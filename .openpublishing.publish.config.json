@@ -9,7 +9,7 @@
       "build_output_subfolder": "vcppdocs",
       "locale": "cs-cz",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -29,4 +29,6 @@
       "branch_mapping": {}
     }
   ]
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/cpp-docs.cs-cz", 
+ "git_repository_branch_open_to_public_contributors": "live", 
 }
