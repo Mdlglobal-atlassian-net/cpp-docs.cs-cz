@@ -1,3 +1,1 @@
----
----
 Další informace o

@@ -1,0 +1,1 @@
+Knihovna šablon C++ prostředí Windows Runtime
