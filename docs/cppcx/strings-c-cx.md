@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 20b2cf3ac565bfd6bbda39825e55e4171781c737
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66a08038825b2ca76a8d18e5103b5569feb51cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strings-ccx"></a>Řetězce (C + +/ CX)
 Představuje text v prostředí Windows Runtime v jazyce C + +/ CX pomocí [Platform::String třída](../cppcx/platform-string-class.md). Použití `Platform::String Class` při předání řetězce a zpět do metod v prostředí Windows Runtime třídy, nebo jsou při interakci s ostatními součástmi prostředí Windows Runtime přes hranice binární rozhraní (ABI) aplikace. `Platform::String Class` Poskytuje metody pro několik běžných operací řetězec, ale jeho není navržené jako třídu plné řetězec. V modulu C++, použijte standardní řetězec typy C++ [wstring](../standard-library/basic-string-class.md) žádné významné text zpracování, a pak převést konečné vést ke [Platform::String ^](../cppcx/platform-string-class.md) předtím, než ji předáte do nebo z veřejné rozhraní. Je snadno a efektivně pro převod mezi `wstring` nebo `wchar_t*` a `Platform::String`.  

@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1304cd827e80328857571552201601f0e453c1dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-ccx"></a>Vlastnosti (C + +/ CX)
 Typy prostředí Windows Runtime vystavit veřejná data jako vlastnosti. Kód klienta přistupuje k vlastnosti jako veřejné datamember. Vlastnost interně je implementovaný jako blok, který obsahuje metodu přistupující objekt get, metodu přistupující objekt set nebo obojí. Pomocí metody přístupových objektů lze provádět další akce před nebo po můžete načíst hodnotu, například může provést událost nebo provádí kontroly platnosti.  
