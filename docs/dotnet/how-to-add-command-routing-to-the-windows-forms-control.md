@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21f3fda51f9df72d9af78a03783771e74fbf3370
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) směrování příkazů a zpráv příkaz aktualizace uživatelského rozhraní do uživatelského ovládacího prvku tak, aby ji zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů).  
@@ -100,4 +103,4 @@ ms.lasthandoff: 10/24/2017
  [Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
  [ICommandSource rozhraní](../mfc/reference/icommandsource-interface.md)   
  [Rozhraní ICommandTarget rozhraní](../mfc/reference/icommandtarget-interface.md)   
- [Commandhandler –](http://msdn.microsoft.com/Library/22096734-e074-4aca-8523-4b15590109f9)
+ [CommandHandler](http://msdn.microsoft.com/Library/22096734-e074-4aca-8523-4b15590109f9)

@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2c444cd8e8d13cca7d891dba92e881b8ca167bbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Požadavky ovladače ODBC pro dynamické sady
 V databázové třídy MFC rozhraní ODBC jsou dynamické sady sady záznamů s dynamické vlastnosti; jejich zůstaly synchronizované se zdrojem dat určitými způsoby. Dynamické sady MFC (ale ne dopředné sady záznamů) vyžadují ovladače ODBC s přizpůsobením API úrovně 2. Pokud ovladač pro vaše [zdroj dat](../../data/odbc/data-source-odbc.md) vyhovuje API úrovně 1 nastavit, když můžete nadále používat snímky v aktualizovatelné i jen pro čtení a dopředné sady záznamů, ale ne dynamické sady. Ovladač úrovně 1 však může podporovat dynamické sady, pokud ji podporuje rozšířené načítání a kurzory řízené.  

@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) rozhraní, přidání záznamů do a z datový člen načítání záznamů ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **CAtlArray <** `RecordClass`**>**.  
@@ -63,7 +66,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |[Adderrorrecord –](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Přidá záznam objektu Chyba OLE DB.|  
 |[Getbasicerrorinfo –](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Vrátí základní informace o této chybě, např. Návratový kód a číslo chyby specifický pro zprostředkovatele.|  
 |[Getcustomerrorobject –](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Vrací ukazatel na rozhraní na objekt vlastní chyby.|  
-|[GetErrorInfo –](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Vrátí [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) ukazatel rozhraní na zadaný záznam.|  
+|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Vrátí [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) ukazatel rozhraní na zadaný záznam.|  
 |[Geterrorparameters –](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Vrátí parametry chyby.|  
 |[Getrecordcount –](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Vrátí počet záznamů v objektu záznamů technologie OLE DB.|  
   

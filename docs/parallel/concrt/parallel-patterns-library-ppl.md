@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d7850721f5005ac1a1ab47c6557dcd99cede897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-patterns-library-ppl"></a>Knihovna PPL (Parallel Patterns Library)
 Paralelní vzory knihovny (PPL) poskytuje imperativní programovací model, který zvýší úroveň škálovatelnost a snadné použití pro vývoj souběžných aplikací. Knihovně PPL staví na plánování a prostředků součásti správy Concurrency Runtime. Vyvolá úroveň abstrakce mezi kódu aplikace a podkladový vláken mechanismus tím, že poskytuje obecné, bezpečnost typů algoritmů a kontejnerů, které fungují na data paralelně. Knihovně PPL také umožňuje vyvíjet aplikace, které škálování tím, že poskytuje alternativy do sdíleného stavu.  
@@ -63,6 +64,6 @@ fib(42): 267914296
 |[Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Popisuje roli úloh a skupiny úloh v knihovně PPL.|  
 |[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)|Popisuje, jak pomocí paralelní algoritmy, jako například `parallel_for` a `parallel_for_each`.|  
 |[Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)|Popisuje různé paralelní kontejnery a objekty, které jsou poskytovány knihovně PPL.|  
-|[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Vysvětluje, jak zrušit práci, kterou provádí paralelní algoritmem.|  
+|[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Vysvětluje, jak zrušit práci, kterou provádí paralelní algoritmem.|  
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Popisuje Concurrency Runtime, který zjednodušuje paralelní programování a obsahuje odkazy na související témata.|
 

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a254b89d7d3007f639c961371b9f1560b4c5f406
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff4fc72d2a40cc52ec614cbd5b470738ad1aa391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-member-functions"></a>Speciální členské funkce  
   
@@ -41,7 +42,7 @@ Výchozí destruktor provede member-wise odstranění objektu. Virtuální je po
 Výchozí kopírování a přesunutí konstrukce a přiřazení operací provést member-wise bitový kopíruje nebo přesouvá nestatické datových členů. Přesun operace jsou generovány pouze, pokud jsou deklarovány žádné destruktor nebo operace přesunutí nebo kopírování. Výchozí konstruktor kopírování se vygeneruje pouze tehdy, když je deklarovaná bez kopírovacího konstruktoru. Odstraní se implicitně, pokud je deklarovaná operaci přesunutí. Operátor přiřazení kopie výchozí se vygeneruje pouze v případě, že žádný operátor přiřazení kopie je explicitně deklarován. Odstraní se implicitně, pokud je deklarovaná operaci přesunutí.  
   
 ## <a name="see-also"></a>Viz také  
-[Referenční příručka jazyka C++](cpp-language-reference.md)  
+[Referenční dokumentace jazyka C++](cpp-language-reference.md)  
 
 
 

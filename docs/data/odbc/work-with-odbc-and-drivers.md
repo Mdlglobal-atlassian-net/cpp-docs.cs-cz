@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7256f202e5e3b2e974f736875be18c8952884b64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 842a09224a9ea61e6c53a6d700435f05176cee55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-odbc-and-drivers"></a>Práce s rozhraním ODBC a ovladači
 ODBC umožňuje psát aplikace, které nejsou závislé na jenom jednom systému správy databáze (databázového systému). Můžete napsat jednu aplikaci, která může pracovat na více systémech DBMS, pro které mají vaši uživatelé správný ovladač ODBC specifické databázového systému.  

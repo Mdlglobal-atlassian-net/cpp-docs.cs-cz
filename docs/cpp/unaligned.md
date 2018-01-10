@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da662cf9cbe17539381766d37255e63d958fb7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unaligned"></a>__unaligned
 Při deklaraci ukazatele s modifikátorem `__unaligned` kompilátor předpokládá, že ukazatel odkazuje na data, která nejsou zarovnána. V důsledku toho pro aplikaci, která cílí na počítač rodiny procesorů Itanium (IPF), kompilátor generuje kód, který čte nezarovnaná data po jednom bajtu.  
@@ -35,7 +36,7 @@ Při deklaraci ukazatele s modifikátorem `__unaligned` kompilátor předpoklád
   
 -   [__alignof – operátor](../cpp/alignof-operator.md)  
   
--   [Pack](../preprocessor/pack.md)  
+-   [pack](../preprocessor/pack.md)  
   
 -   [/Zp (zarovnání členů struktury)](../build/reference/zp-struct-member-alignment.md)  
   

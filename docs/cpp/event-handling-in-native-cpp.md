@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c404caf0090381af1697516d25358daa29c70d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e30e9259a5b3e59b9f8c2f3af877bca3a98c84dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-native-c"></a>Zpracování událostí v nativním kódu C++
 Při zpracování událostí nativní C++, nastavíte zdroj a event přijímače událostí pomocí [event_source –](../windows/event-source.md) a [event_receiver –](../windows/event-receiver.md) atributy, zadání `type` = `native`. Tyto atributy povolit třídy, na které se použijí k vyvolání události a zpracování události v kontextu nativní, modelu COM.  

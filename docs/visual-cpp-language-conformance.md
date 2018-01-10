@@ -9,11 +9,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-conformance"></a>Shoda jazyka Visual C++
 
@@ -248,10 +249,10 @@ __VS 2017 15,5__ určuje funkce, které jsou podporovány v aplikaci Visual Stud
   
 ## <a name="see-also"></a>Viz také
 
-[Referenční příručka jazyka C++](cpp/cpp-language-reference.md)  
+[Referenční dokumentace jazyka C++](cpp/cpp-language-reference.md)  
 [Standardní knihovna C++](standard-library/cpp-standard-library-reference.md)   
-[Vylepšení shoda C++ v Visual Studio 2017](cpp-conformance-improvements-2017.md)  
-[Co je nového pro Visual C++ v Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
+[Vylepšení shody C++ se sadou Visual Studio 2017](cpp-conformance-improvements-2017.md)  
+[Novinky v jazyce Visual C++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
 [Visual C++ historie změn 2003 až 2015](porting/visual-cpp-change-history-2003-2015.md)  
-[Visual C++ Co je nového 2003 až 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
+[Novinky Visual C++ 2003–2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
 [Blogu týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  

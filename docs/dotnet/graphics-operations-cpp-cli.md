@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 923fc7074c4d139d680ed9dee96a0dc54a185f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d80d490dd53a6a27c610532cb26825dc29f34cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="graphics-operations-ccli"></a>Grafické operace (C++/CLI)
 Ukazuje, jak pomocí manipulace s bitovou kopii [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
@@ -31,20 +34,20 @@ Ukazuje, jak pomocí manipulace s bitovou kopii [!INCLUDE[winsdklong](../dotnet/
  Následující témata ukazují použití <xref:System.Drawing.Image?displayProperty=fullName> třídy ke zpracování obrázků.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: převod formátu souborů obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
+ [Postupy: Převod formátu souborů obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
   
- [Postupy: zobrazení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
+ [Postupy: Zobrazení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
   
- [Postupy: kreslení obrazců pomocí rozhraní .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
+ [Postupy: Kreslení tvarů s použitím rozhraní .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
   
- [Postupy: otáčení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
+ [Postupy: Otáčení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Začínáme s programováním grafiky](/dotnet/framework/winforms/advanced/getting-started-with-graphics-programming)  
   
- [O GDI + spravovaný kód](/dotnet/framework/winforms/advanced/about-gdi-managed-code)  
+ [Informace o spravovaném kódu GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)  
   
  <xref:System.Drawing?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Viz také  
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

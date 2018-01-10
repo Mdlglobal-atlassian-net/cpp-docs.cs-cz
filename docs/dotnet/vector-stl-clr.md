@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ee3debcaf651a2a11ef51cac405edf816c5b8ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů s náhodným přístupem. Použít metodu kontejneru `vector` ke správě pořadí elementů jako souvislý blok úložiště. Blok je implementovaný jako pole, které zvětšování na vyžádání.  
@@ -53,59 +56,59 @@ template<typename Value>
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|[Vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Typ konstantního iterátoru řízené sekvence|  
-|[Vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
-|[Vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
-|[Vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|Typ generické rozhraní pro kontejner.|  
-|[Vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|Typ iterace pro obecné rozhraní kontejneru.|  
-|[Vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
-|[Vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní kontejneru.|  
-|[Vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
-|[Vector::Reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|Typ odkazu na prvek|  
-|[Vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
-|[Vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Typ prvku|  
+|[vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Typ konstantního iterátoru řízené sekvence|  
+|[vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
+|[vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
+|[vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|Typ generické rozhraní pro kontejner.|  
+|[vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|Typ iterace pro obecné rozhraní kontejneru.|  
+|[vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
+|[vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní kontejneru.|  
+|[vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
+|[vector::reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
+|[vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[Vector::Assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Nahradí všechny elementy.|  
-|[Vector::AT (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Přístup k elementu na zadané pozici.|  
-|[Vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Přístup k posledním elementem.|  
-|[Vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
-|[Vector::Capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Oznamuje velikost úložiště přidělené kontejneru.|  
-|[Vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[Vector::Empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[Vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Určuje konec řízené sekvence.|  
-|[Vector::Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[Vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Přístup k první prvek.|  
-|[Vector::Insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
-|[Vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Odebere poslední element.|  
-|[Vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Přidá nový posledním elementem.|  
-|[Vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Označuje začátek odstínech řízené sekvenci.|  
-|[Vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Označuje konec odstínech řízené sekvenci.|  
-|[Vector::Reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Zajišťuje růstu minimální kapacitu kontejneru.|  
-|[Vector::Resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Změní počet elementů.|  
-|[Vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Spočítá počet prvků.|  
-|[Vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Zamění obsah dvou kontejnerů.|  
-|[Vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
-|[Vector::Vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Sestaví objekt kontejneru.|  
+|[vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Přístup k elementu na zadané pozici.|  
+|[vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Přístup k posledním elementem.|  
+|[vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
+|[vector::capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Oznamuje velikost úložiště přidělené kontejneru.|  
+|[vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Odebere všechny prvky.|  
+|[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Určuje konec řízené sekvence.|  
+|[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Přístup k první prvek.|  
+|[vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
+|[vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Odebere poslední element.|  
+|[vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Přidá nový posledním elementem.|  
+|[vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Označuje začátek odstínech řízené sekvenci.|  
+|[vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Označuje konec odstínech řízené sekvenci.|  
+|[vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Zajišťuje růstu minimální kapacitu kontejneru.|  
+|[vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Změní počet elementů.|  
+|[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Spočítá počet prvků.|  
+|[vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Zamění obsah dvou kontejnerů.|  
+|[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
+|[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Sestaví objekt kontejneru.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[Vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Přístup k posledním elementem.|  
-|[Vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Přístup k první prvek.|  
+|[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Přístup k posledním elementem.|  
+|[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Přístup k první prvek.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[Vector::Operator = (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Vector::Operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Přístup k elementu na zadané pozici.|  
-|[Operator! = (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Určuje, zda `vector` objekt není rovno jiné `vector` objektu.|  
-|[Operator < (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Určuje, zda `vector` objektu je menší než jiná `vector` objektu.|  
-|[Operator < = (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Určuje, zda `vector` objektu je menší než nebo rovna do jiného `vector` objektu.|  
-|[Operator == (vector) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Určuje, zda `vector` objekt rovná jiné `vector` objektu.|  
-|[Operator > (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Určuje, zda `vector` je větší než druhý objekt `vector` objektu.|  
-|[Operator > = (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Určuje, zda `vector` objekt je větší než nebo rovna hodnotě jiného `vector` objektu.|  
+|[vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Přístup k elementu na zadané pozici.|  
+|[operator!= (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Určuje, zda `vector` objekt není rovno jiné `vector` objektu.|  
+|[operator< (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Určuje, zda `vector` objektu je menší než jiná `vector` objektu.|  
+|[operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Určuje, zda `vector` objektu je menší než nebo rovna do jiného `vector` objektu.|  
+|[operator== (vector) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Určuje, zda `vector` objekt rovná jiné `vector` objektu.|  
+|[operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Určuje, zda `vector` je větší než druhý objekt `vector` objektu.|  
+|[operator>= (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Určuje, zda `vector` objekt je větší než nebo rovna hodnotě jiného `vector` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -141,5 +144,5 @@ template<typename Value>
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [fronty (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [Zásobník (STL/CLR)](../dotnet/stack-stl-clr.md)   
- [Vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

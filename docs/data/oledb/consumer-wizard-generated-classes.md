@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5189794a8f9c1aa44d46a5580fbfa177f15f7b53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
 Pokud použijete průvodce příjemcem knihovny ATL technologie OLE DB pro vygenerování příjemce, máte možnost použití šablony technologie OLE DB nebo OLE DB atributů. V obou případech vygeneruje průvodce příkaz třídy a třídy uživatelského záznamu. Příkaz třída obsahuje kód pro otevření zdroje dat a sady řádků, které zadáte v průvodci. Třída záznamu uživatele obsahuje mapu sloupce pro tabulku databáze, kterou jste vybrali. Generovaný kód se ale liší v každém případě:  
@@ -187,4 +190,4 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor> >
  Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření příjemce technologie OLE DB pomocí Průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+ [Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

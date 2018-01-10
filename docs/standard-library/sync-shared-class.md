@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c84b340c82e735b3bcc62609ff1db10791f154e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff7c75428fbe63a2ec9183c3d909d22e9f38703e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncshared-class"></a>sync_shared – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) používající mutex k řízení přístupu k mezipaměti objekt, který sdílí všechny alokátorů.  
@@ -49,9 +50,9 @@ class sync_shared
   
 |||  
 |-|-|  
-|[přidělit](#allocate)|Přiděluje blok paměti.|  
+|[allocate](#allocate)|Přiděluje blok paměti.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
-|[rovná se](#equals)|Porovná dva mezipamětí rovnosti.|  
+|[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<alokátorů >  

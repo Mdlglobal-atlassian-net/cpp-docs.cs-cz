@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f59a90828f338d918f753c8ba79236fd7edc1587
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL (Intermediate Language)
 Všechny projekty Visual C++ CLR propojit běhové knihovny jazyka C ve výchozím nastavení. V důsledku toho jsou klasifikovány jako aplikace ve smíšeném režimu, proto, že kombinují nativní kód s kódem, který se zaměřuje modul common language runtime (spravovaný kód). Při kompilaci jsou, že se kompilují do převodní jazyk (IL), také známé jako Microsoft (MSIL intermediate language).  

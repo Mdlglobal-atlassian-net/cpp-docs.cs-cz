@@ -28,11 +28,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92c3b6b95bc1ddb51900d8274f76993c32a71ceb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3ee9fbed3fd82fd450fd179683fd119cb1630034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Smíšené, čisté a ověřitelné porovnání funkcí (C++/CLI)
 Toto téma porovnává funkce mezi různými **/CLR** režimy kompilace. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -46,10 +49,10 @@ Toto téma porovnává funkce mezi různými **/CLR** režimy kompilace. Další
 |CRT – knihovna|Podporované|Podporované||[Běhové rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|Podporované|||[Běžné aplikace knihovny MFC](../mfc/mfc-desktop-applications.md) &#124; [Přehled tříd](../atl/atl-class-overview.md)|  
 |Nespravované funkce|Podporované|||[Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|Nespravovaná Data|Podporované|Podporované||[Čistý a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Nespravovaná Data|Podporované|Podporované||[Čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
 |Volány z nespravovaných funkcí|Podporované|||[Postupy: přechod na/CLR: pure (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|Podporuje volání nespravovaných funkcí|Podporované|Pouze funkce jazyka C|Pouze P/Invoke|[Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Podporuje reflexe|Pouze knihovny DLL|Podporované|Podporované|[Reflexe (C + +/ CLI)](../dotnet/reflection-cpp-cli.md)|  
+|Podporuje volání nespravovaných funkcí|Podporované|Pouze funkce jazyka C|Pouze P/Invoke|[Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Podporuje reflexe|Pouze knihovny DLL|Podporované|Podporované|[Reflexe (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
   
 ## <a name="see-also"></a>Viz také  
- [Čistý a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

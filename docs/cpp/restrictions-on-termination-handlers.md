@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 593cb54298682c53f534e92f6553d86d2118d98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71486b167f4e9939d4913b3660ed3513dc02b8f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrictions-on-termination-handlers"></a>Omezení obslužných rutin ukončení
 Nelze použít `goto` příkaz Přejít do `__try` příkaz bloku nebo `__finally` příkaz bloku. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete, ale přejít z `__try` příkaz bloku.) Navíc nelze vnořit obslužná rutina výjimky nebo obslužné rutiny ukončení uvnitř `__finally` bloku.  
@@ -32,4 +33,4 @@ Nelze použít `goto` příkaz Přejít do `__try` příkaz bloku nebo `__finall
   
 ## <a name="see-also"></a>Viz také  
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
- [Strukturované zpracování (C/C++) výjimek](../cpp/structured-exception-handling-c-cpp.md)
+ [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

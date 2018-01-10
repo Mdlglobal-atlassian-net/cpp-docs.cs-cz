@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ead8411d22539218c18d21b8af7d020cc267879f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 Vlastní metody se liší od uložených metod v tom, že již nejsou implementované pomocí `COleControl`. Je třeba zadat implementace pro jednotlivé vlastní metody, které přidáte do vašeho ovládacího prvku.  
@@ -82,5 +83,5 @@ Vlastní metody se liší od uložených metod v tom, že již nejsou implemento
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Zobrazení tříd a ikony v prohlížeči objektů](/visualstudio/ide/class-view-and-object-browser-icons)
+ [Ikony zobrazení třídy a prohlížeče objektů](/visualstudio/ide/class-view-and-object-browser-icons)
 

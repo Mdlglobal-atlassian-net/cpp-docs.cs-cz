@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63143532c5f5ad770c6234a24fbedf1b478ba143
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 Průvodce vytvoří třídu obsahující jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je generován průvodcem a uvádí všechny soubory v adresáři pomocí **WIN32_FIND_DATA** struktura. `CMyProviderWindowsFile`dědí z **WIN32_FIND_DATA** strukturu:  
@@ -84,4 +87,4 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
  Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a umístí jej do **m_rgRowData** – datový člen. `CRowsetImpl` Třída definuje **m_rgRowData** – datový člen. Data v toto pole představuje celou tabulku a bude použit v rámci šablony.  
   
 ## <a name="see-also"></a>Viz také  
- [Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)
+ [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

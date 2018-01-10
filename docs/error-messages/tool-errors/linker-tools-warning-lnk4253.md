@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe7e60c3066e2981f1b826381691950b2ccd46d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1142544852980b8bd1d543783a9ffdf3361879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4253"></a>Upozornění linkerů LNK4253
 část sekci ' 1' není sloučí sekci "2"; již sloučí 'section3.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [/ MERGE (kombinované oddíly)](../../build/reference/merge-combine-sections.md)  
   
--   [komentáře (C/C++)](../../preprocessor/comment-c-cpp.md)  
+-   [comment (C/C++)](../../preprocessor/comment-c-cpp.md)  
   
 ## <a name="example"></a>Příklad  
  V následující ukázce linkeru je odeslán pokyn k sloučení `.rdata` části dvakrát, ale do různých oddílů. Následující ukázka generuje LNK4253.  

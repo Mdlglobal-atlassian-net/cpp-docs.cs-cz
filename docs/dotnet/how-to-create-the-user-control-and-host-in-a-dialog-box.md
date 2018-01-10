@@ -16,11 +16,14 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf0372029a6f6f3c2e2d3030d9e04ddcf6483f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Postupy: Vytvoření uživatelského ovládacího prvku a vložení tohoto prvku do dialogového okna
 Postup v tomto článku předpokládá, že vytváříte dialogu založený ([CDialog – třída](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation třídy (MFC), ale také můžete přidat podporu pro ovládací prvek Windows Forms k existující dialogového okna knihovny MFC.  
@@ -124,4 +127,4 @@ Postup v tomto článku předpokládá, že vytváříte dialogu založený ([CD
      Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**. V dialogovém okně knihovny MFC by měl zobrazit ovládacího prvku Windows Forms.  
   
 ## <a name="see-also"></a>Viz také  
- [Hostitelské poskytování uživatelského Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)
+ [Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

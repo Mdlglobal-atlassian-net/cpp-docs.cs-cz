@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65e030f0ba5d59653612b61246fbd5f4e39b9c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf6078217218a85289602e30c1002ba861db76d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>Postupy: Zařazování řetězců v kódu Unicode pro technologii ADO.NET (C++/CLI)
 Ukazuje, jak přidat nativní řetězec znaků Unicode (`wchar_t *`) k databázi a jak přeuspořádat <xref:System.String?displayProperty=fullName> z databáze na nativní řetězec.  
@@ -155,4 +158,4 @@ StringCol: This is string 2.
  [Přístup k datům s použitím technologie ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   
  [Vzájemná funkční spolupráce](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

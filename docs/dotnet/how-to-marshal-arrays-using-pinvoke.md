@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf034bb191174d78ca8a614559e9f1e4976d88bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>Postupy: Zařazení polí pomocí služby PInvoke
 Toto téma vysvětluje, jak nativních funkcí, které přijímají řetězce stylu jazyka C je možné volat pomocí řetězce typu CLR <xref:System.String> pomocí podpory volání nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ se místo toho používají funkce interoperability C++ (Pokud je to možné), protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být zdlouhavé pro implementaci. Pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností (jinak, najdete v části [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
@@ -87,4 +90,4 @@ int main() {
  Všimněte si, že žádná část knihovny DLL je vystaven do spravovaného kódu přes tradiční #include – direktiva. Ve skutečnosti, protože knihovna DLL je přístup pouze za běhu, problémy s funkcemi, které se importovat s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+ [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

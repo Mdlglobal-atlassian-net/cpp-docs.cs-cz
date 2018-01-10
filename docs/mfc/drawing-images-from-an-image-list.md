@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf53177e0d24777a5447c6655e7b801955610168
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-images-from-an-image-list"></a>Vykreslování obrázků ze seznamu obrázků
 Kreslení bitovou kopii, použijte [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) – členská funkce. Určete ukazatel na objekt kontextu zařízení, index bitové kopie k vykreslení, umístění v kontextu zařízení, kdy k vykreslení bitovou kopii a sadu jsou označeny styl vykreslování.  

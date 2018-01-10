@@ -11,11 +11,12 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c0fe11f502fbfedda226e1d699a2822bdfd676a
-ms.sourcegitcommit: 78f3f8208d49b7c1d87f4240f4a1496b7c29333e
+ms.workload: cplusplus
+ms.openlocfilehash: 3a1010d7061fb8df20cc821e26e903e356050850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153) a [15,5](#improvements_155).
 
@@ -67,7 +68,7 @@ Funkce, které jsou označené jako [14] jsou k dispozici bezpodmínečně i v/s
 
 **Nový přepínač kompilátoru pro extern constexpr** v dřívějších verzích sady Visual Studio, kompilátor vždy Dal `constexpr` proměnné vnitřní propojení i v případě, že byla označena jako proměnnou `extern`. V aplikaci Visual Studio 2017 verze 15,5 nového přepínače kompilátoru [/Zc:externConstexpr](build/reference/zc-externconstexpr.md), umožňuje správné chování podle standardů. Další informace najdete v tématu [extern constexpr propojení](#extern_linkage).
 
-**Odebrání specifikace výjimek dynamické**: [P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html). Specifikace výjimek dynamické byla zrušena v C ++ 11. Tato funkce se odebere z C ++ 17, ale nepoužívá (stále) `throw()` specifikace se uchovávají výhradně jako alias pro `noexcept(true)`. Další informace najdete v tématu [odebrání specifikace dynamické výjimky a noexcept](#noexcept_removal). 
+**Odebrání specifikace výjimek dynamické**: [P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html). Specifikace dynamických výjimek byla vyřazena jako zastaralá v C++11. Tato funkce se odebere z C ++ 17, ale nepoužívá (stále) `throw()` specifikace se uchovávají výhradně jako alias pro `noexcept(true)`. Další informace najdete v tématu [odebrání specifikace dynamické výjimky a noexcept](#noexcept_removal). 
 
 **not_fn()** : [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) náhrada not1 – a not2 – není dostupná.
 

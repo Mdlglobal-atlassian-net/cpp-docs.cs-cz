@@ -1,5 +1,5 @@
 ---
-title: "NMake – stránka vlastností | Microsoft Docs"
+title: "NMake – stránka vlastností (Windows C++) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c487cf7218f11ba6a6a27ddcf5e7b6b575b1499
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cc9f6dc7c5fec4a184ed189cfaae230df3f1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-property-page"></a>NMake – stránka vlastností
 **NMake** stránka vlastností umožňuje zadat nastavení sestavení pro projekty NMake.  
   
- Další informace o projekty NMake najdete v tématu [vytvoření projektu souboru pravidel](../ide/creating-a-makefile-project.md).  
+ Další informace o projekty NMake najdete v tématu [vytvoření projektu souboru pravidel](../ide/creating-a-makefile-project.md). Projekty MakeFile non_Windows, najdete v tématu [vlastnosti projektu souboru pravidel (Linux C++)](../linux/prop-pages/makefile-linux.md), [obecné vlastnosti projektu (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) nebo [NMake vlastnosti (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
  **NMake** vlastnost stránka obsahuje následující vlastnosti.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
  **Vyčištění příkazového řádku**  
  Určuje příkaz, který se spustí, když **Vyčistit** po kliknutí na na **sestavení** nabídky.  
   
- **Výstup**  
+ **Output**  
  Určuje název souboru, který bude obsahovat výstup příkazového řádku. Ve výchozím nastavení je tento název souboru založen na název projektu.  
   
  **Definice preprocesoru**  
@@ -69,4 +70,4 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
- [Postupy: povolení technologie IntelliSense pro projekty Makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)
+ [Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel](../ide/how-to-enable-intellisense-for-makefile-projects.md)

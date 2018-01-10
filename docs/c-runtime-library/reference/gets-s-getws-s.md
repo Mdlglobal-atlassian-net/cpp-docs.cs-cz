@@ -42,11 +42,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea0c9053ef052359a0dc827299ade1ef2bbcb20f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4a14a5166e357c3b25622c49f75b2b26fed4f55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Získá řádek z `stdin` datového proudu. Tyto verze nástroje [získá _getws –](../../c-runtime-library/gets-getws.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -135,4 +136,4 @@ Hello there!The line entered was: Hello there!
  [Získá _getws –](../../c-runtime-library/gets-getws.md)   
  [fgets –, fgetws –](../../c-runtime-library/reference/fgets-fgetws.md)   
  [fputs –, fputws –](../../c-runtime-library/reference/fputs-fputws.md)   
- [Vloží _putws –](../../c-runtime-library/reference/puts-putws.md)
+ [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

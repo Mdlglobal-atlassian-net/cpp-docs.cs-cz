@@ -37,11 +37,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6664c7109b96896a09f131fc142426144047bf68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5e38d9a8df63fd4c2880fda7becec545c9584a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldexp"></a>ldexp
 Vynásobí celočíselný násobek dvou číslo s plovoucí desetinnou čárkou.  
@@ -121,4 +122,4 @@ int main( void )
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [frexp –](../../c-runtime-library/reference/frexp.md)   
- [modf – modff –, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+ [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

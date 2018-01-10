@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60480cef84f04c8c962e94d8f550823f637cfd84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 Přestože systém Windows a Visual C++ podporují strukturovaného zpracování (SEH) výjimek, doporučujeme použít zpracování výjimek C++ standardu ISO, protože umožňuje kód víc přenosného a flexibilní. Nicméně v existující kód nebo pro určité typy programů, můžete stále nejspíš muset použít SEH.  
@@ -69,7 +70,7 @@ Přestože systém Windows a Visual C++ podporují strukturovaného zpracování
   
 -   [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)  
   
--   [Používání strukturovaného zpracování výjimek s C++](../cpp/using-structured-exception-handling-with-cpp.md)  
+-   [Používání strukturovaného zpracování výjimek v jazyce C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Příklad  
  Jak je uvedeno výše, destruktory pro místní objekty se volají, pokud používáte SEH v programu C++ a zkompilovat pomocí **/EH** možnost s určitým modifikátory – například **/EHsc** a   **/EHa**. Chování při spuštění však nemusí být toho, co očekáváte, pokud používáte také výjimky jazyka C++. Následující příklad ukazuje tyto chování rozdíly.  

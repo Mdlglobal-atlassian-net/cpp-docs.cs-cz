@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7b0fe47060872c197831f03ae154b5b77db688e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6d256fd48d8c9f206619e6baa9a50a0278d30c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="param-array-and-ellipsis"></a>Pole parametrů a tlačítko se třemi tečkami
 Prioritu pole parametrů pro rozlišování volání přetížené funkce změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
@@ -46,4 +49,4 @@ fx( 1, 2 );
  přeloží na `fx(...)` v nové syntaxe přeloží na `ParamArray` instance. Na vypnutém pravděpodobnost, že vaše chování program závisí na volání instance třemi tečkami přes u `ParamArray`, budete muset upravit podpis nebo volání.  
   
 ## <a name="see-also"></a>Viz také  
- [Obecné jazykové změny (C + +/ CLI)](../dotnet/general-language-changes-cpp-cli.md)
+ [Obecné jazykové změny (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

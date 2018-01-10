@@ -14,17 +14,20 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 683471e6449e1c1f190ecc7ef680d6108fdd644a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccb26e1f054e6914f24982b36f6655fa62fc9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Hodnotové typy a jejich chování (C++/CLI)
 Typy hodnot změnily různými způsoby ze spravovaných rozšíření jazyka C++ na Visual C++. V této části se podíváme na typ výčtu CLR a hodnota typu třídy, společně s pohled na zabalení a přístup k zabalené instanci na haldě CLR, podívejte se na vnitřních a přídavných ukazatelů. V této oblasti byly rozsáhlé jazykové změny.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Typ výčtu CLR](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
+ [Typ enum v prostředí CLR](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
  Popisuje změny v chování výčtů a deklarace.  
   
  [Implicitní zabalení typů hodnot](../dotnet/implicit-boxing-of-value-types.md)  
@@ -38,4 +41,4 @@ Typy hodnot změnily různými způsoby ze spravovaných rozšíření jazyka C+
   
 ## <a name="see-also"></a>Viz také  
  [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md)   
- [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+ [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

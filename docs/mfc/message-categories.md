@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c7a463e3d2e0f11373c47f66a745c9c486a4581
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-categories"></a>Kategorie zpráv
 Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:  
@@ -51,5 +52,5 @@ Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:
  Zprávy v kategorii 3 – příkazy – může zpracovávat širší různé objekty: dokumenty, šablony dokumentů a objektu application kromě windows a zobrazení. Pokud příkaz přímo ovlivňuje některé konkrétní objekt, má smysl mít tento objekt zpracování příkazu. Příkaz Otevřít v nabídce Soubor je třeba logicky spojený s aplikací: aplikace otevře zadaný dokument po přijetí příkazu. Obslužná rutina pro příkaz otevřete tak je funkce člena třídy aplikace. Další informace o příkazech a jak se směrují na objekty najdete v tématu [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v rozhraní Framework](../mfc/messages-and-commands-in-the-framework.md)
+ [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

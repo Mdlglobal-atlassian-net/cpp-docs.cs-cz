@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c06ae1c043551bbb4ed6469ab3f87d1ed86fd92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteration-statements-c"></a>Příkazy iterace (C++)
 Příkazy iterace způsobit příkazy (nebo složené příkazy) být provedeny v počtu nula či více dobu, může některá kritéria ukončení smyčky. Když jsou tyto příkazy složené příkazy, jsou spouštěny v pořadí, s výjimkou případů, kdy buď [zalomení](../cpp/break-statement-cpp.md) příkaz nebo [pokračovat](../cpp/continue-statement-cpp.md) příkaz je zjistil.  
@@ -32,8 +33,8 @@ Příkazy iterace způsobit příkazy (nebo složené příkazy) být provedeny 
 |Příkaz|Vyhodnocovány v|Inicializace|Přírůstek|  
 |---------------|------------------|--------------------|---------------|  
 |`while`|Začátek smyčky|Ne|Ne|  
-|**proveďte**|Dolní části smyčky|Ne|Ne|  
-|**pro**|Začátek smyčky|Ano|Ano|  
+|**do**|Dolní části smyčky|Ne|Ne|  
+|**for**|Začátek smyčky|Ano|Ano|  
 |**na základě rozsahu pro**|Začátek smyčky|Ano|Ano|  
   
  Příkaz část příkazu iterace nemůže být deklaraci. Však může být složené příkazu, který obsahuje deklaraci.  

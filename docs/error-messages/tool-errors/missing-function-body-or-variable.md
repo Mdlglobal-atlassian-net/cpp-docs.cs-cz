@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba591b6bba935ff5ee6669dd0feb62fb9bd05177
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 356d0f0a71feccee953a0b1bd7dc54bc64a0e233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="missing-function-body-or-variable"></a>Chybějící tělo funkce nebo proměnná
 S právě funkce prototyp kompilátor můžete pokračovat bez chyby, ale linkeru nemůže vyřešit volání na adresu, protože není žádný kód funkce nebo proměnná místa vyhrazeného. Tato chyba se se nezobrazí, dokud vytvoříte volání funkce, která musíte vyřešit linkeru.  

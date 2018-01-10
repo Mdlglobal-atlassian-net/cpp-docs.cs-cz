@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0466b374869ac34c56f58c94111c1738980286a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choice-class"></a>Třída choice
 A `choice` zasílání zpráv blok je více zdroje, jeden cílový blok, který představuje tok řízení interakci s sadu zdrojů. Výběr bloku bude čekat na některém z více zdrojů pro vytvoření zprávy a rozšíří index zdroje, který vytváří zprávu.  
@@ -82,7 +83,7 @@ class choice: public ISource<size_t>;
 |[Rezervovat](#reserve)|Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.|  
 |[unlink_target –](#unlink_target)|Zruší propojení cílový blok z tohoto `choice` zasílání zpráv bloku.|  
 |[unlink_targets –](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` zasílání zpráv bloku. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
-|[Hodnota](#value)|Získá zprávu, jejíž index nebyla vybrána pomocí `choice` zasílání zpráv bloku.|  
+|[value](#value)|Získá zprávu, jejíž index nebyla vybrána pomocí `choice` zasílání zpráv bloku.|  
   
 ## <a name="remarks"></a>Poznámky  
  Výběr bloku zajišťuje využívat pouze jeden z příchozí zprávy.  
@@ -347,4 +348,4 @@ _Payload_type const& value();
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
  [JOIN – třída](join-class.md)   
- [Třída single_assignment](single-assignment-class.md)
+ [single_assignment – třída](single-assignment-class.md)

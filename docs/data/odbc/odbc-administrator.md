@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834825b38eb8d5c81752dfed85f44202fbce3299
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a7d60f11457e509ae67da83aa6bc589af1ce43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-administrator"></a>Správce rozhraní ODBC
 Správce rozhraní ODBC registruje a konfiguruje [zdroje dat](../../data/odbc/data-source-odbc.md) k dispozici místně nebo v síti. Vytvoření kódu v aplikacích, které vaši uživatelé připojí ke zdrojům dat pomocí průvodců informace poskytnuté správcem rozhraní ODBC.  

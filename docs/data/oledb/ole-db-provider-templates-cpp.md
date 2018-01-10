@@ -18,14 +18,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: def429b9a284b7e440bd4bd4e6fc6f6ba7d3bcb9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95b32d62d964c83853025ed4e4af9b90e7a630a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-templates-c"></a>Šablony zprostředkovatele OLE DB (C++)
-OLE DB, je důležitou součástí strategie Microsoft Universal Data Access. OLE DB návrh umožňuje přístup k datům vysoce výkonné z jakéhokoli zdroje dat.. Žádná tabulková data jsou viditelná prostřednictvím technologie OLE DB bez ohledu na to, jestli pochází z databáze. Flexibilitu poskytuje rozsáhlou napájení.  
+OLE DB, je důležitou součástí strategie Microsoft Universal Data Access. OLE DB návrh umožňuje přístup k datům vysoce výkonné z jakéhokoli zdroje dat. Žádná tabulková data jsou viditelná prostřednictvím technologie OLE DB bez ohledu na to, jestli pochází z databáze. Flexibilitu poskytuje rozsáhlou napájení.  
   
  Jak je popsáno v [OLE DB příjemci a zprostředkovatelé](../../data/oledb/ole-db-consumers-and-providers.md), používá koncept příjemci a zprostředkovatelé technologie OLE DB. Příjemce vytváří požadavky na data; zprostředkovatel vrací data ve formátu tabulky k příjemce. Z hlediska programovací nejdůležitější důsledkem tohoto modelu je, že zprostředkovatel musí implementovat každé volání uplatnit.  
   
@@ -71,7 +74,7 @@ OLE DB, je důležitou součástí strategie Microsoft Universal Data Access. OL
   
 -   [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)  
   
--   [OLE DB – programování](../../data/oledb/ole-db-programming.md)  
+-   [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Přístup k datům](../data-access-in-cpp.md)   

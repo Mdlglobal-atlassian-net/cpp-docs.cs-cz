@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43521d3412c7ca7c1f03896fa7732e24bd6d880b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c46b212f200b2ef7d46afae567efdf3f5bcef0f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_set` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Hodnota jednotlivých prvků slouží jako klíč k pořadí řazení.  
@@ -65,7 +68,7 @@ template<typename Key>
 |[hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
 |[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)|Typ klíče řazení|  
-|[hash_set::Reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[hash_set::reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[hash_set::reverse_iterator (STL/CLR)](../dotnet/hash-set-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[hash_set::size_type (STL/CLR)](../dotnet/hash-set-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[hash_set::value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -76,15 +79,15 @@ template<typename Key>
 |[hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)|Spočítá počet intervalů.|  
 |[hash_set::clear (STL/CLR)](../dotnet/hash-set-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[hash_set::Count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[hash_set::Empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[hash_set::count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[hash_set::Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[hash_set::Find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[hash_set::find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
 |[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)|Zkopíruje hash delegáta pro klíč.|  
 |[hash_set::hash_set (STL/CLR)](../dotnet/hash-set-hash-set-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[hash_set::Insert (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|Přidá prvky.|  
+|[hash_set::insert (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|Přidá prvky.|  
 |[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)|Spočítá průměrný počet prvků na kbelík.|  
 |[hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
@@ -101,7 +104,7 @@ template<typename Key>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[hash_set::Operator = (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -160,4 +163,4 @@ template<typename Key>
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

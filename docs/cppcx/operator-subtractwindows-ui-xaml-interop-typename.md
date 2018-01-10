@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ba04742edfacde4a24bf6a9d0b00306e25dd87f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0acc4540b76a6436aeacd19fd99b02997f291705
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName – operátor
 Umožňuje převod `Platform::Type` k [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
@@ -57,4 +58,4 @@ Type^ tx2 = (Type^)(tn);
   
 ## <a name="see-also"></a>Viz také  
  [operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)   
- [Platform::type – třída](../cppcx/platform-type-class.md)
+ [Platform::Type – třída](../cppcx/platform-type-class.md)

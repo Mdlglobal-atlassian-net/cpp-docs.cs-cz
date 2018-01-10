@@ -20,11 +20,14 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33fa0d6e40be1a037632460e15fc453a8ba2853e
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 Toto téma popisuje problémy, které se vynoří během kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) informace). **/ CLR** umožňuje modulům Visual C++ pro vyvolání a jde volat z sestavení .NET a přitom zachovat kompatibilitu s nespravovanými moduly. V tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.  
@@ -148,11 +151,11 @@ COMObj2->Method(args);  // C++ equivalent
   
  Informace o programování v jazyce Visual C++ .NET najdete v části:  
   
--   [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+-   [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
   
--   [Nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md)  
+-   [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)  
   
--   [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
+-   [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

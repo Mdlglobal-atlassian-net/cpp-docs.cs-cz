@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55469ffe0c5473ddda7007655e6f85b4d5822f0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Postupy: Správa instance plánovače
 Instance plánovače umožňují přidružit konkrétní zásady plánování různé druhy zátěží. Toto téma obsahuje dva základní příklady, které ukazují, jak vytvořit a spravovat instance plánovače.  
@@ -85,5 +86,5 @@ Current scheduler id: 0
   
 ## <a name="see-also"></a>Viz také  
  [Instance plánovače](../../parallel/concrt/scheduler-instances.md)   
- [Postupy: určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
+ [Postupy: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
 

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a0e6e69537e694eaff6b8a0edbc5c17853b63c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8b9eac88c9387c6aeedd140159bb24482c829dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Konkrétní Microsoft**  
@@ -50,9 +51,9 @@ void Attach(
   
 ## <a name="remarks"></a>Poznámky  
   
--   **Připojit (**`pInterface`**)** `AddRef` není volán.     To je předán vlastnictví rozhraní `_com_ptr_t` objektu. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele.  
+-   **Připojit (**`pInterface`**)** `AddRef` není volán. To je předán vlastnictví rozhraní `_com_ptr_t` objektu. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele.  
   
--   **Připojit (** `pInterface` **,**`fAddRef`**)** Pokud `fAddRef` je **true**, `AddRef` nazývá se zvýší odkaz počet pro ukazatel zapouzdřené rozhraní.       Pokud `fAddRef` je **false**tento `_com_ptr_t` objekt trvá vlastnictví ukazatel nezpracovaná rozhraní bez volání `AddRef`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele.  
+-   **Připojit (** `pInterface` **,**`fAddRef`**)** Pokud `fAddRef` je **true**, `AddRef` nazývá se zvýší odkaz počet pro ukazatel zapouzdřené rozhraní. Pokud `fAddRef` je **false**tento `_com_ptr_t` objekt trvá vlastnictví ukazatel nezpracovaná rozhraní bez volání `AddRef`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele.  
   
  **Konkrétní Microsoft END**  
   

@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problémy s návrhem technologie OLE DB
 Před zahájením aplikaci OLE DB, je třeba zvážit následující problémy:  
@@ -37,11 +40,11 @@ Před zahájením aplikaci OLE DB, je třeba zvážit následující problémy:
  **Máte starší kódu pomocí jiné technologie přístup data (ADO, rozhraní ODBC a DAO)?**  
  Zadána možných kombinací technologie (například pomocí součásti ADO součásti OLE DB a migrace kód rozhraní ODBC do OLE DB) zahrnující všechny situace je nad rámec dokumentace Visual C++. Mnoho článků týkajících se různé scénáře jsou však k dispozici na následujících webech společnosti Microsoft:  
   
--   [Nápovědu a podporu Microsoftu](http://go.microsoft.com/fwlink/?linkid=148218)  
+-   [Nápovědu a podporu Microsoftu](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Přehled technických článcích přístupu k datům společnosti Microsoft](http://go.microsoft.com/fwlink/?linkid=148217)  
+-   [Přehled technických článcích přístupu k datům společnosti Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Centrum řešení Visual Studio](http://go.microsoft.com/fwlink/?linkid=148215)  
+-   [Centrum řešení Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Hledání Microsoft.com](http://search.microsoft.com/)  
   
@@ -49,4 +52,4 @@ Před zahájením aplikaci OLE DB, je třeba zvážit následující problémy:
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
- [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)
+ [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

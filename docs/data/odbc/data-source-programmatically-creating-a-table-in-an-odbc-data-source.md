@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8009d587007e618bfecf46911c5b30486cf1aba4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43be9c8a2339bb47d598304145a8c34f391b11c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Zdroj dat: Programové vytvoření tabulky ve zdroji dat rozhraní ODBC
 Toto téma vysvětluje, jak vytvořit tabulku pro vaše data zdroje, pomocí `ExecuteSQL` funkce člena třídy `CDatabase`, předávání řetězec, který obsahuje funkce **CREATE TABLE** příkaz jazyka SQL.  

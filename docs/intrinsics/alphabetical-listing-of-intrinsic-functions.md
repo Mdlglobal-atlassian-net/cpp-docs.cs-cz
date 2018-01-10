@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a07e596531957294be304efb6a95cc05ce75aec4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřní funkce
 Následující části popisují specifické pro společnost Microsoft vnitřní funkce dostupné na některé nebo všechny architektury. Jiné podporované – vnitřní prvky jsou zdokumentovat výrobci procesorů, buď v hlavičkových souborů nebo na svých webech. Najdete v článku [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md), [x86 vnitřní funkce](../intrinsics/x86-intrinsics-list.md), a [x64 – vnitřní prvky](../intrinsics/x64-amd64-intrinsics-list.md) oddíly pro odkazy na dokumentaci výrobce. Funkce C Runtime Library (CRT), které mají vnitřní funkce je implementována nejsou uvedeny zde; Tyto funkce jsou dokumentovány v článku [referenční dokumentace knihoven C Run-Time](../c-runtime-library/c-run-time-library-reference.md).  
@@ -34,27 +35,27 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [__assume](../intrinsics/assume.md)  
   
- [_BitScanForward _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)  
+ [_BitScanForward, _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)  
   
- [_BitScanReverse _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)  
+ [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)  
   
- [_bittest _bittest64](../intrinsics/bittest-bittest64.md)  
+ [_bittest, _bittest64](../intrinsics/bittest-bittest64.md)  
   
- [_bittestandcomplement _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)  
+ [_bittestandcomplement, _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)  
   
- [_bittestandreset _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)  
+ [_bittestandreset, _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)  
   
- [_bittestandset _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)  
+ [_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)  
   
  [__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)  
   
- [__debugbreak –](../intrinsics/debugbreak.md)  
+ [__debugbreak](../intrinsics/debugbreak.md)  
   
  [_disable](../intrinsics/disable.md)  
   
  [__emul, \__emulu](../intrinsics/emul-emulu.md)  
   
- [_zapnout](../intrinsics/enable.md)  
+ [_enable](../intrinsics/enable.md)  
   
  [__fastfail](../intrinsics/fastfail.md)  
   
@@ -82,31 +83,31 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)  
   
- [_InterlockedAnd vnitřní funkce](../intrinsics/interlockedand-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)  
   
- [_interlockedbittestandreset vnitřní funkce](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)  
+ [Vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)  
   
- [_interlockedbittestandset vnitřní funkce](../intrinsics/interlockedbittestandset-intrinsic-functions.md)  
+ [Vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)  
   
- [_InterlockedCompareExchange vnitřní funkce](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)  
   
  [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)  
   
- [_InterlockedCompareExchangePointer vnitřní funkce](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)  
   
- [_InterlockedDecrement vnitřní funkce](../intrinsics/interlockeddecrement-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)  
   
- [_InterlockedExchange vnitřní funkce](../intrinsics/interlockedexchange-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)  
   
  [Vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)  
   
- [_InterlockedExchangePointer vnitřní funkce](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)  
   
- [_InterlockedIncrement vnitřní funkce](../intrinsics/interlockedincrement-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)  
   
- [_InterlockedOr vnitřní funkce](../intrinsics/interlockedor-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)  
   
- [_InterlockedXor vnitřní funkce](../intrinsics/interlockedxor-intrinsic-functions.md)  
+ [Vnitřní funkce _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)  
   
  [__invlpg](../intrinsics/invlpg.md)  
   
@@ -128,9 +129,9 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)  
   
- [_mm_extract_si64 _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)  
+ [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)  
   
- [_mm_insert_si64 _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)  
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)  
   
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)  
   
@@ -172,7 +173,7 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [__rdtscp](../intrinsics/rdtscp.md)  
   
- [_Readbarrier –](../intrinsics/readbarrier.md)  
+ [_ReadBarrier](../intrinsics/readbarrier.md)  
   
  [__readcr0](../intrinsics/readcr0.md)  
   
@@ -196,13 +197,13 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [__readpmc](../intrinsics/readpmc.md)  
   
- [_Readwritebarrier –](../intrinsics/readwritebarrier.md)  
+ [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)  
   
  [_ReturnAddress](../intrinsics/returnaddress.md)  
   
- [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)  
+ [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)  
   
- [_rotr8 _rotr16](../intrinsics/rotr8-rotr16.md)  
+ [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)  
   
  [__segmentlimit](../intrinsics/segmentlimit.md)  
   
@@ -262,7 +263,7 @@ Následující části popisují specifické pro společnost Microsoft vnitřní
   
  [__wbinvd](../intrinsics/wbinvd.md)  
   
- [_Writebarrier –](../intrinsics/writebarrier.md)  
+ [_WriteBarrier](../intrinsics/writebarrier.md)  
   
  [__writecr0](../intrinsics/writecr0.md)  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7c2c20604b2630b5125da839b275170559c08e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc867d0a39a3e3869403c359e2d19a258366b679
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-reference"></a>Standardní knihovna C++ – referenční dokumentace
 Programu C++ můžete volat na velký počet funkcí z této vyhovující provedení standardní knihovny jazyka C++. Tyto funkce provádí základní služby jako vstup a výstup a poskytují efektivní implementace často používaných operací.  
@@ -30,7 +31,7 @@ Programu C++ můžete volat na velký počet funkcí z této vyhovující proved
  Další informace o běhové knihovny jazyka Visual C++, najdete v části [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)  
+ [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)  
  Poskytuje přehled implementace Microsoft standardní knihovny C++.  
   
  [iostream – programování](../standard-library/iostream-programming.md)  

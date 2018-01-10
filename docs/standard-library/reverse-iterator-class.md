@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 810f50a17dcdef3aac53462ac059a4aedd4343a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator – třída
 Třída šablony je adaptér iterátoru popisující objekt zpětného iterátoru, který se chová jako obousměrný iterátor nebo iterátor s náhodným přístupem, pouze obráceně. Umožňuje zpětné procházení rozsahu.  
@@ -79,7 +80,7 @@ class reverse_iterator
   
 |||  
 |-|-|  
-|[základní](#base)|Obnoví základní iterator z jeho `reverse_iterator`.|  
+|[base](#base)|Obnoví základní iterator z jeho `reverse_iterator`.|  
   
 ### <a name="operators"></a>Operátory  
   
@@ -981,5 +982,5 @@ int main( )
 ## <a name="see-also"></a>Viz také  
  [\<iterator >](../standard-library/iterator.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

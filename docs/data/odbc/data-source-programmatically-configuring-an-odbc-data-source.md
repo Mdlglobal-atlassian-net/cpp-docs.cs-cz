@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd401acedbdfd8928ab3b2b085ce02595bdaa13b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
 Toto téma vysvětluje, jak můžete nakonfigurovat připojení ODBC (Open Database) názvy zdrojů dat prostřednictvím kódu programu. To vám dává možnost pro přístup k datům bez vynucení uživateli explicitně zadat názvy zdrojů dat pomocí Správce rozhraní ODBC nebo jiné programy.  
@@ -32,7 +35,7 @@ Toto téma vysvětluje, jak můžete nakonfigurovat připojení ODBC (Open Datab
   
  Při vytváření zdroje dat Microsoft Access ODBC prostřednictvím Správce rozhraní ODBC, máte dvě možnosti: můžete vybrat existující soubor .mdb nebo můžete vytvořit nový soubor .mdb. Neexistuje žádný programový způsob vytváření souboru .mdb z vaší aplikace knihovny MFC rozhraní ODBC. Proto pokud vaše aplikace vyžaduje umístění dat do zdroje dat Microsoft Access (.mdb soubor), pravděpodobně budete chtít mít prázdný .mdb soubor, který můžete použít nebo zkopírujte kdykoli budete ho potřebovat.  
   
- Mnoho SŘBD však umožňuje programové vytvoření zdroje dat.. Některé zdroje dat udržovat specifikaci adresáře pro databáze. To znamená, adresář je zdroj dat a každá tabulka v rámci zdroj dat je uložen v samostatném souboru (v případě dBASE, každá tabulka je soubor .dbf). Ovladače jiných ODBC databází, jako je například Microsoft Access a SQL Server, vyžadují, že některé určitá kritéria splnit před navázáním zdroj dat. Například pokud používáte ovladač ODBC systému SQL Server, budete muset mít navázat počítače serveru SQL Server.  
+ Mnoho SŘBD však umožňuje programové vytvoření zdroje dat. Některé zdroje dat udržovat specifikaci adresáře pro databáze. To znamená, adresář je zdroj dat a každá tabulka v rámci zdroj dat je uložen v samostatném souboru (v případě dBASE, každá tabulka je soubor .dbf). Ovladače jiných ODBC databází, jako je například Microsoft Access a SQL Server, vyžadují, že některé určitá kritéria splnit před navázáním zdroj dat. Například pokud používáte ovladač ODBC systému SQL Server, budete muset mít navázat počítače serveru SQL Server.  
   
 ##  <a name="_core_sqlconfigdatasource_example"></a>Příklad SQLConfigDataSource  
  Následující příklad používá **:: SQLConfigDataSource** funkce rozhraní API ODBC vytvořit nový zdroj dat aplikace Excel volána nový zdroj dat aplikace Excel:  

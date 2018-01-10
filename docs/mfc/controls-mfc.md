@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d70249536945d6426598eade2ecb50965221727e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controls-mfc"></a>Ovládací prvky (MFC)
 Ovládací prvky jsou objekty, které mohou uživatelé komunikovat s zadejte nebo pracovat s daty. Běžně zobrazují se v dialogových oknech nebo na panely nástrojů. Toto téma rodiny obsahuje tři hlavní typy ovládacích prvků:  
@@ -73,7 +74,7 @@ Ovládací prvky jsou objekty, které mohou uživatelé komunikovat s zadejte ne
 |[záhlaví](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Tlačítko, které se zobrazí nad sloupec textu; Šířka textu zobrazí ovládací prvky|Ano|  
 |[Klávesová zkratka](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, které umožňuje uživateli vytvořit "klávesové zkratky" k provedení akce rychle|Ano|  
 |[seznam obrázků](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Kolekce obrázků použitých ke správě velkého objemu ikony nebo bitmapy (seznamu obrázků není skutečně ovládacího prvku; podporuje seznamy používají ovládací prvky)|Ano|  
-|[seznam](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, které se zobrazí seznam textu pomocí ikony|Ano|  
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, které se zobrazí seznam textu pomocí ikony|Ano|  
 |Pole se seznamem|[Clistbox –](../mfc/reference/clistbox-class.md)|Pole, která obsahuje seznam řetězců|Ne|  
 |[měsíční kalendář](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Ovládací prvek, který zobrazí informace o datu|Ano|  
 |[průběh](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, které označuje průběh dlouhé operace|Ano|  

@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bae9c7d8e50ca12767e5baed436912f04daafd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
@@ -46,7 +49,7 @@ Vzhledem k tomu, že 2011 Microsoft má zarovnán na ODBC jako standardní pro n
 
 [13.1 ovladač ODBC pro SQL Server – vydání Windows](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) nejnovější ovladače ODBC pro C/C++ na základě aplikací poskytuje robustní data přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database. Poskytuje podporu pro funkce, včetně vždycky šifrovaná, Azure Active Directory a skupiny dostupnosti AlwaysOn. Dostupné taky pro systému MacOS a Linux.     
  
-[SQL Server Native Client](https://msdn.microsoft.com/library/ms130892.aspx) SQL Server Native Client je samostatné data přístupu aplikace programovací rozhraní (API), použít pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 prostřednictvím SQL Server 2014. Nové aplikace by měly používat 13.1 ovladač ODBC systému SQL Server.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client je samostatné data přístupu aplikace programovací rozhraní (API), použít pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 prostřednictvím SQL Server 2014. Nové aplikace by měly používat 13.1 ovladač ODBC systému SQL Server.
 
 [Microsoft Azure C a C++ Developer Center](https://azure.microsoft.com/develop/cpp/) Azure usnadňuje vytváření aplikací C++ s vyšší flexibilitu, škálovatelnost a spolehlivost pomocí nástrojů, které vám rádi.    
 

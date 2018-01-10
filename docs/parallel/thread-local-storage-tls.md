@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64cf1893e2ecaf2b3deda66bd954166a44e7109d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
 Místní úložiště vláken (TLS) je metoda, pomocí kterého můžete přidělit každé vlákno daného procesu umístění pro uložení dat specifické pro vlákno. Dynamicky vázaná (runtime) specifické pro vlákno data jsou podporována prostřednictvím rozhraní API TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), a [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Další informace o tom, jak implementují lokální úložiště vláken v systému Windows najdete v tématu [lokální úložiště vláken (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 a kompilátor Visual C++ nyní podporují staticky vázané (čas načítání) dat pro vlákno kromě existující implementace rozhraní API.  
@@ -118,4 +119,4 @@ __declspec( thread ) int tls_i = 1;
 -   V operačních systémech Windows před [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], `__declspec`(vlákno) má určitá omezení. Pokud se knihovna DLL deklaruje všechny dat nebo objekt jako `__declspec`(vlákno), může to způsobit chybu ochrany případě dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), způsobuje selhání systému vždy, když kód odkazuje `__declspec`dat (vlákno). Vzhledem k tomu prostor globální proměnné vlákna v době běhu, velikost tohoto prostoru je založena na výpočtu požadavky na aplikace a požadavky na všechny knihovny DLL, které jsou staticky propojené. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro lokální proměnné vláken deklarovat s `__declspec`(vlákno). Pomocí rozhraní API TLS, jako například [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), v knihovně DLL přidělit TLS knihovnu DLL může být načtena s `LoadLibrary`.  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a Win32](../parallel/multithreading-with-c-and-win32.md)   
+ [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)   

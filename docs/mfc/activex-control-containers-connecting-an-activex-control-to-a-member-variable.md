@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 140be0aaaf614796d85fe30a33f93058cafafa57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2248dd68b0ecc7471899552bcb7b0394f3f9f363
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontejnery ovládacích prvků ActiveX: Připojení ovládacího prvku ActiveX k členské proměnné
 Nejjednodušší způsob, jak přístup ovládacího prvku ActiveX v rámci jeho kontejnerové aplikace ovládacího prvku se má přidružit ovládacího prvku ActiveX k členské proměnné dialogu třídy, která bude obsahovat ovládacího prvku.  
@@ -49,5 +50,5 @@ Nejjednodušší způsob, jak přístup ovládacího prvku ActiveX v rámci jeho
 6.  Klikněte na tlačítko **Dokončit** potvrďte vybrané možnosti a ukončete Průvodce přidáním členské proměnné.  
   
 ## <a name="see-also"></a>Viz také  
- [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)
+ [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

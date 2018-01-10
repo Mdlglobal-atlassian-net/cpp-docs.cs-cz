@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fc9b085a77cb05f8e7bdd573df32125dd179c72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dc6b3d7cc8e80eaa24c2e2dd9b4e23e79dfb09f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Povolování a zakazování služeb pro zprostředkovatele
 Jednotlivé služby rozhraní OLE DB můžete povolit nebo zakázat ve výchozím nastavení pro všechny aplikace, která přistupují k jednoho zprostředkovatele. To se provádí přidáním **OLEDB_SERVICES** položky registru zprostředkovatele je CLSID, s `DWORD` hodnota určuje služby, které chcete povolit nebo zakázat, jak je znázorněno v následující tabulce.  
@@ -35,4 +38,4 @@ Jednotlivé služby rozhraní OLE DB můžete povolit nebo zakázat ve výchozí
 |Žádné agregace všechny služby jsou zakázány|\<chybí klíč >|  
   
 ## <a name="see-also"></a>Viz také  
- [Povolení a zákaz služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+ [Povolení a zakázání služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

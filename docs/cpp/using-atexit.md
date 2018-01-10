@@ -15,14 +15,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 271dee456d47f9ef6286b4a9543583145f69bc41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7aec0e5aedb2d17e7d22b4f480eaef2be26413fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-atexit"></a>Používání výrazu atexit
 Pomocí [atexit](../c-runtime-library/reference/atexit.md) funkce, můžete zadat ukončení zpracování funkce, která spustí před ukončení programu. Před spuštěním funkce zpracování výstupu nejsou zničeny žádné globální statické objekty inicializované před voláním funkce `atexit`.  
   
 ## <a name="see-also"></a>Viz také  
- [Důležité informace k ukončování další](../cpp/additional-termination-considerations.md)
+ [Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)

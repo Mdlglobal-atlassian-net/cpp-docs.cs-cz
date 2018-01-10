@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0c436a7fc1b7d567ed6cc684e76b46628de97d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientské a serverové aplikace. Mnoho nových aplikací se zapisují pro Internet, a jako technologie, možnosti prohlížeče a změnit možnosti zabezpečení, budou zapisovat nových typů aplikací. Spuštění prohlížeče na klientských počítačích, které umožňují přístup k Internetu a zobrazení stránky HTML, které obsahují text, grafiky, ovládací prvky ActiveX a dokumenty. Servery poskytují FTP, HTTP a gopher služby a spuštění aplikací rozšíření server použití rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytování dat na Internetu.  
@@ -42,13 +43,13 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [Třídy MFC související s Internetem](../mfc/internet-related-mfc-classes.md)  
+-   [Třídy MFC související s internetem](../mfc/internet-related-mfc-classes.md)  
   
 -   [Internetové informace podle témat](../mfc/internet-information-by-topic.md)  
   
 -   [Internetové informace podle úloh](../mfc/internet-information-by-task.md)  
   
--   [Technologie Active na Internetu](../mfc/active-technology-on-the-internet.md)  
+-   [Technologie Active na internetu](../mfc/active-technology-on-the-internet.md)  
   
 -   [WinInet – základy](../mfc/wininet-basics.md)  
   
@@ -58,11 +59,11 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
   
 ## <a name="related-sections"></a>Související oddíly  
   
--   [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md)  
+-   [Ovládací prvky ActiveX na internetu](../mfc/activex-controls-on-the-internet.md)  
   
--   [Aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md)  
+-   [Aktivní dokumenty na internetu](../mfc/active-documents-on-the-internet.md)  
   
--   [Asynchronní Monikery na Internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)  
   
@@ -76,14 +77,14 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
   
 -   [Zabezpečení Internetu](../mfc/internet-security-cpp.md)  
   
--   [ATL – podpora pro ovládací prvky jazyka DHTML](../atl/atl-support-for-dhtml-controls.md)  
+-   [ATL – podpora ovládacích prvků DHTML](../atl/atl-support-for-dhtml-controls.md)  
   
 ##  <a name="_core_web_sites_for_more_information"></a>Weby pro další informace  
- Další informace o technologii Microsoft Internet najdete v tématu [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/linkid=56322) webu. (Odkazy mohou bez předchozího oznámení změnit.)  
+ Další informace o technologii Microsoft Internet najdete v tématu [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) webu. (Odkazy mohou bez předchozího oznámení změnit.)  
   
  Tento web pro vývojáře, obsahuje informace o používání vývojové nástroje společnosti Microsoft a technologie a nejdůležitější zprávy o poslední a nadcházející konferencí. Z této stránky můžete přejít na mnoho související vývojáře webů, včetně .NET a centra pro vývojáře XML. Můžete také stáhnout sady SDK beta a ukázky.  
   
- [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/linkid=37125) publikuje specifikace jazyka HTML, HTTP, CGI a další technologie webu.  
+ [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specifikace jazyka HTML, HTTP, CGI a další technologie webu.  
   
 ##  <a name="_core_more_internet_help"></a>Další nápovědu k Internetu  
  OLE část sady Windows SDK obsahuje další informace o programování OLE. Tyto informace obsahuje podrobné informace o používání funkce Win32 WinInet přímo, nikoli prostřednictvím třídy MFC. Obsahuje také základní informace o technologiích Internetu.  

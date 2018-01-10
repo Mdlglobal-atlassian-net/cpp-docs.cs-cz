@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ebf8d806b5decdbc3e694fc62146a55ef53151c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d22f493a582b6ef09615f94c7b321a7cc535e5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke
 Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -30,7 +33,7 @@ Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze sp
 ## <a name="example"></a>Příklad  
  Následující příklad kódu používá Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) funkce načíst aktuální rozlišení obrazovky v pixelech.  
   
- Pro funkce, které používají pouze vnitřní typy jako argumenty a návratové hodnoty nejsou vyžadované žádné další kroky. Jiné datové typy, jako jsou ukazatele na funkce, pole a struktury, vyžadují další atributy, které zajistí řádné zařazování dat..  
+ Pro funkce, které používají pouze vnitřní typy jako argumenty a návratové hodnoty nejsou vyžadované žádné další kroky. Jiné datové typy, jako jsou ukazatele na funkce, pole a struktury, vyžadují další atributy, které zajistí řádné zařazování dat.  
   
  I když to není nutné, je vhodné zajistit P/Invoke deklarace statické členy třídy hodnot, takže neexistují v globálním oboru názvů, jak je ukázáno v tomto příkladu.  
   
@@ -60,4 +63,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+ [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64b9c77d8c851364790d61e7844b46f25880168c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3de873cf70bafa77d7c8f4b05c70ce211b2c2258
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI – makro
 Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní pro obslužnou rutinu aktualizace příkaz v příkazu cílový objekt. Se automaticky připojí ID objektu uživatelské rozhraní `ON_UPDATE_COMMAND_UI` makro a vytvořit obslužnou rutinu v objektu, která zpracuje aktualizaci. V tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md) Další informace.  
@@ -35,5 +36,5 @@ Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní 
  Všechny rutiny, zobrazí funkce, jako **afx_msg** – klíčové slovo. Jako všechny obslužné rutiny aktualizace, jak dlouho trvá jeden argument, odkazy `CCmdUI` objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
+ [Postupy: Aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
 

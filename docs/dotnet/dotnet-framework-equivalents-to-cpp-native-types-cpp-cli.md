@@ -14,23 +14,26 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97d12adb89baddfbfdc25e6b758a3f659e6973d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f5362b2c3e20a34249b9410951722222b93dce0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>.NET Framework – Ekvivalenty k nativním typům C++ (C++/CLI)
 V následující tabulce jsou uvedeny klíčová slova pro vestavěné typy Visual C++, které jsou aliasy předdefinovaných typů v **systému** oboru názvů.  
   
 |Typ Visual C++|Typ rozhraní .NET Framework|  
 |-----------------------|-------------------------|  
-|**BOOL**|**System.Boolean**|  
+|**bool**|**System.Boolean**|  
 |**podepsané char** (viz [/J](../build/reference/j-default-char-type-is-unsigned.md) informace)|**System.SByte**|  
 |**unsigned char**|**System.Byte**|  
 |**wchar_t**|**System.Char**|  
 |**dvojité** a **long double**|**System.Double**|  
-|**plovoucí desetinná čárka**|**System.Single**|  
+|**float**|**System.Single**|  
 |**int**, **podepsané int**, **dlouho**, a **podepsané dlouho**|**System.Int32**|  
 |**nepodepsané int** a **dlouho bez znaménka**|**System.UInt32**|  
 |**__int64** a **podepsané __int64**|**System.Int64**|  
@@ -40,4 +43,4 @@ V následující tabulce jsou uvedeny klíčová slova pro vestavěné typy Visu
 |**void**|**System.Void**|  
   
 ## <a name="see-also"></a>Viz také  
- [Spravované typy (C + +/ CLI)](../dotnet/managed-types-cpp-cli.md)
+ [Spravované typy (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

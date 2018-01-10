@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db15abf9aca532b8c0fb712733c4e87350b58747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Postupy: Použití regulárních výrazů pro ověření formátu dat (C++/CLI)
 Následující příklad kódu ukazuje použití regulárních výrazů k ověření formátování řetězce. V následujícím příkladu kódu řetězec musí obsahovat platné telefonní číslo. Následující příklad kódu používá řetězec "\d{3}-\d{3}-\d{4}" k označení, že každé pole, představuje platné telefonní číslo. "D" v řetězci označuje číslici a argument po každém "d" označuje počet číslic, které musí být přítomen. Číslo je v tomto případě musí být odděleny pomlčky.  
@@ -67,4 +70,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Regulární výrazy rozhraní .NET framework](/dotnet/standard/base-types/regular-expressions)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

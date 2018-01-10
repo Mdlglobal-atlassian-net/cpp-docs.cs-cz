@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)
 Aktualizace [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány během transakcí prostřednictvím vyrovnávací paměti (stejnou metodu použít mimo transakce). Pole datových členů sady záznamů slouží jako vyrovnávací paměť úprav obsahující aktuální záznam, který zálohuje sady záznamů dočasně během `AddNew` nebo **upravit**. Během **odstranit** operaci, aktuální záznam se nezálohuje společně v rámci transakce. Další informace o upravené vyrovnávací paměti a jak ukládat aktualizace na aktuální záznam najdete v tématu [sada záznamů: Jak sady záznamů aktualizace záznamů (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

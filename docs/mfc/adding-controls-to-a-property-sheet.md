@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5623f95a77710e0ffbfa8a444de6f569f24105e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2acbbed1a253a502aea8b19af6fd16ddb343e3ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Přidání ovládacích prvků do seznamu vlastností
 Ve výchozím nastavení seznam vlastností přiděluje oblast okna pro stránky vlastností, pořadové číslo a tlačítka OK, zrušit a použít. (Nemodálního seznamu vlastností nemá OK, zrušte a použít tlačítka.) Další ovládací prvky můžete přidat do seznamu vlastností. Například lze přidat okno náhledu napravo od oblasti vlastnost stránky se uživateli zobrazí, co bude aktuální nastavení vypadat Pokud použijí pro externího objektu.  
@@ -30,4 +31,4 @@ Ve výchozím nastavení seznam vlastností přiděluje oblast okna pro stránky
 ## <a name="see-also"></a>Viz také  
  [Seznam vlastností](../mfc/property-sheets-mfc.md)   
  [CPropertyPage – třída](../mfc/reference/cpropertypage-class.md)   
- [Cpropertysheet – třída](../mfc/reference/cpropertysheet-class.md)
+ [CPropertySheet – třída](../mfc/reference/cpropertysheet-class.md)

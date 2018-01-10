@@ -19,14 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e2268e110df7a5111f6ccb0fa4dd4d3a2f4a9b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3cf8a75a416f03fed1ae7e0deb9118b3c40ea5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
-MyProviderSess.H obsahuje prohlášení a implementací objektu session OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi příjemcem a zprostředkovatelem. Několik souběžných relací může být otevřené pro jeden zdroj dat.. V seznamu dědičnosti `CMyProviderSession` následuje:  
+MyProviderSess.H obsahuje prohlášení a implementací objektu session OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi příjemcem a zprostředkovatelem. Několik souběžných relací může být otevřené pro jeden zdroj dat. V seznamu dědičnosti `CMyProviderSession` následuje:  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -48,4 +51,4 @@ class ATL_NO_VTABLE CMyProviderSession :
  Specifikace OLE DB vyžaduje, aby implementace zprostředkovatele **IDBSchemaRowset** typy sady řádků schématu podporu tři rozhraní: **DBSCHEMA_COLUMNS**, **DBSCHEMA_PROVIDER_TYPES** , a `DBSCHEMA_TABLES`. Průvodce generuje implementace pro každou sadu řádků schématu. Každá třída je vygenerovat průvodcem obsahuje `Execute` metoda. V tomto `Execute` metodu, můžete se vrátit data poskytovatele, o které tabulky, sloupce a typy dat, které podporujete. Tato data se obvykle označuje v době kompilace.  
   
 ## <a name="see-also"></a>Viz také  
- [Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)
+ [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

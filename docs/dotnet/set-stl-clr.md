@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cafab92b157fb0da39471d96a23a69e2ce209e5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `set` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element.  
@@ -64,7 +67,7 @@ template<typename Key>
 |[set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
 |[set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)|Typ klíče řazení|  
-|[set::Reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[set::reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[set::reverse_iterator (STL/CLR)](../dotnet/set-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[set::size_type (STL/CLR)](../dotnet/set-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -74,13 +77,13 @@ template<typename Key>
 |---------------------|-----------------|  
 |[set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[set::Count (STL/CLR)](../dotnet/set-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[set::Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[set::count (STL/CLR)](../dotnet/set-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[set::Erase (STL/CLR)](../dotnet/set-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[set::Find (STL/CLR)](../dotnet/set-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
-|[set::Insert (STL/CLR)](../dotnet/set-insert-stl-clr.md)|Přidá prvky.|  
+|[set::erase (STL/CLR)](../dotnet/set-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[set::find (STL/CLR)](../dotnet/set-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[set::insert (STL/CLR)](../dotnet/set-insert-stl-clr.md)|Přidá prvky.|  
 |[set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[set::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
 |[set::make_value (STL/CLR)](../dotnet/set-make-value-stl-clr.md)|Vytvoří objekt hodnoty.|  
@@ -95,13 +98,13 @@ template<typename Key>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[set::Operator = (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Určuje, zda `set` objekt není rovno jiné `set` objektu.|  
-|[Operator < (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)|Určuje, zda `set` objektu je menší než jiná `set` objektu.|  
-|[Operator < = (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Určuje, zda `set` objektu je menší než nebo rovna do jiného `set` objektu.|  
-|[Operator == (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)|Určuje, zda `set` objekt rovná jiné `set` objektu.|  
-|[Operator > (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)|Určuje, zda `set` je větší než druhý objekt `set` objektu.|  
-|[Operator > = (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Určuje, zda `set` objekt je větší než nebo rovna hodnotě jiného `set` objektu.|  
+|[set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Určuje, zda `set` objekt není rovno jiné `set` objektu.|  
+|[operator< (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)|Určuje, zda `set` objektu je menší než jiná `set` objektu.|  
+|[operator<= (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Určuje, zda `set` objektu je menší než nebo rovna do jiného `set` objektu.|  
+|[operator== (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)|Určuje, zda `set` objekt rovná jiné `set` objektu.|  
+|[operator> (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)|Určuje, zda `set` je větší než druhý objekt `set` objektu.|  
+|[operator>= (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Určuje, zda `set` objekt je větší než nebo rovna hodnotě jiného `set` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -154,4 +157,4 @@ template<typename Key>
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [nastavení](../dotnet/set-stl-clr.md)   
  [nastavení](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

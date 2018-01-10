@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d7eaeb62f3d8231d7b1a5bca503cd355f7a7aca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process"></a>zpracování
 Určuje, že proces spravované aplikace by měl používat jednu kopii určité globální proměnné, statické členské proměnné nebo statické místní proměnné sdílené ve všech doménách aplikace v procesu. Tento způsob primárně určený pro použití při kompilaci s **/CLR: čistý**, protože v rámci **/CLR: pure** na doménu aplikace se ve výchozím nastavení jsou globální a statické proměnné. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015. Při kompilaci s **/CLR**, globální a statické proměnné jsou podle procesu, ve výchozím nastavení (není potřeba použít `__declspec(process)`.  

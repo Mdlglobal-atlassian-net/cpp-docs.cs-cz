@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-object-model"></a>OLE DB – model objektů
 OLE DB objektový model obsahuje následující objekty nebo součásti. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupové objekty, se vztahují k práci s daty, jakmile se zobrazí.  
@@ -76,4 +79,4 @@ OLE DB objektový model obsahuje následující objekty nebo součásti. První 
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
- [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)
+ [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

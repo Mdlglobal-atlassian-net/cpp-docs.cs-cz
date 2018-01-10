@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55b44085024902c3edb30f222fa48441fc9e72ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8373435f1f97b6b2038e5769c853d521b906715
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Třídy související s ovládacími prvky pro úpravy s formátováním
 [Cricheditview –](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), a [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) třídy poskytují funkce ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) v kontextu na MFC document/view – architektura. `CRichEditView`udržuje textu a formátování vlastnosti textu. `CRichEditDoc`udržuje seznam položek OLE klienta, které jsou v zobrazení. `CRichEditCntrItem`poskytuje kontejner straně přístup k položce OLE klienta. Chcete-li upravit obsah `CRichEditView`, použijte [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) pro přístup k základní bohaté ovládacích prvků pro úpravy.  

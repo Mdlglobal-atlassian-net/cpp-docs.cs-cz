@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72201c20c2cc57705a96cdee2ec41dd3d63caac6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46012a265c1ecefa7af63f829be22e6132e036cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Přidání karet do ovládacího prvku karta
 Po vytvoření ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), přidat libovolný počet záložek, kolik potřebujete.  

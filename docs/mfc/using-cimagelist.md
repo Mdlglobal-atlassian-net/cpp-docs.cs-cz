@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5db9ede8dc87fcb6b32eb825efed3e028872b6ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 053e670b5a6d932c50e2f967ee38cf9191710ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cimagelist"></a>Používání atributu CImageList
 Seznam obrázků, reprezentována třída [CImageList](../mfc/reference/cimagelist-class.md), je kolekce stejnou velikost bitové kopie, z nichž každý lze odkazovat pomocí jeho index. Seznamy obrázků umožňují efektivně spravovat velké sady ikony nebo bitmapy. Obrázek seznamy není sami ovládací prvky, protože se nejedná o windows; však se používají s několika různých typů ovládacích prvků, včetně ovládacích prvcích seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), ovládací prvky stromové struktury ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a kartě ovládacích prvků ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
@@ -38,11 +39,11 @@ Seznam obrázků, reprezentována třída [CImageList](../mfc/reference/cimageli
   
 -   [Vykreslování obrázků ze seznamu obrázků](../mfc/drawing-images-from-an-image-list.md)  
   
--   [Překryvy obrázků v seznamech obrázků](../mfc/image-overlays-in-image-lists.md)  
+-   [Překryvy obrázků v seznamech obrázků](../mfc/image-overlays-in-image-lists.md)  
   
 -   [Přetahování obrázků ze seznamu obrázků](../mfc/dragging-images-from-an-image-list.md)  
   
--   [Informace o obrázku v seznamech obrázků](../mfc/image-information-in-image-lists.md)  
+-   [Informace o obrázku v seznamech obrázků](../mfc/image-information-in-image-lists.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae47ec92ecea46aba5f0e1bf144a34fd5532af9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Zjištění, které knihovny DLL je třeba redistribuovat
 
@@ -39,7 +40,7 @@ Jednotlivé redistributable knihovny DLL jsou také uvedené v instalaci sady Vi
 
 Chcete-li určit, které knihovny DLL, budete muset znovu distribuovat s vaší aplikací, seznam knihoven DLL, které závisí aplikace na shromažďování. Tyto podmínky jsou uvedeny normálně jako importovat knihovny vstupy linkeru. Některé knihovny, například vcruntime a univerzální C Runtime Library (UCRT), jsou zahrnuté ve výchozím nastavení. Pokud vaše aplikace nebo jeden z jeho závislosti používá LoadLibrary se dynamicky načíst knihovnu DLL, nemusí být uvedeny této knihovny DLL na vstupy pro linkeru. Je možné shromáždit seznam dynamicky načtené knihovny DLL ke spuštění Walkera závislosti (depends.exe) ve vaší aplikaci, jak je popsáno v [Principy závislostí aplikace Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Bohužel se tento nástroj je zastaralá a může hlásit, že nelze najít určité knihovny DLL.
 
-Když máte seznam závislosti, porovnejte, je do seznamu propojené v souboru Redist.txt souboru v instalačním adresáři nástroje sady Microsoft Visual Studio, nebo seznam REDISTRIBUCE, na"redistributable knihoven DLL, který se odkazuje v části"Soubory distribuovatelného kódu" Microsoft licenčních podmínek pro Software pro vaší kopie Visual Studio. Visual Studio 2017, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2017 (zahrnuje nástrojů, rozšíření a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/?LinkId=823098). Visual Studio 2015, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2015 a Microsoft Visual Studio 2015 SDK (zahrnuje nástroje a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/?LinkId=799794). Pro Visual Studio 2013, v seznamu je k dispozici online v [distribuovatelného kódu pro Microsoft Visual Studio 2013 a Microsoft Visual Studio 2013 SDK](http://go.microsoft.com/fwlink/p/?LinkId=313603).
+Když máte seznam závislosti, porovnejte, je do seznamu propojené v souboru Redist.txt souboru v instalačním adresáři nástroje sady Microsoft Visual Studio, nebo seznam REDISTRIBUCE, na"redistributable knihoven DLL, který se odkazuje v části"Soubory distribuovatelného kódu" Microsoft licenčních podmínek pro Software pro vaší kopie Visual Studio. Visual Studio 2017, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2017 (zahrnuje nástrojů, rozšíření a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/p/?linkid=823098). Visual Studio 2015, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2015 a Microsoft Visual Studio 2015 SDK (zahrnuje nástroje a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/p/?linkid=799794). Pro Visual Studio 2013, v seznamu je k dispozici online v [distribuovatelného kódu pro Microsoft Visual Studio 2013 a Microsoft Visual Studio 2013 SDK](http://go.microsoft.com/fwlink/p/?LinkId=313603).
 
 V sadě Visual Studio verze před Visual Studio 2015, byl zahrnut jako redistributable knihovny DLL, v msvc C Runtime Library (CRT)*verze*.dll. Spouštění v sadě Visual Studio 2015, byly funkce v CRT rozdělili do vcruntime a UCRT. UCRT je nyní součástí systému ve Windows 10 spravovaná službou Windows Update. Je k dispozici pro všechny operační systémy Windows 10. Chcete-li nasadit aplikaci na starší operační systémy, musíte znovu distribuovat UCRT také. Starší verzi aplikace UCRT je zahrnuté v sadě Visual Studio redistribuovatelné soubory, které je nainstalován pouze v operačních systémech starších než Windows 10, a to pouze pokud je již nainstalována žádná verze UCRT. Instalovat verzi UCRT pro systémy nižší úrovně jako balíček aktualizace produktu Microsoft System, naleznete v části [Windows 10 Universal C Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=48234) na webu Microsoft Download Center.
 

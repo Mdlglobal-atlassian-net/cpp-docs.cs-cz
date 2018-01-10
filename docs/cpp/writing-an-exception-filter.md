@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33492c0cdab2429f1d8ccfc0ad50247cd457a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-filter"></a>Zápis filtru výjimek
 Výjimku lze zpracovat skokem do úrovně obslužné rutiny výjimky nebo pokračováním provádění. Místo použití kód obslužné rutiny výjimek pro zpracování výjimky a návratem, můžete použít *filtru* vyčištění problém a pak vrácením -1 obnovení normálního toku bez vymazání zásobníku.  
@@ -87,4 +88,4 @@ __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
   
 ## <a name="see-also"></a>Viz také  
  [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)   
- [Strukturované zpracování (C/C++) výjimek](../cpp/structured-exception-handling-c-cpp.md)
+ [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

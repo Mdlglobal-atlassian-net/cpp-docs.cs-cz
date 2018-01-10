@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-each-in"></a>for each, in
 Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k dispozici v projektech v jazyce C++/CLI a v nativním jazyce C++. Jeho použití se však nedoporučuje. Zvažte použití standardního [na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md) místo.  
@@ -63,13 +66,13 @@ Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k di
   
  Další informace:  
   
--   [Iterování přes kolekci knihoven C++ Standard pomocí pro každou](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
+-   [Iterace nad kolekcí STL C++ s použitím výrazu for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
   
--   [Postupy: iterace v polích s výrazem for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
+-   [Postupy: Iterace v polích s použitím výrazu for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
   
--   [Postupy: iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+-   [Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
   
--   [Postupy: iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
+-   [Postupy: Iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
   
@@ -105,7 +108,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 abcd  
@@ -154,7 +157,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 abcd  
@@ -163,4 +166,4 @@ Testing
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

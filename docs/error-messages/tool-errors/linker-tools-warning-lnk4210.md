@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31d416638b00a5d517fe49526b49ef130a2e9d31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4210"></a>Upozornění linkerů LNK4210  
   
@@ -46,4 +47,4 @@ Chcete-li tento problém vyřešit, zkuste jednu z těchto možností:
 -   Pokud váš projekt je sestaven pomocí/Entry a/Entry předaný funkci jiné než `_DllMainCRTStartup`, musí volat funkci `_CRT_INIT` inicializace CRT. Toto volání samostatně není dostatečné, pokud vaše knihovna DLL používá /GS, vyžaduje statické inicializátory nebo je volána v rámci MFC nebo ATL kód. V tématu [knihovny DLL a Visual C++ chování běhové knihovny](../../build/run-time-library-behavior.md) Další informace.  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)
+ [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)

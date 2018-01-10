@@ -28,11 +28,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ec68a6179cd74020638aa895028942bc76e21f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7bcaabb9f0a696a5eb7b01c4bd78757681e4e6a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Čistý a ověřitelný kód (C++/CLI)
 Pro programování v rozhraní .NET podporuje aplikace Visual C++ vytváření tří různých typů komponent a aplikací: smíšené, čisté a ověřitelné. Všechny tři jsou k dispozici prostřednictvím [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru.  
@@ -40,19 +43,19 @@ Pro programování v rozhraní .NET podporuje aplikace Visual C++ vytváření t
 ## <a name="remarks"></a>Poznámky  
  Další informace o ověřitelných sestaveních najdete v tématu:  
   
--   [Smíšené, čisté a ověřitelné porovnání funkcí (C + +/ CLI)](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
+-   [Smíšené, čisté a ověřitelné porovnání funkcí (C++/CLI)](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
   
 -   [Postupy: přechod na/CLR: pure (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
   
--   [Postupy: Vytvoření ověřitelných projektů jazyka C++ (C + +/ CLI)](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
+-   [Postupy: Vytvoření ověřitelných projektů jazyka C++ (C++/CLI)](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
   
 -   [Postupy: migrace na/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)  
   
--   [Použití ověřitelných sestavení se serverem SQL Server (C + +/ CLI)](../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md)  
+-   [Použití ověřitelných sestavení s SQL Serverem (C++/CLI)](../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md)  
   
 -   [Osvědčené postupy zabezpečení](../security/security-best-practices-for-cpp.md)  
   
--   [Převod projektů ze smíšeného režimu do čistého IL](../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md)  
+-   [Převod projektů ze smíšeného režimu do čistého IL (Intermediate Language)](../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md)  
   
 ## <a name="mixed-clr"></a>Smíšená (/ clr)  
  Smíšená sestavení (Kompilovat s **/CLR**), obsahuje obě nespravované a spravované části, což jim umožňuje používat funkce rozhraní .NET, ale stále obsahuje nespravovaný kód. To umožňuje aplikací a součástí aktualizovat bez nutnosti, že se celý projekt přepsaná použití funkcí rozhraní .NET. Pomocí Visual C++ kombinovat spravovanými a nespravovanými kódu tímto způsobem se nazývá zprostředkovatele komunikace C++. Další informace najdete v tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md).  
@@ -108,4 +111,4 @@ Pro programování v rozhraní .NET podporuje aplikace Visual C++ vytváření t
 >  Existuje jedna situace kódování, která bude úspěšně zkompilována, ale povede k neověřitelnému sestavení: volání virtuální funkce instancí objektu pomocí operátoru pro rozlišení oboru.  Příklad: `MyObj -> A::VirtualFunction();`.  
   
 ## <a name="see-also"></a>Viz také  
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

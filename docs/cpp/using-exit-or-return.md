@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 666f9c5cbb111e90b0902ab6ec0954355e5678dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f5c9fdb17811206732811db4e27006dc5e0ed84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-exit-or-return"></a>Používání příkazů exit nebo return
 Při volání **ukončete** nebo spuštění `return` příkaz z **hlavní**, statické objekty jsou zničen v obráceném pořadí jejich inicializace. Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.  
@@ -78,4 +79,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Důležité informace k ukončování další](../cpp/additional-termination-considerations.md)
+ [Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)

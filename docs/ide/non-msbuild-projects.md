@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otevřete složku projektů v jazyce Visual C++
 Visual Studio 2017 zavádí funkci "Otevřete složku", která umožňuje otevřete složku zdrojových souborů a okamžitě psaní s podporou pro technologii IntelliSense, procházení, refaktoring, ladění a tak dále. Jsou načteny žádné soubory .sln nebo VCXPROJ; v případě potřeby můžete zadat vlastní úlohy a také sestavení a spuštění parametry prostřednictvím jednoduchého .json soubory. Používá technologii otevřít složku, Visual C++ teď podporuje pouze přijít kolekcí souborů, ale také prakticky jakékoli sestavení systému, včetně CMake, expertem, QMake (pro projekty RT), gyp, SCons, Gradle, Buck, zkontrolujte a další. 
@@ -229,5 +230,5 @@ Pokud chcete zadat další argumenty, stačí přidat je do `args` pole JSON, ja
 Při ukládání tohoto souboru, nová konfigurace se zobrazí v rozevírací nabídce ladění cíl a můžete vybrat tak, aby ladicí program. Můžete vytvářet konfigurace mnoho ladění, jak se vám líbí, pro libovolný počet spustitelné soubory. Pokud vyberete **F5** nyní bude ladicí program spustit a stiskněte tlačítko žádné zarážek mohou být již nastavena. Všechny známé ladicího programu a jejich funkce jsou nyní k dispozici.
 
 ## <a name="see-also"></a>Viz také
-[IDE a nástrojů pro vývoj Visual C++](ide-and-tools-for-visual-cpp-development.md)
+[Integrované vývojové prostředí a nástroje pro vývoj v jazyce Visual C++](ide-and-tools-for-visual-cpp-development.md)
 

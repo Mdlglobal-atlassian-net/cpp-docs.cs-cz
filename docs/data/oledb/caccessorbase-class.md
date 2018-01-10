@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9122b9dde98dfa556855e419fcc62707527ccd18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase – třída
 Všechny přístupové objekty v šablonách technologie OLE DB odvozovat z této třídy. `CAccessorBase`umožňuje jedné sady řádků ke správě více přístupových objektů. Poskytuje také vazby pro parametry a výstupní sloupce.  
@@ -47,4 +50,4 @@ Všechny přístupové objekty v šablonách technologie OLE DB odvozovat z tét
   
 ## <a name="see-also"></a>Viz také  
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

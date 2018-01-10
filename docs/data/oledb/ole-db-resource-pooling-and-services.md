@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b3500c90455c7f180f16eae3c56433f57d0492
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d3d9ddba2039c1b4445bdb8d4ee77e9a68d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Sdružování prostředků OLE DB a služby
 Pro práci s sdružování OLE DB nebo s jakoukoli službu, technologie OLE DB, musí podporovat poskytovatel agregace všech objektů. Jde o požadavek OLE DB 1.5 nebo novější zprostředkovatele. Je důležité pro využívání služby. Zprostředkovatelé, kteří nepodporují agregace nelze ve fondu a jsou k dispozici žádné další služby.  

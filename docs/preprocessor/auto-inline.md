@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb1a36766f8472b6543e8061d0d2566071f47dc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46a1ca697e12a5abe9745a558abf20b73fef8184
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoinline"></a>auto_inline
 Vyloučí všechny funkcí definovaných v rozsahu, kde **vypnout** je zadán z se nepovažují za kandidáty pro automatické vložené rozšíření.  
@@ -39,4 +40,4 @@ Vyloučí všechny funkcí definovaných v rozsahu, kde **vypnout** je zadán z 
  Použít **auto_inline –** – Direktiva pragma, umístěte ho před a okamžitě po (ne ve) definici funkce. Direktiva pragma se projeví u první definice funkce poté, co je direktiva pragma zobrazena.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

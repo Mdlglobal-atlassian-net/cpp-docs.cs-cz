@@ -21,11 +21,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cff5256d94593959c280614858cdde8be3dee9f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflection-ccli"></a>Reflexe (C++/CLI)
 Reflexe umožňuje známé datové typy na modulu runtime. Reflexe umožňuje výčet datových typů v daném sestavení a členy daného typu třídy nebo hodnota může být zjištěny. To platí bez ohledu na to, jestli byl typ známý nebo je odkazované v době kompilace. Díky tomu reflexe užitečná pro vývoj a nástroje pro správu kódu.  
@@ -38,9 +41,9 @@ Reflexe umožňuje známé datové typy na modulu runtime. Reflexe umožňuje v�
   
  Témata v této části:  
   
--   [Postupy: implementace architektury komponenty modulu Plugin pomocí reflexe (C + +/ CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
+-   [Postupy: Implementace architektury komponenty modulu plugin pomocí reflexe (C++/CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
   
--   [Postupy: výčet datových typů v sestaveních pomocí reflexe (C + +/ CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
+-   [Postupy: Výčet datových typů v sestaveních pomocí reflexe (C++/CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
   
  Další informace najdete v tématu [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
   
@@ -233,4 +236,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

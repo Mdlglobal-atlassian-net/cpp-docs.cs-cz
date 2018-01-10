@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f06779fb8f2d5265d93cc4376b42669b978c4e5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="project-build-error-prj0003"></a>Chyba sestavení projektu PRJ0003  
   
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
 
 Možné důvody této chyby patří:  
   
--   Projekt závisí na ATL Server. Od verze Visual Studio 2008, ATL Server již není součástí sady Visual Studio, ale byla vydána jako sdílený zdroj projekt na webu CodePlex. Chcete-li stáhnout ATL Server zdrojového kódu a nástroje, přejděte na [knihovny serveru ATL Server a nástroje](http://go.microsoft.com/fwlink/?LinkID=81979).  
+-   Projekt závisí na ATL Server. Od verze Visual Studio 2008, ATL Server již není součástí sady Visual Studio, ale byla vydána jako sdílený zdroj projekt na webu CodePlex. Chcete-li stáhnout ATL Server zdrojového kódu a nástroje, přejděte na [knihovny serveru ATL Server a nástroje](http://go.microsoft.com/fwlink/p/?linkid=81979).  
   
 -   Nedostatek systémových prostředků. Zavřete některé aplikace, abyste tento problém vyřešili.  
   
@@ -40,4 +41,4 @@ Možné důvody této chyby patří:
 -   Pro projekty makefile chybí příkaz ke spuštění na buď **sestavení příkazového řádku** nebo **opětovné sestavení příkazového řádku**.  
   
 ## <a name="see-also"></a>Viz také  
- [Chyby sestavení a upozornění projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+ [Chyby a upozornění sestavení projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

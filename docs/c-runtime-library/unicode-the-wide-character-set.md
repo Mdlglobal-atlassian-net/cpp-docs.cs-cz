@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5683cb5b161fd492afc69a93b6779b16c19c4022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46702f9ea91c9cbba7f7ddbaadc23de88d80fe9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: široká charakterová sada
 Široká znaková je kód 2bajtová vícejazyčné znaků. Libovolný znak v použití moderní počítačů po celém světě, včetně technických symbolů a speciálních znaků pro publikování, může být reprezentován podle specifikace Unicode jako široký znak. Vyvíjí a udržuje velké Consortium, která zahrnuje Microsoft, standardu Unicode je nyní široce přijat.  

@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d944f055d9332fe5c1923f57f6800dfee6fc119e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1c880e07a56be1dd7b8c82f5e6f0473ededdd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4750"></a>C4750 kompilátoru upozornění (úroveň 1)
 "identifikátor": funkce s _alloca() vložená do smyčky  
@@ -62,4 +63,4 @@ int main(void)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [_alloca –](../../c-runtime-library/reference/alloca.md)
+ [_alloca](../../c-runtime-library/reference/alloca.md)

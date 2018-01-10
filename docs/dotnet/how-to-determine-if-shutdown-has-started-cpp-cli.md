@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f4575f212752a43df2b130fbde9aa7264186d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d89fa475c997e0842ef9de5a21c26e664f25d78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Postupy: Zjištění, zda bylo zahájeno vypínání (C++/CLI)
 Následující příklad kódu ukazuje, jak zjistit, zda je aktuálně ukončení aplikace nebo rozhraní .NET Framework. To je užitečné pro přístup k statických elementů v rozhraní .NET Framework, protože během vypnutí, tyto konstrukce, jsou dokončeny systémem a nelze jej použít spolehlivě. Kontrolou <xref:System.Environment.HasShutdownStarted%2A> vlastnost nejprve můžete vyhnout potenciální selhání přístupu k těmto prvkům.  
@@ -45,4 +48,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Operace systému Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

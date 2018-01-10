@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6685edbe2e6e4805cadb38ada55624eaec2a7ce8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b407bc469a345706f99cf5bad578f678e652a4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-virtual-functions"></a>Soukromé virtuální funkce
 Způsob, jakým soukromé virtuální funkce jsou zpracovány v odvozených třídách změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
@@ -60,5 +63,5 @@ public:
  Všimněte si, že neexistence explicitního `virtual` – klíčové slovo v základní třídě podle nové syntaxe, vygeneruje upozornění.  
   
 ## <a name="see-also"></a>Viz také  
- [Deklarace členů v rámci třídy nebo rozhraní (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

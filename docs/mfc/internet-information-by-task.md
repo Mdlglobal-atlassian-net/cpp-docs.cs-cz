@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 855b533b0fb822a4b631a9f94e032cb33f27ec62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8b76495ce5418be052ee0fba8a1eb420a51db4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-information-by-task"></a>Internetové informace podle úloh
 Úkoly vypsané v tomto tématu jsou seřazené podle úlohy, kterou chcete provést.  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/24/2017
 -   [Zápis aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

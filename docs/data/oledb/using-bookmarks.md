@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b7c5c1a7722e378e313e1b0fe8e9ed10d97ddb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 41c8e5a44130eebfddc9e99ab7ef815b6e8e43a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>Použití záložek
 Před otevřením sady řádků se musí zjistit poskytovatele, kterou chcete použít záložky. Chcete-li to provést, nastavte **DBPROP_BOOKMARKS** vlastnost, která má **true** ve vašem vlastnost nastavit. Zprostředkovatel načte záložky jako sloupec nule, je nutné použít speciální makro `BOOKMARK_ENTRY` a `CBookmark` třídy, pokud používáte statické přistupujícího objektu. `CBookmark`je třída šablony, kde je argument délka v bajtech vyrovnávací paměti záložky. Délka vyrovnávací paměti vyžadované pro záložky závisí na poskytovateli. Pokud používáte zprostředkovatele ODBC OLE DB, jak je znázorněno v následujícím příkladu, musí být vyrovnávací paměti 4 bajtů.  

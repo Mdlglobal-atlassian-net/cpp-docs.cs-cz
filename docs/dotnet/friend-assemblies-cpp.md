@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-assemblies-c"></a>Přátelská sestavení (C++)
 Pro příslušné runtimes *přátelských sestavení* typy, které jsou v oboru názvů nebo globálního oboru v komponentě sestavení, která je přístupná na jeden nebo více sestavení klienta nebo .netmodules díky funkci jazyka.  
@@ -187,4 +190,4 @@ Class1::Test_Public
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

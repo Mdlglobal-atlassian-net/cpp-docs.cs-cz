@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86caaf78ff105f02e2eabe6637e9e80829f53be0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b05fdff690f8693e926011c3bc7d1738ee9be66c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-support"></a>Podpora kompilátoru modelu COM
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  Poskytuje sadu COM podporu globální funkce a třídy pro podporu **VARIANT** a `BSTR` typy, implementovat chytré ukazatele a zapouzdřují objekt chyba vyvolané `_com_raise_error`:  
   
--   [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)  
+-   [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)  
   
 -   [_bstr_t](../cpp/bstr-t-class.md)  
   
@@ -46,4 +47,4 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Viz také  
  [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)   
- [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)
+ [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

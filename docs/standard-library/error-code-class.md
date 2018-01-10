@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::error_code::clear
 - std::error_code::default_error_condition
 - std::error_code::message
-- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7674aeb2a2a1e15ceb38af662f51964884b81ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcode-class"></a>error_code – třída
 Reprezentuje chyby nízké úrovně systému, které jsou specifické pro implementaci.  
@@ -69,14 +69,14 @@ class error_code;
 |[kategorie](#category)|Vrátí kategorie chyby.|  
 |[Vymazat](#clear)|Vymaže hodnotu kódu chyby a kategorie.|  
 |[default_error_condition –](#default_error_condition)|Vrátí výchozí chybový stav.|  
-|[zpráva](#message)|Vrací název kód chyby.|  
+|[message](#message)|Vrací název kód chyby.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
 |[Operator ==](#op_eq_eq)|Testování rovnosti mezi `error_code` objekty.|  
-|[Operator! =](#op_neq)|Testy nerovnost mezi `error_code` objekty.|  
+|[operator!=](#op_neq)|Testy nerovnost mezi `error_code` objekty.|  
 |[operátor <](#op_lt)|Testuje, pokud `error_code` objekt je menší než `error_code` objekt předaná pro porovnání.|  
 |[operátor =](#op_eq)|Přiřadí novou hodnotu výčtu k `error_code` objektu.|  
 |[operátor bool](#op_bool)|Vrhá proměnné typu `error_code`.|  
@@ -293,7 +293,7 @@ typedef int value_type;
   
 ## <a name="see-also"></a>Viz také  
  [error_category – třída](../standard-library/error-category-class.md)   
- [< system_error – >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

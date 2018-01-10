@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9261cf2573a5494a49f2f544772738afcdbbb0c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>Znakové sady
 Text programu C++ je uložen ve zdrojových souborech, které používají konkrétní znaky kódování. Standardní C++ určuje základní zdrojová znaková sada pro zdrojové soubory a spuštění základní znaková sada pro zkompilované soubory. Visual C++ umožňuje další sadu znaků specifická pro národní prostředí pro použití ve zdrojových souborech a zkompilované soubory.  

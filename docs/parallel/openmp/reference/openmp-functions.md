@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: caa41947f43189f52333106f80cce6f58b921f8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01967e47d8108803fdadd9c9cfe746a4d477459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-functions"></a>Funkce jazyka OpenMP
 Obsahuje odkazy na funkce jazyka OpenMP rozhraní API.  
@@ -27,27 +28,27 @@ Obsahuje odkazy na funkce jazyka OpenMP rozhraní API.
 |Funkce|Popis|  
 |--------------|-----------------|  
 |[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Uninitializes zámek.|  
-|[omp_destroy_nest_lock –](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes nestable zámku.|  
-|[omp_get_dynamic –](../../../parallel/openmp/reference/omp-get-dynamic.md)|Vrátí hodnotu, která určuje, pokud počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.|  
-|[omp_get_max_threads –](../../../parallel/openmp/reference/omp-get-max-threads.md)|Vrátí celé číslo, které je rovna nebo větší než počet vláken, které by byly k dispozici, pokud paralelní oblast bez [num_threads](../../../parallel/openmp/reference/num-threads.md) nebyly definované v tomto bodě v kódu.|  
-|[omp_get_nested –](../../../parallel/openmp/reference/omp-get-nested.md)|Vrátí hodnotu, která určuje, zda je povoleno vnořené stupně paralelního zpracování.|  
-|[omp_get_num_procs –](../../../parallel/openmp/reference/omp-get-num-procs.md)|Vrátí počet procesorů, které jsou k dispozici, když je tato funkce volána.|  
-|[omp_get_num_threads –](../../../parallel/openmp/reference/omp-get-num-threads.md)|Vrátí počet vláken v paralelní oblasti.|  
-|[omp_get_thread_num –](../../../parallel/openmp/reference/omp-get-thread-num.md)|Vrátí počet vláken provádění vlákna v rámci jeho team přístup z více vláken.|  
-|[omp_get_wtick –](../../../parallel/openmp/reference/omp-get-wtick.md)|Vrátí počet sekund mezi počtu taktů procesoru.|  
-|[omp_get_wtime –](../../../parallel/openmp/reference/omp-get-wtime.md)|Vrátí že hodnotu v sekundách čas uplynul z některé bodu.|  
-|[omp_in_parallel –](../../../parallel/openmp/reference/omp-in-parallel.md)|Vrátí nenulové hodnoty, pokud je volána v rámci paralelní oblast.|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes nestable zámku.|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Vrátí hodnotu, která určuje, pokud počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Vrátí celé číslo, které je rovna nebo větší než počet vláken, které by byly k dispozici, pokud paralelní oblast bez [num_threads](../../../parallel/openmp/reference/num-threads.md) nebyly definované v tomto bodě v kódu.|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Vrátí hodnotu, která určuje, zda je povoleno vnořené stupně paralelního zpracování.|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Vrátí počet procesorů, které jsou k dispozici, když je tato funkce volána.|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Vrátí počet vláken v paralelní oblasti.|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Vrátí počet vláken provádění vlákna v rámci jeho team přístup z více vláken.|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Vrátí počet sekund mezi počtu taktů procesoru.|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Vrátí že hodnotu v sekundách čas uplynul z některé bodu.|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Vrátí nenulové hodnoty, pokud je volána v rámci paralelní oblast.|  
 |[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Inicializuje jednoduché zámku.|  
-|[omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Inicializuje zámek.|  
-|[omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md)|Označuje, že počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Inicializuje zámek.|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Označuje, že počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.|  
 |[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Bloky vláken provádění, dokud nebude k dispozici zámek.|  
-|[omp_set_nest_lock –](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Bloky vláken provádění, dokud nebude k dispozici zámek.|  
-|[omp_set_nested –](../../../parallel/openmp/reference/omp-set-nested.md)|Vnořené paralelismus umožňuje.|  
-|[omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md)|Nastaví počet vláken v následujících oblastech paralelní, není-li přepsat [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzule.|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Bloky vláken provádění, dokud nebude k dispozici zámek.|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Vnořené paralelismus umožňuje.|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Nastaví počet vláken v následujících oblastech paralelní, není-li přepsat [num_threads](../../../parallel/openmp/reference/num-threads.md) klauzule.|  
 |[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Pokusí se nastavit zámek ale neblokuje provádění vlákna.|  
-|[omp_test_nest_lock –](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Pokusí se nastavit zámek nestable ale neblokuje provádění vlákna.|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Pokusí se nastavit zámek nestable ale neblokuje provádění vlákna.|  
 |[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Uvolní zámek.|  
-|[omp_unset_nest_lock –](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Uvolní nestable zámek.|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Uvolní nestable zámek.|  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace knihoven](../../../parallel/openmp/reference/openmp-library-reference.md)

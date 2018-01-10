@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4cb304e014412e16f425b4162fd4950dcc7789f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-chotkeyctrl"></a>Používání atributu CHotKeyCtrl
 Ovládacího prvku klávesová zkratka, reprezentována třída [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), je okno, které zobrazí textové reprezentace kombinace kláves uživatel zadá do ní, jako je například CTRL + SHIFT + Q. Také udržuje interního vyjádření tohoto klíče ve formuláři virtuální klíče kódu a sadu příznaky, které představují shift stavu. Ovládací prvek aktivního klíče ve skutečnosti nenastaví klávesové zkratky – učinit je váš program. (Seznam kódů standardní virtuální klíčů najdete v tématu winuser.)  

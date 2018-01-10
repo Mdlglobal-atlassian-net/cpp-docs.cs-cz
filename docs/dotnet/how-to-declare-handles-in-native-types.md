@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
 Typ popisovače v nativním typu nelze deklarovat. Vcclr.h poskytuje šablony bezpečnost typů obálku `gcroot` odkazovat na objekt CLR z haldy jazyka C++. Tato šablona umožňuje vložit virtuální popisovač v nativním typu a s nimi zacházet jako by šlo podkladovým typem. Ve většině případů můžete použít `gcroot` objektu jako vložený typ bez žádné přetypování. Nicméně s [, v](../dotnet/for-each-in.md), budete muset použít `static_cast` načíst odkaz na základní spravovaný.  
@@ -118,4 +121,4 @@ String in V: Hello
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

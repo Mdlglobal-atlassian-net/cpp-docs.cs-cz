@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1102d6459701314c5b0d5b3e96908052504262d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace oken s rámečkem na místě
 Tento článek vysvětluje, co musíte udělat implementovat okna s rámečkem na místě v aplikaci visual úpravy serveru, pokud použijete Průvodce aplikace k vytvoření aplikace serveru. Místo podle pokynů uvedených v tomto článku, můžete použít existující třídy oken s rámečkem na místě z aplikace generované v Průvodci aplikace nebo ukázku součástí Visual C++.  

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>Přehled členů třídy
 Třídě nebo struktuře se skládá z její členy. Činnost prováděnou třídu provádí jeho členské funkce. Stav, který udržuje je uložen v jeho datové členy. Inicializace členů je potřeba konstruktory a čištění pracovní například uvolnění paměti a uvolnění prostředků se provádí destruktory. C ++ 11 a novější datové členy můžete (a obvykle by měl) inicializovat v místě deklarace.  
@@ -175,4 +176,4 @@ int CanInit2::j = i;
 >  Název třídy `CanInit2` musí předcházet identifikátor `i`, čímž určíte, že definovaný identifikátor `i` je členem třídy `CanInit2`.  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../cpp/classes-and-structs-cpp.md)
+ [Třídy a struktury](../cpp/classes-and-structs-cpp.md)
