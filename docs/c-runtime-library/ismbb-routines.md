@@ -28,23 +28,24 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb – rutiny
 Testy dané celočíselná hodnota `c` pro určitá podmínka, pomocí aktuální národní prostředí nebo zadané kategorii LC_CTYPE – převod stavu.  
   
 |||  
 |-|-|  
-|[_ismbbalnum –, _ismbbalnum_l –](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint –, _ismbbkprint_l –](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|  
-|[_ismbbalpha –, _ismbbalpha_l –](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct –, _ismbbkpunct_l –](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|  
-|[_ismbbblank _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead –, _ismbblead_l –](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|  
-|[_ismbbgraph –, _ismbbgraph_l –](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint –, _ismbbprint_l –](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|  
-|[_ismbbkalnum –, _ismbbkalnum_l –](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct –, _ismbbpunct_l –](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|  
-|[_ismbbkana –, _ismbbkana_l –](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail –, _ismbbtrail_l –](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|  
+|[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|  
+|[_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|  
+|[_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|  
+|[_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|  
+|[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|  
+|[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|  
   
 ## <a name="remarks"></a>Poznámky  
  Každou rutinu v `_ismbb` rodiny testy dané celočíselná hodnota `c` pro určitá podmínka. Výsledek testu závisí na vícebajtové znakové stránky, který je v platnosti. Vícebajtové znakové stránky je standardně nastavena na stránku ANSI kód, který byl získán z operačního systému při spuštění programu. Můžete použít [_getmbcp –](../c-runtime-library/reference/getmbcp.md) k dotazování vícebajtové znakové stránky, která se používá, nebo [_setmbcp](../c-runtime-library/reference/setmbcp.md) ho změnit.  
@@ -88,4 +89,4 @@ Testy dané celočíselná hodnota `c` pro určitá podmínka, pomocí aktuáln�
  [Klasifikace bajtů](../c-runtime-library/byte-classification.md)   
  [je, isw – rutiny](../c-runtime-library/is-isw-routines.md)   
  [_mbbtombc –, _mbbtombc_l –](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbctombb –, _mbctombb_l –](../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+ [_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)

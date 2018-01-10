@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef178e657a6700bcf6c7a4de2ed985d02df6b9ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 62b012f1ce81ffa30528d027e36b299e9e38d2f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Pravidla a omezení příkazů dllimport/dllexport
 **Konkrétní Microsoft**  
@@ -106,4 +107,4 @@ ms.lasthandoff: 10/24/2017
  **Konkrétní Microsoft END**  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL Import a Export funkcí](../c-language/dll-import-and-export-functions.md)
+ [Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)

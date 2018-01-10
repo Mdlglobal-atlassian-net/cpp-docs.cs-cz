@@ -31,11 +31,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a31ba82059748d49087546e2812d1f1fd32f4628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 Provede binární vyhledávání seřazené pole. Toto je verze [bsearch –](../../c-runtime-library/reference/bsearch.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -195,4 +196,4 @@ cat found at 002F0F04
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
  [_lfind –](../../c-runtime-library/reference/lfind.md)   
  [_lsearch –](../../c-runtime-library/reference/lsearch.md)   
- [qsort –](../../c-runtime-library/reference/qsort.md)
+ [qsort](../../c-runtime-library/reference/qsort.md)

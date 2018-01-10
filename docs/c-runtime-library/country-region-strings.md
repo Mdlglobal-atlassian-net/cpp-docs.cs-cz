@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c250e47688e5fbcb32779d58dd8fe8973cdc96c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="countryregion-strings"></a>Řetězce zemí/oblastí
 Řetězce zemí a oblastí, mohou být kombinovány s řetězec jazyk specifikace národního prostředí pro vytvoření `setlocale`, `_wsetlocale`, `_create_locale`, a `_wcreate_locale` funkce. Seznam názvů země nebo oblast, které jsou podporovány v různých verzích operačního systému Windows, najdete v části [referenční dokumentace rozhraní API National jazykové podpory (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). V seznamu, může být řetězec země nebo oblast země hodnot v **národní prostředí – jazyk země nebo oblast** sloupce, nebo libovolná z zkratky v **zemi nebo oblast zkratka název** sloupce. Další jazyková podpora informace v operačních systémech Windows verze najdete v tématu [příloha A: produktu chování](http://msdn.microsoft.com/goglobal/bb896001.aspx) v [MS-LCID]: odkaz na Windows jazyk kódu identifikátor (LCID).  
@@ -56,4 +57,4 @@ ms.lasthandoff: 10/24/2017
  [Názvy národních prostředí, jazyků a řetězce zemí/oblastí](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [Řetězce jazyků](../c-runtime-library/language-strings.md)   
  [setlocale –, _wsetlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale –, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
+ [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

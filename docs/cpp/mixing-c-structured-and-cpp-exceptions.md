@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2cb390fa0b6cf90a76d0b751b8bdce7d4a3e54b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 375f954f3df300b50a11067b009614ff8879b9b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace výjimek v jazycích C (strukturované) a C++
 Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C++ doporučeno používat zpracování strukturovaných výjimek. Ale v některých případech můžete zkompilovat s **/EHa** a kombinovat strukturovaných výjimky a zdrojového kódu C++ a je třeba některá zařízení pro zpracování oba druhy výjimek. Obslužná rutina strukturovaného výjimek obsahuje žádná koncepce objekty nebo typy výjimky, a proto ho nemůže zpracovat výjimky vyvolané C++ – kód; ale C++ **catch** obslužné rutiny můžete zpracování strukturovaných výjimek. Jako takový, zpracování syntaxe výjimek C++ (**zkuste**, `throw`, **catch**) není přijat kompilátor jazyka C, ale strukturovaného zpracování syntaxe výjimek (`__try`, `__except`, `__finally`) podporuje C++ compiler.  
@@ -47,4 +48,4 @@ Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C
 -   [Rozdíly mezi SEH a C++ EH](../cpp/exception-handling-differences.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+ [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e6d2579eb6d86c53f72d3910c1dd83f973905ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d61dfb9e670e472ddaf7b46136e02a52ef3299e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statements-c"></a>Příkazy (C++)
 Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s objekty manipulováno. Tato část obsahuje:  
   
 -   [Přehled](../cpp/overview-of-cpp-statements.md)  
   
--   [Příkaz s popiskem](../cpp/labeled-statements.md)  
+-   [Příkazy s popiskem](../cpp/labeled-statements.md)  
   
 -   Kategorie příkazů  
   
@@ -46,4 +47,4 @@ Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s obje
  Informace o příkazy zpracování výjimek v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

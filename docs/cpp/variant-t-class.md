@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1afc35836f170a03ec7b8f4d8e20a1ff02995c23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variantt-class"></a>_variant_t – třída
 **Konkrétní Microsoft**  
@@ -41,10 +42,10 @@ ms.lasthandoff: 10/24/2017
   
 |||  
 |-|-|  
-|[Připojení](../cpp/variant-t-attach.md)|Připojí **VARIANT** objektu do `_variant_t` objektu.|  
+|[Attach](../cpp/variant-t-attach.md)|Připojí **VARIANT** objektu do `_variant_t` objektu.|  
 |[Zrušte zaškrtnutí](../cpp/variant-t-clear.md)|Vymaže obsah zapouzdřeného **VARIANT** objektu.|  
 |[ChangeType –](../cpp/variant-t-changetype.md)|Typ se změní `_variant_t` objekt, který má uvedené **VARTYPE**.|  
-|[Odpojení](../cpp/variant-t-detach.md)|Umožňuje odpojit zapouzdřené **VARIANT** objekt z tohoto `_variant_t` objektu.|  
+|[Detach](../cpp/variant-t-detach.md)|Umožňuje odpojit zapouzdřené **VARIANT** objekt z tohoto `_variant_t` objektu.|  
 |[SetString –](../cpp/variant-t-setstring.md)|To přiřadí řetězec `_variant_t` objektu.|  
   
 ### <a name="operators"></a>Operátory  
@@ -63,4 +64,4 @@ ms.lasthandoff: 10/24/2017
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)
+ [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

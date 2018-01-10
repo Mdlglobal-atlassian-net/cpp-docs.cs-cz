@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e8f61cda7d26f75677093e2377adb29a913dd35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 Vytvoří nový soubor. `_creat`a `_wcreat` jsou zastaralé; použít [_sopen_s –, _wsopen_s –](../../c-runtime-library/reference/sopen-s-wsopen-s.md) místo.  
@@ -158,4 +159,4 @@ Created data file.
  [_dup –, _dup2 –](../../c-runtime-library/reference/dup-dup2.md)   
  [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
  [_sopen –, _wsopen –](../../c-runtime-library/reference/sopen-wsopen.md)   
- [_umask –](../../c-runtime-library/reference/umask.md)
+ [_umask](../../c-runtime-library/reference/umask.md)

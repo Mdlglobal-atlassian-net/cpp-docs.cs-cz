@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4a90c28f9bb2a681e88463dfd6bd9d3ff0a1d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9d4099a7f40acf0b5bfcc89f1c95cb880683b86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-a-termination-handler"></a>Zápis obslužné rutiny ukončení
 Na rozdíl od obslužné rutiny výjimky je obslužná rutina ukončení spuštěna vždy, bez ohledu na to, zda je chráněný blok kódu ukončen normálně. Jediným účelem obslužné rutiny ukončení by mělo být zajištění, že prostředky, jako například paměť, popisovače a soubory, jsou správně uzavřeny bez ohledu na to, jak část kódu dokončí provádění.  
@@ -44,4 +45,4 @@ Na rozdíl od obslužné rutiny výjimky je obslužná rutina ukončení spušt�
 -   [Omezení obslužných rutin ukončení](../cpp/restrictions-on-termination-handlers.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Strukturované zpracování (C/C++) výjimek](../cpp/structured-exception-handling-c-cpp.md)
+ [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

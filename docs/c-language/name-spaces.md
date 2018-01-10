@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>Obory názvů
 Kompilátor vytvoří „obory názvů“ pro rozlišení mezi identifikátory použitými pro různé druhy položek. Názvy v rámci každého oboru názvů musejí být jedinečné, aby nedošlo ke konfliktu, ale stejný název se může objevit ve více než jednom oboru názvů. To znamená, že stejný identifikátor lze použít pro dvě nebo více různých položek za předpokladu, že se položky nacházejí v různých oborech názvů. Kompilátor může rozpoznat odkazy na základě syntaktického kontextu identifikátoru v programu.  

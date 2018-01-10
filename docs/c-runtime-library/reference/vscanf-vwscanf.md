@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91be87686be669632b080d5d4294bd041f9b028b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21f7a0061f5a06482763279bd005f3cc7fa575f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 Čtení formátovaných dat z standardní vstupní proud. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [vscanf_s vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md).  
@@ -158,4 +159,4 @@ The contents are: 36 92.300003 y n Wide characters
  [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vscanf_s vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)
+ [vscanf_s, vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)

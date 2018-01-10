@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 367fcdae26b66cce06fd6086a21d3212c7ac17ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-operators--and--gt"></a>Operátory přístup členy:. a -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -46,7 +47,7 @@ postfix-expression -> name
   
 1.  Ve formuláři první *operátory výraz* reprezentuje hodnotu struktura, třídy nebo typu union a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota operace je u *název* a pokud je hodnotou l *operátory výraz* je l hodnota.  
   
-2.  Ve formuláři druhý *operátory výraz* představuje ukazatel struktury, sjednocení nebo třída, a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnota. **->**  Operátor dereferences ukazatele. Proto výrazy *e*  **->**  `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory  **->**  nebo  **\***  jsou přetížené).  
+2.  Ve formuláři druhý *operátory výraz* představuje ukazatel struktury, sjednocení nebo třída, a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnota.  **->**  Operátor dereferences ukazatele. Proto výrazy *e*  **->**  `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory  **->**  nebo  **\***  jsou přetížené).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje obě formy operátoru pro přístup k členu.  
@@ -87,4 +88,4 @@ int main() {
  [Výrazy přípony](../cpp/postfix-expressions.md)   
  [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
- [Členové struktury a sjednocení](../c-language/structure-and-union-members.md)
+ [Členy struktury a sjednocení](../c-language/structure-and-union-members.md)

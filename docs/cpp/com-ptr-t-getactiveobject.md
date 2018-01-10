@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 153f7ffce400fd09e46706a361eebc87bbe1e1c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a67d571c2e5b80eaa1c095cc517872b8e3918fd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Konkrétní Microsoft**  
@@ -54,11 +55,11 @@ HRESULT GetActiveObject(
 ## <a name="remarks"></a>Poznámky  
  Tyto členské funkce volají funkci `GetActiveObject`, pomocí níž načítají ukazatel na spuštěný objekt registrovaný technologií OLE a poté se dotazují na typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele. Tato rutina indikuje úspěch nebo neúspěch pomocí hodnoty `HRESULT`.  
   
--   **Getactiveobject – (**`rclsid`**)** připojí k existující instanci objekt daný **CLSID**.      
+-   **Getactiveobject – (**`rclsid`**)** připojí k existující instanci objekt daný **CLSID**.  
   
--   **Getactiveobject – (**`clsidString`**)** připojí k existující instanci objekt daný řetězec znaků Unicode, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.      
+-   **Getactiveobject – (**`clsidString`**)** připojí k existující instanci objekt daný řetězec znaků Unicode, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
   
--   **Getactiveobject – (**`clsidStringA`**)** připojí k existující instanci objekt daný vícebajtový řetězec, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.     Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
+-   **Getactiveobject – (**`clsidStringA`**)** připojí k existující instanci objekt daný vícebajtový řetězec, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**. Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
   
  **Konkrétní Microsoft END**  
   

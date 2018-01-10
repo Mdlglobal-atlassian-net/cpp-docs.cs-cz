@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destruktory (C++)
 Členské funkce, která je volána automaticky, když objekt ocitne mimo obor nebo je explicitně zničen voláním je destruktor `delete`. Destruktor má stejný název jako třída, před sebou tildou (`~`). Například destruktor třídy `String` je deklarován jako: `~String()`. Pokud nejsou definovány destruktor, kompilátor vám poskytne výchozí jeden; pro mnoho tříd jde dostatečná. Potřebujete definovat vlastní destruktor, když třída uloží obslužné rutiny na systémové prostředky, které je potřeba uvolnit nebo ukazatele, které vlastní paměť ukazovaly na.
@@ -71,7 +72,7 @@ int main() {
   
  V předchozím příkladu používá destruktor `String::~String` k navrácení paměti dynamicky přidělené pro ukládání textu operátor `delete`.  
   
-## <a name="delcaring-destructors"></a>Destruktory Delcaring  
+## <a name="declaring-destructors"></a>Deklarování destruktorů  
  Destruktory jsou funkce se stejným názvem jako třída ale předcházet tildou (`~`)  
   
  Deklarace destruktorů se řídí několika pravidly. Destruktory:  

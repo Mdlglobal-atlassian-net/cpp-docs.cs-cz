@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6ea2a91e50bab33ab46f96d63cdc0c1c1023c6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-lib"></a>Přehled LIB
 LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, které můžete použít se [odkaz](../../build/reference/linker-options.md) při sestavování programu. LIB se spouští z příkazového řádku.  

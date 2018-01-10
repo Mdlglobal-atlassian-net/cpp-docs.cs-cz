@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 689d81d491b58755ca865c92cc79043d105c2be2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf64ca280998ac25adbb380ff8245a0b8eecf797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 Nainstaluje funkce definované aplikací pro výpis `_CLIENT_BLOCK` zadejte bloky paměti (pouze ladicí verze).  
@@ -88,4 +89,4 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
  [_Crtreportblocktype –](../../c-runtime-library/reference/crtreportblocktype.md)   
- [_Crtgetdumpclient –](../../c-runtime-library/reference/crtgetdumpclient.md)
+ [_CrtGetDumpClient](../../c-runtime-library/reference/crtgetdumpclient.md)

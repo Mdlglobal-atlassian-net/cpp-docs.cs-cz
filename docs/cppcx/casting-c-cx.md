@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f1373686ca960f86ca9e8b2ea4756911906fd66d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting-ccx"></a>Přetypování (C + +/ CX)
 Použít čtyři operátory přetypování různé typy prostředí Windows Runtime: [static_cast – operátor](../cpp/static-cast-operator.md), [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md), **safe_cast operátor**, a [ reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md). `safe_cast`a `static_cast` způsobí výjimku, pokud převod nelze provést; [static_cast – operátor](../cpp/static-cast-operator.md) také provádí kontrola typu v kompilaci. `dynamic_cast`Vrátí `nullptr` Pokud se nepodaří typ převést. I když `reinterpret_cast` vrátí nenulovou hodnotu, může to být neplatný. Z tohoto důvodu doporučujeme nepoužívat `reinterpret_cast` Pokud si nejste jisti, že bude úspěšné přetypování. Kromě toho doporučujeme používat přetypování ve stylu jazyka v jazyce C + +/ CX kódu, protože jsou identické `reinterpret_cast`.  

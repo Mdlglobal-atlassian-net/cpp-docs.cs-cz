@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f6b6b39220f49339faccb4ea6608a0df5fdf6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Kontrolní výraz a uživatelem zadané zprávy (C++)
 Ladění aplikace C++ jazyk podporuje tři zpracování chyb mechanismy, které vám pomůžou: [#error – direktiva](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) – klíčové slovo a [assert – makro, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro. Všechny tři mechanismy vyvolávají chybové zprávy a dva z nich také testují kontrolní výrazy softwaru. Kontrolní výraz softwaru Určuje podmínku, která byste měli být na určitém místě v programu na hodnotu true. Pokud kontrolní výraz doby kompilace selže, kompilátor vyvolá chybu kompilace a diagnostických zpráv. Selže-li kontrolní výraz modulu běhu, operační systém vyvolá diagnostickou zprávu a ukončí aplikaci.  

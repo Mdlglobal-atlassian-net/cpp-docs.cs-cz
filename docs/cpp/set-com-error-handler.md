@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52258c64c98651fc7a962c2a246fe8bde79d8ab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cfb1e0dedf8d5ff90092d7eee2246791a491d2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Konkrétní Microsoft**  
@@ -98,4 +99,4 @@ Exception raised: Unable to establish the connection!
  **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru zapnutý, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je vypnuto, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)
+ [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

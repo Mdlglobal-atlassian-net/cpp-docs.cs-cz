@@ -32,11 +32,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a44f6b7ff132bc402e1b7256b298ce0d3ac9985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4295dd84e8066de0906a6fcd7b154c94875f7f5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 Přidělí počet bloky paměti v haldě s další místo pro hlavičku ladění a přepsání vyrovnávací paměti (pouze ladicí verze).  
@@ -143,4 +144,4 @@ Allocated memory successfully
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
  [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md)   
- [_DEBUG –](../../c-runtime-library/debug.md)
+ [_DEBUG](../../c-runtime-library/debug.md)
