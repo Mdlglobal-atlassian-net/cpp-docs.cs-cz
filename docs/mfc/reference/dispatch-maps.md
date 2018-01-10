@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76fc842626890f48b641a495567338404330d8d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 OLE – automatizace poskytuje způsobů, jak volat metody a pro přístup k vlastnostem napříč aplikacemi. Tento mechanismus poskytl knihovny Microsoft Foundation Class pro odeslání tyto požadavky je "mapy odesílání," což znamená, že názvy interních a externích objekt funkce a vlastnosti, jakož i datové typy vlastností sami nebo argumenty funkce.  
@@ -129,10 +130,10 @@ DISP_FUNCTION(
 |Symbol|Návratový typ|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
-|`VT_I2`|**krátký**|  
-|`VT_I4`|**dlouhá**|  
-|`VT_R4`|**plovoucí desetinná čárka**|  
-|`VT_R8`|**Double**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
+|`VT_R4`|**float**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATUM**|  
 |`VT_BSTR`|`BSTR`|  
@@ -210,10 +211,10 @@ DISP_PROPERTY(
   
 |Symbol|**Typ vlastnosti**|  
 |------------|-----------------------|  
-|`VT_I2`|**krátký**|  
-|`VT_I4`|**dlouhá**|  
-|`VT_R4`|**plovoucí desetinná čárka**|  
-|`VT_R8`|**Double**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
+|`VT_R4`|**float**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATUM**|  
 |`VT_BSTR`|`CString`|  
@@ -299,10 +300,10 @@ DISP_PROPERTY_NOTIFY(
   
 |Symbol|**Typ vlastnosti**|  
 |------------|-----------------------|  
-|`VT_I2`|**krátký**|  
-|`VT_I4`|**dlouhá**|  
-|`VT_R4`|**plovoucí desetinná čárka**|  
-|`VT_R8`|**Double**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
+|`VT_R4`|**float**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATUM**|  
 |`VT_BSTR`|`CString`|  

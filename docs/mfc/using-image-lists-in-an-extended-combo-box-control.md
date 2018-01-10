@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec0dfb151660ffc0246428adb79ebf649975c90e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac69e7d0dbe1748a409b107579c747b7f9a4a7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem
 Hlavní funkce ovládací prvky rozšířeného pole se seznamem je možnost k přidružení obrázků ze seznamu obrázků s jednotlivé položky v ovládacím prvku pole se seznamem. Každá položka je možné zobrazit tři různé bitové kopie: jednu pro vybraném stavu, jednu pro jeho nevybrané stavu a třetí pro bitovou kopii překrytí.  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>Směrování příkazů
 Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpráv spojení mezi příkazy a jejich funkce obslužné rutiny, pro kterou použijte okno Vlastnosti úlohy. Také musíte napsat většina obslužné rutiny příkazů.  
@@ -53,5 +54,5 @@ Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpr�
  Kde číslované položky v druhém sloupci v předchozí tabulce zmínili jiné objekty, jako je například dokument, najdete v položce odpovídající z prvního sloupce. Například při čtení v druhém sloupci, zobrazení předává příkaz k jeho dokumentu, najdete v položce "Dokumentu" prvního sloupce podle další směrování.  
   
 ## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+ [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

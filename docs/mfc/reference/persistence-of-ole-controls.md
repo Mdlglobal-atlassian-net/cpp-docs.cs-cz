@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6bdd34d34fc7b1395a6f06a052ed21e60bf319d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE
 Jedna možnost ovládací prvky OLE je vlastnost trvalost (nebo serializace), což umožňuje ovládacího prvku OLE pro čtení nebo zápis hodnot vlastností do a ze souboru nebo datový proud. Kontejner aplikace můžete použít serializace k ukládání hodnot vlastností ovládacího prvku i po aplikaci byl zničen ovládacího prvku. Hodnoty vlastností ovládacího prvku OLE lze poté číst ze souboru nebo datový proud při novou instanci ovládacího prvku se vytvoří na později.  

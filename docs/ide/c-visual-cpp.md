@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d44d1fccb0a6fdbcedff641982033bfdee4adc6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8d4ea984864975196251c9f362283a0df1932cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
 \<c > značka označuje, že text v rámci popis by měl být označen jako kód. Použití [ \<kód >](../ide/code-visual-cpp.md) k označení jako kódu více řádků.  

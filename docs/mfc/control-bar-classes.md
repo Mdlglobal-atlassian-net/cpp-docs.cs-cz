@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 370d43413b50c1eaf1112bae5dab6cb50e9f42b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44fcecbf1d7ddb6c46469f25349d972c8b317809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control-bar-classes"></a>Třídy ovládacích pruhů
 Ovládací pruhy jsou připojené k okně s rámečkem. Obsahují tlačítka, stav podokna nebo šablony dialogového okna. Plovoucí ovládací pruhy, označované taky jako nástroj palety, jsou implementované připojení, aby [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) objektu.  

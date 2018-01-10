@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 87ff7f55b67c4e8a84d15099432962ee0939d13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-language-changes-ccli"></a>Obecné jazykové změny (C++/CLI)
 Počet funkce modulu CLR jazyka změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
@@ -27,17 +30,17 @@ Počet funkce modulu CLR jazyka změnil ze spravovaných rozšíření jazyka C+
  [Řetězcový literál](../dotnet/string-literal.md)  
  Popisuje, jak se změnila zpracování literálů řetězce.  
   
- [Pole parametrů a třemi tečkami](../dotnet/param-array-and-ellipsis.md)  
+ [Pole parametrů a tři tečky](../dotnet/param-array-and-ellipsis.md)  
  Popisuje, jak `ParamArray` nyní je dána přednost se třemi tečkami (`...`) pro rozlišování funkce volání s proměnlivým počtem argumentů.  
   
  [typeof přechází na T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
  Popisuje, jak `typeof` byl nahrazen operátor `typeid`.  
   
- [Inicializační seznamy](../dotnet/initializer-lists.md)  
+ [Seznamy inicializátorů](../dotnet/initializer-lists.md)  
  Popisuje změny v pořadí volání inicializační seznamy.  
   
- [Zápis přetypování a úvod safe_cast <>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
+ [Zápis přetypování a úvod do operace safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
  Popisuje změny na zápis přetypování a zejména zavedení `safe_cast`.  
   
 ## <a name="see-also"></a>Viz také  
- [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md)
+ [Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)

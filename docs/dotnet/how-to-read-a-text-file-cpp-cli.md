@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68add197649dd494225787775ab772e8ffc0fc89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>Postupy: Čtení z textového souboru (C++/CLI)
 Následující příklad kódu ukazuje, jak otevřít a přečíst si text jeden řádek souboru současně, pomocí <xref:System.IO.StreamReader> třídu, která je definována v <xref:System.IO?displayProperty=fullName> oboru názvů. Instance této třídy se používá k otevření textového souboru a potom <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda se používá k načtení každý řádek.  
@@ -66,4 +69,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Souborová služba a datový proud I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

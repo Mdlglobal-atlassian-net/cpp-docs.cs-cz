@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65d2161edc4b2aa03cd547467ca0f38158850051
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Doporučené značky pro dokumentační komentáře (Visual C++)
 Visual C++ compiler zpracuje dokumentační komentáře v kódu a vytvoří soubor projektový pro každý kompilace a xdcmake.exe zpracovává soubory projektový do souboru .xml. Zpracování souboru XML k vytvoření dokumentace je podrobností, která musí být implementována ve vaší lokalitě.  

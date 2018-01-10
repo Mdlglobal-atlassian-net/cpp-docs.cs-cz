@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c0fb340f5f912cd4356be1c87bf78110a30ff7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: becbdcfcc6dbd26ae3095de098d12dbc078530cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT – struktura
 Při psaní vaše [popisovač oznámení obslužné rutiny](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), budete muset použít `TOOLTIPTEXT` struktura. Členové `TOOLTIPTEXT` struktura jsou:  
@@ -65,5 +66,5 @@ Při psaní vaše [popisovač oznámení obslužné rutiny](../mfc/handling-ttn-
 -   Zkopírovat identifikátor řetězec prostředku `lpszText` člen a zkopírujte popisovač instance, který obsahuje prostředek, který `hinst` člen.  
   
 ## <a name="see-also"></a>Viz také  
- [Popisy tlačítek v oknech Neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+ [Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

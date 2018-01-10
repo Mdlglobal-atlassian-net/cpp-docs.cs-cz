@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a0747147f247f7400e2455fdf5f63e61378e96e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16e4a707c4bc1f0fde76ab3a146424d2d34d5ec8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-information"></a>Informace o položkách ovládacího prvku strom
 Ovládací prvky stromové struktury ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) s počtem členské funkce, které načtení informací o položky v ovládacím prvku. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) – členská funkce načte některá nebo všechna data související s položku. Tato data můžou zahrnovat text položky, stavu, Image, počet podřízených položek a hodnotu 32-bit dat definované aplikací. K dispozici je také [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkce, která můžete nastavit některá nebo všechna data související s položku.  

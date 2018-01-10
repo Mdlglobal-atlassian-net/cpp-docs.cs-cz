@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88873faa9978da7c068d35cb88cc92317b7509d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4437"></a>C4437 kompilátoru upozornění (úroveň 4)
 dynamic_cast z virtuální základní "třída1" na "třída2" může selhat v některých kontextech kompilace s /vd2 nebo definovat "třída2" s #pragma vtordisp(2) v platnosti  
@@ -88,4 +89,4 @@ int main()
 ## <a name="see-also"></a>Viz také  
  [dynamic_cast – operátor](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [C4436 kompilátoru upozornění (úroveň 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Upozornění kompilátoru (úroveň 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

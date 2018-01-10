@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02df11739582cbfa84361a7c92e0cd7ee1856716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX
 Licencování podpory, volitelná funkce ovládacích prvků ActiveX, můžete určit, kdo může použít nebo distribuovat ovládacího prvku. (Další informace o licenčních podmínkách, najdete v části licencování problémy v [upgradování existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -123,5 +124,5 @@ Ověření licencované ovládací prvek ActiveX během provádění
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md)
+ [Průvodce ovládacím prvkem ActiveX v prostředí MFC](../mfc/reference/mfc-activex-control-wizard.md)
 

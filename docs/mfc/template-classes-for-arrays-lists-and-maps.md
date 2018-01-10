@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45c906cb109ff0e40d79119e4cf4d140c6e544ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f92790965ffb8cb96fd59c9333a1a99c9fcfbe5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Třídy šablon pro pole, seznamy a mapy
 Tyto třídy kolekce jsou šablony, jejíž parametry určení typů objektů uložených ve agregace. `CArray`, `CMap`, A `CList` třídy použít globální pomocných funkcí, které musí být obvykle přizpůsobit. Další informace o těchto pomocných funkcí najdete v tématu [pomocné rutiny třídy kolekce](../mfc/reference/collection-class-helpers.md). Třídy typu ukazatele jsou obálek pro jiné třídy v knihovně tříd. Pomocí těchto obálky zařazení do kompilátoru – kontrola typu umožňující vyhnout se chybám. Další informace o použití těchto tříd naleznete v části [kolekce](../mfc/collections.md).  

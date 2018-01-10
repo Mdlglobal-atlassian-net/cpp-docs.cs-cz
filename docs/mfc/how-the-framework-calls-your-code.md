@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9fc4999b1ca5c04abf2e867c46fc568d3da95c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jakým způsobem volá rámec váš kód
 Je třeba pochopit o vztah mezi vašeho zdrojového kódu a kódu v rozhraní MFC framework. Při spuštění aplikace většinu toku řízení se nachází v rozhraní framework kódu. Rozhraní framework spravuje smyčce zpráv, který získá zprávy ze systému Windows se uživatel rozhodne příkazy a upravuje dat zobrazení. Události, které rozhraní může zpracovat samostatně nespoléhejte na váš kód vůbec. Například rozhraní znát postup zavřete okna a ukončete aplikaci v reakci na příkazy uživatele. Jako s tyto úlohy, používá rozhraní obslužné rutiny zpráv a virtuálních funkcí jazyka C++ tak, abyste získali příležitosti reagovat na tyto události také. Váš kód nejsou v ovládacím prvku, ale; rozhraní je.  
@@ -41,5 +42,5 @@ Je třeba pochopit o vztah mezi vašeho zdrojového kódu a kódu v rozhraní MF
  Další informace najdete v tématu [CWinApp – třída: třídy aplikace](../mfc/cwinapp-the-application-class.md) a [šablony dokumentů a proces tvorby Document/View](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření v rozhraní Framework](../mfc/building-on-the-framework.md)
+ [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 

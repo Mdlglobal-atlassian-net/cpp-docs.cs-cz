@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 985027ff3c54a923b51e4fd782469da6d2d01e17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2831cce51da7d8889e224089d64b181a78377d17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set –&gt;
 Definuje šablonu třídy kontejnerů [unordered_multiset](../standard-library/unordered-multiset-class.md) a [unordered_set](../standard-library/unordered-set-class.md) a jejich podpůrné šablony.  
@@ -41,10 +42,10 @@ Definuje šablonu třídy kontejnerů [unordered_multiset](../standard-library/u
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/unordered-set-operators.md#op_neq)|Testy, pokud unordered_multiset objekt na levé straně operátoru není stejný jako unordered_multiset objekt na pravé straně.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Testy, pokud unordered_multiset objekt na levé straně operátoru není stejný jako unordered_multiset objekt na pravé straně.|  
 |[Operator ==](../standard-library/unordered-set-operators.md#op_eq_eq)|Testy, pokud unordered_multiset objekt na levé straně operátoru rovná unordered_multiset objekt na pravé straně.|  
 |[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Zamění dvě multisets.|  
-|[Operator! =](../standard-library/unordered-set-operators.md#op_neq)|Testy, pokud unordered_set objekt na levé straně operátoru není stejný jako unordered_set objekt na pravé straně.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Testy, pokud unordered_set objekt na levé straně operátoru není stejný jako unordered_set objekt na pravé straně.|  
 |[Operator ==](../standard-library/unordered-set-operators.md#op_eq_eq)|Testy, pokud unordered_set objekt na levé straně operátoru rovná unordered_set objekt na pravé straně.|  
 |[swap](../standard-library/unordered-set-functions.md#swap)|Zamění dvou sad.|  
   

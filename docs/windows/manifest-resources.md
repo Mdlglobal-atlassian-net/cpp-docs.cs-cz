@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2db9cc041ec9a38b9d1e5fa489b1abdf27b73769
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 56a41a7901e41f4c76fbb9fcbf5930ec97c3b866
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-resources"></a>Manifest prostředků
 Prostředky manifestu jsou soubory XML, které popisují závislosti, které aplikace používá. Například v sadě Visual Studio, MFC generované v Průvodci souboru manifestu definuje což Windows běžného ovládacího prvku by aplikace měla použít knihovny DLL, verze 5.0 nebo 6.0:  

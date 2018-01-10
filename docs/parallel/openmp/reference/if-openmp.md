@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 381347686d8e63681b5d179e191546b8a5bf2f8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81952612a80ac74cd4bfca62a1b2d62c910cb8f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-openmp"></a>if (OpenMP)
 Určuje, zda se má provést smyčku paralelně nebo postupně.  
@@ -39,9 +40,9 @@ if(expression)
 ## <a name="remarks"></a>Poznámky  
  `if`platí pro následující direktivy:  
   
--   [paralelní](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [pro](../../../parallel/openmp/reference/for-openmp.md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
   

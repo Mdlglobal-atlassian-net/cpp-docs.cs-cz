@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43180cb1de107c33ef4969bb9c771b41c82faf99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68142d9556448d5b9b759ddacb91c466bb56c225
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: Běžné problémy s portováním z prostředí MFC 3.x do verze 4.0
 Tato technická Poznámka popsané nejčastější problémy, ke kterým dochází při pokusu o portu aplikace napsané v MFC 3.x (MFC součástí Visual C++ 2.x) do MFC 4.0.  

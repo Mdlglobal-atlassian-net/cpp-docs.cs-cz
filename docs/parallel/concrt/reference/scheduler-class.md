@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69f26f344fd4cdccd2ff2a700dcd7e7d473e26a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-class"></a>Třída plánovače
 Představuje abstrakci pro Concurrency Runtime plánovače.  
@@ -59,14 +60,14 @@ class Scheduler;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Připojení](#attach)|Plánovač připojuje k volání kontextu. Po návratu tato metoda kontext volání spravuje Plánovač a Plánovač stane aktuálního plánovače.|  
+|[Attach](#attach)|Plánovač připojuje k volání kontextu. Po návratu tato metoda kontext volání spravuje Plánovač a Plánovač stane aktuálního plánovače.|  
 |[Vytvoření](#create)|Vytvoří nový scheduler, jehož chování je popsán `_Policy` parametr umístí odkaz na počáteční na Plánovač a vrátí ukazatel na ni.|  
 |[Createschedulegroup –](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plánu v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v rámci skupiny nově vytvořený plán můžete být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
 |[Getnumberofvirtualprocessors –](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač.|  
 |[Getpolicy –](#getpolicy)|Vrátí kopii zásad, který byl vytvořený plánovače.|  
 |[ID](#id)|Vrací jedinečný identifikátor pro Plánovač.|  
 |[Isavailablelocation –](#isavailablelocation)|Určuje, zda je k dispozici na Plánovač daného umístění.|  
-|[Referenční dokumentace](#reference)|Zvýší počet odkazů plánovače.|  
+|[Referenční informace](#reference)|Zvýší počet odkazů plánovače.|  
 |[Registershutdownevent –](#registershutdownevent)|Příčiny předaná popisovač události systému Windows `_Event` parametr signál při Plánovač ukončí a zničí sám sebe. V době, kdy signalizace události všechny práci, kterou naplánoval Plánovač je dokončena. Prostřednictvím této metody může být registrováno více událostí vypnutí.|  
 |[Vydaná verze](#release)|Snižuje počet odkaz na plánovače.|  
 |[Resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy)|Výchozí zásady plánovače obnoví na výchozí modul runtime. Při příštím vytvoření plánovače výchozí použije výchozí nastavení zásady modulu runtime.|  

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e16af63054355a12385d9eacbecef92f2296813c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb9f67b4efac28a1cacd6301c8ca849246f9a481
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noncreatable"></a>noncreatable
 Definuje objekt, který nelze vytvořit instanci samostatně.  
@@ -65,11 +68,11 @@ class CMyClass : public A
 |-|-|  
 |**Platí pro**|**Třída**,`struct`|  
 |**Opakovatelných**|Ne|  
-|**Povinné atributy**|**Třída typu coclass**|  
+|**Povinné atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   

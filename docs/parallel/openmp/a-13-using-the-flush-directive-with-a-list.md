@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc10c427f92ed602975fdb56436911dafbd94532
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da5a7f10abe03364e4de9bdd2bd0258ea8a5e1a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   Použití direktivy flush se seznamem
 Následující příklad používá `flush` direktivu pro typu point-to-point synchronizace konkrétní objektů mezi páry vláken:  

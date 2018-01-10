@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21febf38be647513ca58560078875691a82d22aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc7fbb58aa1ac85c185756eb336737cbaf33a48e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Doporučení pro zpracování vstupu a výstupu
 Ať už používáte vstupně-výstupních operací na základě souborů nebo není závisí na tom, jak reagovat na otázky v rozhodovacím stromu následující:  
@@ -57,4 +58,4 @@ Ať už používáte vstupně-výstupních operací na základě souborů nebo n
  Informace o serializaci najdete v tématu [serializace](../mfc/serialization-in-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Serializace: Serializace vs. Databáze vstupu a výstupu](../mfc/serialization-serialization-vs-database-input-output.md)
+ [Serializace: Porovnání serializace a Databáze vstupu a výstupu](../mfc/serialization-serialization-vs-database-input-output.md)

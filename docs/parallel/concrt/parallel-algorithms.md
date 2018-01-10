@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 191d368d6152f5eb8bd9bb3c7ff7e77a54182a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekcí dat v práci. Tyto algoritmy vypadat jako standardní knihovna C++ u.  
@@ -318,13 +319,13 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Postupy: smyčky Parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Ukazuje, jak používat `parallel_for` algoritmus násobení matic.|  
-|[Postupy: smyčky Parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Ukazuje, jak používat `parallel_for_each` algoritmus vypočítat počet prvočísel v [std::array](../../standard-library/array-class-stl.md) objekt paralelně.|  
-|[Postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu algoritmus bitonic řazení.|  
-|[Postupy: použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu programu, který provádí víc operací na sdílený zdroj dat.|  
-|[Postup: provedení mapy a snížit operace paralelně](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Ukazuje, jak používat `parallel_transform` a `parallel_reduce` algoritmy s cílem provést mapu a snížit počet výskytů slova v souborech operace.|  
-|[Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje PPL, která poskytuje imperativní programovací model, který zvýší úroveň škálovatelnost a snadné použití pro vývoj souběžných aplikací.|  
-|[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Vysvětluje roli zrušení v knihovně PPL, jak zrušit paralelní práce a jak určit, kdy je zrušena skupinu úkolů.|  
+|[Postupy: Programování smyčky parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Ukazuje, jak používat `parallel_for` algoritmus násobení matic.|  
+|[Postupy: Programování smyčky parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Ukazuje, jak používat `parallel_for_each` algoritmus vypočítat počet prvočísel v [std::array](../../standard-library/array-class-stl.md) objekt paralelně.|  
+|[Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu algoritmus bitonic řazení.|  
+|[Postupy: Použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu programu, který provádí víc operací na sdílený zdroj dat.|  
+|[Postupy: Paralelní provádění operací mapování a redukce](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Ukazuje, jak používat `parallel_transform` a `parallel_reduce` algoritmy s cílem provést mapu a snížit počet výskytů slova v souborech operace.|  
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje PPL, která poskytuje imperativní programovací model, který zvýší úroveň škálovatelnost a snadné použití pro vývoj souběžných aplikací.|  
+|[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Vysvětluje roli zrušení v knihovně PPL, jak zrušit paralelní práce a jak určit, kdy je zrušena skupinu úkolů.|  
 |[Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Vysvětluje roli zpracování výjimek v Concurrency Runtime.|  
   
 ## <a name="reference"></a>Odkaz  

@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac169e7cc01682b8ecd0dc4fb5dd387f3be38504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup – třída
 Představuje abstrakci pro skupinu plánu. Skupiny plánů uspořádání sady souvisejících pracovních této výhody z naplánován blízko sebe, buď dočasně, a to spuštěním jiná úloha ve stejné skupině před přesunutím do jiné skupiny, nebo jinými objekty, spuštěním více položek v jedné skupině na stejné Nebo soket fyzického uzlu NUMA.  
@@ -49,7 +50,7 @@ class ScheduleGroup;
 |Název|Popis|  
 |----------|-----------------|  
 |[ID](#id)|Vrátí identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.|  
-|[Referenční dokumentace](#reference)|Zvýší počet odkazů skupiny plánu.|  
+|[Referenční informace](#reference)|Zvýší počet odkazů skupiny plánu.|  
 |[Vydaná verze](#release)|Snižuje počet referenční příručka skupiny plánovače.|  
 |[Scheduletask –](#scheduletask)|Naplánuje úlohu šedé – v rámci skupiny pro plán.|  
   

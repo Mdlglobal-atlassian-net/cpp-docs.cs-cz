@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb39b5089b7cd4849e5afd3eaac239c0c2ab3adf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Datové objekty a zdroje dat (OLE)
 Při provádění přenosu dat, buď pomocí schránky nebo přetažení a drop, data má zdroj a cíl. Jednu aplikaci poskytuje data pro kopírování a přijímá ho jiná aplikace pro vložení. Každé straně přenos je potřeba provádět různé operace na stejná data pro přenos proběhla úspěšně. Knihovna Microsoft Foundation Class (MFC) obsahuje dvě třídy, které představují každé straně tento přenos:  
@@ -36,16 +37,16 @@ Při provádění přenosu dat, buď pomocí schránky nebo přetažení a drop,
   
  Na následující články popisují, jak se datové objekty a zdroje dat ve svých aplikacích. Tyto informace platí pro kontejner a server aplikace, protože obě může být volána po k kopírovat a vkládat data.  
   
--   [Datové objekty a zdroje dat: vytváření a likvidace](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Datové objekty a zdroje dat: Vytváření a likvidace](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Datové objekty a zdroje dat: manipulace](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Datové objekty a zdroje dat: Manipulace](../mfc/data-objects-and-data-sources-manipulation.md)  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Přetažení](../mfc/drag-and-drop-ole.md)  
   
- [Schránky](../mfc/clipboard.md)  
+ [Schránka](../mfc/clipboard.md)  
   
 ## <a name="see-also"></a>Viz také  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject – třída](../mfc/reference/coledataobject-class.md)   
- [Coledatasource – třída](../mfc/reference/coledatasource-class.md)
+ [COleDataSource – třída](../mfc/reference/coledatasource-class.md)

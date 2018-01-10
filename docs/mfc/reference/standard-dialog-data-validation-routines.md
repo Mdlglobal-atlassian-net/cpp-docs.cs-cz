@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d1891c18527cc9682fbb563c8121f81df4f5f30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutiny ověřování dat standardního dialogového okna
 Toto téma uvádí rutiny ověření (DDV) dat standardního dialogového okna použít pro běžné ovládací prvky MFC dialogové okno.  
@@ -62,7 +63,7 @@ void AFXAPI DDV_MaxChars(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `nChars`  
@@ -89,7 +90,7 @@ void AFXAPI DDV_MinMaxByte(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -155,7 +156,7 @@ void AFXAPI DDV_MinMaxDouble(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -185,7 +186,7 @@ void AFXAPI DDV_MinMaxDWord(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -215,7 +216,7 @@ void AFXAPI DDV_MinMaxFloat(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -245,7 +246,7 @@ void AFXAPI DDV_MinMaxInt(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -275,7 +276,7 @@ void AFXAPI DDV_MinMaxLong(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -305,7 +306,7 @@ void AFXAPI DDV_MinMaxLongLong(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -371,7 +372,7 @@ void AFXAPI DDV_MinMaxShort(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -401,7 +402,7 @@ void AFXAPI DDV_MinMaxSlider(
  `pDX`  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na hodnota, která má být ověřen. Tento parametr obsahuje nebo nastaví ovládací prvek jezdec aktuální pozici jezdce.  
   
  `minVal`  
@@ -431,7 +432,7 @@ void AFXAPI DDV_MinMaxUInt(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -461,7 +462,7 @@ void AFXAPI DDV_MinMaxULongLong(
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  
@@ -495,7 +496,7 @@ Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku při
  `pDX`  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, se kterým je ověřit data.  
   
  `minVal`  

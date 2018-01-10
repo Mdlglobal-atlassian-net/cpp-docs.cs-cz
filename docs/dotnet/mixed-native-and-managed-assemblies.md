@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Smíšená (nativní a spravovaná) sestavení
 Smíšená sestavení jsou schopná využívat obsahující pokyny nespravovaném počítači a MSIL pokyny. To umožňuje, aby volání a volat součásti rozhraní .NET, při zachování kompatibility s součásti, které jsou zcela nespravované. Pomocí smíšená sestavení, vývojářům vytvářet aplikace, které používají směs spravovaných a nespravovaných funkcí. Smíšená sestavení díky ideální pro migraci stávajících aplikací Visual C++ pro platformu .NET.  
@@ -49,10 +52,10 @@ Smíšená sestavení jsou schopná využívat obsahující pokyny nespravované
  [Podpora knihovny pro smíšená sestavení](../dotnet/library-support-for-mixed-assemblies.md)  
  Popisuje, jak používat nativní knihovny v **/CLR** kompilace.  
   
- [Faktory ovlivňující výkon](../dotnet/performance-considerations-for-interop-cpp.md)  
+ [Důležité informace o výkonu](../dotnet/performance-considerations-for-interop-cpp.md)  
  Popisuje vliv na výkon smíšená sestavení a zařazování data.  
   
- [Aplikační domény a Visual C++](../dotnet/application-domains-and-visual-cpp.md)  
+ [Domény aplikace a jazyk Visual C++](../dotnet/application-domains-and-visual-cpp.md)  
  Popisuje podporu Visual C++ pro aplikační domény.  
   
  [Dvojitý převod adres](../dotnet/double-thunking-cpp.md)  
@@ -61,10 +64,10 @@ Smíšená sestavení jsou schopná využívat obsahující pokyny nespravované
  [Obcházení výjimek na CLR vypnutí při spotřebě objektů COM sestavených s volbou/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)  
  Popisuje, jak zajistit řádné vypnutí spravované aplikace, která zpracovává objekt COM kompilovat s **/CLR**.  
   
- [Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na modulu DLL knihovny CRT](../dotnet/create-a-partially-trusted-application.md)  
+ [Postupy: Vytvoření částečně důvěryhodné aplikace CRT odebráním závislosti na knihovně DLL](../dotnet/create-a-partially-trusted-application.md)  
  Popisuje postup vytvoření částečně důvěryhodné aplikace modul Common Language Runtime Visual C++ pomocí odebráním závislosti na msvcm90.dll.  
   
  Další informace o pokyny pro kódování pro smíšená sestavení, najdete v článku webu MSDN článku "přehled o spravované nebo nespravované kód" v [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

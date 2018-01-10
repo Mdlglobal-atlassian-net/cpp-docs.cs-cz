@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38f32a1a64c461daae0bd04fd7c79b399107cf9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogová okna v prostředí OLE
 Když uživatel spustí aplikaci OLE povolena, jsou časy, když aplikace potřebuje informace od uživatele, aby bylo možné provést operaci. Třídy MFC OLE poskytují několik dialogových oken získat požadované informace. Toto téma obsahuje seznam úloh zpracovávaných dialogových oken OLE a třídy, které jsou potřebné k zobrazování těchto dialogových oken. Informace o dialogových oknech OLE a struktury používané k přizpůsobení jejich chování najdete v tématu [odkaz knihovny MFC](../mfc/mfc-desktop-applications.md).  

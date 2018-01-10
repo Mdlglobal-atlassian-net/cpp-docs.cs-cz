@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea611f555abe21a6ad3196bca287a7bd4ff00aa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Osvědčené postupy v knihovně PPL (Parallel Patterns Library)
 Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knihovny (PPL). Knihovně PPL poskytuje pro obecné účely kontejnerů, objektů a algoritmy pro provádění podrobného paralelismu.  
@@ -286,5 +287,5 @@ Container 1: Freeing resources...Exiting program...
  [Postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)   
  [Postupy: použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)   
  [Osvědčené postupy v knihovně asynchronních agentů](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)   
- [Obecné osvědčené postupy v Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+ [Obecné osvědčené postupy v Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 172a9c2dd7f2af941c9b0ae5d2600d2717d15b1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9a5380bf335a13bbf7b2f54840c9d1160187167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Přidání obslužné rutiny události (Visual C++)
 V editoru prostředků, můžete přidat novou obslužnou rutinu události nebo upravovat stávající obslužné rutiny události pro dialogové okno pole ovládacího prvku pomocí [Průvodce obslužnou rutinou události](../ide/event-handler-wizard.md).  

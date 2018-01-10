@@ -20,20 +20,23 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0843e3e9798087a1ed5d9415e8397149b0cd74f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 Modul common language runtime poskytuje služby volání nespravovaného nebo PInvoke, což umožňuje spravovat kód volat funkce jazyka C v nativní propojené dynamické knihovny (DLL). Stejné zařazování dat se používá jako Interoperabilita modelů COM s modulem runtime a pro "Prostě to funguje" nebo IJW, mechanismus.  
   
  Další informace naleznete v tématu:  
   
--   [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
+-   [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
--   [Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
 -   [Vyvolání bližší pohled na platformy](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
@@ -230,4 +233,4 @@ int main() {
  Pro lepší výkon máte méně volání PInvoke, které zařazování jako množství dat nejdříve místo další volání, které každé volání.  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

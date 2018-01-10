@@ -56,11 +56,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16876148aa73fada420a58aa4ba38b8a557ab93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-functions"></a>Funkce výměny polí v záznamu
 Toto téma obsahuje seznam výměna pole záznamu (RFX, hromadné RFX a DFX) použít k automatizaci přenos dat mezi objekt sady záznamů a zdrojem dat a provádění dalších operací data funkce.  
@@ -144,7 +145,7 @@ void RFX_Binary(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu [CByteArray](cbytearray-class.md), jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `nMaxLength`  
@@ -178,7 +179,7 @@ void RFX_Bool(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **BOOL**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -206,7 +207,7 @@ void RFX_Byte(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **BAJTŮ**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -244,7 +245,7 @@ void RFX_Date(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen; hodnota, které se mají přenést. Různé verze funkce trvat různé datové typy pro hodnotu:  
   
  Odkaz na přebírá první verze součásti funkce [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu. Pro přenos z sady záznamů ke zdroji dat je tato hodnota převzat ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
@@ -279,7 +280,7 @@ void RFX_Double(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **dvojité**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -307,7 +308,7 @@ void RFX_Int(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu `int`, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -336,7 +337,7 @@ value );
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **dlouho**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -364,7 +365,7 @@ void RFX_LongBinary(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu `CLongBinary`, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -392,7 +393,7 @@ void RFX_Single(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **float**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -424,7 +425,7 @@ void RFX_Text(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu `CString`, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `nMaxLength`  
@@ -697,7 +698,7 @@ void RFX_Int(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu `int`, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
 ### <a name="example"></a>Příklad  
@@ -873,7 +874,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu [CByteArray](cbytearray-class.md), jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `nPreAllocSize`  
@@ -915,7 +916,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **BOOL**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -953,7 +954,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **BAJTŮ**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -991,7 +992,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů ke zdroji dat, tato hodnota je převzat ze zadaných dat člen typu [COleCurrency](colecurrency-class.md). Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1029,7 +1030,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Funkce přijímá odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objektu. Pro přenos z sady záznamů ke zdroji dat je tato hodnota převzat ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1070,7 +1071,7 @@ void AFXAPI DFX_Double(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **dvojité**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1108,7 +1109,7 @@ void AFXAPI DFX_Long(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **dlouho**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1148,7 +1149,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu [CLongBinary](clongbinary-class.md), jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  *dwPreAllocSize*  
@@ -1189,7 +1190,7 @@ void AFXAPI DFX_Short(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **krátké**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Single(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu **float**, jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `dwBindOptions`  
@@ -1270,7 +1271,7 @@ void AFXAPI DFX_Text(
  `szName`  
  Název sloupce dat.  
   
- *Hodnota*  
+ *value*  
  Hodnota uložená v uvedených datový člen – hodnota, která má být převedena. Pro přenos z sady záznamů do zdroje dat, je hodnota typu [CString](../../atl-mfc-shared/reference/cstringt-class.md), jsou převzaty ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů hodnota je uložena ve členovi zadaná data.  
   
  `nPreAllocSize`  

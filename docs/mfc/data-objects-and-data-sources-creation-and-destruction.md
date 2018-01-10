@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b919fec6f9e835a788b6d9c7b5f5d8715bd22b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datové objekty a zdroje dat: Vytváření a likvidace
 Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md), datové objekty a zdroje dat představuje obou stranách datových přenosů. Tento článek vysvětluje, kdy se má vytvořit a odstraňte tyto objekty a zdroje k provedení vaší přenosů dat správně, včetně:  
@@ -90,4 +91,4 @@ Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-obje
 ## <a name="see-also"></a>Viz také  
  [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject – třída](../mfc/reference/coledataobject-class.md)   
- [Coledatasource – třída](../mfc/reference/coledatasource-class.md)
+ [COleDataSource – třída](../mfc/reference/coledatasource-class.md)

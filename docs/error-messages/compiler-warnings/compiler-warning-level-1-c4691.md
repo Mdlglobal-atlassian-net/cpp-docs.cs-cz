@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04276d7e45e4f6e7460a2dedee3973fb6523c9c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17673ee3e65d2e0cd0d989c56759b62de38f5fdc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4691"></a>C4691 kompilátoru upozornění (úroveň 1)
 'type': v neregistrované sestavení 'file' typem definovaným v aktuální jednotku překlad místo toho použít byl očekáván typ odkazuje  

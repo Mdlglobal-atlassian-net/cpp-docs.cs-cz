@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b93a591bb6441fd2d1ed04bfda8fcfa7cbad5946
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: a340acbc50c629686f010f51ce07e397e4084154
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valuecompare-class"></a>value_compare – třída
 Poskytuje objekt funkce, který můžete porovnat elementy hash_map srovnáním jejich klíčů určit jejich relativní pořadí v hash_map.  
@@ -62,7 +63,7 @@ protected:
 ## <a name="see-also"></a>Viz také  
  [binary_function – struktura](../standard-library/binary-function-struct.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

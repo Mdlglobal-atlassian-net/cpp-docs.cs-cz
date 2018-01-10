@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d086540d3b8f1475916bf5f8174f98de3c62c810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel
 IntelliSense přestane fungovat v integrovaném vývojovém prostředí pro projekty makefile Visual C++ při určitých nastavení projektu a možnosti kompilátoru jsou nastaveny nesprávně. Pomocí tohoto postupu ke konfiguraci projekty makefile Visual C++, tak, aby IntelliSense funguje, když jsou projekty makefile otevřené ve vývojovém prostředí sady Visual Studio.  
@@ -57,4 +58,4 @@ IntelliSense přestane fungovat v integrovaném vývojovém prostředí pro proj
 ## <a name="see-also"></a>Viz také  
  [Používání atributu IntelliSense](/visualstudio/ide/using-intellisense)   
  [NMAKE – odkaz](../build/nmake-reference.md)   
- [Postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+ [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)

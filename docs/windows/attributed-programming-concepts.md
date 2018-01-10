@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31a55b2413dceb2738522f755c7a27cd10c19872
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2e5477d91d50ab239732adf3521a2bf07d92a1c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
 Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití atributů v programy můžou. Atributy, nová funkce v jazyce Visual C++, jsou navrženy pro zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele dynamické knihovny (DLL) k vložení kódu nebo úpravě kódu v souborech generovaný objekt. Existují atributy, které pomáhají při vytváření soubory .idl, rozhraní, knihovny typů a další elementy COM. Atributy v integrované vývojové prostředí (IDE), jsou podporovány prostřednictvím průvodců a okno vlastností.  
@@ -35,7 +38,7 @@ Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití a
  [Základní mechanismy atributů](../windows/basic-mechanics-of-attributes.md)  
  Popisuje, jak fungují atributy ve vašem projektu.  
   
- [Sestavení programu s atributy](../windows/building-an-attributed-program.md)  
+ [Sestavení programu s atributy](../windows/building-an-attributed-program.md)  
  Poskytuje informace o používání C++ – možnosti kompilátoru ve vašem projektu.  
   
  [Kategorie atributů](../windows/attribute-categories.md)  

@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00988ef4a0b70561ec3a5687502ddae95508dad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
 Podokno s kartami s vzhled **navigačním podokně** v aplikaci Microsoft Outlook 2000 nebo 2003 aplikace Outlook. `CMFCOutlookBar` Objekt obsahuje [CMFCOutlookBarTabCtrl třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objekt a řadu karty. Karty může být buď [CMFCOutlookBarPane třída](../../mfc/reference/cmfcoutlookbarpane-class.md) objekty nebo `CWnd`-odvozené objekty. Pro uživatele se zobrazí na panelu aplikace Outlook jako řadu tlačítek a zobrazení oblasti. Když uživatel klikne na tlačítko, se zobrazí tlačítko podokna nebo odpovídající ovládacího prvku.  

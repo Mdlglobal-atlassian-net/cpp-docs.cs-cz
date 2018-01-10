@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a628d0ce3d85a2bdcae9c7d25550cbd36386e67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93652274432e5ae84bc7336f233f1cdfd278dc00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error – třída
 Tato třída popisuje výjimce z důvodu selhání při vytváření kontextu spuštění pracovního procesu v Concurrency Runtime.  
@@ -77,4 +78,4 @@ explicit _CRTIMP scheduler_worker_creation_error(
  `HRESULT` Hodnotu chyby, který způsobil výjimku.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

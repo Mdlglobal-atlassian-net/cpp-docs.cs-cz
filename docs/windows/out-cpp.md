@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd5f210632d3f53a26ab6a88f218edeb455bb25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ee63988571f7db0a872bf0286dae952f3066f0e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-c"></a>out (C++)
 Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volání procedury (ze serveru do klienta).  
@@ -55,4 +58,4 @@ Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volán
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy parametru](../windows/parameter-attributes.md)   
  [Výchozí hodnota](../windows/defaultvalue.md)   
- [ID](../windows/id.md)   
+ [id](../windows/id.md)   

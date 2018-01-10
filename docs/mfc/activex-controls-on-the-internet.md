@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b883e5f46e274c19b3e5c4ed3ae2698cef694e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládacího prvku. Ovládací prvky jsou primární architektury pro vývoj programovatelný softwarové komponenty, které lze použít v různých různé kontejnery, včetně podporující rozhraní COM webových prohlížečů na Internetu. Libovolný ovládací prvek ActiveX může být ovládací prvek Internet a můžete přidat jeho funkce pro aktivní dokument nebo být součástí webové stránky. Ovládací prvky na webové stránce mohou komunikovat navzájem pomocí skriptování.  
@@ -209,5 +210,5 @@ ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládac�
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

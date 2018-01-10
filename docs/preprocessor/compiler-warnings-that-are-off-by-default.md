@@ -11,11 +11,12 @@ ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dec9728679629f25ddbea93956fd25d9b29ef59
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 48afd89f4b795a4f582d8b9506c527a602a1d2b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím natavení vypnuta.
 
@@ -89,7 +90,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |C4647 (úroveň 3)|Změna v chování: __is_pod (*typu*) má jinou hodnotu v předchozích verzích|
 |C4654 (úroveň 4)|Kód umístěna před patří předkompilovaných hlaviček řádek bude ignorován. Přidávání kódu do předkompilovaných hlaviček.|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (úroveň 4)|'*symbol*'není definován jako makro preprocesoru, nahraďte '0' pro'*direktivy*.|
-|C4682 (úroveň 4)|'*symbol*': atribut směrovou parametr zadán, jako výchozí bude použit [v]|
+|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (úroveň 4)|'*symbol*': atribut směrovou parametr zadán, jako výchozí bude použit [v]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (úroveň 3)|'*uživatelsky definovaný typ.*': vrátit změnu v hodnotě UDT možné změnu v chování konvence volání|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (úroveň 1)|'*funkce*': podpis privátního člena obsahuje privátní nativní typ sestavení 'native_type.|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (úroveň 4)|'*funkce*': není vložená funkce|
@@ -153,4 +154,4 @@ Tato upozornění byly vypnout ve výchozím nastavení ve verzích kompilátoru
 
 ## <a name="see-also"></a>Viz také
 
-[upozornění](../preprocessor/warning.md)
+[warning](../preprocessor/warning.md)

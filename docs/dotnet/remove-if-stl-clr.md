@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a89698c11800f3943beb2ee47d01cc5506a538e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8e9b30e7f3627758ed905f95f1b700cfa5034e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removeif-stlclr"></a>remove_if (STL/CLR)
 Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.  
@@ -40,4 +43,4 @@ template<class _FwdIt, class _Pr> inline
  **Namespace:** cliext –  
   
 ## <a name="see-also"></a>Viz také  
- [algoritmus (STL/CLR)](../dotnet/algorithm-stl-clr.md)
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

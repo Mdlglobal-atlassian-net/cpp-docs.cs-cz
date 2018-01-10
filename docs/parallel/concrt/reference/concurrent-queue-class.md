@@ -26,11 +26,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue – třída
 `concurrent_queue` Třída je pořadí kontejneru třídu, která umožňuje first in, první ven přístup k jeho elementy. Umožňuje omezenou sadu souběžnosti bezpečných operace, jako například `push` a `try_pop`.  
@@ -268,4 +269,4 @@ size_type unsafe_size() const;
  `unsafe_size`není bezpečné souběžného zpracování a může způsobit nesprávné výsledky, pokud volána souběžně volání metod `push`, `try_pop`, a `empty`.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

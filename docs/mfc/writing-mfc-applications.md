@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b863f841d5edf04ccdfcc1a3376df43ffe2429b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6a3a961ca0197eb80a8fafeee16c6e54cce8579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-mfc-applications"></a>Psaní aplikací MFC
 Tento článek vysvětluje počáteční kroky, které je třeba provést vyvíjet aplikaci. Nejprve je nutné rozhodnout, jaký druh aplikace píšete. Některé z těchto možností se zabývá [volby při návrhu aplikací](../mfc/application-design-choices.md). Bude vaše aplikace:  
@@ -49,11 +50,11 @@ Tento článek vysvětluje počáteční kroky, které je třeba provést vyvíj
   
 -   [Volby při návrhu aplikací](../mfc/application-design-choices.md)  
   
--   [Asynchronní Monikery na Internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [WinInet – základy](../mfc/wininet-basics.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75c3b5356277e227832ecc94a9f6b70cc15f3a71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c6ae27dacf5b8637c914c92b6805b1cc405353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-specific-hot-keys"></a>Klávesové zkratky specifické pro vlákno
 Aplikace nastaví klávesové zkratky specifické pro vlákno ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) pomocí Windows **RegisterHotKey** funkce. Když uživatel stiskne klávesové zkratky specifické pro vlákno, odešle Windows [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) zpráva na začátek fronty zpráv konkrétní vlákno. **WM_HOTKEY** zpráva obsahuje virtuální klíče kódu, stav shift a uživatelské ID konkrétní klávesové zkratky, která byla stisknuta. Seznam kódů standardní virtuální klíčů najdete v tématu winuser. Další informace o této metodě naleznete v tématu [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  

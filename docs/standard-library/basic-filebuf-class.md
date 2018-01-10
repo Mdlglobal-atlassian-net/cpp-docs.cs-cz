@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffc7f3e830d9caccf3428b2d9d3b70253d8d3b18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf – třída
 Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v souboru externích.  
@@ -220,14 +221,14 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
   
 |||  
 |-|-|  
-|[Zavřete](#close)|Zavře soubor.|  
+|[close](#close)|Zavře soubor.|  
 |[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
-|[Otevřete](#open)|Otevře soubor.|  
+|[open](#open)|Otevře soubor.|  
 |[přetečení](#overflow)|Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|  
 |[pbackfail –](#pbackfail)|Chráněný člen virtuální funkce pokusí vrátit zpět element do vstupního datového proudu, ujistěte se, jeho aktuálního elementu (ukazuje další ukazatel).|  
 |[seekoff –](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
 |[seekpos –](#seekpos)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
-|[setbuf –](#setbuf)|Chráněný člen virtuální funkce provádí konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.|  
+|[setbuf](#setbuf)|Chráněný člen virtuální funkce provádí konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.|  
 |[Swap](#swap)|Obsah této výměny `basic_filebuf` pro obsah ze zadaných `basic_filebuf` parametr.|  
 |[synchronizace](#sync)|Chráněné, virtuální funkce se pokusí synchronizovat řízené datové proudy s všechny přidružené externí datové proudy.|  
 |[uflow –](../standard-library/basic-streambuf-class.md#uflow)|Chráněný, virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|  

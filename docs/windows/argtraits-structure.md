@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d95fc547d9c755adad58c1ddcd8de5a8e40a863c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64ec29d674f6213992fbb1424093931b20ed45b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argtraits-structure"></a>ArgTraits – struktura
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -175,7 +178,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Argtraits::args – konstanta](../windows/argtraits-args-constant.md)|Udržuje počet počet parametrů na metodu Invoke rozhraní delegáta.|  
+|[ArgTraits::args – konstanta](../windows/argtraits-args-constant.md)|Udržuje počet počet parametrů na metodu Invoke rozhraní delegáta.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ArgTraits`  
@@ -186,4 +189,4 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

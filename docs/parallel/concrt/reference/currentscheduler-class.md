@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad1d49bb90a5f3c0732fd81851e34485e95f3ccb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler – třída
 Představuje abstrakci pro přidružený k volání kontextu aktuálního plánovače.  
@@ -50,7 +51,7 @@ class CurrentScheduler;
 |----------|-----------------|  
 |[Vytvoření](#create)|Vytvoří nový scheduler, jehož chování je popsán `_Policy` parametr a připojí k volání kontextu. Nově vytvořený Plánovač začnou aktuálního plánovače pro kontext volání.|  
 |[Createschedulegroup –](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plánu v rámci Plánovač přidružený k volání kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v rámci skupiny nově vytvořený plán můžete být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
-|[Odpojení](#detach)|Odpojí aktuální Plánovač z volání kontextu a obnoví dříve připojené Plánovač jako aktuálního plánovače, pokud existuje. Po návratu tato metoda kontext volání je spravován plánovačem, který byl dříve připojen k kontext buď pomocí `CurrentScheduler::Create` nebo `Scheduler::Attach` metoda.|  
+|[Detach](#detach)|Odpojí aktuální Plánovač z volání kontextu a obnoví dříve připojené Plánovač jako aktuálního plánovače, pokud existuje. Po návratu tato metoda kontext volání je spravován plánovačem, který byl dříve připojen k kontext buď pomocí `CurrentScheduler::Create` nebo `Scheduler::Attach` metoda.|  
 |[GET](#get)|Vrátí ukazatel plánovačem přidružený k volání kontextu také označuje jako aktuálního plánovače.|  
 |[Getnumberofvirtualprocessors –](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený k volání kontextu.|  
 |[Getpolicy –](#getpolicy)|Vrátí kopii zásad, který byl vytvořený aktuálního plánovače.|  

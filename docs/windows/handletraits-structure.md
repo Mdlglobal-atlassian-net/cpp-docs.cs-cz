@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d020adfbcb9ee1a47750dd16b5466cf76391906
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dabc47a586eaed540757971f7272e5ec4098be09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handletraits-structure"></a>Struktura HANDLETraits
 Definuje běžné vlastnosti popisovač.  
@@ -42,8 +45,8 @@ struct HANDLETraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Handletraits::Close – metoda](../windows/handletraits-close-method.md)|Zavře Zadaný popisovač.|  
-|[Handletraits::getinvalidvalue – metoda](../windows/handletraits-getinvalidvalue-method.md)|Představuje popisovač za neplatný.|  
+|[HANDLETraits::Close – metoda](../windows/handletraits-close-method.md)|Zavře Zadaný popisovač.|  
+|[HANDLETraits::GetInvalidValue – metoda](../windows/handletraits-getinvalidvalue-method.md)|Představuje popisovač za neplatný.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HANDLETraits`  
@@ -54,4 +57,4 @@ struct HANDLETraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7ad2d09d45747733bd79fd6fe2a7139cef5269a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e535fac6330d6268629e8e3681fec47c7b0d65d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-in-remote-automation"></a>Zabezpečení vzdálené automatizace
 Vzdálená automatizace podporuje základní úroveň zabezpečení umožňující zapisovač aplikace serveru (nebo místo toho správce) k určení, jak může vzdáleně aktivovat určitý objekt. Všechny objekty automatizace na daný systém může být globálně nastaven na "Zakázat Vzdálená aktivace" nebo "povolit vzdálená aktivace". Kromě a více často jednotlivé objekty může mít například tyto funkce. Vzdálená automatizace používá klíč v nastavení registru pro každý objekt, **AllowRemoteActivation**určete, zda daný server mohou být aktivovány vzdáleně. Pokud tento režim používejte systémové nastavení, pak každý objekt v registru může být přiřazen tento klíč a jednotlivých stav každé z nich může být nastaven na "Ano" nebo "Ne" podle potřeby.  

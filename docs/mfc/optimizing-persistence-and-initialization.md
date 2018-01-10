@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b1e38a6ca424a71418790b18b3c115d12bb3065
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimalizace trvalosti a inicializace
 Ve výchozím nastavení, trvalosti a inicializace v ovládacím prvku jsou zpracovávány `DoPropExchange` – členská funkce. V ovládacím prvku typické tuto funkci obsahuje volání do několika **PX_** funkce (`PX_Color`, `PX_Font`a tak dále), jeden pro každou vlastnost.  
@@ -54,5 +55,5 @@ Ve výchozím nastavení, trvalosti a inicializace v ovládacím prvku jsou zpra
  I když `Serialize` a `OnResetState` byl potlačen, `DoPropExchange` funkce by měly být udržovány beze změn protože je stále používán trvalosti ve formátu kontejneru objektů. Je důležité zachovat všechny tři z těchto funkcí k zajištění, že ovládací prvek spravuje jeho vlastnosti konzistentně, bez ohledu na to, které trvalost používá mechanismus kontejneru.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md)
+ [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

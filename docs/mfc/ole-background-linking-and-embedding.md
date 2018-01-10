@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ecbc8bb39d9cba3a5d13567811221fe0a703ab5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9b7de075b3c32d130639c60c7fcc389ae37da54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE – pozadí: Propojování a vkládání
 Pomocí příkazu vložení v aplikaci kontejneru vytvořením Vložená součást nebo vložené položky. Zdroj dat pro vložené položky jsou uloženy jako součást OLE dokumentu, který jej obsahuje. Tímto způsobem souboru dokumentu pro dokument aplikace word procesoru může obsahovat text a také může obsahovat rastrové obrázky, grafy, vzorce nebo jiný typ data.  

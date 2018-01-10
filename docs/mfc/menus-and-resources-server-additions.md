@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65417079c3241feca9c43e058026674c6e35d18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy (součást). Serverová aplikace požaduje mnoho doplňky strukturu nabídky a jiné prostředky, protože může být spuštěno v jednom ze tří režimů: stát samostatného embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídky. Všechny čtyři se používají pro aplikace MDI úplný server při pouze tři se používají pro miniserver. V Průvodce vytvořením aplikace vytvoří rozložení nabídky potřebné pro typ serveru, který má být. Některé přizpůsobení může být nutné.  
@@ -76,5 +77,5 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
 ## <a name="see-also"></a>Viz také  
  [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)   
- [Nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md)
+ [Nabídky a prostředky: Sloučení nabídky](../mfc/menus-and-resources-menu-merging.md)
 

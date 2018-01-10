@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
 Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální pomocných funkcí pro tyto účely jako porovnávání, kopírování a serializace prvků. Jako součást vaší implementace třídy na základě `CMap`, `CList`, a `CArray`, je nutné přepsat tyto funkce v případě potřeby s verzemi přizpůsobit typ dat uložených na mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že **constructelements –** a **destructelements –** jsou zastaralé.  
@@ -215,4 +216,4 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [CMap – třída](cmap-class.md)   
  [CList – třída](clist-class.md)   
- [Carray – třída](carray-class.md)
+ [CArray – třída](carray-class.md)

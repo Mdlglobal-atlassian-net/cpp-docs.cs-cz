@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 699e575d283f830d94c123f7748f7fdaa6272ff5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54bcfa055ca30c61c7cf28abea9152acb7607b15
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ud2"></a>__ud2
 **Konkrétní Microsoft**  
@@ -37,7 +38,7 @@ void __ud2();
 ## <a name="remarks"></a>Poznámky  
  Procesor vyvolá výjimku neplatný kód operace, je-li provést nedefinované instrukci.  
   
- `__ud2` Funkce je ekvivalentní volání `UD2` počítač instrukce a je k dispozici pouze v režimu jádra. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokality.  
+ `__ud2` Funkce je ekvivalentní volání `UD2` počítač instrukce a je k dispozici pouze v režimu jádra. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

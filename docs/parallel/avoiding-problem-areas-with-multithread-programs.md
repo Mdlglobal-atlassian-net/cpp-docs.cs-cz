@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a6722e2cea4141a44bee43a162a73176ce35fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 546f5b5daa88578fc7dd062018257f0929bc0cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Obcházení problémových oblastí pomocí programů s více vlákny
 Existuje několik problémů, které mohou nastat při vytváření, propojení nebo spuštěním programu vícevláknový C. Některé z běžnějších problémy jsou popsány v následující tabulce. (Podobné informace z hlediska MFC, najdete v části [Multithreading: tipy pro programování](../parallel/multithreading-programming-tips.md).)  
@@ -33,4 +34,4 @@ Existuje několik problémů, které mohou nastat při vytváření, propojení 
 |Program generuje mnoho chyb kompilace a odkaz.|Podle nastavení úrovně upozornění kompilátoru do jednoho z jeho nejvyšší hodnoty a budete věnovat pozornost varovným zprávy upozornění, že můžete eliminovat mnoho potenciální problémy. Pomocí úroveň 3 nebo úroveň 4 upozornění úrovně možnosti, můžete zjistit neúmyslné převody dat, chybějící prototypy funkcí a použití funkcí bez ANSI.|  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

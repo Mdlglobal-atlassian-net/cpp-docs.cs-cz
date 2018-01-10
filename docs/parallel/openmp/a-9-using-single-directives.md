@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d6570f2e3c3e757f28ffb632633d6570dac06
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11d41d62448d41d7a11ef747e65cc6ac47e4bd7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a9---using-single-directives"></a>A.9   Použití direktiv single
 Následující příklad ukazuje `single` – direktiva ([části 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) na stránce 15). V příkladu pouze jedno vlákno (obvykle první vlákno, které narazí `single` – direktiva) zobrazí zpráva o průběhu. Uživatel nesmí vytvořit žádný odhad jako na vlákno, které budou spuštěny `single` části. Přeskočí jiná vlákna `single` části a zastavit bariéry na konci `single` vytvořit. Pokud jiná vlákna můžete pokračovat bez čekání na vlákno provádění `single` části `nowait` jde zadat klauzuli `single` – direktiva.  

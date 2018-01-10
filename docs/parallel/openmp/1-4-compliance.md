@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8481c0efb54a397db004f321fb48c217cba8ebc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3fca67cb50cf91195d7edfb1e5e2fccfc9f8c5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="14-compliance"></a>1.4 Kompatibilita
 Implementace rozhraní API jazyka C/C++ OpenMP je *kompatibilní se standardem OpenMP* pokud ji rozpozná a zachová sémantika všechny elementy této specifikace, který je uveden v kapitolách 1, 2, 3, 4, a příloha C. přílohy A, B, D, E a F jsou pro informace pouze účely a nejsou součástí specifikace. Implementace, které zahrnují jenom podmnožinu rozhraní API nejsou kompatibilní se standardem OpenMP.  

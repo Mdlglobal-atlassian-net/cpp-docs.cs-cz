@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81fc5d76e77fe52cb835c409b041acc59b742943
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 882cede51d83da0bd4ffdc8abcbf6353391c2a5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Nastavení barvy pozadí v dialogovém okně
 Barva pozadí dialogových oken můžete nastavit pomocí zpracování `WM_CTLCOLOR` zprávy pro dialogové okno pole. Barva, které nastavíte, se používá pro pouze zadané dialogových oken.  

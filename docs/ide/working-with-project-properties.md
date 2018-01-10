@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>Práce s vlastnostmi projektu
 V prostředí IDE, veškeré informace, které je potřebné k vytvoření projektu je k dispozici jako *vlastnosti*. Tyto informace zahrnují název aplikace, rozšíření (například knihovny DLL, LIB, EXE), – možnosti kompilátoru, možnosti linkeru, nastavení ladicího programu, vlastní kroky sestavení a mnoho dalších položek. Obvykle použijete, *stránky vlastností* ( **projektu &#124; Vlastnosti**) můžete zobrazit a upravit tyto vlastnosti. 
@@ -102,7 +103,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
   
 -   [Stránka vlastností webových odkazů](../ide/web-references-property-page.md)  
   
--   [Stránka vlastností nástroje generátoru dat XML](../ide/xml-data-generator-tool-property-page.md)  
+-   [Stránka vlastností nástroje Generátor dat XML](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>Chcete-li rychle procházet a vyhledejte všechny vlastnosti  
  **Všechny možnosti** stránka vlastností (v části **vlastnosti konfigurace &#124; C/C++** uzlu **stránky vlastností** dialogové okno) poskytuje rychlý způsob, jak procházet a vyhledejte vlastnosti, které jsou dostupné v aktuálním kontextu. Obsahuje speciální vyhledávací pole s jednoduchou syntaxí umožňující filtrovat výsledky:  

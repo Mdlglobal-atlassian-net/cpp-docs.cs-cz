@@ -23,11 +23,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 969086f11addf91c417b0f2bf0037cf01338f565
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Volba metody nasazení
 Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie příkazu, doporučujeme použít instalační služby systému Windows pro nasazení. Instalační služba systému Windows podporuje instalace, opravy a odinstalace a také atomické aktualizace souborů aplikace, závislostí a položek registru.  
@@ -41,7 +42,7 @@ Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie p�
 ## <a name="redistributing-visual-c-libraries"></a>Distribuce knihoven Visual C++  
  Ve svých nasazeních můžete distribuovat jakoukoli verzi knihovny Visual C++, která disponuje licencí pro distribuci. Můžete je nasadit třemi způsoby:  
   
--   Centrální nasazení pomocí Distribuovatelné balíčky, který se nainstaluje knihovny jazyka Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Také si můžete stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=132793). (Na webu Stažení softwaru, vyhledejte "distribuovatelného balíčku Visual C++ *verze sady Visual Studio a aktualizace*" odpovídající vaší aplikace. Pokud jste například k sestavení aplikace použili sadu Visual Studio 2012 s aktualizací 4, vyhledejte „Distribuovatelný balíček Visual C++ 2012 s aktualizací 4“.) Informace o použití redistribuovatelného balíčku najdete v tématu [návod: nasazení Visual C++ aplikace s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Centrální nasazení pomocí Distribuovatelné balíčky, který se nainstaluje knihovny jazyka Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Také si můžete stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Na webu Stažení softwaru, vyhledejte "distribuovatelného balíčku Visual C++ *verze sady Visual Studio a aktualizace*" odpovídající vaší aplikace. Pokud jste například k sestavení aplikace použili sadu Visual Studio 2012 s aktualizací 4, vyhledejte „Distribuovatelný balíček Visual C++ 2012 s aktualizací 4“.) Informace o použití redistribuovatelného balíčku najdete v tématu [návod: nasazení Visual C++ aplikace s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Centrální nasazení s použitím slučovacích modulů, z nichž každý nainstaluje konkrétní knihovny Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Slučovací moduly se stanou součástí instalačního souboru .msi pro vaši aplikaci. Visual C++ redistributable slučovacích modulů jsou zahrnuté v sadě Visual Studio v \Program soubory (x86) \Common Files\Merge moduly\\. Další informace najdete v tématu [Redistribuce podle použití slučovacích modulů](../ide/redistributing-components-by-using-merge-modules.md).  
   
@@ -49,7 +50,7 @@ Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie p�
   
  Pokud nasazení používá redistributable slučovacích modulů a instalace je spuštěna uživatelem, který nemá práva správce, nenainstalují se knihovny DLL jazyka Visual C++ a aplikace se nespustí. Instalační programy aplikací vytvořené pomocí slučovacích modulů, které umožňují instalaci pro jednotlivé uživatele, navíc nainstalují knihovny do sdíleného umístění, které ovlivňuje všechny uživatele systému. Místní nasazení můžete použít k instalaci požadované knihovny DLL jazyka Visual C++ v adresáři aplikace určitého uživatele bez ovlivnění jiných uživatelů nebo nutnosti práva správce. Protože tak můžou vzniknout problémy použitelnost, nedoporučujeme místní nasazení knihoven DLL Visual C++ redistributable.  
   
- Nesprávné nasazení knihoven Visual C++ může způsobit chyby prostředí Runtime během spuštění aplikace, která na knihovnách závisí. Až se operační systém načte aplikaci, použije pořadí vyhledávání popsané v [funkce LoadLibraryEx](http://go.microsoft.com/fwlink/?LinkId=132792)  
+ Nesprávné nasazení knihoven Visual C++ může způsobit chyby prostředí Runtime během spuštění aplikace, která na knihovnách závisí. Až se operační systém načte aplikaci, použije pořadí vyhledávání popsané v [funkce LoadLibraryEx](http://go.microsoft.com/fwlink/p/?linkid=132792)  
   
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>Dynamické propojení je lepší než statické  
  Doporučujeme vyhnout statické propojení, když provedete opětovnou distribuci knihovny jazyka Visual C++. Tento typ propojení téměř nikdy výrazně nezlepší výkon aplikace, a naopak prakticky pokaždé zvyšuje náklady na obsluhu. Představte si například aplikaci staticky propojenou s knihovnou, kterou je třeba aktualizovat pomocí vylepšení zabezpečení – aplikace nebude moci aktualizace využívat, pokud ji znovu nezkompilujete a nenasadíte. Namísto toho doporučujeme aplikace dynamicky propojit s knihovnami, na kterých jsou závislé, aby bylo možné knihovny aktualizovat bez ohledu na to, kde jsou nasazeny.  

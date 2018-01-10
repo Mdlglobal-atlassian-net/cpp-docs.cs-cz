@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2c1f1b0d9c3b7c5949166b0018bf1e6e6fcbd14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac628b660c37c4d281c1b889ccf5a3628240573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvectorgt"></a>&lt;vektor&gt;
 Definuje vektoru třída šablony kontejneru a několika podpůrné šablony.  
@@ -100,13 +101,13 @@ void swap (
 |[operátor\<=](../standard-library/vector-operators.md#op_gt_eq)|Pokud vektoru objekt na levé straně operátoru testů je menší než nebo rovno vektoru objekt na pravé straně.|  
 |[Operator ==](../standard-library/vector-operators.md#op_eq_eq)|Testy, pokud vektoru objekt na levé straně operátoru rovná vektoru objekt na pravé straně.|  
 |[operátor >](../standard-library/vector-operators.md#op_gt)|Testy, pokud vektoru objekt na levé straně operátoru je větší než vektoru objekt na pravé straně.|  
-|[Operator > =](../standard-library/vector-operators.md#op_gt_eq)|Testy, pokud je vektoru objekt na levé straně operátoru větší než nebo rovna hodnotě vektoru objekt na pravé straně.|  
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testy, pokud je vektoru objekt na levé straně operátoru větší než nebo rovna hodnotě vektoru objekt na pravé straně.|  
   
 ### <a name="classes"></a>Třídy  
   
 |||  
 |-|-|  
-|[Vector – třída](../standard-library/vector-class.md)|Šablony třídy kontejnerů pořadí, které umožňuje uspořádat prvky daného typu v lineární uspořádání a povolit vysoká rychlost náhodného přístup k libovolného elementu.|  
+|[vector – třída](../standard-library/vector-class.md)|Šablony třídy kontejnerů pořadí, které umožňuje uspořádat prvky daného typu v lineární uspořádání a povolit vysoká rychlost náhodného přístup k libovolného elementu.|  
   
 ### <a name="specializations"></a>Specializace  
   
@@ -122,5 +123,5 @@ void swap (
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

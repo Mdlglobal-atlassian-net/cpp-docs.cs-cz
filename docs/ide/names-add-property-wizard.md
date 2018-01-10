@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 310ac33fa4e34e75273732f715472114bab9650f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="names-add-property-wizard"></a>Názvy, Průvodce přidáním vlastnosti
 Tento průvodce slouží k přidání vlastnosti do rozhraní.  
@@ -43,7 +44,7 @@ Tento průvodce slouží k přidání vlastnosti do rozhraní.
  **Funkce oznámení**  
  Pouze odesílající rozhraní MFC. K dispozici pouze v případě, že zadáte **členské proměnné** pod **typem implementace**. Nastaví název Pokud volané funkce oznámení změny vlastností. Ve výchozím nastavení, je funkce oznámení je nastavit název na*PropertyName*změněno. Můžete upravit tento název.  
   
- **Get – funkce**  
+ **Funkce Get**  
  Pro odesílající rozhraní MFC. K dispozici pouze v případě, že zadáte **metody Get/Set** pod **typem implementace**. Nastaví název funkce Get pro vlastnost. Ve výchozím nastavení, je název funkce Get hodnotu Get*PropertyName*. Můžete upravit tento název. Pokud odstraníte název funkce [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) vložena do mapy odesílání rozhraní. Zjištění*PropertyName* funkce určuje, že vlastnost jako čitelný.  
   
  **Set – funkce**  
@@ -58,7 +59,7 @@ Tento průvodce slouží k přidání vlastnosti do rozhraní.
 |**Členské proměnné**|Určuje, že vlastnost byla přidána jako členské proměnné. Jako členské proměnné můžete přidat vlastní vlastnosti nebo většinu uložených vlastností. Nelze zadat **členské proměnné** pro **popisek**, **hWnd**, a **Text** vlastnosti.<br /><br /> Poskytuje výchozí názvy v rámci **název proměnné** a **funkce oznámení**. Můžete upravit tento název.|  
 |**Metody Get/Set**|Určuje vlastnost přidán jako Get*PropertyName* a nastavte*PropertyName* funkce ve výchozím nastavení. Tyto názvy se zobrazí pod **získat funkce** a **nastavit funkce**.<br /><br /> Můžete změnit výchozí **typ vlastnosti**, která předá hodnotu funkce Get. Můžete zadat parametry pro **získat** a `Set` funkce.|  
   
- **Get – funkce**  
+ **Funkce Get**  
  Pro knihovny ATL rozhraní. Nastaví vlastnost jako čitelný; To znamená, že vytvoří **získat** metody pro získání této vlastnosti z objektu. Je nutné vybrat **získat**, `Put`, nebo obojí.  
   
  **PUT – funkce**  
@@ -74,8 +75,8 @@ Tento průvodce slouží k přidání vlastnosti do rozhraní.
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|**v**|Označuje, že parametr se předává z volání procedury vyvolání procedury.|  
-|**na více systémů**|Označuje, že je parametr ukazatele vrácená z volané procedury volání procedury (ze serveru do klienta).|  
+|**in**|Označuje, že parametr se předává z volání procedury vyvolání procedury.|  
+|**out**|Označuje, že je parametr ukazatele vrácená z volané procedury volání procedury (ze serveru do klienta).|  
   
  **Typ parametru**  
  Nastaví datový typ parametru. Vyberte typ ze seznamu.  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84fa69490d72d08fd9421d7d15aed5c9d6bf6c26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa2fea0b9a514e51db556e256f9ff17329cf4ad5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-visual-c"></a>Přidání události (Visual C++)
 Ze třídy zobrazení, můžete přidat k událostí pomocí [Průvodce přidáním události](../ide/add-event-wizard.md) pouze k třídě ovládacího prvku v vaše [ovládacího prvku ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control.md) projektu. Pokud chcete přidat událost k jinému typu služby projektu, použijte **události** v tlačítko [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

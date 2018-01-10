@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4f71b2877eaaa7af125918c7fe2b71bb031d39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Vytvoření obrázku zařízení (editor obrázků pro ikony)
 Když vytvoříte nový ikony nebo kurzoru prostředek, bitovou kopii, editor nejprve vytvoří bitovou kopii v konkrétním stylu (32 x 32, 16 barvy u ikon a 32 × 32, černobílý tisk pro kurzory). Můžete přidat Image do počáteční ikony nebo kurzoru v různých velikostech a styly a upravit každé další bitové kopie, podle potřeby pro zařízení s jiným zobrazením. Můžete taky upravit bitovou kopii pomocí operace vyjímání a vkládání z existujícího typu image nebo rastrového obrázku vytvořeného v grafickém programu.  
@@ -43,7 +46,7 @@ Když vytvoříte nový ikony nebo kurzoru prostředek, bitovou kopii, editor ne
   
      Pokud znaménko plus (**+**) se zobrazí u typu prostředku bitové kopie v **vložit prostředků** dialogové okno, znamená to, že nástrojů šablony jsou k dispozici. Kliknutím na znaménko plus rozbalte seznam šablon, vyberte šablonu a klikněte na tlačítko **nový**.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Požadavky**  
   

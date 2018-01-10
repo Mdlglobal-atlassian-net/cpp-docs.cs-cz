@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678d8dbed5d8ba659a6c0a33752f28b3e2d2c61b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activation-c"></a>Aktivace (C++)
 Tento článek vysvětluje roli aktivace ve visual úpravy OLE – položky. Poté, co uživatel má vložené položky OLE v kontejneru dokumentu, bude pravděpodobně nutné použít. K tomuto účelu poklepání položku, která aktivuje této položky. Nejčastěji se vyskytující aktivity pro aktivaci upravuje. Mnoho aktuální položky OLE, pokud je aktivován pro úpravy, způsobit nabídek a panelů nástrojů v aktuálním okně s rámečkem změnit tak, aby odrážela ty, které patří do serverové aplikace, který položku vytvořil. Toto chování známé jako místní aktivace, umožňuje uživatelům upravovat libovolnou položku vložené v složeného dokumentu bez opuštění okna dokumentu kontejneru.  

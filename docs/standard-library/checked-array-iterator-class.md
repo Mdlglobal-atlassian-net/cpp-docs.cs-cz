@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator – třída
 `checked_array_iterator` Třída umožňuje transformovat pole nebo ukazatel do zaškrtnutý iterátor. Tato třída slouží jako obálku (pomocí [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) funkce) pro nezpracovanou ukazatele nebo pole jako cílové způsob zajistit kontroly a ke správě upozornění nezaškrtnuté ukazatel místo globálně silencing tato upozornění. Pokud třeba, můžete použít nezaškrtnuté verze této třídy [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).  
@@ -163,18 +164,18 @@ int main()
   
 |||  
 |-|-|  
-|[základní](#base)|Obnoví základní iterator z jeho `checked_array_iterator`.|  
+|[base](#base)|Obnoví základní iterator z jeho `checked_array_iterator`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
 |[Operator ==](#op_eq_eq)|Dva testy `checked_array_iterator`s rovnosti.|  
-|[Operator! =](#op_neq)|Dva testy `checked_array_iterator`s nerovnost.|  
+|[operator!=](#op_neq)|Dva testy `checked_array_iterator`s nerovnost.|  
 |[operátor <](#op_lt)|Pokud testy `checked_array_iterator` na levé straně operátoru je menší než `checked_array_iterator` na pravé straně.|  
 |[operátor >](#op_gt)|Pokud testy `checked_array_iterator` na levé straně operátoru je větší než `checked_array_iterator` na pravé straně.|  
 |[Operator < =](#op_lt_eq)|Testuje, pokud `checked_array_iterator` na levé straně operátoru je menší než nebo rovno `checked_array_iterator` na pravé straně.|  
-|[Operator > =](#op_gt_eq)|Testuje, pokud `checked_array_iterator` na levé straně operátoru je větší než nebo rovno `checked_array_iterator` na pravé straně.|  
+|[operator>=](#op_gt_eq)|Testuje, pokud `checked_array_iterator` na levé straně operátoru je větší než nebo rovno `checked_array_iterator` na pravé straně.|  
 |[operátor *](#op_star)|Vrátí prvek `checked_array_iterator` adresy.|  
 |[-> – operátor](#operator-_gt)|Vrací ukazatel na element používala `checked_array_iterator`.|  
 |[Operator ++](#op_add_add)|Zvýší `checked_array_iterator` na další prvek.|  
@@ -939,7 +940,7 @@ typedef typename iterator_traits<_Iterator>::reference reference;
   
 ## <a name="see-also"></a>Viz také  
  [\<iterator >](../standard-library/iterator.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

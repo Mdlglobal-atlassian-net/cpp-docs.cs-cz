@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c435a4100189d8561be9217a970bfb4a5917908e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce4f5b91ebd68f13510f887c65927dbe5f84133
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>Postup v typické internetové klientské aplikaci
 Následující tabulka uvádí kroky, že které může provádět v typické internetové klientské aplikaci.  

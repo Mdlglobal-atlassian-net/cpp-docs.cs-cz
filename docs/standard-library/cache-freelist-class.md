@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dae377a89cb3264d8129c7d863d9d922d7bef876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachefreelist-class"></a>cache_freelist – třída
 Definuje [blokovat allocator](../standard-library/allocators-header.md) , přiděluje a zruší přidělení bloků paměti jedné velikosti.  
@@ -59,7 +60,7 @@ class cache_freelist
   
 |||  
 |-|-|  
-|[přidělit](#allocate)|Přiděluje blok paměti.|  
+|[allocate](#allocate)|Přiděluje blok paměti.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
   
 ## <a name="requirements"></a>Požadavky  

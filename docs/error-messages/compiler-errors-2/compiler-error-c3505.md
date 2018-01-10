@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 47ca6c4e8e8c01e97ed0098c84c8ea8c64f387a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b13350ea7a2ffaf232e990bd3ade42d0c44a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3505"></a>C3505 chyby kompilátoru
 
@@ -31,6 +32,6 @@ Můžete tuto chybu vyřešit vytváření 32bitové a 64bitové verze knihovny 
   
 Další informace najdete v tématu,  
   
--   [Postupy: povolení 64bitová verze sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
+-   [Postupy: Povolení 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Postupy: Konfigurace projektů Visual C++ pro 64bitové, x64 platformy](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+-   [Postupy: Konfigurace projektů Visual C++ pro 64bitové platformy x64](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

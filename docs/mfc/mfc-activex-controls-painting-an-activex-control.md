@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2adfa5ba1c327c36df27adfd966f740307ba8c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX
 Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak můžete změnit kód Malování optimalizovat proces. (Viz [optimalizace vykreslování ovládacího prvku](../mfc/optimizing-control-drawing.md) pro techniky o tom, jak optimalizovat kreslení pomocí nemá ovládací prvky jednotlivě obnovit dříve vybrané objekty GDI. Po vykreslení všechny ovládací prvky kontejneru automaticky obnovit původní objekty.)  
@@ -112,5 +113,5 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
      Samostatném okně se zobrazí, ve kterém se zobrazí metafile. Můžete změnit velikost tohoto okna zobrazíte škálování jak ovlivňuje metafile ovládacího prvku. Kdykoli můžete zavřít toto okno.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

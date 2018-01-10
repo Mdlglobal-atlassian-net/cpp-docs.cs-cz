@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a10752fecadaf3a7f044e3c563931ae3cdbe1b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c61e005759af9b5fde4bfff407ed502a41c22a72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cloakediid-structure"></a>CloakedIid – struktura
 Šablon RuntimeClass, implementuje a chaininterfaces – označuje, že zadané rozhraní není dostupný v seznamu IID.  
@@ -51,4 +54,4 @@ struct CloakedIid : T;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03f9547197e2d5dca26fd17c9d4090eb20e795ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing-illustration"></a>Znázornění směrování příkazů
 Pro ilustraci, zvažte zprávou příkazu z vymazat všechny položky nabídky v nabídce aplikace MDI upravit. Předpokládejme, že se stane, obslužné rutiny pro tento příkaz jako funkce člena třídy dokumentu aplikace. Zde je, jak tento příkaz dosáhne její obslužnou rutinu po výběru položky nabídky:  
@@ -39,5 +40,5 @@ Pro ilustraci, zvažte zprávou příkazu z vymazat všechny položky nabídky v
  Pokud dokument neměl obslužnou rutinu, ho by příkaz směrovat vedle jeho šablona dokumentu. Příkaz by pak vrátí k zobrazení a poté okně s rámečkem. Okně s rámečkem by nakonec zkontrolujte jeho mapy zpráv. Pokud se kontroly se nezdařilo i, příkaz zpět do hlavní rámce okna MDI a pak do objektu application směrován – konečným cílem neošetřené příkazy.  
   
 ## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+ [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

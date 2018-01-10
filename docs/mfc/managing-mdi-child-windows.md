@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1489fa4ec75b94c9daad7216a28599c6ef67e5a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebcd6e484385ada3cd3d5ccfe450e7e25f539eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-mdi-child-windows"></a>Správa podřízených oken MDI
 Oken MDI hlavního rámce, (jeden na aplikaci) obsahovat speciální podřízeného okna volat **MDICLIENT** okno. **MDICLIENT** okno spravuje klientské oblasti hlavního okna rámce a sama má podřízená okna: okna dokumentu odvozen od `CMDIChildWnd`. Protože windows dokumentu okna s rámečkem sami (podřízených oken MDI), budou také obsahovat vlastní podřízené objekty. Ve všech těchto případech nadřazeného okna spravuje jeho podřízených systému windows a předá některé příkazy k nim.  

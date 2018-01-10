@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86a44dfc09e3b0bcb0744115ce4ddfaf8d96f258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68f4b2c3b51caf5e0438c2ead293823885b73157
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4234"></a>C4234 kompilátoru upozornění (úroveň 4)
 nestandardní rozšíření používané: vyhrazeno pro budoucí použití – klíčové slovo '– klíčové slovo'  

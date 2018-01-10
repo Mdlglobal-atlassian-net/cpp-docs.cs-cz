@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Podokna (editor obrázků pro ikony)
 Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě podokna. Zobrazení je skutečná velikost a dalších se zvětší (výchozí zvětšení faktor je 6). Tyto dvě podokna zobrazení se automaticky aktualizují: změny v jednom podokně jsou okamžitě uvedené v dalších. Dvě podokna usnadnit práci zvětšeným zobrazením bitové kopie, ve kterém můžete rozlišení jednotlivých pixelů a, ve stejnou dobu, můžete sledovat účinek práce na zobrazení skutečná velikost bitové kopie.  
@@ -36,7 +39,7 @@ Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě
   
  Pokud v podokně editor bitové kopie je rozšířeno o faktor 4 nebo vyšší, můžete [zobrazit mřížky pixelů](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) který vymezuje jednotlivých pixelů v bitové kopii.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  

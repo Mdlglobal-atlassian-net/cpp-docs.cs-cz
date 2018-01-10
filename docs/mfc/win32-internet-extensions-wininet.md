@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d56bef1545d582caab72b9e309b27a540ac62f39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3730c7e0ae1dbbae299ddbe6128044effa101a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 – internetová rozšíření (WinInet)
 Internetových klientských aplikací je program, který přistupuje k informace ze zdroje dat síti (server), pomocí Internetové protokoly, jako je například gopher, FTP nebo HTTP. Internetových klientských aplikací může přístup k serveru, například načíst data, jako jsou počasí mapy, uložených ceny nebo novinách titulky. Klienta přes Internet můžete přístup k serveru přes síť externí (Internet) nebo k interní síti (někdy nazývané intranet).  
@@ -35,7 +36,7 @@ Internetových klientských aplikací je program, který přistupuje k informace
   
 -   [Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
   
--   [Jak MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
+-   [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
   
 -   [MFC – třídy pro tvorbu internetových klientských aplikací](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
   
@@ -45,15 +46,15 @@ Internetových klientských aplikací je program, který přistupuje k informace
   
  Kroky pro provádění úloh typické WinInet v následujících tématech:  
   
--   [Postup v typické internetové klientské aplikace](../mfc/steps-in-a-typical-internet-client-application.md)  
+-   [Postup v typické internetové klientské aplikaci](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [Postup v typické FTP klientské aplikace](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Postup v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Postup v typické klient FTP aplikaci chcete odstranit soubor](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [Postup odstranění souboru v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
--   [Kroky v typické aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Postup v typické aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
--   [Postup v typické HTTP klientské aplikace](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Postup v typické aplikaci klienta HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   

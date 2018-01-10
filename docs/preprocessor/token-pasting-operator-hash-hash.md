@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5573107688968026bf98eda4b18223e35b7b3ef2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2f77a2bd61080c398256c5d9c28085ec779d2e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="token-pasting-operator-"></a>Operátor vložení tokenu (##)
 Operátor double. číslo podepsání nebo "vložení tokenu" (**##**), která se někdy označuje jako "slučovat" operátor je používán jako objekt a funkce jako makra. Umožňuje sloučit samostatné tokeny do jediného tokenu, a proto nemůže být prvním nebo posledním tokenem v definici makra.  

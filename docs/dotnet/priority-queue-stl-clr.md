@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délkou seřazené pořadí prvků, které má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě kontejner základní jako priority fronty.  
@@ -56,17 +59,17 @@ template<typename Value,
 |[priority_queue::difference_type (STL/CLR)](../dotnet/priority-queue-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)|Typ generické rozhraní pro adaptér kontejneru.|  
 |[priority_queue::generic_value (STL/CLR)](../dotnet/priority-queue-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
-|[priority_queue::Reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|Řazení delegáta pro dva elementy.|  
 |[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[priority_queue::Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Nahradí všechny elementy.|  
-|[priority_queue::Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)|Přístup k podkladové kontejneru.|  
-|[priority_queue::POP (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|Odebere element hghest priority.|  
+|[priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|Odebere element hghest priority.|  
 |[priority_queue::priority_queue (STL/CLR)](../dotnet/priority-queue-priority-queue-stl-clr.md)|Sestaví objekt kontejneru.|  
 |[priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)|Přidá nového elementu.|  
 |[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)|Spočítá počet prvků.|  
@@ -80,7 +83,7 @@ template<typename Value,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[priority_queue::Operator = (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -126,4 +129,4 @@ template<typename Value,
  [fronty (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [Zásobník (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

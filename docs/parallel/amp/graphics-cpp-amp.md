@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>Grafické prvky (C++ AMP)
 Obsahuje několik rozhraní API v C++ AMP [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) obor názvů, který můžete použít pro přístup k podpoře texture na grafickými procesory. Jsou některé běžné scénáře:  
@@ -32,7 +33,7 @@ Obsahuje několik rozhraní API v C++ AMP [Concurrency::graphics](../../parallel
  `norm` a `unorm` typy jsou Skalární typy, které omezí rozsah `float` hodnoty, to se označuje jako *upínací*. Tyto typy lze explicitně sestavit od ostatních typů skalární. V přetypování, hodnota nejprve vložena do `float` a pak těsně příslušných oblast, která je povolena norm [-1.0, 1.0] nebo unorm [0,0, 1.0]. Přetypování z +/-infinity vrátí +/-1. Přetypování z NaN není definován. Norm být implicitně konstruovat z unorm a nedochází ke ztrátě dat. Implicitní převod operátorovi float je definována v těchto typů. Binární operátory jsou definované mezi tyto typy a jiné předdefinované Skalární typy, jako `float` a `int`: +, -, *, /, ==,! =, >, \<, > =, < =. Jsou podporovány také složené operátory přiřazení: +=,-=, \*= / =. Operátor unární negace (-) je pro typy norm definované.  
   
 ## <a name="short-vector-library"></a>Vektor krátké knihovna  
- Krátké knihovna vektoru obsahuje některé funkce [vektoru typ](http://go.microsoft.com/fwlink/p/linkid=248500) která je definována v HLSL a obvykle se používá k definování texels. Krátký vektor je datová struktura, která obsahuje jeden až čtyři hodnoty stejného typu. Podporované typy jsou `double`, `float`, `int`, `norm`, `uint`, a `unorm`. V následující tabulce jsou uvedeny názvy typů. Pro každý typ je také odpovídající `typedef` podtržítko, nebude mít v názvu. Typy, které mají podtržítka jsou v [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby se jsou oddělena od podobně názvem základní typy, jako `__int8` a `__int16`.  
+ Krátké knihovna vektoru obsahuje některé funkce [vektoru typ](http://go.microsoft.com/fwlink/p/?linkid=248500) která je definována v HLSL a obvykle se používá k definování texels. Krátký vektor je datová struktura, která obsahuje jeden až čtyři hodnoty stejného typu. Podporované typy jsou `double`, `float`, `int`, `norm`, `uint`, a `unorm`. V následující tabulce jsou uvedeny názvy typů. Pro každý typ je také odpovídající `typedef` podtržítko, nebude mít v názvu. Typy, které mají podtržítka jsou v [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby se jsou oddělena od podobně názvem základní typy, jako `__int8` a `__int16`.  
   
 ||Délka 2|Délka 3|Délka 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ Obsahuje několik rozhraní API v C++ AMP [Concurrency::graphics](../../parallel
   
 -   Krátký vektor, který má dva nebo čtyři součásti. Jedinou výjimkou je `double_4`, což není povolené.  
   
- `texture` Objekt může mít pořadí 1, 2 nebo 3. `texture` Objekt se dají zachytit pouze pomocí odkazu v argument lambda volání `parallel_for_each`. Textury jsou uloženy na GPU jako Direct3D – texture objekty. Další informace o textury a texels v Direct3D – najdete v tématu [Úvod do textury v Direct3D – 11](http://go.microsoft.com/fwlink/p/linkid=248502).  
+ `texture` Objekt může mít pořadí 1, 2 nebo 3. `texture` Objekt se dají zachytit pouze pomocí odkazu v argument lambda volání `parallel_for_each`. Textury jsou uloženy na GPU jako Direct3D – texture objekty. Další informace o textury a texels v Direct3D – najdete v tématu [Úvod do textury v Direct3D – 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  Typ texel, které používáte, může být jedním z mnoha texture formáty, které se používají v programováním grafiky. Například formátu RGBA využít 32 bity s 8 bitů každý pro R, G, B a skalární elementy. Texture hardwaru grafické karty mají přístup k jednotlivé prvky založené na formátu. Například můžete hardwaru texture Pokud používáte formát RGBA, extrahujte každý prvek 8bitové do formuláře 32-bit. V C++ AMP můžete nastavit bity za skalární element vaší texel tak, aby bez použití bitovým posunutím automaticky přístup jednotlivé skalární elementy v kódu.  
   
@@ -429,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Interoperabilita  
 
- Modul runtime C++ AMP podporuje spolupráci mezi `texture<T,1>` a [ID3D11Texture1D rozhraní](http://go.microsoft.com/fwlink/p/LinkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraní](http://go.microsoft.com/fwlink/p/LinkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraní](http://go.microsoft.com/fwlink/p/LinkId=255377). [Get_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda trvá `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda trvá `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.  
+ Modul runtime C++ AMP podporuje spolupráci mezi `texture<T,1>` a [ID3D11Texture1D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda trvá `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda trvá `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [double_2 – třída](../../parallel/amp/reference/double-2-class.md)   

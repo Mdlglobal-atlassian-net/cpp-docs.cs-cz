@@ -23,17 +23,17 @@ helpviewer_keywords:
 - std::error_condition::category
 - std::error_condition::clear
 - std::error_condition::message
-- 
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8109db3a6607abd1792485c93a59795d432f824
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcondition-class"></a>error_condition – třída
 Představuje uživatelem definované chybové kódy.  
@@ -66,14 +66,14 @@ class error_condition;
 |[přiřazení](#assign)|Přiřadí hodnotu kódu chyby a kategorie chybový stav.|  
 |[kategorie](#category)|Vrátí kategorie chyby.|  
 |[Vymazat](#clear)|Vymaže hodnotu kódu chyby a kategorie.|  
-|[zpráva](#message)|Vrací název kód chyby.|  
+|[message](#message)|Vrací název kód chyby.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
 |[Operator ==](#op_eq_eq)|Testování rovnosti mezi `error_condition` objekty.|  
-|[Operator! =](#op_neq)|Testy nerovnost mezi `error_condition` objekty.|  
+|[operator!=](#op_neq)|Testy nerovnost mezi `error_condition` objekty.|  
 |[operátor <](#op_lt)|Testuje, pokud `error_condition` objekt je menší než `error_code` objekt předaná pro porovnání.|  
 |[operátor =](#op_eq)|Přiřadí novou hodnotu výčtu k `error_condition` objektu.|  
 |[operátor bool](#op_bool)|Vrhá proměnné typu `error_condition`.|  
@@ -281,7 +281,7 @@ typedef int value_type;
   
 ## <a name="see-also"></a>Viz také  
  [error_category – třída](../standard-library/error-category-class.md)   
- [< system_error – >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

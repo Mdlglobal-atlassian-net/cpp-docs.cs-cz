@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f298085fab156e8aecd0931dc72e358409a979d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator – třída
 Šablony třídy popisuje objekt, který spravuje přidělení úložiště a uvolnění pro pole objektů typu **typu**. Třída objektu **allocator** je objekt allocator výchozí zadaný v konstruktorech pro několik tříd šablon kontejner ve standardní knihovně C++.  
@@ -111,7 +112,7 @@ class allocator
 |||  
 |-|-|  
 |[Adresa](#address)|Vyhledá objekt, jehož hodnota je zadána adresa.|  
-|[přidělit](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|  
+|[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|  
 |[konstrukce](#construct)|Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[Destroy –](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uloží objekt.|  

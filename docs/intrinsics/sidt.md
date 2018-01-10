@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c952c23af6e1695ca9032e0687334c4ebb881a1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d67e671f2f374790c50e45777d62317d3899c383
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="sidt"></a>__sidt
 **Konkrétní Microsoft**  
@@ -50,7 +51,7 @@ void __sidt(
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `__sidt` Funkce je ekvivalentní volání `SIDT` počítač instrukcí. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokality.  
+ `__sidt` Funkce je ekvivalentní volání `SIDT` počítač instrukcí. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 **Konkrétní Microsoft END**  
   

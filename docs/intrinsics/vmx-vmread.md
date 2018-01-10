@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2ff3bfba5409715f2e5022e62dd74fa94360d10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4bc649f35eb2e3d3ce203529bf4010a3d4f53fe
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Konkrétní Microsoft**  
@@ -53,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|Operace se nezdařila bez stavu k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- `__vmx_vmread` Funkce je ekvivalentní volání `VMREAD` počítač instrukcí. Hodnota `Field` parametr je indexu kódovaného pole, která je popsána v dokumentaci Intel. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu C97063-002 číslo na [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokality a pak najdete příloha C tohoto dokumentu .  
+ `__vmx_vmread` Funkce je ekvivalentní volání `VMREAD` počítač instrukcí. Hodnota `Field` parametr je indexu kódovaného pole, která je popsána v dokumentaci Intel. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu C97063-002 číslo na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality a pak najdete příloha C tohoto dokumentu .  
   
 ## <a name="requirements"></a>Požadavky  
   

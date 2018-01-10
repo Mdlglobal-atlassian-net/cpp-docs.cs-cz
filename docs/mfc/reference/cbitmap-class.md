@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap – třída
 Zapouzdří grafiky zařízení rozhraní GDI rastrového obrázku a poskytuje členské funkce k manipulaci s bitové mapy.  
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `LoadMappedBitmap` namapujete barvy běžně používané v tlačítko glyfů.  
   
- Informace o vytváření namapované rastrového obrázku, najdete v části funkce systému Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) a [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktura ve Windows SDK.  
+ Informace o vytváření namapované rastrového obrázku, najdete v části funkce systému Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktura ve Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Načte předdefinované bitmapy používaná systémem Windows.  

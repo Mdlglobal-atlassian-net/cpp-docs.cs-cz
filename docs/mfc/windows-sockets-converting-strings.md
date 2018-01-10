@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b0b66cb83dc13f74e5417cab7f8cec0fe65b73a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f87d200ca6c5b0b1edb003636e5f8c33570da50d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: Převádění řetězců
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá převádění řetězců. Další problémy, které jsou popsané v [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).  
@@ -33,16 +34,16 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: pozadí](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   
 -   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

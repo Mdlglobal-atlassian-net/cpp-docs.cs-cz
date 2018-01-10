@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c2179d3745f42164ef8cf70162ed560b331d783
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-interface-wizard"></a>Průvodce implementací rozhraní
 Tento průvodce implementuje rozhraní pro objekt COM. Implementace mnoho rozhraní jsou součástí knihovny COM, která je k dispozici v sadě Visual Studio a Windows. Implementace rozhraní je přidružená objektu, když je vytvořena instance tohoto objektu, a poskytuje služby, které nabízí objekt.  

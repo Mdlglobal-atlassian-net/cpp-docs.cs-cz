@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf874dc0d5b2ec8d814bd59a0cfd7fedab3370c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90436e3b775cd547a67be49c120d1fb94b32a5dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-member-function"></a>Run – členská funkce
 Aplikace framework tráví většinu času v [spustit](../mfc/reference/cwinapp-class.md#run) funkce člena třídy [CWinApp](../mfc/reference/cwinapp-class.md). Po inicializaci `WinMain` volání **spustit** ke zpracování zpráv smyčky.  
@@ -28,4 +29,4 @@ Aplikace framework tráví většinu času v [spustit](../mfc/reference/cwinapp-
  Odeslání zprávy závisí na druhu zprávy. Další informace najdete v tématu [zprávy a příkazy v rámci](../mfc/messages-and-commands-in-the-framework.md).  
   
 ## <a name="see-also"></a>Viz také  
- [CWinApp – Třída aplikace](../mfc/cwinapp-the-application-class.md)
+ [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e59c246c99f975cfe299bb8a4d5a27b55ea6437
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8ff1adaeab4a51049f91ba5fd5457a35105043c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation Class (MFC).  
@@ -86,7 +87,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CArchiveException – třída](../../mfc/reference/carchiveexception-class.md)  
  Představuje podmínku výjimka serializace.  
   
- [Carray – třída](../../mfc/reference/carray-class.md)  
+ [CArray – třída](../../mfc/reference/carray-class.md)  
  Podporuje pole, které se podobají C pole, ale můžete dynamicky snížit a růst podle potřeby.  
   
  [CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)  
@@ -167,7 +168,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CContextMenuManager – třída](../../mfc/reference/ccontextmenumanager-class.md)  
  Spravuje místní nabídky, také známé jako kontextové nabídky.  
   
- [Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)  
+ [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)  
  Základní třída pro třídy ovládacích pruhů [cstatusbar – třída](../../mfc/reference/cstatusbar-class.md), [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), [CDialogBar – třída](../../mfc/reference/cdialogbar-class.md), [CReBar – třída](../../mfc/reference/crebar-class.md)a [ Třída COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
   
  [CCriticalSection – třída](../../mfc/reference/ccriticalsection-class.md)  
@@ -302,7 +303,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CDBVariant – třída](../../mfc/reference/cdbvariant-class.md)  
  Představuje je odlišný datový typ pro třídy MFC rozhraní ODBC.  
   
- [Třída CDC](../../mfc/reference/cdc-class.md)  
+ [CDC – třída](../../mfc/reference/cdc-class.md)  
  Definuje třídu objektů kontextu zařízení.  
   
  [CDCRenderTarget – třída](../../mfc/reference/cdcrendertarget-class.md)  
@@ -383,7 +384,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)  
  Podporuje pole záznamu (exchange – RFX) a rutiny exchange (Bulk RFX) pole záznamu hromadné používá databázové třídy.  
   
- [Cfile – třída](../../mfc/reference/cfile-class.md)  
+ [CFile – třída](../../mfc/reference/cfile-class.md)  
  Základní třída pro třídy Microsoft Foundation Class souborů.  
   
  [CFileDialog – třída](../../mfc/reference/cfiledialog-class.md)  
@@ -410,7 +411,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CFontHolder – třída](../../mfc/reference/cfontholder-class.md)  
  Implementuje uložených vlastností písma a zapouzdřuje funkce Windows objektu písma a `IFont` rozhraní.  
   
- [Třídy CFormView – třída](../../mfc/reference/cformview-class.md)  
+ [CFormView – třída](../../mfc/reference/cformview-class.md)  
  Základní třída používaná pro zobrazení formuláře.  
   
  [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)  
@@ -518,7 +519,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CList – třída](../../mfc/reference/clist-class.md)  
  Podporuje seřazené seznamy nejedinečný objekty přístupné postupně nebo podle hodnoty.  
   
- [Clistbox – třída](../../mfc/reference/clistbox-class.md)  
+ [CListBox – třída](../../mfc/reference/clistbox-class.md)  
  Poskytuje funkci pole se seznamem systému Windows.  
   
  [CListCtrl – třída](../../mfc/reference/clistctrl-class.md)  
@@ -575,7 +576,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CMemoryException – třída](../../mfc/reference/cmemoryexception-class.md)  
  Představuje podmínku nedostatku paměti.  
   
- [Cmenu – třída](../../mfc/reference/cmenu-class.md)  
+ [CMenu – třída](../../mfc/reference/cmenu-class.md)  
  Zapouzdření Windows `HMENU`.  
   
  [CMenuTearOffManager – třída](../../mfc/reference/cmenutearoffmanager-class.md)  
@@ -803,7 +804,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CMFCTabCtrl – třída](../../mfc/reference/cmfctabctrl-class.md)  
  Poskytuje funkce pro ovládacího prvku karta. Ovládacího prvku karta zobrazí okno lze ukotvit ploché nebo trojrozměrné karty v její horní nebo dolní. Karet můžete zobrazit text a bitovou kopii a můžete změnit barvu, když je aktivní.  
   
- [Struktura CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
+ [CMFCTabToolTipInfo – struktura](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
  Poskytuje informace o kartě MDI, který uživatel ukazatele myši.  
   
  [CMFCTasksPane – třída](../../mfc/reference/cmfctaskspane-class.md)  
@@ -938,7 +939,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [COleDataObject – třída](../../mfc/reference/coledataobject-class.md)  
  Používá se v přenosech souborů pro načítání dat v různých formátech ze schránky, prostřednictvím přetažení, nebo z vložené položky OLE.  
   
- [Coledatasource – třída](../../mfc/reference/coledatasource-class.md)  
+ [COleDataSource – třída](../../mfc/reference/coledatasource-class.md)  
  Jednání jako mezipaměť, do které aplikace umístí data, která nabízí během data přenášet operace, např. schránku nebo operací přetažení myší.  
   
  [COleDBRecordView – třída](../../mfc/reference/coledbrecordview-class.md)  
@@ -1076,7 +1077,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CPropertyPage – třída](../../mfc/reference/cpropertypage-class.md)  
  Představuje jednotlivých stránek vlastností známé jako dialogové okno karty.  
   
- [Cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)  
+ [CPropertySheet – třída](../../mfc/reference/cpropertysheet-class.md)  
  Představuje seznam vlastností, také známé jako dialogová okna karet.  
   
  [CPropExchange – třída](../../mfc/reference/cpropexchange-class.md)  
@@ -1091,7 +1092,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CReBar – třída](../../mfc/reference/crebar-class.md)  
  Ovládací prvek panel, který poskytuje informace o stavu pro ovládací prvky matrice, rozložení a trvalost.  
   
- [Crebarctrl – třída](../../mfc/reference/crebarctrl-class.md)  
+ [CReBarCtrl – třída](../../mfc/reference/crebarctrl-class.md)  
  Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízeného okna.  
   
  [CRecentDockSiteInfo – třída](../../mfc/reference/crecentdocksiteinfo-class.md)  
@@ -1109,7 +1110,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)  
  Podobně jako Windows [Rect – struktura](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).  
   
- [Crecttracker – třída](../../mfc/reference/crecttracker-class.md)  
+ [CRectTracker – třída](../../mfc/reference/crecttracker-class.md)  
  Umožňuje položku, kterou chcete zobrazit, přesunout a změnit různé způsoby.  
   
  [CRenderTarget – třída](../../mfc/reference/crendertarget-class.md)  
@@ -1121,7 +1122,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CReversalTransition – třída](../../mfc/reference/creversaltransition-class.md)  
  Zapouzdří stornovací přechod.  
   
- [Třída CRgn](../../mfc/reference/crgn-class.md)  
+ [CRgn – třída](../../mfc/reference/crgn-class.md)  
  Zapouzdří oblast Windows zařízení grafické rozhraní (GDI).  
   
  [CRichEditCntrItem – třída](../../mfc/reference/cricheditcntritem-class.md)  
@@ -1133,7 +1134,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)  
  S [cricheditview – třída](../../mfc/reference/cricheditview-class.md) a [CRichEditCntrItem třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
   
- [Cricheditview – třída](../../mfc/reference/cricheditview-class.md)  
+ [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)  
  S [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
   
  [CScrollBar – třída](../../mfc/reference/cscrollbar-class.md)  
@@ -1142,7 +1143,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CScrollView – třída](../../mfc/reference/cscrollview-class.md)  
  A [CView – třída](../../mfc/reference/cview-class.md) s možností posouvání.  
   
- [Prohlížení – třída](../../mfc/reference/csemaphore-class.md)  
+ [CSemaphore – třída](../../mfc/reference/csemaphore-class.md)  
  Představuje "semafor", který je na synchronizační objekt, který umožňuje omezený počet vláken v jedné nebo více procesech pro přístup k aMaintains počet vláken, na které se právě používají zadaný prostředek.  
   
  [CSettingsStore – třída](../../mfc/reference/csettingsstore-class.md)  
@@ -1205,7 +1206,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CStatic – třída](../../mfc/reference/cstatic-class.md)  
  Poskytuje funkci statické ovládacího prvku Windows.  
   
- [Cstatusbar – třída](../../mfc/reference/cstatusbar-class.md)  
+ [CStatusBar – třída](../../mfc/reference/cstatusbar-class.md)  
  Ovládací prvek panel s řádek podokna výstup textu nebo "indikátory."  
   
  [CStatusBarCtrl – třída](../../mfc/reference/cstatusbarctrl-class.md)  
@@ -1232,10 +1233,10 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CTabView – třída](../../mfc/reference/ctabview-class.md)  
  Zjednodušuje použití třídy ovládacího prvku karta ([CTabView třída](../../mfc/reference/ctabview-class.md)) v aplikacích používajících knihovny MFC document/view – architektura.  
   
- [Třída objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md)  
+ [CTaskDialog – třída](../../mfc/reference/ctaskdialog-class.md)  
  Místní dialogové okno, který funguje jako okno se zprávou, ale můžete zobrazit další informace o uživateli. `CTaskDialog` Také zahrnuje funkce pro shromažďování informací o od uživatele.  
   
- [Ctoolbar – třída](../../mfc/reference/ctoolbar-class.md)  
+ [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)  
  Ovládací pruhy, které mají řádek rastrové obrázky tlačítek a volitelné oddělovačů.  
   
  [CToolBarCtrl – třída](../../mfc/reference/ctoolbarctrl-class.md)  
@@ -1304,14 +1305,14 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  [CWinThread – třída](../../mfc/reference/cwinthread-class.md)  
  Představuje vlákno při provádění v rámci aplikace.  
   
- [Třída CWnd](../../mfc/reference/cwnd-class.md)  
+ [CWnd – třída](../../mfc/reference/cwnd-class.md)  
  Poskytuje základní funkce všech tříd oken v knihovny Microsoft Foundation Class.  
   
  [CWordArray – třída](../../mfc/reference/cwordarray-class.md)  
  Podporuje pole 16bitové slova.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Běžné aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)  
+ [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)  
  Obsahuje odkazy na témata týkající se třídy, globální funkce, globální proměnné a makra, která tvoří knihovny MFC.
 
 

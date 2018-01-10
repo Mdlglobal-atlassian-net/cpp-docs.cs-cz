@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 263622066c379450c5155a5d484e9eb7e46916f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f0c3e4a2b35ee0d5581320aea7eff47c9bae3e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncperthread-class"></a>sync_per_thread – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) poskytuje objekt samostatné mezipaměti každé vlákno.  
@@ -52,9 +53,9 @@ class sync_per_thread
   
 |||  
 |-|-|  
-|[přidělit](#allocate)|Přiděluje blok paměti.|  
+|[allocate](#allocate)|Přiděluje blok paměti.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
-|[rovná se](#equals)|Porovná dva mezipamětí rovnosti.|  
+|[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<alokátorů >  

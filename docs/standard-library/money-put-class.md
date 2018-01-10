@@ -27,11 +27,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d93a25339802edc4f03b1f5e5cf03be0b2558dda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd47afe55f1e2625dfe216afd6ef98cbcba7b21f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyput-class"></a>money_put – třída
 Šablony třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody hodnot peněžní pořadí typu `CharType`.  

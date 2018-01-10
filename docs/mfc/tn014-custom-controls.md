@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8833ed077000c3ba41d1400241fa9b10c2f35e63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.  

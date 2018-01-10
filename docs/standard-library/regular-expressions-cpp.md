@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 Standardní knihovna C++ podporuje více gramatika regulární výraz. Toto téma popisuje dostupné gramatika rozdíly při použití regulárních výrazů.  
@@ -34,7 +35,7 @@ Regulární výraz gramatika používat je ve zadán pomocí jednoho z `std::reg
 -   `extended`: POSIX rozšířené regulární výrazy nebo ERE.
 -   `awk`: Toto je `extended`, ale má další řídicí sekvence pro netisknutelné znaky.
 -   `grep`: Toto je `basic`, ale také umožňuje nový řádek (\n) znaků jednotlivé změny.
--   `egrep`: Toto je `extended`, ale také to umožňuje znaky nového řádku k oddělení alternatios.
+-   `egrep`: Toto je `extended`, ale také to umožňuje znaky nového řádku jednotlivé změny.
 
 Ve výchozím nastavení, pokud není zadaný žádný gramatika `ECMAScript` se předpokládá. Je možné zadat pouze jeden gramatika.  
   
@@ -462,5 +463,5 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 |„$nn“||Posloupnost znaků, který odpovídá skupině zachycení na pozici `nn`, kde `nn` je v rozmezí 10 až 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)
 

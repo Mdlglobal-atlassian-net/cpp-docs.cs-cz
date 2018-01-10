@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bdf0a02155329de5b77ffa67a8bc77ab34cc3e07
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section"></a>section
 Vytvoří oddíl v souboru .obj.  
@@ -44,10 +45,10 @@ Vytvoří oddíl v souboru .obj.
   
  `attributes`je volitelný parametr, který se skládá z jedné nebo více oddělených čárkami atributy, které chcete přiřadit k části. Možné `attributes` jsou:  
   
- **pro čtení**  
+ **read**  
  Umožňuje operací čtení na data.  
   
- **zápis**  
+ **write**  
  Umožňuje operací zápisu na data.  
   
  **spuštění**  
@@ -65,7 +66,7 @@ Vytvoří oddíl v souboru .obj.
  **Zahodit**  
  Označí části jako discardable; Tato možnost je užitečná pro ovladače zařízení Win32.  
   
- **odebrat**  
+ **remove**  
  Označí části jako není rezidentní; virtuální ovladače zařízení (V*x*D) jenom.  
   
  Pokud nezadáte atributy, v části bude mít pro čtení a zápis atributů.  
@@ -85,4 +86,4 @@ int main(){}
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

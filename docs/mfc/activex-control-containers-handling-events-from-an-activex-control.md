@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b73fd6d6dbebe764960a7a20c00ddb91aa0b24f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX – kontejnery ovládacích prvků: Ošetření událostí v ovládacím prvku ActiveX
 Tento článek popisuje pomocí okna vlastnosti instalace obslužných rutin událostí pro ovládací prvky ActiveX v kontejneru ovládacího prvku ActiveX. Obslužné rutiny událostí se používají k přijímání oznámení (z ovládacího prvku) určité události a provedení několika akcí v odpovědi. Toto oznámení se nazývá "ohlásí" události.  
@@ -73,5 +74,5 @@ Tento článek popisuje pomocí okna vlastnosti instalace obslužných rutin ud�
 6.  Dvakrát klikněte na nové funkce obslužné rutiny ze zobrazení tříd pro přechod na kód obslužné rutiny událostí v implementaci (. Soubor CPP) `CContainerDlg`.  
   
 ## <a name="see-also"></a>Viz také  
- [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)
+ [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

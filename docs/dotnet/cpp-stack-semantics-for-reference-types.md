@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
 Před Visual C++ 2005 instance typu odkaz může vytvářet pouze pomocí `new` haldě operátor, který vytvořil objekt na paměti. Je však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které byste použili k vytvoření instance nativního typu v zásobníku. Ano, není potřeba použít [nové, gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu odkazového typu. A pokud objekt je mimo rozsah, kompilátor volání destruktoru objektu.  
@@ -48,7 +51,7 @@ Před Visual C++ 2005 instance typu odkaz může vytvářet pouze pomocí `new` 
   
  Následující odkazové typy nejsou k dispozici pro použití s sémantika zásobníku:  
   
--   [Delegát (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)  
   
 -   [Pole](../windows/arrays-cpp-component-extensions.md)  
   
@@ -118,4 +121,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+ [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

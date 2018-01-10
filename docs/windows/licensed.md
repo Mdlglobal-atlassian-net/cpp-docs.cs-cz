@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36d04d47f65e0a37bb5d4807480a4f898d42039a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d33e51cf938642f2ff54c48e1ecd22c3f48b71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="licensed"></a>licensed
 Označuje, že objekt COM, které se má licenci a musí být vytvořena pomocí **IClassFactory2**.  
@@ -64,11 +67,11 @@ public:
 |-|-|  
 |**Platí pro**|**Třída**,`struct`|  
 |**Opakovatelných**|Ne|  
-|**Povinné atributy**|**Třída typu coclass**|  
+|**Povinné atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   

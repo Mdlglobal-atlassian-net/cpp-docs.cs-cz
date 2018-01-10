@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d44d1f5f9a9d37bd38f441820dd75cb9a4b92df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers"></a>Automatizační servery
 Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Automatizační server je aplikace, která zveřejňuje programovatelný objekty (označovaný jako objekty automatizace) k ostatním aplikacím (nazývá [klienti automatizace](../mfc/automation-clients.md)). Automatizační servery se někdy označuje jako komponenty pro automatizaci.  
@@ -61,5 +62,5 @@ Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementov
   
 ## <a name="see-also"></a>Viz také  
  [Automatizace](../mfc/automation.md)   
- [MFC – Průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
+ [MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
 

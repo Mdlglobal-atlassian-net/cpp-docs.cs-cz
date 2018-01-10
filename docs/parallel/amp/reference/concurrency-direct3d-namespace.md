@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d – obor názvů
 `direct3d` Obor názvů obsahuje funkce, které podporují D3D interoperability. Ji umožňuje bezproblémové použít D3D prostředků pro výpočet v kódu AMP a také umožňuje používat prostředky vytvořené v AMP v kódu D3D bez vytvoření redundantní kopie zprostředkující. Můžete přírůstkově urychlit náročné části výpočetní DirectX aplikací s použitím C++ AMP a použít rozhraní API D3D na dat vytvářených z AMP výpočty.  
@@ -85,4 +86,4 @@ namespace direct3d;
  **Namespace:** souběžnosti  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

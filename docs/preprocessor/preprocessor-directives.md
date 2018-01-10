@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 105155a601a062baaebc0abbb1a7dfe23f33b78e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2aa241a4a5ee077bc2b69b021241f3fcfda5a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preprocessor-directives"></a>Preprocesor – direktivy
 Preprocesor – direktivy, jako například `#define` a **#ifdef**, jsou obvykle používány k vytvoření zdrojové programy snadno změnit a snadno zkompilovat v jiném pracovním prostředí. Direktivy ve zdrojovém souboru řekněte preprocesor provedení určitých akcí. Preprocesor můžete například nahradit tokeny v textu, vložte obsah dalších souborů do zdrojového souboru nebo potlačit kompilace část souboru, odebráním části textu. Preprocesoru řádky jsou rozpoznána a provádějí před makro rozšíření. Proto pokud makra rozšíří na objekt, který vypadá jako preprocesoru příkaz, tento příkaz nebyl rozpoznán balíčkem preprocesor.  

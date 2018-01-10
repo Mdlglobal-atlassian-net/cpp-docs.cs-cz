@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa919e1168c6235de0143d1c1f2a2337fe099685
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26458242ab6afcf69d6e70065ba70e31f0adbe74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relationship-to-the-c-language-api"></a>Vztah k rozhraní API jazyka C
 Jeden vlastnosti, která nastavuje knihovna Microsoft Foundation Class (MFC) kromě jiných knihovny tříd pro systém Windows je velmi zavřít mapování na rozhraní API systému Windows, které jsou napsané v jazyce C. Navíc je možné obecně kombinovat volání knihovny tříd volně pomocí přímé volání rozhraní API systému Windows. Tento přímý přístup, ale neznamená, že třídy se o úplné nahrazení pro toto rozhraní API. Vývojáři musí stále příležitostně volat přímo na některé funkce systému Windows, jako [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) a [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), např. Funkce systému Windows je zabalen členské funkce tříd tehdy, když je výhodu tak.  
@@ -35,4 +36,4 @@ Jeden vlastnosti, která nastavuje knihovna Microsoft Foundation Class (MFC) kro
 >  Přehled o tom, jak funguje knihovny MFC framework najdete v tématu [použití tříd pro zápis aplikace pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Obecná filosofie návrhu tříd](../mfc/general-class-design-philosophy.md)
+ [Obecná filozofie návrhu tříd](../mfc/general-class-design-philosophy.md)

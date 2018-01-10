@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe58203bb6f9b5e8aa2c793ac5f4f21a5819df85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e43e1fb1c52413eaae05dcbe8331b1d48dd7e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-implementing-a-container"></a>Kontejnery: Implementace kontejneru
 Tento článek shrnuje postup pro implementace kontejneru a bodů na další články, které poskytují podrobnější vysvětlení o implementaci kontejnery. Jsou také uvedeny některé volitelné funkce OLE, které chcete implementovat a články popisující tyto funkce.  

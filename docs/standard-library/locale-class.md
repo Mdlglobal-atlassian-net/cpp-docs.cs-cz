@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale – třída
 Třída, která popisuje místní objekt, který zapouzdří informace specifické pro jazykovou verzi jako sadu omezujících vlastností, jež společně definují určité lokalizované prostředí.  
@@ -170,13 +171,13 @@ cout.imbue(loc);
 |||  
 |-|-|  
 |[Classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|  
-|[globální](#global)|Obnoví výchozí národní prostředí pro program.|  
+|[global](#global)|Obnoví výchozí národní prostředí pro program.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[Operator! =](#op_neq)|Testuje dvě národní prostředí na nerovnost.|  
+|[operator!=](#op_neq)|Testuje dvě národní prostředí na nerovnost.|  
 |[operátor)](#op_call)|Porovná dva `basic_string` objekty.|  
 |[Operator ==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|  
   
@@ -184,8 +185,8 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[omezující vlastnost](#facet_class)|Třída, která slouží jako základní třída pro všechny omezující vlastnosti národního prostředí.|  
-|[ID](#id_class)|Třída členu poskytuje jedinečnou identifikaci omezující podmínky, která se používá jako index při vyhledávání omezujících vlastností v národním prostředí.|  
+|[facet](#facet_class)|Třída, která slouží jako základní třída pro všechny omezující vlastnosti národního prostředí.|  
+|[id](#id_class)|Třída členu poskytuje jedinečnou identifikaci omezující podmínky, která se používá jako index při vyhledávání omezujících vlastností v národním prostředí.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  

@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 019c295130de7edf14285da813bed79db5ee5404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45986af1a63f79e4466227f767fdf96fd1c2cb35
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Konkrétní Microsoft**  
@@ -46,7 +47,7 @@ unsigned char __vmx_vmlaunch(
 ## <a name="remarks"></a>Poznámky  
  Aplikace můžete provést operaci virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkci lze použít pouze s VMCS, jejichž stav spuštění je `Clear`a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkci lze použít pouze s VMCS, jejichž stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a potom pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkce pro první operaci zadejte virtuální počítač a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce pro následující operace zadejte virtuálních počítačů.  
   
- `__vmx_vmlaunch` Funkce je ekvivalentní volání `VMLAUNCH` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokality.  
+ `__vmx_vmlaunch` Funkce je ekvivalentní volání `VMLAUNCH` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

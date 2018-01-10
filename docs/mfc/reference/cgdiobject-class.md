@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>CGdiObject – třída
 Poskytuje základní třídu pro různé druhy Windows grafické objekty rozhraní GDI zařízení například rastrové obrázky, oblasti, štětce, pera, palety a písem.  
@@ -232,7 +233,7 @@ int GetObject(
 |`CBrush`|[LOGBRUSH –](../../mfc/reference/logbrush-structure.md)|  
 |`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
 |`CBitmap`|[RASTROVÝ OBRÁZEK](../../mfc/reference/bitmap-structure.md)|  
-|`CPalette`|**APLIKACE WORD**|  
+|`CPalette`|**WORD**|  
 |`CRgn`|Nepodporováno|  
   
  Pokud je objekt `CBitmap` objekt, `GetObject` vrátí pouze šířky, výšky a informace o formátu barva bitmapy. Skutečné službu bits můžete načíst pomocí [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
@@ -357,4 +358,4 @@ BOOL UnrealizeObject();
  [CFont – třída](../../mfc/reference/cfont-class.md)   
  [CPalette – třída](../../mfc/reference/cpalette-class.md)   
  [CPen – třída](../../mfc/reference/cpen-class.md)   
- [Třída CRgn](../../mfc/reference/crgn-class.md)
+ [CRgn – třída](../../mfc/reference/crgn-class.md)

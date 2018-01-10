@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dee6fb7423ba9245c1b52a8aa7b90a14d52cc9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **Copyprivate** klauzule poskytuje mechanismus pro privátní proměnnou použijte k vysílání hodnotu z jednoho člena týmu ostatním členům. Jde o alternativu k použití sdílené proměnné pro hodnotu, při poskytování sdílené proměnné může být obtížné (například v rekurze, vyžadování jiné proměnné na každé úrovni). **Copyprivate** klauzule se může vyskytovat pouze na **jeden** – direktiva.  

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f077c54902f69d181adbdfc8788f826f00239230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce14870db466727f93daea15b60c99d975783e87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Metody vytváření stavového řádku
 Poskytuje dvě třídy Vytvoření stavové řádky MFC: [cstatusbar –](../mfc/reference/cstatusbar-class.md) a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). `CStatusBar`obsahuje všechny funkce stavu panelu běžného ovládacího prvku, automaticky komunikuje se službou nabídek a panelů nástrojů a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury pro vás; ale vaše Výsledný spustitelný soubor obvykle bude větší než vytvořené pomocí `CStatusBarCtrl`.  

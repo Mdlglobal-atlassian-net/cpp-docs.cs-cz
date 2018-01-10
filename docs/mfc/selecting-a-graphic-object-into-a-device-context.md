@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ab8c783ac66af912d56ed44481c8c3968a70ca0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5909625b816deb1303821aaec4034fa24f29be5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Výběr grafického objektu v kontextu zařízení
 Toto téma se týká použití grafických objektů v kontextu zařízení časového období. Po jste [vytvoření objektu](../mfc/one-stage-and-two-stage-construction-of-objects.md), je nutné vybrat do kontextu zařízení místo výchozího objektu v ní uloženy:  
@@ -42,7 +43,7 @@ Toto téma se týká použití grafických objektů v kontextu zařízení časo
   
 -   [Kontexty zařízení](../mfc/device-contexts.md)  
   
--   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
+-   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Grafické objekty](../mfc/graphic-objects.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 713a74cc889721259ca99f1622ef5e9919edf573
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 V tomto návodu je úmyslně zavést chyby syntaxe jazyka Visual C++ v kódu se dozvíte, jak vypadá chyba kompilace a jeho řešení. Při kompilaci projektu chybová zpráva označuje, co je problém a kde došlo k.  
@@ -66,4 +67,4 @@ V tomto návodu je úmyslně zavést chyby syntaxe jazyka Visual C++ v kódu se 
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavení C/C++ programů](../build/building-c-cpp-programs.md)
+ [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

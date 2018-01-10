@@ -19,11 +19,12 @@ caps.latest.revision: "50"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b2e0af195270b55f80f7eaba37f273765b3cf4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuce souborů Visual C++
 Při nasazení aplikace je nutné nasadit také soubory, které jsou vyžadovány pro její podporu. Pokud je některý z těchto souborů poskytován společností Microsoft, zkontrolujte, zda je povoleno jej dále distribuovat. Chcete-li zkontrolovat licenční podmínky pro Visual Studio, klikněte na odkaz licenční podmínky v dialogovém okně o aplikaci Microsoft Visual Studio v prostředí IDE nebo stáhnout [licenční podmínky softwaru společnosti Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) souboru. "Seznam REDISTRIBUCE, na který se odkazuje v části"Distribuovatelný kód"licenční podmínky pro Software společnosti Microsoft pro některé edice sady Visual Studio najdete v tématu [distribuovatelného kódu pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 Sada SDK (zahrnuje nástroje a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/p/?LinkId=823098), nebo pro Visual Studio 2015, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2015 a Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Další informace o redistribuovatelné soubory, najdete v části [určení, které knihovny DLL znovu distribuovat](../ide/determining-which-dlls-to-redistribute.md) a [Příklady nasazení](../ide/deployment-examples.md).  
@@ -46,9 +47,9 @@ Při nasazení aplikace je nutné nasadit také soubory, které jsou vyžadován
 |Název|Popis|  
 |-----------|-----------------|  
 |[Redistribuce s použitím slučovacích modulů](../ide/redistributing-components-by-using-merge-modules.md)|Popisuje, jak použít k instalaci modulu runtime knihoven Visual C++ jako sdílené knihovny DLL ve složce %windir%\system32\ Visual C++ redistributable slučovacích modulů.|  
-|[Redistribuce ovládacích prvků ActiveX jazyka Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Popisuje, jak distribuovat aplikaci používající ovládací prvky technologie ActiveX.|  
-|[Redistribuce pomocných souborů databáze](../ide/redistributing-database-support-files.md)|Popisuje, jak distribuovat podporované soubory pro rozhraní DAO a databázové technologie v sadě Microsoft Data Access SDK.|  
+|[Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Popisuje, jak distribuovat aplikaci používající ovládací prvky technologie ActiveX.|  
+|[Redistribuce podpůrných souborů databáze](../ide/redistributing-database-support-files.md)|Popisuje, jak distribuovat podporované soubory pro rozhraní DAO a databázové technologie v sadě Microsoft Data Access SDK.|  
 |[Redistribuce knihovny MFC](../ide/redistributing-the-mfc-library.md)|Popisuje, jak distribuovat aplikaci používající knihovnu MFC.|  
-|[Redistribuování aplikace ATL](../ide/redistributing-an-atl-application.md)|Popisuje, jak znovu distribuovat aplikace, která používá ATL. Spouštění v sadě Visual Studio 2012, žádné redistributable pro ATL vyžaduje se knihovna.|  
+|[Redistribuce aplikace ATL](../ide/redistributing-an-atl-application.md)|Popisuje, jak znovu distribuovat aplikace, která používá ATL. Spouštění v sadě Visual Studio 2012, žádné redistributable pro ATL vyžaduje se knihovna.|  
 |[Příklady nasazení](../ide/deployment-examples.md)|Odkazuje na příklady demonstrující, jak nasadit aplikace jazyka Visual C++.|  
 |[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)|Představuje koncepty a technologie nasazení Visual C++.|

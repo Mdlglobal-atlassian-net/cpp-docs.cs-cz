@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fcd308f21d66535a983e70506fe91afb5c7042f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="4-environment-variables"></a>4. Proměnné prostředí
 Tato kapitola popisuje OpenMP C a C++ API proměnných prostředí (nebo ekvivalentní mechanismy specifických pro platformy), řídit spuštění paralelní kódu.  Názvy proměnných prostředí, musí být velkými písmeny. Hodnoty, které jsou jim přiřazeny jsou malá a velká písmena a může mít úvodní a koncové mezery.  Úpravy hodnot po spuštění programu se ignorují.  

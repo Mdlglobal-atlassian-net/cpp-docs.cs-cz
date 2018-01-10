@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1048cdce98be99b13d306e9ff36eb75b30e43cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-item-states"></a>Kontejnery: Stavy klientských položek
 Tento článek vysvětluje různé stavy, které klientské položky projdou v celé jeho životnosti.  
@@ -52,4 +53,4 @@ Tento článek vysvětluje různé stavy, které klientské položky projdou v c
  [Aktivace](../mfc/activation-cpp.md)   
  [Kontejnery: Oznámení klientských položek](../mfc/containers-client-item-notifications.md)   
  [Snímače](../mfc/trackers.md)   
- [Crecttracker – třída](../mfc/reference/crecttracker-class.md)
+ [CRectTracker – třída](../mfc/reference/crecttracker-class.md)
