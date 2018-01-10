@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7da9810a65d2726341a59c368e0d0f78f6c202
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32ea2fbcbdee22e12487d7497f651b0d70b59c0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Konkrétní Microsoft**  
@@ -75,9 +76,9 @@ DllExport int n;
   
 -   [Definice a deklarace](../cpp/definitions-and-declarations-cpp.md)  
   
--   [Definování vložených funkcí jazyka C++ pomocí příkazů dllexport a dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
+-   [Definování vložených funkcí jazyka C++ příkazy dllexport a dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
   
--   [Obecná pravidla a omezení](../cpp/general-rules-and-limitations.md)  
+-   [Obecná pravidla a omezení](../cpp/general-rules-and-limitations.md)  
   
 -   [Používání příkazů dllimport a dllexport ve třídách jazyka C++](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)  
   

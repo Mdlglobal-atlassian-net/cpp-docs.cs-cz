@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4124ab3d8606ef36b19d6196f680b41bc65fc5a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ce54717a65630089b4bfa0cafe0af70f0292206
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-accessors"></a>Použití přístupových objektů
 Následující témata popisují, jak určit typu přistupujícího objektu je nejvhodnější pro data aplikací a použití různé typy přístupových objektů, které jsou k dispozici:  
@@ -34,7 +37,7 @@ Následující témata popisují, jak určit typu přistupujícího objektu je n
   
 -   [Použití ručních přístupových objektů](../../data/oledb/using-manual-accessors.md)  
   
--   [Přístup k datům XML](../../data/oledb/accessing-xml-data.md)  
+-   [Přístup k datům XML](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

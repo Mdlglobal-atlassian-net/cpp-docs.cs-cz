@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d3c0b1a912846da6f36fc0bc05904c61a86183e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5cd7aacecf96b1908c18a23326876dbf71ce4b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking"></a>Propojení
 Informace o používání linkeru najdete v následujících částech:  
   
--   [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)  
+-   [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
   
 -   [Možnosti linkeru](../../build/reference/linker-options.md)  
   
@@ -31,4 +32,4 @@ Informace o používání linkeru najdete v následujících částech:
 -   [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz sestavení C/C++](../../build/reference/c-cpp-building-reference.md)
+ [Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)

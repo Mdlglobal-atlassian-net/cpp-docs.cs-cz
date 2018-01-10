@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be6aff46df500a55665f85f6f462514985885b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-counting"></a>Počítání odkazů
 COM, samotné nezkusí automaticky k odebrání objektu z paměti, když se domnívá, že objekt je již používána. Objekt programátorů místo toho musíte odebrat nepoužité objektu. Programátorů Určuje, zda objekt lze odebrat podle počet odkazů.  

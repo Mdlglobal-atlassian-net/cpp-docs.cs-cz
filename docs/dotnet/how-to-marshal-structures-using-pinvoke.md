@@ -18,18 +18,21 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
 Tento dokument popisuje, jak nativních funkcí, které přijímají řetězce stylu jazyka C nelze volat ze spravovaných funkcí, které poskytují instanci <xref:System.String> pomocí P/Invoke. Přestože doporučujeme použít funkce interoperability C++ místo P/Invoke protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být obtížné implementovat, pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností. Jinak najdete v následujících dokumentech:  
   
--   [Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Postupy: Zařazování struktur pomocí služby PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [Postupy: Zařazení struktur pomocí služby PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
   
  Ve výchozím nastavení nativní a spravovaná struktury jsou nastíněny jinak v paměti, takže úspěšně předání struktur přes spravované nebo nespravované hranice vyžaduje další kroky k zachování integrity dat.  
   
@@ -141,4 +144,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+ [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

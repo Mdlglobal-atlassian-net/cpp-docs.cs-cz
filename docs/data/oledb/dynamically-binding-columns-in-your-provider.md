@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d942ea203b018e39a98bd731fe2ca9e89b55d3e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamické vazby sloupců ve zprostředkovateli
 Zkontrolujte, zda že je skutečně potřebujete dynamická vazba sloupců. To může být nutné, protože:  
@@ -96,4 +99,4 @@ Zkontrolujte, zda že je skutečně potřebujete dynamická vazba sloupců. To m
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+ [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -38,11 +38,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f02bff312ec718333aa46184830397976b0df240
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e91bf18c9e6595d6122dc1add527e9a4e1193a53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execlp-wexeclp"></a>_execlp, _wexeclp
 Načte a spustí novou podřízené procesy.  
@@ -114,4 +115,4 @@ intptr_t _wexeclp(
  [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit –, _onexit_m –](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)   
- [_wsystem – systém](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

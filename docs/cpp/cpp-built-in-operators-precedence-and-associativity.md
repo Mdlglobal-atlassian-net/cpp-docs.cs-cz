@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Předdefinované C++ operátory, prioritu a Asociativnost
 
@@ -53,7 +54,7 @@ Operátor *přednost* určuje pořadí operací ve výrazech, které obsahují v
 |[Převod reinterpreted typů](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast –](../cpp/reinterpret-cast-operator.md)|
 |[Převod typu statické](../cpp/static-cast-operator.md)|[static_cast –](../cpp/static-cast-operator.md)|
 |**Skupina 3 přednost právo na levém asociativnost**|
-|[Velikost objektu nebo typ](../cpp/sizeof-operator.md)|[sizeof –](../cpp/sizeof-operator.md)|
+|[Velikost objektu nebo typ](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
 |[Předpona přírůstku](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Snížení předpony](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Jednu pro doplňku](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
@@ -62,8 +63,8 @@ Operátor *přednost* určuje pořadí operací ve výrazech, které obsahují v
 |[Unární plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Adresa](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Indirection](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
-|[Vytvoření objektu](../cpp/new-operator-cpp.md)|[Nový](../cpp/new-operator-cpp.md)|
-|[Destroy – objekt](../cpp/delete-operator-cpp.md)|[Odstranit](../cpp/delete-operator-cpp.md)|
+|[Vytvoření objektu](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
+|[Destroy – objekt](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Přetypování](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Skupina 4 přednost, zleva doprava asociativnost**|
 |[Ukazatele na člena (objekty nebo ukazatele)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; nebo -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|

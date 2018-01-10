@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d2c241add0893535be3932e85f1a37daa0d5b642
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b98510e6a027927ee7e24bdf7ba44c7a902b84a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-reference-ccx"></a>Odkaz na obory názvů (C + +/ CX)
 Články v této části dokumentace popisují obory názvů, které podporují kompilátor pro C + +/ CX.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[výchozí obor názvů](../cppcx/default-namespace.md)|Obsahuje popis předdefinované, základní typy.|  
+|[default – obor názvů](../cppcx/default-namespace.md)|Obsahuje popis předdefinované, základní typy.|  
 |[Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)|Obsahuje popis typy, které můžete použít a také interní typy, které jsou používány pouze kompilátoru infrastruktury.|  
 |[Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Obsahuje popis vylepšení a rozšíření pro prostředí Windows Runtime`Windows::Foundation::Collections` oboru názvů.|  
   

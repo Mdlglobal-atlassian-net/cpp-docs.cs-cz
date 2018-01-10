@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e927afba7de87acbfffd611cb7bad2b4953c20ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8539578e8030862e63f4dda36c6b9c93a29547ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Konfigurace Visual C++ pro procesory ARM
 
@@ -25,13 +26,13 @@ Tato část dokumentace obsahuje informace o tom, jak pomocí nástrojů Visual 
   
 ## <a name="in-this-section"></a>V tomto oddílu  
 
-[Přehled konvencí ABI ARM](../build/overview-of-arm-abi-conventions.md)  
+[Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  
 Popisuje binární rozhraní aplikace, které se používá Windows on ARM pro využití registrů, konvence volání a výjimek.  
   
-[Běžné problémy s migrací ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
+[Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
 Popisuje elementy kódu C++, které jsou běžně předpokládá, že přenosné v architekturách, ale který mít různé výsledky pro ARM než pro x86 a x64.  
   
-[Zpracovávání výjimek v jazyce ARM](../build/arm-exception-handling.md)  
+[Zpracování výjimek ARM](../build/arm-exception-handling.md)  
 Popisuje schéma kódování pro během strukturované zpracování výjimek v systému Windows na ARM unwinding zásobníku.  
   
 ## <a name="related-sections"></a>Související oddíly  

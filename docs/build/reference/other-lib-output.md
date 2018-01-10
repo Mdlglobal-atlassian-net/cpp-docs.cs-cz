@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 039117b08a3985e1d29f8be50a8869156699b415
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c41df17d118bca0a99cd16bc54d72169157dc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-lib-output"></a>Další výstup LIB
 Ve výchozím režimu můžete použít možnost/list zobrazíte informace o výsledné knihovny. Tento výstup můžete přesměrovat do souboru.  
@@ -31,4 +32,4 @@ Ve výchozím režimu můžete použít možnost/list zobrazíte informace o vý
  Chybové a výstražné zprávy vygenerované LIB mají tvar LNK*nnnn*. Nástroje pro připojení, DUMPBIN a nástroje EDITBIN také použít tento rozsah chyb. Výběrem chyby ve výstupním okně a stisknutím klávesy F1 je k dispozici nápověda.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled LIB](../../build/reference/overview-of-lib.md)
+ [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0be66a528585bd86c4dbc39c17917229c3353bd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Výběr formátu vstupních souborů .netmodule
 Soubor .obj MSIL (Kompilovat s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) lze také použít jako soubor .netmodule.  soubory .obj obsahovat metadata a nativní symboly.  .netmodules obsahují pouze metadata.  
@@ -46,4 +47,4 @@ Soubor .obj MSIL (Kompilovat s [/CLR](../../build/reference/clr-common-language-
 -   Pokud moduly se použije k vytvoření spravované knihovny, a pokud jeden nebo více modulů vstup linkeru se vytváří pomocí jenom možnosti/CLR, použijte soubory .obj jako vstup linkeru modulu a generovat .dll (sestavení).  Pokud chcete vystavit spravované typy v knihovně, a pokud chcete aplikace C++ využívat nativní typy v knihovně, své knihovny bude obsahovat soubory .obj pro moduly součástí knihovny (také můžete pro odeslání souborů .h pro každý modul takže může být odkazováno s #include ze zdrojového kódu).  
   
 ## <a name="see-also"></a>Viz také  
- [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md)
+ [Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)

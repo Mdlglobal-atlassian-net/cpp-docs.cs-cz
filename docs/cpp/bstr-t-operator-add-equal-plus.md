@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 503f021a9ef0f798af8d82f33dac84d3eb0ccc51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ceeec1461b05b25d4bb0b42321cb9b3988ce4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Konkrétní Microsoft**  
@@ -63,13 +64,13 @@ friend _bstr_t operator+(
 ## <a name="remarks"></a>Poznámky  
  Proveďte tyto operátory zřetězení řetězců:  
   
--   **+= – operátor (***s1***)** připojí znakům zapouzdřené `BSTR` z *s1* na konec tohoto objektu zapouzdřené `BSTR`.      
+-   **+= – operátor (***s1***)** připojí znakům zapouzdřené `BSTR` z *s1* na konec tohoto objektu zapouzdřené `BSTR`.  
   
--   **operátor + (***s1***)** vrátí nové `_bstr_t` která je tvořena zřetězením tento objekt `BSTR` s třídou *s1*.      
+-   **operátor + (***s1***)** vrátí nové `_bstr_t` která je tvořena zřetězením tento objekt `BSTR` s třídou *s1*.  
   
--   **operátor + (***s2***&#124;** *s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením vícebajtové řetězec *s2*, převést na kódování Unicode s `BSTR` zapouzdřené v *s1*.          
+-   **operátor + (***s2***&#124;** *s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením vícebajtové řetězec *s2*, převést na kódování Unicode s `BSTR` zapouzdřené v *s1*.  
   
--   **operátor + (** `s3` **,***s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením řetězec znaků Unicode `s3` pomocí `BSTR` zapouzdřené v *s1*.        
+-   **operátor + (** `s3` **,***s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením řetězec znaků Unicode `s3` pomocí `BSTR` zapouzdřené v *s1*.  
   
  **Konkrétní Microsoft END**  
   

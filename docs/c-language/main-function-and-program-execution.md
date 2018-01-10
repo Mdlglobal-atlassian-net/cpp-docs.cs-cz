@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-and-program-execution"></a>main – spuštění funkce a programu
 Každý program C má primární funkce (hlavní), který musí mít název **hlavní**. Pokud váš kód dodržuje programovací model znakové sady Unicode, můžete použít verzi široká charakterová **hlavní**, **wmain**. **Hlavní** funkce slouží jako výchozí bod pro spuštění programu. Obvykle řídí spuštění programu pomocí směrování volání dalších funkcí v programu. Program obvykle ukončí provádění na konci **hlavní**, i když můžete ukončovat platnost u jiných bodů programu pro celou řadu důvodů. V některých případech, například při zjištění určité chyby, lze vynutit ukončení programu. Chcete-li to provést, použijte **ukončete** funkce. Najdete v článku *referenční dokumentace běhové knihovny* informace o a příklad použití [ukončete](../c-runtime-library/reference/exit-exit-exit.md) funkce.  
@@ -45,4 +46,4 @@ main( int argc, char *argv[ ], char *envp[ ] )
  V tématu [použití funkce wmain](../c-language/using-wmain.md) popis verze široká charakterová **hlavní**.  
   
 ## <a name="see-also"></a>Viz také  
- [hlavní: spuštění programu](../cpp/main-program-startup.md)
+ [main: spuštění programu](../cpp/main-program-startup.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hostování ovládacích prvků ActiveX pomocí AXHost knihovny ATL
 Ukázka v tomto tématu ukazuje postup vytvoření AXHost a jak pro hostování ovládacího prvku ActiveX pomocí různých funkcí ATL. Také ukazuje, jak pro přístup k řízení a jímka událostí (použití [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z ovládacího prvku, který je hostován. Ukázka hostitelem ovládacího prvku kalendář v hlavním okně nebo podřízeného okna.  
@@ -57,5 +58,5 @@ Ukázka v tomto tématu ukazuje postup vytvoření AXHost a jak pro hostování 
  [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
  [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
  [CAxWindow2T – třída](../atl/reference/caxwindow2t-class.md)   
- [IAxWinHostWindowLic rozhraní](../atl/reference/iaxwinhostwindowlic-interface.md)
+ [IAxWinHostWindowLic – rozhraní](../atl/reference/iaxwinhostwindowlic-interface.md)
 

@@ -44,11 +44,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e398363fd12853b06644019201028067cf10f7dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54c7aa7fda123e811f23c2cc4b9e8d81f76966df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 Zkopírujte aktuální systémový datum do vyrovnávací paměti. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strdate_s –, _wstrdate_s –](../../c-runtime-library/reference/strdate-s-wstrdate-s.md).  
@@ -139,4 +140,4 @@ OS date: 04/25/03
  [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [mktime – _mktime32 –, _mktime64 –](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
  [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset –](../../c-runtime-library/reference/tzset.md)
+ [_tzset](../../c-runtime-library/reference/tzset.md)

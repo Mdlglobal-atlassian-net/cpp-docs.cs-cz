@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622bf0194cbf5c3207d161edefcf7da23238fb85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33ec97d5f29398e9e20be9609573eecf33894948
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-in-visual-c"></a>Zpracování výjimek v jazyce Visual C++
 Výjimka je chybový stav, nacházející se případně i mimo řízení programu, který brání programu pokračovat dle jeho pravidelné cesty spuštění. Určité operace, včetně vytvoření objektu, vstupu a výstupu souboru a volání funkcí z jiných modulů, představují možné zdroje výjimek i v případě, že program pracuje správně. Robustní kód je na výjimky připraven a zpracovává je.  
@@ -46,4 +47,4 @@ Výjimka je chybový stav, nacházející se případně i mimo řízení progra
  Informace o zpracování na x64 výjimek procesorů, najdete v části [zpracování výjimek (x64)](../build/exception-handling-x64.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

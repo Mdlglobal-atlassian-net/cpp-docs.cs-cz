@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db0a8cafbc48e4153092475026fad245d94f8e00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14a01b33a005d6715160df09fa3f19ca003b7332
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Konkrétní Microsoft**  
@@ -76,4 +77,4 @@ char * text: Test
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   
 ## <a name="see-also"></a>Viz také  
- [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)
+ [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

@@ -21,14 +21,17 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 843b7a6e10e7814f4f922297b94b3ffe523dc0ad
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e7d192387131ff0eaa04fc366254d7f78a73dd52
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicializace smíšených sestavení
-Před Visual Studio 2005, knihovny DLL kompilovat s **/CLR** – možnost kompilátoru může nedeterministicky zablokování při načítání; tento problém byl volat Smíšený problém DLL načítání nebo zavaděč zámku. Téměř všechny nedeterminismy byla odebrána z procesu načítání smíšených knihoven DLL. Existuje však několik zbývající scénáře, pro které zavaděč zámek můžete (deterministicky). Další informace o tomto problému najdete v části "Smíšených knihoven DLL problém načítání" v [knihovny MSDN](http://go.microsoft.com/fwlink/?linkid=556).  
+Před Visual Studio 2005, knihovny DLL kompilovat s **/CLR** – možnost kompilátoru může nedeterministicky zablokování při načítání; tento problém byl volat Smíšený problém DLL načítání nebo zavaděč zámku. Téměř všechny nedeterminismy byla odebrána z procesu načítání smíšených knihoven DLL. Existuje však několik zbývající scénáře, pro které zavaděč zámek můžete (deterministicky).
   
  Kód v rámci [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) nesmí přístup k modulu CLR. To znamená, že `DllMain` by měly volat žádné spravované funkce, přímo nebo nepřímo; bez spravovaného kódu by měla být deklarován nebo implementované v `DllMain`; a žádné uvolňování paměti nebo automatické načítání knihovna se uskuteční v rámci `DllMain` .  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b86059bba33d2b606b63a84bd364bd60f86eb607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51476c05774103ed439ae45888717378e9f59fac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="white-space-characters"></a>Prázdné znaky
 Znaky mezery, tabulátoru, odřádkování, konce řádku, formfeed, svislého tabulátoru a nového řádku jsou nazývány „prázdné znaky“, protože slouží stejnému účelu jako mezery mezi slovy a řádky v tištěném textu — usnadňují čtení. Tokeny jsou odděleny (ohraničeny) prázdnými znaky a jinými tokeny, například operátory a interpunkcí. Při analýze kódu kompilátor jazyka C ignoruje prázdné znaky, nejsou-li použity jako oddělovače nebo komponenty znakových konstant nebo textových literálů. Použitím prázdných znaků lze program zpřehlednit. Kompilátor zpracovává jako prázdné znaky i komentáře.  

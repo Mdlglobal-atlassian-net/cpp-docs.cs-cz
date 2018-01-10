@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1af5cf0f3304b77bf731a95f8fc771bf7010dfbc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86248b226f40da62282d7a8fb4f5847e6e617915
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 ```  
@@ -35,4 +36,4 @@ ms.lasthandoff: 10/24/2017
  Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
   
 ## <a name="see-also"></a>Viz také  
- [Možnosti DUMPBIN](../../build/reference/dumpbin-options.md)
+ [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b5e6aedfb1cc216c621a18c74d45cdf084c5d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 Určuje cílový nebo cíle pro konkrétní typ sestavy generované `_CrtDbgReport` a všechny makra, které volají [_crtdbgreport –, _crtdbgreportw –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), jako například [_ASSERT, _asserte –, _ASSERT_EXPR makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_ASSERT, _asserte –, _ASSERT_EXPR makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _rptfw – makra](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md), a [_RPT, _RPTF, _RPTW, _rptfw – makra](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) (pouze ladicí verze).  

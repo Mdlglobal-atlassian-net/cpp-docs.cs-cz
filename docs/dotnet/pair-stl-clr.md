@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6ee4a44ea9e126be16b785b9ae52c7a852bc5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 Šablony třídy popisuje objekt, který zabalí dvojici hodnot.  
@@ -43,22 +46,22 @@ template<typename Value1,
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|[Pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|Typ první zabalená hodnota.|  
-|[Pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|Typ druhého zabalená hodnota.|  
+|[pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|Typ první zabalená hodnota.|  
+|[pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|Typ druhého zabalená hodnota.|  
   
 |Člen objektu|Popis|  
 |-------------------|-----------------|  
-|[Pair::First (STL/CLR)](../dotnet/pair-first-stl-clr.md)|První uložené hodnotu.|  
-|[Pair::Second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|Druhá hodnota uložené.|  
+|[pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)|První uložené hodnotu.|  
+|[pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|Druhá hodnota uložené.|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[Pair::Pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Vytvoří objekt dvojice.|  
-|[Pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Zamění obsah dvě dvojice.|  
+|[pair::pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Vytvoří objekt dvojice.|  
+|[pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Zamění obsah dvě dvojice.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[Pair::Operator = (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Nahradí uložené dvojice hodnot.|  
+|[pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Nahradí uložené dvojice hodnot.|  
   
 ## <a name="remarks"></a>Poznámky  
  Objekt ukládá dvojici hodnot. Tato třída šablony slouží ke kombinování dvou hodnot do jednoho objektu. Všimněte si, že `cliext::pair` (zde popsané) ukládá pouze spravované typy; k uložení pár nespravované typy využívají `std::pair`, deklarované v `<utility>`.  
@@ -69,4 +72,4 @@ template<typename Value1,
  **Namespace:** cliext –  
   
 ## <a name="see-also"></a>Viz také  
- [make_pair – (STL/CLR)](../dotnet/make-pair-stl-clr.md)
+ [make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)

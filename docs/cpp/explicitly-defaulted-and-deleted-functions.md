@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e1d52d1c13e2defa51a5cab9da625b75aac757
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitně přednastavené a odstraněné funkce
 V C ++ 11 přednastavené a odstraněné funkce získáte explicitní kontrolu nad jestli jsou speciální členské funkce automaticky generovány. Odstraněné funkce také poskytují jednoduché jazyk, který chcete zakázat problematické typu povýšení z, ke kterým došlo v argumenty funkce všech typů – speciální členské funkce a také normální členských funkcí a funkcí třetí – které by jinak způsobily volání funkce nežádoucí.  

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffce371c2d8af4d0153db4ff4d032e878eda4a64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0be3ee70ef708441d20fdbbc14f25f5102d734a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
 "Řetězcový literál" je posloupnost znaků ze zdrojové znakové sady uzavřené v uvozovkách (**""**). Textové literály slouží k reprezentaci posloupnost znaků, které, dohromady, tvoří řetězce ukončené hodnotou null. Je třeba vždy předponu celou textové literály písmenem **L**.  

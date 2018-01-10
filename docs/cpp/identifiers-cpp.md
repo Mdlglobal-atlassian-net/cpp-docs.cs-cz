@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a60ce1bd87929853e57796c6ca2727fdb626e96f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2b2c3899076206d3ce3b0094f3d85426bd321c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifiers-c"></a>Identifikátory (C++)
 Identifikátor se používá k označení jednu z následujících znaků:  
@@ -107,4 +108,4 @@ int main() {
  Použití dvou po sobě jdoucích podtržítka znaků ( **__** ) na začátku identifikátor nebo jedním úvodní podtržítkem následuje velké písmeno, je vyhrazená pro implementace C++ v všechny obory. Byste neměli používat jeden počáteční podtržítka následuje malé písmeno pro názvech s rozsahem souboru z důvodu možné konflikty s současný nebo budoucí vyhrazené identifikátory.  
   
 ## <a name="see-also"></a>Viz také  
- [Lexikální pravidla](../cpp/lexical-conventions.md)
+ [Lexikální konvence](../cpp/lexical-conventions.md)

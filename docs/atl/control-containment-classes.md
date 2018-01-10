@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7dad827ce51510dfb572a27a3d8aec97ae39cf7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ee9d94bd13c41b269a897d4e752ee674e3fdc1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control-containment-classes"></a>Omezení třídy ovládacích prvků
 Následující třídy poskytovat podporu členství ve skupině pro hostování ovládacích prvků:  
@@ -33,7 +34,7 @@ Následující třídy poskytovat podporu členství ve skupině pro hostování
 -   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) volání metody na tomto rozhraní vytvořit nebo připojit ovládacího prvku na objekt hostitele nebo získat rozhraní z ovládacího prvku hostované.  
   
 ## <a name="related-articles"></a>Související články  
- [Uzavření ovládacího prvku ATL – nejčastější dotazy](../atl/atl-control-containment-faq.md)  
+ [Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL](../atl/atl-control-containment-faq.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../atl/atl-class-overview.md)

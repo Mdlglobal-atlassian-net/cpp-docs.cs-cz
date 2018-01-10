@@ -77,11 +77,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3e683141c37d704dc04c7b322714c0457b95fbb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7e0f3b5e505695eca01437bf8d1999ffccca881a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprovidertypes-cproviderinfo"></a>CProviderTypes, CProviderInfo
 Call – třída definice typedef **CProviderTypes** k implementaci jeho – třída parametru **CProviderInfo**.  
@@ -89,7 +92,7 @@ Call – třída definice typedef **CProviderTypes** k implementaci jeho – tř
 ## <a name="remarks"></a>Poznámky  
  V tématu [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje (základní) datové typy podporované poskytovatelem dat..  
+ Tato třída identifikuje (základní) datové typy podporované poskytovatelem dat.  
   
  Následující tabulka uvádí členy třídy dat a jejich odpovídající OLE DB sloupce. V tématu [řádků PROVIDER_TYPES](https://msdn.microsoft.com/en-us/library/ms709785.aspx) v *referenční příručka programátora technologie OLE DB* Další informace o schématu a sloupců.  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutual-imports"></a>Vzájemné importy
 Export a import do jiného spustitelného souboru představuje komplikace, když jsou importy vzájemné (nebo cyklické). Například dvě knihovny importovat symboly od sebe navzájem, podobně jako vzájemně rekurzivní funkce.  
@@ -58,7 +59,7 @@ Propojení dvou knihoven DLL se vzájemné importy
   
  Problém je, že v Win32, musí explicitně deklarovat všechna data jako **__declspec(dllexport)** Pokud mají být exportovány z knihovny DLL, a **deklarace __declspec(dllimport)** má-li importovat z knihovny DLL. Když definujete `_AFXEXT`, hlavičky knihovny MFC Ujistěte se, že **AFX_EXT_CLASS** správnou definici.  
   
- Pokud máte více vrstev, jeden symbol, jako **AFX_EXT_CLASS** nestačí, protože knihovnu DLL může exportovat nové třídy, jako jako importovat jiné třídy z jiné MFC – rozšiřující knihovny DLL. Chcete-li tento problém vyřešit, použijte speciální symbol preprocesoru, která určuje, že vytváříte samotné knihovny DLL a kdy knihovnu DLL. Představte si například dvě MFC rozšiřující knihovny DLL, A.dll a B.dll. Každá exportovat některé třídy v A.h B.h.. B.dll používá třídy z A.dll. Soubory hlaviček by vypadat přibližně takto:  
+ Pokud máte více vrstev, jeden symbol, jako **AFX_EXT_CLASS** nestačí, protože knihovnu DLL může exportovat nové třídy, jako jako importovat jiné třídy z jiné MFC – rozšiřující knihovny DLL. Chcete-li tento problém vyřešit, použijte speciální symbol preprocesoru, která určuje, že vytváříte samotné knihovny DLL a kdy knihovnu DLL. Představte si například dvě MFC rozšiřující knihovny DLL, A.dll a B.dll. Každá exportovat některé třídy v A.h B.h. B.dll používá třídy z A.dll. Soubory hlaviček by vypadat přibližně takto:  
   
 ```  
 /* A.H */  

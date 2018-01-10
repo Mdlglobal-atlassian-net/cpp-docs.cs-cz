@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c7ec1a356382451fecda37fa4aba2facc8c9d02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e01b1958ad97f5aebe5d7d46053ea1d3ac0059d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="can-i-reuse-a-host-window"></a>Můžete opakovaně použít okno hostitele?
 Není doporučeno hostitele windows znovu použít. K zajištění odolnosti kódu, by měl tie životnost okna hostitele k životnost jeden ovládací prvek.  

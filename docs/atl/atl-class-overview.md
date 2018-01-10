@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab4ee45f254a1b0149f05c2b8ba63f95c98fcf66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-class-overview"></a>Přehled třídy ATL
 Třídy v aktivní knihovny šablony (ATL) můžete rozdělit takto:  
@@ -31,7 +32,7 @@ Třídy v aktivní knihovny šablony (ATL) můžete rozdělit takto:
 |[Objekty pro vytváření tříd](../atl/class-factories-classes.md)|[Správa paměti](../atl/memory-management-classes.md)|  
 |[Informace o třídě](../atl/class-information-classes.md)|[Modul Snap-In konzoly MMC](../atl/mmc-snap-in-classes.md)|  
 |[Kolekce](../atl/collection-classes.md)|[Objekt zabezpečení](../atl/object-safety-classes.md)|  
-|[Moduly COM](../atl/com-modules-classes.md)|[Trvalost](../atl/persistence-classes.md)|  
+|[Moduly COM](../atl/com-modules-classes.md)|[Uchování](../atl/persistence-classes.md)|  
 |[Složené ovládací prvky](../atl/composite-controls-classes.md)|[Vlastností a stránky vlastností](../atl/properties-and-property-pages-classes.md)|  
 |[Body připojení](../atl/connection-points-classes.md)|[Podpora registru](../atl/registry-support-classes.md)|  
 |[Uzavření ovládacího prvku](../atl/control-containment-classes.md)|[S objekty](../atl/running-objects-classes.md)|  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae6f7ca131e30c179d556e225600243500ae9379
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e16711a61b3c8060396ce10aa2061600903499e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-abstract-declarators"></a>Deklarátory abstraktu jazyka C
 Abstraktní deklarátor je deklarátor bez identifikátoru, sestávající z jednoho nebo více ukazatelů, polí nebo modifikátorů funkce. Modifikátor ukazatele (**\***) vždy předchází identifikátor v deklarátor; pole (**[]**) a funkce ( **()** ) modifikátory použijte identifikátor. Když toto víte, můžete určit, kde by se identifikátor v abstraktním deklarátoru měl objevit a interpretovat tento deklarátor odpovídajícím způsobem. V tématu [interpretace více složité Deklarátory](../c-language/interpreting-more-complex-declarators.md) Další informace a příklady složitých deklarátorů. Obecný `typedef` slouží ke zjednodušení deklarátorů. V tématu [Typedef – deklarace](../c-language/typedef-declarations.md).  

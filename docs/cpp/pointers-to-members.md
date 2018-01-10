@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8a8a8c4d88f0ccd7c879eb361643ea22e2ec41b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
@@ -49,7 +50,7 @@ Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  J
   
     -   :: Operátor.  
   
-    -   **\***  Operátor.  
+    -    **\***  Operátor.  
   
     -   Volitelné **const** nebo `volatile` specifikátory.  
   
@@ -57,9 +58,9 @@ Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  J
   
     -   Inicializátoru volitelné:  
   
- **=**  Operátor.  
+  **=**  Operátor.  
   
- **&**  Operátor.  
+  **&**  Operátor.  
   
  Kvalifikovaný název třídy.  
   

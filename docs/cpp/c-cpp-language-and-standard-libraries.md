@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 407a0f42d2657488c39b37444990703f7b77bd08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42fcc58bcbff7be7b3b595f5b46882d5434dc314
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-language-and-standard-libraries"></a>Jazyk C/C++ a standardní knihovny
 Tato část dokumentace obsahuje pokyny a referenční obsah pro standardy ISO implementaci společnosti Microsoft pro C a C++.  
@@ -27,10 +28,10 @@ Tato část dokumentace obsahuje pokyny a referenční obsah pro standardy ISO i
 |Název|Popis|  
 |-----------|-----------------|  
 |[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)|Popisuje moderní programovací idioms C++ a osvědčené postupy.|  
-|[Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)|Referenční obsah pro jazyky C++.|  
+|[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)|Referenční obsah pro jazyky C++.|  
 |[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)|Referenční obsah pro implementaci Microsoft standardní knihovny jazyka C++.|  
 |[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)|Referenční obsah pro implementaci Microsoft jazyka C.|
-|[Referenční dokumentace běhové knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md)|Referenční obsah pro implementaci společnosti Microsoft C runtime (CRT).|
+|[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)|Referenční obsah pro implementaci společnosti Microsoft C runtime (CRT).|
 |[SafeInt – knihovna](../windows/safeint-library.md)|Referenční obsah pro knihovnu funkcí, které zpracovávají celých čísel bez riziko přetečení.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|  
 |[IDE a nástrojů pro vývoj](../ide/ide-and-tools-for-visual-cpp-development.md)|Odkazy na další články, které obsahují informace o tom, jak vytvořit, pomocí sady Visual Studio a jeho souvisejících nástrojích sestavení a nasazení aplikací C++.|  

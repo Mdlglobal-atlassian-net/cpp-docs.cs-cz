@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30b49825d14e72c06f569c343f96c7cf091a62f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-c"></a>friend (C++)
 V některých případech je pohodlnější k udělení přístupu na úrovni člena na funkce, které nejsou členy třídy, nebo pro všechny členy v samostatné třídy. Pouze implementátor třída můžou deklarovat kdo jsou jeho přáteli. Funkce nebo třída nelze samotné deklarovat jako přítele libovolné třídy. V definici třídy, použijte `friend` – klíčové slovo a název třetí funkce nebo jiná třída jí udělit přístup k privátním a chráněné členy vaší třídy.         V definici šablony může být parametr typu deklarované jako přítele.  

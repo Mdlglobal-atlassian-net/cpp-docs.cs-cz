@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8945eb3ca53d6402e2db31c8a174d45394bcfb2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-options"></a>Možnosti DUMPBIN
 Možnost se skládá z specifikátor možnosti, která je pomlčkou (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argumenty zadané za dvojtečkou (:). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich klíčová slova nebo argumenty názvů souborů nerozlišují velikost písmen. Většinu možností lze použít pro všechny binární soubory. Některé však lze použít pouze pro určitý typ souborů. Ve výchozím nastavení nástroj DUMPBIN odesílá informace do standardního výstupu. Použití [/OUT](../../build/reference/out-dumpbin.md) možnost odeslat výstup do souboru.  

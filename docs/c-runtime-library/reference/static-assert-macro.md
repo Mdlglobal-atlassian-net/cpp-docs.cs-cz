@@ -27,11 +27,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 686ac443eb32a9ca17e77baee95b50e06c6556b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec3d90f9bfcf51b3a5f48baea1c6e3cf06e7d72f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT – makro
 Vyhodnocení výrazu v době kompilace a generuje chybu, pokud je výsledek `FALSE`.  
@@ -80,4 +81,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_ASSERT, _asserte –, _ASSERT_EXPR makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)
+ [_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)

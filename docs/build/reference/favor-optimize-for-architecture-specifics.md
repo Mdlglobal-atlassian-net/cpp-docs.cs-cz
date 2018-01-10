@@ -17,11 +17,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58b57183d7976d024a8a9d960f1f56ab438abff9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f9ec5882cb1535f089250bc467c795263132d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Optimalizace pro konkrétní architekturu)
 **/ favor:** `option` vytvoří kód, který je optimalizován pro konkrétní architekturu nebo pro konkrétní architektur micro AMD a architektury Intel.  

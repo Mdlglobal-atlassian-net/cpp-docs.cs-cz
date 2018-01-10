@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyka C a také jejich možnosti přidružené kompilátoru a preprocesor – direktivy.  
@@ -44,7 +45,7 @@ Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyk
   
  Následující tabulka uvádí knihovny, které implementují UCRT.  
   
-|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Preprocesor – direktivy|  
+|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Direktivy preprocesoru|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
 |libucrt.lib|Žádné|Staticky odkazuje UCRT do vašeho kódu.|**/ MT**|_MT –|  
 |libucrtd.lib|Žádné|Ladění verzi UCRT pro statické propojení. Není redistributable.|**/ MTd**|_DEBUG –, _MT –|  
@@ -55,7 +56,7 @@ Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyk
   
  Tato tabulka uvádí knihovny, které implementují vcruntime knihovny.  
   
-|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Preprocesor – direktivy|  
+|Knihovna|Přidružené knihovny DLL|Vlastnosti|Možnost|Direktivy preprocesoru|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
 |libvcruntime.lib|Žádné|Staticky propojené do vašeho kódu.|**/ MT**|_MT –|  
 |libvcruntimed.lib|Žádné|Ladicí verze pro statické propojení. Není redistributable.|**/ MTd**|_MT –, _DEBUG –|  
@@ -66,7 +67,7 @@ Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyk
   
  Tato tabulka uvádí knihovny, které implementují inicializace CRT a ukončení.  
   
-|Knihovna|Vlastnosti|Možnost|Preprocesor – direktivy|  
+|Knihovna|Vlastnosti|Možnost|Direktivy preprocesoru|  
 |-------------|---------------------|------------|-----------------------------|  
 |Libcmt.lib|Staticky odkazuje nativní spuštění CRT do vašeho kódu.|**/ MT**|_MT –|  
 |libcmtd.lib|Ladicí verze nativní spuštění CRT staticky odkazuje. Není redistributable.|**/ MTd**|_DEBUG –, _MT –|  
@@ -95,7 +96,7 @@ Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyk
   
 ## <a name="c-standard-library"></a>Standardní knihovna C++  
   
-|Standardní knihovna C++|Vlastnosti|Možnost|Preprocesor – direktivy|  
+|Standardní knihovna C++|Vlastnosti|Možnost|Direktivy preprocesoru|  
 |----------------------------|---------------------|------------|-----------------------------|  
 |LIBCPMT. LIB|Více vláken, statické propojení|**/ MT**|_MT –|  
 |MSVCPRT. LIB|Více vláken, dynamického propojení (Importovat knihovny pro MSVCP\<verze > .dll)|**/MD**|_MT –, _DLL –|  
@@ -114,4 +115,4 @@ Toto téma popisuje různé soubory .lib, které tvoří běhové knihovny jazyk
  Pokud váš program používá více než jedna verze CRT, některé péči při předávání určitých objektů CRT (jako jsou popisovače souborů, národní prostředí a proměnných prostředí) přes hranice knihovny DLL. Další informace o problematika a způsob jejich řešení najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace běhové knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md)
+ [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)

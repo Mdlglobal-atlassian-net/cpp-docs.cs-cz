@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5c056907716f95a82fde01847485837fcba96f66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d77fdc4df7d2e7239b8bba652d8cf8f4bbc997
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-import-library-and-export-file"></a>Použití knihovny importu a souboru exportu
 Když program na jiném programu, který také importovat z exportuje (spustitelného souboru nebo knihovny DLL), nebo pokud více než dva programy exportovat do a importovat od sebe navzájem, příkazy propojení tyto programy musí zohlednit kruhové exporty.  
@@ -37,4 +38,4 @@ Když program na jiném programu, který také importovat z exportuje (spustitel
  Nakonec propojte program, který jste začali s. V příkazu odkaz zadejte objekty a knihovny pro export, který program používá nebo knihovny pro program, .exp soubor, který LIB vytvořit pro program a knihovny importu. Chcete-li pokračovat v příkladu, obsahuje příkaz odkaz pro ONE.dll ONE.exp a TWO.lib, a také objekty a knihovny, které patří do ONE.dll. Nezadávejte souboru .def nebo/export specifikace v příkazu odkaz; Tyto nejsou potřeba, protože definice exportu jsou obsaženy v souboru .exp. Při propojení pomocí souboru .exp odkaz nevytvoří knihovnu importu, protože předpokládá, že jeden byla vytvořena, když .exp soubor byl vytvořen.  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s importovanými knihovnami a exportovanými soubory](../../build/reference/working-with-import-libraries-and-export-files.md)
+ [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)

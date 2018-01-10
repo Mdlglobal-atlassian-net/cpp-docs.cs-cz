@@ -27,11 +27,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbb6e0886844cda7142ee52fcb545e122c38ea8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14e1a7e98e3d152d54c1d7d3d8f47671f71129cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 `__argc` – Globální proměnná je počet argumentů příkazového řádku předaný do programu. `__argv`ukazatel na pole znaková jeden nebo více byte znakové řetězce, které obsahují argumenty program a `__wargv` je ukazatel na pole široká charakterová řetězců, které obsahují argumenty programu. Tyto globální proměnné zadejte argumenty, které mají `main` nebo `wmain`.  

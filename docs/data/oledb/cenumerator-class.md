@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 856356117161a0c9e3588732faf01c3a663b6a9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a64ac02e7b16bfab70966ffaf2a1897ae955f8c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
 Používá objekt enumerator OLE DB, který zveřejňuje [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) rozhraní vrátí sadu řádků, které popisují všechny zdroje dat a výčty.  
@@ -50,4 +53,4 @@ class CEnumerator :
 ## <a name="see-also"></a>Viz také  
  [DBViewer](../../visual-cpp-samples.md)   
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

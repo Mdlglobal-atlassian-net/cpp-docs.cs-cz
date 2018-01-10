@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 09d0000dd7ac6fbe7c57d0b903694754e2d390e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 Obor názvů je standardní C++ konstrukce pro typy, které mají související s funkcí seskupování a brání kolize názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, aby všechny veřejné typy prostředí Windows Runtime, včetně těch, které v kódu, musí být deklarován v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarované v globálním oboru nebo vnořit do jiné třídy, způsobí chybu kompilace.  
@@ -59,4 +60,4 @@ Obor názvů je standardní C++ konstrukce pro typy, které mají související 
 |Platform::details|Obsahuje typy, které se používají kompilátoru a nejsou určeny pro veřejné spotřeby.|  
   
 ## <a name="see-also"></a>Viz také  
- [Systém typů (C + +/ CX)](../cppcx/type-system-c-cx.md)
+ [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)

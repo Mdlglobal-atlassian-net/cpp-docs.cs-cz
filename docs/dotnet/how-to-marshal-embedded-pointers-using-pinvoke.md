@@ -19,11 +19,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Postupy: Zařazení vložených ukazatelů pomocí služby PInvoke
 Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) a [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
@@ -110,4 +113,4 @@ int main() {
  Všimněte si, že žádná část knihovny DLL je vystaven spravovaného kódu pomocí tradiční #include – direktiva. Ve skutečnosti knihovnu DLL přístupná za běhu, takže problémy s funkcí importovány s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+ [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

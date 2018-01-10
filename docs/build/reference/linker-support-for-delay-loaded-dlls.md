@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83e75df963889730e4514c38d0551af241a788fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Podpora linkeru pro knihovny DLL s odloženým načtením
 Visual C++ linkeru teď podporuje zpožděné načítání knihovny DLL. To zbavuje kterou přináší nutnost je potřeba použít funkce Windows SDK **LoadLibrary** a **GetProcAddress** implementovat odložené načtení knihoven DLL.  
@@ -41,19 +42,19 @@ Visual C++ linkeru teď podporuje zpožděné načítání knihovny DLL. To zbav
   
 -   [Určení knihoven DLL pro odložené načtení](../../build/reference/specifying-dlls-to-delay-load.md)  
   
--   [Explicitní uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
+-   [Explicitní uvolnění knihovny DLL načtené se zpožděním](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
--   [Načtení všech importů pro knihovnu DLL s odloženým načtením](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)  
+-   [Načtení všech importů pro knihovnu DLL se zpožděným načtením](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)  
   
 -   [Import vazeb](../../build/reference/binding-imports.md)  
   
 -   [Zpracování chyb a oznámení](../../build/reference/error-handling-and-notification.md)  
   
--   [Vypsání importy s odloženým načtením](../../build/reference/dumping-delay-loaded-imports.md)  
+-   [Výpis importu se zpožděným načtením](../../build/reference/dumping-delay-loaded-imports.md)  
   
 -   [Omezení odloženého načítání knihoven DLL](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [Principy pomocné funkce](understanding-the-helper-function.md)  
+-   [Základní informace o podpůrné funkci](understanding-the-helper-function.md)  
   
 -   [Vývoj vlastní pomocné funkce](../../build/reference/developing-your-own-helper-function.md)  
   

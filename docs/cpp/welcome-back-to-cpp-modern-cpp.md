@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45cb4bb1537f7d897b1dd53ada413e73a54162ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychlé a efektivní nejsou správně vytvořená C++ programy. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření širokou škálu aplikace – z fun a zajímavé hry, vědecké softwaru vysoce výkonné, ovladače zařízení, vložené programy a klientských aplikací systému Windows. Víc než 20 let C++ jsou využívány k řešení problémů, jako jsou tyto a mnohé další. Co možná nevíte, je, že se zvyšující číslo programátory v jazyce C++ mít přeloženy až dowdy programování stylu jazyka C včerejšek a místo toho donned moderní verze jazyka C++.  
@@ -96,11 +97,11 @@ for( auto& s : v ) {
   
 -   [C++ – systém typů](../cpp/cpp-type-system-modern-cpp.md)  
   
--   [Jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)  
+-   [Jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
 -   [Životní cyklus objektů a Správa prostředků](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
   
--   [Vlastní prostředky objektů (RAII)](../cpp/objects-own-resources-raii.md)  
+-   [Prostředky ve vlastnictví objektů (RAII)](../cpp/objects-own-resources-raii.md)  
   
 -   [Chytré ukazatele](../cpp/smart-pointers-modern-cpp.md)  
   
@@ -116,7 +117,7 @@ for( auto& s : v ) {
   
 -   [Přenositelnost u rozhraní ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Další informace najdete v článku StackOverflow [co idioms C++ jsou zastaralé v C ++ 11](http://go.microsoft.com/fwlink/?LinkId=402836)  
+ Další informace najdete v článku StackOverflow [co idioms C++ jsou zastaralé v C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   

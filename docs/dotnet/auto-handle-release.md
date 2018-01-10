@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f010429904df409b1514dc811d160182f2291227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 99268be928fe7b5018a36520e517a2f1b7eca5af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandlerelease"></a>auto_handle::release
 Uvolní objekt z `auto_handle` správy.  
@@ -96,4 +99,4 @@ done
 ## <a name="see-also"></a>Viz také  
  [auto_handle – členové](../dotnet/auto-handle-members.md)   
  [auto_handle –:: ~ auto_handle –](../dotnet/auto-handle-tilde-auto-handle.md)   
- [auto_handle::Reset](../dotnet/auto-handle-reset.md)
+ [auto_handle::reset](../dotnet/auto-handle-reset.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f79fc84e12f536383753d1d5982751cd30099d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 384615a0c58c3c28a2e0958d6909546f5753ce6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 Generuje buď `UWOP_SAVE_XMM128` nebo `UWOP_SAVE_XMM128_FAR` unwind položku kódu pro zadaný XMM registr a posun pomocí aktuální posun prologu. MASM vybere nejúčinnější kódování.  

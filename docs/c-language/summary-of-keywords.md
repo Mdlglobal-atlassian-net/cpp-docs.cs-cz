@@ -13,25 +13,26 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a41ffad94af09cb4228aadb901004ed4de9b7522
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74a48a8f087bc70cda0ba7fb61772646d1446aa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-keywords"></a>Souhrn klíčových slov
 *– klíčové slovo* : jeden z  
   
 |||||  
 |-|-|-|-|  
-|**automaticky**|**Double**|`int`|`struct`|  
-|**Konec**|**else**|**dlouhá**|`switch`|  
+|**automaticky**|**double**|`int`|`struct`|  
+|**break**|**else**|**long**|`switch`|  
 |**případ**|`enum`|**Registrace**|`typedef`|  
 |`char`|`extern`|`return`|**sjednocení**|  
-|**Const**|**plovoucí desetinná čárka**|**krátký**|`unsigned`|  
-|**pokračovat**|**pro**|**podepsané**|`void`|  
-|**Výchozí**|`goto`|`sizeof`|`volatile`|  
-|**proveďte**|**Pokud**|**statické**|`while`|  
+|**const**|**float**|**short**|`unsigned`|  
+|**continue**|**for**|**podepsané**|`void`|  
+|**default**|`goto`|`sizeof`|`volatile`|  
+|**do**|**Pokud**|**static**|`while`|  
   
 ## <a name="see-also"></a>Viz také  
  [Gramatika slov](../c-language/lexical-grammar.md)

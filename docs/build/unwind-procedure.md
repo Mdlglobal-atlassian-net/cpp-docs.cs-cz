@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6ecdc6490b3d5792737eed65661ef7d53c54f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-procedure"></a>Unwind – procedura
 Unwind kódu jsou rozděleny na sestupném pořadí. Když dojde k výjimce celý kontext uložen operační systém v záznamu kontextu. Logika pro odesílání výjimek je pak vyvolána, která provádí následující kroky k nalezení obslužné rutiny výjimek.  
@@ -43,4 +44,4 @@ Unwind kódu jsou rozděleny na sestupném pořadí. Když dojde k výjimce cel�
  Nejmenší sadu unwind dat je 8 bajtů. To představuje funkci, která přiděleny pouze tehdy, 128 bajtů zásobníku nebo méně a případné uložení jednoho stálého registru. Toto je také velikost zřetězené struktury unwind informace nulové délky prologu s žádnými unwind kódy.  
   
 ## <a name="see-also"></a>Viz také  
- [(X64) zpracování výjimek](../build/exception-handling-x64.md)
+ [Zpracování výjimek (x64)](../build/exception-handling-x64.md)

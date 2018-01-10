@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aeea920579ddf6af71e3c3c9988c6315931f37f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3516f6968773f8aa866a4f2929c2c184e6ddb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunkce a speciální znaky
 Interpunkce a speciální znaky ve znakové sadě C mají různé používá z uspořádání program text, který má definice úlohy, které kompilátor nebo zkompilovaný program provádí. Nezadávejte provést operaci. Některé interpunkčních znamének jsou také operátory (viz [operátory](../c-language/c-operators.md)). Kompilátor určuje jejich použití v kontextu.  

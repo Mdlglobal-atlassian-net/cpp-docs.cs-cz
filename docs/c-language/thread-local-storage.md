@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>Úložiště Thread Local
 **Konkrétní Microsoft**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  Když jsou deklarace staticky vázané vláken v místních proměnných, musí být dodrženy těchto pokynů:  
   
--   Použití **__declspec(thread)** mohou ovlivňovat [zpoždění načítání](../build/reference/linker-support-for-delay-loaded-dlls.md) knihovny DLL importuje**.**  
+-   Místní proměnné, které mají dynamické inicializace se inicializují pouze na vlákno, které způsobí, že knihovny DLL pro načtení a vláken, které jsou již spuštěny v procesu. Další informace najdete v tématu [vlákno](../cpp/thread.md).  
   
 -   Atribut vlákna můžete použít pouze na data deklarace a definice. Nelze zadat na funkce deklarace nebo definice. Například následující kód vygeneruje Chyba kompilátoru:  
   

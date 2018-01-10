@@ -30,11 +30,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50dab1d85b4ad733874225f98489ff295202c1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d77f0f7eb0c9eabf8626a920e04534c79048bd90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freads"></a>fread_s
 Čte data z datového proudu. Tato verze [fread –](../../c-runtime-library/reference/fread.md) má rozšířené zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -155,4 +156,4 @@ Contents of buffer after write/read:
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fwrite –](../../c-runtime-library/reference/fwrite.md)   
- [_Zobrazit](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40c0f03b09a5f056ae260641c588996d3bd2043b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 Řízení přístupu vám umožňují oddělit [veřejné](../cpp/public-cpp.md) rozhraní třídy z [privátní](../cpp/private-cpp.md) podrobnosti implementace a [chráněné](../cpp/protected-cpp.md) členů, které jsou pouze pro použití s odvozené třídy. Specifikátor přístupu se vztahuje na všechny členy deklarovaný po jeho až do další specifikátor přístup.  
@@ -51,9 +52,9 @@ protected:      // Declare protected function for derived classes only.
   
 |Typ přístupu|Význam|  
 |--------------------|-------------|  
-|[privátní](../cpp/private-cpp.md)|Členy třídy deklarované jako `private` lze použít pouze členskými funkcemi a přáteli třídy (třídy nebo funkce).|  
-|[chráněný](../cpp/protected-cpp.md)|Členy třídy deklarován jako `protected` mohou být využívána členských funkcí a přátel třídy (třídy nebo funkce). Navíc je možné je použít třídami odvozenými z třídy.|  
-|[veřejné](../cpp/public-cpp.md)|Členy třídy deklarován jako **veřejné** můžou používat žádné funkce.|  
+|[private](../cpp/private-cpp.md)|Členy třídy deklarované jako `private` lze použít pouze členskými funkcemi a přáteli třídy (třídy nebo funkce).|  
+|[protected](../cpp/protected-cpp.md)|Členy třídy deklarován jako `protected` mohou být využívána členských funkcí a přátel třídy (třídy nebo funkce). Navíc je možné je použít třídami odvozenými z třídy.|  
+|[public](../cpp/public-cpp.md)|Členy třídy deklarován jako **veřejné** můžou používat žádné funkce.|  
   
  Řízení přístupu pomůže zabránit používání objektů způsoby, které nebyly k použití určeny. Tato ochrana je ztracena při provedení explicitních převodů typu (přetypování).  
   
@@ -230,4 +231,4 @@ Přístup podél cest grafu dědičnosti
  Na obrázku je název deklarovaný ve třídě `VBase` vždy dosažen prostřednictvím třídy `RightPath`. Pravá cesta je přístupnější, protože třída `RightPath` deklaruje třídu `VBase` jako veřejnou základní, zatímco třída `LeftPath` deklaruje třídu `VBase` jako soukromou.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

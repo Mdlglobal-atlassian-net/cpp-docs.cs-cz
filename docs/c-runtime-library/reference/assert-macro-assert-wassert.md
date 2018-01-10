@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1033ca0767eb84b896e641db4c5ba3b296a7fae1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assert-macro-assert-wassert"></a>Assert – makro, _assert, _wassert
 Vyhodnocuje na výrazu a pokud je výsledek `false`, vytiskne hlášení diagnostiky a zruší program.  
@@ -161,4 +162,4 @@ A problem caused the program to stop working correctly. Windows will close the p
  [vyvolat](../../c-runtime-library/reference/raise.md)   
  [signál](../../c-runtime-library/reference/signal.md)   
  [_ASSERT, _asserte –, _ASSERT_EXPR makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
- [_DEBUG –](../../c-runtime-library/debug.md)
+ [_DEBUG](../../c-runtime-library/debug.md)

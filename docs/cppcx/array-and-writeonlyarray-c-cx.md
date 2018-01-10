@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 181dcba15098f7cd75eec083ab977969bde622ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
 Můžete volně používat regulární pole stylu jazyka C nebo [std::array](../standard-library/array-class-stl.md) v jazyce C + +/ CX program (i když [std::vector](../standard-library/vector-class.md) je často lepší volbou), ale v jakéhokoli rozhraní API, která je publikovaná v metadatech, je nutné převést pole ve stylu jazyka C nebo vector k [Platform::Array](../cppcx/platform-array-class.md) nebo [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu v závislosti na tom, jak je používán. [Platform::Array](../cppcx/platform-array-class.md) typ není jako efektivní ani výkonné jako [std::vector](../standard-library/vector-class.md), takže v rámci obecných pokynů byste neměli jeho použití v interní kód, který provádí velké množství operací na pole elementy.  

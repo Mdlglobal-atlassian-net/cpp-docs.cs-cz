@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7769c38c939b0deb1e1c61d53fad6b500f3860dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8487ca011355ad248bc38c2fc2d3265f0fad4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 Po použití [_crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) k určení `_CRTDBG_MODE_FILE`, můžete zadat popisovač souboru přijímat textové zprávy. `_CrtSetReportFile`je také používány [_crtdbgreport –, _crtdbgreportw –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) k určení cílového textu (pouze ladicí verze).  

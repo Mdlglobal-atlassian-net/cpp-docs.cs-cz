@@ -14,18 +14,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8940a85085d564404a2dd95f8707b9b986047113
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Další výklad o třídách knihovny MFC rozhraní ODBC
 Další následující témata vysvětlují, koncepty a techniky představenými v tomto tématu:  
   
--   [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Podpora databáze, Průvodce aplikací MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
--   [Přidání příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
+-   [Přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
 -   [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)  
   
@@ -33,21 +36,21 @@ Další následující témata vysvětlují, koncepty a techniky představenými
   
 -   [Výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md)  
   
--   [MFC: Použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md)  
+-   [MFC: Použití databázových tříd s dokumenty a zobrazeními](../../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [MFC: Použití databázových tříd bez objektů Document a View](../../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [MFC: Použití databázových tříd bez dokumentů a zobrazení](../../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   [ROZHRANÍ ODBC](../../data/odbc/odbc-basics.md)  
+-   [ODBC](../../data/odbc/odbc-basics.md)  
   
 -   [Správce rozhraní ODBC](../../data/odbc/odbc-administrator.md)  
   
--   [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [Výměna polí záznamu (Record Field Exchange – RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
 -   [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)  
   
 -   [Zobrazení záznamů](../../data/record-views-mfc-data-access.md)  
   
--   [Serializace: Serializace vs. Databáze vstupu a výstupu](../../mfc/serialization-serialization-vs-database-input-output.md)  
+-   [Serializace: Porovnání serializace a Databáze vstupu a výstupu](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
 -   [Snímek](../../data/odbc/snapshot.md)  
   

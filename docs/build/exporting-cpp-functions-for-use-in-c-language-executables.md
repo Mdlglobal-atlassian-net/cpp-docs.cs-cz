@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56e275b6c97bf319ab3d2bacb014423e6c0efd20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C  
   
@@ -57,4 +58,4 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 -   [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+ [Export z knihovny DLL](../build/exporting-from-a-dll.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5421447cfbe1e1bd8f5d25d80c492d10b1469e0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na *The poznámkou ruční C++ odkaz* Margaret Ellis a Bjarnem Stroustrupem a ANSI/ISO C++ mezinárodní standardní (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.  
@@ -37,7 +38,7 @@ Přehled programování postupy moderní verze jazyka C++, najdete v části [V�
   
 ## <a name="in-this-section"></a>V tomto oddílu  
 
- [Lexikální pravidla](../cpp/lexical-conventions.md)  
+ [Lexikální konvence](../cpp/lexical-conventions.md)  
  Základní lexikální prvky programu C++: tokeny, komentáře, operátory, klíčová slova, interpunkční znaky, literály. Také překlad souborů, přednost/asociativita operátorů.  
   
  [Základní koncepty](../cpp/basic-concepts-cpp.md)  
@@ -52,7 +53,7 @@ Přehled programování postupy moderní verze jazyka C++, najdete v části [V�
  [Výrazy](../cpp/expressions-cpp.md)  
  Typy výrazů, sémantika výrazů, referenční témata operátorů, obsazení a operátory obsazení, typ běhových informací.  
   
- [Lambda – výrazy](../cpp/lambda-expressions-in-cpp.md)  
+ [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)  
  Programovací technika, která implicitně definuje třídu funkčního objektu a vytvoří funkční objekt tohoto typu třídy.  
   
  [Příkazy](../cpp/statements-cpp.md)  
@@ -91,10 +92,10 @@ Přehled programování postupy moderní verze jazyka C++, najdete v části [V�
  [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md)  
  Modifikátory specifické pro jazyk C++ společnosti Microsoft. Paměť adresování, konvence, holé funkce Rozšířené atributy třídy úložiště (__declspec), volání \__w64.  
   
- [Vložený Assembler](../assembler/inline/inline-assembler.md)  
+ [Vkládaný assembler](../assembler/inline/inline-assembler.md)  
  Použití jazyku sestavení a jazyku C++ v blocích __asm.  
   
- [Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)  
+ [Podpora kompilátoru COM](../cpp/compiler-com-support.md)  
  Odkaz na třídy specifické pro společnost Microsoft a globální funkce používané pro podporu typů modelu COM.  
   
  [Rozšíření Microsoft](../cpp/microsoft-extensions.md)  
@@ -106,10 +107,10 @@ Přehled programování postupy moderní verze jazyka C++, najdete v části [V�
  [Vítejte zpět do C++](welcome-back-to-cpp-modern-cpp.md) přehled moderní programování v C++ postupů pro psaní programů bezpečnost, správné a efektivní.
   
 ## <a name="related-sections"></a>Související oddíly  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
  Referenční materiál pro používání jazyka Visual C++ k cílení modulu CLR.  
   
- [Odkaz sestavení C/C++](../build/reference/c-cpp-building-reference.md)  
+ [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)  
  Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.  
   
  [C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>Řídicí proudy
 [fopen –](../c-runtime-library/reference/fopen-wfopen.md) vrátí adresu objekt typu `FILE`. Použijte tuto adresu jako `stream` argument několik – funkce knihovny provádět různé operace v otevření souboru. Pro datový proud s bajtů všechny vstupní probíhá jako v případě, že každý znak je pro čtení voláním [fgetc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstup probíhá jako v případě, že každý znak je zapsán voláním [fputc –](../c-runtime-library/reference/fputc-fputwc.md). Pro datový proud s široké, všechny vstupní probíhá jako v případě, že každý znak je pro čtení voláním [fgetwc –](../c-runtime-library/reference/fgetc-fgetwc.md), a všechny výstup probíhá jako v případě, že každý znak je zapsán voláním [fputwc –](../c-runtime-library/reference/fputc-fputwc.md).  

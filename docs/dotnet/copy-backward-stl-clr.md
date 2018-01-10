@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d9138ef071acd984826add535bba57f86b00864
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 67a79618307890502937111e89f3a3368fa5163d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copybackward-stlclr"></a>copy_backward (STL/CLR)
 Přiřadí hodnoty prvků ze zdrojového rozsahu do cílového rozsahu a provede iterace přes zdrojové sekvence prvků a přiřadí je novým pozicím směrem dozadu.  
@@ -41,4 +44,4 @@ template<class _BidIt1, class _BidIt2> inline
  **Namespace:** cliext –  
   
 ## <a name="see-also"></a>Viz také  
- [algoritmus (STL/CLR)](../dotnet/algorithm-stl-clr.md)
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

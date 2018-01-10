@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0220d13f6c378d5081f6043382e7d58888ff3c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9851a7aa0d1dad84a37504b479c551ffa63bcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-integration-ccx"></a>Integrace modulu CLR (C + +/ CX)
 Některé typy prostředí Windows Runtime přijímat zvláštní zpracování v jazyce C + +/ CX a jazyky, které jsou založeny na modul CLR (CLR). Tento článek popisuje, jak několik typů v jednom jazyce mapování na jiném jazyce. Například modulu CLR mapuje Windows.Foundation.IVector System.Collections.IList, Windows.Foundation.IMap System.Collections.IDictionary a tak dále. Podobně platí, jazyka C + +/ CX speciálně mapuje typy například Platform::Delegate a Platform::String.  

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92992278f0f5395c843ef6623a02e6294786ea24
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstring"></a>Pomocí CString
 Témata v této části popisují, jak programovat s `CString`. Pro referenční dokumentaci o `CString` třídy, najdete v dokumentaci k [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -52,28 +53,28 @@ int main() {
 ```  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [CString základní operace](../atl-mfc-shared/basic-cstring-operations.md)  
+ [CString – základní operace](../atl-mfc-shared/basic-cstring-operations.md)  
  Popisuje základní `CString` operace, včetně vytváření objektů z C řetězcové literály, přístup k jednotlivých znaků `CString`, zřetězení dva objekty a porovnávání `CString` objekty.  
   
- [Správa dat řetězců](../atl-mfc-shared/string-data-management.md)  
+ [Správa řetězcových dat](../atl-mfc-shared/string-data-management.md)  
  Popisuje použití kódování Unicode a MBCS s `CString`.  
   
- [CString sémantiku](../atl-mfc-shared/cstring-semantics.md)  
+ [CString – sémantika](../atl-mfc-shared/cstring-semantics.md)  
  Vysvětluje, jak `CString` objekty se používají.  
   
- [CString operace vztahující se k řetězce stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+ [CString – operace týkající se řetězců ve stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
  Popisuje manipulace s obsah `CString` objekt jako řetězec stylu jazyka C ukončené hodnotou null.  
   
- [Přidělování a uvolňování paměti pro BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+ [Přidělování a uvolňování pro BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
  Popisuje použití paměti pro `BSTR` a objekty modelu COM.  
   
- [CString výjimka čištění](../atl-mfc-shared/cstring-exception-cleanup.md)  
+ [CString – čištění výjimek](../atl-mfc-shared/cstring-exception-cleanup.md)  
  Vysvětluje, že explicitní vyčištění v MFC 3.0 a novější už není nezbytné.  
   
- [Předávání argumentů CString](../atl-mfc-shared/cstring-argument-passing.md)  
+ [CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)  
  Vysvětluje, jak předat CString – objekty funkcí a jak vracet `CString` objekty z funkce.  
   
- [(MBCS) podporu kódování Unicode a vícebajtové znakové sady](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+ [Podpora znakových sad Unicode a MBCS](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
  Popisuje, jak MFC je povolený pro kódování Unicode a MBCS podporovat.  
   
 ## <a name="reference"></a>Odkaz  

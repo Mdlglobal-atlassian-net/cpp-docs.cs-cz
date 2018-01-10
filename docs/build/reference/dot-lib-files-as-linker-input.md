@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad61a8fa3672dd6f243c611e8ad363769dc5fa05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-files-as-linker-input"></a>Soubory .Lib jako vstup linkeru
 ODKAZ přijímá standardní knihoven COFF a COFF importovat knihovny, které obvykle mají příponu. lib. Standardní knihovny obsahovat objekty a jsou vytvořené pomocí nástroje LIB. Import knihovny obsahují informace o export v ostatních aplikacích a vytvoří se buď odkaz k sestavení program, který obsahuje exportuje nebo nástrojem LIB. Informace o používání LIB vytvořit standardní nebo importovat knihovny najdete v tématu [LIB odkaz](../../build/reference/lib-reference.md). Podrobnosti o použití odkaz k vytvoření knihovnu importu najdete v tématu [/dll](../../build/reference/dll-build-a-dll.md) možnost.  

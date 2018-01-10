@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1111a94943188162793ac3270d4a21989c3850e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Určuje, zda celé reprezentuje interpunkční znaménko.  
@@ -106,4 +107,4 @@ int _iswpunct_l(
 ## <a name="see-also"></a>Viz také  
  [Klasifikace znaků](../../c-runtime-library/character-classification.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
- [je, isw – rutiny](../../c-runtime-library/is-isw-routines.md)
+ [is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)

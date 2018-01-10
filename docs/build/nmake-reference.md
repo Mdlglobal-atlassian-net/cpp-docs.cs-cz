@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acae66ff8de61854d1fbaf38955ab275a01cffda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-reference"></a>NMAKE – odkaz
 Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazového řádku součástí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] který sestavení projektů založených na příkazy, které jsou obsaženy v souboru popis.  
@@ -38,7 +39,7 @@ Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazov�
   
  [Příkazy v souboru pravidel](../build/commands-in-a-makefile.md)  
   
- [Makra a NMAKE](../build/macros-and-nmake.md)  
+ [Makra a příkaz NMAKE](../build/macros-and-nmake.md)  
   
  [Odvozená pravidla](../build/inference-rules.md)  
   
@@ -51,4 +52,4 @@ Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazov�
  [Nástroje sestavení C/C++](../build/reference/c-cpp-build-tools.md)   
  [Vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
- [Odkaz sestavení C/C++](../build/reference/c-cpp-building-reference.md)
+ [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)

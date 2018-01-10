@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 Konstruktor je druh členské funkce, která inicializuje novou instanci její třídy. Konstruktor má stejný název jako třída a žádnou návratovou hodnotu. Konstruktor může obsahovat libovolný počet parametrů a třída může mít libovolný počet přetížené konstruktory. Konstruktory může mít usnadnění, veřejné, chráněný nebo soukromé. Pokud nedefinujete žádné konstruktory, kompilátor vygeneruje výchozí konstruktor, které nepřijímá žádné parametry; Toto chování můžete přepsat pomocí deklarace výchozí konstruktor jako odstraněný.  

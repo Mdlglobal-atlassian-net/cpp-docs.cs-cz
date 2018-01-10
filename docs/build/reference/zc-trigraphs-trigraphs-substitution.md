@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56068f6cb630ac12b9c8417940411616cec65c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Náhrada trigraph)
 Když **/Zc: trigraphs** není zadaný, kompilátor nahradí znak posloupnost trigraph pomocí odpovídající interpunkční znaménko. Chcete-li vypnout trigraph nahrazení, zadejte **/Zc:trigraphs-**. Ve výchozím nastavení **/Zc: trigraphs** je vypnutý.  
@@ -41,4 +42,4 @@ Když **/Zc: trigraphs** není zadaný, kompilátor nahradí znak posloupnost tr
   
 ## <a name="see-also"></a>Viz také  
  [/Zc (shoda)](../../build/reference/zc-conformance.md)   
- [Trigraph](../../c-language/trigraphs.md)
+ [Spřežky tří znaků](../../c-language/trigraphs.md)

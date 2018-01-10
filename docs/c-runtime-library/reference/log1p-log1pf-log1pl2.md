@@ -42,11 +42,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d0228b24a97c2b7113cf9ceccf337c15ef904c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p – log1pf –, log1pl
 Vypočítá přirozený logaritmus 1 plus zadanou hodnotu.  
@@ -116,4 +117,4 @@ long double log1pl(
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log2, log2f –, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
- [protokol, logf –, log10, log10f –](../../c-runtime-library/reference/log-logf-log10-log10f.md)
+ [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

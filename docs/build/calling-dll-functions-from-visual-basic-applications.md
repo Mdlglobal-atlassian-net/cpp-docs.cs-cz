@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 471f0b2b89d8c44f17567dd9af6add535be7fbcf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
 Pro aplikace Visual Basic (nebo aplikací v jiných jazycích, jako je například Pascal nebo Fortran) k volání funkce v knihovně DLL C/C++ musí být exportován funkce pomocí správné konvence volání bez jakékoli dekorování názvů kompilátorem.  
@@ -71,7 +72,7 @@ EXPORTS
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
   
--   [Export z knihovny DLL](../build/exporting-from-a-dll.md)  
+-   [Export z knihovny DLL](../build/exporting-from-a-dll.md)  
   
 -   [Export z knihovny DLL pomocí. DEF soubory](../build/exporting-from-a-dll-using-def-files.md)  
   
@@ -84,4 +85,4 @@ EXPORTS
 -   [Dekorované názvy](../build/reference/decorated-names.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

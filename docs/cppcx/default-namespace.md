@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 9d1c04acc5754627906448db9ac4f3afd65fbe7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9d538e42d4173008343df186bd2579dc088fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-namespace"></a>výchozí obor názvů
 `default` Obor názvů rozsahy vestavěné typy, které jsou podporovány C + +/ CX.  
@@ -33,10 +34,10 @@ namespace default;
   
 |||  
 |-|-|  
-|[Výchozí:: (type_name):: rovná se](../cppcx/default-type-name-equals-method.md)|Určuje, zda se zadaný objekt rovná aktuálnímu objektu.|  
-|[Výchozí:: (type_name):: GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Vrátí kód hash této instance.|  
-|[Výchozí:: (type_name):: GetType](../cppcx/default-type-name-gettype-method.md)|Vrátí řetězec, který představuje aktuální typ.|  
-|[Výchozí:: (type_name):: ToString](../cppcx/default-type-name-tostring-method.md)|Vrátí řetězec, který představuje aktuální typ.|  
+|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Určuje, zda se zadaný objekt rovná aktuálnímu objektu.|  
+|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Vrátí kód hash této instance.|  
+|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Vrátí řetězec, který představuje aktuální typ.|  
+|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Vrátí řetězec, který představuje aktuální typ.|  
   
 ### <a name="built-in-types"></a>Vestavěné typy  
   

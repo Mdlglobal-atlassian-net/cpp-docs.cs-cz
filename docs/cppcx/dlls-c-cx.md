@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a3202ba5bd5b42b3f4853348258d5c4e3e5a2072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a759541dd31121f12283f9b2b0c5b468da477554
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dlls-ccx"></a>Knihovny DLL (C + +/ CX)
 Visual Studio můžete použít k vytvoření standardní knihovny DLL Win32 nebo prostředí Windows Runtime součást knihovnu DLL, kterou mohou být spotřebovávána aplikace pro univerzální platformu Windows. Standardní knihovny DLL, která byla vytvořena pomocí verze sady Visual Studio nebo – kompilátor Visual C++, která je starší než Visual Studio 2012 nemusí načíst správně v aplikaci pro univerzální platformu Windows a nemusí projde testem ověření aplikace v [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)].  

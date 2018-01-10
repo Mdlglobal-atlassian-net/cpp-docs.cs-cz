@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d92c5e162541b2b805074740d542a52866c48a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pole specifikace formátu: funkce scanf a wscanf
 Zde uvedené informace platí pro celou `scanf` řadu funkcí, včetně zabezpečené verze a popisuje symboly použité říct `scanf` funguje jak analyzovat vstupního datového proudu, jako je například vstupního datového proudu `stdin` pro `scanf`, do hodnoty, které jsou vloženy do programu proměnné.  
@@ -71,4 +72,4 @@ Zde uvedené informace platí pro celou `scanf` řadu funkcí, včetně zabezpe�
  [Specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md)   
  [Znaky pole typu scanf](../c-runtime-library/scanf-type-field-characters.md)   
  [scanf, _scanf_l –, wscanf, _wscanf_l –](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)

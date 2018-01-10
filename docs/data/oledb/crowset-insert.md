@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8cdb6c413cc1a655ace270df632ca501b9b5f3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75dfe26fa04f8e639b3d391a9dc703a9a98c70c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetinsert"></a>CRowset::Insert
 Vytvoří a inicializuje nový řádek pomocí dat z přistupujícího objektu.  
@@ -60,7 +63,7 @@ Vytvoří a inicializuje nový řádek pomocí dat z přistupujícího objektu.
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro přístup k datovému zdroji prostřednictvím sady řádků a potom vkládání řetězce pomocí tabulky v této sadě řádků.  
   
- Nejdřív vytvořte třídu tabulky vložením nový objekt knihovny ATL do projektu. Například klikněte pravým tlačítkem na projekt v podokně pracovního prostoru a vyberte **nový objekt knihovny ATL**. Z **přístup k datům** kategorie, vyberte **příjemce**. Vytvoření příjemce objektu typu **tabulky**. (Výběr **tabulky** vytvoří sadu řádků přímo z tabulky; výběr **příkaz** vytvoří sadu řádků prostřednictvím příkazu SQL.) Vyberte zdroj dat, zadání tabulky, pomocí kterého je možné získat přístup k danému zdroji dat.. Při volání objektu příjemce **CCustomerTable**, pak by implementovat vložení kódu následujícím způsobem:  
+ Nejdřív vytvořte třídu tabulky vložením nový objekt knihovny ATL do projektu. Například klikněte pravým tlačítkem na projekt v podokně pracovního prostoru a vyberte **nový objekt knihovny ATL**. Z **přístup k datům** kategorie, vyberte **příjemce**. Vytvoření příjemce objektu typu **tabulky**. (Výběr **tabulky** vytvoří sadu řádků přímo z tabulky; výběr **příkaz** vytvoří sadu řádků prostřednictvím příkazu SQL.) Vyberte zdroj dat, zadání tabulky, pomocí kterého je možné získat přístup k danému zdroji dat. Při volání objektu příjemce **CCustomerTable**, pak by implementovat vložení kódu následujícím způsobem:  
   
  [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
   

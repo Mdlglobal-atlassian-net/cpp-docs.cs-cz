@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8bdba2afcc7bc17cb0609e95764b06d83d4cc91e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 412c68f4d1279fea7969b3ddfdd2bf82e3cdbc47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-inline-files"></a>Několik vložených souborů
 Příkaz můžete vytvořit více než jeden vloženého souboru.  
@@ -41,4 +42,4 @@ inlinetext
  Pro každý soubor zadejte jeden nebo více řádků textu vložené následuje uzavírací řádek obsahující oddělovač. Začněte druhý soubor text na řádek následující rozdělujících řádku pro první soubor.  
   
 ## <a name="see-also"></a>Viz také  
- [Vložené soubory v souboru pravidel](../build/inline-files-in-a-makefile.md)
+ [Soubory vložené do souboru pravidel](../build/inline-files-in-a-makefile.md)

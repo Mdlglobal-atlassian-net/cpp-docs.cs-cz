@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 24da0ab4b3ab27cdb9a70c0f9cc05e3ca86e117d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 27fb95e5dc1c417d3dfb03217463a8ef683f3710
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-wizard-generated-files"></a>Poskytovatel souborů vytvořených průvodcem
 Průvodce zprostředkovatele OLE DB ATL generuje následující soubory. V následujících tématech použijte krátký název "MyProvider", ale přesné názvy souborů závisí na možnost, kterou zvolili při vytváření zprostředkovatele.  

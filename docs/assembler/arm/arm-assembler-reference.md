@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8f016d6aa223d1532c90dcd9e82812444195b11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c59cf6e17e763d0e672d2bc0c33d6d55c609dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-assembler-reference"></a>Referenční dokumentace assembleru ARM
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Reference k příkazovému řádku assembleru ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Popisuje možnosti příkazového řádku armasm.|  
+|[Referenční dokumentace pro použití nástroje assembleru ARM v příkazovém řádku](../../assembler/arm/arm-assembler-command-line-reference.md)|Popisuje možnosti příkazového řádku armasm.|  
 |[Diagnostické zprávy assembleru ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Popisuje běžně došlo k armasm upozornění a chybové zprávy.|  
 |[Direktivy assembleru ARM](../../assembler/arm/arm-assembler-directives.md)|Popisuje direktivy ARM, které se liší v armasm.|  
 |[Ruční referenční architektura ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) na webu pro vývojáře ARM.|Vyberte relevantní ručního v architektuře ARM. Každá obsahuje odkaz na části o ARM, Flash, NEÓNOVÁ a VFP a další informace o jazyk sestavení ARM.|  

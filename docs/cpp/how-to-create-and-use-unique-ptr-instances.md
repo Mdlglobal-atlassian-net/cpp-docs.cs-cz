@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08f597a160b3447743646c4cccfc2e05485a47b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů unique_ptr
 A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatele. Nemůže být zkopírován do jiného `unique_ptr`, podle hodnoty předaný funkci nebo použít v jakékoli standardní knihovna C++ algoritmus, který vyžaduje kopie má být provedeno. A `unique_ptr` se dá přesunout jedině. To znamená, že vlastnictví prostředků paměti je přenášet do jiného `unique_ptr` a původní `unique_ptr` už je jeho vlastníkem. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto když potřebujete chytré ukazatele pro objekt prostý C++, použít `unique_ptr`, a když vytvoříte `unique_ptr`, použijte [make_unique](../standard-library/memory-functions.md#make_unique) pomocné funkce.  

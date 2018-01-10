@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0217c62ff207ad706dbcb1cd172e878c2b96daee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 399f9fcea216adf5480bf38b8aba051c60eed496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-support-in-atl-projects"></a>Podpora MFC v projekty knihovny ATL
 Pokud vyberete **Podpora MFC** v Průvodci projektu knihovny ATL deklaruje projekt aplikace jako objekt aplikace knihovny MFC (třída). Projekt inicializuje knihovny MFC a vytvoří instanci třídy (třídy *ProjName*) je odvozena z [CWinApp](../../mfc/reference/cwinapp-class.md).  
@@ -60,5 +61,5 @@ int CProjNameApp::ExitInstance()
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
  [Vytvoření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)   
- [Výchozí konfigurace projektu knihovny ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

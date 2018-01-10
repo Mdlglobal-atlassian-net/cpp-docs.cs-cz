@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae6696123ffa016a1c3f64ed2310efe571b55978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21438bf8f214c10525aa7e9a5829f835b8a33f2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack"></a>/STACK
 ```  
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/24/2017
  Volitelné `commit` argument podléhá interpretace v operačním systému. V systému Windows NT, Windows 95 a Windows 98 `commit` určuje množství fyzické paměti k přidělení najednou. Potvrzená virtuální paměť rezervuje místo ve stránkovacím souboru. A vyšší `commit` hodnota šetří čas, pokud aplikace vyžaduje více místa v zásobníku, ale zvyšuje požadavky na paměť a případně čas spuštění.  
   
 ## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+ [EDITBIN – možnosti](../../build/reference/editbin-options.md)

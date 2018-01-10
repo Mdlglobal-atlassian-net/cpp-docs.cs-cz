@@ -33,11 +33,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f54b8ea828513dfbf25e5af1eeea38751c7c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT – třída
 Tato třída implementuje okno obsažené v rámci jiného objektu.  
@@ -114,7 +115,7 @@ class CContainedWindowT : public TBase
 |--------------------------------|---------|  
 |Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|  
 |Pomocí systému windows v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|  
-|Průvodce projektem knihovny ATL|[Vytvoření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)|  
+|Průvodce projektem knihovny ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
 |Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) a dalších tématech v sadě Windows SDK|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  

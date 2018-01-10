@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4d01ef87b51195f7ff7a05acbdad4a34ca566c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed9d92c4d6123d1c9c8f92814272ae5a77184102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Postupy: Iterace v obecné kolekci s výrazem for each
 [Obecné typy](../windows/generics-cpp-component-extensions.md) součást Visual C++ vám umožní vytvořit obecné kolekce.  
@@ -98,4 +101,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [pro každou v](../dotnet/for-each-in.md)
+ [for each, in](../dotnet/for-each-in.md)

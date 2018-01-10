@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e32b681edc6c6b4c0187d5d0ec89ff609e52858d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Rozlišení přetížení volání šablony funkce
 Šablonu funkce můžete přetížení funkcí objektu bez šablony se stejným názvem. V tomto scénáři se volání funkce vyřeší první pomocí odvození argumentu šablony pro vytvoření instance šablony funkce s jedinečný specializace. Pokud se nezdaří odvození argumentu šablony, jiné přetížení funkce jsou považovány za vyřešit volání. Tyto další přetížení, také známé jako sada candidate zahrnují objektu bez šablony funkce a další funkce vytvořenou instanci šablony. Pokud odvození argumentu šablony úspěšné, generované funkce se porovná s jinými funkcemi určit nejlepší shodu, následující pravidla pro rozlišení přetížení. Další informace najdete v tématu [přetížení funkcí](function-overloading.md).  
@@ -91,5 +92,5 @@ void f(T1, T2)
 ## <a name="see-also"></a>Viz také
 
  [Překlad názvů](../cpp/templates-and-name-resolution.md)   
- [TypeName](../cpp/typename.md)   
+ [typename](../cpp/typename.md)   
  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ec9f0814c976a5ea175e0cd62ab8e57b02f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-support-classes"></a>Třídy podpory kompilátoru modelu COM
 **Konkrétní Microsoft**  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/24/2017
 ## <a name="see-also"></a>Viz také  
  [Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)   
  [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

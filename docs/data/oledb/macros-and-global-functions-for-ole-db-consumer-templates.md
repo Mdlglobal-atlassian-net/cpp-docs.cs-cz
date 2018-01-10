@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 541425a073b4d179a20a33646844723d655f8160
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c095c643f54ee81124a736b0eaa65628cbd23ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra a globální funkce pro šablony příjemců OLE DB
 Šablony příjemce technologie OLE DB patří následující makra a globální funkce:  
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 |||  
 |-|-|  
 |[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)|Označuje začátek položku přistupujícího objektu.|  
-|[BEGIN_ACCESSOR_MAP –](../../data/oledb/begin-accessor-map.md)|Označuje začátek položek mapování přistupujícího objektu.|  
+|[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)|Označuje začátek položek mapování přistupujícího objektu.|  
 |[END_ACCESSOR](../../data/oledb/end-accessor.md)|Označuje konec položku přistupujícího objektu.|  
 |[END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)|Označuje konec položek mapování přistupujícího objektu.|  
   
@@ -99,4 +102,4 @@ ms.lasthandoff: 10/24/2017
 ## <a name="see-also"></a>Viz také  
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

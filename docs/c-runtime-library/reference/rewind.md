@@ -33,11 +33,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e47733dcec28de0ed22df17f6f73f97a8dde279
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78cb2d761e7625dac7073927b7b7f1a06fcf1759
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rewind"></a>rewind
 Na začátek souboru přemístí ukazatele souboru.  
@@ -72,7 +73,7 @@ Na začátek souboru přemístí ukazatele souboru.
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|**REWIND**|\<stdio.h >|  
+|**rewind**|\<stdio.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

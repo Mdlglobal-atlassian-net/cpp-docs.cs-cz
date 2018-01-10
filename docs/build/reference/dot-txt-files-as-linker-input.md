@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ce3d795816de7eced1927523aa57965f43603aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61112fc5c701c7fa027d98b873332fd00df3dfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="txt-files-as-linker-input"></a>Soubory .Txt jako vstup linkeru
 Jako další vstup očekává odkaz různé textové soubory. [Soubor příkazů](../../build/reference/link-command-files.md) – specifikátor (@) a [základní adresu](../../build/reference/base-base-address.md) (/ základní), [/def](../../build/reference/def-specify-module-definition-file.md), a [/pořadí](../../build/reference/order-put-functions-in-order.md) všechny možnosti zadejte textových souborů. Tyto soubory mohou mít všechny rozšíření, ne jenom .txt.  

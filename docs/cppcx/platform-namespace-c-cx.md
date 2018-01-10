@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d434d687eca53deb4cad41615fcfd676836dda5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-namespace-ccx"></a>Obor názvů Platform (C + +/ CX)
 Obsahuje vestavěné typy, které jsou kompatibilní s prostředí Windows Runtime.  
@@ -59,7 +60,7 @@ using namespace Platform;
 |[Platform::DisconnectedException – třída](../cppcx/platform-disconnectedexception-class.md)|Objekt byl odpojen od svých klientů.|  
 |[Platform::Exception – třída](../cppcx/platform-exception-class.md)|Reprezentuje chyby, ke kterým došlo během provádění aplikací. Základní třída pro výjimky.|  
 |[Platform::FailureException – třída](../cppcx/platform-failureexception-class.md)|Vyvolá, když operace se nezdařila. Jde o ekvivalent E_FAIL HRESULT.|  
-|[Platform::GUID – hodnotová třída](../cppcx/platform-guid-value-class.md)|Představuje identifikátor GUID v prostředí Windows Runtime typ systému.|  
+|[Platform::Guid – hodnotová třída](../cppcx/platform-guid-value-class.md)|Představuje identifikátor GUID v prostředí Windows Runtime typ systému.|  
 |[Platform::InvalidArgumentException – třída](../cppcx/platform-invalidargumentexception-class.md)|Vyvolá, když jeden z argumentů poskytnutý metodě je neplatný.|  
 |[Platform::InvalidCastException – třída](../cppcx/platform-invalidcastexception-class.md)|Vyvolána v případě neplatné přetypování nebo explicitní převod.|  
 |[Platform::MTAThreadAttribute – třída](../cppcx/platform-mtathreadattribute-class.md)|Označuje, že je modelu vláken pro aplikace Vícevláknová apartment (MTA).|  
@@ -73,7 +74,7 @@ using namespace Platform;
 |[Platform::STAThreadAttribute – třída](../cppcx/platform-stathreadattribute-class.md)|Označuje, že modelu vláken pro aplikaci je single-threaded apartment (STA).|  
 |[Platform::String – třída](../cppcx/platform-string-class.md)|Sekvenční kolekce znaky znakové sady Unicode, která se používá k reprezentování text.|  
 |[Platform::StringReference – třída](../cppcx/platform-stringreference-class.md)|Umožňuje přístup do řetězce vyrovnávacích pamětí s minimální režie kopie.|  
-|[Platform::type – třída](../cppcx/platform-type-class.md)|Identifikuje předdefinovaný typ výčtem kategorie.|  
+|[Platform::Type – třída](../cppcx/platform-type-class.md)|Identifikuje předdefinovaný typ výčtem kategorie.|  
 |[Platform::ValueType – třída](../cppcx/platform-valuetype-class.md)|Základní třída pro typy hodnot instancí.|  
 |[Platform::WeakReference – třída](../cppcx/platform-weakreference-class.md)|Poskytuje slabé odkaz na objekty tříd ref, který se nezvyšuje počet odkazů.|  
 |[Platform::WriteOnlyArray – třída](../cppcx/platform-writeonlyarray-class.md)|Představuje jednorozměrné pole jen pro zápis, který se používá jako vstupní parametr pro metody, které implementují FillArray vzor.|  
@@ -85,9 +86,9 @@ using namespace Platform;
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|[Platform::IBox rozhraní](../cppcx/platform-ibox-interface.md)|Sloužící k předávání typů hodnot na funkce, jejíž parametry jsou zadány jako Platform::Object ^.|  
-|[Platform::IBoxArray rozhraní](../cppcx/platform-iboxarray-interface.md)|Rozhraní sloužící k předávání pole typů hodnot na funkce, jejíž parametry jsou zadány jako Platform::Array.|  
-|[Platform::IDisposable rozhraní](../cppcx/platform-idisposable-interface.md)|Použít k uvolnění nespravovaných prostředků.|  
+|[Platform::IBox – rozhraní](../cppcx/platform-ibox-interface.md)|Sloužící k předávání typů hodnot na funkce, jejíž parametry jsou zadány jako Platform::Object ^.|  
+|[Platform::IBoxArray – rozhraní](../cppcx/platform-iboxarray-interface.md)|Rozhraní sloužící k předávání pole typů hodnot na funkce, jejíž parametry jsou zadány jako Platform::Array.|  
+|[Platform::IDisposable – rozhraní](../cppcx/platform-idisposable-interface.md)|Použít k uvolnění nespravovaných prostředků.|  
   
  **Výčty**  
   
@@ -104,8 +105,8 @@ using namespace Platform;
   
 |Struktura|Popis|  
 |---------------|-----------------|  
-|[Platform::enum – třída](../cppcx/platform-enum-class.md)|Představuje pojmenovanou konstanta.|  
-|[Platform::GUID – hodnotová třída](../cppcx/platform-guid-value-class.md)|Představuje identifikátor GUID.|  
+|[Platform::Enum – třída](../cppcx/platform-enum-class.md)|Představuje pojmenovanou konstanta.|  
+|[Platform::Guid – hodnotová třída](../cppcx/platform-guid-value-class.md)|Představuje identifikátor GUID.|  
 |[Platform::IntPtr – hodnotová třída](../cppcx/platform-intptr-value-class.md)|Podepsaný ukazatel jejíž aktuální velikost je vhodný pro platformu (32bitová nebo 64bitová verze).|  
 |[Platform::SizeT – hodnotová třída](../cppcx/platform-sizet-value-class.md)|Typ nepodepsaná data používá k reprezentování velikost objektu.|  
 |[Platform::UIntPtr – hodnotová třída](../cppcx/platform-uintptr-value-class.md)|Nepodepsané ukazatel, jejíž aktuální velikost je vhodný pro platformu (32bitová nebo 64bitová verze).|  
@@ -114,4 +115,4 @@ using namespace Platform;
  [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)   
  [Namespace Platform::Runtime::CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
  [Namespace Platform::Runtime::InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
- [Namespace Platform::metadata](../cppcx/platform-metadata-namespace.md)
+ [Platform::Metadata – obor názvů](../cppcx/platform-metadata-namespace.md)

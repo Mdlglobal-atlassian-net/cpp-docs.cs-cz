@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebabc94a289cf28d76903714e9440f50cc1abea2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Můžete použít **MSBuild** nástroj pro vývoj aplikace Visual C++ z příkazového řádku. Informace v souboru projektu (VCXPROJ), který může vytvářet a upravovat řídí procesu sestavení. Soubor projektu určuje možnosti sestavení na základě sestavení fáze, podmínky a události.  
@@ -30,12 +31,12 @@ Můžete použít **MSBuild** nástroj pro vývoj aplikace Visual C++ z příkaz
 |----------|----------------|  
 |[Přehled nástroje MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Popisuje, jak používá Visual C++ **MSBuild** systému.|  
 |[Změny systému sestavení](../build/build-system-changes.md)|Popisuje některé rozdíly mezi systém sestavení aktuální a předchozí verze.|  
-|[Návod: Vytvoření projektu Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Demonstruje postup vytvoření projektu Visual C++ pomocí **MSBuild**.|  
-|[Postupy: použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Ukazuje, jak určit akci, ke kterému dochází v particuler fázi v sestavení: před začátkem sestavování; Před spuštěním kroku odkaz; i po skončení sestavení.|  
+|[Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Demonstruje postup vytvoření projektu Visual C++ pomocí **MSBuild**.|  
+|[Postupy: Použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Ukazuje, jak určit akci, ke kterému dochází v particuler fázi v sestavení: před začátkem sestavování; Před spuštěním kroku odkaz; i po skončení sestavení.|  
 |[Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Ukazuje, jak přidat fázi uživatelem definované pořadí sestavení.|  
-|[Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Ukazuje, jak nástroj pro sestavení přidružit určitého souboru.|  
-|[Postupy: integrace vlastních nástrojů do vlastností projektu](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Demonstruje možnosti vlastní nástroje pro přidání do vlastností projektu.|  
+|[Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Ukazuje, jak nástroj pro sestavení přidružit určitého souboru.|  
+|[Postupy: Integrace vlastních nástrojů do vlastností projektu](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Demonstruje možnosti vlastní nástroje pro přidání do vlastností projektu.|  
 |[Postupy: Změna cílové architektury a sady nástrojů](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Ukazuje, jak k sestavení projektu, pro více rozhraní nebo modulové.|  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření kódu C/C++ v příkazovém řádku](../build/building-on-the-command-line.md)
+ [Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)

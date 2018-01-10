@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c27e5c78316ec48d114bfd1715eb5874772a732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38f45463bb76f858d1b88c059de57a4b8b86227e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extracting-a-library-member"></a>Extrahování člena knihovny
 Můžete vytvořit soubor objektu (.obj), který obsahuje kopii členem existující knihovny LIB. K extrakci kopii členem, použijte následující syntaxi:  
@@ -37,4 +38,4 @@ LIB library /EXTRACT:member /OUT:objectfile
  Tento příkaz vytvoří soubor .obj názvem *objectfile* obsahující kopii `member` z *knihovny*. `member` Název je malá a velká písmena. Můžete rozbalit pouze jednoho člena v jednom příkazu. / Out možnost je povinná; neexistuje žádný výchozí název výstupu. Pokud soubor nazývá *objectfile* již existuje v adresáři zadané (nebo aktuální adresář, je-li zadán žádný adresář s *objectfile*), extrahované *objectfile*nahradí existující soubor.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace LIB](../../build/reference/lib-reference.md)
+ [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

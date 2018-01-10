@@ -14,11 +14,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c102d06e360c97f5c86e613ece869d4d38c4fc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
 Rozšířené uložené procedury jsou reprezentovány jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL Server pomocí funkcí vytvořených s Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definovat rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (například SUMA nebo průměr).  
@@ -84,4 +87,4 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: migrace na/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
- [Třídy a struktury](../cpp/classes-and-structs-cpp.md)
+ [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

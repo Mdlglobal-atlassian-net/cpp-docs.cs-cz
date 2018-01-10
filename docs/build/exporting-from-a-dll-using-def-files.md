@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 640ae9aefd8444e1bf6164c924db6d30a0275125
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15806c3e40d45588ec27f1351e583fc5e8e897e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Export z knihovny DLL pomocí souborů .DEF
 Soubor definice modulu (.def) je textový soubor obsahující jeden nebo více příkazů modulu, které popisují různé atributy knihovny DLL. Pokud nepoužíváte **__declspec(dllexport)** – klíčové slovo pro export funkcí knihovny DLL, knihovny DLL vyžaduje .def souboru.  
@@ -92,4 +93,4 @@ EXPORTS
 -   [Vzájemné importy](../build/mutual-imports.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+ [Export z knihovny DLL](../build/exporting-from-a-dll.md)

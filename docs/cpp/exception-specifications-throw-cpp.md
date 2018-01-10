@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 Specifikace výjimek jsou funkce jazyka C++, která označuje záměr programátora o typy výjimek, které mohou být přeneseny funkcí. Můžete určit, že funkce může nebo nemusí ukončete výjimkou pomocí *specifikace výjimek*. Kompilátor tyto informace můžete použít k optimalizaci volání funkce a ukončete program, pokud neočekávanou výjimku řídicí sekvence funkce. Existují dva druhy specifikace výjimek. *Noexcept specifikace* je nového v C ++ 11. Se určuje, zda je sada potenciální výjimky, které můžete vyhnuli funkce prázdný. *Specifikace výjimek dynamické*, nebo `throw(optional_type_list)` specifikace, se již nepoužívá v C ++ 11 a je podporován pouze částečně Visual Studio. Tato specifikace výjimek byla navržená tak, aby poskytují souhrnné informace o jaké výjimky může být vyvolána mimo funkci, ale v praxi byl nalezen způsobovat problémy. Jeden specifikace dynamické výjimka, která ukázat jako poněkud užitečné byl nepodmíněné `throw()` specifikace. Například deklarace funkce:  
@@ -139,4 +140,4 @@ in handler
   
 ## <a name="see-also"></a>Viz také  
  [Zkuste, throw a catch – příkazy (C++)](../cpp/try-throw-and-catch-statements-cpp.md)   
- [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+ [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
