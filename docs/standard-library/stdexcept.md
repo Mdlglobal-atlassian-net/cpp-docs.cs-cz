@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept –&gt;
 Definuje několik standardní třídy používané pro generování sestav výjimky. Třídy tvoří hierarchii odvození všechny odvozené od třídy [výjimka](../standard-library/exception-class.md) a zahrnují dva obecné typy výjimek: logické chyby a chyby. Logické chyby se nezdařila z důvodu programátory chyb. Že jsou odvozeny od základní třídy logic_error a zahrnují:  

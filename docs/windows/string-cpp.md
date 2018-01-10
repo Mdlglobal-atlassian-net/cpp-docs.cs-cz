@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0293785b9552b2e5696b9334e81aebf44c3bc4b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-c"></a>string (C++)
 Určuje, že jednorozměrná `char`, `wchar_t`, **bajtů** (nebo ekvivalentního) má ukazatel na takové pole nebo pole musí být považované za řetězec.  
@@ -67,4 +70,4 @@ __interface IFireTabCtrl
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy pole](../windows/array-attributes.md)   
- [Export](../windows/export.md)   
+ [export](../windows/export.md)   

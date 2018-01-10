@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aeb679ce2cc8e4e768d5af43ff94c6b2cdb8dea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 917dfbf870959b6934eaa49cbaab05e27304fb77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray –&gt;
 Definuje valarray – třídy šablony a množství podpůrné šablony třídy a funkce.  
@@ -60,12 +61,12 @@ Definuje valarray – třídy šablony a množství podpůrné šablony třídy 
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/valarray-operators.md#op_neq)|Testuje, jestli odpovídající elementy dva stejně velké valarray – třídy jsou různé nebo zda jsou všechny elementy valarray – nerovné zadanou hodnotu valarray – typ elementu.|  
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Testuje, jestli odpovídající elementy dva stejně velké valarray – třídy jsou různé nebo zda jsou všechny elementy valarray – nerovné zadanou hodnotu valarray – typ elementu.|  
 |[% – operátor](../standard-library/valarray-operators.md#op_mod)|Získá zbytek po dělení odpovídající elementy dva stejně velké valarray – třídy nebo dělení valarray – zadaná hodnota valarray – element typu nebo dělení valarray – zadaná hodnota.|  
 |[operátor &](../standard-library/valarray-operators.md#op_amp)|Získá bitové hodnotě **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.|  
 |[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Získá logické **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu valarray – element typu.|  
 |[operátor >](../standard-library/valarray-operators.md#op_gt)|Ověřuje, zda prvky jeden valarray – jsou větší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadaná hodnota valarray – element typu.|  
-|[Operator > =](../standard-library/valarray-operators.md#op_gt_eq)|Ověřuje, zda prvky jeden valarray – jsou větší než nebo rovna hodnotě elementy stejně velké valarray – nebo jestli všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.|  
+|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Ověřuje, zda prvky jeden valarray – jsou větší než nebo rovna hodnotě elementy stejně velké valarray – nebo jestli všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.|  
 |[operátor >>](../standard-library/valarray-operators.md#op_gt_gt)|Posuny vpravo bits pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.|  
 |[operátor <](../standard-library/valarray-operators.md#op_lt)|Ověřuje, zda elementy jeden valarray – je nižší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.|  
 |[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Testuje, zda jsou elementy valarray – jeden, menší než nebo rovna hodnotě elementy stejně velké valarray – nebo zda všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.|  
@@ -87,7 +88,7 @@ Definuje valarray – třídy šablony a množství podpůrné šablony třídy 
 |[gslice_array – třída](../standard-library/gslice-array-class.md)|Třídu interní, pomocného šablony, která podporuje objekty obecné řez tím, že poskytuje mezi poli podmnožina definované obecné řezy valarray – operace.|  
 |[indirect_array – třída](../standard-library/indirect-array-class.md)|Třída interní, pomocného šablony, která podporuje objekty, které jsou podmnožiny valarray – třídy tím, že poskytuje operace mezi poli podmnožina definované zadáním podmnožinu indexy valarray – nadřazené.|  
 |[mask_array – třída](../standard-library/mask-array-class.md)|Třída interní, pomocného šablony, která podporuje objekty, které jsou podmnožiny nadřazené valarray – třídy, zadaný logický výraz, tím, že poskytuje operace mezi poli podmnožina.|  
-|[Slice – třída](../standard-library/slice-class.md)|Třída nástrojů k valarray –, který se používá k definování jednorozměrné, vector jako podmnožiny valarray –.|  
+|[slice – třída](../standard-library/slice-class.md)|Třída nástrojů k valarray –, který se používá k definování jednorozměrné, vector jako podmnožiny valarray –.|  
 |[slice_array – třída](../standard-library/slice-array-class.md)|Třídu interní, pomocného šablony, která podporuje objekty řez tím, že poskytuje operace mezi poli podmnožina definované řezy valarray –.|  
 |[valarray – třída](../standard-library/valarray-class.md)|Šablony třídy popisuje objekt, který určuje posloupnost elementy typu **typ** které jsou uloženy jako pole a určené pro provádění vysokorychlostní matematické operace, které jsou optimalizované pro výpočetní výkon.|  
   

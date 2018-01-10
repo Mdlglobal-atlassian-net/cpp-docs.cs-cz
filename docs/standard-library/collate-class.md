@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bd077c1c657b79cc8b32b3ede075eb5311271e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cce595095600769743a1320d75b00ec1109275c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collate-class"></a>collate – třída
 Třída šablony popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro ovládání řazení a seskupování znaků v rámci řetězce a k jejich porovnání s hodnotami hash řetězců.  

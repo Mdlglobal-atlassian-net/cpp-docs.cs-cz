@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 794317a81c6e3a2858ef0cc75c5264f83ffdf59b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4358e01575ec7d4dfb2dea48499466f1cc0a4766
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolbar-editor"></a>Editor panelu nástrojů
 Editor panelu nástrojů umožňuje vytvářet prostředky panelu nástrojů a převést bitmap na panelu nástrojů prostředky. Editor panelu nástrojů používá grafické zobrazení na panelu nástrojů a tlačítka, která velmi podobat, jak bude vypadat v dokončení aplikaci.  
@@ -45,7 +48,7 @@ Editor panelu nástrojů
   
  Editor panelu nástrojů je podobná editor obrázků ve funkcích. Položky nabídky, grafické nástroje a mřížky rastrového obrázku jsou stejné jako v editoru obrázků. V nabídce bitové kopie a umožní vám přepínat mezi editor panelu nástrojů a editor obrázků není příkaz nabídky. Další informace o použití panel nástrojů grafiky, barevná paleta nebo nabídka obrázku, najdete v části [Editor obrázků](../windows/image-editor-for-icons.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Knihovny MFC nebo knihovny ATL  

@@ -95,11 +95,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: b6e6523b197be2b55847f23447a6d832f55e880d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edd850087249769fce9e96110dfa29ca37450b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;FileSystem&gt; funkce
 Tyto funkce v volné [ \<systému souborů >](../standard-library/filesystem.md) záhlaví provádět operace úpravy a dotaz na cesty, soubory, symbolických odkazů, adresářů a svazky. Další informace a příklady kódu najdete v tématu [navigační systému souborů (C++)](../standard-library/file-system-navigation.md).  
@@ -115,7 +116,7 @@ Tyto funkce v volné [ \<systému souborů >](../standard-library/filesystem.md)
 |[is_empty](#is_empty)|[is_fifo](#is_fifo)|[is_other](#is_other)|
 |[is_regular_file](#is_regular_file)|[is_socket](#is_socket)|[is_symlink](#is_symlink)|
 |[last_write_time –](#last_write_time)|[oprávnění](#permissions)|[read_symlink](#read_symlink)|
-|[odebrat](#remove)|[remove_all –](#remove_all)|[Přejmenování](#rename)|
+|[remove](#remove)|[remove_all –](#remove_all)|[Přejmenování](#rename)|
 |[resize_file –](#resize_file)|[místo](#space)|[Stav](#status)|
 |[status_known –](#status_known)|[swap](#swap)|[symlink_status –](#symlink_status)|
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|  

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 474d4f82b41eaab43c5e87ca335b911db0b4e64e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier – třída
 Po vydání poslední objekt v aktuální modul, vyvolá obslužnou rutinu události. Obslužné rutiny události je zadaný objekt a jejího člena ukazatel na metodu.  
@@ -43,20 +46,20 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::methodreleasenotifier:: methodreleasenotifier – konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicializuje novou instanci třídy Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::MethodReleaseNotifier – konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicializuje novou instanci třídy Module::MethodReleaseNotifier.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::MethodReleaseNotifier:: Invoke – metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události související s aktuálním objektem Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::Invoke – metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události související s aktuálním objektem Module::MethodReleaseNotifier.|  
   
 ### <a name="protected-data-members"></a>Chráněné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::methodreleasenotifier:: method_ – datový člen](../windows/module-methodreleasenotifier-method-data-member.md)|Obslužné rutiny události pro aktuální objekt Module::MethodReleaseNotifier obsahuje ukazatel.|  
-|[Module::methodreleasenotifier:: object_ – datový člen](../windows/module-methodreleasenotifier-object-data-member.md)|Obsahuje ukazatele na objekt, jehož členská funkce je obslužné rutiny události pro aktuální objekt Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::method_ – datový člen](../windows/module-methodreleasenotifier-method-data-member.md)|Obslužné rutiny události pro aktuální objekt Module::MethodReleaseNotifier obsahuje ukazatel.|  
+|[Module::MethodReleaseNotifier::object_ – datový člen](../windows/module-methodreleasenotifier-object-data-member.md)|Obsahuje ukazatele na objekt, jehož členská funkce je obslužné rutiny události pro aktuální objekt Module::MethodReleaseNotifier.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ReleaseNotifier`  
@@ -69,4 +72,4 @@ class MethodReleaseNotifier : public ReleaseNotifier;
  **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Viz také
- [Module – třídy](../windows/module-class.md)
+ [Module – třída](../windows/module-class.md)

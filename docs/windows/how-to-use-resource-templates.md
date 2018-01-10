@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a072fb02c1821e2174671465d570944078b08f7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-resource-templates"></a>Postupy: Použití šablon prostředků
 Prostředek šablony je vlastní prostředek, který jste uložili jako soubor .rct. Šablony prostředků může potom sloužit jako výchozí bod pro vytvoření další prostředky. Šablony prostředků ušetřit čas při vývoji další prostředky nebo skupiny zdroje, které mají funkce, jako je standardní ovládací prvky a další opakovaných elementy. Například můžete chtít zahrnout tlačítko Nápověda a ikona logo společnosti několik dialogových oken. Uděláte to tak rychle, vytvořte novou šablonu pole dialogové okno a upravit pomocí logo a na tlačítko Nápověda.  

@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3550a1e06c1fda8733111371b680f22748aab439
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 32de68754f5d305f15894e5144a1c56ae4e1c981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
 Atributy C++ jsou uspořádány do následujících skupin funkčnosti.  
@@ -36,4 +39,4 @@ Atributy C++ jsou uspořádány do následujících skupin funkčnosti.
  [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)   
  [Koncepty](../windows/attributed-programming-concepts.md)   
  [Atributy podle použití](../windows/attributes-by-usage.md)   
- [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)
+ [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)

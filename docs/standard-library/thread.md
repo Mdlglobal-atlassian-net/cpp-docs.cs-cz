@@ -14,13 +14,14 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7685bd1c112651b07540fefd2a28be91c9671706
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0847d92d890026ce6cfb963b022a3859370877fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltthreadgt"></a>&lt;přístup z více vláken&gt;
+# <a name="ltthreadgt"></a>&lt;thread&gt;
 Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a různé podpůrné funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,7 +43,7 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Thread – třída](../standard-library/thread-class.md)|Definuje objekt, který se používá k sledovat a spravovat vlákno při provádění v aplikaci.|  
+|[thread – třída](../standard-library/thread-class.md)|Definuje objekt, který se používá k sledovat a spravovat vlákno při provádění v aplikaci.|  
   
 ### <a name="public-structures"></a>Veřejné struktury  
   
@@ -58,7 +59,7 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
 |[sleep_for –](../standard-library/thread-functions.md#sleep_for)|Blokuje volající vlákno.|  
 |[sleep_until –](../standard-library/thread-functions.md#sleep_until)|Volající vlákno blokuje alespoň do zadané doby.|  
 |[swap](../standard-library/thread-functions.md#swap)|Výměny stavy dva `thread` objekty.|  
-|[YIELD –](../standard-library/thread-functions.md#yield)|Signály operačního systému spustit jiná vlákna i v případě, že aktuální vlákno by normálně nadále fungoval.|  
+|[yield](../standard-library/thread-functions.md#yield)|Signály operačního systému spustit jiná vlákna i v případě, že aktuální vlákno by normálně nadále fungoval.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   

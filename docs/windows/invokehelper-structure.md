@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52dc2118f537535b81163d375db483a57c5a9854
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper – struktura
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -108,19 +111,19 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Invokehelper::invokehelper – konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicializuje novou instanci třídy invokehelper –.|  
+|[InvokeHelper::InvokeHelper – konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicializuje novou instanci třídy invokehelper –.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Invokehelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.|  
+|[InvokeHelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Invokehelper::callback_ – datový člen](../windows/invokehelper-callback-data-member.md)|Představuje obslužnou rutinu události pro volání při výskytu události.|  
+|[InvokeHelper::callback_ – datový člen](../windows/invokehelper-callback-data-member.md)|Představuje obslužnou rutinu události pro volání při výskytu události.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `InvokeHelper`  
@@ -131,4 +134,4 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

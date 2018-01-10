@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 656c8ac642ae9c8a6a76e1ed52ca014b5515e65f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="universal-windows-apps-c"></a>Univerzální aplikace pro Windows (C++)
 Univerzální aplikace pro platformu Windows (UWP) obsahují sadu Principy návrhu, které zdůraznil jednoduchého uživatelského rozhraní, které zahrnují obsah, který automaticky přizpůsobí pro jiné velikosti obrazovky na různých zařízeních. Vytvoření uživatelského rozhraní v XAML značek a kódu v nativním kódu C++. Můžete také vytvořit komponent (DLL), které mohou být spotřebovávána aplikace UWP, které jsou zapsány v dalších jazycích. Plochy rozhraní API pro aplikace UWP je prostředí Windows Runtime, který je dobře započítané knihovny, která poskytuje širokou škálu služeb operačního systému.  
@@ -31,7 +34,7 @@ Univerzální aplikace pro platformu Windows (UWP) obsahují sadu Principy návr
 |||  
 |-|-|  
 |[Referenční příručka jazyka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)|Popisuje sadu rozšíření, které zjednodušují C++ spotřeba rozhraní API systému Windows Runtime a povolit zpracování chyb, který je založen na výjimky.|  
-|[Vytváření aplikací a knihovny (C + +/ CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Popisuje postup vytvoření knihovny DLL a statických knihoven, které lze přistupovat z C + +/ CX aplikace nebo součást.|  
+|[Sestavení aplikací a knihoven (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Popisuje postup vytvoření knihovny DLL a statických knihoven, které lze přistupovat z C + +/ CX aplikace nebo součást.|  
 |[Kurz: Vytvoření první aplikace pro Windows Store pomocí jazyka C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Návod, který představuje základní koncepty vývoj aplikací pro univerzální platformu Windows v jazyce C++. (Ještě nebyla aktualizována pro vývoj UWP ve Windows 10.)|  
 |[Vytváření Windows Runtime komponent v jazyce C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Popisuje postup vytvoření knihovny DLL, které můžou využívat jiné aplikace pro univerzální platformu Windows a součásti.|  
 |[Vývoj her](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Popisuje, jak používat rozhraní DirectX a C++ pro vytvoření hry.|  

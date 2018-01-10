@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>Členské funkce datového proudu výstupního souboru
 Členské funkce datového proudu výstupního mít tři typy: ty, které odpovídají manipulátory, takové, které provádějí neformátovaný operací zápisu, a ty, které jinak změnit datový proud stavu a mít žádná ekvivalentní manipulator nebo operátor vložení. Pro sekvenční, formátovaný výstup můžete použít pouze operátorů insertion a manipulátory. Pro výstup disku binární náhodný přístup použijte jiné členské funkce s nebo bez operátorů insertion.  
@@ -114,7 +115,7 @@ int main( )
 |[Špatné](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|  
 |[selhání](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Vrátí **true** Pokud dojde k neodstranitelné chybě nebo podmínku "očekávané", jako je Chyba převodu, nebo pokud soubor nebyl nalezen. Zpracování můžete často obnovit po volání **vymazat** s argumentem nula.|  
 |[Dobré](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Vrátí **true** Pokud není žádná chybová podmínka (neopravitelné nebo jinak) a není nastaven příznak end souboru.|  
-|[EOF](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Vrátí **true** na podmínky end souboru.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Vrátí **true** na podmínky end souboru.|  
 |[Vymazat](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Nastaví stav vnitřní chybě. Pokud je volána s výchozí argumenty, vymaže všechny chyby služby bits.|  
 |[rdstate –](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Vrátí aktuální chybový stav.|  
   
@@ -145,5 +146,5 @@ if(!cout.fail())...
  **Void\*()** operátor není ekvivalentní **dobrý** vzhledem k tomu, že není testování pro konec souboru.  
   
 ## <a name="see-also"></a>Viz také  
- [Výstupní datové proudy](../standard-library/output-streams.md)
+ [Výstupní streamy](../standard-library/output-streams.md)
 

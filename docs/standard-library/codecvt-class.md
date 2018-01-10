@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 290b48c5417aa5511b34f2e4ec2e0d4b7358b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvt-class"></a>codecvt – třída
 Třída šablony popisující objekt, který může sloužit jako podmínka národního prostředí. Dokáže řídit převody mezi sekvencí hodnot používanou ke kódování znaků v rámci programu a sekvencí hodnot používanou ke kódování znaků mimo program.  
@@ -133,10 +134,10 @@ class codecvt : public locale::facet, codecvt_base;
 |[do_out –](#do_out)|Virtuální funkce volána převést posloupnost interní `CharType`s pořadí externí bajtů.|  
 |[do_unshift –](#do_unshift)|Virtuální funkce volána zajistit `Byte`během převodu stavu závislé potřebný pro dokončení jeho poslední znak v sekvenci s `Byte`s.|  
 |[kódování](#encoding)|Testy Pokud kódování `Byte` datový proud je stavu závislé, jestli poměr mezi `Byte`, která se používá a `CharType`s vytvořeného konstantní a pokud ano, určuje hodnotu tohoto poměru.|  
-|[v](#in)|Převede externí zobrazení posloupnosti `Byte`s do interního vyjádření posloupnosti `CharType`s.|  
+|[in](#in)|Převede externí zobrazení posloupnosti `Byte`s do interního vyjádření posloupnosti `CharType`s.|  
 |[Délka](#length)|Určuje, kolik `Byte`s z daného posloupnost externí `Byte`sad s více než zadaný počet interní `CharType`s a vrátí počet `Byte`s.|  
 |[max_length](#max_length)|Vrátí maximální počet externí `Byte`s nezbytné k vytvoření jeden interní `CharType`.|  
-|[na více systémů](#out)|Převede posloupnost interní `CharType`s do pořadí externí `Byte`s.|  
+|[out](#out)|Převede posloupnost interní `CharType`s do pořadí externí `Byte`s.|  
 |[unshift –](#unshift)|Poskytuje externí `Byte`s během převodu stavu závislé potřebný pro dokončení jeho poslední znak v pořadí `Byte`s.|  
   
 ## <a name="requirements"></a>Požadavky  

@@ -189,11 +189,12 @@ caps.latest.revision: "39"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de4de5d693e786cd2cb1f7e4a0e45c9f7df66d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx – třída
 Implementuje jeden dokument (SDI rozhraní) překryté nebo oken s rámečkem místní funkci systému Windows a poskytuje členy pro správu okna. Ji rozšiřuje [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy.  
@@ -391,7 +392,7 @@ void DockPane(
  ID na straně okna rámce chcete ukotvit k.  
   
  [v]`lpRect`  
- Ukazatel na konstantní Rect – struktura, která určuje pozici obrazovky a velikost okna..  
+ Ukazatel na konstantní Rect – struktura, která určuje pozici obrazovky a velikost okna.  
   
 ### <a name="remarks"></a>Poznámky  
  `nDockBarID` Parametr může mít jeden z následujících hodnot:  

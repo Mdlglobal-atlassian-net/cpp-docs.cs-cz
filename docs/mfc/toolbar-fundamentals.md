@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55e6df559d6a8365635cea7e94d20bd2576d2273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 Tento článek popisuje základní implementace MFC, která umožňuje přidat výchozí panel nástrojů k vaší aplikaci výběrem možnosti v Průvodci aplikací. Obsahuje následující témata:  
@@ -107,5 +108,5 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
 -   [Použití starých panelů nástrojů](../mfc/using-your-old-toolbars.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace panelu nástrojů v MFC](../mfc/mfc-toolbar-implementation.md)
+ [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)
 

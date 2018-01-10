@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3f0295ce9456822337c9beac3e6d1c35f7d80bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c0e849d1fee7eca67f3b5765d31b54e0660eaa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutex-class1"></a>Mutex Class1
 Představuje objekt synchronizace, kterými se řídí výhradně sdíleného prostředku.  
@@ -42,7 +45,7 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Mutex::mutex – konstruktor](../windows/mutex-mutex-constructor.md)|Inicializuje novou instanci třídy Mutex.|  
+|[Mutex::Mutex – konstruktor](../windows/mutex-mutex-constructor.md)|Inicializuje novou instanci třídy Mutex.|  
   
 ### <a name="public-members"></a>Veřejné členy  
   
@@ -54,7 +57,7 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Mutex::Operator = – operátor](../windows/mutex-operator-assign-operator.md)|Přiřadí (přesune) zadaný objekt Mutex do aktuální objekt Mutex objektu.|  
+|[Mutex::operator= – operátor](../windows/mutex-operator-assign-operator.md)|Přiřadí (přesune) zadaný objekt Mutex do aktuální objekt Mutex objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Mutex`  
@@ -65,4 +68,4 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

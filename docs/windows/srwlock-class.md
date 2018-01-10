@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlock-class"></a>Třída SRWLock
 Představuje zámek pro tenký čtečky nebo zápis.  
@@ -46,23 +49,23 @@ class SRWLock;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Srwlock::srwlock – konstruktor](../windows/srwlock-srwlock-constructor.md)|Inicializuje novou instanci třídy SRWLock.|  
-|[SRWLock:: ~ srwlock – destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Instance třídy SRWLock deinitializes.|  
+|[SRWLock::SRWLock – konstruktor](../windows/srwlock-srwlock-constructor.md)|Inicializuje novou instanci třídy SRWLock.|  
+|[SRWLock::~SRWLock – destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Instance třídy SRWLock deinitializes.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Srwlock::lockexclusive – metoda](../windows/srwlock-lockexclusive-method.md)|Získá objekt SRWLock ve výhradním režimu.|  
-|[Srwlock::lockshared – metoda](../windows/srwlock-lockshared-method.md)|Získá objekt SRWLock ve sdíleném režimu.|  
-|[Srwlock::trylockexclusive – metoda](../windows/srwlock-trylockexclusive-method.md)|Pokusí se získat objekt SRWLock ve výhradním režimu pro objekt SRWLock zadané nebo aktuální.|  
-|[Srwlock::trylockshared – metoda](../windows/srwlock-trylockshared-method.md)|Pokusí se získat objekt SRWLock ve sdíleném režimu pro objekt SRWLock zadané nebo aktuální.|  
+|[SRWLock::LockExclusive – metoda](../windows/srwlock-lockexclusive-method.md)|Získá objekt SRWLock ve výhradním režimu.|  
+|[SRWLock::LockShared – metoda](../windows/srwlock-lockshared-method.md)|Získá objekt SRWLock ve sdíleném režimu.|  
+|[SRWLock::TryLockExclusive – metoda](../windows/srwlock-trylockexclusive-method.md)|Pokusí se získat objekt SRWLock ve výhradním režimu pro objekt SRWLock zadané nebo aktuální.|  
+|[SRWLock::TryLockShared – metoda](../windows/srwlock-trylockshared-method.md)|Pokusí se získat objekt SRWLock ve sdíleném režimu pro objekt SRWLock zadané nebo aktuální.|  
   
 ### <a name="protected-data-member"></a>Chráněný datový člen  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Srwlock::srwlock_ – datový člen](../windows/srwlock-srwlock-data-member.md)|Obsahuje základní proměnná zámek pro aktuální objekt SRWLock.|  
+|[SRWLock::SRWLock_ – datový člen](../windows/srwlock-srwlock-data-member.md)|Obsahuje základní proměnná zámek pro aktuální objekt SRWLock.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SRWLock`  
@@ -73,4 +76,4 @@ class SRWLock;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

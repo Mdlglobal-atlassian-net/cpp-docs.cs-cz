@@ -14,11 +14,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df791e5ef12dfeef72ebf48e673b774ddfd6aee5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4647a8b1001cd6acd6b70a3d15f127c8e3891c1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event – třída (knihovna šablon C++ prostředí Windows Runtime)
 Představuje událost.  
@@ -35,13 +38,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Event::Event konstruktor (knihovna šablon C++ prostředí Windows Runtime)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializuje novou instanci třídy událostí.|  
+|[Event::Event Konstruktor (knihovna šablon C++ prostředí Windows Runtime)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializuje novou instanci třídy událostí.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Event::Operator = – operátor](../windows/event-operator-assign-operator.md)|Přiřadí zadaný odkaz na aktuální instanci události událostí.|  
+|[Event::operator= – operátor](../windows/event-operator-assign-operator.md)|Přiřadí zadaný odkaz na aktuální instanci události událostí.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HandleT`  
@@ -54,4 +57,4 @@ class Event : public HandleT<HandleTraits::EventTraits>;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

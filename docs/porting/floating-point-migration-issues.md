@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e922872f302e6a6fb00170878a5033ba75e6b8a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59898a5ad6af6728b16163c766f6295c850dc577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-migration-issues"></a>Problémy s plovoucí desetinnou čárkou migrace  
   
@@ -41,6 +42,6 @@ Ve většině případů s plovoucí desetinnou čárkou změny v nejnovější 
   
 ## <a name="see-also"></a>Viz také  
   
-[Upgradování projektů z dřívějších verzí aplikace Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Přehled upgradu potenciální problémy (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Historie 2003 2015 změn Visual C++](visual-cpp-change-history-2003-2015.md)  
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  

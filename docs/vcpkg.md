@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Správce balíčků C++ pro Windows 
 vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalace knihoven třetích stran v systému Windows. Pokud projekt používá knihovny třetích stran, doporučujeme použít vcpkg k instalaci. vcpkg podporuje open source a vlastní knihovny. Všechny knihovny v katalogu veřejné vcpkg byly testovány z hlediska kompatibility s Visual Studio 2015 a Visual Studio 2017. Komunity C++ je přidání dalších knihoven průběžně od 2017 pravděpodobně neobsahuje více než 238 knihovny v katalogu.
@@ -107,14 +108,16 @@ Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny můž
 Veřejné katalogu je pořád aktuální a mají nejnovější verze knihoven. Chcete-li zjistit, které z vaší místní knihovny jsou zastaralé, použijte `vcpkg update`. Až budete připraveni k aktualizaci vaší kolekce porty na nejnovější verzi veřejné katalogu, právě provést vyžádanou operací git proti úložiště github, nebo vytvořte nový klon a ponechat ten starý, pokud je stále potřeba.
 
 ### <a name="contribute-new-libraries"></a>Přispívat nové knihovny
-Můžete zahrnout všechny knihovny, které chcete v kolekci privátní porty. Navrhovat nová knihovna pro veřejné katalogu 
-
+Můžete zahrnout všechny knihovny, které chcete v kolekci privátní porty. Navrhovat nová knihovna pro veřejné katalogu, otevřete na problém [GitHub vcpkg problém stránce](https://github.com/Microsoft/vcpkg/issues).
 
 ### <a name="remove-a-library"></a>Odebrání knihovny
 Typ `vcpkg remove` k odebrání nainstalované knihovny. Pokud jsou na ní závislé další knihovny, zobrazí se výzva k znovu spusťte příkaz s `--recurse`, což způsobí, že všechny podřízené knihovny odebrat.
 
 ### <a name="customize-vcpkg"></a>Přizpůsobení vcpkg
 Vaše klon vcpkg žádným způsobem, který chcete, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každé z nich pro získání konkrétních verzí knihovny, nebo zadejte parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může pracovat na softwaru, který má jednu sadu závislosti a jiné skupiny může mít jinou sadu. Můžete nastavit dva klony vcpkg a upravit každé z nich ke stažení verze knihovny a kompilace přepínače a podobně, podle svých potřeb. 
+
+### <a name="uninstall-vcpkg"></a>Odinstalace vcpkg
+Odstraňte adresář. 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchie složky vcpkg
 Všechna data a funkce vcpkg je zcela samostatné v hierarchii jednoho adresářového; tomu se říká "instance". Neexistují žádné nastavení registru nebo proměnné prostředí. Může mít libovolný počet instancí vcpkg na počítači, a nebude do mezi sebou. 

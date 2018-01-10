@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51e18940786af52b86d17f2b54d6fe835c639904
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5ffedd0d370d59056ed895988aadd5362f51a7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper – struktura
 Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
@@ -54,7 +57,7 @@ struct VerifyInterfaceHelper<false, I>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Verifyinterfacehelper::Verify – metoda](../windows/verifyinterfacehelper-verify-method.md)||  
+|[VerifyInterfaceHelper::Verify – metoda](../windows/verifyinterfacehelper-verify-method.md)||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `VerifyInterfaceHelper`  
@@ -65,4 +68,4 @@ struct VerifyInterfaceHelper<false, I>;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

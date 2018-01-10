@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array – třída
 Představuje kontejner dat používá k přesunu dat do akcelerátoru.  
@@ -74,7 +75,7 @@ friend class array;
 |[get_cpu_access_type](#get_cpu_access_type)|Vrátí [access_type](concurrency-namespace-enums-amp.md#access_type) pole. Tato metoda je přístupná jenom na procesoru.|  
 |[get_extent –](#get_extent)|Vrátí [rozsah](extent-class.md) objekt pole.|  
 |[reinterpret_as –](#reinterpret_as)|Vrací jednorozměrné pole, která obsahuje všechny elementy ve `array` objektu.|  
-|[část](#section)|Vrátí dílčí části `array` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
+|[section](#section)|Vrátí dílčí části `array` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
 |[view_as –](#view_as)|Vrátí [array_view](array-view-class.md) objekt, který je vytvořený z `array` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
@@ -817,4 +818,4 @@ array_view<const value_type,_New_rank> view_as(
  [Array_view](array-view-class.md) objekt, který je vytvořený.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

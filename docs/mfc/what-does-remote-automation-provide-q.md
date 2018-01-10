@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6766b2fcc5d277b86f979252bf22e6ae343e608e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-does-remote-automation-provide"></a>Jaké jsou přínosy vzdálené automatizace?
 Vzdálená automatizace umožňuje programy k vyvolání `IDispatch` implementace na jednom počítači z jiného. Mimoto podporuje i jiné rozhraní vyžaduje automatizace, konkrétně **IEnumVARIANT** podpora kolekce. Nenabízí možnost distribuovat jiných rozhraní modelu COM (s výjimkou **IUnknown**, samozřejmě) a jako regulární automatizace obsahuje zařazování podporu pouze pro tyto datové typy podporované automatizace.  

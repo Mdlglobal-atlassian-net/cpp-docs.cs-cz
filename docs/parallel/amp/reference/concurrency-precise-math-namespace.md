@@ -144,11 +144,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math – obor názvů
 Funkce `precise_math` obor názvů jsou C99 kompatibilní. Obě jednotné přesnost a dvojitá přesnost verzích jednotlivé funkce, které jsou zahrnuty. Například `acos` je verze dvojitou přesností a `acosf` je verze jednoduchou přesností. Tyto funkce, včetně funkce jednoduchou přesností vyžadují rozšířené podpory dvojitou přesností na akcelerátor. Můžete použít [Accelerator::supports_double_precision –](accelerator-class.md#supports_double_precision) k určení, pokud tyto funkce můžete spustit na konkrétní akcelerátoru. 
@@ -224,8 +225,8 @@ namespace precise_math;
 |[fminf –](concurrency-precise-math-namespace-functions.md#fminf)|Určení minimální číselná hodnota z argumentů|  
 |[fmod – funkce (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Přetíženo. Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
 |[fmodf –](concurrency-precise-math-namespace-functions.md#fmodf)|Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
-|[fpclassify –](concurrency-precise-math-namespace-functions.md#fpclassify)|Přetíženo. Klasifikuje hodnota argumentu jako nula NaN, nekonečné, normální subnormal,|  
-|[frexp –](concurrency-precise-math-namespace-functions.md#frexp)|Přetíženo. Získá mantisa a exponent _X|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Přetíženo. Klasifikuje hodnota argumentu jako nula NaN, nekonečné, normální subnormal,|  
+|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Přetíženo. Získá mantisa a exponent _X|  
 |[frexpf –](concurrency-precise-math-namespace-functions.md#frexpf)|Získá mantisa a exponent _X|  
 |[hypot –](concurrency-precise-math-namespace-functions.md#hypot)|Přetíženo. Vypočítá druhou odmocninu čísla součet kvadratických _X a _Y|  
 |[hypotf –](concurrency-precise-math-namespace-functions.md#hypotf)|Vypočítá druhou odmocninu čísla součet kvadratických _X a _Y|  
@@ -235,7 +236,7 @@ namespace precise_math;
 |[isinf –](concurrency-precise-math-namespace-functions.md#isinf)|Přetíženo. Určuje, zda je argument nekonečna|  
 |[isNaN](concurrency-precise-math-namespace-functions.md#isnan)|Přetíženo. Určuje, zda je argument NaN.|  
 |[isnormal –](concurrency-precise-math-namespace-functions.md#isnormal)|Přetíženo. Určuje, zda je argument normální|  
-|[ldexp –](concurrency-precise-math-namespace-functions.md#ldexp)|Přetíženo. Vypočítá reálné číslo z mantisa a exponent|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Přetíženo. Vypočítá reálné číslo z mantisa a exponent|  
 |[ldexpf –](concurrency-precise-math-namespace-functions.md#ldexpf)|Vypočítá reálné číslo z mantisa a exponent|  
 |[lgamma –](concurrency-precise-math-namespace-functions.md#lgamma)|Přetíženo. Vypočítá přirozený logaritmus absolutní hodnotu gama argumentu|  
 |[lgammaf –](concurrency-precise-math-namespace-functions.md#lgammaf)|Vypočítá přirozený logaritmus absolutní hodnotu gama argumentu|  
@@ -306,4 +307,4 @@ namespace precise_math;
  **Namespace:** souběžnosti  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
