@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34513ba6799b1f70d16867571d38185420fa3576
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06dca827d6b5cb5d457a2eda6aa143bb5d0fe5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (Visual C++)
 Každý výraz C++ má typ a patří k *hodnota kategorie*. Hodnota kategorie jsou základem pro pravidla, která řídí kompilátory při vytváření, kopírování a přesouvání dočasné objekty při vyhodnocení výrazu. 
@@ -79,4 +80,4 @@ int main()
 ## <a name="see-also"></a>Viz také  
  [Základní koncepty](../cpp/basic-concepts-cpp.md)   
  [Deklarátor odkazu lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
- [Deklarátor odkazu rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

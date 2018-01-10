@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d912c6cd997c23b9623d20a104327fb6e4701494
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 079784f1fed84ae073767a4a0b622d3fdbf7384b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Doporučení pro výběr mezi použitím knihovny ATL a MFC
 Při vývoji součásti a aplikace, můžete si vybrat mezi dva přístupy – ATL a MFC (knihovny Microsoft Foundation Class).  
@@ -35,5 +36,5 @@ Při vývoji součásti a aplikace, můžete si vybrat mezi dva přístupy – A
  Můžete přidat podporu pro pomocí knihovny ATL v projektu knihovny MFC existující spuštěním průvodce. Podrobnosti najdete v tématu [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Úvod do knihovny ATL](../atl/introduction-to-atl.md)
+ [Úvod do ATL](../atl/introduction-to-atl.md)
 

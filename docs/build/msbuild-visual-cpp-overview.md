@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>Přehled nástroje MSBuild (Visual C++)  
   
@@ -28,16 +29,16 @@ MSBuild je standardní sestavení systému pro projekty Visual C++. Při sestavo
   
 Přečtěte si následující dokumenty o nástroji MSBuild.  
   
-- [Nástroje MSBuild](/visualstudio/msbuild/msbuild)  
+- [MSBuild](/visualstudio/msbuild/msbuild)  
  Přehled koncepty nástroje MSBuild.  
   
-- [MSBuild – Reference](/visualstudio/msbuild/msbuild-reference)  
+- [Referenční dokumentace nástroje MSBuild](/visualstudio/msbuild/msbuild-reference)  
  Referenční informace o systému nástroje MSBuild.  
   
 - [Referenční dokumentace schématu souboru projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference)  
  Obsahuje seznam prvků schématu XML MSBuild, spolu s jejich atributů a nadřazené a podřízené elementy. Zejména Poznámka: [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup –](/visualstudio/msbuild/propertygroup-element-msbuild), [cíl](/visualstudio/msbuild/target-element-msbuild), a [úloh](/visualstudio/msbuild/task-element-msbuild) elementy.  
   
-- [Reference k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)  
+- [Referenční dokumentace k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)  
  Popisuje možnosti, které můžete použít s msbuild.exe a argumenty příkazového řádku.  
   
 - [Referenční dokumentace úlohy](/visualstudio/msbuild/msbuild-task-reference)  

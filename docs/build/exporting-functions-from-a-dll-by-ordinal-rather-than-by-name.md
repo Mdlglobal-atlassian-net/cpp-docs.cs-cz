@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d5420a426f0dc1244ede19fc4abddf56469608d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17b49cc54336f596d6815a2ebe53e60ed2dd51e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu
 Nejjednodušší způsob, jak funkce exportu z vaší knihovny DLL je k jejich exportování podle názvu. To se stane, když používáte **__declspec(dllexport)**, např. Ale místo toho můžete exportovat funkce podle pořadí. S touto technikou, musíte použít soubor .def místo **__declspec(dllexport)**. K určení pořadového čísla funkce, připojí k názvu funkce v souboru .def jeho pořadí. Informace o určování pořadí najdete v tématu [export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md).  
@@ -38,4 +39,4 @@ Nejjednodušší způsob, jak funkce exportu z vaší knihovny DLL je k jejich e
 -   [Použijte __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+ [Export z knihovny DLL](../build/exporting-from-a-dll.md)

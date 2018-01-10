@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
 Celé číslo bez znaménka jsou převedeny na kratší číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů, nebo již nepodepsaný nebo podepsaný celočíselná a tím, že rozšíří nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).  
@@ -49,28 +50,28 @@ printf_s( "%hd\n", j );   // Prints -3
 |From|Chcete-li|Metoda|  
 |----------|--------|------------|  
 |`unsigned char`|`char`|Zachovat bitový; bit horní stane přihlašovací bit|  
-|`unsigned char`|**krátký**|Rozšíření nula.|  
-|`unsigned char`|**dlouhá**|Rozšíření nula.|  
+|`unsigned char`|**short**|Rozšíření nula.|  
+|`unsigned char`|**long**|Rozšíření nula.|  
 |`unsigned char`|**short bez znaménka**|Rozšíření nula.|  
 |`unsigned char`|`unsigned long`|Rozšíření nula.|  
-|`unsigned char`|**plovoucí desetinná čárka**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|`unsigned char`|**Double**|Převést na **dlouho**; převést **dlouho** k **double**|  
+|`unsigned char`|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
+|`unsigned char`|**double**|Převést na **dlouho**; převést **dlouho** k **double**|  
 |`unsigned char`|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
 |**short bez znaménka**|`char`|Zachovat nejnižší bajtů|  
-|**short bez znaménka**|**krátký**|Zachovat bitový; bit horní stane přihlašovací bit|  
-|**short bez znaménka**|**dlouhá**|Rozšíření nula.|  
+|**short bez znaménka**|**short**|Zachovat bitový; bit horní stane přihlašovací bit|  
+|**short bez znaménka**|**long**|Rozšíření nula.|  
 |**short bez znaménka**|`unsigned char`|Zachovat nejnižší bajtů|  
 |**short bez znaménka**|`unsigned long`|Rozšíření nula.|  
-|**short bez znaménka**|**plovoucí desetinná čárka**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|**short bez znaménka**|**Double**|Převést na **dlouho**; převést **dlouho** k **double**|  
+|**short bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
+|**short bez znaménka**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|  
 |**short bez znaménka**|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
 |`unsigned long`|`char`|Zachovat nejnižší bajtů|  
-|`unsigned long`|**krátký**|Zachovat nejnižší aplikace word|  
-|`unsigned long`|**dlouhá**|Zachovat bitový; bit horní stane přihlašovací bit|  
+|`unsigned long`|**short**|Zachovat nejnižší aplikace word|  
+|`unsigned long`|**long**|Zachovat bitový; bit horní stane přihlašovací bit|  
 |`unsigned long`|`unsigned char`|Zachovat nejnižší bajtů|  
 |`unsigned long`|**short bez znaménka**|Zachovat nejnižší aplikace word|  
-|`unsigned long`|**plovoucí desetinná čárka**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|`unsigned long`|**Double**|Převést přímo na **double**|  
+|`unsigned long`|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
+|`unsigned long`|**double**|Převést přímo na **double**|  
 |`unsigned long`|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
   
  **Konkrétní Microsoft**  

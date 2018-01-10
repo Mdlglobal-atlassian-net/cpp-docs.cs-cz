@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b86ec1bf3c47de45eaf9120d8e8f68ac9377db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umístit informace o ladění do souboru objektu)
 Mezerami dokončení ladicí informace ve všech souborů objektu vytvořeny ze souboru předkompilovaných hlaviček (.pch) při použití s [/Yc](../../build/reference/yc-create-precompiled-header-file.md) a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti. Zastaralé  

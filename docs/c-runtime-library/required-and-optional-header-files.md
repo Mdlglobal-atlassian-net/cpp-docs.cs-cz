@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>Povinné a nepovinné hlavičkové soubory
 Popis každé spuštění rutiny zahrnuje seznam požadované a volitelné zahrnout, nebo hlavičce (. H), soubory pro tuto rutinu. Požadovaná hlavička soubory musí být součástí získat deklarace funkce pro rutiny nebo definice používá jiné rutiny volá se interně. Nepovinné hlavičkové soubory jsou obvykle součástí využít předdefinované konstanty, definice typu nebo vložené makra. Následující tabulka uvádí některé příklady nepovinné hlavičkové obsah souboru:  

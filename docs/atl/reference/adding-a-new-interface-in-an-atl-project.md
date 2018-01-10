@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21aeda51a917bcb48b16ff8f9c2bc505adc18f1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c07306a660162b23ecaffa4dd239b2538be0295
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Přidání nového rozhraní v projektu knihovny ATL
 Když přidáte do objektu nebo ovládacího prvku rozhraní, můžete vytvořit prázdná funkce pro každou metodu v tomto rozhraní. V objektu nebo ovládací prvek můžete přidat pouze rozhraní, které jsou v existující knihovně typu. Navíc musí implementovat třídu, ve kterém můžete přidat rozhraní [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) makro nebo, pokud je projekt s atributy, musí mít `coclass` atribut.  
@@ -54,5 +55,5 @@ Když přidáte do objektu nebo ovládacího prvku rozhraní, můžete vytvořit
  [Tvorba běžných projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Základy ATL COM – objekty](../../atl/fundamentals-of-atl-com-objects.md)   
- [Výchozí konfigurace projektu knihovny ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

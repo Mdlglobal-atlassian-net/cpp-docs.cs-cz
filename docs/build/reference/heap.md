@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 709b9a1b57750db4ea8eb13bdaa3d49eed9b7629
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d21fe68d96274eaf42c2b7d58aa025c49f8a6d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heap"></a>/HEAP
 Nastaví velikost haldy v bajtech. Tato možnost se vztahuje pouze na spustitelné soubory.  
@@ -42,4 +43,4 @@ reserve[,commit]
  Zadejte `reserve` a `commit` hodnoty v desítkový nebo jazyka C šestnáctkové nebo osmičkové soustavě. Například může být zadána hodnota 1 MB jako 1048576 v desítkové soustavě, nebo jako 0x100000 v šestnáctkové soustavě nebo jako 04000000 v osmičková.  
   
 ## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+ [EDITBIN – možnosti](../../build/reference/editbin-options.md)

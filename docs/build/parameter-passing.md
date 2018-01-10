@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>Předávání parametrů
 První čtyři celočíselné argumenty jsou předány v registrech. Celočíselné hodnoty jsou předána (v pořadí zleva doprava) RCX, RDX, R8 a R9. Argumenty pět a vyšší se předávají v zásobníku. Všechny argumenty mají právo zarovnané v registrech. Důvodem je, pokud můžete volaného ignorovat horní bity registru musí být a k přístup jenom ta část registraci nezbytné.  

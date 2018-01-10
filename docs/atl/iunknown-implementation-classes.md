@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac484e58b585a09eff40d1b058e44dad6b8d394c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34c0b46d8a7d89ca46dc4361fe85469bd64e538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iunknown-implementation-classes"></a>Implementace třídy IUnknown
 Následující třídy implementují **IUnknown** a související metody:  
@@ -47,11 +48,11 @@ Následující třídy implementují **IUnknown** a související metody:
 -   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) vytvoří dočasný objekt COM, pomocí kosterního provádění **IUnknown**.  
   
 ## <a name="related-articles"></a>Související články  
- [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)  
+ [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../atl/atl-class-overview.md)   
  [Agregace a makra objekt pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)   
  [Makra COM Map](../atl/reference/com-map-macros.md)   
- [Globální funkce mapu modelu COM](../atl/reference/com-map-global-functions.md)
+ [Globální funkce mapy modelu COM](../atl/reference/com-map-global-functions.md)
 

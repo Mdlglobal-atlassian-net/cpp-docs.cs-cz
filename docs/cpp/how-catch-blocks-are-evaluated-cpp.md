@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3af6c63ab571738f2c963c3e9b90b9aae4b644eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 744f75f86fd7d3e2ca2a2545a7914f923c4454b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Postup vyhodnocení zachytávacího bloku (C++)
 Jazyk C++ umožňuje vyvolat výjimky jakéhokoli typu, obecně je však doporučeno vyvolávat typy odvozené z typu std::exception. Může být zachycena výjimka C++ **catch** obslužná rutina, která určuje stejného typu jako vyvolaná výjimka nebo obslužná rutina, která může zachytit jakýkoli typ výjimky.  
@@ -74,4 +75,4 @@ catch( CExcptClass E )
  V tomto příkladu se třemi tečkami **catch** obslužná rutina je pouze obslužná rutina, která je zkontrolován.  
   
 ## <a name="see-also"></a>Viz také  
- [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+ [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

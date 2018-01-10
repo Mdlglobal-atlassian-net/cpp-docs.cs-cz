@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e80f6057a26ba7655df0a04d75dcaec2c4856ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce3ac6467ea566ebdd9d21e24843efe72457ba9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-storage-class-specifier"></a>Specifikátor třídy úložiště auto
 **Automaticky** – specifikátor třídy úložiště deklaruje automatické proměnné, proměnná s místní životnost. **Automaticky** proměnné je viditelná pouze v bloku v kterého je deklarovaná. Prohlášení o **automaticky** proměnné může zahrnovat inicializátory, jak je popsáno v [inicializace](../c-language/initialization.md). Od proměnné s **automaticky** třídy úložiště nejsou inicializovány automaticky, buď explicitně inicializujte je při deklarovat je nebo je přiřadit počáteční hodnoty v příkazech v bloku. Hodnoty Neinicializovaný **automaticky** proměnné nejsou definovány. (Místní proměnná **automaticky** nebo **zaregistrovat** pokaždé, když pochází v oboru, pokud je zadána inicializátoru inicializaci třídy úložiště.)  

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a66102153400b62998207f5510b20f7d60e90ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01fbd345daa6243a0385d556dd7cb6642a881de7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-pragmas"></a>Pragmas jazyka C
 **Konkrétní Microsoft**  
@@ -27,11 +28,11 @@ ms.lasthandoff: 10/24/2017
   
 |||||  
 |-|-|-|-|  
-|**alloc_text –**|**data_seg –**|**inline_recursion –**|**setlocale –**|  
-|**auto_inline –**|**funkce**|**vnitřní funkce**|**upozornění**|  
-|**check_stack –**|**hdrstop –**|**zpráva**||  
-|**code_seg**|**include_alias –**|**Optimalizace**||  
-|**Komentář**|**inline_depth –**|**Pack**||  
+|**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|  
+|**auto_inline**|**funkce**|**intrinsic**|**warning**|  
+|**check_stack**|**hdrstop**|**message**||  
+|**code_seg**|**include_alias**|**optimize**||  
+|**Komentář**|**inline_depth**|**pack**||  
   
  V tématu [direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) v *preprocesor odkaz* popis direktivy kompilátoru Microsoft C.  
   

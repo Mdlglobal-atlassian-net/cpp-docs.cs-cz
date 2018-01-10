@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab796752cef10c48036966c2947d711a0e385032
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL – podpora pro ovládací prvky DHTML
 Pomocí knihovny ATL, můžete vytvořit ovládacího prvku funkci Dynamic HTML (DHTML). Ovládací prvek ATL DHTML:  
@@ -39,19 +40,19 @@ Pomocí knihovny ATL, můžete vytvořit ovládacího prvku funkci Dynamic HTML 
  Ovládací prvek ATL DHTML můžete zobrazit v prohlížeči či jiné kontejneru, například kontejner testů ovládacích prvků ActiveX.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Identifikace prvky jazyka DHTML řízení projektu](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+ [Identifikace prvků projektu správy zdrojového kódu DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
  Popisuje prvky jazyka DHTML řízení projektu.  
   
- [Volání kódu C++ z jazyka DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+ [Volání kódu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)  
  Poskytuje příklad volání C++ – kód z ovládací prvek DHTML.  
   
- [Vytvoření ovládacího prvku ATL jazyka DHTML](../atl/creating-an-atl-dhtml-control.md)  
+ [Vytváření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
  Jsou uvedené kroky pro vytvoření ovládacího prvku DHTML.  
   
- [Testování ovládací prvek DHTML knihovny ATL](../atl/testing-the-atl-dhtml-control.md)  
+ [Testování ovládacího prvku ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
  Ukazuje, jak pro sestavení a otestování počáteční projekt ovládací prvek DHTML.  
   
- [Úprava ovládací prvek DHTML knihovny ATL](../atl/modifying-the-atl-dhtml-control.md)  
+ [Změna ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
  Popisuje postup pro přidání do ovládacího prvku některé funkce.  
   
  [Testování ovládacího prvku změněna ATL jazyka DHTML](../atl/testing-the-modified-atl-dhtml-control.md)  

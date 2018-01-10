@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9722c37c34201e87a94c995df0b90a49ebba270f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cce35e3c6c2125a42a5da0b79beec8077d0db74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="library-functions"></a>Funkce knihovny
 -   [Makro s hodnotou NULL](../c-language/null-macro.md)  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Prázdné řádky](../c-language/blank-lines.md)  
   
--   [Znaky Null](../c-language/null-characters.md)  
+-   [Znaky s hodnotou Null](../c-language/null-characters.md)  
   
 -   [Pozice souboru v režimu připojení](../c-language/file-position-in-append-mode.md)  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Ukládání souboru do vyrovnávací paměti](../c-language/file-buffering.md)  
   
--   [Soubory s nulovou délkou](../c-language/zero-length-files.md)  
+-   [Soubor o nulové délce](../c-language/zero-length-files.md)  
   
 -   [Názvy souborů](../c-language/filenames.md)  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Odstranění otevřených souborů](../c-language/deleting-open-files.md)  
   
--   [Přejmenování s názvem, který již existuje](../c-language/renaming-with-a-name-that-exists.md)  
+-   [Přejmenování existujícím názvem](../c-language/renaming-with-a-name-that-exists.md)  
   
 -   [Čtení hodnot ukazatele](../c-language/reading-pointer-values.md)  
   

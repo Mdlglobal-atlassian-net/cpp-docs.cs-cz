@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fac2b16d3a494c323a351ab0cb67f1940523649
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0dfcf34be03204b920e5a4459c6a2d7ea6c506d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (minimální opětovné sestavení IDE)
 **/FD** není dostupná uživatelům s výjimkou v [příkazového řádku](../../ide/command-line-property-pages.md) stránce vlastností projektu C++ **stránky vlastností** dialogové okno pole, pokud a pouze v případě [/Gm (povolit minimální sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) zároveň nevyberete. **/FD** nemá žádný vliv jiné než z vývojového prostředí. **/FD** nebude vystavena, ve výstupu **cl /?**.  

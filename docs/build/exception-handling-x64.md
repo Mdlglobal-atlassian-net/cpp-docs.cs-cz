@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c6f24a6fbb4d1b1cfff871a8568d4e08b1582d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f104f6772cdd1c778c166e27d697146c1280444a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-x64"></a>Zpracování výjimek (x64)
 Tato část popisuje strukturované zpracování výjimek a v chování zpracování výjimek v C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
   
--   [Unwind Data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)  
+-   [Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)  
   
 -   [Unwind – procedura](../build/unwind-procedure.md)  
   
@@ -33,9 +34,9 @@ Tato část popisuje strukturované zpracování výjimek a v chování zpracov�
   
 -   [Unwind pomocníci pro MASM](../build/unwind-helpers-for-masm.md)  
   
--   [Definice unwind dat v jazyce C](../build/unwind-data-definitions-in-c.md)  
+-   [Definice unwind dat v jazyce C](../build/unwind-data-definitions-in-c.md)  
   
  Další informace najdete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
- [x64 softwarové konvence](../build/x64-software-conventions.md)
+ [x64 – softwarové konvence](../build/x64-software-conventions.md)

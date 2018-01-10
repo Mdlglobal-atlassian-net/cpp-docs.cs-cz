@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1fc6893b02dccff6bb30d7a20d1a2c1dce9fbb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbf969f601bd90e84bf0ee15ae2ea3dcb392610
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invoking-scripts"></a>Vyvolání skripty
 [Nahraditelné parametry (registrátora Preprocessor) pomocí](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) popisuje nahrazení mapy a uvádí metodu registrátora **AddReplacement**. Registrátora má osm jiné metody specifické pro skriptování a všechny jsou popsané v následující tabulce.  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
  Metody **FileRegister** a **FileUnregister** jsou užitečné, pokud nechcete, aby skript v prostředku nebo pokud chcete, aby skript u vlastního souboru. Metody **StringRegister** a **StringUnregister** povolit souboru se neukládají v dynamicky přidělené řetězec.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
 

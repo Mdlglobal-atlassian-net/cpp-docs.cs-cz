@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5493d2a1777b999dd13f2fe295b9ee9192580d33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e97db324dc8e130418419ef435e2665c84eb0b64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-map-macros"></a>Makra COM Map
 Tyto makra definovat COM rozhraní mapy.  
@@ -65,4 +66,4 @@ END_COM_MAP()
   
 ## <a name="see-also"></a>Viz také  
  [Makra](../../atl/reference/atl-macros.md)   
- [Globální funkce mapu modelu COM](../../atl/reference/com-map-global-functions.md)
+ [Globální funkce mapy modelu COM](../../atl/reference/com-map-global-functions.md)

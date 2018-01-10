@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fb3638f70d19d88228b8ff65eb78c479868f1b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d87b71daaf5d7b37e67c2c0e56e844bd5251a490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-sbr-file"></a>Vytvoření souboru .Sbr
 Vstupní soubory pro BSCMAKE jsou soubory .sbr. Kompilátor vytvoří soubor .sbr pro každý objekt soubor (.obj) kompilaci. Při vytvoření nebo aktualizaci vaší soubor s informacemi o procházení, všechny soubory .sbr pro svůj projekt musí být k dispozici na disku.  
@@ -38,4 +39,4 @@ Vstupní soubory pro BSCMAKE jsou soubory .sbr. Kompilátor vytvoří soubor .sb
  Proces sestavení může být efektivnější, pokud jsou soubory .sbr nejdřív zabalit odebrat neodkazované definice. Kompilátor automaticky sady soubory .sbr.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření. Souboru BSC](../../build/reference/building-a-dot-bsc-file.md)
+ [Sestavení souboru .Bsc](../../build/reference/building-a-dot-bsc-file.md)

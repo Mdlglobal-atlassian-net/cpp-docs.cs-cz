@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 **/MP** možnost může snížit celkovou dobu kompilace zdrojových souborů na příkazovém řádku. **/MP** možnost způsobí, že kompilátor vytvoří jednu nebo více kopií sám sebe, každý samostatný proces. Potom tyto kopie současně zkompilovat zdrojové soubory. V důsledku toho může být výrazně snížit celkový čas k sestavení zdrojových souborů.  
@@ -131,4 +132,4 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Viz také  
  [#import – direktiva](../../preprocessor/hash-import-directive-cpp.md)   
- [Reference k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)
+ [Referenční dokumentace k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)

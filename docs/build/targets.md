@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40bb3e7e35b00f6c09cdaf5a87fc558db8324989
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07947dc7de4529d8cef3aa0f104d529d0b95ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="targets"></a>Cíle
 V řádku závislostí, zadejte jeden nebo více cílů, pomocí libovolný platný název souboru, název adresáře nebo [pseudotarget](../build/pseudotargets.md). Oddělte více cílů jeden nebo více mezerami nebo karty. Cíle se nerozlišují malá a velká písmena. S názvy souborů je povoleno cesty. Cíl nesmí překročit 256 znaků. Pokud cílový před dvojtečkou jeden znak, použijte dělicí místa; jinak NMAKE interpretuje kombinaci písmeno dvojtečkou jako specifikátor jednotky.  

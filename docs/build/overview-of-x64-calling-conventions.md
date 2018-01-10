@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Přehled konvencí volání v prostředí x64
 Dvě důležité rozdíly mezi x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] jsou schopnosti adresování 64-bit a plochá sada 16 64-bit registrů pro obecné použití. Daná rozšířeného registru, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] používá [__fastcall](../cpp/fastcall.md) volání konvence a založených RISC model zpracování výjimek. `__fastcall` Konvence používá registry pro první čtyři argumenty a rámce zásobníku předat další argumenty.  
@@ -38,4 +39,4 @@ Dvě důležité rozdíly mezi x86 a [!INCLUDE[vcprx64](../assembler/inline/incl
  Funkce listu jsou funkce, které se nemění žádné nezávislé registry. Funkce mimo úroveň listu může změnit stálé konfigurace, například volání funkce a přidělování další prostor v zásobníku pro místní proměnné. Chcete-li obnovit nezávislé registry, když je výjimka ošetřena, musí být opatřena statických dat, který popisuje, jak správně unwind funkci na libovolný instrukce poznámkou funkce mimo úroveň listu. Tato data jsou ukládána jako *pdata*, nebo postup data, která naopak odkazuje na *xdata*, zpracování dat výjimek. Xdata unwinding informacemi a může odkazovat na další pdata nebo funkce obslužné rutiny výjimky. Prology a epilogu funkce jsou vysoce omezenou tak, aby mohly být správně popsány v xdata. Ukazatel zásobníku musí být zarovnána na 16 bajtů v libovolné oblasti kód, který není součástí epilogu nebo prologu, s výjimkou v rámci funkcí listu. Funkce listu můžete odděleny jednoduše tak, že simuluje vrátit, takže pdata a xdata není potřeba. Podrobnosti o správné struktuře Prology funkce a epilogu funkce najdete v tématu [Prolog a Epilog](../build/prolog-and-epilog.md). Další informace o zpracování výjimek a zpracování výjimek a unwinding pdata a xdata najdete v tématu [zpracování výjimek (x64)](../build/exception-handling-x64.md).  
   
 ## <a name="see-also"></a>Viz také  
- [x64 softwarové konvence](../build/x64-software-conventions.md)
+ [x64 – softwarové konvence](../build/x64-software-conventions.md)

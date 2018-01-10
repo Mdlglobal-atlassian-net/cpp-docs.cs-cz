@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a55e1bcd66cb010e2ade8329a17b8ab8b118a2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82f7c34f7a7a26fec4d04f249b9ce6e3c3ec9823
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Méně závažná chyba nástroje ML A2119
 **je třeba zadat typ jazyk**  
@@ -29,4 +30,4 @@ ms.lasthandoff: 10/24/2017
  Typ jazyka musí být deklarován v každé definice procedury nebo prototyp, pokud není zadán výchozí typ jazyka. Výchozí jazyk typ se nastavuje pomocí buď [. MODEL](../../assembler/masm/dot-model.md) – direktiva, **možnost jazyk**, nebo parametry příkazového řádku ML **/Gc** nebo **/Gd**.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

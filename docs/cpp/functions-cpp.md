@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>Funkce (C++)
 Funkce je blok kódu, který provádí nějaké operace. Funkce můžete volitelně definovat vstupní parametry, které umožňují volající předání argumentů do funkce. Funkce můžete volitelně vrátit hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jednom opakovaně použitelné bloku, v ideálním případě s názvem, který jasně popisuje, jaké funkce. Následující funkce přijímá dvě celá čísla od volající a vrátí jejich součet; `a` a `b` jsou *parametry* typu `int`.  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c971d0e46aff9d55c3a004ef554354e40fdc2f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51ad66350c13167e2da0730d6f05f6931ca359d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-lt-masm-run-time"></a>operátor &lt; (prostředí runtime MASM)
 Je menší než. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  

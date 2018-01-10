@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4095ae7cccf33110e4f530c533256aba009aa6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-and-atl"></a>Zpracování událostí a ATL
 V této části ukazuje, jak jímky událostí pomocí ATL. Pokrývá zásady zpracování událostí modelu COM a jaké jsou specifikace vnořování událostí pomocí podpory poskytované ATL.  
@@ -26,19 +27,19 @@ V této části ukazuje, jak jímky událostí pomocí ATL. Pokrývá zásady zp
  Informace o tom, jak aktivovat události a implementovat spojovací body, najdete v tématu [ATL – body připojení](../atl/atl-connection-points.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Zásady zpracování událostí](../atl/event-handling-principles.md)  
+ [Principy zpracování událostí](../atl/event-handling-principles.md)  
  Popisuje postup společné pro všechny události blokováním.  
   
  [Implementace rozhraní zpracování událostí](../atl/implementing-the-event-handling-interface.md)  
  Popisuje třídy použijte pro implementaci rozhraní událostí.  
   
- [Pomocí IDispEventImpl](../atl/using-idispeventimpl.md)  
+ [IDispEventImpl – použití](../atl/using-idispeventimpl.md)  
  Jsou uvedené kroky pro používání `IDispEventImpl` a uvádí ukázku kódu.  
   
- [Pomocí IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+ [IDispEventSimpleImpl – použití](../atl/using-idispeventsimpleimpl.md)  
  Jsou uvedené kroky pro používání `IDispEventSimpleImpl` a uvádí ukázku kódu.  
   
- [Souhrn zpracování události knihovny ATL](../atl/atl-event-handling-summary.md)  
+ [Shrnutí zpracování událostí ATL](../atl/atl-event-handling-summary.md)  
  Shrnuje, pomocí tabulky, hlavní způsoby pro implementace událostí rozhraní a poradenství a unadvising zdroji událostí pomocí ATL.  
   
 ## <a name="related-sections"></a>Související oddíly  

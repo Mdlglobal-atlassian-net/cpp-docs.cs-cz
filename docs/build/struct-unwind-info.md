@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c306e8920bb058b64133b7fec18f21a243e1f715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 Informace o struktuře unwind dat se používá k zaznamenání účinků funkce, která má ukazatel na zásobník a kde jsou uloženy nezávislé registry v zásobníku:  
@@ -87,4 +88,4 @@ Informace o struktuře unwind dat se používá k zaznamenání účinků funkce
  Pokud je nastavený příznak UNW_FLAG_CHAININFO Struktura UNWIND_INFO končí se třemi UWORD.  Tyto UWORD představují RUNTIME_FUNCTION informace pro funkci zřetězené unwind.  
   
 ## <a name="see-also"></a>Viz také  
- [Unwind Data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)
+ [Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)

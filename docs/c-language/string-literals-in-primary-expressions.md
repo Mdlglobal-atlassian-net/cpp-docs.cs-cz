@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1ed5731f0b46769ac9f49c34752d8794a0dddc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0920280f672b1c45d317ade4c592a6b93356fb8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literals-in-primary-expressions"></a>Textové literály v primárních výrazech
 „Textový literál“ je znak, široký znak nebo posloupnost sousedících znaků, které jsou uzavřeny v dvojitých uvozovkách. Jelikož nejde o proměnné, nemohou být textové literály ani jejich prvky levým operandem operace přiřazení. Typem textového literálu je pole typu `char` (nebo pole typu `wchar_t` pro literály širokých znaků). Pole jsou ve výrazech převáděna na ukazatele. V tématu [textové literály](../c-language/c-string-literals.md) Další informace o řetězce.  

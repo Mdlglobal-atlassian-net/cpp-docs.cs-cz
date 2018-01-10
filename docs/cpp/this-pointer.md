@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-pointer"></a>this – ukazatel
 **To** ukazatel je přístupné pouze v rámci nestatické členské funkce ukazatel **třída**, `struct`, nebo **– typ union** typu. Odkazuje na objekt, pro který je členská funkce volána. Statické členské funkce nemají **to** ukazatel.  
@@ -188,7 +189,7 @@ int main()
   
 |Modifikátor|Význam|  
 |--------------|-------------|  
-|**Const**|Nelze změnit data člena; Nelze vyvolat členské funkce, které nejsou **const**.|  
+|**const**|Nelze změnit data člena; Nelze vyvolat členské funkce, které nejsou **const**.|  
 |`volatile`|Členská data jsou načtena z paměti při každém přístupu k nim. Zakáže některé optimalizace.|  
   
  Jedná se o chybu, předávání **const** objekt členské funkce, která není **const**. Obdobně je chybou předání objektu `volatile` členské funkci, která neobsahuje modifikátor `volatile`.  

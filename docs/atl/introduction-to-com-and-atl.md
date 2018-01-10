@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62266dc46aec68747ba1b5c330f2736b36feb90e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1fe02283fc1f0723d86d9d18991c3af444f54db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-and-atl"></a>Úvod do modelu COM a knihovny ATL
 Tato část obsahuje stručný úvod do modelu COM a ATL.  
@@ -30,7 +31,7 @@ Tato část obsahuje stručný úvod do modelu COM a ATL.
  [Úvod do modelu COM](../atl/introduction-to-com.md)  
  Poskytuje přehled součást objektu modelu (COM) základní koncepty, včetně rozhraní, **IUnknown**, počítání odkazů `QueryInterface`, zařazování a agregaci.  
   
- [Úvod do knihovny ATL](../atl/introduction-to-atl.md)  
+ [Úvod do ATL](../atl/introduction-to-atl.md)  
  Popisuje, stručně řečeno, co Active šablony Library (ATL) byl navržený pro, šablony knihoven a čísel verzí ATL. Obsahuje doporučení pro výběr mezi použitím knihovny ATL a MFC.  
   
 ## <a name="related-sections"></a>Související oddíly  

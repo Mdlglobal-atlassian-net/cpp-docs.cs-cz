@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81148525b70f3c5ff351feb9561699f3b9b5e932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee213f1aa381415444288dbab4473cae6f5fc7b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-using-def-files"></a>Import pomocí souborů DEF
 Pokud chcete použít **deklarace __declspec(dllimport)** společně s .def souboru, měli byste změnit soubor .def pomocí dat místo KONSTANTA sníží pravděpodobnost, že nesprávné kódování může dojít k potížím:  

@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d062a17fd71d53451aa8de3aa7d498f8a5ec68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14bd61bc4f319a50abdbf76d7f6e60e511e57312
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Podpora volných vláken ve zprostředkovateli
 Všechny třídy zprostředkovatele OLE DB jsou bezpečné pro přístup z více vláken a položky registru jsou nastaveny odpovídajícím způsobem. Je vhodné podpora volných vláken na pomáhají zajistit vysokou úroveň výkonu v situacích s více uživateli. Zajistit, aby byl váš poskytovatel bezpečné pro přístup z více vláken, musíte ověřit, že je váš kód správně blokován. Při každém zápisu nebo ukládání dat, musíte zablokovat přístup s kritickými oddíly.  
@@ -51,4 +54,4 @@ HRESULT MyObject::MyMethod(void)
  Musíte také ověřit, že žádné metody přepíšete (například `Execute`) jsou bezpečné pro přístup z více vláken.  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+ [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

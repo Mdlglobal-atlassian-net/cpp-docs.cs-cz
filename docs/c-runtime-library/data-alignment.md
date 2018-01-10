@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2dcbb5c484e92089f7a669426b9a6727d205b45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1fa9d918e0032a0ca718ec9c2c97b83f1d5462
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-alignment"></a>Zarovnání dat
 Následující funkce C Runtime podporují zarovnání dat.  
@@ -28,22 +29,22 @@ Následující funkce C Runtime podporují zarovnání dat.
   
 |Rutina|Použití|  
 |-------------|---------|  
-|[_aligned_free –](../c-runtime-library/reference/aligned-free.md)|Uvolní blok paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md)nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
-|[_aligned_free_dbg –](../c-runtime-library/reference/aligned-free-dbg.md)|Uvolní blok paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladění).|  
-|[_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md)|Přidělí paměť na hranici zadané zarovnání.|  
-|[_aligned_malloc_dbg –](../c-runtime-library/reference/aligned-malloc-dbg.md)|Přidělí paměť na hranici zadané zarovnání s další prostor pro ladění hlavičky a přepsání vyrovnávací paměti (pouze ladicí verze).|  
-|[_aligned_msize –](../c-runtime-library/reference/aligned-msize.md)|Vrátí velikost bloku paměti přidělené v haldě.|  
+|[_aligned_free](../c-runtime-library/reference/aligned-free.md)|Uvolní blok paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md)nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
+|[_aligned_free_dbg](../c-runtime-library/reference/aligned-free-dbg.md)|Uvolní blok paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladění).|  
+|[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)|Přidělí paměť na hranici zadané zarovnání.|  
+|[_aligned_malloc_dbg](../c-runtime-library/reference/aligned-malloc-dbg.md)|Přidělí paměť na hranici zadané zarovnání s další prostor pro ladění hlavičky a přepsání vyrovnávací paměti (pouze ladicí verze).|  
+|[_aligned_msize](../c-runtime-library/reference/aligned-msize.md)|Vrátí velikost bloku paměti přidělené v haldě.|  
 |[_aligned_msize_dbg](../c-runtime-library/reference/aligned-msize-dbg.md)|Vrátí velikost bloku paměti přidělené v haldě (pouze ladicí verze).|  
-|[_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md)|Přidělí paměť na hranici zadané zarovnání.|  
-|[_aligned_offset_malloc_dbg –](../c-runtime-library/reference/aligned-offset-malloc-dbg.md)|Přidělí paměť na hranici zadané zarovnání (pouze ladicí verze).|  
-|[_aligned_offset_realloc –](../c-runtime-library/reference/aligned-offset-realloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
-|[_aligned_offset_realloc_dbg –](../c-runtime-library/reference/aligned-offset-realloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladicí verze).|  
-|[_aligned_offset_recalloc –](../c-runtime-library/reference/aligned-offset-recalloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na 0.|  
-|[_aligned_offset_recalloc_dbg –](../c-runtime-library/reference/aligned-offset-recalloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).|  
-|[_aligned_realloc –](../c-runtime-library/reference/aligned-realloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
-|[_aligned_realloc_dbg –](../c-runtime-library/reference/aligned-realloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladicí verze).|  
-|[_aligned_recalloc –](../c-runtime-library/reference/aligned-recalloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na 0.|  
-|[_aligned_recalloc_dbg –](../c-runtime-library/reference/aligned-recalloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).|  
+|[_aligned_offset_malloc](../c-runtime-library/reference/aligned-offset-malloc.md)|Přidělí paměť na hranici zadané zarovnání.|  
+|[_aligned_offset_malloc_dbg](../c-runtime-library/reference/aligned-offset-malloc-dbg.md)|Přidělí paměť na hranici zadané zarovnání (pouze ladicí verze).|  
+|[_aligned_offset_realloc](../c-runtime-library/reference/aligned-offset-realloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
+|[_aligned_offset_realloc_dbg](../c-runtime-library/reference/aligned-offset-realloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladicí verze).|  
+|[_aligned_offset_recalloc](../c-runtime-library/reference/aligned-offset-recalloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na 0.|  
+|[_aligned_offset_recalloc_dbg](../c-runtime-library/reference/aligned-offset-recalloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).|  
+|[_aligned_realloc](../c-runtime-library/reference/aligned-realloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md).|  
+|[_aligned_realloc_dbg](../c-runtime-library/reference/aligned-realloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) (pouze ladicí verze).|  
+|[_aligned_recalloc](../c-runtime-library/reference/aligned-recalloc.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na 0.|  
+|[_aligned_recalloc_dbg](../c-runtime-library/reference/aligned-recalloc-dbg.md)|Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).|  
   
 ## <a name="see-also"></a>Viz také  
  [Běhové rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)

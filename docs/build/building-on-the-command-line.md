@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Vytvoření kódu C/C++ v příkazovém řádku
 
@@ -48,7 +49,7 @@ Zástupce příkazového řádku jsou nainstalovány ve specifické verze [!INCL
 
 Skutečné počáteční složky a místní názvy nabídek lišit v závislosti na verzi [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] jste nainstalovali a instalaci Přezdívka Pokud nastavíte jeden. Například, pokud máte Visual Studio 2017 nainstalovaná a je jste dali instalaci Přezdívka 15.3, na zástupce příkazového řádku vývojáře se jmenuje **příkazový řádek vývojáře pro VS 2017 (15.3)**, ve složce s názvem  **Visual Studio 2017**. 
 
-Pokud jste nainstalovali [nástroje sestavení pro Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931) nebo [nástroje Visual C++ 2015 sestavení](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, může existovat pouze konkrétní nativní nebo mezi nástroje Možnosti příkazového řádku pro vývojáře. 
+Pokud jste nainstalovali [nástroje sestavení pro Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) nebo [nástroje Visual C++ 2015 sestavení](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, může existovat pouze konkrétní nativní nebo mezi nástroje Možnosti příkazového řádku pro vývojáře. 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>Chcete-li otevřít okno příkazového řádku vývojáře  
@@ -158,16 +159,16 @@ Poskytuje příklad, který ukazuje, jak vytvořit a kompilaci jednoduché progr
 [Návod: Kompilace programu v jazyce C na příkazovém řádku](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
 Popisuje způsob kompilace programu v jazyce programovacího jazyka C.  
   
-[Návod: Kompilace C + +/ CLI Program na příkazovém řádku](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
+[Návod: Kompilace programu C++/CLI v příkazovém řádku](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
 Popisuje, jak vytvořit a kompilaci C + +/ CLI program, který používá rozhraní .NET Framework.  
   
-[Návod: Kompilace C + +/ CX Program na příkazovém řádku](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
+[Návod: Kompilace programu C++/CX v příkazovém řádku](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
 Popisuje, jak vytvořit a kompilaci C + +/ CX program, který používá prostředí Windows Runtime.  
   
 [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
 Popisuje, jak spustit okno příkazového řádku, který má proměnné požadované prostředí pro sestavení příkazového řádku nastavit cílených x86, x64 a ARM platforem pomocí nástrojů 32bitové nebo 64bitové verze.  
   
-[NMAKE – odkaz](../build/nmake-reference.md)  
+[NMAKE – referenční zdroje](../build/nmake-reference.md)  
 Obsahuje odkazy na články, které popisují Program údržby nástroj Microsoft (NMAKE. SOUBOR EXE).  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -189,4 +190,4 @@ Poskytuje nástroje, které jsou součástí sestavení odkazy pro C/C++ [!INCLU
   
 ## <a name="see-also"></a>Viz také  
 
-[Sestavení C/C++ programů](../build/building-c-cpp-programs.md)
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

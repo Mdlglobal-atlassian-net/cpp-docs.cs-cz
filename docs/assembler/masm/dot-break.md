@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2665f915d53c6f0ec9c7ff21a8111243ce65d69c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a63fd6da8ab9113959dd2261938e43687d5251ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="break"></a>.BREAK
 Generuje kód do ukončit [. Při](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokovat Pokud *podmínku* hodnotu true.  

@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Převede dvě desetinná čísla na řetězec. Toto je verze [_fcvt –](../../c-runtime-library/reference/fcvt.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -164,4 +165,4 @@ Converted value: 120000
  [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt_s –](../../c-runtime-library/reference/ecvt-s.md)   
  [_gcvt_s –](../../c-runtime-library/reference/gcvt-s.md)   
- [_fcvt –](../../c-runtime-library/reference/fcvt.md)
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

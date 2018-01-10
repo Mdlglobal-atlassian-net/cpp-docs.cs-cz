@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75c1d7edac27b73bbf6fc357c5e60259f45f5cf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce7fa9e9f559c79b4a0a99d2b444138ddb6bf56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN – odkaz
 Vypisovač binárních souborů Microsoft COFF (DUMPBIN. EXE) obsahuje informace o běžných objekt souboru formátu (COFF) binární soubory. DUMPBIN – můžete zkontrolovat soubory COFF objektů, standardní knihoven COFF objektů, spustitelné soubory a dynamické knihovny (DLL).  

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4178d9d6a48e10510bb739bc2e1a55ecbe2714e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7453fbab0ade6cfe2cbdd836d7d59ba49c3ccfd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-c"></a>Odkazy (C++)
 Odkaz, jako je ukazatel, ukládá adresu objektu, který se nachází na jiném místě v paměti. Na rozdíl od ukazatele, nelze vytvořit odkaz po inicializaci k odkazovat na jiný objekt, nebo nastavte na hodnotu null. Existují dva druhy odkazy: lvalue odkazy, které se týkají pojmenované proměnnou a rvalue odkazy, které se vztahují [dočasný objekt](../cpp/temporary-objects.md). & Operátor označuje, že odkazu lvalue a & & – operátor označuje deklarátor odkazu nebo universal odkaz (rvalue nebo lvalue) v závislosti na kontextu.  
@@ -119,7 +120,7 @@ int main() {
   
 -   [Argumenty funkce typu odkazu](../cpp/reference-type-function-arguments.md)  
   
--   [Vrácení funkce typu odkazu](../cpp/reference-type-function-returns.md)  
+-   [Funkce vracející typ odkazu](../cpp/reference-type-function-returns.md)  
   
 -   [Odkazy na ukazatele](../cpp/references-to-pointers.md)  
   

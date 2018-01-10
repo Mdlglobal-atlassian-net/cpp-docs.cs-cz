@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f30254c1c18f49bf7e125fc855a32e9e8d2b8154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-registry-component-registrar"></a>Komponenta knihovny ATL pro přístup k registru (Registrar)
 Registrátor ATL poskytuje optimalizovanou přístup k registru systému prostřednictvím rozhraní, které je vlastní. Registrátora je podprocesy a umožňuje statické propojení kód pro klienty C++.  
@@ -34,7 +35,7 @@ Registrátor ATL poskytuje optimalizovanou přístup k registru systému prostř
 >  Zdrojový kód pro Registrátor ATL naleznete v atlmfc\include\atliface.h.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)  
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)  
  Příručka o vytváření registrátora skripty. Obsahuje témata na BNF syntaxe, analýzy stromy registru skriptování příklady použití nahraditelné parametry a volání skripty.  
   
  [Nastavení statické odkaz na kód registrátora (pouze C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  

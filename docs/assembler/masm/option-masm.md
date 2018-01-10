@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab64740cd5f04b4a707a702f0bf39174907fc8fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f449606b143bfbf188e878b261f3d35017846862
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 Povolí nebo zakáže funkce assembleru.  
@@ -43,7 +44,7 @@ optionlist
 |**JAZYK**|**LJMP**|**NOLJMP**|**M510**|  
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**POSUNUTÍ**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
-|**PROCEDURA**|**PROLOGU**|**JEN PRO ČTENÍ**|**NOREADONLY**|  
+|**PROC**|**PROLOGU**|**JEN PRO ČTENÍ**|**NOREADONLY**|  
 |**OBOR**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
   
  Syntaxe pro jazyk je **možnost jazyk:***x*, kde *x* je jedním z C, SYSCALL, STDCALL, PASCAL, FORTRAN nebo BASIC.  SYSCALL, PASCAL, FORTRAN a BASIC nepodporuje použít s [. MODEL](../../assembler/masm/dot-model.md) ploché.  

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78cd6292c97f41cb7e862389113404346da80460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28712275312bf653e082a9f8e32424f26534fb93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 Specifikátory typu v deklaracích definování typu deklarace proměnné nebo funkce.  
@@ -29,17 +30,17 @@ Specifikátory typu v deklaracích definování typu deklarace proměnné nebo f
  *Specifikátor typu*:  
  **void**  
   
- **Char**  
+ **char**  
   
- **krátký**  
+ **short**  
   
- **celá čísla**  
+ **int**  
   
- **dlouhá**  
+ **long**  
   
- **plovoucí desetinná čárka**  
+ **float**  
   
- **Double**  
+ **double**  
   
  **podepsané**  
   

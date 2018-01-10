@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb16beb6f2ddb07f57fe9f35c67552348cac56cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3123a722e0e95119a4b04f5c060bd947b987cdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
 Pokud máte více verzí aplikace Visual C++ v počítači, nebo pokud jste definovali vlastní pomocné funkce, které mohou být ovlivněny změny provedené na knihovnu DLL odložené načtení pomocné funkce. Příklad:  
@@ -60,4 +61,4 @@ Pokud máte více verzí aplikace Visual C++ v počítači, nebo pokud jste defi
  Linkeru můžete načtení všech importů z knihovny DLL, který jste zadali jako zpoždění načíst. V tématu [načtení všech importů pro knihovnu DLL Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) Další informace.  
   
 ## <a name="see-also"></a>Viz také  
- [Principy pomocné funkce](understanding-the-helper-function.md)
+ [Základní informace o podpůrné funkci](understanding-the-helper-function.md)

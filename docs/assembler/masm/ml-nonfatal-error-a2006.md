@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 463a66ae4f1f7d21d108644c3aa47b504d742edb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c27f859f7841bb1b64fadd2f7051b9e0647f0b15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Méně závažná chyba nástroje ML A2006
 **Nedefinovaná symbol: identifikátor**  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/24/2017
 -   Místní znakové štítek odkazovaný mimo její obor.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

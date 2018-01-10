@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb525964025ce3ffce497087ec42b72aff0a4b9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-building-reference"></a>Odkaz sestavení C/C++
 Visual C++ nabízí dva způsoby vytvoření programu C/C++. Způsob nejjednodušší (a nejběžnější) je [sestavení ve vývojovém prostředí Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../../build/building-on-the-command-line.md). V obou případech můžete vytvořit pomocí editoru Visual C++ zdroje nebo třetích stran editoru podle své volby zdrojových souborů.  
@@ -30,7 +31,7 @@ Visual C++ nabízí dva způsoby vytvoření programu C/C++. Způsob nejjednodu�
  Pokud váš program používá souboru pravidel místo souboru, můžete přesto vytvořit ji ve vývojovém prostředí jako [externí projektu](../../ide/building-external-projects.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Kompilace programu C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
+ [Kompilace programu v jazyce C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
  Popisuje kompilátoru, který vytvoří soubor objekt obsahující zkompilovaný kód, linkeru direktivy, oddíly, externí odkazy a názvy funkce nebo data.  
   
  [Propojování](../../build/reference/linking.md)  
@@ -52,7 +53,7 @@ Visual C++ nabízí dva způsoby vytvoření programu C/C++. Způsob nejjednodu�
  [C/C++ – referenční dokumentace preprocesoru](../../preprocessor/c-cpp-preprocessor-reference.md)  
  Popisuje preprocesor, který připraví zdrojové soubory pro kompilátor překladu makra, operátory a direktivy.  
   
- [Seznámení s kroky vlastního sestavení a událostí sestavení](../../ide/understanding-custom-build-steps-and-build-events.md)  
+ [Seznámení s kroky vlastního sestavení a s událostmi sestavení](../../ide/understanding-custom-build-steps-and-build-events.md)  
  Popisuje přizpůsobení procesu sestavení.  
   
  [Sestavení programu C/C++](../../build/building-c-cpp-programs.md)  
@@ -64,23 +65,23 @@ Visual C++ nabízí dva způsoby vytvoření programu C/C++. Způsob nejjednodu�
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)  
  Obsahuje odkazy na témata pojednávající o pomocí možnosti kompilátoru.  
   
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)  
+ [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
  Popisuje možnosti linkeru nastavení uvnitř nebo vně integrované vývojové prostředí.  
   
  [Možnosti linkeru](../../build/reference/linker-options.md)  
  Obsahuje odkazy na témata pojednávající o pomocí možnosti linkeru.  
   
- [BscMake – odkaz](../../build/reference/bscmake-reference.md)  
+ [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)  
  Popisuje nástroj údržba informací procházení Microsoft (BSCMAKE. Soubor EXE), která sestavení soubor s informacemi o procházení (.bsc) z .sbr soubory vytvořené během kompilace.  
   
- [Referenční dokumentace LIB](../../build/reference/lib-reference.md)  
+ [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)  
  Popisuje Správce knihovny Microsoft (LIB.exe), které vytváří a spravuje knihovnu běžných objekt souboru formátu () objekt soubory COFF.  
   
- [Editbin – odkaz](../../build/reference/editbin-reference.md)  
+ [EDITBIN – referenční dokumentace](../../build/reference/editbin-reference.md)  
  Popisuje Microsoft COFF binární soubor Editor (nástroje EDITBIN. EXE), který upravuje binární soubory běžné objekt souboru formátu (COFF).  
   
  [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md)  
  Popisuje Vypisovač binárních souborů Microsoft COFF (DUMPBIN. EXE), který zobrazí informace o běžných objekt souboru formátu (COFF) binární soubory.  
   
- [NMAKE – odkaz](../../build/nmake-reference.md)  
+ [NMAKE – referenční zdroje](../../build/nmake-reference.md)  
  Popisuje nástroj Údržba programu Microsoft (NMAKE. EXE), což je nástroj, který vytvoří projekty založené na příkazy, které jsou obsaženy v souboru popis.

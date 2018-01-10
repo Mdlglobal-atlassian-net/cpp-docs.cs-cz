@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fdcc4b315f2e223e59e88e2f5876965d106a49c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef67792b01d4d4dab535bfb180cd70beb2316b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="order-of-cl-options"></a>Pořadí možností CL
 Možnosti může vyskytovat kdekoli na příkazovém řádku CL, s výjimkou/Link možnost, která musí objevit jako poslední. Kompilátor začíná zadaný v možnosti [proměnné prostředí CL](../../build/reference/cl-environment-variables.md) a potom načte příkazového řádku zleva doprava – soubory příkazů v pořadí, zjistí jejich zpracování. Každý možnost se vztahuje na všechny soubory na příkazovém řádku. Pokud CL zaznamená konfliktní možnosti, používá jako úplně vpravo.  

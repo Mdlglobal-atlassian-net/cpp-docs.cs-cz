@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c444fe53719aea5c78477aa9d9f35134c44d99a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a94844a0d5636c58a764114ed6f413923d69950
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-restrictions"></a>main – omezení funkce
 Několik omezení se vztahují na **hlavní** funkce, která se nevztahují na jiných funkcí jazyka C++. **Hlavní** funkce:  
@@ -35,4 +36,4 @@ Několik omezení se vztahují na **hlavní** funkce, která se nevztahují na j
 -   Nelze ji volat.  
   
 ## <a name="see-also"></a>Viz také  
- [hlavní: spuštění programu](../cpp/main-program-startup.md)
+ [main: spuštění programu](../cpp/main-program-startup.md)

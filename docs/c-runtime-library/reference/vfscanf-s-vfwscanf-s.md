@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f6ffb0f0c4ad4e53c19daa226e12517efab315f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1012a87cd2f5b73818000877216839f881c309c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
 Čtení formátovaných dat z datového proudu. Tyto verze nástroje vfscanf vfwscanf mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -171,4 +172,4 @@ x
  [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [sscanf_s –, _sscanf_s_l –, swscanf_s –, _swscanf_s_l –](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
  [fscanf –, _fscanf_l –, fwscanf –, _fwscanf_l –](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [vfscanf vfwscanf](../../c-runtime-library/reference/vfscanf-vfwscanf.md)
+ [vfscanf, vfwscanf](../../c-runtime-library/reference/vfscanf-vfwscanf.md)

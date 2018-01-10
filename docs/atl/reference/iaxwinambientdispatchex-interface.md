@@ -9,8 +9,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatchEx
-- No header/ATL::IAxWinAmbientDispatchEx
-- No header/ATL::SetAmbientDispatch
+- ATLIFACE/ATL::IAxWinAmbientDispatchEx
+- ATLIFACE/ATL::SetAmbientDispatch
 dev_langs: C++
 helpviewer_keywords: IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92eed1ce48c4aed1ae535b4ae3751501c432281d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd212417a00335bfc02699cf5e38eeacc6451ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx rozhraní
 Toto rozhraní implementuje dodatečné vedlejším vlastnostem hostované ovládacího prvku.  
@@ -82,4 +83,4 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
  Když `SetAmbientDispatch` je volána s ukazatel na nové rozhraní, toto nové rozhraní se použije k vyvolání jakékoli vlastnosti nebo metody žádali hostované ovládacím prvkem, pokud tyto vlastnosti nejsou obsaženy ve [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
   
 ## <a name="see-also"></a>Viz také  
- [IAxWinAmbientDispatch rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)
+ [IAxWinAmbientDispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)

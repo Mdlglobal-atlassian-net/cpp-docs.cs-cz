@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d408e0e6fe021caf7f3722a55528020d94bb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy a definice Typedef (C++)
 Můžete použít *alias deklarace* deklarovat název, který bude používat jako synonymum pro dříve deklarovaného typu. (Tento mechanismus se také označuje neformálně jako *typ alias*). Tento mechanismus můžete také použít k vytvoření *alias šablony*, což může být obzvláště užitečné pro vlastní alokátorů.  

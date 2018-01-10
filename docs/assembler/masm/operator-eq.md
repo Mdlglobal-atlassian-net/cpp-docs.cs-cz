@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 84c423c326ec3acc8f7f72f5d02dbf82b7b95b18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b655c63f3c33b14dcdd67c2c37400194ce56bdf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-eq"></a>operátor EQ
 Vrátí hodnotu true (-1) Pokud *expression1* rovná *Výraz2*, nebo vrátí hodnotu false (0), pokud neexistuje.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 96dff858d068f9d9bf9c6c47e1f444603c2a5729
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70ae055d69341cc773b8b40ed1111b65ba5683cf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (úroveň sestav s automatickou vektorizací)
 Povolí funkci vytváření sestav v kompilátoru [automatickou vektorizací](../../parallel/auto-parallelization-and-auto-vectorization.md) a určuje úroveň informační zprávy pro výstup během kompilace.  
@@ -53,4 +54,4 @@ Povolí funkci vytváření sestav v kompilátoru [automatickou vektorizací](..
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
- [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)

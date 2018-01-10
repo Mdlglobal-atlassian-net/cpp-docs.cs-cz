@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08165d5e6308697ec75a6d03751b26fb626dbb15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro typy proměnných souhrnu v tomto seznamu. Konkrétně zbývající části popisují, jak deklarovat následující:  
@@ -73,7 +74,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Další informace o syntaxi *deklarace* v [přehled deklarace](../c-language/overview-of-declarations.md) nebo [souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) pro syntaxi, která odkazuje *deklarátor*.  
   
- Když deklarátor se skládá z identifikátorem beze změny, položka je deklarovaná má základní typ.. Pokud se hvězdička (**\***) se zobrazí vlevo identifikátoru, typ je upravit tak, aby ukazatel typu. Pokud je identifikátor následovaný hranatými závorkami (**[]**), typ je upravit tak, aby typ pole. Pokud identifikátor následuje závorky, typ je upravit tak, aby typ funkce. Další informace o interpretaci Priorita v rámci deklarace najdete v tématu [interpretace další složité Deklarátory](../c-language/interpreting-more-complex-declarators.md).  
+ Když deklarátor se skládá z identifikátorem beze změny, položka je deklarovaná má základní typ. Pokud se hvězdička (**\***) se zobrazí vlevo identifikátoru, typ je upravit tak, aby ukazatel typu. Pokud je identifikátor následovaný hranatými závorkami (**[]**), typ je upravit tak, aby typ pole. Pokud identifikátor následuje závorky, typ je upravit tak, aby typ funkce. Další informace o interpretaci Priorita v rámci deklarace najdete v tématu [interpretace další složité Deklarátory](../c-language/interpreting-more-complex-declarators.md).  
   
  Každý deklarátor deklaruje alespoň jeden identifikátor. Deklarátor musí obsahovat specifikátor typu jako úplné deklarace. Specifikátor typu dává typ elementů typu pole, typ objektu používala ukazatel typu nebo návratový typ funkce.  
   

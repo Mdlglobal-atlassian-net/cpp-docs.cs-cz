@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03f8ebdf74dfcf8962b4308c467984d0a63c7968
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6cfcb90daaf23a5fd8e248d43b920340e38d8057
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-your-provider"></a>Ladění zprostředkovatele
 Existují dva způsoby, jak ladit svého poskytovatele:  
@@ -44,4 +47,4 @@ Existují dva způsoby, jak ladit svého poskytovatele:
 5.  Nastavte zarážky a pak ladění jako obvykle.  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+ [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

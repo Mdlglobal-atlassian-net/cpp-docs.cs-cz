@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e75e4c18a14b66760213f72c97453afebfd0c0fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5d04b93f88198553dad32fd21bbe47a38a9788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2189"></a>Méně závažná chyba nástroje ML A2189
 **Neplatná kombinace s segment zarovnání**  
@@ -27,4 +28,4 @@ ms.lasthandoff: 10/24/2017
  Zarovnání určeného **ALIGN** nebo `EVEN` – direktiva byla větší než aktuální segment zarovnání podle specifikace **SEGMENT** – direktiva.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

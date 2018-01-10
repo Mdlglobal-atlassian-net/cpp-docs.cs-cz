@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d916d4f4d946e498337ee801dd88ce18f9a5101
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff153c462361e8b6bac8f3c10192025352da650f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení předpony: ++ a --
 ## <a name="syntax"></a>Syntaxe  
@@ -89,4 +90,4 @@ k = ((++i)<(j))?(j):(++i);
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operátory přírůstku a snížení předpony](../c-language/prefix-increment-and-decrement-operators.md)
+ [Operátory inkrementace a dekrementace předpony](../c-language/prefix-increment-and-decrement-operators.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a77c69b2268ea1d97cc92122ab587b1c70be0e42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatelů na členy:. * a -&gt;*
 ## <a name="syntax"></a>Syntaxe  
@@ -141,5 +142,5 @@ int main() {
 >  Je-li výsledkem jednoho z operátorů ukazatele na člen funkce, lze jej použít pouze jako operand operátoru volání funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 

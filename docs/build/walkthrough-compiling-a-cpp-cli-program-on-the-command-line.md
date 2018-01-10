@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fc173111e2188aef8c06657844000d44bfb84f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilace C + +/ CLI Program na příkazovém řádku
 Můžete vytvořit programy Visual C++, cíle Common Language Runtime (CLR), které používají rozhraní .NET Framework a sestavení je na příkazovém řádku. Podporuje Visual C++ C + +/ CLI programovací jazyk, který má operátory a další typy, jehož cílem je programovací model rozhraní .NET. Úvod do jazyka C + +/ rozhraní příkazového řádku jazyka, najdete v části [čistý C++: Hello, C + +/ CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). Obecné informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  

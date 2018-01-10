@@ -51,11 +51,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ef7f9b1cbeb3aeab28a4c02bce9099aaaf0078d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-a-library"></a>Správa knihovny
 K vytvoření nebo úpravě knihovnu COFF objektů, které je výchozí režim pro LIB. LIB běží v tomto režimu, když zadáte/extract (Chcete-li zkopírovat do souboru objektu) nebo/def (k vytvoření knihovnu importu).  
@@ -109,4 +110,4 @@ LIB [options...] files...
 >  Nelze jak odstranit členem a rozbalte ho do souboru do jednoho kroku. Nejdřív musíte extrahovat objektem člena pomocí/extract a potom spusťte LIB znovu s použitím/remove. Toto chování se liší od 16bitové LIB (pro knihovny OMF) uvedené v další produkty společnosti Microsoft.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace LIB](../../build/reference/lib-reference.md)
+ [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

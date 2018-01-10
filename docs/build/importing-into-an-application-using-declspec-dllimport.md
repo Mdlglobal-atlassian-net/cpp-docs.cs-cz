@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f16c9f5c96712c311928e0389fec0a1ce1f0dca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
 Program, který používá veřejné symboly definované knihovnou DLL říká, že je importovat. Když vytvoříte hlavičkových souborů pro aplikace, které používají váš knihovny DLL k sestavení, používat **deklarace __declspec(dllimport)** na prohlášení o veřejné symboly. Klíčové slovo **deklarace __declspec(dllimport)** funguje zda exportovat soubory .def nebo s **__declspec(dllexport)** – klíčové slovo.  

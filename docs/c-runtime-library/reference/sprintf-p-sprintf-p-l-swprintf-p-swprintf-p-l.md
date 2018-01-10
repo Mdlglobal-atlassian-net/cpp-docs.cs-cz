@@ -53,11 +53,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 010b3f04509852012dac641aadeb4152d666898d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p –, _sprintf_p_l –, _swprintf_p –, _swprintf_p_l –
 Umožňuje určit pořadí, že parametry jsou použity v řetězec formátu zápisu formátovaná data na řetězec.  

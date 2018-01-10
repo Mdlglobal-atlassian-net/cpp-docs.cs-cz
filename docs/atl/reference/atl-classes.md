@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58b0a6c8baa52acf82bffaacb7dd309b4420f3f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-classes"></a>ATL – třídy
 Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité třídy podle kategorie naleznete v tématu [přehledu třídy ATL](../../atl/atl-class-overview.md).  
@@ -213,9 +214,9 @@ Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité tříd
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|Tato třída poskytuje výchozí implementaci třídy `IServiceProvider` rozhraní.|atlcom|  
 |[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) rozhraní.|atlcom|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Tato třída poskytuje výchozí implementaci třídy `ISupportErrorInfo Interface` rozhraní a lze použít při pouze jedno rozhraní generuje chyby na objekt.|atlcom|  
-|[IThreadPoolConfig rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)|Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.|atlutil.h|  
+|[IThreadPoolConfig – rozhraní](../../atl/reference/ithreadpoolconfig-interface.md)|Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), a [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)rozhraní.|atlctl.h|  
-|[IWorkerThreadClient rozhraní](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`představuje rozhraní implementované klienty [CWorkerThread](../../atl/reference/cworkerthread-class.md) třídy.|atlutil.h|  
+|[IWorkerThreadClient – rozhraní](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`představuje rozhraní implementované klienty [CWorkerThread](../../atl/reference/cworkerthread-class.md) třídy.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Tato třída poskytuje obálek pro **CreateWindow** a **CreateWindowEx**.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Tato třída argument adaptér umožňuje buď `RECT` ukazatele nebo odkazy, které mají být předány funkci, která je implementovaná z hlediska ukazatele.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Tato třída argument adaptér umožňuje buď názvy prostředků (`LPCTSTR`s) nebo ID prostředku (**Celé_číslo**s) mají být předány funkce bez nutnosti volající převést na řetězec pomocí ID **MAKEINTRESOURCE** makro.|atlwin.h|  

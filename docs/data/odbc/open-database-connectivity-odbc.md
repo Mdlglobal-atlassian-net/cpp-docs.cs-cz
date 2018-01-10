@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa72d261a0b41375ccc6d9bd7da027f78a2e3b55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 28fe1e6237b424c35e70bbd8240ddb3c8189e283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 Knihovna Microsoft Foundation třídy (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database). Od verze Visual Studio 2015 a ODBC systému SQL Server 2012 je upřednostňovaný způsob, jak připojit ke zdrojům dat SQL.
@@ -72,17 +75,17 @@ Knihovna Microsoft Foundation třídy (MFC) poskytuje třídy pro programování
   
 -   [Návrh a vytvoření databázové aplikace ODBC](design-and-create-an-odbc-database-application.md)  
   
--   [Použití databázových formulářů (zobrazení záznamů) s rozhraním ODBC](use-database-forms-record-views-with-odbc.md)  
+-   [Použití databázových formulářů (zobrazení záznamů) s rozhraním ODBC](use-database-forms-record-views-with-odbc.md)  
   
--   [Použití rozhraní ODBC pro práci s jinými uživateli](use-odbc-to-work-with-other-users.md)  
+-   [Použití rozhraní ODBC pro práci s jinými uživateli](use-odbc-to-work-with-other-users.md)  
   
--   [Práce s databázovým připojením ODBC](work-with-odbc-database-connections.md)  
+-   [Práce s databázovým připojením ODBC](work-with-odbc-database-connections.md)  
   
 -   [Práce s rozhraním ODBC a ovladači](work-with-odbc-and-drivers.md)  
   
 -   [Použití knihovny kurzorů ODBC](use-the-odbc-cursor-library.md)  
   
--   [Použití sad záznamů rozhraní ODBC knihovny MFC](use-mfc-odbc-recordsets.md)  
+-   [Použití sad záznamů rozhraní MFC ODBC](use-mfc-odbc-recordsets.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Přístup k datům programování (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
