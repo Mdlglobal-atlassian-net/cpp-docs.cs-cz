@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6b4c21cc7788bdfa6511e93873bf64bcfe796e2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf0d71bc517e97a99db79dfc905935fba81faed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncnone-class"></a>sync_none – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) poskytující žádná synchronizace.  
@@ -49,9 +50,9 @@ class sync_none
   
 |||  
 |-|-|  
-|[přidělit](#allocate)|Přiděluje blok paměti.|  
+|[allocate](#allocate)|Přiděluje blok paměti.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
-|[rovná se](#equals)|Porovná dva mezipamětí rovnosti.|  
+|[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<alokátorů >  

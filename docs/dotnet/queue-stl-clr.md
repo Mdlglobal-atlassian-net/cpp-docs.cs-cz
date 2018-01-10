@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e55cb83461ed1a0229babf98c384b74de357aeb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup první, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `queue` ke správě kontejner základní jako fronty.  
@@ -52,42 +55,42 @@ template<typename Value,
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|[Queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
-|[Queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Typ základního kontejneru.|  
-|[Queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|Typ generické rozhraní pro adaptér kontejneru.|  
-|[Queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
-|[Queue::Reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|Typ odkazu na prvek|  
-|[Queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Typ prvku|  
+|[queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
+|[queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Typ základního kontejneru.|  
+|[queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|Typ generické rozhraní pro adaptér kontejneru.|  
+|[queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
+|[queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[Queue::Assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Nahradí všechny elementy.|  
-|[Queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Přístup k posledním elementem.|  
-|[Queue::Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[Queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|Přístup k první prvek.|  
-|[Queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|Přístup k podkladové kontejneru.|  
-|[Queue::POP (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|Odebere první prvek.|  
-|[Queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|Přidá nový posledním elementem.|  
-|[Queue::Queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[Queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Spočítá počet prvků.|  
-|[Queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
+|[queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Přístup k posledním elementem.|  
+|[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|Přístup k první prvek.|  
+|[queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|Přístup k podkladové kontejneru.|  
+|[queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|Odebere první prvek.|  
+|[queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|Přidá nový posledním elementem.|  
+|[queue::queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|Sestaví objekt kontejneru.|  
+|[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Spočítá počet prvků.|  
+|[queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[Queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Přístup k posledním elementem.|  
-|[Queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Přístup k první prvek.|  
+|[queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Přístup k posledním elementem.|  
+|[queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Přístup k první prvek.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[Queue::Operator = (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Určuje, zda `queue` objekt není rovno jiné `queue` objektu.|  
-|[Operator < (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|Určuje, zda `queue` objektu je menší než jiná `queue` objektu.|  
-|[Operator < = (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Určuje, zda `queue` objektu je menší než nebo rovna do jiného `queue` objektu.|  
-|[Operator == (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|Určuje, zda `queue` objekt rovná jiné `queue` objektu.|  
-|[Operator > (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|Určuje, zda `queue` je větší než druhý objekt `queue` objektu.|  
-|[Operator > = (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Určuje, zda `queue` objekt je větší než nebo rovna hodnotě jiného `queue` objektu.|  
+|[queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Určuje, zda `queue` objekt není rovno jiné `queue` objektu.|  
+|[operator< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|Určuje, zda `queue` objektu je menší než jiná `queue` objektu.|  
+|[operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Určuje, zda `queue` objektu je menší než nebo rovna do jiného `queue` objektu.|  
+|[operator== (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|Určuje, zda `queue` objekt rovná jiné `queue` objektu.|  
+|[operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|Určuje, zda `queue` je větší než druhý objekt `queue` objektu.|  
+|[operator>= (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Určuje, zda `queue` objekt je větší než nebo rovna hodnotě jiného `queue` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -110,4 +113,4 @@ template<typename Value,
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [Zásobník (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

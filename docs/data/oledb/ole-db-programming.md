@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f130c5d17a1a753d97cded0ab987305cc6a75c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: df532b1ffdc8eba635af93f34e0d77fd3da0d115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming"></a>OLE DB – programování
 Microsoft OLE DB je starší verze technologie; pro nové aplikace je požadovaná data přístup k rozhraní API pro odkazované servery SQL. Všechny ostatní nové aplikace by měly použití rozhraní ODBC. Aktuální zprostředkovatel OLE DB pro SQL Server je SQLNCLI11. KNIHOVNY DLL. Zprostředkovatel je stále přesouvání v SQL serveru 2016. Tato dokumentace je určena pro vývojáře, kteří jsou zachování existující aplikace, které už používají OLE DB.
@@ -45,4 +48,4 @@ Microsoft OLE DB je starší verze technologie; pro nové aplikace je požadovan
 
   
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům](../data-access-in-cpp.md)
+ [Přístup k datům](../data-access-in-cpp.md)

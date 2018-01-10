@@ -12,14 +12,15 @@ caps.latest.revision: "31"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c6e36d00d27f5fcf32faec666871ced1d9d0ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="quick-reference-ccx"></a>Stručná referenční dokumentace (C + +/ CX)
-Prostředí Windows Runtime podporuje aplikace pro univerzální platformu Windows, které provést pouze v prostředí trustworthy operačního systému, použijte oprávnění funkce, datové typy a zařízení a jsou distribuovány prostřednictvím [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + +/ CX zjednodušit psaní aplikací pro prostředí Windows Runtime. Tento článek je rychlý přehled; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md) a [rozšíření komponent pro platformy běhového prostředí](http://go.microsoft.com/fwlink/?LinkId=228720).  
+Prostředí Windows Runtime podporuje aplikace pro univerzální platformu Windows, které provést pouze v prostředí trustworthy operačního systému, použijte oprávnění funkce, datové typy a zařízení a jsou distribuovány prostřednictvím [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + +/ CX zjednodušit psaní aplikací pro prostředí Windows Runtime. Tento článek je rychlý přehled; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md) a [rozšíření komponent pro platformy běhového prostředí](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
  Při sestavování na příkazovém řádku použít **/ZW** – možnost kompilátoru sestavit aplikaci pro univerzální platformu Windows nebo prostředí Windows Runtime součásti. Pro přístup k prostředí Windows Runtime deklarace, které jsou definovány v souborech metadat (.winmd) prostředí Windows Runtime, zadejte `#using` – direktiva nebo **/FU** – možnost kompilátoru. Při vytváření projektu pro univerzální platformu Windows aplikaci Visual Studio ve výchozím nastavení nastaví tyto možnosti a přidá odkazy na všechny knihovny prostředí Windows Runtime.  
   

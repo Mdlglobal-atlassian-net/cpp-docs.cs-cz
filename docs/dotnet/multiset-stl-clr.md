@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 801f6a99a6b479ebc72f62c59fc5fcf099814996
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `multiset` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element.  
@@ -64,7 +67,7 @@ template<typename Key>
 |[multiset::iterator (STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
 |[multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)|Typ klíče řazení|  
-|[multiset::Reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[multiset::reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[multiset::reverse_iterator (STL/CLR)](../dotnet/multiset-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[multiset::size_type (STL/CLR)](../dotnet/multiset-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -74,13 +77,13 @@ template<typename Key>
 |---------------------|-----------------|  
 |[multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[multiset::Count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[multiset::Empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[multiset::count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[multiset::Erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[multiset::Find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
-|[multiset::Insert (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|Přidá prvky.|  
+|[multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[multiset::find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[multiset::insert (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|Přidá prvky.|  
 |[multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
 |[multiset::make_value (STL/CLR)](../dotnet/multiset-make-value-stl-clr.md)|Vytvoří objekt hodnoty.|  
@@ -95,13 +98,13 @@ template<typename Key>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[multiset::Operator = (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Určuje, zda `multiset` objekt není rovno jiné `multiset` objektu.|  
-|[Operator < (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|Určuje, zda `multiset` objektu je menší než jiná `multiset` objektu.|  
-|[Operator < = (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|Určuje, zda `multiset` objektu je menší než nebo rovna do jiného `multiset` objektu.|  
-|[Operator == (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|Určuje, zda `multiset` objekt rovná jiné `multiset` objektu.|  
-|[Operator > (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Určuje, zda `multiset` je větší než druhý objekt `multiset` objektu.|  
-|[Operator > = (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|Určuje, zda `multiset` objekt je větší než nebo rovna hodnotě jiného `multiset` objektu.|  
+|[multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Určuje, zda `multiset` objekt není rovno jiné `multiset` objektu.|  
+|[operator< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|Určuje, zda `multiset` objektu je menší než jiná `multiset` objektu.|  
+|[operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|Určuje, zda `multiset` objektu je menší než nebo rovna do jiného `multiset` objektu.|  
+|[operator== (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|Určuje, zda `multiset` objekt rovná jiné `multiset` objektu.|  
+|[operator> (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Určuje, zda `multiset` je větší než druhý objekt `multiset` objektu.|  
+|[operator>= (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|Určuje, zda `multiset` objekt je větší než nebo rovna hodnotě jiného `multiset` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -154,4 +157,4 @@ template<typename Key>
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [multimnožina](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 061766f73b554895f8d7ad8952dc6172fd381169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-parameters"></a>Výstupní parametry
 Volání uložené procedury je podobná vyvolání příkazu SQL. Hlavní rozdíl je, že uložené procedury použít výstupní parametry (nebo "výstupní parametry") a návratové hodnoty.  

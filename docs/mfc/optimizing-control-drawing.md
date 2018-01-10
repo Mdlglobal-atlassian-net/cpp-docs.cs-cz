@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7b78bd517e7f31168c13595ec699b223ba458e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimizing-control-drawing"></a>Optimalizace vykreslování ovládacích prvků
 Při ovládacího prvku je odeslán pokyn k vykreslení sám v kontextu zadaný kontejner zařízení, je obvykle vybere objekty GDI (například pera, štětce a písem) do kontextu zařízení, provede jeho kreslení operací a obnoví předchozí objekty GDI. Pokud kontejneru má více ovládacích prvků, které mají být vykresleny do stejného kontextu zařízení a každý ovládací prvek vybere GDI objekty, které vyžaduje, čas může být uloženy ovládací prvky neobnovujte jednotlivě dříve vybrané objekty. Po čerpají všechny ovládací prvky kontejneru automaticky obnovit původní objekty.  
@@ -56,5 +57,5 @@ Při ovládacího prvku je odeslán pokyn k vykreslení sám v kontextu zadaný 
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
  [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md)   
- [Ovládací prvky MFC ActiveX: Vykreslování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+ [MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
 

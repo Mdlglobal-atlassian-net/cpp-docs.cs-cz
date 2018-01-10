@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c355a0ec75912ab9ef8b20cc980bc920de96b37b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54e0da32736f00a8ba1f01e6cf3ce2d0f38c8ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="technical-notes-by-number"></a>Technické poznámky podle čísel
 Technické poznámky níže jsou uvedeny jako číselné hodnoty, s nedávno napsané Technická poznámka první. Seznam podle kategorie, naleznete v [technické poznámky podle kategorií](../mfc/technical-notes-by-category.md).  

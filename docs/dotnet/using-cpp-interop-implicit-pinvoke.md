@@ -31,11 +31,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f400ed3e93af8f7e0727d3fe378d0ac471bd18f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)
 Na rozdíl od jiných jazyků .NET, Visual C++ má interoperabilita podpory, který umožňuje spravovanými a nespravovanými kód existovat ve stejné aplikaci a to i ve stejném souboru (s [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy). To umožňuje vývojářům Visual C++ integrovat funkce .NET do stávajících aplikací Visual C++ bez narušení zbývající aplikace.  
@@ -46,7 +49,7 @@ Na rozdíl od jiných jazyků .NET, Visual C++ má interoperabilita podpory, kte
   
  Visual C++ nabízí dva způsoby, kterými spravovaných a nespravovaných funkcí pro spolupráci:  
   
--   [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
+-   [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
  Explicitního volání PInvoke podporuje rozhraní .NET Framework a je dostupný ve většině jazyků .NET. Ale jak již název napovídá, zprostředkovatele komunikace C++ je specifické pro aplikaci Visual C++.  
   
@@ -91,9 +94,9 @@ Done
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [Postupy: Zařazování řetězců kódování Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
 -   [Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
@@ -101,45 +104,45 @@ Done
   
 -   [Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
   
--   [Postupy: zařazování zpětných volání a delegátů pomocí funkcí interoperability C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
--   [Postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
+-   [Postupy: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
   
--   [Postupy: přístup ke znakům v datech třídy System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
+-   [Postupy: Přístup ke znakům v datech třídy System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
   
--   [Postupy: převedení char * řetězce na pole System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
+-   [Postupy: Převod řetězce typu char * na pole System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
   
 -   [Postupy: převod typu System::String na wchar_t * nebo char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
   
--   [Postupy: převod typu System::String na standardní řetězec](../dotnet/how-to-convert-system-string-to-standard-string.md)  
+-   [Postupy: Převod typu System::String na standardní řetězec](../dotnet/how-to-convert-system-string-to-standard-string.md)  
   
--   [Postupy: převod standardního řetězce na typ System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
+-   [Postupy: Převod standardního řetězce na typ System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
   
--   [Postupy: získání ukazatele na pole bajtů](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
+-   [Postupy: Získání ukazatele na pole bajtů](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
   
--   [Postupy: načtení nespravovaných prostředků do bajtového pole](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
+-   [Postupy: Načtení nespravovaných prostředků do bajtového pole](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
   
--   [Postupy: Změna referenční třídy v nativní funkci](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
+-   [Postupy: Změna referenční třídy v nativní funkci](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
   
--   [Postupy: určení, pokud bitová kopie je nativní nebo CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
+-   [Postupy: Určení, zda je bitová kopie nativní nebo CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
   
 -   [Postupy: Přidání nativní knihovny DLL do globální mezipaměti sestavení](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)  
   
--   [Postupy: uložení odkazu na typ hodnoty v nativním typu](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
+-   [Postupy: Uložení odkazu na typ hodnoty v nativním typu](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
   
--   [Postupy: uchování odkazu na objekt v nespravované paměti](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
+-   [Postupy: Uchování odkazu na objekt v nespravované paměti](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
   
 -   [Postupy: zjištění kompilaci/CLR](../dotnet/how-to-detect-clr-compilation.md)  
   
--   [Postupy: převod mezi hodnotami System::Guid a _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
+-   [Postupy: Převody mezi hodnotami System::Guid a _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
   
--   [Postupy: určení výstupního parametru](../dotnet/how-to-specify-an-out-parameter.md)  
+-   [Postupy: Určení výstupního parametru](../dotnet/how-to-specify-an-out-parameter.md)  
   
 -   [Postupy: použití nativního typu v kompilaci/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
   
--   [Postupy: deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md)  
+-   [Postupy: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md)  
   
--   [Postupy: zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
  Informace o použití delegátů ve scénáři interoperability najdete v tématu [delegáta (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  
   

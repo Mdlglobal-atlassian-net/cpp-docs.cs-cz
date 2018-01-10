@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c7e35dab6a94a01851b667ce4ab3dd58aa4bd8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0555af785d75c9247eb365a03a51161441a4722a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-tool-tips"></a>Povolení tipů nástrojů
 Můžete povolit nástroj pro podporu tip pro podřízené prvky okna (například ovládacích prvků na formuláři zobrazení nebo dialogové okno pole).  
@@ -34,5 +35,5 @@ Můžete povolit nástroj pro podporu tip pro podřízené prvky okna (napříkl
 2.  Zadejte řetězec pro každý ovládací prvek v vaše [oznámení TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) obslužné rutiny. Obslužná rutina se mapy zpráv okna, která obsahuje podřízené ovládací prvky (například třídě zobrazení formuláře). Tato obslužná rutina by měly volat funkci, která identifikuje ovládacího prvku a nastaví **pszText** Určuje text, který používá ovládacím prvkem popis tlačítka.  
   
 ## <a name="see-also"></a>Viz také  
- [Popisy tlačítek v oknech Neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+ [Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

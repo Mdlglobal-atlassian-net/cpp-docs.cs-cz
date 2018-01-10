@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 648e0cada61e15c29ab908e93cc8e457581f9239
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-windows"></a>Okna s rámečkem
 Pokud je aplikace spuštěna v systému Windows, uživatel pracuje s dokumenty zobrazí v oknech s rámečkem. Okně s rámečkem dokumentu tvoří dvě hlavní součásti: rámečku a obsah, který se snímky. Může být okně s rámečkem dokumentu [rozhraní s jedním dokumentem](../mfc/sdi-and-mdi.md) oken s rámečkem (SDI) nebo [rozhraní více dokumentů](../mfc/sdi-and-mdi.md) podřízeného okna (MDI). Systém Windows spravuje většinu interakce uživatele se okně s rámečkem: přesunutí a změna velikosti okna, zavřít a současně minimalizujete její a jeho maximalizaci. Můžete spravovat obsah uvnitř rámečku.  

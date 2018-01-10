@@ -28,11 +28,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88afc0f7ae61dcf822a84c514fbc98da2bf827c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections"></a>Kolekce
 Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupin objektů. Tyto třídy jsou dvou typů:  
@@ -118,7 +119,7 @@ Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupi
   
 -   [Přístup ke všem členům kolekce](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [Smazání všech objektů v kolekcích CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
+-   [Smazání všech objektů v kolekci CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../mfc/mfc-concepts.md)   

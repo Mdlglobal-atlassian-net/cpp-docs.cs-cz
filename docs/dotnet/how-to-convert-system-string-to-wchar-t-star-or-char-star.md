@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Postupy: Převod typu System::String na wchar_t* nebo char*
 Můžete použít `PtrToStringChars` v Vcclr.h převést <xref:System.String> na nativní `wchar_t *` nebo `char *`.  Protože řetězce CLR jsou interně Unicode vždy vrátí široké ukazatel řetězce Unicode. Pak můžete převést z celé jak je znázorněno v následujícím příkladu.  
@@ -73,4 +76,4 @@ Hello
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

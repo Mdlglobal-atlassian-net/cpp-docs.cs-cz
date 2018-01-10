@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505b9b16bb3c84e92a640f136c5aa58fdaaa13a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de955ecc25137f5305806ca5ba03ed15930574dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi"></a>MAPI
 Tento článek popisuje Microsoft Zasílání zpráv rozhraní MAPI (Application Programming) pro vývojáře aplikací zpráv klienta. MFC poskytuje podporu pro podmnožinu rozhraní MAPI v třídě **CDocument** , ale není zapouzdření celý rozhraní API. Další informace najdete v tématu [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md).  

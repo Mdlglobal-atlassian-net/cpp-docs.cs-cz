@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1fb4094e5a54f82aa6aeebffe576965838cf7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 Tato poznámka se popisuje, jak můžete použít MFCxx.DLL a MFCxxD.DLL (kde x je číslo verze knihovny MFC) sdílet dynamické knihovny s aplikací MFC a MFC – rozšiřující knihovny DLL. Další informace o pravidelných MFC – knihovny DLL najdete v tématu [pomocí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -222,7 +223,7 @@ class CExampleView : public CView
   
  Problém je, že v Win32, musí explicitně deklarovat všechna data jako **__declspec(dllexport)** Pokud mají být exportovány z knihovny DLL, a **deklarace __declspec(dllimport)** má-li importovat z knihovny DLL. Když definujete `_AFXEXT`, hlavičky knihovny MFC Ujistěte se, že **AFX_EXT_CLASS** správnou definici.  
   
- Pokud máte více vrstev, jeden symbol, jako **AFX_EXT_CLASS** nestačí, protože knihovnu DLL může být exportovat nové třídy a také importovat jiné třídy z jiné MFC – rozšiřující knihovny DLL. Chcete-li řešit potíže, použijte speciální symbol preprocesoru, která určuje, že vytváříte samotné knihovny DLL a kdy knihovnu DLL. Představte si například dvě MFC rozšiřující knihovny DLL, A.DLL a B.DLL. Každá exportovat některé třídy v A.H B.H.. B.DLL používá třídy z A.DLL. Soubory hlaviček by vypadat přibližně takto:  
+ Pokud máte více vrstev, jeden symbol, jako **AFX_EXT_CLASS** nestačí, protože knihovnu DLL může být exportovat nové třídy a také importovat jiné třídy z jiné MFC – rozšiřující knihovny DLL. Chcete-li řešit potíže, použijte speciální symbol preprocesoru, která určuje, že vytváříte samotné knihovny DLL a kdy knihovnu DLL. Představte si například dvě MFC rozšiřující knihovny DLL, A.DLL a B.DLL. Každá exportovat některé třídy v A.H B.H. B.DLL používá třídy z A.DLL. Soubory hlaviček by vypadat přibližně takto:  
   
 ```  
 /* A.H */  

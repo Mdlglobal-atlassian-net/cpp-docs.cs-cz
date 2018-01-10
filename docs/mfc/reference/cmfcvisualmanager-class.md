@@ -355,11 +355,12 @@ caps.latest.revision: "58"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92aafb6b979557f98448e4c8ad27d20b663e228a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e51a6a630daa2d03ac9f251a3ba516c708ec6d37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager – třída
 Poskytuje podporu pro Změna vzhledu vaší aplikace na globální úrovni. `CMFCVisualManager` Třídy funguje nejlépe společně s třídu, která obsahuje pokyny k vykreslení ovládacích prvků grafického uživatelského rozhraní aplikace pomocí konzistentní styl. Tyto další třídy jsou označovány jako visual správci a dědí z `CMFCBaseVisualManager`.  

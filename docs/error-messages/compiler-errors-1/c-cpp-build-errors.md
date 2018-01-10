@@ -1,7 +1,7 @@
 ---
 title: "Chyby sestavení C/C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>Chyby sestavení C/C++
-Články v této části dokumentace vysvětlují chybové zprávy, které jsou generovány nástroje pro sestavení. [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Kompilátoru a sestavení nástroje může hlásit různé druhy chyb a upozornění. Nástroje pro sestavení může Zkontrolujte předpoklady o záměru kódu a pokusí pokračovat po chybě nebo upozornění nenajde, takže další problémy mohou být oznámeny ve stejnou dobu. Pokud nástroje nesprávný předpokladů, novější chyby nebo upozornění nemusí vztahovat do projektu. Pokud je ve vašem projektu opravit problémy, vždy začínat první chybě nebo upozornění, která se použije v hlášení a často sestavte znovu.  
-  
- Chcete-li získat nápovědu v konkrétní chybová zpráva v sadě Visual Studio, vyberte číslo chyby v **výstup** okno a stisknutím klávesy F1 otevřete webu MSDN stránky pro tuto chybu. Na webu MSDN můžete také hledání článků o chybách nebo procházet seznam chyb podle kategorie v navigačním podokně.  
-  
-> [!NOTE]
->  Ne každý [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] chyby nebo upozornění je popsána v MSDN. Diagnostické zprávy v mnoha případech poskytuje všechny informace, které jsou k dispozici. Pokud se domníváte, že chybovou zprávu potřebuje další vysvětlení, můžete dejte nám vědět. Můžete použít formulář zpětné vazby na této stránce, nebo přejít na panelu nabídek v sadě Visual Studio a zvolte **pomoci**, **ohlásit chybu**, nebo můžete odeslat zprávu návrhu nebo chyb na [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Chyby a upozornění na veřejných fórech MSDN můžete najít další pomoc. [Jazyka Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum je pro dotazy a v diskusích o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxi a kompilátoru jazyka. [Visual C++ Obecné](http://go.microsoft.com/fwlink/?LinkId=158194) fórum je pro dotazy o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] které nejsou popsané v dalších fóra. Můžete také zjistit nápovědu k nástroji chyby a upozornění na [Stack Overflow](http://stackoverflow.com/).  
-  
- Odkazy na další zdroje informací o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], najdete v části [Visual C++ Nápověda a komunita](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Odkaz sestavení C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Články v této části dokumentace vysvětlují diagnostické chybové zprávy a upozornění vytvořených pomocí nástroje pro sestavení.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Viz také
+
+[Odkaz sestavení C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

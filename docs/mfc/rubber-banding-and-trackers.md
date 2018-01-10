@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40ff1d5bf9e1514b8366cc113426ee83cb1dcc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bd9da00d2d6ea0110562f523a0adc53c1a476c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rubber-banding-and-trackers"></a>Pružné čáry a snímače
 Další funkcí, které jsou součástí snímačů je výběr "pružné vzdálené správy", který umožňuje uživateli vybrat více položek OLE přetažením obdélníku velikosti kolem položky, které chcete vybrat. Když uživatel uvolní levé tlačítko myši, jsou vybrané položky v rámci oblasti vybraný uživatelem a práce s uživatelem. Uživatel může například přetáhněte výběr do jiné aplikace kontejneru.  
@@ -40,4 +41,4 @@ Další funkcí, které jsou součástí snímačů je výběr "pružné vzdále
   
 ## <a name="see-also"></a>Viz také  
  [Snímače: Implementace snímačů ve vašich aplikacích OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
- [Crecttracker – třída](../mfc/reference/crecttracker-class.md)
+ [CRectTracker – třída](../mfc/reference/crecttracker-class.md)

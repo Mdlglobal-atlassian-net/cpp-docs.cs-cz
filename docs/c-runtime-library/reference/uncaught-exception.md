@@ -28,11 +28,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b43a6b08087dcaeeda7959eaadbee9c250f4de9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25d2e84bb6d336b2e530b833252b2b4a05dce4e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 Označuje, zda byla vyvolána výjimka jednu nebo více výjimek, ale ještě nebyly zpracovány v odpovídajícím `catch` blokovat z [try-catch –](../../cpp/try-throw-and-catch-statements-cpp.md) příkaz.  
@@ -56,4 +57,4 @@ bool __uncaught_exception(
 |__uncaught_exception|EH.h|  
   
 ## <a name="see-also"></a>Viz také  
- [Zkuste, throw a catch – příkazy (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)
+ [try, throw a catch – příkazy (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)

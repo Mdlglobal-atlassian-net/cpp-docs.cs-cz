@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c67ed88a395b6d688fdc753ed45f08fd5b41925c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-c-amp"></a>Obor názvů souběžnosti (C++ AMP)
 Poskytuje třídy a funkce, které urychlit spuštění kódu C++ na data paralelní hardwaru. Další informace najdete v tématu [přehled produktu C++ AMP](../cpp-amp-overview.md)  
@@ -32,26 +33,26 @@ namespace Concurrency;
   
 ## <a name="members"></a>Členové  
   
-### <a name="namespaces"></a>Obory názvů  
+### <a name="namespaces"></a>Jmenné prostory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Concurrency::Direct3D – Namespace](concurrency-direct3d-namespace.md)|Poskytuje funkce, které podporují D3D interoperability. Umožňuje bezproblémové použití D3D prostředků pro výpočet v kódu AMP a využívat prostředky vytvořené v AMP v kódu D3D bez vytvoření zprostředkující redundantní kopie. C++ AMP můžete přírůstkově urychlit části náročné DirectX aplikací a použít rozhraní API D3D na dat vytvářených z AMP výpočty.|  
-|[Concurrency::fast_math – Namespace](concurrency-fast-math-namespace.md)|Funkce `fast_math` nejsou kompatibilní se standardem C99 oboru názvů. Pouze jednoduchou přesností verze jednotlivé funkce jsou k dispozici. Vnitřní funkce DirectX, které jsou rychlejší než odpovídající funkce v použít tyto funkce `precise_math` obor názvů a nevyžadují rozšířené podpory dvojitou přesností na akcelerátor, ale je méně přesné. Existují dvě verze jednotlivé funkce pro zdroj úroveň kompatibility s kódem C99; obě verze trvat a návratové hodnoty jednoduchou přesností.|  
-|[Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)|Poskytuje typy a funkce, které jsou určené pro programováním grafiky.|  
-|[Concurrency::precise_math – Namespace](concurrency-precise-math-namespace.md)|Funkce `precise_math` obor názvů jsou C99 kompatibilní. Jednoduchou přesností a dvojitou přesností verzích jednotlivé funkce jsou zahrnuty. Tyto funkce – to zahrnuje funkce jednoduchou přesností – vyžadují rozšířené podpory dvojitou přesností na akcelerátor.|  
+|[Concurrency::direct3d – obor názvů](concurrency-direct3d-namespace.md)|Poskytuje funkce, které podporují D3D interoperability. Umožňuje bezproblémové použití D3D prostředků pro výpočet v kódu AMP a využívat prostředky vytvořené v AMP v kódu D3D bez vytvoření zprostředkující redundantní kopie. C++ AMP můžete přírůstkově urychlit části náročné DirectX aplikací a použít rozhraní API D3D na dat vytvářených z AMP výpočty.|  
+|[Concurrency::fast_math – obor názvů](concurrency-fast-math-namespace.md)|Funkce `fast_math` nejsou kompatibilní se standardem C99 oboru názvů. Pouze jednoduchou přesností verze jednotlivé funkce jsou k dispozici. Vnitřní funkce DirectX, které jsou rychlejší než odpovídající funkce v použít tyto funkce `precise_math` obor názvů a nevyžadují rozšířené podpory dvojitou přesností na akcelerátor, ale je méně přesné. Existují dvě verze jednotlivé funkce pro zdroj úroveň kompatibility s kódem C99; obě verze trvat a návratové hodnoty jednoduchou přesností.|  
+|[Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)|Poskytuje typy a funkce, které jsou určené pro programováním grafiky.|  
+|[Concurrency::precise_math – obor názvů](concurrency-precise-math-namespace.md)|Funkce `precise_math` obor názvů jsou C99 kompatibilní. Jednoduchou přesností a dvojitou přesností verzích jednotlivé funkce jsou zahrnuty. Tyto funkce – to zahrnuje funkce jednoduchou přesností – vyžadují rozšířené podpory dvojitou přesností na akcelerátor.|  
   
 ### <a name="classes"></a>Třídy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Accelerator – třída](accelerator-class.md)|Představuje abstrakci uzlu fyzické výpočetní optimalizované distribučního bodu.|  
+|[accelerator – třída](accelerator-class.md)|Představuje abstrakci uzlu fyzické výpočetní optimalizované distribučního bodu.|  
 |[accelerator_view – třída](accelerator-view-class.md)|Představuje virtuální zařízení abstrakce na akcelerátor C++ AMP paralelní data.|  
 |[accelerator_view_removed – třída](accelerator-view-removed-class.md)|Výjimka, která se vyvolá, když je základní DirectX volání selže z důvodu vypršení časového limitu detekce a zotavení mechanismus Windows.|  
-|[Array – třída](array-class.md)|Agregační na data `accelerator_view` v doméně mřížky. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně mřížky. Každá proměnná obsahuje hodnotu, která odpovídá některé C++ typu.|  
+|[array – třída](array-class.md)|Agregační na data `accelerator_view` v doméně mřížky. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně mřížky. Každá proměnná obsahuje hodnotu, která odpovídá některé C++ typu.|  
 |[array_view – třída](array-view-class.md)|Představuje pohled na data v pole\<T, N >.|  
 |[completion_future – třída](completion-future-class.md)|Představuje budoucnost, která odpovídá C++ AMP asynchronní operaci.|  
-|[Extent – třída](extent-class.md)|Představuje vektor N celočíselné hodnoty, které určují hranice N dimenzí místa, která má počátek 0. Hodnoty v souřadnic vektor seřazeni z nejvýznamnějších k nejméně významný. V kartézských 3 dimenzí místo, například rozsah vektoru (7,5,3) představuje místa, ve kterém souřadnice v rozsahu od 0 do 7, rozsahy na souřadnici y od 0 do 5, a souřadnici x rozsah od 0 do 3.|  
+|[extent – třída](extent-class.md)|Představuje vektor N celočíselné hodnoty, které určují hranice N dimenzí místa, která má počátek 0. Hodnoty v souřadnic vektor seřazeni z nejvýznamnějších k nejméně významný. V kartézských 3 dimenzí místo, například rozsah vektoru (7,5,3) představuje místa, ve kterém souřadnice v rozsahu od 0 do 7, rozsahy na souřadnici y od 0 do 5, a souřadnici x rozsah od 0 do 3.|  
 |[index – třída](index-class.md)|Definuje bod dimenzí N index.|  
 |[invalid_compute_domain – třída](invalid-compute-domain-class.md)|Výjimka, která se vyvolá, když modul runtime nelze spustit jádra pomocí zadané v doméně výpočetní `parallel_for_each` volání lokality.|  
 |[out_of_memory – třída](out-of-memory-class.md)|Výjimka, která se vyvolá, když metoda selže z důvodu nedostatku paměti systému nebo zařízení.|  

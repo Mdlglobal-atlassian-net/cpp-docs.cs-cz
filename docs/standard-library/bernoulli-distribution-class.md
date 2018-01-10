@@ -34,11 +34,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d0e5e5fb88eae5ca0247f1672e816dc35c601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution – třída
 Generuje Bernoulliho distribuce.  
@@ -97,7 +98,7 @@ Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr
   
 Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).  
   
-Podrobné informace o funkci diskrétní pravděpodobnosti Bernoulliho distribuce, najdete v článku Wolfram MathWorld [Bernoulliho distribuční](http://go.microsoft.com/fwlink/LinkId=398467).  
+Podrobné informace o funkci diskrétní pravděpodobnosti Bernoulliho distribuce, najdete v článku Wolfram MathWorld [Bernoulliho distribuční](http://go.microsoft.com/fwlink/p/?linkid=398467).  
   
 ## <a name="example"></a>Příklad  
   

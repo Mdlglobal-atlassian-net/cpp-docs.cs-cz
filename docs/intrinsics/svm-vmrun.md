@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04467cc1d6d13a5c7c983aae48d2208622a75683
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 000e798dce3fba367a8666d4b5c97bd25fd53253
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Konkrétní Microsoft**  
@@ -45,7 +46,7 @@ void __svm_vmrun(
 ## <a name="remarks"></a>Poznámky  
  `__svm_vmrun` Funkce používá minimální množství informací VMCB zahájíte provádění kódu hosta virtuálního počítače. Použití [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) fungovat, pokud potřebujete další informace pro zpracování komplexní přerušení nebo přepnout do jiného hosta.  
   
- `__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace naleznete v dokumentu "programátory architektura AMD64 ruční svazku 2: programování systému" číslem 24593, revize 3.11 nebo novější, na [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) lokality.  
+ `__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace naleznete v dokumentu "programátory architektura AMD64 ruční svazku 2: programování systému" číslem 24593, revize 3.11 nebo novější, na [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   

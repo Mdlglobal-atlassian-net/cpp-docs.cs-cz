@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outline-of-changes-ccli"></a>Přehled změn (C++/CLI)
 Tato osnova ukazuje příklady některých změn v jazyce ze spravovaných rozšíření jazyka C++ na Visual C++. Pomocí následujícího odkazu, který doprovází každou položku pro další informace.  
@@ -519,6 +522,6 @@ Array^ myIntArray =
   
 ## <a name="see-also"></a>Viz také  
  [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md)   
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
 
 

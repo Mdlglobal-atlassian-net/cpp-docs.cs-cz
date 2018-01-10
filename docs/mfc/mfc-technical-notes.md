@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5915c20e01021e3296ba1f26f297cd773125973
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e8310f287aa94771bad2b4724b1edb22d3ca8bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-technical-notes"></a>MFC – technické poznámky
 Technická poznámka je napsán pro programátory v jazyce programátory dokumentu.  
@@ -37,5 +38,5 @@ Technická poznámka je napsán pro programátory v jazyce programátory dokumen
   
 ## <a name="see-also"></a>Viz také  
  [Visual C++ – referenční dokumentace knihoven](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)   
- [Běžné aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)
+ [Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)
 

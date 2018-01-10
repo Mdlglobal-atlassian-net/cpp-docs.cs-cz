@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ffe0e2d8f4c26274a71082bec2cecaf19acb1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: caf2cc77cd31df611f71d07c5a0a49f600767f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource – struktura
 Rozhraní k provádění prostředku definovaným pomocí Správce prostředků.  
@@ -75,4 +76,4 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
  Rozhraní k další provádění prostředku v pořadí výčtu. Pokud nejsou žádné další uzly v pořadí výčtu uzlu, ke kterému patří tohoto provádění prostředku, tato metoda vrátí hodnotu `NULL`.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

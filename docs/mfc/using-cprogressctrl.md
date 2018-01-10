@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89fc982eba1a4eeeb291a33440cfae71c4b2a745
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09d7673450834fbe6824e731679c1a6517c247a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cprogressctrl"></a>Používání atributu CProgressCtrl
 Ovládací prvek Průběh můžete použít informace o průběhu časově náročná operace. Je obdélníku postupně, naplní se barva zvýraznění systému v průběhu operace.  
@@ -38,7 +39,7 @@ Ovládací prvek Průběh můžete použít informace o průběhu časově náro
   
 -   [Nastavení pro ovládací prvek průběh](../mfc/settings-for-the-progress-control.md)  
   
--   [Manipulace s ovládacím prvkem průběh](../mfc/manipulating-the-progress-control.md)  
+-   [Manipulace s ovládacím prvkem průběh](../mfc/manipulating-the-progress-control.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

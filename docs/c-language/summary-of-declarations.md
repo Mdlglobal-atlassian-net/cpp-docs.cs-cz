@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 467a342b612a82532acb04f11b5fa9f36ce9fe82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 `declaration`:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
  **Registrace**  
   
- **statické**  
+ **static**  
   
  **extern**  
   
@@ -68,11 +69,11 @@ ms.lasthandoff: 10/24/2017
  *Specifikátor typu*:  
  **void**  
   
- **Char**  
+ **char**  
   
- **krátký**  
+ **short**  
   
- **celá čísla**  
+ **int**  
   
  `__int8`/ * Konkrétní Microsoft\*/  
   
@@ -82,11 +83,11 @@ ms.lasthandoff: 10/24/2017
   
  `__int64`/ * Konkrétní Microsoft\*/  
   
- **dlouhá**  
+ **long**  
   
- **plovoucí desetinná čárka**  
+ **float**  
   
- **Double**  
+ **double**  
   
  **podepsané**  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 10/24/2017
  *Název definice TypeDef*  
   
  *Kvalifikátor typu*:  
- **Const**  
+ **const**  
   
  `volatile`  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 10/24/2017
  *Struktura nebo sjednocení identifikátor*<sub>opt</sub>**{** *seznam struktura prohlášení* **}**  *identifikátor struktura nebo sjednocení*  
   
  *Struktura nebo sjednocení*:  
- **Struktura**  
+ **struct**  
   
  **sjednocení**  
   
@@ -230,7 +231,7 @@ ms.lasthandoff: 10/24/2017
  *Rozšířené rozšířené decl – modifikátor seq – decl – modifikátor*  
   
  *Rozšířené modifikátor decl*: /\* specifické pro Microsoft\*/  
- **přístup z více vláken**  
+ **thread**  
   
  **holé**  
   

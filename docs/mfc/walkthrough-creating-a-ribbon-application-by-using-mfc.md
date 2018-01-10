@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c695f50760736b989b355cae7f7708f95dc431db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvořit aplikaci, která má ve výchozím nastavení pásu karet. Na pásu karet můžete rozbalit přidáním **vlastní** kategorie pásu karet, který má **oblíbených položek** pásu karet panelech a pak přidáte některé často používané příkazy do panelu.  
@@ -90,9 +91,9 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
 3.  Chcete-li ověřit, zda byla tlačítka přidána na panel pásu karet, sestavte a spusťte aplikaci. Vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Pokud aplikace sestavení úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky. **Tiskových** tlačítko a se seznamem se pole na **Oblíbené** panelu na **vlastní** se má zobrazit na pásu karet.  
   
 ## <a name="next-steps"></a>Další kroky  
- [Postupy: přizpůsobení panelu nástrojů Rychlý přístup](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+ [Postupy: Přizpůsobení panelu nástrojů Rychlý přístup](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Postupy: přizpůsobení tlačítka aplikace](../mfc/how-to-customize-the-application-button.md)  
+ [Postupy: Přizpůsobení tlačítka aplikace](../mfc/how-to-customize-the-application-button.md)  
   
  Ukázky začátku do konce naleznete v části [ukázky (MFC Feature Pack)](../visual-cpp-samples.md).  
   

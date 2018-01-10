@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0aea958eb441f3b2b4d1adb993f1b92ae8359530
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Sestavení projektů C++ v sadě Visual Studio
 V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několik způsobů vytvářet celé řešení nebo jedním projektu v ní. Můžete také upravit nastavení sestavení a zadejte vlastní kroky sestavení aby vývojových procesech efektivnější.  
@@ -55,10 +56,10 @@ V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několi
  Číst informace o tom, jak vytvářet, upravovat nastavení sestavení a zadejte vlastní kroky sestavení, najdete v následujících článcích.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Seznámení s kroky vlastního sestavení a událostí sestavení](../ide/understanding-custom-build-steps-and-build-events.md)  
+ [Seznámení s kroky vlastního sestavení a s událostmi sestavení](../ide/understanding-custom-build-steps-and-build-events.md)  
  Popisuje postup přizpůsobení procesu sestavení v integrovaném vývojovém prostředí.  
   
- [Běžné makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
+ [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
  Uvádí makra, které můžete použít, pokud jsou přijaty řetězce.  
   
  [Sestavení externích projektů](../ide/building-external-projects.md)  
@@ -71,19 +72,19 @@ V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několi
  [VC ++ adresáře, projekty, dialogové okno Možnosti](vcpp-directories-property-page.md)  
  (Jenom projektů MSBuild) Popisuje, jak změnit cesta hledání pro spustitelné soubory, zahrnout soubory, soubory knihovny a soubory zdrojového kódu během sestavení.  
   
- [Kompilaci a sestavování](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [Kompilace a sestavení](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Poskytuje informace o sestavení v sadě Visual Studio.  
   
- [Sestavení C/C++ programů](../build/building-c-cpp-programs.md)  
+ [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
  Obsahuje odkazy na témata popisující sestavení programu z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.  
   
- [Odkaz sestavení C/C++](../build/reference/c-cpp-building-reference.md)  
+ [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)  
  Obsahuje odkazy na přehled sestavování programů v jazycích C++, kompilátoru a linkeru možnosti a další sestavovací nástroje.  
   
- [Upgradování projektů z dřívějších verzí aplikace Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+ [Upgrade projektů z dřívějších verzí Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
  Obsahuje odkazy na témata týkající se problémů na upgrade na novější verze sady nástrojů kompilátoru projektu jazyka C++.  
   
-[Průvodce Visual C++ přenosem a upgradováním](../porting/visual-cpp-porting-and-upgrading-guide.md)  
+[Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
   Podrobné informace o tom, jak upgradovat aplikací C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a také k migraci aplikace, které byly vytvořeny pomocí nástrojů pro jiné než Visual Studio.  
   
 ## <a name="see-also"></a>Viz také  

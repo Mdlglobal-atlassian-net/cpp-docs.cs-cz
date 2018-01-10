@@ -83,11 +83,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 734097d8fffcbe21f17b68432d6233a03b11a28a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a235b88b676f7cf643a878e9a06408c87b20bcba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar – třída
 `CMFCStatusBar` Třída implementuje podobná stavového řádku `CStatusBar` třídy. Ale `CMFCStatusBar` třída má funkce není služeb `CStatusBar` třídy, například možnost zobrazit obrázky, animace a indikátory průběhu; a schopnost reagovat na myši poklikáním. 
@@ -777,4 +778,4 @@ void SetTipText(
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CPane – třída](../../mfc/reference/cpane-class.md)   
- [Cstatusbar – třída](../../mfc/reference/cstatusbar-class.md)
+ [CStatusBar – třída](../../mfc/reference/cstatusbar-class.md)

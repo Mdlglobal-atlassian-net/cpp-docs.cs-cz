@@ -19,11 +19,12 @@ caps.latest.revision: "56"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26b41c4fa3f3cdc9840eecbd31790b7cf82d7659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Funkční paralelismus (Concurrency Runtime)
 V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní úlohu a obvykle běží paralelně s ostatními úkoly. Úlohy lze rozložit na další, podrobnějšího úlohy, které jsou uspořádány do *skupina úkolů*.  
@@ -319,14 +320,14 @@ Message from task: 42
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu algoritmus bitonic řazení.|  
-|[Postupy: použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu programu, který provádí víc operací na sdílený zdroj dat.|  
-|[Postupy: vytvoření úlohy, která je dokončena po prodlevě](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Ukazuje, jak používat `task`, `cancellation_token_source`, `cancellation_token`, a `task_completion_event` třídy k vytvoření úlohy, která je dokončena po prodlevě.|  
-|[Návod: Implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md)|Ukazuje, jak kombinovat stávajících funkcí v Concurrency Runtime na něco jiného, který nemá informace.|  
-|[Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje PPL, která poskytuje imperativní programovací model pro vývoj souběžných aplikací.|  
+|[Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu algoritmus bitonic řazení.|  
+|[Postupy: Použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ukazuje, jak používat `parallel_invoke` algoritmus ke zlepšení výkonu programu, který provádí víc operací na sdílený zdroj dat.|  
+|[Postupy: Vytvoření úlohy, která se dokončí po prodlevě](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Ukazuje, jak používat `task`, `cancellation_token_source`, `cancellation_token`, a `task_completion_event` třídy k vytvoření úlohy, která je dokončena po prodlevě.|  
+|[Návod: Implementace tříd future](../../parallel/concrt/walkthrough-implementing-futures.md)|Ukazuje, jak kombinovat stávajících funkcí v Concurrency Runtime na něco jiného, který nemá informace.|  
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje PPL, která poskytuje imperativní programovací model pro vývoj souběžných aplikací.|  
   
 ## <a name="reference"></a>Odkaz  
- [Task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  
+ [task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  
   
  [task_completion_event – třída](../../parallel/concrt/reference/task-completion-event-class.md)  
 

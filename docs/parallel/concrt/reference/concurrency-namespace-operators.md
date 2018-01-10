@@ -15,16 +15,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c37f3262c6750bad4330780a4db09f2eef9d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators"></a>Concurrency – obor názvů operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#operator_neq)|[operátor&amp;&amp;](#operator_amp_amp)|[operátor&gt;](#operator_gt)|  
+|[operator!=](#operator_neq)|[operátor&amp;&amp;](#operator_amp_amp)|[operátor&gt;](#operator_gt)|  
 |[operátor&gt;=](#operator_gt_eq)|[operátor&lt;](#operator_lt)|[operátor&lt;=](#operator_lt_eq)|  
 |[Operator ==](#operator_eq_eq)|[– operátor||](#operator_lor)|  
   
@@ -325,4 +326,4 @@ inline bool operator>= (
  Tato metoda není bezpečná souběžnosti s ohledem na jiné metody, které může změnit buď souběžných vektorů `_A` nebo `_B`.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

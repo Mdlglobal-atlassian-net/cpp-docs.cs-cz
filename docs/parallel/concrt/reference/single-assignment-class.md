@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07b57d3175bc584ed2a54e091e76207994accd4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singleassignment-class"></a>Třída single_assignment
 A `single_assignment` zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání jedinou zápisu-po `message`.  
@@ -63,7 +64,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Název|Popis|  
 |----------|-----------------|  
 |[has_value –](#has_value)|Kontroluje, zda tato `single_assignment` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
-|[Hodnota](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `single_assignment` zasílání zpráv bloku.|  
+|[value](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `single_assignment` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   

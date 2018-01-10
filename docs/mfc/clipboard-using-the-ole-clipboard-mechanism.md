@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68f6c53c091063ab79078fb4a512638263b814bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4996c6559ad20141fb84ed37e87fd1551e89a77b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Schránka: Použití mechanismu schránky OLE
 OLE používá standardní formáty a některé formáty OLE specifické pro přenos dat prostřednictvím schránky.  
@@ -53,5 +54,5 @@ OLE používá standardní formáty a některé formáty OLE specifické pro př
 -   [Objekty a data zdroje dat OLE a uniform přenosu dat](../mfc/data-objects-and-data-sources-ole.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Schránky](../mfc/clipboard.md)
+ [Schránka](../mfc/clipboard.md)
 

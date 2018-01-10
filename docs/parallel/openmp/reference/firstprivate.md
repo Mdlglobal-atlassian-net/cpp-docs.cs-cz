@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0645eee74ab162c444531c141b297665653907b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7d4a5ba23e343f7858bf3320ed05ebce84f1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="firstprivate"></a>firstprivate
 Určuje, že každé vlákno má mít svou vlastní instanci proměnné a že proměnnou by měl být inicializovaný s hodnotu proměnné, protože existuje před paralelní konstrukce.  
@@ -41,13 +42,13 @@ firstprivate(var)
 ## <a name="remarks"></a>Poznámky  
  `firstprivate`platí pro následující direktivy:  
   
--   [pro](../../../parallel/openmp/reference/for-openmp.md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [paralelní](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [jeden](../../../parallel/openmp/reference/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
  Další informace najdete v tématu [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).  
   

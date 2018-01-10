@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8ee6a5b1c24ce718a019f8d660b4d433a4055c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aaae665311db47a7129ecaaef816dc3c3b546d45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-and-using-controls"></a>Příprava a použití ovládacích prvků
 Zkontrolujte většina ovládacích prvků pro dialogová okna v jazyku Visual C++ [editoru dialogového okna](../windows/dialog-editor.md). Ale můžete také vytvořit ovládací prvky v libovolném dialogové okno nebo okno.  
@@ -40,9 +41,9 @@ Zkontrolujte většina ovládacích prvků pro dialogová okna v jazyku Visual C
   
 -   [Příjem oznámení z běžných ovládacích prvků](../mfc/receiving-notification-from-common-controls.md)  
   
--   [Dialogové okno Data výměna a ověřování](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
+-   [Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
   
 -   Jednotlivých ovládacích prvků: najdete v části [ovládací prvky](../mfc/controls-mfc.md) odkazy na všechny běžné ovládací prvky  
   

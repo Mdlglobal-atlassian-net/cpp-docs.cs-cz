@@ -26,20 +26,21 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f49395959ec3b62f20716ddfb4ba7f4d89032d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed2d8cd6c852a15c4190c16c049e29577b754ce7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností
 Tento článek popisuje dostupné pro ovládací prvky ActiveX a jejich použití stránek uložených vlastností.  
   
  Další informace o použití stránek vlastností v ovládacím prvku ActiveX najdete v následujících článcích:  
   
--   [Ovládací prvky MFC ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [Ovládací prvky MFC ActiveX: Přidání další stránky přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
  MFC poskytuje tři stránky uložených vlastností pro použití s ovládacími prvky ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, a **CLSID_CPicturePropPage**. Tyto stránek zobrazit uživatelské rozhraní pro uložené barvy, písma a vlastnosti obrázku, v uvedeném pořadí.  
   
@@ -59,5 +60,5 @@ Tento článek popisuje dostupné pro ovládací prvky ActiveX a jejich použit�
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Ovládací prvky MFC ActiveX: Přidání uložených vlastností](../mfc/mfc-activex-controls-adding-stock-properties.md)
+ [MFC – ovládací prvky ActiveX: Přidání uložených vlastností](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

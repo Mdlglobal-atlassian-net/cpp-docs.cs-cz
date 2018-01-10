@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e836730942b3293ff8adc6aa7f8c75f4d2376cc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
 Použití tříd MFC Windows Forms podpory, můžete hostovat ovládací prvky Windows Forms v aplikacích MFC jako ovládací prvek ActiveX v dialogových oknech MFC nebo zobrazení. Kromě toho může být hostovaný modelu Windows Forms jako dialogových oken MFC.  
@@ -50,11 +53,11 @@ Použití tříd MFC Windows Forms podpory, můžete hostovat ovládací prvky W
  Pokud vaše aplikace MFC používá Windows Forms, budete muset znovu distribuovat mfcmifc90.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../ide/redistributing-the-mfc-library.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Hostitelské poskytování uživatelského Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
+ [Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
  [Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
   
- [Hostitelské poskytování uživatelského ovládacího prvku Windows Form jako dialogového okna knihovny MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
+ [Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
   
 ## <a name="reference"></a>Odkaz  
  [CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md)  
@@ -63,15 +66,15 @@ Použití tříd MFC Windows Forms podpory, můžete hostovat ovládací prvky W
   
  [CWinFormsView – třída](../mfc/reference/cwinformsview-class.md)  
   
- [ICommandSource rozhraní](../mfc/reference/icommandsource-interface.md)  
+ [ICommandSource – rozhraní](../mfc/reference/icommandsource-interface.md)  
   
- [Rozhraní ICommandTarget rozhraní](../mfc/reference/icommandtarget-interface.md)  
+ [ICommandTarget – rozhraní](../mfc/reference/icommandtarget-interface.md)  
   
- [ICommandUI rozhraní](../mfc/reference/icommandui-interface.md)  
+ [ICommandUI – rozhraní](../mfc/reference/icommandui-interface.md)  
   
- [IView rozhraní](../mfc/reference/iview-interface.md)  
+ [IView – rozhraní](../mfc/reference/iview-interface.md)  
   
- [Commandhandler –](../atl/commandhandler.md)  
+ [CommandHandler](../atl/commandhandler.md)  
   
  [DDX_ManagedControl –](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)  
   
@@ -80,7 +83,7 @@ Použití tříd MFC Windows Forms podpory, můžete hostovat ovládací prvky W
 ## <a name="related-sections"></a>Související oddíly  
  [Windows Forms](/dotnet/framework/winforms/index)  
   
- [Ovládací prvky Windows Forms](/dotnet/framework/winforms/controls/index)  
+ [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/index)  
   
 ## <a name="see-also"></a>Viz také  
  [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)   

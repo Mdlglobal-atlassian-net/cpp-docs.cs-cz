@@ -99,11 +99,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 852a9d97fed21835c966b4f47af4fb24ad026546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-class"></a>deque – třída
 Uspořádá elementy daného typu v lineární uspořádání a jako vektor, umožňuje vysoká rychlost náhodného přístup k žádné elementu a efektivní vkládání a odstraňování za kontejnerem. Ale na rozdíl od vektor `deque` třída také podporuje efektivní vkládání a odstraňování vpředu kontejneru.  
@@ -2267,5 +2268,5 @@ int main( )
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

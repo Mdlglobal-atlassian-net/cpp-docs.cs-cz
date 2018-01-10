@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73048093c35fe28bf02af60d6b99963df8394dc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4764cf615bf04e9f2b1c3c816becc5a58da35f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Konkrétní Microsoft**  
@@ -66,11 +67,11 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>Poznámky  
  Tyto členské funkce volání `CoCreateInstance` k vytvoření nového objektu COM a pak dotazů pro typ rozhraní tento inteligentní ukazatel. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele. Tato rutina indikuje úspěch nebo neúspěch pomocí hodnoty `HRESULT`.  
   
--   **CreateInstance – (** `rclsid` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané spuštěné **CLSID**.        
+-   **CreateInstance – (** `rclsid` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané spuštěné **CLSID**.  
   
--   **CreateInstance – (** `clsidString` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadaný řetězec znaků Unicode, který obsahuje buď spuštěné **CLSID** (počínaje "**{**") nebo **ProgID**.        
+-   **CreateInstance – (** `clsidString` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadaný řetězec znaků Unicode, který obsahuje buď spuštěné **CLSID** (počínaje "**{**") nebo **ProgID**.  
   
--   **CreateInstance – (** `clsidStringA` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané vícebajtový řetězec, který obsahuje buď spuštěné  **CLSID** (počínaje "**{**") nebo **ProgID**.       Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
+-   **CreateInstance – (** `clsidStringA` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané vícebajtový řetězec, který obsahuje buď spuštěné  **CLSID** (počínaje "**{**") nebo **ProgID**. Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
   
  **Konkrétní Microsoft END**  
   

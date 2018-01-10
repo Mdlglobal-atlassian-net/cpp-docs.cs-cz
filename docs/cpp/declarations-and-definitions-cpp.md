@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b22be2b4d04350a25fcb59bd3dee49114504b547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
 Deklarace zavést názvy v programu, například názvy proměnných, obory názvů, třídy a funkce. Deklarace také určit typ informací, jakož i dalších vlastností objektu, který je právě deklarován. Název musí být deklarován před jeho použitím; v jazyce C++ bod, ve kterém je deklarovaná název určuje, zda je viditelná pro kompilátor. Nemůže odkazovat na funkci nebo třídu, která je deklarovaná novější někde v jednotce kompilace; můžete použít *předávat deklarace* získat obejít toto omezení.  

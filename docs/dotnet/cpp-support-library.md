@@ -17,17 +17,20 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46d08372e96ef28e45a27da4c16680645d8d50e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f072d9b23a39f82f8a8fd3e8482dffacad48d70c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-support-library"></a>Knihovna podpory C++
 Knihovna podpory C++ poskytuje třídy, které podporují spravované programování v jazyce C++.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)  
+ [Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)  
   
  [Třídy správy zdrojů](../dotnet/resource-management-classes.md)  
   
@@ -35,4 +38,4 @@ Knihovna podpory C++ poskytuje třídy, které podporují spravované programov�
   
  [Volání funkcí ve specifické aplikační doméně](../dotnet/calling-functions-in-a-specific-application-domain.md)  
   
- [com::PTR](../dotnet/com-ptr.md)
+ [com::ptr](../dotnet/com-ptr.md)

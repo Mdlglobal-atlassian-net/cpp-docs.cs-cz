@@ -27,11 +27,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f02f6ad2d7486c8460d3dae42500f165f60b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Plánovač úloh (Concurrency Runtime)
 Témata v této části dokumentace popisují důležité funkce Plánovač úloh Concurrency Runtime. Plánovač úloh je užitečné, pokud chcete optimalizovat výkon váš stávající kód, který používá Concurrency Runtime.  
@@ -63,7 +64,7 @@ Témata v této části dokumentace popisují důležité funkce Plánovač úlo
 |[Kontexty](../../parallel/concrt/contexts.md)|Popisuje roli kontextů, `concurrency::wait` funkce a `concurrency::Context` třídy. Tato funkce používejte, když potřebujete řídit při kontexty blokovat, odblokovat a yield nebo pokud chcete povolit Překryvný odběr ve vaší aplikaci.|  
 |[Funkce správy paměti](../../parallel/concrt/memory-management-functions.md)|Popisuje `concurrency::Alloc` a `concurrency::Free` funkce. Tyto funkce můžou zlepšit výkon paměti přidělením a způsobem souběžné uvolňování paměti.|  
 |[Porovnání s jinými modely souběžného zpracování](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Popisuje rozdíly mezi plánování mechanismy preemptivní a spolupráci.|  
-|[Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje způsob použití různých paralelní vzorů, například paralelní algoritmy ve svých aplikacích.|  
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje způsob použití různých paralelní vzorů, například paralelní algoritmy ve svých aplikacích.|  
 |[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)|Popisuje způsob použití asynchronních agentů ve svých aplikacích.|  
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Popisuje Concurrency Runtime, který zjednodušuje paralelní programování a obsahuje odkazy na související témata.|
 

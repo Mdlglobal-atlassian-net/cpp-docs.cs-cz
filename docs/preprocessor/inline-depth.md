@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ec052eb387e2dd5ea169b45cdf98edb62f4c203
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f105512910658603139105ecf1cf1d5b7030ad00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inlinedepth"></a>inline_depth
 Určuje hloubku vloženého heuristického hledání tak, že nebude vložena žádná funkce, nachází-li se v hloubce (v grafu volání) větší než `n`.  
@@ -53,4 +54,4 @@ Určuje hloubku vloženého heuristického hledání tak, že nebude vložena ž
   
 ## <a name="see-also"></a>Viz také  
  [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_recursion –](../preprocessor/inline-recursion.md)
+ [inline_recursion](../preprocessor/inline-recursion.md)

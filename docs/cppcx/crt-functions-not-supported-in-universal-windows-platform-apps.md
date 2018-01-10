@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1550dca016b765278f8f1fe7ed9d95c4bfd3932e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>CRT – funkce není podporována v aplikacích pro univerzální platformu Windows
 Mnoho funkcí jazyka C runtime (CRT) nejsou k dispozici, při sestavování aplikací pro univerzální platformu Windows (UWP). V některých případech jsou k dispozici alternativní řešení – – například můžete použít rozhraní API Win32 nebo prostředí Windows Runtime. Ale v ostatních případech funkcí CRT zakázali protože funkce, které odpovídají jejich nebo podporující rozhraní API neplatí pro aplikace UWP.  

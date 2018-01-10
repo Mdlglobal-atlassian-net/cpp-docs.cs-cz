@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3844dc5b53defcb02f1dab1a97f05760d05d531f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-overloading"></a>Přetížení operátoru
 `operator` – Klíčové slovo deklaruje funkci zadání co `operator-symbol` znamená při použití instance třídy. To dává operátor více než jeden význam, nebo "přetížení" jej. Kompilátor rozlišuje mezi různé významy operátoru prověřením typy operandů.  
@@ -106,7 +107,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Volání funkce](../cpp/function-call-cpp.md)  
   
--   [Subscripting](../cpp/subscripting.md)  
+-   [Podskripty](../cpp/subscripting.md)  
   
 -   [Přístup ke členu – třída](../cpp/member-access.md)  
   
@@ -185,7 +186,7 @@ int main() {
   
 5.  [Volání funkce](../cpp/function-call-cpp.md)  
   
-6.  [Subscripting](../cpp/subscripting.md)  
+6.  [Podskripty](../cpp/subscripting.md)  
   
 7.  [Přístup ke členu](../cpp/member-access.md)  
   

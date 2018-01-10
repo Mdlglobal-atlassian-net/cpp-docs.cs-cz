@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48c8da8fda2cd70676476532b3ed3646285f0782
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherfile-class"></a>CGopherFile – třída
 Poskytuje funkce pro vyhledání a přečtení souborů na gopher serveru.  
@@ -95,7 +96,7 @@ CGopherFile(
  Popisovač pro aktuální relaci Internet.  
   
  `pstrLocator`  
- Ukazatel na řetězec používaná k nalezení gopher serveru. V tématu [Gopher relací](https://msdn.microsoft.com/library/24wz8xze.aspx) Další informace o gopher lokátory.  
+ Ukazatel na řetězec používaná k nalezení gopher serveru. V tématu [Gopher relací](cgopherlocator-class.md) Další informace o gopher lokátory.  
   
  *dwLocLen*  
  DWORD, který obsahuje počet bajtů v `pstrLocator`.  

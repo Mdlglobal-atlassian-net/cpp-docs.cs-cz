@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6aea339b4ddb91336405d281d9b902a8f2a86c3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandsource-interface"></a>ICommandSource rozhraní
 Spravuje příkazy, odeslané ze zdrojového objektu příkazu do uživatelského ovládacího prvku.  
@@ -85,7 +86,7 @@ Popisovač metody obslužná rutina příkazu.
 
 ### <a name="remarks"></a>Poznámky
 Tato metoda se zdrojovým objektem příkaz přidá cmdHandler obslužná rutina příkazu a obslužná rutina se mapuje na cmdID.
-V tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](https://msdn.microsoft.com/library/y33d8624.aspx) příklad použití AddCommandHandler.
+V tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad použití AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 
@@ -218,4 +219,4 @@ ID příkazu k odeslání zprávy.
 Tato metoda synchronně odešle zprávu mapovat na ID zadané pomocí příkazu. Volá CWnd::SendMessage umístit zprávy ve frontě zpráv okna a čeká na zprávu postupu okno zpracovala před vrácením.
 ## <a name="see-also"></a>Viz také  
  [Postupy: Přidání příkaz prvku směrování do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [Rozhraní ICommandTarget rozhraní](../../mfc/reference/icommandtarget-interface.md)
+ [ICommandTarget – rozhraní](../../mfc/reference/icommandtarget-interface.md)

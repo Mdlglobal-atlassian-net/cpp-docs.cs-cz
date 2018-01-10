@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efc79bf15b9b238235c9ef64587c8f9a22dccdcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 488ba883a64683ab8b9428a055cdc1aff5bed6c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Jakým způsobem volá framework obslužnou rutinu
 V následujících tématech nejprve zkontrolujte, jak rozhraní směruje příkazy, a poté zkontrolujte, jak se odesílají další zprávy a oznámení ovládacích prvků do systému windows:  

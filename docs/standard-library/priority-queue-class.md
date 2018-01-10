@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k nejvyšší element některé základní typ kontejneru, který je vždycky na největší nebo nejvyšší prioritou. Nové prvky lze přidat do priority_queue a nejvyšší element priority_queue může být prověřovány nebo odebrat.  
@@ -557,5 +558,5 @@ The element at the top of the priority_queue is 69.
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

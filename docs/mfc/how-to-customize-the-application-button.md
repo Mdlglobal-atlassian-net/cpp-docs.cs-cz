@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a2512c212efe2cba09d23baf1a997de3a98d154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-customize-the-application-button"></a>Postupy: Přizpůsobení tlačítka aplikace
 Když kliknete na tlačítko aplikace, zobrazí se nabídka příkazů. Obvykle se v nabídce obsahuje příkazů týkajících se souboru, jako **otevřete**, **Uložit**, **tiskových**, a **ukončení**.  
@@ -46,7 +47,7 @@ Když kliknete na tlačítko aplikace, zobrazí se nabídka příkazů. Obvykle 
 |**HDPI velkých obrázků**|Určuje identifikátor vysoké DPI velkých obrázků. Pokud aplikace běží na monitorování vysoké DPI **velkých obrázků HDPI** se používá místo **velkých obrázků**.|  
 |**HDPI malých obrázků**|Určuje identifikátor vysoké DPI malých obrázků. Při spuštění aplikace na vysokou DPI monitorování, **malých obrázků HDPI** se používá místo **malých obrázků**.|  
 |**ID**|Určuje identifikátor ovládacího prvku.|  
-|**Bitové kopie**|Určuje identifikátor tlačítko ikona aplikace. Ikona je 26 x 26 32-bit rastrového obrázku, který má průhlednost alfa. Průhledné plochy na ikonu se zvýrazněnou při kliknutí na nebo při přechodu myší nad tlačítka aplikace.|  
+|**Obrázek**|Určuje identifikátor tlačítko ikona aplikace. Ikona je 26 x 26 32-bit rastrového obrázku, který má průhlednost alfa. Průhledné plochy na ikonu se zvýrazněnou při kliknutí na nebo při přechodu myší nad tlačítka aplikace.|  
 |**Klíče**|Určuje řetězec, který se zobrazí, když je povolena klíč tip navigace. Navigační tlačítka klíč je povoleno po stisknutí klávesy ALT.|  
 |**Velkých obrázků**|Určuje identifikátor bitové kopie, který obsahuje řadu ikony 32 x 32. Ikony jsou používány tlačítka v kolekci hlavní položky.|  
 |**Hlavní položky**|Obsahuje kolekci položek nabídky, které se zobrazují v nabídce aplikace.|  

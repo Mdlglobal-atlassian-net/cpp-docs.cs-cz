@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd7b35758caaf76904eb3144d22d747c22f02804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_multimap` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -78,7 +81,7 @@ template<typename Key,
 |[hash_multimap::key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)|Typ klíče řazení|  
 |[hash_multimap::mapped_type (STL/CLR)](../dotnet/hash-multimap-mapped-type-stl-clr.md)|Typ namapované hodnotu přidruženou každý klíč.|  
-|[hash_multimap::Reference (STL/CLR)](../dotnet/hash-multimap-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[hash_multimap::reference (STL/CLR)](../dotnet/hash-multimap-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[hash_multimap::reverse_iterator (STL/CLR)](../dotnet/hash-multimap-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[hash_multimap::size_type (STL/CLR)](../dotnet/hash-multimap-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[hash_multimap::value_compare (STL/CLR)](../dotnet/hash-multimap-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -89,15 +92,15 @@ template<typename Key,
 |[hash_multimap::begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)|Spočítá počet intervalů.|  
 |[hash_multimap::clear (STL/CLR)](../dotnet/hash-multimap-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[hash_multimap::Count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[hash_multimap::Empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[hash_multimap::count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[hash_multimap::Erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[hash_multimap::Find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[hash_multimap::find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
 |[hash_multimap::hash_delegate (STL/CLR)](../dotnet/hash-multimap-hash-delegate-stl-clr.md)|Zkopíruje hash delegáta pro klíč.|  
 |[hash_multimap::hash_multimap (STL/CLR)](../dotnet/hash-multimap-hash-multimap-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[hash_multimap::Insert (STL/CLR)](../dotnet/hash-multimap-insert-stl-clr.md)|Přidá prvky.|  
+|[hash_multimap::insert (STL/CLR)](../dotnet/hash-multimap-insert-stl-clr.md)|Přidá prvky.|  
 |[hash_multimap::key_comp (STL/CLR)](../dotnet/hash-multimap-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)|Spočítá průměrný počet prvků na kbelík.|  
 |[hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
@@ -114,7 +117,7 @@ template<typename Key,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[hash_multimap::Operator = (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -173,4 +176,4 @@ template<typename Key,
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

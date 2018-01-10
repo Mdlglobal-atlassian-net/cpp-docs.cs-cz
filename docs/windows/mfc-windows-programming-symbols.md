@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67c1924b1e9ed3f533fc1f22fbc0f34a2ecf03be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symboly pro programování oken MFC
 Tyto symboly jsou taky součástí MFC podpůrné soubory, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly se používá hlavně s nabídkami. Při práci s nabídkami v editoru nabídky, tyto symboly se zobrazí v okně vlastnosti přidružené k běžné příkazy nabídky. Například pokud aplikace obsahuje nabídku souborů pomocí příkazu pro ukončení, tento příkaz bude spojený s symbol id_app_exit – v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

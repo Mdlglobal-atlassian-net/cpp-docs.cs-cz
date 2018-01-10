@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 `setlocale` a `_create_locale` funkce můžete použít rozhraní API systému Windows NLS podporované jazyky v operačních systémech, které nepoužívají znaková stránka kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [referenční dokumentace rozhraní API National jazykové podpory (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Řetězec jazyka může být některá z hodnot v **jazyk** a **zkratka jazyka** sloupce seznam podporovaných jazyků. Další informace o podpoře jazyka podle verze operačního systému najdete v tématu [příloha A: produktu chování](http://msdn.microsoft.com/goglobal/bb896001.aspx) v [MS-LCID]: odkaz na Windows jazyk kódu identifikátor (LCID).   
@@ -98,4 +99,4 @@ Implementace běhové knihovny jazyka C také podporuje tyto řetězce jazyků:
  [Názvy národních prostředí, jazyků a řetězce zemí/oblastí](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [Řetězce zemí/oblastí](../c-runtime-library/country-region-strings.md)   
  [setlocale –, _wsetlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale –, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
+ [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

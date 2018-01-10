@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16bf93390538a5f2abebb2bf327970dbec1d2a8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea0f68bbd0c426aee8141c27d6852bfaaa6ed523
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Přiřazení příkazů nabídky k textu stavového řádku v aplikacích MFC
 Aplikace může zobrazit popisný text pro každou příkazů nabídky, které uživatel může vybrat. To uděláte tak, že každý pomocí příkazu nabídky přiřadíte textového řetězce **výzva** vlastnost v okně Vlastnosti. Pokud máte řetězec [tabulky řetězců](../windows/string-editor.md) jejíž ID je stejný jako příkaz, aplikace MFC se automaticky zobrazí tento řetězec prostředku ve stavovém řádku spuštěné aplikace při nastavení ukazatele myši položku nabídky.  

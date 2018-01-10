@@ -50,11 +50,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 Je akcelerátor schopnost hardwaru, která je optimalizovaná pro data paralelní výpočty. Akcelerátor může být zařízení připojené ke sběrnici PCIe (například grafického procesoru), nebo může být rozšířené instrukce nastavit na hlavní procesoru.  
@@ -100,7 +101,7 @@ class accelerator;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)|Porovná tato `accelerator` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
+|[operator!=](#operator_neq)|Porovná tato `accelerator` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator` k tomuto objektu.|  
 |[Operator ==](#operator_eq_eq)|Porovná tato `accelerator` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
   
@@ -779,4 +780,4 @@ void wait();
  Vrátí `void`.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

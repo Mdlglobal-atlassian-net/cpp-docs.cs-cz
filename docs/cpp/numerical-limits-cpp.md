@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5679054d67e22ce5285023ca935942e30e6e04b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numerical-limits-c"></a>Numerické limity (C++)
 Dva standardní vložené soubory, LIMITS.H a FLOAT.H, definují číselné limity nebo minimální a maximální hodnoty, které proměnná daného typu může obsahovat. Tyto minimálních a maximální hodnoty jsou zaručit přenosný na C++ compiler, který používá stejné reprezentace dat jako ANSI c OMEZENÍ. H zahrnout soubor definuje [numerické limity pro integrální typy](../cpp/integer-limits.md)a FLOAT. Definuje H [numerické limity pro plovoucí typy](../cpp/floating-limits.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9bb1cbcb58e2693b33693b390a09d3826c77cfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a95193d5ca3df890c9c97f458b76413e588bc59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cleaning-up-documents-and-views"></a>Uklízení dokumentů a zobrazení
 Při zavírání dokumentu nejprve volá rámec jeho [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) – členská funkce. Pokud jste přidělili libovolná paměť v haldě v průběhu operace dokumentu `DeleteContents` je nejlepší místo k navrácení ho.  
@@ -32,5 +33,5 @@ Při zavírání dokumentu nejprve volá rámec jeho [DeleteContents](../mfc/ref
  Můžete přepsat zobrazení destruktor se zrušit přidělení žádné paměti, které jste přidělili v haldě.  
   
 ## <a name="see-also"></a>Viz také  
- [Inicializace a Uklízení dokumentů a zobrazení](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+ [Inicializace a uklízení dokumentů a zobrazení](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

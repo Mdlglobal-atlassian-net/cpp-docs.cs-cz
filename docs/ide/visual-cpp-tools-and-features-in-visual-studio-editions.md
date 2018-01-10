@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37f1eed2287c8fe655a124b1f76f48a203ab1607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Funkcí v edicích sady Visual Studio a nástrojů pro Visual C++
 Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v následujících tabulkách. Znak X v buňce označuje, že je tato funkce není k dispozici. prázdná buňka označuje, že tato funkce není k dispozici. Poznámky v závorkách znamenat, že funkce je k dispozici, ale s omezeným přístupem.  

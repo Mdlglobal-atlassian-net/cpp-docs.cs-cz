@@ -17,17 +17,18 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7c1681daf0f0ccae7d6307b2f6c000c01a313c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 734b118cfdd1523379e9fb1e5e157bf9da9824af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP ve Visual C++
 Rozhraní programu OpenMP C a C++ aplikace umožňuje psát aplikace, které efektivně používat víc procesorů. Visual C++ podporuje standard OpenMP 2.0.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Direktivy jazyka](../../parallel/openmp/reference/openmp-directives.md)  
+ [Direktivy](../../parallel/openmp/reference/openmp-directives.md)  
  Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.  
   
  [Klauzule](../../parallel/openmp/reference/openmp-clauses.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c5a701f42b2707b957753c1f8a22640c7818d72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0549f898a076b140e7b5bed23c1c1e8c60d6adba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Vytváření nemodálních dialogových oken
 Pro pole dialogového okna bez režimu je nutné zadat vlastní veřejný konstruktor ve vlastní třídy dialogového okna. Vytvoření nemodálního dialogové okno, volání veřejný konstruktor a pak zavolají objektu dialogového okna [vytvořit](../mfc/reference/cdialog-class.md#create) – členská funkce načíst prostředku dialogového okna. Můžete volat **vytvořit** během nebo po volání konstruktoru. Pokud má vlastnost prostředku dialogového okna **ws_visible –**, okamžitě se zobrazí dialogové okno. Pokud ne, musí volat jeho [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) – členská funkce.  

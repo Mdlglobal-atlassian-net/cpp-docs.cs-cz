@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>Pole (C++)
 Pole je kolekce podobně jako objekty. Nejjednodušším případě pole je vektor, který může být deklarován v následujícím pořadí:  
@@ -109,13 +110,13 @@ double TransportCosts[][cMarkets] = {
   
  Témata v této části:  
   
--   [Použití polí](../cpp/using-arrays-cpp.md)  
+-   [Používání polí](../cpp/using-arrays-cpp.md)  
   
 -   [Pole ve výrazech](../cpp/arrays-in-expressions.md)  
   
--   [Interpretace operátoru dolního indexu](../cpp/interpretation-of-subscript-operator.md)  
+-   [Interpretace operátoru podskriptu](../cpp/interpretation-of-subscript-operator.md)  
   
--   [Deference na typech pole](../cpp/indirection-on-array-types.md)  
+-   [Indirekce u typů polí](../cpp/indirection-on-array-types.md)  
   
 -   [Pořadí polí jazyka C++](../cpp/ordering-of-cpp-arrays.md)  
   

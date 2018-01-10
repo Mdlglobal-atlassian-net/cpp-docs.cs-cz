@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27107c794dfd4987eb0519dfeaa9762f47d0417c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ce2c554ac6d959df868b80c1959a286fb0ef307
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs – třída
 Třída Šablona používaná pro typy argumentů událostí pro rozlišených položek.  
@@ -46,13 +49,13 @@ class DeferrableEventArgs : public TEventArgsInterface
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Deferrableeventargs::getdeferral – metoda](../windows/deferrableeventargs-getdeferral-method.md)|Získá odkaz na [odložení](http://go.microsoft.com/fwlink/?LinkId=526520) objekt, který reprezentuje odložené události.|  
-|[Deferrableeventargs::invokeallfinished – metoda](../windows/deferrableeventargs-invokeallfinished-method.md)|Voláno k označení, že veškeré zpracování zpracování odložené události je kompletní.|  
+|[DeferrableEventArgs::GetDeferral – metoda](../windows/deferrableeventargs-getdeferral-method.md)|Získá odkaz na [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objekt, který reprezentuje odložené události.|  
+|[DeferrableEventArgs::InvokeAllFinished – metoda](../windows/deferrableeventargs-invokeallfinished-method.md)|Voláno k označení, že veškeré zpracování zpracování odložené události je kompletní.|  
   
 ## <a name="remarks"></a>Poznámky  
  Instance této třídy jsou předány obslužných rutin událostí pro odložené události. Parametry šablony představují rozhraní, které definuje podrobnosti o argumenty událostí pro konkrétní typ odložené události a třídu, která implementuje rozhraní.  
   
- Třída zobrazí jako první argument obslužné rutiny události pro odložené událost. Můžete volat [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) metoda získat [odložení](http://go.microsoft.com/fwlink/?LinkId=526520) objekt, ze kterého můžete získat všechny informace o odložených událostí. Po dokončení zpracování událostí, by měly volat Complete odložení objektu. Potom by měly volat [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) na konci obslužná rutina události, což zajistí, že je správně adrese dokončení všech odložených události.  
+ Třída zobrazí jako první argument obslužné rutiny události pro odložené událost. Můžete volat [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) metoda získat [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objekt, ze kterého můžete získat všechny informace o odložených událostí. Po dokončení zpracování událostí, by měly volat Complete odložení objektu. Potom by měly volat [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) na konci obslužná rutina události, což zajistí, že je správně adrese dokončení všech odložených události.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  
@@ -60,4 +63,4 @@ class DeferrableEventArgs : public TEventArgsInterface
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

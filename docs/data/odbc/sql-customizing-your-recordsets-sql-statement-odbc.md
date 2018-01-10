@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cae8862dd8fc10dd117b07414ab00a34117f5e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)
 Toto téma vysvětluje:  
@@ -164,4 +167,4 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
 ## <a name="see-also"></a>Viz také  
  [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)   
- [SQL: Provedení přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+ [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -91,11 +91,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eba062342aeb0ecc6e9818d7da9eead94b81a9af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forwardlist-class"></a>forward_list – třída
 Popisuje objekt, který řídí různých délka pořadí elementů. Pořadí je uloženo jako samostatně propojené seznam uzlů, každá obsahuje člen typu `Type`.  
@@ -169,7 +170,7 @@ class forward_list
 |[sloučení](#merge)|Odebere ze seznamu argumentů elementy, vloží je do cílového seznamu dopředného a řadí nové, kombinované sadu elementů ve vzestupném pořadí nebo v některých zadaném pořadí.|  
 |[pop_front –](#pop_front)|Odstraní prvek na začátek dopředného seznamu.|  
 |[push_front –](#push_front)|Přidá prvek na začátek seznamu předat dál.|  
-|[odebrat](#remove)|Vymaže elementy dopředného seznamu, který odpovídá zadané hodnotě.|  
+|[remove](#remove)|Vymaže elementy dopředného seznamu, který odpovídá zadané hodnotě.|  
 |[remove_if –](#remove_if)|Vymaže elementy dopředného seznamu, pro kterou je splněné zadaným predikátem.|  
 |[Změna velikosti](#resize)|Určuje novou velikost dopředného seznam.|  
 |[zpětné](#reverse)|Obrátí pořadí, ve kterém elementy objevují v seznamu předat dál.|  
@@ -957,5 +958,5 @@ typedef typename Allocator::value_type value_type;
  Typ se jedná o synonymum _ parametr šablony `Ty`.  
   
 ## <a name="see-also"></a>Viz také  
- [< forward_list – >](../standard-library/forward-list.md)
+ [<forward_list>](../standard-library/forward-list.md)
 

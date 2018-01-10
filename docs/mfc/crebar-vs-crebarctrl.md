@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dca7c6bc7c423018959a9ff38b5c54fa43f06c5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68cd21e21c14a34122f1b26345fab767728ac6a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 Poskytuje dvě třídy Vytvoření tyčová ocel MFC: [CReBar](../mfc/reference/crebar-class.md) a [crebarctrl –](../mfc/reference/crebarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). **CReBar** poskytuje všechny funkce běžné prvku matrice a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury za vás.  

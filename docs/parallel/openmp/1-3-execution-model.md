@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dddc4c10a77ca5dd277435837169478e0d5daca5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="13-execution-model"></a>1.3 Model spouštění
 OpenMP používá model připojení k rozvětvení paralelní provádění. I když tento model rozvětvení připojení může být užitečná pro řešení různé problémy, poněkud přizpůsobit pro velké aplikace založené na pole. OpenMP je určený pro podporu programy, které budou spuštěny správně i jako paralelní programy (více vláken provádění a knihovnu úplnou podporu OpenMP) a jako sekvenční programy (direktivy ignorována a jednoduchý knihovny zástupných procedur OpenMP). Ale je možné a umožnit vyvíjet program, který není chovat správně při spuštění postupně. Navíc různé stupně paralelního zpracování může vést k jiné číselných výsledků z důvodu změn v association číselné operací. Snížení sériové přidání například může mít jiný vzor přidružení přidání než paralelní snížení. Tyto jiné přidružení může změnit výsledky přidání s plovoucí desetinnou čárkou.  

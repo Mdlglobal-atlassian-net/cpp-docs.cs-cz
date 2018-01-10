@@ -15,22 +15,23 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8841ad9429fb9561952cce1320e030c64eb3a74b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 940fb1d210b6a53349f0d8391c3b41beb51d52d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3798"></a>C3798 chyby kompilátoru
 'specifikátor': deklarace vlastnosti nemůže mít specifikátor override (musí být umístěny na vlastnost metody get/set místo)  
   
  Vlastnost byla deklarována nesprávně. Další informace naleznete v tématu  
   
--   [Vlastnost](../../windows/property-cpp-component-extensions.md)  
+-   [property](../../windows/property-cpp-component-extensions.md)  
   
--   [abstraktní](../../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../../windows/abstract-cpp-component-extensions.md)  
   
--   [zapečetěná](../../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../../windows/sealed-cpp-component-extensions.md)  
   
 ## <a name="example"></a>Příklad  
  Následující ukázka generuje C3798  

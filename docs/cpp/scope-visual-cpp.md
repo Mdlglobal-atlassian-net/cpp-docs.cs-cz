@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>Rozsah (Visual C++)
 Názvy v jazyce C++ lze použít pouze v určité oblasti programu. Tato oblast se nazývá "obor" název. Obor určuje "životnost" název, který neoznačuje objekt statický rozsah. Obor rovněž určuje, zda název, pokud se označují jako třída konstruktory a destruktory a pokud jsou inicializovány proměnné místní do oboru. (Další informace najdete v tématu [konstruktory](../cpp/constructors-cpp.md) a [destruktory](../cpp/destructors-cpp.md).) Jsou k dispozici pět typy oboru:  

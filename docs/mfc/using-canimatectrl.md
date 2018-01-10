@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2054fcd5ca73263f8d26713c4e6c1e9a59323659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f27fd24c3c4334476c78ba0b59c90cbbb0d51f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-canimatectrl"></a>Používání atributu CAnimateCtrl
 Ovládacího prvku animace reprezentována třída [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), je okno, které zobrazí klip ve formátu Audio Video prokládaný (AVI) – ve standardním formátu video nebo zvuk systému Windows. Klip souborů AVI je řady rastrový obrázek snímků, jako jsou videa.  
@@ -35,7 +36,7 @@ Ovládacího prvku animace reprezentována třída [CAnimateCtrl](../mfc/referen
   
 -   [Použití ovládacího prvku animace](../mfc/using-an-animation-control.md)  
   
--   [Oznámení zaslaná z ovládacích prvků animace](../mfc/notifications-sent-by-animation-controls.md)  
+-   [Oznámení zaslaná z ovládacích prvků animace](../mfc/notifications-sent-by-animation-controls.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

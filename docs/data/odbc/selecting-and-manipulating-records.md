@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 978dc1940fd4e1c659631edc8feb712e594c9457
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dec5e0094405cf9d038e53959da97ba079736505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-manipulating-records"></a>Výběr záznamů a manipulace s nimi
 Za normálních okolností když vyberete záznamy ze zdroje dat pomocí SQL **vyberte** příkaz získat sadu výsledků, což je sada záznamů z tabulky nebo dotazu. S třídami databází použít objekt sady záznamů a vyberte přístup sadu výsledků dotazu. Toto je objekt třídy specifické pro aplikaci, která je odvozena od třídy [CRecordset](../../mfc/reference/crecordset-class.md). Když definujete třídy sady záznamů, je třeba zadat zdroj dat pro její přidružení, tabulku, kterou chcete použít a sloupců tabulky. Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) vytvoří připojení ke zdroji dat konkrétní třídu. Průvodci zápis [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkce člena třídy `CRecordset` vrátit název tabulky. Další informace o vytvoření sady záznamů tříd pomocí průvodců najdete v tématu [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md) a [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
@@ -43,4 +46,4 @@ Za normálních okolností když vyberete záznamy ze zdroje dat pomocí SQL **v
  Po dokončení práce objekt sady záznamů, zavřete a zničte jej. Další informace o sadách záznamů najdete v tématu [záznamů (ODBC)](../../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [ODBC a MFC](../../data/odbc/odbc-and-mfc.md)
+ [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

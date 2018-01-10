@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e90281b3202303fa95e44684f8250259d0d653
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 48dd657d4cf1b315b29fda881b949dea29204f24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-and-mfc"></a>Rozhraní ODBC a knihovna MFC
 > [!NOTE]
@@ -35,13 +38,13 @@ ms.lasthandoff: 10/24/2017
   
 -   [Připojení ke zdroji dat](connecting-to-a-data-source.md)  
   
--   [Výběr a manipulace s nimi záznamů](selecting-and-manipulating-records.md)  
+-   [Výběr záznamů a manipulace s nimi](selecting-and-manipulating-records.md)  
   
--   [Zobrazení a manipulace dat ve formuláři](displaying-and-manipulating-data-in-a-form.md)  
+-   [Zobrazení dat ve formuláři a manipulace s nimi](displaying-and-manipulating-data-in-a-form.md)  
   
 -   [Práce s dokumenty a zobrazeními](working-with-documents-and-views.md)  
   
--   [Přístup k rozhraní ODBC a jazyku SQL](access-to-odbc-and-sql.md)  
+-   [Přístup k rozhraní ODBC a jazyku SQL](access-to-odbc-and-sql.md)  
   
 -   [Další výklad o třídách knihovny MFC rozhraní ODBC](further-reading-about-the-mfc-odbc-classes.md)  
   

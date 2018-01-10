@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5848e4f200f528261a135e38e1898a256433871b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad62906f5ee509bd6f99caca55b0df581e1f629b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-manipulators-with-arguments"></a>Vlastní manipulátory bez argumentů
 Tato část popisuje, jak vytvořit jeden nebo více argumentů manipulátory výstupního datového proudu a jak používat manipulátory pro datové proudy nonoutput.  
@@ -29,7 +30,7 @@ Tato část popisuje, jak vytvořit jeden nebo více argumentů manipulátory v�
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Manipulátory výstupního datového proudu s jedním argumentem](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (`int` nebo `long`)  
   
- [Další jeden – Argument manipulátory výstupního datového proudu](../standard-library/other-one-argument-output-stream-manipulators.md)  
+ [Jiné manipulátory výstupního streamu s jedním argumentem](../standard-library/other-one-argument-output-stream-manipulators.md)  
   
 ## <a name="see-also"></a>Viz také  
  [iostream – programování](../standard-library/iostream-programming.md)

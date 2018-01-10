@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase – třída
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -52,14 +55,14 @@ class ComPtrRefBase;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator operátor IInspectable **](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Vrhá aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) data člena ukazatel k ukazatele k rozhraní IInspectable.|  
-|[ComPtrRefBase::operator IUnknown ** – operátor](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Vrhá aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) data člena ukazatel k ukazatele k rozhraní IUnknown.|  
+|[ComPtrRefBase::operator IInspectable** – operátor](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Vrhá aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) data člena ukazatel k ukazatele k rozhraní IInspectable.|  
+|[ComPtrRefBase::operator IUnknown** – operátor](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Vrhá aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) data člena ukazatel k ukazatele k rozhraní IUnknown.|  
   
 ### <a name="protected-data-members"></a>Chráněné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Comptrrefbase::ptr_ – datový člen](../windows/comptrrefbase-ptr-data-member.md)|Ukazatel na typ určený parametrem aktuální šablony.|  
+|[ComPtrRefBase::ptr_ – datový člen](../windows/comptrrefbase-ptr-data-member.md)|Ukazatel na typ určený parametrem aktuální šablony.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ComPtrRefBase`  
@@ -70,4 +73,4 @@ class ComPtrRefBase;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "35"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c8496e0128d3ebd88c5a3a2fafad593c135f6fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-ccx"></a>Kolekce (C + +/ CX)
 V jazyce C + +/ CX programu, můžete provést volné použijte standardní šablona knihovny (STL) kontejnery nebo jakýkoli jiný typ uživatelem definované kolekci. Ale pokud předáte kolekce a zpět přes rozhraní binární aplikace Windows Runtime (ABI) – například do ovládacího prvku XAML nebo klienta JavaScript – je nutné použít prostředí Windows Runtime typy kolekcí.  
@@ -104,7 +105,7 @@ void FindButton(UIElementCollection^ col)
   
  Prvky upravitelnými kolekce lze změnit, ale prvků jen pro čtení kolekce, která se označuje jako *zobrazení*, mohli číst jenom. Elementy [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) nebo[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) kolekce je přístupná pomocí iterovat nebo kolekce [Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) a indexu. Prvky asociativní kolekce můžete přistupovat pomocí kolekce [Map::Lookup](../cppcx/platform-collections-map-class.md#lookup) a klíč.  
   
- [Platform::Collections::map – třída](../cppcx/platform-collections-map-class.md)  
+ [Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)  
  Upravitelnými, asociativní kolekce. Mapa prvky jsou páry klíč hodnota. Vyhledávání klíč pro načtení její přidružené hodnoty a iterace v rámci všechny páry klíč hodnota, jsou podporované.  
   
  `Map`a `MapView` jsou na základě šablony `<K, V, C = std::less<K>>`; proto Komparátor, který můžete přizpůsobit.  Kromě toho `Vector` a `VectorView` jsou na základě šablony `<T, E = std::equal_to<T>>` tak, aby si můžete přizpůsobit chování `IndexOf()`. To je důležité hlavně pro `Vector` a `VectorView` struktur hodnotu. Chcete-li například vytvořit vektor\<Windows::Foundation::DateTime >, je nutné zadat vlastní Komparátor, protože data a času není přetížení == – operátor.  

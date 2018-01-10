@@ -44,11 +44,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d90482cc7b58962e76558a26bbf2777d8854e4ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování výjimek. K dispozici jsou dva mechanismů:  
@@ -115,7 +116,7 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
 ##  <a name="_core_further_reading_about_exceptions"></a>Další výklad o výjimkách  
  Na následující články vysvětlují použití knihovny MFC pro blokováním výjimka:  
   
--   [Výjimky: Zachytávání a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md)  
+-   [Výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md)  
   
 -   [Výjimky: Zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md)  
   
@@ -131,11 +132,11 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
   
 -   [Výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)  
   
--   [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
+-   [Výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
   
--   [Výjimky: Použití v makrech MFC a výjimky jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
+-   [Výjimky: Použití výjimek v makrech MFC a jazyce C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)   
- [Jak I: vytvořit vlastní třídy výjimek vlastní](http://go.microsoft.com/fwlink/linkid=128045)
+ [Jak I: vytvořit vlastní třídy výjimek vlastní](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

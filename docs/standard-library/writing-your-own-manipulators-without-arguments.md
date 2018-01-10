@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ccdd1222335cba8ba3169903f8a05e064801ccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7439908970d61f55f10915ff69bc990a6fcc841
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Psaní vlastních manipulátorů bez argumentů
 Zápis manipulátory, které nepoužívají argumenty vyžaduje odvození třídy ani používají komplexní makra. Předpokládejme, že tiskárna vyžaduje dvojici \<ESC > [k zadání tučné režimu. Můžete vložit tento pár přímo do datového proudu:  
@@ -51,5 +52,5 @@ _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
  Tato funkce slouží k rozšíření jiných přetížené operátory. V takovém případě je následných, `bold` vloží znaků do datového proudu. Funkce je volána, když je vložen do datového proudu, nemusí při tisku sousedících znaků. Tisk může tedy dojít ke zpoždění, kvůli ukládání do vyrovnávací paměti datový proud.  
   
 ## <a name="see-also"></a>Viz také  
- [Výstupní datové proudy](../standard-library/output-streams.md)
+ [Výstupní streamy](../standard-library/output-streams.md)
 

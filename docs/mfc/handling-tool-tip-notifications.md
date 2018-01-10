@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d6ec102d38e91389fddb3faf4eb83ace9ba7129
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-tool-tip-notifications"></a>Zpracování oznámení popisů tlačítek
 Pokud zadáte `TBSTYLE_TOOLTIPS` styl panelu nástrojů vytváří a spravuje prvkem popis tlačítka. Popis tlačítka je malé místní okno, které obsahuje na řádku textu s popisem tlačítka panelu nástrojů. Popis tlačítka je skrytý, zobrazování, pouze když uživatel uloží kurzor na tlačítka panelu nástrojů a ponechá ji existuje pro přibližně polovinu druhý. Popis tlačítka se zobrazí téměř kurzor.  

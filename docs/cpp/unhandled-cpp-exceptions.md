@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6954c3eecfb3e6048a653401f4238b950e3aecf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhandled-c-exceptions"></a>Nezpracované výjimky jazyka C++
 Pokud odpovídající obslužná rutina (nebo třemi tečkami **catch** obslužné rutiny) nebyl nalezen pro aktuální výjimky, předdefinovanou `terminate` běhové funkce je volána. (V libovolné obslužné rutině lze funkci `terminate` volat také explicitně.) Výchozí akcí funkce `terminate` je volání funkce `abort`. Chcete-li, aby funkce `terminate` vyvolala před ukončením aplikace jinou funkci v programu, vyvolejte funkci `set_terminate`, v jejímž jediném argumentu bude název funkce, která má být vyvolána. Funkci `set_terminate` lze vyvolat kdekoli v programu. `terminate` Rutina vždy volá funkci naposledy zadaný jako argument pro `set_terminate`.  
@@ -63,4 +64,4 @@ term_func was called by terminate.
  Funkce `term_func` by měla ukončit program nebo aktuální vlákno, ideálně vyvoláním funkce `exit`. Pokud k tomu nedojde a místo toho přejde funkce zpět na volající funkci, je vyvolána funkce `abort`.  
   
 ## <a name="see-also"></a>Viz také  
- [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+ [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

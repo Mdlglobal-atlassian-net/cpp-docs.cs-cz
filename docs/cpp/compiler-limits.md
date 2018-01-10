@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e64bedc169fb4737a7e16175099df5571df82ef2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf668ddfa1c2d7e62ca10963827056f9661b83f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-limits"></a>Omezení kompilátoru
 Standard jazyka C++ doporučuje limity pro různé jazykové konstrukce. Následuje seznam případů, kdy Visual C++ compiler neimplementuje doporučené omezení. První číslo je limit, který je vytvořen v ISO C++ 11 standardní (INCITS nebo ISO/IEC 14882-2011 [2012] přílohy B) a druhé číslo, které je implementováno modulem Visual C++ omezení:  

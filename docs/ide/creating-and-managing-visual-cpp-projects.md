@@ -22,11 +22,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e9ab166605d4d67e450a206cf1b47ea6d97f0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Vytváření a správa projekty využívající MSBuild Visual C++
 MSBuild je systém nativní sestavení pro Visual C++ a je obecně že nejvhodnější vytvořit systému pro aplikace UWP a také aplikací klasické pracovní plochy, které používají knihovny MFC nebo ATL. MSBuild je úzce integrovaná s Visual Studio IDE a systému projektu, ale můžete ji použít i z příkazového řádku. Počínaje Visual Studio 2017, Visual C++ podporuje [CMake a dalšími systémy bez MSBuild prostřednictvím funkce Otevřít složku](non-msbuild-projects.md).
@@ -52,20 +53,20 @@ Projekty Visual C++ můžete vytvořit tak, že zvolíte **soubor &#124; Nové &
  [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)  
  Popisuje typy souborů, které se používají s různými typy projektu nástroje MSBuild.  
   
- [Tvorba běžných projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)  
+ [Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)  
  Postup vytváření projektů s Visual C++ pomocí průvodců.  
   
- [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
+ [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
  Popisuje, jak používat stránky vlastností a vlastností k určení nastavení projektu.  
   
  [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)  
  Popisuje postup přidání tříd, metod, proměnné a další elementy do projektu přidat další funkce.  
   
- [Postupy: uspořádání výstupních souborů projektu pro sestavení](../ide/how-to-organize-project-output-files-for-builds.md)  
+ [Postupy: Uspořádání výstupních souborů projektu pro sestavení](../ide/how-to-organize-project-output-files-for-builds.md)  
  Popisuje, jak uspořádání výstupních souborů projektu.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Sestavení C/C++ programů](../build/building-c-cpp-programs.md)  
+ [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
  Obsahuje odkazy na témata popisující sestavení programu z příkazového řádku nebo z integrovaného vývojového prostředí sady Visual Studio.  
   
  [Referenční dokumentace jazyka Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  

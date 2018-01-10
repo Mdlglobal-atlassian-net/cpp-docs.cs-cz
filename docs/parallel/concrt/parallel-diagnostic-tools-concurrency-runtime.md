@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Paralelní diagnostické nástroje (Concurrency Runtime)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]poskytuje rozsáhlou podporu pro ladění a profilování vícevláknových aplikací.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="event-tracing"></a>Trasování událostí  
  Používá Concurrency Runtime [trasování událostí pro Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) oznámit instrumentace nástroje, jako je například profilery, když dojde k různé události. Tyto události zahrnují při plánovače je aktivace nebo deaktivace, pokud kontext začne, končí, blokuje, odblokuje nebo vypočítá a při paralelní algoritmus začíná nebo končí.  
   
- Nástroje, jako [vizualizér souběžnosti](/visualstudio/profiling/concurrency-visualizer) tuto funkci využívat; proto obvykle nemusíte tyto události pracovat přímo. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje trasování událostí, jako [Xperf](http://go.microsoft.com/fwlink/linkid=160628).  
+ Nástroje, jako [vizualizér souběžnosti](/visualstudio/profiling/concurrency-visualizer) tuto funkci využívat; proto obvykle nemusíte tyto události pracovat přímo. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje trasování událostí, jako [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   
  Concurrency Runtime vyvolá tyto události jenom v případě, že je povolené trasování. Volání [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) funkce povolit trasování událostí a [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) funkce pro vypnutí trasování.  
   

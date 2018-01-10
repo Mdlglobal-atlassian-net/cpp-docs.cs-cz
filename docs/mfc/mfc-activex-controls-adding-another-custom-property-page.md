@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 225535055f05fa8d6eeb08476004fbc5074e86b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e342df8bee9b69d0d84e3096f727d2c260b7493
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
 Ovládací prvek ActiveX v některých případech bude mít více vlastností než to bude přiměřeně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.  
@@ -33,9 +34,9 @@ Ovládací prvek ActiveX v některých případech bude mít více vlastností n
   
  Další informace o použití stránek vlastností v ovládacím prvku ActiveX najdete v následujících článcích:  
   
--   [Ovládací prvky MFC ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [Ovládací prvky MFC ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
     > [!NOTE]
     >  Důrazně doporučujeme tuto novou vlastnost, kterou stránky dodržovat velikost standard pro stránky vlastností ovládacího prvku ActiveX. Stránky uložených vlastností obrázků a barvu měr 250 × 62 jednotky dialogu (DLU). Stránka vlastností standardní písma je 250 x 110 dlu. Výchozí stránka vlastností vytvořené Průvodce ovládacím prvkem ActiveX používá standardní DLU 250 × 62.  
@@ -117,5 +118,5 @@ Ovládací prvek ActiveX v některých případech bude mít více vlastností n
  Po provedení nezbytné úpravy znovu sestavte projekt a otestovat kontejneru použít k testování nové stránky vlastností. V tématu [testování vlastností a událostí pomocí Test kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup kontejner testů.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

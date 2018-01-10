@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 001af91af02f5b24e58737181258f036fe73a407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-member-function-wizard"></a>Průvodce přidáním členské funkce
 Tento průvodce přidá deklaraci členské funkce soubor hlaviček a implementaci do souboru implementace pro vybrané třídy.  
@@ -32,8 +33,8 @@ Tento průvodce přidá deklaraci členské funkce soubor hlaviček a implementa
 ||||  
 |-|-|-|  
 |`char`|`int`|`unsigned int`|  
-|**Double**|**dlouhá**|`unsigned long`|  
-|**plovoucí desetinná čárka**|**krátký**|`void`|  
+|**double**|**long**|`unsigned long`|  
+|**float**|**short**|`void`|  
 |`HRESULT`|`unsigned char`||  
   
  **Název funkce**  
@@ -45,8 +46,8 @@ Tento průvodce přidá deklaraci členské funkce soubor hlaviček a implementa
 ||||  
 |-|-|-|  
 |`char`|`int`|`unsigned char`|  
-|**Double**|**dlouhá**|`unsigned int`|  
-|**plovoucí desetinná čárka**|**krátký**|`unsigned long`|  
+|**double**|**long**|`unsigned int`|  
+|**float**|**short**|`unsigned long`|  
   
  **Název parametru**  
  Nastaví název parametru, který přidáváte členské funkce, pokud funkci člen má parametry.  
@@ -57,17 +58,17 @@ Tento průvodce přidá deklaraci členské funkce soubor hlaviček a implementa
  **Přístup**  
  Nastaví přístupu k funkci člen. Modifikátory přístupu jsou klíčová slova, která určující přístup ostatní třídy mají členské funkce. V tématu [řízení přístup ke členu](../cpp/member-access-control-cpp.md) pro další informace o přístupu. Úroveň přístupu funkce členů je nastavena na **veřejné** ve výchozím nastavení.  
   
--   [veřejné](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [chráněný](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [privátní](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  Zkontrolujte, jestli jsou nové funkce člen statická nebo virtuální, a zda je vložené nebo prázdná. Pokud nastavíte členskou funkci jako prázdnou, `Virtual` je zaškrtnuté políčko a **vložené** zaškrtávací políčko je k dispozici. Výchozí hodnota je nevirtuální, nestatické členské funkce.  
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|[Statické](../cpp/storage-classes-cpp.md)|Určuje, že funkce chová jako globální a lze volat mimo třídu, i když bez vytváření instance třídy. Členská funkce nemá přístup k nestatické členy. Členské funkce zadaná jako `Static` nemůže být virtuální.|  
+|[Static](../cpp/storage-classes-cpp.md)|Určuje, že funkce chová jako globální a lze volat mimo třídu, i když bez vytváření instance třídy. Členská funkce nemá přístup k nestatické členy. Členské funkce zadaná jako `Static` nemůže být virtuální.|  
 |[Virtuální](../cpp/virtual-cpp.md)|Zajišťuje, že pro objekt, bez ohledu na to výraz použitý k volání členské funkce je volána funkce správné člen. Členské funkce zadaná jako `Virtual` nemůže být statická.|  
 |**Čistý**|Označuje, žádné implementace jsou dodané pro člena virtuální funkci se deklarovat; Proto **prázdná** lze zadat pouze u člena virtuální funkce. Třída, která obsahuje alespoň jeden prázdné virtuální členské funkce považuje za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat prázdné virtuální členské funkce nebo, příliš, jsou abstraktní třídy.|  
 |[Vložené](../cpp/inline-functions-cpp.md)|Dá pokyn kompilátoru vložení kopii tělo funkce člena do každé místo, kde je volána funkce člen. Členské funkce zadaná jako **vložené** nemůže být prázdná.|  

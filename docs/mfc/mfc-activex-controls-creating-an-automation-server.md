@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 56b05c85212630b8e368817006098aeff2ceb832
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c3de04fbbfa9f2d0b55b7e31ca02faeddfa5c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace
 Můžete vyvíjet ovládacího prvku ActiveX knihovny MFC jako serveru automatizace pro účely programově vložení tohoto ovládacího prvku v jiné aplikaci a volání metod v ovládacím prvku z aplikace. Takový ovládací prvek bude stále k dispozici pro hostování v kontejneru ovládacího prvku ActiveX.  
@@ -57,5 +58,5 @@ Můžete vyvíjet ovládacího prvku ActiveX knihovny MFC jako serveru automatiz
  Pokud přidáte metody do ovládacího prvku ActiveX po použití v aplikaci, můžete začít používat nejnovější verzi ovládacího prvku v aplikaci tak, že odstraníte soubory, které byly vytvořeny při importu knihovny typů. Znovu proveďte importujte knihovny typů.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

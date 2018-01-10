@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78afaeb771cac88d02fe15870df329e97c4cd1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-mfc"></a>Seznamy vlastností (MFC)
 Tato řada článků vysvětluje, jak implementovat podporu pro seznam vlastností v aplikacích MFC. Seznam vlastností, také známé jako karta dialogového okna, poskytuje způsob, jak spravovat velké počty ovládacích prvků v dialogovém okně. Obsahuje seznam vlastností stránky vlastností, každý podle prostředku šablony samostatné dialogové okno. Můžete rozdělit vašem dialogovém ovládacích prvků do logických skupin a umístí každou skupinu vlastní stránky vlastností.  
@@ -31,7 +32,7 @@ Tato řada článků vysvětluje, jak implementovat podporu pro seznam vlastnost
   
 -   [Seznam vlastností a stránky vlastností](../mfc/property-sheets-and-property-pages-in-mfc.md)  
   
--   [Použití seznamů vlastností v aplikaci](../mfc/using-property-sheets-in-your-application.md)  
+-   [Použití seznamů vlastností v aplikaci](../mfc/using-property-sheets-in-your-application.md)  
   
 -   [Přidání ovládacích prvků do seznamu vlastností](../mfc/adding-controls-to-a-property-sheet.md) (na rozdíl od stránky vlastností)  
   

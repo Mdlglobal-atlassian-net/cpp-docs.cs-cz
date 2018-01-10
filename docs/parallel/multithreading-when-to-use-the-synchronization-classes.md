@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b72b3ffac2c4c295aa997e43e52b0bf5e67fe985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38437983552dfdf2cf6708ec5fd067e06387ea5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading: Kdy použít synchronizační třídy
 Vícevláknové třídy dodávané s knihovnou MFC rozdělit do dvou kategorií: synchronizačními objekty ([CSyncObject](../mfc/reference/csyncobject-class.md), [prohlížení](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), a [CEvent](../mfc/reference/cevent-class.md)) a synchronizace přístup k objektům ([CMultiLock](../mfc/reference/cmultilock-class.md) a [CSingleLock](../mfc/reference/csinglelock-class.md)).  
@@ -62,4 +63,4 @@ Vícevláknové třídy dodávané s knihovnou MFC rozdělit do dvou kategorií:
  Informace o tom, jak se používají synchronizační třídy najdete v tématu [Multithreading: jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Informace o synchronizaci najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Informace o podpoře více vláken v prostředí MFC najdete v tématu [Multithreading s C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

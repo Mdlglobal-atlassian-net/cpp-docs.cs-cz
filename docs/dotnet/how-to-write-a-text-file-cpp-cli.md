@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58b53159bab17ef0fddf5b26606889f89412856e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Postupy: Zápis do textového souboru (C++/CLI)
 Následující příklad kódu ukazuje, jak vytvořte textový soubor a zápis textu do ní pomocí <xref:System.IO.StreamWriter> třída, která je definována v <xref:System.IO> oboru názvů. <xref:System.IO.StreamWriter> Konstruktor přebírá název souboru, který se má vytvořit. Pokud soubor existuje, je přepsán (Pokud je nastavena hodnota True předat jako druhý <xref:System.IO.StringWriter> argument konstruktoru).  
@@ -55,4 +58,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Souborová služba a datový proud I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

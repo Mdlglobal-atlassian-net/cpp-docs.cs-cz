@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů s náhodným přístupem. Použít metodu kontejneru `deque` ke správě pořadí elementů, který vypadá jako souvislý blok úložiště, ale které zvětšit nebo zmenšit na obou koncích, aniž by bylo nutné zkopírovat všechny zbývající elementy. Proto můžete implementovat efektivně `double-ended queue`. (Proto název.)  
@@ -65,31 +68,31 @@ template<typename Value>
 |[deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
 |[deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní kontejneru.|  
 |[deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
-|[deque::Reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[deque::reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[deque::Assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Nahradí všechny elementy.|  
-|[deque::AT (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Přístup k elementu na zadané pozici.|  
+|[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Přístup k elementu na zadané pozici.|  
 |[deque::back (STL/CLR)](../dotnet/deque-back-stl-clr.md)|Přístup k posledním elementem.|  
 |[deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|Odebere všechny prvky.|  
 |[deque::deque (STL/CLR)](../dotnet/deque-deque-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[deque::Empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md)|Určuje konec řízené sekvence.|  
-|[deque::Erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
 |[deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|Přístup k první prvek.|  
-|[deque::Insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
+|[deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
 |[deque::pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)|Odebere poslední element.|  
 |[deque::pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)|Odebere první prvek.|  
 |[deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)|Přidá nový posledním elementem.|  
 |[deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)|Přidá nový první prvek.|  
 |[deque::rbegin (STL/CLR)](../dotnet/deque-rbegin-stl-clr.md)|Označuje začátek odstínech řízené sekvenci.|  
 |[deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)|Označuje konec odstínech řízené sekvenci.|  
-|[deque::Resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Změní počet elementů.|  
+|[deque::resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Změní počet elementů.|  
 |[deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)|Spočítá počet prvků.|  
 |[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|Zamění obsah dvou kontejnerů.|  
 |[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
@@ -101,14 +104,14 @@ template<typename Value>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[deque::Operator! = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Určuje, zda dva `deque` objekty nejsou stejné.|  
-|[deque::Operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Přístup k elementu na zadané pozici.|  
-|[Operator < (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Určuje, zda `deque` objektu je menší než jiná `deque` objektu.|  
-|[Operator < = (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Určuje, zda `deque` objektu je menší než nebo rovna do jiného `deque` objektu.|  
-|[Operator = (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator == (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Určuje, zda `deque` objekt rovná jiné `deque` objektu.|  
-|[Operator > (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Určuje, zda `deque` je větší než druhý objekt `deque` objektu.|  
-|[Operator > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Určuje, zda `deque` objekt je větší než nebo rovna hodnotě jiného `deque` objektu.|  
+|[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Určuje, zda dva `deque` objekty nejsou stejné.|  
+|[deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Přístup k elementu na zadané pozici.|  
+|[operator< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Určuje, zda `deque` objektu je menší než jiná `deque` objektu.|  
+|[operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Určuje, zda `deque` objektu je menší než nebo rovna do jiného `deque` objektu.|  
+|[operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator== (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Určuje, zda `deque` objekt rovná jiné `deque` objektu.|  
+|[operator> (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Určuje, zda `deque` je větší než druhý objekt `deque` objektu.|  
+|[operator>= (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Určuje, zda `deque` objekt je větší než nebo rovna hodnotě jiného `deque` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -144,4 +147,4 @@ template<typename Value>
  [fronty (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [Zásobník (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

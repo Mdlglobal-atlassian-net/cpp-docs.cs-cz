@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d5321c2e4167c38123f57ff8e416e50bc8ac5a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 454e64d67321282030126d2aab023e9f587c1cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-io-classes"></a>Třídy I/O souborů
 Tyto třídy poskytuje rozhraní pro tradiční disku soubory, soubory v paměti, aktivní datové proudy a rozhraní Windows sockets. Všechny třídy odvozené od `CFile` lze použít s `CArchive` objekt pro provedení serializace.  

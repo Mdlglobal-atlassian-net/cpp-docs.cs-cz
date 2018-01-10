@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8416e7a176c00e5fb3067d1c1cfa447445dab54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 Jedno z výkonnější použití ovládacích prvků ActiveX je datovou vazbu, která umožňuje vlastnost ovládacího prvku, který má být svázána s konkrétní pole v databázi. Když uživatel upravuje data v této vázané vlastnosti, upozorní ovládacího prvku databáze a požadavky aktualizovat pole záznamu. Databáze poté oznámí kontrolu nad úspěch nebo selhání žádosti.  
@@ -138,5 +139,5 @@ Koncepční Diagram ovládacího prvku typu vázané na Data
  Teď můžete sestavit projekt, který bude zaregistrovat ovládací prvek. Při vložení ovládacího prvku v dialogovém okně, **datové pole** a **zdroj dat** vlastnosti bude byly přidány a teď si můžete vybrat zdroj dat a pole pro zobrazení v ovládacím prvku.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)   
 

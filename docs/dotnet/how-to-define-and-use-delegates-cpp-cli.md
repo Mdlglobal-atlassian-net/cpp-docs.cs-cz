@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f400a03f1b9ae877ee7ec681cb038698a92598a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Postupy: Definice a používání delegátů (C++/CLI)
 Tento článek ukazuje, jak definice a používání delegátů v jazyce C + +/ CLI.  
@@ -82,7 +85,7 @@ int main( )
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 static SomeClass::Func - single  
@@ -117,7 +120,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 test  
@@ -163,7 +166,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 Invoking delegate a:  
@@ -220,7 +223,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 Call to Managed Function  
@@ -263,7 +266,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 hello  
@@ -345,7 +348,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 2  
@@ -421,7 +424,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 11  
@@ -460,7 +463,7 @@ int main() {
 };  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 in f(R ^ r)  
@@ -504,7 +507,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 12  
@@ -512,4 +515,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Delegát (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)
+ [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)

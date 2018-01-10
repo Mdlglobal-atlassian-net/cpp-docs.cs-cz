@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a297ee1676fb3ffbff45d46334d20280beeab078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a82afb894b31dcbee88c7ecdf0720ef198c866b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Postupy: Použití regulárních výrazů k extrakci datových polí (C++/CLI)
 Následující příklad kódu ukazuje použití regulárních výrazů extrahovat data z formátovaný řetězec. Následující příklad kódu používá <xref:System.Text.RegularExpressions.Regex> třída zadat vzor, který odpovídá e-mailovou adresu. Tento vzor zahrnuje identifikátory pole, které lze použít k načtení uživatele a částí názvu hostitele každou e-mailovou adresu. <xref:System.Text.RegularExpressions.Match> Třída se používá k provádění skutečné vzor shody. Pokud daná e-mailová adresa je platná, jsou extrahována a zobrazí uživatelské jméno a názvy hostitelů.  
@@ -72,4 +75,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Regulární výrazy rozhraní .NET framework](/dotnet/standard/base-types/regular-expressions)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

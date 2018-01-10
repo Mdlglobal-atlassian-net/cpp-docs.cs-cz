@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)  
   
@@ -39,7 +40,7 @@ A *třídy úložiště* v kontextu C++ deklarace proměnných je specifikátor 
 
 ## <a name="in-this-section"></a>V této části:
   
--   [statické](#static)  
+-   [static](#static)  
 -   [extern](#extern)  
 -   [thread_local](#thread_local)
 
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 Všimněte o `thread_local` specifikátor:  
+
+- Dynamicky inicializovaného lokální proměnné vláken v knihovnách DLL nemusí správně inicializována všechna volání vlákna. Další informace najdete v tématu [vlákno](thread.md).
   
 -  `thread_local` Specifikátor mohou být kombinovány s `static` nebo `extern`.  
   
 -  Můžete použít `thread_local` pouze na data deklarace a definice; `thread_local` nelze použít na funkce deklarace nebo definice.  
-  
--  Použití `thread_local` mohou ovlivňovat [zpoždění načítání](../build/reference/linker-support-for-delay-loaded-dlls.md) knihovny DLL importuje. 
-  
--  V systémech XP `thread_local` nemusí fungovat správně, pokud knihovnu DLL používá `thread_local` dat a je načtena dynamicky prostřednictvím `LoadLibrary`.  
   
 -  Můžete zadat `thread_local` pouze na datové položky s úložiště se statickými doba trvání. To zahrnuje globální datové objekty (obojí `static` a `extern`), místní statické objekty a členy statických dat tříd. Všechny místní proměnné deklarovány `thread_local` je implicitně statické, pokud je k dispozici žádné další třídy úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`. 
   

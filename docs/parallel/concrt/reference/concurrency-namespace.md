@@ -30,11 +30,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca728f3efa45c35306184e1aefa108c455470ab9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace"></a>concurrency – obor názvů
 `Concurrency` Obor názvů obsahuje třídy a funkce, které získáte přístup k Concurrency Runtime, souběžné programování framework pro C++. Další informace najdete v tématu [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).  
@@ -47,7 +48,7 @@ namespace concurrency;
   
 ## <a name="members"></a>Členové  
   
-### <a name="namespaces"></a>Obory názvů  
+### <a name="namespaces"></a>Jmenné prostory  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -67,14 +68,14 @@ namespace concurrency;
 |Název|Popis|  
 |----------|-----------------|  
 |[affinity_partitioner – třída](affinity-partitioner-class.md)|`affinity_partitioner` Třídy je podobná `static_partitioner` třídy, ale zvyšuje mezipaměti spřažení podle svého výběru mapování podrozsahů na pracovních vláken. Ho může výrazně zvýšit výkon při smyčku je znovu spustit přes stejnou sadu dat a zda je data v mezipaměti. Všimněte si, že stejný `affinity_partitioner` objekt musí být použit s následující iterace paralelní smyčky, která je spuštěna v rámci konkrétní sady dat, abyste mohli využívat výhod polohu data.|  
-|[Agent – třída](agent-class.md)|Třída určena pro použití jako základní třída pro všechny agenty nezávislé. Umožňuje skrýt stavu z jiné agenty a komunikovat pomocí přenosu zpráv.|  
+|[agent – třída](agent-class.md)|Třída určena pro použití jako základní třída pro všechny agenty nezávislé. Umožňuje skrýt stavu z jiné agenty a komunikovat pomocí přenosu zpráv.|  
 |[auto_partitioner – třída](auto-partitioner-class.md)|`auto_partitioner` Třída reprezentuje výchozí metoda `parallel_for`, `parallel_for_each` a `parallel_transform` použít při vytváření oddílů se iteruje nad rozsahu. Tato metoda oddíly employes rozsahu krádež pro vyrovnávání zatížení a také za iteraci zrušení.|  
 |[bad_target – třída](bad-target-class.md)|Tato třída popisuje výjimka vyvolaná při zasílání zpráv blok je zadána ukazatel cíl, který je neplatný pro prováděnou operaci.|  
-|[Call – třída](call-class.md)|A `call` zasílání zpráv blok je více zdroje, seřazené `target_block` , který spustí zadaná funkce při přijímání zprávy.|  
+|[call – třída](call-class.md)|A `call` zasílání zpráv blok je více zdroje, seřazené `target_block` , který spustí zadaná funkce při přijímání zprávy.|  
 |[cancellation_token – třída](cancellation-token-class.md)|`cancellation_token` Třída reprezentuje schopnosti určit, zda byla vyžádána některé operace zrušení. Daný token dají přidružit `task_group`, `structured_task_group`, nebo `task` zajistit implicitní zrušení. Můžete ho také dotazování pro zrušení nebo zpětné volání pro registrováno Pokud a při přidruženého `cancellation_token_source` je zrušená.|  
 |[cancellation_token_registration – třída](cancellation-token-registration-class.md)|`cancellation_token_registration` Třída reprezentuje zpětné volání oznámení z `cancellation_token`. Když `register` metodu `cancellation_token` se používá k přijetí oznámení o zrušení v případech, `cancellation_token_registration` jako popisovač pro zpětné volání tak, aby volající požadovat zpětného volání konkrétní už být provedeny prostřednictvím použití sevrátíobjekt`deregister` metoda.|  
 |[cancellation_token_source – třída](cancellation-token-source-class.md)|`cancellation_token_source` Třída reprezentuje možnost zrušit některé možné zrušit operaci.|  
-|[Třída Choice](choice-class.md)|A `choice` zasílání zpráv blok je více zdroje, jeden cílový blok, který představuje tok řízení interakci s sadu zdrojů. Výběr bloku bude čekat na některém z více zdrojů pro vytvoření zprávy a rozšíří index zdroje, který vytváří zprávu.|  
+|[choice – třída](choice-class.md)|A `choice` zasílání zpráv blok je více zdroje, jeden cílový blok, který představuje tok řízení interakci s sadu zdrojů. Výběr bloku bude čekat na některém z více zdrojů pro vytvoření zprávy a rozšíří index zdroje, který vytváří zprávu.|  
 |[combinable – třída](combinable-class.md)|`combinable<T>` Objektu slouží jako vlákno privátní kopií dat, provádět výpočty dílčí uvolnění zámku místní během paralelní algoritmy. Na konci paralelní operace dílčí výpočty vlákno privátní můžete pak sloučit konečný výsledek. Tato třída je možné místo sdílené proměnné a může mít za následek zlepšování výkonu Pokud by jinak byly spoustu kolizí sdílené proměnné.|  
 |[concurrent_priority_queue – třída](concurrent-priority-queue-class.md)|`concurrent_priority_queue` Třída je kontejner, který umožňuje více vláken současně nabízení a pop položek. Položky jsou odebrány v pořadí podle priority, kde je priorita určena functor, zadaný jako argument šablony.|  
 |[concurrent_queue – třída](concurrent-queue-class.md)|`concurrent_queue` Třída je pořadí kontejneru třídu, která umožňuje first in, první ven přístup k jeho elementy. Umožňuje omezenou sadu souběžnosti bezpečných operace, jako například `push` a `try_pop`.|  
@@ -89,7 +90,7 @@ namespace concurrency;
 |[critical_section – třída](critical-section-class.md)|Mutex nejsou vícenásobně přístupné, což je explicitně vědět Concurrency Runtime.|  
 |[CurrentScheduler – třída](currentscheduler-class.md)|Představuje abstrakci pro přidružený k volání kontextu aktuálního plánovače.|  
 |[default_scheduler_exists – třída](default-scheduler-exists-class.md)|Tato třída popisuje výjimka vyvolaná při `Scheduler::SetDefaultSchedulerPolicy` metoda je volána, když plánovače výchozí již existuje v rámci procesu.|  
-|[Event – třída](event-class.md)|Ruční vynulování události, které explicitně zná Concurrency Runtime.|  
+|[event – třída](event-class.md)|Ruční vynulování události, které explicitně zná Concurrency Runtime.|  
 |[improper_lock – třída](improper-lock-class.md)|Tato třída popisuje výjimku vyvolá, když je nesprávně získat zámek.|  
 |[improper_scheduler_attach – třída](improper-scheduler-attach-class.md)|Tato třída popisuje výjimka vyvolaná při `Attach` metoda je volána na `Scheduler` objekt, který je již připojen k aktuálním kontextu.|  
 |[improper_scheduler_detach – třída](improper-scheduler-detach-class.md)|Tato třída popisuje výjimka vyvolaná při `CurrentScheduler::Detach` metoda je volána v kontextu, který nebyl přidán do jakékoli služby Plánovač pomocí `Attach` metodu `Scheduler` objektu.|  
@@ -103,9 +104,9 @@ namespace concurrency;
 |[invalid_scheduler_policy_value – třída](invalid-scheduler-policy-value-class.md)|Tato třída popisuje výjimka vyvolaná při zásad klíč `SchedulerPolicy` je nastavena na neplatnou hodnotu pro tento klíč.|  
 |[ISource – třída](isource-class.md)|`ISource` Třída je rozhraní pro všechny zdrojové bloky. Zdroj bloky rozšířit zprávy a pokuste se `ITarget` bloky.|  
 |[ITarget – třída](itarget-class.md)|`ITarget` Třída je rozhraní pro všechny cílové bloky. Cíl bloky využívat zprávy jim podle nabízejí `ISource` bloky.|  
-|[JOIN – třída](join-class.md)|A `join` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který kombinuje společně zprávy typu `T` z každé její zdroje.|  
-|[Location – třída](location-class.md)|Abstrakci fyzické umístění na hardwaru.|  
-|[Message – třída](message-class.md)|Obálku základní zprávu obsahující datovou předávány mezi bloky zasílání zpráv.|  
+|[join – třída](join-class.md)|A `join` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který kombinuje společně zprávy typu `T` z každé její zdroje.|  
+|[location – třída](location-class.md)|Abstrakci fyzické umístění na hardwaru.|  
+|[message – třída](message-class.md)|Obálku základní zprávu obsahující datovou předávány mezi bloky zasílání zpráv.|  
 |[message_not_found – třída](message-not-found-class.md)|Tato třída popisuje výjimka vyvolaná při blok zasílání zpráv se nepodařilo najít požadovaný zprávu.|  
 |[message_processor – třída](message-processor-class.md)|`message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka řazení zpráv v.|  
 |[missing_wait – třída](missing-wait-class.md)|Tato třída popisuje výjimka vyvolaná při stále naplánované úlohy `task_group` nebo `structured_task_group` objektu v době tento objekt destruktor. Tato výjimka bude vyvolána nikdy Pokud destruktoru je dostupný z důvodu unwinding v důsledku výjimky zásobníku.|  
@@ -115,7 +116,7 @@ namespace concurrency;
 |[network_link_registry – třída](network-link-registry-class.md)|`network_link_registry` Abstraktní základní třída spravuje propojení mezi zdrojovými a cílovými bloky.|  
 |[operation_timed_out – třída](operation-timed-out-class.md)|Tato třída popisuje výjimka vyvolaná při vypršel časový limit operace.|  
 |[ordered_message_processor – třída](ordered-message-processor-class.md)|`ordered_message_processor` Je `message_processor` umožňuje bloky zpráv ke zpracování zpráv v pořadí, které byly přijaty.|  
-|[Třída overwrite_buffer](overwrite-buffer-class.md)|`overwrite_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání do jedné zprávy najednou. Nové zprávy přepsat dříve udržovaných ty.|  
+|[overwrite_buffer – třída](overwrite-buffer-class.md)|`overwrite_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání do jedné zprávy najednou. Nové zprávy přepsat dříve udržovaných ty.|  
 |[progress_reporter – třída](progress-reporter-class.md)|Třída průběh zpravodaje, která umožňuje reporting oznámení průběhu určitého typu. Každý objekt progress_reporter je vázána na operaci nebo konkrétní asynchronní akce.|  
 |[propagator_block – třída](propagator-block-class.md)|`propagator_block` Třída je abstraktní základní třídu pro bloky zpráv, které jsou zdrojovém i cílovém. Kombinuje funkci i `source_block` a `target_block` třídy.|  
 |[reader_writer_lock – třída](reader-writer-lock-class.md)|Zapisovač předvoleb zámku na základě fronty čtení a zápis s místní pouze otáčí. Zámek uděluje nejprve v – nejprve out (FIFO) přístup k zapisovače a starves čtečky průběžné zatížení zapisovačů.|  
@@ -126,22 +127,22 @@ namespace concurrency;
 |[scheduler_worker_creation_error – třída](scheduler-worker-creation-error-class.md)|Tato třída popisuje výjimce z důvodu selhání při vytváření kontextu spuštění pracovního procesu v Concurrency Runtime.|  
 |[SchedulerPolicy – třída](schedulerpolicy-class.md)|`SchedulerPolicy` Třída obsahuje sadu páry klíč/hodnota, jeden pro každý prvek zásady, které řídí chování instance plánovače.|  
 |[simple_partitioner – třída](simple-partitioner-class.md)|`simple_partitioner` Třída reprezentuje statické dělení vstupní přes podle rozsahu `parallel_for`. Dělicí metody rozsahu rozdělí do bloků, tak, aby měl každého bloku alespoň počet iterací určeného velikost bloku.|  
-|[Třída single_assignment](single-assignment-class.md)|A `single_assignment` zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání jedinou zápisu-po `message`.|  
+|[single_assignment – třída](single-assignment-class.md)|A `single_assignment` zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání jedinou zápisu-po `message`.|  
 |[single_link_registry – třída](single-link-registry-class.md)|`single_link_registry` Objekt `network_link_registry` , spravuje pouze jeden blok zdroje nebo cíle.|  
 |[source_block – třída](source-block-class.md)|`source_block` Třída je abstraktní základní třídu pro jen zdroj bloky. Třída poskytuje funkce správy základní odkaz jako dobře běžné chyby kontroly.|  
 |[source_link_manager – třída](source-link-manager-class.md)|`source_link_manager` Objekt spravuje zasílání zpráv bloku sítě odkazy na `ISource` bloky.|  
 |[static_partitioner – třída](static-partitioner-class.md)|`static_partitioner` Třída reprezentuje statické dělení vstupní přes podle rozsahu `parallel_for`. Dělicí metody rozdělí rozsahu na libovolný počet bloků dat jsou k dispozici pro Plánovač underyling pracovních procesů.|  
 |[structured_task_group – třída](structured-task-group-class.md)|`structured_task_group` Třída reprezentuje kolekci vysoce strukturovaných paralelní práce. Jednotlivé paralelní úlohy pro můžete fronty `structured_task_group` pomocí `task_handle` objekty a počkat na jejich dokončení nebo zrušte skupiny úloh před dokončením provádění, který bude všech úloh, které nebyly zahájení zpracování přerušeno.|  
 |[target_block – třída](target-block-class.md)|`target_block` Třída je abstraktní základní třída, která poskytuje funkce správy základní odkaz a kontrola chyb pro cíl pouze blokuje.|  
-|[Task – třída (Concurrency Runtime)](task-class.md)|Paralelní vzory knihovny (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze spustit asynchronně a souběžně další úkoly a paralelní pracovní vytvořené paralelní algoritmy v Concurrency Runtime. Vyvolá výsledek typu `_ResultType` při úspěšném dokončení. Úlohy typu `task<void>` vytvořit žádný výsledek. Úlohu můžete čekali při a zrušení nezávisle na jiné úlohy. Můžete také skládat s ostatními úkoly pomocí pokračování (`then`) a spojení (`when_all`) a volba (`when_any`) vzory.|  
+|[task – třída (Concurrency Runtime)](task-class.md)|Paralelní vzory knihovny (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze spustit asynchronně a souběžně další úkoly a paralelní pracovní vytvořené paralelní algoritmy v Concurrency Runtime. Vyvolá výsledek typu `_ResultType` při úspěšném dokončení. Úlohy typu `task<void>` vytvořit žádný výsledek. Úlohu můžete čekali při a zrušení nezávisle na jiné úlohy. Můžete také skládat s ostatními úkoly pomocí pokračování (`then`) a spojení (`when_all`) a volba (`when_any`) vzory.|  
 |[task_canceled – třída](task-canceled-class.md)|Tato třída popisuje výjimka vyvolaná objektem vrstvě PPL úlohy, aby vynutil aktuální úlohu zrušit. Je také vyvolané `get()` metodu [úloh](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), zrušené úlohy.|  
 |[task_completion_event – třída](task-completion-event-class.md)|`task_completion_event` Třída umožňuje zpozdit provádění úlohy, dokud je podmínka nebo spustit úlohu v reakci na externí událost.|  
 |[task_continuation_context – třída](task-continuation-context-class.md)|`task_continuation_context` Třída umožňuje určit, kam chcete pokračování spouštění. Je užitečné k použití této třídy z aplikace pro Windows Store. Pro aplikace pro Windows Store kontext provádění úkolů pokračování je určené modulem runtime a nejde konfigurovat.|  
 |[task_group – třída](task-group-class.md)|`task_group` Třída reprezentuje kolekci paralelní práce, která může být čekali nebo došlo ke zrušení.|  
 |[task_handle – třída](task-handle-class.md)|`task_handle` Třída reprezentuje jednotlivé paralelní pracovní položku. Zapouzdřit pokynů a data potřebná k provedení práce.|  
 |[task_options – třída (Concurrency Runtime)](task-options-class-concurrency-runtime.md)|Představuje povolené možnosti pro vytvoření úlohy|  
-|[Třída Timer](timer-class.md)|A `timer` zasílání zpráv blok je jeden cíl `source_block` může odeslat zprávu k cíli po uplynutí zadané časové období má nebo v určitých intervalech.|  
-|[Třída Transformer](transformer-class.md)|A `transformer` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který může přijmout zprávy jednoho typu a je schopný ukládání bez vazby počet zpráv jiného typu.|  
+|[timer – třída](timer-class.md)|A `timer` zasílání zpráv blok je jeden cíl `source_block` může odeslat zprávu k cíli po uplynutí zadané časové období má nebo v určitých intervalech.|  
+|[transformer – třída](transformer-class.md)|A `transformer` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který může přijmout zprávy jednoho typu a je schopný ukládání bez vazby počet zpráv jiného typu.|  
 |[Třída unbounded_buffer](unbounded-buffer-class.md)|`unbounded_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání bez vazby počet zpráv.|  
 |[unsupported_os – třída](unsupported-os-class.md)|Tato třída popisuje výjimku vyvolá, když se používá nepodporovaný operační systém.|  
   
@@ -149,20 +150,20 @@ namespace concurrency;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Dispatchstate – struktura](dispatchstate-structure.md)|`DispatchState` Struktura se používá k přenosu stavu, `IExecutionContext::Dispatch` metoda. Je popsaný v případech, ve kterém `Dispatch` metoda je volána `IExecutionContext` rozhraní.|  
-|[Iexecutioncontext – struktura](iexecutioncontext-structure.md)|Rozhraní na kontext spuštění, který můžete spustit na danou virtuálních procesorů a být spolupráce při přepnout kontext.|  
-|[Iexecutionresource – struktura](iexecutionresource-structure.md)|Abstrakci pro vlákno hardwaru.|  
-|[Iresourcemanager – struktura](iresourcemanager-structure.md)|Rozhraní pro správce prostředků Concurrency Runtime. Toto je rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků.|  
-|[Struktura rozhraní IScheduler](ischeduler-structure.md)|Rozhraní pro abstrakci pracovní plánovače. Concurrency Runtime Resource Manager používá ke komunikaci s pracovní plánovače toto rozhraní.|  
-|[Ischedulerproxy – struktura](ischedulerproxy-structure.md)|Rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků pro vyjednávání přidělení prostředků Concurrency Runtime.|  
-|[Ithreadproxy – struktura](ithreadproxy-structure.md)|Abstrakci pro vlákno provádění. V závislosti na tom `SchedulerType` klíčem zásad plánovače vytvoříte Resource Manager udělí můžete vlákno proxy server, který je zálohovaný díky regulární vlákno Win32 nebo které lze plánovat vlákna (UMS) uživatelského režimu. Vlákna UMS jsou podporované v operačních systémech 64bitové verze Windows 7 a vyšší.|  
-|[Itopologyexecutionresource – struktura](itopologyexecutionresource-structure.md)|Rozhraní k provádění prostředku definovaným pomocí Správce prostředků.|  
-|[Itopologynode – struktura](itopologynode-structure.md)|Rozhraní pro uzel topologie, jak jsou definovány pomocí Správce prostředků. Uzel obsahuje jeden nebo více prostředků provádění.|  
-|[Iumscompletionlist – struktura](iumscompletionlist-structure.md)|Představuje seznam dokončení UMS. Při plánování vláken UMS bloky plánovače určené kontextu je odeslat, aby rozhodnutí o při plánování v kořenovém adresáři základní virtuálních procesorů, zatímco původní vlákno je blokované. Při původní vlákno odblokuje, fronty je operační systém do seznamu dokončení, která je přístupná prostřednictvím tohoto rozhraní. Plánovač můžete dotazovat seznamu dokončení v určené plánování kontext nebo jiné místo, které vyhledávání pro práci.|  
-|[Struktura rozhraní IUMSScheduler](iumsscheduler-structure.md)|Rozhraní pro abstrakci plánovače pracovní, který chce Concurrency Runtime Resource Manager k ruční ho, které lze plánovat vláken (UMS) uživatelského režimu. Resource Manager používá toto rozhraní ke komunikaci s plánovače UMS přístup z více vláken. `IUMSScheduler` Rozhraní dědí z `IScheduler` rozhraní.|  
-|[Iumsthreadproxy – struktura](iumsthreadproxy-structure.md)|Abstrakci pro vlákno provádění. Pokud chcete vašeho scheduleru udělit oprávnění uživatelského režimu které lze plánovat vláken (UMS), nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vláken jsou pouze podporované v operačních systémech 64bitové verze Windows 7 a vyšší.|  
-|[Iumsunblocknotification – struktura](iumsunblocknotification-structure.md)|Představuje oznámení ze Správce prostředků, proxy přístup z více vláken, která blokovaný a aktivaci vraťte se do plánovače určené plánování kontextu má odblokováno a je připravený k naplánování. Toto rozhraní je neplatný, jakmile kontext přidružený spuštění proxy přístup z více vláken, vrátí z `GetContext` je přeplánovat metody.|  
-|[Ivirtualprocessorroot – struktura](ivirtualprocessorroot-structure.md)|Abstrakci pro hardware vláken, ve kterém můžete spustit vlákno proxy.|  
+|[DispatchState – struktura](dispatchstate-structure.md)|`DispatchState` Struktura se používá k přenosu stavu, `IExecutionContext::Dispatch` metoda. Je popsaný v případech, ve kterém `Dispatch` metoda je volána `IExecutionContext` rozhraní.|  
+|[IExecutionContext – struktura](iexecutioncontext-structure.md)|Rozhraní na kontext spuštění, který můžete spustit na danou virtuálních procesorů a být spolupráce při přepnout kontext.|  
+|[IExecutionResource – struktura](iexecutionresource-structure.md)|Abstrakci pro vlákno hardwaru.|  
+|[IResourceManager – struktura](iresourcemanager-structure.md)|Rozhraní pro správce prostředků Concurrency Runtime. Toto je rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků.|  
+|[IScheduler – struktura](ischeduler-structure.md)|Rozhraní pro abstrakci pracovní plánovače. Concurrency Runtime Resource Manager používá ke komunikaci s pracovní plánovače toto rozhraní.|  
+|[ISchedulerProxy – struktura](ischedulerproxy-structure.md)|Rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků pro vyjednávání přidělení prostředků Concurrency Runtime.|  
+|[IThreadProxy – struktura](ithreadproxy-structure.md)|Abstrakci pro vlákno provádění. V závislosti na tom `SchedulerType` klíčem zásad plánovače vytvoříte Resource Manager udělí můžete vlákno proxy server, který je zálohovaný díky regulární vlákno Win32 nebo které lze plánovat vlákna (UMS) uživatelského režimu. Vlákna UMS jsou podporované v operačních systémech 64bitové verze Windows 7 a vyšší.|  
+|[ITopologyExecutionResource – struktura](itopologyexecutionresource-structure.md)|Rozhraní k provádění prostředku definovaným pomocí Správce prostředků.|  
+|[ITopologyNode – struktura](itopologynode-structure.md)|Rozhraní pro uzel topologie, jak jsou definovány pomocí Správce prostředků. Uzel obsahuje jeden nebo více prostředků provádění.|  
+|[IUMSCompletionList – struktura](iumscompletionlist-structure.md)|Představuje seznam dokončení UMS. Při plánování vláken UMS bloky plánovače určené kontextu je odeslat, aby rozhodnutí o při plánování v kořenovém adresáři základní virtuálních procesorů, zatímco původní vlákno je blokované. Při původní vlákno odblokuje, fronty je operační systém do seznamu dokončení, která je přístupná prostřednictvím tohoto rozhraní. Plánovač můžete dotazovat seznamu dokončení v určené plánování kontext nebo jiné místo, které vyhledávání pro práci.|  
+|[IUMSScheduler – struktura](iumsscheduler-structure.md)|Rozhraní pro abstrakci plánovače pracovní, který chce Concurrency Runtime Resource Manager k ruční ho, které lze plánovat vláken (UMS) uživatelského režimu. Resource Manager používá toto rozhraní ke komunikaci s plánovače UMS přístup z více vláken. `IUMSScheduler` Rozhraní dědí z `IScheduler` rozhraní.|  
+|[IUMSThreadProxy – struktura](iumsthreadproxy-structure.md)|Abstrakci pro vlákno provádění. Pokud chcete vašeho scheduleru udělit oprávnění uživatelského režimu které lze plánovat vláken (UMS), nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vláken jsou pouze podporované v operačních systémech 64bitové verze Windows 7 a vyšší.|  
+|[IUMSUnblockNotification – struktura](iumsunblocknotification-structure.md)|Představuje oznámení ze Správce prostředků, proxy přístup z více vláken, která blokovaný a aktivaci vraťte se do plánovače určené plánování kontextu má odblokováno a je připravený k naplánování. Toto rozhraní je neplatný, jakmile kontext přidružený spuštění proxy přístup z více vláken, vrátí z `GetContext` je přeplánovat metody.|  
+|[IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)|Abstrakci pro hardware vláken, ve kterém můžete spustit vlákno proxy.|  
 |[scheduler_interface – struktura](scheduler-interface-structure.md)|Rozhraní plánovače|  
 |[scheduler_ptr – struktura (Concurrency Runtime)](scheduler-ptr-structure-concurrency-runtime.md)|Představuje ukazatel plánovače. Tato třída existuje umožňující specifikace sdílené životnost pomocí shared_ptr nebo jen prostý odkaz pomocí nezpracovaná ukazatele.|  
   
@@ -236,14 +237,14 @@ namespace concurrency;
   
 |Název|Popis|  
 |----------|-----------------| 
-|[Operator! =](concurrency-namespace-operators.md#operator_neq)|Pokud testy `concurrent_vector` objekt na levé straně operátor není rovno `concurrent_vector` objekt na pravé straně.|  
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|Pokud testy `concurrent_vector` objekt na levé straně operátor není rovno `concurrent_vector` objekt na pravé straně.|  
 |[Operator & &](concurrency-namespace-operators.md#operator_amp_amp)|Přetíženo. Vytvoří úlohu, která se dokončí svou činnost úspěšně, pokud obě úlohy zadané jako argumenty úspěšně dokončit.|  
 |[operátor &#124; &#124;](concurrency-namespace-operators.md#operator_lor)|Přetíženo. Vytvoří úlohu, která se úspěšně dokončí, když některý z úkolů zadané jako argumenty úspěšně dokončena.|  
 |[operátor <](concurrency-namespace-operators.md#operator_lt)|Testuje, pokud `concurrent_vector` objekt na levé straně operátoru je menší než `concurrent_vector` objekt na pravé straně.|  
 |[Operator < =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, pokud `concurrent_vector` objekt na levé straně operátor je menší než nebo rovno `concurrent_vector` objekt na pravé straně.|  
 |[Operator ==](concurrency-namespace-operators.md#operator_eq_eq)|Pokud testy `concurrent_vector` objekt na levé straně operátoru rovná `concurrent_vector` objekt na pravé straně.|  
 |[operátor >](concurrency-namespace-operators.md#operator_gt)|Pokud testy `concurrent_vector` objekt na levé straně operátoru je větší než `concurrent_vector` objekt na pravé straně.|  
-|[Operator > =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, pokud `concurrent_vector` objekt na levé straně operátoru je větší než nebo rovno `concurrent_vector` objekt na pravé straně.|  
+|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, pokud `concurrent_vector` objekt na levé straně operátoru je větší než nebo rovno `concurrent_vector` objekt na pravé straně.|  
   
 ### <a name="constants"></a>Konstanty  
   
@@ -272,5 +273,5 @@ namespace concurrency;
  **Záhlaví:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace](reference-concurrency-runtime.md)
+ [Referenční informace](reference-concurrency-runtime.md)
 

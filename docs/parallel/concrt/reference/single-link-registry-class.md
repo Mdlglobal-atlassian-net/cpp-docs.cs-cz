@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18e0ebe846a8ee0bf583ad342e43959e4996cd87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry – třída
 `single_link_registry` Objekt `network_link_registry` , spravuje pouze jeden blok zdroje nebo cíle.  
@@ -56,11 +57,11 @@ class single_link_registry : public network_link_registry<_Block>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Přidat](#add)|Přidá odkaz `single_link_registry` objektu. (Přepisuje [network_link_registry::Add –](network-link-registry-class.md#add).)|  
+|[add](#add)|Přidá odkaz `single_link_registry` objektu. (Přepisuje [network_link_registry::Add –](network-link-registry-class.md#add).)|  
 |[začít](#begin)|Vrátí iterovat prvním elementem v `single_link_registry` objektu. (Přepisuje [network_link_registry::BEGIN –](network-link-registry-class.md#begin).)|  
 |[obsahuje](#contains)|Hledání `single_link_registry` objekt pro zadaný blok. (Přepisuje [network_link_registry::contains –](network-link-registry-class.md#contains).)|  
 |[počet](#count)|Spočítá počet položek v `single_link_registry` objektu. (Přepisuje [network_link_registry::Count –](network-link-registry-class.md#count).)|  
-|[odebrat](#remove)|Odebere odkaz z `single_link_registry` objektu. (Přepisuje [network_link_registry::Remove –](network-link-registry-class.md#remove).)|  
+|[remove](#remove)|Odebere odkaz z `single_link_registry` objektu. (Přepisuje [network_link_registry::Remove –](network-link-registry-class.md#remove).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [network_link_registry](network-link-registry-class.md)  

@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c59ec6c0eed419cdac05a39a65ea1bde624d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock – třída
 Zapisovač předvoleb zámku na základě fronty čtení a zápis s místní pouze otáčí. Zámek uděluje nejprve v – nejprve out (FIFO) přístup k zapisovače a starves čtečky průběžné zatížení zapisovačů.  
@@ -60,7 +61,7 @@ class reader_writer_lock;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zámek](#lock)|Získá zámek čtení a zápis jako zapisovač.|  
+|[lock](#lock)|Získá zámek čtení a zápis jako zapisovač.|  
 |[lock_read –](#lock_read)|Získá zámek čtení a zápis pro čtenáře. Pokud existují uživatelé vytvářející obsah, je nutné čekat, až se provádí pomocí active čtečky. Čtečka jednoduše zaregistruje zájmu o zámek a čeká zapisovače pro uvolnění.|  
 |[try_lock –](#try_lock)|Pokusí se získat zámek čtení a zápis jako zapisovač bez blokování.|  
 |[try_lock_read –](#try_lock_read)|Pokusí se získat zámek čtení a zápis pro čtenáře bez blokování.|  

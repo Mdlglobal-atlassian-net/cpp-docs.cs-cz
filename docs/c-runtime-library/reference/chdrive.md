@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 214083f511067c102fcb3ab7d3e6637cfeb548ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7733a366ade87dd937eb20eab97a5258db8787a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chdrive"></a>_chdrive
 Změní aktuální pracovní jednotce.  
@@ -64,7 +65,7 @@ int _chdrive(
 ## <a name="remarks"></a>Poznámky  
  Pokud `drive` není v rozsahu od 1 do 26, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_chdrive –** funkce vrátí hodnotu -1, `errno` je nastaven na `EACCES`, a `_doserrno` je nastaven na `ERROR_INVALID_DRIVE`.  
   
- **_Chdrive –** funkce není bezpečné pro přístup z více vláken protože závisí na **SetCurrentDirectory** funkce, které je samo není bezpečné pro přístup z více vláken. Chcete-li použít **_chdrive –** bezpečně vícevláknové aplikace, je nutné zadat vlastní synchronizace vláken. Další informace, přejděte na [knihovny MSDN](http://go.microsoft.com/fwlink/?LinkID=150542) a poté vyhledejte **SetCurrentDirectory**.  
+ **_Chdrive –** funkce není bezpečné pro přístup z více vláken protože závisí na **SetCurrentDirectory** funkce, které je samo není bezpečné pro přístup z více vláken. Chcete-li použít **_chdrive –** bezpečně vícevláknové aplikace, je nutné zadat vlastní synchronizace vláken. Další informace, přejděte na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) a poté vyhledejte **SetCurrentDirectory**.  
   
  **_Chdrive –** funkce se změní pouze aktuální pracovní jednotce.  **_chdir –** změní aktuální pracovní adresář.  
   
@@ -72,7 +73,7 @@ int _chdrive(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|**_chdrive –**|\<Direct.h >|  
+|**_chdrive**|\<Direct.h >|  
   
  Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -87,4 +88,4 @@ int _chdrive(
  [_getdrive –](../../c-runtime-library/reference/getdrive.md)   
  [_mkdir –, _wmkdir –](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir –, _wrmdir –](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [_wsystem – systém](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

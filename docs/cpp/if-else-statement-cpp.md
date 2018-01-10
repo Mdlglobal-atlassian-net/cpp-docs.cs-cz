@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
 Ovládá podmíněné větvení. Příkazy v *bloku v případě* jsou vykonány pouze v případě *výraz if* jehož výsledkem je hodnota nulová (nebo `true`). Pokud hodnota *výraz* nenulový, *statement1* jsou vykonány jiné příkazy v bloku a else bloku, pokud existuje, bude přeskočena. Pokud hodnota *výraz* rovná nule, pak pokud bloku se přeskočí a else bloku, pokud existuje, je proveden. Výrazy, které vyhodnotí jako nulová
@@ -199,4 +200,4 @@ void f(T&& t, Rest&&... r)
 ## <a name="see-also"></a>Viz také  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   
- [Switch – příkaz (C++)](../cpp/switch-statement-cpp.md)
+ [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

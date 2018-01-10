@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6568c9bd9002df880a5501dd68e7050a4dc14706
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2af05011e8f2af2993edf3ea2f82716137b17857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-the-dialog-box"></a>Inicializace dialogových oken
 Po dialogové okno pole a všechny její ovládací prvky se vytvoří, ale těsně před dialogové okno pole (buď typu) se zobrazí na obrazovce objektu dialogového okna na [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) členské funkce je volána. Pro modální dialogové okno, k tomu dojde během `DoModal` volání. Nemodální dialogové `OnInitDialog` je volána, když **vytvořit** je volána. Obvykle přepsat `OnInitDialog` se inicializovat ovládací prvky dialogových oken, například nastavení počáteční text textové pole. Je třeba zavolat `OnInitDialog` – členská funkce základní třídy, `CDialog`, z vaší `OnInitDialog` přepsat.  

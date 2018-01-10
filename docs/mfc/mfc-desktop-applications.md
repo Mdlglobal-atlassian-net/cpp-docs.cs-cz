@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8bc3b4b2273db0c5b090bf24875daafe7c63ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-desktop-applications"></a>Běžné aplikace knihovny MFC
 Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientované obálku přes většinu Win32 a COM rozhraní API. Lze vytvořit velmi jednoduché aplikací klasické pracovní plochy, ale je velmi užitečné při budete muset vyvíjet složitější uživatelské rozhraní s více ovládacích prvků. MFC můžete použít k vytvoření aplikací s stylu Office uživatelská rozhraní.  
@@ -70,10 +71,10 @@ Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientované obá
  [Makra a globální prvky](reference/mfc-macros-and-globals.md)  
  Obsahuje odkazy na makra a globální funkce v knihovně MFC.  
   
- [Struktury, styly, zpětná volání a mapy zpráv](reference/structures-styles-callbacks-and-message-maps.md)  
+ [Struktury, styly, zpětná volání a mapy zpráv](reference/structures-styles-callbacks-and-message-maps.md)  
  Obsahuje odkazy na struktury, styly, zpětná volání a mapy zpráv používaný knihovnou MFC.  
   
- [MFC průvodců a dialogových oken](reference/mfc-wizards-and-dialog-boxes.md)  
+ [Průvodci a dialogová okna knihovny MFC](reference/mfc-wizards-and-dialog-boxes.md)  
  Příručka k funkcím v sadě Visual Studio pro vytváření aplikací MFC.  
   
  [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)  
@@ -96,4 +97,4 @@ Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientované obá
  Obsahuje odkazy na používání ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložené procedury.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC a knihovna ATL](mfc-and-atl.md)
+ [Rozhraní MFC a knihovna ATL](mfc-and-atl.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1115af5eb7726138a1954f832ec2761a47667e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
 ID národního prostředí odráží místní konvence a jazyk pro určitou zeměpisnou oblast. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.  
@@ -53,4 +54,4 @@ ID národního prostředí odráží místní konvence a jazyk pro určitou zem�
   
 ## <a name="see-also"></a>Viz také  
  [Kódování Unicode a MBCS](../text/unicode-and-mbcs.md)   
- [Výhody znaku nastavit přenositelnost](../text/benefits-of-character-set-portability.md)
+ [Výhody přenositelnosti znakové sady](../text/benefits-of-character-set-portability.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71596eefa0d9553f562e0b5abf888fe83cc13669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 840862915e90accbab254f5a9003446471608a2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory – třída
 Poskytuje základní mechanismus pro vytvoření základní třídy.  
@@ -50,7 +53,7 @@ class SimpleClassFactory : public ClassFactory<>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Simpleclassfactory::CreateInstance – metoda](../windows/simpleclassfactory-createinstance-method.md)|Vytvoří instanci zadaného rozhraní.|  
+|[SimpleClassFactory::CreateInstance – metoda](../windows/simpleclassfactory-createinstance-method.md)|Vytvoří instanci zadaného rozhraní.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `I0`  
@@ -81,4 +84,4 @@ class SimpleClassFactory : public ClassFactory<>;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

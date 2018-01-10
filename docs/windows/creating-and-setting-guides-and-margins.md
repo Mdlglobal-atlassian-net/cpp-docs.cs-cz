@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7632474f60254c5c5dc2c270976e1d6a970fdb35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e767eaa8fbb91f0cf49c63d5d7aca3a05c5dd518
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Vytvoření a nastavení vodítek a okrajů
 Zda jsou přesouvání ovládacích prvků, přidání ovládacích prvků a změna uspořádání aktuální rozložení, může pomoci příručky je Zarovnat ovládací prvky přesně v rámci dialogového okna. Se zobrazují jako modré čáry s koncovými body v dialogu zobrazí v editoru a odpovídající šipky v pravítek (v horní části a na levé straně editoru dialogových oken).  
@@ -57,7 +60,7 @@ Zda jsou přesouvání ovládacích prvků, přidání ovládacích prvků a zm�
   
      Chcete-li okraj zmizí, přesuňte okraj nulové pozice. Navrácení okraj, umístěte ukazatel myši na okraji nulové pozice a přesunutí okraj do pozice.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ### <a name="requirements"></a>Požadavky  
  Win32  

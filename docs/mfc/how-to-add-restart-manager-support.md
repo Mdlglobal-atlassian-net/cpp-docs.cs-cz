@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e86ca1959ce22370e47bca508602d5efa35cd4f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-restart-manager-support"></a>Postupy: Přidání podpory správce restartování
 Správce restartování je funkce přidána do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pro [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Správce restartování přidává podporu pro aplikace, pokud se neočekávaně ukončí nebo restartuje. Chování správce restartování závisí na typu aplikace. Pokud je aplikace editor dokumentů, správce restartování povolené automaticky uložit stav aplikace a obsah všechny otevřené dokumenty a restartuje po neočekávaném ukončení aplikace. Pokud vaše aplikace není editor dokumentů, správce restartování restartuje aplikace, ale je ve výchozím nastavení nelze uložit stav aplikace.  

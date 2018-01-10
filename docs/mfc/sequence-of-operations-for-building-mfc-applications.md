@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81c857a4ce12ec28be49e393886fc52a43d012d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Posloupnost operací při sestavování aplikací MFC
 Následující tabulka popisuje obecné pořadí, které může být obvykle postupujte podle vyvíjet aplikace knihovny MFC.  
@@ -53,5 +54,5 @@ Následující tabulka popisuje obecné pořadí, které může být obvykle pos
  [Posloupnost operací při vytváření aplikací OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
  [Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
  [Posloupnost operací při vytváření databázových aplikací](../mfc/sequence-of-operations-for-creating-database-applications.md)   
- [Vytváření v rozhraní Framework](../mfc/building-on-the-framework.md)
+ [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 

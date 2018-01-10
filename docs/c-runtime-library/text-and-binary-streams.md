@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>Textové a binární proudy
 Datový proud s text se skládá z jednoho nebo více řádků textu, které je možné zapsat do zobrazení se text orientované tak, aby mohly být čteny. Při čtení z datového proudu textu, program přečte `NL` (každý na jednom řádku) na konci každého řádku. Při zápisu do proudu textu, zapíše program `NL` signál konec řádku. Tak, aby odpovídaly odlišné konvence mezi cílové prostředí pro představující text v souborech, můžete změnit funkce knihovny počet a reprezentace znaků přenesené mezi program a text datového proudu.  

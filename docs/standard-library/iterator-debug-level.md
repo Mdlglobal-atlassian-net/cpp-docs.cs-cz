@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14939c7c39d207e686bcccf786dcabf93e809059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b69d4f3cf8f5065cbae2708dace20de3b1f63f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 `_ITERATOR_DEBUG_LEVEL` Ovládací prvky makro zda [zaškrtnutí iterátory](../standard-library/checked-iterators.md) a [podpora ladění iterátorů](../standard-library/debug-iterator-support.md) jsou povoleny. Toto makro nahrazuje a kombinuje funkce starší `_SECURE_SCL` a `_HAS_ITERATOR_DEBUGGING` makra.  
@@ -73,4 +74,4 @@ Ve zdrojovém souboru zadejte makro před všechny standardní knihovna hlavičk
 ## <a name="see-also"></a>Viz také  
 [Checked – iterátory](../standard-library/checked-iterators.md)   
 [Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)   
-[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)
+[Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)

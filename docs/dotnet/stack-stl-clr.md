@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dad00eecc05b8b3020dcf024b297b4b090317ee4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup poslední, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `stack` ke správě kontejner základní jako zásobník nabízená dolů.  
@@ -52,40 +55,40 @@ template<typename Value,
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|[Stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
-|[Stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Typ základního kontejneru.|  
-|[Stack::difference_type (STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|Typ generické rozhraní pro adaptér kontejneru.|  
-|[Stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
-|[Stack::Reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)|Typ odkazu na prvek|  
-|[Stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[Stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|Typ prvku|  
+|[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|Typ konstantního odkazu na prvek|  
+|[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Typ základního kontejneru.|  
+|[stack::difference_type (STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|Typ generické rozhraní pro adaptér kontejneru.|  
+|[stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
+|[stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[Stack::Assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Nahradí všechny elementy.|  
-|[Stack::Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[Stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|Přístup k podkladové kontejneru.|  
-|[Stack::POP (STL/CLR)](../dotnet/stack-pop-stl-clr.md)|Odebere poslední element.|  
-|[Stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)|Přidá nový posledním elementem.|  
-|[Stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)|Spočítá počet prvků.|  
-|[Stack::Stack (STL/CLR)](../dotnet/stack-stack-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[Stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Přístup k posledním elementem.|  
-|[Stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
+|[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|Přístup k podkladové kontejneru.|  
+|[stack::pop (STL/CLR)](../dotnet/stack-pop-stl-clr.md)|Odebere poslední element.|  
+|[stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)|Přidá nový posledním elementem.|  
+|[stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)|Spočítá počet prvků.|  
+|[stack::stack (STL/CLR)](../dotnet/stack-stack-stl-clr.md)|Sestaví objekt kontejneru.|  
+|[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Přístup k posledním elementem.|  
+|[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[Stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Přístup k posledním elementem.|  
+|[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Přístup k posledním elementem.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[Stack::Operator = (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Určuje, zda `stack` objekt není rovno jiné `stack` objektu.|  
-|[Operator < (stack) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|Určuje, zda `stack` objektu je menší než jiná `stack` objektu.|  
-|[Operator < = (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Určuje, zda `stack` objektu je menší než nebo rovna do jiného `stack` objektu.|  
-|[Operator == (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|Určuje, zda `stack` objekt rovná jiné `stack` objektu.|  
-|[Operator > (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|Určuje, zda `stack` je větší než druhý objekt `stack` objektu.|  
-|[Operator > = (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Určuje, zda `stack` objekt je větší než nebo rovna hodnotě jiného `stack` objektu.|  
+|[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Určuje, zda `stack` objekt není rovno jiné `stack` objektu.|  
+|[operator< (stack) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|Určuje, zda `stack` objektu je menší než jiná `stack` objektu.|  
+|[operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Určuje, zda `stack` objektu je menší než nebo rovna do jiného `stack` objektu.|  
+|[operator== (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|Určuje, zda `stack` objekt rovná jiné `stack` objektu.|  
+|[operator> (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|Určuje, zda `stack` je větší než druhý objekt `stack` objektu.|  
+|[operator>= (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Určuje, zda `stack` objekt je větší než nebo rovna hodnotě jiného `stack` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -108,4 +111,4 @@ template<typename Value,
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [fronty (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)
