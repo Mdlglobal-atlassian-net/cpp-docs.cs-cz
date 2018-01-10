@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4db7def12f6b5d08c774bef51e2a15ea5994f5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
 Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu běžných objekt souboru formátu () objekt soubory COFF. LIB také slouží k vytvoření export souborů a knihoven importovat do definice odkaz exportovali.  
@@ -32,9 +33,9 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu běžných 
 > [!NOTE]
 >  Můžete spustit tento nástroj pouze z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] příkazového řádku. Nelze ji spustit z příkazového řádku systému nebo v Průzkumníku souborů.  
   
--   [Přehled LIB](../../build/reference/overview-of-lib.md)  
+-   [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)  
   
--   [Postupy: nastavení LIB. Možnosti EXE ve vývojovém prostředí sady Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
+-   [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
   
 -   [Spuštění knihovny LIB](../../build/reference/running-lib.md)  
   
@@ -42,7 +43,7 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu běžných 
   
 -   [Extrahování člena knihovny](../../build/reference/extracting-a-library-member.md)  
   
--   [Práce s importovanými knihovnami a exportovanými soubory](../../build/reference/working-with-import-libraries-and-export-files.md)  
+-   [Práce s knihovnami importu a soubory exportu](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d07f6bf2c5d48b3149eb43448e217d1a66b92c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b32986513a94c20f0fb0cd1b4c65dd21e8c9e8aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subtraction--"></a>Odčítání (-)
 Operátor odčítání (**-**) odečítá Druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.  
@@ -30,4 +31,4 @@ Operátor odčítání (**-**) odečítá Druhý operand od prvního. Oba operan
  Když celočíselnou hodnotu je odečten od hodnota ukazatele, operátor odčítání převede na celé číslo (*i*) vynásobením velikost hodnoty, které řeší ukazatele. Po převodu celočíselná hodnota představuje *i* paměti pozice, kdy každý pozice má délku určeného je ukazatel typu. Když převedený celočíselná hodnota je odečten od hodnota ukazatele, výsledkem je, adresa paměti *i* pozic před původní adresu. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.  
   
 ## <a name="see-also"></a>Viz také  
- [Operátory sčítání jazyka C](../c-language/c-additive-operators.md)
+ [Sčítací operátory jazyka C](../c-language/c-additive-operators.md)

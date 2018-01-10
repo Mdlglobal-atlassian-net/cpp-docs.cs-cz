@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1ffbffede067a34c737216a95351f097ca0eed7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-clistctrl"></a>Používání atributu CListCtrl
 Použijte ovládací prvek seznamu zobrazíte všechny uspořádání ikony s popisky, stejně jako v Průzkumníkovi souborů nebo sloupcové seznamy textu, s nebo bez ikon. Popis čtyř možné "zobrazení" (ne nelze zaměňovat s MFC zobrazení) může mít v ovládacím prvku seznamu – zobrazení ikon, malé ikony zobrazení, zobrazení seznamu a zobrazení sestavy – vidět v zobrazení [CListCtrl](../mfc/reference/clistctrl-class.md) přehledu třídy.  

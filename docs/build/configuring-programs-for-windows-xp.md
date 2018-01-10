@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro systém Windows XP
 Protože Visual Studio podporuje více modulové platformy, můžete určit cílovou operačních systémů a runtime knihovny, které nepodporují výchozí sady nástrojů. Například přepínání sada nástrojů platformy, můžete pomocí C ++ 11 a C ++ 14, vylepšení C ++ 17 jazyk podporuje – kompilátor Visual C++ v sadě Visual Studio k vytvoření aplikace cílených [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Můžete také použít starší platformy modulové zachovat starší verze kódu binární kompatibilní a nadále využívat výhody nejnovějších funkcí Visual Studio IDE.  
   
 > [!NOTE]
->  Pokud používáte [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], je nutné nainstalovat [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizace 4 pro přidání podpory sada nástrojů platformy pro [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Ke stažení a instalaci kopii [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizace 4 najdete [Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) na webu Microsoft Download Center. Poté nainstalujte [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) získat sada nástrojů platformy v110_xp. Použijte službu Windows Update a získat nejnovější aktualizace softwaru po instalaci.  
+>  Pokud používáte [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], je nutné nainstalovat [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizace 4 pro přidání podpory sada nástrojů platformy pro [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Ke stažení a instalaci kopii [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizace 4 najdete [Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) na webu Microsoft Download Center. Poté nainstalujte [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) získat sada nástrojů platformy v110_xp. Použijte službu Windows Update a získat nejnovější aktualizace softwaru po instalaci.  
   
 ## <a name="windows-xp-targeting-experience"></a>Cílení na prostředí Windows XP  
  Sada nástrojů platformy systému Windows XP, která je zahrnutá v sadě Visual Studio je verze [!INCLUDE[win7](../build/includes/win7_md.md)] SDK, která byla součástí [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], ale používá aktuální kompilátoru C++. Nakonfiguruje taky vlastnosti projektu do příslušných výchozích hodnot – například specifikace kompatibilní linkeru pro cílení na nižší úrovni. Pouze Windows aplikace klasické pracovní plochy, které jsou vytvořené pomocí sady nástrojů systému Windows XP spustit na [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], ale tyto aplikace můžete spustit také na novější operační systémy Windows.  

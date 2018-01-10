@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 333eaeb579467a91591849688e9b35ce71acbee3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66adda6bebfd7ab251fbd3e7cba97a0f0b7aa968
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2107"></a>Méně závažná chyba nástroje ML A2107
 **nemůže mít implicitní úplně přechod nebo volání v blízkosti popisek**  
@@ -27,4 +28,4 @@ ms.lasthandoff: 10/24/2017
  Došlo pokusu o Ujistěte se implicitní daleko přejít, nebo volejte na nejbližší štítek v jiné segmentu.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

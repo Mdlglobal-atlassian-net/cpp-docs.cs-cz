@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f3e337f96c1acef53b1ec34237d31a868fb4dfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 677a29d4f0b65a9490f24a5906d606a05bb4573b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Jednofázová a dvoufázová konstrukce objektů
 Máte možnost volby mezi dvěma metody pro vytváření grafických objektů, jako je například pera a štětce:  
@@ -49,7 +50,7 @@ Máte možnost volby mezi dvěma metody pro vytváření grafických objektů, j
   
 -   [Kontexty zařízení](../mfc/device-contexts.md)  
   
--   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
+-   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Grafické objekty](../mfc/graphic-objects.md)

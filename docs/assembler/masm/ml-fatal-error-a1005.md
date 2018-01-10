@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e71d92a1d977caa994e16218ef79f1800c00aa34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de2f2a8c2a68418a9e29c9e1cf9ade371c87e451
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-fatal-error-a1005"></a>Závažná chyba nástroje ML A1005
 **limit assembleru: makro parametr název tabulky úplné**  
@@ -29,4 +30,4 @@ ms.lasthandoff: 10/24/2017
  Zadejte kratší nebo méně názvy, nebo odeberte nepotřebné makra.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

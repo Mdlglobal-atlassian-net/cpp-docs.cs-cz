@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f56e7858fc313ac35d5a3937e2d64472f28e355d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy – struktura
 Abstrakci pro vlákno provádění. V závislosti na tom `SchedulerType` klíčem zásad plánovače vytvoříte Resource Manager udělí můžete vlákno proxy server, který je zálohovaný díky regulární vlákno Win32 nebo které lze plánovat vlákna (UMS) uživatelského režimu. Vlákna UMS jsou podporované v operačních systémech 64bitové verze Windows 7 a vyšší.  
@@ -135,4 +136,4 @@ virtual void YieldToSystem() = 0;
  [Namespace souběžnosti](concurrency-namespace.md)   
  [Iexecutioncontext – struktura](iexecutioncontext-structure.md)   
  [Struktura rozhraní IScheduler](ischeduler-structure.md)   
- [Ivirtualprocessorroot – struktura](ivirtualprocessorroot-structure.md)
+ [IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e78ab48d04538901aa8d8e18fc4e13f1343f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0490a9df1f58ac009bda61b330e29c153a080e05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-a-bsc-file"></a>Sestavení souboru BSC
 BscMake – můžete vytvořit nový soubor procházet informace ze souborů nově vytvořený .sbr. Také ho můžete zachovat existující soubor .bsc pomocí .sbr souborů pro soubory objektů, které se změnily od poslední sestavení.  
@@ -30,4 +31,4 @@ BscMake – můžete vytvořit nový soubor procházet informace ze souborů nov
 -   [Jak BSCMAKE sestavení souboru BSC](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
   
 ## <a name="see-also"></a>Viz také  
- [BscMake – odkaz](../../build/reference/bscmake-reference.md)
+ [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

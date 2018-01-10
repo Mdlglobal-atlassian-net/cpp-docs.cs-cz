@@ -1,7 +1,7 @@
 ---
 title: . Soubory obj jako vstup Linkeru | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -16,32 +16,35 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.assetid: 3028e423-8b10-4972-8eb4-6e9ae58f0a26
-caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca8346f9ff29d097450eda4d8bfbfee7f7a3f522
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a2896822e97bdbb5ffdf8f869e67beadc1675b7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obj-files-as-linker-input"></a>Soubory .Obj jako vstup linkeru
-Nástroj linkeru (odkaz. Soubor EXE) přijímá soubory .obj, které jsou v běžné objekt souboru formátu (COFF).  
-  
-## <a name="remarks"></a>Poznámky  
- Společnost Microsoft poskytuje ke stažení dokument, který definuje běžný formát souboru objektu. Další informace, stáhněte si revize 8.1 nebo novější z [Microsoft přenosné spustitelný soubor a běžné specifikaci formátu souboru objektu](http://go.microsoft.com/fwlink/?LinkId=93292).  
-  
-## <a name="unicode-support"></a>Podpora kódování Unicode  
- Od verze Visual Studio 2005, podporuje Microsoft Visual C++ compiler znaky kódování Unicode v identifikátory definované ISO/IEC C a C++ standardů. V identifikátory předchozí verze kompilátoru podporovány pouze znaky ASCII. Chcete-li podporují kódování Unicode v názvech funkcí, třídy a statické objekty, použijte kompilátoru a linkeru kódování Unicode UTF-8 symbolů COFF v soubory .obj. Kódování UTF-8 je upwardly kompatibilní s kódováním ASCII, které se používá starších verzí sady Visual Studio.  
-  
- Další informace o kompilátoru a linkeru najdete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](http://go.microsoft.com/fwlink/?LinkId=37123) organizace.  
-  
-## <a name="see-also"></a>Viz také  
- [Vstupní soubory LINK](../../build/reference/link-input-files.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)   
- [Podpora kódování Unicode](../../text/support-for-unicode.md)   
- [Podpora kódování Unicode v kompilátoru a Linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md)   
- [Unicode standard](http://go.microsoft.com/fwlink/?LinkId=37123)   
- [Běžné specifikaci formátu souboru objektu](http://go.microsoft.com/fwlink/?LinkId=93292)
+
+Nástroj linkeru (odkaz. Soubor EXE) přijímá soubory .obj, které jsou v běžné objekt souboru formátu (COFF).
+
+## <a name="remarks"></a>Poznámky
+
+Společnost Microsoft poskytuje úplný popis běžný formát souboru objektu. Další informace najdete v tématu [PE formátu](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+
+## <a name="unicode-support"></a>Podpora kódování Unicode
+
+Od verze Visual Studio 2005, podporuje Microsoft Visual C++ compiler znaky kódování Unicode v identifikátory definované ISO/IEC C a C++ standardů. V identifikátory předchozí verze kompilátoru podporovány pouze znaky ASCII. Chcete-li podporují kódování Unicode v názvech funkcí, třídy a statické objekty, použijte kompilátoru a linkeru kódování Unicode UTF-8 symbolů COFF v soubory .obj. Kódování UTF-8 je upwardly kompatibilní s kódováním ASCII, které se používá starších verzí sady Visual Studio.
+
+Další informace o kompilátoru a linkeru najdete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organizace.
+
+## <a name="see-also"></a>Viz také
+
+[Vstupní soubory LINK](../../build/reference/link-input-files.md)  
+[Možnosti linkeru](../../build/reference/linker-options.md)  
+[Podpora pro Unicode](../../text/support-for-unicode.md)  
+[Podpora kódování Unicode v kompilátoru a linkeru](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+[Unicode standard](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Formát PE](https://msdn.microsoft.com/library/windows/desktop/ms680547)  

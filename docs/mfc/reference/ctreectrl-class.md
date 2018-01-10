@@ -173,11 +173,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5437cef55a0e46f38eaf0e97b56ed9f82b4bb31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl – třída
 Poskytuje funkci běžné stromové zobrazení ovládacího prvku Windows.  
@@ -1328,7 +1329,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
  Popisovač položku zobrazení stromu ( `HTREEITEM`), který odpovídá `uAccId` parametr. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Usnadnění pomůcky jsou aplikace, které pomáhají osoby s postižením používat počítače. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně zadat element v okně. Další informace o usnadnění identifikátory, naleznete v tématu "O Active Accessibility podpora" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Usnadnění pomůcky jsou aplikace, které pomáhají osoby s postižením používat počítače. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně zadat element v okně. Další informace o usnadnění identifikátory, naleznete v tématu "O Active Accessibility podpora" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Tato metoda odesílá [TVM_MAPACCIDTOHTREEITEM](http://msdn.microsoft.com/library/windows/desktop/bb773734) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -1359,7 +1360,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
  Identifikátor usnadnění přístupu, která odpovídá `hItem` parametr.  
   
 ### <a name="remarks"></a>Poznámky  
- Usnadnění pomůcky jsou aplikace, které pomáhají osoby s postižením používat počítače. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně zadat element v okně. Další informace o usnadnění identifikátory, naleznete v tématu "O Active Accessibility podpora" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Usnadnění pomůcky jsou aplikace, které pomáhají osoby s postižením používat počítače. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně zadat element v okně. Další informace o usnadnění identifikátory, naleznete v tématu "O Active Accessibility podpora" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Tato metoda odesílá [TVM_MAPHTREEITEMTOACCID](http://msdn.microsoft.com/library/windows/desktop/bb773735) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -1987,7 +1988,7 @@ void ShowInfoTip(HTREEITEM hItem);
 |[v]`hItem`|Popisovač pro položku zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o rozdílu mezi popisy tlačítek a infotips, naleznete v tématu "Popisy tlačítek a Infotips" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Další informace o rozdílu mezi popisy tlačítek a infotips, naleznete v tématu "Popisy tlačítek a Infotips" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Tato metoda odesílá [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) zprávy, která je popsána v sadě Windows SDK.  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 174160657e5494f5566fd0828815b3c0f1b3d601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcc27a303e9d03d2e899a76703bcfae5abfd0c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-inline-file-text"></a>Vytvořit vložený text souboru
 Vložené soubory jsou trvalé nebo dočasné.  
@@ -43,4 +44,4 @@ Vložené soubory jsou trvalé nebo dočasné.
  Dočasný soubor existuje po dobu trvání relace a lze opětovně použít další příkazy. Zadejte **zachovat** po uzavírací hranaté závorce úhel zachování soubor po NMAKE relaci; soubor bez názvu se zachová, i na disku s vygenerovaný název souboru. Zadejte **NOKEEP** nebo nic pro dočasný soubor. **ZACHOVAT** a **NOKEEP** nejsou velká a malá písmena.  
   
 ## <a name="see-also"></a>Viz také  
- [Vložené soubory v souboru pravidel](../build/inline-files-in-a-makefile.md)
+ [Soubory vložené do souboru pravidel](../build/inline-files-in-a-makefile.md)

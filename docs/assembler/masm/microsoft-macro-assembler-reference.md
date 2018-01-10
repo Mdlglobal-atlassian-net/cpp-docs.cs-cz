@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9df0f039bb9fcf9b157c642025b3f140c26ccc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého sestavení. MASM obsahuje makro jazyk, který obsahuje funkce, jako je zpracování řetězec opakování ve smyčce, aritmetické a text. MASM také vám dává větší kontrolu nad hardware, protože umožňuje sady instrukce 386, 486 a Pentium procesory. Pomocí MASM také můžete snížit režijní náklady na čas a paměti.  
@@ -31,7 +32,7 @@ Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého se
  [Použití nástroje ML a ml64 v příkazovém možnost příkazového řádku](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
  Popisuje možnosti příkazového řádku ML.exe a ML64.exe.  
   
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)  
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)  
  Popisuje ML.exe závažné a méně závažné chybové zprávy a upozornění.  
   
  [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)  

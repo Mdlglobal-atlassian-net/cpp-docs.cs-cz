@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15d37f6adb5d6a5588d9b727ff8ba5adb56dda67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
 CL vyvolává linker automaticky po kompilování, pokud se používá možnost /c. CL předá linkeru názvů .obj soubory vytvořené během kompilace a názvy všechny další soubory zadané na příkazovém řádku. Linkeru používá možnosti uvedené v proměnném prostředí odkaz. Možnost/Link můžete použít k určení možnosti linkeru na příkazovém řádku CL. Možnosti, které následují možnosti/Link přepíšou nastavení v proměnné prostředí odkaz. Možnosti v následující tabulce potlačit propojení.  

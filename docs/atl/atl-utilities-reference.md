@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>Referenční dokumentace k nástrojům ATL
 ATL obsahuje kód pro manipulaci s cesty a adresy URL ve formě [CPathT](../atl/reference/cpatht-class.md) a [CUrl](../atl/reference/curl-class.md). Fondu vláken, [CThreadPool](../atl/reference/cthreadpool-class.md), můžete použít ve svých aplikacích. Tento kód lze nalézt v atlpath.h a atlutil.h.  
@@ -102,4 +103,4 @@ ATL obsahuje kód pro manipulaci s cesty a adresy URL ve formě [CPathT](../atl/
 
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)   
- [ATL COM plochy součásti](../atl/atl-com-desktop-components.md)
+ [Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)

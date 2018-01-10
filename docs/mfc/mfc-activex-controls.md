@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5351e7dca3c78b9709f183b8e1f6f9e7b2dc883
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c06b66be2dd9b982fc925aa69483a58fcc4799dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 Ovládací prvek ActiveX je opakovaně použitelné softwaru komponenta založená na modelu COM (Component Object), který podporuje širokou škálu funkcí technologie OLE a můžete přizpůsobit podle potřeb mnoho softwaru. Ovládací prvky ActiveX jsou navrženy pro použití v běžných kontejnerech ovládacího prvku ActiveX a v Internetu na webových stránkách. Můžete vytvořit ovládací prvky ActiveX, buď pomocí knihovny MFC, popsané v tomto poli, nebo pomocí [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
@@ -51,7 +52,7 @@ Interakce mezi kontejnerem ovládacího prvku ActiveX a ovládacím prvkem Activ
   
  Další informace naleznete v tématu:  
   
--   [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)  
+-   [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)  
   
 -   [Aktivní dokumenty](../mfc/active-documents.md)  
   

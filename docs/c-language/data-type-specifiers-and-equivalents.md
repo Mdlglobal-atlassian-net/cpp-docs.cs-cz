@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fbc76f70eba6fab46e709978bbadcd10312af6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596e3fcf4dab3f88abc17cac4bc32471e63b4bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty datového typu
 Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů typů uvedené v následující tabulce a předpokládá, že typ `char` je ve výchozím nastavení se znaménkem. Proto v této příručce `char` je ekvivalentní **podepsané char**.  
@@ -36,7 +37,7 @@ Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů ty
   
 |Specifikátor typu|Ekvivalenty|  
 |--------------------|---------------------|  
-|**podepsané char**1|**Char**|  
+|**podepsané char**1|**char**|  
 |**podepsaný int**|**podepsané**, **int**|  
 |**krátká celočíselná podepsané**|**krátký**, **prostě podepsané**|  
 |**podepsané dlouho int**|**dlouhé**, **podepsané dlouho**|  
@@ -44,7 +45,7 @@ Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů ty
 |**int bez znaménka**|**bez znaménka**|  
 |**krátká celočíselná bez znaménka**|**short bez znaménka**|  
 |**nepodepsané dlouho int**|**dlouho bez znaménka**|  
-|**plovoucí desetinná čárka**|—|  
+|**float**|—|  
 |**long double**2|—|  
   
  1 Pokud provedete **char** typu bez znaménka ve výchozím nastavení (tak, že zadáte /J – možnost kompilátoru), nelze zkrátit **podepsané char** jako **char**.  

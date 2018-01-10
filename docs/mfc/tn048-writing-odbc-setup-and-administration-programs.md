@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec82c030e01852725ffd7a7a9308fcbbf7802ef8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC
 > [!NOTE]
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  Program, který konfiguruje zdroje dat, volá funkce DLL Instalační služby. Instalační program DLL volá instalace knihovny DLL pro konfiguraci zdroje dat. Jeden nastavení knihovny DLL pro každý ovladač; To může být ovladač samotné knihovny DLL nebo samostatné knihovny DLL. Instalační program DLL vyzve uživatele k informace, které ovladač potřebuje pro připojení ke zdroji dat a výchozí překladač, pokud podporován. Pak zavolá instalační program, zaznamenejte tyto informace v ODBC knihovny DLL a rozhraní API systému Windows. Soubor INI (nebo registru).  
   
- Pokud chcete zobrazit dialogové okno, pomocí kterého můžete přidat, upravit a odstranit zdroje dat uživatele, program zavolá **SQLManageDataSources** v instalačním programu knihovnu DLL. Tato funkce je voláno, když instalační program knihovny DLL je volána z ovládacích panelů. Chcete-li přidat, upravit nebo odstranit zdroj dat, **SQLManageDataSources** volání **ConfigDSN** v nastavení knihovny DLL pro ovladače, které jsou přidružené k danému zdroji dat.. Přímo přidat, upravit nebo odstranit data zdroje, program zavolá **SQLConfigDataSource** v instalačním programu knihovnu DLL. Program předá název zdroje dat a možnost, která určuje akci, kterou trvat. **SQLConfigDataSource** volání **ConfigDSN** v instalačním programu DLL a předává je argumenty z **SQLConfigDataSource**.  
+ Pokud chcete zobrazit dialogové okno, pomocí kterého můžete přidat, upravit a odstranit zdroje dat uživatele, program zavolá **SQLManageDataSources** v instalačním programu knihovnu DLL. Tato funkce je voláno, když instalační program knihovny DLL je volána z ovládacích panelů. Chcete-li přidat, upravit nebo odstranit zdroj dat, **SQLManageDataSources** volání **ConfigDSN** v nastavení knihovny DLL pro ovladače, které jsou přidružené k danému zdroji dat. Přímo přidat, upravit nebo odstranit data zdroje, program zavolá **SQLConfigDataSource** v instalačním programu knihovnu DLL. Program předá název zdroje dat a možnost, která určuje akci, kterou trvat. **SQLConfigDataSource** volání **ConfigDSN** v instalačním programu DLL a předává je argumenty z **SQLConfigDataSource**.  
   
  Další informace najdete v tématu ODBC SDK *referenční informace pro programátory,* kapitoly 23, instalační program referenční dokumentace funkcí knihovny DLL a kapitoly 24, odkaz na funkci knihovny DLL Instalační služby.  
   

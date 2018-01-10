@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74ed32c0322d23cd3da1d439dcc8d8eadb246c13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Úprava ovládací prvek DHTML knihovny ATL
 Průvodce ovládacím prvkem ATL poskytuje počáteční kód tak můžete sestavit a spustit řízení, a abyste viděli, jak jsou metody napsané v souborech projektu a jak DHTML volá kód C++ ovládacího prvku pomocí metody odesílání. Můžete přidat libovolné metody odesílání rozhraní. Potom můžete volat metody v prostředku HTML.  

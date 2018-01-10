@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7a74abff7a2971fe66fa2df878078ac95f58fe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-usage"></a>Použití zásobníku
 Všechna paměť za adresu aktuální konfigurace je považován za volatile: operačního systému nebo ladicí program, mohou přepsat tuto paměť během ladicí relace uživatele nebo obslužné rutiny přerušení. Konfigurace proto musí být vždy nastaven před pokusem o čtení nebo zápis hodnot rámce zásobníku.  
@@ -26,13 +27,13 @@ Všechna paměť za adresu aktuální konfigurace je považován za volatile: op
   
 -   [Přidělení zásobníku](../build/stack-allocation.md)  
   
--   [Zásobník konstrukce dynamické oblasti parametrů](../build/dynamic-parameter-stack-area-construction.md)  
+-   [Konstrukce dynamické oblasti zásobníku parametrů](../build/dynamic-parameter-stack-area-construction.md)  
   
--   [Typy funkce](../build/function-types.md)  
+-   [Typy funkcí](../build/function-types.md)  
   
 -   [malloc – zarovnání](../build/malloc-alignment.md)  
   
--   [alloca –](../build/alloca.md)  
+-   [alloca](../build/alloca.md)  
   
 ## <a name="see-also"></a>Viz také  
- [x64 softwarové konvence](../build/x64-software-conventions.md)
+ [x64 – softwarové konvence](../build/x64-software-conventions.md)

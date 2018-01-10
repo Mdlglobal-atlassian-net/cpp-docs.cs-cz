@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bce36839b0736eabdbc850d9a2b2f9434cc820d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0eca56e607c916e28afc7bf513d853bcf6d94b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="previewing-resources"></a>Náhled prostředků
 Zobrazení náhledu vaše prostředky můžete zobrazit grafické prostředků bez jejich otevření. Zobrazení náhledu je také užitečné pro spustitelné soubory, poté, co jste je kompilovat, protože identifikátory prostředků změnit na čísla. Vzhledem k tomu, že tyto číselné identifikátory často neposkytují dostatek informací, zobrazení náhledu prostředky vám pomůže rychle identifikovat.  
@@ -59,7 +62,7 @@ Zobrazení náhledu vaše prostředky můžete zobrazit grafické prostředků b
   
      Stránka vlastností pro prostředek otevře zobrazení Náhled prostředku. Potom můžete pomocí nahoru a dolů klávesy se šipkami přejděte ovládacího prvku strom zobrazení prostředků nebo okna dokumentu. Stránka vlastností zůstane otevřít a zobrazit jakémukoli prostředku, který má právě fokus a bude schopen zobrazit jejich náhled.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Požadavky**  
   

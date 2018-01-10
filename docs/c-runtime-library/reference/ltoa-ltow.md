@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 135c082e4d972b18af057bf22a718ac9c4170718
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e7ae79ed3505e4570b453e7fd56b68730010388
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 Převede dlouhých celých čísel na řetězec. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_ltoa_s –, _ltow_s –](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
@@ -119,4 +120,4 @@ wchar_t *_ltow(
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [_itoa –, _i64toa –, _ui64toa –, _itow –, _i64tow –, _ui64tow –](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
- [_ultoa –, _ultow –](../../c-runtime-library/reference/ultoa-ultow.md)
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

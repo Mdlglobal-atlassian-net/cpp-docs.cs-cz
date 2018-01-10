@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daa70cb5bc1bcb1fef77930a9955f7afbd618f67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d56fcfa8fb65f183acfe96c3981023d06f5e524a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-predefined-symbols"></a>Předdefinované symboly ATL
 Tyto symboly jsou definovány v ATL hlavičkových souborů, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly jsou používány především s dialogová okna. Pokud pracujete s dialogů a ovládacích prvků v [editoru dialogového okna](../windows/dialog-editor.md), tyto symboly se zobrazí v okně vlastnosti přidružené k běžné ovládací prvky. Například pokud vašem dialogovém okně tlačítko Zrušit, tento příkaz bude spojený s symbol IDCANCEL v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

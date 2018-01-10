@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 740d1d35781fcea7820bfcb32171b744534b20fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL – třída
 Tato třída definuje objekt enumerator COM na základě kolekce standardní knihovna C++.  

@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4457712cf99a7e5b34632247e027d6765699ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-point-global-functions"></a>Spojovací bod globální funkce
 Tyto funkce poskytuje podporu pro spojovací body a jímky mapy.  
@@ -129,4 +130,4 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
   
 ## <a name="see-also"></a>Viz také  
  [Funkce](../../atl/reference/atl-functions.md)   
- [Makra bodu připojení](../../atl/reference/connection-point-macros.md)
+ [Makra bodů připojení](../../atl/reference/connection-point-macros.md)

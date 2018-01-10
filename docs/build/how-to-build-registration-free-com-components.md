@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bba711f88a53a3d9b6f9eae1faed09670e95d497
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 018a3ba707f4c5cff73b5a5c54f82400a79a8d46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Postupy: Sestavení součásti modelu COM bez registrace
 Komponenty modelu COM bez registrace jsou komponenty modelu COM, které mají manifest integrovány do knihovny DLL.  
@@ -38,4 +39,4 @@ Komponenty modelu COM bez registrace jsou komponenty modelu COM, které mají ma
 ## <a name="see-also"></a>Viz také  
  [Izolované aplikace](http://msdn.microsoft.com/library/aa375190)   
  [O souběžně sdílená sestavení](http://msdn.microsoft.com/library/ff951640)   
- [Postupy: sestavení izolované aplikace pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+ [Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)

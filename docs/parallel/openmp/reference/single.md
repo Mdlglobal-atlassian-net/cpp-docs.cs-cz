@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 898a175963698d1f44f90f08c21015a765892017
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single"></a>single
 Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli nutně hlavní vlákno.  
@@ -46,7 +47,7 @@ Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli n
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [privátní](../../../parallel/openmp/reference/private-openmp.md)  
+-   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
  [Hlavní](../../../parallel/openmp/reference/master.md) umožňuje zadat, že části kódu, se má provést pouze v hlavní vlákno.  
   
@@ -85,4 +86,4 @@ write output
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy jazyka](../../../parallel/openmp/reference/openmp-directives.md)
+ [Direktivy](../../../parallel/openmp/reference/openmp-directives.md)

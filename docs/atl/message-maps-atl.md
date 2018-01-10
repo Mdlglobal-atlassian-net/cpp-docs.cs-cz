@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 650dcd31e07ef1995f09b0521991d79726b22774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e708fea75c594c7bb9504515c80222ad901c335
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-atl"></a>Mapy zpráv (ATL)
 Mapy zpráv přidruží obslužnou rutinu konkrétní zprávu, příkaz nebo oznámení. Pomocí knihovny ATL pro [makra map zpráv](../atl/reference/message-map-macros-atl.md), můžete zadat mapy zpráv pro okno. Procedury oken v `CWindowImpl`, `CDialogImpl`, a `CContainedWindowT` přímé časového období zprávy a pokuste se jeho mapy zpráv.  
@@ -38,5 +39,5 @@ Mapy zpráv přidruží obslužnou rutinu konkrétní zprávu, příkaz nebo ozn
  Nakonec ATL podporuje mapy alternativní zpráv, deklarovat s [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) makro. Každý mapa alternativní zpráv je určený podle jedinečné číslo, které můžete předat `ALT_MSG_MAP`. Pomocí alternativní zprávy mapy, dokáže zpracovat zprávy více oken v jedna mapa. Všimněte si, že se ve výchozím nastavení, `CWindowImpl` nepoužívá mapy alternativní zpráv. Chcete-li přidat tuto podporu, přepište `WindowProc` metoda v vaše `CWindowImpl`-odvozené třídy a volání `ProcessWindowMessage` s identifikátorem mapy zpráv.  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace okno](../atl/implementing-a-window.md)
+ [Implementace okna](../atl/implementing-a-window.md)
 

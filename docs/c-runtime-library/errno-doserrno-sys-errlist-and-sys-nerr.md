@@ -30,11 +30,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 Globální makra, které mají kódy chyb, které se nastavují při spuštění programu a řetězec ekvivalenty kódy chyb pro zobrazení.  
@@ -126,4 +127,4 @@ Globální makra, které mají kódy chyb, které se nastavují při spuštění
  [_get_doserrno –](../c-runtime-library/reference/get-doserrno.md)   
  [_set_doserrno –](../c-runtime-library/reference/set-doserrno.md)   
  [_get_errno –](../c-runtime-library/reference/get-errno.md)   
- [_set_errno –](../c-runtime-library/reference/set-errno.md)
+ [_set_errno](../c-runtime-library/reference/set-errno.md)

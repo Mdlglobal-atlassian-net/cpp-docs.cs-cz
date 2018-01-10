@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20789d226ace8ba41a9635f0039274b68d37922c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (specifikátory implicitních výjimek)
 Když **/Zc: implicitnoexcept** je zadána možnost, kompilátor přidá implicitní [noexcept](../../cpp/noexcept-cpp.md) specifikátor výjimky kompilátoru definované speciální členské funkce a uživatelem definované destruktory a deallocators. Ve výchozím nastavení **/Zc: implicitnoexcept** je povoleno tak, aby odpovídala ISO C ++ 11 standardní. Vypnutí této možnosti vypnout zakáže implicitní `noexcept` na uživatelem definované destruktory a dealloacators a definované kompilátoru speciální členské funkce.  

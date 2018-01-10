@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4895e7b1cd0e38b33c1efe66e9070073403ee01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae16adcc6743c7e35aae2a4121819a6df50cf4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-dual-interface"></a>Implementace duální rozhraní
 Můžete implementovat duální rozhraní pomocí [IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídy, která poskytuje výchozí implementaci třídy `IDispatch` metody duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
@@ -53,5 +54,5 @@ Můžete implementovat duální rozhraní pomocí [IDispatchImpl](../atl/referen
 >  Nabízí ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) a [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) třídy, která vám pomůže implementovat odesílající rozhraní bez nutnosti knihovny typů obsahující definice duální rozhraní, které je kompatibilní.  
   
 ## <a name="see-also"></a>Viz také  
- [Duální rozhraní a knihovny ATL](../atl/dual-interfaces-and-atl.md)
+ [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)
 

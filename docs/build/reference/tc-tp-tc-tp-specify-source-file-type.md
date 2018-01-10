@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3b7508bf3ff65e27cab3260577d2831de00eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69ccd08967d386780744fb85476033430127ba3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (zadání typu zdrojového souboru)
 **/Tc** možnost určuje, že `filename` je C zdrojového souboru, i když nemá .c rozšíření. **/Tp** možnost určuje, že `filename` je zdrojového souboru C++, i když nemá příponu sada nebo .cxx. Mezery mezi parametrem a `filename` je volitelný. Každá možnost určuje jeden soubor. Chcete-li zadat další soubory, opakujte možnost.  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84e603da97d31b240ad4b2d0471128be95028296
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70e2fd6d436120b6bae0cf02600a6d8866e11b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-crebarctrl"></a>Používání atributu CReBarCtrl
 Ovládacím prvkem matrice funguje jako kontejner pro podřízená okna. Tyto podřízená okna, často další ovládací prvky, jsou přiřazeny k pásmo ovládacího prvku matrice. Ovládacím prvkem matrice může obsahovat jeden nebo více pruhy s každé pásmo s libovolnou kombinaci řádku úchytu, rastrový obrázek, text popisku a podřízeného okna. Pruhy však nemůže obsahovat více než jeden podřízeného okna.  
@@ -33,17 +34,17 @@ Ovládacím prvkem matrice funguje jako kontejner pro podřízená okna. Tyto po
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   
--   [CReBar vs. Crebarctrl –](../mfc/crebar-vs-crebarctrl.md)  
+-   [Porovnání atributů CReBar a CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   
 -   [Vytvoření ovládacího prvku matrice](../mfc/creating-a-rebar-control.md)  
   
 -   [Matrice – ovládací prvky a pruhy](../mfc/rebar-controls-and-bands.md)  
   
--   [Použití seznamu obrázků s ovládacím prvkem matrice](../mfc/using-an-image-list-with-a-rebar-control.md)  
+-   [Použití seznamu obrázků s ovládacím prvkem matrice](../mfc/using-an-image-list-with-a-rebar-control.md)  
   
--   [Použití dialogového pruhu s ovládacím prvkem matrice](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
+-   [Použití dialogového pruhu s ovládacím prvkem matrice](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
   
--   [Zpracování zpráv s oznámením v ovládacím prvku matrice](../mfc/processing-notification-messages-in-a-rebar-control.md)  
+-   [Zpracování zpráv s oznámením v ovládacím prvku matrice](../mfc/processing-notification-messages-in-a-rebar-control.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední seznam najdete v tématu [možnosti kompilátoru uvedené abecedně](../../build/reference/compiler-options-listed-alphabetically.md).  
@@ -83,7 +84,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
   
 |Možnost|Účel|  
 |------------|-------------|  
-|[/ DOC](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Zpracuje dokumentační komentáře do souboru XML.|  
+|[/doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Zpracuje dokumentační komentáře do souboru XML.|  
 |[/FA](../../build/reference/fa-fa-listing-file.md)|Nakonfiguruje výpis souboru sestavení.|  
 |[/Fa](../../build/reference/fa-fa-listing-file.md)|Vytvoří seznam souboru sestavení.|  
 |[/FD](../../build/reference/fd-program-database-file-name.md)|Přejmenuje soubor databáze programu.|  
@@ -142,7 +143,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/F](../../build/reference/f-set-stack-size.md)|Nastaví zásobníku velikost.|  
 |[/LD](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří knihovnu DLL.|  
 |[/ LDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří knihovnu DLL ladění.|  
-|[/ Link](../../build/reference/link-pass-options-to-linker.md)|Předá Zadaná možnost propojení.|  
+|[/link](../../build/reference/link-pass-options-to-linker.md)|Předá Zadaná možnost propojení.|  
 |[/LN](../../build/reference/ln-create-msil-module.md)|Vytvoří modul MSIL.|  
 |[/MD](../../build/reference/md-mt-ld-use-run-time-library.md)|Zkompiluje k vytvoření vícevláknové knihovny DLL pomocí MSVCRT.lib.|  
 |[/ MDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Zkompiluje k vytvoření ladění vícevláknové knihovny DLL pomocí MSVCRTD.lib.|  
@@ -167,7 +168,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/J](../../build/reference/j-default-char-type-is-unsigned.md)|Změní výchozí `char` typu.|  
 |[/ Kernel](../../build/reference/kernel-create-kernel-mode-binary.md)|Kompilátoru a linkeru vytvoří binární soubor, který lze spustit v jádru systému Windows.|  
 |[/ MP](../../build/reference/mp-build-with-multiple-processes.md)|Sestaví víc souborů současně.|  
-|[/ nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Potlačí zobrazení nápisu přihlášení.|  
+|[/nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Potlačí zobrazení nápisu přihlášení.|  
 |[SDL](../../build/reference/sdl-enable-additional-security-checks.md)|Povoluje další funkce zabezpečení a upozornění.|  
 |[/ showincludes vložených](../../build/reference/showincludes-list-include-files.md)|Zobrazí seznam všech zahrnují souborů během kompilace.|  
 |[/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)|Určuje zdrojový soubor C.|  

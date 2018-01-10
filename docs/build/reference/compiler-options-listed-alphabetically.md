@@ -14,11 +14,12 @@ caps.latest.revision: "66"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab900cf342754aed7d7d9ba7f9a499c537ad8a22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee6062b04c1f406fe3286f6035eba1cda65ef1fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
 Následuje komplexní abecední seznam možností kompilátoru. Seznam kategorií, najdete v článku [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
@@ -39,7 +40,7 @@ Následuje komplexní abecední seznam možností kompilátoru. Seznam kategori�
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Vyhodnocení constexpr ovládacího prvku v době kompilace.|  
 |[/D](../../build/reference/d-preprocessor-definitions.md)|Definuje konstanty a makra.|  
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Určuje formát diagnostické zprávy.|  
-|[/ DOC](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Proces dokumentační komentáře do souboru XML.|  
+|[/doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Proces dokumentační komentáře do souboru XML.|  
 |[/E](../../build/reference/e-preprocess-to-stdout.md)|Výstup preprocesoru kopie standardním výstupu.|  
 |[/EH](../../build/reference/eh-exception-handling-model.md)|Určuje model zpracování výjimek.|  
 |[/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Výstup preprocesoru kopie standardním výstupu.|  
@@ -91,14 +92,14 @@ Následuje komplexní abecední seznam možností kompilátoru. Seznam kategori�
 |[/ Kernel](../../build/reference/kernel-create-kernel-mode-binary.md)|Kompilátoru a linkeru vytvoří binární soubor, který lze spustit v jádru systému Windows.|  
 |[/LD](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří knihovnu DLL.|  
 |[/ LDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří knihovnu DLL ladění.|  
-|[/ Link](../../build/reference/link-pass-options-to-linker.md)|Předá Zadaná možnost propojení.|  
+|[/link](../../build/reference/link-pass-options-to-linker.md)|Předá Zadaná možnost propojení.|  
 |[/LN](../../build/reference/ln-create-msil-module.md)|Vytvoří modul MSIL.|  
 |[/MD](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří vícevláknové knihovny DLL pomocí MSVCRT.lib.|  
 |[/ MDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří ladění vícevláknové knihovny DLL pomocí MSVCRTD.lib.|  
 |[/ MP](../../build/reference/mp-build-with-multiple-processes.md)|Zkompiluje víc zdrojových souborů pomocí několika procesů.|  
 |[/ MT](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří soubor s více vlákny spustitelný soubor pomocí LIBCMT.lib.|  
 |[/ MTd](../../build/reference/md-mt-ld-use-run-time-library.md)|Vytvoří ladění vícevláknové spustitelný soubor pomocí LIBCMTD.lib.|  
-|[/ nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Potlačí zobrazení nápisu přihlášení.|  
+|[/nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Potlačí zobrazení nápisu přihlášení.|  
 |[/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Vytvoří malý kód.|  
 |[/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Vytvoří rychlý kód.|  
 |[/Ob](../../build/reference/ob-inline-function-expansion.md)|Vložené rozšíření ovládacích prvků.|  

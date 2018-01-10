@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c15def4acc3daad2cb0739da0f53e2a9871d172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctoolbarctrl"></a>Používání atributu CToolBarCtrl
 Můžete použít ovládací prvek panelu nástrojů ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) vytvořit okno Ovládací prvek obsahující tlačítka a volitelné mezery. Jako uživatel vybere ho každého tlačítka v okně Ovládací prvek panelu nástrojů odešle zprávu příkaz do nadřazeného okna. Tlačítka na panelu nástrojů, obvykle odpovídají položky v nabídce aplikace, že poskytuje další a více přímý způsob pro uživatele pro přístup aplikaci příkazy.  
@@ -30,13 +31,13 @@ Můžete použít ovládací prvek panelu nástrojů ([CToolBarCtrl](../mfc/refe
   
 -   [Metody vytváření panelů nástrojů](../mfc/methods-of-creating-a-toolbar.md)  
   
--   [Nastavení pro ovládací prvek panelu nástrojů](../mfc/settings-for-the-toolbar-control.md)  
+-   [Nastavení pro ovládací prvek panel nástrojů](../mfc/settings-for-the-toolbar-control.md)  
   
 -   [Vytvoření objektu CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)  
   
--   [Použití seznamů obrázků v ovládacím prvku panel nástrojů](../mfc/using-image-lists-in-a-toolbar-control.md)  
+-   [Použití seznamů obrázků v ovládacím prvku panel nástrojů](../mfc/using-image-lists-in-a-toolbar-control.md)  
   
--   [Použití rozevíracích tlačítek v ovládacím prvku panel nástrojů](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
+-   [Použití rozevíracích tlačítek v ovládacím prvku panel nástrojů](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
   
 -   [Přizpůsobení vzhledu ovládacího prvku panel nástrojů](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   

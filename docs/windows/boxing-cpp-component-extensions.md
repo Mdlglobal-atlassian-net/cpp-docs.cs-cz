@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8d597466204aa17475ee732b77f321464ccc010
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="boxing--c-component-extensions"></a>Zabalení (rozšíření komponent C++)
 Visual C++ compiler můžete převést typy hodnot k objektům v procesu označovaného jako *zabalení*a převést objekty do typy hodnot v procesu označovaného jako *rozbalení*.  
@@ -88,11 +91,11 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
  Další informace naleznete v tématu:  
   
--   [Postupy: explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)  
+-   [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [Postupy: pomocí výrazu gcnew vytváření typů hodnot s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
--   [Postupy: Unbox](../dotnet/how-to-unbox.md)  
+-   [Postupy: Rozbalení](../dotnet/how-to-unbox.md)  
   
 -   [Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
@@ -174,7 +177,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 1  
@@ -197,4 +200,4 @@ in func2(System::ValueType^)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

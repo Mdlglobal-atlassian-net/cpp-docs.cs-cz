@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebfa692f422283e69395639295b3bf2ace1741ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bff1ab29841ff2dd9973d538bb763d1fc1126a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-assertions"></a>Zobrazení kontrolní výrazy
 Pokud klient pro připojení ke službě se zobrazí přestane reagovat, může služba prohlašovanou a zobrazí okno se zprávou, není možné zobrazit. Můžete to ověřit pomocí ladicí program Visual C++ pro ladění kódu (viz [pomocí Správce úloh](../atl/using-task-manager.md) nahoře v této části).  
@@ -30,5 +31,5 @@ Pokud klient pro připojení ke službě se zobrazí přestane reagovat, může 
  Pokud zjistíte, že služby zobrazit okno se zprávou, která se nezobrazí, můžete chtít nastavit **povolit služby interakcí s plochou** možnost před použitím služby znovu. Tato možnost je spuštění parametr, který umožňuje zprávami zobrazuje službu tak, aby se na ploše. Pokud chcete nastavit tuto možnost, otevřete aplikaci ovládacím panelu služby, vyberte službu, klikněte na **spuštění**a pak vyberte **povolit služby interakcí s plochou** možnost.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění tipy](../atl/debugging-tips.md)
+ [Tipy pro ladění](../atl/debugging-tips.md)
 

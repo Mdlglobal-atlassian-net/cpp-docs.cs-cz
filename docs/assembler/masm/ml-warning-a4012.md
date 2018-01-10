@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b022fcfd49b8be54189e1cfb3b1257338b3409b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0648d2bac0d300fc8e2c696b54741a3d7293a4f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-warning-a4012"></a>Upozornění nástroje ML A4012
 **informace o čísle řádku pro segment bez třídy 'kódu.**  
@@ -29,4 +30,4 @@ ms.lasthandoff: 10/24/2017
  CodeView nemůže zpracovat moduly s kódem v segmentech s názvy tříd, které na konci "Kód."  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

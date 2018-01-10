@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
 ||||  
@@ -104,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Poznámky  
  Přetížení funkce šablony **operátor <<**, což bitset k zapsání bez první převádění na řetězce. Funkce šablony efektivně provede:  
   
- **ostr** << _ *vpravo*. [to_string –](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **vlastnosti**, **allocator** \< **CharType**>> ( )  
+ **ostr** << _ *vpravo*. [to_string –](bitset-class.md) < **CharType**, **vlastnosti**, **allocator** \< **CharType**>> ( )  
   
 ### <a name="example"></a>Příklad  
   
@@ -161,7 +162,7 @@ _Istr,
  Funkce šablony vrátí řetězec `_Istr`.  
   
 ### <a name="remarks"></a>Poznámky  
- Přetížení funkce šablony **operátor >>** k uložení v bitset _ *vpravo* bitset – hodnota ( `str`), kde `str` je objekt typu [basic_string ](https://msdn.microsoft.com/library/syxtdd4f.aspx)  <  **CharType**, **vlastnosti**, **allocator** \< **CharType**> >  **&**  extrahují z `_Istr`.  
+ Přetížení funkce šablony **operátor >>** k uložení v bitset _ *vpravo* bitset – hodnota ( `str`), kde `str` je objekt typu [basic_string ](basic-string-class.md)  <  **CharType**, **vlastnosti**, **allocator** \< **CharType**> >  **&**  extrahují z `_Istr`.  
   
  Funkce šablony extrahuje prvky z `_Istr` a vloží je do bitset – dokud:  
   

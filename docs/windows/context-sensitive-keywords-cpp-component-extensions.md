@@ -15,11 +15,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextově závislá klíčová slova (rozšíření komponent C++)
 *Kontextově závislá klíčová slova* jsou jazykové elementy, které jsou rozpoznány jenom v konkrétní kontexty. Mimo kontext určité kontextové klíčové slovo lze symbol definovaný uživatelem.  
@@ -29,15 +32,15 @@ ms.lasthandoff: 10/24/2017
   
  Následuje seznam kontextově závislá klíčová slova:  
   
--   [abstraktní](../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [Delegát](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [události](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
--   [Nakonec](../dotnet/finally.md)  
+-   [finally](../dotnet/finally.md)  
   
--   [pro každou v](../dotnet/for-each-in.md)  
+-   [for each, in](../dotnet/for-each-in.md)  
   
 -   [InitOnly](../dotnet/initonly-cpp-cli.md)  
   
@@ -45,11 +48,11 @@ ms.lasthandoff: 10/24/2017
   
 -   [literál](../windows/literal-cpp-component-extensions.md)  
   
--   [přepsání](../windows/override-cpp-component-extensions.md)  
+-   [override](../windows/override-cpp-component-extensions.md)  
   
--   [Vlastnost](../windows/property-cpp-component-extensions.md)  
+-   [property](../windows/property-cpp-component-extensions.md)  
   
--   [zapečetěná](../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
 -   `where`(součástí [obecné typy](../windows/generics-cpp-component-extensions.md))  
   
@@ -97,11 +100,11 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 100  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

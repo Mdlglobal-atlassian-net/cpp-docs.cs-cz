@@ -18,11 +18,14 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf02b1c8aa84688df5ef29f4c5e69fa818b31904
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (rozšíření komponent C++)
 `safe_cast` Operace v případě úspěchu vrátí zadaný výraz jako zadaný typ; jinak vyvolá `InvalidCastException`.  
@@ -103,7 +106,7 @@ int main(Array<String^>^ args) {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 Caught expected exception: InvalidCastException  
@@ -147,7 +150,7 @@ expression
   
 -   [Přetypování ve stylu jazyka pomocí možnosti/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
--   [Postupy: používání operátoru safe_cast v jazyce C + +/ CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+-   [Postupy: Používání operátoru safe_cast v jazyce C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
@@ -181,11 +184,11 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 Caught expected exception  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

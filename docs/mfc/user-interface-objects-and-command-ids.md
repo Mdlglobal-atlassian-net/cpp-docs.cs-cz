@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec4b281812f66ba54d73866bce3b907d26a8ceb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e085c6d9e4d030c8db44e11e570ffa1033abee35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Identifikátory objektů uživatelského rozhraní a příkazů
 Položky nabídky, tlačítek panelu nástrojů a klávesy akcelerátoru jsou "objekty uživatelského rozhraní" schopný vytvářet příkazy. Každý uživatelského rozhraní objekt má identifikátor. Příkaz přiřazením stejné ID objektu a příkaz přidružíte objekt uživatelského rozhraní. Jak je popsáno v [zprávy](../mfc/messages.md), příkazy jsou implementované jako speciální zprávy. Obrázek "Příkazy v rámci" níže ukazuje, jak rozhraní spravuje příkazy. Objekt uživatelského rozhraní vygeneruje-li příkaz, jako například `ID_EDIT_CLEAR_ALL`, jeden z objektů v aplikaci zpracovává příkaz – na obrázku níže objekt dokumentu `OnEditClearAll` funkce je volána prostřednictvím mapy zpráv dokumentu.  
@@ -40,5 +41,5 @@ Příkazy v rozhraní Framework
 Příkaz aktualizace v rozhraní Framework  
   
 ## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v rozhraní Framework](../mfc/messages-and-commands-in-the-framework.md)
+ [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

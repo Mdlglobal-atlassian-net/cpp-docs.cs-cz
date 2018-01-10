@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Referenční dokumentace pro použití nástroje assembleru ARM v příkazovém řádku
 Tento článek obsahuje informace o assembleru Microsoft ARM, příkazového řádku *armasm*, který kompilovaný jazyk sestavení ARMv7 jezdec do implementace Microsoft z běžné objekt souboru formátu (COFF). Linkeru můžete propojit COFF kód s kódem objekt, který je vytvořen pomocí assembleru ARM nebo kompilátorem C, společně s objekt knihovny, které jsou vytvořené pomocí librarian.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Cesta hledání zahrnout přidáte zadaných adresářích.  
   
  -předdefinovat`directive`  
- Zadejte direktivu SETA, SETL nebo NASTAVÍ předdefinovat symbol. Příklad: **armasm.exe-předdefinovat "Počet SETA 150" source.asm**. Další informace najdete v tématu [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Zadejte direktivu SETA, SETL nebo NASTAVÍ předdefinovat symbol. Příklad: **armasm.exe-předdefinovat "Počet SETA 150" source.asm**. Další informace najdete v tématu [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Zakažte všechny zprávy upozornění.  

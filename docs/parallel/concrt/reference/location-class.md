@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-class"></a>location – třída
 Abstrakci fyzické umístění na hardwaru.  
@@ -55,7 +56,7 @@ class location;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)|Určuje, zda dva `location` představovat jiné umístění.|  
+|[operator!=](#operator_neq)|Určuje, zda dva `location` představovat jiné umístění.|  
 |[operátor =](#operator_eq)|Přiřadí obsah jiné `location` k tomuto objektu.|  
 |[Operator ==](#operator_eq_eq)|Určuje, zda dva `location` představovat stejné umístění.|  
   
@@ -171,4 +172,4 @@ bool operator== (const location& _Rhs) const;
  `true`Pokud jsou stejné, těmito dvěma umístěními a `false` jinak.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

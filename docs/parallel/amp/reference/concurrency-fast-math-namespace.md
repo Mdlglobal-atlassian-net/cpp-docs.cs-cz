@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math – obor názvů
 Funkce `fast_math` obor názvů mít nižší přesnost, podporují pouze jednoduchou přesností (`float`) a volání vnitřní funkce DirectX. Existují dvě verze jednotlivé funkce, například `cos` a `cosf`. Obě verze přijmout a vrátit `float`, ale každý volá stejné DirectX vnitřní.  
@@ -63,12 +64,12 @@ namespace fast_math;
 |[fminf –](concurrency-fast-math-namespace-functions.md#fminf)|Určení minimální číselná hodnota z argumentů|  
 |[fmod](concurrency-fast-math-namespace-functions.md#fmod)|Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
 |[fmodf –](concurrency-fast-math-namespace-functions.md#fmodf)|Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
-|[frexp –](concurrency-fast-math-namespace-functions.md#frexp)|Získá mantisa a exponent _X|  
+|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Získá mantisa a exponent _X|  
 |[frexpf –](concurrency-fast-math-namespace-functions.md#frexpf)|Získá mantisa a exponent _X|  
 |[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Určuje, zda argument má hodnotu konečné|  
 |[isinf –](concurrency-fast-math-namespace-functions.md#isinf)|Určuje, zda je argument nekonečna|  
 |[isNaN](concurrency-fast-math-namespace-functions.md#isnan)|Určuje, zda je argument NaN.|  
-|[ldexp –](concurrency-fast-math-namespace-functions.md#ldexp)|Vypočítá reálné číslo z mantisa a exponent|  
+|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Vypočítá reálné číslo z mantisa a exponent|  
 |[ldexpf –](concurrency-fast-math-namespace-functions.md#ldexpf)|Vypočítá reálné číslo z mantisa a exponent|  
 |[protokolu](concurrency-fast-math-namespace-functions.md#log)|Vypočítá základní e logaritmus argumentu|  
 |[LOG10](concurrency-fast-math-namespace-functions.md#log10)|Vypočítá logaritmus o základu 10 argument|  
@@ -107,4 +108,4 @@ namespace fast_math;
  **Namespace:** Concurrency::fast_math –  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

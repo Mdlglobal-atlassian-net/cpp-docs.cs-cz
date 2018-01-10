@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df3bb5be4f2032353dd08e551591a03cdc2f4b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList – struktura
 Představuje seznam dokončení UMS. Při plánování vláken UMS bloky plánovače určené kontextu je odeslat, aby rozhodnutí o při plánování v kořenovém adresáři základní virtuálních procesorů, zatímco původní vlákno je blokované. Při původní vlákno odblokuje, fronty je operační systém do seznamu dokončení, která je přístupná prostřednictvím tohoto rozhraní. Plánovač můžete dotazovat seznamu dokončení v určené plánování kontext nebo jiné místo, které vyhledávání pro práci.  
@@ -68,4 +69,4 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
  [Struktura rozhraní IUMSScheduler](iumsscheduler-structure.md)   
- [Iumsunblocknotification – struktura](iumsunblocknotification-structure.md)
+ [IUMSUnblockNotification – struktura](iumsunblocknotification-structure.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c817ab67fecb1479971d729977ad55d6b3e506fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4492f590c1be5604fcd630c41cdf79ce21e8b76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iostream-programming"></a>iostream – programování
 Tato část obsahuje [obecný popis](../standard-library/what-a-stream-is.md) z iostream – třídy a pak popisuje [výstupní datové proudy](../standard-library/output-streams.md), [vstupní datové proudy](../standard-library/input-streams.md), a [vstupu a výstupu datové proudy](../standard-library/input-output-streams.md). Konci části poskytuje informace o pokročilé iostream – programování.  
@@ -40,15 +41,15 @@ Tato část obsahuje [obecný popis](../standard-library/what-a-stream-is.md) z 
  Je také se zabývat na [bezpečný přístup z více vláken ve standardní knihovna C++](../standard-library/thread-safety-in-the-cpp-standard-library.md) a [stdext – obor názvů](../standard-library/stdext-namespace.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Co je datový proud](../standard-library/what-a-stream-is.md)  
+ [Co je stream](../standard-library/what-a-stream-is.md)  
   
- [Výstupní datové proudy](../standard-library/output-streams.md)  
+ [Výstupní streamy](../standard-library/output-streams.md)  
   
- [Vstupní datové proudy](../standard-library/input-streams.md)  
+ [Vstupní streamy](../standard-library/input-streams.md)  
   
  [Vstupní/výstupní datové proudy](../standard-library/input-output-streams.md)  
   
- [Vlastní manipulátory bez argumentů](../standard-library/custom-manipulators-with-arguments.md)  
+ [Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)   

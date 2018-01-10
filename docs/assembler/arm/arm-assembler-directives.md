@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
-Ve většině případů assembleru Microsoft ARM používá jazyk sestavení ARM, která je popsána v kapitole 7 [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/?LinkId=246102). Ale implementace Microsoft direktiv některé sestavení se liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.  
+Ve většině případů assembleru Microsoft ARM používá jazyk sestavení ARM, která je popsána v kapitole 7 [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Ale implementace Microsoft direktiv některé sestavení se liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementace Microsoft direktiv sestavení ARM  
  OBLASTI  
  Assembleru Microsoft ARM podporuje tyto atributy oblasti: ZAROVNAT, kód, CODEALIGN, DATA, NOINIT, jen pro čtení, READWRITE, Flash, ARM.  
   
- Všechny kromě Flash a ARM fungovat, jak je uvedeno v [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Všechny kromě Flash a ARM fungovat, jak je uvedeno v [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  V assembleru Microsoft ARM Flash označuje, že část kódu obsahuje kód, Flash a je výchozí pro části kódu.  ARM znamená, že oddíl obsahuje kód ARM.  
   

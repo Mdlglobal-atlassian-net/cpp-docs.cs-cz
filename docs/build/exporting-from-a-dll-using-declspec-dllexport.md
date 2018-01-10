@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 967b3a737893ac6f891ab6fbbc73de08b1084d67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Export z knihovny DLL pomocí deklarace __declspec(dllexport)
 Microsoft zavedená **__export** v kompilátoru 16bitové verzi Visual C++ pro povolení kompilátoru automaticky generovat názvy exportu a umístit je soubor LIB. Tento soubor .lib pak lze stejně jako statické .lib propojit s knihovny DLL.  
@@ -90,4 +91,4 @@ class __declspec(dllexport) CExampleExport : public CObject
 -   [Vzájemné importy](../build/mutual-imports.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+ [Export z knihovny DLL](../build/exporting-from-a-dll.md)

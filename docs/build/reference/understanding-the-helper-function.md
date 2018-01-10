@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-helper-function"></a>Základní informace o podpůrné funkci
 Podpůrná funkce pro podporované linkeru zpožděné načítání je co ve skutečnosti knihovnu DLL načte, v době běhu. Pomocné funkce přizpůsobit své chování tak, že zápis vlastní funkce a propojení s vaším programem místo pomocí zadané pomocné funkce v Delayimp.lib, můžete upravit. Jeden pomocné funkce slouží všechny knihovny DLL načtené zpoždění.  
@@ -62,7 +63,7 @@ Podpůrná funkce pro podporované linkeru zpožděné načítání je co ve sku
   
  Následující témata popisují pomocné funkce:  
   
--   [Změny v knihovně DLL odložené načtení pomocné funkce od Visual C++ verze 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
+-   [Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
   
 -   [Konvence volání, parametry a návratový typ](../../build/reference/calling-conventions-parameters-and-return-type.md)  
   
@@ -70,7 +71,7 @@ Podpůrná funkce pro podporované linkeru zpožděné načítání je co ve sku
   
 -   [Výpočet nezbytných hodnot](../../build/reference/calculating-necessary-values.md)  
   
--   [Uvolnění knihovny DLL odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
+-   [Uvolnění knihovny DLL s odloženým načtením](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)

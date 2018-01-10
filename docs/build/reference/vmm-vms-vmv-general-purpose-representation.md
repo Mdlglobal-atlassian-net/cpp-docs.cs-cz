@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1de5d46375a48b3d0a97ee76486a11e8a6e71b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
 Použít, když [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je vybrán jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti znamenat model dědičnosti definice třídy není ještě došlo.  

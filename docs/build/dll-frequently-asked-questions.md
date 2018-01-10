@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ddacf677dab37bc85492dff1ec13dde23132da15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39c3a36f697527c7e133409f49656e4415f86a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL – nejčastější dotazy  
   
@@ -39,7 +40,7 @@ Následující jsou uvedeny některé časté otázky (FAQ) o knihovny DLL.
 
 ## <a name="mfc_multithreaded_1"></a>Může knihovna MFC DLL vytvořit více vláken?  
   
-S výjimkou při inicializaci knihovny MFC DLL bezpečně vytvořit více vláken také používá místní úložiště (TLS) funguje jako Win32 vlákno **TlsAlloc** přidělit úložiště thread local. Ale pokud knihovně MFC DLL používá **__declspec(thread)** přidělit úložiště thread local, musí být implicitně propojena klientská aplikace na knihovnu DLL. Pokud klientská aplikace explicitně odkazuje na knihovnu DLL, volání **LoadLibrary** nebude úspěšně načíst knihovnu DLL. Další informace o vytváření více vláken uvnitř MFC – knihovny DLL najdete v článku znalostní báze Knowledge Base, "PRB: Volání LoadLibrary() na zatížení knihovnu DLL, má statické protokol TLS, (Q118816).  
+S výjimkou při inicializaci knihovny MFC DLL bezpečně vytvořit více vláken také používá místní úložiště (TLS) funguje jako Win32 vlákno **TlsAlloc** přidělit úložiště thread local. Ale pokud knihovně MFC DLL používá **__declspec(thread)** přidělit úložiště thread local, musí být implicitně propojena klientská aplikace na knihovnu DLL. Pokud klientská aplikace explicitně odkazuje na knihovnu DLL, volání **LoadLibrary** nebude úspěšně načíst knihovnu DLL. Další informace o vytváření více vláken uvnitř MFC – knihovny DLL najdete v článku znalostní báze Knowledge Base, "PRB: Volání LoadLibrary() na zatížení knihovnu DLL, má statické protokol TLS, (Q118816). Další informace o lokální proměnné vláken v knihovnách DLL najdete v tématu [vlákno](../cpp/thread.md).
   
  MFC DLL, která vytvoří nové vlákno MFC během spouštění se zastaví odezvu, když je načten jiná aplikace. To zahrnuje při každém vlákno voláním `AfxBeginThread` nebo `CWinThread::CreateThread` uvnitř:  
   
@@ -78,4 +79,4 @@ Pokud vaše knihovna DLL je regulární MFC DLL, která je staticky propojené d
 Možnou příčinou nevrácené paměti je, že MFC vytvoří dočasné objekty, které se používají v rámci funkce obslužných rutin zpráv. V aplikacích MFC tyto dočasné objekty jsou automaticky vyčištěna v `CWinApp::OnIdle()` funkci, která je volána mezi zpracování zpráv. V MFC dynamické knihovny (DLL), ale `OnIdle()` funkce není volána automaticky. V důsledku toho dočasné objekty nejsou vyčistit automaticky. Vyčistěte dočasné objekty, musí explicitně volání knihovny DLL `OnIdle(1)` pravidelně.  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

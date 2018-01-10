@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39e515cadf2930cdbe5ef600bcba4c86cb79a191
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd6351623b230e3be1e432bd6ee0fb760da5abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp-files-as-linker-input"></a>Soubory .Exp jako vstup linkeru
 Export (.exp) soubory obsahují informace o exportovaných funkcí a datové položky. Když LIB vytvoří knihovnu importu, také vytvoří soubor .exp. Můžete použít soubor .exp při propojení program, který exportuje do i importuje z jiné aplikace, buď přímo nebo nepřímo. Pokud jste se souborem .exp, odkaz nevytváří knihovnu importu, protože předpokládá, že LIB již vytvořili. Podrobnosti o soubory .exp a knihoven importovat najdete v tématu [práce knihoven importovat a exportovat soubory](../../build/reference/working-with-import-libraries-and-export-files.md).  

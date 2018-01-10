@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64a99bad7d6bc7fa937100cc5bf864e968572402
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6c13ed0bb19ef1ed2864378e151c6be8d98887
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
 Rodina Tento článek popisuje zpracování zprávy a příkazy pomocí rozhraní MFC framework a jak se připojit je k jejich funkcím obslužných rutin.  
@@ -36,21 +37,21 @@ Rodina Tento článek popisuje zpracování zprávy a příkazy pomocí rozhran�
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   
--   [Zprávy a příkazy v rozhraní Framework](../mfc/messages-and-commands-in-the-framework.md)  
+-   [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)  
   
 -   [Jakým způsobem volá rámec obslužné rutiny zpráv](../mfc/how-the-framework-calls-a-handler.md)  
   
--   [Jak Framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)  
+-   [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)  
   
 -   [Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)  
   
--   [Mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)  
+-   [Mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)  
   
 -   [Postup zobrazení informací o příkazu ve stavovém řádku](../mfc/how-to-display-command-information-in-the-status-bar.md)  
   
 -   [Dynamická aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)  
   
--   [Postupy: vytvoření mapy zpráv pro třídu šablony](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
+-   [Postupy: Vytvoření mapy zpráv pro třídu šablony](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../mfc/mfc-concepts.md)   

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d2eadf67de4a9eb92ee1edb734abc54d7ee2dbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 394e459a46003e3f1baccff7dd4c76f40b73e354
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-semantics"></a>CString sémantiku
 I když [CString](../atl-mfc-shared/reference/cstringt-class.md) jsou dynamické objekty, které můžou růst, budou fungovat stejně jako jednoduchý třídy a vestavěné primitivní typy. Každý `CString` objekt představuje jedinečnou hodnotu. `CString`objekty by měl představit jako skutečný řetězce, nikoli jako ukazatele na řetězce.  

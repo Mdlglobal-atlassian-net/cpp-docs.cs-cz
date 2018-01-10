@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f601c32a1fe2accec2663246a56830fda5ed930
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Místní zdroje v aplikacích MFC: Satelitní knihovny DLL
 MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkce, která pomáhají při vytváření aplikací lokalizovaný pro víc jazyků. Satelitní knihovny DLL je [DLL obsahuje pouze](../build/creating-a-resource-only-dll.md) obsahující prostředky aplikace, které lokalizovaný pro konkrétní jazyk. Když aplikace spustí, MFC automaticky načte lokalizovaný prostředek, který je nejvhodnější pro prostředí. Například můžete mít aplikace s anglickými prostředky s dvě satelitní knihovny DLL, jeden obsahuje francouzský překlad vašich prostředků a dalších obsahující němčině překlad. Když je aplikace spuštěna v anglické verzi systému, používá anglické prostředky. Pokud je spuštěna ve francouzštině systému, používá francouzské prostředky; Pokud je spuštěna na německém systému, používá německé prostředky.  

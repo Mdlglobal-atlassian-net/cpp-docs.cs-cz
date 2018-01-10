@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39d8294404ff76ae7bdef9d5067ef9686a9ab899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e38b0ca0f0d8d5b6007f713c69bcece1947be25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmc-snap-in-classes"></a>Modul Snap-In konzoly MMC – třídy
 Následující třídy poskytují podporu pro vývoj Microsoft Management Console (MMC) snap-in součásti:  
@@ -30,5 +31,5 @@ Následující třídy poskytují podporu pro vývoj Microsoft Management Consol
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../atl/atl-class-overview.md)   
- [Modul snap-In objekt makra](../atl/reference/snap-in-object-macros.md)
+ [Makra objektů modulu snap-in](../atl/reference/snap-in-object-macros.md)
 

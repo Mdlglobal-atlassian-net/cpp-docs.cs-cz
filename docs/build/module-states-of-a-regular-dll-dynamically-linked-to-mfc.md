@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8908fb93cf6bc1c5a0c19cbbdb6597451c1cfa51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b88f895255c698f04b6988e63b8b75372fa59b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stavy modulů běžné knihovny MFC DLL dynamicky propojené s MFC
 Umožňuje dynamicky propojit běžný MFC DLL ke knihovně MFC DLL umožňuje některé konfigurace, které jsou velmi složité. Například běžné knihovny MFC DLL a spustitelný soubor, který použije dynamické propojení ke knihovně MFC DLL a všechny MFC – rozšiřující knihovny DLL.  
@@ -51,4 +52,4 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 -   [MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

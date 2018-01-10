@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e1476369a798228361b89fdef12c94624ca4a70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a03f3ea67c9ecabd6fa68d653a3e1812fb0266cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (vláken místní statické inicializace)  
 `/Zc:threadSafeInit` – Možnost kompilátoru říká kompilátoru inicializovat statické místní (rozsah funkce) proměnné vláken způsobem, což eliminuje potřebu ruční synchronizace. Pouze inicializace je bezpečné pro přístup z více vláken. Používání a úpravy statické místní proměnné více podprocesů musí být stále ručně synchronizovány. Tato možnost je dostupná od ve Visual Studiu 2015. Ve výchozím nastavení povoluje Visual Studio tuto možnost.  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a848e0b995aa138c68344f80123c94a013d82f73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-verify-instead-of-assert"></a>Použití příkazu VERIFY místo ASSERT
 Předpokládejme, že při spuštění ladicí verzi vaší aplikace knihovny MFC neexistují žádné problémy. Prodejní verze stejné aplikace však dojde k chybě, vrátí nesprávné výsledky nebo vykazuje některé neobvyklé chování.  

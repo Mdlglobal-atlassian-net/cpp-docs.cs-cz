@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79a7115e3e84fcac0da2605da3a700717569fb3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65bf4e239ea7c80e9032be6a555ac6598eb3f0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-"></a>. – operátor
 Vrátí první operátor *výraz* plus posun *pole* v rámci jeho struktura nebo union. Vrátí druhou operátor hodnotu v umístění, na kterou odkazuje *zaregistrovat* plus posun *pole* v rámci jeho struktura nebo union.  

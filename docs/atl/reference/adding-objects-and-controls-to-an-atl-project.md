@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e01b39eb7393d171b2c1fb30193810f62be85b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Přidání objektů a ovládacích prvků do projektu knihovny ATL
 Některého z průvodců kódu ATL můžete přidat do vašich projektů na základě knihovny ATL nebo MFC objekt nebo ovládacího prvku. Pro každý objekt COM nebo ovládací prvek přidáte, Průvodce generuje sada a souborů .h, jakož i soubor .rgs pro podporu založených na skriptech registru. Následující kód průvodce ATL jsou k dispozici v sadě Visual Studio:  
@@ -34,7 +35,7 @@ Některého z průvodců kódu ATL můžete přidat do vašich projektů na zák
 |-|-|-|  
 |[Jednoduchého objektu knihovny ATL](../../atl/reference/atl-simple-object-wizard.md)|[Dialogové okno knihovny ATL](../../atl/reference/atl-dialog-wizard.md)|[Ovládací prvek ATL](../../atl/reference/atl-control-wizard.md)|  
 |[Stránka vlastností knihovny ATL](../../atl/reference/atl-property-page-wizard.md)|[Komponenty ASP knihovny ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL technologie OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|  
-|[Přidání podpory knihovny ATL s knihovnou MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM + 1.0 součást Průvodce](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Zprostředkovatel OLE DB knihovny ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|  
+|[Přidání podpory knihovny ATL s knihovnou MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Průvodce komponentami ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Zprostředkovatel OLE DB knihovny ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|  
   
 > [!NOTE]
 >  Před přidáním objektu knihovny ATL do projektu, měli byste zkontrolovat podrobnosti a požadavky pro objekt v příslušných tématech nápovědy.  
@@ -58,5 +59,5 @@ Některého z průvodců kódu ATL můžete přidat do vašich projektů na zák
  [Tvorba běžných projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Základy ATL COM – objekty](../../atl/fundamentals-of-atl-com-objects.md)   
  [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Výchozí konfigurace projektu knihovny ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

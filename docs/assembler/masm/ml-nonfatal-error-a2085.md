@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d93ec58a7f55a2d875cc07dfbddff103b052f98c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f987b775c13b0e477fd5c1d215d556069535a0fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2085"></a>Méně závažná chyba nástroje ML A2085
 **instrukce nebo zaregistrovat nebylo přijato. v aktuální režim procesoru**  
@@ -29,4 +30,4 @@ ms.lasthandoff: 10/24/2017
  Například 32-bit registry vyžadovat [.386](../../assembler/masm/dot-386.md) nebo vyšší. Ovládací prvek zaregistruje, jako je CR0 vyžadují privilegovaném režimu [.386p –](../../assembler/masm/dot-386p.md) nebo vyšší. Tato chyba bude vygenerována také pro **NEAR32**, **FAR32**, a **ploché** klíčová slova, která vyžadují. **386** nebo vyšší.  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

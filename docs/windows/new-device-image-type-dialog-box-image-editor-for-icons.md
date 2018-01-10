@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c667616325cf29d959340db38a8336dd6c63e8c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nové &lt;zařízení&gt; bitové kopie dialogové okno typů (Editor obrázků pro ikony)
 Umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > Image** dialogové okno, klikněte na tlačítko **typ obrázku** na **Image** nabídky.  

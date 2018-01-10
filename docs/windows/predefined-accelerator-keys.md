@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee7aed9bfcbc105892e647c5e59b45805120ba39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
 Existuje několik předdefinovaných přístupové klávesy, které může být součástí projekt aplikace Windows. Některé z těchto virtuálních klíčů jsou pro prostředí Windows. Další podpora prohlížeče nebo aplikace kódování Unicode. Můžete používat kterýkoli z těchto klíčů v jakékoli akcelerátoru.  

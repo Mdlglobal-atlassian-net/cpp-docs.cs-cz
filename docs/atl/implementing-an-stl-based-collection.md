@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ca1d07a39950c5d5de83ed6e3a09c12c775d4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementace kolekci na základě knihovny C++ Standard
 Poskytuje ATL `ICollectionOnSTLImpl` rozhraní, které vám umožňují rychle implementovat rozhraní pro kolekce na základě standardní knihovna C++ na vašich objektů. Abyste pochopili, jak tato třída funguje, bude fungovat přes jednoduchý (dole) příklad, který používá tuto třídu pro implementaci kolekce jen pro čtení zaměřené na klienty automatizace.  
@@ -103,5 +104,5 @@ Poskytuje ATL `ICollectionOnSTLImpl` rozhraní, které vám umožňují rychle i
 ## <a name="see-also"></a>Viz také  
  [Kolekce a výčty](../atl/atl-collections-and-enumerators.md)   
  [Ukázka ATLCollections](../visual-cpp-samples.md)   
- [Třídy ATL kopie zásad](../atl/atl-copy-policy-classes.md)
+ [Třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md)
 

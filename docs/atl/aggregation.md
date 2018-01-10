@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b98caeedd99199f7d286a4d8ab12c976fffd073c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dbb0332bc7e55464e5b8af9d0b57e236f23dc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregation"></a>Agregace
 Existují situace, když uživatel provádějící implementaci objektu chcete využít výhod služeb, které jiné, předem objektu. Kromě toho přeje tento druhý objekt zobrazí jako přirozené součást první. COM dosahuje obou těchto cílů prostřednictvím členství ve skupině a agregaci.  

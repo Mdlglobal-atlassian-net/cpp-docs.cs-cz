@@ -14,20 +14,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: abd78a9e02a2723b94edd2b3d71574f7d39090dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e223fb256126f05cdf5f4f6fcbd3a704f74506d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integers"></a>Celá čísla
--   [Hodnoty rozsahu celé číslo](../c-language/range-of-integer-values.md)  
+-   [Rozsah hodnoty typu Integer](../c-language/range-of-integer-values.md)  
   
 -   [Degradace celých čísel](../c-language/demotion-of-integers.md)  
   
 -   [Podepsané bitové operace](../c-language/signed-bitwise-operations.md)  
   
--   [Zbytků](../c-language/remainders.md)  
+-   [Připomenutí](../c-language/remainders.md)  
   
 -   [Posuny doprava](../c-language/right-shifts.md)  
   

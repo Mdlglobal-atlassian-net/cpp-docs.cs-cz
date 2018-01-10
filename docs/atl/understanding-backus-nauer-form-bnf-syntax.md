@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Principy Backus Nauer formuláře (BNF) syntaxe
 Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí syntaxe BNF, který používá zápis uvedené v následující tabulce.  
@@ -107,5 +108,5 @@ val 'testhex' = d '&H55'
  Určuje, že název klíče `testhex` je **DWORD** hodnota nastavena na hexadecimální 55 (decimal 85). Poznámka: Tento formát dodržuje **& H** zápis jako nalezena ve specifikaci jazyka Visual Basic.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
 

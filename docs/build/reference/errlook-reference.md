@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05d80bca74117ca23f8e839dda6ef23d9e08e3d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errlook-reference"></a>ERRLOOK – odkaz
 Errlook – nástroj, který je k dispozici v nabídce nástroje jako **Chyba vyhledávání**, načte modul chybová zpráva nebo zpráva Chyba systému podle zadaná hodnota. Errlook – získá text chybové zprávy automaticky v případě, že jste přetažení hexadecimální nebo desetinná hodnota z ladicího programu sady Visual Studio do **hodnotu** ovládacích prvků pro úpravy. Můžete také zadat hodnotu buď zadáním **hodnotu** ovládacích prvků pro úpravy nebo pomocí vkládání ze schránky a kliknutím na tlačítko **Hledat**.  
@@ -31,7 +32,7 @@ Errlook – nástroj, který je k dispozici v nabídce nástroje jako **Chyba vy
  [Hodnota – textové pole](../../build/reference/value-edit-control.md)  
  Popisuje upravit hodnotu ovládací prvek v errlook –.  
   
- [Řízení úprav chybových zpráv](../../build/reference/error-message-edit-control.md)  
+ [Chybová zpráva – textové pole](../../build/reference/error-message-edit-control.md)  
  Popisuje ovládací prvek upravit chybové zprávy v errlook –.  
   
  [Moduly – tlačítko](../../build/reference/modules-button.md)  

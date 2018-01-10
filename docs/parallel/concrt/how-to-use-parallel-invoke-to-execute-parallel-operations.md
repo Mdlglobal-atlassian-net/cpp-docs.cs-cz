@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2190d7809791fbc66f6070eb3ae721ec1bc0a04f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefabd21e04c4c3cc39934de111fe94151317ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Postupy: Použití algoritmu parallel_invoke k provádění paralelních operací
 Tento příklad ukazuje způsob použití [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus ke zlepšení výkonu programu, který provádí víc operací na sdílený zdroj dat. Protože žádné operace upravit zdroj, se mohou být provedeny souběžně přehledné způsobem.  

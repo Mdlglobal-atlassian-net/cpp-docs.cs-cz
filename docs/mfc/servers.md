@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be83831c79b398de9e9b0791d172cf7608e322aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers"></a>Servery
 Aplikace serveru (nebo součásti aplikace) vytvoří aplikace typu kontejner OLE položky (nebo součásti) pro použití. Visual úpravy serverová aplikace také podporuje úpravy s náhledem nebo aktivace na místě. Jinou formu OLE serveru je [automatizační server](../mfc/automation-servers.md). Některé serverové aplikace podporují pouze vytváření vložené položky; ostatní podporují vytvoření vložené a propojené položky. I když toto je výjimečná některé podporují pouze propojení. Všechny aplikace server musí podporovat aktivace aplikace typu kontejner, pokud chce uživatel upravovat položky. Aplikace může být kontejner i server. Jinými slovy ho můžete obě začlenit dat do své dokumenty a vytvořit data, která lze vložit jako položky do dalších aplikací dokumenty.  
@@ -56,7 +57,7 @@ Aplikace serveru (nebo součásti aplikace) vytvoří aplikace typu kontejner OL
   
 -   [Servery: Implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md)  
   
--   [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)  
+-   [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)  
   
 -   [Servery: Serverové položky](../mfc/servers-server-items.md)  
   

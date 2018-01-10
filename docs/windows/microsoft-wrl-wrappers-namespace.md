@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7390f68d7bc7c7856d1fef35ba1fb180b8341559
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f7633bcd784fa7b9b5f7255e25e8ddc52c5b93db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers – obor názvů
 Definuje obálku typy prostředků pořízení je inicializace (RAII), které zjednodušit správu doba platnosti objektů, řetězce a obslužné rutiny.  
@@ -58,4 +61,4 @@ namespace Microsoft::WRL::Wrappers;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

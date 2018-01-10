@@ -17,11 +17,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d13c8b081f3bcc3efbf20be3c31e2601baa6ca02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="literal-c-component-extensions"></a>literal (rozšíření komponent C++)
 Proměnné (– datový člen) označen jako `literal` v **/CLR** kompilace je nativní ekvivalentem `static const` proměnné.  
@@ -125,4 +128,4 @@ class B {
  – Možnost kompilátoru:   **/CLR**  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

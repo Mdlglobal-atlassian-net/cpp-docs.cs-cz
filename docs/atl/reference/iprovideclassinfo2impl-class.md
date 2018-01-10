@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50fa35223e9695c0c70b65114c4c6fa408769850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fe466608acaecfaf6219b6d15d27e0611ac2511
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl – třída
 Tato třída poskytuje výchozí implementaci třídy [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) a [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.  
@@ -61,7 +62,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  Vedlejší verze knihovny typů. Výchozí hodnota je 0.  
   
  `tihclass`  
- Třída, která slouží ke správě informací o typu coclass.. Výchozí hodnota je `CComTypeInfoHolder`.  
+ Třída, která slouží ke správě informací o typu coclass. Výchozí hodnota je `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Členové  
   
@@ -75,7 +76,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Načte **ITypeInfo** ukazatel na informace o typu coclass..|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Načte **ITypeInfo** ukazatel na informace o typu coclass.|  
 |[IProvideClassInfo2Impl::GetGUID](#getguid)|Načte identifikátor GUID pro odchozí dispinterface objektu.|  
   
 ### <a name="protected-data-members"></a>Chráněné datové členy  
@@ -98,7 +99,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  **Záhlaví:** atlcom  
   
 ##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
- Načte `ITypeInfo` ukazatel na informace o typu coclass..  
+ Načte `ITypeInfo` ukazatel na informace o typu coclass.  
   
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);

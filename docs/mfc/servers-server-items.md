@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21d8e601956e0afb943c3739e531b3b677c7454a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-server-items"></a>Servery: Serverové položky
 Když kontejner spouští server tak, aby smí uživatel upravovat položky vložené nebo propojené OLE, je serverová aplikace vytvoří "položka serveru". Položka serveru, který je objektem třídy odvozené od `COleServerItem`, poskytuje rozhraní mezi dokumentu na serveru a aplikace kontejneru.  

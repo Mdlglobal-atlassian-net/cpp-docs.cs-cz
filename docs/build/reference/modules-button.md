@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c88f22506a2f65c3385cc7d0851954f1115fb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd8c95775eb8db2256d35715cc117a9bb0fab22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modules-button"></a>Moduly – tlačítko
 Klikněte na tlačítko **moduly** tlačítko zprovoznit **další moduly pro vyhledávání chyb** dialogové okno. Zadejte název požadované EXE nebo DLL do textového pole a klikněte na **přidat** zahrnout moduly hledání chybová zpráva. Odebere modul ze seznamu zvýraznění ho a klikněte na **odebrat** tlačítko.  

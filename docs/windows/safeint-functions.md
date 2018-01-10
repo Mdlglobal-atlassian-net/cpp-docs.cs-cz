@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7b71ee1088c60ea1c13b04fef517169f40a32d96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
 Knihovna SafeInt nabízí několik funkcí, které můžete použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete chránit jedné matematické operace z přetečení celé číslo, můžete tyto funkce. Pokud chcete chránit více matematické operace, měli byste vytvořit `SafeInt` objekty. Chcete-li vytvořit je efektivnější `SafeInt` objekty než pomocí těchto funkcí vícekrát.  

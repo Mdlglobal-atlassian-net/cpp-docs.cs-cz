@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6b98d3c03d319c2da397f969f8adf1ec858f72c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef000f6611c9cb3794da8e46e6b905e57d5ecf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Spuštění programu při předběžném zpracování
 Pokud chcete používat při předběžném zpracování příkaz ukončovací kód, zadejte příkaz, se všechny argumenty do hranatých závorek ([]). Makra jsou rozšířit před provedením příkazu. NMAKE nahradí specifikace příkaz ukončovací kód příkazu, který můžete použít ve výrazu k řízení předběžného zpracování.  

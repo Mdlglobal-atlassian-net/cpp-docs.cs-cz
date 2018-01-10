@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set – třída
 Sada standardní knihovna C++ kontejner – třída se používá pro ukládání a načítání dat z kolekce, ve kterém jsou jedinečné hodnoty elementů obsažených a slouží jako klíčové hodnoty, podle kterých automaticky řazení dat. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.  
@@ -154,7 +155,7 @@ class set
   
 |||  
 |-|-|  
-|[nastavení](#set)|Zkonstruuje objekt set, který je prázdný nebo který je kopií celého nebo části některého jiného objektu set.|  
+|[set](#set)|Zkonstruuje objekt set, který je prázdný nebo který je kopií celého nebo části některého jiného objektu set.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -2379,5 +2380,5 @@ The set has elements: 10 20.
  [\<Nastavení >](../standard-library/set.md)   
  [Kontejnery](../cpp/containers-modern-cpp.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

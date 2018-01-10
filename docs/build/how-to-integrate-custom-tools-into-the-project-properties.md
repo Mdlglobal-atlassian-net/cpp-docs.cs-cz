@@ -15,18 +15,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b19c1175fb5f39599a9ccaeae66d1fc53fdab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Postupy: Integrace vlastních nástrojů do vlastností projektu
 Možnosti vlastního nástroje můžete přidat do sady Visual Studio **stránky vlastností** okna tak, že vytvoříte základní souboru schématu XML.  
   
  **Vlastnosti konfigurace** části **stránky vlastností** v okně se zobrazí skupiny nastavení, které jsou známé jako *pravidla*. Každé pravidlo obsahuje nastavení pro nástroj nebo skupiny funkcí. Například **Linkeru** pravidlo obsahuje nastavení pro nástroj linkeru. Nastavení v pravidle lze rozdělit na *kategorie*.  
   
- Tento dokument vysvětluje, jak vytvořit soubor v adresáři sady, který obsahuje vlastnosti pro svůj vlastní nástroj tak, aby vlastnosti jsou načteny při spuštění sady Visual Studio. Informace o tom, jak upravit soubor najdete v tématu [platformy Extensibilty část 2](http://go.microsoft.com/fwlink/?LinkID=191489) na blogu týmu projekt Visual Studio.  
+ Tento dokument vysvětluje, jak vytvořit soubor v adresáři sady, který obsahuje vlastnosti pro svůj vlastní nástroj tak, aby vlastnosti jsou načteny při spuštění sady Visual Studio. Informace o tom, jak upravit soubor najdete v tématu [platformy Extensibilty část 2](http://go.microsoft.com/fwlink/p/?linkid=191489) na blogu týmu projekt Visual Studio.  
   
 ### <a name="to-add-or-change-project-properties"></a>Chcete-li přidat nebo změnit vlastnosti projektu  
   

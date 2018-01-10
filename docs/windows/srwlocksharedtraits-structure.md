@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a044baaa463c91c134137214e9708db8c4dfefb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cadf94f1d336de7bac13572a045e7ac8487013cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits – struktura
 Popisuje běžné vlastnosti třída SRWLock ve sdíleném režimu zámku.  
@@ -42,8 +45,8 @@ struct SRWLockSharedTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Srwlocksharedtraits::getinvalidvalue – metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Načte srwlocksharedtraits – objekt, který je vždy neplatný.|  
-|[Srwlocksharedtraits::Unlock – metoda](../windows/srwlocksharedtraits-unlock-method.md)|Uvolní výhradní kontrolu nad zadaný objekt SRWLock.|  
+|[SRWLockSharedTraits::GetInvalidValue – metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Načte srwlocksharedtraits – objekt, který je vždy neplatný.|  
+|[SRWLockSharedTraits::Unlock – metoda](../windows/srwlocksharedtraits-unlock-method.md)|Uvolní výhradní kontrolu nad zadaný objekt SRWLock.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SRWLockSharedTraits`  
@@ -54,4 +57,4 @@ struct SRWLockSharedTraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

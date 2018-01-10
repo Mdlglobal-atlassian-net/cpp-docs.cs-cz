@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8189e621ac137986c72657441c5584e09795edd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměť elementy typu `Elem`, také známé jako [char_type –](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znak určuje třídu *Tr* , také známé jako [traits_type –](../standard-library/basic-ios-class.md#traits_type).  
@@ -149,12 +150,12 @@ setstate(state);
 |||  
 |-|-|  
 |[gcount –](#gcount)|Vrátí počet znaků pro čtení během poslední neformátovaný vstup.|  
-|[GET](#get)|Přečte jeden nebo více znaků ze vstupního datového proudu.|  
+|[get](#get)|Přečte jeden nebo více znaků ze vstupního datového proudu.|  
 |[getline](#getline)|Přečte řádek ze vstupního datového proudu.|  
 |[Ignorovat](#ignore)|Způsobí, že počet elementů přeskočil z aktuální číst pozici.|  
 |[funkce Náhled](#peek)|Vrací další znak, který má být číst.|  
 |[putback –](#putback)|Vloží zadaný znak do datového proudu.|  
-|[pro čtení](#read)|Přečte zadaný počet znaků z datového proudu a ukládá je do pole.|  
+|[read](#read)|Přečte zadaný počet znaků z datového proudu a ukládá je do pole.|  
 |[readsome –](#readsome)|Čtení z jenom vyrovnávací paměti.|  
 |[seekg –](#seekg)|Přesune čtení pozici v datovém proudu.|  
 |[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupní funkce a neformátovaný vstupní funkce.|  

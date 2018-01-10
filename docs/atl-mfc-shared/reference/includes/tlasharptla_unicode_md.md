@@ -1,3 +1,1 @@
----
----
 Kódování Unicode

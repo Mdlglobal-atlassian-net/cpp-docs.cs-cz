@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 094d10069b854d122e835f7d12f9ef095775db2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule – třída
 Od verze ATL 7.0 `CComAutoThreadModule` je zastaralá: najdete v části [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.  
@@ -59,7 +60,7 @@ class CComAutoThreadModule : public CComModule
 |-|-|  
 |[CreateInstance –](#createinstance)|Vybere vlákna a potom vytvoří objekt přidružený typu apartment.|  
 |[GetDefaultThreads](#getdefaultthreads)|(Statické) Dynamicky vypočítá počet vláken pro modul na základě počtu procesorů.|  
-|[Init –](#init)|Vytvoří modulu vláken.|  
+|[Init](#init)|Vytvoří modulu vláken.|  
 |[Zámek](#lock)|Zvětší počet zámku na modul a na aktuální vlákno.|  
 |[Odemknutí](#unlock)|Snižuje počet zámek na modul a na aktuální vlákno.|  
   

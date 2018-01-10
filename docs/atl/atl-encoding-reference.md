@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a97809fefdc0a5e6e7d90e7b62bbee83f28bfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-encoding-reference"></a>ATL – referenční dokumentace ke kódování
 Kódování v řadu běžných Internetové standardy, jako je uuencode šestnáctkové a UTF8 podporuje kód v atlenc.h nalezen.  
@@ -53,5 +54,5 @@ Kódování v řadu běžných Internetové standardy, jako je uuencode šestná
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)   
- [ATL COM plochy součásti](../atl/atl-com-desktop-components.md)
+ [Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4213bcc0321749ddda1ee0b85f577b01044bfc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 [Část 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Tento průvodce vám ukázal, jak přidat Office Fluent Ribbon do classic Klikyháky aplikace. Tato část popisuje postup pro přidání panelů pásu karet a ovládacích prvků, které uživatelé můžou použít místo nabídek a příkazů.  

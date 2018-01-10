@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c833a4833bfc670a58796700efd4f885fe3ee560
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 932aad860cd2b78208857ca7b028e35cd96d481e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inference-rules"></a>Odvozená pravidla
 Odvozená pravidla zadat příkazy aktualizaci cíle a odvození závislé objekty pro cíle. Rozšíření v pravidle odvození shodovat s jedním cílem a závislé, které mají stejné základní název. Odvozená pravidla jsou definované uživatelem nebo předdefinované; můžete jej předefinovat předdefinovaná pravidla.  
@@ -40,4 +41,4 @@ Odvozená pravidla zadat příkazy aktualizaci cíle a odvození závislé objek
  [Priorita odvozených pravidel](../build/precedence-in-inference-rules.md)  
   
 ## <a name="see-also"></a>Viz také  
- [NMAKE – odkaz](../build/nmake-reference.md)
+ [NMAKE – referenční zdroje](../build/nmake-reference.md)

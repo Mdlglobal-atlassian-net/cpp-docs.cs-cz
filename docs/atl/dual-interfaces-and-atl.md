@@ -17,20 +17,21 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fdb5ba2c9c2be7693f5c447528f846127cc3ba1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-atl"></a>Duální rozhraní a knihovny ATL
 Duální rozhraní, které umožňuje přístup k jako dispinterface metody nebo metody vtable její metody. Tato část popisuje některé funkce duální rozhraní z hlediska ATL.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Implementace duální rozhraní](../atl/implementing-a-dual-interface.md)  
+ [Implementace duálního rozhraní](../atl/implementing-a-dual-interface.md)  
  Popisuje třídy a průvodců podílejících se na provádění duální rozhraní.  
   
- [Více duální rozhraní](../atl/multiple-dual-interfaces.md)  
+ [Více duálních rozhraní](../atl/multiple-dual-interfaces.md)  
  Popisuje, jak vystavit více duální rozhraní na jednoho objektu.  
   
  [Nonextensible – atribut](../atl/nonextensible-attribute.md)  

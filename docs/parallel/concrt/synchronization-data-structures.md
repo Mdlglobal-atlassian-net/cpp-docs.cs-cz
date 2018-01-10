@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>Synchronizační datové struktury
 Concurrency Runtime poskytuje několik datové struktury, které umožňují synchronizovat přístup ke sdíleným datům z více vláken. Tyto datové struktury jsou užitečné, když jste sdíleli data, která upravíte zřídka. Objekt synchronizace, například důležitý oddíl, způsobí, že jiná vlákna počkat, dokud sdílený prostředek je k dispozici. Proto pokud používáte takového objektu synchronizovat přístup k datům, která se často používají, byste ztratili škálovatelnost ve vaší aplikaci. [Paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md) poskytuje [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy, která umožňuje sdílení prostředků mezi několik vláken nebo úloh bez nutnosti synchronizace. Další informace o `combinable` třídy najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -32,7 +33,7 @@ Concurrency Runtime poskytuje několik datové struktury, které umožňují syn
   
 -   [scoped_lock – a scoped_lock_read –](#scoped_lock)  
   
--   [události](#event)  
+-   [event](#event)  
   
 ##  <a name="critical_section"></a>critical_section  
  [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) třída reprezentuje objekt spolupráci vzájemné vyloučení, která vede k jiným úlohám místo preempting je. Kritické oddíly jsou užitečné, pokud několik vláken vyžadují exkluzivní oprávnění ke čtení a zápis ke sdíleným datům.  
@@ -46,7 +47,7 @@ Concurrency Runtime poskytuje několik datové struktury, které umožňují syn
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Zámek](reference/critical-section-class.md#lock)|Získá kritická sekce. Na volání kontextu bloky dokud ho získá zámek.|  
+|[lock](reference/critical-section-class.md#lock)|Získá kritická sekce. Na volání kontextu bloky dokud ho získá zámek.|  
 |[try_lock –](reference/critical-section-class.md#try_lock)|Pokusí se získat důležité části, ale nejsou blokovány.|  
 |[odemknutí](reference/critical-section-class.md#unlock)|Uvolní kritická sekce.|  
   
@@ -73,7 +74,7 @@ Concurrency Runtime poskytuje několik datové struktury, které umožňují syn
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Zámek](reference/reader-writer-lock-class.md#lock)|Získá přístup pro čtení a zápis pro zámek.|  
+|[lock](reference/reader-writer-lock-class.md#lock)|Získá přístup pro čtení a zápis pro zámek.|  
 |[try_lock –](reference/reader-writer-lock-class.md#try_lock)|Pokusí se získat přístup pro čtení a zápis k zámek, ale nejsou blokovány.|  
 |[lock_read –](reference/reader-writer-lock-class.md#lock_read)|Získá přístup jen pro čtení k zámek.|  
 |[try_lock_read –](reference/reader-writer-lock-class.md#try_lock_read)|Pokusí se získat přístup jen pro čtení k zámek, ale nejsou blokovány.|  
@@ -103,7 +104,7 @@ Concurrency Runtime poskytuje několik datové struktury, které umožňují syn
 |Metoda|Popis|  
 |------------|-----------------|  
 |[Počkej](reference/event-class.md#wait)|Čeká na událost, která má být signál.|  
-|[nastavení](reference/event-class.md#set)|Nastaví událost do signalizovaného stavu.|  
+|[set](reference/event-class.md#set)|Nastaví událost do signalizovaného stavu.|  
 |[resetování](reference/event-class.md#reset)|Nastaví událost do stavu signál.|  
 |[wait_for_multiple –](reference/event-class.md#wait_for_multiple)|Čeká na více událostí k stát signál.|  
 
@@ -114,7 +115,7 @@ Concurrency Runtime poskytuje několik datové struktury, které umožňují syn
  [[Horní](#top)]  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Porovnávání synchronizačních datových struktur rozhraním API systému Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
+ [Porovnávání synchronizačních datových struktur s rozhraním API systému Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
  Porovná chování synchronizační datové struktury k protokolům poskytovaným rozhraní API systému Windows.  
   
  [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)  

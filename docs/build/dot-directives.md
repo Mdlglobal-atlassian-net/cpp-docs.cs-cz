@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53eaabb2c58d349273288c670da33445feaaea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9958b13a6f06b0024ec2d4dd304abfe93b16741e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dot-directives"></a>Direktivy s tečkou
 Zadejte direktivy s tečkou mimo blok popis na začátku řádku. Direktivy s tečkou začínat tečkou (. ) a jsou následovaným dvojtečkou (:). Jsou povoleny mezery a karty. Direktivy názvy tečkou se rozlišují malá a velká písmena.  
@@ -47,4 +48,4 @@ Zadejte direktivy s tečkou mimo blok popis na začátku řádku. Direktivy s te
  kde *suffixlist* je seznam další přípony, oddělených mezery nebo karty. Chcete-li zobrazit aktuální nastavení **. PŘÍPONY**, spusťte s parametrem/p. NMAKE  
   
 ## <a name="see-also"></a>Viz také  
- [NMAKE – odkaz](../build/nmake-reference.md)
+ [NMAKE – referenční zdroje](../build/nmake-reference.md)

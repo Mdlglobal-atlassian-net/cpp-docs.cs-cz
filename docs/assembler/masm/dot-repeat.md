@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e60ae387ec619a0109b322902a4ad40c9ad73f1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46d6502b0fe69a81dd092c97c5d651a32a7fca5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="repeat"></a>.REPEAT
 Generuje kód, který bude opakovat provádění blok *příkazy* dokud `condition` se změní na hodnotu true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), který změní hodnotu true, pokud CX rovná nule, mohou nahradit [. DOKUD](../../assembler/masm/dot-until.md). `condition` Je volitelný s **. UNTILCXZ**.  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01ba4f1852f7f5d79de94712b8465fb54e62acb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e92358b3aa7d8cffb0c05112e9b8b3587ee6590
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-csliderctrl"></a>Používání atributu CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) třída reprezentuje ovládací prvek typu jezdec, kterému se taky říká TrackBar –. "Ovládací prvek typu jezdec" je okno, které obsahuje posuvníku a volitelné osové značky. Pokud se uživatel přesune posuvníku pomocí myši nebo klávesy se šipkami, v ovládacím prvku posuvník odešle zprávy s oznámením označíte změnu.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Členské funkce ovládacího prvku posuvník](../mfc/slider-control-member-functions.md)  
   
--   [Zprávy s oznámením posuvníku](../mfc/slider-notification-messages.md)  
+-   [Zprávy s oznámením pro posuvník](../mfc/slider-notification-messages.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

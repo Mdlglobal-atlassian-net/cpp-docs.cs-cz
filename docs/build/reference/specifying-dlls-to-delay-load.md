@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bfa7eb3c862c1ce5d1ed356ddd89c51ebff95860
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7c04b0885228bcef65b1b53cda6d28dc6755379
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Určení knihoven DLL pro odložené načtení
 Můžete určit, které knihoven DLL pro odložené načítání vlivem [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` – možnost linkeru. Pokud neplánujete použít vlastní verzi pomocné funkce, je nutné také propojit váš program s delayimp.lib (pro desktopové aplikace) nebo dloadhelper.lib (pro aplikace pro store).  

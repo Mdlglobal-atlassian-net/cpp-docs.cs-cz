@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17054a0658a74f7b1a69172ceaae5f8bec79953f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50c59b4c6d769b37b9ee1fbf4efa58bcf8af1e86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pragmas"></a>Pragmas
 **ANSI 3.8.6** chování na každý rozpoznaný #pragma – direktiva.  
@@ -27,11 +28,11 @@ ms.lasthandoff: 10/24/2017
   
 |||||  
 |-|-|-|-|  
-|**alloc_text –**|**data_seg –**|**include_alias –**|`setlocale`|  
-|**auto_inline –**|**funkce**|**vnitřní funkce**|**upozornění**|  
-|**check_stack –**|**hdrstop –**|**zpráva**||  
-|**code_seg**|**inline_depth –**|**Optimalizace**||  
-|**Komentář**|**inline_recursion –**|`pack`||  
+|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|  
+|**auto_inline**|**funkce**|**intrinsic**|**warning**|  
+|**check_stack**|**hdrstop**|**message**||  
+|**code_seg**|**inline_depth**|**optimize**||  
+|**Komentář**|**inline_recursion**|`pack`||  
   
 ## <a name="see-also"></a>Viz také  
  [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

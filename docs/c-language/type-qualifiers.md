@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4fad93505a5778c23171b413654624a32e825b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-qualifiers"></a>Kvalifikátory typu
 Kvalifikátory typu jednu ze dvou vlastností předáte identifikátor. **Const** kvalifikátor typu deklaruje objekt tak, aby se neupravitelnými. `volatile` Kvalifikátor typu deklaruje položku, jehož hodnota může být změněna legálně cokoli, co je nad rámec tohoto programu, ve kterém se zobrazí, jako je například souběžně spuštěných vláken ovládacího prvku.  

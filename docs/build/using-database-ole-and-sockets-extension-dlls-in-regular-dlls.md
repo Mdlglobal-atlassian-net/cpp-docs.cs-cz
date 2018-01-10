@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC
 Při použití knihovnu DLL z běžné knihovny MFC DLL, pokud MFC – rozšiřující knihovny DLL není připojená do **CDynLinkLibrary** objektu řetězu regulární knihovny MFC DLL, můžete narazit na jeden nebo více sady souvisejících problémech. Protože verze pro ladění MFC databáze, technologie OLE a Sockets podporují knihovny DLL jsou implementované jako MFC – rozšiřující knihovny DLL, může se zobrazit podobné problémy, pokud používáte tyto MFC funkce, i v případě, že nepoužíváte explicitně všechny vlastní MFC – rozšiřující knihovny DLL. Některé příznaky jsou:  
@@ -146,9 +147,9 @@ BOOL CYourRegularDLL::InitInstance()
   
 -   [MFC – rozšiřující knihovny DLL](../build/extension-dlls.md)  
   
--   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [Běžné knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Běžné knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
 -   [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   

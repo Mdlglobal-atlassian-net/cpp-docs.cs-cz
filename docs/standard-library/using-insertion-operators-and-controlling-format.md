@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2860a0bfd050c4e2a86e948c7008327d237bc5ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Používání operátorů insertion a řízení formátu
 Toto téma ukazuje, jak řídit formát a postup vytvoření operátorů insertion pro vaše vlastní třídy. Vložení (**<<**) operátor, který je naprogramovaných, pro všechny standardní datové typy C++, odešle do výstupního datového proudu objekt bajtů. Operátorů insertion pracovat předdefinované "manipulátory,", které jsou elementy, které Změna výchozího formátu argumentů celé číslo.  
@@ -219,5 +220,5 @@ std::cout <<extracted;   //   This
  Další informace a příklady úplného kódu, najdete v tématu [uvozovkách]--brokenlink--(.. / Topic/%3Cios%3E%20functions.md#quoted).  
   
 ## <a name="see-also"></a>Viz také  
- [Výstupní datové proudy](../standard-library/output-streams.md)   
+ [Výstupní streamy](../standard-library/output-streams.md)   
 

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcb1b2307ccb16e7b842e221c48c0f2a99b31db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-scripting-examples"></a>Příklady skriptování registru
 Skriptovací příklady v tomto tématu ukazují, jak přidat klíč registru systému, zaregistrujte server COM registrátora a zadejte více stromy analýzy.  
@@ -118,5 +119,5 @@ HKEY_CURRENT_USER
 >  Ve skriptu registrátora 4K je maximální velikost tokenu. (Token je libovolný rozpoznatelném element v syntaxi.) V předchozím příkladu skriptování `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, a `'HowGoesIt'` jsou všechny tokeny.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
 

@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62c2b658f21552ace07863e8fc93827e60de1c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f991f8ebf87535de09dc7c3dce5e0f4ca2ee457b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Umístění ovládacích prvků na panely nástrojů
 Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástrojů obsahující ovládací prvek systému Windows. V prostředí MFC, musí být tlačítka panelu nástrojů [CMFCToolBarButton – třída](../mfc/reference/cmfctoolbarbutton-class.md)-odvozené třídy, například [CMFCToolBarComboBoxButton třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton třída](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton třída](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), nebo [CMFCToolBarMenuButton třída](../mfc/reference/cmfctoolbarmenubutton-class.md).  

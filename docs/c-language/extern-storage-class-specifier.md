@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern – specifikátor třídy úložiště
 Proměnná deklarovaná pomocí specifikátoru paměťové třídy `extern` je odkaz na proměnnou se stejným názvem, která je definovaná na vnější úrovni v jakémkoli zdrojovém souboru programu. Pomocí vnitřní deklarace `extern` lze definice proměnné na vnější úrovni zviditelnit v rámci bloku. Není-li na vnější úrovni deklarováno jinak, je proměnná deklarovaná pomocí klíčového slova `extern` viditelná pouze v bloku, ve kterém je deklarována.  

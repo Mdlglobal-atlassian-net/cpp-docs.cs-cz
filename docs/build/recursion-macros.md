@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 41354c34fb21da7f568718489495991cbd1bae43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8d9ef7f194151fb3259712759d0c29ed157d564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursion-macros"></a>Rekurzivní makra
 Rekurzivní makra využít k volání NMAKE rekurzivně. Rekurzivní relace dědit informace o Tools.ini a makra příkazového řádku a proměnnou prostředí. Nedědí definované makefile odvozená pravidla nebo **. PŘÍPONY** a **. DRAHOCENNÝ** specifikace. Předávání makra NMAKE relaci rekurzivní, nastavit proměnnou prostředí s NASTAVENÝM před voláním rekurzivní, definujte makro v příkazu pro rekurzivní volání nebo definování makra v Tools.ini.  

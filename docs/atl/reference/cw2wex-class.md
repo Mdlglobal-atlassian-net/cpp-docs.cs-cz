@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 61dbd4e59671ef2a17ba53eff4e864c43f3575b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2wex-class"></a>CW2WEX – třída
 Tato třída se používá ve makra převodů řetězec `CW2TEX` a `CT2WEX`a typedef `CW2W`.  

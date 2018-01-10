@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebdfd892b164d10fbed46a481184c23113af4bc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 231d84e5d99cd9e6c1238ae12c143636f62ce80d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitfields"></a>Bitová pole
 Struktura bitových polí jsou omezené na 64 bitů a může být typu int, int bez znaménka, int64 nebo unsigned int64 podepsané. Bitová pole, které překračují hranice typu přeskočí bits zarovnáním k dalším typem přidružení. Bitová pole celé číslo, například nemusí křížová 32bitovou hranici.  

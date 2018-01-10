@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43d8cf7ae406f2d29a381f765686e6537243de3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slider-control-styles"></a>Posuvník – styly ovládacího prvku
 Ovládací prvky posuvníku ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) může mít svislé nebo vodorovné orientaci. Mají osové značky na obou stranách obě strany, nebo ani jeden z nich. Můžete také používají k určení rozsahu po sobě jdoucích hodnot. Tyto vlastnosti jsou řízena pomocí posuvník – styly ovládacích prvků, které určíte při vytváření ovládacího prvku posuvník.  

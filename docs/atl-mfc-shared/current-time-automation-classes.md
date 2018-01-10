@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30794f1cd6dbe90abb9929f5b01cb4ea2c196a95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3031d6ff22daf996ef2ab6fccff61fac313773a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-time-automation-classes"></a>Aktuální čas: Třídy automatizace
 Následující postup ukazuje, jak vytvořit `COleDateTime` objektu a provést jeho inicializaci s aktuálním časem.  

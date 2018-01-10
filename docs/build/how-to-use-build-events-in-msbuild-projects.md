@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebbccf147cc45ce5e3dab512e13a8b059f104cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 Události sestavení je příkaz který [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] provádí v konkrétní fázi v procesu sestavení. *Před sestavením* události dojde před začátkem sestavování; *před propojením* před spuštěním kroku odkaz; dojde k události a *po sestavení* k události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že dojde k krok přidružené sestavení. Událost před propojením například nedochází, pokud nejde spustit krok propojení.  
@@ -78,4 +79,4 @@ Události sestavení je příkaz který [!INCLUDE[vstecmsbuild](../build/include
   
 ## <a name="see-also"></a>Viz také  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
- [Návod: Vytvoření projektu Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+ [Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

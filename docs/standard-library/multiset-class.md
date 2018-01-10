@@ -97,11 +97,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba5b35c7bff46369236bf9be719e351d10a8900d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-class"></a>multiset – třída
 Standardní knihovně C++ multiset – třída se používá pro ukládání a načítání dat z kolekce, v kterém hodnoty elementů obsažených nemusí být jedinečný a které budou sloužit jako klíčové hodnoty, podle které data automaticky řazení. Hodnotu klíče prvku v multisadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.  
@@ -114,7 +115,7 @@ class multiset
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Klíč*  
+ *Key*  
  Typ dat prvku, který bude uložen do multisady.  
   
  *Porovnání*  
@@ -2212,5 +2213,5 @@ The multiset has elements: 10 20.
  [\<Nastavení > členy](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)   
  [Kontejnery](../cpp/containers-modern-cpp.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 926ed226b67ae510647d2523e4992f6ee3c79a5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9e740dc15618388fe9c1428705b47bd495a1c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper – struktura
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -54,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Verifyinheritancehelper::Verify – metoda](../windows/verifyinheritancehelper-verify-method.md)|Testuje dvě rozhraní zadanou aktuální parametry šablony a určuje, zda jedno rozhraní je odvozena z jiných.|  
+|[VerifyInheritanceHelper::Verify – metoda](../windows/verifyinheritancehelper-verify-method.md)|Testuje dvě rozhraní zadanou aktuální parametry šablony a určuje, zda jedno rozhraní je odvozena z jiných.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `VerifyInheritanceHelper`  
@@ -65,4 +68,4 @@ struct VerifyInheritanceHelper<I, Nil>;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

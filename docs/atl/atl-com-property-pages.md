@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-property-pages"></a>ATL COM – stránky vlastností
 COM – stránky vlastností nabízí uživatelské rozhraní pro nastavení vlastností (nebo volání metody) jeden nebo více objektů COM. Stránky vlastností jsou používány v ovládacích prvcích ActiveX pro zajištění bohaté uživatelské rozhraní, které umožňují vlastností ovládacího prvku na nastavit v době návrhu.  
@@ -36,10 +37,10 @@ COM – stránky vlastností nabízí uživatelské rozhraní pro nastavení vla
  Další informace najdete v tématu [vlastností a stránky vlastností](http://msdn.microsoft.com/library/windows/desktop/ms686577) v [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Určení stránky vlastností](../atl/specifying-property-pages.md)  
+ [Zadání stránek vlastností](../atl/specifying-property-pages.md)  
  Jsou uvedené kroky pro zadání stránky vlastností pro ovládací prvek je a zobrazí ukázka třídy.  
   
- [Implementace stránky vlastností](../atl/implementing-property-pages.md)  
+ [Implementace stránek vlastností](../atl/implementing-property-pages.md)  
  Jsou uvedené kroky pro implementaci stránky vlastností, včetně metody k přepsání. Vás provede kompletní příklad podle ATLPages ukázka programu.  
   
 ## <a name="related-sections"></a>Související oddíly  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2b5aa12a22a32917b6f5bf84b6be409e0497002
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c2313b81756fdf82972b64360a4d384a53f68fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE – kódy ukončení
 BSCMAKE vrátí ukončovací kód (také nazývané návratový kód nebo kód chyby) do operačního systému nebo volací program.  
@@ -32,4 +33,4 @@ BSCMAKE vrátí ukončovací kód (také nazývané návratový kód nebo kód c
 |4|Závažná chyba při vytváření sestavení|  
   
 ## <a name="see-also"></a>Viz také  
- [BscMake – odkaz](../../build/reference/bscmake-reference.md)
+ [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

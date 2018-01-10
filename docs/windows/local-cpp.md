@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 007d95d5db0785deae08744b46738d7188e4da70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3543adfe0cb25f7946e6ed6c81c4bd66a7b60324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-c"></a>local (C++)
 Při použití v hlavičce rozhraní, můžete použít MIDL kompilátoru jako generátor záhlaví. Při použití v jednotlivé funkce, označí místní postupu, pro které jsou generovány žádné zástupných procedur.  
@@ -55,4 +58,4 @@ Při použití v hlavičce rozhraní, můžete použít MIDL kompilátoru jako g
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [call_as –](../windows/call-as.md)   
+ [call_as](../windows/call-as.md)   

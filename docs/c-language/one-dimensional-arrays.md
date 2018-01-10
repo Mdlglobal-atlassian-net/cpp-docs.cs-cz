@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea3d4c2461579fcafc4f9ff7ba5071572229c640
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="one-dimensional-arrays"></a>Jednorozměrná pole
 Výraz operátory následováno výrazem do hranatých závorek (**[]**) je dolního indexu reprezentace elementu objektu array. Výraz dolního indexu představuje hodnotu na adresu, která je *výraz* umisťuje nad rámec *operátory výraz* při vyjádřený jako  
@@ -74,4 +75,4 @@ b[a]
  Výraz dolního indexu `line[0]` představuje hodnotu první prvek řádku, od posun z adresy reprezentována `line` je 0. Podobně výrazem jako `line[5]` odkazuje na pozice posun pět element z řádku nebo element šesté pole.  
   
 ## <a name="see-also"></a>Viz také  
- [Operátor dolního indexu:](../cpp/subscript-operator.md)
+ [Operátor dolního indexu: []](../cpp/subscript-operator.md)

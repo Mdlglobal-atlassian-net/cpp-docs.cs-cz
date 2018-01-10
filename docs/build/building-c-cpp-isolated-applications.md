@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5af0dde80a143166d9824d2739632ca7e7ed4382
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76b0c1fa5b509ae495a12fb63164d7da01f402aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-isolated-applications"></a>Sestavení izolovaných aplikací C/C++
 Izolované aplikace závisí pouze na souběžně sdílená sestavení a sváže jeho závislé součásti pomocí manifestu. Není nutné pro vaši aplikaci plně izolaci, aby bylo možné správně fungovat v systému Windows. ale investicemi do vytváření aplikace plně izolované, může ušetřit čas Pokud potřebujete služeb vaší aplikace v budoucnu. Další informace o výhodách vytváření plně izolované aplikace najdete v tématu [izolované aplikace](http://msdn.microsoft.com/library/aa375190).  
@@ -27,4 +28,4 @@ Izolované aplikace závisí pouze na souběžně sdílená sestavení a sváže
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty izolovaných aplikací a souběžně sdílená sestavení](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [Sestavení C/C++ izolovaných aplikací a souběžně sdílená sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

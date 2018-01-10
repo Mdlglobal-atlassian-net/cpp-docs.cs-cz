@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f4c174050d2280f116f41be94741dc3c71ae91a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc53ce776dd494c4af312c16d751f883afecc69d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfstream-class"></a>basic_fstream – třída
 Popisuje objekt, který řídí vložení a extrakce elementů a kódovaného objekty pomocí datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`.  
@@ -99,9 +100,9 @@ Writing to a basic_fstream object...
   
 |||  
 |-|-|  
-|[Zavřete](#close)|Zavře soubor.|  
+|[close](#close)|Zavře soubor.|  
 |[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
-|[Otevřete](#open)|Otevře soubor.|  
+|[open](#open)|Otevře soubor.|  
 |[rdbuf –](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu, typ ukazatele na [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|  
 |[swap](#swap)|Obsah tohoto objektu s obsahem jiného výměny `basic_fstream` objektu.|  
   

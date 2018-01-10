@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>Syntaxe částí názvu souboru
 Syntaxe částí názvu souboru v příkazech představuje součástí první závislé název souboru (který může být předpokládané závislé). Název souboru součásti jsou jednotky v souboru, cesta, základní název a příponu jako zadaný, není, protože existuje na disku. Použití **%s** představují úplný název souboru. Použití **% &#124;** [*částí*]**F** (svislá čára znak následuje symbol procenta) představují částí názvu souboru, kde *částí* může být nula nebo více z následujících písmen v libovolném pořadí.  

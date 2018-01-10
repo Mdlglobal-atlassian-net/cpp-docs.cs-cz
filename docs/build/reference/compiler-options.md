@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 490814f85199450d4261bf4071184b75b5ea10c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c433abea04ff81c69fe1b73569ea7e043e6e81ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options"></a>Možnosti kompilátoru
 cl.exe je nástroj, který řídí Microsoft C a C++ kompilátory a linkeru. cl.exe lze spustit pouze v operačních systémech, které podporují Microsoft Visual Studio.  
@@ -40,7 +41,7 @@ cl.exe je nástroj, který řídí Microsoft C a C++ kompilátory a linkeru. cl.
 ## <a name="finding-an-option"></a>Možnosti hledání  
  Možnost konkrétní kompilátoru naleznete v tématu jednu z následujících seznamů:  
   
--   [Možnosti kompilátoru uvedené podle abecedy](../../build/reference/compiler-options-listed-alphabetically.md)  
+-   [Možnosti kompilátoru (abecední pořadí)](../../build/reference/compiler-options-listed-alphabetically.md)  
   
 -   [Možnosti kompilátoru uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md)  
   
@@ -64,4 +65,4 @@ cl.exe je nástroj, který řídí Microsoft C a C++ kompilátory a linkeru. cl.
  [Odkaz sestavení C/C++](../../build/reference/c-cpp-building-reference.md)   
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
  [Rychlá kompilace](../../build/reference/fast-compilation.md)   
- [CL vyvolává Linker](../../build/reference/cl-invokes-the-linker.md)
+ [CL vyvolává linker](../../build/reference/cl-invokes-the-linker.md)

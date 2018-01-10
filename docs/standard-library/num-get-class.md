@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 908f7f595f2312bc16a01cdc3b6784c3e56f21bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numget-class"></a>num_get – třída
 Třídu šablony, která popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` do číselných hodnot.  
@@ -69,7 +70,7 @@ class num_get : public locale::facet;
 |||  
 |-|-|  
 |[do_get –](#do_get)|Virtuální funkce volaná k extrakci číselné hodnoty nebo logické hodnoty ze sekvence znaků.|  
-|[GET](#get)|Extrahuje ze sekvence znaků číselnou nebo logickou hodnotu.|  
+|[get](#get)|Extrahuje ze sekvence znaků číselnou nebo logickou hodnotu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  

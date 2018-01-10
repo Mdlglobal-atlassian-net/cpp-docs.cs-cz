@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 906ab5406fb6ccfb8905c3cf76ae6968ef0979da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Určuje prostředí pro spuštění, který je požadován spustitelné bitové kopie.  
@@ -72,4 +73,4 @@ Určuje prostředí pro spuštění, který je požadován spustitelné bitové 
  Další informace, včetně minimální a výchozí hodnoty pro hlavní verze a podverze čísla pro každý subsystém, najdete v článku [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru.  
   
 ## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+ [EDITBIN – možnosti](../../build/reference/editbin-options.md)

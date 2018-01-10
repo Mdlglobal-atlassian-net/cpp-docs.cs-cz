@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ccd5f54464fa9b685df40a808166658a49af6f6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce755f88e8a9efaaacd456206d599dd5db75443
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC – přehled
 MFC DLL není knihovnu DLL, kterou nepoužívá MFC interně a může být volána exportovaných funkcí v knihovně DLL knihovny MFC nebo mimo MFC spustitelné soubory. Funkce jsou obvykle exportovány z non - MFC DLL pomocí standardní rozhraní jazyka.  
@@ -33,7 +34,7 @@ MFC DLL není knihovnu DLL, kterou nepoužívá MFC interně a může být volá
   
 -   [Export z knihovny DLL](../build/exporting-from-a-dll.md)  
   
--   [Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)  
+-   [Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)  
   
 -   [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
@@ -43,7 +44,7 @@ MFC DLL není knihovnu DLL, kterou nepoužívá MFC interně a může být volá
   
 -   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [MFC – rozšiřující knihovny DLL: Přehled](../build/extension-dlls-overview.md)  
+-   [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Druhy knihoven DLL](../build/kinds-of-dlls.md)
+ [Typy knihoven DLL](../build/kinds-of-dlls.md)

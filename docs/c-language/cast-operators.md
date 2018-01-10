@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e607d3e1d02a985225f1ae41be66200ecf754ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3f922bb052d6a69bc8a051769bc552b1f2653de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cast-operators"></a>Operátory přetypování
 Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétní situaci.  
@@ -36,4 +37,4 @@ Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétn
  Kompilátor zpracovává *výraz cast* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Přetypování typu explicitní jsou omezeny stejné pravidla, která určují důsledky implicitní převody, popsané v [převody přiřazení](../c-language/assignment-conversions.md). Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů. V tématu [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o skutečné velikosti integrální typy. Další informace o přetypování typu, najdete v části [převody přetypování](../c-language/type-cast-conversions.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Operátor přetypování:)](../cpp/cast-operator-parens.md)
+ [Operátor přetypování: ()](../cpp/cast-operator-parens.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45fc41430fbbf04f8b1b56fe6355fb0b81f8e1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Třídy a struktury (rozšíření komponent C++)
 Deklaruje třídě nebo struktuře jejichž *doba života objektu* je spravována automaticky. Pokud objekt již není dostupný nebo mimo rozsah, Visual C++ automaticky zahodí paměti, který je přidělen k objektu.  
@@ -75,19 +78,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  
   
--   [C++ – sémantika zásobníku pro odkazové typy](../dotnet/cpp-stack-semantics-for-reference-types.md)  
+-   [Sémantika zásobníku C++ pro typy odkazů](../dotnet/cpp-stack-semantics-for-reference-types.md)  
   
 -   [Tříd, struktur a sjednocení](../cpp/classes-and-structs-cpp.md)  
   
 -   [Destruktory a finalizační metody v postupy: definování a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)  
   
--   [Uživatelem definované operátory (C + +/ CLI)](../dotnet/user-defined-operators-cpp-cli.md)  
+-   [Uživatelem definované operátory (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)  
   
--   [Uživatelem definované převody (C + +/ CLI)](../dotnet/user-defined-conversions-cpp-cli.md)  
+-   [Uživatelem definované převody (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)  
   
--   [Postupy: zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
--   [Obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)  
+-   [Obecné třídy (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  **Poznámky**  
@@ -124,4 +127,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  – Možnost kompilátoru:   **/CLR**  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

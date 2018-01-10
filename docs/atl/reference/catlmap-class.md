@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d16ff30313a9346aa25f8febfba2f6e0d8307f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166e8f7804a3138d3e891fbe15b54cb0e270811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmap-class"></a>CAtlMap – třída
 Tato třída poskytuje metody pro vytváření a správu objekt map.  
@@ -284,7 +285,7 @@ CPair* GetAt(POSITION& pos) throw();
  `key`  
  Určení typu klíče mapy pro parametr šablony.  
   
- *Hodnota*  
+ *value*  
  Parametr šablony určující typ hodnoty na mapě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -365,7 +366,7 @@ void GetNextAssoc(
  `key`  
  Určení typu klíče mapy pro parametr šablony.  
   
- *Hodnota*  
+ *value*  
  Parametr šablony určující typ hodnoty na mapě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -507,7 +508,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Určuje klíč, který identifikuje elementu, který chcete vyhledávat.  
   
- *Hodnota*  
+ *value*  
  Proměnná, která přijímá vyhledaných hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -601,7 +602,7 @@ POSITION SetAt(
  `key`  
  Hodnota klíče pro přidání do `CAtlMap` objektu.  
   
- *Hodnota*  
+ *value*  
  Hodnota k přidání do `CAtlMap` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -650,7 +651,7 @@ void SetValueAt(
  `pos`  
  Čítač pozice vrácené z předchozího volání [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).  
   
- *Hodnota*  
+ *value*  
  Hodnota k přidání do `CAtlMap` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
