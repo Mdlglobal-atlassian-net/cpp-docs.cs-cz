@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ad153a0d74df9102f2e4e4ff048603378cb55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Generované třídy, Průvodce aplikací MFC
 Toto téma obsahuje seznam názvů základní třídy a soubory, které generuje projektu. Ve výchozím nastavení jsou názvy založené na název projektu, který jste zadali v **dialogové okno Nový projekt**. Většina těchto názvů, můžete změnit podle postupu popsaného tady:  

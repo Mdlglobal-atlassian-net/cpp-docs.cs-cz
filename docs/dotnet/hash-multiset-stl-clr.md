@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b98e8d858c154e344320c759ac4a38c1cf78cbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f07e2e063be9c5a30a63b445d06100124e4250a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_multiset` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Hodnota jednotlivých prvků slouží jako klíč k pořadí řazení.  
@@ -65,7 +68,7 @@ template<typename Key>
 |[hash_multiset::iterator (STL/CLR)](../dotnet/hash-multiset-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
 |[hash_multiset::key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)|Typ klíče řazení|  
-|[hash_multiset::Reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[hash_multiset::reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[hash_multiset::reverse_iterator (STL/CLR)](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[hash_multiset::size_type (STL/CLR)](../dotnet/hash-multiset-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[hash_multiset::value_compare (STL/CLR)](../dotnet/hash-multiset-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -76,15 +79,15 @@ template<typename Key>
 |[hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Spočítá počet intervalů.|  
 |[hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[hash_multiset::Count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[hash_multiset::Empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[hash_multiset::Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[hash_multiset::Find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[hash_multiset::find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
 |[hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Zkopíruje hash delegáta pro klíč.|  
 |[hash_multiset::hash_multiset (STL/CLR)](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[hash_multiset::Insert (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Přidá prvky.|  
+|[hash_multiset::insert (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Přidá prvky.|  
 |[hash_multiset::key_comp (STL/CLR)](../dotnet/hash-multiset-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)|Spočítá průměrný počet prvků na kbelík.|  
 |[hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
@@ -101,7 +104,7 @@ template<typename Key>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[hash_multiset::Operator = (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -160,4 +163,4 @@ template<typename Key>
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

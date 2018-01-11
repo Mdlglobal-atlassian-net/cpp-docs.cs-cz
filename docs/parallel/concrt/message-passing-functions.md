@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4139068c8871fe69f43168fe925011a48411a74b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-passing-functions"></a>Funkce usnadnění
 Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují předávání zpráv mezi součástmi.  
@@ -57,17 +58,17 @@ Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují p
   
 -   [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Postupy: implementace různých vzorů typu výrobce spotřebitel](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [Postupy: Implementace různých vzorů producent–příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
--   [Postupy: poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
+-   [Postupy: Poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
--   [Postupy: použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
+-   [Postupy: Použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
   
--   [Postupy: výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
+-   [Postupy: Výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
   
--   [Postupy: odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
+-   [Postupy: Odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
   
--   [Postupy: použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+-   [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
  [[Horní](#top)]  
   

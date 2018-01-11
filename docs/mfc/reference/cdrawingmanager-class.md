@@ -67,11 +67,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73b8adbff021a179f3bd3185fa85ee18c84a441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 689d538c03a35175040663aedb7bd6130aae10fd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager – třída
 `CDrawingManager` Třída implementuje složité algoritmy kreslení.  
@@ -576,7 +577,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
  Reprezentace RGB zadaná barva HLS.  
   
 ### <a name="remarks"></a>Poznámky  
- Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/linkid=119126).  
+ Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Tato metoda a `CDrawingManager::HLStoRGB_TWO` metoda provádět stejné operace, ale vyžadují různé hodnoty pro `H` parametr. Tato metoda `H` je procento kruhu. V `CDrawingManager::HLStoRGB_TWO` metody `H` je stupeň hodnotu od 0 do 360, které obě představují red. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro `H` je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
   
@@ -604,7 +605,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
  Reprezentace RGB zadaná barva HLS.  
   
 ### <a name="remarks"></a>Poznámky  
- Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/linkid=119126).  
+ Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Tato metoda a [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda provádět stejné operace, ale vyžadují různé hodnoty pro `H` parametr. Tato metoda `H` je stupeň hodnotu od 0 do 360, které obě představují red. V [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody `H` je procento kruhu. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro `H` je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
   
@@ -631,7 +632,7 @@ static COLORREF __stdcall HSVtoRGB(
  Reprezentace RGB barvu HSV zadat.  
   
 ### <a name="remarks"></a>Poznámky  
- Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/linkid=119126).  
+ Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
 ##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  Převede hodnotu hue červené, zelené nebo modré součásti.  
@@ -800,7 +801,7 @@ static void __stdcall RGBtoHSL(
 |[out]`L`|Ukazatel na dvojitou, kde Metoda ukládá světlost barvy.|  
   
 ### <a name="remarks"></a>Poznámky  
- Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/linkid=119126).  
+ Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Vrácená hodnota pro `H` je reprezentována jako desetinné číslo mezi 0 a 1, kde 0 a 1 představují red. Vrácené hodnoty `S` a `L` jsou čísla od 0 do 1.  
   
@@ -829,7 +830,7 @@ static void __stdcall RGBtoHSV(
  Ukazatel na dvojitou, kde tato metoda ukládá výslednou hodnotu pro tuto barvu.  
   
 ### <a name="remarks"></a>Poznámky  
- Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/linkid=119126).  
+ Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Vrácená hodnota pro `H` je číslo v rozsahu od 0 do 360, kde 0 až 360 znamenat red. Vrácení hodnoty pro `S` a `V` jsou čísla od 0 do 1.  
   

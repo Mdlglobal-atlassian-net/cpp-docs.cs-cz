@@ -17,13 +17,14 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed07a18729996097afd588bf084a18593a3946d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltstringgt"></a>&lt;řetězec&gt;
+# <a name="ltstringgt"></a>&lt;string&gt;
 Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablony.  
   
  Další informace o `basic_string`, najdete v části [basic_string – třída](../standard-library/basic-string-class.md)  
@@ -45,7 +46,7 @@ Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablon
   
 |||  
 |-|-|  
-|[řetězec](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializace šablon třídy `basic_string` elementy typu `char` jako `string`.|  
+|[string](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializace šablon třídy `basic_string` elementy typu `char` jako `string`.|  
 |[wstring](../standard-library/string-typedefs.md#wstring)|Typ, který popisuje specializace šablon třídy `basic_string` elementy typu `wchar_t` jako `wstring`.|  
 |[u16string](../standard-library/string-typedefs.md#u16string)|Typ, který popisuje specializace šablon třídy `basic_string` podle elementy typu `char16_t`.|  
 |[u32string –](../standard-library/string-typedefs.md#u32string)|Typ, který popisuje specializace šablon třídy `basic_string` podle elementy typu `char32_t`.|  
@@ -55,13 +56,13 @@ Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablon
 |||  
 |-|-|  
 |[operátor +](../standard-library/string-operators.md#op_add)|Zřetězí dva objekty řetězce.|  
-|[Operator! =](../standard-library/string-operators.md#op_neq)|Testy, pokud řetězec objekt na levé straně operátoru není stejný jako řetězec objekt na pravé straně.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Testy, pokud řetězec objekt na levé straně operátoru není stejný jako řetězec objekt na pravé straně.|  
 |[Operator ==](../standard-library/string-operators.md#op_eq_eq)|Testy, pokud řetězec objekt na levé straně operátoru rovná řetězec objekt na pravé straně.|  
 |[operátor <](../standard-library/string-operators.md#op_lt)|Testuje, pokud objekt na levé straně operátoru řetězce je menší než na objekt řetězce na pravé straně.|  
 |[Operator < =](../standard-library/string-operators.md#op_lt_eq)|Pokud řetězec objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt řetězce na pravé straně.|  
 |[operátor <\<](../standard-library/string-operators.md#op_lt_lt)|Funkce šablony, která vloží řetězec do výstupního datového proudu.|  
 |[operátor >](../standard-library/string-operators.md#op_gt)|Testy, pokud je řetězec objekt na levé straně operátoru větší než na objekt řetězce na pravé straně.|  
-|[Operator > =](../standard-library/string-operators.md#op_gt_eq)|Testy, pokud je řetězec objekt na levé straně operátoru větší než nebo rovna hodnotě řetězec objekt na pravé straně.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testy, pokud je řetězec objekt na levé straně operátoru větší než nebo rovna hodnotě řetězec objekt na pravé straně.|  
 |[operátor >>](../standard-library/string-operators.md#op_gt_gt)|Funkce šablony, která extrahuje řetězec ze vstupního datového proudu.|  
   
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon  
@@ -97,9 +98,9 @@ Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablon
 |||  
 |-|-|  
 |[char_traits –\<char > – Struktura](../standard-library/char-traits-char-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char`.|  
-|[char_traits – < wchar_t > – Struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `wchar_t`.|  
-|[< char16_t > char_traits – struktura](../standard-library/char-traits-char16-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char16_t`.|  
-|[< char32_t > char_traits – struktura](../standard-library/char-traits-char32-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char32_t`.|  
+|[char_traits<wchar_t> – struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `wchar_t`.|  
+|[char_traits<char16_t> – struktura](../standard-library/char-traits-char16-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char16_t`.|  
+|[char_traits<char32_t> – struktura](../standard-library/char-traits-char32-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char32_t`.|  
   
 ## <a name="requirements"></a>Požadavky  
   

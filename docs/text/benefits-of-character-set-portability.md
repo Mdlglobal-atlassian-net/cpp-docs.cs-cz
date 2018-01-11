@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 93bd0356e8e2192e44053c9090ffb63ea72cfeca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 554137352c0a8f7275a051e4026020fce25edbb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="benefits-of-character-set-portability"></a>Výhody přenositelnosti znakové sady
 Můžete využít i v případě, že jste neměli v úmyslu aktuálně internationalizi vaší aplikace pomocí přenositelnost běhové funkce MFC a C:  
@@ -33,4 +34,4 @@ Můžete využít i v případě, že jste neměli v úmyslu aktuálně internat
   
 ## <a name="see-also"></a>Viz také  
  [Kódování Unicode a MBCS](../text/unicode-and-mbcs.md)   
- [Podpora kódování Unicode](../text/support-for-unicode.md)
+ [Podpora pro Unicode](../text/support-for-unicode.md)

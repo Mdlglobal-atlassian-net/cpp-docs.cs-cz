@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4a509ee99acef2510424995569da297c5d6f971
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c04d411a6b0075d2fa08d846ad3b8a1bbb020c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="once"></a>once
 Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového kódu obsažen (otevřen) pouze jednou.  
@@ -68,4 +69,4 @@ Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového
  Dejte pozor, abyste používat `#pragma once` nebo #include ochrana stylu hlavičky souborů, které jsou navržené jako zahrnuta vícekrát, používání preprocesoru symboly k řízení jejich důsledky. Příklad tohoto návrhu v tématu \<assert.h > soubor hlaviček. Také je potřeba spravovat zahrnout cesty, kde se vyhněte se vytváření více cest k zahrnuté soubory, které můžete vůbec nemělo více zahrnují optimalizace pro obě #include chrání a `#pragma once`.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

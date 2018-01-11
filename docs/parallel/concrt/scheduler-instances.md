@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b21ea045d8c875bac6ca5b068cdeb919f0d6ad85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-instances"></a>Instance plánovače
 Tento dokument popisuje roli instance plánovače v Concurrency Runtime a jak používat [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) a [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) třídy Vytvoření a Správa instance plánovače. Instance plánovače jsou užitečné, pokud chcete přidružit explicitní plánování zásady konkrétní typy úloh. Můžete například vytvořit jednu instanci plánovače spouštět některé úlohy prioritou zvýšenými vláken a používat výchozí plánovač při spouštění dalších úloh na normální vlákno prioritu.  
@@ -104,7 +105,7 @@ Tento dokument popisuje roli instance plánovače v Concurrency Runtime a jak po
 |------------|-----------------|  
 |[Vytvoření](reference/currentscheduler-class.md#create)|Vytvoří `Scheduler` objekt, který se používá k určené zásadě a přidruží ji s aktuálním kontextu.|  
 |[GET](reference/currentscheduler-class.md#get)|Načte ukazatel `Scheduler` objektu, která souvisí s aktuálním kontextu. Tato metoda se nezvyšuje počet odkazů `Scheduler` objektu.|  
-|[Odpojení](reference/currentscheduler-class.md#detach)|Odpojí aktuální Plánovač z aktuálního kontextu a nastaví předchozímu jako aktuálního plánovače.|  
+|[Detach](reference/currentscheduler-class.md#detach)|Odpojí aktuální Plánovač z aktuálního kontextu a nastaví předchozímu jako aktuálního plánovače.|  
 |[Registershutdownevent –](reference/currentscheduler-class.md#registershutdownevent)|Zaregistruje událost, která nastaví modul runtime při zničena aktuálního plánovače.|  
 |[Createschedulegroup –](reference/currentscheduler-class.md#createschedulegroup)|Vytvoří [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objekt v aktuálního plánovače.|  
 |[Scheduletask –](reference/currentscheduler-class.md#scheduletask)|Prosté úlohy přidá do plánování frontu aktuálního plánovače.|  
@@ -115,8 +116,8 @@ Tento dokument popisuje roli instance plánovače v Concurrency Runtime a jak po
 |Metoda|Popis|  
 |------------|-----------------|  
 |[Vytvoření](reference/scheduler-class.md#create)|Vytvoří `Scheduler` objekt, který používá zadanou zásadu.|  
-|[Připojení](reference/scheduler-class.md#attach)|Přidruží `Scheduler` objekt spolu s aktuálním kontextu.|  
-|[Referenční dokumentace](reference/scheduler-class.md#reference)|Zvýší čítače odkaz z `Scheduler` objektu.|  
+|[Attach](reference/scheduler-class.md#attach)|Přidruží `Scheduler` objekt spolu s aktuálním kontextu.|  
+|[Referenční informace](reference/scheduler-class.md#reference)|Zvýší čítače odkaz z `Scheduler` objektu.|  
 |[Vydaná verze](reference/scheduler-class.md#release)|Snižuje čítači, odkaz `Scheduler` objektu.|  
 |[Registershutdownevent –](reference/scheduler-class.md#registershutdownevent)|Zaregistruje událost, která nastaví modul runtime, kdy `Scheduler` objekt zničena.|  
 |[Createschedulegroup –](reference/scheduler-class.md#createschedulegroup)|Vytvoří [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objekt v `Scheduler` objektu.|  

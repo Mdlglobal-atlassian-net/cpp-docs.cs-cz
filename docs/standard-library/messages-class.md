@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d60a1ba5ac8acbb6fbaf9e5b7e922a1f373f9293
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-class"></a>messages – třída
 Třída šablony popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí k načítání lokalizovaných zpráv z katalogu internacionalizovaných zpráv pro dané národní prostředí.  
@@ -77,12 +78,12 @@ class messages : public messages_base;
   
 |||  
 |-|-|  
-|[Zavřete](#close)|Zavře katalog zpráv.|  
+|[close](#close)|Zavře katalog zpráv.|  
 |[do_close –](#do_close)|Virtuální funkce volaná k zavření katalogu zpráv.|  
 |[do_get –](#do_get)|Virtuální funkce volaná k načtení katalogu zpráv.|  
 |[do_open –](#do_open)|Virtuální funkce volaná k otevření katalogu zpráv.|  
-|[GET](#get)|Načte katalog zpráv.|  
-|[Otevřete](#open)|Otevře katalog zpráv.|  
+|[get](#get)|Načte katalog zpráv.|  
+|[open](#open)|Otevře katalog zpráv.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  

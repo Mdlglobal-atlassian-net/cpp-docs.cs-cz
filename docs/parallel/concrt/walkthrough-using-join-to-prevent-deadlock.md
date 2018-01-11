@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3553ac8948e10271da449356bde20d2a9ae4378b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Návod: Použití metody join k zabránění vzájemnému zablokování
 Toto téma používá nabízet filosofů problém pro ilustraci použití [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy, aby zablokování v aplikaci. V aplikaci softwaru *zablokování* nastane, když minimálně dva procesy každý uložení prostředku a vzájemně čekat na jiný proces k uvolnění jiný prostředek.  
@@ -38,7 +39,7 @@ Toto téma používá nabízet filosofů problém pro ilustraci použití [concu
   
 - [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
-- [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)  
+- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
   
 - [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
   

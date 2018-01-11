@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry – třída
 `multi_link_registry` Objekt `network_link_registry` , spravuje více bloků zdroje nebo více bloků cíl.  
@@ -57,11 +58,11 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Přidat](#add)|Přidá odkaz `multi_link_registry` objektu. (Přepisuje [network_link_registry::Add –](network-link-registry-class.md#add).)|  
+|[add](#add)|Přidá odkaz `multi_link_registry` objektu. (Přepisuje [network_link_registry::Add –](network-link-registry-class.md#add).)|  
 |[začít](#begin)|Vrátí iterovat prvním elementem v `multi_link_registry` objektu. (Přepisuje [network_link_registry::BEGIN –](network-link-registry-class.md#begin).)|  
 |[obsahuje](#contains)|Hledání `multi_link_registry` objekt pro zadaný blok. (Přepisuje [network_link_registry::contains –](network-link-registry-class.md#contains).)|  
 |[počet](#count)|Spočítá počet položek v `multi_link_registry` objektu. (Přepisuje [network_link_registry::Count –](network-link-registry-class.md#count).)|  
-|[odebrat](#remove)|Odebere odkaz z `multi_link_registry` objektu. (Přepisuje [network_link_registry::Remove –](network-link-registry-class.md#remove).)|  
+|[remove](#remove)|Odebere odkaz z `multi_link_registry` objektu. (Přepisuje [network_link_registry::Remove –](network-link-registry-class.md#remove).)|  
 |[set_bound –](#set_bound)|Nastaví horní mez počtu odkazy `multi_link_registry` objekt mohou být uloženy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  

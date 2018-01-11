@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>ios_base – třída
 Třída popisuje úložiště a členské funkce společné pro vstupní a výstupní datové proudy, které jsou nezávislé na parametry šablony. (Šablony třídy [basic_ios](../standard-library/basic-ios-class.md) popisuje, co je běžné a závisí na parametry šablony.)  
@@ -164,7 +165,7 @@ Třída popisuje úložiště a členské funkce společné pro vstupní a výst
   
 |||  
 |-|-|  
-|[události](#event)|Určuje typy událostí.|  
+|[event](#event)|Určuje typy událostí.|  
   
 ### <a name="constants"></a>Konstanty  
   
@@ -187,11 +188,11 @@ Třída popisuje úložiště a členské funkce společné pro vstupní a výst
 |[floatfield](#fmtflags)|Bitová maska definován jako `fixed` &#124;`scientific`|  
 |[goodbit](#iostate)|Zrušte zaškrtnutí všech stavu bitů.|  
 |[Hex](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty v šestnáctkovém formátu.|  
-|[v](#openmode)|Určuje extrakci z datového proudu.|  
-|[interní](#fmtflags)|Dotyková zařízení šířky pole vložením výplně znaků na bod interní generovaného číselné pole.|  
+|[in](#openmode)|Určuje extrakci z datového proudu.|  
+|[internal](#fmtflags)|Dotyková zařízení šířky pole vložením výplně znaků na bod interní generovaného číselné pole.|  
 |[vlevo](#fmtflags)|Určuje zarovnání doleva.|  
 |[OCT](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty ve formátu osmičková.|  
-|[na více systémů](#openmode)|Určuje vložení do datového proudu.|  
+|[out](#openmode)|Určuje vložení do datového proudu.|  
 |[vpravo](#fmtflags)|Určuje zarovnání doprava.|  
 |[Scientific](#fmtflags)|Určuje vložení hodnot s plovoucí desetinnou čárkou v matematickém formátu (s exponentu pole).|  
 |[showbase](#fmtflags)|Určuje vkládání předponu, která zjistí základní pole generovaný celé číslo.|  
@@ -210,7 +211,7 @@ Třída popisuje úložiště a členské funkce společné pro vstupní a výst
 |[příznaky](#flags)|Nastaví nebo vrátí aktuální nastavení příznaku.|  
 |[getloc –](#getloc)|Vrací objekt uložené národního prostředí.|  
 |[imbue –](#imbue)|Změní národní prostředí.|  
-|[Init –](#init)|Standardní iostream objekty, když se vytvoří.|  
+|[Init](#init)|Standardní iostream objekty, když se vytvoří.|  
 |[iword –](#iword)|Přiřadí hodnotu ukládaly jako `iword`.|  
 |[přesnost](#precision)|Určuje počet číslic, které chcete zobrazit v číslo s plovoucí desetinnou čárkou.|  
 |[pword –](#pword)|Přiřadí hodnotu ukládaly jako `pword`.|  

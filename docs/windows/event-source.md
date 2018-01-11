@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f7f56e8cfbc8532ad4cd4f1dcfcac4b0ad9fde5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05371b5c2d9acd091adcbdf81d2994f205e36ef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsource"></a>event_source
 Vytvoří zdroje událostí.  
@@ -55,7 +58,7 @@ Vytvoří zdroje událostí.
     #include <atlcom.h>  
     ```  
   
- **Optimalizace**  
+ **optimize**  
  Když `type` je **nativní**, můžete zadat **optimalizovat = velikost**, k označení, že 4 bajtů úložišť (minimum) pro všechny události v třídě nebo **optimalizovat = rychlost** (výchozí) k označení, že je 4 * bajtů (# událostí) úložiště.  
   
  **uspořádání**  
@@ -88,4 +91,4 @@ Vytvoří zdroje událostí.
  [__Event](../cpp/event.md)   
  [__hook](../cpp/hook.md)   
  [__unhook](../cpp/unhook.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   

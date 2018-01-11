@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85b9c40d5253c707567a7cb0a1c751b1392fc995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-policies"></a>Zásady plánovače
 Tento dokument popisuje roli zásady plánovače v Concurrency Runtime. A *zásad plánovače* prvky strategie používající Plánovač při správě úloh. Představte si třeba aplikaci, která vyžaduje některé úlohy provést v `THREAD_PRIORITY_NORMAL` a další úlohy provést v `THREAD_PRIORITY_HIGHEST`.  Můžete vytvořit dvě instance plánovače: ten, který určuje `ContextPriority` k zásad `THREAD_PRIORITY_NORMAL` a druhý, který určuje stejné zásady jako `THREAD_PRIORITY_HIGHEST`.  
@@ -65,5 +66,5 @@ Tento dokument popisuje roli zásady plánovače v Concurrency Runtime. A *zása
 ## <a name="see-also"></a>Viz také  
  [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Postupy: určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
- [Postupy: vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+ [Postupy: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
 

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkce uživatelského rozhraní, Průvodce aplikací MFC
 Toto téma vysvětluje možnosti, které můžete použít k určení vzhledu vaší aplikace. Funkce uživatelského rozhraní k dispozici pro váš projekt závisí na typu aplikace, které jste zadali v [typu aplikace, Průvodce aplikací knihovny MFC](../../mfc/reference/application-type-mfc-application-wizard.md) stránky Průvodce aplikací MFC. Například pokud vytvoříte aplikaci rozhraní jedním dokumentem, nelze přidat styly podřízeného rámce.  
@@ -65,5 +66,5 @@ Toto téma vysvětluje možnosti, které můžete použít k určení vzhledu va
  Pro [CDialog – třída](../../mfc/reference/cdialog-class.md)– na základě pouze aplikací, tento název se zobrazí v záhlaví dialogového okna. Chcete-li upravit toto pole, musíte nejdřív vybrat **založená na dialogovém okně** možnost v části **typ aplikace**. Další informace najdete v tématu [typu aplikace, Průvodce aplikací knihovny MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
+ [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
 

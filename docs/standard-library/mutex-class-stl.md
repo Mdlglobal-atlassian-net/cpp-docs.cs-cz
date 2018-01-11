@@ -27,11 +27,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 37a6d72ab7f79c24606a5ffb0dcafe1e6c6d1e18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c1039ceae802984762dbb1aaf50c259bf8a2e95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex – třída (standardní knihovna C++)
 Představuje *mutex typu*. Objekty tohoto typu lze vynutit vzájemné vyloučení v rámci programu.  
@@ -55,7 +56,7 @@ class mutex;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zámek](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.|  
+|[lock](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.|  
 |[native_handle –](#native_handle)|Vrátí implementace konkrétní typ, který reprezentuje objekt mutex popisovač.|  
 |[try_lock –](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|  
 |[odemknutí](#unlock)|Uvolní vlastnictví `mutex`.|  

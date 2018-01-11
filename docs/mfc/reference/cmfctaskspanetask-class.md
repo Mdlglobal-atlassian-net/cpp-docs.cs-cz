@@ -41,11 +41,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c5627aba75f7eca9680d369c805dc910403b2647
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b64f1efd16a1ac372f6e8ce9ea9e0781046f1892
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask – třída
 `CMFCTasksPaneTask` Třída je pomocná třída, která představuje úlohy pro ovládací prvek podokna úloh ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klikne na úlohy a ikonu, která se zobrazí vlevo od název úlohy.  

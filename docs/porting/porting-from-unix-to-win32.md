@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 Při migraci aplikací ze systému UNIX do systému Windows, máte několik možností:  
@@ -44,11 +45,11 @@ Při migraci aplikací ze systému UNIX do systému Windows, máte několik mož
 ### <a name="unix-migration-guides"></a>Příručky k migraci UNIX  
  Průvodce migrací UNIX vlastní aplikace obsahuje technickou nápovědu migrace kódu ze systému UNIX do Win32 prostředí.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?LinkId=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Průvodce projektem migrace Unix doplňuje Průvodce migrací UNIX vlastní aplikace poskytnutím vysokoúrovňové pomoci s přenesením podstatných projektů ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu. Průvodce může být stažen:  
   
- [http://go.microsoft.com/fwlink/?LinkId=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?LinkId=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Služby Microsoft Windows pro UNIX (SFU)  
  Služby systému Windows pro UNIX (SFU) poskytuje celou řadu napříč platformami služby pro integraci systému Windows do existujících prostředí založené na systému UNIX. Služby pro systém UNIX poskytuje sdílení souborů, vzdálený přístup a správu, synchronizace hesel, společnou správu adresářů, společnou sadu nástrojů a prostředí.  

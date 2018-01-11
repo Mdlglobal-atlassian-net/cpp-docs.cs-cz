@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 V tomto tématu najdete informace o tom, jak portu existujícího kódu C++ pro aplikace platformy Windows 10, univerzální platformu Windows. Pojmy termín *universal* je, že váš kód můžete spustit u zařízení se systémem Windows 10, včetně stolní počítače, telefon, tablety a budoucí zařízení se systémem Windows 10. Vytvoříte projekt a jeden XAML základní uživatelské rozhraní, které funguje dobře na jakémkoli zařízení se systémem Windows 10. Dynamické rozložení funkce můžete v jazyce XAML umožňující uživatelském rozhraní aplikace se různé velikosti zobrazení přizpůsobit.  
@@ -114,4 +115,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
   
 ## <a name="see-also"></a>Viz také  
  [Průvodce přenosem Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
- [Vývoj aplikací pro univerzální platformu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
+ [Vývoj aplikací pro Univerzální platformu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

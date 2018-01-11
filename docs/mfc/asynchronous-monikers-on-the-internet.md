@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8307b8984ee1b5b6074ee309fdf8a74fe46ea9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Asynchronní monikery na Internetu
 Internetu vyžaduje nové přístupy k návrhu aplikace z důvodu jeho přístup k pomalé síti. Aplikace by měla provést přístup k síti asynchronně, aby se zabránilo zablokování uživatelského rozhraní. Třída knihovny MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) poskytuje asynchronní podpora pro stahování souborů.  
@@ -71,5 +72,5 @@ Internetu vyžaduje nové přístupy k návrhu aplikace z důvodu jeho přístup
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

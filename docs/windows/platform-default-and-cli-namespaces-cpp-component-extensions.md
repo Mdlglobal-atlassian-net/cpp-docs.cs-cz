@@ -19,11 +19,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bde9c1d76c2c8196f7773a8af042acb2ef0d2d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Obory názvů Platform, default a cli (rozšíření komponent C++)
 Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.  
@@ -52,9 +55,9 @@ using namespace cli;
   
 -   [Pole](../windows/arrays-cpp-component-extensions.md)  
   
--   [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md)  
+-   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
--   [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md)  
+-   [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)  
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
@@ -83,4 +86,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

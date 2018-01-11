@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Pomocí klauzule plán
 Paralelní oblast má alespoň jeden bariéry při ukončení a může mít další překážky v něm. V každé bariéry ostatní členové týmu musí čekat poslední vlákno k doručení. Chcete-li minimalizovat této čekací doby, by měly být distribuovány sdílené pracovní tak, aby přicházejí všechna vlákna na bariéry v přibližně ve stejnou dobu. Pokud některé této sdílené je součástí pracovní **pro** vytvoří, `schedule` klauzuli lze použít pro tento účel.  

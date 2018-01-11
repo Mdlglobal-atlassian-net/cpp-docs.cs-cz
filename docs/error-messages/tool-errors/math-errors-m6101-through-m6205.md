@@ -1,7 +1,7 @@
 ---
 title: "Matematické chyby M6101 až M6205 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37aa175dff030898cc99e327535b947256ce1274
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9998343b63f9d39b300bfe27892cd8f059efec84
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Matematické chyby M6101 až M6205
-Tato část poskytuje přehled chyb generovaných sestavovacími nástroji. Nápovědu v konkrétní chybová zpráva, klikněte na tlačítko myši na číslo chyby v okně výstupu a stiskněte klávesu F1 nebo zadejte číslo chyby v **vyhledejte** pole v indexu.
+
+Tato část se odkaz na generované knihovna runtime s plovoucí desetinnou čárkou matematické chyby.
+
+Můžete najít další pomoc chyby a upozornění ve fórech veřejné společnosti Microsoft. Můžete vyhledat chyby nebo upozornění číslo na [komunity vývojářů](https://go.microsoft.com/fwlink/p/?linkid=820594) lokality. [Jazyka Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) fórum je pro dotazy a v diskusích o syntaxi jazyka C++ a MSVC kompilátoru. [Visual C++ Obecné](http://go.microsoft.com/fwlink/p/?linkid=158194) fórum je pro dotazy týkající se Visual C++, které nejsou popsané v dalších fóra. Vyhledejte chyby a upozornění, kde můžete klást otázky na [Stack Overflow](http://stackoverflow.com/) najít řešení.
+
+Odkazy na další nápovědu a komunitní zdroje naleznete v tématu [Visual C++ Nápověda a komunita](../../visual-cpp-help-and-community.md).

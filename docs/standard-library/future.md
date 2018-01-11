@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e741324e6871846aba8912d53ca9aad5ce1cb739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;budoucí&gt;
 Zahrnují standardní hlavičku \<budoucí > k definování tříd šablon a podpůrné šablony, které zjednodušují spuštění funkce – případně v samostatné vlákna – a načítání její výsledek. Výsledkem je hodnota, kterou vrátí funkce nebo výjimku, která je vysílaných funkce ale není zachycena ve funkci.  
@@ -56,10 +57,10 @@ Zahrnují standardní hlavičku \<budoucí > k definování tříd šablon a pod
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Future – třída](../standard-library/future-class.md)|Popisuje asynchronní návratové objekt.|  
+|[future – třída](../standard-library/future-class.md)|Popisuje asynchronní návratové objekt.|  
 |[future_error – třída](../standard-library/future-error-class.md)|Popisuje výjimka objekt, který může být vyvolána metodami typů, které spravují `future` objekty.|  
 |[packaged_task – třída](../standard-library/packaged-task-class.md)|Popisuje asynchronní zprostředkovatele, který představuje obálku volání a jejíž volání podpis je `Ty(ArgTypes...)`. Jeho přidružený stav asynchronní obsahuje kopii svého s objektu kromě potenciální výsledek.|  
-|[Promise – třída](../standard-library/promise-class.md)|Popisuje asynchronní zprostředkovatele.|  
+|[promise – třída](../standard-library/promise-class.md)|Popisuje asynchronní zprostředkovatele.|  
 |[shared_future – třída](../standard-library/shared-future-class.md)|Popisuje asynchronní návratové objekt. Rozdíl s `future` objektu asynchronní zprostředkovatele lze přidružit libovolný počet `shared_future` objekty.|  
   
 ### <a name="structures"></a>Struktury  
@@ -73,7 +74,7 @@ Zahrnují standardní hlavičku \<budoucí > k definování tříd šablon a pod
   
 |Název|Popis|  
 |----------|-----------------|  
-|[asynchronní](../standard-library/future-functions.md#async)|Představuje asynchronní zprostředkovatele.|  
+|[async](../standard-library/future-functions.md#async)|Představuje asynchronní zprostředkovatele.|  
 |[future_category –](../standard-library/future-functions.md#future_category)|Vrátí odkaz na `error_category` objekt, který charakterizuje chyby, které jsou přidružené `future` objekty.|  
 |[make_error_code –](../standard-library/future-functions.md#make_error_code)|Vytvoří `error_code` který má `error_category` objekt, který charakterizuje `future` chyby.|  
 |[make_error_condition –](../standard-library/future-functions.md#make_error_condition)|Vytvoří `error_condition` který má `error_category` objekt, který charakterizuje `future` chyby.|  

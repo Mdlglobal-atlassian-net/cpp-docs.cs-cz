@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 180039627049dee0be8ebcaf211dabc2e42086c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30ecf45c8a22dfb42917affa59152aeefbc35425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-programming-tips"></a>Multithreading: Tipy pro programování
 Vícevláknové aplikace vyžadují přísnější zacházení než jednovláknové aplikace při přístupu k datům. Protože existuje více, nezávislé cesty spouštění v používat současně v vícevláknové aplikace na algoritmy, data nebo obojí musí mít přehled dat může používat více než jedno vlákno najednou. Toto téma popisuje postupy pro předcházení potenciálních problémů při programování vícevláknové aplikace s knihovnou Microsoft Foundation Class (MFC).  
@@ -65,4 +66,4 @@ Vícevláknové aplikace vyžadují přísnější zacházení než jednovlákno
  Knihovna MFC poskytuje několik tříd, které umožňují vláken synchronizovat přístup k objektům pro zachování zabezpečení vlákna. Použití těchto tříd je popsaná v [Multithreading: jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md) a [Multithreading: kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Další informace o těchto objektů najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

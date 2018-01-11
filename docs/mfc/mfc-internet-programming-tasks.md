@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c99ee29adb900154b3e9943f4f40d6301af5ce5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-internet-programming-tasks"></a>Úlohy internetového programování MFC
 Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše aplikace. Témata zahrnují postup používání třídy MFC Internetu povolte existující aplikace a jak přidat podporu pro aktivní dokument do vaší stávající komponenty modelu COM. Opravdu chcete vytvořit dokument s mohou uložených uvozovky, je Pittsburgh fotbalové skóre, a nejnovější teploty v Antarktida Microsoft poskytuje řadu technologií, můžete to udělat přes Internet.  
@@ -45,13 +46,13 @@ Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše
   
 -   [Psaní aplikací MFC](../mfc/writing-mfc-applications.md)  
   
--   [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md)  
+-   [Ovládací prvky ActiveX na internetu](../mfc/activex-controls-on-the-internet.md)  
   
--   [Upgradování existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
+-   [Upgrade existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Aktivní dokumenty na Internetu](../mfc/active-documents-on-the-internet.md)  
+-   [Aktivní dokumenty na internetu](../mfc/active-documents-on-the-internet.md)  
   
--   [Asynchronní Monikery na Internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Testování internetových aplikací](../mfc/testing-internet-applications.md)  
   

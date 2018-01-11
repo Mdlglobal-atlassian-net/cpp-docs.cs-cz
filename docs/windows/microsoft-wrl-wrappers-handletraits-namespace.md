@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369f7b9264c7b0fd0bfbb9f137278a9f53848d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits – obor názvů
 Popisuje vlastnosti běžné typy prostředků na základě popisovač.  
@@ -36,15 +39,15 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Criticalsectiontraits – struktura](../windows/criticalsectiontraits-structure.md)|Se specializuje `CriticalSection` objekt pro podporu neplatný kritická sekce nebo funkce, která se verze kritická sekce.|  
-|[Eventtraits – struktura](../windows/eventtraits-structure.md)|Definuje vlastnosti `Event` třída popisovač.|  
-|[Filehandletraits – struktura](../windows/filehandletraits-structure.md)|Definuje vlastnosti popisovač souboru.|  
-|[Handlenulltraits – struktura](../windows/handlenulltraits-structure.md)|Definuje běžné vlastnosti neinicializovaný popisovač.|  
-|[Handletraits – struktura](../windows/handletraits-structure.md)|Definuje běžné vlastnosti popisovač.|  
-|[Mutextraits – struktura](../windows/mutextraits-structure.md)|Definuje běžné vlastnosti [Mutex](../windows/mutex-class1.md) třídy.|  
-|[Semaphoretraits – struktura](../windows/semaphoretraits-structure.md)|Definuje běžné vlastnosti semaforu pro objekt.|  
-|[Srwlockexclusivetraits – struktura](../windows/srwlockexclusivetraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve výhradním režimu zámku.|  
-|[Srwlocksharedtraits – struktura](../windows/srwlocksharedtraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve sdíleném režimu zámku.|  
+|[CriticalSectionTraits – struktura](../windows/criticalsectiontraits-structure.md)|Se specializuje `CriticalSection` objekt pro podporu neplatný kritická sekce nebo funkce, která se verze kritická sekce.|  
+|[EventTraits – struktura](../windows/eventtraits-structure.md)|Definuje vlastnosti `Event` třída popisovač.|  
+|[FileHandleTraits – struktura](../windows/filehandletraits-structure.md)|Definuje vlastnosti popisovač souboru.|  
+|[HANDLENullTraits – struktura](../windows/handlenulltraits-structure.md)|Definuje běžné vlastnosti neinicializovaný popisovač.|  
+|[HANDLETraits – struktura](../windows/handletraits-structure.md)|Definuje běžné vlastnosti popisovač.|  
+|[MutexTraits – struktura](../windows/mutextraits-structure.md)|Definuje běžné vlastnosti [Mutex](../windows/mutex-class1.md) třídy.|  
+|[SemaphoreTraits – struktura](../windows/semaphoretraits-structure.md)|Definuje běžné vlastnosti semaforu pro objekt.|  
+|[SRWLockExclusiveTraits – struktura](../windows/srwlockexclusivetraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve výhradním režimu zámku.|  
+|[SRWLockSharedTraits – struktura](../windows/srwlocksharedtraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve sdíleném režimu zámku.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  
@@ -52,4 +55,4 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

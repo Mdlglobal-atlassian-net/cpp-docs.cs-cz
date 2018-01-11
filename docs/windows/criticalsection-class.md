@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89587f87bd71d2688bba2c128d28c01212b50b71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e2bf6e4728bac6622f9872ab939e084b14f49ae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>CriticalSection – třída
 Představuje objekt kritická sekce.  
@@ -36,22 +39,22 @@ class CriticalSection;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Criticalsection::criticalsection – konstruktor](../windows/criticalsection-criticalsection-constructor.md)|Inicializuje objekt synchronizace, který je podobný objekt mutex, ale mohou být využívána pouze vláken v jednom procesu.|  
-|[CriticalSection:: ~ criticalsection – destruktor](../windows/criticalsection-tilde-criticalsection-destructor.md)|Deinitializes a zničí aktuální objekt CriticalSection.|  
+|[CriticalSection::CriticalSection – konstruktor](../windows/criticalsection-criticalsection-constructor.md)|Inicializuje objekt synchronizace, který je podobný objekt mutex, ale mohou být využívána pouze vláken v jednom procesu.|  
+|[CriticalSection::~CriticalSection – destruktor](../windows/criticalsection-tilde-criticalsection-destructor.md)|Deinitializes a zničí aktuální objekt CriticalSection.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Criticalsection::trylock – metoda](../windows/criticalsection-trylock-method.md)|Pokusy o zadání kritická sekce bez blokování. Pokud je volání úspěšné, volající vlákno převezme vlastnictví kritická sekce.|  
-|[Criticalsection::Lock – metoda](../windows/criticalsection-lock-method.md)|Čeká na vlastnictví objektu zadaného kritická sekce. Funkce vrátí hodnotu, pokud volající vlákno je uděleno vlastnictví.|  
-|[Criticalsection::IsValid – metoda](../windows/criticalsection-isvalid-method.md)|Určuje, zda je aktuální kritická sekce platný.|  
+|[CriticalSection::TryLock – metoda](../windows/criticalsection-trylock-method.md)|Pokusy o zadání kritická sekce bez blokování. Pokud je volání úspěšné, volající vlákno převezme vlastnictví kritická sekce.|  
+|[CriticalSection::Lock – metoda](../windows/criticalsection-lock-method.md)|Čeká na vlastnictví objektu zadaného kritická sekce. Funkce vrátí hodnotu, pokud volající vlákno je uděleno vlastnictví.|  
+|[CriticalSection::IsValid – metoda](../windows/criticalsection-isvalid-method.md)|Určuje, zda je aktuální kritická sekce platný.|  
   
 ### <a name="protected-data-members"></a>Chráněné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Criticalsection::cs_ – datový člen](../windows/criticalsection-cs-data-member.md)|Deklaruje člena kritická sekce.|  
+|[CriticalSection::cs_ – datový člen](../windows/criticalsection-cs-data-member.md)|Deklaruje člena kritická sekce.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CriticalSection`  
@@ -62,4 +65,4 @@ class CriticalSection;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5196503776be8abf4de49c9ae0ffc42122f9028f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4ce3240041987a79657c7e8bf296f9e89acb7a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-agents"></a>Asynchronní agenti
 *Asynchronní agenta* (nebo jenom *agenta*) je aplikace, kterou asynchronně funguje s jinými prostředky k řešení větší výpočetní úlohy. Agent si můžete představit jako úlohu, která má nastavené životní cyklus. Například jeden agent může číst data ze zařízení s vstupu a výstupu (například klávesnici, soubor na disku nebo připojení k síti) a jiné agent může provádět akce na data, jakmile je k dispozici. První agent používá předávání zpráv k informování druhý agenta další data nejsou k dispozici. Plánovač úloh Concurrency Runtime poskytuje efektivní mechanismus, aby agenty blokovat a yield spolupráce při bez nutnosti méně efektivní přerušení.  

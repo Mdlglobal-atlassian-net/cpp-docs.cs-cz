@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 93bb3b8f1b765b70128537b096142a9d7ac3ae8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direktivy Pragma a klíčové slovo __Pragma
 Direktivy pragma zadejte počítače nebo operačního – funkce specifické pro kompilátoru. `__pragma` – Klíčové slovo, která je specifická pro kompilátor Microsoft, vám umožňuje kód direktivy pragma v definicích maker.  
@@ -53,21 +54,21 @@ __pragma(token-string)
   
 ||||  
 |-|-|-|  
-|[alloc_text –](../preprocessor/alloc-text.md)|[auto_inline –](../preprocessor/auto-inline.md)|[bss_seg –](../preprocessor/bss-seg.md)|  
-|[check_stack –](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[Komentář](../preprocessor/comment-c-cpp.md)|  
-|[součást](../preprocessor/component.md)|[v souladu s](../preprocessor/conform.md) <sup>1</sup>|[const_seg –](../preprocessor/const-seg.md)|  
-|[data_seg –](../preprocessor/data-seg.md)|[zastaralé](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
-|[fenv_access –](../preprocessor/fenv-access.md)|[float_control –](../preprocessor/float-control.md)|[fp_contract –](../preprocessor/fp-contract.md)|  
-|[funkce](../preprocessor/function-c-cpp.md)|[hdrstop –](../preprocessor/hdrstop.md)|[include_alias –](../preprocessor/include-alias.md)|  
-|[init_seg –](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth –](../preprocessor/inline-depth.md)|[inline_recursion –](../preprocessor/inline-recursion.md)|  
-|[vnitřní funkce](../preprocessor/intrinsic.md)|[smyčky](../preprocessor/loop.md) <sup>1</sup>|[make_public –](../preprocessor/make-public.md)|  
-|[spravované](../preprocessor/managed-unmanaged.md)|[zpráva](../preprocessor/message.md)||  
-|[omp –](../preprocessor/omp.md)|[jednou](../preprocessor/once.md)||  
-|[Optimalizace](../preprocessor/optimize.md)|[Pack](../preprocessor/pack.md)|[pointers_to_members –](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
-|[pop_macro –](../preprocessor/pop-macro.md)|[push_macro –](../preprocessor/push-macro.md)|[oblast, endregion –](../preprocessor/region-endregion.md)|  
-|[runtime_checks –](../preprocessor/runtime-checks.md)|[část](../preprocessor/section.md)|[setlocale –](../preprocessor/setlocale.md)|  
-|[strict_gs_check –](../preprocessor/strict-gs-check.md)|[nespravované](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
-|[upozornění](../preprocessor/warning.md)|||  
+|[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[Komentář](../preprocessor/comment-c-cpp.md)|  
+|[component](../preprocessor/component.md)|[v souladu s](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
+|[data_seg](../preprocessor/data-seg.md)|[zastaralé](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
+|[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
+|[funkce](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
+|[init_seg –](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
+|[intrinsic](../preprocessor/intrinsic.md)|[smyčky](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
+|[spravované](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
+|[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||  
+|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members –](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
+|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
+|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|  
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[nespravované](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
+|[warning](../preprocessor/warning.md)|||  
   
  1. Podporuje pouze C++ compiler.  
   

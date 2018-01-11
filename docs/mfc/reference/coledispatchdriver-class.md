@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e19bfb11a564f23ce41bbc963a19fd239476dfb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 059ff922689eaf354d4b4ae9b89fb49ab8c5a885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 Implementuje OLE – automatizace na straně klienta.  
@@ -266,10 +267,10 @@ void AFX_CDECL InvokeHelper(
 |Symbol|Návratový typ|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
-|`VT_I2`|**krátký**|  
-|`VT_I4`|**dlouhá**|  
-|`VT_R4`|**plovoucí desetinná čárka**|  
-|`VT_R8`|**Double**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
+|`VT_R4`|**float**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATUM**|  
 |`VT_BSTR`|`BSTR`|  

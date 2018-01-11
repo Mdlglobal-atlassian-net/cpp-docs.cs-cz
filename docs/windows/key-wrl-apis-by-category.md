@@ -13,11 +13,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4748220f0115f9bd05d051ca5f1bb3f6fcc8ded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="key-wrl-apis-by-category"></a>Nejdůležitější rozhraní API knihovny WRL podle kategorie
 V následujících tabulkách jsou uvedeny primární třídy, struktury, funkcemi a makry v knihovna šablon C++ prostředí Windows Runtime. Konstrukce v pomocná obory názvů a třídy byly vynechány. Tyto seznamy posílení dokumentaci rozhraní API, která jsou uspořádána podle oboru názvů.  
@@ -36,7 +39,7 @@ V následujících tabulkách jsou uvedeny primární třídy, struktury, funkce
 |[HandleT – třída](../windows/handlet-class.md)|Představuje popisovač objektu.|  
 |[HString – třída](../windows/hstring-class.md)|Poskytuje podporu pro manipulaci s HSTRING obslužné rutiny.|  
 |[HStringReference – třída](../windows/hstringreference-class.md)|Představuje HSTRING, který je vytvořený z existujícího řetězce.|  
-|[Module – třídy](../windows/module-class.md)|Představuje kolekci související objekty.|  
+|[Module – třída](../windows/module-class.md)|Představuje kolekci související objekty.|  
 |[Module::GenericReleaseNotifier – třída](../windows/module-genericreleasenotifier-class.md)|Po vydání poslední objekt v aktuální modul, vyvolá obslužnou rutinu události. Obslužné rutiny události je určena na lambda, functor nebo ukazatel funkce.|  
 |[Module::MethodReleaseNotifier – třída](../windows/module-methodreleasenotifier-class.md)|Po vydání poslední objekt v aktuální modul, vyvolá obslužnou rutinu události. Obslužné rutiny události je zadaný objekt a jejího člena ukazatel na metodu.|  
 |[Module::ReleaseNotifier – třída](../windows/module-releasenotifier-class.md)|Vyvolá obslužnou rutinu události, až bude vydaná poslední objekt v modulu.|  
@@ -50,8 +53,8 @@ V následujících tabulkách jsou uvedeny primární třídy, struktury, funkce
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Chaininterfaces – struktura](../windows/chaininterfaces-structure.md)|Určuje ověření a Inicializace funkce, které mohou být použity pro sadu rozhraní ID.|  
-|[Cloakediid – struktura](../windows/cloakediid-structure.md)|Ukazuje `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, není dostupný v seznamu IID specifikované rozhraní.|  
+|[ChainInterfaces – struktura](../windows/chaininterfaces-structure.md)|Určuje ověření a Inicializace funkce, které mohou být použity pro sadu rozhraní ID.|  
+|[CloakedIid – struktura](../windows/cloakediid-structure.md)|Ukazuje `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, není dostupný v seznamu IID specifikované rozhraní.|  
 |[Implements – struktura](../windows/implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaná rozhraní.|  
 |[MixIn – struktura](../windows/mixin-structure.md)|Zajišťuje třídu runtime, pochází z prostředí Windows Runtime rozhraní, pokud existuje a pak classic COM – rozhraní.|  
   
@@ -59,20 +62,20 @@ V následujících tabulkách jsou uvedeny primární třídy, struktury, funkce
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Activateinstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v zadané třídy ID.|  
-|[Asweak – funkce](../windows/asweak-function.md)|Načte slabé odkaz na zadané instanci.|  
+|[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v zadané třídy ID.|  
+|[AsWeak – funkce](../windows/asweak-function.md)|Načte slabé odkaz na zadané instanci.|  
 |[Funkce zpětného volání](../windows/callback-function-windows-runtime-cpp-template-library.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|  
-|[Createactivationfactory – funkce](../windows/createactivationfactory-function.md)|Vytvoří objekt factory, který vytváří instance pro zadanou třídu, která může být aktivovaný pomocí prostředí Windows Runtime.|  
-|[Createclassfactory – funkce](../windows/createclassfactory-function.md)|Vytvoří objekt factory, který vytváří instance pro zadanou třídu.|  
-|[Getactivationfactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt pro vytváření aktivace pro typ zadaný v parametru šablony.|  
+|[CreateActivationFactory – funkce](../windows/createactivationfactory-function.md)|Vytvoří objekt factory, který vytváří instance pro zadanou třídu, která může být aktivovaný pomocí prostředí Windows Runtime.|  
+|[CreateClassFactory – funkce](../windows/createclassfactory-function.md)|Vytvoří objekt factory, který vytváří instance pro zadanou třídu.|  
+|[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt pro vytváření aktivace pro typ zadaný v parametru šablony.|  
 |[Make – funkce](../windows/make-function.md)|Inicializuje pro zadanou třídu prostředí Windows Runtime.|  
   
 ### <a name="macros"></a>Makra  
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Activatableclass – makra](../windows/activatableclass-macros.md)|Naplní vnitřní mezipaměti, která obsahuje objekt factory, který můžete vytvořit instanci zadané třídy.|  
-|[Inspectableclass – makro](../windows/inspectableclass-macro.md)|Nastaví úroveň runtime třídy název a vztah důvěryhodnosti.|  
+|[ActivatableClass – makra](../windows/activatableclass-macros.md)|Naplní vnitřní mezipaměti, která obsahuje objekt factory, který můžete vytvořit instanci zadané třídy.|  
+|[InspectableClass – makro](../windows/inspectableclass-macro.md)|Nastaví úroveň runtime třídy název a vztah důvěryhodnosti.|  
   
 ## <a name="see-also"></a>Viz také  
  [Knihovna šablon C++ prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

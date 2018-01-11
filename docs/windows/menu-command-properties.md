@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 463db89257623d9464bb1e562261362ecf1dc68c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-command-properties"></a>Vlastnosti příkazu nabídky
 Níže uvedené informace jsou uspořádána podle vlastnosti nabídky, které se zobrazují v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) když vyberete příkaz nabídky. Tyto podmínky jsou uvedeny abecedně Přestože okno vlastností můžete také zobrazit tyto vlastnosti podle kategorie.  
@@ -32,7 +35,7 @@ Níže uvedené informace jsou uspořádána podle vlastnosti nabídky, které s
 |**Šedý**|V případě hodnoty True je příkaz nabídky původně šedým a neaktivní. Typ: Bool. Výchozí: False.|  
 |**Pomoc**|Zarovnává položku nabídky vpravo. Například **pomoci** příkazu nabídky je vždy na pravé straně v všechny aplikace systému Windows. Pokud tuto vlastnost nastavte u položky nabídky, že položka se zobrazí na velmi pravém a na konci velmi v nabídce. Platí pro položky nejvyšší úrovně. Výchozí hodnota: **False**.|  
 |**ID**|Symbol definované v záhlaví souboru. Typ: Symbol, celé číslo nebo řetězec v uvozovkách. Můžete použít všechny symbol, který je běžně k dispozici v žádném z editory, i když [vlastnosti – okno](/visualstudio/ide/reference/properties-window) neposkytuje rozevíracího seznamu můžete vybrat z.|  
-|**Místní nabídka**|V případě hodnoty True je příkaz nabídky místní nabídky. Typ: Bool. Výchozí hodnota: True nabídek nejvyšší úrovně v řádku nabídek; jinak hodnota False.|  
+|**Popup**|V případě hodnoty True je příkaz nabídky místní nabídky. Typ: Bool. Výchozí hodnota: True nabídek nejvyšší úrovně v řádku nabídek; jinak hodnota False.|  
 |**Výzva**|Obsahuje text, který se zobrazí ve stavovém řádku, když je označený tento příkaz nabídky. Text je umístěn v tabulce řetězců se stejným identifikátorem jako příkaz nabídky. Tato vlastnost je k dispozici pro jakýkoli typ projektu, ale je běhové funkce MFC konkrétní.|  
 |**Justify zprava doleva**|Zarovná příkaz nabídky v řádku nabídek v době běhu vpravo. Typ: Bool. Výchozí: False.|  
 |**Právo na levém pořadí**|Umožňuje zobrazit zprava doleva při rozhraní je lokalizace do jakýkoli jazyk, který čte doleva, jako je například hebrejština nebo arabské příkazů nabídky.|  

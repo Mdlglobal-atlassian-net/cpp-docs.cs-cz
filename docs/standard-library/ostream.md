@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64af7a36a243fd633af5365b9c2c54b52088ed9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4805086fb3d63d16f5f9ce6bf3b9e900b436569
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltostreamgt"></a>&lt;ostream –&gt;
 Definuje třídu šablony [basic_ostream](../standard-library/basic-ostream-class.md), která zprostředkovává vložení pro iostreams. Záhlaví také definuje několik související manipulátory. (Tuto hlavičku je obvykle zahrnuté pro můžete jiným iostreams záhlaví. Je potřeba jen zřídka ho zahrňte přímo.)  

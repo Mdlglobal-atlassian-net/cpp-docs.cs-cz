@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 542be13898b18fb6f73a724eebe72f135f7ebde2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitset-class"></a>bitset – třída
 Popisuje typ objektu, který ukládá pořadí, který se skládá z pevný počet bitů, které poskytují compact kvůli udržení příznaky pro sadu položek nebo podmínky. Bitset – třída podporuje operace s objekty typu bitset, které obsahují kolekci bitů a poskytují konstanta běhu je přístup k každý bit.  
@@ -92,7 +93,7 @@ class bitset
 |[Překlopit](#flip)|Invertuje výběr všechny bity v hodnotě `bitset` nebo Invertuje výběr jeden bit na zadané pozici.|  
 |[None](#none)|Testuje, pokud byl nastaven na hodnotu 1 v žádné bit `bitset` objektu.|  
 |[resetování](#reset)|Obnoví všechny bity v `bitset` na hodnotu 0 nebo resetování trochu na zadané pozici 0.|  
-|[nastavení](#set)|Nastaví službu bits `bitset` na 1 nebo nastaví trochu na zadané pozici 1.|  
+|[set](#set)|Nastaví službu bits `bitset` na 1 nebo nastaví trochu na zadané pozici 1.|  
 |[velikost](#size)|Vrátí počet bitů `bitset` objektu.|  
 |[Test](#test)|Testy zda bit na zadané pozici v `bitset` je nastaven na hodnotu 1.|  
 |[to_string –](#to_string)|Převede `bitset` řetězcovou reprezentaci objektu.|  
@@ -109,7 +110,7 @@ class bitset
   
 |||  
 |-|-|  
-|[Operator! =](#op_neq)|Testy cíl `bitset` nerovnost se zadaným `bitset`.|  
+|[operator!=](#op_neq)|Testy cíl `bitset` nerovnost se zadaným `bitset`.|  
 |[operátor & =](#op_and_eq)|Provede bitovou kombinaci bitové sady s logické `AND` operaci.|  
 |[operátor <<](#op_lshift)|Posune bitů v `bitset` doleva o zadaný počet pozic a vrátí výsledek na nový `bitset`.|  
 |[operátor << =](#op_lshift_eq)|Posune bitů v `bitset` doleva o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|  

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 87e478109df859fc6c95da70500ab84a1cba1b4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltlocalegt"></a>&lt;národní prostředí&gt;
 Definuje třídy a funkce šablon, které mohou programy v jazyce C++ použít k zapouzdření a manipulaci s různými kulturními konvencemi v souvislosti se znázorněním a formátováním číselných, finančních a kalendářních dat, včetně podpory iternacionalizace pro klasifikaci znaků a řazení řetězců.  

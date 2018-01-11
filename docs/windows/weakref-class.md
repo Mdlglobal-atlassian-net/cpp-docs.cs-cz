@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 148c39f1ef38b6b20de6d50cc75352a4f30a9090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8263595bdd564c313a8783a3a9baf0c6d562494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakref-class"></a>WeakRef – třída
 Představuje *slabé odkaz* které lze použít pouze prostředí Windows Runtime, není klasického modelu COM. Slabé odkazy představuje objekt, který může nebo nemusí být dostupné.  
@@ -71,22 +74,22 @@ if (strongRef == nullptr)
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Weakref::weakref – konstruktor](../windows/weakref-weakref-constructor.md)|Inicializuje novou instanci třídy WeakRef.|  
-|[WeakRef:: ~ weakref – destruktor](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes aktuální instance třídy WeakRef.|  
+|[WeakRef::WeakRef – konstruktor](../windows/weakref-weakref-constructor.md)|Inicializuje novou instanci třídy WeakRef.|  
+|[WeakRef::~WeakRef – destruktor](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes aktuální instance třídy WeakRef.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Weakref::AS – metoda](../windows/weakref-as-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují specifikované rozhraní.|  
-|[Weakref::asiid – metoda](../windows/weakref-asiid-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují ID specifikované rozhraní.|  
-|[Weakref::CopyTo – metoda](../windows/weakref-copyto-method.md)|Přiřadí ukazatele rozhraní, pokud je k dispozici, proměnnou zadaný ukazatele.|  
+|[WeakRef::As – metoda](../windows/weakref-as-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují specifikované rozhraní.|  
+|[WeakRef::AsIID – metoda](../windows/weakref-asiid-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují ID specifikované rozhraní.|  
+|[WeakRef::CopyTo – metoda](../windows/weakref-copyto-method.md)|Přiřadí ukazatele rozhraní, pokud je k dispozici, proměnnou zadaný ukazatele.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakRef::operator & – operátor](../windows/weakref-operator-ampersand-operator.md)|Vrátí objekt ComPtrRef, který představuje aktuální objekt WeakRef.|  
+|[WeakRef::operator& – operátor](../windows/weakref-operator-ampersand-operator.md)|Vrátí objekt ComPtrRef, který představuje aktuální objekt WeakRef.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ComPtr`  
@@ -99,4 +102,4 @@ if (strongRef == nullptr)
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

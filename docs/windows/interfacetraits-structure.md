@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494942ce3c50889cae7a8867dc2b86ed6a609313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits – struktura
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -64,17 +67,17 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Interfacetraits::cancastto – metoda](../windows/interfacetraits-cancastto-method.md)|Určuje, zda je zadaný ukazatel lze převést na ukazatel na `Base`.|  
-|[Interfacetraits::casttobase – metoda](../windows/interfacetraits-casttobase-method.md)|Vrhá zadaný ukazatel na ukazatel na `Base`.|  
-|[Interfacetraits::casttounknown – metoda](../windows/interfacetraits-casttounknown-method.md)|Vrhá zadaný ukazatel na ukazatel IUnknown.|  
-|[Interfacetraits::fillarraywithiid – metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Přiřadí ID rozhraní `Base` na element pole určený argumentem index.|  
-|[Interfacetraits::Verify – metoda](../windows/interfacetraits-verify-method.md)|Ověřuje, že je správně odvozený Base.|  
+|[InterfaceTraits::CanCastTo – metoda](../windows/interfacetraits-cancastto-method.md)|Určuje, zda je zadaný ukazatel lze převést na ukazatel na `Base`.|  
+|[InterfaceTraits::CastToBase – metoda](../windows/interfacetraits-casttobase-method.md)|Vrhá zadaný ukazatel na ukazatel na `Base`.|  
+|[InterfaceTraits::CastToUnknown – metoda](../windows/interfacetraits-casttounknown-method.md)|Vrhá zadaný ukazatel na ukazatel IUnknown.|  
+|[InterfaceTraits::FillArrayWithIid – metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Přiřadí ID rozhraní `Base` na element pole určený argumentem index.|  
+|[InterfaceTraits::Verify – metoda](../windows/interfacetraits-verify-method.md)|Ověřuje, že je správně odvozený Base.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Interfacetraits::iidcount – konstanta](../windows/interfacetraits-iidcount-constant.md)|Obsahuje počet rozhraní, které ID přidružené k aktuálnímu objektu interfacetraits –.|  
+|[InterfaceTraits::IidCount – konstanta](../windows/interfacetraits-iidcount-constant.md)|Obsahuje počet rozhraní, které ID přidružené k aktuálnímu objektu interfacetraits –.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `InterfaceTraits`  
@@ -85,4 +88,4 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

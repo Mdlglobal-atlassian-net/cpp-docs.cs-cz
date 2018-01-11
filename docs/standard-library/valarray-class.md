@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0fe6762e9e8f98895deda9ac8cbbe9a6fe3bb4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valarray-class"></a>valarray – třída
 Šablony třídy popisuje objekt, který určuje posloupnost elementy typu **typ** které jsou uloženy jako pole, určený pro provádění vysokorychlostní matematické operace a optimalizované pro výpočetní výkon.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[použít](#apply)|Zadaná funkce se vztahuje na jednotlivé prvky `valarray`.|  
 |[cshift –](#cshift)|Cyklicky posune všechny elementy ve `valarray` o zadaný počet pozic.|  
-|[Uvolněte](#free)|Uvolní množství paměti používané `valarray`.|  
+|[free](#free)|Uvolní množství paměti používané `valarray`.|  
 |[maximální počet](#max)|Vyhledá nejvyšší element v `valarray`.|  
 |[min.](#min)|Vyhledá nejnižší element v `valarray`.|  
 |[Změna velikosti](#resize)|Změní počet elementů ve `valarray` na číslo, přidávání nebo odebírání elementů podle potřeby.|  

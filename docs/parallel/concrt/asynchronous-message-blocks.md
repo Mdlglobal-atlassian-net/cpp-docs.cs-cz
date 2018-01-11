@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e2c2641ada0f6bbcd1b19c4297ba85b3bb4d393
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchronní bloky zpráv
 
@@ -38,19 +39,19 @@ Knihovna agentů poskytuje několik typů bloku zpráv, které vám umožní š�
   
 - [Třída unbounded_buffer](#unbounded_buffer)  
   
-- [Třída overwrite_buffer](#overwrite_buffer)  
+- [overwrite_buffer – třída](#overwrite_buffer)  
   
-- [Třída single_assignment](#single_assignment)  
+- [single_assignment – třída](#single_assignment)  
   
-- [Call – třída](#call)  
+- [call – třída](#call)  
   
-- [Třída Transformer](#transformer)  
+- [transformer – třída](#transformer)  
   
-- [Třída Choice](#choice)  
+- [choice – třída](#choice)  
   
 - [spojování a multitype_join třídy](#join)  
   
-- [Třída Timer](#timer)  
+- [timer – třída](#timer)  
   
 - [Filtrování zpráv](#filtering)  
   

@@ -17,11 +17,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 733c99dc4895907ba943f32dc7048ce6cfc01528
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 71389a622b02d5c0379b2be1a91783e8235077bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operátor sledovacího odkazu (rozšíření komponent C++)
 A *sledovací odkaz* (`%`) se chová stejně jako obyčejnou referenční příručka C++ (`&`) s tím rozdílem, že když je objekt přiřazení sledovací odkaz, se zvýší počet odkazů objektu.  
@@ -80,7 +83,7 @@ ref class Foo sealed {};
   
  Další informace o sledování odkazů v jazyce C + +/ CLI, najdete v části:  
   
--   [Postupy: používání sledovacích odkazů v jazyce C + +/ CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+-   [Postupy: Používání sledovacích odkazů v jazyce C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Příklady  
  **Příklad**  
@@ -143,7 +146,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 21  

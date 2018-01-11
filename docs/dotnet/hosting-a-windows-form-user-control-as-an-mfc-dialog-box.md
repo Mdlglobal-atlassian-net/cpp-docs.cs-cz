@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50b1b3c6fb425885c7d48975a3815951454f3bf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 MFC poskytuje šablony třídy [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) tak, aby je možné hostovat uživatelského ovládacího prvku Windows Forms (<xref:System.Windows.Forms.UserControl>) v modální nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog`je odvozena od třídy MFC [CDialog](../mfc/reference/cdialog-class.md), takže dialogové okno může být spuštěn jako modální nebo nemodální.  
@@ -144,4 +147,4 @@ MFC poskytuje šablony třídy [CWinFormsDialog](../mfc/reference/cwinformsdialo
   
 ## <a name="see-also"></a>Viz také  
  <xref:System.Windows.Forms.UserControl?displayProperty=fullName>   
- [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+ [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

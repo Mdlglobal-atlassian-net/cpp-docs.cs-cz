@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0bdaf5b8f6128e9b718b35b7332707a5249b33ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrace z OpenMP do Concurrency Runtime
 Concurrency Runtime umožňuje celou řadu programovacích modelů. Tyto modely můžou překrývat nebo doplňují modely další knihovny. Dokumenty v této části porovnání [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do Concurrency Runtime a příklady o tom, jak migrovat existující kód OpenMP na využití modulu Concurrency Runtime.  
@@ -54,18 +55,18 @@ Concurrency Runtime umožňuje celou řadu programovacích modelů. Tyto modely 
 |Aplikace je napsána v C.|Protože Concurrency Runtime používá mnoho funkcí C++, nemusí být vhodný při nelze psát kód, který umožňuje aplikaci C plně ho použít.|  
   
 ## <a name="related-topics"></a>Související témata  
- [Postupy: převedení paralelní smyčky for na využití modulu Concurrency Runtime v OpenMP](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
+ [Postupy: Převedení paralelní smyčky for v OpenMP na využití modulu Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
 
  Danou smyčku základní, který používá OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) a [pro](../../parallel/openmp/reference/for-openmp.md) direktivy, ukazuje, jak převeďte ho na využití modulu Concurrency Runtime [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.  
 
   
- [Postupy: převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
+ [Postupy: Převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
  Vzhledem OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčky, který nevyžaduje všech iterací ke spuštění, ukazuje, jak převést ho na použití mechanismus zrušení Concurrency Runtime.  
   
- [Postupy: převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
+ [Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
  Vzhledem OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčky, který provádí zpracování výjimek, ukazuje, jak převést ho na použití zpracování mechanismus výjimek Concurrency Runtime.  
   
- [Postupy: převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
+ [Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
  Vzhledem OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčky, který používá [snížení](../../parallel/openmp/reference/reduction.md) klauzule, ukazuje, jak převeďte ho na využití modulu Concurrency Runtime.  
   
 ## <a name="see-also"></a>Viz také  

@@ -51,11 +51,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 5ddb30840a3f92de70d688cc763394e92b356417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatortraits-class"></a>allocator_traits – třída
 Šablony třídy popisuje objekt, který nahrazuje *allocator typu*. Typ přidělení je žádný typ, který popisuje allocator objekt, který se používá pro správu, přidělit úložiště. Konkrétně pro jakýkoli typ allocator `Alloc`, můžete použít `allocator_traits<Alloc>` k určení veškeré informace, které je potřeba kontejner allocator povolena. Další informace najdete v tématu výchozí [allocator – třída](../standard-library/allocator-class.md).  
@@ -88,7 +89,7 @@ class allocator_traits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[přidělit](#allocate)|Statickou metodu, pomocí parametru daného allocator přidělí paměť.|  
+|[allocate](#allocate)|Statickou metodu, pomocí parametru daného allocator přidělí paměť.|  
 |[konstrukce](#construct)|Statickou metodu, který používá zadaný allocator k vytvoření objektu.|  
 |[zrušit přidělení](#deallocate)|Statickou metodu, která používá zadaný allocator se zrušit přidělení zadaný počet objektů.|  
 |[Destroy –](#destroy)|Statickou metodu, která používá zadaný allocator volání destruktoru objektu bez rušení přidělení paměti.|  

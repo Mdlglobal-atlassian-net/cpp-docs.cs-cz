@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2a16e9125c0c121aea3905b6e20eba59ef1dc68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-streams"></a>Výstupní datové proudy
 Objekt výstupní datový proud je cíl pro bajtů. Jsou tři nejdůležitější tříd výstupní datový proud `ostream`, `ofstream`, a `ostringstream`.  
@@ -40,17 +41,17 @@ Objekt výstupní datový proud je cíl pro bajtů. Jsou tři nejdůležitějš�
  Běhové funkce, jako `sprintf_s`, `ostringstream` třída podporuje výstup do řetězců v paměti. Pokud chcete vytvořit řetězec v paměti pomocí formátování vstupně-výstupní datový proud, vytvořit objekt třídy `ostringstream`.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Vytváření objektů výstupního datového proudu](../standard-library/constructing-output-stream-objects.md)  
+ [Vytváření objektů výstupního streamu](../standard-library/constructing-output-stream-objects.md)  
   
- [Používání operátorů Insertion a řízení formátu](../standard-library/using-insertion-operators-and-controlling-format.md)  
+ [Používání operátorů insertion a řízení formátu](../standard-library/using-insertion-operators-and-controlling-format.md)  
   
- [Členské funkce datového proudu souboru výstup](../standard-library/output-file-stream-member-functions.md)  
+ [Členské funkce streamu výstupního souboru](../standard-library/output-file-stream-member-functions.md)  
   
  [Účinky ukládání do vyrovnávací paměti](../standard-library/effects-of-buffering.md)  
   
  [Binární výstupní soubory](../standard-library/binary-output-files.md)  
   
- [Přetížení << operátor pro vaše vlastní třídy](../standard-library/overloading-the-output-operator-for-your-own-classes.md)  
+ [Přetěžování operátoru << pro vaše vlastní třídy](../standard-library/overloading-the-output-operator-for-your-own-classes.md)  
   
  [Psaní vlastních manipulátorů bez argumentů](../standard-library/writing-your-own-manipulators-without-arguments.md)  
   

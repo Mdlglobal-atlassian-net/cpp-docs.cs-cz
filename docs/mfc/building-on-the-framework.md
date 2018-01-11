@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ac5503f32d257d27ceb0f3f56fbf6305f42763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44101d4b0c9ab9bf5766514a75ef510bc5b8d7e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-on-the-framework"></a>Sestavení na základě rozhraní .NET Framework
 Vaše role při konfiguraci aplikace pomocí rozhraní MFC framework je zadat konkrétní aplikace zdrojový kód a připojení komponenty tak, že definují, jaké zprávy a příkazy, na které reagovat. Pomocí jazyka C++ a standardní C++ techniky vlastní specifické pro aplikaci odvozovat z těch, které knihovna tříd a k přepsání a posílení chování základní třídy.  

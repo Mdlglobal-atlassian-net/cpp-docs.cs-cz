@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c61238a809da49686975acbfb8016996cf5d5c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creatormap-structure"></a>CreatorMap – struktura
 Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
@@ -49,10 +52,10 @@ struct CreatorMap;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Creatormap::activationid – datový člen](../windows/creatormap-activationid-data-member.md)|Představuje identifikovanou classic ID třídy modelu COM nebo prostředí Windows Runtime název ID objektu.|  
-|[Creatormap::factorycache – datový člen](../windows/creatormap-factorycache-data-member.md)|Uchovává creatormap – ukazatel na objekt pro vytváření mezipaměti.|  
-|[Creatormap::factorycreator – datový člen](../windows/creatormap-factorycreator-data-member.md)|Vytvoří objekt factory pro zadaný creatormap –.|  
-|[Creatormap::servername – datový člen](../windows/creatormap-servername-data-member.md)|Ukládá název serveru pro creatormap –.|  
+|[CreatorMap::activationId – datový člen](../windows/creatormap-activationid-data-member.md)|Představuje identifikovanou classic ID třídy modelu COM nebo prostředí Windows Runtime název ID objektu.|  
+|[CreatorMap::factoryCache – datový člen](../windows/creatormap-factorycache-data-member.md)|Uchovává creatormap – ukazatel na objekt pro vytváření mezipaměti.|  
+|[CreatorMap::factoryCreator – datový člen](../windows/creatormap-factorycreator-data-member.md)|Vytvoří objekt factory pro zadaný creatormap –.|  
+|[CreatorMap::serverName – datový člen](../windows/creatormap-servername-data-member.md)|Ukládá název serveru pro creatormap –.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CreatorMap`  
@@ -63,4 +66,4 @@ struct CreatorMap;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

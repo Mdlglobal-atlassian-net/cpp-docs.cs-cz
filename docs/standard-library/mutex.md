@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65629b16b03503f70f7c966e19282391c512e4ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recursive_mutex`, `timed_mutex`, a `recursive_timed_mutex`; šablony `lock_guard` a `unique_lock`; a podpůrné typy a funkce, které definují vzájemné vyloučení kód oblasti.  
@@ -71,7 +72,7 @@ Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recurs
 |Název|Popis|  
 |----------|-----------------|  
 |[call_once –](../standard-library/mutex-functions.md#call_once)|Poskytuje mechanismus pro volání právě jednou na zadaný objekt s během provádění.|  
-|[Zámek](../standard-library/mutex-functions.md#lock)|Pokusí se uzamknout všechny argumenty bez vzájemného zablokování.|  
+|[lock](../standard-library/mutex-functions.md#lock)|Pokusí se uzamknout všechny argumenty bez vzájemného zablokování.|  
   
 ### <a name="structs"></a>Struktury  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3299f1bad01427723d3fcfabefd7924913d5690f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5525953e5f4ba68fdf1b84b02046d9ab4679abe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atomic-structure"></a>atomic – struktura
 Popisuje objekt, který provádí atomické operací na uložené hodnoty typu `Ty`.  
@@ -36,7 +37,7 @@ struct atomic;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Vytvoří objekt atomic.|  
+|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Vytvoří objekt atomic.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   

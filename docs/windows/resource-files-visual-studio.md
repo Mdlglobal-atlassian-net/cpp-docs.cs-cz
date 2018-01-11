@@ -27,17 +27,20 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e1ff029c2fb7a39c0257358ebb1f73f53ca3837
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 117472c764dd6f13858881275b067600579a0fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-files-visual-studio"></a>Zdrojové soubory (Visual Studio)
 > [!NOTE]
 >  Tomto materiálu se vztahuje na aplikací klasické pracovní plochy Windows. Informace o prostředcích v aplikacích pro univerzální platformu Windows najdete v tématu [definování prostředky aplikace](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
-> Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+> Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
 >  
 > Vzhledem k tomu, že projekty v rozhraní .NET programovací jazyky nepoužívají soubory skriptu prostředků, musíte otevřít vaše prostředky z **Průzkumníku řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pracovat se soubory prostředků v spravované projekty. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Import a export prostředků](../windows/how-to-import-and-export-resources.md)  
   
--   [Upravitelné typy souboru pro prostředky](../windows/editable-file-types-for-resources.md)  
+-   [Upravitelné typy souborů pro prostředky](../windows/editable-file-types-for-resources.md)  
   
 -   [Soubory ovlivněné úpravou prostředku](../windows/files-affected-by-resource-editing.md)  
   

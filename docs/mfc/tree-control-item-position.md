@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69198834513362e87568f83f8c4f38b74a2b05d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db47e27ad0b556e08f51685bf84b6bd998722239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-position"></a>Umístění položky v ovládacím prvku strom
 Počáteční pozice položky je nastavena při přidání položky do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) pomocí `InsertItem` – členská funkce. Volání funkce člen Určuje popisovač nadřazené položky a popisovač položky, po jejímž uplynutí má vložit novou položku. Druhý popisovač musí identifikovat podřízenou položku daného nadřazeného prvku nebo jedné z těchto hodnot: `TVI_FIRST`, `TVI_LAST`, nebo `TVI_SORT`.  

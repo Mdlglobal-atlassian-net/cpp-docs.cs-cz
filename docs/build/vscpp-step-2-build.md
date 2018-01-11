@@ -1,8 +1,8 @@
 ---
-title: "Krok 2 – sestavení a spuštění projektu jazyka C++ konzole aplikace | Microsoft Docs"
+title: "Sestavení a spuštění projektu jazyka C++ konzole aplikace | Microsoft Docs"
 description: "Nainstalovat Visual Studio – podpora pro Visual C++"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly jazyka C++
 
@@ -23,9 +24,9 @@ Když jste vytvořili projekt aplikace konzoly C++ a kódu, sestavit a spustit v
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Visual Studio s vývoj aplikací máte C++ zatížení nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalovaná, postupujte podle kroků v [krok 0 - podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Visual Studio s vývoj aplikací máte C++ zatížení nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalovaná, postupujte podle kroků v [podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Vytvoření "Hello, World!" projekt a zadejte jeho zdrojový kód. Pokud jste to ještě neudělali, postupujte podle kroků v [krok 1 – Vytvoření projektu aplikace konzoly C++](../build/vscpp-step-1-create.md).
+- Vytvoření "Hello, World!" projekt a zadejte jeho zdrojový kód. Pokud jste to ještě neudělali, postupujte podle kroků v [vytvoření projektu aplikace konzoly C++](../build/vscpp-step-1-create.md).
 
 Pokud Visual Studio vypadá to, jste připraveni k sestavení a spuštění aplikace:
 
@@ -67,7 +68,7 @@ Blahopřejeme, jste vytvořené a spusťte konzolovou aplikaci v sadě Visual St
 
 ## <a name="next-steps"></a>Další kroky
 
-Jakmile jste vytvořené a spusťte tento jednoduchou aplikaci, jste připraveni pro složitější projekty. V tématu – elementy QuickStart, kurzy a ukázkový kód pro příklady akcí, které můžete provést v jazyce C++ pomocí sady Visual Studio.
+Jakmile jste vytvořené a spusťte tento jednoduchou aplikaci, jste připraveni pro složitější projekty. V tématu [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) podrobné návody, které prozkoumat možnosti aplikace Visual C++ v sadě Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Průvodce odstraňováním potíží s
 

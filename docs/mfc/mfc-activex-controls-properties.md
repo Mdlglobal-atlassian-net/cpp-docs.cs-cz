@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26947b0c2c779f65fb01dd78d56ffe19afaf27ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC – ovládací prvky ActiveX: Vlastnosti
 Ovládací prvek ActiveX aktivuje události ke komunikaci s jeho kontejneru ovládacího prvku. Kontejner, používá ke komunikaci s ovládacím prvkem, metod a vlastností. Metody a vlastnosti jsou podobné se používají a účel, v uvedeném pořadí, členské funkce a proměnné členů třídy C++. Datové členy ovládacího prvku ActiveX, které jsou umístěny do kontejneru, jsou vlastnosti. Vlastnosti poskytují rozhraní pro aplikace, které obsahují ovládací prvky ActiveX, například klienti automatizace a ActiveX – kontejnery ovládacích prvků.  
@@ -36,14 +37,14 @@ Ovládací prvek ActiveX aktivuje události ke komunikaci s jeho kontejneru ovl�
   
  Následující články popisují vlastnosti ovládacích prvků ActiveX podrobněji:  
   
--   [Ovládací prvky MFC ActiveX: Přidání uložených vlastností](../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [MFC – ovládací prvky ActiveX: Přidání uložených vlastností](../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [Ovládací prvky MFC ActiveX: Přidání přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [Ovládací prvky MFC ActiveX: Implementace rozšířených vlastností](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
+-   [MFC – ovládací prvky ActiveX: Implementace rozšířených vlastností](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
   
--   [Ovládací prvky MFC ActiveX: Přístup k vedlejším vlastnostem](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
+-   [MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

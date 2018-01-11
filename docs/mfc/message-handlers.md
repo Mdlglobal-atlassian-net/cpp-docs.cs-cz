@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be9c19ecb5da71b4925b1e979e4d3de69df193db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1b906a49d7da7ed8505252a1759d7ea00fcda1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handlers"></a>Obslužné rutiny zpráv
 V prostředí MFC vyhrazená *obslužná rutina* funkce zpracuje každou samostatnou zprávu. Funkce obslužné rutiny zpráv jsou funkce člena třídy. Tato dokumentace používá podmínky *obslužné rutiny zpráv – členská funkce*, *funkce obslužné rutiny zpráv*, *obslužné rutiny zpráv*, a *obslužná rutina*zcela zaměnitelným významem. Některé druhy obslužné rutiny zpráv se také označují jako "obslužné rutiny příkazů."  
@@ -36,5 +37,5 @@ V prostředí MFC vyhrazená *obslužná rutina* funkce zpracuje každou samosta
  Všechna zařízení Microsoft Visual C++ a MFC můžete použít k zápisu vaší obslužné rutiny. Seznam všechny třídy, naleznete v části [– přehled knihovny tříd](../mfc/class-library-overview.md) v *odkaz knihovny MFC*.  
   
 ## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v rozhraní Framework](../mfc/messages-and-commands-in-the-framework.md)
+ [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

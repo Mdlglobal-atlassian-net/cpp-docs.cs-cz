@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d601ac8da59e4b980c4f1a5bd85bc1b347e8e11e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dfbc0a1f20cb6cc01143ed6f07a63e84b53be6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onidle-member-function"></a>OnIdle – členská funkce
 Při zpracování zprávy žádné Windows volá framework [CWinApp](../mfc/reference/cwinapp-class.md) – členská funkce [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (popsaný v referenční příručka knihovny MFC).  
@@ -37,4 +38,4 @@ Zpráva smyčky
  Další informace o co můžete dělat v nečinné smyčky najdete v tématu [zpracování nečinné smyčky](../mfc/idle-loop-processing.md).  
   
 ## <a name="see-also"></a>Viz také  
- [CWinApp – Třída aplikace](../mfc/cwinapp-the-application-class.md)
+ [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

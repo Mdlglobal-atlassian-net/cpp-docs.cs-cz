@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1671d9d52625395fcad579470d8c3b0224cca189
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Sloučení nabídky
 Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokumentů pro úpravy s náhledem zpracování a aktivace na místě správně. Aktivace na místě představuje výzvu pro kontejner a server (součást) aplikace. Uživatel zůstane ve stejném okně s rámečkem (v rámci kontejneru dokumentu), ale je ve skutečnosti spuštěna jiná aplikace (server). To vyžaduje spolupráce mezi prostředky kontejneru a serverové aplikace.  

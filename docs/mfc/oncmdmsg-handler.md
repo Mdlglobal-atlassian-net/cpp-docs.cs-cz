@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71913ede29f3a8e02c319b3c713d2c33bbcb5b8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 173741ef73cd4bf6426787ef56e8334f504d7c0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg – obslužná rutina
 K dosažení směrování příkazů, každý příkaz cíl volá `OnCmdMsg` – členská funkce další příkaz cíle v pořadí. Příkaz cílem použití `OnCmdMsg` a určit, zda jejich zpracování příkazu směrovat na jiný cíl příkazu, pokud jejich nelze ho zpracovat.  
@@ -34,5 +35,5 @@ K dosažení směrování příkazů, každý příkaz cíl volá `OnCmdMsg` –
  Výchozí hodnota `CCmdTarget` implementace `OnCmdMsg` používá k hledání funkce obslužné rutiny pro každou zprávu příkaz obdrží mapy zpráv příkaz cílové třídy – stejným způsobem, prohledají se standardní zprávy. Pokud se najde shoda, volá obslužnou rutinu. Vyhledávání map zpráv je vysvětleno v [jak rámci hledání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+ [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

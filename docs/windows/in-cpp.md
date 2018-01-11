@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba7999f9834b0efc100fc66f19506a6f25843f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="in-c"></a>in (C++)
 Označuje, že parametr je mají být předány z volání procedury volané procedury.  
@@ -47,7 +50,7 @@ Označuje, že parametr je mají být předány z volání procedury volané pro
 |**Platí pro**|Parametr rozhraní, rozhraní – metoda|  
 |**Opakovatelných**|Ne|  
 |**Povinné atributy**|Žádné|  
-|**Neplatné atributy**|**retval –**|  
+|**Neplatné atributy**|**retval**|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
@@ -57,4 +60,4 @@ Označuje, že parametr je mají být předány z volání procedury volané pro
  [Atributy metody](../windows/method-attributes.md)   
  [Výchozí hodnota](../windows/defaultvalue.md)   
  [ID](../windows/id.md)   
- [na více systémů](../windows/out-cpp.md)   
+ [out](../windows/out-cpp.md)   

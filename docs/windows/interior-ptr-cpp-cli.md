@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: edb506b17cce617c438bc518bfbd5410b9dabbe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Vnitřní ukazatel* deklaruje ukazatel na uvnitř odkazového typu, ale ne samotný objekt. Vnitřní ukazatel můžete bodu odkaz popisovač, typ hodnoty, zabalený typ popisovače, členem spravovaný typ, nebo element spravované pole.  
@@ -75,13 +78,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
  Další informace o vnitřních ukazatelů najdete v tématu  
   
--   [Postupy: deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [Postupy: deklarace hodnotových typů s použitím klíčového slova interior_ptr (C + +/ CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [Postupy: přetížení funkcí s vnitřními a nativními ukazateli (C + +/ CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [Postupy: deklarace vnitřních ukazatelů s použitím klíčového slova const (C + +/ CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
@@ -117,7 +120,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 1  
@@ -126,4 +129,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

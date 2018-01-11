@@ -20,15 +20,16 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95e7586dc15c641ff4915b3257f4ed33a552fde2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 394c48644c3b5cdc2514fefef2f4451e4098856f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-link-library-support"></a>Podpora dynamických knihoven
 NAFXCW.lib a NAFXCWD.lib knihoven (uvedené v tabulce zásady vytváření názvů knihoven staticky propojené v [zásady vytváření názvů knihoven](../mfc/library-naming-conventions.md)) vytvořit projekt jako knihovnu DLL, nazývá "Běžné knihovny MFC DLL Knihovny" (dříve "USRDLL") který lze použít s aplikací není vytvořené s nástroji knihovny tříd. Tato podpora DLL není stejný jako MFCx0.DLL a verze knihovny MFCx0D.DLL (označované jako AFXDLL), které obsahují celou třídu knihovny v nástroji knihovny DLL. Další informace najdete v tématu [knihovny DLL](../build/dlls-in-visual-cpp.md). Tabulku názvy knihoven DLL, najdete v části [zásady vytváření názvů pro knihovny MFC DLL](../build/naming-conventions-for-mfc-dlls.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Verze knihovny MFC](../mfc/mfc-library-versions.md)
+ [MFC – knihovní verze](../mfc/mfc-library-versions.md)
 

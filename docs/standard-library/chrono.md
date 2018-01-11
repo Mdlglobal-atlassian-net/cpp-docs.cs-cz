@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;typu chrono&gt;
 Zahrnují standardní hlavičku \<typu chrono > Definovat třídy a funkce, které představují a zpracování dobách trvání a okamžiky čas.  
@@ -42,7 +43,7 @@ Zahrnují standardní hlavičku \<typu chrono > Definovat třídy a funkce, kter
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Doba trvání – třída](../standard-library/duration-class.md)|Popisuje typ, který obsahuje časovém intervalu.|  
+|[duration – třída](../standard-library/duration-class.md)|Popisuje typ, který obsahuje časovém intervalu.|  
 |[time_point – třída](../standard-library/time-point-class.md)|Popisuje typ, který reprezentuje bod v čase.|  
   
 ### <a name="structs"></a>Struktury  
@@ -67,7 +68,7 @@ Zahrnují standardní hlavičku \<typu chrono > Definovat třídy a funkce, kter
 |Název|Popis|  
 |----------|-----------------|  
 |[Operator –](../standard-library/chrono-operators.md#operator-)|Operátor odčítání nebo negace `duration` a `time_point` objekty.|  
-|[Operator! =](../standard-library/chrono-operators.md#op_neq)|Operátor nerovnosti, která se používá s `duration` nebo `time_point` objekty.|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|Operátor nerovnosti, která se používá s `duration` nebo `time_point` objekty.|  
 |[Operátor modulo](../standard-library/chrono-operators.md#op_modulo)|Operátor pro modulo operací na `duration` objekty.|  
 |[operátor *](../standard-library/chrono-operators.md#op_star)|Operátor násobení pro `duration` objekty.|  
 |[operátor nebo](../standard-library/chrono-operators.md#op_div)|Operátor dělení pro `duration` objekty.|  

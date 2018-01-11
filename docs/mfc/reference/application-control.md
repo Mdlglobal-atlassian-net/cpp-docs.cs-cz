@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b5c64a8e624d48bf07348c591d42920911d711b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-control"></a>Řízení aplikace
 OLE vyžaduje významné kontrolu nad aplikací a jejich objekty. OLE systémové knihovny DLL musí být možné spustit a verze aplikace automaticky, koordinaci jejich produkční a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané systémem OLE knihovny DLL, musí tyto funkce někdy nazývá také aplikace. 

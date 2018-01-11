@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2536d406293d84db2ce5d5bd3e0292e0e57920e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-class"></a>Modul – třída
 Představuje kolekci související objekty.  
@@ -58,32 +61,32 @@ class Module<OutOfProc> : public Module<InProc>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Modul:: ~ Module – destruktor](../windows/module-tilde-module-destructor.md)|Deinitializes aktuální instance třídy modulu.|  
+|[Module::~Module – destruktor](../windows/module-tilde-module-destructor.md)|Deinitializes aktuální instance třídy modulu.|  
   
 ### <a name="protected-constructors"></a>Chráněné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::module – konstruktor](../windows/module-module-constructor.md)|Inicializuje novou instanci třídy modulu.|  
+|[Module::Module – konstruktor](../windows/module-module-constructor.md)|Inicializuje novou instanci třídy modulu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[Module::Create – metoda](../windows/module-create-method.md)|Vytvoří instanci modulu.|  
-|[Module::decrementobjectcount – metoda](../windows/module-decrementobjectcount-method.md)|Snižuje počet objektů, které sledují modulem.|  
-|[Module::getactivationfactory – metoda](../windows/module-getactivationfactory-method.md)|Získá objekt pro vytváření aktivace pro modul.|  
+|[Module::DecrementObjectCount – metoda](../windows/module-decrementobjectcount-method.md)|Snižuje počet objektů, které sledují modulem.|  
+|[Module::GetActivationFactory – metoda](../windows/module-getactivationfactory-method.md)|Získá objekt pro vytváření aktivace pro modul.|  
 |[Module::GetClassObject – metoda](../windows/module-getclassobject-method.md)|Retreives mezipaměť pro vytváření tříd.|  
-|[Module::getmodule – metoda](../windows/module-getmodule-method.md)|Vytvoří instanci modulu.|  
-|[Module::getobjectcount – metoda](../windows/module-getobjectcount-method.md)|Načte počet objektů, které spravuje tento modul.|  
-|[Module::incrementobjectcount – metoda](../windows/module-incrementobjectcount-method.md)|Zvýší počet objektů, které sledují modulem.|  
-|[Module::registercomobject – metoda](../windows/module-registercomobject-method.md)|Zaregistruje jeden nebo více objektů COM, můžete k nim připojit jiné aplikace.|  
-|[Module::registerobjects – metoda](../windows/module-registerobjects-method.md)|Zaregistruje objekty modelu COM nebo prostředí Windows Runtime, můžete k nim připojit jiné aplikace.|  
-|[Module::registerwinrtobject – metoda](../windows/module-registerwinrtobject-method.md)|Jeden nebo více objektů prostředí Windows Runtime zaregistruje, takže k nim můžou připojit jiné aplikace.|  
+|[Module::GetModule – metoda](../windows/module-getmodule-method.md)|Vytvoří instanci modulu.|  
+|[Module::GetObjectCount – metoda](../windows/module-getobjectcount-method.md)|Načte počet objektů, které spravuje tento modul.|  
+|[Module::IncrementObjectCount – metoda](../windows/module-incrementobjectcount-method.md)|Zvýší počet objektů, které sledují modulem.|  
+|[Module::RegisterCOMObject – metoda](../windows/module-registercomobject-method.md)|Zaregistruje jeden nebo více objektů COM, můžete k nim připojit jiné aplikace.|  
+|[Module::RegisterObjects – metoda](../windows/module-registerobjects-method.md)|Zaregistruje objekty modelu COM nebo prostředí Windows Runtime, můžete k nim připojit jiné aplikace.|  
+|[Module::RegisterWinRTObject – metoda](../windows/module-registerwinrtobject-method.md)|Jeden nebo více objektů prostředí Windows Runtime zaregistruje, takže k nim můžou připojit jiné aplikace.|  
 |[Module::Terminate – metoda](../windows/module-terminate-method.md)|Způsobí, že všechny objekty Factory mohl vytvořit jeho instanci modulu vypnout.|  
-|[Module::unregistercomobject – metoda](../windows/module-unregistercomobject-method.md)|Odregistruje jeden nebo více objektů COM, což zabraňuje dalších aplikací v připojení k nim.|  
-|[Module::unregisterobjects – metoda](../windows/module-unregisterobjects-method.md)|Zruší registraci objekty v zadaný modul tak, aby ostatní aplikace se nemůže připojit k nim.|  
-|[Module::unregisterwinrtobject – metoda](../windows/module-unregisterwinrtobject-method.md)|Zruší registraci jeden nebo více objektů prostředí Windows Runtime tak, aby ostatní aplikace se nemůže připojit k nim.|  
+|[Module::UnregisterCOMObject – metoda](../windows/module-unregistercomobject-method.md)|Odregistruje jeden nebo více objektů COM, což zabraňuje dalších aplikací v připojení k nim.|  
+|[Module::UnregisterObjects – metoda](../windows/module-unregisterobjects-method.md)|Zruší registraci objekty v zadaný modul tak, aby ostatní aplikace se nemůže připojit k nim.|  
+|[Module::UnregisterWinRTObject – metoda](../windows/module-unregisterwinrtobject-method.md)|Zruší registraci jeden nebo více objektů prostředí Windows Runtime tak, aby ostatní aplikace se nemůže připojit k nim.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
@@ -95,8 +98,8 @@ class Module<OutOfProc> : public Module<InProc>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::objectcount_ – datový člen](../windows/module-objectcount-data-member.md)|Uchovává informace o tom, kolik třídy byla vytvořena [zkontrolujte](../windows/make-function.md) funkce.|  
-|[Module::releasenotifier_ – datový člen](../windows/module-releasenotifier-data-member.md)|Obsahuje ukazatele na objekt ReleaseNotifier.|  
+|[Module::objectCount_ – datový člen](../windows/module-objectcount-data-member.md)|Uchovává informace o tom, kolik třídy byla vytvořena [zkontrolujte](../windows/make-function.md) funkce.|  
+|[Module::releaseNotifier_ – datový člen](../windows/module-releasenotifier-data-member.md)|Obsahuje ukazatele na objekt ReleaseNotifier.|  
   
 ### <a name="macros"></a>Makra  
   
@@ -119,4 +122,4 @@ class Module<OutOfProc> : public Module<InProc>;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3389a92be2dcb1a183cfbc297e45fb8360a9288d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 47bd233e384bbe21775d02b35cb878bf6bc402b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="guide-settings-dialog-box"></a>Dialogové okno Nastavení vodítek
 ## <a name="layout-guides"></a>Vodítka rozložení  
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  Když je povolené, přidá pravítek do nástroje rozložení; Průvodce můžete umístit do pravítek. Výchozí příručky jsou okrajů, které lze přesunout přetažením. Klikněte v pravítek umístit průvodce. Ovládací prvky "snap" k vodítkům při ovládací prvky se přesouvají přes nebo u nich. Ovládací prvky se také přesunout pomocí průvodce, jakmile jsou připojené k němu. Pokud ovládací prvek je připojen k příručce na každé straně a Průvodce se přesune, změně velikosti ovládacího prvku.  
   
- **Mřížky**  
+ **Mřížka**  
   
  Vytvoří rozložení mřížky. Nové ovládací prvky se automaticky zarovná k mřížce.  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/24/2017
   
  Nastaví výšku mřížky rozložení v dlu. Svislé DLU je průměrná výška dialogové okno Písmo pole dělený 8.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

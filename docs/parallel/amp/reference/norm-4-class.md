@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 788f9ebe23e02a2ba14be534063f4934d6f5040f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm4-class"></a>norm_4 – třída
 Představuje krátký vektoru čtyři normální čísel.  
@@ -708,4 +709,4 @@ static const int size = 4;
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

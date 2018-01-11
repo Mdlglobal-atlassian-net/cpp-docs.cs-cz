@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>error_category – třída
 Představuje abstraktní, běžné základ pro objekty, která popisuje kategorie kódy chyb.  
@@ -57,7 +58,7 @@ class error_category;
 |-|-|  
 |[default_error_condition –](#default_error_condition)|Ukládá hodnotu kódu chyby pro objekt podmínku chyby.|  
 |[ekvivalentní](#equivalent)|Vrátí hodnotu, která určuje, zda jsou ekvivalentní objekty chyby.|  
-|[zpráva](#message)|Vrací název zadané chybový kód.|  
+|[message](#message)|Vrací název zadané chybový kód.|  
 |[Jméno](#name)|Vrací název kategorie.|  
   
 ### <a name="operators"></a>Operátory  
@@ -65,7 +66,7 @@ class error_category;
 |||  
 |-|-|  
 |[Operator ==](#op_eq_eq)|Testování rovnosti mezi `error_category` objekty.|  
-|[Operator! =](#op_neq)|Testy nerovnost mezi `error_category` objekty.|  
+|[operator!=](#op_neq)|Testy nerovnost mezi `error_category` objekty.|  
 |[operátor <](#op_lt)|Testuje, pokud [error_category](../standard-library/error-category-class.md) objekt je menší než `error_category` objekt předaná pro porovnání.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -216,7 +217,7 @@ typedef int value_type;
  Definici tohoto typu se jedná o synonymum `int`.  
   
 ## <a name="see-also"></a>Viz také  
- [< system_error – >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

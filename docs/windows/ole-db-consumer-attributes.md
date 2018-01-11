@@ -20,23 +20,26 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86dc5e8ef939175cdda20c141ad397a26a73f712
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a42ce4f1d8f3a9f61840433ef83470882e42e647
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vloží kód, na základě [šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní OLE DB spotřebitele, který provádí úlohy, jako je například otevírání tabulky, provádění příkazů a přístup k datům.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|[db_accessor –](../windows/db-accessor.md)|Váže sloupců v sadě řádků a sváže jejich odpovídající mapy přistupujícího objektu.|  
-|[db_column –](../windows/db-column.md)|Vytvoří vazbu zadaný sloupec sady řádků.|  
+|[db_accessor](../windows/db-accessor.md)|Váže sloupců v sadě řádků a sváže jejich odpovídající mapy přistupujícího objektu.|  
+|[db_column](../windows/db-column.md)|Vytvoří vazbu zadaný sloupec sady řádků.|  
 |[db_command](../windows/db-command.md)|Spustí příkaz OLE DB.|  
-|[db_param –](../windows/db-param.md)|Přidruží zadané členské proměnné vstupní nebo výstupní parametr.|  
-|[db_source –](../windows/db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele, ke zdroji dat.|  
-|[db_table –](../windows/db-table.md)|Otevře se tabulce OLE DB.|  
+|[db_param](../windows/db-param.md)|Přidruží zadané členské proměnné vstupní nebo výstupní parametr.|  
+|[db_source](../windows/db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele, ke zdroji dat.|  
+|[db_table](../windows/db-table.md)|Otevře se tabulce OLE DB.|  
   
 ## <a name="see-also"></a>Viz také  
  [Atributy podle skupin](../windows/attributes-by-group.md)

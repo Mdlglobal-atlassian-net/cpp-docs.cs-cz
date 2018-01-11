@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16a16a1c400c840d0e8abe2e9c078d295d891dc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6311169c0c8f9ee59f3582559f07ba85f997beff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-states-overview"></a>Přehled stavů položek ovládacího prvku strom
 Každá položka v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) má aktuální stav. Například může být vybrána položka, zakázaná, Rozšířená a tak dále. Ve většině případů ovládací prvek stromu automaticky nastaví stav položky tak, aby odrážela uživatelské akce, jako je výběr položky. Však můžete také nastavit stav položky pomocí [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) – členská funkce a načtěte aktuální stav položky pomocí [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) – členská funkce. Úplný seznam stavů položek, najdete v části [stromové zobrazení ovládacího prvku konstanty](http://msdn.microsoft.com/library/windows/desktop/bb759985) ve Windows SDK.  

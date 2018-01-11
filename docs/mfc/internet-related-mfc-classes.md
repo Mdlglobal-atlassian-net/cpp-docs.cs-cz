@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea0a9256b1d5c45a3ef85bd2f25e2e864260dfc3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d07495ce82ec3f82f4c04e3b3dc845710a72738
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-related-mfc-classes"></a>Třídy MFC související s Internetem
 Informace o třídy související s Internetem a funkce najdete v tématu:  
@@ -74,5 +75,5 @@ Informace o třídy související s Internetem a funkce najdete v tématu:
 -   [CInternetException](../mfc/reference/cinternetexception-class.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

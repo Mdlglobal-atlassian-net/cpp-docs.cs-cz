@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e773085167266cd413b4d2279863d2b68c52bed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX – kontejnery ovládacích prvků: Použití ovládacích prvků v jiném kontejneru než dialogovém okně
 V některých aplikace, jako je například SDI a MDI aplikace můžete pro vložení ovládacího prvku v okně aplikace. **Vytvořit** funkce člena třídy obálky vložit pomocí Visual C++, můžete dynamicky, vytvořte instanci ovládacího prvku bez nutnosti dialogové okno.  
@@ -71,5 +72,5 @@ V některých aplikace, jako je například SDI a MDI aplikace můžete pro vlo�
 5.  Znovu sestavte projekt. Str ovládacího prvku se dynamicky vytvoří vždy, když je vytvořeno zobrazení aplikace.  
   
 ## <a name="see-also"></a>Viz také  
- [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)
+ [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

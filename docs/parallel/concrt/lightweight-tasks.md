@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b9caa028d7f870ecdd6c67503c6bc9448cff1d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lightweight-tasks"></a>Prosté úlohy
 Tento dokument popisuje roli prosté úlohy v Concurrency Runtime. A *prostých úloh* je úkol, který můžete naplánovat přímo z `concurrency::Scheduler` nebo `concurrency::ScheduleGroup` objektu. Prosté úlohy se podobá funkci, která zadáte na rozhraní API systému Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce. Prosté úlohy proto jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování Concurrency Runtime. Concurrency Runtime samotné používá prosté úlohy k plánování asynchronních agentů a odesílání zpráv mezi asynchronní bloky zpráv.  

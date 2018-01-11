@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Jiné manipulátory výstupního datového proudu s jedním argumentem
 Následující příklad používá třídu `money`, který je `long` typu. `setpic` Manipulator připojí formátování řetězce "formát" na třídu, která mohou být využívána operátor vložení přetížené datového proudu třídy `money`. Obrázek řetězce je uloženo jako statické proměnné v `money` třídy místo jako datový člen třídy datového proudu, takže nemáte k odvození novou třídu výstupní datový proud.  
@@ -84,5 +85,5 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Vlastní manipulátory bez argumentů](../standard-library/custom-manipulators-with-arguments.md)
+ [Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)
 

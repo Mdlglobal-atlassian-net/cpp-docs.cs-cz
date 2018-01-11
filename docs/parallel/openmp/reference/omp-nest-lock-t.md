@@ -15,26 +15,27 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73615a6c8e4b09aae01369c5a2fed07117fe490c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bbf62ae43ed1ebd0d28157b03fabace9b2b9d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompnestlockt"></a>omp_nest_lock_t
 Typ, který obsahuje následující informace o zámek: jestli zámek je k dispozici, a identity vlákno, který je vlastníkem zámek a počet vnoření.  
   
  Následující funkce použití **omp_nest_lock_t**:  
   
--   [omp_init_nest_lock –](../../../parallel/openmp/reference/omp-init-nest-lock.md)  
+-   [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)  
   
--   [omp_destroy_nest_lock –](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)  
+-   [omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)  
   
--   [omp_set_nest_lock –](../../../parallel/openmp/reference/omp-set-nest-lock.md)  
+-   [omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)  
   
--   [omp_unset_nest_lock –](../../../parallel/openmp/reference/omp-unset-nest-lock.md)  
+-   [omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)  
   
--   [omp_test_nest_lock –](../../../parallel/openmp/reference/omp-test-nest-lock.md)  
+-   [omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)  
   
  Další informace najdete v tématu [3.2 funkce Zámek](../../../parallel/openmp/3-2-lock-functions.md).  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b626eb6edbd740ab9c11a9da9d5d72d83c19fc56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b53607c1ca163bf7e1e50728e64da0e3497f4cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 Microsoft Foundation třídy (MFC), poskytují obálku objektově orientované C++ přes Win32 pro rychlý vývoj nativních aplikací klasické pracovní plochy. Aktivní šablony Library (ATL) je obálky knihovny, která usnadňuje vývoj COM a se velmi často používá pro vytváření ovládacích prvků ActiveX.  
@@ -28,8 +29,8 @@ Microsoft Foundation třídy (MFC), poskytují obálku objektově orientované C
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Běžné aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)|Microsoft Foundation třídy poskytují dynamické objektově orientované obálku přes Win32 umožňující rychlý vývoj aplikací grafického uživatelského rozhraní v jazyce C++.|  
-|[ATL COM plochy součásti](../atl/atl-com-desktop-components.md)|ATL poskytuje šablony třídy a jiné použití vytvoří pro zjednodušení vytváření objektů COM v jazyce C++.|  
+|[Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)|Microsoft Foundation třídy poskytují dynamické objektově orientované obálku přes Win32 umožňující rychlý vývoj aplikací grafického uživatelského rozhraní v jazyce C++.|  
+|[Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)|ATL poskytuje šablony třídy a jiné použití vytvoří pro zjednodušení vytváření objektů COM v jazyce C++.|  
 |[ATL a MFC sdílené třídy](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odkazuje pro [CStringT třída](../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou sdíleny MFC a ATL.|  
 |[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)|Editor prostředků umožňuje upravit prostředkům uživatelského rozhraní, například řetězce, Image a dialogová okna.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Nadřazené téma pro veškerý obsah C++ v knihovně MSDN.|

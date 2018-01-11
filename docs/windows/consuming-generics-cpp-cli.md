@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
 Obecné typy vytvořené v jednom jazyce .NET je možné použít jinými jazyky rozhraní .NET. Na rozdíl od šablony obecný v kompilovaném sestavení stále zůstává Obecné. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a to i v jiném jazyce než sestavení, ve které byla definována obecného typu.  

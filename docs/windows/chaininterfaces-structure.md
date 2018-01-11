@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d48aac7e14092c8406db28910263e7048c17bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 Určuje ověření a Inicializace funkce, které mohou být použity pro sadu rozhraní ID.  
@@ -103,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Chaininterfaces::cancastto – metoda](../windows/chaininterfaces-cancastto-method.md)|Určuje, zda zadaný rozhraní ID lze převést na každý specializací definované ChainInterface parametry šablony.|  
-|[Chaininterfaces::casttounknown – metoda](../windows/chaininterfaces-casttounknown-method.md)|Ukazatel rozhraní typu definované vrhá `I0` parametr šablony na ukazatel IUnknown.|  
-|[Chaininterfaces::fillarraywithiid – metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Ukládá ID rozhraní definované `I0` parametr šablony do zadaného umístění v zadané pole rozhraní ID.|  
-|[Chaininterfaces::Verify – metoda](../windows/chaininterfaces-verify-method.md)|Ověřuje, že každé rozhraní definované parametry šablony `I0` prostřednictvím `I9` dědí z IUnknown nebo IInspectable a že `I0` dědí z `I1` prostřednictvím `I9`.|  
+|[ChainInterfaces::CanCastTo – metoda](../windows/chaininterfaces-cancastto-method.md)|Určuje, zda zadaný rozhraní ID lze převést na každý specializací definované ChainInterface parametry šablony.|  
+|[ChainInterfaces::CastToUnknown – metoda](../windows/chaininterfaces-casttounknown-method.md)|Ukazatel rozhraní typu definované vrhá `I0` parametr šablony na ukazatel IUnknown.|  
+|[ChainInterfaces::FillArrayWithIid – metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Ukládá ID rozhraní definované `I0` parametr šablony do zadaného umístění v zadané pole rozhraní ID.|  
+|[ChainInterfaces::Verify – metoda](../windows/chaininterfaces-verify-method.md)|Ověřuje, že každé rozhraní definované parametry šablony `I0` prostřednictvím `I9` dědí z IUnknown nebo IInspectable a že `I0` dědí z `I1` prostřednictvím `I9`.|  
   
 ### <a name="protected-constants"></a>Chráněné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Chaininterfaces::iidcount – konstanta](../windows/chaininterfaces-iidcount-constant.md)|Celkový počet rozhraní ID obsažené v rozhraní určeného parametry šablony `I0` prostřednictvím `I9`.|  
+|[ChainInterfaces::IidCount – konstanta](../windows/chaininterfaces-iidcount-constant.md)|Celkový počet rozhraní ID obsažené v rozhraní určeného parametry šablony `I0` prostřednictvím `I9`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `I0`  
@@ -125,4 +128,4 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

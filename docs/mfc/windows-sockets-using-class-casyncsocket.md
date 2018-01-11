@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31dc9159c0f66b5c1482efebd482e049b5ef270a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
 Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Upozorňujeme, že tato třída zapouzdří rozhraní API systému Windows Sockets na velmi nízké úrovni. `CAsyncSocket`je pro používané programátory, kteří síťové komunikace podrobně znát, ale chcete pohodlí zpětných volání pro oznámení o události sítě. Podle této předpokladů, tento článek obsahuje pouze základní instrukcí. Měli byste pravděpodobně zvážit použití `CAsyncSocket` Pokud má Windows Sockets snadnou práci s několika síťových protokolů v aplikaci MFC, ale nechcete vzdát flexibilitu. Může také cítíte, že můžete získat lepší efektivitu programování další komunikace přímo sami, než jste může pomocí obecnější alternativní modelu třídy `CSocket`.  
@@ -110,12 +111,12 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: pozadí](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   
 -   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

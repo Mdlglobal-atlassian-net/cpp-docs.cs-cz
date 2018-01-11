@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40cb73049d7dbb8722b456c3d41ec7538dabdab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE – pozadí: Implementace MFC
 Kvůli velikost a složitost nezpracovaná OLE rozhraní API volání se přímo k psaní aplikací OLE může být časově velmi náročná. Cílem společnosti Microsoft Foundation Class Library implementace OLE je snížit objem práce, kterou je nutné provést pro psaní aplikací plně funkční, podporující OLE.  

@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02c0f42042f5cdda0898e7d2c74754e68fb67113
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68824b9fcdf2f4de47900d5b0c4b03db9e28d9fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Postupy: Připnutí ukazatelů a polí
 Připnutí dílčí objekt definovaný v spravovaného objektu má za následek Připnutí celý objekt.  Například pokud je připnutý libovolný element pole, pak celé pole je také připojena. Neexistují žádné rozšíření pro jazyk pro deklarování definovaného pole. Chcete-li připnout pole, deklarujte Připnutí ukazatel na jeho typ elementu a kód pin, jeden z jejích elementů.  
@@ -56,4 +59,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md)
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

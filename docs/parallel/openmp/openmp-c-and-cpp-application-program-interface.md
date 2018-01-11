@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d807d8e9b3ef7012ac574cf8bcccb152b2c5d26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c2b2b3a71ac37ea7dfeeea777a2b576aaf069
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP – rozhraní API pro jazyky C a C++
 Popisuje OpenMP C a C++ rozhraní API, jak je uvedeno ve specifikaci verze 2.0 z panelu zkontrolujte architektura OpenMP.  

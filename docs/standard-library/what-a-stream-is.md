@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd6b99e59810c08e0e053d93ef0d6ef09700ed3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7084a0fb74d963532e01623e8e9047768c67f801
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-a-stream-is"></a>Co je datový proud
 Jako C C++ nemá integrovanou schopnost vstupu a výstupu. Všechny kompilátory C++, ale být součástí systematické, objektově orientovaný vstupně-výstupních operací balíček, označuje jako iostream třídy sady. Datový proud je centrální koncept iostream třídy. Objekt proudu si lze představit jako inteligentní soubor, který slouží jako zdroj a cíl pro bajtů. Datový proud charakteristiky jsou určeny podle jeho třídy a přizpůsobené vložení a extrakce operátory.  

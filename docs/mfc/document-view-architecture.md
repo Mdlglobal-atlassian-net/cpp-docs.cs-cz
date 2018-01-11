@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63bf1b92521f7a99baed0d4a000b2f3cb1f804cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45c595b78b17ed00691533369ec4837345fcce03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-architecture"></a>Architektonický model dokument/zobrazení
 Ve výchozím nastavení vytvoří Průvodce aplikací MFC kostru aplikace s dokumentové třídy a třídy zobrazení. MFC odděluje Správa dat do těchto dvou tříd. Dokument ukládá data a spravuje tisk data a koordinuje aktualizace dat více zobrazení. Zobrazení zobrazí data a spravuje interakci s uživatelem s ním, včetně výběru a úpravy.  
@@ -79,7 +80,7 @@ Zobrazení a dokumentů
   
 -   [Použití zobrazení](../mfc/using-views.md)  
   
--   [Více typů dokumentů, zobrazení a oken s rámečkem](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Více typů dokumentů, zobrazení a oken s rámečkem](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
 -   [Inicializace a Uklízení dokumentů a zobrazení](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb442fdd9e46e4e043c42b6d2289cf0b9e2a53a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927643d467433d1a88e9b38d6c050bcc758e64c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-classes"></a>OLE – třídy
 Třídy OLE pracovat s další aplikace framework třídy k poskytování snadného přístupu k rozhraní API ActiveX poskytnutí programy snadný způsob, jak uživatelům poskytnout sílu ActiveX. Pomocí ActiveX, můžete:  
@@ -44,9 +45,9 @@ Třídy OLE pracovat s další aplikace framework třídy k poskytování snadn�
   
 -   [OLE – třídy serveru](../mfc/ole-server-classes.md)  
   
--   [OLE přetahování myší a třídy přenosu dat](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+-   [Přetahování v rozhraní OLE a třídy přenosu dat](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
--   [Třídy společných dialogů OLE](../mfc/ole-common-dialog-classes.md)  
+-   [OLE – třídy společných dialogů](../mfc/ole-common-dialog-classes.md)  
   
 -   [OLE – třídy automatizace](../mfc/ole-automation-classes.md)  
   
@@ -54,7 +55,7 @@ Třídy OLE pracovat s další aplikace framework třídy k poskytování snadn�
   
 -   [Třídy aktivních dokumentů](../mfc/active-document-classes.md)  
   
--   [Třídy související s rozhraním OLE](../mfc/ole-related-classes.md)  
+-   [Třídy související s rozhraním OLE](../mfc/ole-related-classes.md)  
   
  Pokud chcete zobrazit dědičnost třídy, použijte [graf hierarchie třídy](../mfc/hierarchy-chart.md).  
   

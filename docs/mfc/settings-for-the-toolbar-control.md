@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1de3843ce44f043a3f948d63cd4d2f5eb429ff7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b1290e8769bfd072ac66c2e4d981eb6b4d641fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-toolbar-control"></a>Nastavení pro ovládací prvek panelu nástrojů
 Tlačítka na panelu nástrojů můžete zobrazit rastrový obrázek, řetězce nebo obojí. Ve výchozím nastavení je velikost bitové kopie hodnotu rozměry 16 podle 15 pixelů. Všechny tlačítka jsou stejné šířky, o výchozí 24 ve 22 pixelů. Panelu nástrojů výška je dáno výšku tlačítka a panelu nástrojů šířka je stejný jako šířku nadřazeného okna klientské oblasti také ve výchozím nastavení.  

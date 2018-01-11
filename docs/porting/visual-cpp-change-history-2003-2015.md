@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++
 Tento článek popisuje nejnovějších změn z Visual Studia 2015, přejděte zpět na Visual Studio 2003 a v tomto článku podmínky "nové chování" nebo "teď" prostudujte pro Visual Studio 2015 a novější. Podmínky "staré chování" a "před" odkazovat na Visual Studio 2013 a starších verzích. 
@@ -3394,7 +3395,7 @@ C c;
   
 -   Makra PROP_ENTRY a PROP_ENTRY_EX byly zastaralé a nahradí andPROP_ENTRY_TYPE_EX PROP_ENTRY_TYPE makra z bezpečnostních důvodů.  
   
-### <a name="atlmfc-shared-classes"></a>ATL a MFC sdílené třídy  
+### <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC  
   
 -   ATL nemůže být sestaven bez závislosti na CRT. V dřívějších verzích sady Visual Studio, můžete použít #define atl_min_crt – aby projektu knihovny ATL minimálně závisí na CRT. V aplikaci Visual C++ 2008 jsou všechny projekty knihovny ATL minimálně závislá na CRT bez ohledu na to, jestli je definován atl_min_crt –.  
   

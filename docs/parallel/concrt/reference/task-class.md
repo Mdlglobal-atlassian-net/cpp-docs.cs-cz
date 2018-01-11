@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a44245ea212a770902787e01d1896612b7cb37b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 Paralelní vzory knihovny (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze spustit asynchronně a souběžně další úkoly a paralelní pracovní vytvořené paralelní algoritmy v Concurrency Runtime. Vyvolá výsledek typu `_ResultType` při úspěšném dokončení. Úlohy typu `task<void>` vytvořit žádný výsledek. Úlohu můžete čekali při a zrušení nezávisle na jiné úlohy. Můžete také skládat s ostatními úkoly pomocí pokračování ( `then`) a spojení ( `when_all`) a volba ( `when_any`) vzory.  
@@ -70,7 +71,7 @@ class task;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[GET](#get)|Přetíženo. Vrátí výsledek tato úloha vytváří. Pokud úloha není v terminálu stavu, volání `get` způsobí čekání na dokončení úlohy. Tato metoda nevrátí hodnotu při volání pro úlohy `result_type` z `void`.|  
+|[get](#get)|Přetíženo. Vrátí výsledek tato úloha vytváří. Pokud úloha není v terminálu stavu, volání `get` způsobí čekání na dokončení úlohy. Tato metoda nevrátí hodnotu při volání pro úlohy `result_type` z `void`.|  
 |[is_apartment_aware –](#is_apartment_aware)|Určuje, zda úloha rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo je následníky takových úloh.|  
 |[is_done](#is_done)|Určuje, pokud je úloha dokončena.|  
 |[Scheduler](#scheduler)|Vrátí Plánovač pro tuto úlohu|  
@@ -81,7 +82,7 @@ class task;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)|Přetíženo. Určuje, zda dva `task` objekty představují různé interních úlohách.|  
+|[operator!=](#operator_neq)|Přetíženo. Určuje, zda dva `task` objekty představují různé interních úlohách.|  
 |[operátor =](#operator_eq)|Přetíženo. Nahradí obsah jedné `task` objekt s jinou.|  
 |[Operator ==](#operator_eq_eq)|Přetíženo. Určuje, zda dva `task` objekty představují stejnou interní úlohu.|  
   
@@ -328,4 +329,4 @@ task_status wait() const;
 >  V [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace, nevolejte `wait` v kódu, který běží na STA Jinak, modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane odpovídat. Můžete však volat [concurrency::task::get](#get) metodu výsledek předchozí úlohou v pokračování založený na úlohách.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

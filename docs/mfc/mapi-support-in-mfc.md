@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12ebceaa155a8af1078bd18fa74ced1a4d8e72d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6cc1670559354628127729724300399d5f003ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi-support-in-mfc"></a>Podpora MAPI v MFC
 MFC poskytuje podporu pro podmnožinu z Microsoft Zasílání zpráv programu rozhraní MAPI (Application) ve třídě **CDocument**. Konkrétně **CDocument** má členské funkce, které určují, zda je na počítači koncového uživatele pro podporu pošty a pokud ano, povolit příkaz Odeslat e-mailu s ID standardních příkazů **ID_FILE_SEND_MAIL**. Funkce MFC obslužná rutina pro tento příkaz umožňuje uživatelům poslat dokument e-mailem.  

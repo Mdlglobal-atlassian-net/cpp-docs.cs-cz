@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3dc050418d8053e04053d5eafbd328e49bd473b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 Toto téma ukazuje, jak ladit aplikaci, která používá C++ Accelerated Massive Parallelism (C++ AMP) využívat výhod grafický procesor (GPU). Využívá paralelní snížení program, který shrnuje velké pole celých čísel. Tento návod znázorňuje následující úlohy:  
@@ -393,5 +394,5 @@ Seskupené vláken v okna vláken GPU
  [Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)   
  [Postupy: použití okna vláken GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
  [Postupy: použití okna paralelního sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
- [Analýza kódu C++ AMP s vizualizér souběžnosti](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)
+ [Analýza kódu C++ AMP s vizualizér souběžnosti](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
 

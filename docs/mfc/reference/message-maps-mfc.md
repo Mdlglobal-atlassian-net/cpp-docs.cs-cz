@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 677a4a06402af1115f419dcd5979a13a84d79e08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958f308a089f2f503159b2ce56c2096595fc7613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-mfc"></a>Mapy zpráv (MFC)
 Tato část obsahuje seznam všech [makra mapování zpráv](../../mfc/reference/message-map-macros-mfc.md) a všechny [CWnd](../../mfc/reference/cwnd-class.md) map zpráv položky spolu s odpovídající členské funkce prototypy:  
@@ -31,7 +32,7 @@ Tato část obsahuje seznam všech [makra mapování zpráv](../../mfc/reference
 |Kategorie|Popis|  
 |--------------|-----------------|  
 |ON\_příkaz obslužné rutiny zpráv|Zpracovává `WM_COMMAND` zprávy vytvářené nabídky Výběr uživatelů nebo nabídky přístupové klíče.|  
-|[Obslužné rutiny oznamovacích zpráv podřízená okna](../../mfc/reference/child-window-notification-message-handlers.md)|Zpracování zpráv s oznámením z podřízené windows.|  
+|[Obslužné rutiny oznamovacích zpráv v podřízených oknech](../../mfc/reference/child-window-notification-message-handlers.md)|Zpracování zpráv s oznámením z podřízené windows.|  
 |[Wm_ – obslužné rutiny zpráv](../../mfc/reference/handlers-for-wm-messages.md)|Zpracování `WM_` zprávy, jako například `WM_PAINT`.|  
 |[Obslužné rutiny zpráv uživatelem definované](../../mfc/reference/user-defined-handlers.md)|Zpracování zpráv definovaný uživatelem.|  
   
@@ -73,5 +74,5 @@ Tato část obsahuje seznam všech [makra mapování zpráv](../../mfc/reference
  Mapy zpráv však jsou důležitou součástí knihovny Microsoft Foundation Class. Byste měli porozumět, co dělají a dokumentace se poskytuje pro ně.  
   
 ## <a name="see-also"></a>Viz také  
- [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+ [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

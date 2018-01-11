@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>char_traits – struktura
 Char_traits – struktura popisuje atributy přidružené znak.  
@@ -79,7 +80,7 @@ struct char_traits;
 |[porovnání](#compare)|Porovná až zadaný počet znaků v dva řetězce.|  
 |[kopírování](#copy)|Zadaný počet znaků z jednoho řetězce zkopíruje do jiného. Zastaralé Použití [char_traits::_Copy_s](#copy_s) místo.|  
 |[_Copy_s –](#copy_s)|Zadaný počet znaků z jednoho řetězce zkopíruje do jiného.|  
-|[EOF](#eof)|Vrátí znak end souboru (EOF).|  
+|[eof](#eof)|Vrátí znak end souboru (EOF).|  
 |[EQ](#eq)|Kontroluje, zda dva `char_type` znaky jsou stejné.|  
 |[eq_int_type –](#eq_int_type)|Kontroluje, zda dva znaky vyjádřené `int_type`s jsou stejné.|  
 |[Najít](#find)|Vyhledá první výskyt je zadaný znak v rozsah znaků.|  

@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50aaf3f695b023d6316fdd5d601962435903e15c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7da90e13c325380cb8aad54d1af712c1567e0420
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt"></a>&lt;regulární výraz&gt;
 Definuje třídu šablony analyzovat [regulární výrazy (C++)](../standard-library/regular-expressions-cpp.md)a několik šablony třídy a funkce pro vyhledání text odpovídá na objekt regulárního výrazu.  
@@ -93,11 +94,11 @@ Definuje třídu šablony analyzovat [regulární výrazy (C++)](../standard-lib
 |||  
 |-|-|  
 |[Operator ==](../standard-library/regex-operators.md#op_eq_eq)|Porovnání různých objektů, které jsou stejné.|  
-|[Operator! =](../standard-library/regex-operators.md#op_neq)|Porovnání různých objektů, není rovno.|  
+|[operator!=](../standard-library/regex-operators.md#op_neq)|Porovnání různých objektů, není rovno.|  
 |[operátor <](../standard-library/regex-operators.md#op_lt)|Porovnání různých objektů, menší než.|  
 |[operátor\<=](../standard-library/regex-operators.md#op_gt_eq)|Porovnání různých objektů, menší nebo rovno.|  
 |[operátor >](../standard-library/regex-operators.md#op_gt)|Porovnání různých objektů, které jsou větší než.|  
-|[Operator > =](../standard-library/regex-operators.md#op_gt_eq)|Porovnání různých objektů, větší než nebo rovno.|  
+|[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Porovnání různých objektů, větší než nebo rovno.|  
 |[operátor <<](../standard-library/regex-operators.md#op_lt_lt)|Vloží `sub_match` v datovém proudu.|  
   
 ## <a name="see-also"></a>Viz také  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80eeea133c953622151fba8b83e4995c9e5bd478
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2670f3935e2f4c482728000a268cb46cc9dbdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manipulating-image-lists"></a>Manipulace se seznamy obrázků
 [Nahradit](../mfc/reference/cimagelist-class.md#replace) – členská funkce nahrazuje obrázek v seznamu obrázků ([CImageList](../mfc/reference/cimagelist-class.md)) s novou bitovou kopii. Tato funkce je také užitečné, pokud je potřeba dynamicky zvýšit počet bitových kopií v objektu seznamu bitové kopie. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) funkce dynamicky změní počet bitových kopií, které jsou uložené v seznamu obrázků. Pokud zvýšíte velikosti seznamu obrázků, zavolejte **nahradit** Přidání bitové kopie do nové sloty bitové kopie. Pokud snížit velikost seznamu obrázků jsou uvolněny nad rámec novou velikost bitové kopie.  

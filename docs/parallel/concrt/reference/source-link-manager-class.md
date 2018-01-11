@@ -27,11 +27,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75be5687e63fe38f1ffa8f91c41963dfa1171e48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager – třída
 `source_link_manager` Objekt spravuje zasílání zpráv bloku sítě odkazy na `ISource` bloky.  
@@ -69,14 +70,14 @@ class source_link_manager;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Přidat](#add)|Přidá odkaz na zdroj `source_link_manager` objektu.|  
+|[add](#add)|Přidá odkaz na zdroj `source_link_manager` objektu.|  
 |[začít](#begin)|Vrátí iterovat prvním elementem v `source_link_manager` objektu.|  
 |[obsahuje](#contains)|Hledání `network_link_registry` v rámci to `source_link_manager` objekt pro zadaný blok.|  
 |[počet](#count)|Spočítá počet propojené bloky v `source_link_manager` objektu.|  
 |[referenční dokumentace](#reference)|Získá odkaz na `source_link_manager` objektu.|  
 |[register_target_block –](#register_target_block)|Zaregistruje cílový blok, který obsahuje tento `source_link_manager` objektu.|  
 |[verze](#release)|Uvolní odkaz na `source_link_manager` objektu.|  
-|[odebrat](#remove)|Odebere odkaz z `source_link_manager` objektu.|  
+|[remove](#remove)|Odebere odkaz z `source_link_manager` objektu.|  
 |[set_bound –](#set_bound)|Nastaví maximální počet odkazů zdroj, který jde přidat do tohoto `source_link_manager` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6f72036e897a51b907fb41387f25fd7d20df69e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkstack"></a>check_stack
 Dá pokyn kompilátoru, chcete-li vypnout sondy zásobníku, pokud **vypnout** (nebo  **-** ) není zadaný, nebo zapnout sondy zásobníku, pokud **na** (nebo  **+** ) je zadán.  
@@ -52,4 +53,4 @@ Dá pokyn kompilátoru, chcete-li vypnout sondy zásobníku, pokud **vypnout** (
 |**#pragma check_stack(off)**<br /><br /> nebo **check_stack – #pragma -**|Ano nebo ne|Vypnutím kontrola ověření pro funkce, které následují zásobníku|  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

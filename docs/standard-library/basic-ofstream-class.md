@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fa5bdad26039217a52c480d747d3dac1ba2db5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicofstream-class"></a>basic_ofstream – třída
 Popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementy typu `Elem`, jejichž Určuje vlastnosti znak v třídě `Tr`.  
@@ -86,9 +87,9 @@ int main(int argc, char **argv)
   
 |||  
 |-|-|  
-|[Zavřete](#close)|Zavře soubor.|  
+|[close](#close)|Zavře soubor.|  
 |[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
-|[Otevřete](#open)|Otevře soubor.|  
+|[open](#open)|Otevře soubor.|  
 |[rdbuf –](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
 |[swap](#swap)|Obsah tohoto Exchange `basic_ofstream` pro obsah ze zadaných `basic_ofstream`.|  
   

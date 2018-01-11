@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5f7b9d6eeda8192fe05a73d25c04527bea2ee80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>critical_section – třída
 Mutex nejsou vícenásobně přístupné, což je explicitně vědět Concurrency Runtime.  
@@ -64,7 +65,7 @@ class critical_section;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zámek](#lock)|Získá tato část důležité.|  
+|[lock](#lock)|Získá tato část důležité.|  
 |[native_handle –](#native_handle)|Pokud existuje, vrátí platformy konkrétní nativní popisovač.|  
 |[try_lock –](#try_lock)|Pokusí se získat zámek bez blokování.|  
 |[try_lock_for –](#try_lock_for)|Pokusí se získat zámek bez pro konkrétní počet milisekund blokování.|  

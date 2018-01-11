@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 103e76f32e9b7296af53fbebbd1d837991facec5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům s průvodci kódem
 Pokud jste obeznámeni s funkcemi DDX, můžete použít vlastnost ovládacího prvku v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvořit typově bezpečný přístup. Tento přístup je jednodušší než vytváření ovládacím prvkům bez průvodců kódem.  
@@ -45,5 +46,5 @@ Pokud jste obeznámeni s funkcemi DDX, můžete použít vlastnost ovládacího 
 ## <a name="see-also"></a>Viz také  
  [Typově bezpečný přístup k ovládacím prvkům v dialogovém okně](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
  [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)   
- [Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+ [Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 

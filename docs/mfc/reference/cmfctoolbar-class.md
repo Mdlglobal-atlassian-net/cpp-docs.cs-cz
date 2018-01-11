@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar – třída
 `CMFCToolBar` Vypadá takto: Třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale nabízí další podporu pro funkce uživatelského rozhraní. Patří ploché panely nástrojů, panely nástrojů s aktivní obrázky, ikony. velké ikony, tlačítka stránkování, uzamčení panely nástrojů, ovládací prvky matrice, text v rámci bitové kopie, obrázky na pozadí a na kartách panely nástrojů. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro uživatele přizpůsobení panelů nástrojů a nabídky, přetažení myší mezi panely nástrojů a nabídky, tlačítek pole se seznamem, upravit pole tlačítka, výběr barvy a souhrnné tlačítka.

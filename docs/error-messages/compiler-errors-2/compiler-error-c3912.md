@@ -15,16 +15,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5198258264688196a1ddc27059ab1f1349048c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6de7becfbb6aed8a1056732a975cd6e1f8f47f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3912"></a>C3912 chyby kompilátoru
 'událost': typ události musí být typu delegáta  
   
- Událost byla deklarována, ale neměla správný typ..  
+ Událost byla deklarována, ale neměla správný typ.  
   
  Další informace najdete v tématu [událostí](../../windows/event-cpp-component-extensions.md).  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0152afbafe7c4756bebd87f931b9a6b6f4e31269
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63f8b8f735b62c1cbfedd50320bf65cec5905632
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Odvozování z tříd soketů
 Tento článek popisuje některé funkce, které můžete získat odvozením vlastní třídy jednu z tříd soketů.  
@@ -36,16 +37,16 @@ Tento článek popisuje některé funkce, které můžete získat odvozením vla
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)  
   
 -   [Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md)  
   
 -   [Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

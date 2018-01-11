@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a9098f6f8f0374ad10396f30cf5aa636d9843d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overwritebuffer-class"></a>Třída overwrite_buffer
 `overwrite_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání do jedné zprávy najednou. Nové zprávy přepsat dříve udržovaných ty.  
@@ -64,7 +65,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Název|Popis|  
 |----------|-----------------|  
 |[has_value –](#has_value)|Kontroluje, zda tato `overwrite_buffer` zasílání zpráv bloku ještě má hodnotu.|  
-|[Hodnota](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `overwrite_buffer` zasílání zpráv bloku.|  
+|[value](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `overwrite_buffer` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
@@ -330,4 +331,4 @@ T value();
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
  [Třída unbounded_buffer](unbounded-buffer-class.md)   
- [Třída single_assignment](single-assignment-class.md)
+ [single_assignment – třída](single-assignment-class.md)

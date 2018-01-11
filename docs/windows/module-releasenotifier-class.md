@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b48374182d9b39d43cbf0ec99cb51075867e914d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb640f146109363a8025818b3ec560c250029914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier – třída
 Vyvolá obslužnou rutinu události, až bude vydaná poslední objekt v modulu.  
@@ -36,14 +39,14 @@ class ReleaseNotifier;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier:: ~ releasenotifier – destruktor](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Deinitializes aktuální instance třídy Module::ReleaseNotifier.|  
-|[Module::releasenotifier:: releasenotifier – konstruktor](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializuje novou instanci třídy Module::ReleaseNotifier.|  
+|[Module::ReleaseNotifier::~ReleaseNotifier – destruktor](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Deinitializes aktuální instance třídy Module::ReleaseNotifier.|  
+|[Module::ReleaseNotifier::ReleaseNotifier – konstruktor](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializuje novou instanci třídy Module::ReleaseNotifier.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier:: Invoke – metoda](../windows/module-releasenotifier-invoke-method.md)|Pokud je implementována, volá obslužnou rutinu události při vydání poslední objekt v modulu.|  
+|[Module::ReleaseNotifier::Invoke – metoda](../windows/module-releasenotifier-invoke-method.md)|Pokud je implementována, volá obslužnou rutinu události při vydání poslední objekt v modulu.|  
 |[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Odstraní aktuální objekt Module::ReleaseNotifier, pokud objekt byl zkonstruován s parametrem `true`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -55,4 +58,4 @@ class ReleaseNotifier;
  **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Viz také
- [Module – třídy](../windows/module-class.md)
+ [Module – třída](../windows/module-class.md)

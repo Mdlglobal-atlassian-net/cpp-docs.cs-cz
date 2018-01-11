@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr – třída
 Zabalí inteligentní ukazatel kolem na prostředek, který zajistí, že prostředek automaticky zničen při řízení opustí blok.  
@@ -91,7 +92,7 @@ public:
   
 |||  
 |-|-|  
-|[GET](#get)|Členská funkce vrátí uložené ukazatele `myptr`.|  
+|[get](#get)|Členská funkce vrátí uložené ukazatele `myptr`.|  
 |[verze](#release)|Člen nahrazuje uložené ukazatele `myptr` s ukazatele null a vrátí dříve uložené ukazatele.|  
 |[resetování](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale jenom v případě uložené ukazatel hodnota `myptr` změny v důsledku volání funkce. Nahradí uložené ukazatel s `ptr`.|  
   

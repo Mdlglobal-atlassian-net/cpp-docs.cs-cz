@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25780092d11580225bef325c53e99c82263267b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-document-frame-windows"></a>Vytváření oken s rámečkem v dokumentu
 [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md) ukazuje, jak [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objekt orchestruje vytváření oken s rámečkem, dokumentů a zobrazení a jejich připojením všechny společně. Tři [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumenty, které mají `CDocTemplate` konstruktor zadejte oken s rámečkem, dokumentů a zobrazení třídy, které šablona dokumentu vytvoří dynamicky v reakci na příkazy uživatele jako nový příkaz v souboru nabídky nebo v nabídce okna MDI příkaz nové okno. Šablona dokumentu ukládá tyto informace pro pozdější použití při vytváření okna rámce pro zobrazení a dokumentu.  

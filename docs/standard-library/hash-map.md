@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e69496f3383233c45ba994305342c3340459a287
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: a996142e128f4113fb9d1057cd061155dae251f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map –&gt;
 > [!NOTE]
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](cpp-standard-library-reference.md)
 
 
 

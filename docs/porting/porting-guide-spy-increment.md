@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 Tato přenosem Případová studie slouží k získáte představu o jaké typické přenosem projekt je stejně jako typy problémů, může dojít k a některé obecné tipy a triky pro adresování přenosem problémy. Smyslem není jako spolehlivý Průvodce přenosem, protože možností portování projektu velmi mnohem závisí na specifika kódu.  
@@ -503,7 +504,7 @@ virtual void OnSelectTab(int nTab) {};
 virtual void OnSelectTab(int /*nTab*/) {};  
 ```  
   
- Další upozornění, které jsme obdrželi byly užitečné pro obecné kód čištění. Existuje několik implicitní převody z `int` nebo `unsigned int` k `WORD` (což je typedef pro `unsigned short`). Ty zahrnují možné ztrátě dat.. Jsme přidali přetypování na `WORD` v těchto případech.  
+ Další upozornění, které jsme obdrželi byly užitečné pro obecné kód čištění. Existuje několik implicitní převody z `int` nebo `unsigned int` k `WORD` (což je typedef pro `unsigned short`). Ty zahrnují možné ztrátě dat. Jsme přidali přetypování na `WORD` v těchto případech.  
   
  Další úroveň 4 upozornění, které jsme tu pro tento kód byl:  
   
