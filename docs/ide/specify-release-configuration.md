@@ -14,17 +14,18 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce56bc4839ff7f284a9c8c9bd96331742459fd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Specifikace konfigurace nastavení pro vydání , Průvodce vytvoření nového projektu z existujících souborů kódu
 Na této stránce Průvodce vytvoření nového projektu z existujících souborů kódu můžete nastavení konfigurace verze projektu.  
   
 ## <a name="task-list"></a>Seznam úloh  
- [Postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+ [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **Stejné jako konfiguraci ladění**  
@@ -58,4 +59,4 @@ Na této stránce Průvodce vytvoření nového projektu z existujících soubor
  Určuje sestavení .NET zpracovat při vytváření nového projektu. Další informace najdete v tématu [/FU (vynuceným názvem #using souboru)](../build/reference/fu-name-forced-hash-using-file.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Specifikace nastavení projektu, vytvoření nového projektu z existujících souborů kódu pomocí Průvodce](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
+ [Specifikace nastavení projektu, Průvodce vytvořením nového projektu z existujících souborů kódu](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

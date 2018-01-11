@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c79a01e5c6724ab37a29e8f3b80ca9a3346f1440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 919573139ee8bd37c210d91f223a1c41d28d7b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tvorba běžných projektů pomocí průvodců aplikací
 Každý typ projektu jazyka Visual C++ obsahuje průvodce aplikací, který pomáhá rychle a snadno generovat nové projekty modelované ze šablony projektu.  Pokud chcete otevřít Průvodce aplikací, použijte **nový projekt** dialogové okno k určení vlastností projektu, například název projektu, nebo adresář a řešení kde se bude nacházet projektu.  
@@ -48,4 +49,4 @@ Každý typ projektu jazyka Visual C++ obsahuje průvodce aplikací, který pom�
 ## <a name="see-also"></a>Viz také  
  [Vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [MFC průvodců a dialogových oken](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
- [ATL průvodců a dialogových oken](../atl/reference/atl-wizards-and-dialog-boxes.md)
+ [Průvodci a dialogová okna ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)

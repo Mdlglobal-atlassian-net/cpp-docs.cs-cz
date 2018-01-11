@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42912e047279e3da30f84d1ef3560c36143e6964
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7986da0ae1906293e2d107b382e4ee4e41212ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers"></a>Kontejnery
 Aplikace kontejneru je aplikace, která může obsahovat vložené nebo propojené položky do svých vlastních dokumentů. Dokumenty spravuje aplikace kontejneru musí být schopný k uložení a zobrazení OLE složeného dokumentu součásti a také data vytvořená vlastní aplikace. Aplikace kontejneru musí také umožňují uživatelům vložit nové položky nebo upravit existující položky.  
@@ -43,5 +44,5 @@ Aplikace kontejneru je aplikace, která může obsahovat vložené nebo propojen
  [OLE](../mfc/ole-in-mfc.md)   
  [Servery](../mfc/servers.md)   
  [Aktivace](../mfc/activation-cpp.md)   
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
+ [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
 

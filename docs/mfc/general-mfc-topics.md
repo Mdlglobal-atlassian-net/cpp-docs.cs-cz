@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc2da54365af1d09d92608c4e6f37c3b04fd7230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97f3b609a68071f34e1841128a66b5518e1b17db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-mfc-topics"></a>Obecná témata MFC
 Tato řada článků obsahuje technické podrobnosti o knihovně Microsoft Foundation Class (MFC) a poskytuje přehled rozhraní MFC a jeho klíčových komponent a podsystémů.  
@@ -35,25 +36,25 @@ Tato řada článků obsahuje technické podrobnosti o knihovně Microsoft Found
   
  [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)  
   
- [Verze knihovny MFC](../mfc/mfc-library-versions.md)  
+ [MFC – knihovní verze](../mfc/mfc-library-versions.md)  
   
  [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
- [Vytváření v rozhraní Framework](../mfc/building-on-the-framework.md)  
+ [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)  
   
- [CWinApp – Třída aplikace](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)  
   
  [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
  [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
- [Zpracování nečinné smyčky](../mfc/idle-loop-processing.md)  
+ [Zpracování smyčky nečinnosti](../mfc/idle-loop-processing.md)  
   
  [Podpora kontextů aktivace ve stavu modulu MFC](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
   
  [Izolace knihovny běžných ovládacích prvků MFC](../mfc/isolation-of-the-mfc-common-controls-library.md)  
   
- [Požadavky na sestavení pro běžné ovládací prvky Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)  
+ [Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)  
   
  [Postupy: Přidání podpory správce restartování](../mfc/how-to-add-restart-manager-support.md)  
   
@@ -64,5 +65,5 @@ Tato řada článků obsahuje technické podrobnosti o knihovně Microsoft Found
  Informace o rozhraní ATL najdete v tématu [Active referenční příručka knihovny šablony](../atl/atl-class-overview.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s objekty oken](../mfc/working-with-window-objects.md)
+ [Práce s objekty oken](../mfc/working-with-window-objects.md)
 

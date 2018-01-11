@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a95212d3774e9befeccbd8f0da3773305041d11c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25685991222b02f4c622f344b06e9faaea4caf02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threadprivate"></a>threadprivate
 Určuje, že je na vlákno soukromé proměnné.  
@@ -72,4 +73,4 @@ int main()
  Pro ukázkové použití `threadprivate`, najdete v části [privátní](../../../parallel/openmp/reference/private-openmp.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy jazyka](../../../parallel/openmp/reference/openmp-directives.md)
+ [Direktivy](../../../parallel/openmp/reference/openmp-directives.md)

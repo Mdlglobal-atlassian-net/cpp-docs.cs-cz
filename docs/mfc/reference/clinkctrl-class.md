@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl – třída
 Poskytuje funkci běžné SysLink ovládacího prvku Windows.  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parametry  
  `lpszLinkMarkup`  
- Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706) v [knihovny MSDN](http://go.microsoft.com/fwlink/linkid=556).  
+ Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Určuje styl řízení propojení. Použijte libovolnou kombinaci styly ovládacího prvku. V tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) v `Windows SDK` Další informace.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parametry  
  `lpszLinkMarkup`  
- Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706) v [knihovny MSDN](http://go.microsoft.com/fwlink/linkid=556).  
+ Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Určuje styl rozšířené ovládací prvek odkazu. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
@@ -469,4 +470,4 @@ BOOL SetItemUrl(
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třída CWnd](../../mfc/reference/cwnd-class.md)
+ [CWnd – třída](../../mfc/reference/cwnd-class.md)

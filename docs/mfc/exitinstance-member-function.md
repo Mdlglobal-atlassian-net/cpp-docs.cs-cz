@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dc1710bbb6efd5bc48aa0b640c8e05747dce2e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99898a5e80c3f487c7f53fe81d13d3d1eb55ebd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance – členská funkce
 [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funkce člena třídy [CWinApp](../mfc/reference/cwinapp-class.md) nazývá pokaždé, když kopie aplikace ukončí, obvykle v důsledku opuštění aplikace uživatele.  
@@ -30,4 +31,4 @@ ms.lasthandoff: 10/24/2017
  Přepsání `ExitInstance` Pokud potřebujete čištění zvláštní zpracování, např. tím uvolní prostředky rozhraní GDI grafiky zařízení nebo rušení přidělení paměti při spuštění programu. Čištění standardní položek, jako jsou dokumenty a zobrazení, ale poskytuje rozhraní, pomocí jiných přepisovatelné funkce pro provádění speciální čištění, které jsou specifické pro tyto objekty.  
   
 ## <a name="see-also"></a>Viz také  
- [CWinApp – Třída aplikace](../mfc/cwinapp-the-application-class.md)
+ [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

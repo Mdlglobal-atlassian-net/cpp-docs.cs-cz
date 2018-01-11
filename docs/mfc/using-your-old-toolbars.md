@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86a26667c065ec8b10694c0bc16e79979b01eab7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b64c1b9c5cf38337cd286a86275331f4f5f65daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-your-old-toolbars"></a>Použití starých panelů nástrojů
 Pokud jste použili k vytvoření vlastní panely nástrojů, novou implementací třídy předchozích verzí aplikace Visual C++ [ctoolbar –](../mfc/reference/ctoolbar-class.md) by mohla způsobovat problémy. Takže nemáte k uvolnění starých panelů nástrojů využívat nové funkce, staré implementace je nadále podporován.  
@@ -41,5 +42,5 @@ Pokud jste použili k vytvoření vlastní panely nástrojů, novou implementac�
 -   [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace panelu nástrojů v MFC](../mfc/mfc-toolbar-implementation.md)
+ [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)
 

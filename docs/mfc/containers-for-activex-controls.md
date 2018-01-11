@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18e427c4b66969b92b6ba0683b9b40cf25caac08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9da47cd7fe5c69a7506bcb339cb1ad09d22c3984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-for-activex-controls"></a>Kontejnery pro ovládací prvky ActiveX
 ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikacích můžete použít také podporují uzavření ovládacího prvku ActiveX. Počet aplikací společnosti Microsoft, počínaje verzí uvedených, podporují uzavření ovládacího prvku ActiveX.  
@@ -59,5 +60,5 @@ ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikac�
 -   Modul Plug-in pro Netscape Navigátor NCompass  
   
 ## <a name="see-also"></a>Viz také  
- [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)
+ [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

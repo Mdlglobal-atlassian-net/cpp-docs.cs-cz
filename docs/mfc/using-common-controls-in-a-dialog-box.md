@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e31c979feb82fd72eb739e2bcfb2816159cfe88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67a9c77e6a8e5721bca6e3741b4b337cfdb42393
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Použití běžných ovládacích prvků v dialogovém okně
 Běžné ovládací prvky Windows lze použít v [dialogová okna](../mfc/dialog-boxes.md), tvoří zobrazení, zobrazení záznamů a další okno, podle šablony dialogového okna. Následující postup s menšími změnami, budou fungovat v forms také.  

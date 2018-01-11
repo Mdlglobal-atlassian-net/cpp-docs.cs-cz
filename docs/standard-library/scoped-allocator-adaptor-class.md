@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c74216b8b510b17327c22a087295725049c4f024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor – třída
 Představuje vnoření alokátorů.  
@@ -104,7 +105,7 @@ class scoped_allocator_adaptor;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[přidělit](#allocate)|Přidělí paměť pomocí `Outer` přidělení.|  
+|[allocate](#allocate)|Přidělí paměť pomocí `Outer` přidělení.|  
 |[konstrukce](#construct)|Vytvoří objekt.|  
 |[zrušit přidělení](#deallocate)|Zruší přidělení objektů pomocí přidělujícího modulu vnější.|  
 |[Destroy –](#destroy)|Odstraní zadaný objekt.|  

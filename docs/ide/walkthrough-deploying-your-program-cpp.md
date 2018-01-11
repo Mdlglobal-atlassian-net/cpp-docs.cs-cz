@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6cec4d77ec1c5bcc010a061065516ef132ec88c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
 Teď, když jste vytvořili vaší aplikace pomocí dříve související názorné postupy, které jsou uvedeny v [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalační program tak, aby mohou ostatní uživatelé Nainstalujte aplikaci na svých počítačích. K tomuto účelu přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který bude instalovat aplikaci na jiném počítači.  
@@ -96,5 +97,5 @@ Teď, když jste vytvořili vaší aplikace pomocí dříve související názor
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavení C/C++ programů](../build/building-c-cpp-programs.md)  
+ [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)  
  [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

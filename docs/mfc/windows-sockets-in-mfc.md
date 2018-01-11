@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01c61a00fe9a0f34a6f1237e0b7307fd8924e6be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdade770449b7ae5db9db9a170198b81cbeaf970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows sockets v prostředí MFC
 > [!NOTE]
@@ -56,25 +57,25 @@ ms.lasthandoff: 10/24/2017
   
  Další informace o rozhraní Windows Sockets najdete v tématu:  
   
--   [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   
 -   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
   
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
 -   [Windows Sockets: Posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md)  
   
 -   [Windows Sockets: Příklady soketů využívajících archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
   
--   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
 -   [Windows Sockets: Oznámení soketů](../mfc/windows-sockets-socket-notifications.md)  
   
--   [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)  
   
 -   [Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md)  
   
@@ -83,5 +84,5 @@ ms.lasthandoff: 10/24/2017
 -   [Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets](../mfc/windows-sockets.md)
+ [Rozhraní Windows Sockets](../mfc/windows-sockets.md)
 

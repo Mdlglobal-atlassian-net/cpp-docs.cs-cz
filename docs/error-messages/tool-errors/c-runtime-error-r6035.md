@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>R6035 Chyba za běhu C
 Knihovna prostředí Runtime Microsoft Visual C++, chyba R6035 – Modul této aplikace inicializuje soubor cookie globálního zabezpečení, když se funkce spoléhá na to, že je soubor cookie zabezpečení aktivní.  Call __security_init_cookie earlier.  
@@ -76,4 +77,4 @@ void DllEntryHelper() {
 >  Chybová zpráva R6035 se vygeneruje pouze při ladění CRT platformy x86 a pouze pro strukturované zpracování výjimek. Tato podmínka je však chybou na všech platformách a pro všechny formy zpracování výjimek, například zpracování výjimek jazyka C++ EH.  
   
 ## <a name="see-also"></a>Viz také  
- [Podrobněji kontroly zabezpečení kompilátoru](http://go.microsoft.com/fwlink/?linkid=7260)
+ [Podrobněji kontroly zabezpečení kompilátoru](http://go.microsoft.com/fwlink/p/?linkid=7260)

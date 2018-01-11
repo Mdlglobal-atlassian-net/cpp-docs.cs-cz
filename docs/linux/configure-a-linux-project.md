@@ -11,11 +11,14 @@ ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 893194b3e08b56e4abe892033193b167b46dab27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 Toto téma popisuje postup konfigurace projektu Visual Studio Linux. Informace o projektech CMake Linux najdete v tématu [konfigurace projektu CMake Linux ](cmake-linux-project.md).
@@ -69,7 +72,7 @@ Vzhledem k tomu, že všechny kompilace se děje ve vzdáleném počítači, ně
 ![Události sestavení](media/settings_buildevents.png)
 
 ## <a name="see-also"></a>Viz také
-[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
+[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
 [C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)  
 [Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
 [Kopírovat zdroje vlastnosti projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)  

@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fdfbded65f8f5a728037793a8c4f870ffafc74b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b78c4c086b40f786d86411c99279245704a48a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-design-choices"></a>Volby při návrhu aplikací
 Tento článek popisuje některé problémy návrhu, které je třeba zvážit při programování pro Internet.  
@@ -93,5 +94,5 @@ Tento článek popisuje některé problémy návrhu, které je třeba zvážit p
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   
  [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Asynchronní Monikery na Internetu](../mfc/asynchronous-monikers-on-the-internet.md)
+ [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)
 

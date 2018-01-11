@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67d2df7d72de079a0408847c433000a652ac6aaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e7b8b2cf605e0f53418755b65151fd9eb2cff5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destroying-window-objects"></a>Zničení objektů oken
 Musí dát pozor s vlastními podřízená okna odstranění objektu okna C++ po dokončení se uživatel s okna. Pokud nejsou tyto objekty zničený, vaše aplikace nebude obnovit jejich paměti. Naštěstí rozhraní spravovat odstraňování oken, jakož i vytvoření oken s rámečkem, zobrazeních a dialogových oken. Pokud vytvoříte další windows, jste zodpovědní za jejich likvidace.  

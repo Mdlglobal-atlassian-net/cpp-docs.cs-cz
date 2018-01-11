@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f98cc77ecc11f2b3ea07352e48c1e6a096125300
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f14998ce663e5a8e53901acf9192719fa41e724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-flicker-free-activation"></a>Zajištění aktivace bez blikání
 Pokud vlastní ovládací prvek nevykresluje samotné stejně jako ve stavu neaktivní a aktivní (a nepoužívá aktivace bez oken), můžete eliminovat kreslení operace a doprovodné visual blikání, které obvykle dojít při provádění přechod mezi neaktivní a aktivní stavy. Chcete-li to provést, zahrňte **noFlickerActivate** příznak v sadě příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Příklad:  
@@ -35,5 +36,5 @@ Pokud vlastní ovládací prvek nevykresluje samotné stejně jako ve stavu neak
  Pokud používáte aktivace bez oken, optimalizace nemá žádný vliv.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md)
+ [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

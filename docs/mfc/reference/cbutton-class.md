@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>CButton – třída
 Poskytuje funkce Windows ovládacích prvků.  
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  `true`Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud ovládací prvek tlačítko nebo příkaz odkaz vyžaduje zvýšená oprávnění k provedení akce, nastavení ovládacího prvku `elevation required` stavu. Následně Windows zobrazuje ikona štítu řízení uživatelských účtů (UAC) na ovládací prvek. Další informace najdete v tématu "Řízení uživatelských účtů" v [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+ Pokud ovládací prvek tlačítko nebo příkaz odkaz vyžaduje zvýšená oprávnění k provedení akce, nastavení ovládacího prvku `elevation required` stavu. Následně Windows zobrazuje ikona štítu řízení uživatelských účtů (UAC) na ovládací prvek. Další informace najdete v tématu "Řízení uživatelských účtů" v [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Tato metoda odesílá [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) zprávy, která je popsána v sadě Windows SDK.  
   

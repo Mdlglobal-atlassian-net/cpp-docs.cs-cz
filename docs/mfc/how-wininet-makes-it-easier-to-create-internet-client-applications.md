@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd3492afb8725ccc510d185c025a27f2ce07f7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
 Win32 – internetová rozšíření nebo WinInet, poskytují přístup k běžné Internetové protokoly, včetně gopher, FTP a HTTP. Pomocí WinInet, můžete napsat internetové klientské aplikace na vyšší úrovni programování, aniž byste museli řešit rozhraní WinSock, protokolu TCP/IP nebo podrobnosti o konkrétní internetových protokolech. WinInet poskytuje konzistentní sadu funkcí pro všechny tři protokoly s známé rozhraní Win32 API. Tato konzistence minimalizuje změn kódu, které budete muset udělat, pokud se změní základního protokolu (například z FTP HTTP).  
@@ -56,5 +57,5 @@ Win32 – internetová rozšíření nebo WinInet, poskytují přístup k běžn
   
 ## <a name="see-also"></a>Viz také  
  [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Jak MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+ [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 839a597624c0f1a00ab983ecd5f2f31aeefbd953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Internetu bez úprav. Můžete však změnit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, existují další aspekty. Soubor .ocx a všechny podpůrné soubory musí být v cílovém počítači nebo stáhnout přes Internet. Díky velikosti kódu a stažení čas důležitý faktor. Stahování se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit ovládací prvek jako bezpečné pro skriptování a jako bezpečné pro inicializaci.  
@@ -85,7 +86,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  Soubory CAB jsou doporučeným způsobem balíček ovládací prvky ActiveX, které používají MFC. Balení ovládacího prvku ActiveX knihovny MFC v souboru CAB umožňuje soubor s příponou INF mají být zahrnuty do ovládacího prvku instalace ovládacího prvku ActiveX a všechny závislé knihoven DLL (například MFC DLL). Pomocí souboru CAB automaticky komprimuje kódu pro rychlejší stahování. Pokud používáte soubor .cab pro součástí ke stažení, je rychlejší k podepsání souboru CAB celý než jednotlivých součástí.  
   
 ### <a name="creating-cab-files"></a>Vytváření souborů CAB  
- Soubor CAB Development Kit si můžete stáhnout z článku znalostní báze [310618: Microsoft soubor CAB Software Development Kit](http://go.microsoft.com/fwlink/linkid=148204). V této sadě zjistíte nástroje potřebné k vytvoření souborů CAB.  
+ Soubor CAB Development Kit si můžete stáhnout z článku znalostní báze [310618: Microsoft soubor CAB Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). V této sadě zjistíte nástroje potřebné k vytvoření souborů CAB.  
   
  Soubor CAB na kterou odkazuje `CODEBASE` by měly obsahovat soubor .ocx pro ovládací prvek ActiveX a soubor s příponou INF k řízení jeho instalace. Vytvoříte soubor CAB tak, že zadáte název řídicí soubor a soubor s příponou INF. Nezahrnujte závislé knihovny DLL, které možná již existuje v systému v tomto souboru CAB. Knihovny MFC DLL jsou například zabalené do samostatného souboru CAB a řízení soubor INF.  
   
@@ -266,5 +267,5 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   
- [Ovládací prvky MFC ActiveX: Licencování ovládacích prvků ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+ [MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
 

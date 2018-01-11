@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 748b28288df33ab61674dc0cf4044db28c263d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d949486867200c0349d52805a94b6cddf48d357f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-concepts"></a>MFC – koncepce
 Tato část obsahuje témata koncepční a založený na úlohách, které vám pomůže programu pomocí knihovny Microsoft Foundation Class (MFC).  
@@ -48,14 +49,14 @@ Tato část obsahuje témata koncepční a založený na úlohách, které vám 
  [Serializace](../mfc/serialization-in-mfc.md)  
  Vysvětluje mechanismu serializace poskytované povolit objekty, které chcete zachovat mezi spouští vašeho programu.  
   
- [Kódování Unicode](../mfc/unicode-in-mfc.md)  
+ [Unicode](../mfc/unicode-in-mfc.md)  
  Popisuje Podpora MFC pro standard pro kódování na platformách systému Windows NT, Windows 2000 a Windows XP široké znaky kódování Unicode.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Výjimka zpracování (MFC)](../mfc/exception-handling-in-mfc.md)  
  Popisuje dostupné v prostředí MFC mechanismus zpracování výjimek.  
   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)  
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)  
  Popisuje třídy MFC, které podporují internetové programování.  
   
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)  
@@ -64,10 +65,10 @@ Tato část obsahuje témata koncepční a založený na úlohách, které vám 
  [MFC COM](../mfc/mfc-com.md)  
  Popisuje podmnožinu MFC, který je určený k podpory modelu COM, zatímco většina Active šablony Library (ATL) slouží pro programování COM.  
   
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
  Popisuje, co jsou vláken a procesů a popisuje MFC přístup k více vláken.  
   
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets.md)  
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets.md)  
  Popisuje implementace MFC rozhraní Windows Sockets.  
   
  [Odkaz knihovny MFC](../mfc/mfc-desktop-applications.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0372e407927d270fe5115fd3b5646d59049d269d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provádí pomocí uživatelského rozhraní (UI) vlákno v aplikaci Microsoft Foundation třídy (MFC) pracovní vlákno pomocí Concurrency Runtime. Tento dokument také ukazuje, jak zlepšit výkon časově náročná operace kreslení.  
@@ -34,11 +35,11 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
 -   [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)  
+-   [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
   
 -   [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)  
   
--   [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)  
+-   [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)  
   
  Doporučujeme taky, že chápete základní informace o vývoji aplikací MFC a [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] před spuštěním tohoto průvodce. Další informace o rozhraní MFC najdete v tématu [aplikace MFC plochy](../../mfc/mfc-desktop-applications.md). Další informace o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], najdete v části [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
@@ -233,4 +234,4 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
  [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)   
  [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)   
  [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)   
- [Běžné aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)
+ [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)

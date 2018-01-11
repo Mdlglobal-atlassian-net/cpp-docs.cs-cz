@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ce24f1f7b50a899f02cc8578a293aa5734548b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ – referenční dokumentace preprocesoru
 *Referenční dokumentace jazyka C/C++ Preprocessor* preprocesor vysvětluje, jak je implementované v Microsoft C/C++. Preprocesor provede předběžné soubory C a C++ operace předtím, než jsou předávány kompilátoru. Podmíněná kompilace kódu, vložit soubory, zadejte kompilace chybové zprávy a specifické pro počítač pravidla použít na části kódu můžete preprocesor.  
@@ -35,11 +36,11 @@ ms.lasthandoff: 10/24/2017
  [Předdefinovaná makra](../preprocessor/predefined-macros.md)  
  Popisuje předdefinovaná makra nastavené ANSI a Microsoft C++.  
   
- [Direktivy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+ [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
  Popisuje direktivy, který nabízí způsob, jak každý kompilátoru nabízet počítače a operačního systému konkrétní funkce a přitom zachovat celkové kompatibilitu s jazyky C a C++.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)  
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)  
  Poskytuje referenční materiál pro implementaci Microsoft jazyka C++.  
   
  [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)  

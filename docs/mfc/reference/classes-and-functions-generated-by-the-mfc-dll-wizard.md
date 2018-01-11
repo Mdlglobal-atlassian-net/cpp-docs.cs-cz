@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52465b01b8644b2f4ea1f4a22412af0159e4f598
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0cc40da55dce6edbbae0afcfe923dccc600802f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Třídy a funkce generované průvodcem knihovnou MFC DLL
 Kód, který generuje Průvodce MFC DLL závisí na druhu knihovny DLL, kterou vytváříte a možnosti, které jste vybrali. Průvodce MFC DLL generuje stejný kód pro obě formy regulární MFC – knihovny DLL.  
@@ -38,5 +39,5 @@ Kód, který generuje Průvodce MFC DLL závisí na druhu knihovny DLL, kterou v
 |[Regulární](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Okno Sockets|Aplikační třída odvozená z`CWinApp`|`InitInstance`obsahuje volání`AfxSocketInit`|  
   
 ## <a name="see-also"></a>Viz také  
- [MFC DLL – Průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)
+ [MFC DLL – průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)
 

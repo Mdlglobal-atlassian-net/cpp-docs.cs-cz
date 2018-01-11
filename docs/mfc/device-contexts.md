@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 641ea3d50be4d739b19ea8e53424cc311016362b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="device-contexts"></a>Kontexty zařízení
 Kontext zařízení je datová struktura Windows obsahující informace o kreslení atributy zařízení, například zobrazení nebo tiskárnu. Všechny kreslení volání prostřednictvím objektu kontextu zařízení, který zapouzdřuje rozhraní API systému Windows pro kreslení čáry, tvary a text. Kontexty zařízení povolí kreslení nezávislé na zařízení v systému Windows. Kontexty zařízení lze použít k vykreslení na obrazovku, na tiskárnu nebo metasoubory.  
@@ -67,7 +68,7 @@ Kontext zařízení je datová struktura Windows obsahující informace o kresle
   
 -   [Kontexty zařízení (definice)](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
   
--   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
+-   [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)  
   
 -   [Interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md)  
   

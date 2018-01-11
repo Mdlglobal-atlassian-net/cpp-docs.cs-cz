@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b94fb68ad28e45141551b238acf99baedf78ef6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Postupy: Vytvoření agenta toku dat
 Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou založené na toku dat, místo tok řízení.  
@@ -36,7 +37,7 @@ Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou
   
 - [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
-- [Postupy: použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+- [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
 ##  <a name="top"></a>Oddíly  
  Tento názorný postup obsahuje následující části:  
@@ -154,5 +155,5 @@ info: ===Logging finished.===
  [[Horní](#top)]  
   
 ## <a name="see-also"></a>Viz také  
- [Návody k Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
+ [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

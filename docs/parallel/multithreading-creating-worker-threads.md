@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c43b8453b592369d8179c9d3917bdbcc7381fa00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading: Vytváření pracovních vláken
 Pracovní podproces se často používá ke zpracování úlohy na pozadí, které uživatel by neměl mít čekat chcete pokračovat v používání aplikace. Úlohy, jako je při každém přepočítání a tisk na pozadí jsou dobrými příklady pracovních vláken. V tomto tématu najdete postup potřeba vytvořit pracovní vlákno. Témata zahrnují:  
@@ -101,4 +102,4 @@ AfxBeginThread(MyThreadProc, pNewObject);
 -   [Multithreading: Vytváření vláken uživatelského rozhraní](../parallel/multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3976e9455966914e124fbfd5a4d2479866305b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>Ovládací prvky dialogových oken a typy proměnných
 Můžete použít [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) přidání členské proměnné na ovládací prvek dialogového okna vytvořené pomocí knihovny MFC. Typ ovládacího prvku, pro kterou přidáte členské proměnné určuje možnosti, které se zobrazují v dialogovém okně.  

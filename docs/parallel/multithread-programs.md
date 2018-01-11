@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: effbb235ef678253f5258d3eb01a3a82292385cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithread-programs"></a>Programy s více vlákny
 Vlákno je v podstatě cesta provádění prostřednictvím programu. Je také nejmenší jednotkou provádění, která plánuje Win32. Vlákno se skládá z zásobníku, stav registrů CPU a položku v seznamu spuštění plánovače systému. Každé vlákno sdílí všech procesů prostředky.  
@@ -30,4 +31,4 @@ Vlákno je v podstatě cesta provádění prostřednictvím programu. Je také n
  Každé vlákno v procesu funguje nezávisle. Pokud jste je zpřístupněte k sobě navzájem, vláken provést jednotlivě a neberou v jiných vláken v procesu. Sdílení společných prostředků, vláken, musí však koordinovat práci pomocí semaforů nebo použijte jinou metodu meziprocesová komunikace. Další informace o synchronizaci vláken najdete v tématu [psaní programů s více vlákny Win32](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

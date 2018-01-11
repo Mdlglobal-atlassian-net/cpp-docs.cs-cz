@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a8cd0a5a30f5ae3e7c2f551c667a014f8bb85f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f87bc7e26fd7cc50defbc086594c92a3ea339ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-warning-prj0049"></a>Upozornění sestavení projektu PRJ0049
 Odkazovaná cíl '\<odkaz > se vyžaduje rozhraní .NET Framework \<MinFrameworkVersion > a nebude možné spustit na cílový framework projektu na  
@@ -34,4 +35,4 @@ Odkazovaná cíl '\<odkaz > se vyžaduje rozhraní .NET Framework \<MinFramework
     -   Odeberte odkaz na sestavení nebo projekt, který má minimální framework verzi, která je novější než cílové rozhraní. Tyto položky budou označeny ikonou upozornění v projektu **stránky vlastností**.  
   
 ## <a name="see-also"></a>Viz také  
- [Chyby sestavení a upozornění projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+ [Chyby a upozornění sestavení projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

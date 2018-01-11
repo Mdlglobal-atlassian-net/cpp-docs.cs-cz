@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 875df8f8205d132cf6bcafe536c221876a5e3e51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-support-mfc-application-wizard"></a>Podpora databáze, Průvodce aplikací knihovny MFC
 Tato stránka obsahuje možnosti, které vám umožní určit úroveň databáze podporu pro svůj projekt (plus zdroj dat, v případě potřeby).  
@@ -47,7 +48,7 @@ Tato stránka obsahuje možnosti, které vám umožní určit úroveň databáze
 |Možnost|Popis|  
 |------------|-----------------|  
 |**OLE DB**|Pokud je vybraná tato možnost, kliknutím na tlačítko **zdroj dat** tlačítko vyvolá **vlastnosti propojení dat** Průvodce vám pomůže vytvořit připojení ke zdroji dat OLE DB.|  
-|**ROZHRANÍ ODBC**|Pokud je vybraná tato možnost, kliknutím na tlačítko **zdroj dat** tlačítko vyvolá **vybrat zdroj dat** Průvodce vám pomůže vytvořit připojení ke zdroji dat rozhraní ODBC.|  
+|**ODBC**|Pokud je vybraná tato možnost, kliknutím na tlačítko **zdroj dat** tlačítko vyvolá **vybrat zdroj dat** Průvodce vám pomůže vytvořit připojení ke zdroji dat rozhraní ODBC.|  
   
  **Zdroj dat**  
  Klikněte **zdroj dat** tlačítko Nastavení zdroje dat pomocí zadaného ovladače nebo zprostředkovatele a databáze. Pokud jste vybrali OLE DB v **typ klienta** možnost, zobrazí toto tlačítko **vlastnosti propojení dat** dialogové okno. Pokud jste vybrali v ODBC **typ klienta** možnost, poskytuje toto tlačítko **vybrat zdroj dat** dialogové okno. Tato možnost je dostupná pouze v případě, že se rozhodnete zahrnout zobrazení databáze v aplikaci.  
@@ -75,4 +76,4 @@ Tato stránka obsahuje možnosti, které vám umožní určit úroveň databáze
 |Snímek|Určuje, že je záznamů snímku. Snímek je výsledek dotazu a zobrazení do databáze v jednom bodě v čase. Všechny záznamy nalezené v důsledku dotaz jsou v mezipaměti, takže se nezobrazí žádné změny původní záznamy.|  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
+ [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d30a06cc420b5e9f00f0340e92295ca629ad6fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore – třída
 Zabalí funkcí rozhraní API systému Windows, poskytnutím objektově orientované rozhraní, které používáte pro přístup k registru.  
@@ -128,7 +129,7 @@ CSettingsStore(
  Logický parametr, který určuje, zda `CSettingsStore` objekt se vytvoří v režimu jen pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bAdmin` je nastaven na `false`, `m_hKey` člen proměnná je nastavená na `HKEY_LOCAL_MACHINE`. Pokud nastavíte `bAdmin` k `true`, `m_hKey` je nastaven na `HKEY_CURRENT_USER`.  
+ Pokud `bAdmin` je nastaven na `true`, `m_hKey` člen proměnná je nastavená na `HKEY_LOCAL_MACHINE`. Pokud nastavíte `bAdmin` k `false`, `m_hKey` je nastaven na `HKEY_CURRENT_USER`.  
   
  Zabezpečený přístup závisí na `bReadOnly` parametr. Pokud `bReadonly` je `false`, nastaví se zabezpečený přístup `KEY_ALL_ACCESS`. Pokud `bReadyOnly` je `true`, zabezpečený přístup bude nastavena pro kombinaci `KEY_QUERY_VALUE, KEY_NOTIFY` a `KEY_ENUMERATE_SUB_KEYS`. Další informace o zabezpečení přístupu spolu s registru najdete v tématu [zabezpečení klíč registru a přístupová práva](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   

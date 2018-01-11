@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4c5c15e7d18fb768b7b0fffa99140ae64075da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-class-design-philosophy"></a>Obecná filosofie návrhu tříd
 Microsoft Windows byla navržená tak dlouho, než se aktivovala oblíbených jazyka C++. Vzhledem k tisícům aplikací používá rozhraní (API) Windows jazyka C, že rozhraní se zachová v dohledné budoucnosti. Každé rozhraní C++ Windows musí být proto postavená na procedurální rozhraní API jazyka C. To zaručuje, že aplikace C++ nebudou existovat společně s aplikacemi C.  
@@ -53,7 +54,7 @@ Microsoft Windows byla navržená tak dlouho, než se aktivovala oblíbených ja
   
 -   [Architektura aplikace](../mfc/application-framework.md)  
   
--   [Vztah k rozhraní API jazyka C](../mfc/relationship-to-the-c-language-api.md)  
+-   [Vztah k rozhraní API jazyka C](../mfc/relationship-to-the-c-language-api.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../mfc/class-library-overview.md)

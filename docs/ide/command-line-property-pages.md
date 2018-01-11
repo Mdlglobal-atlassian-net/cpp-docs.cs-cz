@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 320e3ac5126ec1e60d768e7c109f32610103f93b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d6c2958c1f6cd5954efb9c8166c151cf2a8cc29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-property-pages"></a>Stránky vlastností příkazového řádku
 Většina složek stránky vlastností obsahovat **příkazového řádku** stránku vlastností. Tato stránka zobrazuje vlastnosti, které jsou nastavené ve složce. **Příkazového řádku** vlastnost stránka taky obsahuje **další možnosti** pole, kde můžete určit vlastnosti, které jsou platné pro nástroj, ale pro kterou neexistuje vlastnost ve složce.  
@@ -30,4 +31,4 @@ Většina složek stránky vlastností obsahovat **příkazového řádku** str�
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
- [. Soubory LIB jako vstup Linkeru](../build/reference/dot-lib-files-as-linker-input.md)
+ [Soubory .Lib jako vstup linkeru](../build/reference/dot-lib-files-as-linker-input.md)

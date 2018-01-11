@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a1c0ced45fc7f9c4e51a5dbe8a888c030a6b957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
 Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který se označí ke generování dokumentace. Další informace najdete v tématu [doporučené značky dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). ID řetězec jednoznačně identifikuje konstruktu. Programy, které zpracovávají soubor .xml můžete použít ID řetězec k identifikaci odpovídající rozhraní .NET Framework metadata nebo reflexe položky na které se vztahuje na dokumentaci.  
@@ -86,7 +87,7 @@ Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který
   
      Pro typ, který je definován jako `public class MyClass<T, U>`.  
   
-     Pro metody trvá obecné typy jako parametry, jsou parametry obecného typu zadané jako čísla, kterými back rysky (například \`0, \`1).  Každý číslo představující zápis pole s nulovým základem pro obecné parametry typu..  
+     Pro metody trvá obecné typy jako parametry, jsou parametry obecného typu zadané jako čísla, kterými back rysky (například \`0, \`1).  Každý číslo představující zápis pole s nulovým základem pro obecné parametry typu.  
   
 ## <a name="example"></a>Příklad  
  Následující příklady ukazují, jak ID řetězce pro třídu a její členy by vytvořilo.  

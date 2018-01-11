@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8660501a679b994bfe8fa5e3ad5ff3728725667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43523cb5f4c024ec3e937e88fca7f78c341ab19d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4373"></a>C4373 kompilátoru upozornění (úroveň 3)
 '%$S': '%$pS' přepisování virtuální funkce, předchozí verze kompilátoru přepsat při parametry pouze podle const nebo volatile kvalifikátory lišil.  

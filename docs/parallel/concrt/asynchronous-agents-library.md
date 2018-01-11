@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77f0008e3bf3956d55dbeb68a24ed54a506e3ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-agents-library"></a>Knihovna asynchronních agentů
 Knihovna asynchronních agentů (nebo jenom *knihovna agentů*) poskytuje programovací model, který umožňuje zvýšit robustnost vývoj aplikace s povolenými souběžnosti. Knihovna agentů je knihovny šablon jazyka C++, který podporuje služby založené na objektu actor programovací model a zprávy v procesu předávání pro hrubý toku dat a paralelní zpracování úlohy. Knihovna agentů je založený na plánování a prostředků součásti správy Concurrency Runtime.  
@@ -68,28 +69,28 @@ agent1: received '42'.
  [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
  Popisuje různé typy bloku zpráv, které jsou poskytovány knihovna agentů.  
   
- [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)  
+ [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
  Popisuje různé rutiny předávání zpráv, které jsou poskytovány knihovna agentů.  
   
- [Postupy: implementace různých vzorů typu výrobce spotřebitel](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+ [Postupy: Implementace různých vzorů producent–příjemce](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
  Popisuje způsob implementace vzoru producent – příjemce ve vaší aplikaci.  
   
- [Postupy: poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
+ [Postupy: Poskytování pracovních funkcí třídám call a transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
  Znázorňuje několik způsobů, jak poskytování pracovních funkcí k [concurrency::call](../../parallel/concrt/reference/call-class.md) a [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) třídy.  
   
- [Postupy: použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
+ [Postupy: Použití transformace v datovém kanálu](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
  Ukazuje, jak používat [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) – třída v datovém kanálu.  
   
- [Postupy: výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
+ [Postupy: Výběr z dokončených úloh](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
  Ukazuje, jak používat [concurrency::choice](../../parallel/concrt/reference/choice-class.md) a [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy vyberte první úlohy k dokončení vyhledávacího algoritmu.  
   
- [Postupy: odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
+ [Postupy: Odesílání zpráv v pravidelných intervalech](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
  Ukazuje, jak používat [concurrency::timer](../../parallel/concrt/reference/timer-class.md) třída k odesílání zpráv v pravidelných intervalech.  
   
- [Postupy: použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+ [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
  Ukazuje, jak povolit bloku asynchronní zpráva k přijetí nebo odmítnutí zprávy pomocí filtru.  
   
- [Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
+ [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  Popisuje, jak používat různé paralelní vzory, třeba paralelní algoritmy ve svých aplikacích.  
   
  [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)  

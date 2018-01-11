@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb5f30dfaf3710e1b3dbe782a0aa24b3cd02deb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e23f1a138bfa6d297c33597b81035a11c1d96c03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-application"></a>Vytvoření aplikace MFC
 Aplikace MFC je spustitelný soubor aplikace pro Windows, která je založena na knihovna Microsoft Foundation Class (MFC). Nejjednodušší způsob, jak vytvořit aplikaci MFC je použití Průvodce aplikací MFC.  
@@ -35,11 +36,11 @@ Aplikace MFC je spustitelný soubor aplikace pro Windows, která je založena na
   
 -   [Vytváření a zobrazování dialogových oken](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Vytváření aplikací MFC založených na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
+-   [Vytvoření aplikace MFC založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [Vytváření aplikací MFC ve stylu Průzkumníka souborů](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
+-   [Vytvoření aplikace MFC ve stylu Průzkumníka souborů](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
   
--   [Vytváření aplikací MFC webové prohlížeče – styl](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
+-   [Vytvoření aplikace MFC ve stylu webového prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
   
  Průvodce aplikací MFC generuje příslušné třídy a soubory pro některý z těchto typů aplikací, v závislosti na možnostech, které vyberete v průvodci.  
   

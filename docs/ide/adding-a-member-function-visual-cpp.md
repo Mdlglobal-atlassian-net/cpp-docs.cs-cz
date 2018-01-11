@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f90aa1194a05fc8c79dbb811684151cbcbc4e2b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6edc2e33eeba8d2d3c6bd0a3778c1863ac295caa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-member-function-visual-c"></a>Přidání členské funkce (Visual C++)
 V **zobrazení tříd**, členské funkce můžete přidat všechny třídy. Když to uděláte, deklaraci se přidá do hlavičky souboru a stub – členská funkce text se přidá do souboru implementace třídy, který poté můžete upravit.  

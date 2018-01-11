@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 879078481cde75841cf180329ef67a6badfa4b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a44e528e871d784c432730799c44ac91af465be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-security-c"></a>Internetové zabezpečení (C++)
 Zabezpečení kódu je závažný problém pro vývojáře a pro uživatele internetových aplikací. Jsou rizika: škodlivý kód, kód, který byl porušen a kód z neznámé lokality nebo autoři.  
@@ -40,5 +41,5 @@ Zabezpečení kódu je závažný problém pro vývojáře a pro uživatele inte
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics – obor názvů
 Obor názvů grafiky poskytuje typy a funkce, které jsou určeny pro programováním grafiky.  
@@ -31,11 +32,11 @@ namespace graphics;
   
 ## <a name="members"></a>Členové  
   
-### <a name="namespaces"></a>Obory názvů  
+### <a name="namespaces"></a>Jmenné prostory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Concurrency::Graphics:: Direct3D – Namespace](concurrency-graphics-direct3d-namespace.md)|Poskytuje funkce pro Direct3D – zprostředkovatel komunikace s objekty.|  
+|[Concurrency::graphics::direct3d – obor názvů](concurrency-graphics-direct3d-namespace.md)|Poskytuje funkce pro Direct3D – zprostředkovatel komunikace s objekty.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -54,7 +55,7 @@ namespace graphics;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Texture – třída](texture-class.md)|Texturou je agregační na accelerator_view v doméně rozsah data. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně rozsah. Každá proměnná obsahuje hodnotu odpovídající primitivní typ C++ (bez znaménka int, int, float, double) nebo norm skalárního typu nebo unorm (definovanou v concurrency::graphics) nebo oprávněné krátké vektoru typy definované v concurrency::graphics.|  
+|[texture – třída](texture-class.md)|Texturou je agregační na accelerator_view v doméně rozsah data. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně rozsah. Každá proměnná obsahuje hodnotu odpovídající primitivní typ C++ (bez znaménka int, int, float, double) nebo norm skalárního typu nebo unorm (definovanou v concurrency::graphics) nebo oprávněné krátké vektoru typy definované v concurrency::graphics.|  
 |[writeonly_texture_view – třída](writeonly-texture-view-class.md)|Writeonly_texture_view poskytuje writeonly přístup k texturou.|  
 |[double_2 – třída](double-2-class.md)|Představuje krátký vektor 2 `double` hodnoty.|  
 |[double_3 – třída](double-3-class.md)|Představuje krátký vektor 3 `double` hodnoty.|  
@@ -92,4 +93,4 @@ namespace graphics;
  **Namespace:** souběžnosti  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

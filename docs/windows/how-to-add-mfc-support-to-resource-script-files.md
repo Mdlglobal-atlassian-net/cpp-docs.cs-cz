@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d931c1309d583b8904afa403130411e495e0408
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 259b9d0799e46bba6ea2290ba6b02fe3f35e6e74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Postupy: Přidání podpory MFC do souborů skriptu prostředků
 Za normálních okolností při vytváření aplikace knihovny MFC pro Windows pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), Průvodce generuje základní sadu soubory (včetně souboru skriptu (.rc) prostředků), který obsahuje hlavní funkce Microsoft Foundation třídy (MFC). Ale pokud upravujete soubor .rc pro aplikace Windows, která není založena na MFC, následující funkce, které jsou specifické pro rozhraní MFC framework nejsou k dispozici:  

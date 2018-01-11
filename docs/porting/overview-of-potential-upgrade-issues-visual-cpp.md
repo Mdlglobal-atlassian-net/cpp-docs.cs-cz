@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled upgradu potenciální problémy (Visual C++)
 V průběhu let Visual C++ compiler podstoupila mnoho změn, společně s změny v samotné jazyk C++, standardní knihovna C++, C runtime (CRT) a další knihovny například MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze aplikace Visual C++ můžete setkat kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompiluje ještě jednou. Starší původní kód základní, tím větší potenciální takové chyby. Tento přehled obsahuje souhrn nejčastějších třídy problémy se můžete setkat, a poskytuje odkazy na podrobnější informace.  

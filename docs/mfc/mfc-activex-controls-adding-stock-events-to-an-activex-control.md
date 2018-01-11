@@ -53,11 +53,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e3226618c645a1f96c776a5aef5fbbf55f30bfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
 Uložených událostí se liší od vlastních událostí v tom, že jsou automaticky aktivována třída [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`obsahuje předdefinované členské funkce, které budou spuštěny událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks na ovládací prvek, události klávesnice a změny ve stavu tlačítka myši. Záznamy událostí mapy pro uložených událostí jsou vždy uvedeny **event_stock –** předponu.  

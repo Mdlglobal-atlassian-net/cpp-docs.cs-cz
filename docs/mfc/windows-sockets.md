@@ -19,15 +19,16 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1687137b20822891c727689bbe20327457316586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 495c4957ea67c26ef07a4a8957353c1a6347cf84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets"></a>Windows Sockets
 Tato řada článků popisuje implementace MFC rozhraní Windows Sockets. MFC poskytuje dvě třídy pro podporu programování síťových aplikací pomocí rozhraní Windows Sockets API. Třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md) zapouzdří rozhraní API systému Windows Sockets, jednu pro jednu, udělíte pokročilé sítě programátory nejvíce výkon a flexibilitu. Třída [CSocket](../mfc/reference/csocket-class.md) nabízí zjednodušené rozhraní pro serializaci dat do a z [CArchive](../mfc/reference/carchive-class.md) objektu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 
