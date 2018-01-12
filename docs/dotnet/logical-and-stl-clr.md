@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085266bea35e59de593d9aa8437be71bc48c71a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
@@ -126,4 +129,4 @@ int main()
  **Namespace:** cliext –  
   
 ## <a name="see-also"></a>Viz také  
- [logical_or – (STL/CLR)](../dotnet/logical-or-stl-clr.md)
+ [logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)

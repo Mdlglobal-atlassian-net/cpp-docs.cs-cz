@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a8ee337c6e647f88fc4ef8730f100681c37a170
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
 MFC používá třídu CWinFormsView pro hostování uživatelského ovládacího prvku Windows Forms v MFC zobrazení. Jsou zobrazení MFC Windows Forms – ovládací prvky ActiveX. Uživatelský ovládací prvek je umístěn jako podřízený nativní zobrazení a zabírá celého klienta nativní zobrazení.  
@@ -33,12 +36,12 @@ MFC používá třídu CWinFormsView pro hostování uživatelského ovládacíh
  Ukázkové aplikace, která ukazuje použití MFC modelu Windows Forms, najdete v části [integrace produktů Windows Forms a MFC](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
+ [Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
   
- [Postupy: Přidání příkaz prvku směrování do ovládacího prvku Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
+ [Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
   
- [Postupy: řízení vlastnosti volání a metody modelu Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
+ [Postupy: Vlastnosti volání a metody ovládacího prvku modelu Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Postupy: vytváření složených ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+ [Postupy: Vytváření složených ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
