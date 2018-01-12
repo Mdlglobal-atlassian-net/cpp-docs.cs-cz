@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38c2edeffbdd2c37e69ce0886c24ca0d2f0b68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 Šablony příjemce technologie OLE DB podporují specifikaci verzi 2.6 OLE DB. (Šablony příjemce technologie OLE DB jsou testovány proti 2.6 technologie OLE DB, ale nepodporují každé rozhraní ve specifikaci.) Šablony příjemce minimalizovat kód, který musí zapsat implementace příjemce technologie OLE DB. Šablony poskytují:  
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/24/2017
   
  Další informace naleznete v následujících tématech:  
   
--   [Vytvoření příjemce technologie OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
+-   [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
   
 -   [Běžné OLE DB scénáře (příklady)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
   

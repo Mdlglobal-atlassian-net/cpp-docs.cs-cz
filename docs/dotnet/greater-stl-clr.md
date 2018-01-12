@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47a2e525158d76182387f8ff82d6d0e08fd003c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4940e94619807b85050c7037976e0d47b7a66f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument je větší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
@@ -126,4 +129,4 @@ int main()
  **Namespace:** cliext –  
   
 ## <a name="see-also"></a>Viz také  
- [less_equal – (STL/CLR)](../dotnet/less-equal-stl-clr.md)
+ [less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)

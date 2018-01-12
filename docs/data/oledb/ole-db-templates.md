@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f584b28d24d941a4ad03a31582c661bafa09cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-templates"></a>Šablony OLE DB
 Šablony technologie OLE DB usnadnění přístupu k datům OLE DB. Visual C++ poskytuje šablony třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Můžete vytvořit šablony příjemce Visual C++ pro zápis aplikace klienta (příjemce) technologie OLE DB a šablony zprostředkovatele psát aplikace serveru (zprostředkovatel).  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
  Obsahuje odkazy na šablony zprostředkovatele technologie OLE DB tříd uvedených podle použití.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)  
+ [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Popisuje, co je technologie OLE DB a univerzální přístup k datům v OLE DB.  
   
  [Referenční příručka programátora prostředí OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/24/2017
  [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
  Popisuje koncepční materiály o šablony zprostředkovatele technologie OLE DB.  
   
- [Vytvoření příjemce technologie OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
+ [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
  Popisuje vytvoření příjemce technologie OLE DB šablony s nebo bez průvodce příjemcem knihovny ATL technologie OLE DB.  
   
  [Vytvoření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/creating-a-simple-read-only-provider.md)  

@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>Postupy: Přechod na /clr:pure (C++/CLI)
 Toto téma popisuje problémy, které mohou nastat při migraci do čistého pomocí MSIL **/CLR: pure** (najdete v části [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace). Toto téma předpokládá, že přenášený kód aktuálně vyhovuje podmínkám smíšeného sestavení pomocí **/CLR** možnost, protože cesty migrace z nespravovaného kódu na čistá MSIL není přímá. Nespravovaný kód, najdete v části [postupy: přechod na/CLR](../dotnet/how-to-migrate-to-clr.md) před pokusem o migraci na čistá MSIL.  
@@ -55,4 +58,4 @@ Toto téma popisuje problémy, které mohou nastat při migraci do čistého pom
  Linkeru jazyka Visual C++ se nebude pokoušet propojit smíšené a čisté soubory OBJ jako úložiště oboru a volání konvence se liší.  
   
 ## <a name="see-also"></a>Viz také  
- [Čistý a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

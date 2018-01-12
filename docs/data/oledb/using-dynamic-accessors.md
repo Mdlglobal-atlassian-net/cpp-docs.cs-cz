@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7995415bf74dabab43a86495630f77bd015d2bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3d2e722ce96ff7a2f1add779377079a0eaecfc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-dynamic-accessors"></a>Použití dynamických přístupových objektů
 Dynamické přistupující objekty umožňují přístup ke zdroji dat, pokud nemáte žádné znalosti schématu databáze (podkladová struktura). Knihovna šablony technologie OLE DB poskytuje několik tříd, můžete to udělat.  

@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d339be4d907e0cfaaea1e80830b3fe77b1cc09b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9996fd10bad8578bd70739aa10b863bcea7f3c18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Postupy: Vytvoření datové vazby DDX/DDV s modelem Windows Forms
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) volání [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) k vytvoření ovládacího prvku odpovídající ID prostředku ovládacího prvku. Pokud používáte `DDX_ManagedControl` pro `CWinFormsControl` ovládací prvek (v generované v průvodci kódu), by neměl volání `CreateManagedControl` explicitně pro stejný ovládací prvek.  

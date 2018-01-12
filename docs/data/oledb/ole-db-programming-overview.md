@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f3d97dda514b3cdb0773adb3d7830e611bca3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming-overview"></a>Přehled programování v architektuře OLE DB
 OLE DB je databáze založená na modelu COM, vysoce výkonné technologie. Poskytuje společné způsob, jak přistupovat k datům bez ohledu na formulář, ve kterém je uložený. V typické obchodní situaci je uložený obrovské množství informací mimo firemní databáze. Tyto informace naleznete v systémech souborů (například FAT nebo systému souborů NTFS), sekvenční indexované soubory, osobní databáze (například přístup), tabulky (například aplikace Excel), aplikace plánování projektu (například projekt) a e-mailu (jako je například Outlook). OLE DB umožňuje přístup k libovolného typu úložiště dat stejným způsobem, dokud úložiště dat obsahuje zprostředkovatele OLE DB.
@@ -37,4 +40,4 @@ OLE DB je databáze založená na modelu COM, vysoce výkonné technologie. Posk
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Šablony technologie OLE DB](../../data/oledb/ole-db-templates.md)
+ [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

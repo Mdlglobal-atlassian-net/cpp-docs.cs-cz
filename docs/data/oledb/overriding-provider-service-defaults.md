@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 479f3464db46fda4c566feeaeec2f7fe5384ee87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-provider-service-defaults"></a>Přepsání výchozích hodnot služby zprostředkovatele
 Hodnota registru zprostředkovatele pro **OLEDB_SERVICES** se vrátí jako výchozí hodnota [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) inicializace vlastnost v objektu zdroje dat.  
@@ -41,4 +44,4 @@ Hodnota registru zprostředkovatele pro **OLEDB_SERVICES** se vrátí jako vých
  [Sdružování prostředků](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
  [Jak uživatelé používat sdílení prostředků ve fondech](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
  [Jak zprostředkovatelé pracovat efektivně sdílení prostředků ve fondech](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
- [Povolení a zákaz služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+ [Povolení a zakázání služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

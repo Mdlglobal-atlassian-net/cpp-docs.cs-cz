@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4aada166d8843665c645fbac90e58ef31714ab13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>Postupy: Zápis do binárního souboru (C++/CLI)
 Následující příklad kódu ukazuje zapisování binární data do souboru. Používá třídy <xref:System.IO> a <xref:System.IO.FileStream> z oboru názvů <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream>představuje skutečný soubor, zatímco <xref:System.IO.BinaryWriter> poskytuje rozhraní pro datový proud, který umožňuje binární přístup.  
@@ -66,4 +69,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Souborová služba a datový proud I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

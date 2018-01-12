@@ -16,18 +16,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 333b72f2ad27fb079380ea8f2fb07c06f32e5b26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
 Následující témata obsahují některé příklady, jak používat šablony příjemce technologie OLE DB v běžné scénáře:  
   
--   [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+-   [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+-   [Datové členy stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
 -   [Procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md)  
   
@@ -43,9 +46,9 @@ Následující témata obsahují některé příklady, jak používat šablony p
   
 -   [Získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
--   [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
+-   [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Použití zobrazení záznamů technologie OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+-   [Použití zobrazení záznamů OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
 -   [Použití existující sady záznamů ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
   

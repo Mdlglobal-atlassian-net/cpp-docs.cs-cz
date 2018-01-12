@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 058c2c2c2c8c54a0c4c7d290326c4af453c73d05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccl"></a>Spravované typy (C++/CL)
 Syntaxe deklarace spravované typy a vytváření a používání objektů z těchto typů výrazně upravíte ze spravovaných rozšíření jazyka C++ na Visual C++. K tomu bylo potřeba k podpoře jejich integrace v rámci systém typů ISO C++. Tyto změny jsou podrobně uvedeny v následující témata.  
@@ -35,10 +38,10 @@ Syntaxe deklarace spravované typy a vytváření a používání objektů z tě
  [Deklarace pole CLR](../dotnet/declaration-of-a-clr-array.md)  
  Vysvětluje, jak deklarace a inicializace pole.  
   
- [Změny v pořadí inicializace konstruktoru](../dotnet/changes-in-constructor-initialization-order.md)  
+ [Změny v pořadí inicializace konstruktoru](../dotnet/changes-in-constructor-initialization-order.md)  
  Popisuje klíčové změny v pořadí inicializace konstruktoru třídy.  
   
- [Změny v sémantice destruktorů](../dotnet/changes-in-destructor-semantics.md)  
+ [Změny v sémantice destruktorů](../dotnet/changes-in-destructor-semantics.md)  
  Popisuje nedeterministické dokončení `Finalize` versus `Dispose`, důsledky pro referenční objekty a použití explicitního `Finalize`.  
   
  **Poznámka:** diskuse o delegátech je odložena až do [Delegáti a události](../dotnet/delegates-and-events.md) s cílem je prezentovat se členy události v rámci třídy, obecné téma [deklarace členů v rámci třídy nebo rozhraní (C + +/ CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  

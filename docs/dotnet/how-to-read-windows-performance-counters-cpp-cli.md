@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Postupy: Čtení čítačů výkonu systému Windows (C++/CLI)
 Některé aplikace a subsystémy Windows zobrazit data výkonu prostřednictvím výkonu systému Windows. Tyto čítače lze přistupovat pomocí <xref:System.Diagnostics.PerformanceCounterCategory> a <xref:System.Diagnostics.PerformanceCounter> třídy, které jsou umístěny ve <xref:System.Diagnostics?displayProperty=fullName> oboru názvů.  
@@ -127,4 +130,4 @@ int main()
 ## <a name="see-also"></a>Viz také  
  [Úvod do sledování výkonu](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
  [Operace systému Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

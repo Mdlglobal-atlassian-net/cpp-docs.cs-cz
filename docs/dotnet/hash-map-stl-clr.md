@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aae2ca596a04a6502fc50bc7ac2cb6344463f739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cff0a45360a74bcfd7612b4eabe60dcc1057507a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_map` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -79,7 +82,7 @@ template<typename Key,
 |[hash_map::key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)|Typ klíče řazení|  
 |[hash_map::mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)|Typ namapované hodnotu přidruženou každý klíč.|  
-|[hash_map::Reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[hash_map::reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[hash_map::reverse_iterator (STL/CLR)](../dotnet/hash-map-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -90,15 +93,15 @@ template<typename Key,
 |[hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)|Spočítá počet intervalů.|  
 |[hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[hash_map::Count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[hash_map::Empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[hash_map::count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[hash_map::equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[hash_map::Erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[hash_map::find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
 |[hash_map::hash_delegate (STL/CLR)](../dotnet/hash-map-hash-delegate-stl-clr.md)|Zkopíruje hash delegáta pro klíč.|  
 |[hash_map::hash_map (STL/CLR)](../dotnet/hash-map-hash-map-stl-clr.md)|Sestaví objekt kontejneru.|  
-|[hash_map::Insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|Přidá prvky.|  
+|[hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|Přidá prvky.|  
 |[hash_map::key_comp (STL/CLR)](../dotnet/hash-map-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)|Spočítá průměrný počet prvků na kbelík.|  
 |[hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
@@ -115,8 +118,8 @@ template<typename Key,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[hash_map::Operator = (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[hash_map::Operator(STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|Klíč se mapuje na její přidružené hodnoty namapované.|  
+|[hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[hash_map::operator(STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|Klíč se mapuje na její přidružené hodnoty namapované.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -176,4 +179,4 @@ template<typename Key,
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

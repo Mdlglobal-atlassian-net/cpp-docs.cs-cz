@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issuing-a-parameterized-query"></a>Zadání parametrizovaného dotazu
 Následující příklad vydává jednoduché parametrizovaného dotazu, který načte záznamy s polem věku (která je větší než 30) z tabulky v databázi Microsoft Access. Pro podporu parametru, musí mít uživatelský záznam další mapy. Následující kód v projektu knihovny ATL používá `CCommand` místo `CTable` třída používaná v předchozím příkladu [procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md).  

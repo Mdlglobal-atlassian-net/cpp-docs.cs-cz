@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3475ae25a6c11dbbbead1de4fb4f3180e2e24f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)
 Deklarace vlastnosti a operátory hojně přepracovaná je ze spravovaných rozšíření jazyka C++ na Visual C++, skrytí základní podrobnosti implementace, které byly vystaveny v návrhu spravovaných rozšíření. Deklarace událostí bylo upraveno, také.  
@@ -43,7 +46,7 @@ Deklarace vlastnosti a operátory hojně přepracovaná je ze spravovaných roz�
  [Přetížené operátory](../dotnet/overloaded-operators.md)  
  Popisuje změny přetížení operátoru.  
   
- [Změny u operátorů převodů](../dotnet/changes-to-conversion-operators.md)  
+ [Změny operátorů převodu](../dotnet/changes-to-conversion-operators.md)  
  Popisuje změny u operátorů převodů.  
   
  [Explicitní přepsání člena rozhraní](../dotnet/explicit-override-of-an-interface-member.md)  
@@ -56,4 +59,4 @@ Deklarace vlastnosti a operátory hojně přepracovaná je ze spravovaných roz�
  Popisuje změny ve způsobu, jakým `static const` integrační členové jsou propojeny a jak explicitně deklarovat konstantu pomocí `literal` – klíčové slovo.  
   
 ## <a name="see-also"></a>Viz také  
- [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md)
+ [Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd09e1566a6f53244d420387870a03b0b34f8fb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4f0a0ee77b13d6e5231d002cb444ac5a7847f3d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumers-and-providers"></a>Příjemci a zprostředkovatelé technologie OLE DB
 Architektura technologie OLE DB používá model příjemci a zprostředkovatelé. Příjemce vytváří požadavky na data. Zprostředkovatel reaguje na tyto požadavky uvedení v tabulkovém formátu data a vrátit k příjemce. Žádném volání, které uplatnit musí být implementované ve zprostředkovateli.  
@@ -36,4 +39,4 @@ Architektura technologie OLE DB používá model příjemci a zprostředkovatel�
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
- [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)
+ [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

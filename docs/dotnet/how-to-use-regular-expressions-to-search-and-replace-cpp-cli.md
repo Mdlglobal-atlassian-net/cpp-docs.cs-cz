@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Postupy: Použití regulárních výrazů k vyhledávání a nahrazení (C++/CLI)
 Následující příklad kódu ukazuje, jak třída regulárního výrazu <xref:System.Text.RegularExpressions.Regex> slouží k vyhledávání a nahrazování. To lze provést pomocí <xref:System.Text.RegularExpressions.Regex.Replace%2A> metoda. Je verze použitá přebírá dva řetězce jako vstup: řetězec, který má být změněn a řetězec, který má být vložen namísto oddílů (pokud existuje) odpovídající vzor zadané <xref:System.Text.RegularExpressions.Regex> objektu.  
@@ -56,4 +59,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Regulární výrazy rozhraní .NET framework](/dotnet/standard/base-types/regular-expressions)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

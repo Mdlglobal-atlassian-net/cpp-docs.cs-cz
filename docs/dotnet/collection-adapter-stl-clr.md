@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Zabalí typu .NET collection používat jako kontejner STL/CLR. A `collection_adapter` je třída šablony, která popisuje jednoduchého objektu kontejneru STL/CLR. Zabalí základní třídy knihovny (BCL) rozhraní a vrátí dvojici iterator, který používáte k manipulaci s řízené sekvenci.  
@@ -82,13 +85,13 @@ template<typename Key,
 |[collection_adapter::iterator (STL/CLR)](../dotnet/collection-adapter-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
 |[collection_adapter::key_type (STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)|Typ klíče slovníku.|  
 |[collection_adapter::mapped_type (STL/CLR)](../dotnet/collection-adapter-mapped-type-stl-clr.md)|Typ hodnoty slovníku.|  
-|[collection_adapter::Reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[collection_adapter::reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[collection_adapter::size_type (STL/CLR)](../dotnet/collection-adapter-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[collection_adapter::value_type (STL/CLR)](../dotnet/collection-adapter-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[collection_adapter::Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Označí zabalené BCL rozhraní.|  
+|[collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Označí zabalené BCL rozhraní.|  
 |[collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[collection_adapter::collection_adapter (STL/CLR)](../dotnet/collection-adapter-collection-adapter-stl-clr.md)|Vytvoří objekt adaptéru.|  
 |[collection_adapter::end (STL/CLR)](../dotnet/collection-adapter-end-stl-clr.md)|Určuje konec řízené sekvence.|  
@@ -97,7 +100,7 @@ template<typename Key,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[collection_adapter::Operator = (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Nahradí uložené BCL popisovač.|  
+|[collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Nahradí uložené BCL popisovač.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tuto třídu šablony můžete použít k manipulaci s BCL kontejneru jako kontejner STL/CLR. `collection_adapter` Uloží popisovač do rozhraní BCL, který naopak řídí pořadí elementů. A `collection_adapter` objekt `X` vrátí pár vstupní iterátory `X.begin()` a `X.end()` , které umožňují najdete prvky, v pořadí. Některé odborností, které vám také umožní zápisu `X.size()` k určení délky řízené sekvenci.  
@@ -109,4 +112,4 @@ template<typename Key,
   
 ## <a name="see-also"></a>Viz také  
  [range_adapter – (STL/CLR)](../dotnet/range-adapter-stl-clr.md)   
- [make_collection – (STL/CLR)](../dotnet/make-collection-stl-clr.md)
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

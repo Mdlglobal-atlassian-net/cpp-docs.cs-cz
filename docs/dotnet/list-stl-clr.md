@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 991b72b312c8ad1b36a9a401a6452ec36ea25d6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 40046e2b7263559765c2aab2bef13a17c341f7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `list` spravovat pořadí elementů jako obousměrný odkazovaného seznamu uzlů, ukládání jeden element.  
@@ -61,22 +64,22 @@ template<typename Value>
 |[list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
 |[list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)|Typ elementu pro obecné rozhraní kontejneru.|  
 |[list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)|Typ iterátoru řízené sekvence|  
-|[list::Reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[list::reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
-|[list::Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Nahradí všechny elementy.|  
+|[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Nahradí všechny elementy.|  
 |[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|Přístup k posledním elementem.|  
 |[list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[list::Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)|Určuje konec řízené sekvence.|  
-|[list::Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
 |[list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)|Přístup k první prvek.|  
-|[list::Insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
+|[list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Přidá elementy na zadané pozici.|  
 |[list::list (STL/CLR)](../dotnet/list-list-stl-clr.md)|Sestaví objekt kontejneru.|  
 |[list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)|Sloučí dvě řízené pořadí řazení.|  
 |[list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)|Odebere poslední element.|  
@@ -84,17 +87,17 @@ template<typename Value>
 |[list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)|Přidá nový posledním elementem.|  
 |[list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)|Přidá nový první prvek.|  
 |[list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)|Označuje začátek odstínech řízené sekvenci.|  
-|[list::Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Odebere element se zadanou hodnotou.|  
+|[list::remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Odebere element se zadanou hodnotou.|  
 |[list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)|Odebere prvky, které předávají testu zadaný.|  
 |[list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)|Označuje konec odstínech řízené sekvenci.|  
-|[list::Resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Změní počet elementů.|  
+|[list::resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Změní počet elementů.|  
 |[list::reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)|Obrátí řízené sekvenci.|  
 |[list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)|Spočítá počet prvků.|  
 |[list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)|Řadí řízené sekvenci.|  
 |[list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)|Restitches propojení mezi uzly.|  
 |[list::swap (STL/CLR)](../dotnet/list-swap-stl-clr.md)|Zamění obsah dvou kontejnerů.|  
 |[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|Zkopíruje řízené sekvenci do nové pole.|  
-|[list::Unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Odebere přiléhající prvky, které předávají testu zadaný.|  
+|[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Odebere přiléhající prvky, které předávají testu zadaný.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
@@ -103,13 +106,13 @@ template<typename Value>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[list::Operator = (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Určuje, zda `list` objekt není rovno jiné `list` objektu.|  
-|[Operator < (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Určuje, zda `list` objektu je menší než jiná `list` objektu.|  
-|[Operator < = (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Určuje, zda `list` objektu je menší než nebo rovna do jiného `list` objektu.|  
-|[Operator == (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Určuje, zda `list` objekt rovná jiné `list` objektu.|  
-|[Operator > (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Určuje, zda `list` je větší než druhý objekt `list` objektu.|  
-|[Operator > = (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Určuje, zda `list` objekt je větší než nebo rovna hodnotě jiného `list` objektu.|  
+|[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Určuje, zda `list` objekt není rovno jiné `list` objektu.|  
+|[operator< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Určuje, zda `list` objektu je menší než jiná `list` objektu.|  
+|[operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Určuje, zda `list` objektu je menší než nebo rovna do jiného `list` objektu.|  
+|[operator== (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Určuje, zda `list` objekt rovná jiné `list` objektu.|  
+|[operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Určuje, zda `list` je větší než druhý objekt `list` objektu.|  
+|[operator>= (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Určuje, zda `list` objekt je větší než nebo rovna hodnotě jiného `list` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -144,4 +147,4 @@ template<typename Value>
  [fronty (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [Zásobník (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Postupy: Vytvoření ověřitelných projektů jazyka C++ (C++/CLI)
 Průvodci aplikací Visual C++ nevytvářejte ověřitelných projektů, ale projekty mohou být převedeny na ověřitelné. Toto téma popisuje, jak nastavit vlastnosti projektu a upravit projektu zdrojové soubory k transformaci projekty Visual C++ vytvářely ověřitelné aplikace.  
@@ -62,4 +65,4 @@ Průvodci aplikací Visual C++ nevytvářejte ověřitelných projektů, ale pro
 3.  Na **Upřesnit** v části **Linkeru** uzlu, zadejte `Main` jako **vstupní bod** hodnotu vlastnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [Čistý a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

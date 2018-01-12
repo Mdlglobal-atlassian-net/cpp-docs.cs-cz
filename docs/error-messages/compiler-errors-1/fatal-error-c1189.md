@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2330d49f817012fc2e0381a0991f709ada74ea32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1189"></a>Závažná chyba C1189
 \#Chyba: uživatelem dodaný chybová zpráva  
@@ -53,4 +54,4 @@ ms.lasthandoff: 10/24/2017
 -   Použití **Upřesnit** stránka vlastností v **MIDL** složky stránky vlastností k odebrání **/ robust** přepínače a potom zadejte **/no_robust** přepínač. Další informace najdete v tématu [MIDL – stránky vlastností: Upřesnit](../../ide/midl-property-pages-advanced.md).  
   
 ## <a name="see-also"></a>Viz také  
- [#define – direktiva (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)
+ [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)

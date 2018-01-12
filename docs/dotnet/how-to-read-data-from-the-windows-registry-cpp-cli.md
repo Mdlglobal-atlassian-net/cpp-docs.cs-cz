@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25ab4b9cdba5a9a71d1258960e4da89d2d5e657d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Postupy: Čtení dat z registru systému Windows (C++/CLI)
 Následující příklad kódu používá <xref:Microsoft.Win32.Registry.CurrentUser> klíč číst data z registru systému Windows. Nejprve podklíčů jsou uvedené pomocí <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metoda a pak je podklíč identity je otevřena pomocí <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metoda. Podobně jako kořenového klíče, je reprezentována každý podklíč <xref:Microsoft.Win32.RegistryKey> třídy. Nakonec novou <xref:Microsoft.Win32.RegistryKey> objekt se používá k vytvoření výčtu páry klíč/hodnota.  
@@ -76,4 +79,4 @@ int main( )
 ## <a name="see-also"></a>Viz také  
  [Postupy: zápis dat do registru systému Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
  [Operace systému Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

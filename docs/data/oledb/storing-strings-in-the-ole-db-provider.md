@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Ukládání řetězců ve zprostředkovateli OLE DB
 V souboru MyProviderRS.h, Průvodce zprostředkovatele OLE DB ATL vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, buď změňte `CWindowsFile` nebo přidat vlastní záznam uživatele, jak je znázorněno v následujícím kódu:  

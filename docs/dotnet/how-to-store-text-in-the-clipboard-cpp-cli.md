@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 971d87da7045e079e62d2ab3274ddc35ddbffaea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Postupy: Ukládání textu do schránky (C++/CLI)
 Následující příklad kódu používá <xref:System.Windows.Forms.Clipboard> objekt definovaný v <xref:System.Windows.Forms> obor názvů pro uložení řetězce. Tento objekt obsahuje dva členské funkce: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> a <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Data jsou uložena v schránky odesláním libovolného objektu odvozeného z <xref:System.Object> k <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  
@@ -55,4 +58,4 @@ using namespace System::Windows::Forms;
 ## <a name="see-also"></a>Viz také  
  [Postupy: načtení textu ze schránky (C + +/ CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
  [Operace systému Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
