@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d8aea199ff45da06d434150bb8346f24131136f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v aplikaci Windows Desktop
 Vytváříte-li ve Visual Studio 2017 klasické pracovní plochy projektu pro Windows, můžete ho je nastavený ve výchozím nastavení k vytvoření s verzí Windows 10 SDK, která byla nainstalována při zatížení C++ plocha byla nainstalována nebo poslední aktualizace. Tato verze sady Windows SDK je kompatibilní s všechny poslední verze systému Windows. Pokud chcete zacílit starší verze sady SDK, můžete otevřít projekt | Vlastnosti a volbou z jiné k dispozici v rozevírací nabídce verze sady SDK Windows SDK verze.  
@@ -26,7 +29,7 @@ Vytváříte-li ve Visual Studio 2017 klasické pracovní plochy projektu pro Wi
   
 ### <a name="to-target-the-windows-10-sdk"></a>Cíl Windows 10 SDK  
   
-1.  Zkontrolujte, zda že je nainstalovaná sada Windows 10 SDK. Windows 10 SDK je nainstalován jako součást [nástrojů pro Windows 10](http://go.microsoft.com/fwlink/?LinkID=617631).  
+1.  Zkontrolujte, zda že je nainstalovaná sada Windows 10 SDK. Windows 10 SDK je nainstalován jako součást [nástrojů pro Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
   
 2.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílový verze sady SDK**.  
   

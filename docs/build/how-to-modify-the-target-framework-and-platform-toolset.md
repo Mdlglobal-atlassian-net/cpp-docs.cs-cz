@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a9ab87cc24a106e70e9662f58e7c7266dd39d8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 Nastavení projektu Visual C++ jiné cílové verze rozhraní .NET Framework a používat modulové různé platformy, můžete změnit. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Sada nástrojů platformy cíl, můžete změnit úpravou vlastností projektu. Cílový Framework můžete změnit úpravou souboru projektu (VCXPROJ). Nemáte udržovat samostatné kód základní pro každý cíl kompilace.  
@@ -32,7 +33,7 @@ Nastavení projektu Visual C++ jiné cílové verze rozhraní .NET Framework a p
 > [!NOTE]
 >  Chcete-li změnit sada nástrojů platformy cíl, musí mít přidružené verze sady Visual Studio nebo sadu SDK platformy Windows nainstalována. Například pro Cílová platforma Itanium s **Windows7.1SDK** sada nástrojů platformy, musíte mít [programu Microsoft Windows SDK pro systém Windows 7 a rozhraní .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) nainstalovaný; však můžete použít jiné kompatibilní verze sady Visual Studio k práci vývoj, za předpokladu, že cíl správné Framework verze a platforma nástrojů.  
   
- Další cílové platformy můžete rozšířit tak, že vytvoříte vlastní sady nástrojů. Další informace najdete v tématu [cílení na více nativní C++](http://go.microsoft.com/fwlink/?LinkId=196619) na blogu Visual C++.  
+ Další cílové platformy můžete rozšířit tak, že vytvoříte vlastní sady nástrojů. Další informace najdete v tématu [cílení na více nativní C++](http://go.microsoft.com/fwlink/p/?linkid=196619) na blogu Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Chcete-li změnit cílový Framework  
   

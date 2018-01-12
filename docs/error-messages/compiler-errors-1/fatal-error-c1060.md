@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c551ed3a6befbf646394929a6bcc6406ea93b19f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fatal-error-c1060"></a>Závažná chyba C1060
 kompilátoru nemá dostatek místa na haldy  
@@ -34,7 +35,7 @@ kompilátoru nemá dostatek místa na haldy
   
 2.  Pokud jste se kompilování na 64bitové platformě, pomocí sady nástrojů kompilátoru 64-bit. Informace najdete v tématu [postupy: povolení 64bitová verze sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
-3.  V systému Windows 32-bit, zkuste použít [3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini přepínače.  
+3.  V systému Windows 32-bit, zkuste použít [3 GB](http://go.microsoft.com/fwlink/p/?linkid=177831) boot.ini přepínače.  
   
 4.  Zvětšete velikost odkládacího souboru v systému Windows.  
   

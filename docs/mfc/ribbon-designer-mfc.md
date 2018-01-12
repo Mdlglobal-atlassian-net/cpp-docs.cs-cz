@@ -17,14 +17,15 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0076f9ce0bcf4787f4e848fbcb0d34ae8968f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
-Návrhář pásu karet umožňuje vytvářet a přizpůsobovat pásů karet v aplikacích MFC. Pásu karet je element rozhraní (UI) uživatele, který slouží k uspořádání příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných záložkách v pruhu v horní části okna. Na pásu karet nahrazuje řádku nabídek a panelů nástrojů. Pásu karet může výrazně zlepšit použitelnost aplikací. Další informace najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/linkid=129233). Následující obrázek znázorňuje pásu karet.  
+Návrhář pásu karet umožňuje vytvářet a přizpůsobovat pásů karet v aplikacích MFC. Pásu karet je element rozhraní (UI) uživatele, který slouží k uspořádání příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných záložkách v pruhu v horní části okna. Na pásu karet nahrazuje řádku nabídek a panelů nástrojů. Pásu karet může výrazně zlepšit použitelnost aplikací. Další informace najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233). Následující obrázek znázorňuje pásu karet.  
   
  ![Ovládací prvek prostředku pásu karet MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
@@ -90,13 +91,13 @@ Návrhář pásu karet umožňuje vytvářet a přizpůsobovat pásů karet v ap
   
  Následující témata popisují, jak používat funkce v Návrháři pásu karet:  
   
-- [Postupy: přizpůsobení tlačítka aplikace](../mfc/how-to-customize-the-application-button.md)  
+- [Postupy: Přizpůsobení tlačítka aplikace](../mfc/how-to-customize-the-application-button.md)  
   
-- [Postupy: přizpůsobení panelu nástrojů Rychlý přístup](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [Postupy: Přizpůsobení panelu nástrojů Rychlý přístup](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
 - [Postupy: Přidání ovládacích prvků pásu karet a obslužných rutin událostí](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
-- [Postupy: načtení prostředku pásu karet z aplikace MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [Postupy: Načtení prostředku pásu karet z aplikace MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
 ## <a name="definitions-of-ribbon-elements"></a>Definice elementů pásu karet  
  ![Pásu karet MFC](../mfc/media/ribbon.png "pásu karet")  

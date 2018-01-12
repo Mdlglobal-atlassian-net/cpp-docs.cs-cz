@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10de04ebed31835d93daca9cf4caa5d96ed605b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphore-class"></a>Semaphore – třída
 Představuje objekt synchronizace, který řídí sdílený prostředek, který podporuje omezený počet uživatelů.  
@@ -49,7 +52,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Invokehelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.|  
+|[InvokeHelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -61,7 +64,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Semaphore::Operator = – operátor](../windows/semaphore-operator-assign-operator.md)|Přesune zadaný popisovač z objektu semaforu pro aktuální objekt semafor.|  
+|[Semaphore::operator= – operátor](../windows/semaphore-operator-assign-operator.md)|Přesune zadaný popisovač z objektu semaforu pro aktuální objekt semafor.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Semaphore`  
@@ -72,4 +75,4 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

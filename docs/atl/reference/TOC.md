@@ -243,7 +243,6 @@
 ## [Makra třídy okna](window-class-macros.md)
 ## [Makra zpráv Windows](windows-messages-macros.md)
 # [Globální proměnné ATL](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [Průvodci a dialogová okna ATL](atl-wizards-and-dialog-boxes.md)
 ## [Nastavení aplikace, průvodce projektem ATL](application-settings-atl-project-wizard.md)
 ## [Průvodce komponentami ATL Active Server Pages, ASP](asp-atl-active-server-page-component-wizard.md)

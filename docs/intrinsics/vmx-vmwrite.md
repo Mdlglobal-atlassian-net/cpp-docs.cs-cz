@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c9ebd2602fe38a0ec1b51389b1a8a90625dd75e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00bc9fe617144db7de3425c5732b3f655b30c790
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Konkrétní Microsoft**  
@@ -55,7 +56,7 @@ unsigned char __vmx_vmwrite(
  Operace se nezdařila bez stavu k dispozici.  
   
 ## <a name="remarks"></a>Poznámky  
- `__vmx_vmwrite` Funkce je ekvivalentní volání `VMWRITE` počítač instrukcí. Hodnota `Field` parametr je indexu kódovaného pole, která je popsána v dokumentaci Intel. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokality a pak zjistěte příloha C této dokument.  
+ `__vmx_vmwrite` Funkce je ekvivalentní volání `VMWRITE` počítač instrukcí. Hodnota `Field` parametr je indexu kódovaného pole, která je popsána v dokumentaci Intel. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality a pak zjistěte příloha C této dokument.  
   
 ## <a name="requirements"></a>Požadavky  
   

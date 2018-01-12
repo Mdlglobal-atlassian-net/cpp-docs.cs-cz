@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f84f891a12da90efbe68371d077e2d41b111ea0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatická paralelizace a automatická vektorizace
 Automatickou vektorizací a automatickou vektorizací jsou navrženy pro zvýšení výkonu automatické přinášejí smyčky v kódu.  
@@ -117,8 +118,8 @@ for (int i = 0; i < 1000; ++i)
   
 ## <a name="see-also"></a>Viz také  
  [smyčky](../preprocessor/loop.md)   
- [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/?linkid=263662)   
+ [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [/ Qpar (automatickou vektorizací)](../build/reference/qpar-auto-parallelizer.md)   
  [/ Qpar-report (úroveň sestav automatickou vektorizací)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [/ Qvec-report (úroveň sestav automatickou vektorizací)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   
- [Nástrojů pro vektorizaci a paralelní zpracování zpráv](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
+ [Zprávy nástrojů pro vektorizaci a paralelní zpracování](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)

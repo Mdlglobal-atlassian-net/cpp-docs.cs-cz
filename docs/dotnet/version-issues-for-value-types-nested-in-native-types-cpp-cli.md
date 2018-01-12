@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problémy s verzí u typů hodnot vnořených v nativních typech (C++/CLI)
 Vezměte v úvahu komponentu sestavení podepsané (silný název) používá k vytvoření klientského sestavení. Součást obsahuje typ hodnoty, který se používá v klientovi jako typ člena skupiny nativní union, třídu nebo pole. Pokud budoucí verze komponenty změní velikost nebo rozložení typ hodnoty, klient musí zopakovat.  
@@ -84,4 +87,4 @@ S.i = 11
  Ale pokud přidáte jiného člena pro `struct S` v nested_value_types.cpp (například `double d;`) a znovu zkompiluje komponentu bez nutnosti rekompilace klienta, výsledkem je k neošetřené výjimce (typu <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
 ## <a name="see-also"></a>Viz také  
- [Spravované typy (C + +/ CLI)](../dotnet/managed-types-cpp-cli.md)
+ [Spravované typy (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

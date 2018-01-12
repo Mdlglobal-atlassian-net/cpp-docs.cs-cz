@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47355ea2c7db35b32c69e91bf8445efe7671ccce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Používání akcelerátoru a objektů accelerator_view
 Můžete použít [akcelerátoru](../../parallel/amp/reference/accelerator-class.md) a [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) třídy k určení zařízení nebo emulátoru ke spuštění kódu C++ AMP v. Systém může mít několik zařízení nebo emulátorů, které se liší podle velikosti paměti, podpory sdílené paměti, podpora ladění nebo podporu dvojitou přesností. C++ Accelerated Massive Parallelism (C++ AMP) poskytuje rozhraní API, která vám pomůže zkontrolovat dostupné akcelerátorů, nastavit jako výchozí, zadejte více accelerator_views pro několik volání parallel_for_each – a provádět úlohy speciální ladění.  
@@ -175,10 +176,10 @@ bool pick_accelerator()
   
 - [Accelerator::direct3d_warp – datový člen](reference/accelerator-class.md#direct3d_warp): Tento accelerator poskytuje záložní řešení pro spouštění kódu C++ AMP v vícejádrovými procesory, které používají Streaming SIMD Extensions (SSE).  
   
-- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): můžete použít tento akcelerátoru pro nastavení pracovní pole. Kód C++ AMP ji nelze spustit. Další informace najdete v tématu [pracovní pole v C++ AMP](http://go.microsoft.com/fwlink/p/LinkId=248485) můžete zveřejnit na paralelní programování v blogu nativního kódu.  
+- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): můžete použít tento akcelerátoru pro nastavení pracovní pole. Kód C++ AMP ji nelze spustit. Další informace najdete v tématu [pracovní pole v C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) můžete zveřejnit na paralelní programování v blogu nativního kódu.  
   
 ## <a name="interoperability"></a>Interoperabilita  
- Modul runtime C++ AMP podporuje spolupráci mezi `accelerator_view` třídy a Direct3D – [ID3D11Device rozhraní](http://go.microsoft.com/fwlink/p/LinkId=248488). [Create_accelerator_view –](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda trvá `IUnknown` rozhraní a vrátí `accelerator_view` objektu. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) metoda trvá `accelerator_view` objekt a vrátí `IUknown` rozhraní.  
+ Modul runtime C++ AMP podporuje spolupráci mezi `accelerator_view` třídy a Direct3D – [ID3D11Device rozhraní](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view –](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda trvá `IUnknown` rozhraní a vrátí `accelerator_view` objektu. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) metoda trvá `accelerator_view` objekt a vrátí `IUknown` rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   

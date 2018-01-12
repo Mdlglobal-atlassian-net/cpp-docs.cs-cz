@@ -14,11 +14,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73a397664d5e5a9074731b6eac879fe965580f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-operators-ccli"></a>Uživatelem definované operátory (C++/CLI)
 Uživatelem definované operátory pro spravované typy jsou povoleny jako statické členy nebo členy instancí nebo v globálním oboru. Jenom statické operátory jsou však přístupné prostřednictvím metadata klientů, které jsou zapsány v jiném jazyce než v jazyce Visual C++.  
@@ -171,4 +174,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+ [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

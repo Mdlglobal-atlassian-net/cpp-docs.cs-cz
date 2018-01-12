@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119c98c8cf5f5a3077afce4e706b177513113d03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Nastavení ovládacího prvku, Průvodce ovládacím prvkem ActiveX v prostředí MFC
 Na této stránce průvodce můžete určit způsob řízení chovat. Můžete například základní ovládacího prvku na standardní typy ovládacích prvků Windows, optimalizaci chování a vzhled nebo znamenat, že ovládací prvek může fungovat jako kontejner pro další ovládací prvky.  
@@ -59,7 +60,7 @@ Na této stránce průvodce můžete určit způsob řízení chovat. Můžete n
  Určuje, že ovládací prvek je standardní Windows **o** dialogové okno, které zobrazuje číslo verze a informace o autorských právech.  
   
 > [!NOTE]
->  Jak uživatel přistupuje k nápovědy pro ovládací prvek závisí na tom, jak jste implementovali v nápovědě a jestli mají integrované Nápověda ovládacího prvku kontejner pomocí. Další informace o tom, jak integrovat nápovědy, na [knihovně MSDN](http://go.microsoft.com/fwlink/linkid=150542) webu, vyhledejte "Přidání Context-Sensitive pomoci pro MFC ovládací prvek ActiveX".  
+>  Jak uživatel přistupuje k nápovědy pro ovládací prvek závisí na tom, jak jste implementovali v nápovědě a jestli mají integrované Nápověda ovládacího prvku kontejner pomocí. Další informace o tom, jak integrovat nápovědy, na [knihovně MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Přidání Context-Sensitive pomoci pro MFC ovládací prvek ActiveX".  
   
  Když vyberete tuto možnost, vloží `AboutBox` řídit metodu v třídě řízení projektu (C*ProjName*Ctrl.cpp) a přidá AboutBox do mapy odeslání projektu. Ve výchozím nastavení je tato možnost vybrána.  
   
@@ -82,7 +83,7 @@ Na této stránce průvodce můžete určit způsob řízení chovat. Můžete n
  Umožňuje řízení pro proces oznámení ukazatel myši, zda řízení je aktivní, nebo ne. Když vyberete tuto možnost, `pointerInactive` příznak je příznaky, které se vrátí pomocí [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Další informace o tom, jak použít tuto možnost najdete v tématu [poskytování myši interakce při neaktivní](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
  **Jednání jako jednoduchý rámeček ovládací prvek**  
- Určuje, že ovládací prvek je kontejner pro další ovládací prvky podle nastavení `OLEMISC_SIMPLEFRAME` bit pro ovládací prvek. Další informace najdete na [knihovny MSDN](http://go.microsoft.com/fwlink/linkid=150542) webu, vyhledejte "Jednoduché rámce lokality omezení".  
+ Určuje, že ovládací prvek je kontejner pro další ovládací prvky podle nastavení `OLEMISC_SIMPLEFRAME` bit pro ovládací prvek. Další informace najdete na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Jednoduché rámce lokality omezení".  
   
  **Asynchronně načte vlastnosti**  
  Umožňuje provést obnovení žádná předchozí asynchronní data a zahájí nového zatížení asynchronní vlastnosti ovládacího prvku.  
@@ -90,5 +91,5 @@ Na této stránce průvodce můžete určit způsob řízení chovat. Můžete n
 ## <a name="see-also"></a>Viz také  
  [Průvodce ovládacím prvkem ActiveX knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
  [Nastavení aplikace, Průvodce ovládacím prvkem ActiveX knihovny MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX knihovny MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+ [Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX v prostředí MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 

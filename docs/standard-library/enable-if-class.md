@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if – třída
 Podmíněná vytváří instanci typu pro sfinae u výrazů řešení přetížení. Vnořené typedef `enable_if<Condition,Type>::type` existuje, a je synonymum pro `Type`– jenom v případě `Condition` je `true`.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- V jazyce C++ selhání nahrazování parametrů šablony není chybu sám o sobě – tento proces se označuje jako *sfinae u výrazů* (selhání nahrazování není chybu). Obvykle `enable_if` slouží k odebrání kandidáty rozlišení přetížení – to znamená, že ho culls sadu přetížení – tak, aby jednu definici, může být odmítnutá považuje jiné. To odpovídá chování sfinae u výrazů. Další informace o sfinae u výrazů najdete v tématu [selhání nahrazování není chybu](http://go.microsoft.com/fwlink/LinkId=394798) na webu Wikipedia.  
+ V jazyce C++ selhání nahrazování parametrů šablony není chybu sám o sobě – tento proces se označuje jako *sfinae u výrazů* (selhání nahrazování není chybu). Obvykle `enable_if` slouží k odebrání kandidáty rozlišení přetížení – to znamená, že ho culls sadu přetížení – tak, aby jednu definici, může být odmítnutá považuje jiné. To odpovídá chování sfinae u výrazů. Další informace o sfinae u výrazů najdete v tématu [selhání nahrazování není chybu](http://go.microsoft.com/fwlink/p/?linkid=394798) na webu Wikipedia.  
   
  Zde jsou čtyři ukázkové scénáře:  
   
@@ -142,7 +143,7 @@ func(make_pair("foo", "bar"));
  **Namespace:** – std  
   
 ## <a name="see-also"></a>Viz také  
- [< type_traits >](../standard-library/type-traits.md)
+ [<type_traits>](../standard-library/type-traits.md)
 
 
 

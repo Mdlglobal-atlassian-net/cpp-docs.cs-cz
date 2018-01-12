@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ae60f200b9c90c30879370329220d039d7eb03c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7bb80775b6da51c3b70597ce9ad6297cc3021df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-reference"></a>Referenční dokumentace ke knihovně WRL
 Tato část obsahuje referenční informace pro Windows Runtime C++ šablony knihovny (WRL).  
@@ -26,16 +29,16 @@ Tato část obsahuje referenční informace pro Windows Runtime C++ šablony kni
 >  Knihovna šablon C++ Runtime Windows definuje funkce, které podporuje infrastrukturu rozhraní knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu. Tato funkce je uvedeno v této dokumentaci.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)  
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)  
  Definuje základní typy, které tvoří knihovna šablon C++ Runtime systému Windows.  
   
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)  
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)  
  Definuje obálku typy prostředků pořízení je inicializace (RAII), které zjednodušit správu doba platnosti objektů, řetězce a obslužné rutiny.  
   
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
+ [Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
  Popisuje vlastnosti běžné typy prostředků na základě popisovač.  
   
- [Windows::Foundation – Namespace](../windows/windows-foundation-namespace.md)  
+ [Windows::Foundation – obor názvů](../windows/windows-foundation-namespace.md)  
  Umožňuje základní funkce prostředí Windows Runtime, například vytváření objektu a objektu pro vytváření.  
   
 ## <a name="related-sections"></a>Související oddíly  

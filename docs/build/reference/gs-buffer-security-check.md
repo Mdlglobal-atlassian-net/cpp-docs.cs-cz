@@ -25,11 +25,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21ebf470372c24a4e1ab5922f1d98c1a434691a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS (kontrola zabezpečení vyrovnávací paměti)  
   
@@ -43,7 +44,7 @@ Rozpozná některá přetečení vyrovnávací paměti, která přepisují návr
   
 ## <a name="remarks"></a>Poznámky  
   
-**/GS** ve výchozím nastavení zapnutý. Pokud očekáváte, vaše aplikace měla žádné ohrožení zabezpečení, použijte **/GS-**. Další informace o **/GS**, najdete v části [kompilátoru zabezpečení kontroluje v hloubka](http://go.microsoft.com/fwlink/?linkid=7260). Další informace o potlačení detekce přetečení vyrovnávací paměti najdete v tématu [safebuffers](../../cpp/safebuffers.md).  
+**/GS** ve výchozím nastavení zapnutý. Pokud očekáváte, vaše aplikace měla žádné ohrožení zabezpečení, použijte **/GS-**. Další informace o **/GS**, najdete v části [kompilátoru zabezpečení kontroluje v hloubka](http://go.microsoft.com/fwlink/p/?linkid=7260). Další informace o potlačení detekce přetečení vyrovnávací paměti najdete v tématu [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Kontroly zabezpečení  
   

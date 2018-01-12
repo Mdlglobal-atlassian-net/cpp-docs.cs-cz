@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager – třída
 Třída CAtlTransactionManager poskytuje obálku pro funkce správce KTM (Kernel Transaction).  
@@ -466,10 +467,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Název souboru nebo adresáře.  
   
  `dwAttributes`  
- Atributy souboru pro soubor. Další informace najdete v tématu [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699).  
+ Atributy souboru pro soubor. Další informace najdete v tématu [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
   
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `SetFileAttributesTransacted` funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [ATL COM plochy součásti](../../atl/atl-com-desktop-components.md)
+ [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

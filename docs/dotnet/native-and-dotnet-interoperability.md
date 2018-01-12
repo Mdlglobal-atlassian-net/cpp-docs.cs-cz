@@ -25,11 +25,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9e948534f4e5417a561f8a650f666f32e707632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="native-and-net-interoperability"></a>Nativní funkce a vzájemná funkční spolupráce rozhraní .NET
 Visual C++ podporuje funkce interoperability umožňujících spravovanými a nespravovanými konstrukce existovat a spolupracovat v rámci stejného sestavení a to i ve stejném souboru. Podporuje malou podmnožinu tuto funkci, jako je například P/Invoke i jinými jazyky rozhraní .NET, ale většina podpory interoperability poskytované Visual C++ není k dispozici v dalších jazycích.  
@@ -38,7 +41,7 @@ Visual C++ podporuje funkce interoperability umožňujících spravovanými a ne
  [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)  
  Popisuje generovaná sestavení s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru obsahující obě spravovaných a nespravovaných funkcí.  
   
- [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)  
+ [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)  
  Popisuje, jak používat podporu třídy MFC Windows Forms k hostitelské ovládací prvky Windows Forms do aplikací MFC.  
   
  [Volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md)  

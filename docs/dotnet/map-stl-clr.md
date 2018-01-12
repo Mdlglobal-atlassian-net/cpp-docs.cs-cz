@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b6e535dac08e473e281f45e45a084d856c931b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `map` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -78,7 +81,7 @@ template<typename Key,
 |[map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)|Typ klíče řazení|  
 |[map::mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)|Typ namapované hodnotu přidruženou každý klíč.|  
-|[map::Reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[map::reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[map::size_type (STL/CLR)](../dotnet/map-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -88,13 +91,13 @@ template<typename Key,
 |---------------------|-----------------|  
 |[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[map::Count (STL/CLR)](../dotnet/map-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[map::Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[map::count (STL/CLR)](../dotnet/map-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[map::equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[map::Erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[map::Find (STL/CLR)](../dotnet/map-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
-|[map::Insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)|Přidá prvky.|  
+|[map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[map::find (STL/CLR)](../dotnet/map-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)|Přidá prvky.|  
 |[map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
 |[map::make_value (STL/CLR)](../dotnet/map-make-value-stl-clr.md)|Vytvoří objekt hodnoty.|  
@@ -109,14 +112,14 @@ template<typename Key,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[map::Operator = (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[map::Operator(STL/CLR)](../dotnet/map-operator-stl-clr.md)|Klíč se mapuje na její přidružené hodnoty namapované.|  
-|[Operator! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|Určuje, zda `map` objekt není rovno jiné `map` objektu.|  
-|[Operator < (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|Určuje, zda `map` objektu je menší než jiná `map` objektu.|  
-|[Operator < = (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|Určuje, zda `map` objektu je menší než nebo rovna do jiného `map` objektu.|  
-|[Operator == (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|Určuje, zda `map` objekt rovná jiné `map` objektu.|  
-|[Operator > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|Určuje, zda `map` je větší než druhý objekt `map` objektu.|  
-|[Operator > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|Určuje, zda `map` objekt je větší než nebo rovna hodnotě jiného `map` objektu.|  
+|[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[map::operator(STL/CLR)](../dotnet/map-operator-stl-clr.md)|Klíč se mapuje na její přidružené hodnoty namapované.|  
+|[operator!= (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|Určuje, zda `map` objekt není rovno jiné `map` objektu.|  
+|[operator< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|Určuje, zda `map` objektu je menší než jiná `map` objektu.|  
+|[operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|Určuje, zda `map` objektu je menší než nebo rovna do jiného `map` objektu.|  
+|[operator== (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|Určuje, zda `map` objekt rovná jiné `map` objektu.|  
+|[operator> (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|Určuje, zda `map` je větší než druhý objekt `map` objektu.|  
+|[operator>= (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|Určuje, zda `map` objekt je větší než nebo rovna hodnotě jiného `map` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -170,4 +173,4 @@ template<typename Key,
  [mapy](../dotnet/map-stl-clr.md)   
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

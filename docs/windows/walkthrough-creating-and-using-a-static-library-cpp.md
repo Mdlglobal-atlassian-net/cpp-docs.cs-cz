@@ -16,11 +16,14 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97de0b4dba9aa05e34c03077d22f42bb7a2266b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
 Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) pro použití s aplikací C++. Použití statické knihovny je skvělým způsobem, jak kód opakovaně. Místo znovu implementace stejných rutin v každé aplikaci, která vyžaduje funkci, je napsat jednou v statické knihovny a pak na ni odkazujte z aplikací. Kód odkazované z statické knihovny stane součástí aplikace – nemusíte instalovat k použití kódu jiný soubor.  
@@ -138,4 +141,4 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Vytvoření a použití dynamické knihovny (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)   
- [Aplikací klasické pracovní plochy (Visual C++)](../windows/desktop-applications-visual-cpp.md)
+ [Desktopové aplikace (Visual C++)](../windows/desktop-applications-visual-cpp.md)

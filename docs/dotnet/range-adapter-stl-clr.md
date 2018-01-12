@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Třída šablony, která zabalí pár iterátory, které se používají k implementaci několik rozhraní základní třídy knihovny (BCL). Použijete range_adapter – k manipulaci s rozsah STL/CLR, jako by šlo BCL kolekce.  
@@ -49,7 +52,7 @@ template<typename Iter>
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[range_adapter::Operator = (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Nahradí uložené iterator pár.|  
+|[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Nahradí uložené iterator pár.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -70,4 +73,4 @@ template<typename Iter>
   
 ## <a name="see-also"></a>Viz také  
  [collection_adapter – (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
- [make_collection – (STL/CLR)](../dotnet/make-collection-stl-clr.md)
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

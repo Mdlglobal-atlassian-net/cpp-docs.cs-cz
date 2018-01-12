@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 Umožňuje aplikací a součástí, které chcete používat funkce z common language runtime (CLR).  
@@ -75,7 +76,7 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
  Před Visual C++ 2005 **/clr:noAssembly** požadované **/LD**. **/LD** je nyní zahrnuta, když zadáte **/clr:noAssembly**.  
   
  **/ CLR: initialAppDomain**  
- Umožňuje [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] spuštění aplikace v 1 verzi modulu CLR. Pokud používáte **initialAppDomain**, pak může v některé z problémů, které jsou popsané v tématu [chyb: AppDomainUnloaded výjimka při použití spravovaná rozšíření pro Visual C++ součásti](http://go.microsoft.com/fwlink/?LinkID=169465) na Microsoft Web podpory.  
+ Umožňuje [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] spuštění aplikace v 1 verzi modulu CLR. Pokud používáte **initialAppDomain**, pak může v některé z problémů, které jsou popsané v tématu [chyb: AppDomainUnloaded výjimka při použití spravovaná rozšíření pro Visual C++ součásti](http://go.microsoft.com/fwlink/p/?linkid=169465) na Microsoft Web podpory.  
   
  Aplikace, který se zkompiluje pomocí **initialAppDomain** by se nemělo používat aplikaci, která používá technologii ASP.NET, protože není podporována v 1 verzi modulu CLR.  
   

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 711ddfb76ea9e8be2420ea9a9a31af4cfb5f6c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu rozhraní modelu COM, které poskytuje jednotný přístup k datům v různých informačních zdrojů a formáty.  OLE DB je oficiálně zastaralé; Tato dokumentace je pro vývojáře, kteří jsou zachování starší verze kódu. Nové aplikace měla použít rozhraní ODBC pro připojení ke zdrojům dat SQL.
@@ -38,7 +41,7 @@ Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu r
   
  Všimněte si, že knihovna MFC obsahuje jednu třídu, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), který zobrazí záznamů databáze v ovládacích prvcích. Zobrazení je přímo připojený k zobrazení formuláře `CRowset` objektu a zobrazí pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna.  
   
- Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [OLE DB – Příručka pro vývojáře](http://go.microsoft.com/fwlink/?linkid=121548).  
+ Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [OLE DB – Příručka pro vývojáře](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření příjemce technologie OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   

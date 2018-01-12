@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3991e2e5cab8814cba4e92882fbd978bdc051eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5b11350adfa70f38824744054df01d3d657e7474
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
 Při použití průvodce příjemcem knihovny ATL technologie OLE DB pro vytvoření příjemce, Průvodce vytvoří datový člen v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců. Každý člen dat je typu `DWORD` a obsahuje hodnotu stavu odpovídající její příslušné pole.  
@@ -84,7 +87,7 @@ END_COLUMN_MAP()
   
  Hodnoty stavu můžete taky nastavit hodnotu NULL pro konkrétního pole. To vám pomůže v případech, ve kterých chcete odlišit hodnotu pole jako NULL spíše než nula. Je na vás rozhodnout, zda je platná hodnota nebo hodnota NULL a rozhodnout, jak vaše aplikace bude pracovat. OLE DB definuje **DBSTATUS_S_ISNULL** jako správný způsob zadání obecné hodnoty NULL. Pokud příjemce čte data a hodnota je null, pole stavu nastavená na **DBSTATUS_S_ISNULL**. Pokud příjemce chce nastavit hodnotu NULL, příjemce nastaví hodnotu stavu na **DBSTATUS_S_ISNULL** před voláním zprostředkovatele.  
   
- Dále otevřete Oledb.h a vyhledejte **DBSTATUSENUM**. Pak můžete porovnat číselnou hodnotu nenulové hodnoty stavu proti **DBSTATUSENUM** hodnot výčtu. Pokud název výčtu není dostatečná říct, co je nesprávný, naleznete v tématu "Status" v části "Vytvoření vazby dat hodnoty" [OLE DB – Příručka pro vývojáře](http://go.microsoft.com/fwlink/?linkid=121548). Toto téma obsahuje tabulky použité při získání nebo nastavení data hodnoty stavu. Informace o hodnotami délky naleznete v tématu "Délka" ve stejném oddílu.  
+ Dále otevřete Oledb.h a vyhledejte **DBSTATUSENUM**. Pak můžete porovnat číselnou hodnotu nenulové hodnoty stavu proti **DBSTATUSENUM** hodnot výčtu. Pokud název výčtu není dostatečná říct, co je nesprávný, naleznete v tématu "Status" v části "Vytvoření vazby dat hodnoty" [OLE DB – Příručka pro vývojáře](http://go.microsoft.com/fwlink/p/?linkid=121548). Toto téma obsahuje tabulky použité při získání nebo nastavení data hodnoty stavu. Informace o hodnotami délky naleznete v tématu "Délka" ve stejném oddílu.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Načítání stavu sloupce nebo délka  
  Je možné načíst stav sloupce nebo délka sloupce s proměnnou délkou (zkontrolujte **DBSTATUS_S_ISNULL**, například):  

@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 077af759cfde3d312ec502c33cb42ee79bafc319
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5ca4de3cd7192fa4847bf6090a02b156458340
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution – třída
 Generuje rozdělení chí-kvadrát.  
@@ -98,7 +99,7 @@ Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr
   
 Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).  
   
-Podrobné informace o rozdělení chí-kvadrát, najdete v článku Wolfram MathWorld [Chi-Squared distribuční](http://go.microsoft.com/fwlink/LinkId=400528).  
+Podrobné informace o rozdělení chí-kvadrát, najdete v článku Wolfram MathWorld [Chi-Squared distribuční](http://go.microsoft.com/fwlink/p/?linkid=400528).  
   
 ## <a name="example"></a>Příklad  
   

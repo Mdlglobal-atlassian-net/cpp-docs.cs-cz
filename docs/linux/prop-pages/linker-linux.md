@@ -11,36 +11,19 @@ ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCLinkerTool.OutputFile
-- VC.Project.VCLinkerTool.ShowProgress
-- VC.Project.VCLinkerTool.Version
-- VC.Project.VCLinkerTool.VerboseOutput
-- VC.Project.VCLinkerTool.UnresolvedReferences
-- VC.Project.VCLinkerTool.OptimizeForMemory
-- VC.Project.VCLinkerTool.SharedLibrarySearchPath
-- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
-- VC.Project.VCLinkerTool.ForceSymbolReferences
-- VC.Project.VCLinkerTool.LibraryDependencies
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.GenerateMapFile
-- VC.Project.VCLinkerTool.Relocation
-- VC.Project.VCLinkerTool.FunctionBinding
-- VC.Project.VCLinkerTool.NoExecStackRequired
-- VC.Project.WholeArchive
-- VC.Project.AdditionalOptionsPage
-- VC.Project.VCLinkerTool.AdditionalDependencies
-ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-properties-linux-c"></a>Vlastnosti linkeru (Linux C++)
 
 ## <a name="general"></a>Obecné
+
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Výstupní soubor | Možnost přepíše výchozí název a umístění program, který vytvoří linkeru. (-o).
@@ -59,6 +42,7 @@ Linkeru | Určuje program, který má být vyvolán při propojování nebo cest
 Kopírovat výstup | Určuje, jestli zkopírujte výstupní soubor sestavení ze vzdáleného systému v místním počítači.
 
 ## <a name="input"></a>Vstup
+
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Ignorovat konkrétní výchozí knihovny | Určuje jeden nebo více názvů výchozí knihovny ignorovat. (--vyloučení knihovny lib, lib)
@@ -68,21 +52,17 @@ Závislosti knihovny | Tato možnost umožňuje zadat další knihovny pro přid
 Další závislosti | Určuje další položek, které chcete přidat do příkazového řádku odkaz.
 
 ## <a name="debugging"></a>Ladění
+
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Ladicí program informací o symbolu | Ladicí program informací o symbolu z výstupního souboru. | **Zahrnout všechny**<br>**Vynechat pouze informace symbolu ladicí program**<br>**Vynechat všech informací o symbolu**<br>
 Mapování názvu souboru | Možnost mapy informuje linkeru pro vytvoření souboru s mapováním se zadaným názvem uživatele. (-Mapy =)
 
 ## <a name="advanced"></a>Upřesnit
+
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Po přemístění označte proměnné určené jen pro čtení | Tato možnost označí proměnné jen pro čtení po přemístění.
 Povolit okamžitou funkce vazby | Tato možnost označí objektu pro vazbu okamžitou funkce.
 Nevyžadují spustitelné zásobníku | Tato možnost označí výstup jako nevyžadující spustitelné zásobníku.
 Celý archivu | Celý archivu používá všechny kódu ze zdroje a další závislosti.
-
-
-## <a name="additional-options"></a>Další možnosti
-
-
-

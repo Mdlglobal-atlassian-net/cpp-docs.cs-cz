@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) zrychluje spuštění kódu C++ a využívají data paralelní hardwaru, jako jsou grafický procesor (GPU) na kartě diskrétní grafiky. Pomocí C++ AMP můžete kódu algoritmy vícerozměrných dat tak, aby spuštění lze urychlit pomocí paralelismus na heterogenní hardwaru. Programovací model C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, dlaždice a knihovnu matematické funkce. Rozšíření jazyka C++ AMP můžete použít k řízení, jak přesunout data z procesoru na grafický procesor a zpět, takže může zlepšit výkon.  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>Knihovny Math  
- C++ AMP zahrnuje dvě matematické knihovny. Dvojitá přesnost knihovny v nástroji [Concurrency::precise_math – Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce dvojitou přesností. Také poskytuje podporu pro funkce s jednoduchou přesností, i když je stále potřebná podpora dvojitou přesností na hardware. Je v souladu s [C99 specifikace (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887). Akcelerátor musí podporovat a úplného dvojitou přesností. Můžete určit, jestli nemá kontrolou hodnotu [Accelerator::supports_double_precision – datový člen](reference/accelerator-class.md#supports_double_precision). Knihovny math rychlé v [Concurrency::fast_math – Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), obsahuje další sadu matematické funkce. Tyto funkce, které podporují pouze `float` operandy, provést rychleji, ale nejsou jako přesné jako v knihovně matematické dvojitou přesností. Funkce jsou součástí \<amp_math.h > hlavičkový soubor a všechny jsou deklarovány s `restrict(amp)`. Funkce v \<cmath – > soubor hlaviček importují do obou `fast_math` a `precise_math` obory názvů. `restrict` – Klíčové slovo se používá k rozlišení \<cmath – > C++ AMP a verze. Následující kód vypočítá logaritmus základu 10, rychlé metodou, každou hodnotu, která je ve výpočetní doméně.  
+ C++ AMP zahrnuje dvě matematické knihovny. Dvojitá přesnost knihovny v nástroji [Concurrency::precise_math – Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce dvojitou přesností. Také poskytuje podporu pro funkce s jednoduchou přesností, i když je stále potřebná podpora dvojitou přesností na hardware. Je v souladu s [C99 specifikace (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerátor musí podporovat a úplného dvojitou přesností. Můžete určit, jestli nemá kontrolou hodnotu [Accelerator::supports_double_precision – datový člen](reference/accelerator-class.md#supports_double_precision). Knihovny math rychlé v [Concurrency::fast_math – Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), obsahuje další sadu matematické funkce. Tyto funkce, které podporují pouze `float` operandy, provést rychleji, ale nejsou jako přesné jako v knihovně matematické dvojitou přesností. Funkce jsou součástí \<amp_math.h > hlavičkový soubor a všechny jsou deklarovány s `restrict(amp)`. Funkce v \<cmath – > soubor hlaviček importují do obou `fast_math` a `precise_math` obory názvů. `restrict` – Klíčové slovo se používá k rozlišení \<cmath – > C++ AMP a verze. Následující kód vypočítá logaritmus základu 10, rychlé metodou, každou hodnotu, která je ve výpočetní doméně.  
 
   
 ```cpp  
@@ -467,15 +468,15 @@ void MathExample() {
 ## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]Aplikace  
  Stejně jako jiné knihovny jazyka C++ použijete C++ AMP v vaší [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Tyto články popisují, jak zahrnout kódu C++ AMP v aplikacích vytvořené pomocí C++, C#, Visual Basic nebo JavaScript:  
   
-- [Používání modelu C++ AMP v aplikacích pro Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Používání modelu C++ AMP v aplikacích pro Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání z jazyka JavaScript](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání z jazyka JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [Bing Maps Optimalizátor cesty, aplikace Windows Store v JavaScript a C++](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [Bing Maps Optimalizátor cesty, aplikace Windows Store v JavaScript a C++](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [Jak používat C++ AMP z C# s použitím prostředí Windows Runtime](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [Jak používat C++ AMP z C# s použitím prostředí Windows Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [Jak používat C++ AMP z jazyka C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [Jak používat C++ AMP z jazyka C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [Volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -486,13 +487,13 @@ void MathExample() {
   
 - [Aktivita GPU (stránkování)](/visualstudio/profiling/gpu-activity-paging)  
   
-- [Aktivita GPU (Tento proces)](/visualstudio/profiling/gpu-activity-this-process)  
+- [Aktivita GPU (tento proces)](/visualstudio/profiling/gpu-activity-this-process)  
   
 - [Aktivita GPU (jiné procesy)](/visualstudio/profiling/gpu-activity-other-processes)  
   
-- [Kanály (zobrazení vláken)](/visualstudio/profiling/channels-threads-view)  
+- [Kanály (Zobrazení vláken)](/visualstudio/profiling/channels-threads-view)  
   
-- [Analýza kódu C++ AMP s vizualizér souběžnosti](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [Analýza kódu C++ AMP s vizualizér souběžnosti](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>Doporučení výkonu  
  MODULUS a dělení celých čísel bez znaménka mají výrazně lepší výkon než numerického zbytku a dělení podepsaná celá čísla. Doporučujeme použít bez znaménka celá čísla, pokud je to možné.  
@@ -501,4 +502,4 @@ void MathExample() {
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)   
  [Referenční dokumentace (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=238472)

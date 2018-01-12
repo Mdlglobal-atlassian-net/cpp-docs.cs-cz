@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f5c751bffbc8ae7c5dc71ab507ed878fc94d82d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-c"></a>module (C++)
 Knihovna bloku definuje v souboru.  
@@ -68,13 +71,13 @@ Knihovna bloku definuje v souboru.
  `uuid`  
  Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Budete muset načíst *uuid* bloku knihovny, což lze provést pomocí identifikátor **__uuidof – (***NázevKnihovny***)**.  
   
- **LCID**  
+ **lcid**  
  Lokalizace parametr. V tématu [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Další informace.  
   
  **ovládací prvek** (volitelné)  
  Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.  
   
- **helpstring –**  
+ **helpstring**  
  Určuje knihovny typů.  
   
  ***helpstringdll –*** (volitelné)  

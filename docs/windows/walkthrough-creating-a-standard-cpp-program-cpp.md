@@ -19,11 +19,14 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b44b8f21f2c8deea7cd6b9c89e87004e088d63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření standardního programu C++ (C++)
 Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slouží k vytvoření standardní C++ – programy. Podle kroků v tomto návodu, můžete vytvořit projekt, přidejte do projektu nový soubor, úpravou souboru přidejte kód C++ a pak zkompilování a spuštění programu pomocí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  

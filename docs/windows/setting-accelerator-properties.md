@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8a83b155b5e0a350d5c578a8dccfb9040cec3df
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-accelerator-properties"></a>Nastavení vlastností akcelerátoru
 Vlastnosti akcelerátoru můžete nastavit v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) kdykoli. Editor akcelerátorů můžete také použít k úpravě vlastností akcelerátoru v tabulce akcelerátorů. Změny provedené pomocí okna vlastnosti nebo editor akcelerátorů mít stejný výsledek: úpravy se okamžitě projeví v tabulce akcelerátorů.  

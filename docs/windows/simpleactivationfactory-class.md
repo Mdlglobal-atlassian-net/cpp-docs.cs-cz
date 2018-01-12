@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c56d03b74080ae65f84ffbad8c4dd2092be1082
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory – třída
 Poskytuje základní mechanismus pro vytvoření klasického základní třídy COM nebo prostředí Windows Runtime.  
@@ -50,9 +53,9 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Simpleactivationfactory::activateinstance – metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Vytvoří instanci zadaného rozhraní.|  
-|[Simpleactivationfactory::getruntimeclassname – metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Získá název třídy runtime instance třídy určeného `Base` – třída parametru šablony.|  
-|[Simpleactivationfactory::gettrustlevel – metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Získá úroveň důvěryhodnosti instance třídy určeného `Base` – třída parametru šablony.|  
+|[SimpleActivationFactory::ActivateInstance – metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Vytvoří instanci zadaného rozhraní.|  
+|[SimpleActivationFactory::GetRuntimeClassName – metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Získá název třídy runtime instance třídy určeného `Base` – třída parametru šablony.|  
+|[SimpleActivationFactory::GetTrustLevel – metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Získá úroveň důvěryhodnosti instance třídy určeného `Base` – třída parametru šablony.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `I0`  
@@ -83,4 +86,4 @@ class SimpleActivationFactory : public ActivationFactory<>;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

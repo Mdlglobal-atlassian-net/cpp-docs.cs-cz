@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 201d4a6493b71a78f2a438ac43c003a8b7d36ce7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Konkrétní Microsoft**  
@@ -35,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **/GS** – možnost kompilátoru způsobí, že kompilátor vyzkoušet přetečení vyrovnávací paměti vložením kontrol zabezpečení v zásobníku. Typy datové struktury, které jsou způsobilé pro kontrol zabezpečení jsou popsané v [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md). Další informace o zjišťování přetečení vyrovnávací paměti najdete v tématu [kompilátoru zabezpečení kontroluje v hloubka](http://go.microsoft.com/fwlink/?linkid=7260) na webu MSDN.  
+ **/GS** – možnost kompilátoru způsobí, že kompilátor vyzkoušet přetečení vyrovnávací paměti vložením kontrol zabezpečení v zásobníku. Typy datové struktury, které jsou způsobilé pro kontrol zabezpečení jsou popsané v [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md). Další informace o zjišťování přetečení vyrovnávací paměti najdete v tématu [kompilátoru zabezpečení kontroluje v hloubka](http://go.microsoft.com/fwlink/p/?linkid=7260) na webu MSDN.  
   
  Zabezpečení funkce před přetečením vyrovnávací paměti může být určeno expertní ruční revizí kódu nebo externí analýzou. V takovém případě můžete potlačit kontrol zabezpečení pro funkci s použitím `__declspec(safebuffers)` – klíčové slovo do deklarace funkce.  
   
@@ -83,4 +84,4 @@ int wmain() {
  [__declspec](../cpp/declspec.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   
  [vložené, __inline, \__forceinline](inline-functions-cpp.md)   
- [strict_gs_check –](../preprocessor/strict-gs-check.md)
+ [strict_gs_check](../preprocessor/strict-gs-check.md)

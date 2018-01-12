@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Zprávy nástrojů pro vektorizaci a paralelní zpracování
 Můžete použít možnosti kompilátoru jazyka Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) a [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) nastavit [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) pro výstup důvod kódy a informační zprávy o jeho aktivity. Tento článek vysvětluje kódy příčiny a zprávy.  
@@ -989,7 +990,7 @@ void code_1505(int *A, int *B)
   
 ## <a name="see-also"></a>Viz také  
  [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [Paralelní programování v nativním kódu](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop()](../../preprocessor/loop.md)   
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
  [/ Qpar-report (úroveň sestav automatickou vektorizací)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

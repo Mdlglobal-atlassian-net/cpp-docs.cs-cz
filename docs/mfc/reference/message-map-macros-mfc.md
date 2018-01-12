@@ -39,11 +39,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70f88d493ad557515cfac1f8cffeaa305c849f63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 Pro podporu mapy zpráv, MFC poskytuje následující makra:  
@@ -312,7 +313,7 @@ ON_MESSAGE( message, memberFxn )
  Musí být přesně jeden `ON_MESSAGE` makro příkaz na mapě zprávu pro každý uživatelem definovaná zpráva, která musí být namapovaný na funkce obslužné rutiny zpráv.  
   
 > [!NOTE]
->  Kromě zprávy uživatelem definované `ON_MESSAGE` zpracovává méně častých zpráv systému Windows. Další informace najdete v článku znalostní báze [99848: informace: použití ON_MESSAGE() makro na mapu méně běžné zprávy](http://go.microsoft.com/fwlink/?linkId=192022).  
+>  Kromě zprávy uživatelem definované `ON_MESSAGE` zpracovává méně častých zpráv systému Windows. Další informace najdete v článku znalostní báze [99848: informace: použití ON_MESSAGE() makro na mapu méně běžné zprávy](http://go.microsoft.com/fwlink/p/?linkid=192022).  
   
  Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md) a [uživatelem definované obslužné rutiny](user-defined-handlers.md)  
   

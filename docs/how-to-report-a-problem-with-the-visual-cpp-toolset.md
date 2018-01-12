@@ -1,23 +1,22 @@
 ---
 title: "Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Postup nahlásit problém s sady nástrojů Visual C++
 
@@ -29,9 +28,9 @@ V tomto dokumentu budete přečíst si o
 
 - [Postup přípravy sestavy](#prepare), a díky užitečnou sestavu.
 
-- [Způsoby odeslání sestavy](#send), a jsou co pak jiný.
-
 - [Jak vygenerovat zkopírujte](#generate)a různé druhy repros.
+
+- [Způsoby odeslání sestavy](#send), a jsou co pak jiný.
 
 Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
 
@@ -47,7 +46,7 @@ Minimálně musí obsahovat sestavy
 
 - Podrobný popis problému, který jste se setkali.
 
-- Zkopírujte – zdrojový kód, který ukazuje problém.
+- Zkopírujte: zdrojový kód, který ukazuje problém.
 
 Přečtěte si další informace o konkrétní informace jsme potřeba a tam, kde můžete najít.
 
@@ -94,7 +93,7 @@ Nejlepší místo k najít tyto informace se v protokolu sestavení ihned po se 
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Tak, aby odesílaly obsah příkazového řádku
 
-1. Vyhledejte **CL.command.1.tlog** souborů a otevřete ji. Ve výchozím nastavení, tento soubor nachází ve \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.
+1. Vyhledejte **CL.command.1.tlog** souborů a otevřete ji. Ve výchozím nastavení, tento soubor nachází ve \\...\Visual Studio *verze*\Projects\\*název řešení SolutionName*\\*ProjectName*\ Konfigurace\\*ProjectName*.tlog\CL.command.1.tlog.
 
    Uvnitř tohoto souboru najdete v ní názvy soubory zdrojového kódu, za nímž následuje argumenty příkazového řádku používá ke kompilaci je každý na samostatné řádky.
 
@@ -213,7 +212,7 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Pokud je povolená přírůstkové propojování a až po počáteční propojení došlo k havárii – to znamená, až po první úplné propojení na kterých je založena následné přírůstkové propojování – uveďte také kopii objektu (.obj) a knihovny (LIB) soubory, které odpovídají pro zdrojové soubory, které byly upraveny po počáteční propojení bylo dokončeno.
+Pokud je povolená přírůstkové propojování a až po počáteční propojení, došlo k havárii (tedy až po první úplné propojení na kterých je založena následné přírůstkové propojování) také zadejte kopii objektu (.obj) a knihovny (LIB) soubory, které odpovídají pro zdrojové soubory, které byly upraveny po počáteční propojení bylo dokončeno.
 
 #### <a name="bad-code-generation"></a>Generování chybného kódu
 
@@ -221,50 +220,13 @@ Generování chybného kódu je taková situace vzácná, ale nastane, když kom
 
 Pro tento typ havárie zadejte [zkopírujte odkaz](#link-repros) nebo, pokud používáte generování kódu v době propojování (LTCG) [zpracované zkopírujte](#preprocessed-repros) není-li. LTGC zapnuta podle `/GL` argument příkazového řádku k cl.exe.
 
-## <a name="send"></a>Způsoby odeslání sestavy
-
-Chcete-li získat sestavu do us několika způsoby. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo na e-mailovou. Nejlepší volbou pro sestavy závisí na druhu problém, který jste došlo, jak chcete pracovat s technici, kteří budou prozkoumat sestavy a jestli chcete sledovat průběh nebo sdílení sestavy s komunitou.
-
-> [!NOTE]
-> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
-
-### <a name="send-an-email"></a>Odeslat E-mail
-
-E-mailu je další způsob k odeslání zprávy přímo do týmu Visual C++; můžete kontaktovat nás na adrese [ compilercrash@microsoft.com ](mailto:compilercrash@microsoft.com).
-
-Pokud si zvolíte sestavu odeslat e-mailem, můžete použít následující šablonu jako text e-mailové zprávy. Nezapomeňte si připojit zdrojový kód nebo další soubory, pokud nejsou včetně těchto informací v obsahu e-mailu.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
-
-Sestava nástroj problém v sadě Visual Studio je způsob, jak uživatelům v sadě Visual Studio sestavy celou řadu problémů s několika kliknutí. Poskytuje jednoduché formulář, který můžete použít k určení podrobné informace o problému byla zjištěna a pak odeslat sestavy, aniž byste opustili prostředí IDE.
-
-Vytváření sestav váš problém prostřednictvím sestava je nástroj problém neobvyklé druhy problémů nástrojů popsaných v tomto dokumentu; Nicméně jeho možnost můžete zvolit, pokud ji sady vašich předvolbách.
-
-> [!TIP]
-> Pro jiné druhy problémů, ke kterým může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě) může být sestava nástroj problém hlavně dobrou volbou z důvodu možnosti snímek obrazovky a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému byla zjištěna. Měli byste nikdy nahlásit tyto jiné typy chyb zasláním e-mailu compilercrash@microsoft.com.
-
 ## <a name="generate"></a>Generování zkopírujte
 
-Zkopírujte je příklad dokončení, úplný a samostatný kódu, která demonstruje problému, který jste reporting. Zkopírujte je **není** fragmentu kódu – musí být kompletní příklad, který vytvoří a spustí (nebo způsobem, s výjimkou chyby, vytvořené na problém se reporting). Měl by obsahovat všechny nezbytné # direktivy i pro hlavičky standardních include.
+Zkopírujte je příklad dokončení, úplný a samostatný kódu, která demonstruje problému, který jste reporting. Zkopírujte je **není** fragmentu kódu; musí být kompletní příklad, který vytvoří a spustí (nebo způsobem, s výjimkou chyby, vytvořené na problém se reporting). Měl by obsahovat všechny nezbytné # direktivy i pro hlavičky standardních include.
 
 Kromě toho je dobré zkopírujte
 
-- **Minimální.** Repros by měl být co nejmenší při stále demonstraci přesně problému, který jste se setkali. Repros nemusí být komplexní nebo realistické – je lepší použít jednoduchý, na bod repros. Není potřeba zahrnout kontrolní příklady kódu, který funguje, ale možná, pokud je ilustrativní; pouze ukázkový kód, který je příčinou problému je nutné.
+- **Minimální.** Repros by měl být co nejmenší při stále demonstraci přesně problému, který jste se setkali. Repros nemusí být komplexní nebo realistické; jednoduchý, na bod repros je lepší. Není potřeba zahrnout kontrolní příklady kódu, který funguje, ale možná, pokud je ilustrativní; pouze ukázkový kód, který je příčinou problému je nutné.
 
 - **Úplný a samostatný.** Repros byste neměli nepotřebné závislosti. Pokud můžete reprodukujte problém bez knihovny třetích stran, prosím učiňte. Pokud jste reprodukování problému bez jakékoli knihovny kódu (`std::out`, `printf()` jsou v pořádku), proveďte tuto akci. Snižuje množství kód, který se musí vzít v úvahu jako Přispěvatel možné tento problém je pro nás enormously užitečné.
 
@@ -330,3 +292,51 @@ Nakonec balíček nepodařilo komprimací celý adresáře do souboru .zip nebo 
 Pokud problém nelze zmenšit na jeden zdrojový soubor nebo předběžně zpracované zkopírujte a zkopírujte odkaz nevyžaduje žádný problém, jsme prozkoumat a projekt IDE. Měli byste být minimální kódu v projektu a všechny pokyny z tohoto dokumentu se vztahuje.
 
 Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprimací celou strukturu adresáře do souboru .zip nebo podobné a jeho připojení k sestavě.
+
+## <a name="send"></a>Způsoby odeslání sestavy
+
+Chcete-li získat sestavu do us několika způsoby. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Je také možné odeslat e-mail s sestavy, ale jsou upřednostněny první dvě metody. Výběr závisí na tom, jak chcete pracovat s technici, kteří budou prozkoumat sestavy a jestli chcete sledovat průběh nebo sdílení sestavy s komunitou.
+
+> [!NOTE]
+> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
+
+### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
+
+**Nahlásit problém** nástroj v sadě Visual Studio je způsob, jak uživatelům v sadě Visual Studio sestavy celou řadu problémů s několika kliknutí. Poskytuje jednoduché formulář, který můžete použít k určení podrobné informace o problému byla zjištěna a pak odeslat sestavy, aniž byste opustili prostředí IDE.
+
+Vytváření sestav váš problém prostřednictvím **nahlásit problém** nástroj je snadný a pohodlný z prostředí IDE. Můžete k němu přístup ze záhlaví výběrem **odeslat zpětnou vazbu** ikonu vedle **Snadné spuštění** vyhledávací pole, nebo můžete najít v řádku nabídek v **pomoci**  >  **Odeslat názor** > **nahlásit problém**.
+
+Když zvolíte-li nahlásit problém, nejprve vyhledejte komunity vývojářů pro podobné problémy. Pokud váš problém byla nahlášena před, upvote tématu a přidejte komentář s další podrobnosti. Pokud nevidíte podobný problém, vyberte **problém nové sestavy** tlačítko v dolní části zpětnou vazbu Visual Studio dialogové okno a postupujte podle kroků zprávu o problému.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Pomocí stránky komunity vývojářů Visual Studio
+
+Visual Studio Community vývojáře stránky jsou jiné pohodlný způsob, jak odesílat zprávy o problémech a najděte řešení pro Visual Studio, C++ kompilátoru, nástroje a knihovny. [Visual Studio otázky](https://developercommunity.visualstudio.com/spaces/8/index.html) stránky je tam, kde k hlášení problémů s IDE nebo instalace. Pro problémy s používáním C++ kompilátoru, linkeru a další nástroje a knihovny, [C++ otázky](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky.
+
+Do komunity vývojářů je informační zpráva v horní části každé stránce vyhledávací pole, které můžete použít k vyhledání příspěvcích nebo témata, která odesílat zprávy o problémech, které vám podobnou. Můžete zjistit, že řešení a další užitečné informace týkající se váš problém již k dispozici v existující téma. Pokud někdo ohlásil ke stejnému problému před, upvote a komentáře v tomto tématu místo vytvoření nové sestavy problém.
+
+Pokud váš problém nebyla hlášena před, vyberte **nahlásit problém** tlačítko vedle do vyhledávacího pole na stránce komunity vývojářů. Můžete být vyzváni k přihlášení k účtu sady Visual Studio a vyjádřete umožnit přístup k aplikaci komunity vývojářů k profilu. Pokud jste přihlášeni, přejdete přímo na stránku kde můžete nahlásit problém. Můžete zahrnout kódu zkopírujte a příkazového řádku, snímky obrazovky, odkazy na související diskusí a další informace, které si myslíte, že je relevantní a užitečné.
+
+### <a name="send-an-email"></a>Odeslat E-mail
+
+E-mailu je další způsob k odeslání zprávy přímo do týmu Visual C++. Můžete kontaktovat nás na adrese [ compilercrash@microsoft.com ](mailto:compilercrash@microsoft.com). Tuto metodu použijte pouze v případě, že další dvě nejsou k dispozici, protože e-mailu není sledována úzce problémy hlášené do komunity vývojářů pomocí **nahlásit problém** nejsou nástroj nebo webové stránky a komentářů a řešení viditelné pro ostatní uživatelé v sadě Visual Studio.
+
+Pokud si zvolíte sestavu odeslat e-mailem, můžete použít následující šablonu jako text e-mailové zprávy. Nezapomeňte si připojit zdrojový kód nebo další soubory, pokud nejsou včetně těchto informací v obsahu e-mailu.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> Pro jiné druhy problémů, ke kterým může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě) může být sestava nástroj problém hlavně dobrou volbou z důvodu možnosti snímek obrazovky a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému byla zjištěna. Měli byste nikdy nahlásit tyto jiné typy chyb zasláním e-mailu compilercrash@microsoft.com.
+

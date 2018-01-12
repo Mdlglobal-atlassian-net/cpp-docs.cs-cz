@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8353c8e6baf8072ee45acaa3f4635bc333c03add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a915768f0668a4ce276962f9eafd1f905980e2be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1112"></a>Chyba linkerů LNK1112
 modul počítač typu 'type1' v konfliktu s cílový počítač typ 'type2'.  
@@ -35,4 +36,4 @@ modul počítač typu 'type1' v konfliktu s cílový počítač typ 'type2'.
  Této chybě může také dojít, pokud změníte **aktivní konfigurace řešení** v **nástroje Configuration Manager** a potom se pokusíte sestavení projektu, než odstraníte soubory zprostředkující projektu. Chcete-li tuto chybu vyřešit, vyberte **znovu sestavit řešení** z **sestavení** nabídky. Můžete také vybrat **Vyčistit řešení** z **sestavení** nabídce a potom sestavení řešení.  
   
 ## <a name="see-also"></a>Viz také  
- [Chyby a upozornění Linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+ [Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

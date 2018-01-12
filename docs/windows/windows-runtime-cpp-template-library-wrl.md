@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.  
@@ -56,19 +59,19 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  [Návod: Vytvoření komponenty základní služby Windows Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
  Ukazuje, jak vytvořit základní komponenty prostředí Windows Runtime, která sečte dvě čísla pomocí knihovny šablon jazyka C++ Runtime systému Windows. Také ukazuje, jak aktivovat události a používání komponent z aplikace univerzální platformu Windows, která používá jazyk JavaScript.  
   
- [Návod: Vytvoření aplikace pro Windows Store pomocí knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Návod: Vytvoření aplikace pro Windows Store s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Zjistěte, jak vytvořit aplikaci pro univerzální platformu Windows, která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Ukazuje, jak použít knihovna šablon C++ Runtime Windows k vytvoření základní komponenty modelu COM a základní způsob, jak zaregistrovat a využívat komponenty modelu COM z aplikace na ploše.  
   
- [Postupy: vytváření instancí komponent knihovny WRL přímo](../windows/how-to-instantiate-wrl-components-directly.md)  
+ [Postupy: Přímé vytváření instancí komponent knihovny WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
  Další informace o použití [Microsoft::WRL::Make](../windows/make-function.md) a [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funkce pro vytvoření instance součásti z modulu, který ji definuje.  
   
- [Postupy: vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+ [Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
  Ukazuje, jak používat vlastní komponenty prostředí Windows Runtime z knihovny WRL vytvořením souboru IDL z .winmd metadat.  
   
- [Návod: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+ [Návod: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
  Ukazuje, jak používat [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) a [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) rozhraní společně s úkoly na odesílání žádostí HTTP GET a POST na webovou službu v aplikaci pro univerzální platformu Windows.  
   
  [Ukázka Optimalizátor cestě Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
@@ -141,6 +144,6 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
 |-|-|  
 |[Šablona projektu knihovny tříd](../windows/wrl-class-library-project-template.md)|Popisuje, jak pro přístup k šabloně projektu knihovny tříd WRL. Tato šablona pomáhá zjednodušit pomocí sady Visual Studio k vytvoření komponentů prostředí Windows Runtime.|  
 |[Klíč rozhraní API podle kategorie](../windows/key-wrl-apis-by-category.md)|Označuje primární typy knihovna šablon C++ prostředí Windows Runtime, funkcemi a makry.|  
-|[Referenční dokumentace](../windows/wrl-reference.md)|Obsahuje referenční informace pro knihovny šablon jazyka C++ Runtime systému Windows.|  
-|[Stručná referenční dokumentace (prostředí Windows Runtime a Visual C++)](http://go.microsoft.com/fwlink/?LinkId=229180)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|  
-|[Pomocí modulu Runtime součásti systému Windows v jazyce Visual C++](http://go.microsoft.com/fwlink/?LinkId=229155)|Ukazuje, jak používat C + +/ CX pro vytvoření základní komponenty prostředí Windows Runtime.|
+|[Referenční informace](../windows/wrl-reference.md)|Obsahuje referenční informace pro knihovny šablon jazyka C++ Runtime systému Windows.|  
+|[Stručná referenční dokumentace (prostředí Windows Runtime a Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|  
+|[Pomocí modulu Runtime součásti systému Windows v jazyce Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Ukazuje, jak používat C + +/ CX pro vytvoření základní komponenty prostředí Windows Runtime.|

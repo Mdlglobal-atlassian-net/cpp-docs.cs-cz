@@ -163,11 +163,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ccc21b89b7330eca084dbd740a36ce5e031ff8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl – třída
 Poskytuje funkce ovládacího prvku RichEdit.  
@@ -1210,7 +1211,7 @@ int LineLength(int nLine = -1) const;
  Určuje znakový index znaku v řádku, jehož délka má být načtena. Pokud tento parametr hodnotu -1, se vrátí délku aktuálního řádku (řádek, který obsahuje vsuvka), není včetně Délka libovolného vybraný text v řádku. Když `LineLength` je volána pro jednořádkové textové pole, je tento parametr ignorován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Když `LineLength` je volána pro ovládací prvek upravit více řádků, je vrácenou hodnotu délka (v bajtech) řádku určeného `nLine`. Když `LineLength` je volána pro ovládací prvek upravit jeden řádek, vrácená hodnota je délka textu v textovém poli (v bajtech).  
+ Když `LineLength` je volána pro ovládací prvek upravit více řádků, je vrácenou hodnotu délka (v `TCHAR`) řádku určeného `nLine`.  Nebude obsahovat znak návratu na konec řádku. Když `LineLength` je volána pro jednořádkové textové pole, je vrácenou hodnotu délka (v `TCHAR`) textu v textovém poli. Pokud je vyšší než počet znaků v ovládacím prvku využívat, je vrácenou hodnotu nula.
   
 ### <a name="remarks"></a>Poznámky  
  Použití [LineIndex](#lineindex) – členská funkce načíst znakový index pro daný řádek číslo v rámci to `CRichEditCtrl` objektu.  
@@ -1915,4 +1916,4 @@ BOOL Undo();
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CEdit – třída](../../mfc/reference/cedit-class.md)   
- [Cricheditview – třída](../../mfc/reference/cricheditview-class.md)
+ [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)

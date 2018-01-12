@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8a28eaf627300041812937982bf3a24232271e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 376c2fd83284bacbf3e4c38e4a25c14d5c9c24c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-list-stlclr"></a>operátor&lt;= (list) (STL/CLR)
 Seznam menší než nebo rovna porovnání.  
@@ -99,4 +102,4 @@ int main()
  [Operator! = (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
  [operátor\< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   
  [Operator > = (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [Operator > (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)
+ [operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)

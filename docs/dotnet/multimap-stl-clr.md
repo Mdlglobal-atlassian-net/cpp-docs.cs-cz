@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b944be379b851410a7c45af5aa05e72dbf63037c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `multimap` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -77,7 +80,7 @@ template<typename Key,
 |[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)|Řazení delegáta pro dva klíče.|  
 |[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)|Typ klíče řazení|  
 |[multimap::mapped_type (STL/CLR)](../dotnet/multimap-mapped-type-stl-clr.md)|Typ namapované hodnotu přidruženou každý klíč.|  
-|[multimap::Reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)|Typ odkazu na prvek|  
+|[multimap::reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)|Typ odkazu na prvek|  
 |[multimap::reverse_iterator (STL/CLR)](../dotnet/multimap-reverse-iterator-stl-clr.md)|Typ zpětné iterator pro řízené sekvenci.|  
 |[multimap::size_type (STL/CLR)](../dotnet/multimap-size-type-stl-clr.md)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
 |[multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)|Řazení delegáta pro dvě hodnoty elementu.|  
@@ -87,13 +90,13 @@ template<typename Key,
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|Určuje začátek řízené sekvence.|  
 |[multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|Odebere všechny prvky.|  
-|[multimap::Count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
-|[multimap::Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
+|[multimap::count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)|Určuje konec řízené sekvence.|  
 |[multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)|Najde rozsah, který odpovídá zadanému klíči.|  
-|[multimap::Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
-|[multimap::Find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
-|[multimap::Insert (STL/CLR)](../dotnet/multimap-insert-stl-clr.md)|Přidá prvky.|  
+|[multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)|Odebere prvky v určených pozicích.|  
+|[multimap::find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)|Vyhledá prvek, který odpovídá zadanému klíči.|  
+|[multimap::insert (STL/CLR)](../dotnet/multimap-insert-stl-clr.md)|Přidá prvky.|  
 |[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)|Zkopíruje řazení delegáta pro dva klíče.|  
 |[multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
 |[multimap::make_value (STL/CLR)](../dotnet/multimap-make-value-stl-clr.md)|Vytvoří objekt hodnoty.|  
@@ -108,13 +111,13 @@ template<typename Key,
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[multimap::Operator = (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
-|[Operator! = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Určuje, zda `multimap` objekt není rovno jiné `multimap` objektu.|  
-|[Operator < (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)|Určuje, zda `multimap` objektu je menší než jiná `multimap` objektu.|  
-|[Operator < = (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Určuje, zda `multimap` objektu je menší než nebo rovna do jiného `multimap` objektu.|  
-|[Operator == (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)|Určuje, zda `multimap` objekt rovná jiné `multimap` objektu.|  
-|[Operator > (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Určuje, zda `multimap` je větší než druhý objekt `multimap` objektu.|  
-|[Operator > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Určuje, zda `multimap` objekt je větší než nebo rovna hodnotě jiného `multimap` objektu.|  
+|[multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Nahradí řízené sekvenci.|  
+|[operator!= (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Určuje, zda `multimap` objekt není rovno jiné `multimap` objektu.|  
+|[operator< (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)|Určuje, zda `multimap` objektu je menší než jiná `multimap` objektu.|  
+|[operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Určuje, zda `multimap` objektu je menší než nebo rovna do jiného `multimap` objektu.|  
+|[operator== (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)|Určuje, zda `multimap` objekt rovná jiné `multimap` objektu.|  
+|[operator> (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Určuje, zda `multimap` je větší než druhý objekt `multimap` objektu.|  
+|[operator>= (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Určuje, zda `multimap` objekt je větší než nebo rovna hodnotě jiného `multimap` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
@@ -167,4 +170,4 @@ template<typename Key,
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Sada (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

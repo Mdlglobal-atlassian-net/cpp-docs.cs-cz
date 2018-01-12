@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězce a znak a poskytuje způsoby, jak express literálových hodnot každé z těchto typů. Ve zdrojovém kódu express obsah vaší znak a řetězec literály pomocí znakovou sadu. Univerzální názvy znaků a řídicí znaky umožňují express libovolného řetězce základní zdrojové znakové sadě. Nezpracovaná řetězcový literál umožňuje vyhnout řídicí znaky a slouží k express všechny typy textových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět navíc konstrukce nebo převod kroky.  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Nezpracovaný řetězec literály (C ++ 11)  
- Nezpracovaná řetězcový literál je pole ukončené hodnotou null – znak typu – obsahující libovolný grafické znak, včetně dvojité uvozovky ("), zpětné lomítko (\\), nebo znak nového řádku. Nezpracovaný řetězec literály se často používají v regulárních výrazech, které používají třídy znaků a řetězce HTML a XML řetězce. Příklady, najdete v následujícím článku: [Bjarnem Stroustrupem – nejčastější dotazy na C ++ 11](http://go.microsoft.com/fwlink/?LinkId=401172).  
+ Nezpracovaná řetězcový literál je pole ukončené hodnotou null – znak typu – obsahující libovolný grafické znak, včetně dvojité uvozovky ("), zpětné lomítko (\\), nebo znak nového řádku. Nezpracovaný řetězec literály se často používají v regulárních výrazech, které používají třídy znaků a řetězce HTML a XML řetězce. Příklady, najdete v následujícím článku: [Bjarnem Stroustrupem – nejčastější dotazy na C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

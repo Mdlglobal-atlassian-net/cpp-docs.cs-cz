@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e912d5043c1b908d875dca50af12e38fd05f64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Používání modelu C++ AMP v aplikacích pro Windows Store
 C++ AMP (C++ Accelerated Massive Parallelism) můžete použít ve vaší [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikaci s grafickým Procesorem (grafiky zpracování Unit) nebo jiné výpočetní akcelerátorů provádět výpočty. Ale C++ AMP neposkytuje rozhraní API pro práci přímo s typy prostředí Windows Runtime a prostředí Windows Runtime neposkytuje obálku pro C++ AMP. Při použití prostředí Windows Runtime typy ve vašem kódu – včetně těch, které jste sami vytvořili, je nutné je převést na typy, které jsou kompatibilní s C++ AMP.  
@@ -119,8 +120,8 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření první aplikace Windows Store s použitím jazyka C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
- [Vytváření Windows Runtime komponent v jazyce C++](http://go.microsoft.com/fwlink/p/linkid=249076)
+ [Vytvoření první aplikace Windows Store s použitím jazyka C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
+ [Vytváření Windows Runtime komponent v jazyce C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
 
 
 

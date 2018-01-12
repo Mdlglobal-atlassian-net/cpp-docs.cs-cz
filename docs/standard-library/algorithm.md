@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65cb348e19031965d70175d73ed8df94692f9db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
+ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;algoritmus&gt;
 Definuje standardní knihovna C++ kontejneru šablony funkce, které provádět algoritmy.  
@@ -44,7 +45,7 @@ Definuje standardní knihovna C++ kontejneru šablony funkce, které provádět 
   
 -   Přípona „_copy“ označuje, že algoritmus nejen manipuluje s hodnotami prvků, ale také kopíruje změněné hodnoty do cílového rozsahu. `reverse` Algoritmus obrátí pořadí prvků v rozsahu a `reverse_copy` algoritmus také zkopíruje výsledek do cílové oblasti.  
   
- Standardní knihovna C++ algoritmy jsou často klasifikovány do skupin, které indikují něco o jejich účel nebo požadavky. Patří mezi ně úprava algoritmy, které změňte hodnotu elementů ve srovnání s úprava algoritmy, které nepodporují. Mutující algoritmy mění pořadí prvků, ale nikoli jejich hodnoty. Odebírající algoritmy mohou odstranit prvky z rozsahu nebo rozsah zkopírovat. Algoritmy řazení mění různými způsoby pořadí prvků v rozsahu a algoritmy seřazeného rozsahu pracují pouze s algoritmy, jejichž prvky byly seřazeny určitým způsobem.  
+ Standardní knihovna C++ algoritmy jsou často klasifikovány do skupin, které indikují něco o jejich účel nebo požadavky. Patří mezi ně úprava algoritmy, které změňte hodnotu elementů ve srovnání s úprava algoritmy, které nepodporují. Mutující algoritmy mění pořadí prvků, ale nikoli jejich hodnoty. Odebírající algoritmy mohou odstranit prvky z rozsahu nebo rozsah zkopírovat. Řazení algoritmy přeuspořádejte elementy v rozsahu různými způsoby a algoritmy seřazené oblasti fungovat jenom na rozsahy, jehož elementy seřazeny určitým způsobem.  
   
  Standardní knihovna C++ číselné algoritmy, které jsou k dispozici pro zpracování číselné mají své vlastní soubor hlaviček [ \<číselné >](../standard-library/numeric.md), a funkce objekty a adaptéry jsou definovány v hlavičce [ \<funkční >](../standard-library/functional.md) funkce objekty, které vracejí logické hodnoty jsou známé jako predikáty. Predikát binární výchozí je porovnání `operator<`. Seřazované prvky musí být obecně menší než srovnatelné, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo zda jeden je menší než druhý. Výsledkem je řazení mezi neekvivalentními prvky.  
   
@@ -108,7 +109,7 @@ Definuje standardní knihovna C++ kontejneru šablony funkce, které provádět 
 |[prev_permutation –](../standard-library/algorithm-functions.md#prev_permutation)|Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky následující větší permutací, pokud existuje, kde význam následujícího může být určen binárním predikátem.|  
 |[push_heap –](../standard-library/algorithm-functions.md#push_heap)|Přidá prvek, který je na konci rozsahu, do stávající haldy, která zahrnuje předchozí prvky daného rozsahu.|  
 |[random_shuffle –](../standard-library/algorithm-functions.md#random_shuffle)|Přeuspořádá posloupnost *N* elementy v rozsahu do jedné ze *N*! možné uspořádání náhodně vybrané.|  
-|[odebrat](../standard-library/algorithm-functions.md#remove)|Odstraní zadanou hodnotu z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|  
+|[remove](../standard-library/algorithm-functions.md#remove)|Odstraní zadanou hodnotu z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|  
 |[remove_copy –](../standard-library/algorithm-functions.md#remove_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky zadané hodnoty zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|  
 |[remove_copy_if –](../standard-library/algorithm-functions.md#remove_copy_if)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky splňující predikát zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|  
 |[remove_if –](../standard-library/algorithm-functions.md#remove_if)|Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|  
@@ -141,7 +142,7 @@ Definuje standardní knihovna C++ kontejneru šablony funkce, které provádět 
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

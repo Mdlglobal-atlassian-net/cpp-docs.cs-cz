@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bde60a4e0c8ec9c0f9091edd40397a371e0e66e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuce knihovny MFC
 Pokud jste dynamicky aplikace knihovny MFC, je třeba znovu distribuovat odpovídající MFC DLL. Například pokud aplikace MFC je integrovaný s použitím verze knihovny MFC, který se dodává s Visual Studiem 2015, je třeba znovu distribuovat mfc140.dll nebo mfc140u.dll, v závislosti na tom, jestli je vaše aplikace zkompilovaném pro úzké znaků nebo podpora kódování Unicode.  
@@ -28,7 +29,7 @@ Pokud jste dynamicky aplikace knihovny MFC, je třeba znovu distribuovat odpoví
 > [!NOTE]
 >  Soubory mfc140.dll byly vynechány z adresáře redistribuovatelné soubory ve Visual Studio 2015 RTM. Verze nainstalované pomocí sady Visual Studio 2015 v adresáři Windows\system32 a Windows\syswow64 místo toho můžete použít.  
   
- Protože všechny knihovny MFC DLL používat sdílené verzi běhové knihovny jazyka C (CRT), může také muset znovu distribuovat CRT. Verze knihovny MFC, který se dodává s Visual Studiem 2015 používá universal CRT knihovny, která se distribuuje v rámci Windows 10. Pokud chcete spustit aplikaci MFC sestavené pomocí sady Visual Studio 2015 v dřívějších verzích systému Windows, je třeba znovu distribuovat Universal CRT. Informace o tom, jak znovu distribuovat universal CRT jako součást operačního systému nebo pomocí místní nasazení najdete v tématu [představení Universal CRT](http://go.microsoft.com/fwlink/?LinkId=617977). Chcete-li stáhnout univerzální CRT pro centrální nasazení v podporovaných verzích systému Windows, přečtěte si téma [Windows 10 Universal C Runtime](http://go.microsoft.com/fwlink/p/?LinkId=619489). Ve Windows SDK se našly Redistributable verze specifické pro architekturu ucrtbase.dll pro místní nasazení. Ve výchozím nastavení nainstaluje Visual Studio v C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ v konkrétní architektury podadresář.  
+ Protože všechny knihovny MFC DLL používat sdílené verzi běhové knihovny jazyka C (CRT), může také muset znovu distribuovat CRT. Verze knihovny MFC, který se dodává s Visual Studiem 2015 používá universal CRT knihovny, která se distribuuje v rámci Windows 10. Pokud chcete spustit aplikaci MFC sestavené pomocí sady Visual Studio 2015 v dřívějších verzích systému Windows, je třeba znovu distribuovat Universal CRT. Informace o tom, jak znovu distribuovat universal CRT jako součást operačního systému nebo pomocí místní nasazení najdete v tématu [představení Universal CRT](http://go.microsoft.com/fwlink/p/?linkid=617977). Chcete-li stáhnout univerzální CRT pro centrální nasazení v podporovaných verzích systému Windows, přečtěte si téma [Windows 10 Universal C Runtime](http://go.microsoft.com/fwlink/p/?LinkId=619489). Ve Windows SDK se našly Redistributable verze specifické pro architekturu ucrtbase.dll pro místní nasazení. Ve výchozím nastavení nainstaluje Visual Studio v C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ v konkrétní architektury podadresář.  
   
  Pokud vaše aplikace je vytvořené pomocí dřívější verze knihovny MFC, je třeba znovu distribuovat odpovídající CRT knihovny DLL z adresáře redistribuovatelné soubory. Například pokud vaše aplikace knihovny MFC je sestaven pomocí nástrojů Visual Studio 2013 (vc120), je třeba znovu distribuovat msvcr120.dll. Je také nutné znovu distribuovat odpovídající mfc`<version>`u.dll nebo mfc`<version>`.dll.  
   
@@ -49,7 +50,7 @@ Pokud jste dynamicky aplikace knihovny MFC, je třeba znovu distribuovat odpoví
   
  Soubory distribuovatelného .msm obsahují knihovny DLL, které se používají pro lokalizaci. Neexistuje jeden knihovny DLL pro každý podporovaný jazyk. Proces instalace nainstaluje tyto knihovny DLL ve složce %windir%\system32\ na cílovém počítači.  
   
- Další informace o tom, jak lokalizace aplikací MFC najdete v tématu [TN057: lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md)a také [208983 článek: postup pomocí knihovny MFC DLL umístění](http://go.microsoft.com/fwlink/?LinkId=198025) na webu Microsoft Support.  
+ Další informace o tom, jak lokalizace aplikací MFC najdete v tématu [TN057: lokalizace komponent MFC](../mfc/tn057-localization-of-mfc-components.md)a také [208983 článek: postup pomocí knihovny MFC DLL umístění](http://go.microsoft.com/fwlink/p/?linkid=198025) na webu Microsoft Support.  
   
  Lokalizace MFC – knihovny DLL je možné znovu distribuovat nasazením knihovně MFC DLL v místní složce aplikace. Další informace o tom, jak znovu distribuovat knihovny jazyka Visual C++ najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

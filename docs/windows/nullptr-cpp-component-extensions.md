@@ -16,11 +16,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 114ea9d40c5d4e8e1f271e7b099bd4b4075dbccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (rozšíření komponent C++)
 `nullptr` Představuje – klíčové slovo *hodnota ukazatele null*. Použijte ukazatele null hodnotu indikující, že popisovač objektu, vnitřní ukazatel nebo nativní ukazatel typu neodkazuje na objekt.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  `nullptr` – Klíčové slovo není typu a není podporována pro použití se službou:  
   
--   [sizeof –](../cpp/sizeof-operator.md)  
+-   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
@@ -116,7 +119,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 pMyClass == nullptr  
@@ -187,7 +190,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 test  
@@ -217,7 +220,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 NULL  

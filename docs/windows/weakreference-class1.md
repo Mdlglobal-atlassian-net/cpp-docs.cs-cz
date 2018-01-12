@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8985434365cb8144fc2ee3680ef19c5b8ed99301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -45,17 +48,17 @@ class WeakReference;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Weakreference::weakreference – konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicializuje novou instanci třídy WeakReference.|  
-|[WeakReference:: ~ weakreference – destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (zničí) aktuální instance třídy WeakReference.|  
+|[WeakReference::WeakReference – konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicializuje novou instanci třídy WeakReference.|  
+|[WeakReference::~WeakReference – destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (zničí) aktuální instance třídy WeakReference.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Weakreference::decrementstrongreference – metoda](../windows/weakreference-decrementstrongreference-method.md)|Snižuje počet silné odkaz na aktuální objekt WeakReference.|  
-|[Weakreference::incrementstrongreference – metoda](../windows/weakreference-incrementstrongreference-method.md)|Zvětší počet silné odkaz na aktuální WeakReference objektu.|  
-|[Weakreference::Resolve – metoda](../windows/weakreference-resolve-method.md)|Nastaví zadaný ukazatele na aktuální hodnotu silné odkaz, pokud počet silné odkazů nenulové hodnoty.|  
-|[Weakreference::setunknown – metoda](../windows/weakreference-setunknown-method.md)|Nastaví odkaz na silné aktuálního objektu WeakReference ukazatel zadaný rozhraní.|  
+|[WeakReference::DecrementStrongReference – metoda](../windows/weakreference-decrementstrongreference-method.md)|Snižuje počet silné odkaz na aktuální objekt WeakReference.|  
+|[WeakReference::IncrementStrongReference – metoda](../windows/weakreference-incrementstrongreference-method.md)|Zvětší počet silné odkaz na aktuální WeakReference objektu.|  
+|[WeakReference::Resolve – metoda](../windows/weakreference-resolve-method.md)|Nastaví zadaný ukazatele na aktuální hodnotu silné odkaz, pokud počet silné odkazů nenulové hodnoty.|  
+|[WeakReference::SetUnknown – metoda](../windows/weakreference-setunknown-method.md)|Nastaví odkaz na silné aktuálního objektu WeakReference ukazatel zadaný rozhraní.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `WeakReference`  
@@ -66,4 +69,4 @@ class WeakReference;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

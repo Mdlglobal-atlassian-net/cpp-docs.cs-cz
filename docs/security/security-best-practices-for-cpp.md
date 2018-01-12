@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich používání není zpřístupnit aplikace útokům imunní, ale umožňuje méně pravděpodobné, že úspěšné útoky.  
@@ -87,7 +88,7 @@ Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich
   s
 -   Identifikujte potenciální potíže se zabezpečením v aplikaci.  
   
- Nástroj Ověřovatel aplikací je součástí sady Application Compatibility Toolkit, která je k dispozici z [kompatibilita aplikací](http://go.microsoft.com/fwlink/?LinkId=91277) na webu TechNet.  
+ Nástroj Ověřovatel aplikací je součástí sady Application Compatibility Toolkit, která je k dispozici z [kompatibilita aplikací](http://go.microsoft.com/fwlink/p/?linkid=91277) na webu TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Uživatelské účty systému Windows  
@@ -96,4 +97,4 @@ Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich
 ## <a name="see-also"></a>Viz také  
  <xref:System.Security>   
  [Zabezpečení](/dotnet/standard/security/index)   
- [Jak ovlivňuje nástroj Řízení uživatelských účtů (UAC) vaší aplikace](how-user-account-control-uac-affects-your-application.md)
+ [Jak nástroj Řízení uživatelských účtů (UAC) ovlivňuje vaši aplikaci](how-user-account-control-uac-affects-your-application.md)

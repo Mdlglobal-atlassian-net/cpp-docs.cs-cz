@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapuje jeden řetězec znaků do jiné, provádění Zadaná transformace závislých na národním prostředí. Tuto funkci lze také vygenerovat klíč řazení pro vstupní řetězec.  
@@ -75,7 +76,7 @@ int __crtLCMapStringW(
  Nula naznačuje chybu. Chcete-li získat rozšířené informace o chybě, zavolejte `GetLastError` funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `cchSrc` je větší než nula a `lpSrcStr` je řetězce ukončené hodnotou null, `__crtLCMapStringW` nastaví `cchSrc` na délku řetězce. Potom `__crtLCMapStringW` volá široké řetězec (Unicode) verzi `LCMapString` funkce se zadanými parametry. Další informace o parametry a návratové hodnoty této funkce najdete v tématu `LCMapString` fungovat v [knihovny MSDN](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Pokud `cchSrc` je větší než nula a `lpSrcStr` je řetězce ukončené hodnotou null, `__crtLCMapStringW` nastaví `cchSrc` na délku řetězce. Potom `__crtLCMapStringW` volá široké řetězec (Unicode) verzi `LCMapString` funkce se zadanými parametry. Další informace o parametry a návratové hodnoty této funkce najdete v tématu `LCMapString` fungovat v [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Požadavky  
   
