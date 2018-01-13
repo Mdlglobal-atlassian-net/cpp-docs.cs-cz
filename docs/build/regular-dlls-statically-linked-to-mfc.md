@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acf04ba49e8e99aa1f51e5181f063d8da86c40e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Regulární knihovny MFC DLL staticky propojené do MFC
 Knihovny DLL, která používá MFC interně je běžný, které MFC DLL staticky propojené do MFC a exportovaných funkcí v knihovně DLL lze volat pomocí knihovny MFC nebo mimo MFC spustitelné soubory. Podle názvu, popisu, tento druh DLL vytvořená s využitím staticky propojené verze knihovny MFC. Funkce jsou obvykle exportovány z běžný MFC DLL pomocí standardní rozhraní jazyka. Příklad toho, jak zapsat, vytvářet a používat běžné knihovny MFC DLL v tématu vzorku [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
@@ -81,13 +82,13 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
 -   [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
--   [Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
 -   [Vytvoření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)  
   
--   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Běžné knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
 -   [MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Druhy knihoven DLL](../build/kinds-of-dlls.md)
+ [Typy knihoven DLL](../build/kinds-of-dlls.md)

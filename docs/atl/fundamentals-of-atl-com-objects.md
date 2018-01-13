@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL COM – objekty
 Následující obrázek znázorňuje vztahy mezi třídy a rozhraní, které definují objekt ATL COM.  
@@ -58,7 +59,7 @@ Následující obrázek znázorňuje vztahy mezi třídy a rozhraní, které def
  [Implementace CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
  Zobrazit příklad položek mapování COM pro implementaci `CComObjectRootEx`.  
   
- [Implementace CComObject CComAggObject a CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+ [Implementace CComObject, CComAggObject a CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
  Popisuje, jak **DECLARE_\*_AGGREGATABLE** makra mají vliv na použití `CComObject`, `CComAggObject`, a `CComPolyObject`.  
   
  [Podpora IDispatch a IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
@@ -67,14 +68,14 @@ Následující obrázek znázorňuje vztahy mezi třídy a rozhraní, které def
  [Podpora IDispEventImpl](../atl/supporting-idispeventimpl.md)  
  Popisuje kroky pro implementaci bod připojení pro třídu.  
   
- [Změna výchozí objekt pro vytváření tříd a agregace modelu](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+ [Změna výchozího objektu pro vytváření tříd a agregačního modelu](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
  Zobrazit, jaké makra sloužící k změňte model třída výchozí tovární nastavení a agregace.  
   
  [Vytvoření agregovaného objektu](../atl/creating-an-aggregated-object.md)  
  Jsou uvedené kroky pro vytvoření agregovaného objektu.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Vytvoření projektu knihovny ATL](../atl/reference/creating-an-atl-project.md)  
+ [Vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md)  
  Poskytuje informace o vytvoření objektu ATL COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

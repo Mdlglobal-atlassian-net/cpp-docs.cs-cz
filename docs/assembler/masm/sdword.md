@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc353475f61d2e49c030baa3b42be6926225c0d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2a610799a6db3845ba0883d4fd524e066c08d29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sdword"></a>SDWORD
 Přiděluje a volitelně inicializuje podepsaný slovo double (4 bajtů) úložiště pro každou `initializer`. Můžete také použít jako specifikátor typu kdekoli je právní typu.  

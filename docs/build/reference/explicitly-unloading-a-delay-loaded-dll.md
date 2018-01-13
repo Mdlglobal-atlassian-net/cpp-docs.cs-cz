@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Explicitní uvolnění knihovny DLL načtené se zpožděním
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload – možnost linkeru umožňuje uvolnění knihovny DLL, která byla načtena zpoždění. Ve výchozím nastavení při kódu uvolnění knihovny DLL (pomocí/delay: Unload a **__FUnloadDelayLoadedDLL2**), importy s odloženým načtením zůstat v tabulky import adres (IAT). Ale pokud používáte/delay: Unload na příkazový řádek linkeru, pomocné funkce bude podporovat explicitní uvolnění knihovny DLL, obnovena IAT původní podobě; Neplatný ukazatele budou přepsány. Tabulku IAT je pole v [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) obsahující adresu kopii původní IAT (pokud existuje).  

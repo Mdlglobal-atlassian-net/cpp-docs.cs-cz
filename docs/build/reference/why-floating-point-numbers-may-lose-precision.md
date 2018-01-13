@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad6d78b6209b2a2d45f0d0e5874dff1271da880b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost
 Desetinná čísla s plovoucí desetinnou čárkou obvykle nemají přesnou binární reprezentace. Toto je vedlejším účinkem jak procesoru reprezentuje data s plovoucí desetinnou. Z tohoto důvodu může dojít k některé ztrátu přesnosti a některé operace s plovoucí desetinnou čárkou mohou vést k neočekávaným výsledkům.  

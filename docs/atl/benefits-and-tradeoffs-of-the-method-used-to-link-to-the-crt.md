@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13b4ef1599a5f59e1f01d551552cb03265e939ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 244415a947918a836e8c4c67dbd18758ec40393c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Výhody a kompromisy metodu použitou k propojení CRT
 Projekt můžete propojit s CRT dynamicky nebo staticky. Následující tabulka popisuje výhody a kompromisy účastnící se výběr jakou metodu použít.  

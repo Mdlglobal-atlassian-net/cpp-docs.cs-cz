@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Sestavení souběžných sestavení C/C++
 A [souběžně sdílená sestavení](http://msdn.microsoft.com/library/windows/desktop/ff951640) je kolekce prostředků – skupinu knihovny DLL, třídy windows, serverů modelu COM, knihovny typů nebo rozhraní – k dispozici pro aplikace pro použití v době běhu. Primární výhodou opětovné vytvoření balíčku knihovny DLL v sestavení je, že více verzí sestavení je použít v aplikacích ve stejnou dobu a je možné sestavení aktuálně nainstalována v případě vydání aktualizace.  
@@ -40,4 +41,4 @@ A [souběžně sdílená sestavení](http://msdn.microsoft.com/library/windows/d
 ## <a name="see-also"></a>Viz také  
  [Příklady nasazení](../ide/deployment-examples.md)   
  [Sestavení C/C++ izolovaných aplikací](../build/building-c-cpp-isolated-applications.md)   
- [Sestavení C/C++ izolovaných aplikací a souběžně sdílená sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

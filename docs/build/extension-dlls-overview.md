@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39ed1531be553a66f22ac8b93e898a91cf5006e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 407ed0c63dce8e350c24ac5f260876fb6ab47576
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC – rozšiřující knihovny DLL: Přehled
 MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy odvozené z existujících tříd Microsoft Foundation Class Library. MFC – knihovny DLL rozšíření jsou vytvořeny pomocí knihovny DLL verze knihovny MFC (také označovaný jako sdílený verze knihovny MFC). Pouze spustitelné soubory knihovny MFC (aplikace nebo běžné knihovny MFC DLL), jsou integrované s sdílená verze knihovny MFC můžete použít knihovnu DLL. S příponou MFC DLL lze odvodit nové vlastní třídy z rozhraní MFC a pak nabízet toto rozšířené verze knihovny MFC k aplikacím, které volání knihovny DLL.  
@@ -42,9 +43,9 @@ MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy 
   
 -   [MFC – rozšiřující knihovny DLL](../build/extension-dlls.md)  
   
--   [Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
--   [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)  
+-   [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)  
   
 -   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
@@ -53,4 +54,4 @@ MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy 
 -   [Vytvoření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Druhy knihoven DLL](../build/kinds-of-dlls.md)
+ [Typy knihoven DLL](../build/kinds-of-dlls.md)

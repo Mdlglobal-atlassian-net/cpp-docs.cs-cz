@@ -26,11 +26,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85d2510658bdf534f25ccc3efc29c88da1c93eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-and-address-of-operators"></a>Deferenční operátory a operátory adresy
 Deferenční operátor (**\***) přistupuje hodnotu nepřímo prostřednictvím ukazatele. Operandem musí být hodnota ukazatele. Výsledkem operace je hodnota adresovaná operandem, tedy hodnota na adrese, na kterou operand ukazuje. Typ výsledku je typ adresovaný operandem.  
@@ -94,4 +95,4 @@ int  *pround  = &roundup;
   
 ## <a name="see-also"></a>Viz také  
  [Deferenční operátor: *](../cpp/indirection-operator-star.md)   
- [Adresa operátoru: &](../cpp/address-of-operator-amp.md)
+ [Operátor address-of: &](../cpp/address-of-operator-amp.md)

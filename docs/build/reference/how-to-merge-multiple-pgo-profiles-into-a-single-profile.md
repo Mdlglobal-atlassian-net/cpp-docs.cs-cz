@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dcd10c25e4512683b840bd2feeee287995ab8776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 880e9fbba7852a9a7919e73f80b73e34394cd037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Postupy: Sloučení několika profilů PGO do jediného profilu
 Optimalizace na základě profilu (PGO) je skvělý nástroj pro vytváření optimalizované binární soubory podle scénáře, který je vytvořený profil. Ale co když máte aplikaci, který má několik důležitých, ještě odlišné scénáře; jak vytvořit jeden profil, který můžete použít PGO z několika různých scénářů? V sadě Visual Studio správce PGO Pgomgr.exe, provede tuto úlohu.  

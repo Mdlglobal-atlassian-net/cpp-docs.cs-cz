@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b0572f4d83cfc6b098f290cda53592dbe4aa54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d13eebbe96ba57c82e3bf1c360b0cb471a6bd975
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-services"></a>ATL Services
 K vytvoření objektu ATL COM tak, aby běžel v službě, jednoduše služby (EXE) vyberte ze seznamu možností serveru v Průvodci projektu knihovny ATL. Průvodce potom vytvoří třídy odvozené od `CAtlServiceModuleT` tuto službu implementovat.  

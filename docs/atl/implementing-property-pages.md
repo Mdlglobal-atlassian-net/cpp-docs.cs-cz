@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 493bd7606dd837199eaa95a2e8abd5536c5f5028
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-property-pages"></a>Implementace stránky vlastností
 Stránky vlastností jsou, které implementují objekty COM `IPropertyPage` nebo **IPropertyPage2** rozhraní. ATL poskytuje podporu pro implementaci stránky vlastností prostřednictvím [ATL vlastnost stránky průvodce](../atl/reference/atl-property-page-wizard.md) v [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md).  

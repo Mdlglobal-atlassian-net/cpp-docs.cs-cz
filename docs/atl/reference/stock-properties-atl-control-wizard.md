@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Uložené vlastnosti, Průvodce ovládacím prvkem knihovny ATL
 Tato stránka průvodce identifikuje uložené vlastnosti podporované pro ovládací prvek. Ve výchozím nastavení nejsou označeny žádné vlastnosti.  
@@ -37,5 +38,5 @@ Tato stránka průvodce identifikuje uložené vlastnosti podporované pro ovlá
 |**<<**|Odebere všechny názvy vlastnosti v **podporované** seznamu.|  
   
 ## <a name="see-also"></a>Viz také  
- [Průvodce ovládacím prvkem knihovny ATL](../../atl/reference/atl-control-wizard.md)
+ [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
 

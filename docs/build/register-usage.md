@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7394088f4bd3cec21dde9ea82c0573c56d87366a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-usage"></a>Využití registrů
 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Architektura poskytuje pro 16 pro obecné účely registrů (dále jen jako celočíselné registry) a také 16 XMM/YMM registrů, k dispozici pro použití s plovoucí desetinnou čárkou. Volatile registry jsou odolné registry předpokládá, že volající zničení prostřednictvím volání. Nezávislé registry zachovat jejich hodnoty prostřednictvím volání funkce a musí být uložena volaného, pokud se používá.  

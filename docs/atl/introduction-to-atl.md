@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5acbd7fbeccf89b13be9a1ed6c6084ce4b4b73a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1c84074eae22e4263646abc1623ff96a374c04d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-atl"></a>Úvod do knihovny ATL
 ATL je aktivní knihovna šablon, sadu na základě šablon C++ třídy, pomocí kterého můžete snadno vytvořit malé, rychlé objekty modelu COM (Component Object). Obsahuje speciální podpory pro klíčové funkce COM, včetně: stock implementace [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), a `IDispatch`; duální rozhraní; standardní rozhraní pro výčty COM; body připojení; Úplné vypnutí rozhraní; a ovládací prvky ActiveX.  

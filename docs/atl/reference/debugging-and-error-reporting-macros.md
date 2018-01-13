@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a zasílání zpráv o chybách
 Tyto makra poskytují užitečné ladění a trasování zařízení.  
@@ -268,4 +269,4 @@ ATLTRACE2(
   
 ## <a name="see-also"></a>Viz také  
  [Makra](../../atl/reference/atl-macros.md)   
- [Ladění a chybách globální funkce](../../atl/reference/debugging-and-error-reporting-global-functions.md)
+ [Globální funkce ladění a hlášení chyb](../../atl/reference/debugging-and-error-reporting-global-functions.md)

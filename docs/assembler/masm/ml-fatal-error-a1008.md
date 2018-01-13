@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b7a6aeb41b8f938ca4f1a72668d84c2a58d5b6aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b46b1c10077453c2a68ec03e50f1a958322ccfd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-fatal-error-a1008"></a>Závažná chyba nástroje ML A1008
 **vnoření neodpovídající – makro**  
@@ -29,4 +30,4 @@ ms.lasthandoff: 10/24/2017
  Jednou z příčin této chyby je vynechání tečky před [. OPAKUJTE](../../assembler/masm/dot-repeat.md) nebo [. Při](../../assembler/masm/dot-while.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

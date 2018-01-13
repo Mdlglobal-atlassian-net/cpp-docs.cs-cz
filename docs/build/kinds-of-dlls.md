@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f1f2bbc257bbed427766f81175b250909ccb7d04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="kinds-of-dlls"></a>Druhy knihoven DLL
 Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro sestavení.  
@@ -39,13 +40,13 @@ Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro 
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
   
--   [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)  
+-   [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)  
   
 -   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
 -   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [MFC – rozšiřující knihovny DLL: Přehled](../build/extension-dlls-overview.md)  
+-   [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)  
   
 -   [Jaký druh knihovny DLL používat](#_core_which_kind_of_dll_to_use)  
   
@@ -66,13 +67,13 @@ Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro 
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
   
--   [Knihovny DLL mimo MFC: Přehled](../build/non-mfc-dlls-overview.md)  
+-   [Knihovny DLL mimo MFC – přehled](../build/non-mfc-dlls-overview.md)  
   
 -   [Regulární knihovny MFC DLL staticky propojené do MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
 -   [Regulární knihovny MFC DLL dynamicky propojené s MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [MFC – rozšiřující knihovny DLL: Přehled](../build/extension-dlls-overview.md)  
+-   [Rozšiřující knihovny MFC DLL: Přehled](../build/extension-dlls-overview.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

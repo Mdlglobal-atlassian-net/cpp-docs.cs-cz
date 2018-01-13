@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,4 +45,4 @@ ms.lasthandoff: 10/24/2017
 |DOLŮ|Informuje nástroje EDITBIN přiřazení základní adresy dolů z koncová adresa. Soubory jsou přiřazeny v uvedeném pořadí s první soubor nachází v nejvyšší možné adrese níže konec rozsahu adres. ZÁKLADNÍ musí použít s nižší zajistit dostatečný Adresní prostor pro odvození soubory. K určení adresní prostor vyžaduje zadané soubory, spusťte nástroje EDITBIN s /REBASE na soubory a přidejte 64 KB na zobrazené celkovou velikost.|  
   
 ## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+ [EDITBIN – možnosti](../../build/reference/editbin-options.md)

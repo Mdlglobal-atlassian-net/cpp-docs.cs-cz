@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a7040ac0093471be657c2ed7a064719abcd0230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f9a3e907b72b4b8cf8e673e771832ba3fc0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-words"></a>Vyhrazená slova
 Slova jsou vyhrazené linkeru. Názvy těchto lze použít jako argumenty v [příkazy definice modulu](../../build/reference/module-definition-dot-def-files.md) pouze v případě, že název je uzavřena v uvozovkách ("").  
@@ -52,8 +53,8 @@ Slova jsou vyhrazené linkeru. Názvy těchto lze použít jako argumenty v [př
 |**EXECUTEONLY**|**NODATA**1|**SEGMENTY**|  
 |**EXECUTEREAD**|**NOIOPL**1|**SDÍLENÉ**|  
 |**EXETYPE**|**NONAME**|**JEDEN**|  
-|**EXPORT**|**NEODPOVÍDAJÍCÍ**1|**VELIKOST ZÁSOBNÍKU**|  
-|**OPRAVENÉ**1|**NONDISCARDABLE**|**SE ZAKÁZANÝM INZEROVÁNÍM**|  
+|**EXPORTY**|**NEODPOVÍDAJÍCÍ**1|**VELIKOST ZÁSOBNÍKU**|  
+|**OPRAVENÉ**1|**NONDISCARDABLE**|**ZÁSTUPNÁ PROCEDURA**|  
 |**FUNKCE**2|**NONE**|**VERZE**|  
 |**VELIKOST HALDY**|**SDÍLENÉM**|**WINDOWAPI**|  
 |**IMPORTY**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  

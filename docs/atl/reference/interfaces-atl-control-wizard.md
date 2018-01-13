@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3d93dc4e80178b1bdd90a6fe86e4a6f051f77f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5280f09e7d17036652acf6fc62d4d4f5ab31c758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfaces-atl-control-wizard"></a>Rozhraní, Průvodce ovládacím prvkem knihovny ATL
 Tato stránka průvodce identifikovaná rozhraní, která podporuje ovládací prvek. Ve výchozím nastavení nejsou podporované rozhraní obvykle používaných většina kontejneru.  
@@ -41,5 +42,5 @@ Tato stránka průvodce identifikovaná rozhraní, která podporuje ovládací p
 |**<<**|Odebere všechny názvy rozhraní **podporované** seznamu.|  
   
 ## <a name="see-also"></a>Viz také  
- [Průvodce ovládacím prvkem knihovny ATL](../../atl/reference/atl-control-wizard.md)
+ [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
 

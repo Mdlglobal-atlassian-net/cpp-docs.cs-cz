@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>Prolog a epilog
 Každá funkce, která přiděluje místo v zásobníku, volá jiné funkce, ukládá stálé registry nebo používá zpracování výjimek, musí mít prologu, jejichž adresa limity jsou popsány v unwind data přidružená k položce příslušné funkce tabulky (viz [(X64) zpracování výjimek](../build/exception-handling-x64.md)). Prologu uloží argument registrů v jejich domovské adresy v případě potřeby přesune stálé registry v zásobníku, přidělí pevnou část zásobníku pro místní a dočasné proměnné a volitelně vytváří ukazatel na rámec. Přidružená unwind data musí popisovat akce prologu a poskytne informace potřebné k účinek kód prologu vrátit zpět.  
@@ -99,4 +100,4 @@ ret
  Těchto pravidel umožňuje unwind kódu a určit, že epilog aktuálně vykonáván simulovat provádění zbytek epilogu, aby se povolilo kontext volání funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [x64 softwarové konvence](../build/x64-software-conventions.md)
+ [x64 – softwarové konvence](../build/x64-software-conventions.md)

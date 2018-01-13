@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b13942f47726bb2e6e6dfcbdea9a6b89c30d1f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb68652bb1b26164e52e0218b4b71c24e9356f8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="union"></a>UNION
 Deklaruje sjednocení jeden nebo více datových typů. *Fielddeclarations* musí být platná data definice. Vynechat [KONČÍ](../../assembler/masm/ends-masm.md) *název* popisek na vnořené **SJEDNOCENÍ** definice.  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-registrar-scripts"></a>Vytváření skripty registrátora
 Skript registrátora poskytuje řízené daty, nikoli rozhraní API řízené, přístup k registru systému. Řízené daty přístup je obvykle efektivnější, protože trvá pouze jeden nebo dva řádky ve skriptu přidání klíče registru.  
@@ -34,15 +35,15 @@ Skript registrátora poskytuje řízené daty, nikoli rozhraní API řízené, p
   
  Tento článek obsahuje následující témata týkající se skripty registrátora:  
   
--   [Principy Backus Nauer formuláře (BNF) syntaxe](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
+-   [Principy syntaxe BNF (Backus Nauer Form)](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
   
--   [Principy analýzy stromů](../atl/understanding-parse-trees.md)  
+-   [Principy stromů analýzy](../atl/understanding-parse-trees.md)  
   
 -   [Příklady skriptování registru](../atl/registry-scripting-examples.md)  
   
--   [Pomocí nahraditelné parametry (vašeho registrátora Preprocessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+-   [Použití nahraditelných parametrů (preprocesor registrátoru)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
   
--   [Vyvolání skripty](../atl/invoking-scripts.md)  
+-   [Volání skriptů](../atl/invoking-scripts.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Komponenta registru (Registrar)](../atl/atl-registry-component-registrar.md)

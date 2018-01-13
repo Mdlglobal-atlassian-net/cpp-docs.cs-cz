@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6ba275b3a287130df111ba89ec2f4dd91170d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="release-builds"></a>Sestavení pro vydání
 Sestavení pro vydání používá optimalizace. Použijete-li optimalizace vytvořit sestavení pro vydání, nebude kompilátor vytvořit symbolické ladicí informace. Neexistence symbolické ladicí informace, společně s fakt, že kód není vygenerovat pro trasování a ASSERT volá, znamená to, že se snižuje velikost spustitelného souboru a proto bude rychlejší.  
@@ -44,4 +45,4 @@ Sestavení pro vydání používá optimalizace. Použijete-li optimalizace vytv
   
 ## <a name="see-also"></a>Viz také  
  [Sestavení projektů C++ v sadě Visual Studio](../../ide/building-cpp-projects-in-visual-studio.md)   
- [Odkaz sestavení C/C++](../../build/reference/c-cpp-building-reference.md)
+ [Referenční zdroje k sestavení programu v jazyce C/C++](../../build/reference/c-cpp-building-reference.md)

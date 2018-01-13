@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee85d6959536d2845d7b6e6ccf7f07924e46143f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9581b152057655c510f1cbcd4ab29ba8339070b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="null-and-undefined-macros"></a>Hodnota Null a nedefinovaná makra
 Hodnota null a Nedefinovaná makra rozšířit do řetězce null, ale makra definován jako řetězec null se považuje za definované v předběžném zpracování výrazy. Makra, definovat jako řetězec hodnotu null, zadejte žádné znaky s výjimkou mezery nebo karty Po znaménku rovná se (=), v příkazovém řádku nebo příkazového řádku a řetězec null nebo definice uzavřít do uvozovek (""). Chcete-li nedefinované makra, použijte **! UNDEF.** Další informace najdete v tématu [předběžné zpracování direktiv souboru pravidel](../build/makefile-preprocessing-directives.md).  

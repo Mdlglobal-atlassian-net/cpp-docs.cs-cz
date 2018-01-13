@@ -14,14 +14,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1eee05a9a206d3c02f34d619cf78822aaa4ed61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregates-and-unions"></a>Agregace a sjednocení
-Ostatní typy například pole, struktur a sjednocení mít přísnější požadavky na zarovnání, které zajišťují konzistentní agregace a sjednocení uložení a načtení dat.. Zde jsou uvedeny definice pro pole, struktury a sjednocení:  
+Ostatní typy například pole, struktur a sjednocení mít přísnější požadavky na zarovnání, které zajišťují konzistentní agregace a sjednocení uložení a načtení dat. Zde jsou uvedeny definice pro pole, struktury a sjednocení:  
   
  Pole  
  Obsahuje uspořádanou skupinu sousedních datových objektů. Každý objekt, se nazývá prvek. Všechny elementy v rámci pole mít stejný typ velikost a data.  
@@ -39,14 +40,14 @@ Ostatní typy například pole, struktur a sjednocení mít přísnější poža
 |Skalární typ.|C – datový typ|Požadované zarovnání|  
 |**INT8**|`char`|Byte|  
 |**UINT8**|`unsigned char`|Byte|  
-|**INT16**|**krátký**|Word|  
+|**INT16**|**short**|Word|  
 |**UINT16**|**short bez znaménka**|Word|  
 |**INT32**|**int, dlouho**|Doubleword|  
 |**UINT32**|**nepodepsané int, long bez znaménka**|Doubleword|  
 |**INT64**|`__int64`|Quadword|  
 |**UINT64**|**__int64 bez znaménka**|Quadword|  
-|**FP32 (jednoduchá přesnost)**|**plovoucí desetinná čárka**|Doubleword|  
-|**FP64 (Dvojitá přesnost)**|**Double**|Quadword|  
+|**FP32 (jednoduchá přesnost)**|**float**|Doubleword|  
+|**FP64 (Dvojitá přesnost)**|**double**|Quadword|  
 |**UKAZATELE**|**\***|Quadword|  
 |`__m64`|**__m64 – struktura**|Quadword|  
 |`__m128`|**__m128 – struktura**|Octaword|  

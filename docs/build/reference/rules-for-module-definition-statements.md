@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-module-definition-statements"></a>Pravidla pro příkazy definice modulu
 Následující syntaxe pravidla platí pro všechny příkazy v souboru .def. Další pravidla, která se vztahují na konkrétní příkazy jsou popsány se každý příkaz.  
@@ -45,4 +46,4 @@ Následující syntaxe pravidla platí pro všechny příkazy v souboru .def. Da
 -   Pokud odpovídá argument řetězce [vyhrazené slovo](../../build/reference/reserved-words.md), musí být uzavřena v uvozovkách (").  
   
 ## <a name="see-also"></a>Viz také  
- [Definice modulu (. Soubory def)](../../build/reference/module-definition-dot-def-files.md)  
+ [Soubory definice modulu (.Def)](../../build/reference/module-definition-dot-def-files.md)  

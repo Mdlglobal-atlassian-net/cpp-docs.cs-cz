@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 875dddb961b18378029de08582e728ad626be948
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1630636b0de552712f67bc43b5182f991b10ef0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-of-a-library"></a>Struktura knihovny
 Knihovnu obsahuje COFF objekty. Objekty v knihovně obsahují funkce a data, která může externě odkazují jiné objekty v programu. Objekt v knihovně se někdy označuje jako člena knihovny.  
@@ -26,4 +27,4 @@ Knihovnu obsahuje COFF objekty. Objekty v knihovně obsahují funkce a data, kte
  Další informace o obsahu knihovny můžete získat spuštěním nástroje DUMPBIN s parametrem /LINKERMEMBER. Další informace o této možnosti najdete v tématu [DUMPBIN – odkaz](../../build/reference/dumpbin-reference.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled LIB](../../build/reference/overview-of-lib.md)
+ [Přehled knihovny LIB](../../build/reference/overview-of-lib.md)

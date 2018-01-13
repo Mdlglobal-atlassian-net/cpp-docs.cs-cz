@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd9bee6423c0eea98941331dcff86c002dd4ef9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f462eeea9f2bca566745d425b84bd1506f52fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-imports"></a>Import vazeb
 Výchozí chování linkeru je vytvoření tabulku vazbu importních adres pro knihovny DLL načtené se zpožděním. Pokud je vázána knihovnu DLL, pomocné funkce se pokusí použít vázané informace namísto volání **GetProcAddress** na každém z odkazovaného importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídají definicím načtené knihovny DLL, pomocné funkce převezme tabulky adres vázané import je zastaralá a bude pokračovat, protože pokud neexistuje.  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4358dc54589971c559bec48adf77252d4f4cda28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-message-handler"></a>Přidání popisovače zpráv knihovny ATL
 Přidání obslužné rutiny zpráv (členské funkce, která zpracovává zprávy systému Windows) do ovládacího prvku, nejprve vyberte ovládací prvek v zobrazení tříd. Otevřete **vlastnosti** vyberte **zprávy** ikonu a klikněte na rozevírací seznam řízení v poli opačným požadované zprávy. Tím se přidá deklaraci pro obslužné rutiny zpráv v záhlaví souboru ovládacího prvku a kostru implementaci obslužné rutiny v souboru sada ovládacího prvku. Rovněž přidat mapu zprávu a přidat záznam pro obslužnou rutinu.  
@@ -37,5 +38,5 @@ Přidání obslužné rutiny zpráv (členské funkce, která zpracovává zprá
 -   Nové položky mapy zpráv se přidají do mapy hlavní zpráv. Průvodce nebyl rozpoznán mapy alternativní zpráv a řetězení.  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace okno](../atl/implementing-a-window.md)
+ [Implementace okna](../atl/implementing-a-window.md)
 

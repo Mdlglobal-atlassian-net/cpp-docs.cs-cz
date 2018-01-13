@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1506eb2f2220ebfdf4c116c8e7b4a41ccf0e9085
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurace Visual C++ pro 64bitové, x64 cíle
 
@@ -31,13 +32,13 @@ Tento oddíl obsahuje témata o cílení na 64-bit x64 hardware s Visual C++ ná
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [Postupy: Konfigurace projektů Visual C++ pro 64bitové, x64 platformy](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
+-   [Postupy: Konfigurace projektů Visual C++ pro 64bitové platformy x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
   
--   [Postupy: povolení 64bitová verze sady nástrojů Visual C++ v příkazovém řádku](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
+-   [Postupy: Povolení 64bitové sady nástrojů Visual C++ v příkazovém řádku](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Běžné problémy s migrací 64-bit Visual C++](../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Obecné problémy migrace v 64bitovém prostředí Visual C++](../build/common-visual-cpp-64-bit-migration-issues.md)  
   
--   [x64 softwarové konvence](../build/x64-software-conventions.md)  
+-   [x64 – softwarové konvence](../build/x64-software-conventions.md)  
   
 ## <a name="related-sections"></a>Související oddíly  
 
@@ -57,4 +58,4 @@ Tento oddíl obsahuje témata o cílení na 64-bit x64 hardware s Visual C++ ná
   
 ## <a name="see-also"></a>Viz také  
 
-[Sestavení C/C++ programů](building-c-cpp-programs.md)
+[Sestavování programů v jazyce C/C++](building-c-cpp-programs.md)

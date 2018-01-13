@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b167f4064c73e126a745e5273592042dbf4a00e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementace nástroje vlastní řetězec Manager (rozšířené metoda)
 V situacích, specializované můžete implementovat vlastní řetězec správce, který mění více než jen haldě, které se používá k přidělení paměti. V takovém případě je nutné ručně implementovat [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní jako správce svého vlastní řetězec.  
@@ -38,5 +39,5 @@ V situacích, specializované můžete implementovat vlastní řetězec správce
      Při přidělování `CStringData` strukturu, musíte nastavit toto pole tak, aby odrážela typ sdílení, který je povoleno pro velikost vyrovnávací paměti. Pro většinu implementací nastavte tuto hodnotu na jednu. To umožňuje o obvyklé chování sdílení kopírování při zápisu. Pokud váš správce řetězec nepodporuje sdílení řetězce vyrovnávací paměti, ale nastavte pole na uzamčeném stavu. Vynutí se tak `CStringT` pouze používat této vyrovnávací paměti pro instanci `CStringT` které ho přidělilo.  
   
 ## <a name="see-also"></a>Viz také  
- [Správa paměti s CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

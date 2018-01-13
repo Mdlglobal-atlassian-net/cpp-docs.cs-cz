@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4faa6143342d8765fce460a653090152c0b10417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9768baa53e39f1b3243aba24385d592010c3d81a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-type"></a>Návratový typ
 Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odpovídá specifikátor typu níže uvedené syntaxe:  
@@ -46,17 +47,17 @@ Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odp
  *Specifikátor typu*:  
  **void**  
   
- **Char**  
+ **char**  
   
- **krátký**  
+ **short**  
   
- **celá čísla**  
+ **int**  
   
- **dlouhá**  
+ **long**  
   
- **plovoucí desetinná čárka**  
+ **float**  
   
- **Double**  
+ **double**  
   
  **podepsané**  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10f2eb4597808f726d55c3ece76b99c394d691c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 446e15a6f578413cf3f0ddefa980303c10a5d280
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Volání s proměnlivým počtem argumentů
 Seznam částečné parametrů můžete ukončí se třemi tečkami zápis, čárku, za nímž následuje tři tečky (**,...** ), k označení, že může být více argumentů předaný funkci, ale žádné další informace jsou uvedeny o nich. Na těchto argumentech se neprovádí kontrola typu. Zápis tří teček musí předcházet alespoň jeden parametr a tento zápis tří teček musí být posledním tokenem v seznamu parametrů. Bez zápisu tří teček není chování funkce definováno, pokud obdrží jiné parametry než ty deklarované v seznamu parametrů.  

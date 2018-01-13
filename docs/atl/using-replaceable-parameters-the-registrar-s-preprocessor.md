@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6909db6a68a9e637ed0cf8513f49ba306007ce6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Pomocí nahraditelné parametry (registrátora & č. 39; s Preprocessor)
 Nahraditelné parametry Povolit klientům doménového registrátora zadejte data pro spuštění. K tomuto účelu udržuje registrátora nahrazení mapy, do kterého přejde hodnoty přidružené k nahraditelné parametry ve vašem skriptu. Registrátora umožňuje tyto položky v době běhu.  
@@ -54,5 +55,5 @@ Nahraditelné parametry Povolit klientům doménového registrátora zadejte dat
 >  Při sestavování projektu, který produkuje knihovny DLL, nebude ATL přidat název cesty uvozovky Pokud **modulu %** nebo **MODULE_RAW %** se používá.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
 

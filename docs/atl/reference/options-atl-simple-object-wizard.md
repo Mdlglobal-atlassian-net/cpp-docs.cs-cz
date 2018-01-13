@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13c705448a4f25be2759487b6a7d9a62e69011e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c57206cb5be251e609f14132b4f0913a22b31534
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-atl-simple-object-wizard"></a>Možnosti, Průvodce jednoduchého objektu knihovny ATL
 Tato stránka ATL Simple Object Wizard slouží k poskytují zvýšenou efektivitu a podpory chyb pro objekt.  

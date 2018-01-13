@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>Výrazy konstant v jazyce C
 Konstantní výraz vyhodnotí při kompilaci, není běh a je možné v jakémkoli místě lze konstanta. Konstanta, která je v rozsahu hodnot reprezentovat pro tento typ se musí vyhodnotit konstantní výraz. Operandy konstantní výraz může být konstanty typu integer, konstanty znaků, konstanty s plovoucí desetinnou čárkou, konstanty výčtu typu přetypování, `sizeof` výrazy a jiné konstantní výrazy.  

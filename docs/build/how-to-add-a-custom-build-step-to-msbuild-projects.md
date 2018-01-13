@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 436c4a7d2eb8c0b75891d7df670a7f30e900bd97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d664b9fad6a9ec67dc009a90171119036dc13cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Postupy: Přidání vlastního kroku sestavení do projektů MSBuild
 Vlastní krok sestavení je krok uživatelem definované v sestavení. Vlastní krok sestavení se chová stejně jako jakýkoli jiný *nástroj příkazu* krok, jako je například standardní nástroj krok kompilaci nebo odkaz.  
@@ -60,4 +61,4 @@ Vlastní krok sestavení je krok uživatelem definované v sestavení. Vlastní 
 ## <a name="see-also"></a>Viz také  
  [Návod: Vytvoření projektu Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)   
  [Postupy: použití událostí sestavení v projektech MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)   
- [Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+ [Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)

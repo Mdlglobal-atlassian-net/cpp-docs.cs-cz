@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 426a0c5a40f3be3effdf4ba8316f6a72a8295965
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Procesy explicitního propojení s volání knihovny DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu exportované funkce v knihovně DLL. Použijete ukazatel vrácený funkce k volání funkce DLL. **GetProcAddress** přijímá jako parametry popisovač modulu DLL (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a trvá buď název funkce je Chcete hovor nebo funkce exportu pořadí.  
@@ -73,7 +74,7 @@ if (hDLL != NULL)
   
 -   [FreeLibrary](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
   
--   [Export z knihovny DLL pomocí souborů DEF](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Export z knihovny DLL pomocí souborů DEF](../build/exporting-from-a-dll-using-def-files.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

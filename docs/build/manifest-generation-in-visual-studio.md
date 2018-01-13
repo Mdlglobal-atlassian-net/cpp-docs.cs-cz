@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecd9ce0236a305fd31dec2ccc1ac3197d02908bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generování manifestu v aplikaci Visual Studio
 Generování souboru manifestu pro konkrétní projekt se dá řídit v projektu **stránky vlastností** dialogové okno. Na **vlastnosti konfigurace** , klikněte na **Linkeru**, pak **souboru Manifest**, pak **generovat Manifest**. Ve výchozím nastavení jsou nastaveny vlastnosti projektu nové projekty generovat soubor manifestu. Je ale možné zakázat generování manifestu pro projekt pomocí **generovat Manifest** vlastnosti projektu. Pokud je tato vlastnost nastavená na **Ano**, se generuje manifest pro tento projekt. V opačném případě linkeru ignoruje informací o sestavení při rozpoznávání závislostem kódu aplikace a negeneruje manifest.  
@@ -41,4 +42,4 @@ Generování souboru manifestu pro konkrétní projekt se dá řídit v projektu
  [Postupy: vložení manifestu do aplikace C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
  [O privátní sestavení](http://msdn.microsoft.com/library/ff951638)   
  [Nástroj manifest](http://msdn.microsoft.com/library/aa375649)   
- [Principy generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [Základní informace o generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

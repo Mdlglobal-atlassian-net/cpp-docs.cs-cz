@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1e3d50dd4ecf19b1a7bcee7b5efc0d6e2e57d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373dc99b7c4292501a41e17ba4d7393972c31c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Konstanty a podmíněné zahrnutí znaků
 **ANSI 3.8.1** jestli hodnota konstanta znaků délce jednoho znaku v konstantní výraz, který řídí podmíněné zahrnutí odpovídá hodnotě stejné konstanta znaků v znaková sada spuštění. Informace, zda taková znaková konstanta může mít zápornou hodnotu  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf5ef9c9d9e122b23dc1b39d6e6092168f2c9381
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Přehled konvencí ABI ARM
 Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na procesory ARM je založena na standardní EABI ARM. Tento článek popisuje klíčové rozdíly mezi Windows on ARM a standard. Další informace o standardní EABI ARM naleznete v tématu [aplikace binární rozhraní (ABI) pro architekturu ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  
@@ -212,4 +213,4 @@ Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na proces
   
 ## <a name="see-also"></a>Viz také  
  [Běžné problémy s migrací ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)   
- [Zpracovávání výjimek v jazyce ARM](../build/arm-exception-handling.md)
+ [Zpracování výjimek ARM](../build/arm-exception-handling.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 960f7989d3891be4cf23ef75b0982a2577f5e95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ae8b8266aca2c9d6099455ddcb7618206dbe8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-ccomobjectrootex"></a>Implementace CComObjectRootEx
 [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) je nezbytné; všechny objekty knihovny ATL musí mít jednu instanci `CComObjectRootEx` nebo [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) v jejich dědičnosti. `CComObjectRootEx`poskytuje výchozí `QueryInterface` mechanismus podle položek mapování COM.  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Viz také  
  [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)   
- [Makra COM Map](../atl/reference/com-map-macros.md)
+ [Makra map COM](../atl/reference/com-map-macros.md)
 

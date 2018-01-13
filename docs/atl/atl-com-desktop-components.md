@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM plochy součásti
 Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablon C++ třídy, které zjednodušují programování objekty modelu COM (Component Object). Pokud chcete plně využít výhod ATL, se důrazně doporučuje pracovní znalost COM.  
@@ -32,13 +33,13 @@ Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablo
  [ATL – třídy](../atl/reference/atl-classes.md)  
  Poskytuje referenční materiál na třídách abecedním pořadí.  
   
- [ATL – funkce](../atl/reference/atl-functions.md)  
+ [Funkce ATL](../atl/reference/atl-functions.md)  
  Poskytuje referenční materiál na globální funkce abecedním pořadí. Obsahuje témata uspořádání funkce do kategorií.  
   
- [Globální proměnné knihovny ATL](../atl/reference/atl-global-variables.md)  
+ [Globální proměnné ATL](../atl/reference/atl-global-variables.md)  
  Poskytuje referenční materiál na globální proměnné abecedním pořadí.  
   
- [ATL – makra](../atl/reference/atl-macros.md)  
+ [Makra ATL](../atl/reference/atl-macros.md)  
  Poskytuje referenční materiál na makra abecedním pořadí. Obsahuje témata uspořádání makra do kategorií.  
   
  [Struktury knihovny ATL](../atl/reference/atl-structures.md)  
@@ -63,7 +64,7 @@ Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablo
  [Ukázky knihovny ATL](../visual-cpp-samples.md)  
  Ukázkový kód, který ukazuje, jak pomocí knihovny ATL COM – objekty zapsat.  
   
- [Šablony technologie OLE DB](../data/oledb/ole-db-templates.md)  
+ [Šablony OLE DB](../data/oledb/ole-db-templates.md)  
  Poskytuje referenční materiál pro příjemce a zprostředkovatele šablony technologie OLE DB sadu tříd šablon, které implementují mnoha běžně používaných rozhraní OLE DB.  
   
  [Knihovny jazyka Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  

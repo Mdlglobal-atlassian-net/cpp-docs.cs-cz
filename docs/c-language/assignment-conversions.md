@@ -16,18 +16,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e51b6af4006ad3d8b35f9167e4db4e3ea84a89f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94087d5e07765b1052404a4c3e51f37db2a31e3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-conversions"></a>Převody přiřazení
 V operacích přiřazení je typ přiřazené hodnoty převeden na typ proměnné, která obdrží přiřazení. Jazyk C umožňuje převod mezi celočíselnými typy a typy s plovoucí desetinnou čárkou i v případě, že je informace při převodu ztracena. Převod metodu použitou závisí na typech zahrnutých v přiřazení, jak je popsáno v [obvyklé aritmetické převody](../c-language/usual-arithmetic-conversions.md) a v následujících částech:  
   
--   [Převody z podepsaných integrálních typů](../c-language/conversions-from-signed-integral-types.md)  
+-   [Převody z integrálních typů se znaménkem](../c-language/conversions-from-signed-integral-types.md)  
   
--   [Převody z nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md)  
+-   [Převody z integrálních typů bez znaménka](../c-language/conversions-from-unsigned-integral-types.md)  
   
 -   [Převody z typů s plovoucí desetinnou čárkou](../c-language/conversions-from-floating-point-types.md)  
   

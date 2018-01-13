@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>Ukázkový program
 Následující zdrojová aplikace jazyka C se skládá ze dvou zdrojových souborů. Poskytuje přehled o různých deklaracích a definicích, které je možné v aplikaci jazyka C použít. V dalších částech v této příručce popisují, jak napsat tyto deklarace, definice a inicializacích a použít klíčová slova jazyka C, jako je **statické** a `extern`. Funkce `printf` je deklarována v souboru záhlaví STDIO.H jazyka C.  

@@ -64,11 +64,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0cc09c716e8867c03147a28e6c0eb7d4fc844937
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a7a2a5baadab38283b621cb2f6ae99b36fe0a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 Sestaví a odkazuje jeden nebo více zdrojových souborů jazyka sestavení. Možnosti příkazového řádku jsou velká a malá písmena.  
@@ -114,7 +115,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/H**`number`|Externí názvy omezuje na číslo důležité znaky. Výchozí nastavení je 31 znaků.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/ Help**|Nápovědu k ML volá QuickHelp.|  
 |**/I**`pathname`|Nastaví cesta k souboru zahrnout. Maximálně 10 **/I** povoleny možnosti.|  
-|**/ nologo**|Potlačí zprávy pro úspěšné sestavení.|  
+|**/nologo**|Potlačí zprávy pro úspěšné sestavení.|  
 |**/ omf**|Generuje objektu modulu soubor formátu (OMF) typu objektu modulu.  **/ omf** znamená **/c**; ML.exe nepodporuje propojení OMF objektů.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/SA**|Zapne seznam všechny dostupné informace.|  
 |**/ SAFESEH**|Označí objekt jako obsahující žádné obslužné rutiny výjimek nebo obsahující obslužné rutiny výjimek, které jsou deklarovány s [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Není k dispozici v ml64.exe.|  

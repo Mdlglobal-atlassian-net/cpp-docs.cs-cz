@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08c3b48ebfc96a93961c6c810312daa6072e8f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Koncept izolovaných aplikací a souběžných sestavení
 Aplikace se považuje za [izolované aplikace](http://msdn.microsoft.com/library/aa375190) Pokud jsou všechny jeho komponenty [souběžně sdílená sestavení](http://msdn.microsoft.com/library/ff951640). Souběžné sestavení je kolekce prostředků – skupina knihoven DLL, tříd oken, serverů COM, knihoven typů nebo rozhraní – které se nasazují společně a které jsou dostupné spuštěné aplikaci. Souběžné sestavení je zpravidla jedna až několik knihoven DLL.  
@@ -40,4 +41,4 @@ Aplikace se považuje za [izolované aplikace](http://msdn.microsoft.com/library
  V sadě Visual Studio 2005 a Visual Studio 2008 byly distribuovatelné knihovny (například ATL, MFC, CRT, Standard C++, OpenMP a MSDIA) nasazeny jako sdílená souběžná sestavení do mezipaměti nativních sestavení. V aktuální verzi používají distribuovatelné knihovny centrální nasazení. Všechny aplikace vytvořené pomocí jazyka Visual C++ jsou standardně sestaveny s manifestem vloženým do konečného binárního souboru, přičemž tento manifest popisuje závislosti binárního souboru na knihovnách jazyka Visual C++. Pochopit generování manifestu pro aplikace Visual C++, najdete v části [Principy generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md). Manifest se nevyžaduje pro aplikace staticky propojené s knihovnami, které používají, nebo které používají místní nasazení. Další informace o nasazení najdete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Sestavení C/C++ izolovaných aplikací a souběžně sdílená sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

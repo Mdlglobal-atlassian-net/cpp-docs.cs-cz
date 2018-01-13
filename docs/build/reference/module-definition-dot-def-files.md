@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-definition-def-files"></a>Soubory definice modulu (.Def)
 Soubory definice modulu (.def) zadejte linkeru s informacemi o export, atributy a další informace o program, který má být propojena. Soubor .def je velmi užitečné při vytváření knihovny DLL. Protože nejsou k dispozici [možnosti linkeru](../../build/reference/linker-options.md) který lze použít místo příkazy definice modulu .def soubory jsou obecně není nutné. Můžete také použít [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako způsob, jak určit exportovaných funkcí.  
@@ -36,7 +37,7 @@ Soubory definice modulu (.def) zadejte linkeru s informacemi o export, atributy 
   
 -   [Pravidla pro příkazy definice modulu](../../build/reference/rules-for-module-definition-statements.md)  
   
--   [EXPORT](../../build/reference/exports.md)  
+-   [EXPORTY](../../build/reference/exports.md)  
   
 -   [VELIKOST HALDY](../../build/reference/heapsize.md)  
   
@@ -48,7 +49,7 @@ Soubory definice modulu (.def) zadejte linkeru s informacemi o export, atributy 
   
 -   [VELIKOST ZÁSOBNÍKU](../../build/reference/stacksize.md)  
   
--   [SE ZAKÁZANÝM INZEROVÁNÍM](../../build/reference/stub.md)  
+-   [ZÁSTUPNÁ PROCEDURA](../../build/reference/stub.md)  
   
 -   [VERZE](../../build/reference/version-c-cpp.md)  
   

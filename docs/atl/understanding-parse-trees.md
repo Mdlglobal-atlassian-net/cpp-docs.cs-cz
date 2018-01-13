@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 091ad40625c85f465e3989dd2dff790c630f6538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-parse-trees"></a>Principy analýzy stromů
 Jeden nebo více stromy analýzy můžete definovat ve vašem Registrátor skriptu, kde každý strom analýzy má následující formát:  
@@ -67,5 +68,5 @@ HKEY_CLASSES_ROOT
  Zde původně otevře registrátora (vytvoří) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Pak uvidí, který `MyVeryOwnKey` obsahuje podklíč. Spíše než zavřete klíč k `MyVeryOwnKey`, registrátora uchovává popisovač a otevře (vytvoří) `HasASubKey` pomocí tohoto popisovače nadřazené. (Registr systému může být pomalejší v otevřeném žádný nadřazený popisovač.) Proto otevírání `HKEY_CLASSES_ROOT\MyVeryOwnKey` a pak otevřete `HasASubKey` s `MyVeryOwnKey` jako nadřazená položka rychlejší než otevírání `MyVeryOwnKey`, uzavření `MyVeryOwnKey`a pak otevřete `MyVeryOwnKey\HasASubKey`.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření skripty registrátora](../atl/creating-registrar-scripts.md)
+ [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
 

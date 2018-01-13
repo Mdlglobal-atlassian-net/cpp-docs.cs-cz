@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Přidání stránky vlastností (ATL – tutoriál, část 6)
 Stránky vlastností jsou implementované jako samostatné objekty modelu COM, které mohly být sdílen, pokud je to nutné. V tomto kroku provedete následující úkoly a přidání stránky vlastností ovládacího prvku:  

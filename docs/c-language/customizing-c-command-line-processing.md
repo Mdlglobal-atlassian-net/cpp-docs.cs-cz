@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60f0c14382190cb724c4e4a84488006c54813558
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C
 Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá **_setargv –** (nebo **_wsetargv** v prostředí široká charakterová), jak je popsáno v [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md). Chcete-li potlačit jeho použití, definovat rutiny, která nemá žádnou v soubor obsahující **hlavní** funkce a pojmenujte ji **_setargv –** (nebo **_wsetargv** znakem celou prostředí). Volání **_setargv –** nebo **_wsetargv** pak splňují vaše definice **_setargv –** nebo **_wsetargv** , a je knihovní verze není načtená.  
@@ -37,4 +38,4 @@ Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetř
  Pokud váš program volá **_spawn** nebo **_exec** řadu rutiny v běhové knihovny jazyka C jste neměli potlačit rutiny zpracování prostředí vzhledem k tomu, že tato rutina slouží k předávání prostředí z procesu trdliště nový proces.  
   
 ## <a name="see-also"></a>Viz také  
- [hlavní funkce a spuštění programu](../c-language/main-function-and-program-execution.md)
+ [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

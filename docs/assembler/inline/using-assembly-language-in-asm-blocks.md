@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: de48f28b1a31ebece26d6b39286fb6edb065db0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07a7e50c040ec52fe79cba25ca4c1e29ac05bd8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Použití jazyka sestavení v blocích __asm
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Výrazy MASM ve vloženém sestavení](../../assembler/inline/masm-expressions-in-inline-assembly.md)  
   
--   [Direktivy a operátory ve vloženém sestavení dat](../../assembler/inline/data-directives-and-operators-in-inline-assembly.md)  
+-   [Direktivy a operátory dat ve vloženém sestavení](../../assembler/inline/data-directives-and-operators-in-inline-assembly.md)  
   
 -   [Direktivy EVEN a ALIGN](../../assembler/inline/even-and-align-directives.md)  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Typ a velikost proměnných ve vloženém sestavení](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)  
   
--   [Komentáře jazyka sestavení](../../assembler/inline/assembly-language-comments.md)  
+-   [Komentáře assembleru](../../assembler/inline/assembly-language-comments.md)  
   
 -   [_Emit – pseudoinstrukce](../../assembler/inline/emit-pseudoinstruction.md)  
   
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/24/2017
  **Konkrétní Microsoft END**  
   
 ## <a name="see-also"></a>Viz také  
- [Vložený Assembler](../../assembler/inline/inline-assembler.md)
+ [Vkládaný assembler](../../assembler/inline/inline-assembler.md)

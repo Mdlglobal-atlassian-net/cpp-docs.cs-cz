@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64d3269bda732ad16941a433674ed1c1ec2bf6e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50f2f1856b4718af8e87728a79511d9b18654efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bind"></a>/BIND
 ```  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/24/2017
  Ve výchozím nastavení program zavaděč nastavuje adresy vstupních bodů, když ho načte program. Množství času, trvá tento proces se liší v závislosti na počtu knihovny DLL a počet vstupních bodů, kterou se odkazuje v programu. Pokud program byl upraven s/BIND a základní adresy pro spustitelného souboru a jeho knihovny DLL nejsou v konfliktu s knihovny DLL, které již byly načteny, není nutné nastavovat tyto adresy operačního systému. V situaci, kde jsou nesprávně na základě souborů operační systém přemístí program knihovny DLL a přepočítá adresy vstupního bodu, který přidá do čas načítání programu.  
   
 ## <a name="see-also"></a>Viz také  
- [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)
+ [EDITBIN – možnosti](../../build/reference/editbin-options.md)

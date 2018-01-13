@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 803e4e0556026eaa5a3fb75c8faa7fd87f34052f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-exception-handling"></a>Zpracovávání výjimek v jazyce ARM
 Systém Windows na ARM používá stejné strukturovaného zpracování mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwaru výjimek. Obslužné rutiny výjimek specifické pro jazyk je postavená na Windows strukturovaného zpracování pomocí jazyka podpůrné funkce výjimek. Tento dokument popisuje zpracování výjimek v systému Windows na ARM a pomocníky jazyk používaný kód, který je generován MASM a kompilátor Visual C++.  
@@ -736,4 +737,4 @@ Function:
   
 ## <a name="see-also"></a>Viz také  
  [Přehled konvencí ABI ARM](../build/overview-of-arm-abi-conventions.md)   
- [Běžné problémy s migrací ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+ [Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)

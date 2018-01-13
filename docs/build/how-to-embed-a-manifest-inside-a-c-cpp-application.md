@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
 Je doporučeno, že aplikace C/C++ (nebo knihovna) mají jeho manifest vložená do konečné binární, protože zaručí se tím správný modul runtime chování ve většině scénářů. Ve výchozím nastavení [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pokusí k sestavení projektu ze zdrojových souborů pro vložení manifestu; viz [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace vytvořené s použitím nmake, některé změny existujícího souboru pravidel jsou nezbytné. V této části ukazuje, jak změnit stávající soubory pravidel pro automaticky vložení manifestu do konečné binárního souboru.  
@@ -260,4 +261,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Principy generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [Základní informace o generování manifestu pro programy C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

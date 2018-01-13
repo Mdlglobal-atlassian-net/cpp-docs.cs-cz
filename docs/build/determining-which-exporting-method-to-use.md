@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 013620a6353c281b2d60a8c4f847f57c60e5f10c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7375d4baf31c1564493fd29938ef2ac8ee034f3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Výběr použité metody exportu
 Můžete exportovat funkce v některém ze dvou způsobů – soubor .def nebo `__declspec(dllexport)` – klíčové slovo. Chcete-li vám pomohou rozhodnout, který způsob je lepší pro vaši knihovnu DLL, zvažte tyto otázky:  
@@ -68,4 +69,4 @@ Můžete exportovat funkce v některém ze dvou způsobů – soubor .def nebo `
 -   [Dekorované názvy](../build/reference/decorated-names.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Export z knihovny DLL](../build/exporting-from-a-dll.md)
+ [Export z knihovny DLL](../build/exporting-from-a-dll.md)

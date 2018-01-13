@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 083eb8742308f986e3261711039bbd29a914d97e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8737c0e33d33fe062d9a07f18d9005e58463f5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (zpracování dokumentačních komentářů) (C/C++)
 V soubory zdrojového kódu a vytvořte projektový soubor pro každou souboru zdrojového kódu, který má dokumentační komentáře způsobí, že kompilátor zpracování dokumentačních komentářů.  

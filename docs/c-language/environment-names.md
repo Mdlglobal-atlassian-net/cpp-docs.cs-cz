@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 819bb0395ed8a47c7da9df85d50cd26357c84422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efae64f64ef6b5ed92dffafb9f83a0e32ab38513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environment-names"></a>Názvy prostředí
 **ANSI 4.10.4.4** sadu názvy prostředí a metody pro změnu seznamu prostředí používá [GETENV –](../c-runtime-library/reference/getenv-wgetenv.md) – funkce  
@@ -39,4 +40,4 @@ system( SET LIB = D:\LIBS );
 ## <a name="see-also"></a>Viz také  
  [Funkce knihovny](../c-language/library-functions.md)   
  [_putenv –, _wputenv –](../c-runtime-library/reference/putenv-wputenv.md)   
- [GETENV –, _wgetenv –](../c-runtime-library/reference/getenv-wgetenv.md)
+ [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)

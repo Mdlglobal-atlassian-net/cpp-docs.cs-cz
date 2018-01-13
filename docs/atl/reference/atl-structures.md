@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8f34a1957a4af4090d5e73a54f0ef00f8b76088
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-structures"></a>Struktury knihovny ATL
 
@@ -54,13 +55,13 @@ Aktivní knihovna šablon zahrnuje následující struktury.
  [ATL – referenční informace](../../atl/atl-com-desktop-components.md)  
  Poskytuje referenční materiál pro knihovny serveru ATL, sadu na základě šablon C++ třídy, které zjednodušují programování COM – objekty.  
   
- [ATL – funkce](../../atl/reference/atl-functions.md)  
+ [Funkce ATL](../../atl/reference/atl-functions.md)  
  Poskytuje referenční materiál na globální funkce abecedním pořadí. Obsahuje témata uspořádání funkce do kategorií.  
   
- [Globální proměnné knihovny ATL](../../atl/reference/atl-global-variables.md)  
+ [Globální proměnné ATL](../../atl/reference/atl-global-variables.md)  
  Poskytuje referenční materiál na globální proměnné abecedním pořadí.  
   
- [ATL – makra](../../atl/reference/atl-macros.md)  
+ [Makra ATL](../../atl/reference/atl-macros.md)  
  Poskytuje referenční materiál na makra abecedním pořadí. Obsahuje témata uspořádání makra do kategorií.  
   
  [ATL – definice TypeDef](../../atl/reference/atl-typedefs.md)  

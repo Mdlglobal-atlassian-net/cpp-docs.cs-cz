@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0f4177ffb0db75eb18c39aa260f0b150da9b6f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 Určuje typ zpracování výjimky používané kompilátoru, když k optimalizaci tokeny výjimka kontroluje a jestli zrušení C++ objekty, které z důvodu výjimky se dostala mimo rozsah. Pokud **/EH** není zadán, kompilátor zachytí asynchronní strukturovaných výjimky a výjimky jazyka C++, ale nezničí C++ objekty, které z důvodu asynchronní výjimky se dostala mimo rozsah.  
@@ -126,4 +127,4 @@ int main() {
  [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)   
  [Ošetření chyb a výjimek](../../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md)   
- [Strukturované zpracování (C/C++) výjimek](../../cpp/structured-exception-handling-c-cpp.md)
+ [Strukturované zpracování výjimek (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

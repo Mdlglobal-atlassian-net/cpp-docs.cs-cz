@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73858235f949c07da646944efcae6e846a96d900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoidance-of-heap-contention"></a>Předcházení kolizí haldy
 Správci řetězec výchozí, poskytované MFC a knihovna ATL jsou jednoduché obálky nad globální haldy. Tato globální halda představuje plně vláken, což znamená, že více vláken můžete přidělit a volné paměti z něj současně bez poškozování halda. Zabezpečení vlákna pomáhají halda má k serializaci přístup na sebe sama. To se obvykle dosahuje kritická sekce nebo podobné uzamčení mechanismu. Vždy, když se dvěma vlákny došlo k pokusu o přístup k haldě současně, jedno vlákno je blokován, dokud dokončení požadavku jiné vlákno. Mnoho aplikací k této situaci dochází zřídka a dopad na výkon uzamčení mechanismu do haldy je nepatrné. Ale pro aplikace, které často halda přístup z více vláken může způsobit kolizí je halda zámek aplikace pomalejší, než pokud by měla jednovláknové (i u počítačů s více procesory).  
@@ -38,5 +39,5 @@ Správci řetězec výchozí, poskytované MFC a knihovna ATL jsou jednoduché o
  Složitější postup vlákno může být vhodné k uložení ukazatel na řetězec manager vlákna v přihrádce přístup z více vláken místní úložiště (TLS). To umožňuje jiné funkce volané procedurou vlákno pro přístup k manager řetězec vlákna.  
   
 ## <a name="see-also"></a>Viz také  
- [Správa paměti s CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

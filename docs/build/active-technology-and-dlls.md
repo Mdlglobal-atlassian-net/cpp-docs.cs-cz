@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb97e43f589718f79f64483593cfea870258d9f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44dcc58aed4025af2e3e2177e978633c13f0ef20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-technology-and-dlls"></a>Technologie Active a knihovny DLL
 Technologie Active umožňuje serverům objektu k implementaci zcela uvnitř knihovny DLL. Tento typ serveru se říká server v procesu. MFC nepodporuje zcela v procesu servery pro úpravy s náhledem, všechny funkce především, protože technologie Active neposkytuje způsob, jak se server připojí do kontejneru hlavní zpráva smyčky. MFC vyžaduje přístup ke smyčce zpráv aplikace typu kontejner pro zpracování klávesy akcelerátoru a zpracování doby nečinnosti.  
@@ -35,4 +36,4 @@ Technologie Active umožňuje serverům objektu k implementaci zcela uvnitř kni
 -   [Automatizační servery](../mfc/automation-servers.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)
+ [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)

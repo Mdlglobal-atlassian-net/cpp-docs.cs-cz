@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e31d9f86b9ff6d2de8ef0bfa9fb039324c1556db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace nástroje vlastní řetězec Manager (základní metoda)
 Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro data řetězce se má používat zadaný ATL **CAtlStringMgr** třídy, ale poskytnutí vlastní paměti rutiny přidělení. V konstruktoru pro **CAtlStringMgr** přijímá jeden parametr: ukazatel na `IAtlMemMgr` objektu. `IAtlMemMgr`je abstraktní základní třída, která poskytuje obecné rozhraní haldě. Pomocí `IAtlMemMgr` rozhraní, **CAtlStringMgr** přiděluje, přidělí a uvolní paměť použitá k ukládání dat řetězců. Můžete buď implementace `IAtlMemMgr` rozhraní sami, nebo použijte jednu z pěti tříd manager zadaný ATL paměti. Zadaný ATL paměti správci jednoduše zabalit stávajících zařízení přidělení paměti:  
@@ -42,5 +43,5 @@ Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro dat
  [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Správa paměti s CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

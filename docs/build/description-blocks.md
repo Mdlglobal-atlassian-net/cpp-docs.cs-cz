@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cec8005599ab6d4e2b7d769f73b5ef2e3869accd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37f095f5ae46e4b555f1d3f7996bd5f357e58ee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-blocks"></a>Bloky popisů
 Popis blok je řádek závislostí a za blok příkazů:  
@@ -36,7 +37,7 @@ targets... : dependents...
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
  [Cíle](../build/targets.md)  
   
- [Závislé objekty](../build/dependents.md)  
+ [Závislé prvky](../build/dependents.md)  
   
 ## <a name="see-also"></a>Viz také  
- [NMAKE – odkaz](../build/nmake-reference.md)
+ [NMAKE – referenční zdroje](../build/nmake-reference.md)

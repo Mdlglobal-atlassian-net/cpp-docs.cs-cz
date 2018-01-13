@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b202d9e1d93cb170325ede736eb1ab33fc69b02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 282ceac05587452fad750f05b642c0ffd5b929a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Přidělování a uvolňování paměti pro BSTR
 Při vytváření `BSTR`s a předat je mezi objekty modelu COM, musí postará v považuje paměti používají, aby se zabránilo nevracení paměti. Když `BSTR` zůstane v rámci rozhraní, je nutné uvolnit jeho paměť až skončíte s ním. Ale když `BSTR` předává mimo rozhraní, přebírá objekt přijímající odpovědnost za jeho správa paměti.  
