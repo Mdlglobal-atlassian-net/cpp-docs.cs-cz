@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 559dba68c8c171fbc84be17e64c2628b4bbf5011
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b5169a9f5110e40e0d7ff7e9b036c2e28c98660
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdbgflag"></a>_crtDbgFlag
 **_Crtdbgflag –** příznak se skládá z pěti bitových polí, která řídí jak jsou přidělení paměti na ladicí verze haldy sledovat, ověřit, hlášené a zálohované. Bitová pole vlajky jsou nastavené pomocí [_crtsetdbgflag –](../c-runtime-library/reference/crtsetdbgflag.md) funkce. Tento příznak a jeho bitová pole jsou deklarované v Crtdbg.h. Tento příznak je k dispozici pouze při [_DEBUG –](../c-runtime-library/debug.md) příznak byla definována v aplikaci.  
@@ -36,4 +37,4 @@ ms.lasthandoff: 10/24/2017
  Další informace o používání tento příznak ve spojení s další funkce ladění najdete v tématu [funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="see-also"></a>Viz také  
- [Příznaky ovládacích prvků](../c-runtime-library/control-flags.md)
+ [Příznaky řízení](../c-runtime-library/control-flags.md)

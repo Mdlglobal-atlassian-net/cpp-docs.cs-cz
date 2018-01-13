@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 Klíčové slovo `constexpr` byla zavedená v C ++ 11 a vylepšené v C ++ 14. Znamená to, *konstantní výraz*. Jako `const`, může platit pro proměnné tak, že pokud se kód, se pokusí změnit hodnotu, bude vyvolána chyba kompilátoru. Na rozdíl od `const`, `constexpr` lze použít také k funkcím a třídy konstruktory. `constexpr`Označuje, že hodnota nebo vrací hodnotu, je konstantní a, pokud je to možné, se automaticky spočítá v době kompilace.  A `constexpr` celočíselné hodnoty lze použít, kdykoli je to požadováno, například v šabloně argumentů a deklarace pole const celé číslo. A pokud v době kompilace místo běhu můžete vypočítat hodnotu, může pomoci váš program spouštět rychleji a používat méně paměti.  
@@ -120,7 +121,7 @@ constexpr float exp(float x, int n)
   
  
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje `constexpr` proměnné, funkce a uživatelsky definovaný typ.. Všimněte si, že se v poslední příkaz v main(), `constexpr` – členská funkce GetValue() je volání spuštění, protože hodnota nemusí být známé v době kompilace.  
+ Následující příklad ukazuje `constexpr` proměnné, funkce a uživatelsky definovaný typ. Všimněte si, že se v poslední příkaz v main(), `constexpr` – členská funkce GetValue() je volání spuštění, protože hodnota nemusí být známé v době kompilace.  
   
 ```  
 #include <iostream>  
@@ -195,4 +196,4 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)   
- [Const](../cpp/const-cpp.md)
+ [const](../cpp/const-cpp.md)

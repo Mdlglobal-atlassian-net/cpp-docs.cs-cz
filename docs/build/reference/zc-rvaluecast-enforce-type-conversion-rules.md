@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 068d1e0e9061645729728c4d0a3c956e521948cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f4b888dde70708ee10b2d8000ff6380709dc870
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Vynucení pravidel převodu typů)
 Když **/Zc: rvaluecast** je zadána možnost, kompilátor správně identifikuje typ deklarátor odkazu jako výsledek operace cast v souladu s C ++ 11 standardní. Pokud není zadána možnost, kompilátoru chování je stejné jako v sadě Visual Studio 2012. Ve výchozím nastavení **/Zc: rvaluecast** je vypnutý. Shoda a k odstranění chyb s použitím přetypování, doporučujeme použít **/Zc: rvaluecast**.  

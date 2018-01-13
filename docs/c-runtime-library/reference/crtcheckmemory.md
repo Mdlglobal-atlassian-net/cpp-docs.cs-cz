@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0094c43b7bbe60da1a89d201d40577422b7a889a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60909079a4d7c30b3a3e6c00257d882d76467585
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 Potvrdí její integritu bloky paměti přidělené v haldě ladění (pouze ladicí verze).  
@@ -81,4 +82,4 @@ _ASSERTE( _CrtCheckMemory( ) );
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
  [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md)   
- [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md)
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)

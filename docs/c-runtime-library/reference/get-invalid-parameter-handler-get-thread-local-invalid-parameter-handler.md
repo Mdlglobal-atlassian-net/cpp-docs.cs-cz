@@ -37,11 +37,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aef6cfa2c015abf64cdfd217e2128dd77bd925a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b00d6528301101729e032a63298dd0874bfa8ed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler
 Získá funkce, která je volána, když CRT zjistí neplatný argument.  
@@ -83,4 +84,4 @@ typedef void (__cdecl* _invalid_parameter_handler)(
   
 ## <a name="see-also"></a>Viz také  
  [_set_invalid_parameter_handler –, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)   
- [Verze funkcí CRT se zdokonaleným zabezpečení](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)
+ [Verze funkcí CRT se zdokonaleným zabezpečením](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)

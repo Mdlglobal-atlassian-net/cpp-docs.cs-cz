@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 668cd4b2f27c2cde18528c0eb2d4d661160c4e4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2c5fc714b9c2ff0e1af679edbc3842b86d201fee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-odbc"></a>Sada záznamů (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -111,7 +114,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+-   [Sada záznamů: Deklarace třídy předdefinovaného dotazu (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
 -   [Sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
@@ -119,7 +122,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Sada záznamů: Práce s velkými datovými položkami (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [Sada záznamů: Získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+-   [Sada záznamů: Získávání součtů a jiných souhrnných výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
 ### <a name="topics-about-how-recordsets-work"></a>Témata o fungování sady záznamů  
   

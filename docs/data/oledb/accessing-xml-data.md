@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cccb224553bc217bbbcd37030f03419f6f5d55e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-xml-data"></a>Přístup k datům XML
 Existují dvě samostatné metody načítání dat XML ze zdroje dat: jeden používá [CStreamRowset](../../data/oledb/cstreamrowset-class.md) a jiné účely [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  

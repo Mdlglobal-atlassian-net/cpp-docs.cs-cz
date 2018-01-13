@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd5a1844bfeec798ee25a3cb8e65efd019e65e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeinfo-class"></a>type_info – třída
 **Type_info** třída popisuje informace o typu generované v rámci programu kompilátoru. Objekty této třídy účinně ukládají ukazatel na název typu. **Type_info** třída také ukládá hodnotu kódovaného vhodný pro porovnání rovnosti dvou typů nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  
@@ -56,4 +57,4 @@ public:
  Typ informace se generují pro polymorfní třídy pouze v případě [/GR (Povolit Run-Time informace typu)](../build/reference/gr-enable-run-time-type-information.md) – možnost kompilátoru je zadán.  
   
 ## <a name="see-also"></a>Viz také  
- [Informace běhového typu](../cpp/run-time-type-information.md)
+ [Informace o typu modulu runtime](../cpp/run-time-type-information.md)

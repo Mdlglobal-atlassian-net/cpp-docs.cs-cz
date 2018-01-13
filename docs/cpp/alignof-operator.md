@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof – operátor
 Zavádí c ++ 11 `alignof` operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro maximální přenositelnost použijte operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.  
@@ -85,7 +86,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
  Další informace o úpravách zarovnání naleznete v:  
   
--   [Pack](../preprocessor/pack.md)  
+-   [pack](../preprocessor/pack.md)  
   
 -   [Zarovnat](../cpp/align-cpp.md)  
   
@@ -97,7 +98,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
  Další informace o rozdíly v zarovnání v kódu pro x86 a x64 najdete v tématu:  
   
--   [Je v konfliktu s x86 kompilátoru](../build/conflicts-with-the-x86-compiler.md)  
+-   [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)  
   
 **Konkrétní Microsoft END**  
   

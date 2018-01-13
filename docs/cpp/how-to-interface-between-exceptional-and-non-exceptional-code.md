@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a6004236c02868787235441d92466b24c9a3d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
 Tento článek popisuje, jak implementovat konzistentní výjimek v C++ modulu a také jak přeložit tyto výjimky do a z kódy chyb v hranicích výjimka.  
@@ -244,4 +245,4 @@ bool DiffFiles3(const string& file1, const string& file2)
   
 ## <a name="see-also"></a>Viz také  
  [Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [Postupy: návrh na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)
+ [Postupy: Návrh s ohledem na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)

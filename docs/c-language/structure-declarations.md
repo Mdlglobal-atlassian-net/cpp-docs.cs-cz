@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>Deklarace struktury
 "Struktury deklarace" názvy typu a určuje pořadí proměnných hodnot (nazývané "členy" nebo "pole" struktury), které může mít různé typy. Volitelné identifikátor, s názvem "značku", poskytuje název typu Struktura a mohou být používány následující odkazy na typ struktury. Proměnné tohoto typu struktura obsahuje celého pořadí definované typu. Struktury v jazyce C jsou podobné typy označuje jako "záznamy" v dalších jazycích.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
  *identifikátor struktura nebo sjednocení*  
   
  *Struktura nebo sjednocení*:  
- **Struktura**  
+ **struct**  
   
  **sjednocení**  
   

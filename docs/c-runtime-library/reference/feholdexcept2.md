@@ -33,11 +33,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfc0ce4da07bb83fbe003e7ea23029628f4e199b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1455f3b963c2d9faf7c2e96a2d6684e0e412ef8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feholdexcept"></a>feholdexcept
 Uloží aktuální prostředí s plovoucí desetinnou čárkou v zadaný objekt, vymaže příznaky s plovoucí desetinnou čárkou stavu a, pokud je to možné, převede s plovoucí desetinnou čárkou prostředí do režimu bez zastavení.  

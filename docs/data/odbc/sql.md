@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) je způsob, jak komunikovat s relační databázi, která umožňuje definovat, dotaz, úpravě a řídit data. Pomocí syntaxe jazyka SQL, můžete vytvořit příkaz, který extrahuje záznamy podle zadaných kritérií.  
@@ -54,9 +57,9 @@ SQL (Structured Query Language) je způsob, jak komunikovat s relační databáz
   
 |SQL – klíčové slovo|Průvodci a databázové třídy použít|  
 |-----------------|---------------------------------------------|  
-|**VYBERTE**|K identifikaci, které tabulky a sloupce ve zdroji dat mají být použita.|  
-|**KDE**|Pokud chcete použít filtr, který zúží výběr.|  
-|**ŘADIT PODLE**|Chcete použít řazení pro sady záznamů.|  
+|**SELECT**|K identifikaci, které tabulky a sloupce ve zdroji dat mají být použita.|  
+|**WHERE**|Pokud chcete použít filtr, který zúží výběr.|  
+|**ORDER BY**|Chcete použít řazení pro sady záznamů.|  
 |**VLOŽENÍ**|Přidání nových záznamů do sady záznamů.|  
 |**ODSTRANIT**|Při odstraňování záznamů z sady záznamů.|  
 |**AKTUALIZACE**|Chcete-li upravit polí záznamu.|  
@@ -85,9 +88,9 @@ SQL (Structured Query Language) je způsob, jak komunikovat s relační databáz
   
 -   [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
+-   [SQL: Datové typy SQL a C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
   
--   [SQL: Provedení přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
+-   [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

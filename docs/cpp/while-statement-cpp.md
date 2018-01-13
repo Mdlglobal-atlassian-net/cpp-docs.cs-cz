@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4b076a1679bec8de9407d253d233e96060aaef4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="while-statement-c"></a>while – příkaz (C++)
 Provede *příkaz* opakovaně až *výraz* vyhodnotí na hodnotu nula.  
@@ -75,4 +76,4 @@ int main()
  [Klíčová slova](../cpp/keywords-cpp.md)   
  [Proveďte-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)   
  [pro příkaz (C++)](../cpp/for-statement-cpp.md)   
- [Na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md)
+ [Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)

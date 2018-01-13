@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5b0d17ba04dc1648d9aa05dff98715ef9a80a230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Základní informace o generování manifestu pro programy C/C++
 A [manifest](http://msdn.microsoft.com/library/aa375365) je dokument XML, který může být externí soubor XML nebo prostředek vložena do aplikace nebo sestavení. Manifest [izolované aplikace](http://msdn.microsoft.com/library/aa375190) slouží ke správě názvy a verze sdílené souběžně sdílená sestavení, na které aplikace by měla vytvořit vazbu v době běhu. Manifest souběžně sdílená sestavení určuje jeho závislé součásti na názvy, verze, prostředky a jiné sestavení.  
@@ -29,4 +30,4 @@ A [manifest](http://msdn.microsoft.com/library/aa375365) je dokument XML, který
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty izolovaných aplikací a souběžně sdílená sestavení](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [Sestavení C/C++ izolovaných aplikací a souběžně sdílená sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

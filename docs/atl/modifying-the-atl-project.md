@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>Úprava projektu knihovny ATL
 V tomto okamžiku projektu složeného ovládacího prvku implementuje nezbytných objektů pro vaše složeného ovládacího prvku. Dalším krokem je přidání všech ovládacích prvků, že bude obsahovat a zpracovat všechny potřebné události složeného ovládacího prvku.  
@@ -32,5 +33,5 @@ V tomto okamžiku projektu složeného ovládacího prvku implementuje nezbytný
   
 ## <a name="see-also"></a>Viz také  
  [Principy vytváření složených prvků](../atl/atl-composite-control-fundamentals.md)   
- [Postupy: vytvoření souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md)
+ [Postupy: Vytvoření souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md)
 

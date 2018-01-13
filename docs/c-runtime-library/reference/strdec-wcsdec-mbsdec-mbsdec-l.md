@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4df8de18c2256b4e9034b4b0c80f7c4edf85fe91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46e905408faed138b1509362a1ec56e727742ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 Přesune řetězec ukazatel zpět jeden znak.  
@@ -186,4 +187,4 @@ int main()
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [_strinc –, _wcsinc –, _mbsinc, _mbsinc_l –](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
  [_strnextc –, _wcsnextc –, _mbsnextc –, _mbsnextc_l –](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   
- [_strninc –, _wcsninc –, _mbsninc –, _mbsninc_l –](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)
+ [_strninc, _wcsninc, _mbsninc, _mbsninc_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)

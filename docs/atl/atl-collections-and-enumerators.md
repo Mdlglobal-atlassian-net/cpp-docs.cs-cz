@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL – kolekce a výčty
 A `collection` je objekt modelu COM, který poskytuje rozhraní, které umožňuje přístup do skupiny datové položky (nezpracovaná data nebo jiných objektů). Rozhraní, které dodržuje standardy pro poskytování přístupu pro skupinu objektů, které se označuje jako *rozhraní kolekce*.  
@@ -34,13 +35,13 @@ A `collection` je objekt modelu COM, který poskytuje rozhraní, které umožňu
  Další informace o rozhraní pro výčty ve čtení o archetypal (ale zcela pomyslná) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) rozhraní.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [ATL – kolekce a Enumerátor třídy](../atl/atl-collection-and-enumerator-classes.md)  
+ [ATL – třídy kolekcí a výčtů](../atl/atl-collection-and-enumerator-classes.md)  
  Stručně popisuje a poskytuje odkazy na třídy ATL, které vám pomohou implementovat kolekce a výčty.  
   
- [Principy návrhu pro sběr a rozhraní pro výčty](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+ [Principy návrhu rozhraní kolekce a výčtů](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
  Popisuje různé zásady za každý typ rozhraní.  
   
- [Implementace kolekci na základě knihovny C++ Standard](../atl/implementing-an-stl-based-collection.md)  
+ [Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)  
  Příklad rozšířené, který vás provede procesem implementace kolekce na základě standardní knihovna C++.  
   
 ## <a name="related-sections"></a>Související oddíly  

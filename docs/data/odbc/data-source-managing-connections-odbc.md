@@ -29,11 +29,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a88aab7023791de7f01ea9c3b189528e845bd02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9b83093496d355fdba8b5d714875d08040ae28ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-managing-connections-odbc"></a>Zdroj dat: Správa připojení (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -131,7 +134,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 2.  Objekt zrušte, pokud chcete znovu použít.  
   
 ##  <a name="_core_reusing_a_cdatabase_object"></a>Opětovné použití objektu CDatabase  
- Můžete opakovaně použít `CDatabase` objektu po odpojení od toho, zda používat se připojit ke stejnému zdroji dat nebo se připojit k jinému zdroji dat..  
+ Můžete opakovaně použít `CDatabase` objektu po odpojení od toho, zda používat se připojit ke stejnému zdroji dat nebo se připojit k jinému zdroji dat.  
   
 #### <a name="to-reuse-a-cdatabase-object"></a>Chcete-li znovu použít objekt CDatabase  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc923e8c638f51720aaffbb8c26aaa65bb230731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="low-level-io"></a>I/O nízké úrovně
 Tyto funkce vyvolání operačního systému přímo pro operaci nižší úrovni než poskytované datového proudu vstupně-výstupní operace. Nízké úrovně vstup a výstup volání provést vyrovnávací paměti nebo formát data.  
@@ -43,19 +44,19 @@ Tyto funkce vyvolání operačního systému přímo pro operaci nižší úrovn
   
 |Funkce|Použití|  
 |--------------|---------|  
-|[_close –](../c-runtime-library/reference/close.md)|Zavřete soubor|  
-|[_commit –](../c-runtime-library/reference/commit.md)|Vyprázdnění souborů na disk|  
-|[_creat –, _wcreat –](../c-runtime-library/reference/creat-wcreat.md)|Vytvoření souboru|  
+|[_close](../c-runtime-library/reference/close.md)|Zavřete soubor|  
+|[_commit](../c-runtime-library/reference/commit.md)|Vyprázdnění souborů na disk|  
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Vytvoření souboru|  
 |[_dup –](../c-runtime-library/reference/dup-dup2.md)|Návratový další dostupné sdílené popisovač pro danou souboru|  
 |[_dup2 –](../c-runtime-library/reference/dup-dup2.md)|Vytvořit druhý popisovač pro danou souboru|  
-|[_eof –](../c-runtime-library/reference/eof.md)|Test pro konec souboru|  
-|[_lseek –, _lseeki64 –](../c-runtime-library/reference/lseek-lseeki64.md)|Změna umístění souboru ukazatel na zadané umístění|  
-|[_Otevřít _wopen –](../c-runtime-library/reference/open-wopen.md)|Otevřete soubor|  
-|[_Zobrazit](../c-runtime-library/reference/read.md)|Čtení dat ze souboru|  
+|[_eof](../c-runtime-library/reference/eof.md)|Test pro konec souboru|  
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Změna umístění souboru ukazatel na zadané umístění|  
+|[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otevřete soubor|  
+|[_read](../c-runtime-library/reference/read.md)|Čtení dat ze souboru|  
 |[_sopen –, _wsopen –](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s –, _wsopen_s –](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otevřete soubor pro sdílení souborů|  
-|[_tell –, _telli64 –](../c-runtime-library/reference/tell-telli64.md)|Získat aktuální pozici ukazatele souboru|  
+|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Získat aktuální pozici ukazatele souboru|  
 |[_umask –](../c-runtime-library/reference/umask.md), [_umask_s –](../c-runtime-library/reference/umask-s.md)|Nastavení oprávnění souborů masky|  
-|[_Write –](../c-runtime-library/reference/write.md)|Zapisovat data do souboru|  
+|[_write](../c-runtime-library/reference/write.md)|Zapisovat data do souboru|  
   
  `_dup`a `_dup2` jsou obvykle používány pro přidružení předdefinovaného souboru popisovače různých souborů.  
   

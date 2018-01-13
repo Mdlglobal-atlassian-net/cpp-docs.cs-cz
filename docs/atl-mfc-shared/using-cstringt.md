@@ -14,20 +14,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca98ae4f9df78b91fb3e6495c638952b6dbf2445
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48f5ca02ef578d4dc01ce701b239d1aa279d05fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstringt"></a>Pomocí CStringT
 Témata v této části popisují programování pomocí třídy šablony [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Správa paměti s CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+ [Správa paměti pomocí CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
  Popisuje správu paměti s `CStringT`, třídu šablony, které se používá k manipulaci s proměnlivou délkou znakových řetězců.  
   
- [Export tříd řetězec pomocí CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+ [Export tříd řetězců pomocí CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
  Vysvětluje, jak exportovat z knihovny DLL pomocí šablony třídy <> CStringT třídě řetězec.  
   
 ## <a name="reference"></a>Odkaz  

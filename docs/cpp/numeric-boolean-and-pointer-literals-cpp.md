@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Číselné literály, logické a literály typu ukazatele (C++)
 Literál je program elementu, který přímo představuje hodnotu. Tento článek se zabývá literály typu integer, s plovoucí desetinnou čárkou, logické a ukazatel. Informace o řetězce a znak literály najdete v tématu [řetězec a znakové literály (C++)](../cpp/string-and-character-literals-cpp.md). Můžete také definovat vlastní literály na základě některé z těchto kategorií; Další informace najdete v části [uživatelem definované literály (C++)](../cpp/user-defined-literals-cpp.md)  

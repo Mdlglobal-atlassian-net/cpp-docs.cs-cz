@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d85ba653ceba37f065816ce792a03276bf36551
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
 C++ [iostreams](../standard-library/iostream.md) podporují formátovaný řetězec vstupně-výstupní operace. Například následující kód ukazuje, jak nastavit cout k formátování celé výstup v šestnáctkové soustavě, nejprve ukládání mimo aktuální stav a znovu nastavení později, protože po formátování stavu je předán cout, zůstane tímto způsobem, dokud nezměníte, ne jenom pro jeden řádek kódu.  

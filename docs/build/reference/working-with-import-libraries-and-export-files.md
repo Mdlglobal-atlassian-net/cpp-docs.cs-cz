@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a78f6e4c7cdb5dbd25354d93d9bafc2892098c7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e0d60eed00abc60c09e03838a113c424d8f173a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Práce s importovanými knihovnami a exportovanými soubory
 LIB s parametrem/DEF slouží k vytvoření knihovnu importu a souboru exportu. ODKAZ používá exportu souboru k vytvoření programu, který obsahuje vyexportuje (obvykle dynamické knihovny (DLL)) a používá knihovny importu odkazy na tyto exporty v jiných aplikacích.  
@@ -35,4 +36,4 @@ LIB s parametrem/DEF slouží k vytvoření knihovnu importu a souboru exportu. 
  Ale při programu, který umožňuje importovat taková také z provede export knihovny DLL, jestli přímo ani nepřímo, používejte LIB k jeho vytvoření knihoven importovat. Když LIB vytvoří knihovnu importu, také vytvoří soubor exportu. Při propojování jednu z knihoven DLL, je nutné použít soubor exportu.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace LIB](../../build/reference/lib-reference.md)
+ [Referenční dokumentace ke knihovně LIB](../../build/reference/lib-reference.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d395b6981e167bf759e0e26577dca962632a22c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-class"></a>_com_ptr_t – třída
 **Konkrétní Microsoft**  
@@ -47,12 +48,12 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||  
 |-|-|  
 |[Addref –](../cpp/com-ptr-t-addref.md)|Volání `AddRef` členské funkce **IUnknown** na ukazatel zapouzdřené rozhraní.|  
-|[Připojení](../cpp/com-ptr-t-attach.md)|Zapouzdří ukazatel nezpracovaná rozhraní tento inteligentní ukazatel typu.|  
+|[Attach](../cpp/com-ptr-t-attach.md)|Zapouzdří ukazatel nezpracovaná rozhraní tento inteligentní ukazatel typu.|  
 |[CreateInstance –](../cpp/com-ptr-t-createinstance.md)|Vytvoří novou instanci objektu zadané **CLSID** nebo **ProgID**.|  
-|[Odpojení](../cpp/com-ptr-t-detach.md)|Extrahuje a vrátí zapouzdřený ukazatel rozhraní.|  
+|[Detach](../cpp/com-ptr-t-detach.md)|Extrahuje a vrátí zapouzdřený ukazatel rozhraní.|  
 |[Getactiveobject –](../cpp/com-ptr-t-getactiveobject.md)|Připojí k existující instanci objekt daný **CLSID** nebo **ProgID**.|  
 |[Getinterfaceptr –](../cpp/com-ptr-t-getinterfaceptr.md)|Vrátí ukazatel zapouzdřené rozhraní.|  
-|[QueryInterface –](../cpp/com-ptr-t-queryinterface.md)|Volání `QueryInterface` členské funkce **IUnknown** na ukazatel zapouzdřené rozhraní.|  
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Volání `QueryInterface` členské funkce **IUnknown** na ukazatel zapouzdřené rozhraní.|  
 |[Vydaná verze](../cpp/com-ptr-t-release.md)|Volání **verze** členské funkce **IUnknown** na ukazatel zapouzdřené rozhraní.|  
   
 ### <a name="operators"></a>Operátory  
@@ -71,4 +72,4 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)
+ [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

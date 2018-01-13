@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5b54c820095b54be28a5868505d07f9b0e39d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 V moderní verze jazyka C++, ve většině scénářů je upřednostňovaný způsob, jak sestav a zpracování logiky chyby a chyby za běhu použít výjimky. To platí hlavně při zásobníku může obsahovat několik volání funkce mezi funkce, která zjistí chybu a funkce, která má kontext, který má vědět, jak se nezdařilo. Výjimky poskytují způsob formální, dobře definované pro kód, který zjistí chyby k předání informací o zásobníkem volání.  

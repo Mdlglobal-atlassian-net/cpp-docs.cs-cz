@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb74dbc28235f211f24d64ef125f2cccdafc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3e5e2f8ffab670c6e6c5eb95d37b4daced5c6b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Nepodporované funkce CRT prostředí Windows Runtime
 Mnoho rozhraní API jazyka C Runtime (CRT) nelze použít v [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplikace, které jsou spuštěny v prostředí Windows Runtime. Tyto aplikace jsou vytvořeny pomocí příznaku /ZW kompilátoru. Seznam nepodporované funkce CRT najdete v tématu [funkcí CRT nepodporuje /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
@@ -29,4 +30,4 @@ Mnoho rozhraní API jazyka C Runtime (CRT) nelze použít v [!INCLUDE[win8_appna
   
 ## <a name="see-also"></a>Viz také  
  [Běhové rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)   
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+ [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

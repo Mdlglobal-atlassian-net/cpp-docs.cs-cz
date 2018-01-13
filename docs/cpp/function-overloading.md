@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Takové funkce jsou označovány za přetížené a jsou podrobně popsány v tématu Přetížení. Přetížené funkce umožňují programátorům poskytnout různé sémantiky funkce v závislosti na typech a počtu argumentů.  

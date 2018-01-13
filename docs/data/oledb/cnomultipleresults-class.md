@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6782d4935f9547649e49dee2a01f5e9ca3ee6259
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cbb5873ca504cac72489c612e9bb3b4177e2e96b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults – třída
 Použít jako argument šablony (*TMultiple*) k [CCommand](../../data/oledb/ccommand-class.md) vytvoření optimalizované příkaz, který zpracovává jeden výsledek sady.  
@@ -41,4 +44,4 @@ class CNoMultipleResults
   
 ## <a name="see-also"></a>Viz také  
  [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

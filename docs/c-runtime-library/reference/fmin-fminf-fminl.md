@@ -42,11 +42,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e8fd804c63caa1a8558e19cb67b4b3f35ecf180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3428afcdcf403c733e5282b2b3c4347ba94497d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 Určuje menší ze dvou zadaných hodnot.  
@@ -110,5 +111,5 @@ long double fminl(
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
- [Fmax, fmaxf –, fmaxl](fmax-fmaxf-fmaxl.md)  
+ [Abecední seznam odkazů na funkce](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
+ [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)  

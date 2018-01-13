@@ -41,11 +41,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43e7443204404f79a797cab09cb56560e719a896
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11050e3f168f390fa7a80aa6febf08a4be695c3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 Odstranění souboru.  
@@ -78,13 +79,13 @@ int _wremove(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tremove`|**odebrat**|**odebrat**|`_wremove`|  
+|`_tremove`|**remove**|**remove**|`_wremove`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|**odebrat**|\<stdio.h > nebo \<io.h >|  
+|**remove**|\<stdio.h > nebo \<io.h >|  
 |`_wremove`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -123,4 +124,4 @@ Deleted 'CRT_REMOVE.TXT'
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_unlink –, _wunlink –](../../c-runtime-library/reference/unlink-wunlink.md)
+ [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)

@@ -18,27 +18,28 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programování s použitím knihovny ATL a běhového kódu jazyka C
 Tato část popisuje výhody použití knihoven C Run-Time (CRT) s statické nebo dynamické propojení.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Výhody a kompromisy metodu použitou k propojení CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+ [Výhody a nevýhody metody použité k připojení k CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
  Shrnuje výhody a kompromisy zahrnutých v propojení staticky CRT nebo propojení dynamicky.  
   
- [Propojení s CRT ve vašem projektu knihovny ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
+ [Propojení projektu ATL s knihovnami CRT](../atl/linking-to-the-crt-in-your-atl-project.md)  
  Popisuje nastavení projektu a možnosti linkeru pro propojení s CRT; také poskytuje podrobné informace o propojení s CRT jak ovlivňuje bitové kopie programu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
   
- [Knihovny DLL a chování běhové knihovny jazyka Visual C++](../build/run-time-library-behavior.md)  
+ [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)  
  Obsahuje podrobné informace o tom, jak funguje kód VCRuntime a CRT spuštění.  
   
  [Běhové knihovny jazyka C](../c-runtime-library/crt-library-features.md)  

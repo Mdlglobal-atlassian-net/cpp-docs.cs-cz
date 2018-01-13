@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6d34f0d0616ae3980d1132b1f70812fe273d275
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f39db3e844df884e8e95352bed2a078b01beede8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Podpora IDispatch a IErrorInfo
 Můžete použít třídu šablony [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zajistit výchozí implementaci třídy `IDispatch Interface` část žádné duální rozhraní v objektu.  
@@ -33,5 +34,5 @@ Můžete použít třídu šablony [IDispatchImpl](../atl/reference/idispatchimp
  Pokud používá objektu `IErrorInfo` rozhraní k hlášení chyb zpět do klienta a pak musí podporovat objektu `ISupportErrorInfo Interface` rozhraní. Šablony třídy [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) poskytuje snadný způsob, jak tuto funkci implementovat Pokud máte pouze jednu rozhraní, které generuje chyby v objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)
+ [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)
 

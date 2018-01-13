@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 043420b5d948f17c3764d985262a88f082277d9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Izolované modelu COM, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností
 Pomocí tohoto dialogového okna zadejte **izolované COM** možnosti pro [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -31,7 +32,7 @@ Pomocí tohoto dialogového okna zadejte **izolované COM** možnosti pro [Mt.ex
   
 ## <a name="task-list"></a>Seznam úloh  
   
--   [Postupy: sestavení izolované aplikace pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
+-   [Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **Soubor knihovny typů**  
@@ -50,4 +51,4 @@ Pomocí tohoto dialogového okna zadejte **izolované COM** možnosti pro [Mt.ex
  [Izolované aplikace](http://msdn.microsoft.com/library/aa375190)   
  [ClickOnce – Manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)   
  [Stránky vlastností nástroje manifest](../ide/manifest-tool-property-pages.md)   
- [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)   
+ [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)   

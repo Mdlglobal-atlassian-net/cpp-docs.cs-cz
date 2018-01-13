@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e792e8587d97c4ec6123af7b66e570816f25ba28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13134a3e6b34be13d6d878cf94f204bb6c87a458
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 Široká znaková převeďte do reprezentace vícebajtových znaků. Verzi [wcrtomb –](../../c-runtime-library/reference/wcrtomb.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -146,4 +147,4 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbsinit –](../../c-runtime-library/reference/mbsinit.md)
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)

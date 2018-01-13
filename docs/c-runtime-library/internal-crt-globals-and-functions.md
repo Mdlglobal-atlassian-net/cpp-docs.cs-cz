@@ -851,11 +851,12 @@ ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2b3dea72647bc4c4f0d49b0af1de9d6bcb0f116
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: bab5e5e8316ff181ce8b2a190c721336fb5032cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-crt-globals-and-functions"></a>Funkce a globální prvky interní CRT  
   
@@ -900,19 +901,19 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |_chvalidator_l|  
 |_CIacos|  
 |_CIasin|  
-|[_Ciatan –](../c-runtime-library/ciatan.md)|  
-|[_Ciatan2 –](../c-runtime-library/ciatan2.md)|  
-|[_Cicos –](../c-runtime-library/cicos.md)|  
+|[_CIatan](../c-runtime-library/ciatan.md)|  
+|[_CIatan2](../c-runtime-library/ciatan2.md)|  
+|[_CIcos](../c-runtime-library/cicos.md)|  
 |_CIcosh|  
-|[_Ciexp –](../c-runtime-library/ciexp.md)|  
-|[_Cifmod –](../c-runtime-library/cifmod.md)|  
-|[_Cilog –](../c-runtime-library/cilog.md)|  
-|[_Cilog10 –](../c-runtime-library/cilog10.md)|  
-|[_Cipow –](../c-runtime-library/cipow.md)|  
-|[_Cisin –](../c-runtime-library/cisin.md)|  
+|[_CIexp](../c-runtime-library/ciexp.md)|  
+|[_CIfmod](../c-runtime-library/cifmod.md)|  
+|[_CIlog](../c-runtime-library/cilog.md)|  
+|[_CIlog10](../c-runtime-library/cilog10.md)|  
+|[_CIpow](../c-runtime-library/cipow.md)|  
+|[_CIsin](../c-runtime-library/cisin.md)|  
 |_CIsinh|  
-|[_Cisqrt –](../c-runtime-library/cisqrt.md)|  
-|[_Citan –](../c-runtime-library/citan.md)|  
+|[_CIsqrt](../c-runtime-library/cisqrt.md)|  
+|[_CItan](../c-runtime-library/citan.md)|  
 |_CItanh|  
 |__clean_type_info_names_internal|  
 |_configure_narrow_argv|  
@@ -985,7 +986,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |_EH_prolog|  
 |_errno|  
 |_except_handler2|  
-|[_except_handler3 –](../c-runtime-library/except-handler3.md)|  
+|[_except_handler3](../c-runtime-library/except-handler3.md)|  
 |_except_handler4_common|  
 |_except1|  
 |[_execute_onexit_table](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|  
@@ -1071,7 +1072,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |__libm_sse2_tan|  
 |_libm_sse2_tan_precise|  
 |__libm_sse2_tanf|  
-|[_local_unwind2 –](../c-runtime-library/local-unwind2.md)|  
+|[_local_unwind2](../c-runtime-library/local-unwind2.md)|  
 |_local_unwind4|  
 |_lock_locales|  
 |_longjmpex|  
@@ -1126,7 +1127,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |_seh_longjmp_unwind4|  
 |[__set_app_type](../c-runtime-library/internal-set-app-type.md)|  
 |_set_malloc_crt_max_wait|  
-|[_setjmp3 –](../c-runtime-library/setjmp3.md)|  
+|[_setjmp3](../c-runtime-library/setjmp3.md)|  
 |__setlc_active|  
 |[___setlc_active_func](../c-runtime-library/setlc-active-func-unguarded-readlc-active-add-func.md)|  
 |[__setusermatherr](../c-runtime-library/setusermatherr.md)|  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 Binární relační operátory a operátory rovnosti porovnat jejich první operand jejich Druhý operand k testování platnosti zadané relaci. Výsledek relační výrazu je 1, pokud je otestované vztah true a 0, pokud je hodnota false. Typ výsledku je `int`.  
@@ -106,4 +107,4 @@ enum color { red, white, green } col;
   
 ## <a name="see-also"></a>Viz také  
  [Relační operátory: \<, >, \<=, a > =](../cpp/relational-operators-equal-and-equal.md)   
- [Operátory rovnosti: == a! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
+ [Operátory rovnosti: == a !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

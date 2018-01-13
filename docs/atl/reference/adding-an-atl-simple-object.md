@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f6a32ebf3ab59679ee3f5fff3aabaf6866011e76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e0251e33eb6b6ae2af920181077071c90c61192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-simple-object"></a>Přidání jednoduchého objektu knihovny ATL
 Pokud chcete přidat objekt knihovny ATL (Active knihovna šablon) do projektu, projektu musí být vytvořen jako aplikace knihovny ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  
@@ -47,5 +48,5 @@ Pokud chcete přidat objekt knihovny ATL (Active knihovna šablon) do projektu, 
  [Přidání body připojení k objektu](../../atl/adding-connection-points-to-an-object.md)   
  [Přidání metody](../../ide/adding-a-method-visual-cpp.md)   
  [Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Přidání obecnými třídami C++](../../ide/adding-a-generic-cpp-class.md)
+ [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)
 

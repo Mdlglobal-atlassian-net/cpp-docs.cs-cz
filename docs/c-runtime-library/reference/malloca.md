@@ -33,11 +33,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10f81913113073c48c4d68c9647db7d67cba01f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcdeab9e61eda17164be06498e9ce42695faf8ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloca"></a>_malloca
 Přidělí paměť v zásobníku. Toto je verze [_alloca –](../../c-runtime-library/reference/alloca.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -180,4 +181,4 @@ Enter the number of bytes to allocate using _malloca: 1000
  [calloc –](../../c-runtime-library/reference/calloc.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
  [realloc –](../../c-runtime-library/reference/realloc.md)   
- [_resetstkoflw –](../../c-runtime-library/reference/resetstkoflw.md)
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

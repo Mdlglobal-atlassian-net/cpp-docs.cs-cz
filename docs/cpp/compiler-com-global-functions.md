@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2ff7d6090a8990610a4cfe73a0936fdf91dd96f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be73622037c1c058edffa681ccd79322b8252633
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-global-functions"></a>Globální funkce kompilátoru modelu COM
 **Konkrétní Microsoft**  
@@ -29,13 +30,13 @@ ms.lasthandoff: 10/24/2017
   
 |Funkce|Popis|  
 |--------------|-----------------|  
-|[_com_raise_error –](../cpp/com-raise-error.md)|Vyvolá [_com_error](../cpp/com-error-class.md) v reakci na selhání.|  
-|[_set_com_error_handler –](../cpp/set-com-error-handler.md)|Nahradí výchozí funkci, která se používá pro zpracování chyb modelu COM.|  
-|[Convertbstrtostring –](../cpp/convertbstrtostring.md)|Převede `BSTR` hodnotu **char \*** .|  
-|[Convertstringtobstr –](../cpp/convertstringtobstr.md)|Převede **char \***  hodnotu `BSTR`.|  
+|[_com_raise_error](../cpp/com-raise-error.md)|Vyvolá [_com_error](../cpp/com-error-class.md) v reakci na selhání.|  
+|[_set_com_error_handler](../cpp/set-com-error-handler.md)|Nahradí výchozí funkci, která se používá pro zpracování chyb modelu COM.|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Převede `BSTR` hodnotu **char \*** .|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Převede **char \***  hodnotu `BSTR`.|  
   
 **Konkrétní Microsoft END**  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)   
- [Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)
+ [Podpora kompilátoru COM](../cpp/compiler-com-support.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df14f32b8b51d8b74b56a697f3928ff8da485a5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dee769d0a5bc2d0992dfb51de240bdd5e3d62d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 Operátor sekvenčního vyhodnocení, označované taky jako "operátor čárka," vyhodnotí jeho dva operandy postupně zleva doprava.  
@@ -55,4 +56,4 @@ func_two( (x--, y + 2), z );
  Ve funkci volat na `func_one`, tři argumenty, oddělených čárkami, se předávají: `x`, `y + 2`, a `z`. Ve volání funkce `func_two` donutí závorky kompilátor interpretovat první čárku jako operátor sekvenčního vyhodnocení. Toto volání funkce předává do funkce `func_two` dva argumenty. Prvním argumentem je výsledek operace sekvenčního vyhodnocení `(x--, y + 2)`, který má hodnotu a typ výrazu `y + 2`, druhým argumentem je proměnná `z`.  
   
 ## <a name="see-also"></a>Viz také  
- [Operátor čárky:,](../cpp/comma-operator.md)
+ [Operátor čárka: ,](../cpp/comma-operator.md)

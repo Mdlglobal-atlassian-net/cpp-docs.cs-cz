@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d835b45d9f06b9b8ff59916e36b124f8b1ec848d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 Převede `double` čísel na řetězec. Toto je verze [_ecvt –](../../c-runtime-library/reference/ecvt.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -162,4 +163,4 @@ Converted value: 12000
  [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt_s –](../../c-runtime-library/reference/fcvt-s.md)   
- [_gcvt_s –](../../c-runtime-library/reference/gcvt-s.md)
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)

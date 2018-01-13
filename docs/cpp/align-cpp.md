@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 V sadě Visual Studio 2015 a novější, použijte C ++ 11 standard `alignas` specifikátor pro zarovnání ovládacího prvku. Další informace najdete v tématu [zarovnání](../cpp/alignment-cpp-declarations.md).  
@@ -248,4 +249,4 @@ struct S {
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   
  [Přehled konvencí ABI ARM](../build/overview-of-arm-abi-conventions.md)   
- [Přehled x64 konvence volání](../build/overview-of-x64-calling-conventions.md)
+ [Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)

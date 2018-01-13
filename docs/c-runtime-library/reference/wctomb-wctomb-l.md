@@ -38,11 +38,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cbba6a51a51720248667cf04738ad16203717db9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 462fecfcd9400d10dbc943fded0d04fb7a0cf010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 Široká znaková převeďte na odpovídající vícebajtových znaků. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [wctomb_s –, _wctomb_s_l –](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  

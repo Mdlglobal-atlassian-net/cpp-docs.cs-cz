@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>Rozsahy datového typu
 Kompilátory jazyka Visual C++ 32bitové a 64bitové verze rozpoznat typy v tabulce dál v tomto článku.  
@@ -100,7 +101,7 @@ Kompilátory jazyka Visual C++ 32bitové a 64bitové verze rozpoznat typy v tabu
 |enum|Je to různé.|žádná| |  
 |float|4|žádná|3.4e +/-38 (7 míst)|  
 |double|8|žádná|1, 7E +/-308 (15 číslic)|  
-|long double|stejné jako datový typ double|žádná|Stejné jako datový typ double|  
+|long double|Stejné jako datový typ double|žádná|Stejné jako datový typ double|  
 |wchar_t|2|__wchar_t|0 až 65 535|  
   
  V závislosti na tom, jak se používá, proměnná `__wchar_t` označí celou – znak typu nebo typ vícebajtových znaků. Použití `L` předpony před znak nebo string konstanta k určení konstanta celou typy znaků.  

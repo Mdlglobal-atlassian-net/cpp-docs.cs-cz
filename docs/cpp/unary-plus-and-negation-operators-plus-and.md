@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37436e2f2c534051747e5f561144ad19abea30ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Unární operátory Plus a Negation: + a -
 ## <a name="syntax"></a>Syntaxe  
@@ -56,4 +57,4 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

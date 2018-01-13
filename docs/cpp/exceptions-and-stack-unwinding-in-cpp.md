@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eedfb9c453fbd48ef2c5868fb186156397eeb500
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2b354ebaa72c5257e2752a948ece6320a5d8e70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Výjimky a unwinding zásobníku v jazyce C++
 V mechanismu výjimek jazyka C++ přesune ovládací prvek příkaz throw na první příkaz catch, který dokáže zpracovat vyvolaný typ. Když je dosaženo příkaz catch, všechny automatické proměnné, které jsou v rozsahu mezi throw a catch příkazy jsou zničen v procesu, který se označuje jako *unwinding zásobníku*. V odvíjení zásobníku pokračuje provádění takto:  

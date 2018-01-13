@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0af38fe5e88540bf7e8947808c49c5283d742a4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
 **Konkrétní Microsoft**  
@@ -40,9 +41,9 @@ ms.lasthandoff: 10/24/2017
 |||  
 |-|-|  
 |[Přiřazení](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` zabalené službou `_bstr_t`.|  
-|[Připojení](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálka pro `BSTR`.|  
+|[Attach](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálka pro `BSTR`.|  
 |[kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřené `BSTR`.|  
-|[Odpojení](../cpp/bstr-t-detach.md)|Vrátí `BSTR` zabalené službou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|  
+|[Detach](../cpp/bstr-t-detach.md)|Vrátí `BSTR` zabalené službou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|  
 |[Getaddress –](../cpp/bstr-t-getaddress.md)|Odkazuje na `BSTR` zabalené službou `_bstr_t`.|  
 |[Getbstr –](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.|  
 |[Délka](../cpp/bstr-t-length.md)|Vrátí počet znaků `_bstr_t`.|  
@@ -53,8 +54,8 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[operátor =](../cpp/bstr-t-operator-equal.md)|Přiřadí novou hodnotu na stávající `_bstr_t` objektu.|  
 |[+= – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Přidá konec znaků `_bstr_t` objektu.|  
-|[operátor +](../cpp/bstr-t-operator-add-equal-plus.md)|Zřetězí dva řetězce.|  
-|[Operator – operátor!](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda obsah zapouzdřeného `BSTR` je **NULL** řetězec.|  
+|[+ – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Zřetězí dva řetězce.|  
+|[! – operátor](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda obsah zapouzdřeného `BSTR` je **NULL** řetězec.|  
 |[Operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porovná dva `_bstr_t` objekty.|  
 |[operátor wchar_t * &#124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahování ukazatele na zapouzdřené Unicode nebo vícebajtových `BSTR` objektu.|  
   
@@ -66,4 +67,4 @@ ms.lasthandoff: 10/24/2017
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)
+ [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

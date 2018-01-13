@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20025ae47491084436864481357125e741ccc486
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f851fe628b7ac69fe3d327c290881561219a011
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-constants"></a>Konstanty typu Integer jazyka C
 "Celočíselná konstanta" je desetinné číslo (se základem 10), osmičkové (základ 8) nebo číslo šestnáctkové (základ 16), které představuje celočíselné hodnoty. Konstanty typu integer znázornit celočíselné hodnoty, které nelze změnit.  

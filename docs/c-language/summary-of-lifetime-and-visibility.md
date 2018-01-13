@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee45ec7a2a842cc45c01c0e6f43ab49ba55aa3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 V následující tabulce je uveden seznam doby platnosti a viditelnosti charakteristiky pro většinu identifikátory. První tři sloupce zadejte atributy, které definují doby platnosti a viditelnosti. Identifikátor s atributy poskytují první tři sloupce má doby platnosti a viditelnosti, které jsou ve sloupci čtvrté a páté. V tabulce nepopisuje všechny možné případy. Odkazovat na [třídy úložiště](../c-language/c-storage-classes.md) Další informace.  
@@ -29,12 +30,12 @@ V následující tabulce je uveden seznam doby platnosti a viditelnosti charakte
   
 |Atributy:<br /><br /> úroveň|Položka|Třídy úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Doba platnosti|Viditelnost|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
-|Rozsah souboru|Definicí proměnné|**statické**|Globální|Zbývající část zdrojový soubor, ve kterém byly provedeny|  
+|Rozsah souboru|Definicí proměnné|**static**|Globální|Zbývající část zdrojový soubor, ve kterém byly provedeny|  
 ||Deklarace proměnné|`extern`|Globální|Zbývající část zdrojový soubor, ve kterém byly provedeny|  
-||Prototyp funkce a definice|**statické**|Globální|Jeden zdrojový soubor|  
+||Prototyp funkce a definice|**static**|Globální|Jeden zdrojový soubor|  
 ||Prototyp funkce|`extern`|Globální|Zbývající část zdrojový soubor|  
 |Rozsah bloku|Deklarace proměnné|`extern`|Globální|Blok|  
-||Definicí proměnné|**statické**|Globální|Blok|  
+||Definicí proměnné|**static**|Globální|Blok|  
 ||Definicí proměnné|**Automatické** nebo **zaregistrovat**|místní|Blok|  
   
 ## <a name="example"></a>Příklad  

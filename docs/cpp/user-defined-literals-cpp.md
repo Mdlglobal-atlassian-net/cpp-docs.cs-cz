@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6643df5e0d5b49155a07763cca68ffc66cb2d38d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-literals--c"></a>Uživateli definované literály (C++)
 Existují pět hlavních kategorií literálů: celé číslo, znak, s plovoucí desetinnou čárkou, řetězec, logická hodnota a ukazatel.  Počínaje C++ 11, můžete definovat vlastní literály podle těchto kategorií pro účely poskytování syntaktické zástupce pro běžné idioms a zvýšit zabezpečení typů. Řekněme například, že máte třídu vzdálenost. Můžete definovat literál pro kilometrech a další pro paliva a motivovat uživatele explicitní měrné jednotky jednoduše napsáním: automatické d = 42.0_km nebo auto d = 42.0_mi. Neexistuje žádné výhody výkonu nebo nevýhody k uživateli definované literály; jsou to především pro usnadnění práce nebo pro odvození typu v čase kompilace. Standardní knihovna má uživateli definované literály std:string, std::complex a jednotky v čas a dobu trvání operace v \<typu chrono > hlavičky:  

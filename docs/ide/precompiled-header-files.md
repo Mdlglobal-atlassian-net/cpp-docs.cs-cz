@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f30a841462552324bb151e1b2ce61d62924f2eb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1208b000f57397764277cc0a43e223f7c781a06e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 Tyto soubory se používají k vytvoření souboru předkompilovaných hlaviček *Projname*.pch a předkompilovaných typy souborů Stdafx.obj.  
@@ -38,4 +39,4 @@ Tyto soubory se používají k vytvoření souboru předkompilovaných hlaviček
   
 ## <a name="see-also"></a>Viz také  
  [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)
+ [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)

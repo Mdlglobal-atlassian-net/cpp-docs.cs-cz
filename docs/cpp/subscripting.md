@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80173fd16bc13f4951cd85930e742947079f14fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51199a2276246b047916e0c5c1ced12fd0ee0bf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscripting"></a>Předplatné
 Operátor dolního indexu (**[]**), například operátor volání funkce, je považován za binární operátor. Operátor dolního indexu musí být nestatické členské funkce, která přebírá jeden argument. Tento argument může být jakéhokoli typu, která označuje dolní index požadované pole.  

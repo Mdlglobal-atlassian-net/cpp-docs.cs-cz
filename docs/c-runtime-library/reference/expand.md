@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09906e3cdf8455a2a221601f475074a18a72b1b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 103ff4077bdc68b8886c5181ce317b5c0d0d2b79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expand"></a>_expand
 Změní velikost bloku paměti.  
@@ -132,4 +133,4 @@ Expanded block to 1024 bytes at 002C12BC
  [Uvolněte](../../c-runtime-library/reference/free.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
  [_msize –](../../c-runtime-library/reference/msize.md)   
- [realloc –](../../c-runtime-library/reference/realloc.md)
+ [realloc](../../c-runtime-library/reference/realloc.md)

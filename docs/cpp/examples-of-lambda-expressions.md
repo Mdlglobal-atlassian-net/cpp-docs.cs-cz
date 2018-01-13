@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 Tento článek ukazuje, jak můžete použít výrazy lambda v programech. Přehled výrazů lambda v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md). Další informace o struktuře výrazu lambda najdete v tématu [syntaxe výrazu Lambda](../cpp/lambda-expression-syntax.md).  
@@ -528,4 +529,4 @@ Hello!
  [Volání funkce](../cpp/function-call-cpp.md)   
  [Šablony](../cpp/templates-cpp.md)   
  [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)   
- [Referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

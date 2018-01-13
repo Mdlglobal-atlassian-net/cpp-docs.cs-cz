@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>Rozdíly ve zpracování výjimek
 Hlavní rozdíl mezi strukturovaným zpracováním výjimek a zpracováním výjimek v jazyce C++ je, že v modelu zpracování výjimek v jazyce C++ se model zabývá typy, zatímco model zpracování strukturovaných výjimek jazyka C se zabývá výjimkami jednoho typu – konkrétně `unsigned int`. Výjimky jazyka C jsou označeny hodnotou unsigned integer, na rozdíl od výjimek jazyka C++, které jsou určeny typem dat. Jakmile je v jazyce C vyvolána výjimka, vykoná každý popisovač filtr, který prověří kontext výjimek jazyka C a určí, zda výjimku přijmout, předat ji jiné obslužné rutině, nebo ji ignorovat. Jakmile je vyvolána výjimka v jazyce C++, může být libovolného typu.  
@@ -151,4 +152,4 @@ nSE = 0xc0000094
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Kombinování C (strukturované) a výjimky jazyka C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+ [Kombinace výjimek v jazycích C (strukturované) a C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

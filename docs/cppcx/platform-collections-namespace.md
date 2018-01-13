@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 04514a4d4ddbba8b6c28e35e964deb153803580f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections Namespace
 Obor názvů Platform::Collection obsahuje `Map`, `MapView`, `Vector`, a `VectorView` třídy. Tyto třídy jsou konkrétní implementace odpovídající rozhraní, které jsou definovány v [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) oboru názvů. Typy konkrétní kolekce nejsou přenosné napříč ABI (např. při Javascript nebo programu volání do komponent C++ C#), ale jsou implicitně převést na jejich odpovídající typy rozhraní. Například pokud budete implementovat veřejnou metodu, která naplní a vrátí kolekci, použijte [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) interně implementovat kolekce a použít [Windows::Foundation::Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako návratový typ. Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md) a [vytváření součásti systému Windows Runtime v jazyce C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
@@ -45,7 +46,7 @@ using namespace Platform::Collection;
 |----------|-----------------|  
 |[Platform::Collections::BackInsertIterator – třída](../cppcx/platform-collections-backinsertiterator-class.md)|Představuje iterátor, který vloží prvek na konec kolekce.|  
 |[Platform::Collections::InputIterator – třída](../cppcx/platform-collections-inputiterator-class.md)|Představuje iterátor, který vloží prvek na začátek kolekce.|  
-|[Platform::Collections::map – třída](../cppcx/platform-collections-map-class.md)|Představuje kolekci upravitelnými páry klíč hodnota, které jsou přístupné pomocí klíče. Podobně jako [std::map](../standard-library/map-class.md).|  
+|[Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)|Představuje kolekci upravitelnými páry klíč hodnota, které jsou přístupné pomocí klíče. Podobně jako [std::map](../standard-library/map-class.md).|  
 |[Platform::Collections::MapView – třída](../cppcx/platform-collections-mapview-class.md)|Představuje kolekci páry klíč hodnota, které jsou přístupné pomocí klíče jen pro čtení.|  
 |[Platform::Collections::Vector – třída](../cppcx/platform-collections-vector-class.md)|Představuje upravitelnými pořadí elementů. Podobně jako [std::vector](../standard-library/vector-class.md).|  
 |[Platform::Collections::VectorIterator – třída](../cppcx/platform-collections-vectoriterator-class.md)|Představuje iterátor, který prochází `Vector` kolekce.|  

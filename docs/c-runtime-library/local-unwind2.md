@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ad37d66e0e73e7ee75e2c44869c59c545025bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b0c027623f5b562219e46c67ef730754538d602
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Vnitřní funkce CRT. Spouští všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.  
@@ -60,4 +61,4 @@ void _local_unwind2(
  Když tato metoda provede obslužné rutiny ukončení, začne na aktuální úrovni lexikální a funguje jeho způsobem až lexikální úrovně, dokud nedosáhne úroveň, která je indikován `stop`. Nepracuje obslužné rutiny ukončení na úrovni označená `stop`.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+ [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

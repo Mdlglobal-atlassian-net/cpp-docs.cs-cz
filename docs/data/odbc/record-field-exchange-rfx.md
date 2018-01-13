@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494773de5bd64e66c2031a618d7a8d899215c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-rfx"></a>Výměna pole záznamu (Record Field Exchange – RFX)
 Databázové třídy MFC rozhraní ODBC automatizují přesunutí dat mezi zdroji dat a [sada záznamů](../../data/odbc/recordset-odbc.md) objektu. Pokud odvodíte třídu od [CRecordset](../../mfc/reference/crecordset-class.md) a nepoužívejte hromadné načítání řádků, data se přenáší přes mechanismus pole záznamu (exchange – RFX).  

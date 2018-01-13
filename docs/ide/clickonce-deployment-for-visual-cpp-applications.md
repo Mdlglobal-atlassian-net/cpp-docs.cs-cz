@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 454bc2d4fd19568f526881208da77deabbe72087
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a036a1520a747448c5541f367f0b43711e30b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce – nasazení pro aplikace Visual C++
 Visual Studio poskytuje dvě různé technologie pro nasazení aplikace systému Windows: ClickOnce – nasazení nebo [Instalační služby systému Windows](http://msdn.microsoft.com/library/cc185688) nasazení.  
@@ -57,4 +58,4 @@ Visual Studio poskytuje dvě různé technologie pro nasazení aplikace systému
  [ClickOnce – zabezpečení a nasazení](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Vytváření balíčků zaváděcího nástroje](/visualstudio/deployment/creating-bootstrapper-packages)   
  [.NET – programování s C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [Nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

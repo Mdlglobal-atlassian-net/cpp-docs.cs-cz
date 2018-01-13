@@ -23,11 +23,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7304d83eca004952eb65ed6c5d16e4ce816bb56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Přímé volání funkcí rozhraní API ODBC
 Databázové třídy poskytují jednodušší rozhraní k [zdroj dat](../../data/odbc/data-source-odbc.md) než rozhraní ODBC. Třídy v důsledku toho není zapouzdření rozhraní API ODBC. Pro všechny funkce, která spadá mimo schopnosti tříd musí volat funkce rozhraní API ODBC přímo. Například musí volat funkce katalogu rozhraní ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**a jiné) přímo.  

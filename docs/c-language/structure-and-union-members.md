@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a736a1e66fd857b7d959279a6b44a6d0f9ebd6f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-and-union-members"></a>Členové struktury a sjednocení
 „Výraz výběru členů“ odkazuje na členy struktury a sjednocení. Takový výraz má hodnotu a typ vybraného členu.  
@@ -106,4 +107,4 @@ list[8].b = 12;
  Tento příkaz ukazuje, jak vybrat jednotlivý člen struktury z pole struktur.  
   
 ## <a name="see-also"></a>Viz také  
- [Operátory přístup členy:. a ->](../cpp/member-access-operators-dot-and.md)
+ [Operátory přístupu členů: . a ->](../cpp/member-access-operators-dot-and.md)

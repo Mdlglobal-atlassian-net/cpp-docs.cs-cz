@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b4d4ad6a2fbfbb30fe5f0b465c8bb70753cd701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-functions-c"></a>Vložené funkce (C++)
 Funkce definovaná v těle deklarace třídy je vloženou funkcí.  
@@ -160,7 +161,7 @@ private:
   
 -   [Vložené funkce člena třídy](../cpp/inline-functions-cpp.md)  
   
--   [Definování vložených funkcí jazyka C++ pomocí příkazů dllexport a dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
+-   [Definování vložených funkcí jazyka C++ příkazy dllexport a dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
   
 ## <a name="when-to-use-inline-functions"></a>Kdy použít vložené funkce  
  Vložené funkce je nejvhodnější používat pro malé funkce, například přístup k soukromým datovým členům. Hlavním účelem těchto „přístupových“ funkcí s jedním nebo dvěma řádky je vrátit stavové informace o objektech. Krátké funkce jsou citlivé na režii spojenou s voláním funkcí. Delší funkce stráví sekvencemi volání a vrácení poměrově méně času a jejich vkládání přináší menší užitek.  
@@ -266,4 +267,4 @@ Sample Output: A
   
 ## <a name="see-also"></a>Viz také  
  [noinline](../cpp/noinline.md)   
- [auto_inline –](../preprocessor/auto-inline.md)
+ [auto_inline](../preprocessor/auto-inline.md)

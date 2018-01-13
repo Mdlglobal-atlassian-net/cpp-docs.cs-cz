@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení přípony: ++ a --
 ## <a name="syntax"></a>Syntaxe  
@@ -84,4 +85,4 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ## <a name="see-also"></a>Viz také  
  [Výrazy přípony](../cpp/postfix-expressions.md)   
  [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operátory jazyka C operátory přírůstku a snížení](../c-language/c-postfix-increment-and-decrement-operators.md)
+ [Operátory inkrementace a dekrementace přípony jazyka C](../c-language/c-postfix-increment-and-decrement-operators.md)

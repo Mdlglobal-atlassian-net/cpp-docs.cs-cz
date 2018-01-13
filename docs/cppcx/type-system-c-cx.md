@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c1839fad0c929f6e24b74f74c2cc91e29e07005b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-system-ccx"></a>Systém typů (C + +/ CX)
 Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Visual Basic, Visual C# a JavaScript pro zápis aplikace a součásti, které přímo přístup k rozhraní API systému Windows a zajistit vzájemnou funkční spolupráci s jinými aplikace Windows Runtime a součásti. Univerzální aplikace platformy Windows, které jsou napsané v jazyce C++ kompilace nativního kódu, které provádí přímo v procesoru. Univerzální platforma Windows aplikace, které jsou napsané v C# nebo Visual Basic zkompilovat do převodního jazyka Microsoft (MSIL) a spustit v common language runtime (CLR). Univerzální aplikace platformy Windows, které jsou napsané v jazyce JavaScript spustit v prostředí runtime. Sami součásti operačního systému Windows Runtime jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a Universal Windows Platform apps komunikovat přímo přes rozhraní binární aplikace Windows Runtime (ABI).  
@@ -57,7 +58,7 @@ Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Vi
 ## <a name="windows-runtime-type-system-in-ccx"></a>Prostředí Windows Runtime systém typů v jazyce C + +/ CX  
  Následující části popisují hlavní funkce systém typů prostředí Windows Runtime a jak jsou podporovány v jazyce C + +/ CX.  
   
-### <a name="namespaces"></a>Obory názvů  
+### <a name="namespaces"></a>Jmenné prostory  
  Všechny typy prostředí Windows Runtime musí být deklarován v oboru názvů; rozhraní API systému Windows, samotné je seřazená podle obory názvů. Soubor .winmd musí mít stejný název, který má kořenového oboru názvů. Například třídu, která je s názvem A.B.C.MyClass se dá vytvořit instance pouze v případě, že je definována v souboru metadat, který je pojmenován A.winmd nebo A.B.winmd nebo A.B.C.winmd. Název knihovny DLL nemusí odpovídat názvu souboru .winmd.  
   
  Rozhraní API systému Windows, samotné má byla reinvented jako knihovnu dobře započítané třída, která je seřazená podle obory názvů.  Všechny součásti prostředí Windows Runtime jsou deklarované v oborech názvů Windows.*.  

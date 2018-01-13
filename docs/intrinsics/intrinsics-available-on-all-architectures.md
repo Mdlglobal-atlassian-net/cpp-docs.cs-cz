@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58c96e365a7ce3858f57ba9626c0181b60ddeec1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a97d2469fdec35c73e830d4a616a9e4487ffef86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Vnitřní funkce dostupné na všech architektury
 Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury:  
@@ -38,9 +39,9 @@ Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury
 |[_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|  
 |[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|  
 |[_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|  
-|[__debugbreak –](../intrinsics/debugbreak.md)|intrin.h|  
+|[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|  
 |[_disable](../intrinsics/disable.md)|intrin.h|  
-|[_zapnout](../intrinsics/enable.md)|intrin.h|  
+|[_enable](../intrinsics/enable.md)|intrin.h|  
 |[__fastfail](../intrinsics/fastfail.md)|intrin.h|  
 |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
@@ -78,8 +79,8 @@ Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury
 |[_mul128](../intrinsics/mul128.md)|intrin.h|  
 |[__mulh](../intrinsics/mulh.md)|intrin.h|  
 |[__nop](../intrinsics/nop.md)|intrin.h|  
-|[_Readbarrier –](../intrinsics/readbarrier.md)|intrin.h|  
-|[_Readwritebarrier –](../intrinsics/readwritebarrier.md)|intrin.h|  
+|[_ReadBarrier](../intrinsics/readbarrier.md)|intrin.h|  
+|[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)|intrin.h|  
 |[_ReturnAddress](../intrinsics/returnaddress.md)|intrin.h|  
 |[_rotl16](../intrinsics/rotl8-rotl16.md)|intrin.h|  
 |[_rotl8](../intrinsics/rotl8-rotl16.md)|intrin.h|  
@@ -89,7 +90,7 @@ Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury
 |[__shiftright128](../intrinsics/shiftright128.md)|intrin.h|  
 |[_umul128](../intrinsics/umul128.md)|intrin.h|  
 |[__umulh](../intrinsics/umulh.md)|intrin.h|  
-|[_Writebarrier –](../intrinsics/writebarrier.md)|intrin.h|  
+|[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|  
   
  Následující funkce CRT nemají vnitřní forms na všechny architektury:  
   
@@ -100,7 +101,7 @@ Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury
 |[ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|  
 |[acosf –](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|  
 |[acosl –](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|  
-|[_alloca –](../c-runtime-library/reference/alloca.md)|malloc.h|  
+|[_alloca](../c-runtime-library/reference/alloca.md)|malloc.h|  
 |[ASIN](../c-runtime-library/reference/asin-asinf-asinl.md)|Math.h|  
 |[asinf –](../c-runtime-library/reference/asin-asinf-asinl.md)|Math.h|  
 |[asinl –](../c-runtime-library/reference/asin-asinf-asinl.md)|Math.h|  

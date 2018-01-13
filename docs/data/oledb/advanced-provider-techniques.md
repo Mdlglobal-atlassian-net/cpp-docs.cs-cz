@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 803a455341f59aff1a0a0d09c63230a9bc6083d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 622d50db55843b6c140ba4eee98885ee60180020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-provider-techniques"></a>Pokročilé techniky zprostředkování
 Další informace o pokročilé techniky zprostředkování najdete v následujících tématech:  
@@ -29,9 +32,9 @@ Další informace o pokročilé techniky zprostředkování najdete v následuj�
   
 -   [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md)  
   
--   [Testů shodnosti technologie předávání OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)  
+-   [Předávání testů shodnosti technologie OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)  
   
--   [OLE DB sdílení prostředků ve fondech a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)  
+-   [Sdružování prostředků OLE DB a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   

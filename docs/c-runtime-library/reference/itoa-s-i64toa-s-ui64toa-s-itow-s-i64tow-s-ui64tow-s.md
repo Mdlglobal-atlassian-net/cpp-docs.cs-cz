@@ -69,11 +69,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac2b681b605c4485ed87cecebb51afa6261cafff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Převede na řetězec, celé číslo. Toto jsou verze [_itoa –, _i64toa –, _ui64toa –, _itow –, _i64tow –, _ui64tow –](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -256,4 +257,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [_ltoa –, _ltow –](../../c-runtime-library/reference/ltoa-ltow.md)   
- [_ultoa –, _ultow –](../../c-runtime-library/reference/ultoa-ultow.md)
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

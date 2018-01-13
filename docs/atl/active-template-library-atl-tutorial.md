@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 858534a72dbd7d8f9849f95aa3c6e4bef070dd26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutoriál knihovny ATL (Active Template Library)
 ATL slouží ke zjednodušení procesu vytváření efektivních, flexibilní a lightweight ovládacích prvků. Tento kurz vás provede vytvoření ovládacího prvku ActiveX demonstraci mnoho základy ATL a COM.  

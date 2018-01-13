@@ -40,11 +40,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: edd16f6ac3d37bfc1ccd13d4e70a8868a4ac23cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 099114e2c05a1466b11e88c176d40a6ec70fe360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 Operace vyčištění provede a vrátí bez proces se ukončuje.  
@@ -89,4 +90,4 @@ myObject.myClass::~myClass( );
  [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit –, _onexit_m –](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)   
- [_wsystem – systém](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

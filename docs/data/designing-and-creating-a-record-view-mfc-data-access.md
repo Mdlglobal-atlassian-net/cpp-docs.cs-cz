@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a164bd7d07fac68de5b2e8fb4b49fa4e399c7cb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 19f4f248a7fdca0d89df9c8becad69876bf6ac7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Navrhování a vytváření zobrazení záznamů (Data MFC Access)
 Můžete vytvořit svou třídu zobrazení záznamu s [Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md). Pokud použijete průvodce aplikaci, vytvoří tříd zobrazení záznamu a prostředku šablony dialogové okno pro něj (bez kontroly). Visual C++ dialogové okno editor musíte použít k přidání ovládacích prvků do prostředku šablony dialogového okna. Na druhé straně, pokud používáte **přidat třídu**, musíte nejprve vytvořit šablonu prostředku dialogového okna v dialogovém okně editoru a pak vytvořit třídu zobrazení záznamu.  

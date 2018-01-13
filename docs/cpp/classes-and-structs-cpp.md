@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d5f690846954dde21252b2aabdd229abdf33ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac15db222aed3abad980f4e1a0c715c099e2019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs-c"></a>Třídy a struktury (C++)
 Tato část představuje C++ třídy a struktury. Kromě toho, že v struktury je výchozí usnadnění veřejným, zatímco ve třídách výchozí hodnota je privátní, jsou identické v jazyce C++ dvěma konceptů.  
@@ -32,9 +33,9 @@ Tato část představuje C++ třídy a struktury. Kromě toho, že v struktury j
   
  V následujících tématech jsou zahrnuty:  
   
--   [– Třída](../cpp/class-cpp.md)  
+-   [class](../cpp/class-cpp.md)  
   
--   [Struktura](../cpp/struct-cpp.md)  
+-   [struct](../cpp/struct-cpp.md)  
   
 -   [Přehled členů třídy](../cpp/class-member-overview.md)  
   
@@ -48,13 +49,13 @@ Tato část představuje C++ třídy a struktury. Kromě toho, že v struktury j
   
 -   [Proměnlivé datové členy (proměnný specifikátor)](../cpp/mutable-data-members-cpp.md)  
   
--   [Vnořené deklarace tříd](../cpp/nested-class-declarations.md)  
+-   [Deklarace vnořených tříd](../cpp/nested-class-declarations.md)  
   
--   [Anonymní typy třídy](../cpp/anonymous-class-types.md)  
+-   [Anonymní typy tříd](../cpp/anonymous-class-types.md)  
   
 -   [Ukazatelé na členy](../cpp/pointers-to-members.md)  
   
--   [Ukazatel this](../cpp/this-pointer.md)  
+-   [this – ukazatel](../cpp/this-pointer.md)  
   
 -   [Bitová pole jazyka C++](../cpp/cpp-bit-fields.md)  
   
@@ -71,4 +72,4 @@ Tato část představuje C++ třídy a struktury. Kromě toho, že v struktury j
 |Žádná omezení využití|Žádná omezení využití|Současně použít jen jeden členský|  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

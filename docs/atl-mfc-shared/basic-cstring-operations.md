@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 566f2d29da9ff8422b8a29178f63a553bfe33668
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42353a9c59bead96da8eb3b114c8acb2361b53d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-cstring-operations"></a>CString základní operace
 Toto téma vysvětluje následující basic [CString](../atl-mfc-shared/reference/cstringt-class.md) operace:  
@@ -107,5 +108,5 @@ CString cs("meow");
  [Řetězce (ATL a MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)   
  [Specializace šablony](../cpp/template-specialization-cpp.md)   
- [Postupy: převod mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)
+ [Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)
 

@@ -60,11 +60,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a159deb22b903351c989ca3e8ec43ab7843dd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Načte nebo upraví stav **_crtdbgflag –** příznak můžete řídit chování přidělení haldy ladění správce (pouze ladicí verze).  
@@ -263,4 +264,4 @@ int main( )
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
  [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md)   
- [_Crtcheckmemory –](../../c-runtime-library/reference/crtcheckmemory.md)
+ [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

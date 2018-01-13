@@ -12,11 +12,12 @@ caps.latest.revision: "27"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 55d890fa369bade254d145ca4935911fef367159
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a0e7cba73d85253db28d719932d02cfb3cdecca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referenční dokumentace jazyka Visual C++ (C + +/ CX)
 
@@ -40,6 +41,6 @@ Nový model představuje novou generaci nativní C++ programování v systému W
 |[Spolupráce s jinými jazyky](../cppcx/interoperating-with-other-languages-c-cx.md)|Popisuje, jak součásti, které jsou zapsány pomocí C + +/ CX lze použít s součástí, které jsou napsané v jazyce JavaScript, některé spravovány jazyka, nebo [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|
 |[Dělení na vlákna a zařazování](../cppcx/threading-and-marshaling-c-cx.md)|Popisuje, jak určit způsob chování vláken a zařazování komponent, které vytvoříte.|
 |[Odkaz na obory názvů](../cppcx/namespaces-reference-c-cx.md)|Referenční dokumentace pro výchozí obor názvů, obor názvů Platform, Platform::Collections a související obory názvů.|
-|[CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Obsahuje seznam funkcí CRT, které nejsou k dispozici pro použití v aplikacích pro prostředí Windows Runtime.|
+|[Nepodporované funkce CRT v aplikacích pro Univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Obsahuje seznam funkcí CRT, které nejsou k dispozici pro použití v aplikacích pro prostředí Windows Runtime.|
 |[Postup příručky pro aplikace pro Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Obsahuje základní pokyny pro aplikace pro Windows 10 a odkazy na další informace.|
 |[C + +/ CX část 0 \[ n \]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX část 1 / \[ n \]: jednoduchý – třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX část 2 / \[ n \]: typy, které nosit klobouky](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX části 3 \[ n \]: v části vytváření](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX část 4 \[ n \]: statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Úvodní blog řady Visual C++ v jazyce C + +/ CX.|

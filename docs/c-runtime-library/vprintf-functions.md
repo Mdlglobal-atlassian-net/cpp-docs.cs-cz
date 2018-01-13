@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>vprintf – funkce
 Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a zapíše daná data na určitý cíl. Ověření parametru provést, jestli funkce trvat široké nebo znakovou řetězce, cíl výstupu a podpora pro určení pořadí, ve kterém se používají parametry v řetězec formátu funkce se liší.  
@@ -37,11 +38,11 @@ Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a
 |||  
 |-|-|  
 |[_vcprintf –, _vcwprintf –](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md)|[vfprintf –, vfwprintf –](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|  
-|[_vfprintf_p –, _vfprintf_p_l –, _vfwprintf_p –, _vfwprintf_p_l –](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|[vfprintf_s –, _vfprintf_s_l –, vfwprintf_s –, _vfwprintf_s_l –](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|  
-|[vprintf –, vwprintf –](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p –, _vprintf_p_l –, _vwprintf_p –, _vwprintf_p_l –](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|  
-|[vprintf_s –, _vprintf_s_l –, vwprintf_s –, _vwprintf_s_l –](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|[vsprintf –, vswprintf –](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|  
-|[_vsprintf_p –, _vsprintf_p_l –, _vswprintf_p –, _vswprintf_p_l –](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s –, _vsprintf_s_l –, vswprintf_s –, _vswprintf_s_l –](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|  
-|[_vscprintf –, _vscprintf_l –, _vscwprintf –, _vscwprintf_l –](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf –, _vsnwprintf –](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|  
+|[_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|[vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|  
+|[vprintf –, vwprintf –](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|  
+|[vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|[vsprintf –, vswprintf –](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|  
+|[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|  
+|[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf –, _vsnwprintf –](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|  
   
 ## <a name="remarks"></a>Poznámky  
  `vprintf` Jsou podobné funkce jejich protějšku, jak je uvedeno v následující tabulce. Ale každý `vprintf` funkce přijímá ukazatel na seznam argumentů, zatímco každá z těchto funkcí protějšku přijímá seznam argumentů.  
@@ -52,12 +53,12 @@ Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
 |`_vcprintf`|[_cprintf –](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
 |`_vcwprintf`|[_cwprintf –](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Datový proud*|Zkontrolujte hodnotu null.|Ne|  
-|**vfprintf_p –**|[fprintf_p –](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Datový proud*|Zkontrolujte hodnotu null a platný formát.|Ano|  
-|`vfprintf_s`|[fprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Datový proud*|Zkontrolujte hodnotu null a platný formát.|Ne|  
-|`vfwprintf`|[fwprintf –](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Datový proud*|Zkontrolujte hodnotu null.|Ne|  
-|**vfwprintf_p –**|[fwprintf_p –](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Datový proud*|Zkontrolujte hodnotu null a platný formát.|Ano|  
-|`vfwprintf_s`|[fwprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Datový proud*|Zkontrolujte hodnotu null a platný formát.|Ne|  
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Zkontrolujte hodnotu null.|Ne|  
+|**vfprintf_p –**|[fprintf_p –](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ano|  
+|`vfprintf_s`|[fprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ne|  
+|`vfwprintf`|[fwprintf –](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Zkontrolujte hodnotu null.|Ne|  
+|**vfwprintf_p –**|[fwprintf_p –](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ano|  
+|`vfwprintf_s`|[fwprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ne|  
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Zkontrolujte hodnotu null.|Ne|  
 |**vprintf_p –**|[printf_p –](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ano|  
 |`vprintf_s`|[printf_s –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ne|  
@@ -95,4 +96,4 @@ Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf, _printf_l –, wprintf, _wprintf_l –](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va_arg –, va_copy –, va_end –, va_start –](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

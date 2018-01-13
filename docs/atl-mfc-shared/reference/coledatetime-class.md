@@ -45,11 +45,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fda1737c32bbc63f4ffdd4e1226459a09595f635
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 Zapouzdří `DATE` datový typ, který se používá v automatizace OLE.  
@@ -804,7 +805,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  Pokud některý z operandy je neplatný a dalších nemá hodnotu null, stav výsledná `COleDateTime` hodnota je neplatná.  
   
- **+**  a  **-**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
+  **+**  a  **-**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
   
  Další informace o stavu platná, neplatný a hodnotu null. hodnoty, najdete v článku [m_status](#m_status) členské proměnné.  
   
@@ -830,7 +831,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Další informace o stavu platná, neplatný a hodnotu null. hodnoty, najdete v článku [m_status](#m_status) členské proměnné.  
   
- **+=**  a  **-=**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
+  **+=**  a  **-=**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
   
  Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   

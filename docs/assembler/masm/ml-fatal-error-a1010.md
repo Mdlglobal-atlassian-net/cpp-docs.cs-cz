@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 22b9886587b07958650a0624386867d4bc69cfd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b495fc2b8bd0e667dd7dae7e23347f6971ec4d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-fatal-error-a1010"></a>Závažná chyba nástroje ML A1010
 **neodpovídající bloku vnoření:**  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/24/2017
 -   Podmíněné sestavení direktivy, například [ELSE](../../assembler/masm/else-masm.md), [ElseIf –](../../assembler/masm/elseif-masm.md), nebo **ENDIF** bez odpovídající [Pokud](../../assembler/masm/if-masm.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Chybové zprávy nástroje ML](../../assembler/masm/ml-error-messages.md)
+ [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)

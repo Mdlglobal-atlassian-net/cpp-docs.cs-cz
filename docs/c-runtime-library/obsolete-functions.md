@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a8811703234f2c4e23dab6ad2b99b1aae316c04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obsolete-functions"></a>Zastaralé funkce
 Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujeme, že aby aktualizované verze změníte. Další zastaralé funkce byly odebrány z CRT. Toto téma obsahuje zastaralý jako zastaralé funkce a funkce v konkrétní verzi sady Visual Studio odebrána.  
@@ -65,18 +66,18 @@ Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujem
   
 |Zastaralé funkce|Alternativní|  
 |-----------------------|-----------------|  
-|[_cgets –, _cgetws –](../c-runtime-library/cgets-cgetws.md)|[_cgets_s –, _cgetws_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
-|[Získá _getws –](../c-runtime-library/gets-getws.md)|[gets_s –, _getws_s –](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format –](../c-runtime-library/get-output-format.md)|Žádné|  
-|[_heapadd –](../c-runtime-library/heapadd.md)|Žádné|  
-|[_heapset –](../c-runtime-library/heapset.md)|Žádné|  
-|[INP –, inpw –](../c-runtime-library/inp-inpw.md)|Žádné|  
-|[_inp – _inpw –, _inpd –](../c-runtime-library/inp-inpw-inpd.md)|Žádné|  
-|[outp –, outpw –](../c-runtime-library/outp-outpw.md)|Žádné|  
-|[_outp – _outpw –, _outpd –](../c-runtime-library/outp-outpw-outpd.md)|Žádné|  
-|[_set_output_format –](../c-runtime-library/set-output-format.md)|Žádné|  
+|[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
+|[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Žádné|  
+|[_heapadd](../c-runtime-library/heapadd.md)|Žádné|  
+|[_heapset](../c-runtime-library/heapset.md)|Žádné|  
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Žádné|  
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádné|  
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Žádné|  
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádné|  
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Žádné|  
   
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Odebrat z CRT v dřívějších verzích sady Visual Studio  
- [_Lock](../c-runtime-library/lock.md)  
+ [_lock](../c-runtime-library/lock.md)  
   
- [_Unlock –](../c-runtime-library/unlock.md)
+ [_unlock](../c-runtime-library/unlock.md)

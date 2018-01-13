@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea788921b72d06deb44ed67ecdfa49c5efe43ed2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08872f9e1034c50ca1468d6834f3a44dc06c1ebe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-a-data-source"></a>Připojení ke zdroji dat
 Zdroje dat ODBC je konkrétní sadu dat, informace požadované pro přístup k datům a umístění zdroje dat, který lze popsat pomocí názvu zdroje dat. Zdroj dat z vašeho programu zahrnuje data, databázového systému, sítě (pokud existuje) a rozhraní ODBC.  
@@ -43,4 +46,4 @@ Zdroje dat ODBC je konkrétní sadu dat, informace požadované pro přístup k 
  Po dokončení práce s připojení zdroje dat, zavřete `CDatabase` objekt a zničte jej nebo ji znovu použít pro nové připojení. Další informace o připojení ke zdroji dat najdete v tématu [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [ODBC a MFC](../../data/odbc/odbc-and-mfc.md)
+ [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01bd114c92b7056ead29b57c70801d2cbbacb554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-concepts"></a>Koncepty knihovny ATL (Active Template Library)
 Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které vám umožní vytvořit malé, rychlé objekty modelu COM (Component Object). Má speciální podporu klíče COM funkcí, včetně uložených implementace, duální rozhraní, standardní rozhraní pro výčty COM, spojovací body, úplné vypnutí rozhraní a ovládací prvky ActiveX.  
@@ -32,25 +33,25 @@ Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které
  [Úvod do modelu COM a knihovny ATL](../atl/introduction-to-com-and-atl.md)  
  Představuje hlavní koncepty za modelu COM (Component Object). Tento článek také krátce vysvětluje, co je ATL a kdy byste měli použít.  
   
- [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)  
+ [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)  
  Popisuje vztah mezi různé třídy ATL a jak jsou implementované tyto třídy.  
   
- [Duální rozhraní a knihovny ATL](../atl/dual-interfaces-and-atl.md)  
+ [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)  
  Duální rozhraní z hlediska ATL popisuje.  
   
- [ATL – kolekce a výčty](../atl/atl-collections-and-enumerators.md)  
+ [ATL – kolekce a výčty](../atl/atl-collections-and-enumerators.md)  
  Popisuje provádění a vytvoření kolekce a výčty v ATL.  
   
  [Principy vytváření složených prvků](../atl/atl-composite-control-fundamentals.md)  
  Poskytuje podrobné pokyny pro vytvoření složeného ovládacího prvku. Složeného ovládacího prvku je typ ovládacího prvku ActiveX, který může obsahovat další ovládací prvky ActiveX nebo ovládací prvky systému Windows.  
   
- [Uzavření ovládacího prvku ATL – nejčastější dotazy](../atl/atl-control-containment-faq.md)  
+ [Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL](../atl/atl-control-containment-faq.md)  
  Popisuje základní otázky související s hostování ovládacích prvků s ATL.  
   
  [ATL COM – stránky vlastností](../atl/atl-com-property-pages.md)  
  Ukazuje, jak určit a implementovat COM – stránky vlastností.  
   
- [ATL – podpora pro ovládací prvky jazyka DHTML](../atl/atl-support-for-dhtml-controls.md)  
+ [ATL – podpora ovládacích prvků DHTML](../atl/atl-support-for-dhtml-controls.md)  
  Poskytuje podrobné pokyny pro vytvoření ovládacího prvku DHTML.  
   
  [ATL – body připojení](../atl/atl-connection-points.md)  
@@ -80,7 +81,7 @@ Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které
  [Součást knihovny ATL registru (Registrar)](../atl/atl-registry-component-registrar.md)  
  Popisuje ATL skriptování syntaxe a nahraditelné parametry. Také vysvětluje, jak nastavit statickou odkaz registrátora.  
   
- [Programování s použitím knihovny ATL a běhového kódu jazyka C](../atl/programming-with-atl-and-c-run-time-code.md)  
+ [Programování s použitím knihovny ATL a běhového kódu jazyka C](../atl/programming-with-atl-and-c-run-time-code.md)  
  Popisuje výhody propojení staticky nebo dynamicky k běhové knihovny jazyka C (CRT).  
   
  [Programování pomocí třídy CComBSTR](../atl/programming-with-ccombstr-atl.md)  
@@ -96,10 +97,10 @@ Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které
  [Ukázky knihovny ATL](../visual-cpp-samples.md)  
  Obsahuje popisy a odkazy na ATL ukázkové aplikace.  
   
- [Vytvoření projektu knihovny ATL](../atl/reference/creating-an-atl-project.md)  
+ [Vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md)  
  Obsahuje informace o Průvodci projektu knihovny ATL.  
   
- [Průvodce ovládacím prvkem knihovny ATL](../atl/reference/atl-control-wizard.md)  
+ [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md)  
  Popisuje, jak přidat třídy.  
   
  [Programování s atributy](../windows/attributed-programming-concepts.md)  

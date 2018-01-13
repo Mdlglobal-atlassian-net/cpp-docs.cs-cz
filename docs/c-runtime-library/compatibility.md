@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6a524e552728df0cee3e320aa36bf92d687c539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compatibility"></a>Kompatibilita
 Univerzální knihoven C Run-Time (UCRT) podporuje většinu standardní knihovny jazyka C požadované pro přizpůsobení C++. Implementuje knihovnu C99 (ISO/IEC 9899:1999) s výjimky obecného typu makra definované v \<tgmath.h > a striktní typ kompatibility v \<complex.h >. UCRT také implementuje podmnožinu POSIX.1 velké (ISO/IEC 9945-1:1996, rozhraní API systému POSIX) knihovny jazyka C, ale není plně vyhovující pro všechny konkrétní standard POSIX.  Kromě toho UCRT implementuje několik specifické pro společnost Microsoft funkcemi a makry, které nejsou součástí standardní.  
@@ -39,8 +40,8 @@ Univerzální knihoven C Run-Time (UCRT) podporuje většinu standardní knihovn
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Aplikace pro Windows Store, prostředí Windows Runtime a běhu C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud rutiny UCRT nejsou kompatibilní s univerzální aplikace pro Windows nebo aplikace pro Windows Store.|  
-|[Kompatibilita se specifikací ANSI C](../c-runtime-library/ansi-c-compliance.md)|Popisuje kompatibilní se standardem standardní pojmenování v UCRT.|  
+|[Aplikace pro Windows Store, prostředí Windows Runtime a knihovna CRT](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud rutiny UCRT nejsou kompatibilní s univerzální aplikace pro Windows nebo aplikace pro Windows Store.|  
+|[Kompatibilita s ANSI C](../c-runtime-library/ansi-c-compliance.md)|Popisuje kompatibilní se standardem standardní pojmenování v UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Poskytuje pokyny pro přenos programů UNIX.|  
 |[Platformy systému Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Seznam operačních systémů, které jsou CRT podporuje.|  
 |[Zpětná kompatibilita](../c-runtime-library/backward-compatibility.md)|Popisuje, jak mapování názvů staré CRT k nové.|  

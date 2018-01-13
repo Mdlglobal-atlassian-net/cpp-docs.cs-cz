@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 150178bebc87cc3a4902bc056c9427a5a62858c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a63d3c409e671cf5f8531d161c4a713a3aa4d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="truncation-of-floating-point-values"></a>Zkrácení hodnot s plovoucí desetinnou čárkou
 **ANSI 3.2.1.4** směr zkrácení nebo zaokrouhlení při s plovoucí desetinnou čárkou číslo je převedeno na užší číslo s plovoucí desetinnou čárkou  
@@ -26,4 +27,4 @@ ms.lasthandoff: 10/24/2017
  Kdykoli dojde k podtečení, hodnota proměnné s plovoucí desetinnou čárkou je zaokrouhlena na nulu. Přetečení může způsobit chybu modulu runtime nebo vytvořit nepředvídatelnou hodnotu v závislosti na určených optimalizacích.  
   
 ## <a name="see-also"></a>Viz také  
- [Matematické s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)
+ [Matematika s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)

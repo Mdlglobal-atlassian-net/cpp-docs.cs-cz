@@ -1,7 +1,7 @@
 ---
 title: "_get_osfhandle – | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3b15b4577d1d8c0b24df82acff76494474c4e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b810edac60b08ccc31d6767cb11b7176fb981b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -55,15 +56,16 @@ intptr_t _get_osfhandle(
   
 ### <a name="parameters"></a>Parametry
 
-*FD* existující soubor popisovače.  
+*FD*  
+Existující popisovače souborů.  
   
 ## <a name="return-value"></a>Návratová hodnota
 
-Zpracování souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `INVALID_HANDLE_VALUE` (-1) a nastaví `errno` k `EBADF`, označující neplatný popisovač souboru.  
+Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `INVALID_HANDLE_VALUE` (-1) a nastaví `errno` k `EBADF`, označující neplatný popisovač souboru.  
   
 ## <a name="remarks"></a>Poznámky
 
-Zavřete soubor, jehož popisovač souboru operačního systému se získávají pomocí `_get_osfhandle`, volání [ \_zavřete](../../c-runtime-library/reference/close.md) na popisovače souborů *fd*. Základní obslužná rutina také uzavřené volání `_close`, takže není nutné volat funkci Win32 `CloseHandle` na původní popisovač.  
+Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získávají pomocí `_get_osfhandle`, volání [ \_zavřete](../../c-runtime-library/reference/close.md) na popisovače souborů *fd*. Nevolejte `CloseHandle` na návratovou hodnotu této funkce. Je vlastníkem základní popisovač souboru *fd* popisovače souborů a při zavření `_close` se volá na *fd*. Pokud je vlastníkem popisovače souborů `FILE *` datového proudu, pak volání [fclose –](../../c-runtime-library/reference/fclose-fcloseall.md) na který `FILE *` datový proud se zavře popisovače souborů a základní popisovač souboru. V takovém případě Nevolejte `_close` na popisovače souborů.
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -79,4 +81,4 @@ Zavřete soubor, jehož popisovač souboru operačního systému se získávají
 [_close –](../../c-runtime-library/reference/close.md)   
 [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
 [_dup –, _dup2 –](../../c-runtime-library/reference/dup-dup2.md)   
-[_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)
+[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

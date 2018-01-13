@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Assume operátor nové vyvolává)  
 Když `/Zc:throwingNew` je zadána možnost, kompilátor optimalizuje volání `operator new` tak, aby přeskočil kontroluje návratový ukazatel s hodnotou null. Tato možnost určuje kompilátor předpokládají, že všechny propojené implementace `operator new` a vlastní alokátorů odpovídat C++ standard a throw na došlo k chybě přidělení. Ve výchozím nastavení v sadě Visual Studio, kompilátor pessimistically generuje kontroly hodnoty null (`/Zc:throwingNew-`) pro toto volání, protože uživatele můžete propojit s na jiný vyvolávání implementace `operator new` nebo napište vlastní allocator rutiny, které vracejí ukazatelé s hodnotou null.  

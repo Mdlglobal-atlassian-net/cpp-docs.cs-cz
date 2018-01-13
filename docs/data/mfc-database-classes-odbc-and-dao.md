@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8b2da7c45875ed78d40873cbbd481cdcd38f2d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8a8f34bbe05a01c2015b74dca04a5408ec2ad1a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-database-classes"></a>MFC – databázové třídy 
 > [!NOTE]
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 
 -   [13.1 ovladač ODBC pro SQL Server, které jsou vydané](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) 13 ovladač Microsoft ODBC pro SQL Server se má použít k vytvoření nové aplikace nebo vylepšují existující aplikace, které potřebují využívat výhod nových funkcí SQL Server 2016.
   
--   [ODBC a MFC](../data/odbc/odbc-and-mfc.md)  
+-   [Rozhraní ODBC a knihovna MFC](../data/odbc/odbc-and-mfc.md)  
   
 -   [Použití databázových tříd s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md)  
   

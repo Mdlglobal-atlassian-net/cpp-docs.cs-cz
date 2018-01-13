@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 317fdaadd622571f6e90be11a2b55a778806c39e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c132def87ce2ba2fbe72f8a4696071ab62fda82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lexical-conventions"></a>Lexikální pravidla
 Tato část představuje základní prvky programu C++. Tyto prvky nazývané „lexikální prvky“ nebo „tokeny“ použijete k sestavení příkazů, definic, deklarací a podobných funkcí, které se používají k vytvoření kompletních programů. V této části jsou popsány následující lexikální prvky:  
@@ -46,4 +47,4 @@ Tato část představuje základní prvky programu C++. Tyto prvky nazývané �
  Tato část také obsahuje [přehled posunutí souboru](../cpp/cpp-built-in-operators-precedence-and-associativity.md) tématu.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

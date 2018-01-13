@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be2836f095a6ec5d8861def985d4561eacd7b1f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 62415d4dd5df14bfd2d26fdd976fe6e3c53ba95d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-c-statements"></a>Přehled příkazů jazyka C++
 Příkazy jazyka C++ jsou spouštěny postupně, s výjimkou případů, kdy příkaz výrazu, příkaz výběru, příkaz iterace nebo příkaz jump konkrétně upravuje danou sekvenci.  
@@ -46,12 +47,12 @@ try-throw-catch
   
 |||||  
 |-|-|-|-|  
-|[Konec](../cpp/break-statement-cpp.md)|[else](../cpp/if-else-statement-cpp.md)|[__if_exists –](../cpp/if-exists-statement.md)|[__try](../cpp/structured-exception-handling-c-cpp.md)|  
+|[break](../cpp/break-statement-cpp.md)|[else](../cpp/if-else-statement-cpp.md)|[__if_exists –](../cpp/if-exists-statement.md)|[__try](../cpp/structured-exception-handling-c-cpp.md)|  
 |[případ](../cpp/switch-statement-cpp.md)|[__except](../cpp/structured-exception-handling-c-cpp.md)|[__if_not_exists –](../cpp/if-not-exists-statement.md)|[Zkuste](../cpp/try-throw-and-catch-statements-cpp.md)|  
-|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|[pro](../cpp/for-statement-cpp.md)|[__leave](../c-language/try-finally-statement-c.md)|[Při](../cpp/while-statement-cpp.md)|  
-|[pokračovat](../cpp/continue-statement-cpp.md)|[goto – příkaz](../cpp/goto-statement-cpp.md)|[Vrátí](../cpp/return-statement-cpp.md)||  
-|[Výchozí](../cpp/switch-statement-cpp.md)|[__finally](../cpp/structured-exception-handling-c-cpp.md)|[přepínače](../cpp/switch-statement-cpp.md)||  
-|[proveďte](../cpp/do-while-statement-cpp.md)|[Pokud](../cpp/if-else-statement-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)||  
+|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|[for](../cpp/for-statement-cpp.md)|[__leave](../c-language/try-finally-statement-c.md)|[while](../cpp/while-statement-cpp.md)|  
+|[continue](../cpp/continue-statement-cpp.md)|[goto](../cpp/goto-statement-cpp.md)|[return](../cpp/return-statement-cpp.md)||  
+|[default](../cpp/switch-statement-cpp.md)|[__finally](../cpp/structured-exception-handling-c-cpp.md)|[switch](../cpp/switch-statement-cpp.md)||  
+|[do](../cpp/do-while-statement-cpp.md)|[Pokud](../cpp/if-else-statement-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)||  
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy](../cpp/statements-cpp.md)

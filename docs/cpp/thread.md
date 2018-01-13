@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d81cd7e569cd2baa8ab50b1904fa3ac15b36d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>vlákno
 
 **Konkrétní Microsoft**  
-**Vlákno** modifikátor rozšířené třídy úložiště se používá k deklaraci vlákna místní proměnné. Přenosných ekvivalentní v C ++ 11 a novější, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště.
+**Vlákno** modifikátor rozšířené třídy úložiště se používá k deklaraci vlákna místní proměnné. Přenosných ekvivalentní v C ++ 11 a novější, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosné kód. V systému Windows **thread_local** je implementováno s **__declspec(thread)**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,13 +47,18 @@ Musíte použít deklarace lokální proměnné vláken [rozšířené syntaxe a
 __declspec( thread ) int tls_i = 1;  
 ```
 
-Tyto pokyny je nutné při deklarování místních objektů a proměnných vlákna dodržovat:
+Při použití lokální proměnné vláken v dynamicky načíst knihovny, musíte mít na paměti faktory, které můžou způsobit, že místní proměnnou, která nebyla správně inicializována:
+
+1) Pokud je proměnná inicializována pomocí volání funkce (včetně konstruktory), tato funkce bude volat pouze pro vlákno, která způsobila, že binární/knihovny DLL pro načtení do procesu a pro tyto vláken, která spustí po binární knihovna DLL byla načtena. Funkce inicializace nejsou volat pro jiné vlákno, který byl již spuštěn, když knihovna DLL byla načtena. Dynamické inicializace proběhne volání DllMain pro DLL_THREAD_ATTACH, ale knihovnu DLL nikdy získá, které zprávy, není-li knihovnu DLL v procesu při spuštění vlákno. 
+
+2) Místní proměnné, které jsou inicializovat staticky s konstantní hodnoty se obvykle inicializují správně na všechna vlákna. Od prosince 2017 je však známé shoda problém v Microsoft C++ compiler, při němž constexpr proměnné přijímat dynamické místo statické inicializace.  
+  
+   Poznámka: Oba tyto problémy se očekává v budoucnosti opraven aktualizací kompilátoru.
+
+
+Kromě toho musí odpovídat tyto pokyny, když deklarace místní objekty vláken a proměnné:
 
 - Můžete použít **vlákno** atribut pouze pro třídy a data deklarace a definice; **vlákno** nelze použít na funkce deklarace nebo definice.
-
-- Použití **vlákno** mohou ovlivňovat atribut [zpoždění načítání](../build/reference/linker-support-for-delay-loaded-dlls.md) knihovny DLL importuje.
-
-- V systémech XP **vlákno** nemusí fungovat správně, pokud knihovnu DLL používá __declspec(thread) data a že je načtený dynamicky prostřednictvím LoadLibrary.
 
 - Můžete zadat **vlákno** atribut pouze na datové položky s úložiště se statickými doba trvání. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a členy statických dat tříd. Nelze deklarovat automatické datové objekty s **vlákno** atribut.
 
@@ -95,4 +101,4 @@ Tyto pokyny je nutné při deklarování místních objektů a proměnných vlá
 
 [__declspec](../cpp/declspec.md)  
 [Klíčová slova](../cpp/keywords-cpp.md)  
-[Lokální úložiště vláken (TLS)](../parallel/thread-local-storage-tls.md)
+[Úložiště Thread Local (TLS)](../parallel/thread-local-storage-tls.md)

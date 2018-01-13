@@ -12,11 +12,12 @@ caps.latest.revision: "42"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f02bbb91563233e4e49537dd8f7a5290aad64b6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-classes-and-structs-ccx"></a>REF třídy a struktury (C + +/ CX)
 C + +/ CX podporuje uživatelem definované *ref třídy* a *ref struktury*a uživatelem definovanými *hodnota třídy* a *hodnota struktury*. Tyto datové struktury jsou primární kontejnery, které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité konkrétní pravidla jsou vygenerované jejich obsah, a díky tomu mohou být předán mezi součástmi prostředí Windows Runtime a univerzální platformu Windows aplikace, které jsou zapsány v C++ nebo jiných jazyků.  

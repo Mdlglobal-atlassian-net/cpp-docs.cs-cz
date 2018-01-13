@@ -43,11 +43,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04c9091214928ecf7122868992974a0b0af9d3c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 942267c2632e6ffafec3d2fa9308bfb3db69aa87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 Zkopíruje jeden vícebajtových znaků z řetězce na jiný řetězec. Tyto verze nástroje [_mbccpy –, _mbccpy_l –](../../c-runtime-library/reference/mbccpy-mbccpy-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -143,4 +144,4 @@ errno_t _mbccpy_s_l(
 ## <a name="see-also"></a>Viz také  
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)

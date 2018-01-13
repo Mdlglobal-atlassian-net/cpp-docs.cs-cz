@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01a346054fff0f8f3a9a1407c17e28e8dc234a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 Třídy a struktury mohou obsahovat členy, které zabírají méně úložného prostoru než celočíselný typ. Tyto členy jsou určeny jako bitová pole. Syntaxe pro pole bit *člen deklarátor* specifikace následovně:  
@@ -94,4 +95,4 @@ Rozložení objektu Date s nulovou délkou bitového pole
 2.  Inicializace odkazu pomocí bitového pole.  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../cpp/classes-and-structs-cpp.md)
+ [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

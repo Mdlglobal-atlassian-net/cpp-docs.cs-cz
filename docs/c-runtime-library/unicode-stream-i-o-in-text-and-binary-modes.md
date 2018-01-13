@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df81013b497c0be939ceb3afd44d8a3e9e28ce18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76e739ae95788448cc655ca18d32aaf1f8a5c90a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>I/O proudu kódování Unicode v textovém a binárním režimu
 Když typu Unicode stream rutiny vstupně-výstupní operace (například `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws`, nebo `fputws`) funguje na soubor, který je otevřený v textovém režimu (výchozí), dva druhy znak převody proveďte místní:  
@@ -36,4 +37,4 @@ Když typu Unicode stream rutiny vstupně-výstupní operace (například `fwpri
   
 ## <a name="see-also"></a>Viz také  
  [Běhové rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)   
- [Vstup a výstup](../c-runtime-library/input-and-output.md)
+ [Vstup a výstup](../c-runtime-library/input-and-output.md)

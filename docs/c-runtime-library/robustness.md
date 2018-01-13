@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 27412403fe6ce0f1884a2ea99790376acb1c5236
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb071b615d87ab1b605c78e5ba0645be139fba1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="robustness"></a>Robustnost
 Použijte následující funkce běhové knihovny jazyka C programy vašeho programu.  
@@ -28,8 +29,8 @@ Použijte následující funkce běhové knihovny jazyka C programy vašeho prog
   
 |Funkce|Použití|  
 |--------------|---------|  
-|[_set_new_handler –](../c-runtime-library/reference/set-new-handler.md)|Přenosy ovládacího prvku na váš mechanismus zpracování chyb, pokud `new` operátor se nepodařilo přidělit paměť.|  
-|[_set_se_translator –](../c-runtime-library/reference/set-se-translator.md)|Obslužné rutiny výjimky Win32 (C strukturovaná výjimky) jako C++ zadali výjimky.|  
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Přenosy ovládacího prvku na váš mechanismus zpracování chyb, pokud `new` operátor se nepodařilo přidělit paměť.|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Obslužné rutiny výjimky Win32 (C strukturovaná výjimky) jako C++ zadali výjimky.|  
 |[set_terminate –](../c-runtime-library/reference/set-terminate-crt.md)|Nainstaluje ukončení funkce má být volána [ukončit](../c-runtime-library/reference/terminate-crt.md).|  
 |[set_unexpected –](../c-runtime-library/reference/set-unexpected-crt.md)|Nainstaluje ukončení funkce má být volána [neočekávané](../c-runtime-library/reference/unexpected-crt.md).|  
   

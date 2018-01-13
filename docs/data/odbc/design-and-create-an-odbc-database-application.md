@@ -14,20 +14,23 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab7ad407d5a3c2bb207f2dca601cfc583696ec88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25a1f041f9f2968fd74749727044573f1d787797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Návrh a vytvoření databázové aplikace ODBC
 Tato témata vám pomohou navrhnout a nastavit databázové aplikace ODBC.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
--   [ODBC a MFC](../../data/odbc/odbc-and-mfc.md)  
+-   [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)  
   
--   [Použití sad záznamů rozhraní ODBC knihovny MFC](../../data/odbc/use-mfc-odbc-recordsets.md)  
+-   [Použití sad záznamů rozhraní MFC ODBC](../../data/odbc/use-mfc-odbc-recordsets.md)  
   
 -   [ODBC – základy](../../data/odbc/odbc-basics.md)  
   

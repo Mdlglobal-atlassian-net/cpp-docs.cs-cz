@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1db1d851e72bcce893f5e49b83b95ebf3366f15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decorated-names"></a>Dekorované názvy
 Funkce, dat a objektů v programy C a C++ jsou reprezentované interně pomocí jejich dekorované názvy. A *dekorované název* je zakódovaný řetězec vytvořený kompilátor při kompilaci objektu, dat nebo definici funkce. Zaznamenává konvence volání, typy, parametry funkce a další informace společně s názvem. Tato úprava názvu, také známé jako *úprava názvu*, pomáhá linkeru najít správné funkce a objekty při propojování spustitelný soubor.  

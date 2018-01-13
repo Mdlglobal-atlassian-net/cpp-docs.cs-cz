@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f47c0de0a4bbfec89fa91b04d7894c6f1daf968
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 73f06fc8b0a37d0e8a2362735b6d80f1e4ee11f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-c"></a>Výrazy (C++)
 Tato část popisuje výrazů C++. Výrazy jsou pořadí operátory a operandy, které se používají pro jeden nebo více tyto účely:  
@@ -53,7 +54,7 @@ Tato část popisuje výrazů C++. Výrazy jsou pořadí operátory a operandy, 
   
  Témata na operátory v dalších částech:  
   
--   [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+-   [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
 -   [Přetížené operátory](../cpp/operator-overloading.md)  
   
@@ -63,4 +64,4 @@ Tato část popisuje výrazů C++. Výrazy jsou pořadí operátory a operandy, 
     >  Operátory pro vestavěné typy nemohou být přetíženy; je předdefinovaná jejich chování.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

@@ -17,25 +17,26 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-keywords"></a>Klíčová slova jazyka C
 „Klíčová slova“ jsou slova, která mají pro kompilátor jazyka C zvláštní význam. Ve fázích překladu 7 a 8 nemůže mít identifikátor stejné pořadí a velikost písmen jako klíčové slovo jazyka C. (Viz popis [fáze překladu](../preprocessor/phases-of-translation.md) v *preprocesor odkaz*; informace o identifikátory, najdete v tématu [identifikátory](../c-language/c-identifiers.md).) Jazyk C používá následující klíčová slova:  
   
 |||||  
 |-|-|-|-|  
-|**automaticky**|**Double**|**celá čísla**|**Struktura**|  
-|**Konec**|**else**|**dlouhá**|**přepínače**|  
-|**případ**|**výčet**|**Registrace**|**Definice TypeDef**|  
-|**Char**|**extern**|**Vrátí**|**sjednocení**|  
-|**Const**|**plovoucí desetinná čárka**|**krátký**|**bez znaménka**|  
-|**pokračovat**|**pro**|**podepsané**|**void**|  
-|**Výchozí**|**goto – příkaz**|**sizeof –**|**volatile**|  
-|**proveďte**|**Pokud**|**statické**|**Při**|  
+|**automaticky**|**double**|**int**|**struct**|  
+|**break**|**else**|**long**|**switch**|  
+|**případ**|**enum**|**Registrace**|**Definice TypeDef**|  
+|**char**|**extern**|**return**|**sjednocení**|  
+|**const**|**float**|**short**|**bez znaménka**|  
+|**continue**|**for**|**podepsané**|**void**|  
+|**default**|**goto**|**sizeof**|**volatile**|  
+|**do**|**Pokud**|**static**|**while**|  
   
  Klíčová slova nelze předefinovat. Můžete však zadat text, který má být nahrazena klíčových slov před kompilace pomocí C [preprocesor – direktivy](../preprocessor/preprocessor-directives.md).  
   

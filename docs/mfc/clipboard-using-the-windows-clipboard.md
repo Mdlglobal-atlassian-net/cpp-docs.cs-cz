@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506e7f0d14d76203259e0bac0c34f49e72021ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6063a27495d46e4b54f3133b92689e4b0faaa631
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Schránka: Použití schránky systému Windows
 Toto téma popisuje, jak používat standardní API schránky systému Windows v rámci aplikace knihovny MFC.  
@@ -50,5 +51,5 @@ Toto téma popisuje, jak používat standardní API schránky systému Windows v
 -   [Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Schránky](../mfc/clipboard.md)
+ [Schránka](../mfc/clipboard.md)
 

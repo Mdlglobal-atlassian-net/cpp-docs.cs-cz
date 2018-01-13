@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 544f3abbcdfa67a450e7c722d1ff5994f13c5e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1849b212871db05dcab85111ece7d2a98fc57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 Najde rozdíl mezi dvěma časy.  
@@ -158,4 +159,4 @@ Program takes      5 seconds.
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [Správa času](../../c-runtime-library/time-management.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

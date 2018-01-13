@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1c98af83f4da73b437a1308e260b19024728b13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f9533ffc2d21c3e8ee006fc97f7c61f4cb41115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
 Tato část popisuje specifické pro společnost Microsoft rozšíření pro C++ v těchto oblastech:  
@@ -47,4 +48,4 @@ Tato část popisuje specifické pro společnost Microsoft rozšíření pro C++
 |[__vectorcall](../cpp/vectorcall.md)|Název, který následuje deklaruje funkci, která používá registry, včetně SSE registrů, pokud je k dispozici místo v zásobníku pro předávání argumentů.|Ano|  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

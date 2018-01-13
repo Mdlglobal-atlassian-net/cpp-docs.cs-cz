@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77a5e1c01254a67151d5b8577676537709bdba4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unions"></a>Sjednocení
 A `union` je uživatelsky definovaný typ., ve kterém všichni členové sdílet stejné umístění paměti. To znamená, že v každém okamžiku sjednocení může obsahovat více než jeden objekt z jeho seznam členů. Taky to znamená, že bez ohledu na to, kolik členů sjednocení má vždy používá jenom dostatek paměti k uložení největší člena.  
@@ -661,4 +662,4 @@ Kromě omezení pro pojmenované sjednocení anonymní sjednocení se vztahují 
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   
  [– Třída](../cpp/class-cpp.md)   
- [Struktura](../cpp/struct-cpp.md)
+ [struct](../cpp/struct-cpp.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>Přehled posunutí souboru
 Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo více souborů. Každý z těchto souborů je přeložen v následujícím konceptuálním pořadí (skutečné pořadí následuje pravidlo „jako kdyby“: překlad musí nastat, jako kdyby byly následovány tyto kroky):  
@@ -57,4 +58,4 @@ Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo 
 -   Preprocesor C nerozpoznává operátory jazyka C++: **.\*** ,  **-> \*** , a `::`. V tématu [operátory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) a [výrazy](../cpp/expressions-cpp.md), další informace o operátory.  
   
 ## <a name="see-also"></a>Viz také  
- [Lexikální pravidla](../cpp/lexical-conventions.md)
+ [Lexikální konvence](../cpp/lexical-conventions.md)

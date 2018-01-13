@@ -35,11 +35,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95446e1442f1df98dff5e1819e97c49c75209fda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b0da3f3578e1ee2176ffca8358d5f5276732cf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 Čtení formátovaných dat z řetězce. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [vsscanf_s vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
@@ -155,4 +156,4 @@ Real:     = 15.000000
  [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf_s vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+ [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

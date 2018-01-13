@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c1835ad660c9dbb9f8e4b43dbf697ea960f82ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Regulární knihovny MFC DLL dynamicky propojené s MFC
 Knihovny DLL, která používá MFC interně je běžný, které MFC DLL dynamicky propojené s MFC a exportovaných funkcí v knihovně DLL lze volat pomocí knihovny MFC nebo mimo MFC spustitelné soubory. Podle názvu, popisu, tento druh DLL vytvořená s využitím knihovna DLL verze knihovny MFC (také označovaný jako sdílený verze knihovny MFC). Funkce jsou obvykle exportovány z běžný MFC DLL pomocí standardní rozhraní jazyka.  
@@ -100,9 +101,9 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
 -   [Správa dat stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
--   [Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
 -   [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Druhy knihoven DLL](../build/kinds-of-dlls.md)
+ [Typy knihoven DLL](../build/kinds-of-dlls.md)

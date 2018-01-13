@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>C4055 kompilátoru upozornění (úroveň 1)  
   
 'Převod': z dat ukazatel 'type1' na ukazatel na funkci 'type2'.  

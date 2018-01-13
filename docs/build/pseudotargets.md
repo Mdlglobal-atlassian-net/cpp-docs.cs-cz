@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b018cd586e48f344b93b31571ba60ae9982ad4fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 761b71f05840c86516563df79d45cc1bb018fbba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pseudotargets"></a>Pseudocíle
 Pseudotarget je štítek použít místo název souboru na řádku závislostí. Je interpretován jako soubor, který neexistuje a proto je zastaralý. NMAKE předpokládá, že časové razítko pseudotarget je nejnovější všechny jeho závislé objekty. Pokud má žádné závislé objekty, se předpokládá, že aktuální čas. Pokud pseudotarget se používá jako cíl, jsou vždy provádět její příkazy. Pseudotarget, použít jako závislé musí zobrazit i jako cíl v jiné závislostí. Tuto závislost však nemusí mít blok příkazů.  

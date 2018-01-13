@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb870adea1e13a9e97ac0cf36f6eb4960e87cf30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 Při programování pro moderní C++, obsahuje standardní knihovna *inteligentní ukazatele*, které se používají k zajištění programy, které jsou volné paměti a prostředek nevracení a jsou bezpečné pro výjimky.  
@@ -87,7 +88,7 @@ Při programování pro moderní C++, obsahuje standardní knihovna *inteligentn
  [CComPtr – třída](../atl/reference/ccomptr-class.md)  
  Tuto volbu použijte, dokud nenastane situace, že nemůžete použít knihovnu ATL. Provede pomocí při počítání referencí `AddRef` a `Release` metody. Další informace najdete v tématu [postupy: vytvoření a použití CComPtr a CComQIPtr instance](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
- [Třída CComQIPtr](../atl/reference/ccomqiptr-class.md)  
+ [CComQIPtr – třída](../atl/reference/ccomqiptr-class.md)  
  Podobá `CComPtr` , ale také poskytuje zjednodušenou syntaxi pro volání `QueryInterface` na objekty modelu COM. Další informace najdete v tématu [postupy: vytvoření a použití CComPtr a CComQIPtr instance](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr – třída](../atl/reference/ccomheapptr-class.md)  

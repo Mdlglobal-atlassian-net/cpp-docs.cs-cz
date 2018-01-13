@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc02c58479cd52151f697133aa667b6759b5f347
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eed53718d211ac2152978c2a4d36e6a82c5c8024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="naked-function-calls"></a>Volání holé funkce
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [holé](../cpp/naked-cpp.md)  
   
--   [Pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md)  
+-   [Pravidla holých funkcí a jejich omezení](../cpp/rules-and-limitations-for-naked-functions.md)  
   
 -   [Důležité informace k zápisu kódu prologu/epilogu](../cpp/considerations-for-writing-prolog-epilog-code.md)  
   
