@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 Tato přenosem Případová studie slouží k získáte představu o jaké typické přenosem projekt je stejně jako typy problémů, může dojít k a některé obecné tipy a triky pro adresování přenosem problémy. Smyslem není jako spolehlivý Průvodce přenosem, protože možností portování projektu velmi mnohem závisí na specifika kódu.  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- Projekt aktuálně je sestavení, pomocí MBCS (vícebajtový znaková sada), tak, aby char datový typ odpovídající znaku. Ale povolit jednodušší aktualizace kód na kódování Unicode UTF-16, jsme aktualizovat na TCHAR –, který se přeloží na znaky nebo wchar_t podle toho, jestli **znaková sada** v nastavení projektu je nastavena na MBCS nebo Unicode.  
+ Aktuálně projektu je sestaven pomocí znakové sady MBCS (vícebajtový znaková sada), takže `char` je datový typ odpovídající znaku. Ale povolit jednodušší aktualizace kód na kódování Unicode UTF-16, budeme aktualizovat na `TCHAR`, který přeloží na `char` nebo `wchar_t` podle toho, jestli **znaková sada** v nastavení projektu je nastavena na Znakové sady MBCS nebo Unicode.  
   
  Několik dalších částí kódu je nutné aktualizovat.  Ios_base – bylo nahrazeno ios základní třídy a jsme nahrazený ostream – je basic_ostream\<T >. Přidáme dva další definice TypeDef a zkompiluje v této části.  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  Tento problém nastane, když proměnná byla deklarována nejprve `extern`, později deklarovaný `static`. Význam tyto dvě specifikátory třídy úložiště se vzájemně vylučují, ale je to povoleno jako rozšíření Microsoft. Pokud jste chtěli kód přenosný na jiné kompilátory nebo jste chtěli kompilovat s /Za (režim kompatibility ANSI), změníte deklarace do mají odpovídající specifikátory třídy úložiště.  
   
-##  <a name="porting_to_unicode"></a>Krok 11. Portování ze MBCS do kódu Unicode  
- Všimněte si, že na světě Windows když říkáme kódování Unicode, jsme obvykle znamená UTF-16. Jiné operační systémy, jako je například Linux pomocí znakové sady UTF-8, ale Windows obecně neexistuje. Před provedením kroku k ve skutečnosti portu kód MBCS do kódu Unicode UTF-16, budeme chtít dočasně eliminovat upozornění, že je zastaralá MBCS, aby bylo možné provádět další činnosti nebo portování dokud vhodnou dobu odložit. Aktuální kód používá MBCS a chcete-li pokračovat, potřebujeme stáhnout verzi MFC MBCS.  Toto místo rozsáhlé knihovny je odebraný z výchozí instalace sady Visual Studio, takže se musí stáhnout samostatně. V tématu [MFC MBCS DLL – doplněk](../mfc/mfc-mbcs-dll-add-on.md). Jakmile si stáhnout tuto a restartujte Visual Studio, můžete zkompilovat a propojit s verzí MFC MBCS, ale se jich zbavit upozornění o rozhraní MBCS, měli byste také přidat NO_WARN_MBCS_MFC_DEPRECATION do seznamu předdefinovaná makra v části preprocesoru projektu vlastnosti, nebo na začátku souboru stdafx.h záhlaví nebo jiné běžné hlavičky souborů.  
+##  <a name="porting_to_unicode"></a>Krok 11. Portování ze MBCS do kódu Unicode
+
+ Všimněte si, že na světě Windows když říkáme kódování Unicode, jsme obvykle znamená UTF-16. Jiné operační systémy, jako je například Linux pomocí znakové sady UTF-8, ale Windows obecně neexistuje. MBCS verze knihovny MFC byla zrušena v sadě Visual Studio 2013 a 2015, ale už se nepoužívá v Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, před provedením kroku k ve skutečnosti portu kód MBCS do kódu Unicode UTF-16, chceme může dočasně omezit upozornění, že je zastaralá MBCS, aby bylo možné provádět další činnosti nebo portování dokud vhodnou dobu odložit. Aktuální kód používá MBCS a chcete-li pokračovat, je potřeba nainstalovat verzi ANSI/MBCS MFC. Místo velké knihovny MFC není součástí výchozí sady Visual Studio **vývoj aplikací s jazykem C++** instalace, takže musíte ji vybrat z volitelných komponent v instalačním programu. V tématu [MFC MBCS DLL – doplněk](../mfc/mfc-mbcs-dll-add-on.md). Jakmile si stáhnout tuto a restartujte Visual Studio, můžete zkompilovat a propojit s verzí MFC MBCS, ale se jich zbavit upozornění o rozhraní MBCS Pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat **NO_WARN_MBCS_MFC_DEPRECATION**do seznamu předdefinovaná makra v části preprocesoru vlastnosti projektu, nebo na začátku souboru stdafx.h záhlaví nebo jiné běžné hlavičky souborů.  
   
  Nyní je k dispozici chybami linkeru.  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  Nyní dejte nám ve skutečnosti aktualizujte kód staré vícebajtové znakovou sadu (MBCS) na kódování Unicode. Vzhledem k tomu, že toto je aplikace systému Windows, důvěrně svázané s platformou Windows desktop jsme se portu na kódování Unicode UTF-16, které používá systém Windows. Při psaní kódu pro různé platformy nebo portování aplikace systému Windows na jiné platformě, můžete zvážit portování do znakové sady UTF-8, které se často používá v jiných operačních systémech.  
   
- Portování do kódu Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost zkompilovat do MBCS nebo ne.  Pokud Chceme mít možnost pro podporu MBCS, jsme používali Tchar – makro jako typ znak, který se přeloží na znaky nebo wchar_t, v závislosti na tom, jestli je definována _MBCS nebo _UNICODE během kompilace. Přepnutí na Tchar – a Tchar – verze různých rozhraních API místo wchar_t a jeho přidružené rozhraní API znamená, že můžete vrátit zpět na verzi MBCS kódu jednoduše tak, že definujete _MBCS makro místo _UNICODE. Kromě Tchar – existuje různých verzí Tchar – například často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** změňte **znaková sada** vlastnost z **použití MBCS Znaková sada** k **použít sadu znak Unicode**. Toto nastavení ovlivňuje, které makro je předdefinovaná během kompilace. Je makro kódování UNICODE a _UNICODE – makro. Vlastnosti projektu ovlivňuje i konzistentně. Záhlaví systému Windows pomocí kódování UNICODE, kde hlavičky Visual C++, jako je například MFC použít _UNICODE, ale pokud je definován, dalších vždy definována.  
+ Portování do kódu Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost zkompilovat do MBCS nebo ne.  Pokud Chceme mít možnost pro podporu MBCS, bychom měli použít Tchar – makro jako typ znak, který přeloží na buď `char` nebo `wchar_t`, v závislosti na tom, jestli je definována _MBCS nebo _UNICODE během kompilace. Přepnutí na Tchar – a Tchar – verzích různých rozhraních API místo `wchar_t` a jeho přidružené rozhraní API znamená, že můžete vrátit zpět na verzi MBCS kódu jednoduše tak, že definujete _MBCS makro místo _UNICODE. Kromě Tchar – existuje různých verzí Tchar – například často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** změňte **znaková sada** vlastnost z **použití MBCS Znaková sada** k **použít sadu znak Unicode**. Toto nastavení ovlivňuje, které makro je předdefinovaná během kompilace. Je makro kódování UNICODE a _UNICODE – makro. Vlastnosti projektu ovlivňuje i konzistentně. Záhlaví systému Windows pomocí kódování UNICODE, kde hlavičky Visual C++, jako je například MFC použít _UNICODE, ale pokud je definován, dalších vždy definována.  
   
  Dobrou [průvodce](http://msdn.microsoft.com/library/cc194801.aspx) portování z MBCS do kódu Unicode UTF-16 pomocí Tchar – existuje. Vybereme možnost této trasy. Nejprve se nám změnit **znaková sada** vlastnost **použití Unicode znaková sada** a projekt znovu sestavte.  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- _T – makro má za následek provedení literálu kompilace řetězec jako char řetězec nebo řetězec wchar_t, v závislosti na nastavení MBCS nebo UNICODE. Pokud chcete nahradit všechny řetězce _T v sadě Visual Studio, poprvé otevřete **rychle nahradit** (klávesnice: Ctrl + F) pole nebo **nahradit v souborech** (klávesnice: Ctrl + Shift + H), zvolte **použití regulárních Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako Nahrazovací text. Pokud již máte _T – makro kolem některé řetězce, tento postup se ji znovu přidejte a setkat i případy, kdy nechcete _T, například při použití `#include`, takže je vhodné použít **nahradit další** místo  **Nahraďte všechny**.  
+ _T – makro má za následek provedení literálu kompilace řetězec jako `char` řetězec nebo `wchar_t` řetězec, v závislosti na nastavení MBCS nebo UNICODE. Pokud chcete nahradit všechny řetězce _T v sadě Visual Studio, poprvé otevřete **rychle nahradit** (klávesnice: Ctrl + F) pole nebo **nahradit v souborech** (klávesnice: Ctrl + Shift + H), zvolte **použití regulárních Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako Nahrazovací text. Pokud již máte _T – makro kolem některé řetězce, tento postup se ji znovu přidejte a setkat i případy, kdy nechcete _T, například při použití `#include`, takže je vhodné použít **nahradit další** místo  **Nahraďte všechny**.  
   
  Tato konkrétní funkce [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx), je ve skutečnosti definován v záhlaví systému Windows a v dokumentaci pro doporučí, že ho nelze použít, z důvodu přetečení možné vyrovnávací paměti. Pro je uvedena velikost `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob pro funkce, které chcete zkontrolovat, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do ní. Najdete v další části o přenos do zabezpečení CRT, ve kterém jsme jiné podobné problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- I když _tcscpy – funkce byl použit, což je Tchar – strcpy – funkce pro kopírování řetězec, se vyrovnávací paměti, která byla přidělena char vyrovnávací paměti. Snadno se změní na Tchar –.  
+ I když _tcscpy – funkce byl použit, což je Tchar – strcpy – funkce pro kopírování řetězec, byl vyrovnávací paměti, která byla přidělena `char` vyrovnávací paměti. Snadno se změní na Tchar –.  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Podobně jsme změnili `LPSTR` (dlouho ukazatel na řetězec) a `LPCSTR` (dlouho ukazatel na konstantní řetězec) k `LPTSTR` (dlouho ukazatel Tchar – řetězec) a `LPCTSTR` (dlouho ukazatel na konstantní řetězec Tchar –), při oprávněných z Chyba kompilátoru. Jsme zvolili Nedělejte nahrazení pomocí globální Hledat a nahradit, protože každé situaci měl prověřit, jednotlivě. V některých případech se verze char chtěli například při zpracování určitých Windows zpráv, které používat struktury systému Windows, které mají příponu A. V rozhraní Windows API příponu A znamená ASCII nebo ANSI (a platí také pro MBCS) a příponou W znamená široké znaky, nebo Unicode UTF-16. Tato vzoru pro pojmenovávání se používá v hlavičkách Windows, ale jsme také a potom ji v kódu nástroje Spy ++ když jsme měli přidat Unicode verze funkce, která již byla definována ve pouze MBCS verzi.  
+ Podobně jsme změnili `LPSTR` (dlouho ukazatel na řetězec) a `LPCSTR` (dlouho ukazatel na konstantní řetězec) k `LPTSTR` (dlouho ukazatel Tchar – řetězec) a `LPCTSTR` (dlouho ukazatel na konstantní řetězec Tchar –), při oprávněných z Chyba kompilátoru. Jsme zvolili Nedělejte nahrazení pomocí globální Hledat a nahradit, protože každé situaci měl prověřit, jednotlivě. V některých případech `char` chtěli verze, například při zpracování určitých Windows zpráv, které používat struktury systému Windows, které mají příponu A. V rozhraní Windows API příponu A znamená ASCII nebo ANSI (a platí také pro MBCS) a příponou W znamená široké znaky, nebo Unicode UTF-16. Tato vzoru pro pojmenovávání se používá v hlavičkách Windows, ale jsme také a potom ji v kódu nástroje Spy ++ když jsme měli přidat Unicode verze funkce, která již byla definována ve pouze MBCS verzi.  
   
  V některých případech nám museli nahradit typ má být použit na verzi, která přeloží správně (WNDCLASS místo WNDCLASSA např.).  
   
