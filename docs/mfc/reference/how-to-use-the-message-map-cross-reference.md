@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffa7b39962d78476e971750e92569eb14229606b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25f78fb2e2c5700cbb1f7c8dcb093795ce001c13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Postupy: Použití křížových odkazů mapování zpráv
 V položkách s názvem bez přípony \<memberFxn >, napište vlastní funkci člena pro odvozený [CWnd](../../mfc/reference/cwnd-class.md) třídy. Zadejte funkce libovolný název, který chcete. Další funkce, jako například `OnActivate`, jsou funkce člena třídy `CWnd`. Pokud je volána, předají zprávu, která se `DefWindowProc` funkce systému Windows. Při zpracování zprávy oznámení Windows, přepsání odpovídající `CWnd` funkce v odvozené třídě. Funkce by měly volat funkci přepsaného v základní třídě umožníte základní třídy a Windows reagovat na zprávu.  

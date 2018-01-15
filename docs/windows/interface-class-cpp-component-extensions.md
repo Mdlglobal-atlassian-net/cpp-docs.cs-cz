@@ -17,11 +17,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3c6416ebe8b87295499e2a2ba50519d830b59ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (rozšíření komponent C++)
 Deklaruje rozhraní.  Informace o nativní rozhraní najdete v tématu [__interface](../cpp/interface.md).  
@@ -183,7 +186,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 in Function_3  
@@ -227,4 +230,4 @@ ref struct R : I, J {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

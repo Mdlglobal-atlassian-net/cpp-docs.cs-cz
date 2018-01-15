@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cb598a5b0f87080a937218962037d849275d7bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tiles"></a>Používání bloků
 Dlaždice můžete maximalizovat akcelerace vaší aplikace. Dlaždice rozdělí vláken na stejné obdélníková podmnožiny nebo *dlaždice*. Pokud používáte příslušné dlaždice velikost a algoritmus vedle sebe, můžete získat i další akcelerace z vašeho kódu C++ AMP. Základní součásti dlaždice jsou:  
@@ -337,5 +338,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
   
 ## <a name="see-also"></a>Viz také  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [tile_static – klíčové slovo](../../cpp/tile-static-keyword.md)
+ [tile_static Keyword](../../cpp/tile-static-keyword.md)
 

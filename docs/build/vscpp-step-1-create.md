@@ -1,8 +1,8 @@
 ---
-title: "Krok 1 – Vytvoření projektu aplikace konzoly C++ | Microsoft Docs"
+title: "Vytvoření projektu aplikace konzoly C++ | Microsoft Docs"
 description: "Nainstalovat Visual Studio – podpora pro Visual C++"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f75d8fc6ec744038d57bfb7576547c9be84b7551
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: e44d9c097461b118cae72b47dff2ab15757aed64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
@@ -23,7 +24,7 @@ Obvyklým výchozím bodem pro programátory C++ text "Hello, world!" aplikace, 
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Visual Studio s vývoj aplikací máte C++ zatížení nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalovaná, přečtěte si téma [krok 0 - podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Visual Studio s vývoj aplikací máte C++ zatížení nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalovaná, přečtěte si téma [podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
@@ -92,7 +93,7 @@ Pokud kód vypadá takto v editoru, jste připravení přejděte k dalšímu kro
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Krok 2: Sestavení a spuštění projektu jazyka C++](vscpp-step-2-build.md)
+> [Sestavení a spuštění projektu jazyka C++](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Průvodce odstraňováním potíží s
 

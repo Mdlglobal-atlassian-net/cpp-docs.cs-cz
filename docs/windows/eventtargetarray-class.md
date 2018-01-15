@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7f23265601411c0a1913b1e06b9fffa62bfa07f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ac591a1d27792d3b825336ed46e38fa5d002fa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray – třída
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -41,17 +44,17 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Eventtargetarray::eventtargetarray – konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializuje novou instanci třídy EventTargetArray.|  
-|[EventTargetArray:: ~ eventtargetarray – destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes aktuální EventTargetArray – třída.|  
+|[EventTargetArray::EventTargetArray – konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializuje novou instanci třídy EventTargetArray.|  
+|[EventTargetArray::~EventTargetArray – destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes aktuální EventTargetArray – třída.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Eventtargetarray::addtail – metoda](../windows/eventtargetarray-addtail-method.md)|Přidá zadanou událost obslužné rutiny na konec interní pole obslužné rutiny událostí.|  
-|[Eventtargetarray::begin – metoda](../windows/eventtargetarray-begin-method.md)|Získá adresu první prvek v poli interní obslužných rutin událostí.|  
-|[Eventtargetarray::end – metoda](../windows/eventtargetarray-end-method.md)|Získá adresu posledním prvkem v poli interní obslužných rutin událostí.|  
-|[Eventtargetarray::length – metoda](../windows/eventtargetarray-length-method.md)|Získá aktuální počet prvků v poli interní obslužných rutin událostí.|  
+|[EventTargetArray::AddTail – metoda](../windows/eventtargetarray-addtail-method.md)|Přidá zadanou událost obslužné rutiny na konec interní pole obslužné rutiny událostí.|  
+|[EventTargetArray::Begin – metoda](../windows/eventtargetarray-begin-method.md)|Získá adresu první prvek v poli interní obslužných rutin událostí.|  
+|[EventTargetArray::End – metoda](../windows/eventtargetarray-end-method.md)|Získá adresu posledním prvkem v poli interní obslužných rutin událostí.|  
+|[EventTargetArray::Length – metoda](../windows/eventtargetarray-length-method.md)|Získá aktuální počet prvků v poli interní obslužných rutin událostí.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `EventTargetArray`  
@@ -62,4 +65,4 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

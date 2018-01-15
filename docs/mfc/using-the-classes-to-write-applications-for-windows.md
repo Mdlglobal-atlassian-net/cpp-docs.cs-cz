@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90790e12d2137324c4d641f1beac6c5cae0cff31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Použití tříd pro psaní aplikací pro Windows
 Dohromady třídy v knihovně Microsoft Foundation Class (MFC) tvoří "aplikační rozhraní," na kterém vytváříte aplikaci pro operační systém Windows. Velmi obecné úrovni rozhraní definuje kostru aplikace a poskytuje implementace standardní uživatelského rozhraní, které se dají umístit do kostru. Je vaše úloha jako programátory vyplnit zbytek kostru, které jsou všechny tyto věci, které jsou specifické pro vaši aplikaci. Začít můžete získat pomocí Průvodce aplikací MFC k vytvoření těchto souborů pro velmi důkladné Startovní aplikace. Implementace logika specifické pro aplikaci pomocí Microsoft Visual C++ editory prostředků vizuálně, navrhnout vaše prvky uživatelského rozhraní zobrazení tříd příkazů pro připojení k kód a knihovna tříd těchto elementů.  
@@ -67,7 +68,7 @@ Dohromady třídy v knihovně Microsoft Foundation Class (MFC) tvoří "aplikač
   
      Kromě toho, která poskytuje několik výhod v psaní aplikací pro operační systém Windows, MFC taky je mnohem jednodušší pro psaní aplikací, které konkrétně používají propojování a vkládání technologie OLE. Můžete použít aplikace OLE visual úpravy kontejneru, server visual úpravy OLE nebo obojí a automatizace můžete přidat tak, aby ostatní aplikace můžete použít objekty z vaší aplikace nebo i jednotky vzdáleně.  
   
--   [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)  
+-   [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)  
   
      OLE řízení development kit (CDK) je nyní plně integrována rozhraní. Tento článek rodiny poskytuje přehled vývoje ovládacího prvku ActiveX MFC. (Ovládací prvky ActiveX dříve označované jako ovládací prvky OLE.)  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 022d4576127d068ea31a215de1adbb6edffb2d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurrency Runtime, kdy ji použít, a způsob jejich součástí interakce mezi sebou a se operační systém a aplikace.  
@@ -103,7 +104,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
  [!code-cpp[concrt-comparing-work-functions#1](../../parallel/concrt/codesnippet/cpp/overview-of-the-concurrency-runtime_1.cpp)]  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 1  

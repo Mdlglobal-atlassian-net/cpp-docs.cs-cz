@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bcd84415737ee5fb8584f04b56c1df895145a3b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49d145bc80b524176b381b2b5938c9707e8c1b19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constseg"></a>const_seg
 Určuje segment kde [const](../cpp/const-cpp.md) proměnné jsou uloženy v souboru .obj.  
@@ -102,4 +103,4 @@ test4
  Můžete také určit oddíly pro inicializovaného dat ([data_seg](../preprocessor/data-seg.md)), Neinicializovaný dat ([bss_seg –](../preprocessor/bss-seg.md)) a funkce ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

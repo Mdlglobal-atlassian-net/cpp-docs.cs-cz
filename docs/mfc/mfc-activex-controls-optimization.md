@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1dab85041f63afd3904bc026bdf2a4d94b5301
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46a17a6594db6c59148042f6e8c6cc72c7068dc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC – ovládací prvky ActiveX: Optimalizace
 Tento článek vysvětluje techniky, které můžete použít k optimalizaci vaše ovládací prvky ActiveX pro dosažení vyššího výkonu.  
@@ -48,9 +49,9 @@ Tento článek vysvětluje techniky, které můžete použít k optimalizaci va�
 |-------------------------------------------------------|------------|----------------------|  
 |**Aktivovat při viditelné** zaškrtávací políčko|Zrušte zaškrtnutí|[Vypnutí při aktivaci Visible – možnost](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**Aktivace bez oken** zaškrtávací políčko|Vyberte|[Zajišťování aktivace bez oken](../mfc/providing-windowless-activation.md)|  
-|**Neoříznutého kontextu zařízení** zaškrtávací políčko|Vyberte|[Použití Neoříznutého kontextu zařízení](../mfc/using-an-unclipped-device-context.md)|  
+|**Neoříznutého kontextu zařízení** zaškrtávací políčko|Vyberte|[Použití neoříznutého kontextu zařízení](../mfc/using-an-unclipped-device-context.md)|  
 |**Bez blikání aktivace** zaškrtávací políčko|Vyberte|[Zajištění aktivace bez blikání](../mfc/providing-flicker-free-activation.md)|  
-|**Myš ukazatel oznámení o neaktivní** zaškrtávací políčko|Vyberte|[Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Myš ukazatel oznámení o neaktivní** zaškrtávací políčko|Vyberte|[Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Optimalizované kreslení kód** zaškrtávací políčko|Vyberte|[Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)|  
   
  Podrobné informace o členské funkce, které implementují tyto optimalizace najdete v tématu [COleControl](../mfc/reference/colecontrol-class.md). Členské funkce jsou uvedeny podle použití, jako například [bez oken Operations](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) a [neaktivní ukazatel zpracování funkce](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
@@ -63,14 +64,14 @@ Tento článek vysvětluje techniky, které můžete použít k optimalizaci va�
   
 -   [Vypnutí při aktivaci Visible – možnost](../mfc/turning-off-the-activate-when-visible-option.md)  
   
--   [Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)  
+-   [Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)  
   
 -   [Zajištění aktivace bez blikání](../mfc/providing-flicker-free-activation.md)  
   
--   [Použití Neoříznutého kontextu zařízení](../mfc/using-an-unclipped-device-context.md)  
+-   [Použití neoříznutého kontextu zařízení](../mfc/using-an-unclipped-device-context.md)  
   
 -   [Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

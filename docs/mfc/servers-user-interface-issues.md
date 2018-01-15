@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b4e45874b8cfebafbfedd6a8a91ef86816ac60b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ea7130770f88c377aa7f332ac60bb244b66f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-user-interface-issues"></a>Servery: Problémy uživatelského rozhraní
 Serverová aplikace obsahuje řadu funkcí, které musí být přidaný do uživatelského rozhraní k poskytování položek OLE – aplikace typu kontejner. Další informace o nabídky a další prostředky, které je třeba přidat do aplikace server, najdete v části [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Servery](../mfc/servers.md)   
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
+ [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
 

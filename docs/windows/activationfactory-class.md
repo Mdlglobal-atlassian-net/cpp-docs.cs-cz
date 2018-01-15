@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6876fb3d418a4dac8a68449da5d0eae855daa440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activationfactory-class"></a>ActivationFactory – třída
 Umožňuje jednu nebo více tříd, které chcete aktivovat pomocí prostředí Windows Runtime.  
@@ -62,18 +65,18 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Activationfactory::activationfactory – konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicializuje ActivationFactory – třída.|  
+|[ActivationFactory::ActivationFactory – konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicializuje ActivationFactory – třída.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Activationfactory::addref – metoda](../windows/activationfactory-addref-method.md)|Zvýší počet odkazů aktuální objekt ActivationFactory.|  
-|[Activationfactory::getiids – metoda](../windows/activationfactory-getiids-method.md)|Načte pole ID implementovaných rozhraní.|  
-|[Activationfactory::getruntimeclassname – metoda](../windows/activationfactory-getruntimeclassname-method.md)|Získá název modulu runtime třídy objektu, který vytvoří instanci aktuální ActivationFactory.|  
-|[Activationfactory::gettrustlevel – metoda](../windows/activationfactory-gettrustlevel-method.md)|Získá objekt, který vytvoří instanci aktuální ActivationFactory úroveň důvěryhodnosti.|  
-|[Activationfactory::QueryInterface – metoda](../windows/activationfactory-queryinterface-method.md)|Načte ukazatele k zadanému rozhraní.|  
-|[Activationfactory::Release – metoda](../windows/activationfactory-release-method.md)|Snižuje počet odkaz na aktuální objekt ActivationFactory.|  
+|[ActivationFactory::AddRef – metoda](../windows/activationfactory-addref-method.md)|Zvýší počet odkazů aktuální objekt ActivationFactory.|  
+|[ActivationFactory::GetIids – metoda](../windows/activationfactory-getiids-method.md)|Načte pole ID implementovaných rozhraní.|  
+|[ActivationFactory::GetRuntimeClassName – metoda](../windows/activationfactory-getruntimeclassname-method.md)|Získá název modulu runtime třídy objektu, který vytvoří instanci aktuální ActivationFactory.|  
+|[ActivationFactory::GetTrustLevel – metoda](../windows/activationfactory-gettrustlevel-method.md)|Získá objekt, který vytvoří instanci aktuální ActivationFactory úroveň důvěryhodnosti.|  
+|[ActivationFactory::QueryInterface – metoda](../windows/activationfactory-queryinterface-method.md)|Načte ukazatele k zadanému rozhraní.|  
+|[ActivationFactory::Release – metoda](../windows/activationfactory-release-method.md)|Snižuje počet odkaz na aktuální objekt ActivationFactory.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `I0`  
@@ -102,4 +105,4 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

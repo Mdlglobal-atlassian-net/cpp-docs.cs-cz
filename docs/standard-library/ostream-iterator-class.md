@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a8454182c51120677f968483dc35c7da93c5e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83ec130d9a6273d56e107707b033968d96c0b778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator – třída
 Ostream_iterator – třída šablony popisuje objekt iterator výstup, který zapíše do výstupního datového proudu s extrahování následných elementy **operátor <<**.  
@@ -403,7 +404,7 @@ by intOut are:
 ## <a name="see-also"></a>Viz také  
  [\<iterator >](../standard-library/iterator.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

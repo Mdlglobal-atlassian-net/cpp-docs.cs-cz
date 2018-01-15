@@ -19,20 +19,21 @@ caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8599f7220554984453bfabe988b95209f5a82a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0409df12df704e52e48f68b193d914d9241cf812
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-data-applications"></a>Portování datových aplikací
 V průběhu let Visual C++ poskytl několik způsobů, jak pracovat s databází. V 2011 Microsoft oznámila, že ho je zarovnání na ODBC jako upřednostňovaný technologie pro přístup k systému SQL Server produkty z nativního kódu. Rozhraní ODBC je standardní a použití získat maximální přenositelnost kódu přes více platforem a zdroje dat. Většina produktů databáze SQL a mnoho NoSQL produkty podporují ODBC. Můžete použít rozhraní ODBC přímo ve volání nízké úrovně rozhraní API ODBC, nebo můžete použít obálkové třídy knihovny MFC rozhraní ODBC nebo obálky knihovny C++ třetích stran. 
 
-OLE DB je nízké úrovně, vysoce výkonné rozhraní API podle specifikace COM a je podporována pouze v systému Windows. Použijte OLE DB, pokud je přístup k vaší program [propojené servery](https://msdn.microsoft.com/library/ms188279.aspx). ATL poskytuje šablony technologie OLE DB, které usnadňují vytváření vlastního zprostředkovatele OLE DB a spotřebitelé. Nejnovější verzi technologie OLE DB poskytuje 11 Nativní klient SQL.  
+OLE DB je nízké úrovně, vysoce výkonné rozhraní API podle specifikace COM a je podporována pouze v systému Windows. Použijte OLE DB, pokud je přístup k vaší program [propojené servery](/sql/relational-databases/linked-servers/linked-servers-database-engine). ATL poskytuje šablony technologie OLE DB, které usnadňují vytváření vlastního zprostředkovatele OLE DB a spotřebitelé. Nejnovější verzi technologie OLE DB poskytuje 11 Nativní klient SQL.  
 
 Pokud starší verze aplikace používá pro připojení k systému SQL Server OLE DB nebo vyšší úrovně rozhraní ADO a přístup k odkazované servery nepoužíváte, zvažte migraci na rozhraní ODBC v blízké budoucnosti. Pokud nechcete, aby napříč platformami přenositelnost nebo nejnovější funkce SQL Server, můžete případně použít zprostředkovatele Microsoft OLE DB pro ODBC (MSDASQL).  MSDASQL umožňuje aplikacím, které jsou vytvořené v OLE DB a ADO (který interně používá OLEDB) pro přístup ke zdrojům dat prostřednictvím ovladače ODBC. Stejně jako u vrstvy jakékoli překlad může ovlivnit MSDASQL performace databáze. Měli byste otestovat k určení, zda dopad signifant pro vaši aplikaci. MSDASQL se dodává s verzí operačního systému Windows a Windows Server 2008 a Windows Vista SP1 se, že první Windows verzí obsahovat 64bitovou verzi technologie.
 
-Nativní klient SQL součást (SNAC), které balíčky ovladače OLE DB a ODBC v jednom knihovny DLL, se již nepoužívá, pro aplikace rozhraní ODBC. Verze SQL Server 2012 SNAC (SQLNCLI11. Knihovny DLL) se dodává s SQL Server 2016, protože na ní závisí další součásti systému SQL Server. Však měli použít nové aplikace C++, která se připojují k systému SQL Server nebo Azure SQL Database přes rozhraní ODBC [nejnovější ovladače ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server). Další informace najdete v tématu [SQL serveru Nativní klient programování](https://msdn.microsoft.com/en-us/library/ms130892.aspx)
+Nativní klient SQL součást (SNAC), které balíčky ovladače OLE DB a ODBC v jednom knihovny DLL, se již nepoužívá, pro aplikace rozhraní ODBC. Verze SQL Server 2012 SNAC (SQLNCLI11. Knihovny DLL) se dodává s SQL Server 2016, protože na ní závisí další součásti systému SQL Server. Však měli použít nové aplikace C++, která se připojují k systému SQL Server nebo Azure SQL Database přes rozhraní ODBC [nejnovější ovladače ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server). Další informace najdete v tématu [SQL serveru Nativní klient programování](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
 Pokud používáte C + +/ CLI, můžete nadále používat jako vždy ADO.NET. Další informace najdete v tématu [Data Access pomocí ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), a [přístup k datům v sadě Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   

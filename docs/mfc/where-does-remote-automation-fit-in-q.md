@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d34c9ed610cb375c0755e7698f45a1b16e935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Kde se uplatní vzdálená automatizace?
 Byla vydána v 1996 a je k dispozici v 32bitové a 64bitové verze platformy DCOM. Visual Basic team v Microsoft vždy zaznamenal jazyka Visual Basic jako pomocí automatizace umožňující komunikaci jeho součástí. Nedostatečná distribuované verze vážně omezenou využívat tyto možnosti v podnikovém prostředí, takže týmem vývoj Visual Basic 4.0 Enterprise Edition rozhodli prozkoumat vytvoření vlastní sadu součástí vzdálenou komunikaci pro automatizaci OLE a modelu COM. Hlavní cíl bylo zřejmé, zajistěte, aby výsledkem by být kompatibilní s a modelu DCOM může vyměnit, když jsou k dispozici. Potom pokračovalo implementovat vzdálené automatizace (RA) pro 16bitové a 32bitové verze platformy systému Windows.  

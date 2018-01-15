@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 086552c72e37822920e0afa213c7966befa052f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3a76a950d547effccf0b50fa04799814597bc5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections – konstrukce
 **Parallel sections –** – direktiva nabízí způsob zástupce pro zadání **paralelní** oblast obsahující pouze jeden **části** – direktiva. Sémantika jsou shodné s explicitním zadáním **paralelní** – direktiva bezprostředně následované **části** – direktiva. Syntaxe **parallel sections –** – Direktiva vypadá takto:  

@@ -21,11 +21,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e520fb524cd25709b9d03ae992305a4fac41763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-editor"></a>Editor dialogových oken
 Editor dialogového okna umožňuje vytváření nebo úpravu prostředků dialogových oken. Otevřete dialogové okno editor poklikáním na soubor .rc dialog s v okně zobrazení prostředků (**zobrazení &#124; Zobrazení prostředků**). Zobrazení prostředků není k dispozici ve verzích Express.  
@@ -50,18 +53,18 @@ Editor dialogového okna umožňuje vytváření nebo úpravu prostředků dialo
   
 -   [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)  
   
--   [Přidání obslužných rutin událostí pro ovládací prvky dialogové okno](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+-   [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)  
   
 -   [Testování dialogového okna](../windows/testing-a-dialog-box.md)  
   
--   [Klávesy akcelerátoru pro Editor dialogových oken](../windows/accelerator-keys-for-the-dialog-editor.md)  
+-   [Klávesy akcelerátoru pro editor dialogového okna](../windows/accelerator-keys-for-the-dialog-editor.md)  
   
--   [Řešení potíží s editoru dialogových oken](../windows/troubleshooting-the-dialog-editor.md)  
+-   [Řešení potíží s editorem dialogového okna](../windows/troubleshooting-the-dialog-editor.md)  
   
     > [!TIP]
     >  Při použití editoru dialogového okna lze v mnoha případech po kliknutí pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -71,5 +74,5 @@ Editor dialogového okna umožňuje vytváření nebo úpravu prostředků dialo
  [Ovládací prvky](../mfc/controls-mfc.md)   
  [Třídy ovládacích prvků](../mfc/control-classes.md)   
  [Třídy dialogových oken](../mfc/dialog-box-classes.md)   
- [Ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)
+ [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)
 

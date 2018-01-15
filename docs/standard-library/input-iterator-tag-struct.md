@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 68e43b8295d56d8f0895dc1a41fdd5d4526384ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 267e4109f5a1b0447dd1c7b2b61796a2346694f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inputiteratortag-struct"></a>input_iterator_tag – struktura
 Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje vstupní iterator.  
@@ -45,7 +46,7 @@ Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, 
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

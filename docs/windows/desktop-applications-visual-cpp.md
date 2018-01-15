@@ -13,11 +13,14 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 953bb3c84916920d9913bac9242650e66114cefc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikací klasické pracovní plochy (Visual C++)
 A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úplnou sadu rozhraní API systému Windows a buď běží v okně nebo v systémové konzoly. Aplikací klasické pracovní plochy v jazyce C++ můžete spustit v systému Windows XP do systému Windows 10 (i když je už oficiálně podporované systémem Windows XP a existuje mnoho rozhraní API systému Windows, které byly zavedeny od té doby).   Aplikace se liší od aplikace univerzální platformu Windows (UWP), který můžete spustit na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hub a dalších zařízení. Další informace o plochy vs. Aplikace UWP, najdete v části [zvolte technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -42,7 +45,7 @@ A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úp
 |[Aplikace pracovní plochy Windows](../windows/windows-desktop-applications-cpp.md)|Postup vytvoření aplikací klasické pracovní plochy, které běží v systému windows a konzole.|  
 |[Prostředky pro vytvoření hry s použitím rozhraní DirectX (C++)](../windows/resources-for-creating-a-game-using-directx.md)|Odkazy na obsah pro vytvoření hry v jazyce C++.|  
 |[Návod: Vytvoření a použití statické knihovny](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Postup vytvoření binární soubor LIB.|  
-|[Postupy: použití Windows 10 SDK v aplikaci Windows Desktop](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro nastavení projektu pro sestavení pomocí Windows 10 SDK.|  
+|[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro nastavení projektu pro sestavení pomocí Windows 10 SDK.|  
   
 ## <a name="related-articles"></a>Související články  
   

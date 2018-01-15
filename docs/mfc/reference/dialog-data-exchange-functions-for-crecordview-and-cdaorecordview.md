@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69c70c42a2b4c83933464249a1096339cf1eb98f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 Toto téma obsahuje seznam DDX_Field – funkce, které slouží pro výměnu dat mezi [CRecordset](../../mfc/reference/crecordset-class.md) a [CRecordView](../../mfc/reference/crecordview-class.md) formuláře nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) a [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formuláře.  
@@ -126,7 +127,7 @@ void AFXAPI DDX_FieldCBString(
  `nIDC`  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -169,7 +170,7 @@ void AFXAPI DDX_FieldCBStringExact(
  `nIDC`  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -212,7 +213,7 @@ void AFXAPI DDX_FieldCheck(
  `nIDC`  
  ID prostředku ovládací prvek zaškrtávací políčko, které jsou spojené s vlastností ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
  `pRecordset`  
@@ -293,7 +294,7 @@ void AFXAPI DDX_FieldLBString(
  `nIDC`  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -336,7 +337,7 @@ void AFXAPI DDX_FieldLBStringExact(
  `nIDC`  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -379,7 +380,7 @@ void AFXAPI DDX_FieldRadio(
  `nIDC`  
  ID první ve skupině (se stylem **ws_group –**) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -422,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  *nIDC\**  
  ID první ve skupině (se stylem **ws_group –**) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
  `pRecordset`  
@@ -465,7 +466,7 @@ void AFXAPI DDX_FieldSlider(
  `nIDC`  
  ID prostředku v ovládacím prvku posuvník.  
   
- *Hodnota*  
+ *value*  
  Odkaz na hodnotu výměnu. Tento parametr obsahuje nebo se použije k nastavení ovládacího prvku posuvník aktuální pozici jezdce.  
   
  `pRecordset`  
@@ -609,7 +610,7 @@ void AFXAPI DDX_FieldText(
  `nIDC`  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
- *Hodnota*  
+ *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu. Datový typ hodnoty závisí na kterém přetížené verze `DDX_FieldText` používáte.  
   
  `pRecordset`  

@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b3c5825b32a30bba5572de3333d8870086a67b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56af79669b4240a32f7dc6ac134beae4ac402b2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwstringgt"></a>&lt;CVT/wstring –&gt;
 Záhlaví `<cvt/wstring>` v předchozích verzích sady Visual Studio definované šablony třídy [wstring_convert – třída](../standard-library/wstring-convert-class.md) v oboru názvů stdext::cvt. Záhlaví bude zachována pro účely zpětné kompatibility. Nový kód by měl použít verzi třídu, která je definována v [ \<národní prostředí >](../standard-library/locale.md) v `std` obor názvů  

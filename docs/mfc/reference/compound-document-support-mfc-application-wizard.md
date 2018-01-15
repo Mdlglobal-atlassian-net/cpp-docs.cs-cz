@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 952f27b0c6717d23395453e5159e125370a76804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Podpora složených dokumentů, Průvodce aplikací MFC
 Na této stránce Průvodce aplikací MFC indikovat, na jakou úroveň aplikace nabízí podporu složeného a aktivní dokument. Aplikace musí podporovat document/view – architektura pro podporu složené dokumenty a šablony dokumentů.  
@@ -50,5 +51,5 @@ Na této stránce Průvodce aplikací MFC indikovat, na jakou úroveň aplikace 
 |**Podpora pro složené soubory**|Aplikace typu kontejner dokumentů pomocí formát souboru složené nejsou serializovány. Tato možnost způsobí načítání celý soubor obsahující objekty do paměti. Přírůstkové uložení jednotlivých objektů nejsou k dispozici. Pokud se jeden objekt změněn a následně uložen, se uloží všechny objekty v souboru.|  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
+ [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
 

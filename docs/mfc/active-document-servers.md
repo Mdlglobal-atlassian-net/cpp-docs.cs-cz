@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76e1e4d237e486734c734359f4844e27d80dd2a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-servers"></a>Servery pro aktivní dokumenty
 Aktivní dokument servery, jako je například Word, Excel nebo PowerPoint dokumentům hostitele jinými typy aplikací označují jako aktivní dokumenty. Na rozdíl od OLE vložené objekty (které se zobrazí v rámci dané stránky jiného dokumentu), aktivní dokumenty zadejte úplné rozhraní a dokončení nativní funkce serverové aplikace, která je vytvořila. Uživatelé mohou vytvářet dokumenty pomocí potenciál jejich oblíbených aplikací (pokud jsou aktivní dokument povolené) ještě lze považovat za výsledné projektu jedné entity.  
@@ -39,5 +40,5 @@ Aktivní dokument servery, jako je například Word, Excel nebo PowerPoint dokum
  `COleDocObjectItem` Třída umožňuje kontejner OLE se kontejner. Průvodce aplikací MFC můžete vytvořit kontejner výběrem **kontejner pro aktivní dokument** zaškrtávacího políčka na stránce Průvodce aplikací MFC složené podporu dokumentu. Další informace najdete v tématu [vytvoření aplikace kontejnerů pro aktivní dokument](../mfc/creating-an-active-document-container-application.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Obsahování pro aktivní dokument](../mfc/active-document-containment.md)
+ [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
 

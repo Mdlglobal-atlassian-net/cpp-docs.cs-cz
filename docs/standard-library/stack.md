@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: edce2008e2733e9806dfafc2eb38a15f65651718
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9a3c05e5df8290972c1b94b6576361a9bb3d9c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstackgt"></a>&lt;zásobníku&gt;
 Definuje zásobníku třída šablony a podpůrné dvě šablony.  
@@ -37,21 +38,21 @@ Definuje zásobníku třída šablony a podpůrné dvě šablony.
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/stack-operators.md#op_neq)|Testy, pokud zásobník objekt na levé straně operátoru není stejný jako zásobníku objekt na pravé straně.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testy, pokud zásobník objekt na levé straně operátoru není stejný jako zásobníku objekt na pravé straně.|  
 |[operátor <](../standard-library/stack-operators.md#op_lt)|Testy, pokud zásobník objekt na levé straně operátor je menší než zásobníku objekt na pravé straně.|  
 |[operátor\<=](../standard-library/stack-operators.md#op_lt_eq)|Pokud zásobníku objekt na levé straně operátoru testů je menší než nebo rovno zásobníku objekt na pravé straně.|  
 |[Operator ==](../standard-library/stack-operators.md#op_eq_eq)|Testy, pokud zásobník objekt na levé straně operátoru rovná zásobníku objekt na pravé straně.|  
 |[operátor >](../standard-library/stack-operators.md#op_gt)|Testy, pokud zásobník objekt na levé straně operátoru je větší než zásobníku objekt na pravé straně.|  
-|[Operator > =](../standard-library/stack-operators.md#op_gt_eq)|Testy, pokud je zásobník objekt na levé straně operátoru větší než nebo rovna hodnotě zásobníku objekt na pravé straně.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testy, pokud je zásobník objekt na levé straně operátoru větší než nebo rovna hodnotě zásobníku objekt na pravé straně.|  
   
 ### <a name="classes"></a>Třídy  
   
 |||  
 |-|-|  
-|[Stack – třída](../standard-library/stack-class.md)|Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k prvek naposledy přidaný do některé základní typ kontejneru.|  
+|[stack – třída](../standard-library/stack-class.md)|Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k prvek naposledy přidaný do některé základní typ kontejneru.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

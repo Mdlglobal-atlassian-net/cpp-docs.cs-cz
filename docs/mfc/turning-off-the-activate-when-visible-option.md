@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ecc0257cf087a28c0186adaffb795f3e33253b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25521d75921b377730a7f9afac71f2a60c055216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Vypnutí možnosti Activate When Visible
 Ovládací prvek má dva základní stavy: aktivní a neaktivní. Dříve bylo zvykem, že tyto stavy byly rozlišeny skutečností, zda ovládací prvek má okno. Aktivní ovládací prvek okno měl, neaktivní nikoli. Se zavedením aktivace bez oken není již toto rozlišení univerzální, ale pro mnoho ovládacích prvků je stále platné.  
@@ -34,5 +35,5 @@ Ovládací prvek má dva základní stavy: aktivní a neaktivní. Dříve bylo z
  **OLEMISC_ACTIVATEWHENVISIBLE** příznak automaticky vynecháte Pokud vypnete **Activate When Visible** možnost [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky MFC ActiveX Průvodce ovládacím prvkem při vytváření vlastního ovládacího prvku.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md)
+ [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

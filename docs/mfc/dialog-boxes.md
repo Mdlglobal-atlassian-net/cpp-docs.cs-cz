@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4417fc2d4714a249b04bb0c1d04e5642495835
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes"></a>Dialogová okna
 Aplikace pro Windows se často komunikují s uživateli pomocí dialogových oken. Třída [CDialog](../mfc/reference/cdialog-class.md) poskytuje rozhraní pro správu dialogová okna, dialogové okno editor Visual C++ usnadňuje návrh dialogových oken a vytvoření jejich prostředky šablony dialogového okna a průvodců kódem zjednodušit proces inicializace a ověřování ovládacích prvků v dialogovém okně a shromažďování hodnot zadaných uživatelem.  
@@ -42,7 +43,7 @@ Aplikace pro Windows se často komunikují s uživateli pomocí dialogových oke
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   
--   [Příklad: Zobrazení dialogového okna pomocí příkazu nabídky](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
+-   [Příklad: Zobrazení dialogového okna pomocí příkazu v nabídce](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   
 -   [Komponenty dialogového okna v rozhraní framework](../mfc/dialog-box-components-in-the-framework.md)  
   

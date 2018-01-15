@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2d286bcc9e5119e373af6ae2e02d7e39190dc3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Položky zpětného volání a maska zpětného volání
 Pro každý z jeho položky ovládacího prvku zobrazení seznamu obvykle ukládá na text popisku, index bitové kopie seznamu položky ikony, a sadu bit flags pro stav položky. Jednotlivé položky můžete definovat jako položky zpětného volání, které jsou užitečné, pokud již aplikace ukládá některé z informací pro položku.  

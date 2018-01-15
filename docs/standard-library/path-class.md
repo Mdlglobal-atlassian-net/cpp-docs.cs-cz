@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4221702df42bc82d1a0573f9a8b10252017b282a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="path-class"></a>path – třída
 **Cesta** třída uloží objekt typu řetězec\_typu, s názvem myname sem pro účely budeme vhodné pro použití jako pathname. řetězec\_typ je synonymum pro základní\_řetězec\<value_type >, kde hodnota\_typ je synonymum pro znaky v systému Windows nebo wchar_t pod Posix.  

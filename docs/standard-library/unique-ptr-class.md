@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>unique_ptr – třída
 Ukládá ukazatel na vlastní objekt nebo pole. Objekt nebo pole vlastní žádná jiná `unique_ptr`. Objekt nebo pole zničen při `unique_ptr` zničena.  
@@ -147,7 +148,7 @@ public:
   
 |||  
 |-|-|  
-|[GET](#get)|Vrátí `stored_ptr`.|  
+|[get](#get)|Vrátí `stored_ptr`.|  
 |[get_deleter –](#get_deleter)|Vrátí odkaz na `stored_deleter`.|  
 |[verze](#release)|ukládá `pointer()` v `stored_ptr` a vrátí jeho předchozí obsah.|  
 |[resetování](#reset)|Uvolní aktuálně vlastněný prostředek a přijme nový prostředek.|  

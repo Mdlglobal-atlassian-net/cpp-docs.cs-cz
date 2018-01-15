@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04992f8324196c5fd762ba01a96fff7cc6ba6539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23fbac008c6954830fb016099fdf7ebc45ba685f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosgt"></a>&lt;IOS&gt;
 Definuje několik typů a základní funkce pro operaci iostreams. Tuto hlavičku je obvykle zahrnuté pro můžete podle jiného iostream hlaviček; zřídka zahrnete ji přímo.  
@@ -64,7 +65,7 @@ istr>> noskipws;
 |[defaultfloat –](../standard-library/ios-functions.md#ios_defaultfloat)|Nakonfiguruje příznaky z `ios_base` objekt, který chcete použít výchozí zobrazení formát pro hodnoty typu float.|  
 |[Pevná](../standard-library/ios-functions.md#fixed)|Určuje, že číslo s plovoucí desetinnou čárkou zobrazí notaci decimal.|  
 |[Hex](../standard-library/ios-functions.md#hex)|Určuje celé číslo proměnné, které se zobrazují v základní 16 zápisu.|  
-|[interní](../standard-library/ios-functions.md#internal)|Způsobí, že přihlášení počet zbývajících oprávněné a číslo, které má být zarovnání doprava.|  
+|[internal](../standard-library/ios-functions.md#internal)|Způsobí, že přihlášení počet zbývajících oprávněné a číslo, které má být zarovnání doprava.|  
 |[vlevo](../standard-library/ios-functions.md#left)|Způsobí, že text, který není široká jako šířka výstupu se objeví v vyprázdnění datového proudu s levým okrajem.|  
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) zobrazí jako 1 nebo 0 v datovém proudu.|  
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Vypne označující konvenční základní, ve kterém se zobrazí číslo.|  

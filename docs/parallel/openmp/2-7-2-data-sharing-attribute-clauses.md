@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Klauzule atributů pro sdílení dat
 Několik direktivy přijmout klauzule, které umožňují uživateli řídit sdílení atributy proměnných po dobu trvání oblasti. Sdílení klauzule atributů platí pouze pro proměnné v lexikální rozsah direktiva, na kterém se zobrazí v klauzuli. Ne všechny následující klauzule jsou povoleny na všechny direktivy. Seznam věty, které jsou platné na konkrétní – direktiva jsou popsány s direktivou.  

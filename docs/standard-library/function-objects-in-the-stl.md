@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
-ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objekty funkcí ve standardní knihovně C++
 A *objekt funkce*, nebo *functor*, je žádný typ, který implementuje Operator() –. Tento operátor odkazuje jako *operátor volání* nebo někdy *operátor aplikací*. Standardní knihovna C++ pomocí funkce objektů především jako kritéria pro kontejnery a algoritmy řazení.  
@@ -71,5 +72,5 @@ ForwardIterator remove_if(
  Poslední argument `remove_if` je objekt funkce, který vrací logickou hodnotu ( *predikát*). Pokud je výsledek objektu funkce `true`, pak se odebere element z kontejneru přistupuje iterátory `first` a `last`. Můžete použít libovolnou funkce objektů v deklarována [ \<funkční >](../standard-library/functional.md) záhlaví pro argument `pred` nebo můžete vytvořit vlastní.  
   
 ## <a name="see-also"></a>Viz také  
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

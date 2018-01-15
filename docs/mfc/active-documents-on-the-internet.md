@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>Aktivní dokumenty na Internetu
 Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktivní dokumenty může být vícestránkové a jsou zobrazeny v celého klienta. Proveďte vyjednávání tradiční nabídky a můžete upravit na místě a také v otevřeném okně v serverové aplikace. Místo zobrazení jako malé šrafované ohraničení obdélníku, jsou aktivní dokumenty úplné rámce a aktivní vždy na místě.  
@@ -75,5 +76,5 @@ Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktiv
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)
+ [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a891a03f9b54946060cc41d535c7dfc44fd94e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="texture-class"></a>texture – třída
 Texturou je typu dat na agregační `accelerator_view` v doméně rozsah. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně rozsah. Každá proměnná obsahuje hodnotu odpovídající primitivní typ C++ ( `unsigned int`, `int`, `float`, `double`), skalárního typu ( `norm`, nebo `unorm`), nebo zadejte krátký vektoru.  
@@ -73,11 +74,11 @@ class texture;
 |----------|-----------------|  
 |[copy_to –](#copy_to)|Kopie `texture` objektu do cílového umístění, pomocí tohoto postupu hloubkové kopie.|  
 |[data](#data)|Nezpracovaná data tohoto texture vrátí ukazatel procesoru.|  
-|[GET](#get)|Vrátí hodnotu elementu v zadaném indexu.|  
+|[get](#get)|Vrátí hodnotu elementu v zadaném indexu.|  
 |[get_associated_accelerator_view –](#get_associated_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) tedy upřednostňovaný cíl pro tuto texture zkopírovány do.|  
 |[get_depth_pitch](#get_depth_pitch)|Vrátí počet bajtů mezi každý řez hloubka v 3D pracovní texture na procesoru.|  
 |[get_row_pitch](#get_row_pitch)|Vrátí počet bajtů mezi každý řádek v 2D nebo 3D pracovní texture na procesoru.|  
-|[nastavení](#set)|Nastaví hodnotu elementu v zadaném indexu.|  
+|[set](#set)|Nastaví hodnotu elementu v zadaném indexu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -616,4 +617,4 @@ texture(
  Pořadí v části.  
   
 ## <a name="see-also"></a>Viz také  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

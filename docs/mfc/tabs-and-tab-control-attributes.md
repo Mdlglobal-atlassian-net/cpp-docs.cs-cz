@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd46ddafa76d47be7e237066c034e16010ff7b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty a atributy ovládacího prvku karta
 Máte značnou ovládat vzhled a chování karet, které tvoří ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Každé kartě může mít štítek, ikonu, v položce stavu a s ním spojená hodnotu 32-bit definované aplikací. Pro každé kartě můžete zobrazit ikona, popisek nebo obojí.  

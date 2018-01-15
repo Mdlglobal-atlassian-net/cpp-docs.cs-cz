@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f76c46dbef341639dbaf0f468510b6d4cbe5a1c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3f2215b84600e2691f6b3aeb0407c5c6b96ebd00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Otevře připojení k zdroje dat pomocí **CLSID**, **ProgID**, nebo `CEnumerator` přezdívka nebo vyzývá uživatele se dialogové okno lokátoru.  

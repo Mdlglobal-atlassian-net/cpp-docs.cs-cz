@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5d9fb768c4c1030a43094565aae5f88fdabf4eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbase-class"></a>FtmBase – třída
 Představuje objekt volné zařazování vláken.  
@@ -42,25 +45,25 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Ftmbase::ftmbase – konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicializuje novou instanci třídy FtmBase.|  
+|[FtmBase::FtmBase – konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicializuje novou instanci třídy FtmBase.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Ftmbase::createglobalinterfacetable – metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Vytvoří tabulku globální rozhraní (GIT).|  
-|[Ftmbase::disconnectobject – metoda](../windows/ftmbase-disconnectobject-method.md)|Vynuceně uvolní všechny externí připojení k objektu. Server objektu volání objektu implementace této metody před vypíná.|  
-|[Ftmbase::getmarshalsizemax – metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Získáte horní mez počtu bajtů, které jsou potřebné pro zařazování specifikované rozhraní ukazatele na zadaný objekt.|  
-|[Ftmbase::getunmarshalclass – metoda](../windows/ftmbase-getunmarshalclass-method.md)|Získá CLSID, který COM používá k nalezení DLL obsahující kód pro odpovídající proxy server. COM načte tuto knihovnu DLL k vytvoření instance Neinicializovaný proxy serveru.|  
-|[Ftmbase::marshalinterface – metoda](../windows/ftmbase-marshalinterface-method.md)|Zapíše do datového proudu data potřebná pro inicializaci objektu proxy v některé procesu klienta.|  
-|[Ftmbase::releasemarshaldata – metoda](../windows/ftmbase-releasemarshaldata-method.md)|Zničí zařazené datový paket.|  
-|[Ftmbase::unmarshalinterface – metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicializuje nově vytvořený proxy a vrátí ukazatele rozhraní zda proxy serveru.|  
+|[FtmBase::CreateGlobalInterfaceTable – metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Vytvoří tabulku globální rozhraní (GIT).|  
+|[FtmBase::DisconnectObject – metoda](../windows/ftmbase-disconnectobject-method.md)|Vynuceně uvolní všechny externí připojení k objektu. Server objektu volání objektu implementace této metody před vypíná.|  
+|[FtmBase::GetMarshalSizeMax – metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Získáte horní mez počtu bajtů, které jsou potřebné pro zařazování specifikované rozhraní ukazatele na zadaný objekt.|  
+|[FtmBase::GetUnmarshalClass – metoda](../windows/ftmbase-getunmarshalclass-method.md)|Získá CLSID, který COM používá k nalezení DLL obsahující kód pro odpovídající proxy server. COM načte tuto knihovnu DLL k vytvoření instance Neinicializovaný proxy serveru.|  
+|[FtmBase::MarshalInterface – metoda](../windows/ftmbase-marshalinterface-method.md)|Zapíše do datového proudu data potřebná pro inicializaci objektu proxy v některé procesu klienta.|  
+|[FtmBase::ReleaseMarshalData – metoda](../windows/ftmbase-releasemarshaldata-method.md)|Zničí zařazené datový paket.|  
+|[FtmBase::UnmarshalInterface – metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicializuje nově vytvořený proxy a vrátí ukazatele rozhraní zda proxy serveru.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Ftmbase::marshaller_ – datový člen](../windows/ftmbase-marshaller-data-member.md)|Obsahuje odkaz na volné zařazování vláken.|  
+|[FtmBase::marshaller_ – datový člen](../windows/ftmbase-marshaller-data-member.md)|Obsahuje odkaz na volné zařazování vláken.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `FtmBase`  
@@ -71,4 +74,4 @@ class FtmBase : public Microsoft::WRL::Implements<
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

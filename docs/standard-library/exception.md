@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7624e80138e2c7feb77b9aa385a40a2b5fe0320
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e152b51a5c33bc6e33622af2a08cb40886af67b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltexceptiongt"></a>&lt;Výjimka&gt;
 Definuje několik typů a funkcí, které se týkají zpracování výjimek. Zpracování výjimek se používá v situacích, ve kterých lze systém zotavit z chyby. Poskytuje prostředky pro vrácení vykonávání z funkce do programu. Cílem začlenění zpracování výjimek je zvýšit robustnost programu a poskytnout řádný způsob zotavení z chyby.  
@@ -59,7 +60,7 @@ Definuje několik typů a funkcí, které se týkají zpracování výjimek. Zpr
 |||  
 |-|-|  
 |[bad_exception – třída](../standard-library/bad-exception-class.md)|Třída popisuje výjimku, která může být vyvolána z `unexpected_handler`.|  
-|[Třída Exception](../standard-library/exception-class.md)|Třída slouží jako základní třída pro všechny výjimky vydané určité výrazy a standardní knihovny C++.|  
+|[exception – třída](../standard-library/exception-class.md)|Třída slouží jako základní třída pro všechny výjimky vydané určité výrazy a standardní knihovny C++.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   

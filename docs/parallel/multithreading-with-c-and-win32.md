@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading s použitím jazyka C a prostředí Win32
 Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny se systémem Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me a Windows 98. Měli byste zvážit použití více než jedno vlákno, pokud aplikace potřebuje ke správě více aktivit, jako je vstup souběžných klávesnice a myši. Jedno vlákno může zpracovat vstup z klávesnice, zatímco druhé filtruje aktivity myši. Třetí vlákno můžete aktualizovat obrazovku na základě dat z vláken myši a klávesnice. Jiná vlákna ve stejnou dobu, můžete získat přístup k souborům disku nebo získat data z komunikační port.  
@@ -55,4 +56,4 @@ Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákn
 -   [Lokální úložiště vláken (TLS)](../parallel/thread-local-storage-tls.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora více vláken ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+ [Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

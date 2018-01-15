@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94e1978c5c0188410cf8d6d6bfdfe08d9af620e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Principy závislostí v aplikacích Visual C++
 Chcete-li zjistit, které knihovny jazyka Visual C++ aplikace závisí na, můžete zobrazit vlastnosti projektu. (V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti** otevřete **stránky vlastností** dialogové okno.) Můžete použít také Prohlížeč závislostí (depends.exe), který vám poskytne komplexnější přehled o závislostech v projektu.  

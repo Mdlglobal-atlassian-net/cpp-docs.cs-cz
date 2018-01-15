@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99a4cf3fe356cf888101935aba5bec9a599135f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f4e99ce38bd5ae472d688dc779bdd4ccf9fd4c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-procedure-entry-points"></a>Vstupní bod procedury okna
 K ochraně procedury oken MFC, modul statické propojení s na speciální okno Postup implementace. Propojení se automaticky nastane, když modul je propojené s knihovnou MFC. Tento postup okno používá `AFX_MANAGE_STATE` makro správně nastavit stav efektivní modulu, pak zavolá **AfxWndProc**, která zase deleguje `WindowProc` členské funkce odpovídající `CWnd`-odvozené objekt.  

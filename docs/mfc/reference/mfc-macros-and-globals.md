@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-macros-and-globals"></a>MFC – makra a globální prvky
 Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních částech: (1) MFC – třídy a (2) makra a globální prvky. Pokud funkce nebo proměnná není členem třídy, je globální funkce nebo proměnná.  
@@ -54,7 +55,7 @@ Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních čás
 
 -   [Delegát a rozhraní mapy](delegate-and-interface-maps.md)
 
--   [Moduly a knihoven DLL](extension-dll-macros.md)
+-   [Moduly a knihovny DLL](extension-dll-macros.md)
   
 -   [Informace o aplikaci a Správa](application-information-and-management.md)  
   
@@ -68,9 +69,9 @@ Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních čás
   
 -   [Rutiny ověřování (DDV) dat standardního dialogového okna](standard-dialog-data-validation-routines.md)  
   
--   [Afx – zprávy](afx-messages.md)  
+-   [AFX – zprávy](afx-messages.md)  
   
--   [Styly ovládacího prvku panel nástrojů](toolbar-control-styles.md)  
+-   [Styly ovládacích prvků panelů nástrojů](toolbar-control-styles.md)  
   
 -   [CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 

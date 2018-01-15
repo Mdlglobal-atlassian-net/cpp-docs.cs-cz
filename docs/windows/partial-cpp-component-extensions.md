@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d880834984b74cd460e82d5608f2e03b31a9e6e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial--c-component-extensions"></a>partial (rozšíření komponent C++)
 `partial` – Klíčové slovo umožňuje různé části stejnou třídu ref vytvářet nezávisle a v různých souborů.  

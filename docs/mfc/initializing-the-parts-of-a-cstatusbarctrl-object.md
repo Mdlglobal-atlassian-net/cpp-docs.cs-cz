@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c0171255e470e1ef4b675c9f9c4cd34c90119d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b713a46db13508df5ba80b21e3dfe938261eec65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicializace částí objektu CStatusBarCtrl
 Ve výchozím nastavení stavového řádku zobrazí informace o stavu pomocí samostatných podokna. Tyto podokna (také označované jako částí) může obsahovat textový řetězec, ikonu nebo obojí.  

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25511a531d78e26c752f9694a8f3845d408bdd58
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-data-type-classes"></a>Třídy jednoduchého datového typu
 Následující třídy zapouzdření kreslení souřadnice, znakové řetězce a času a informace o datu, což pohodlný pomocí syntaxe jazyka C++. Tyto objekty se často používají jako parametry pro členské funkce tříd Windows v knihovně tříd. Protože `CPoint`, `CSize`, a `CRect` odpovídají **bodu**, **velikost**, a `RECT` struktury v uvedeném pořadí, ve Windows SDK, můžete použít tyto objekty C++ třídy, kde můžete použít tyto struktury jazyka C. Třídy poskytují užitečné rozhraní prostřednictvím svých členských funkcí. `CStringT`poskytuje velmi flexibilní dynamické znakových řetězců. `CTime`, `COleDateTime`, `CTimeSpan`, a **COleTimeSpan** představují hodnoty data a času. Další informace o těchto tříd naleznete v článku [datum a čas](../atl-mfc-shared/date-and-time.md).  

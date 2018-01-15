@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6507d3b43372f3e68e81ac44f896d7a6e7984a09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Používání parametrů Lambda, objektů funkcí a omezených funkcí
 C++ AMP kód, který chcete spustit na akcelerátor je zadaný jako argument při volání [parallel_for_each –](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metoda. Výraz lambda nebo objekt funkce (functor) můžete zadat jako tento argument. Kromě toho můžete objekt funkce nebo výraz lambda volání funkce C++ AMP omezený. Toto téma používá nepodporovaný algoritmus přidání pole k předvedení lambdas, objektů funkcí a omezených funkcí. Následující příklad ukazuje, že algoritmus bez kódu C++ AMP. Jsou vytvořeny dva 1jednorozměrná pole stejné délky. Odpovídající elementy celé číslo se přidat a uložená v třetí dimenzí 1 pole. C++ AMP se nepoužije.  
@@ -178,5 +179,5 @@ void AddArraysWithFunction() {
  [Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)   
  [Volání funkce](../../cpp/function-call-cpp.md)   
  [Objekty funkcí ve standardní knihovně C++](../../standard-library/function-objects-in-the-stl.md)   
- [omezení (C++ AMP)](../../cpp/restrict-cpp-amp.md)
+ [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
 

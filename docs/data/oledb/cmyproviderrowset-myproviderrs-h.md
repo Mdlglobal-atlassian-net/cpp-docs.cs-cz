@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8a099ed08075877b7ca611e15994c2d68c25137
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 702a86d600a1ff3623ce86c1ad36da9b15876c61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 Průvodce generuje položku pro objektu sady řádků. V takovém případě se nazývá `CMyProviderRowset`. `CMyProviderRowset` Třída dědí z třídy zprostředkovatele OLE DB názvem `CRowsetImpl`, který implementuje všechna rozhraní, které jsou nezbytné pro objektu sady řádků. Následující kód ukazuje řetězec dědičnosti pro `CRowsetImpl`:  
@@ -45,4 +48,4 @@ class CMyRowsetImpl:
  **RowsetInterface** parametr můžete také použít `IRowsetLocate` nebo `IRowsetScroll` rozhraní. `IRowsetLocate` a `IRowsetScroll` rozhraní obě dědí z `IRowset`. Šablony zprostředkovatele technologie OLE DB tedy musí zadat zvláštní zpracování těchto rozhraní. Pokud chcete použít některou z těchto rozhraní, budete muset použít tento parametr.  
   
 ## <a name="see-also"></a>Viz také  
- [Poskytovatel souborů vytvořených průvodcem](../../data/oledb/provider-wizard-generated-files.md)
+ [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

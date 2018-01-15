@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapování obecného textu v souboru Tchar.h
 Pro zjednodušení migrace kódu pro mezinárodní použití [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] poskytuje běhové knihovny [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-konkrétní mapování obecného textu pro mnoho typů dat, rutiny a jiné objekty. Můžete použít tyto mapování, které jsou definovány v souboru Tchar.h zápis obecný kód, který může být sestaven pro jednobajtové, vícebajtové, nebo [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] znakových sad, v závislosti na manifestu konstanta, která je definována pomocí `#define` příkaz. Mapování obecného textu jsou [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozšíření, které nejsou [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] kompatibilní.  
@@ -101,4 +102,4 @@ RetVal = strrev(szString);
   
 ## <a name="see-also"></a>Viz také  
  [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)   
- [Pomocí Tchar –. Datové typy H s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)
+ [Použití datových typů TCHAR.H s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

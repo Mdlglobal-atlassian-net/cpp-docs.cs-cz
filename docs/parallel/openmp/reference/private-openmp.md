@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21193361d10acdbf506e0b9f8e09ba5d7da598d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fe390b0b344fcc149654454294c919f29d9a507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 Určuje, že každé vlákno má mít svou vlastní instanci proměnné.  
@@ -39,13 +40,13 @@ private(var)
 ## <a name="remarks"></a>Poznámky  
  **privátní** platí pro následující direktivy:  
   
--   [pro](../../../parallel/openmp/reference/for-openmp.md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [paralelní](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [jeden](../../../parallel/openmp/reference/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
  Další informace najdete v tématu [2.7.2.1 privátní](../../../parallel/openmp/2-7-2-1-private.md).  
   

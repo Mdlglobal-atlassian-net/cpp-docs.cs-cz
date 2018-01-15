@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e16570c288d47e146053fa42f3c6954bafb09569
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b05e6d37a0550cf157dcd43a22689c9db029b51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
 Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejším vlastnostem svého kontejneru ovládacího prvku.  
@@ -65,5 +66,5 @@ Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejš
  Pokud se změní hodnota vedlejším vlastnosti (prostřednictvím některé akce kontejneru), **OnAmbientPropertyChanged** členské funkce ovládacího prvku. Člen funkci pro zpracování toto oznámení přepište. Parametr pro **OnAmbientPropertyChanged** je odesílání ID ovlivněných vedlejší vlastnost. Může být hodnota parametru toto ID odesílání **DISPID_UNKNOWN**, což naznačuje, že jeden nebo více vedlejším vlastnostem došlo ke změně, ale není k dispozici informace o tom, které situace měla vliv na vlastnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ece4c1b56aeb724c16683a3614d908a7e0caaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d2cd6344f11a9c32ade0fc3241225a8763c18b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-in-mfc"></a>Soubory v prostředí MFC
 Třídy v Microsoft Foundation Class Library (MFC), [cfile –](../mfc/reference/cfile-class.md) zpracovává normální souborových vstupně-výstupních operací. Tato řada článků vysvětluje, jak otevřít a zavřete soubory a také pro čtení a zápisu dat do těchto souborů. Popisuje také operací se soubory stavu. Popis toho, jak používat funkce na základě objektů serializace MFC jako alternativní způsob čtení a zápis dat v souborech, najdete v článku [serializace](../mfc/serialization-in-mfc.md).  

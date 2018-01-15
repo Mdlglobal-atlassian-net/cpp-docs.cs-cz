@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5efc5a12acbad786039b687e5a9e3bb00e62e090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-ole"></a>Přetažení (OLE)
 Funkce přetažení myší OLE je primárně zástupce pro kopírování a vkládání dat. Použijete-li do schránky Kopírovat nebo vložit data, jsou vyžaduje několik kroků. Vyberte data, klikněte na **Vyjmout** nebo **kopie** z **upravit** nabídky, přejděte do cílového souboru, okno nebo aplikace, umístěte kurzor do požadovaného umístění a klikněte na **Vložení** z **upravit** nabídky.  
@@ -41,11 +42,11 @@ Funkce přetažení myší OLE je primárně zástupce pro kopírování a vklá
   
  Další informace o přetažení najdete v tématu:  
   
--   [Přetažení: implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Přetažení: Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Přetažení: implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Přetažení: Implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md)  
+-   [Přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md)  
   
 ## <a name="see-also"></a>Viz také  
  [OLE](../mfc/ole-in-mfc.md)   

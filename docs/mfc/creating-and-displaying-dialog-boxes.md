@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 109c4f2e8272293ccfcb58924380c586f8078536
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d436301a979dbba2bc4a922f8427f355a398f654
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Vytváření a zobrazování dialogových oken
 Vytvoření objektu dialogového okna je dvoufázovou operaci. Nejprve vytvořit objektu dialogového okna a potom vytvořit dialogového okna. Modální a nemodální dialogová okna liší poněkud v procesu slouží k vytvoření a jejich zobrazení. Následující tabulka uvádí, jak modální a nemodální dialogové okno pole jsou obvykle sestavený a zobrazí.  

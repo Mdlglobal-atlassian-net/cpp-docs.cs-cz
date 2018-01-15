@@ -109,11 +109,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f22a8ac8c1d20bb6f972b8674c344db7c8a5ce60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca9848ba0ad3f5be1584e299a8a2d2b69f472425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-class"></a>list – třída
 List – třída standardní knihovna C++ je třída šablony pořadí kontejnerů, které se zachovávají prvky v lineární uspořádání a umožňují efektivní vložení a odstranění v libovolném umístění v sekvenci. Pořadí je uloženo jako obousměrný odkazovaného seznamu elementů, každá obsahuje člena typu *typu*.  
@@ -145,7 +146,7 @@ class list
   
 |||  
 |-|-|  
-|[seznam](#list)|Vytvoří seznam určité velikosti nebo elementy konkrétní hodnotu nebo s konkrétní `allocator` nebo jako kopii některé jiné seznamu.|  
+|[list](#list)|Vytvoří seznam určité velikosti nebo elementy konkrétní hodnotu nebo s konkrétní `allocator` nebo jako kopii některé jiné seznamu.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -192,7 +193,7 @@ class list
 |[push_back –](#push_back)|Přidá prvek na konec seznamu.|  
 |[push_front –](#push_front)|Přidá prvek na začátek seznamu.|  
 |[rbegin –](#rbegin)|Vrátí iterator adresování prvním elementem v invertovaných seznamu.|  
-|[odebrat](#remove)|Vymaže prvků v seznamu, které odpovídají zadané hodnotě.|  
+|[remove](#remove)|Vymaže prvků v seznamu, které odpovídají zadané hodnotě.|  
 |[remove_if –](#remove_if)|Vymaže elementy ze seznamu, pro kterou je splněné zadaným predikátem.|  
 |[rend –](#rend)|Vrátí iterátor, který řeší umístění úspěšné posledním prvkem v invertovaných seznamu.|  
 |[Změna velikosti](#resize)|Určuje novou velikost seznam.|  
@@ -2531,5 +2532,5 @@ int main( )
 ## <a name="see-also"></a>Viz také  
  [\<Seznam >](../standard-library/list.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

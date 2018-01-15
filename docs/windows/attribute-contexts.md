@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fceb15c713eee25c4ae04ef2a095737e587170a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-contexts"></a>Kontexty atributů
 Atributy C++ lze popsat pomocí čtyři základní pole: je možné použít pro cíl (**platí pro**), pokud jsou opakovatelných, nebo ne (**Repeatable**), vyžaduje přítomnost další atributy ( **Atributy požadované**) a nekompatibilitu s další atributy (**neplatné atributy**). Tato pole jsou uvedeny v doprovodné tabulce v tématu referenční každý atribut. Každá z těchto polí je popsána níže.  
@@ -38,4 +41,4 @@ Atributy C++ lze popsat pomocí čtyři základní pole: je možné použít pro
  Toto pole uvádí další atributy, které jsou kompatibilní se zadaným atributem. Neobvyklé pro atribut, aby byly všechny položky v tomto poli.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)
+ [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72326b5ce7aedfd03f93688e7890fdfab9b827f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 00e9ce0a3e310ad9d07f41b0053ed5249a35a339
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control"></a>– ovládací prvek
 Určuje, že je uživatelem definovaný typ ovládacího prvku.  
@@ -68,4 +71,4 @@ class CTest : public ICustom {};
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Class – atributy](../windows/class-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)   

@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9186b7c056321dcb3ef394e44ae93d530e29810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní
 Vlákna uživatelského rozhraní se často používá ke zpracování uživatelského vstupu a reakce na události uživatele nezávisle na vláken provádění dalších částí aplikace. Hlavní vlákno aplikace (součástí vaší `CWinApp`-odvozené třídy) je již vytvořena a spuštěna pro vás. Toto téma popisuje kroky potřebné k vytvoření vlákna další uživatelského rozhraní.  
@@ -69,4 +70,4 @@ Vlákna uživatelského rozhraní se často používá ke zpracování uživatel
 -   [Procesy a vlákna](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

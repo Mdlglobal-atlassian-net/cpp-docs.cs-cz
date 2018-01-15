@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dff3b8a7041c24f5becedb207b1aa9a9193afbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438d75ad3a36c82c4f9389d4c9b65d677603f6c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Převod dat nepodporovaných zprostředkovatelem
 Pokud příjemce požádá o datový typ, který není podporována zprostředkovatelem, šablony zprostředkovatele technologie OLE DB kód `IRowsetImpl::GetData` Msdadc.dll k převedení datového typu.  
@@ -26,4 +29,4 @@ Pokud příjemce požádá o datový typ, který není podporována zprostředko
  Pokud implementujete rozhraní jako `IRowsetChange` který vyžaduje převod dat, můžete zavolat DLL knihovnu Msdaenum.dll k provést převod. Použití `GetData`, definované v Atldb.h jako příklad.  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+ [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0eab26299a40496cbcd8e59a79eb48643fbcdf3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d3c8e4999aa3729d0e7961cb976ccc41801e6c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="negate-struct"></a>negate – struktura
 Předdefinované funkce objekt, který provede operaci aritmetické negace (unární `operator-`) na jeho argumentem.  
@@ -104,7 +105,7 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

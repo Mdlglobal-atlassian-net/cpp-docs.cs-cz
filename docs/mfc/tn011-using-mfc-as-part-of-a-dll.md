@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 312451f40b19375dcef9d4a68b2d1bf3f3ae2562
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d0ac05e314f3f8354ba289695afa672b1e28881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Použití prostředí MFC jako součásti knihovny DLL
 Tato poznámka popisuje regulární knihovny MFC DLL, který vám umožní používat knihovny MFC jako součást Windows dynamická knihovna (DLL). Přitom se předpokládá, že jste obeznámeni s knihovny DLL systému Windows a jak sestavit je. Informace o MFC – rozšiřující knihovny DLL, pomocí kterého můžete vytvořit rozšíření ke knihovně MFC najdete v části [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md).  

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8e97253f74365ef0b3c3a235257c85ceee37b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Vytvoření aplikace knihovny MFC ve stylu Průzkumníka souborů
 Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Průzkumníka souborů. Když spustíte Průzkumníka souborů, například zobrazí aplikace s svislé rozdělovače panelu dělení klientské oblasti. Na levé straně klientské oblasti poskytuje navigaci a procházení funkcí a na pravé straně klientské oblasti zobrazuje podrobnosti týkající se výběru v levém podokně. Když uživatel klikne na položku v levém podokně, aplikace znovu naplní v pravém podokně. V aplikaci MDI, můžete použít příkazy na **zobrazení** chcete změnit úroveň podrobností zobrazí v pravém podokně, v nabídce. (V aplikaci SDI nebo více dokumentů nejvyšší úrovně, můžete změnit podrobnosti, pomocí tlačítka panelu nástrojů.)  
@@ -51,7 +52,7 @@ Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Prů
   
  Další informace naleznete v tématu:  
   
--   [Více typů dokumentů, zobrazení a oken s rámečkem](../../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Více typů dokumentů, zobrazení a oken s rámečkem](../../mfc/multiple-document-types-views-and-frame-windows.md)  
   
 -   [Odvozené třídy zobrazení](../../mfc/derived-view-classes-available-in-mfc.md)  
   
@@ -60,5 +61,5 @@ Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Prů
 ## <a name="see-also"></a>Viz také  
  [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)   
  [Vytváření aplikací MFC webové prohlížeče – styl](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
- [Vytváření aplikací MFC založených na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+ [Vytvoření aplikace MFC založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md)
 

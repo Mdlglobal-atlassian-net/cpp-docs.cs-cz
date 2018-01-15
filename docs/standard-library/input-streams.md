@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e708f1cbb9db3cc546aac172291facfa95acfb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>Vstupní datové proudy
 Objekt vstupního datového proudu je zdroj bajtů. Jsou tři nejdůležitější tříd vstupního datového proudu [IStream on Request](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), a [istringstream –](../standard-library/basic-istringstream-class.md).  
@@ -34,17 +35,17 @@ Objekt vstupního datového proudu je zdroj bajtů. Jsou tři nejdůležitějš�
  Funkce knihovny, například `sscanf_s`, `istringstream` třída podporuje vstup z řetězců v paměti. Chcete-li extrahovat data z pole znaků, který má hodnotu null. ukončovací znak, přidělit a inicializuje řetězec a pak vytvořit objekt třídy `istringstream`.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Vytváření objektů vstupního datového proudu](../standard-library/constructing-input-stream-objects.md)  
+ [Vytváření objektů vstupního streamu](../standard-library/constructing-input-stream-objects.md)  
   
  [Používání operátorů extrakce](../standard-library/using-extraction-operators.md)  
   
  [Testování pro nalezení chyb extrakce](../standard-library/testing-for-extraction-errors.md)  
   
- [Manipulátory vstupního datového proudu](../standard-library/input-stream-manipulators.md)  
+ [Manipulátory vstupního streamu](../standard-library/input-stream-manipulators.md)  
   
- [Členské funkce vstupního datového proudu](../standard-library/input-stream-member-functions.md)  
+ [Členské funkce vstupního streamu](../standard-library/input-stream-member-functions.md)  
   
- [Přetížení >> operátor pro vaše vlastní třídy](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
+ [Přetěžování operátoru >> pro vaše vlastní třídy](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
 ## <a name="see-also"></a>Viz také  
  [iostream – programování](../standard-library/iostream-programming.md)

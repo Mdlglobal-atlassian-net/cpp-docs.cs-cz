@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V tomto návodu vytvoříte agenta, který asynchronně čte data z textového souboru. Aplikace používá algoritmus kontrolního součtu Adler-32 vypočítat kontrolní součet obsah tohoto souboru.  
@@ -32,7 +33,7 @@ Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V
   
 - [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
-- [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)  
+- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
   
 - [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
   
@@ -192,5 +193,5 @@ Adler-32 sum is fefb0d75
  [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)   
  [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)   
- [Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
+ [Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
 

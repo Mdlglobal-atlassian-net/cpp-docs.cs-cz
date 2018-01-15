@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66e45448d25cff013ad4a0d98e8cca403589581b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d07e716e085b7f10220f3ed3db4956ae7b1b3cf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown – metoda
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -43,4 +46,4 @@ IUnknown* CastToUnknown();
   
 ## <a name="see-also"></a>Viz také  
  [Implementshelper – struktura](../windows/implementshelper-structure.md)   
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

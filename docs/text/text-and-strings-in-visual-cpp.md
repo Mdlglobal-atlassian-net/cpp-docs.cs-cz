@@ -35,29 +35,30 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1e302fb7003358a75cb0b3022c4264c1e63518e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 Vývoj aplikací pro mezinárodní trhy důležitým aspektem je odpovídající reprezentace místní znakové sady. Znaková sada ASCII definuje znaky v rozsahu od 0x00 do 0x7F. Existují jiné znakové sady, především Evropské, které definovat znaky v rozsahu od 0x00 do 0x7F stejně jako na znakové sadě ASCII a také rozšířenou znakovou sadu z 0x80 do 0xFF. Proto je dostačující k reprezentaci znaková sada ASCII, jakož i znakové sady mnoha evropských jazyků 8bitové, jedním znaková sada (SBCS). Ale některé neevropské znakových sad, jako je například japonské Kanji, zahrnují mnoho více znaků, než schéma kódování jednobajtové představují a proto vyžaduje, že vícebajtové znakové sady (MBCS) kódování.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Kódování Unicode a MBCS](../text/unicode-and-mbcs.md)  
+ [Unicode a MBCS](../text/unicode-and-mbcs.md)  
  Popisuje podporu Visual C++ pro kódování Unicode a MBCS programování.  
   
- [Podpora kódování Unicode](../text/support-for-unicode.md)  
+ [Podpora pro Unicode](../text/support-for-unicode.md)  
  Popisuje kódování Unicode, specifikace pro podporu všech znakových sad, včetně znakových sad, které nelze vyjádřit v byl jediný bajt.  
   
  [Podpora vícebajtových znakových sad (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
  Popisuje MBCS, pro podporu znakových sad, například japonštiny a čínština, který nelze v jednom bajtu alternativu ke kódování Unicode.  
   
- [Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
+ [Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
  Mapování obecného textu specifické pro společnost Microsoft poskytuje pro mnoho typů dat, rutiny a jiné objekty.  
   
- [Postupy: převod mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)  
+ [Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)  
  Ukazuje, jak převést různými typy řetězců Visual C++ do jiných řetězců.  
   
 ## <a name="related-sections"></a>Související oddíly  

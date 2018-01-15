@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3de4444aaeb55ab30ec6ce7e0ebd187c8468f673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64775ad9f44c55529107b50d0695e95e2b9c3a2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Přepisovatelné členské funkce CWinApp
 [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik klíče přepisovatelné členské funkce (`CWinApp` nahradí tyto členy z třídy [CWinThread](../mfc/reference/cwinthread-class.md), ze kterého `CWinApp` odvozuje):  
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/24/2017
  Jediným `CWinApp` – členská funkce, které je nutné přepsat je `InitInstance`.  
   
 ## <a name="see-also"></a>Viz také  
- [CWinApp – Třída aplikace](../mfc/cwinapp-the-application-class.md)
+ [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

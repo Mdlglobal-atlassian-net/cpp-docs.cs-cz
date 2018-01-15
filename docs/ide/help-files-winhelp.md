@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5036aa329c0b4004bd7ada724c62e1a1669f050
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="help-files-winhelp"></a>Soubory nápovědy (WinHelp)
 Následující soubory jsou vytvořeny po přidání WinHelp typu nápovědy k aplikaci tak, že vyberete **Kontextová nápověda** zaškrtávací políčko a potom vyberete **WinHelp formátu** v [Upřesňující funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  
@@ -37,7 +38,7 @@ Následující soubory jsou vytvořeny po přidání WinHelp typu nápovědy k a
 |Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|  
 |---------------|------------------------|--------------------------------|-----------------|  
 |*Projname*HPJ|*Projname*\hlp|Zdrojové soubory|Soubor projektu používá kompilátoru nápovědu k vytvoření programu nebo soubor nápovědy ovládacího prvku.|  
-|*Projname*.rtf|*Projname*\hlp|Project|Obsahuje informace o úpravách souboru HPJ a témata šablony, které můžete upravit.|  
+|*Projname*.rtf|*Projname*\hlp|Projekt|Obsahuje informace o úpravách souboru HPJ a témata šablony, které můžete upravit.|  
 |Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  
 |Bullet.bmp|*Projname*|Zdrojové soubory|Používá standardní témata nápovědy k představují seznamy s odrážkami.|  
   

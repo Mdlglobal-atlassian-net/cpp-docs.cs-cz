@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75a8e720fa1a3add6dc8017df8b970dfa746f439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt –&gt;
 Definuje několik tříd šablon, které popisují objekty na základě šablony třídy [codecvt –](../standard-library/codecvt-class.md). Tyto objekty může sloužit jako [omezující vlastnosti národního prostředí](../standard-library/locale-class.md#facet_class) , řídit převody mezi pořadí hodnot typu `Elem` a pořadí hodnot typu `char`.  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bdbd65d74b45ed1d7bfc69c24c214383e0567a31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9784afedd20d8e3492b056179b9c60601a065a11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Vnořené direktivy for
 Na následující příklad `for` vnořování direktiv ([2.9 části](../../parallel/openmp/2-9-directive-nesting.md) na stránce 33) není kompatibilní s protože vnitřní a vnější `for` direktivy vytvořit vazbu na různých oblastech paralelní:  

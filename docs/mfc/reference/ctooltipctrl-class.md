@@ -83,11 +83,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b55d466e62ed306e41877b855c06b9fe8bc8577d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f67a9ccb25216c6f7546d9d906f91cfe5102bc4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
 Zapouzdřuje funkce ovládacího prvku"nástroj tip," malé místní okno, které zobrazuje jeden řádek textu popisující účel nástroj v aplikaci.  
@@ -833,4 +834,4 @@ void UpdateTipText(
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Ctoolbar – třída](../../mfc/reference/ctoolbar-class.md)
+ [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)

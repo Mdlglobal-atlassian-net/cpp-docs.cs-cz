@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;systém souborů&gt;
 Zahrnout záhlaví &lt;filesystem > pro přístup k třídy a funkce, které pracují a načíst informace o cesty, souborů a adresářů.  
@@ -105,7 +106,7 @@ using namespace std::experimental::filesystem::v1;
 |[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen `directory_iterator` nebo `recursive_directory_iterator` a obsahuje cestu.|  
 |[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterator, který pořadí prostřednictvím názvy souborů v adresáři systému souborů.|  
 |[filesystem_error – třída](../standard-library/filesystem-error-class.md)|Základní třída pro výjimky, které jsou vyvolány nahlásit nízké úrovně systému přetečení.|  
-|[Path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu šablony `String` , je vhodné použít jako název souboru.|  
+|[path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu šablony `String` , je vhodné použít jako název souboru.|  
 |[recursive_directory_iterator – třída](../standard-library/recursive-directory-iterator-class.md)|Popisuje vstupní iterator, který pořadí prostřednictvím názvy souborů v adresáři systému souborů. Iteraci můžete také sestup do podadresářů.|  
 |[file_status – třída](../standard-library/file-status-class.md)|Zabalí `file_type`.|  
   

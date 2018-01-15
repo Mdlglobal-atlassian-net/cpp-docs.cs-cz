@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc303b90f3b484d42f1221f7f2eb72daa3719f7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange – třída
 Podporuje pole záznamu (exchange – RFX) a rutiny exchange (Bulk RFX) pole záznamu hromadné používá databázové třídy.  

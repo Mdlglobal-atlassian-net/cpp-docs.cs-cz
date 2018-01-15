@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be54f9b0d82b2c860c12dfcdeeb2c44c9c67547c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
 Když spustíte program v režimu ladění, můžete pozastavit program, který chcete zkontrolovat stav proměnné a objekty zarážky.  
@@ -69,4 +70,4 @@ Když spustíte program v režimu ladění, můžete pozastavit program, který 
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Sestavení C/C++ programů](../build/building-c-cpp-programs.md)
+ [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

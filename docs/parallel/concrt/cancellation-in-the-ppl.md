@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 Tento dokument popisuje roli zrušení v paralelní vzory knihovny (PPL), jak zrušit paralelní práce a jak určit, kdy je zrušena paralelní práce.  
@@ -86,7 +87,7 @@ Tento dokument popisuje roli zrušení v paralelní vzory knihovny (PPL), jak zr
  Další příklady, které zrušení paralelních úloh najdete v tématu [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), a [postupy: použití Zpracování přerušení paralelní smyčky výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a>Použití Token zrušení pro zrušení paralelní práce  
- `task`, `task_group`, A `structured_task_group` třídy podporují zrušení prostřednictvím zrušení tokenů. Definuje knihovně PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) a [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třídy pro tento účel. Použijete-li zrušit pracovní token zrušení, modul runtime nespustí nové práci, která si předplatí tento token. Práce, která je již aktivní můžete použít [is_canceled –] ((.. /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) – členská funkce ke sledování token zrušení a zastavit, když je to možné.  
+ `task`, `task_group`, A `structured_task_group` třídy podporují zrušení prostřednictvím zrušení tokenů. Definuje knihovně PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) a [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) třídy pro tento účel. Použijete-li zrušit pracovní token zrušení, modul runtime nespustí nové práci, která si předplatí tento token. Můžete použít pracovní, která je již aktivní [is_canceled –](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) – členská funkce ke sledování token zrušení a zastavit, když je to možné.  
   
 
  Chcete-li zahájit zrušení, volejte [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metoda. Můžete reagovat na zrušení těmito způsoby:  
@@ -263,15 +264,15 @@ Caught 50
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Postupy: použití zrušení přerušení paralelní smyčky](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Ukazuje, jak použít k implementaci paralelního vyhledávacího algoritmu zrušení.|  
-|[Postupy: použití výjimek zpracování přerušení paralelní smyčky](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Ukazuje, jak používat `task_group` třída pro psaní vyhledávacího algoritmu pro základní stromové struktury.|  
+|[Postupy: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Ukazuje, jak použít k implementaci paralelního vyhledávacího algoritmu zrušení.|  
+|[Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Ukazuje, jak používat `task_group` třída pro psaní vyhledávacího algoritmu pro základní stromové struktury.|  
 |[Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány skupiny úloh, prosté úlohy a asynchronních agentů a jak reagovat na výjimky ve vašich aplikacích.|  
 |[Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Popisuje, jak úlohy vztahují k skupin úloh a použití strukturovaných a nestrukturovaných úloh ve svých aplikacích.|  
 |[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)|Popisuje paralelní algoritmy, které souběžně provádět práci na kolekce dat|  
-|[Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Poskytuje přehled Parallel Library vzory.|  
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Poskytuje přehled Parallel Library vzory.|  
   
 ## <a name="reference"></a>Odkaz  
- [Task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  
+ [task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)  
   
  [cancellation_token_source – třída](../../parallel/concrt/reference/cancellation-token-source-class.md)  
   

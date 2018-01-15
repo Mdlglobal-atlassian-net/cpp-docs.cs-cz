@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementy typu `Elem`, jejichž Určuje vlastnosti znak v třídě `Tr`.  
@@ -99,9 +100,9 @@ This is the contents of basic_ifstream_class.txt.
   
 |||  
 |-|-|  
-|[Zavřete](#close)|Zavře soubor.|  
+|[close](#close)|Zavře soubor.|  
 |[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
-|[Otevřete](#open)|Otevře soubor.|  
+|[open](#open)|Otevře soubor.|  
 |[rdbuf –](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
 |[swap](#swap)|Obsah této výměny `basic_ifstream` pro obsah ze zadaných `basic_ifstream`.|  
   

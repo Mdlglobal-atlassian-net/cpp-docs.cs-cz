@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e05b4acf06f17813d45b4888a1342b31a424648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07f59d65b5231e7e102dcf154ef2bc64ed8cbf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="divides-struct"></a>divides – struktura
 Předdefinované funkce objekt, který provede operaci dělení ( `operator/`) na její argumenty.  
@@ -121,7 +122,7 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

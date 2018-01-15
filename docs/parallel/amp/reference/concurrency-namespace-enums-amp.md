@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 809ea614924444b4f753153f821118cee6d29e6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8979ab026d5bf6aef9d0dd8677bf2ec47a8c6142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Výčty obor názvů souběžnosti (AMP)
 |||  
@@ -57,4 +58,4 @@ enum queuing_mode;
 |`queuing_mode_automatic`|Řízení front režim, který určuje, že příkazy zařadí do fronty ve frontě příkaz, který odpovídá [accelerator_view](accelerator-view-class.md) objektu. Příkazy se odesílají do zařízení při [accelerator_view::Flush –](accelerator-view-class.md#flush) je volána.|   
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d09ba7fff2426f58f72b26a2c7e7681cecde8b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringreference-class"></a>HStringReference – třída
 Představuje HSTRING, který je vytvořený z existujícího řetězce.  
@@ -38,22 +41,22 @@ class HStringReference;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Hstringreference::hstringreference – konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicializuje novou instanci třídy HStringReference.|  
+|[HStringReference::HStringReference – konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicializuje novou instanci třídy HStringReference.|  
   
 ### <a name="members"></a>Členové  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[Hstringreference::CopyTo – metoda](../windows/hstringreference-copyto-method.md)|Kopie aktuální HStringReference objektu na objekt HSTRING.|  
-|[Hstringreference::Get – metoda](../windows/hstringreference-get-method.md)|Načte hodnotu základní HSTRING popisovač.|  
+|[HStringReference::CopyTo – metoda](../windows/hstringreference-copyto-method.md)|Kopie aktuální HStringReference objektu na objekt HSTRING.|  
+|[HStringReference::Get – metoda](../windows/hstringreference-get-method.md)|Načte hodnotu základní HSTRING popisovač.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[HStringReference::Operator = – operátor](../windows/hstringreference-operator-assign-operator.md)|Hodnota jiného objektu HStringReference přesune na aktuální objekt HStringReference.|  
-|[HStringReference::Operator == – operátor](../windows/hstringreference-operator-equality-operator.md)|Určuje, zda dva parametry jsou stejné.|  
-|[HStringReference::Operator! = – operátor](../windows/hstringreference-operator-inequality-operator.md)|Určuje, zda dva parametry nejsou stejné.|  
+|[HStringReference::Operator= – operátor](../windows/hstringreference-operator-assign-operator.md)|Hodnota jiného objektu HStringReference přesune na aktuální objekt HStringReference.|  
+|[HStringReference::Operator== – operátor](../windows/hstringreference-operator-equality-operator.md)|Určuje, zda dva parametry jsou stejné.|  
+|[HStringReference::Operator!= – operátor](../windows/hstringreference-operator-inequality-operator.md)|Určuje, zda dva parametry nejsou stejné.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HStringReference`  
@@ -64,4 +67,4 @@ class HStringReference;
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

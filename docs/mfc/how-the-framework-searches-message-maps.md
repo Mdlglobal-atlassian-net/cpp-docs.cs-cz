@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622fb25c957749b9fbd2f4fee51ffa131cfef7f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf9bea3e2a0b79e8e38fbdb61c851f5a1ab72f01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Jak framework prohledává mapy zpráv
 Framework prohledává mapy zpráv tabulky pro shoduje s příchozí zprávy. Jakmile napíšete položku mapy zpráv pro každou zprávu, že má třída pro zpracování a zápis odpovídající obslužné rutiny, volá rámec váš obslužné rutiny automaticky. Následující témata vysvětlují, vyhledávání map zpráv.  

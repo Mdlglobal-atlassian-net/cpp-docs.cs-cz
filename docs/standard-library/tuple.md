@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df03116e230a9cba7721a37701e9b67ac8e8a518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;řazené kolekce členů&gt;
 Definuje šablonu `tuple` jejichž instance uložení objektů různých typů.  
@@ -43,17 +44,17 @@ Definuje šablonu `tuple` jejichž instance uložení objektů různých typů.
 |||  
 |-|-|  
 |[Operator ==](../standard-library/tuple-operators.md#op_eq_eq)|Porovnání `tuple` objekty stejné|  
-|[Operator! =](../standard-library/tuple-operators.md#op_neq)|Porovnání `tuple` objekty, není rovno|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Porovnání `tuple` objekty, není rovno|  
 |[operátor <](../standard-library/tuple-operators.md#op_lt)|Porovnání `tuple` objekty, menší než|  
 |[Operator < =](../standard-library/tuple-operators.md#op_lt_eq)|Porovnání `tuple` objekty, menší nebo rovno|  
 |[operátor >](../standard-library/tuple-operators.md#op_gt)|Porovnání `tuple` objekty, které jsou větší než|  
-|[Operator > =](../standard-library/tuple-operators.md#op_gt_eq)|Porovnání `tuple` objekty, větší než nebo rovno|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Porovnání `tuple` objekty, větší než nebo rovno|  
   
 ### <a name="functions"></a>Funkce  
   
 |||  
 |-|-|  
-|[GET](../standard-library/tuple-functions.md#get)|Získá element z `tuple` objektu.|  
+|[get](../standard-library/tuple-functions.md#get)|Získá element z `tuple` objektu.|  
 |[make_tuple –](../standard-library/tuple-functions.md#make_tuple)|Díky `tuple` z hodnot elementu.|  
 |[Tie –](../standard-library/tuple-functions.md#tie)|Díky `tuple` z elementu odkazy.|  
   

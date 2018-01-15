@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28be63dffff7d89b4967363670263f78b98d398a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-member-variable-wizard"></a>Průvodce přidáním členské proměnné
 Tento průvodce přidá deklaraci členské proměnné soubor hlaviček a v závislosti na možnosti, můžete přidat kód do souboru. Po přidání členské proměnné pomocí průvodce, můžete upravit kód ve vývojovém prostředí.  
@@ -27,11 +28,11 @@ Tento průvodce přidá deklaraci členské proměnné soubor hlaviček a v záv
  **Přístup**  
  Nastaví přístupu k členské proměnné. Modifikátory přístupu jsou klíčová slova, která určující přístup ostatní třídy mají k členské proměnné. V tématu [řízení přístup ke členu](../cpp/member-access-control-cpp.md) pro další informace o přístupu. Úroveň proměnné přístupu členů je nastavena na **veřejné** ve výchozím nastavení.  
   
--   [veřejné](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [chráněný](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [privátní](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  **Typ proměnné**  
  Nastaví návratový typ pro proměnnou člen, který chcete přidat.  
@@ -42,11 +43,11 @@ Tento průvodce přidá deklaraci členské proměnné soubor hlaviček a v záv
   
     |||  
     |-|-|  
-    |`char`|**krátký**|  
-    |**Double**|`unsigned char`|  
-    |**plovoucí desetinná čárka**|`unsigned int`|  
+    |`char`|**short**|  
+    |**double**|`unsigned char`|  
+    |**float**|`unsigned int`|  
     |`int`|`unsigned long`|  
-    |**dlouhá**||  
+    |**long**||  
   
 -   Pokud přidáváte členské proměnné pro ovládací prvek dialogového okna, je toto políčko vyplněn typ objektu pro ovládací prvek nebo hodnota vrácena. Pokud vyberete **řízení**, pak **typ proměnné** určuje základní třídy, vyberte v ovládacího prvku **ID ovládacího prvku** pole. Pokud ovládací prvek dialogovém okně pole může obsahovat hodnotu, a pokud vyberete **hodnotu**, pak **typ proměnné** Určuje hodnotu, která může obsahovat řízení příslušného typu. V tématu [ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md) Další informace.  
   

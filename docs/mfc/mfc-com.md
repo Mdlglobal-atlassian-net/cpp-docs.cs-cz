@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 652e299ad7dc01f070e3fe4ed9738fc9ed47a493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-com"></a>MFC COM
 Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablony Library (ATL) slouží pro programování COM. Témata v této části popisuje podporu pro knihovny MFC pro COM.  
@@ -38,9 +39,9 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
   
 -   ActiveX – ovládací prvky jsou interaktivní objekty, které mohou být používány kontejnery, jako jsou webu. Další informace pro ovládací prvky ActiveX najdete v tématu:  
   
-    -   [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)  
+    -   [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)  
   
-    -   [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md)  
+    -   [Ovládací prvky ActiveX na internetu](../mfc/activex-controls-on-the-internet.md)  
   
     -   [Přehled: Internet](../mfc/mfc-internet-programming-basics.md)  
   
@@ -61,7 +62,7 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
  Navíc najdete v článku znalostní báze Knowledge Base Q248019: postupy: zabránit Server zaneprázdněn dialogové okno pole z zobrazování během náročná COM operace.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Obsahování pro aktivní dokument](../mfc/active-document-containment.md)  
+ [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)  
   
  [Automatizace](../mfc/automation.md)  
   
@@ -69,7 +70,7 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
   
  [Body připojení](../mfc/connection-points.md)  
   
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)  
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../mfc/mfc-concepts.md)

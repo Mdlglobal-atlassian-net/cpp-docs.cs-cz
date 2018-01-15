@@ -59,13 +59,14 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4de72103a06230c88025e7df8f4f862b9a25ca53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltatomicgt"></a>&lt;Atomic&gt;
+# <a name="ltatomicgt"></a>&lt;atomic&gt;
 Definuje třídy a třídy šablony sloužící k vytvoření typy, které podporují atomické operací.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -161,7 +162,7 @@ Definuje třídy a třídy šablony sloužící k vytvoření typy, které podpo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Atomic – struktura](../standard-library/atomic-structure.md)|Popisuje objekt, který provádí atomické operací na uložené hodnoty.|  
+|[atomic – struktura](../standard-library/atomic-structure.md)|Popisuje objekt, který provádí atomické operací na uložené hodnoty.|  
 |[atomic_flag – struktura](../standard-library/atomic-flag-structure.md)|Popisuje, objektu, která atomicky nastaví a vymaže `bool` příznak.|  
   
 ## <a name="enums"></a>Výčty  
@@ -207,7 +208,7 @@ Definuje třídy a třídy šablony sloužící k vytvoření typy, které podpo
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

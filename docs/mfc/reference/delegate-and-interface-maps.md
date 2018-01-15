@@ -17,11 +17,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30586116fff517818822f484b1285a59fd2a98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 |||  
 |-|-|  
@@ -53,7 +54,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
  **Záhlaví:** msclr\event.h  
    
 ### <a name="see-also"></a>Viz také  
- [Postupy: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP –
 Zahájí definici připojený mapy při použití v souboru implementace.  
@@ -99,7 +100,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
  **Záhlaví:** afxwinforms.h (definovanou v atlmfc\lib\mfcmifc80.dll sestavení)  
    
 ### <a name="see-also"></a>Viz také  
- [Postupy: Přidání příkaz prvku směrování do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+ [Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>Commanduihandler –
 Zaregistruje zpětné volání metody se zprávou příkazu update uživatelské rozhraní.  
@@ -125,7 +126,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
    
 ### <a name="see-also"></a>Viz také  
  [Postupy: Přidání příkaz prvku směrování do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [Commandhandler –](#commandhandler)
+ [CommandHandler](#commandhandler)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP –
 Ukončí mapu delegáta.  
@@ -143,7 +144,7 @@ END_DELEGATE_MAP();
    
 ### <a name="see-also"></a>Viz také  
 
- [Postupy: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
  
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP –

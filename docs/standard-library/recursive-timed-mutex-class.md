@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 0a47e7794dd38169b99711bbc1898083a1c8c149
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ed5930eca492d6793ab08c39b6af8b45a9124c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex – třída
 Představuje *vypršel časový limit typu mutex*. Objekty tohoto typu se používají k vynucení vzájemné vyloučení pomocí časově omezené blokování v rámci programu. Na rozdíl od objekty typu [timed_mutex](../standard-library/timed-mutex-class.md), účinek volání uzamčení metod pro `recursive_timed_mutex` objektů je dobře definovaný.  
@@ -57,7 +58,7 @@ class recursive_timed_mutex;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zámek](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.|  
+|[lock](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.|  
 |[try_lock –](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|  
 |[try_lock_for –](#try_lock_for)|Pokusí se získat vlastnictví `mutex` zadaný časový interval.|  
 |[try_lock_until](#try_lock_until)|Pokusí se získat vlastnictví `mutex` až po zadanou dobu.|  

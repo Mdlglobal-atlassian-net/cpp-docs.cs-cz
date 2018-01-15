@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0169cf171e519a4fd620cacd7e684c400f94929d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoříte okno, které obsahuje dvě podokna. V levém podokně bude obsahovat [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazuje v hierarchické zobrazení plochy. V pravém podokně bude obsahovat [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) který ukazuje soubory ve složce, který je vybraný v levém podokně.  

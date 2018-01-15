@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae3c6586153403e3c82078d4f7559ae89767f40a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli řízení Změna vzhledu textu změnou vlastnosti písma. Vlastnosti písma jsou implementovány jako objekty písma a může mít jednu ze dvou typů: uložených nebo vlastní. Uložené vlastnosti písma jsou vlastnosti preimplemented písma, které můžete přidat pomocí Průvodce přidáním vlastnosti. Vlastní vlastnosti písma nejsou preimplemented a vývojář ovládacího prvku určuje tato vlastnost chování a využití.  
@@ -236,5 +237,5 @@ Implementace více rozhraní objektů písma
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
  [Ovládací prvky MFC ActiveX: Použití obrázků v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
- [Ovládací prvky MFC ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+ [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 

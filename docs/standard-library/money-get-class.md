@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e5da0114c1d652e8d45d0ea157df24562da33cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c823f6ddc688a697d82835995b2fda86a2feb44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyget-class"></a>money_get – třída
 Šablony třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` peněžní hodnoty.  
@@ -72,7 +73,7 @@ class money_get : public locale::facet;
 |||  
 |-|-|  
 |[do_get –](#do_get)|Virtuální funkce volaná k extrakci číselné hodnoty ze sekvence znaků, která představuje peněžní hodnotu.|  
-|[GET](#get)|Extrahuje číselnou hodnotu ze sekvence znaků, která představuje peněžní hodnotu.|  
+|[get](#get)|Extrahuje číselnou hodnotu ze sekvence znaků, která představuje peněžní hodnotu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  

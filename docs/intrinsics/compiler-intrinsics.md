@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53d6986d569bbf928282dce9e9e1cba0601bc4ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffbe20fb6c2b35cef46f975e99191bf96fdc6b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics"></a>Vnitřní funkce kompilátoru
 Většina funkcí jsou obsaženy v knihovnách, ale některé funkce, které jsou integrované v (to znamená, vnitřní) pro kompilátor. Tyto jsou označovány jako vnitřní funkce nebo vnitřní funkce.  
@@ -48,12 +49,12 @@ Většina funkcí jsou obsaženy v knihovnách, ale některé funkce, které jso
   
 -   [x64 (amd64) – seznam vnitřních objektů](../intrinsics/x64-amd64-intrinsics-list.md)  
   
--   [Vnitřní funkce dostupné na všech architektury](../intrinsics/intrinsics-available-on-all-architectures.md)  
+-   [Vnitřní objekty dostupné ve všech architekturách](../intrinsics/intrinsics-available-on-all-architectures.md)  
   
--   [Abecední seznam vnitřní funkce](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
+-   [Abecední seznam vnitřních funkcí](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)   
  [Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   
- [Referenční dokumentace běhové knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md)
+ [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8100119dba1094ced9358e5ff0102d831a713b2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-maps"></a>Mapy událostí
 Vždy, když ovládacího prvku, které chcete upozornit jeho kontejner, který (například stisknutí klávesy, klikněte na tlačítko myši nebo ke změně stavu ovládacího prvku) některá z akcí (určené vývojář ovládacího prvku) došlo k volání funkce spouštění událostí. Tato funkce upozorní kontejneru ovládacího prvku, který některé důležité akce došlo k chybě ve ohlásí související události.  
@@ -131,10 +132,10 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
   
 |Symbol|Typ parametru|  
 |------------|--------------------|  
-|**VTS_I2**|**krátký**|  
-|**VTS_I4**|**dlouhá**|  
-|**VTS_R4**|**plovoucí desetinná čárka**|  
-|**VTS_R8**|**Double**|  
+|**VTS_I2**|**short**|  
+|**VTS_I4**|**long**|  
+|**VTS_R4**|**float**|  
+|**VTS_R8**|**double**|  
 |**VTS_COLOR –**|**OLE_COLOR**|  
 |**VTS_CY**|**MĚNA.**|  
 |**VTS_DATE**|**DATUM**|  

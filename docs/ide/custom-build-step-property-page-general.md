@@ -23,14 +23,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10fa52dbf477f970cee0695aba13ec2eb5cfd90c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-build-step-property-page-general"></a>Stránka vlastností vlastního kroku sestavení: Obecné
 Pro každou kombinaci konfigurace projektu a cílové platformy v projektu můžete zadat vlastní krok, který se má provést při sestavení projektu.  
+
+Linux verzi této stránce, naleznete v části [vlastní sestavení krok vlastnosti (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **Příkazový řádek**  

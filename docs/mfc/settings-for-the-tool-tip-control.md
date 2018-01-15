@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c7e88956ab7c7fe1c03d10a8519aedad4767e48e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 406e35b6ab694ca972d4cd6add0dcca7586e5005
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Nastavení pro ovládací prvek popis tlačítka
 Můžete nastavit ovládacím prvkem popis tlačítka ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) Chcete-li být aktivní nebo neaktivní. Když nastavíte ji jako aktivní, ovládacím prvkem popis tlačítka se zobrazí, pokud se ukazatel na nástroj. Když nastavíte ho do neaktivního stavu, ovládacím prvkem popis tlačítka nezobrazí, i když na nástroj se nachází kurzor. Volání [aktivovat](../mfc/reference/ctooltipctrl-class.md#activate) aktivovat nebo deaktivovat prvkem popis tlačítka.  

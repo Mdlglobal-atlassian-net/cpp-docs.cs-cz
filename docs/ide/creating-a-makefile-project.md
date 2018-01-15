@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834475840fbe20a0d6938c563f3541c294e09bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e86bedbf83cd417cfc41317e5887304cda7ee76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-makefile-project"></a>Vytvoření projektu souboru pravidel
 Máte-li projekt, který jste vytvořili z příkazového řádku se souborem pravidel, vývojové prostředí Visual Studio jej nerozpozná. K otevření a sestavení, váš projekt pomocí [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional nebo Visual Studio Express pro Windows Desktop, nejprve vytvořit prázdný projekt výběrem šablony projektu souboru pravidel. Tento projekt potom můžete použít k sestavení projektu z vývojového prostředí Visual Studio.  

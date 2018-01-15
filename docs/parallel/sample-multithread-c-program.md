@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-multithread-c-program"></a>Ukázkový vícevláknový program v jazyce C
 Bounce.c je ukázka s více vlákny programu, který vytvoří nový vláken pokaždé, když písmeno **a** nebo **A** je zadán. Každé vlákno nedoručitelných zpráv radostí řez jiné barvy po obrazovce. Můžete vytvořit až 32 vláken. Dojde k ukončení programu normální při `q` nebo **Q** je zadán. Informace o kompilování a propojování Bounce.c najdete v tématu [kompilace a propojování vícevláknových programů](../parallel/compiling-and-linking-multithread-programs.md).  
@@ -219,4 +220,4 @@ q
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

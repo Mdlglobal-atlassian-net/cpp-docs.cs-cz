@@ -36,11 +36,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0378e35d182409cd4077b3f7c6fc270d116f18c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view – třída
 Reprezentuje N-trojrozměrné zobrazení přes data ukládaná v jiném kontejneru.  
@@ -89,8 +90,8 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_source_accelerator_view](#get_source_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází.|  
 |[aktualizace](#refresh)|Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.|  
 |[reinterpret_as –](#reinterpret_as)|Vrací jednorozměrné pole, která obsahuje všechny elementy ve `array_view` objektu.|  
-|[část](#section)|Vrátí dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
-|[Synchronizovat](#synchronize)|Synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
+|[section](#section)|Vrátí dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
+|[synchronize](#synchronize)|Synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
 |[synchronize_async](#synchronize_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
 |[synchronize_to](#synchronize_to)|Synchronizuje všechny změny provedené `array_view` objekt, který má zadaný [accelerator_view](accelerator-view-class.md).|  
 |[synchronize_to_async](#synchronize_to_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objekt, který má zadaný [accelerator_view](accelerator-view-class.md).|  
@@ -825,4 +826,4 @@ array_view<const value_type,_New_rank> view_as(
  `array_view` Objekt, který je vytvořený.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>texture_view – třída
 Poskytuje přístup pro čtení a zápis do texturou. `texture_view`můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  
@@ -81,9 +82,9 @@ class texture_view<const value_type, _Rank>
 |[gather_blue](#gather_blue)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí blue (z) součástí čtyři jen Vzorkovaná texels.|  
 |[gather_green](#gather_green)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.|  
 |[gather_red](#gather_red)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).|  
-|[GET](#get)|Přetíženo. Získá hodnotu elementu index.|  
+|[get](#get)|Přetíženo. Získá hodnotu elementu index.|  
 |[Ukázka](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
-|[nastavení](#set)|Nastaví hodnotu elementu index.|  
+|[set](#set)|Nastaví hodnotu elementu index.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -501,4 +502,4 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

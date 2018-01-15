@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
 Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Windows verze 6.1. Běžné ovládací prvky jsou součástí [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a je součástí knihovny [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Knihovna poskytuje nové metody, které zlepšují existující třídy a nové třídy a metody, které podporují [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] běžné ovládací prvky. Když vytvoříte aplikaci, postupujte podle požadavků na kompilace a migrace, které jsou popsány v následujících částech.  
@@ -63,5 +64,5 @@ Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Wi
 ## <a name="see-also"></a>Viz také  
  [Obecná témata MFC](../mfc/general-mfc-topics.md)   
  [Graf hierarchie](../mfc/hierarchy-chart.md)   
- [Rozhraní API standardu ANSI nepoužívané](../mfc/deprecated-ansi-apis.md)
+ [Zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md)
 

@@ -29,11 +29,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 418b0d76292667da6a4083dc0565867b9d2c1f13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Pozadí
 Tento článek popisuje povahu a účel rozhraní Windows Sockets. Tento článek také:  
@@ -99,12 +100,12 @@ Tento článek popisuje povahu a účel rozhraní Windows Sockets. Tento článe
   
  Další informace najdete v tématu Specifikace Windows Sockets: **ntohs**, **ntohl**, **htons**, **htonl**. Také si přečtěte následující témata:  
   
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
 -   [Windows Sockets: Příklady soketů využívajících archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be77c7986675fe30b4e2b1ea12287c6a83b4d66f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a1da85da1c7e56f16ec98dd78bb0af58c242a99d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-attributes-reference"></a>Referenční dokumentace k atributům C++
 Microsoft definuje sadu atributů, které zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele knihoven DLL pro vložení kódu nebo změňte kód v soubory generované objektů.  
@@ -35,14 +38,14 @@ Microsoft definuje sadu atributů, které zjednodušují programování COM a ro
  [Atributy podle použití](../windows/attributes-by-usage.md)  
  Obsahuje odkazy na referenční témata, seskupené podle použití atributu.  
   
- [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)  
+ [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)  
  Obsahuje odkazy na všechny atribut referenční témata.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Programování s atributy](../windows/attributed-programming-concepts.md)  
  Poskytuje koncepční přehled atributů.  
   
- [Referenční dokumentace](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Referenční informace](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Obsahuje odkazy na témata popisující jazyk C a C++, knihovny poskytované aplikaci Visual C++, rozšířený objektový model Visual C++ a MASM (Microsoft Macro Assembler).  
   
  [Visual C++ – ukázky](../visual-cpp-samples.md)  

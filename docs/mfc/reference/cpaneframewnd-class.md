@@ -143,11 +143,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e115e173d88961d24ed42990ec7bd3d863a404f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e93061da24ac148ac47d96f84d6dfcea67045235
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -1176,4 +1177,4 @@ virtual void StoreRecentTabRelatedInfo(
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [Třída CWnd](../../mfc/reference/cwnd-class.md)
+ [CWnd – třída](../../mfc/reference/cwnd-class.md)

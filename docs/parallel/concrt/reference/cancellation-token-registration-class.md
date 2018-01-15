@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2d80255803c4d2ca2aec05af8115ac887f7258b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70ab8114860a77582a6c9f6276b74122f9505c26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration – třída
 `cancellation_token_registration` Třída reprezentuje zpětné volání oznámení z `cancellation_token`. Když `register` metodu `cancellation_token` se používá k přijetí oznámení o zrušení v případech, `cancellation_token_registration` jako popisovač pro zpětné volání tak, aby volající požadovat zpětného volání konkrétní už být provedeny prostřednictvím použití sevrátíobjekt`deregister` metoda.  
@@ -46,7 +47,7 @@ class cancellation_token_registration;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)||  
+|[operator!=](#operator_neq)||  
 |[operátor =](#operator_eq)||  
 |[Operator ==](#operator_eq_eq)||  
   
@@ -113,4 +114,4 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ### <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

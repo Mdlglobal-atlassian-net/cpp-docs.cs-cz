@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 498f4404f0b3f6b291eca0e78315d2a010cbf846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03797d266dc0f3104d6153b9d946d06ac963fafc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-and-solution-files"></a>Soubory projektu a řešení
 Následující soubory se vytvoří při vytvoření projektu v sadě Visual Studio. Používají se ke správě souborů projektu v řešení.  
@@ -40,7 +41,7 @@ Následující soubory se vytvoří při vytvoření projektu v sadě Visual Stu
 |*Projname.* vcxproj.filters|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Filtry* souboru. Určuje, kde má být umístění souboru, který je přidán do řešení. Například soubor .h uveden **soubory hlaviček** uzlu.|  
 |*Projname.* vcxproj.user|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Migrace uživatele* souboru. Po migraci projektu ze sady Visual Studio 2008, tento soubor obsahuje informace, které byl převeden ze všech souborů.|  
 |*Projname*.idl|*Projname*|Zdroj|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacích prvků. Tento soubor se používá ve Visual C++ pro generování knihovny typů. Vygenerovaná knihovna zpřístupní rozhraní ovládacího prvku pro ostatní klienty automatizace. Další informace najdete v tématu [soubor definice IDL (Interface)](http://msdn.microsoft.com/library/windows/desktop/aa378712) ve Windows SDK.|  
-|Readme.txt|*Projname*|Project|*Soubor Readme* souboru. Je generována pomocí Průvodce aplikací a popisuje soubory v projektu.|  
+|Readme.txt|*Projname*|Projekt|*Soubor Readme* souboru. Je generována pomocí Průvodce aplikací a popisuje soubory v projektu.|  
   
 ## <a name="see-also"></a>Viz také  
  [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

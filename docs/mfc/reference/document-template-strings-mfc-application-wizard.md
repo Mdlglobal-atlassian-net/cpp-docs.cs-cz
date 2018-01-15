@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Řetězce šablon dokumentů, Průvodce aplikací MFC
 Na této stránce Průvodce aplikací MFC zadejte nebo upřesněte následující možnosti, které pomáhají při správě dokumentů a lokalizace. Řetězce šablony dokumentu jsou k dispozici pro aplikace, které zahrnují **Document/view – architektura podporu** v [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md). Nejsou k dispozici pro dialogová okna. Protože většina řetězce šablony dokumentu je viditelná a použitá s aplikace, jsou lokalizovány do **jazyk prostředku** uvedené v **typ aplikace** stránce průvodce.  
@@ -45,5 +46,5 @@ Na této stránce Průvodce aplikací MFC zadejte nebo upřesněte následujíc�
 |**Dlouhý název typu souboru**|Nastaví název typu souboru v registru systému. Pokud je aplikace Automatizační server, tento název se používá jako dlouhý název objektu automatizace. Ve výchozím nastavení je to název projektu a. Dokument.|  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
+ [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)
 

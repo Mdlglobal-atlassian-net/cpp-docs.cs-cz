@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d2dc6bda0b364467fa04d0146a0d90846e597ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4b54b78034037e9f3b015d7c1f67bb33771248c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Blokování
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá blokování. Další problémy, které jsou popsané v článcích: [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  
@@ -48,13 +49,13 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: pozadí](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   
 -   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
   

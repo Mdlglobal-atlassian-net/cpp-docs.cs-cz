@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbfcd2d1009f98565719fb514ce8c804092573da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cea7690c9d1f754006a38c793fcd9608747c13b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets – třídy
 Windows Sockets poskytují způsob nezávislý sítě pro komunikaci mezi dvěma počítači. Tyto sokety může být synchronní (váš program čeká, dokud probíhá komunikace) nebo asynchronní (váš program dál běží, zatímco se děje komunikace).  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2722d45da00349c797d6091506fda82a06614d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Přidání členské proměnné (Visual C++)
 Členské proměnné můžete přidat do třídy pomocí zobrazení tříd. Členské proměnné může být buď pro [výměny dat a ověření dat](../mfc/dialog-data-exchange-and-validation.md), nebo mohou být obecné. Průvodce data členské proměnné je určená speciálně pro trvat příslušné informace a použít ho k vložení elementy ve zdrojových souborech na vhodného umístění. Přidáním členské proměnné z [editoru dialogového okna](../windows/dialog-editor.md) v [zobrazení prostředků](../windows/resource-view-window.md), nebo z [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  

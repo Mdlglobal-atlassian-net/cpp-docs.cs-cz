@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89bccb4ce3803708d919f0778c49428c399a3b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combinable-class"></a>combinable – třída
 `combinable<T>` Objektu slouží jako vlákno privátní kopií dat, provádět výpočty dílčí uvolnění zámku místní během paralelní algoritmy. Na konci paralelní operace dílčí výpočty vlákno privátní můžete pak sloučit konečný výsledek. Tato třída je možné místo sdílené proměnné a může mít za následek zlepšování výkonu Pokud by jinak byly spoustu kolizí sdílené proměnné.  
@@ -191,4 +192,4 @@ combinable& operator= (const combinable& _Copy);
  Odkaz na toto `combinable` objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

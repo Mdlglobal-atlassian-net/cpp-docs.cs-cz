@@ -21,20 +21,21 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d949c1ff19be6f3b89673753fdaccc2996bbef36
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1037b8b81c9286ac1b1dd9303294b4300e7c9309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Podpora více vláken ve starším kódu (Visual C++)
 Visual C++ můžete mít více souběžných vláken, která se provádí současně. S více vláken, můžete číselníku úlohy na pozadí, spravovat několik současných vstup, spravovat uživatelské rozhraní a mnoho dalšího.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Multithreading s použitím jazyka C a Win32](../parallel/multithreading-with-c-and-win32.md)  
+ [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)  
  Poskytuje podporu pro vytváření aplikací s více vlákny se systémem Microsoft Windows  
   
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
  Popisuje, jaké jsou vláken a procesů a co je přístup knihovny MFC do více vláken je.  
   
  [Multithreading a národní prostředí](../parallel/multithreading-and-locales.md)  

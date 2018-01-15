@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0e4b0699f17e4bf00106b3d4a22938569a2254
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctoolbar-class"></a>Ctoolbar – třída
 Ovládací pruhy, které mají řádek rastrové obrázky tlačítek a volitelné oddělovačů.  
@@ -656,4 +657,4 @@ void SetSizes(
  [Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CToolBarCtrl – třída](../../mfc/reference/ctoolbarctrl-class.md)   
- [Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)
+ [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)

@@ -13,36 +13,37 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90f1277375d6c42c99df80f583d5062cf17c083f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46a879f8509aaf0ec97346b3c7e8d8c9457cade
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="contents"></a>Obsah
 [1. Úvod](../../parallel/openmp/1-introduction.md)  
   
- [1.1 oboru](../../parallel/openmp/1-1-scope.md)  
+ [1.1 Rozsah](../../parallel/openmp/1-1-scope.md)  
   
- [1.2 definice pojmů](../../parallel/openmp/1-2-definition-of-terms.md)  
+ [1.2 Definice pojmů](../../parallel/openmp/1-2-definition-of-terms.md)  
   
  [1.3 Model spouštění](../../parallel/openmp/1-3-execution-model.md)  
   
- [1.4 dodržování předpisů](../../parallel/openmp/1-4-compliance.md)  
+ [1.4 Kompatibilita](../../parallel/openmp/1-4-compliance.md)  
   
- [1.5 normativní odkazy](../../parallel/openmp/1-5-normative-references.md)  
+ [1.5 Normativní odkazy](../../parallel/openmp/1-5-normative-references.md)  
   
- [1.6 organizace](../../parallel/openmp/1-6-organization.md)  
+ [1.6 Organizace](../../parallel/openmp/1-6-organization.md)  
   
- [2. Direktivy jazyka](../../parallel/openmp/2-directives.md)  
+ [2. Direktivy](../../parallel/openmp/2-directives.md)  
   
- [2.1 formát direktivy](../../parallel/openmp/2-1-directive-format.md)  
+ [2.1 Formát direktivy](../../parallel/openmp/2-1-directive-format.md)  
   
  [2.2 Podmíněná kompilace](../../parallel/openmp/2-2-conditional-compilation.md)  
   
  [2.3 parallel – konstrukce](../../parallel/openmp/2-3-parallel-construct.md)  
   
- [2.4 konstrukce pro sdílení práce](../../parallel/openmp/2-4-work-sharing-constructs.md)  
+ [2.4 Konstrukce pro sdílení práce](../../parallel/openmp/2-4-work-sharing-constructs.md)  
   
  [2.4.1 for – konstrukce](../../parallel/openmp/2-4-1-for-construct.md)  
   
@@ -50,13 +51,13 @@ ms.lasthandoff: 10/24/2017
   
  [2.4.3 single – konstrukce](../../parallel/openmp/2-4-3-single-construct.md)  
   
- [2.5 kombinované paralelní konstrukce pro sdílení práce](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)  
+ [2.5 Kombinované paralelní konstrukce pro sdílení práce](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)  
   
  [2.5.1 parallel for – konstrukce](../../parallel/openmp/2-5-1-parallel-for-construct.md)  
   
  [2.5.2 parallel sections – konstrukce](../../parallel/openmp/2-5-2-parallel-sections-construct.md)  
   
- [2.6 hlavní a synchronizační direktivy](../../parallel/openmp/2-6-master-and-synchronization-directives.md)  
+ [2.6 Hlavní a synchronizační direktivy](../../parallel/openmp/2-6-master-and-synchronization-directives.md)  
   
  [2.6.1 master – konstrukce](../../parallel/openmp/2-6-1-master-construct.md)  
   
@@ -70,35 +71,35 @@ ms.lasthandoff: 10/24/2017
   
  [2.6.6 ordered – konstrukce](../../parallel/openmp/2-6-6-ordered-construct.md)  
   
- [2.7 datové prostředí](../../parallel/openmp/2-7-data-environment.md)  
+ [2.7 Datové prostředí](../../parallel/openmp/2-7-data-environment.md)  
   
  [2.7.1 threadprivate – direktiva](../../parallel/openmp/2-7-1-threadprivate-directive.md)  
   
- [2.7.2 klauzule atributů pro sdílení dat](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)  
+ [2.7.2 Klauzule atributů pro sdílení dat](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)  
   
- [2.7.2.1 privátní](../../parallel/openmp/2-7-2-1-private.md)  
+ [2.7.2.1 private](../../parallel/openmp/2-7-2-1-private.md)  
   
  [2.7.2.2 firstprivate](../../parallel/openmp/2-7-2-2-firstprivate.md)  
   
  [2.7.2.3 lastprivate](../../parallel/openmp/2-7-2-3-lastprivate.md)  
   
- [2.7.2.4 sdílené](../../parallel/openmp/2-7-2-4-shared.md)  
+ [2.7.2.4 shared](../../parallel/openmp/2-7-2-4-shared.md)  
   
- [2.7.2.5 výchozí](../../parallel/openmp/2-7-2-5-default.md)  
+ [2.7.2.5 default](../../parallel/openmp/2-7-2-5-default.md)  
   
- [2.7.2.6 snížení](../../parallel/openmp/2-7-2-6-reduction.md)  
+ [2.7.2.6 reduction](../../parallel/openmp/2-7-2-6-reduction.md)  
   
  [2.7.2.7 copyin](../../parallel/openmp/2-7-2-7-copyin.md)  
   
  [2.7.2.8 copyprivate](../../parallel/openmp/2-7-2-8-copyprivate.md)  
   
- [2.8 vazby direktiv](../../parallel/openmp/2-8-directive-binding.md)  
+ [2.8 Vazby direktiv](../../parallel/openmp/2-8-directive-binding.md)  
   
- [2.9 vnořování direktiv](../../parallel/openmp/2-9-directive-nesting.md)  
+ [2.9 Vnořování direktiv](../../parallel/openmp/2-9-directive-nesting.md)  
   
  [3. Funkce běhové knihovny](../../parallel/openmp/3-run-time-library-functions.md)  
   
- [3.1 funkce spouštěcího prostředí](../../parallel/openmp/3-1-execution-environment-functions.md)  
+ [3.1 Funkce spouštěcího prostředí](../../parallel/openmp/3-1-execution-environment-functions.md)  
   
  [3.1.1 omp_set_num_threads – funkce](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)  
   
@@ -120,19 +121,19 @@ ms.lasthandoff: 10/24/2017
   
  [3.1.10 omp_get_nested – funkce](../../parallel/openmp/3-1-10-omp-get-nested-function.md)  
   
- [3.2 funkce zamykání](../../parallel/openmp/3-2-lock-functions.md)  
+ [3.2 Funkce zamykání](../../parallel/openmp/3-2-lock-functions.md)  
   
- [3.2.1 omp_init_lock a omp_init_nest_lock – funkce](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)  
+ [3.2.1 omp_init_lock a omp_init_nest_lock – funkce](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)  
   
- [3.2.2 omp_destroy_lock a omp_destroy_nest_lock – funkce](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)  
+ [3.2.2 omp_destroy_lock a omp_destroy_nest_lock – funkce](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)  
   
- [3.2.3 omp_set_lock a omp_set_nest_lock – funkce](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)  
+ [3.2.3 omp_set_lock a omp_set_nest_lock – funkce](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)  
   
- [3.2.4 omp_unset_lock a omp_unset_nest_lock – funkce](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)  
+ [3.2.4 omp_unset_lock a omp_unset_nest_lock – funkce](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)  
   
- [3.2.5 omp_test_lock a omp_test_nest_lock – funkce](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)  
+ [3.2.5 omp_test_lock a omp_test_nest_lock – funkce](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)  
   
- [3.3 rutiny časování](../../parallel/openmp/3-3-timing-routines.md)  
+ [3.3 Rutiny časování](../../parallel/openmp/3-3-timing-routines.md)  
   
  [3.3.1 omp_get_wtime – funkce](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)  
   
@@ -212,19 +213,19 @@ ms.lasthandoff: 10/24/2017
   
  [Funkce A.31 zámku bezpečné pro přístup z více vláken](../../parallel/openmp/a-31-thread-safe-lock-functions.md)  
   
- [B. Zástupných procedur pro funkce běhové knihovny](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)  
+ [B. Zástupné procedury funkcí běhové knihovny](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)  
   
- [C. OpenMP C a C++ – gramatika](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)  
+ [C. Gramatika jazyků C a C++ v prostředí OpenMP](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)  
   
- [C.1 zápis](../../parallel/openmp/c-1-notation.md)  
+ [C.1 Zápis](../../parallel/openmp/c-1-notation.md)  
   
- [C.2 pravidla](../../parallel/openmp/c-2-rules.md)  
+ [C.2 Pravidla](../../parallel/openmp/c-2-rules.md)  
   
- [D. Pomocí klauzule plán](../../parallel/openmp/d-using-the-schedule-clause.md)  
+ [D. Použití klauzule schedule](../../parallel/openmp/d-using-the-schedule-clause.md)  
   
- [E. Chování definované implementací v OpenMP C/C++](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)  
+ [E. Chování definované implementací v jazyku C/C++ v prostředí OpenMP](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)  
   
- [F. Nové funkce a objasnění, která ve verzi 2.0](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)  
+ [F. Nové funkce a vyjasnění ve verzi 2.0](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)  
   
 ## <a name="see-also"></a>Viz také  
  [C a C++ rozhraní API](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)

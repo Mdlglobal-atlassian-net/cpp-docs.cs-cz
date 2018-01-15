@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dbe6474b8fa957c07c334641e0e95cdc5b07878
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
 Určuje kód oddíly pro rozdělí mezi všechna vlákna.  
@@ -55,9 +56,9 @@ Určuje kód oddíly pro rozdělí mezi všechna vlákna.
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [privátní](../../../parallel/openmp/reference/private-openmp.md)  
+-   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [snížení](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
  Pokud **paralelní** rovněž je zadán, `clause` může všechny klauzule přijmout **paralelní** nebo **části** direktivy, s výjimkou `nowait`.  
   
@@ -87,4 +88,4 @@ Hello from thread 0
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy jazyka](../../../parallel/openmp/reference/openmp-directives.md)
+ [Direktivy](../../../parallel/openmp/reference/openmp-directives.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>Kontejnery knihovny C++ Standard
 Standardní knihovna obsahuje různé kontejnery bezpečnost typů ukládání kolekcí související objekty. Kontejnery jsou šablony třídy; Když je deklarovat proměnnou kontejneru, můžete zadat typ prvků, které bude obsahovat kontejneru. Kontejnery konstruovat s inicializační seznamy. Mají členské funkce pro přidávání a odebírání elementů a provádění dalších operací.  

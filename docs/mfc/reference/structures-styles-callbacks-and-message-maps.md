@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, styly, zpětná volání a mapy zpráv
 Tato část popisuje struktury, styly a používat knihovny Microsoft Foundation Class funkce zpětného volání a mapy zpráv knihovny MFC.  
@@ -35,7 +36,7 @@ Tato část popisuje struktury, styly a používat knihovny Microsoft Foundation
  [Styly využívané prostředím MFC](../../mfc/reference/styles-used-by-mfc.md)  
  Obsahuje odkazy na styly použité při vytváření objektů MFC.  
   
- [Funkce zpětného volání používané v prostředí MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
+ [Funkce zpětného volání používané v prostředí MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
  Obsahuje odkazy na funkce zpětného volání, které jsou uvedeny v knihovně MFC.  
   
  [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)  

@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b128257c06c2d2a0c1e19b67aa33217138d88c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1127a6ec3e921e19c9626cc51197eb2a87d6ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorbase-class"></a>allocator_base – třída
 Definuje základní třídu a běžné funkce, které jsou nutné k vytvoření přidělení uživatelem definované z filtr synchronizace.  
@@ -97,7 +98,7 @@ class allocator_base
 |[_Charalloc –](#charalloc)|Přidělí úložiště pro pole typu `char`.|  
 |[_Chardealloc –](#chardealloc)|Uvolní úložiště pro pole obsahující elementy typu `char`.|  
 |[Adresa](#address)|Vyhledá objekt, jehož hodnota je zadána adresa.|  
-|[přidělit](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|  
+|[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|  
 |[konstrukce](#construct)|Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|  
 |[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[Destroy –](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uloží objekt.|  

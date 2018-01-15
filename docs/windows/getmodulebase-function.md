@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30ff77fd81b63019f9c6c3bcfc8c6b676a1351f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 19f575705b1f8680a68e9100f20be66ca22ec87a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase – funkce
 Načte [ModuleBase](../windows/modulebase-class.md) ukazatele, který umožňuje zvyšování a dekrementace počet odkazů [RuntimeClass](../windows/runtimeclass-class.md) objektu.  
@@ -43,4 +46,4 @@ inline Details::ModuleBase* GetModuleBase() throw()
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

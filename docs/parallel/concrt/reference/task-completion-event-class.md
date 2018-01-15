@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c5cb9bdd1da0876abacda48000a914c884d25a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event – třída
 `task_completion_event` Třída umožňuje zpozdit provádění úlohy, dokud je podmínka nebo spustit úlohu v reakci na externí událost.  
@@ -57,7 +58,7 @@ class task_completion_event<void>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[nastavení](#set)|Přetíženo. Nastaví událost dokončení úlohy.|  
+|[set](#set)|Přetíženo. Nastaví událost dokončení úlohy.|  
 |[set_exception –](#set_exception)|Přetíženo. Rozšíří výjimku na všechny úlohy přidružené k této události.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -122,4 +123,4 @@ task_completion_event();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

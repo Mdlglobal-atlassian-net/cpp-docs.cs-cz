@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37a45443efe1ad45e21c5729907135d0e037baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit vaše objekt soketu se o důležitých událostech. Funkce oznámení jsou:  
@@ -56,18 +57,18 @@ Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkc
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)  
   
 -   [Windows Sockets: Pořadí bajtů](../mfc/windows-sockets-byte-ordering.md)  
   
 -   [Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e031cf6d142e611c81ae73ee8d201a12acdea529
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna použít pro běžné ovládací prvky MFC dialogové okno.  
@@ -92,7 +93,7 @@ void AFXAPI DDX_CBString(
  `nIDC`  
  ID prostředku ovládacího prvku pole se seznamem přidružená vlastnost ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -123,7 +124,7 @@ void AFXAPI DDX_CBStringExact(
  `nIDC`  
  ID prostředku ovládacího prvku pole se seznamem přidružená vlastnost ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -154,7 +155,7 @@ void AFXAPI DDX_Check(
  `nIDC`  
  ID prostředku ovládací prvek zaškrtávací políčko, které jsou spojené s vlastností ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -220,7 +221,7 @@ void AFXAPI DDX_DateTimeCtrl(
  `nIDC`  
  ID prostředku ovládacího prvku datum a čas výběr přidružený k proměnné členů.  
   
- *Hodnota*  
+ *value*  
  V první dva verzí, odkaz na `CTime` nebo `COleDateTime` členské proměnné, dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data. Ve třetí verzi, odkaz na `CString` objekt zobrazení ovládacího prvku data člena.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -288,7 +289,7 @@ void AFXAPI DDX_IPAddress(
  `nIDC`  
  ID prostředku IP adresu ovládací prvek související s vlastností ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na `DWORD` obsahující hodnotu pole čtyři ovládací prvek adresy IP. Pole jsou vyplněna nebo tímto.  
   
 |Pole|Služba BITS obsahující hodnota pole|  
@@ -353,7 +354,7 @@ void AFXAPI DDX_LBString(
  `nIDC`  
  ID prostředku ovládací prvek seznam přidružená vlastnost ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -386,7 +387,7 @@ void AFXAPI DDX_LBStringExact(
  `nIDC`  
  ID prostředku ovládací prvek seznam přidružená vlastnost ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -424,7 +425,7 @@ void AFXAPI DDX_MonthCalCtrl(
  `nIDC`  
  ID prostředku ovládací prvek měsíční kalendář přidružený k proměnné členů.  
   
- *Hodnota*  
+ *value*  
  Odkaz na `CTime` nebo `COleDateTime` členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -456,7 +457,7 @@ void AFXAPI DDX_Radio(
  `nIDC`  
  ID prostředku první prvek přepínač ve skupině.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -486,7 +487,7 @@ void AFXAPI DDX_Scroll(
  `nIDC`  
  ID prostředku ovládací prvek typu posuvník související s vlastností ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo ovládacího prvku zobrazení objektu, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -514,7 +515,7 @@ void AFXAPI DDX_Slider(
  `nIDC`  
  ID prostředku v ovládacím prvku posuvník.  
   
- *Hodnota*  
+ *value*  
  Odkaz na hodnotu výměnu. Tento parametr obsahuje nebo nastaví aktuální pozici v ovládacím prvku posuvník.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -592,7 +593,7 @@ void AFXAPI DDX_Text(
  `nIDC`  
  ID ovládací prvek upravit v dialogovém okně, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- *Hodnota*  
+ *value*  
  Odkaz na člena dat v dialogovém okně, zobrazení formuláře nebo objekt zobrazení ovládacího prvku. Datový typ *hodnotu* závisí na kterém přetížené verze `DDX_Text` používáte.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be26e2139ab0cf0e31e63331a8e87df8769fe715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1bd1d80f692695c1cbf4ad535d2c5e759e4ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hdrstop"></a>hdrstop
 Poskytuje větší kontrolu nad názvy souborů předkompilace a nad umístěním, ve kterém je uložen stav kompilace.  
@@ -89,4 +90,4 @@ __inline Disp( char *szToDisplay )   // Define an inline function
  V tomto příkladu **hdrstop –** – Direktiva pragma se zobrazí po dva soubory byly zahrnuty a byla definována vložené funkce. To se může zpočátku zdát, jako neobvyklé umístění direktivy pragma. Zvažte ale, že pomocí ruční možnosti předkompilace, /Yc a /Yu, **hdrstop –** – Direktiva pragma umožňuje předkompilovat celý zdrojové soubory – dokonce i vloženého kódu. Kompilátor společnosti Microsoft předkompilaci neomezuje pouze na deklarace dat.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

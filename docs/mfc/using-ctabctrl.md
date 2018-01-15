@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4375b995ec60197f1e1f9f8238f1542ec7d1d313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c6386c5baf4af7447e4d3c711e644cb2ae5209a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctabctrl"></a>Používání atributu CTabCtrl
 "Ovládacího prvku karta" je obdobou rozdělení v poznámkovém bloku nebo s popiskem složky v souboru CAB. Použití ovládacího prvku karta reprezentována třída [CTabCtrl](../mfc/reference/ctabctrl-class.md), chcete-li zobrazit více stránek informace nebo ovládací prvky pro uživatele, jeden po druhém, ve formátu, který naznačuje sdílené nebo logické vztah mezi každé stránce.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Ovládací prvky karet a seznamy vlastností](../mfc/tab-controls-and-property-sheets.md)  
   
--   [Karty a atributy ovládacího prvku karta](../mfc/tabs-and-tab-control-attributes.md)  
+-   [Karty a atributy ovládacího prvku karta](../mfc/tabs-and-tab-control-attributes.md)  
   
 -   [Vytváření karet vykreslovaných vlastníkem](../mfc/making-owner-drawn-tabs.md)  
   

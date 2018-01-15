@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d58c079fc08935a11f65170b804f6a4b2786cbb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9606d28f6e2057072a0c9fc356e3bc7ca7cdc19b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mdi-tabbed-groups"></a>MDI – skupiny se záložkami
 Více funkce skupiny v záložkách rozhraní (MDI) dokumentu umožňuje více aplikací rozhraní (MDI) dokumentu pro zobrazení jeden nebo více záložkách windows (nebo skupiny systému windows s kartami, označuje jako *– skupiny se záložkami*) v oblasti MDI klienta. Okna s kartami lze zarovnávat vodorovně nebo svisle. Pokud aplikace je hostitelem více než jedné skupině záložkách MDI, skupiny jsou odděleny příčky.  

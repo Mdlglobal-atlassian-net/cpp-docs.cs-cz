@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5c60fd4ff47745e5209023783b74f52a319065d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c648e32865f73bda5f896f26c495184f964c41d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-in-mfc"></a>Serializace v prostředí MFC
 Tento článek vysvětluje, že zadaná v knihovny pro třídu Foundation Microsoft (MFC) umožňující objekty, které chcete zachovat mezi mechanismu serializace spouští vašeho programu.  
@@ -57,4 +58,4 @@ Tento článek vysvětluje, že zadaná v knihovny pro třídu Foundation Micros
  [CArchive – třída](../mfc/reference/carchive-class.md)   
  [CObject – třída](../mfc/reference/cobject-class.md)   
  [CDocument – třída](../mfc/reference/cdocument-class.md)   
- [Cfile – třída](../mfc/reference/cfile-class.md)
+ [CFile – třída](../mfc/reference/cfile-class.md)

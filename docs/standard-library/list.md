@@ -17,13 +17,14 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f3f7944688e2953a47bbc1f6ced8f7f26d1e5ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 313ce96bd86a732749b5437d5e839bf2bfbe35ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltlistgt"></a>&lt;seznam&gt;
+# <a name="ltlistgt"></a>&lt;list&gt;
 Definuje seznam tříd šablony kontejneru a několik podpůrných šablon.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,12 +37,12 @@ Definuje seznam tříd šablony kontejneru a několik podpůrných šablon.
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/list-operators.md#op_neq)|Testy, pokud objekt seznamu na levé straně operátoru není stejný jako seznam objekt na pravé straně.|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|Testy, pokud objekt seznamu na levé straně operátoru není stejný jako seznam objekt na pravé straně.|  
 |[operátor <](../standard-library/list-operators.md#op_lt)|Testy, pokud objekt seznamu na levé straně operátoru je menší než list objekt na pravé straně.|  
 |[operátor\<=](../standard-library/list-operators.md#op_gt_eq)|Pokud v seznamu objekt na levé straně operátoru testů je menší než nebo rovna hodnotě list objekt na pravé straně.|  
 |[Operator ==](../standard-library/list-operators.md#op_eq_eq)|Testy, pokud se objekt seznamu na levé straně operátoru rovná objektu seznamu na pravé straně.|  
 |[operátor >](../standard-library/list-operators.md#op_gt)|Testy, pokud objekt seznamu na levé straně operátoru je větší než list objekt na pravé straně.|  
-|[Operator > =](../standard-library/list-operators.md#op_gt_eq)|Testy, pokud je seznam objekt na levé straně operátoru větší než nebo rovna hodnotě list objekt na pravé straně.|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|Testy, pokud je seznam objekt na levé straně operátoru větší než nebo rovna hodnotě list objekt na pravé straně.|  
   
 ### <a name="classes"></a>Třídy  
   
@@ -52,5 +53,5 @@ Definuje seznam tříd šablony kontejneru a několik podpůrných šablon.
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

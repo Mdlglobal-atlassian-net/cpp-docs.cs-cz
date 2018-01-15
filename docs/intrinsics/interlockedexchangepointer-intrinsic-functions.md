@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d4c55ce7c11305344156677fbcfce7ef7dd7b117
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba9b7ac5c20c7b4bd4c43db3d76fbb5cfcb331c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer vnitřní funkce
 **Konkrétní Microsoft**  
@@ -104,4 +105,4 @@ void * _InterlockedExchangePointer_HLERelease(
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Je v konfliktu s x86 kompilátoru](../build/conflicts-with-the-x86-compiler.md)
+ [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

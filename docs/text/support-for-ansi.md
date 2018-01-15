@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 545a713ebfda9ad4f4dcbfa3e8b55e27ab9c570f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb3e64f82c95cdffeef4091efb76458e9b28e967
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-ansi"></a>Podpora standardu ANSI
 Většina MFC – třídy a metody podporuje znakovou sadu ANSI, přestože rozhraní MFC framework jako celek postupně vyvíjí směrem k podpoře pouze Unicode znaková sada. Z důvodu probíhajícího vylepšení v [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a běžné ovládací prvky Windows verze 6.1, podporu pro několik ANSI třídy a metody je zastaralý.  Další informace najdete v tématu [zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md) a [podpora pro Unicode](../text/support-for-unicode.md).  

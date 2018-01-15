@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 Implementuje počítač asynchronní stavu prostředí Windows Runtime.  
@@ -58,40 +61,40 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Asyncbase::asyncbase – konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Inicializuje novou instanci třídy AsyncBase.|  
+|[AsyncBase::AsyncBase – konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Inicializuje novou instanci třídy AsyncBase.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Asyncbase::Cancel – metoda](../windows/asyncbase-cancel-method.md)|Zruší asynchronní operace.|  
-|[Asyncbase::Close – metoda](../windows/asyncbase-close-method.md)|Ukončí asynchronní operaci.|  
-|[Asyncbase::firecompletion – metoda](../windows/asyncbase-firecompletion-method.md)|Volá obslužnou rutinu události dokončení nebo obnoví interní průběh delegáta.|  
-|[Asyncbase::fireprogress – metoda](../windows/asyncbase-fireprogress-method.md)|Vyvolá aktuální obslužné rutiny události průběh.|  
-|[Asyncbase::get_errorcode – metoda](../windows/asyncbase-get-errorcode-method.md)|Načte kód chyby pro aktuální asynchronní operaci.|  
-|[Asyncbase::get_id – metoda](../windows/asyncbase-get-id-method.md)|Načte popisovač asynchronní operaci.|  
-|[Asyncbase::get_status – metoda](../windows/asyncbase-get-status-method.md)|Načte hodnotu, která určuje stav asynchronní operace.|  
-|[Asyncbase::getoncomplete – metoda](../windows/asyncbase-getoncomplete-method.md)|Zkopíruje adresu aktuální obslužné rutiny události dokončení na zadanou proměnnou.|  
-|[Asyncbase::getonprogress – metoda](../windows/asyncbase-getonprogress-method.md)|Zkopíruje adresu aktuální obslužné rutiny události průběhu na zadanou proměnnou.|  
-|[Asyncbase::put_id – metoda](../windows/asyncbase-put-id-method.md)|Nastaví popisovač asynchronní operaci.|  
-|[Asyncbase::putoncomplete – metoda](../windows/asyncbase-putoncomplete-method.md)|Nastaví adresu dokončení obslužné rutiny události se zadanou hodnotou.|  
-|[Asyncbase::putonprogress – metoda](../windows/asyncbase-putonprogress-method.md)|Nastaví adresu průběh obslužné rutiny události se zadanou hodnotou.|  
-|[Asyncbase::Start – metoda](../windows/asyncbase-start-method.md)|Spustí asynchronní operaci.|  
+|[AsyncBase::Cancel – metoda](../windows/asyncbase-cancel-method.md)|Zruší asynchronní operace.|  
+|[AsyncBase::Close – metoda](../windows/asyncbase-close-method.md)|Ukončí asynchronní operaci.|  
+|[AsyncBase::FireCompletion – metoda](../windows/asyncbase-firecompletion-method.md)|Volá obslužnou rutinu události dokončení nebo obnoví interní průběh delegáta.|  
+|[AsyncBase::FireProgress – metoda](../windows/asyncbase-fireprogress-method.md)|Vyvolá aktuální obslužné rutiny události průběh.|  
+|[AsyncBase::get_ErrorCode – metoda](../windows/asyncbase-get-errorcode-method.md)|Načte kód chyby pro aktuální asynchronní operaci.|  
+|[AsyncBase::get_Id – metoda](../windows/asyncbase-get-id-method.md)|Načte popisovač asynchronní operaci.|  
+|[AsyncBase::get_Status – metoda](../windows/asyncbase-get-status-method.md)|Načte hodnotu, která určuje stav asynchronní operace.|  
+|[AsyncBase::GetOnComplete – metoda](../windows/asyncbase-getoncomplete-method.md)|Zkopíruje adresu aktuální obslužné rutiny události dokončení na zadanou proměnnou.|  
+|[AsyncBase::GetOnProgress – metoda](../windows/asyncbase-getonprogress-method.md)|Zkopíruje adresu aktuální obslužné rutiny události průběhu na zadanou proměnnou.|  
+|[AsyncBase::put_Id – metoda](../windows/asyncbase-put-id-method.md)|Nastaví popisovač asynchronní operaci.|  
+|[AsyncBase::PutOnComplete – metoda](../windows/asyncbase-putoncomplete-method.md)|Nastaví adresu dokončení obslužné rutiny události se zadanou hodnotou.|  
+|[AsyncBase::PutOnProgress – metoda](../windows/asyncbase-putonprogress-method.md)|Nastaví adresu průběh obslužné rutiny události se zadanou hodnotou.|  
+|[AsyncBase::Start – metoda](../windows/asyncbase-start-method.md)|Spustí asynchronní operaci.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Asyncbase::checkvalidstatefordelegatecall – metoda](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním stavu asynchronní.|  
-|[Asyncbase::checkvalidstateforresultscall – metoda](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Ověřuje, zda je možné v aktuálním stavu asynchronní shromažďovat výsledky asynchronní operace.|  
-|[Asyncbase::continueasyncoperation – metoda](../windows/asyncbase-continueasyncoperation-method.md)|Určuje, zda by měly pokračovat ve zpracování asynchronní operaci, nebo by měla zastaví.|  
-|[Asyncbase::currentStatus – metoda](../windows/asyncbase-currentstatus-method.md)|Načte stav aktuální asynchronní operace.|  
-|[Asyncbase::ErrorCode – metoda](../windows/asyncbase-errorcode-method.md)|Načte kód chyby pro aktuální asynchronní operaci.|  
-|[Asyncbase::oncancel – metoda](../windows/asyncbase-oncancel-method.md)|Při přepisu v odvozené třídě, zruší asynchronní operace.|  
-|[Asyncbase::onclose – metoda](../windows/asyncbase-onclose-method.md)|Při přepisu v odvozené třídě, ukončí asynchronní operaci.|  
-|[Asyncbase::ONSTART – metoda](../windows/asyncbase-onstart-method.md)|Při přepisu v odvozené třídě, spustí asynchronní operaci.|  
-|[Asyncbase::trytransitiontocompleted – metoda](../windows/asyncbase-trytransitiontocompleted-method.md)|Určuje, zda aktuální asynchronní operace byla dokončena.|  
-|[Asyncbase::trytransitiontoerror – metoda](../windows/asyncbase-trytransitiontoerror-method.md)|Určuje, zda kód zadaný chyby můžete upravit stav vnitřní chybě.|  
+|[AsyncBase::CheckValidStateForDelegateCall – metoda](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním stavu asynchronní.|  
+|[AsyncBase::CheckValidStateForResultsCall – metoda](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Ověřuje, zda je možné v aktuálním stavu asynchronní shromažďovat výsledky asynchronní operace.|  
+|[AsyncBase::ContinueAsyncOperation – metoda](../windows/asyncbase-continueasyncoperation-method.md)|Určuje, zda by měly pokračovat ve zpracování asynchronní operaci, nebo by měla zastaví.|  
+|[AsyncBase::CurrentStatus – metoda](../windows/asyncbase-currentstatus-method.md)|Načte stav aktuální asynchronní operace.|  
+|[AsyncBase::ErrorCode – metoda](../windows/asyncbase-errorcode-method.md)|Načte kód chyby pro aktuální asynchronní operaci.|  
+|[AsyncBase::OnCancel – metoda](../windows/asyncbase-oncancel-method.md)|Při přepisu v odvozené třídě, zruší asynchronní operace.|  
+|[AsyncBase::OnClose – metoda](../windows/asyncbase-onclose-method.md)|Při přepisu v odvozené třídě, ukončí asynchronní operaci.|  
+|[AsyncBase::OnStart – metoda](../windows/asyncbase-onstart-method.md)|Při přepisu v odvozené třídě, spustí asynchronní operaci.|  
+|[AsyncBase::TryTransitionToCompleted – metoda](../windows/asyncbase-trytransitiontocompleted-method.md)|Určuje, zda aktuální asynchronní operace byla dokončena.|  
+|[AsyncBase::TryTransitionToError – metoda](../windows/asyncbase-trytransitiontoerror-method.md)|Určuje, zda kód zadaný chyby můžete upravit stav vnitřní chybě.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `AsyncBase`  
@@ -104,4 +107,4 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

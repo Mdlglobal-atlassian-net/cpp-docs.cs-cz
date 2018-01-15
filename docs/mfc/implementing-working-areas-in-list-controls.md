@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8376a65a511f2a59342aa59f86a9cd6ecd9768e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementace pracovních oblastí v ovládacích prvcích seznam
 Ve výchozím nastavení uspořádá ovládací prvek seznamu všechny položky způsobem standardní mřížky. Ale je podporované jinou metodu, pracovních oblastí, které jsou uspořádány položky seznamu obdélníková skupiny. Obrázek ovládacího prvku seznam, který implementuje pracovní oblasti najdete pomocí zobrazení seznamu ovládacích prvků ve Windows SDK.  

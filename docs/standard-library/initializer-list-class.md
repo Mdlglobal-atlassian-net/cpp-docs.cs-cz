@@ -23,11 +23,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: 271ba1705dd48e11f1613e778b2d3bd41df7bba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df79acefbd5482238b2ce59885bdb06af128c9b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializerlist-class"></a>initializer_list – třída
 Poskytuje přístup k pole elementy, ve kterých je každý člen zadaného typu.  
@@ -201,5 +202,5 @@ constexpr size_t size() const noexcept;
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [< forward_list – >](../standard-library/forward-list.md)
+ [<forward_list>](../standard-library/forward-list.md)
 

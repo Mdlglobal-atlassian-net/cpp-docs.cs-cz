@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b3a64db489865463f914fa94c096605f8c9c56b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae095b59b07132bd7e4c6892b8e58d9e69fb39c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-unclipped-device-context"></a>Použití neoříznutého kontextu zařízení
 Pokud jste si naprosto jisti, že vlastní ovládací prvek není malovat mimo jeho obdélníku klienta, můžete zaznamenat nárůst malé ale rozpoznat rychlost zakázáním volání `IntersectClipRect` , je provedené `COleControl`. Chcete-li to provést, odeberte **clipPaintDC** příznak ze sady příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Příklad:  
@@ -32,5 +33,5 @@ Pokud jste si naprosto jisti, že vlastní ovládací prvek není malovat mimo j
  Pokud používáte aktivace bez oken, optimalizace nemá žádný vliv.  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md)
+ [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

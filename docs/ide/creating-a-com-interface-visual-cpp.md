@@ -15,26 +15,27 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 260d56fa4a6944c7cf3a9971e3627d8b24936786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7b5820686c3e6f01c37cbf527d0e631e5bcc25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Vytváření rozhraní modelu COM (Visual C++)
 Visual C++ poskytuje průvodci a šablony k vytváření projektů, které používají rozhraní a odesílající rozhraní COM – objekty a třídy automatizace.  
   
  Tito průvodci můžete provádět následující tři běžné úkoly:  
   
--   [Přidání podpory knihovny ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md)  
+-   [Přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md)  
   
      Přidání podpory knihovny ATL do aplikace MFC po vytvoření projektu knihovny MFC pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md) a pak spustit **přidat podporu knihovny ATL a MFC** kód průvodce. Tato podpora se vztahuje pouze na jednoduché objekty modelu COM, přidat do spustitelného souboru knihovny MFC nebo projektu knihovny DLL. Tyto objekty knihovny ATL může mít více rozhraní.  
   
--   [Vytvoření ovládacího prvku ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control.md)  
+-   [Vytvoření ovládacího prvku ActiveX prostředí MFC](../mfc/reference/creating-an-mfc-activex-control.md)  
   
      Otevřete [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md) vytvoření ovládacího prvku ActiveX s odesílajícím rozhraním a mapou události definované v souboru IDL a třída ovládacích prvků v uvedeném pořadí.  
   
--   [Přidání ovládacího prvku knihovny ATL](../atl/reference/adding-an-atl-control.md)  
+-   [Přidání ovládacího prvku ATL](../atl/reference/adding-an-atl-control.md)  
   
      Použít kombinaci [ATL – Průvodce projektem](../atl/reference/atl-project-wizard.md) a [Průvodce ovládacím prvkem ATL](../atl/reference/atl-control-wizard.md) k vytvoření ovládacího prvku ActiveX knihovny ATL.  
   
@@ -44,13 +45,13 @@ Visual C++ poskytuje průvodci a šablony k vytváření projektů, které použ
   
  Jakmile máte projektu knihovny ATL otevřít, [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno poskytuje volba Další průvodci a šablony do projektu přidejte COM – rozhraní. Následující průvodci umožňují vytvořit jeden nebo více rozhraní pro objekt:  
   
--   [ATL COM + 1.0 součást Průvodce](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
+-   [Průvodce komponentami ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
   
--   [Průvodce jednoduchého objektu knihovny ATL](../atl/reference/atl-simple-object-wizard.md)  
+-   [Průvodce jednoduchým objektem ATL](../atl/reference/atl-simple-object-wizard.md)  
   
--   [Průvodce komponentou stránky ASP knihovny ATL](../atl/reference/atl-active-server-page-component-wizard.md)  
+-   [Průvodce komponentami ATL Active Server Pages](../atl/reference/atl-active-server-page-component-wizard.md)  
   
--   [Průvodce ovládacím prvkem knihovny ATL](../atl/reference/atl-control-wizard.md)  
+-   [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md)  
   
  Kromě toho můžete implementovat nové rozhraní ovládacího prvku COM pravým tlačítkem myši na ovládací prvek třídy objektu v zobrazení tříd a kliknutím na [implementovat rozhraní](../ide/implement-interface-wizard.md).  
   

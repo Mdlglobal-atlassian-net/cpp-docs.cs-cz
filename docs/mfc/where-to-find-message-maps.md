@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 741c7a62083680c434f7eaa1c415441449525344
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-to-find-message-maps"></a>Kde hledat mapy zpráv
 Když vytvoříte nové kostru aplikace pomocí Průvodce aplikací, Průvodce aplikací zapíše mapy zpráv pro jednotlivé příkaz cílové třídy, které vytvoří za vás. To zahrnuje odvozené aplikace, dokumentu, zobrazení a třídy oken s rámečkem. Některé z těchto mapy zpráv už máte položky zadaný pomocí Průvodce aplikací pro určité zprávy a příkazy předdefinované a některé jsou jenom zástupné symboly pro obslužné rutiny, které přidáte.  
@@ -39,5 +40,5 @@ Když vytvoříte nové kostru aplikace pomocí Průvodce aplikací, Průvodce a
  Když pomocí průvodce Přidat třídu vytvořte novou třídu, poskytuje mapy zpráv pro třídu. Alternativně můžete vytvořit ručně pomocí editoru zdrojového kódu mapy zpráv.  
   
 ## <a name="see-also"></a>Viz také  
- [Jak Framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
+ [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
 

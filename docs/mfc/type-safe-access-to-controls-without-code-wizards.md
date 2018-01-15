@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50206ec8196247deb4a63f7ac2685eed47fab5bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5a4adce63851620326add61857433b32e1fad5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem
 Prvním přístupem k vytvoření typově bezpečný přístup k ovládacím prvkům používá funkci člen vložené přetypovat návratový typ třídy `CWnd`na `GetDlgItem` – členská funkce odpovídající typ ovládacího prvku C++, jako v následujícím příkladu:  
@@ -33,5 +34,5 @@ Prvním přístupem k vytvoření typově bezpečný přístup k ovládacím prv
   
 ## <a name="see-also"></a>Viz také  
  [Typově bezpečný přístup k ovládacím prvkům v dialogovém okně](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+ [Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 

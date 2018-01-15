@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792d2f658ed64b44254b5e93b9f2b2bde9eb0a1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c94ed10a0b97820c5a787e4350d39dcf6286fee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreambufiterator-class"></a>Třída ostreambuf_iterator
 Ostreambuf_iterator – třída šablony popisuje objekt iterator výstup, který zapíše elementy po sobě jdoucích znaků do výstupního datového proudu s extrahování **operátor >>**. `ostreambuf_iterator`s lišit od těch, které [ostream_iterator – třída](../standard-library/ostream-iterator-class.md) v znaků místo obecného typu, které mají při typ objektu vkládání do výstupního datového proudu.  
@@ -449,7 +450,7 @@ The characters written to the output stream
 ## <a name="see-also"></a>Viz také  
  [\<iterator >](../standard-library/iterator.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

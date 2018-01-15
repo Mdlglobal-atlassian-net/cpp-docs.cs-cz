@@ -42,11 +42,14 @@ f1_keywords:
 - VC.Project.VCClangCompilerTool.CompileAs
 - VC.Project.VCClangCompilerTool.ForcedIncludeFiles
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 94a22843c15e537a7af8e1e44827f8c1ab365165
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 096775841841574571b7ef731db52f3bbda6485f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-properties-linux-c"></a>Vlastnosti C/C++ (Linux C++)
 
@@ -98,8 +101,8 @@ Povolit výjimky jazyka C++ | Určuje model zpracování má být používána k
 Vlastnost | Popis | Možnosti
 --- | ---| ---
 Povolit informace běhového typu | Přidá kód pro kontrolu typy objektů C++ v době běhu (informace o běhu programu typ).     (frtti, fno rtti)
-Jazyk C – Standard | Určuje standard jazyka C. | **Výchozí**<br>**Kompilátorem C89** -Standard kompilátorem C89 Language.<br>**C99** -C99 Language Standard.<br>**C11** -C11 Language Standard.<br>**C99 (GNU dialekt)** -C99 Standard Language (GNU dialekt).<br>**C11 (GNU dialekt)** -C11 Standard Language (GNU dialekt).<br>
-Standard jazyka C++ | Určuje standard jazyka C++. | **Výchozí**<br>**C ++ 03** -03 jazyk standardu C ++.<br>**C ++ 11** -C ++ 11 jazyk Standard.<br>**C ++ 14** -C ++ 14 jazyk Standard.<br>**C ++ 03 (GNU dialekt)** – C ++ 03 Standard Language (GNU dialekt).<br>**C ++ 11 (GNU dialekt)** – C ++ 11 Standard Language (GNU dialekt).<br>**C ++ 14 (GNU dialekt)** – C ++ 14 Standard Language (GNU dialekt).<br>
+Jazyk C – Standard | Určuje standard jazyka C. | **Default**<br>**Kompilátorem C89** -Standard kompilátorem C89 Language.<br>**C99** -C99 Language Standard.<br>**C11** -C11 Language Standard.<br>**C99 (GNU dialekt)** -C99 Standard Language (GNU dialekt).<br>**C11 (GNU dialekt)** -C11 Standard Language (GNU dialekt).<br>
+Standard jazyka C++ | Určuje standard jazyka C++. | **Default**<br>**C ++ 03** -03 jazyk standardu C ++.<br>**C ++ 11** -C ++ 11 jazyk Standard.<br>**C ++ 14** -C ++ 14 jazyk Standard.<br>**C ++ 03 (GNU dialekt)** – C ++ 03 Standard Language (GNU dialekt).<br>**C ++ 11 (GNU dialekt)** – C ++ 11 Standard Language (GNU dialekt).<br>**C ++ 14 (GNU dialekt)** – C ++ 14 Standard Language (GNU dialekt).<br>
 
 ## <a name="advanced"></a>Upřesnit
 Vlastnost | Popis | Možnosti

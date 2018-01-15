@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 316066f8476d413f9a92e11cc69f709080829f18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cheaderctrl"></a>Používání atributu CHeaderCtrl
 Použití ovládacího prvku záhlaví, reprezentována – třída [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), zobrazit záhlaví sloupců pro sloupcový seznamu. Například ovládacím prvkem záhlaví by být užitečné pro implementaci ovládací prvky sloupce v tabulce.  
@@ -37,13 +38,13 @@ Použití ovládacího prvku záhlaví, reprezentována – třída [CHeaderCtrl
   
 -   [Příklady ovládacích prvků záhlaví](../mfc/header-control-examples.md)  
   
--   [Položky hlaviček v ovládacím prvku hlavička](../mfc/header-items-in-a-header-control.md)  
+-   [Položky záhlaví v ovládacím prvku záhlaví](../mfc/header-items-in-a-header-control.md)  
   
 -   [Přizpůsobení vzhledu položky záhlaví](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Zajištění podpory přetažení a přetažení u položek záhlaví](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Zajištění podpory přetažení u položek záhlaví](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Použití seznamů obrázků s ovládacími prvky záhlaví](../mfc/using-image-lists-with-header-controls.md)  
+-   [Použití seznamů obrázků s ovládacími prvky záhlaví](../mfc/using-image-lists-with-header-controls.md)  
   
 -   [Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem](../mfc/making-owner-drawn-header-controls.md)  
   
@@ -53,7 +54,7 @@ Použití ovládacího prvku záhlaví, reprezentována – třída [CHeaderCtrl
   
 -   [Přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md)  
   
--   [Objednávání položek v ovládacím prvku záhlaví](../mfc/ordering-items-in-the-header-control.md)  
+-   [Objednávání položek v ovládacím prvku záhlaví](../mfc/ordering-items-in-the-header-control.md)  
   
 -   [Zpracování oznámení ovládacího prvku záhlaví](../mfc/processing-header-control-notifications.md)  
   

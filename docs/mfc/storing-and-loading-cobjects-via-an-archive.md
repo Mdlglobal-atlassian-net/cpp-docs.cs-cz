@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23c403d5e872818345b319ea6786da6b2f42fabc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 987f754ccdf03e5a252feae693a1f7718da1b353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Ukládání a načítání objektů CObject prostřednictvím archivu
 Ukládání a načítání `CObject`s prostřednictvím archivu vyžaduje další pozornost. V některých případech by měly volat `Serialize` funkce objektu, kde `CArchive` objekt je parametr `Serialize` volání, na rozdíl od použití  **< \<**  nebo  **>>**  operátor z `CArchive`. Fakt, který je třeba vzít v úvahu důležité je, že `CArchive`  **>>**  operátor konstrukce `CObject` v paměti na základě `CRuntimeClass` informace o ukládání archivu dříve zapíše do souboru.  

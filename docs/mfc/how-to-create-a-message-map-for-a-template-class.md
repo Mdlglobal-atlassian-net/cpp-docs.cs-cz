@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73f6812b1dcc4652c1cb984ddb0ca67f3e72f631
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e593d1b75265a1c58c82278920bda92ddf58929
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Postupy: Vytvoření mapy zpráv pro třídu šablony
 Mapování zpráv v prostředí MFC poskytuje účinný způsob, jak přímé zpráv systému Windows na instanci objektu příslušné C++. Příklady cílů mapy zpráv knihovny MFC: třídy aplikace, třídy dokumentů a zobrazení, – třídy ovládacích prvků a tak dále.  

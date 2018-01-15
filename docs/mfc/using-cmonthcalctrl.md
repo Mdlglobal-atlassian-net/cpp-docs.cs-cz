@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b16df22efe86310e4d6faeadc35085507e15a7e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee958116b7eed8804bb6c540187eea6b37d750ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cmonthcalctrl"></a>Používání atributu CMonthCalCtrl
 Ovládací prvek měsíční kalendář ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje kalendáře jako uživatelské rozhraní. To poskytuje uživatele s velmi intuitivní a rozpoznatelném metody zadáním nebo výběrem data. Ovládací prvek také poskytuje aplikace způsob, jak získat a nastavit informace o datu v ovládacím prvku pomocí stávající datové typy. Ve výchozím nastavení zobrazí ovládací prvek měsíční kalendář aktuálního dne a měsíce. Uživatel je však možné se přejděte na předchozí a další měsíců a vyberte konkrétní měsíce a roku.  
@@ -29,13 +30,13 @@ Ovládací prvek měsíční kalendář ([CMonthCalCtrl](../mfc/reference/cmonth
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   
--   [Vytváření v měsíci v ovládacím prvku Kalendář](../mfc/creating-the-month-calendar-control.md)  
+-   [Vytvoření ovládacího prvku měsíční kalendář](../mfc/creating-the-month-calendar-control.md)  
   
 -   [Příklady pro ovládací prvek měsíční kalendář](../mfc/month-calendar-control-examples.md)  
   
--   [Zpracování zpráv s oznámením v měsíci ovládacím prvku Kalendář](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
+-   [Zpracování zpráv s oznámením v ovládacím prvku měsíční kalendář](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
   
--   [Nastavení stavu dne v měsíci v ovládacím prvku Kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
+-   [Nastavení stavu dne v ovládacím prvku měsíční kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

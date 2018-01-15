@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 030deda8b46492dba76fb85702fa40f22b0db594
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
 Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vložit Data](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementace potřebných k podpoře kopírování a vkládání ze schránky. Pokud je to všechny implementujete, jsou pouze formáty umístit do schránky `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně `CF_LINKSOURCE`. Většina aplikací potřebovat více formátů do schránky. než tyto tři.  

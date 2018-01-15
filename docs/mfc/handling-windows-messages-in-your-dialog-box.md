@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b23131af3d1264a042de615d26c79d3e2827897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 819d11c8749852900e070ea3e7abf579cac7f7f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Zpracování zpráv systému Windows ve vašem dialogovém okně
 Dialogová okna jsou windows, takže jejich zpracování zpráv systému Windows, pokud zadáte funkce příslušnou obslužnou rutinu. Při vytváření vlastní třídy dialogového okna pomocí Průvodce přidáním, průvodce přidá mapování prázdná zpráva k třídě. Okno Vlastnosti použijte k mapování libovolné zpráv systému Windows nebo příkazy, že které chcete vaší třídy pro zpracování.  

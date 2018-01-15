@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>tiled_extent – třída
 A `tiled_extent` objekt `extent` objekt jednu až tři dimenzí, který rozděluje prostor rozsah do jeden, dva nebo trojrozměrné dlaždice.  
@@ -225,4 +226,4 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -47,11 +47,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10bc57e29383386df63de4cd6f27299a8f9986a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-class"></a>ctype – třída
 Třída poskytující omezující vlastnost, která se používá ke klasifikaci znaků, převodu z velkých a malých písmen a převodu mezi nativní znakovou sadou a sadou používanou národním prostředím.  
@@ -107,7 +108,7 @@ class ctype : public ctype_base;
 |[do_tolower –](#do_tolower)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na malá písmena.|  
 |[do_toupper –](#do_toupper)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na velká písmena.|  
 |[do_widen –](#do_widen)|Virtuální funkce volat za účelem převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.|  
-|[je](#is)|Ověřuje, zda má jeden znak konkrétní atribut, nebo klasifikuje atributy v jednotlivých kontejnerech v rozsahu a uloží je v poli.|  
+|[is](#is)|Ověřuje, zda má jeden znak konkrétní atribut, nebo klasifikuje atributy v jednotlivých kontejnerech v rozsahu a uloží je v poli.|  
 |[zúžit](#narrow)|Převádí znak typu `CharType` používá národní prostředí odpovídající znaku znakový typ nativní znakovou sadu.|  
 |[scan_is –](#scan_is)|Vyhledá první znak v rozsahu, který odpovídá zadané masce.|  
 |[scan_not –](#scan_not)|Vyhledá první znak v rozsahu, který neodpovídá zadané masce.|  

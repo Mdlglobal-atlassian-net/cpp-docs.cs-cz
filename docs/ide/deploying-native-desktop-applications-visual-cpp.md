@@ -20,11 +20,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a8dcf4a49813ae108edb23b50676e751db5e2f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fe88a322314ac24fa5799735e84ff100efa2e79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Nasazení nativních aplikací klasické pracovní plochy (Visual C++)
 Nasazení je proces, pomocí kterého distribuujete dokončenou aplikaci nebo součásti k instalaci na jiných počítačích. Plánování nasazení spustí, když aplikace je vytvořena na počítači pro vývojáře. Nasazení končí, když je aplikace nainstalované a připravené ke spuštění v počítači uživatele.  
@@ -38,13 +39,13 @@ Nasazení je proces, pomocí kterého distribuujete dokončenou aplikaci nebo so
  Články v této části dokumentace popisuje zajistit, že na libovolném počítači, který poskytuje podporované cílovou platformu, soubory, které je nutné zahrnout instalační balíček a doporučené způsoby, jak funguje nativní aplikace Visual C++ znovu distribuovat součásti, které vaše aplikace závisí.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md)  
+ [Nasazení ve Visual C++](../ide/deployment-in-visual-cpp.md)  
   
  [Koncepty nasazení](../ide/deployment-concepts.md)  
   
- [Principy závislostí v aplikaci Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)  
+ [Principy závislostí v aplikacích Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)  
   
- [Určení, které knihovny DLL je třeba redistribuovat](../ide/determining-which-dlls-to-redistribute.md)  
+ [Zjištění, které knihovny DLL je třeba redistribuovat](../ide/determining-which-dlls-to-redistribute.md)  
   
  [Volba metody nasazení](../ide/choosing-a-deployment-method.md)  
   
@@ -59,8 +60,8 @@ Nasazení je proces, pomocí kterého distribuujete dokončenou aplikaci nebo so
  [C++/CLR aplikace spuštěné v předchozí verzi modulu Runtime](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Sestavení C/C++ izolovaných aplikací a souběžně sdílená sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+ [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
  [Nasazení](/dotnet/framework/deployment/index)  
   
- [Řešení potíží s C/C++ izolované aplikace a souběžně sdílená sestavení](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

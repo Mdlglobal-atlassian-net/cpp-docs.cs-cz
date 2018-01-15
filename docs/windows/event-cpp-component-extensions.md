@@ -17,11 +17,14 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e821d68fac0467d48a2056e1818c3fd58963581
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event--c-component-extensions"></a>event (rozšíření komponent C++)
 `event` Deklaruje – klíčové slovo *událostí*, který je registrovaný odběratelům oznámení (*obslužné rutiny událostí*), něco zájmu došlo k chybě.  
@@ -50,7 +53,7 @@ modifiereventdelegate^ event_name
  *Modifikátor*  
  Modifikátor, který lze použít v deklaraci události nebo metodu přístupového objektu události.  Možné hodnoty jsou `static` a `virtual`.  
   
- *Delegát*  
+ *delegate*  
  [Delegovat](../windows/delegate-cpp-component-extensions.md), jejichž podpis obslužné rutiny události se musí shodovat.  
   
  *EVENT_NAME*  
@@ -112,7 +115,7 @@ modifiereventdelegate^ event_name
  *Modifikátor*  
  Modifikátor, který lze použít v deklaraci události nebo metodu přístupového objektu události.  Možné hodnoty jsou `static` a `virtual`.  
   
- *Delegát*  
+ *delegate*  
  [Delegovat](../windows/delegate-cpp-component-extensions.md), jejichž podpis obslužné rutiny události se musí shodovat.  
   
  *EVENT_NAME*  
@@ -229,7 +232,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 OnClick: 7, 3.14159  
@@ -273,7 +276,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 0  
@@ -282,4 +285,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

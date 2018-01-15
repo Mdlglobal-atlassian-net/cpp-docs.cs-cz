@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 32523bd64ccb5583e789b812d41e58ba734d80f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedfuture-class"></a>shared_future – třída
 Popisuje, *asynchronní návratové objekt*. Rozdíl s [budoucí](../standard-library/future-class.md) objektu, *asynchronní zprostředkovatele* lze přidružit libovolný počet `shared_future` objekty.  
@@ -62,7 +63,7 @@ class shared_future;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[GET](#get)|Načte výsledek, který je uložen v *přidružené asynchronní stavu*.|  
+|[get](#get)|Načte výsledek, který je uložen v *přidružené asynchronní stavu*.|  
 |[platný](#valid)|Určuje, zda objekt není prázdný.|  
 |[Počkej](#wait)|Aktuální vlákno zablokuje, dokud přidružený stav asynchronní je připraven.|  
 |[wait_for](#wait_for)|Bloky dokud přidružený stav asynchronní je připraven nebo dokud určený čas uplynul.|  

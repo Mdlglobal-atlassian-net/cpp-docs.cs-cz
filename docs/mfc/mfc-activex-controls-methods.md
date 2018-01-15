@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1c0fe2f5e54205c3e9c82ebf1d9cb40504e5023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e3b343b13118930612e4adfed4c33a65a9e7be8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC – ovládací prvky ActiveX: Metody
 Ovládací prvek ActiveX aktivuje události pro komunikaci mezi samostatně a jeho kontejneru ovládacího prvku. Kontejner může také komunikovat s ovládacím prvkem prostřednictvím metody a vlastnosti. Metody se také nazývají funkce.  
@@ -42,12 +43,12 @@ Ovládací prvek ActiveX aktivuje události pro komunikaci mezi samostatně a je
   
  Následující články popisují metody podrobně:  
   
--   [Ovládací prvky MFC ActiveX: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [MFC – ovládací prvky ActiveX: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [Ovládací prvky MFC ActiveX: Přidání vlastních metod](../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [MFC – ovládací prvky ActiveX: Přidání vlastních metod](../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [Ovládací prvky MFC ActiveX: Vrácení chybových kódů z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
+-   [MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

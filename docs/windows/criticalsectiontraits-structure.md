@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95428e0513193c78f135157b09a354e050014f23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits – struktura
 Se specializuje objekt CriticalSection pro podporu neplatný kritická sekce nebo funkce, která se verze kritická sekce.  
@@ -42,8 +45,8 @@ struct CriticalSectionTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Criticalsectiontraits::getinvalidvalue – metoda](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Se specializuje šablonu CriticalSection tak, aby šablona vždy je neplatná.|  
-|[Criticalsectiontraits::Unlock – metoda](../windows/criticalsectiontraits-unlock-method.md)|Se specializuje šablonu CriticalSection tak, aby podporoval uvolnit vlastnictví objektu zadaného kritická sekce.|  
+|[CriticalSectionTraits::GetInvalidValue – metoda](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Se specializuje šablonu CriticalSection tak, aby šablona vždy je neplatná.|  
+|[CriticalSectionTraits::Unlock – metoda](../windows/criticalsectiontraits-unlock-method.md)|Se specializuje šablonu CriticalSection tak, aby podporoval uvolnit vlastnictví objektu zadaného kritická sekce.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CriticalSectionTraits`  
@@ -54,4 +57,4 @@ struct CriticalSectionTraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2767ae80c2b967bfbe78f35431949b472ff550f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3febe10f7c71e1c1d478dd6f6b6f565c4134e033
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification – struktura
 Představuje oznámení ze Správce prostředků, proxy přístup z více vláken, která blokovaný a aktivaci vraťte se do plánovače určené plánování kontextu má odblokováno a je připravený k naplánování. Toto rozhraní je neplatný, jakmile kontext přidružený spuštění proxy přístup z více vláken, vrátí z `GetContext` je přeplánovat metody.  
@@ -74,4 +75,4 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
  [Struktura rozhraní IUMSScheduler](iumsscheduler-structure.md)   
- [Iumscompletionlist – struktura](iumscompletionlist-structure.md)
+ [IUMSCompletionList – struktura](iumscompletionlist-structure.md)

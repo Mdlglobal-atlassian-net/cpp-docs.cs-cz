@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a36cfa6c0171f7f05d308aef2cd2c84e62ce296
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33e9245654f0ec2e9af65258eb5be7b4230ad6fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-project-wizard"></a>Průvodce projektem souboru pravidel
 Pomocí tohoto průvodce k vytvoření příkazového řádku pro modul sestavení provést. Jakmile vytvoříte projekt, můžete zobrazit a upravit vlastnosti projektu v projektu [stránka vlastností](../ide/working-with-project-properties.md).  

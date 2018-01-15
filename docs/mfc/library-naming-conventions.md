@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd3a4464a7857a3fecac040be7b9d4f1161b4a37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
-ms.translationtype: MT
+ms.workload: cplusplus
+ms.openlocfilehash: 14e217b3cfd9f3618046cf1a0ca825eb2e6492f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="library-naming-conventions"></a>Zásady vytváření názvů knihoven
 Kód objektu knihovny MFC použijte následující zásady vytváření názvů. Názvy knihoven mají tvar  
@@ -62,5 +63,5 @@ Kód objektu knihovny MFC použijte následující zásady vytváření názvů.
  Další informace najdete v tématu [zásady vytváření názvů pro knihovny MFC DLL](../build/naming-conventions-for-mfc-dlls.md) a [Unicode verze knihovny MFC](../mfc/unicode-in-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Verze knihovny MFC](../mfc/mfc-library-versions.md)
+ [MFC – knihovní verze](../mfc/mfc-library-versions.md)
 

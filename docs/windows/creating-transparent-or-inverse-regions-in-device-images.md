@@ -30,11 +30,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1e59f05c011f1a65937c63f43bd8dfd6f506fe9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f416b31200352fc849fb2d1c7a43f9759da47d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (editor obrázků pro ikony)
 V [editor obrázků](../windows/image-editor-for-icons.md), má atribut transparentní počáteční obrázek ikony nebo kurzoru. I když jsou obdélníková ikonu a kurzor bitové kopie, mnoho se nezobrazí, protože částí obrázku jsou transparentní; základní bitovou kopii na obrazovce zobrazuje pomocí ikony nebo kurzoru. Při přetažení ikonu částí obrázku se mohou objevit v obráceným barev. Vytvoříte tento účinek nastavení barvy obrazovky a inverzní barvy v [barvy – okno](../windows/colors-window-image-editor-for-icons.md).  
@@ -61,7 +64,7 @@ V [editor obrázků](../windows/image-editor-for-icons.md), má atribut transpar
     > [!TIP]
     >  Pokud dvakrát kliknete výběr barvy obrazovky nebo inverzní barvy [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) se zobrazí.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Požadavky  
   

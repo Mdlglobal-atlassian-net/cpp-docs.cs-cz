@@ -26,16 +26,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd19281a66767f6487730640f9a98d721b0b33e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bbc8bd6acdd916abac12803a28eb0e817f15e86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: Instalace lokalizovaných komponent knihovny MFC
 Tato technická Poznámka, která popsané instalace lokalizovaných komponent knihovny MFC, je nyní zastaralá.  
   
- **V tématu**[nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) pro další **informace o redistribuci aplikací Visual C++.   Viz také** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) Další informace o lokalizaci aplikací knihovny MFC.  
+ **V tématu**[nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) pro další **informace o redistribuci aplikací Visual C++. Viz také** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) Další informace o lokalizaci aplikací knihovny MFC.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

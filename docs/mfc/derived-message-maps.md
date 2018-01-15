@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e70f2298ed916db7d9c7b2d059ef7ce69b4060c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e5901602368e60a3873a1dba2fc681c6ac146f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-message-maps"></a>Mapy odvozených zpráv
 Během zpracování, kontrola zprávu třídy a vlastní zprávy mapy není konec scénář map zpráv. Co se stane, když třída `CMyView` (odvozený z `CView`) nemá odpovídající záznam zprávy  
@@ -45,5 +46,5 @@ Zobrazení hierarchie
  Na rychlost mapování zpráv odpovídající, rozhraní ukládá do mezipaměti poslední odpovídá na pravděpodobnost, že ho stejnou zprávu přijme znovu. Důsledkem tohoto objektu je procesy framework velmi efektivně neošetřená zprávy. Mapy zpráv jsou také místo efektivnější než implementace, které používají virtuální funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [Jak Framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
+ [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
 

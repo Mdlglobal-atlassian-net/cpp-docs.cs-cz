@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e09ebafbeb0d4aa1357ff9dc6e378ff4058d772a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcfcb2e4fe333db1ed629489b405255d4ab050b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Oznámení z ovládacích prvků pro úpravy s formátováním
 Sestava ovládacích prvků pro úpravy s formátováním ovlivňující událostí zprávy oznámení ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Jsou může zpracovat nadřazeného okna nebo pomocí reflexe zpráv pomocí bohaté upravit vlastní ovládací prvek. Ovládací prvky Rich edit podporovat všechny zprávy s oznámením použít s ovládacími prvky pro úpravy, jakož i několik dalších ty. Můžete určit, jaké zprávy s oznámením ovládacího prvku RichEdit odešle jeho nadřazeného okna nastavením "události maska."  

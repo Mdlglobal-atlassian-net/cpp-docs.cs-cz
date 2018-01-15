@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6711cc93071c1e260a5d216a6ad21add9c00540
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be56e7afb23295e9b03d801943af25c652d18758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf – metoda
 Uvolní rozhraní přidružené k této ComPtr a pak načte adresu [ptr_ –](../windows/comptr-ptr-data-member.md) datového člena, který obsahuje ukazatel na rozhraní, která byla vydána.  
@@ -40,4 +43,4 @@ T** ReleaseAndGetAddressOf();
   
 ## <a name="see-also"></a>Viz také  
  [ComPtr – třída](../windows/comptr-class.md)   
- [Comptr::ptr_ – datový člen](../windows/comptr-ptr-data-member.md)
+ [ComPtr::ptr_ – datový člen](../windows/comptr-ptr-data-member.md)

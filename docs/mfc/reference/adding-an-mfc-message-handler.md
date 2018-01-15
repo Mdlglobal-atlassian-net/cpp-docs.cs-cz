@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed68a99e35d5ab234e567e01ea264bea64579fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 170e8314759d24ce1cfe7413b0c41e81a5617445
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-message-handler"></a>Přidání popisovače zpráv knihovny MFC
 Můžete [použijte okno Vlastnosti pro přidání obslužné rutiny zpráv](../../mfc/reference/mapping-messages-to-functions.md) (členské funkce, která zpracovává zprávy systému Windows) do třídy a mapování zpráv systému Windows do obslužné rutiny zpráv. Můžete také přidat [obslužné rutiny události pro libovolný ovládací prvek dialogové okno](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2f4f91d16d0eccf8a5d0f9802b1990c2bdcab470
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f3e632488f8cceee9de9fe069825b1a1204944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map –&gt;
 Definuje šablonu třídy kontejnerů [unordered_map](../standard-library/unordered-map-class.md) a [unordered_multimap](../standard-library/unordered-multimap-class.md) a jejich podpůrné šablony.  
@@ -41,10 +42,10 @@ Definuje šablonu třídy kontejnerů [unordered_map](../standard-library/unorde
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/unordered-map-operators.md#op_neq)|Testy, pokud unordered_map objekt na levé straně operátoru není stejný jako unordered_map objekt na pravé straně.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testy, pokud unordered_map objekt na levé straně operátoru není stejný jako unordered_map objekt na pravé straně.|  
 |[Operator ==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testy, pokud unordered_map objekt na levé straně operátoru rovná unordered_map objekt na pravé straně.|  
 |[swap – funkce (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamění dvě mapy.|  
-|[Operator! =](../standard-library/unordered-map-operators.md#op_neq)|Testy, pokud unordered_multimap objekt na levé straně operátoru není stejný jako unordered_multimap objekt na pravé straně.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testy, pokud unordered_multimap objekt na levé straně operátoru není stejný jako unordered_multimap objekt na pravé straně.|  
 |[Operator ==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testy, pokud unordered_multimap objekt na levé straně operátoru rovná unordered_multimap objekt na pravé straně.|  
 |[swap – funkce (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamění dvě multimaps.|  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03a07410f6decb6497312a9f04b421bed367dfad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c415b12b22c19a5e1f2d19fd9c808a98485eb7ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-messages"></a>Mapování zpráv
 Každá třída framework, který může přijímat zprávy nebo příkazy, má svou vlastní "mapy zpráv." Rozhraní používá mapy zpráv pro připojení zprávy a příkazy k jejich funkcím obslužných rutin. Všechny třídy odvozené od třídy `CCmdTarget` může mít mapy zpráv. Další články vysvětlují mapy zpráv podrobně a popisují, jak je používat.  
@@ -34,5 +35,5 @@ Každá třída framework, který může přijímat zprávy nebo příkazy, má 
  Přestože název "zpráva mapy" zpráva mapy zpracovat oba zprávy a příkazy – všechny tři kategorie zpráv, které jsou uvedené v [kategorie zpráv](../mfc/message-categories.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v rozhraní Framework](../mfc/messages-and-commands-in-the-framework.md)
+ [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

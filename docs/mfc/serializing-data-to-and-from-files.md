@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a0b81c90567bb3cebd9a5e128eb6b76d58ee9b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializace dat při vstupu i výstupu ze souborů
 Základní představu o trvalost je, že objekt by měl být schopni zapisovat jeho aktuální stav indikován hodnoty jeho členské proměnné, do trvalého úložiště. Objekt později, může být znovu vytvořen, čtení, nebo "deserializaci" stav objektu z trvalého úložiště. Zde bod klíče je zodpovědná za čtení a zápis vlastní stav samotného objektu. Proto pro třídu jako trvalé, musí implementovat operace základní serializace.  

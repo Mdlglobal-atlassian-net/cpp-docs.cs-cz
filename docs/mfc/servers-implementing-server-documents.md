@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d2a3f42522ecceb09261de7437446f0d5be2d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-server-documents"></a>Servery: Implementace dokumentů serveru
 Tento článek vysvětluje kroky, které je nutné provést při úspěšně implementovat dokument na serveru, pokud jste nezadali možnost OLE serveru v Průvodci aplikací.  
@@ -47,5 +48,5 @@ Tento článek vysvětluje kroky, které je nutné provést při úspěšně imp
  [Servery](../mfc/servers.md)   
  [Servery: Serverové položky](../mfc/servers-server-items.md)   
  [Servery: Implementace serveru](../mfc/servers-implementing-a-server.md)   
- [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
+ [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
 

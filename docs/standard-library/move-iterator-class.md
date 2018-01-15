@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59ad715516adfa716a307e1a4e0b7e4cf39e154a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54691a7d25e9229143e17476d5e0e09c6732e69e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moveiterator-class"></a>move_iterator – třída
 Šablona třídy `move_iterator` je obálku pro iterace. Iterátor move_iterator poskytuje stejné chování jako iterátor, kterého zabalí (uloží). Výjimkou je, že operátor přesměrování uloženého iterátoru mění na odkaz hodnoty rvalue a kopírování se tak mění na přesunutí. Další informace o rvalue najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -70,7 +71,7 @@ class move_iterator;
   
 |||  
 |-|-|  
-|[základní](#base)|Členská funkce vrátí uložené iterator zabalen to `move_iterator`.|  
+|[base](#base)|Členská funkce vrátí uložené iterator zabalen to `move_iterator`.|  
   
 ### <a name="operators"></a>Operátory  
   
@@ -297,7 +298,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
  [\<iterator >](../standard-library/iterator.md)   
  [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [Konstruktory a operátory přiřazení pro přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

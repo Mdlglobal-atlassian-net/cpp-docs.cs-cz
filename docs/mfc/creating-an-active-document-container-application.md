@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66618fd86d1ced689cffbaeef3da08cc0c0491a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 077d15837ed857ac983c3c9f9d4e7853b45aeee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-active-document-container-application"></a>Vytvoření aplikace kontejnerů pro aktivní dokument
 Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontejnerů pro aktivní dokument je vytvoření kontejneru aplikace MFC EXE pomocí Průvodce aplikací knihovny MFC a pak upravit aplikaci, aby podporovala obsahování pro aktivní dokument.  
@@ -71,5 +72,5 @@ Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontej
 11. Přidejte všechny vlastní implementaci a sestavení aplikace.  
   
 ## <a name="see-also"></a>Viz také  
- [Obsahování pro aktivní dokument](../mfc/active-document-containment.md)
+ [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 803f58daf4a4be4773c81db51b6289602f930820
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59732c2315bafca46bdcf99f31beaa528336669b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ccomboboxex"></a>Používání atributu CComboBoxEx
 Pole ovládacího prvku rozšířené pole se seznamem je rozšířením pole se seznamem standardní ovládací prvek, který poskytuje nativní podporu pro obrázků položek. Tyto bitové kopie slouží k označení stavu jednotlivých položek v seznamu, jako je například položky aktuálně vybrané a nezaškrtnuté. Chcete-li obrázků položek snadno dostupný, ovládacího prvku poskytuje podporu seznamu bitové kopie.  
@@ -34,11 +35,11 @@ Pole ovládacího prvku rozšířené pole se seznamem je rozšířením pole se
   
 -   [Vytvoření ovládacího prvku rozšířené pole se seznamem](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem](../mfc/using-image-lists-in-an-extended-combo-box-control.md)  
+-   [Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem](../mfc/using-image-lists-in-an-extended-combo-box-control.md)  
   
 -   [Nastavení obrázků pro jednotlivé položky](../mfc/setting-the-images-for-an-individual-item.md)  
   
--   [Zpracování zpráv s oznámením v ovládacích prvcích rozšířeného pole se seznamem](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)  
+-   [Zpracování zpráv s oznámením v ovládacích prvcích rozšířené pole se seznamem](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky](../mfc/controls-mfc.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue – třída
 `concurrent_priority_queue` Třída je kontejner, který umožňuje více vláken současně nabízení a pop položek. Položky jsou odebrány v pořadí podle priority, kde je priorita určena functor, zadaný jako argument šablony.  

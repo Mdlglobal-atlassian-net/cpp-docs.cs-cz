@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 492c9a293f69ffce893436930b2c4cc4319ac850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c74f2d0d1d97a1e3381f986433eaf8806e1c431f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-chart-categories"></a>Kategorie grafů hierarchie
 ![Kategorie grafů hierarchie MFC](../mfc/media/vc369r1.png "vc369r1")  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../mfc/hierarchy-chart.md)   
- [Běžné aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)
+ [Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)
 

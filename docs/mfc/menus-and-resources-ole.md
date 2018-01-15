@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11875a7004f8b833869440e59252325558cada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe0a5f6dae2cece571eddabc4094ebb87df175b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-ole"></a>Nabídky a prostředky (OLE)
 Tato skupina článků popisuje použití nabídky a prostředky v aplikacích MFC OLE dokumentu.  
@@ -63,11 +64,11 @@ Tato skupina článků popisuje použití nabídky a prostředky v aplikacích M
   
  Následující články popisují témata související s kontejnery, servery a v nabídce slučování nezbytné k implementaci aktivace na místě:  
   
--   [Nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)  
+-   [Nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)  
   
--   [Nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md)  
+-   [Nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md)  
   
--   [Nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md)  
+-   [Nabídky a prostředky: Sloučení nabídky](../mfc/menus-and-resources-menu-merging.md)  
   
 ## <a name="see-also"></a>Viz také  
  [OLE](../mfc/ole-in-mfc.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e66a6fd81e1d6240c6b5c203a7101d18f987e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0e70e8ecc14496b03bc758d91f078a926f33532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Příklady soketů využívajících archivy
 Tento článek představuje příklad použití třídy [CSocket](../mfc/reference/csocket-class.md). Aktivuje se v příkladu `CArchive` objekty k serializaci dat prostřednictvím soketu. Všimněte si, že se nejedná dokumentu serializace do nebo ze souboru.  
@@ -56,11 +57,11 @@ Tento článek představuje příklad použití třídy [CSocket](../mfc/referen
   
  Další informace najdete v tématu Specifikace Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Také další informace najdete v tématu:  
   
--   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: pozadí](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)   

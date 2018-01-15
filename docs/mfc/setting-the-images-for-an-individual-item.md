@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dec67e2ff5423213645b2e5bb8493198eb53dff9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Nastavení obrázků pro jednotlivé položky
 Různé typy obrázků použitých položkou pole rozšířeného pole se seznamem, které jsou určeny podle hodnot v `iImage`, **iSelectedImage**, a **iOverlay** členy [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktura. Každá hodnota je index bitové kopie v seznamu přidruženou bitovou kopii ovládacího prvku. Tito členové jsou standardně nastavena na hodnotu 0, způsobuje ovládací prvek zobrazí žádný obrázek pro položku. Pokud chcete použít Image pro konkrétní položky, můžete upravit strukturu odpovídajícím způsobem, při vkládání položky pole se seznamem nebo úpravou existující položky pole se seznamem.  

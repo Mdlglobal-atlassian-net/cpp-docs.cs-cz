@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a30ad3887ace197276556aab929a7d16ae7922e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Bezpečný přístup z více vláken ve standardní knihovně C++
 Platí následující pravidla bezpečný přístup z více vláken na všechny třídy v standardní knihovna C++ – to zahrnuje `shared_ptr`, jak je popsáno níže.  Někdy jsou k dispozici větší záruku – například standardní iostream objekty, jak je popsáno níže a typy určený speciálně pro více vláken, jako jsou ty v [ \<atomic >](../standard-library/atomic.md).  
@@ -42,7 +43,7 @@ Platí následující pravidla bezpečný přístup z více vláken na všechny 
 >  Čtení z datového proudu vyrovnávací paměti se nepovažuje za operace čtení. Místo toho považuje za operaci zápisu, protože se změnil stav třídy.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)
 
 
 

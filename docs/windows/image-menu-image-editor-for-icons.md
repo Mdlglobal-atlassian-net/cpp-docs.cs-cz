@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32b10c79d5ec2a8d25c0a942dd96a22b8e6a71e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Nabídka obrázku (editor obrázků pro ikony)
 Nabídka obrázku, která se zobrazí jenom v případě, že je aktivní editor obrázků, obsahuje příkazy pro úpravy bitové kopie, Správa palety barev a nastavení možností okno Editor obrázků. Příkazy pro použití obrázky zařízení kromě toho jsou k dispozici při práci s ikony a kurzory.  

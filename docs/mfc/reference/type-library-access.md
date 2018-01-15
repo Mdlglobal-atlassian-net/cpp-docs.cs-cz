@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f05738c02fd70fde5fc2d92c5ee1e823747797c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bbc5ceabe60d7ee15d85495bb1a431955a589849
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-library-access"></a>Přístup ke knihovně typů
 Knihovny typů vystavit rozhraní OLE ovládacího prvku pro jiné aplikace využívající technologii OLE. Pokud jeden nebo více rozhraní mají být exponovány, musí mít každý ovládací prvek OLE knihovny typů.  

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43eda0c6bd875b9fd82ee97d346e3f5d89584795
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d189395bbedff4d73cc690d454ddd07af4d109e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Převádění bitmap na panely nástrojů
 Převádění rastrový obrázek můžete vytvořit nový panel nástrojů. Na obrázku z bitmapy převede na pro obrázky tlačítka panelu nástrojů. Obvykle bitmapy obsahuje několik tlačítko bitových kopií na jednom rastrového obrázku, jednu bitovou kopií pro každé tlačítko. Bitové kopie může mít libovolnou velikost; Výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost tlačítko obrázků v [dialogové okno Nový prostředek panelu nástrojů](../windows/new-toolbar-resource-dialog-box.md) Pokud vyberete Editor panelu nástrojů z **Image** nabídky v editoru obrázků.  
@@ -41,7 +44,7 @@ Převádění rastrový obrázek můžete vytvořit nový panel nástrojů. Na o
   
  Identifikátory příkazů tlačítek na panelu nástrojů nové můžete také změnit pomocí [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Informace o nových nástrojů pro úpravy, najdete v části [vytváření, přesouvání a úpravy tlačítka panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Požadavky  
   

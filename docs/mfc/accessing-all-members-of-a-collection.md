@@ -14,24 +14,24 @@ helpviewer_keywords:
 - enumerating collections [MFC]
 - collections [MFC], accessing
 - collection classes [MFC]
-- accessing members"
-- arrays [MFC], iterating
-- iteration [MFC], collections
-- member access [MFC], collections
-- list collection iteration [MFC]s
-- MFC collection classes [MFC], accessing members
-- collections [MFC], looping through
-- loop structures [MFC], looping through collections
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b3f6e78bfd0beac1c3c5eb2b2248ddaa7b6f1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Přístup ke všem členům kolekce
 Třídy MFC pole kolekce – i na základě šablon a není – používat pro přístup k jejich elementů indexy. Třídy MFC seznamu a mapy kolekce – i na základě šablon a není – použít jako ukazatel typu **pozice** k popisu dané pozici v rámci kolekce. Pro přístup k jedné nebo více členové těchto kolekcí, budete nejprve inicializovat označení pozice opakovaně předat tuto pozici do kolekce a požádejte ho vrátit na další prvek. Kolekce není zodpovědná za údržbu informace o průběhu iterace stavu. Tyto informace se ukládají v označení pozice. Ale s ohledem na konkrétní pozici, kolekce je odpovědná za vrácení na další prvek.  

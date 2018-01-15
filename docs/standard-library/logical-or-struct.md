@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e07ce23d2c6416cc98bc2996dbe52d88d3a1cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6196cb6bb2e86f39bb738e32c013c4408447e859
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicalor-struct"></a>logical_or – struktura
 Předdefinované funkce objekt, který provede operaci logické disjunkce ( `operator||`) na její argumenty.  
@@ -128,7 +129,7 @@ The deque which is the disjuction of d1 & d2 is:
   
 ## <a name="see-also"></a>Viz také  
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

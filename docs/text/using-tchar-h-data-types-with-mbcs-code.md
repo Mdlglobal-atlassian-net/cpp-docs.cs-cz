@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 8eb50d8e49b195ffb3322bb30a8f147c2f248273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Použití datových typů TCHAR.H s kódováním _MBCS
 Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu se mapuje na jednu z následujících druhů rutin:  
@@ -76,4 +77,4 @@ Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu 
      Pokud tuto metodu, musí být opatrní, abyste zajistili použití příslušné datové typy pro argumenty řetězce a návratové hodnoty řetězce. Přetypování typu můžete použít k zajištění správné shody typů nebo můžete použít **_TXCHAR** datový typ obecného textu. **_TXCHAR –** mapuje na typ `char` v kódu SBCS ale mapuje na typ `unsigned` `char` v MBCS kódu. Další informace o obecného textu makra najdete v tématu [mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v *referenční dokumentace běhové knihovny*.  
   
 ## <a name="see-also"></a>Viz také  
- [Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+ [Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

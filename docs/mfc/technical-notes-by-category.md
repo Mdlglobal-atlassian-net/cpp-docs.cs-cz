@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb41c39be99a851e8acf8248fc2365ea47a86d7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0507558266200af87014c67d6a5c1173aba7a164
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="technical-notes-by-category"></a>Technické poznámky podle kategorií
 Technické poznámky jsou rozdělené do následujících kategorií. Číselné seznam technické poznámky, najdete v části [technické poznámky podle čísel](../mfc/technical-notes-by-number.md).  
@@ -28,9 +29,9 @@ Technické poznámky jsou rozdělené do následujících kategorií. Číselné
 ||  
 |-|  
 |[TN001: Registrace tříd oken](../mfc/tn001-window-class-registration.md)|  
-|[TN003: Obslužných rutin Windows na objekty](../mfc/tn003-mapping-of-windows-handles-to-objects.md)|  
-|[TN017: Likvidace objektů oken](../mfc/tn017-destroying-window-objects.md)|  
-|[TN051: A budoucí použití knihovny CTL3D](../mfc/tn051-using-ctl3d-now-and-in-the-future.md)|  
+|[TN003: Mapování obslužných rutin Windows na objekty](../mfc/tn003-mapping-of-windows-handles-to-objects.md)|  
+|[TN017: Zničení objektů oken](../mfc/tn017-destroying-window-objects.md)|  
+|[TN051: Současné a budoucí použití knihovny CTL3D](../mfc/tn051-using-ctl3d-now-and-in-the-future.md)|  
   
 ### <a name="mfc-architecture"></a>Architektura MFC  
   
@@ -38,21 +39,21 @@ Technické poznámky jsou rozdělené do následujících kategorií. Číselné
 |-|  
 |[TN002: Formát dat trvalých objektů](../mfc/tn002-persistent-object-data-format.md)|  
 |[TN006: Mapy zpráv](../mfc/tn006-message-maps.md)|  
-|[TN016: Použití vícenásobné C++ dědičnosti MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|  
-|[TN021: Příkazů a zpráv směrování](../mfc/tn021-command-and-message-routing.md)|  
+|[TN016: Použití vícenásobné dědičnosti jazyka C++ v prostředí MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|  
+|[TN021: Směrování příkazů a zpráv](../mfc/tn021-command-and-message-routing.md)|  
 |[TN022: Implementace standardních příkazů](../mfc/tn022-standard-commands-implementation.md)|  
-|[Tn025: vytvoření Dokumentu, zobrazení a rámečku](../mfc/tn025-document-view-and-frame-creation.md)|  
+|[TN025: Vytvoření dokumentu, zobrazení a rámečku](../mfc/tn025-document-view-and-frame-creation.md)|  
 |[TN026: Rutiny DDX a DDV](../mfc/tn026-ddx-and-ddv-routines.md)|  
 |[TN029: Dělená okna](../mfc/tn029-splitter-windows.md)|  
 |[TN030: Přizpůsobení tisku a tiskového náhledu](../mfc/tn030-customizing-printing-and-print-preview.md)|  
 |[TN031: Ovládací pruhy](../mfc/tn031-control-bars.md)|  
 |[TN032: Mechanismus výjimek MFC](../mfc/tn032-mfc-exception-mechanism.md)|  
-|[TN037: Vícevláknové MFC 2.1 aplikace](../mfc/tn037-multithreaded-mfc-2-1-applications.md)|  
+|[TN037: Vícevláknové aplikace MFC 2.1](../mfc/tn037-multithreaded-mfc-2-1-applications.md)|  
 |[TN044: Podpora MFC pro znaky DBCS](../mfc/tn044-mfc-support-for-dbcs.md)|  
 |[TN046: Konvence při psaní komentářů pro třídy MFC](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|  
 |[TN058: Implementace stavu modulu MFC](../mfc/tn058-mfc-module-state-implementation.md)|  
 |[TN059: Použití maker MBCS/Unicode převod MFC](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|  
-|[TN066: Běžné MFC 3.x na 4.0 problémy s portováním](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|  
+|[TN066: Běžné problémy s portováním z prostředí MFC 3.x do verze 4.0](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|  
   
 ### <a name="mfc-controls"></a>MFC – ovládací prvky  
   
@@ -60,7 +61,7 @@ Technické poznámky jsou rozdělené do následujících kategorií. Číselné
 |-|  
 |[TN014: Vlastní ovládací prvky](../mfc/tn014-custom-controls.md)|  
 |[TN060: Běžné ovládací prvky Windows](../mfc/tn060-the-new-windows-common-controls.md)|  
-|[TN061: ON_NOTIFY a wm_notify – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md)|  
+|[TN061: ON_NOTIFY a WM_NOTIFY – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md)|  
 |[TN062: Reflexe zprávy pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md)|  
   
 ### <a name="mfc-database"></a>MFC databáze  
@@ -70,12 +71,12 @@ Technické poznámky jsou rozdělené do následujících kategorií. Číselné
 |[TN042: Doporučení pro vývojáře ovladačů ODBC](../mfc/tn042-odbc-driver-developer-recommendations.md)|  
 |[TN043: Rutiny RFX](../mfc/tn043-rfx-routines.md)|  
 |[TN045: Podpora MFC a databáze pro Long Varchar/Varbinary](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|  
-|[TN047: Uvolnění požadavků transakce databáze](../mfc/tn047-relaxing-database-transaction-requirements.md)|  
-|[TN048: Psaní nastavení rozhraní ODBC a programy pro správu pro databázové aplikace MFC](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|  
+|[TN047: Uvolnění požadavků na databázové transakce](../mfc/tn047-relaxing-database-transaction-requirements.md)|  
+|[TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|  
 |[TN053: Vlastní rutiny DFX pro třídy MFC rozhraní DAO](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|  
-|[TN054: Volání rozhraní DAO přímo při používání tříd DAO knihovny MFC](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|  
+|[TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|  
 |[TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO](../mfc/tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md)|  
-|[TN068: Provádění transakcí pomocí ovladače 7 ODBC Microsoft Access](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|  
+|[TN068: Provádění transakcí pomocí ovladače ODBC Microsoft Access 7](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|  
   
 ### <a name="mfc-dlls"></a>MFC DLL  
   
@@ -104,17 +105,17 @@ Technické poznámky jsou rozdělené do následujících kategorií. Číselné
   
 ||  
 |-|  
-|[TN020: ID konvence pojmenování a číslování](../mfc/tn020-id-naming-and-numbering-conventions.md)|  
+|[TN020: Konvence pojmenování a číslování pro identifikátory](../mfc/tn020-id-naming-and-numbering-conventions.md)|  
 |[TN023: Standardní prostředky MFC](../mfc/tn023-standard-mfc-resources.md)|  
-|[TN024: Zprávy definované MFC a prostředky](../mfc/tn024-mfc-defined-messages-and-resources.md)|  
+|[TN024: Zprávy a prostředky definované knihovnou MFC](../mfc/tn024-mfc-defined-messages-and-resources.md)|  
 |[TN028: Podpora kontextové nápovědy](../mfc/tn028-context-sensitive-help-support.md)|  
-|[TN035: Použití více zdrojových souborů a hlavičkových souborů pomocí aplikace Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|  
-|[TN036: Použití třídy CFormView s objekty AppWizard a ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)|  
+|[TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyku Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|  
+|[TN036: Použití třídy CFormView s objekty AppWizard a ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)|  
 |[TN070: MFC – názvy tříd oken](../mfc/tn070-mfc-window-class-names.md)|  
   
 ### <a name="mfc-internet"></a>MFC Internet  
   
 ||  
 |-|  
-|[TN063 Ladění knihoven Internet MFC – rozšiřující knihovny DLL](../mfc/tn063-debugging-internet-extension-dlls.md)|
+|[TN063 Ladění knihoven DLL internetového rozšíření MFC](../mfc/tn063-debugging-internet-extension-dlls.md)|
 

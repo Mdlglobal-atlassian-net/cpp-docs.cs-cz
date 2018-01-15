@@ -36,11 +36,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dfd818a22bb720ef41ab1a1dbacc1cd6ee6676b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC – ovládací prvky ActiveX: Distribuce ovládacích prvků ActiveX
 Tento článek popisuje několik problémy související s Redistribuce ovládacích prvků ActiveX:  
@@ -83,5 +84,5 @@ Tento článek popisuje několik problémy související s Redistribuce ovládac
  Byste měli zaregistrovat MFCx0.DLL.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

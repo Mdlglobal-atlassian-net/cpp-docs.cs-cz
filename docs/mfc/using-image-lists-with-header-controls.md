@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3346384b6b77b3ef965bb2b58b99c78f315f183
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-image-lists-with-header-controls"></a>Použití seznamů obrázků s ovládacími prvky záhlaví
 Položky hlavičky mít možnost zobrazit obrázek v rámci položky záhlaví. Tuto bitovou kopii, uložené v seznamu přidruženou bitovou kopii, je velikosti 16 x 16 pixelů a má stejné vlastnosti jako ikona obrázků použitých v ovládacím prvku zobrazení seznamu. Aby bylo možné úspěšně implementovat toto chování, musíte nejprve vytvořit a Inicializace seznamu obrázků, přidružit seznamu pomocí ovládacího prvku záhlaví a potom upravte atributy položky záhlaví, který se zobrazí bitovou kopii.  

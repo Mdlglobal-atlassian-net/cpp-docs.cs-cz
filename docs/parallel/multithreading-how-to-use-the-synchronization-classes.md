@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6726596a22532bfe2095cca2e021afefaef80fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy
 Synchronizace přístupu k prostředkům mezi vlákny problém je běžný, při zápisu vícevláknové aplikace. Má dva nebo více vlákna současně přístup, stejná data může vést k nežádoucím a nepředvídatelným výsledky. Například jedno vlákno může aktualizovat obsah struktury zatímco jiné vlákno čte obsah stejnou strukturu. Není známo, jaká data vlákno pro čtení obdrží: stará data, nově zapsaná data či kombinaci obou. MFC poskytuje řadu synchronizace a synchronizační přístupové třídy na pomoc při řešení tohoto problému. Toto téma vysvětluje třídy, které jsou k dispozici a jakým způsobem je použít k vytvoření třídy bezpečné pro přístup z více vláken v typické aplikaci s více vlákny.  
@@ -65,4 +66,4 @@ singleLock.Unlock();
  Informace o způsobu určení, které třídy pro použití v různých situacích naleznete v tématu [Multithreading: kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Další informace o synchronizaci najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Další informace o podpoře více vláken v prostředí MFC najdete v tématu [Multithreading s C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

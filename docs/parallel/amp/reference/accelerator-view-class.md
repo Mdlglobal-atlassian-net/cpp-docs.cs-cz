@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d98297d681f3c2c377a7bccb7b988169aca76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 Představuje virtuální zařízení abstrakce na akcelerátor C++ AMP paralelní data.  
@@ -72,7 +73,7 @@ class accelerator_view;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
+|[operator!=](#operator_neq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` objekt s touto.|  
 |[Operator ==](#operator_eq_eq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
   
@@ -334,4 +335,4 @@ void wait();
   
  
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

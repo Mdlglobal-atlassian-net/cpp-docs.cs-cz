@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e755ae6b0d6170087af64f7561b310894f0768d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registration"></a>Registrace
 Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů můžete vybrat ze seznamu. OLE získá tento seznam z registrační databáze systému, který obsahuje informace, které poskytuje všechny serverové aplikace. Když server registruje, položky, které se uloží do databáze systému registrace (registr) popisují každý typ objektu, který poskytne, soubor rozšíření a cestu sama na sebe, mimo jiné informace o.  

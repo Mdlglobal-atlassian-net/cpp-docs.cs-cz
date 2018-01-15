@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d332c13356620b97497f505bf194ea82919cd9dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3720a0445f3d43324c2c5963f2dc2cb21e18b3f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: Podpora MFC pro znaky DBCS
 Tato technická Poznámka popsané podpory v prostředí MFC "dvoubajtové znakové sady" nebo DBCS. Tato informace, jakož i informace o MFC je podpora pro UNICODE je teď dostupná v *knihovny tříd*.  

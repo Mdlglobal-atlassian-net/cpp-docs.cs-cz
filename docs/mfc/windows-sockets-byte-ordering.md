@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c4693951800056974fe51ad102e63f2662fa76e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c25a7b2c8240531e1d778d6a119f857032423db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Pořadí bajtů
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá pořadí bajtů. Další problémy, které jsou popsané v článcích: [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  
@@ -103,14 +104,14 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
   
  Další informace naleznete v tématu:  
   
--   [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: pozadí](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: Sokety datového proudu](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
   
 -   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+ [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

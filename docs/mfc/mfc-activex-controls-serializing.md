@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc6a81fd32b4a32ba6468ee8d03c68d2678409c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34b8f0520d1f071bb408f782b0f2370ef29f528e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC – ovládací prvky ActiveX: Serializace
 Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializace je proces čtení nebo zápisu do trvalého úložiště média, jako je soubor na disku. Knihovna Microsoft Foundation Class (MFC) obsahuje integrovanou podporu pro serializaci ve třídě `CObject`. `COleControl`rozšiřuje tato podpora do ovládacích prvků ActiveX prostřednictvím mechanismus vlastnost exchange.  
@@ -97,5 +98,5 @@ Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializa
  Ve výchozím nastavení ovládacího prvku "převede" stará data na nejnovější formát. Například pokud verze 2 ovládacího prvku načítá data, která byla uložena podle verze 1, se bude zapisovat ve formátu verze 2 při jeho uložení opakujte. Pokud chcete k uložení dat v poslední čtení formátu ovládacího prvku, předat **FALSE** jako třetí parametr při volání metody `ExchangeVersion`. Tato třetí parametr je volitelný a je **TRUE** ve výchozím nastavení.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

@@ -35,11 +35,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69002f6b0b326b9ad4eb9a5aaa2162558ff368af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 978303c9edaec2d9776d6e1c81b530df791ca5ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog – třída
 Dialogové okno nemodální karta ( [cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)), který umožňuje uživateli upravit panely nástrojů, nabídek, klávesové zkratky, uživatelem definované nástroje a vizuální styl v aplikaci. Obvykle se uživatel přistoupí k tohoto dialogového okna tak, že vyberete **přizpůsobit** z **nástroje** nabídky.  
@@ -685,4 +686,4 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [Cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)
+ [CPropertySheet – třída](../../mfc/reference/cpropertysheet-class.md)

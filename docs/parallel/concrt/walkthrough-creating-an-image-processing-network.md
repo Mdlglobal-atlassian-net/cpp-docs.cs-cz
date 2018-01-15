@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8378c3acb691164641f788a87f740b0900f1bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
 Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv provádějící zpracování obrázků.  
@@ -34,9 +35,9 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
 -   [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Postupy: použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+-   [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
--   [Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)  
+-   [Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)  
   
  Doporučujeme taky, že chápete základní informace o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] před spuštěním tohoto průvodce.  
   
@@ -170,4 +171,4 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
  **cl.exe /DUNICODE /EHsc/Link bitové kopie. zpracování network.cpp gdiplus.lib**  
   
 ## <a name="see-also"></a>Viz také  
- [Návody k Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
+ [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

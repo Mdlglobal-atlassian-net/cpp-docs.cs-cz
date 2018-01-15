@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14eb80452a9b5ceefeea7ff204c42288b7542c5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 093c732563844b14a3f99662150d4db9b2fac1fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuce součástí s použitím modulů sloučení
 Visual Studio obsahuje [slučovací moduly](http://msdn.microsoft.com/library/aa367434) pro každou součást Visual C++, který je licencován distribuována pomocí aplikace. Jakmile se slučovací modul zkompiluje v instalačním souboru Instalační služba systému Windows, umožňuje nasazení konkrétních knihoven DLL do počítačů na určité platformě. V instalačním souboru určete, že slučovací moduly představují požadavky pro vaši aplikaci. Při instalaci sady Visual Studio slučovacích modulů nainstalovaných v \Program Files\Common Files\Merge Modules\\. (Jenom bez ladění verze Visual C++ – knihovny DLL může distribuují.) Další informace a odkaz na seznam slučovací moduly, které jsou licencí pro redistribuci najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).  

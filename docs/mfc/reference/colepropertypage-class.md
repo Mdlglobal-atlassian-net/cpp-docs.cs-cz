@@ -49,11 +49,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19ed15a5245712933ec43daabc5444160e5eeb95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cac788f0e7f691f28a6751d15971f117d753428c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 Slouží k zobrazení vlastností vlastního ovládacího prvku v grafickém rozhraní, podobně jako dialogové okno.  

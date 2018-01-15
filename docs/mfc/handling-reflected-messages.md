@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 442e9f3ee7af696a175a57d482b2d276f10eb0b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c3576e93ce7ce2d972e78433065feaf06f3ae15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-reflected-messages"></a>Zpracování reflektovaných zpráv
 Zpráva reflexe umožňuje zpracovat zprávy pro ovládací prvek, jako například `WM_CTLCOLOR`, **wm_command –**, a **wm_notify –**, v samotném ovládacím prvku. Díky řízení více samostatné a přenosné. Tento mechanismus funguje s běžné ovládací prvky Windows, a také s ovládacími prvky ActiveX (dříve se označovaly jako ovládací prvky OLE).  

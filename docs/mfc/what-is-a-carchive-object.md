@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2fe145a2bfac01bd201284bbbaa8250ee20b3612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb9b0c3e24094deb0d4fd4ac20d673d9ffafca6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-a-carchive-object"></a>Co je objekt CArchive
 A `CArchive` objekt poskytuje mechanismus bezpečného typu vyrovnávací paměti pro zápisu nebo čtení serializovatelné objekty do nebo z `CFile` objektu. Obvykle `CFile` objekt představuje soubor na disku; však může být také soubor paměti (`CSharedFile` objektu), případně představující schránky.  

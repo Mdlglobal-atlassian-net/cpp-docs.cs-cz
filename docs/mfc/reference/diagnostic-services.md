@@ -30,11 +30,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a55f100bb23f098f927231331e727fc2972eb4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 Knihovny Microsoft Foundation Class poskytuje mnoho diagnostiky službách, díky kterým ladění programy jednodušší. Tyto diagnostické služby zahrnují makra a globální funkce, které vám umožní sledovat paměti pro vaše programy přidělení, dump obsah objektů za běhu a Tisk zprávy ladění za běhu. Makra a globální funkce pro diagnostické služby jsou seskupené do následujících kategorií:  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 234288be0313c8e50fde08a3cb898f498ebe4174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-groups"></a>Skupiny plánů
 Tento dokument popisuje roli skupiny plánu v Concurrency Runtime. A *plán skupiny* způsobem přidružuje nebo skupin, souvisejících úloh společně. Všechny plánovače má jeden nebo více skupin plán. Použití skupin plánů, pokud požadujete vysokou míru polohu mezi úlohy, například když skupinu souvisejících úloh těžit z provádění na stejném procesoru uzlu. Instance plánovače naopak používejte, když vaše aplikace má požadavky na konkrétní kvalitu, například pokud chcete omezit množství prostředků zpracování, které jsou přiděleny sadu úloh. Další informace o instance plánovače najdete v tématu [instance plánovače](../../parallel/concrt/scheduler-instances.md).  
@@ -44,5 +45,5 @@ Tento dokument popisuje roli skupiny plánu v Concurrency Runtime. A *plán skup
 ## <a name="see-also"></a>Viz také  
  [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Instance plánovače](../../parallel/concrt/scheduler-instances.md)   
- [Postupy: použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
+ [Postupy: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
 

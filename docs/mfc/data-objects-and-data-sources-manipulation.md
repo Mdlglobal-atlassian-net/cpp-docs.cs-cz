@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4561e055bd258ba2b276075ff337d62cf194813b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
 Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných operací na data, jako je například vkládání a odstraňování dat, vytváření výčtu formáty, které je v datech, a další. Tento článek popisuje techniky, které jsou potřebné k dokončení většiny běžných operací. Témata zahrnují:  
@@ -94,9 +95,9 @@ Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných
   
 -   [Přetažení](../mfc/drag-and-drop-ole.md)  
   
--   [Schránky](../mfc/clipboard.md)  
+-   [Schránka](../mfc/clipboard.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject – třída](../mfc/reference/coledataobject-class.md)   
- [Coledatasource – třída](../mfc/reference/coledatasource-class.md)
+ [COleDataSource – třída](../mfc/reference/coledatasource-class.md)

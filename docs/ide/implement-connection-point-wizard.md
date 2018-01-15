@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7efade7f0bd0a3c35e02439818873b923c1ac1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-connection-point-wizard"></a>Průvodce implementací bodu připojení
 Tento průvodce implementuje bod připojení pro objekt COM. Objekt umožňující připojení (tedy zdroje) můžou zpřístupnit spojovací bod pro vlastní rozhraní nebo pro jakékoli odchozí rozhraní. Visual C++ i Windows poskytují knihovny typů, které mají odchozí rozhraní. Každý odchozí rozhraní může být implementováno klientem objektu (tj. jímka).  

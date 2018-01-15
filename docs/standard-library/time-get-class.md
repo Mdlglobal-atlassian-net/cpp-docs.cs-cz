@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get – třída
 Šablony třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` hodnoty času.  
@@ -101,7 +102,7 @@ class time_get : public time_base;
 |[do_get_time –](#do_get_time)|A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  
 |[do_get_weekday –](#do_get_weekday)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu týdnu.|  
 |[do_get_year –](#do_get_year)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu roku.|  
-|[GET](#get)|Čte ze zdroje data znaků a převede je na čas, který je uložen v časové struktuře.|  
+|[get](#get)|Čte ze zdroje data znaků a převede je na čas, který je uložen v časové struktuře.|  
 |[get_date –](#get_date)|Analyzuje řetězec jako datum vyprodukované `x` – specifikátor pro `strftime`.|  
 |[get_monthname –](#get_monthname)|Analyzuje řetězec jako název měsíce.|  
 |[get_time –](#get_time)|Analyzuje řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  

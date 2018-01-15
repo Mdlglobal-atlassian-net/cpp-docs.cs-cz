@@ -66,11 +66,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0558bd962d8f646cc599ba604dbe749f5a02138b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7068c2b94637a859c35c662350c27f157103e37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicios-class"></a>basic_ios – třída
 Šablony třídy popisuje funkce úložiště a člen, které jsou společné pro obě vstupní datové proudy (šablony třídy [basic_istream](../standard-library/basic-istream-class.md)) a výstupní datové proudy (šablony třídy [basic_ostream](../standard-library/basic-ostream-class.md)), závisí na Parametry šablony. (Třída [ios_base](../standard-library/ios-base-class.md) popisuje, co je to běžné a není závislá na parametry šablony.) Třída objektu **basic_ios\<Elem třídy, vlastnosti třídy >** pomáhá řídit datový proud s elementy typu **Elem**, jehož vlastnosti znak určuje třídu  **Vlastnosti**.  
@@ -126,13 +127,13 @@ class basic_ios : public ios_base
 |[Špatné](#bad)|Určuje, ke ztrátě integrity vyrovnávací paměti datového proudu.|  
 |[Vymazat](#clear)|Vymaže všechny příznaky chyby.|  
 |[copyfmt –](#copyfmt)|Zkopíruje příznaky z jednoho datového proudu do jiného.|  
-|[EOF](#eof)|Označuje, pokud byl dosažen konec datového proudu.|  
+|[eof](#eof)|Označuje, pokud byl dosažen konec datového proudu.|  
 |[výjimky](#exceptions)|Označuje, výjimek, které bude vyvolána pomocí datového proudu.|  
 |[selhání](#fail)|Označuje selhání platné pole extrahovat z datového proudu.|  
 |[výplně](#fill)|Určuje nebo vrátí znak, který se použije, když text není širší jako datový proud.|  
 |[Dobré](#good)|Označuje, že datový proud je v dobrém stavu.|  
 |[imbue –](#imbue)|Změní národní prostředí.|  
-|[Init –](#init)|Voláno rozhraním `basic_ios` konstruktory.|  
+|[init](#init)|Voláno rozhraním `basic_ios` konstruktory.|  
 |[Přesunutí](#move)|Přesune všechny hodnoty, s výjimkou má ukazatel na vyrovnávací paměť datový proud, z parametru pro aktuální objekt.|  
 |[zúžit](#narrow)|Vyhledá ekvivalentní char k danou `char_type`.|  
 |[rdbuf –](#rdbuf)|Datový proud trasy do zadané vyrovnávací paměti.|  

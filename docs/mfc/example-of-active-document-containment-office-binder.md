@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1305057b6b0f63e513aca88b77a507ed9bbc3493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00451b41b047f433929ad58e4b275eb413f4e22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Příklad zahrnutí aktivního dokumentu: modul vazby sady Office
 Microsoft Office Binder je příkladem kontejner. Aplikace Office Binder obsahuje dvě podokna primární, stejně jako kontejnery obvykle. V levém podokně obsahuje ikony, které odpovídají aktivní dokumenty v vazače. Je volána každý dokument *části* v rámci vazače. Vazač může například obsahovat dokumenty aplikace Word, PowerPoint soubory, tabulky aplikace Excel a tak dále.  
@@ -38,5 +39,5 @@ Microsoft Office Binder je příkladem kontejner. Aplikace Office Binder obsahuj
  Existují samozřejmě další možné typy kontejnery vedle vazače. Průzkumník souborů používá rozhraní typické duální podokně, ve kterém v levém podokně pomocí ovládacím prvkem strom zobrazí hierarchické seznamu adresářů v síti, nebo jednotku při pravý panel zobrazuje soubory obsažené v aktuálně vybraném adresáři. Internetové prohlížeče – typ kontejneru (například aplikace Microsoft Internet Explorer), nikoli pomocí rozhraní duální podokně, obvykle má jeden snímek a poskytuje navigační pomocí hypertextové odkazy.  
   
 ## <a name="see-also"></a>Viz také  
- [Obsahování pro aktivní dokument](../mfc/active-document-containment.md)
+ [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
 

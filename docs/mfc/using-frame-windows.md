@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6245ea3f406311ab018f19ed1071c609c4e981f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e54a232b246665a1ef82fb48166eed2aff0fd9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-frame-windows"></a>Použití oken s rámečkem
 Rozhraní MFC framework vytvoří dokument okna s rámečkem – a jejich zobrazení a dokumenty – jako součást provádění nové a spuštění příkazů v nabídce Soubor. Protože systém provádí většinu práce oken s rámečkem pro vás, můžete přehrát jenom malé role v vytvoření, použití a odstraňování těchto windows. Můžete, ale explicitně vytvořit vlastní okna s rámečkem a podřízená okna pro zvláštní účely.  
@@ -30,7 +31,7 @@ Rozhraní MFC framework vytvoří dokument okna s rámečkem – a jejich zobraz
   
 -   [Vytváření dokumentů, oken s rámečkem](../mfc/creating-document-frame-windows.md)  
   
--   [Když třeba inicializovat objekty CWnd](../mfc/when-to-initialize-cwnd-objects.md)  
+-   [Kdy je třeba inicializovat objekty CWnd](../mfc/when-to-initialize-cwnd-objects.md)  
   
 -   [Zničení oken s rámečkem](../mfc/destroying-frame-windows.md)  
   

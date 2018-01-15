@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>MFC – průvodce aplikací
 Průvodce aplikací MFC generuje aplikaci, když kompilovat, implementuje základní funkce spustitelný soubor (.exe) aplikace systému Windows. Výchozí aplikace knihovny MFC zahrnuje C++ zdrojové (sada) soubory, soubory prostředků (RC), soubory hlavičky () a soubor projektu (VCXPROJ). Kód, který je generovaný v těchto souborech starter vychází MFC.  
@@ -44,23 +45,23 @@ Průvodce aplikací MFC generuje aplikaci, když kompilovat, implementuje zákla
   
     -   Projekt využívá MFC v sdílenou knihovnu DLL. Další informace najdete v tématu [knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md).  
   
--   [Podpora složených dokumentů, Průvodce aplikací knihovny MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
+-   [Podpora složených dokumentů, Průvodce aplikací MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   
     -   Projekt nepodporuje složené dokumenty.  
   
--   [Řetězce šablony dokumentu, Průvodce aplikací knihovny MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
+-   [Řetězce šablon dokumentů, Průvodce aplikací MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
   
     -   Projekt využívá název projektu pro výchozích řetězce šablony dokumentu.  
   
--   [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Podpora databáze, Průvodce aplikací MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
     -   Projekt poskytuje žádná podpora pro databáze.  
   
--   [Funkce uživatelského rozhraní, Průvodce aplikací knihovny MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
+-   [Funkce uživatelského rozhraní, Průvodce aplikací MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
   
     -   Projekt implementuje standardní Windows uživatelské rozhraní funkce, jako je system nabídku, stavového řádku, maximalizovat a minimalizovat polí **o** pole, standardní řádek nabídek a ukotvení panelu nástrojů a podřízené rámce.  
   
--   [Pokročilé funkce, Průvodce aplikací knihovny MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
+-   [Pokročilé funkce, Průvodce aplikací MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
   
     -   Projekt podporuje tisku a přehled tisku.  
   
@@ -70,7 +71,7 @@ Průvodce aplikací MFC generuje aplikaci, když kompilovat, implementuje zákla
   
     -   Projekt podporuje **Explorer** ukotvení podokně **výstup** ukotvení podokně a **vlastnosti** ukotvení podokně.  
   
--   [Generované třídy, Průvodce aplikací knihovny MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
+-   [Generované třídy, Průvodce aplikací MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
   
     -   Třídy zobrazení projektu je odvozený od [CView – třída](../../mfc/reference/cview-class.md).  
   

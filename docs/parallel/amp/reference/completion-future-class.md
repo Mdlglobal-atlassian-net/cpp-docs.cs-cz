@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="completionfuture-class"></a>completion_future – třída
 Představuje budoucí odpovídající C++ AMP asynchronní operaci.  
@@ -52,7 +53,7 @@ class completion_future;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[GET](#get)|Čeká na dokončení přidružené asynchronní operace.|  
+|[get](#get)|Čeká na dokončení přidružené asynchronní operace.|  
 |[potom](#then)|Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.|  
 |[to_task](#to_task)|Vrátí `task` objekt odpovídající přidružené asynchronní operaci.|  
 |[platný](#valid)|Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.|  
@@ -285,4 +286,4 @@ Zničí `completion_future` objektu.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

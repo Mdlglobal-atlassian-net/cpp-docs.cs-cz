@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a4c9d15f5b86aea78ae02837f0b7073189894d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 198fd62e8134a14930d88b478d5ed78b1e8d8e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Průvodci a dialogová okna knihovny MFC
 Průvodci Microsoft Foundation Class (MFC) generovat často používaný kód pro různé druhy komponent a objektů. Můžete spustit Průvodce otevřením místní nabídku pro projekt v **Průzkumníku řešení** a výběr **přidat**, **třída**.  
@@ -27,14 +28,14 @@ Průvodci Microsoft Foundation Class (MFC) generovat často používaný kód pr
 |Název|Popis|  
 |-----------|-----------------|  
 |[Vytvoření projektu knihovny MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)|Vytvoří podle MFC knihovny DLL.|  
-|[Vytváření aplikací MFC](../../mfc/reference/creating-an-mfc-application.md)|Generuje aplikace knihovny MFC.|  
-|[Vytvoření kontejneru ovládacího prvku ActiveX knihovny MFC](../../mfc/reference/creating-an-mfc-activex-control-container.md)|Generuje kontejner pro ovládací prvek ActiveX.|  
-|[Vytvoření ovládacího prvku ActiveX knihovny MFC](../../mfc/reference/creating-an-mfc-activex-control.md)|Generuje ovládacího prvku ActiveX podle MFC.|  
+|[Vytvoření aplikace MFC](../../mfc/reference/creating-an-mfc-application.md)|Generuje aplikace knihovny MFC.|  
+|[Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC](../../mfc/reference/creating-an-mfc-activex-control-container.md)|Generuje kontejner pro ovládací prvek ActiveX.|  
+|[Vytvoření ovládacího prvku ActiveX prostředí MFC](../../mfc/reference/creating-an-mfc-activex-control.md)|Generuje ovládacího prvku ActiveX podle MFC.|  
 |[Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)|Vytvoří základní třídu.|  
 |[Třída knihovny MFC z knihovny typů](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)|Vygeneruje třídu a naplní podle knihovny typů, který určíte.|  
 |[Popisovač zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)|Vytvoří obslužnou rutinu zpráv systému Windows.|  
 |[Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)|Vytvoří komponenty, která může komunikovat s databází ODBC.|  
 |[Podpora knihovny ATL v projektu knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|Vytvoří hlavičky a makra, které jsou vyžadovány aktivním šablony Library (ATL).|  
 |[Průvodce třídou MFC](../../mfc/reference/mfc-class-wizard.md)|Vytvoří soubor .h a soubor sada.|  
-|[Běžné aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)|Odkazy na dokumentaci MFC.|
+|[Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)|Odkazy na dokumentaci MFC.|
 

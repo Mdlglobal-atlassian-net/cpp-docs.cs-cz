@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 348964eb2f9b17a00188dd3a2589ce0711767e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry – třída
 `network_link_registry` Abstraktní základní třída spravuje propojení mezi zdrojovými a cílovými bloky.  
@@ -57,11 +58,11 @@ class network_link_registry;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Přidat](#add)|Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.|  
+|[add](#add)|Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.|  
 |[začít](#begin)|Při přepsání v odvozené třídě vrátí iterovat na prvním elementem v `network_link_registry` objektu.|  
 |[obsahuje](#contains)|Při přepisu v odvozené třídě, vyhledá `network_link_registry` objekt pro zadaný blok.|  
 |[počet](#count)|Při přepsání v odvozené třídě vrátí počet položek v `network_link_registry` objektu.|  
-|[odebrat](#remove)|Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.|  
+|[remove](#remove)|Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
  `network link registry` Není bezpečná pro souběžný přístup.  

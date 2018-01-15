@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba55de8c308e7f2a76559006ff5dad0a7fe6f5d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Zprávy a příkazy v prostředí .NET Framework
 Aplikace napsané pro Microsoft Windows jsou "zpráva řízené." V reakci na události, jako je například kliknutí myší, stisknutí kláves, okno pohybů a tak dále systém Windows odešle zprávy do okna správné. Framework – aplikace zpracování zpráv systému Windows jako jiná aplikace pro Windows. Ale rozhraní přináší také některé vylepšení, které zpracování zpráv jednodušší, více udržovatelný a lepší zapouzdřené.  

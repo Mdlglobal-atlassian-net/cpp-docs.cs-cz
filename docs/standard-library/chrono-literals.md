@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a470c96670753fd98b97f9b9d5daffbb8c3eba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chrono-literals"></a>literály typu chrono
 (C ++ 14) \<Typu chrono > záhlaví definuje 12 [uživateli definované literály](../cpp/user-defined-literals-cpp.md) usnadňuje pomocí literály, které představují hodiny, minuty, sekundy, milisekundách, mikrosekundách a nanosekundách. Každé uživatelské literál má integrální hodnotu a s plovoucí desetinnou čárkou přetížení. Literály jsou definovány v oboru názvů vloženého literals::chrono_literals, která je uvedena do oboru automaticky po std::chrono v oboru.  

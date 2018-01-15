@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 520e6ae9aebdc35c07acac3f99c16be393f79e74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d92e0ffa11ea07331704bfcd91798c50c48dabac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager – třída
 Udržuje kolekci [CUserTool třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatele nástroje k aplikaci. Podporuje provádění příkazů související nástroje pro uživatele, a také ukládá informace o nástrojích uživatele do registru systému Windows.  

@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e447b6b8d4895bf0103995742fe0b2a5c8d62484
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizace textu na panelu stavového řádku
 Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně panelu aplikace MFC stavu. Stavový řádek – objektem okna třídy [cstatusbar –](../mfc/reference/cstatusbar-class.md) – obsahuje několik "podokna." Každý podokno je obdélníkovou oblast stavový řádek, který můžete použít k zobrazení informací. Například mnoho aplikace se zobrazí stav klávesy CAPS LOCK NUMLOCK a jiných klíčů ve nejvíce vpravo podokna. Aplikace se zobrazí také často informativní text v krajní levé podokno (0), někdy označuje jako "podokno zpráva". Například výchozí MFC stavového řádku používá v podokně zpráv pro zobrazení řetězec vysvětlením tlačítko nabídky aktuálně vybrané položky nebo na panelu nástrojů. Na obrázku v [stavové řádky](../mfc/status-bar-implementation-in-mfc.md) zobrazuje indikátor stavu z aplikace vytvořené – Průvodce aplikací knihovny MFC.  
@@ -84,4 +85,4 @@ Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně pane
   
 ## <a name="see-also"></a>Viz také  
  [Implementace stavového řádku v prostředí MFC](../mfc/status-bar-implementation-in-mfc.md)   
- [Cstatusbar – třída](../mfc/reference/cstatusbar-class.md)
+ [CStatusBar – třída](../mfc/reference/cstatusbar-class.md)

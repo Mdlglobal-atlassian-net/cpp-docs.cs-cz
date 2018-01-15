@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05ddb536dc4d7929141c7c153fdd9ec5ce1e9d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf0cd4d6d77f4479d5a1cfd56f74f83c3980f38f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setlocale"></a>setlocale
 Určuje národní prostředí (země/oblast a jazyk) při překladu konstant širokého znaku a řetězcových literálů.  
@@ -49,4 +50,4 @@ Určuje národní prostředí (země/oblast a jazyk) při překladu konstant ši
  Schopnost vydávat řetězec jazyka závisí na znakové stránce a podpoře ID jazyka na počítači.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

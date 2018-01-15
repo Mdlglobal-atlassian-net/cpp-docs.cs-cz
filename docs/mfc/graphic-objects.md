@@ -52,11 +52,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29bc2b807cfbe83772eec1982d6fa391f22ce78b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 Systém Windows nabízí celou řadu kreslení nástroje dostupné v kontextech zařízení. Poskytuje pera kreslení čar, štětce výplně vnitřek a písem pro kreslení textu. Knihovna MFC poskytuje třídy grafických objektů ekvivalentní nástrojů pro kreslení v systému Windows. Následující tabulka uvádí dostupných tříd a ekvivalentní grafika Windows typy popisovač rozhraní GDI zařízení.  

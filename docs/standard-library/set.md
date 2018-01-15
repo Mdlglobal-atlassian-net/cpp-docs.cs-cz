@@ -15,13 +15,14 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c56eec9249f073f27b063778df460ef7347a6e7b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16338888d64155ddeab188159030ac060ebb2b17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltsetgt"></a>&lt;nastavení&gt;
+# <a name="ltsetgt"></a>&lt;set&gt;
 Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -60,7 +61,7 @@ Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablon
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 
 
 

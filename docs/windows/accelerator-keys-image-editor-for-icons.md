@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eb2440602fefbbd2f42cbdde3f56745777e8e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c992ed83f5c86fdd770bda8f9970ff98a90c2722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Klávesy akcelerátoru (editor obrázků pro ikony)
 V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitové kopie, které jsou vázány na klíče ve výchozím nastavení. Klávesy akcelerátoru změnit, klikněte na **možnosti** na **nástroje** nabídce a potom zvolte **klávesnice** pod **prostředí** složky. Další informace najdete v tématu [identifikuje a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -71,7 +74,7 @@ V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitov�
 |Image.ZoomIn|CTRL + SHIFT +. (tečka)<br /><br /> - nebo -<br /><br /> CTRL + ŠIPKA NAHORU|Zvyšuje zvětšení pro aktuální zobrazení.|  
 |Image.ZoomOut|CTRL + (čárkou)<br /><br /> - nebo -<br /><br /> CTRL + ŠIPKA DOLŮ|Snižuje zvětšení aktuálního zobrazení.|  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  

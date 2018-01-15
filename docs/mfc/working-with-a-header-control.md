@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9078c01456f2766d544280b57297dc3cc64d54f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de7ef22d66befda28c6a374e8fb39f6b24a1dd62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-a-header-control"></a>Práce s ovládacím prvkem záhlaví
 Snadný způsob, jak pomocí ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) se používá současně se ovládací prvek seznamu, zjistit [pomocí CListCtrl](../mfc/using-clistctrl.md) dál v této rodině tématu. Můžete taky ovládacím prvkem záhlaví samostatně. MFC volání **InitCommonControls** za vás. Klíčovými úlohami jsou následující:  

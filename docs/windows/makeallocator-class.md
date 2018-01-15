@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0333dec823cb3996a9546bbfa702b3febf711a61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makeallocator-class"></a>MakeAllocator – třída
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -65,15 +68,15 @@ class MakeAllocator<T, true>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Makeallocator::makeallocator – konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicializuje novou instanci třídy MakeAllocator.|  
-|[MakeAllocator:: ~ makeallocator – destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes aktuální instance třídy MakeAllocator.|  
+|[MakeAllocator::MakeAllocator – konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicializuje novou instanci třídy MakeAllocator.|  
+|[MakeAllocator::~MakeAllocator – destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes aktuální instance třídy MakeAllocator.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Makeallocator::allocate – metoda](../windows/makeallocator-allocate-method.md)|Přidělí paměť a přidruží ji s aktuálním objektem MakeAllocator.|  
-|[Makeallocator::detach – metoda](../windows/makeallocator-detach-method.md)|Zrušíte paměti přidělené [přidělte](../windows/makeallocator-allocate-method.md) z aktuálního objektu MakeAllocator metodu.|  
+|[MakeAllocator::Allocate – metoda](../windows/makeallocator-allocate-method.md)|Přidělí paměť a přidruží ji s aktuálním objektem MakeAllocator.|  
+|[MakeAllocator::Detach – metoda](../windows/makeallocator-detach-method.md)|Zrušíte paměti přidělené [přidělte](../windows/makeallocator-allocate-method.md) z aktuálního objektu MakeAllocator metodu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `MakeAllocator`  
@@ -84,4 +87,4 @@ class MakeAllocator<T, true>;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

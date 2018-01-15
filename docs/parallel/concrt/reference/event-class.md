@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 53a49eeeaa6c9fb83b5dc2b96001a2b2097fbe5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-class"></a>event – třída
 Ruční vynulování události, které explicitně zná Concurrency Runtime.  
@@ -50,7 +51,7 @@ class event;
 |Název|Popis|  
 |----------|-----------------|  
 |[resetování](#reset)|Obnoví události do stavu signál.|  
-|[nastavení](#set)|Signály události.|  
+|[set](#set)|Signály události.|  
 |[Počkej](#wait)|Čeká na událost, která má být signál.|  
 |[wait_for_multiple –](#wait_for_multiple)|Čeká na více událostí k stát signál.|  
   
@@ -172,4 +173,4 @@ static size_t __cdecl wait_for_multiple(
 >  V [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace, nevolejte `wait_for_multiple` na ASTA vláken, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

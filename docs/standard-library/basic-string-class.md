@@ -127,11 +127,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c642d592b464b1a6844a8fa2e5f28b2b41467a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75779c073e50b80df717497919e0319612b1edcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstring-class"></a>basic_string – třída
 Pořadí řízené objekt třídy šablony `basic_string` se třída řetězec standardní C++ a jsou obvykle označují jako řetězce, ale nesmí být plést se používají v rámci standardní knihovna C++ C-style řetězce ukončené hodnotou null. Řetězec standardní C++ je kontejner, který umožňuje použití řetězce jako normální typy, jako jsou operace porovnání a zřetězení, iterátory, algoritmy standardní knihovna C++ a kopírování a přiřazení s allocator – třída spravované paměti. Pokud potřebujete převést řetězec standardní C++ C-style řetězce ukončené hodnotou null, použijte [basic_string::c_str](#c_str) člen.  

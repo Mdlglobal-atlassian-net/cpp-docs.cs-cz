@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b19a01ce06b76b49593adf54fa8af728be2d5c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-update-handlers-are-called"></a>Kdy jsou volány obslužné rutiny aktualizace
 Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, který generuje `WM_INITMENUPOPUP` zprávy. V rámci aktualizace Frameworku souhrnně aktualizuje všechny položky v nabídce soubor před rozbalení nabídky, takže uživatel uvidí.  
@@ -45,5 +46,5 @@ Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, kt
  Inicializace nabídky je automatické v rozhraní framework, ke kterým dochází, když obdrží aplikace `WM_INITMENUPOPUP` zprávy. Během nečinné smyčky framework prohledává příkaz směrování pro obslužné rutiny aktualizace tlačítko mnohem stejným způsobem jako v případě nabídky.  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
+ [Postupy: Aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 037e32f5284ab27c072f09c8965009eca1d0e7c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programmatic-printing"></a>Tisk prostřednictvím kódu programu
 OLE poskytuje prostředky k jednoznačné identifikaci trvalé dokumentů (**GetClassFile**) a načíst je do jejich přidružených kódu (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, a **IPersistStorage::Load**). Další povolit tisk dokumentů, obsahování pro aktivní dokument (pomocí existujícímu návrhu OLE není součástí OLE 2.0 původně) představuje základ standardní tisk rozhraní, `IPrint`, obecně k dispozici prostřednictvím jakéhokoliv objektu, který může načíst trvalý stav typu dokumentu. Každé zobrazení aktivní dokument může volitelně podporovat **IPrint –** rozhraní k poskytování těchto funkcí.  

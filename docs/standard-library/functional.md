@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f7b09ed7c4b52b45efee0708f65d8d2f3e24cd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt"></a>&lt;funkční&gt;
 Definuje funkce standardní knihovny C++, které pomáhají při vytváření *funkce objekty*– taky známé jako functors – a jejich vazače. Objekt funkce je objekt typu, který definuje `operator()`. Objekt funkce může být ukazatel na funkci, ale častěji tento objekt slouží k ukládání dalších informací, ke kterým lze získat přístup během volání funkce.  
@@ -124,7 +125,7 @@ Definuje funkce standardní knihovny C++, které pomáhají při vytváření *f
 |[not1 –](../standard-library/functional-functions.md#not1)|Vrací doplněk jednočlenného predikátu.|  
 |[not2 –](../standard-library/functional-functions.md#not2)|Vrací doplněk binárního predikátu.|  
 |[ptr_fun –](../standard-library/functional-functions.md#ptr_fun)|Pomocná funkce šablony použitá k převedení ukazatelů na jednočlenné a binární funkce do jednočlenných a binárních přizpůsobitelných funkcí.|  
-|[REF](../standard-library/functional-functions.md#ref)|Vytvoří `reference_wrapper` z argumentu.|  
+|[ref](../standard-library/functional-functions.md#ref)|Vytvoří `reference_wrapper` z argumentu.|  
 |[swap](../standard-library/functional-functions.md#swap)|Prohození dva `function` objekty.|  
   
 ### <a name="structs"></a>Struktury  
@@ -160,10 +161,10 @@ Definuje funkce standardní knihovny C++, které pomáhají při vytváření *f
 |||  
 |-|-|  
 |[Operator ==](../standard-library/functional-operators.md#op_eq_eq)|Zakáže porovnávání rovnosti volatelných objektů.|  
-|[Operator! =](../standard-library/functional-operators.md#op_neq)|Zakáže porovnávání nerovnosti volatelných objektů.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Zakáže porovnávání nerovnosti volatelných objektů.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní C++ – referenční dokumentace knihoven](../standard-library/cpp-standard-library-reference.md)
+ [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

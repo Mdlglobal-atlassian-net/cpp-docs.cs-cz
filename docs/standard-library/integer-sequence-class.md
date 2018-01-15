@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 129847900bc64ea0696f2736f173b9e57f7595ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integersequence-class"></a>integer_sequence – třída
 Představuje v sekvenci celé číslo. Lze odvodit a rozbalte sady parametrů v variadická typy například std::tuple\<T... > které jsou předávány jako argumenty funkce.  
@@ -131,5 +132,5 @@ int main()
  Oboru názvů: – std  
   
 ## <a name="see-also"></a>Viz také  
- [Tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md)
+ [Tři tečky a variadické šablony](../cpp/ellipses-and-variadic-templates.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 393e8aea159e83e43b83a9f06522466c60baba9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Vytváření programů využívajících vzdálenou automatizaci
 Jakýkoli objekt automatizace a jakýkoli řadič automatizace je možné používat vzdálenou automatizaci bez jakékoli změny do zdrojového kódu, bez nutnosti rekompilace a bez nutnosti opakované propojování. Až budete mít instalačního programu, která funguje místně (který je na stejném počítači), musí projít jenom pár kroků provést vzdáleně.  
@@ -55,5 +56,5 @@ Jakýkoli objekt automatizace a jakýkoli řadič automatizace je možné použ�
   
 ## <a name="see-also"></a>Viz také  
  [Vzdálená automatizace](../mfc/remote-automation.md)   
- [Spuštění vzdálené automatizace s použitím příkazů AUTOCLIK a AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
+ [Spuštění vzdálené automatizace s použitím příkazů AUTOCLIK a AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
 

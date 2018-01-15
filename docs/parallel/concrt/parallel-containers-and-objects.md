@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 695e3e07af26c709dadc70935e1e4d72705ecab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které poskytují přístup z více vláken bezpečný přístup k jejich elementů.  
@@ -298,23 +299,23 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
 ###  <a name="combinable-examples"></a>Příklady  
  Příklady týkající se použití `combinable` třídy, najdete v následujících tématech:  
   
--   [Postupy: použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
+-   [Postupy: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
   
--   [Postupy: použití objektu combinable ke slučování množin](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
+-   [Postupy: Použití objektu combinable ke slučování množin](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
   
  [[Horní](#top)]  
   
 ## <a name="related-topics"></a>Související témata  
- [Postupy: použití paralelních kontejnerů ke zvýšení efektivity](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)  
+ [Postupy: Použití paralelních kontejnerů ke zvýšení účinnosti](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)  
  Ukazuje způsob použití paralelních kontejnerů ke efektivně ukládat a přistupovat k datům paralelně.  
   
- [Postupy: použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
+ [Postupy: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
  Ukazuje, jak používat `combinable` třídy eliminovat sdíleného stavu a tak zlepšit výkon.  
   
- [Postupy: použití objektu combinable ke slučování množin](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
+ [Postupy: Použití objektu combinable ke slučování množin](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
  Ukazuje, jak používat `combine` funkce Sloučit místní datových sad.  
   
- [Knihovna Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
+ [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  Popisuje PPL, která poskytuje imperativní programovací model, který zvýší úroveň škálovatelnost a snadné použití pro vývoj souběžných aplikací.  
   
 ## <a name="reference"></a>Odkaz  

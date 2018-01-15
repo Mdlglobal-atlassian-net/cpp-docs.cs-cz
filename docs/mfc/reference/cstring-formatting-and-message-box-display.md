@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1596e4c890142947af74f8a117222705082d553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formátování dat CString a zobrazení oken zpráv
 Počet funkcí jsou k dispozici můžete naformátovat a analyzovat `CString` objekty. Tyto funkce lze použít, když máte k manipulaci s `CString` objekty, ale jsou užitečné zejména pro formátování řetězce, které se zobrazí v textu okno se zprávou.  

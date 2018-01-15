@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbf2e31e178cc444f3980e9b6a8ebe1b1a374235
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd1e652edb3501583624b068c604083f0c5d4165
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cspinbuttonctrl"></a>Používání atributu CSpinButtonCtrl
 *Číselníku* ovládací prvek (také označované jako *obousměrný číselník* ovládací prvek) poskytuje dvojice šipek, které uživatel klepnutím na tlačítko můžete upravit hodnotu. Tato hodnota se označuje jako *aktuální pozici*. Pozice zůstane v rozsahu číselníku. Když uživatel klikne na šipku nahoru, pozice blíží maximální; a když uživatel klikne na šipku dolů, pozice blíží minimální.  

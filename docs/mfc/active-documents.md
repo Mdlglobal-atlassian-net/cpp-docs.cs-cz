@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c535a6d0ecb2d38445f0c7c0629ea874cdb12e3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents"></a>Aktivní dokumenty
 Aktivní dokumenty rozšířit složeného dokumentu technologie OLE. Tato rozšíření jsou uvedeny v podobě další rozhraní, které spravují zobrazení, tak, aby fungovala v rámci kontejnerů a ještě zachovat kontrolu nad jejich zobrazení a tisk funkce objekty. Tento proces umožní zobrazování dokumentů v cizí snímků (například Microsoft modul vazby sady Office nebo aplikace Microsoft Internet Explorer) i v nativní rámce (třeba portů zobrazení produkt vlastní).  
@@ -106,5 +107,5 @@ interface IOleDocumentView : IUnknown
  Objekt zobrazení může být také cíl příkazu. Implementací `IOleCommandTarget` zobrazení může přijímat příkazy, které pocházejí z kontejneru uživatelské rozhraní (například **nový**, **otevřete**, **uložit jako**,  **Tisk** na **soubor** nabídky; a **kopie**, **vložení**, **vrátit zpět** na **upravit** nabídky). Další informace najdete v tématu [zpracování zpráv a cíle příkazů](../mfc/message-handling-and-command-targets.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Obsahování pro aktivní dokument](../mfc/active-document-containment.md)
+ [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
 

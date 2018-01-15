@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff1beb01e08ea78f96b7f161e7f3ffc1110ff63b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb376bd640c5b56bfbe5a855f0df91a9a0cb6b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Vytvoření nového vlastního prostředku nebo prostředku dat
 Můžete vytvořit nový prostředek vlastní nebo dat tím, že prostředek v samostatném souboru pomocí syntaxe souboru skriptu (.rc) normální prostředků a včetně tento soubor pravým tlačítkem myši na projekt v Průzkumníku řešení a kliknutím na **prostředek zahrnuje**  v místní nabídce.  
@@ -47,12 +50,12 @@ Můžete vytvořit nový prostředek vlastní nebo dat tím, že prostředek v s
   
  Jiný způsob, jak vytvořit vlastní prostředek se má importovat externí soubor jako vlastní prostředek. Další informace najdete v tématu [import a export prostředků](../windows/how-to-import-and-export-resources.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Požadavky  
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Binární Editor](binary-editor.md)
+ [Binární editor](binary-editor.md)
 

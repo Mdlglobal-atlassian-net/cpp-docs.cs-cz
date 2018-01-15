@@ -58,11 +58,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c849fb14b9400711596e36a8d5b5829c233efd45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce přizpůsobení, včetně definovaná systémem přizpůsobení dialogové okno, umožnit uživatelům vložit, odstranit nebo změna uspořádání tlačítek panelu nástrojů. Aplikace určuje, zda jsou k dispozici funkce přizpůsobení a ovládací prvky v rozsahu, ke kterému se uživatel může přizpůsobit panelu nástrojů.  

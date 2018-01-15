@@ -105,11 +105,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0586de707bb015e21df5c7975b98be6966cd0262
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd79ff07ff5e70c3d2d95482c5676df72dd41612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf – třída
 Popisuje abstraktní základní třídu pro odvození datového proudu vyrovnávací paměti řídí přenos elementů do a z konkrétní reprezentace datového proudu.  
@@ -206,7 +207,7 @@ class basic_streambuf;
 |[sbumpc –](#sbumpc)|Přečte a vrátí aktuálního elementu, ukazatele datového proudu.|  
 |[seekoff –](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
 |[seekpos –](#seekpos)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
-|[setbuf –](#setbuf)|Chráněný člen virtuální funkce provádí konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.|  
+|[setbuf](#setbuf)|Chráněný člen virtuální funkce provádí konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.|  
 |[setg –](#setg)|Chráněné funkci, která ukládá `_Gbeg` v ukazatele začátku `_Gnext` v další ukazatel a `_Gend` v end ukazatele pro vstupní vyrovnávací paměť.|  
 |[setp –](#setp)|Chráněné funkci, která ukládá `_Pbeg` v ukazatele začátku a `_Pend` v end ukazatele pro výstupní vyrovnávací paměť.|  
 |[sgetc –](#sgetc)|Vrátí aktuální element beze změny pozici v datovém proudu.|  

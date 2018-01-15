@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44e1ec9a00f1de2ab07d7b2a916d274a9cddce2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implements-c"></a>implements (C++)
 Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.  
@@ -550,4 +553,4 @@ public:
   
 ## <a name="see-also"></a>Viz také  
  [Atributy kompilátoru](../windows/compiler-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   

@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token – třída
 `cancellation_token` Třída reprezentuje schopnosti určit, zda byla vyžádána některé operace zrušení. Daný token dají přidružit `task_group`, `structured_task_group`, nebo `task` zajistit implicitní zrušení. Můžete ho také dotazování pro zrušení nebo zpětné volání pro registrováno Pokud a při přidruženého `cancellation_token_source` je zrušená.  
@@ -61,7 +62,7 @@ class cancellation_token;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator! =](#operator_neq)||  
+|[operator!=](#operator_neq)||  
 |[operátor =](#operator_eq)||  
 |[Operator ==](#operator_eq_eq)||  
   
@@ -190,4 +191,4 @@ template<typename _Function>
  A `cancellation_token_registration` objekt, který můžete použít v `deregister` metodu zrušení registrace dříve zaregistrovaný zpětného volání a zabránit prováděné. Vyvolá metodu [invalid_operation](invalid-operation-class.md) výjimka, pokud je volána na `cancellation_token` objekt, který byl vytvořen pomocí [cancellation_token::none –](#none) metoda.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)
+ [concurrency – obor názvů](concurrency-namespace.md)

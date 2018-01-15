@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0be095dab096743272432b0d69d9d294900718d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile – třída
 Představuje datový proud ( [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  

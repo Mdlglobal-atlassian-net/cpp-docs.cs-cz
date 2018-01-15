@@ -14,11 +14,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 387141945882bf3c491c55a4a8ab8ab3804e876a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explicitní přepsání (rozšíření komponent C++)
 Toto téma popisuje postup explicitní přepsání člena rozhraní nebo základní třída. S názvem (explicitní) přepsání lze používat pouze přepsat metodu s odvozené metodu, která má jiný název.  
@@ -90,7 +93,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 X::f override of I1::f  
@@ -126,7 +129,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 X::f override of I1::f and I2::f  
@@ -157,7 +160,7 @@ int main() {
 }  
 ```  
   
- **Výstup**  
+ **Output**  
   
 ```Output  
 X::g  
@@ -191,4 +194,4 @@ public:
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

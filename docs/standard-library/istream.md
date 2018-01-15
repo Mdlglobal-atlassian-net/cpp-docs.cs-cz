@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1e19ee61fd6a4b19e288c44b2d5c83950ee78e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 570a23dff65c6c4838d85083b25507bbf0f68e44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltistreamgt"></a>&lt;IStream on Request&gt;
 Definuje basic_istream – třída šablony, která zprostředkovává extrakce pro iostreams, a basic_iostream – třída šablony, která zprostředkovává vložení a extrakce. Záhlaví definuje také související manipulator. Tento soubor záhlaví je obvykle zahrnuté pro můžete pomocí jiné záhlaví iostreams; Máte zřídka se zahrnuje přímo.  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 764721114bb87127c892563211f7fcc85171ea68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Vytváření aplikací MFC založených na formulářích
 Formulář je dialogové okno s ovládacími prvky, které může uživatel získávat přístup a které by mohly mít měnit data. Můžete vyvíjet aplikace, ve kterém si uživatel vybere ze několika formulářů. Běžně, formulářové aplikace umožňuje uživateli přístup k formulářům kliknutím **nový** z **souboru** nabídky. Dialogové okno aplikace, které uživateli neposkytují přístup k **nový** možnost **souboru** nabídky, je také považují za aplikace založené na formulářích.  
@@ -69,5 +70,5 @@ Formulář je dialogové okno s ovládacími prvky, které může uživatel zís
  [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)   
  [Zobrazení formulářů](../../mfc/form-views-mfc.md)   
  [Vytváření aplikací MFC ve stylu Průzkumníka souborů](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
- [Vytváření aplikací MFC webové prohlížeče – styl](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+ [Vytvoření aplikace MFC ve stylu webového prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 

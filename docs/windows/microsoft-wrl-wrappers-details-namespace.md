@@ -22,11 +22,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ed72cd48cada79b831d89246d1338b79fdc5c9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 520871366f02ef636eef5b2cc9c19344979c6fb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details – obor názvů
 Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
@@ -50,7 +53,7 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Comparestringordinal – metoda](../windows/comparestringordinal-method.md)|Porovná dvě zadané `HSTRING` objekty a vrátí celé číslo, které označuje jejich relativní pozici v pořadí řazení.|  
+|[CompareStringOrdinal – metoda](../windows/comparestringordinal-method.md)|Porovná dvě zadané `HSTRING` objekty a vrátí celé číslo, které označuje jejich relativní pozici v pořadí řazení.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  
@@ -58,4 +61,4 @@ namespace Microsoft::WRL::Wrappers::Details;
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: wrappers – Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Podpora ladění iterátorů
 Běhové knihovny jazyka Visual C++ zjistí nesprávné iterator použití nepodmíněných výrazů a zobrazí dialogové okno v době běhu. Povolit – podpora ladění iterátorů, musíte použít ladicí verze standardní knihovny C++ a běhové knihovny jazyka C zkompilovat vašeho programu. Další informace najdete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md). Informace o tom, jak používat checked – iterátory najdete v tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md).  
@@ -196,7 +197,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
-[Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)
 
 
 

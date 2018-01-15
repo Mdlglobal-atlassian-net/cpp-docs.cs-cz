@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d0c36c0429930d99bac779a54ab0bb09d0fd792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a2159f79acd075054f464bd36ab870f08c4208
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 Obsahuje hlavičku knihovny standardní C \<stdint.h > a přidá přidružené jména `std` oboru názvů.  
@@ -34,7 +35,7 @@ Obsahuje hlavičku knihovny standardní C \<stdint.h > a přidá přidružené j
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)
 
 
 

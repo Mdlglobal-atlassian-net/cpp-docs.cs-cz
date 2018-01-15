@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7937e0eec53a800c7bcef2842310af368949bcca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Override – specifikátory (rozšíření komponent C++)
 *Override – specifikátory* upravit jak zděděné typy a členy zděděné typů chovat v odvozených typů.  
@@ -30,13 +33,13 @@ ms.lasthandoff: 10/24/2017
   
  Další informace o specifikátorů override najdete v tématu:  
   
--   [abstraktní](../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
 -   [New (nový slot v tabulce vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
--   [přepsání](../windows/override-cpp-component-extensions.md)  
+-   [override](../windows/override-cpp-component-extensions.md)  
   
--   [zapečetěná](../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
 -   [Specifikátory override a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
@@ -57,4 +60,4 @@ ms.lasthandoff: 10/24/2017
  – Možnost kompilátoru:   **/CLR**  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

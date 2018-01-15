@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b5c7635a3d6d9253a0e8dce52f78158f7681b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dbdf7cd626cca0d333b3979fa30cd8770c940701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Úprava vlastností pro ovládací prvek ActiveX
 Ovládací prvky ActiveX, které poskytl nezávislí výrobci může jsou vybavené vlastní vlastnosti a vlastnosti. V okně Vlastnosti se zobrazí vlastnosti pro ovládací prvky ActiveX. Kromě toho se zobrazují všechny stránky vlastností vytvořené zapisovače ovládacího prvku ActiveX v **vlastnosti stránky** dialogové okno (Pokud chcete zobrazit na stránce vlastností pro určitý ovládací prvek ActiveX, klikněte na tlačítko Stránka vlastností v [Vlastnosti – okno](/visualstudio/ide/reference/properties-window)).  
@@ -38,7 +41,7 @@ Ovládací prvky ActiveX, které poskytl nezávislí výrobci může jsou vybave
   
 3.  Proveďte změny podle potřeby na stránce vlastností.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](https://msdn.microsoft.com/library/f45fce5x.aspx) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](https://msdn.microsoft.com/library/xbx3z216.aspx). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Požadavky  
   
@@ -48,5 +51,5 @@ Ovládací prvky ActiveX, které poskytl nezávislí výrobci může jsou vybave
  [Zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md)
+ [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

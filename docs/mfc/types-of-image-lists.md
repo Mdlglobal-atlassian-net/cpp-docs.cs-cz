@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 430bc574fdb35fca08dcbe3a3ea503f809d08985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84a2118978d5ebd722d4fe56cdeec2aa0f74a94e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-image-lists"></a>Typy seznamů obrázků
 Existují dva typy seznamů obrázků ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked a maskované. "Nonmasked image seznam" se skládá z barva rastrového obrázku, který obsahuje jeden nebo více bitových kopií. "Maskované image seznam" se skládá ze dvou bitmap rovna velikosti. První je barva rastrového obrázku, který obsahuje Image a druhá černobílý rastrový obrázek, který obsahuje řadu masek – jeden pro každé bitové kopie v první rastrového obrázku.  

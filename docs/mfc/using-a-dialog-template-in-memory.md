@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74c098b1f2b978798003a2ebf765a8fe7b1f2204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c27a8b0f0d960f3d82a58ab6360de65e1959f0e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Použití šablony dialogového okna v paměti
 Místo použití metody v [dialogové okno Vytvoření tabulky](../mfc/creating-a-dialog-class-with-code-wizards.md), můžete vytvořit buď typ dialogového okna nepřímo z šablony dialogového okna v paměti. Další informace najdete v tématu třídy [CDialog](../mfc/reference/cdialog-class.md) v *odkaz knihovny MFC*.  
