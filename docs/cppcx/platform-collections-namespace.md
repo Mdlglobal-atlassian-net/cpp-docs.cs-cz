@@ -16,27 +16,27 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a93282a233f98d7a384d1fdad2ba6ca862e9e3f2
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections Namespace
-Obor názvů Platform::Collection obsahuje `Map`, `MapView`, `Vector`, a `VectorView` třídy. Tyto třídy jsou konkrétní implementace odpovídající rozhraní, které jsou definovány v [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) oboru názvů. Typy konkrétní kolekce nejsou přenosné napříč ABI (např. při Javascript nebo programu volání do komponent C++ C#), ale jsou implicitně převést na jejich odpovídající typy rozhraní. Například pokud budete implementovat veřejnou metodu, která naplní a vrátí kolekci, použijte [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) interně implementovat kolekce a použít [Windows::Foundation::Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako návratový typ. Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md) a [vytváření součásti systému Windows Runtime v jazyce C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
+Obor názvů Platform::Collections obsahuje `Map`, `MapView`, `Vector`, a `VectorView` třídy. Tyto třídy jsou konkrétní implementace odpovídající rozhraní, které jsou definovány v [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) oboru názvů. Typy konkrétní kolekce nejsou přenosné napříč ABI (např. při Javascript nebo programu volání do komponent C++ C#), ale jsou implicitně převést na jejich odpovídající typy rozhraní. Například pokud budete implementovat veřejnou metodu, která naplní a vrátí kolekci, použijte [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) interně implementovat kolekce a použít [Windows::Foundation::Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako návratový typ. Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md) a [vytváření součásti systému Windows Runtime v jazyce C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
   
  Můžete vytvořit Platform::Collections::Vector z [std::vector](../standard-library/vector-class.md) a [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) z [std::map](../standard-library/map-class.md).  
   
- Kromě toho obor názvů Platform::Collection poskytuje podporu pro zpětné vložení a vstupní iterátory a `Vector` a `VectorView` iterátory.  
+ Kromě toho obor názvů Platform::Collections poskytuje podporu pro zpětné vložení a vstupní iterátory a `Vector` a `VectorView` iterátory.  
   
- Musí zahrnovat (`#include`) collection.h hlavičky k použít typy v oboru názvů Platform::Collection.  
+ Musí zahrnovat (`#include`) collection.h hlavičky k použít typy v oboru názvů Platform::Collections.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
   
 #include <collection.h>  
-using namespace Platform::Collection;  
+using namespace Platform::Collections;  
 ```  
   
 ### <a name="members"></a>Členové  
