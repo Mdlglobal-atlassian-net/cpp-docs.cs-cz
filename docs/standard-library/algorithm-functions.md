@@ -210,11 +210,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 2b70ab848071bb1196ceb57f986a6e74fe43d2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 ||||  
@@ -237,7 +238,7 @@ ms.lasthandoff: 10/24/2017
 |[none_of](#none_of)|[nth_element –](#nth_element)|[partial_sort –](#partial_sort)|  
 |[partial_sort_copy –](#partial_sort_copy)|[oddíl](#partition)|[partition_copy –](#partition_copy)|  
 |[partition_point](#partition_point)|[pop_heap –](#pop_heap)|[prev_permutation –](#prev_permutation)|  
-|[push_heap –](#push_heap)|[random_shuffle –](#random_shuffle)|[odebrat](#remove)|  
+|[push_heap –](#push_heap)|[random_shuffle –](#random_shuffle)|[remove](#remove)|  
 |[remove_copy –](#remove_copy)|[remove_copy_if –](#remove_copy_if)|[remove_if –](#remove_if)|  
 |[nahradit](#replace)|[replace_copy –](#replace_copy)|[replace_copy_if –](#replace_copy_if)|  
 |[replace_if –](#replace_if)|[zpětné](#reverse)|[reverse_copy –](#reverse_copy)|  
@@ -5403,7 +5404,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>random_shuffle –  
- Zastaralé funkce std::random_shuffle() nahrazuje [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Příklad kódu a další informace najdete v tématu [ \<náhodných >](../standard-library/random.md) a zveřejňování Stackoverflow [proč std::random_shuffle metody se nepoužívají v C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ Zastaralé funkce std::random_shuffle() nahrazuje [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Příklad kódu a další informace najdete v tématu [ \<náhodných >](../standard-library/random.md) a zveřejňování Stackoverflow [proč std::random_shuffle metody se nepoužívají v C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).  
   
 ##  <a name="remove"></a>odebrat  
  Odstraní zadanou hodnotu z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.  

@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3df6dab957b886c13dcd2fa8f7f6aa2f9859dc61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcomplexgt"></a>&lt;komplexní&gt;
 Definuje třídu šablony kontejneru **komplexní** a jeho podpůrné šablony.  
@@ -106,7 +107,7 @@ Definuje třídu šablony kontejneru **komplexní** a jeho podpůrné šablony.
   
 |||  
 |-|-|  
-|[Operator! =](../standard-library/complex-operators.md#op_neq)|Testy nerovnost mezi dvěma komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Testy nerovnost mezi dvěma komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.|  
 |[operátor *](../standard-library/complex-operators.md#op_star)|Vynásobí dvě komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.|  
 |[operátor +](../standard-library/complex-operators.md#op_add)|Přidá dvě komplexní čísla, jednu nebo obě dvě může patřit k podmnožině typ pro skutečné a pomyslná části.|  
 |[Operator –](../standard-library/complex-operators.md#operator-)|Odečítá od dva komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.|  

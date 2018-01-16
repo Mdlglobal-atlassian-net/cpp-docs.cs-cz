@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 511b583e6ce01a6d4f6d40fa2a4a075216a367d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 484997806cadb75b0322e9d194fe37ab30dae3b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution – třída
 Generuje uniform (každých hodnota je stejně pravděpodobných) s plovoucí desetinnou čárkou distribuční rozsahu výstupu, který je včetně vylučují.  
