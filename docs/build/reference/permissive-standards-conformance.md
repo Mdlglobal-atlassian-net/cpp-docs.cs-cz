@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ projektovou-(standardy shoda)
 
@@ -30,7 +30,7 @@ Zadejte režim standardů shoda kompilátoru. Pomocí této možnosti vám pomoh
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ projektovou-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Poznámky
 
@@ -42,7 +42,7 @@ Ve výchozím nastavení **/ projektovou-** je možnost nastavena v nové projek
 
 **/ Projektovou-** možnost nastaví [/Zc: strictstrings](../../build/reference/zc-conformance.md) a [/Zc: rvaluecast](../../build/reference/zc-conformance.md) možnosti vyhovující chování. Jejich výchozí nonkonformní chování. Můžete předat konkrétní **/Zc** možnosti po **/ projektovou-** na příkazovém řádku toto chování potlačit.
 
-Ve verzích počínaje kompilátoru Visual Studio 2017 verze 15.3 **/ projektovou-** možnost nastaví **/Zc:ternary** možnost. Kompilátor také implementuje více požadavků pro hledání dvoufázového název. Když **/ projektovou-** je možnost nastavena, kompilátor analyzuje funkce a – třída definice šablony identifikace závislé a nezávislých názvů používaných v šablonách. V této verzi se provádí pouze název detekci závislosti.
+Ve verzích počínaje kompilátoru Visual Studio 2017 verze 15.3 **/ projektovou-** možnost nastaví [/Zc:ternary](../../build/reference/zc-ternary.md) možnost. Kompilátor také implementuje více požadavků pro hledání dvoufázového název. Když **/ projektovou-** je možnost nastavena, kompilátor analyzuje funkce a – třída definice šablony identifikace závislé a nezávislých názvů používaných v šablonách. V této verzi se provádí pouze název detekci závislosti.
 
 Rozšíření pro konkrétní prostředí a jazyk oblastí, které standardní opustí až implementace nemá vliv **/ projektovou-**. Například konkrétní Microsoft `__declspec`, konvence volání a strukturovaného zpracování klíčová slova a direktivy pragma kompilátoru konkrétní nebo atributy výjimek nejsou příznakem kompilátorem v **/ projektovou-** režimu.
 
@@ -376,7 +376,7 @@ struct tagRESTRICTION
 
 Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují Query.h bez **/ projektovou-** možnost.
 
-#### <a name="issue-in-umcellularapioemh"></a>Problém um\cellularapi_oem.h
+#### <a name="issue-in-umcellularapioemh"></a>Issue in um\cellularapi_oem.h
 
 Při použití **/ projektovou-** přepínače kompilátoru, předat dál deklaraci `enum UICCDATASTOREACCESSMODE` způsobí, že upozornění:
 

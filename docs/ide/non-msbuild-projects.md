@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otevřete složku projektů v jazyce Visual C++
 Visual Studio 2017 zavádí funkci "Otevřete složku", která umožňuje otevřete složku zdrojových souborů a okamžitě psaní s podporou pro technologii IntelliSense, procházení, refaktoring, ladění a tak dále. Jsou načteny žádné soubory .sln nebo VCXPROJ; v případě potřeby můžete zadat vlastní úlohy a také sestavení a spuštění parametry prostřednictvím jednoduchého .json soubory. Používá technologii otevřít složku, Visual C++ teď podporuje pouze přijít kolekcí souborů, ale také prakticky jakékoli sestavení systému, včetně CMake, expertem, QMake (pro projekty RT), gyp, SCons, Gradle, Buck, zkontrolujte a další. 
@@ -39,10 +39,10 @@ Projekt otevřít složku můžete přizpůsobit prostřednictvím tři soubory 
 |||
 |-|-|
 |CppProperties.json|Zadejte informace o vlastní konfigurace pro procházení. Tento soubor vytvořte, v případě potřeby v kořenové složce projektu.|
-|Launch.vs.JSON|Zadejte argumenty příkazového řádku. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **ladění a spusťte nastavení**.|
-|Tasks.vs.JSON|Zadejte vlastní sestavovací příkazy a přepínače kompilátoru. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **nakonfigurovat úlohy**.|
+|launch.vs.json|Zadejte argumenty příkazového řádku. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **ladění a spusťte nastavení**.|
+|tasks.vs.json|Zadejte vlastní sestavovací příkazy a přepínače kompilátoru. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **nakonfigurovat úlohy**.|
 
-### <a name="configure-intellisense-with-cpppropertiesjson"></a>Nakonfigurovat CppProperties.json IntelliSense
+### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configure IntelliSense with CppProperties.json
 IntelliSense a procházení chování částečně závisí na konfiguraci active sestavení, který definuje #include cesty, přepínače kompilátoru a další parametry. Ve výchozím nastavení Visual Studio poskytuje konfigurace Debug a Release. U některých projektů musíte vytvořit vlastní konfiguraci, aby plně pochopit kódu technologie IntelliSense a procházení funkce. Pokud chcete definovat novou konfiguraci, vytvořte soubor s názvem CppProperties.json v kořenové složce. Tady je příklad:
 
 ```json
@@ -71,20 +71,131 @@ Konfigurace může mít některý z následujících vlastností:
 |`forcedInclude`|záhlaví má být automaticky zahrnut v každou jednotku kompilace (mapuje /FI pro MSVC nebo – zahrnout pro clang)|
 |`undefines`|seznam makra být definován (mapuje /U pro MSVC)|
 |`intelliSenseMode`|modul IntelliSense, který se má použít. Můžete zadat konkrétní variant architektura pro MSVC, RSZ nebo Clang:
-- msvc-x86 (výchozí)
-- msvc x64
-- msvc arm
-- Windows-clang-x86
-- Windows-clang-x64
-- Windows-clang – arm
-- Linux x64
-- Linux x86
-- Linux arm
+- msvc-x86 (default)
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
+- Linux-x64
+- Linux-x86
+- Linux-arm
 - gccarm
 
-CppProperties.json podporuje rozšíření proměnné prostředí pro zahrnují cesty a dalších hodnot vlastností. Syntaxe je `${env.FOODIR}` rozbalte proměnné prostředí `%FOODIR%`.
+#### <a name="environment-variables"></a>Proměnné prostředí
+CppProperties.json podporuje systém rozšíření proměnné prostředí pro zahrnují cesty a dalších hodnot vlastností. Syntaxe je `${env.FOODIR}` rozbalte proměnné prostředí `%FOODIR%`. Jsou podporovány následující proměnné definované v systému:
 
-Máte také přístup k následující předdefinované makra uvnitř tohoto souboru:
+|Název proměnné|Popis|  
+|-----------|-----------------|
+|vsdev|Výchozí prostředí Visual Studio|
+|msvc_x86|Kompilace pro x86 x86 pomocí nástroje|
+|msvc_arm|Kompilace pro ARM pomocí x86 nástroje|
+|msvc_arm64|Kompilace pro ARM64 x86 pomocí nástroje|
+|msvc_x86_x64|Kompilace pro AMD64 x86 pomocí nástroje|
+|msvc_x64_x64|Kompilace pro AMD64 pomocí nástrojů 64-bit|
+|msvc_arm_x64|Kompilace pro ARM pomocí nástrojů 64-bit|
+|msvc_arm64_x64|Kompilace pro ARM64 pomocí nástrojů 64-bit|
+
+Při instalaci Linux úlohy jsou k dispozici pro systémy Linux a WSL vzdáleným cílením následujících prostředích:
+
+|Název proměnné|Popis|  
+|-----------|-----------------|
+|linux_x86|Cíl x86 Linux vzdáleně|
+|linux_x64|Cíl x64 Linux vzdáleně|
+|linux_arm|Vzdáleně cíle ARM Linux|
+
+Můžete definovat vlastní proměnné prostředí v CppProperties.json buď globálně nebo na konfiguraci. Následující příklad ukazuje, jak výchozí a vlastní proměnné prostředí lze deklarovat a použít. Na globální **prostředí** vlastnost deklaruje proměnné s názvem **zahrnout** , můžete použít všechny konfigurace:
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+Můžete také definovat **prostředí** vlastnosti v konfiguraci, takže to platí pouze pro danou konfiguraci a přepíše všechny globální proměnné se stejným názvem. V následujícím příkladu x64 konfigurace definuje místní **zahrnout** proměnné, která přepíše globální hodnotu:
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+Všechny vlastní a výchozí proměnné prostředí jsou také k dispozici v tasks.vs.json a launch.vs.json.
+
+#### <a name="macros"></a>Makra
+Máte přístup k následující předdefinované makra uvnitř CppProperties.json:
 |||
 |-|-|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru|
@@ -133,12 +244,12 @@ Můžete vytvořit libovolný počet konfigurací v CppProperties.json. Každý 
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Definování úloh s tasks.vs.json
+### <a name="define-tasks-with-tasksvsjson"></a>Define tasks with tasks.vs.json
 Je možné automatizovat skripty sestavení nebo jiné externí operace se soubory, které máte v aktuálním pracovním prostoru spuštěním jako úlohy přímo v prostředí IDE. Novou úlohu můžete nakonfigurovat tak, že kliknete pravým tlačítkem na soubor nebo složku a výběr **nakonfigurovat úlohy**. 
 
 ![Otevřít složku konfigurovat úlohy](media/open-folder-config-tasks.png)
 
-To vytvoří (nebo otevře) `tasks.vs.json` soubor ve složce neodstraňujte, která sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a potom vyvolat z **Průzkumníku řešení** kontextové nabídky. Následující příklad ukazuje soubor tasks.vs.json, který definuje jednu úlohu. `taskName`Definuje název, který se zobrazí v místní nabídce. `appliesTo`Definuje soubory, které lze provést příkaz na. `command` Vlastnost odkazuje na proměnné prostředí COMSPEC, které identifikuje cestu pro konzolu (cmd.exe v systému Windows). `args` Vlastnost určuje příkazový řádek, který má být volána. `${file}` Makro načte vybraného souboru v **Průzkumníku řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného souboru.
+To vytvoří (nebo otevře) `tasks.vs.json` soubor ve složce neodstraňujte, která sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a potom vyvolat z **Průzkumníku řešení** kontextové nabídky. Následující příklad ukazuje soubor tasks.vs.json, který definuje jednu úlohu. `taskName`Definuje název, který se zobrazí v místní nabídce. `appliesTo`Definuje soubory, které lze provést příkaz na. `command` Vlastnost odkazuje na proměnné prostředí COMSPEC, které identifikuje cestu pro konzolu (cmd.exe v systému Windows). Proměnné prostředí, které jsou deklarované v CppProperties.json nebo CMakeSettings.json, můžete odkazovat. `args` Vlastnost určuje příkazový řádek, který má být volána. `${file}` Makro načte vybraného souboru v **Průzkumníku řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného souboru.
 
 ```json
 {
@@ -156,7 +267,9 @@ To vytvoří (nebo otevře) `tasks.vs.json` soubor ve složce neodstraňujte, kt
 ```
 Po uložení tasks.vs.json, klikněte pravým tlačítkem na libovolný soubor sada ve složce, vyberte **Echo filename** z kontextové nabídky a zjistit, na které se zobrazí název souboru v okně výstupu.
 
-#### <a name="appliesto"></a>AppliesTo –
+
+
+#### <a name="appliesto"></a>appliesTo
 Můžete vytvořit úlohy pro libovolný soubor nebo složku a to zadáním názvu v `appliesTo` pole, například `"appliesTo" : "hello.cpp"`. Následující masek souboru můžete použít jako hodnoty:
 |||
 |-|-|
@@ -175,7 +288,7 @@ Použití `output` vlastnosti k určení spustitelného souboru, který se spust
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Makra pro tasks.vs.json
+#### <a name="macros-for-tasksvsjson"></a>Macros for tasks.vs.json
 
 |||
 |-|-|

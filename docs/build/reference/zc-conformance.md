@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (shoda)
 
@@ -47,12 +47,13 @@ Jedná se o `/Zc` – možnosti kompilátoru:
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Externí propojení pro povolení `constexpr` proměnné (ve výchozím nastavení vypnuté).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Vynutit standardní C++ `for` rozsahu pravidla (na ve výchozím nastavení).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Povolit implicitní `noexcept` na požadované funkce (na ve výchozím nastavení).|
-|[vložené\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazované funkce nebo data, pokud je sekvence COMDAT, nebo obsahuje pouze vnitřní propojení (ve výchozím nastavení vypnuté).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazované funkce nebo data, pokud je sekvence COMDAT, nebo obsahuje pouze vnitřní propojení (ve výchozím nastavení vypnuté).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Vynutit C ++ 17 noexcept pravidla (na ve výchozím nastavení součástí C ++ 17 nebo novější).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT dočasného nebude vytvořit vazbu odkazu lvalue bez const (ve výchozím nastavení vypnuté).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Vynucení pravidel převodu explicitního typu Standard C++ (ve výchozím nastavení vypnuté).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Povolit C ++ 14 globální velikostí navrácení funkce (na ve výchozím nastavení).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Zakázat řetězcový literál k `char*` nebo `wchar_t*` převodu (ve výchozím nastavení vypnuté).|
+|[Ternární\[-\]](zc-ternary.md)|Vynutit podmíněný operátor pravidla pro typy operand (ve výchozím nastavení vypnuté).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Povolit místní statické inicializace vláken (na ve výchozím nastavení).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Předpokládejme `operator new` vyvolá při selhání (ve výchozím nastavení vypnuté).|
 |[trigraph\[-\]](zc-trigraphs-trigraphs-substitution.md)|Povolte trigraphs (zastaralé, vypněte ve výchozím nastavení).|
