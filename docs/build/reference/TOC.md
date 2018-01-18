@@ -142,6 +142,7 @@
 ##### [/Zc:rvalueCast (vynucení pravidel převodu typů)](zc-rvaluecast-enforce-type-conversion-rules.md)
 ##### [/Zc:sizedDealloc (povolení funkcí zrušení přidělení v globálním měřítku)](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)
 ##### [/Zc:strictStrings (zakázání převodů typů řetězcových literálů)](zc-strictstrings-disable-string-literal-type-conversion.md)
+##### [/Zc:ternary (vynutit pravidla podmíněného operátoru)](zc-ternary.md)
 ##### [/Zc:threadSafeInit (lokální statická inicializace bezpečná pro přístup z více vláken)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (předpoklad, že operátor new vyvolá výjimku)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (náhrada spřežky tří znaků)](zc-trigraphs-trigraphs-substitution.md)
