@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>Kontejnery (moderní verze jazyka C++)  
   
@@ -41,7 +41,7 @@ Optimalizace výkonu je potřeba, zvažte použití:
   
 1.  [Pole](../standard-library/array-class-stl.md) zadat, když je důležitá, například jako člena třídy vkládání.  
   
-2.  Neuspořádané asociativní kontejnery, jako jsou [unordered_map] ((.. /Standard-library/unordered-map-Class.MD). Tyto mít nižší za element režii a běhu konstanta vyhledávání, ale může být obtížnější použít správné a efektivní.  
+2.  Neuspořádané asociativní kontejnery, jako [unordered_map](../standard-library/unordered-map-class.md). Tyto mít nižší za element režii a běhu konstanta vyhledávání, ale může být obtížnější použít správné a efektivní.  
   
 3.  Seřadit `vector`. Další informace najdete v tématu [algoritmy](../cpp/algorithms-modern-cpp.md).  
   

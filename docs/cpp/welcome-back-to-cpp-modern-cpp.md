@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychlé a efektivní nejsou správně vytvořená C++ programy. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření širokou škálu aplikace – z fun a zajímavé hry, vědecké softwaru vysoce výkonné, ovladače zařízení, vložené programy a klientských aplikací systému Windows. Víc než 20 let C++ jsou využívány k řešení problémů, jako jsou tyto a mnohé další. Co možná nevíte, je, že se zvyšující číslo programátory v jazyce C++ mít přeloženy až dowdy programování stylu jazyka C včerejšek a místo toho donned moderní verze jazyka C++.  
@@ -50,40 +50,60 @@ C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychl
  Je také odvozen jazyka C++, sám sebe. Porovnejte následující fragmenty kódu. Tato ukazuje, jak použít věcí v C++:  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  Zde je, jak se provádí samé v moderní verze jazyka C++:  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- V moderní verze jazyka C++ nemusíte používat nový nebo odstranění nebo zpracování, protože se místo toho používají chytré ukazatele explicitní výjimek. Při použití `auto` zadejte odvození a [lambda funkce](../cpp/lambda-expressions-in-cpp.md), můžete napsat kód rychlejší, posílit ho a pochopit lepší. A `for_each` je čisticí, snadněji používat a méně náchylná k neočekávaným chybám než `for` smyčky. Standardní společně s minimálním řádků kódu můžete použít k zápisu aplikace. A můžete nastavit tento kód výjimky bezpečných a bezpečných paměti a obsahovat žádné kódy přidělování a navracení zpět nebo chyba řešit.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ V moderní verze jazyka C++ nemusíte používat nový nebo odstranění nebo zpracování, protože se místo toho používají chytré ukazatele explicitní výjimek. Při použití `auto` zadejte odvození a [lambda funkce](../cpp/lambda-expressions-in-cpp.md), můžete napsat kód rychlejší, posílit ho a pochopit lepší. Rozsah systémem a `for` smyčka je čisticí, snadněji používat a méně náchylná k neočekávaným chybám než stylu jazyka C `for` smyčky. Standardní společně s minimálním řádků kódu můžete použít k zápisu aplikace. A můžete nastavit tento kód výjimky bezpečných a bezpečných paměti a obsahovat žádné kódy přidělování a navracení zpět nebo chyba řešit.  
   
  Moderní verze jazyka C++ zahrnuje dva druhy polymorfismus: kompilaci, prostřednictvím šablon a běhu prostřednictvím dědičnosti a virtualizace. Je možné kombinovat dva druhy polymorfismus na velký vliv. Standardní knihovna C++ šablony `shared_ptr` používá interní virtuální metody k provádění jeho zjevně snadné typ vymazání. Ale nepoužívejte přepsání virtualizaci pro polymorfismus při šablony je vhodnější. Šablony může být velmi mocné.  
   
@@ -121,6 +141,6 @@ for( auto& s : v ) {
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Lambda – výrazy](../cpp/lambda-expressions-in-cpp.md)   
+ [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)  
  [Přizpůsobení jazyka Visual C++](../visual-cpp-language-conformance.md)  
