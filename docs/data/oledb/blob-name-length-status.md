@@ -58,7 +58,7 @@ length
  [v] Odpovídající datových členů v záznamu uživatele.  
   
  *Délka*  
- [out] (Skutečné) délka v bajtech sloupci objektů BLOB.  
+ [out] \(Skutečné) délka v bajtech sloupci objektů BLOB.  
   
  *Stav*  
  [out] Stav pole objektů BLOB.  

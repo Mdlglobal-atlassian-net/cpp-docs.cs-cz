@@ -59,7 +59,7 @@ length
  [v] Odpovídající datových členů v záznamu uživatele.  
   
  *Délka*  
- [out] (Skutečné) délka v bajtech sloupci objektů BLOB.  
+ [out] \(Skutečné) délka v bajtech sloupci objektů BLOB.  
   
 ## <a name="example"></a>Příklad  
  V tématu [jak můžete načíst objekt BLOB?](../../data/oledb/retrieving-a-blob.md).  

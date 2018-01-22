@@ -57,7 +57,7 @@ length )
  [v] Odpovídající datových členů v záznamu uživatele.  
   
  *Délka*  
- [out] (Skutečné) délka v bajtech sloupci objektů BLOB.  
+ [out] \(Skutečné) délka v bajtech sloupci objektů BLOB.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** také atldbcli.h  
