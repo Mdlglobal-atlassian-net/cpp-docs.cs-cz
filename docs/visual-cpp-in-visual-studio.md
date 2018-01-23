@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -32,7 +32,7 @@ Visual Studio 2017 programovací jazyk a vývoj nástroje můžete vyvíjet nati
 
 Tento obsah je pro vývojáře C++, kteří jsou psaní programů.
 
-- Pokud hledáte distribuovatelného balíčku C++ a součásti režimu runtime tak, aby spuštění programu, přejděte k [Microsoft Download Center](http://www.microsoft.com/en-us/download/) a zadejte **Visual C++** do vyhledávacího pole.
+- Pokud hledáte konkrétní distribuovatelného balíčku C++ a součásti režimu runtime tak, aby spuštění programu, přejděte k [Microsoft](http://www.microsoft.com/) web a zadejte **Visual C++ Redistributable** do vyhledávacího pole. Stáhněte a nainstalujte redistribuovatelného balíčku pro architekturu počítače (například x64 Pokud používáte systém Windows 64-bit) a verze aplikace Visual C++, které potřebujete. 
 
 - Pokud hledáte Úvod do koncepty programování v C++, přejděte do jednoho z mnoha webů, které nabízejí tohoto obsahu nebo získat kopii [programování – principy a postup pomocí C++ (druhé vydání)](http://stroustrup.com/Programming/) podle inventor c++, Bjarnem Stroustrupem. Visual C++ obsahu předpokládá, že již máte základní znalost jazyka C++.
 
@@ -163,7 +163,7 @@ Další materiály k jazyku Visual C++
 [Standardní C++](http://isocpp.org/)  
 Získejte informace o jazyce C++, přehled o moderním jazyce C++ a odkazy na knihy, články, rozhovory a události.
 
-[Další informace Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
+[Learn Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
 Začněte se učit jazyk C++.
 
 ## <a name="see-also"></a>Viz také

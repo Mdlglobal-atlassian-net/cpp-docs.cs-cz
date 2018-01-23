@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuce souborů Visual C++
+
+> [!NOTE]
+> Jste tady vzhledem k tomu, že hledáte stahování jednoho ze souborů modulu Runtime Visual C++? Přejděte na [Microsoft](http://www.microsoft.com/) web a zadejte **Visual C++ Redistributable** do vyhledávacího pole. Stáhněte a nainstalujte redistribuovatelného balíčku pro architekturu počítače (například x64 Pokud používáte systém Windows 64-bit) a verze aplikace Visual C++, které potřebujete.   
+  
 Při nasazení aplikace je nutné nasadit také soubory, které jsou vyžadovány pro její podporu. Pokud je některý z těchto souborů poskytován společností Microsoft, zkontrolujte, zda je povoleno jej dále distribuovat. Chcete-li zkontrolovat licenční podmínky pro Visual Studio, klikněte na odkaz licenční podmínky v dialogovém okně o aplikaci Microsoft Visual Studio v prostředí IDE nebo stáhnout [licenční podmínky softwaru společnosti Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) souboru. "Seznam REDISTRIBUCE, na který se odkazuje v části"Distribuovatelný kód"licenční podmínky pro Software společnosti Microsoft pro některé edice sady Visual Studio najdete v tématu [distribuovatelného kódu pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 Sada SDK (zahrnuje nástroje a soubory buildovacího serveru)](http://go.microsoft.com/fwlink/p/?LinkId=823098), nebo pro Visual Studio 2015, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2015 a Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Další informace o redistribuovatelné soubory, najdete v části [určení, které knihovny DLL znovu distribuovat](../ide/determining-which-dlls-to-redistribute.md) a [Příklady nasazení](../ide/deployment-examples.md).  
   
  Chcete-li nasadit redistribuovatelné soubory Visual C++, můžete použít Distribuovatelné balíčky Visual C++ (VCRedist\_x86.exe VCRedist\_x64.exe nebo součást VCRedist\_arm.exe) které jsou zahrnuté v sadě Visual Studio. Ve Visual Studio 2017, tyto soubory najdete ve složce Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\ MSVC\\_lib-version_ složku, kde _edition_ je edicí sady Visual Studio nainstalována, a _lib-version_ je verze knihovny znovu distribuovat. V sadě Visual Studio 2015, tyto soubory naleznete v části adresáře instalace sady Visual Studio v Program Files [(x 86)] \Microsoft Visual Studio *verze*\VC\redist\\*národního prostředí* \\. Další možností je použít redistributable slučovací moduly (soubory .msm), které v Visual Studio 2017 najdete v souborech programu [(x 86)]\\Microsoft Visual Studio\\2017\\_edition_ \\ VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ složky. V sadě Visual Studio 2015 ty lze najít v programových souborů [(x 86)] \Common Files\Merge moduly\\. Je také možné přímo nainstalovat redistributable Visual C++ – knihovny DLL v *místní složky aplikace*, což je složka, která obsahuje váš soubor spustitelná aplikace. Pro obsluhu z důvodů, nedoporučujeme používat toto umístění instalace.  

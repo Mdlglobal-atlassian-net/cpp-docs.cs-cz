@@ -1,7 +1,7 @@
 ---
-title: "Specifikace výjimek (throw) (C++) | Microsoft Docs"
+title: "Specifikace výjimek (throw, noexcept) (C++) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: c93fdaa75155e6f0117ef1c30d4e093d5ca0e576
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 
 Specifikace výjimek jsou funkce jazyka C++, která označuje záměr programátora o typy výjimek, které mohou být přeneseny funkcí. Můžete určit, že funkce může nebo nemusí ukončete výjimkou pomocí *specifikace výjimek*. Kompilátor tyto informace můžete použít k optimalizaci volání funkce a ukončete program, pokud neočekávanou výjimku řídicí sekvence funkce. 
 
-Před C ++ 17 nebyly k dispozici dva druhy specifikace výjimek. *Noexcept specifikace* nové v C ++ 11. Se určuje, zda je sada potenciální výjimky, které můžete vyhnuli funkce prázdný. *Specifikace výjimek dynamické*, nebo `throw(optional_type_list)` specifikace, se nepoužívá v C ++ 11 a odebrat součástí C ++ 17, s výjimkou `throw()`, což je pro noexcept(true) alias. Tato specifikace výjimek byla navržená tak, aby poskytují souhrnné informace o jaké výjimky může být vyvolána mimo funkci, ale v praxi byl nalezen způsobovat problémy. Jeden specifikace dynamické výjimka, která ukázat jako poněkud užitečné byl nepodmíněné `throw()` specifikace. Například deklarace funkce:
+Před C ++ 17 nebyly k dispozici dva druhy specifikace výjimek. *Noexcept specifikace* nové v C ++ 11. Se určuje, zda je sada potenciální výjimky, které můžete vyhnuli funkce prázdný. *Specifikace výjimek dynamické*, nebo `throw(optional_type_list)` specifikace, se nepoužívá v C ++ 11 a odebrat součástí C ++ 17, s výjimkou `throw()`, což je alias `noexcept(true)`. Tato specifikace výjimek byla navržená tak, aby poskytují souhrnné informace o jaké výjimky může být vyvolána mimo funkci, ale v praxi byl nalezen způsobovat problémy. Jeden specifikace dynamické výjimka, která ukázat jako poněkud užitečné byl nepodmíněné `throw()` specifikace. Například deklarace funkce:
 
 ```cpp
 void MyFunction(int i) throw();

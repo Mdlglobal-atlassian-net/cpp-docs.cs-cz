@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -40,7 +40,7 @@ Existuje několik široký kategorií aplikací pro Windows, které můžete vyv
 
 ##  <a name="BK_WindowsUniversal"></a>Univerzální aplikace pro Windows
 
-S Windows 10 aplikace je možné spouštět ve všech zařízeních Windows 10, jako jsou tablety a mobilní telefon, a také na ploše. Na ploše, budou moci spouštět jako plochy okno místo vždy spuštěn přes celou obrazovku. Tyto aplikace můžete také spouštět v zařízení Xbox a v budoucích zařízeních.  Programovací model pro oba typy aplikací se liší od aplikací klasické pracovní plochy Win32. Tyto aplikace systému Windows spustit v prostředí Windows Runtime, která obsahuje elementy uživatelského rozhraní, základní služby pro tyto aplikace a poskytuje, a rozhraní na různých hardwarová zařízení, které jsou podporovány. Tyto aplikace kompilace nativního kódu a mít uživatelské rozhraní jazyka XAML nebo pomocí rozhraní DirectX. Je také možné zapsat komponenty prostředí Windows Runtime v nativním kódu, který mohou využívat jiné aplikace pro Windows – patří mezi ně aplikace, které jsou napsané v C#, Visual Basic nebo JavaScript. Další informace najdete v tématu [vytvoření aplikace pro univerzální platformu Windows v jazyce C++](http://go.microsoft.com/fwlink/p/?linkid=534976), [vytvoření vaší první UWP hry s použitím rozhraní DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), a [vytváření prostředí Windows Runtime komponent v jazyce C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+S Windows 10 aplikace je možné spouštět ve všech zařízeních Windows 10, jako jsou tablety a mobilní telefon, a také na ploše. Na ploše, budou moci spouštět jako plochy okno místo vždy spuštěn přes celou obrazovku. Tyto aplikace můžete také spouštět v zařízení Xbox a v budoucích zařízeních.  Programovací model pro oba typy aplikací se liší od aplikací klasické pracovní plochy Win32. Tyto aplikace systému Windows spustit v prostředí Windows Runtime, která obsahuje elementy uživatelského rozhraní, základní služby pro tyto aplikace a poskytuje, a rozhraní na různých hardwarová zařízení, které jsou podporovány. Tyto aplikace kompilace nativního kódu a mít uživatelské rozhraní jazyka XAML nebo pomocí rozhraní DirectX. Je také možné zapsat komponenty prostředí Windows Runtime v nativním kódu, který mohou využívat jiné aplikace pro Windows – patří mezi ně aplikace, které jsou napsané v C#, Visual Basic nebo JavaScript. Další informace najdete v tématu [vytvořit aplikaci UWP "Hello, world" v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [vytvořit jednoduchou UWP hru s DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), a [vytváření prostředí Windows Runtime komponent v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
 > Pro Windows 10 můžete aplikaci převaděč plochy do balíčku plochy aplikace pro nasazení prostřednictvím portálu Windows Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
