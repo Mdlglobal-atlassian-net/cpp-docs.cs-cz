@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru verzí kompilátoru  
   
@@ -362,7 +363,7 @@ C4678|Základní třída se*deklarace*je méně přístupný než*název*.
 C4679|'*popis*': nelze importovat člena
 C4687|'*typ*': zapečetěné abstraktní třídy nelze implementovat rozhraní '*typu*.
 C4688|'*název*': omezení seznam obsahuje privátní typ sestavení '*deklarace*.
-C4690|[emitidl – (pop)]: více bodů POP než nabízených oznámení
+C4690|[ emitidl( pop ) ]: více bodů POP než nabízených oznámení
 C4691|'*typ*': byl očekáván typ odkazovat ve které se neodkazuje *modulu* '*popis*', typem definovaným v místo toho použít aktuální překlad jednotky
 C4692|'*název*': podpis privátního člena obsahuje privátní nativní typ sestavení '*deklarace*.
 C4693|'*typ*': zapečetěné abstraktní třídy nemůže mít u členů instancí*název*.
@@ -605,4 +606,4 @@ C4998|OČEKÁVÁ se nezdařilo: *popis*(*číslo*)
 ## <a name="see-also"></a>Viz také  
 [/WV – možnost kompilátoru](../../build/reference/compiler-option-warning-level.md)  
 [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[upozornění](../../preprocessor/warning.md)  
+[warning](../../preprocessor/warning.md)  

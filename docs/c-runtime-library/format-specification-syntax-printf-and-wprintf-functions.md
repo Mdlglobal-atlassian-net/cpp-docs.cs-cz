@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -130,7 +131,7 @@ První volitelné pole ve specifikaci převod obsahuje *příznak direktivy*, nu
 |----------|-------------|-------------|
 |**-**|Výsledek v rámci dané pole Šířka zarovnání doleva.|Zarovnání doprava.|
 |**+**|Symbol (+ nebo -) jako předpona výstupní hodnotu, pokud je typ se znaménkem.|Přihlášení se zobrazí pouze pro podepsané záporné hodnoty (-).|
-|**0**|Pokud *šířka* je předponu **0**, úvodní nuly se přidají, dokud nebude dosaženo minimální šířku. Pokud oba **0** a  **-**  se zobrazí, **0** je ignorována. Pokud **0** je zadán pro formátu celé číslo (**i**, **u**, **x**, **X**, **o**, **d**) a specifikace přesnosti je také k dispozici – například `%04.d`– **0** je ignorována. Pokud **0** pro je zadána **a** nebo **A** s plovoucí desetinnou čárkou formátu úvodní nuly se přidá jako předpona k mantisa, po `0x` nebo `0X` předponu.|Odsazení.|
+|**0**|Pokud *šířka* je předponu **0**, úvodní nuly se přidají, dokud nebude dosaženo minimální šířku. Pokud oba **0** a **-** se zobrazí, **0** je ignorována. Pokud **0** je zadán pro formátu celé číslo (**i**, **u**, **x**, **X**, **o**, **d**) a specifikace přesnosti je také k dispozici – například `%04.d`– **0** je ignorována. Pokud **0** pro je zadána **a** nebo **A** s plovoucí desetinnou čárkou formátu úvodní nuly se přidá jako předpona k mantisa, po `0x` nebo `0X` předponu.|Odsazení.|
 |**prázdné** ("")|Pomocí prázdné předpony výstupní hodnotu, pokud je podepsaná a kladná. Prázdné je ignorována, pokud obě prázdné a + příznaky zobrazí.|Zobrazí se žádné prázdné.|
 |**#**|Když se používá s **o**, **x**, nebo **X** formát,  **#**  příznak používá 0, 0 x, nebo 0 X, k předponě všechny nenulové hodnoty hodnota výstupu.|Zobrazí se žádné prázdné.|
 ||Pokud se používá s **e**, **E**, **f**, **F**, **a** nebo **A** formát, **#** příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky.|Desetinné čárky se zobrazí jenom v případě, že číslic podle něj.|
@@ -217,6 +218,6 @@ V jazyce Visual C++ i když `long double` je typu distinct má stejné interníh
 
 ## <a name="see-also"></a>Viz také
 
-[printf, _printf_l –, wprintf, _wprintf_l –](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s –, _printf_s_l –, wprintf_s –, _wprintf_s_l –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
 [printf_p – poziční parametry](../c-runtime-library/printf-p-positional-parameters.md)  
