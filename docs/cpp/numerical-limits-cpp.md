@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e531de79621eb3a010a41c7e5059dd5b76b2c2fc
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numerical-limits-c"></a>Numerické limity (C++)
-Dva standardní vložené soubory, LIMITS.H a FLOAT.H, definují číselné limity nebo minimální a maximální hodnoty, které proměnná daného typu může obsahovat. Tyto minimálních a maximální hodnoty jsou zaručit přenosný na C++ compiler, který používá stejné reprezentace dat jako ANSI c OMEZENÍ. H zahrnout soubor definuje [numerické limity pro integrální typy](../cpp/integer-limits.md)a FLOAT. Definuje H [numerické limity pro plovoucí typy](../cpp/floating-limits.md).  
+Dva standardní vložené soubory, \<Limits.h – > a \<float.h – >, definovat numerické limity nebo minimální a maximální hodnoty, které mohou být uloženy proměnné daného typu. Tyto minimálních a maximální hodnoty jsou zaručit přenosný na C++ compiler, který používá stejné reprezentace dat jako ANSI c \<Limits.h – > zahrnout soubor definuje [numerické limity pro integrální typy](../cpp/integer-limits.md), a \<float.h – > definuje [numerické limity pro plovoucí typy](../cpp/floating-limits.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Základní koncepty](../cpp/basic-concepts-cpp.md)

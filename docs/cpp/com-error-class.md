@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error – třída
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  A `_com_error` objekt představuje podmínku vyhledat pomocí funkce obálky zpracování chyb v souborech hlavičky generované z knihovny typů nebo jednu z tříd COM podpory. `_com_error` Třída zapouzdří `HRESULT` kód chyby a všechny přidružené `IErrorInfo Interface` objektu.  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[Chyba](../cpp/com-error-error.md)|Načte `HRESULT` předaný konstruktoru.|  
-|[ErrorInfo –](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|  
-|[Wcode –](../cpp/com-error-wcode.md)|Načte kód chyby 16bitové namapovat na zapouzdřené `HRESULT`.|  
+|[ErrorInfo](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|  
+|[WCode](../cpp/com-error-wcode.md)|Načte kód chyby 16bitové namapovat na zapouzdřené `HRESULT`.|  
   
 ### <a name="ierrorinfo-functions"></a>Funkce IErrorInfo  
   
 |||  
 |-|-|  
 |[Popis](../cpp/com-error-description.md)|Volání `IErrorInfo::GetDescription` funkce.|  
-|[HelpContext –](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|  
+|[HelpContext](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|  
 |[Soubor nápovědy](../cpp/com-error-helpfile.md)|Volání `IErrorInfo::GetHelpFile` – funkce|  
 |[Zdroj](../cpp/com-error-source.md)|Volání `IErrorInfo::GetSource` funkce.|  
-|[IDENTIFIKÁTOR GUID](../cpp/com-error-guid.md)|Volání `IErrorInfo::GetGUID` funkce.|  
+|[GUID](../cpp/com-error-guid.md)|Volání `IErrorInfo::GetGUID` funkce.|  
   
 ### <a name="format-message-extractor"></a>Formát zprávy Extraktor  
   
@@ -67,13 +67,13 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Hresulttowcode –](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit `HRESULT` na 16bitové `wCode`.|  
-|[Wcodetohresult –](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` na 32-bit `HRESULT`.|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit `HRESULT` na 16bitové `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` na 32-bit `HRESULT`.|  
   
 **Konkrétní Microsoft END**  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** comdef.h  
+ **Header:** \<comdef.h>  
   
  `Lib:`comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   

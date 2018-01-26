@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkce s argumentů s proměnnou seznamy (C++)
 Deklarace funkcí, ve kterých posledního člena se třemi tečkami (...) může trvat proměnný počet argumentů. V těchto případech poskytuje jazyk C++ kontrolu typu pouze pro explicitně deklarované argumenty. Seznamy argumentů proměnných lze použít, pokud je zapotřebí provést funkci tak obecnou, že i počet a typ argumentů se může lišit. Řada funkcí je příkladem funkce, které používají seznam argumentů s proměnnou délkou. `printf` *seznam argumentů deklarace*  
   
 ## <a name="functions-with-variable-arguments"></a>Funkce s proměnné argumenty  
- Pro přístup k argumentům po deklarované, použijte makra obsažené v souboru standardní zahrnout STDARG. H, jak je popsáno níže.  
+ Přístup k argumentům po deklarované, použijte makra obsažené v souboru standardní zahrnout \<stdarg.h > jak je popsáno níže.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Microsoft C++ umožňuje zadat tři tečky jako argument, jsou-li tři tečky posledním argumentem a předchází-li jim čárka. Proto je deklarace `int Func( int i, ... );` platná, ale `int Func( int i ... );` platná není.  
   
@@ -43,9 +43,9 @@ Deklarace funkcí, ve kterých posledního člena se třemi tečkami (...) můž
   
  Jsou-li argumenty typu `char` předány jako argumenty proměnných, jsou převedeny na typ `int`. Podobně když argumenty typu **float** jsou předávány jako proměnné argumenty se převedou na typ **dvojité**. Argumenty jiných typů představují objekt běžného povýšení integrálních typů a typů s plovoucí desetinnou čárkou. V tématu [standardní převody](standard-conversions.md) Další informace.  
   
- Funkce, které vyžadují proměnné seznamy jsou deklarovány s použitím se třemi tečkami (...) v seznamu argumentů. Chcete-li přistoupit k argumentům předaným seznamem proměnných, použijte typy a makra popsané ve vloženém souboru STDARG.H. Další informace o těchto makra najdete v tématu [va_arg –, va_copy –, va_end –, va_start –](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). v dokumentaci pro knihovnu C Run-Time.  
+ Funkce, které vyžadují proměnné seznamy jsou deklarovány s použitím se třemi tečkami (...) v seznamu argumentů. Typy a makra, které jsou popsány v \<stdarg.h > zahrnout soubor k přístupu argumentů, které se předávají pomocí seznamu proměnných. Další informace o těchto makra najdete v tématu [va_arg –, va_copy –, va_end –, va_start –](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). v dokumentaci pro knihovnu C Run-Time.  
   
- Následující příklad ukazuje, jak makra fungují společně s typem (v STDARG deklarováno. H): 
+ Následující příklad ukazuje, jak makra fungují společně s typem (deklarované v \<stdarg.h >): 
   
 ```  
 // variable_argument_lists.cpp  

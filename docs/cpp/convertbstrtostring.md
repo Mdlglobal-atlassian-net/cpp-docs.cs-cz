@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 14a01b33a005d6715160df09fa3f19ca003b7332
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7f3463e34c17bcde4f64b89e1ae083228317293
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Převede `BSTR` hodnotu **char \*** .  
   
@@ -72,7 +72,7 @@ char * text: Test
 **Konkrétní Microsoft END**  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** comutil.h.  
+ **Záhlaví:** \<comutil.h >.  
   
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   

@@ -37,15 +37,15 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except – příkaz
 
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
 **Zkuste – s výjimkou** příkaz je rozšíření Microsoft pro C a C++ jazyky, které podporuje strukturované zpracování výjimek.  
 
 ## <a name="syntax"></a>Syntaxe  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Typy ukazatelů `PEXCEPTION_RECORD` a `PCONTEXT` jsou definovány v souboru zahrnout WINNT. H, a `_EXCEPTION_RECORD` a `_CONTEXT` jsou definovány v souboru zahrnout vyjma. H
+Typy ukazatelů `PEXCEPTION_RECORD` a `PCONTEXT` jsou definovány v souboru zahrnout \<souboru winnt.h >, a `_EXCEPTION_RECORD` a `_CONTEXT` jsou definovány v souboru zahrnout \<excpt.h >
 
 Můžete použít `GetExceptionCode` v rámci obslužná rutina výjimky. Můžete však použít `GetExceptionInformation` pouze v rámci výrazu filtru výjimek. Informace, na které ukazuje, jsou obecně umístěny do zásobníku a ve chvíli, kdy je řízení převedeno na obslužnou rutinu výjimky, jsou již nedostupné.
 
 Vnitřní funkce `AbnormalTermination` je k dispozici v rámci obslužné rutiny ukončení. Pokud vrátí hodnotu 0 text **try-finally –** příkaz ukončí postupně. Ve všech ostatních případech vrátí hodnotu 1.
 
-Soubor EXCPT.H pro tyto vnitřní funkce definuje několik alternativních názvů:
+excpt.h definuje některé alternativní názvy pro vnitřní tyto funkce:
 
 `GetExceptionCode`je ekvivalentní`_exception_code`
 

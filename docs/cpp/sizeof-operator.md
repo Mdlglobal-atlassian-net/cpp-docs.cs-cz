@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sizeof-operator"></a>sizeof – operátor
 Vypočítá velikost jeho operand s ohledem na velikost typu `char`.  
@@ -36,7 +36,7 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem `sizeof` operátor je typu `size_t`, typ integrální definované v souboru zahrnout STDDEF. H. Tento operátor umožňuje Vyhněte se zadání velikosti data závislá na počítače ve vašich aplikacích.  
+ Výsledkem `sizeof` operátor je typu `size_t`, typ integrální definované v souboru zahrnout \<stddef.h >. Tento operátor umožňuje Vyhněte se zadání velikosti data závislá na počítače ve vašich aplikacích.  
   
  Operand pro `sizeof` může být jedna z následujících akcí:  
   

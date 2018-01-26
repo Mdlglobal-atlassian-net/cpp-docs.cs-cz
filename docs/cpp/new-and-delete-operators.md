@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -56,7 +56,7 @@ Dva obory funkcí `operator new` jsou popsány v následující tabulce.
 |**:: new – operátor**|Globální|  
 |*Název třídy* **:: new – operátor**|Třída|  
   
- První argument **new – operátor** musí být typu **size_t –** (typem definovaným v STDDEF. H) a návratový typ je vždy **void \*** .  
+ První argument **new – operátor** musí být typu **size_t –** (typem definovaným v \<stddef.h >), a návratový typ je vždy **void \***  .  
   
  Na globální **new – operátor** funkce je volána, když **nové** operátor se používá k přidělení objekty vestavěné typy, uživatelem definované objekty typu třídy, které neobsahují **new – operátor** funkce a pole libovolného typu. Při **nové** operátor se používá k přidělení objekty typu třídy kde **new – operátor** je definována této třídy a **new – operátor** je volána.  
   

@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Operátory sčítání: + a -
 ## <a name="syntax"></a>Syntaxe  
@@ -57,19 +57,19 @@ expression - expression
 |----------|-------------|  
 |*aritmetické operace*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|  
 |*integrální*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|  
-|*Skalární*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|  
+|*scalar*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|  
   
  Platnými kombinacemi pro tyto operátory jsou:  
   
  *aritmetické* + *aritmetické*  
   
- *Skalární* + *integrální*  
+ *scalar* + *integral*  
   
- *integrální* + *skalární*  
+ *integral* + *scalar*  
   
  *aritmetické* - *aritmetické*  
   
- *Skalární* - *skalární*  
+ *scalar* - *scalar*  
   
  Všimněte si, že sčítání a odčítání nejsou ekvivalentními operacemi.  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  Kód ve tvaru `pIntArray = pIntArray + 1` se v programech jazyka C++ nachází jen zřídka. K provedení zvýšení jsou vhodnější tvary `pIntArray++` nebo `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Odečtení ukazatele  
- Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výsledkem výrazu odčítání je celočíselná hodnota se znaménkem typu ptrdiff_t (definovaného ve standardním vloženém souboru STDDEF.H).  
+ Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání vypočítá výsledku podepsaný integrální ptrdiff_t – typ (definované v souboru standardní zahrnout \<stddef.h >).  
   
  Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Operátor odečítání hodnotu ukazatel (*n* - *i*) element TD pole, kde  *n*  je element na kterou odkazuje původní ukazatele a *i* je integrální hodnota Druhý operand.  
   

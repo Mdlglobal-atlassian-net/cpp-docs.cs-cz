@@ -1,5 +1,5 @@
 ---
-title: "_set_com_error_handler – | Microsoft Docs"
+title: _set_com_error_handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 2cfb1e0dedf8d5ff90092d7eee2246791a491d2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c04c6b2a1177288544536130cf88c8fd8fb673e6
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Nahradí výchozí funkci, která se používá pro zpracování chyb modelu COM.  
   
@@ -94,7 +94,7 @@ Exception raised: Unable to establish the connection!
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** comdef.h  
+ **Header:** \<comdef.h>  
   
  **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru zapnutý, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je vypnuto, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

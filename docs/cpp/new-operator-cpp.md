@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new – operátor (C++)
 Přidělí paměť pro objekt nebo pole objektů *název typu* z volné úložiště a vrátí vhodně typové, nenulové hodnoty ukazatele k objektu.  
@@ -69,10 +69,10 @@ delete *p;
   
  Následující seznam popisuje elementy gramatika **nové**:  
   
- *umístění*  
+ *placement*  
  Poskytuje způsob předat další argumenty, pokud jste přetížení **nové**.  
   
- *Název typu*  
+ *type-name*  
  Určuje typ přidělování; může být buď předdefinovaných nebo uživatelem definovaný typ. Pokud specifikace typu je složitá, může být obklopená závorkách vynutit pořadí vazby.  
   
  *Inicializátor*  
@@ -238,7 +238,7 @@ int main()
  Když kompilátor narazí **nové** operátor přidělit objekt typu `type`, vystavuje volání `type` **:: new – operátor (sizeof (** `type` **))**  nebo, pokud ne, uživatelem definované `operator new` je definován **:: new – operátor (sizeof (** `type` **))**. Proto **nové** operátor můžete přidělit správné množství paměti pro objekt.  
   
 > [!NOTE]
->  Argument `operator new` je typu **size_t –**. Tento typ je definován v DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H a TIME.H.  
+>  Argument `operator new` je typu **size_t –**. Tento typ je definována v \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
   
  Možnost v gramatiky umožňuje specifikaci *umístění* (viz gramatika pro [operátor new](../cpp/new-operator-cpp.md)). *Umístění* parametr lze použít pouze pro uživatelem definované implementace `operator new`; umožňuje doplňující informace, které mají být předány `operator new`. Výraz s *umístění* pole, jako `T *TObject = new ( 0x0040 ) T;` převádějí na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Pokud T je třídu operátor členů nové, jinak `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

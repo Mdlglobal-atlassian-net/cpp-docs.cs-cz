@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  A `_bstr_t` zapouzdřují [BSTR datový typ](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Třída spravuje přidělení prostředků a navrácení prostřednictvím volání funkce **SysAllocString** a **SysFreeString** a dalších `BSTR` rozhraní API v případě nutnosti. `_bstr_t` Třída používá, aby se zabránilo nadměrnému zatížení při počítání referencí.  
   
@@ -44,8 +44,8 @@ ms.lasthandoff: 12/21/2017
 |[Attach](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálka pro `BSTR`.|  
 |[kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřené `BSTR`.|  
 |[Detach](../cpp/bstr-t-detach.md)|Vrátí `BSTR` zabalené službou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|  
-|[Getaddress –](../cpp/bstr-t-getaddress.md)|Odkazuje na `BSTR` zabalené službou `_bstr_t`.|  
-|[Getbstr –](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.|  
+|[GetAddress](../cpp/bstr-t-getaddress.md)|Odkazuje na `BSTR` zabalené službou `_bstr_t`.|  
+|[GetBSTR](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.|  
 |[Délka](../cpp/bstr-t-length.md)|Vrátí počet znaků `_bstr_t`.|  
   
 ### <a name="operators"></a>Operátory  
@@ -57,12 +57,12 @@ ms.lasthandoff: 12/21/2017
 |[+ – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Zřetězí dva řetězce.|  
 |[! – operátor](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda obsah zapouzdřeného `BSTR` je **NULL** řetězec.|  
 |[Operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porovná dva `_bstr_t` objekty.|  
-|[operátor wchar_t * &#124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahování ukazatele na zapouzdřené Unicode nebo vícebajtových `BSTR` objektu.|  
+|[operátor wchar_t * & #124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahování ukazatele na zapouzdřené Unicode nebo vícebajtových `BSTR` objektu.|  
   
 **Konkrétní Microsoft END**  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** comutil.h  
+ **Záhlaví:** \<comutil.h >  
   
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   

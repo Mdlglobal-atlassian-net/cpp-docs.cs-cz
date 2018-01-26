@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Postupy: Vytváření a používání instancí objektů CComPtr a CComQIPtr
 V classic programování v systému Windows, jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji řečeno, jako servery COM). Mnoho součásti systému Windows jsou implementované jako servery COM a počet přispěvatelů poskytnout knihovny v tomto formuláři. Informace o základech COM najdete v tématu [modelu COM (Component Object)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -30,7 +30,7 @@ V classic programování v systému Windows, jsou knihovny často implementován
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr`a jeho příbuzných jsou součástí knihovny ATL a jsou definovány v atlcomcli.h. `_com_ptr_t`je v comip.h deklarována. Kompilátor vytvoří specializací `_com_ptr_t` při vygeneruje Obálka – třídy pro knihovny typů.  
+ `CComPtr`a jeho příbuzných jsou součástí knihovny ATL a jsou definovány v \<atlcomcli.h >. `_com_ptr_t`je deklarován v \<comip.h >. Kompilátor vytvoří specializací `_com_ptr_t` při vygeneruje Obálka – třídy pro knihovny typů.  
   
 ## <a name="example"></a>Příklad  
  Také poskytuje ATL `CComQIPtr`, který má jednodušší syntaxi pro dotazování objektu COM pro načtení další rozhraní. Doporučujeme však `CComPtr` protože provádí vše, `CComQIPtr` můžete provést a sémanticky více konzistentní se nezpracovaná ukazatele rozhraní COM. Pokud používáte `CComPtr` se dotázat na rozhraní, nové ukazatel rozhraní je umístěn v výstupní parametr. Pokud volání selže, je vrácen HRESULT, což je obvyklý COM. S `CComQIPtr`, vrácená hodnota je ukazatel sám sebe, a pokud volání selže, interní návratovou hodnotu HRESULT není přístupný. Následující dva řádků jak zobrazit chyba zpracování mechanismech `CComPtr` a `CComQIPtr` lišit.  
