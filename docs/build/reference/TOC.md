@@ -102,6 +102,7 @@
 ##### [/Qpar (automatická paralelizace)](qpar-auto-parallelizer.md)
 ##### [/Qpar-report (úroveň generování sestav s automatickou paralelizací)](qpar-report-auto-parallelizer-reporting-level.md)
 ##### [/Qsafe_fp_loads](qsafe-fp-loads.md)
+##### [/Qspectre](qspectre.md)
 ##### [/Qpar-report (úroveň generování sestav s automatickou vektorizací)](qvec-report-auto-vectorizer-reporting-level.md)
 #### [/RTC (kontrola chyb za běhu)](rtc-run-time-error-checks.md)
 #### [/sdl (povolení dalších kontrol zabezpečení)](sdl-enable-additional-security-checks.md)
