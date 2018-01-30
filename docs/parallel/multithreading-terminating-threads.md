@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Ukončení vláken
 Dvě běžné situace způsobí ukončení vlákna: řídící funkce nebo vlákno není povolené k zahájení dokončení. Pokud textový editor používá vlákno pro tisk na pozadí, řídící funkce by ukončit normálně, pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale tisk vlákně na pozadí musí byla předčasně ukončena. Toto téma vysvětluje, jak implementovat každé situaci a jak získat kód ukončení vlákna po ukončí.  
@@ -58,12 +62,12 @@ Dvě běžné situace způsobí ukončení vlákna: řídící funkce nebo vlák
   
 -   Nastavte `m_bAutoDelete` – datový člen k **FALSE**. To umožňuje `CWinThread` objekt zůstanou zachovány i po ukončení vlákno. Potom můžete přistupovat `m_hThread` – datový člen po ukončení vlákno. Pokud použijete tento postup, ale je zodpovědná za zničení `CWinThread` objekt, protože rozhraní nebude odstraní automaticky. Toto je upřednostňovaná metoda.  
   
--   Popisovač vlákna úložiště samostatně. Po vytvoření vlákno zkopírujte jeho `m_hThread` – datový člen (pomocí **:: DuplicateHandle**) do jiné proměnné a k němu přístup pomocí této proměnné. Tímto způsobem objekt je automaticky odstraněn, když dojde k ukončení a můžete stále zjistit, proč bylo vlákno ukončeno. Dávejte pozor, aby vlákno nezavře předtím, než můžete duplikovat popisovač. Nejbezpečnější způsob, jak to udělat, je předat **CREATE_SUSPENDED** k [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), uložte popisovač a poté obnovit vlákno voláním [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Popisovač vlákna úložiště samostatně. Po vytvoření vlákno zkopírujte jeho `m_hThread` – datový člen (pomocí **:: DuplicateHandle**) do jiné proměnné a k němu přístup pomocí této proměnné. Tímto způsobem objekt je automaticky odstraněn, když dojde k ukončení a můžete stále zjistit, proč bylo vlákno ukončeno. Dávejte pozor, aby vlákno nezavře předtím, než můžete duplikovat popisovač. Nejbezpečnější způsob, jak to udělat, je předat **CREATE_SUSPENDED** k [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), uložte popisovač a poté obnovit vlákno voláním [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Buď metoda umožňuje určit, proč `CWinThread` objekt byl ukončen.  
   
 ## <a name="see-also"></a>Viz také  
  [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
- [_endthread –, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
- [_beginthread –, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+ [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

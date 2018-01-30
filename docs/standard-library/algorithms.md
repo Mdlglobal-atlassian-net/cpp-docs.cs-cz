@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Algoritmy
 Algoritmů je základní součástí standardní knihovna C++. Algoritmy nefungují s kontejnery sami, ale s iterátory. Proto stejný algoritmus lze ve většině není-li všechny kontejnery standardní knihovna C++. Tato část popisuje konvence a přehled terminologie algoritmů standardní knihovna C++.  
@@ -56,7 +59,7 @@ Algoritmů je základní součástí standardní knihovna C++. Algoritmy nefungu
   
  Pořadí elementů určené, které iterátory v rozsahu [`First`, `Last`) je pořadí řazení podle operátor **<**  Pokud pro každou *N* v rozsahu [0, `Last`  -  `First`) a pro každou *M* v rozsahu (N, `Last`  -  `First`) predikát! () \*(`First` + *M*) < \*(*první* + *N*)) hodnotu true. (Všimněte si, že prvky jsou seřazeny ve vzestupném pořadí.) Funkce predikátu **operátor <**, nebo jakékoli náhradou, nesmí změnit buď jejími operandy. Musí zaručit, stejné `bool` způsobit pokaždé, když je vyhodnocena a pokud je kopie buď operand nahradit pro operand ho musí zaručit stejný výsledek. Kromě toho musíte použít, striktní slabé řazení operandy, které se porovná.  
   
- Pořadí elementů určené, které iterátory v rozsahu [`First`, `Last`) je haldy seřazené podle **operátor <** Pokud pro každou *N* v rozsahu [1, `Last`  -  `First`) predikát! (\*`First` < \*(`First` + *N*)) hodnotu true. (První prvek je největší.) Jeho vnitřní struktura je známé jenom k funkcím šablony [make_heap –](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap –]--brokenlink--(.. / Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap) a [push_heap –] - brokenlink--(.. / Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). Stejně jako u seřazené posloupnosti, funkce predikátu **operátor <**, nebo jakékoli náhradou, nesmí změnit buď jejími operandy, a musí použít, striktní slabé řazení u operandů porovná. Musí zaručit, stejné `bool` způsobit pokaždé, když je vyhodnocena a pokud je kopie buď operand nahradit pro operand ho musí zaručit stejný výsledek.  
+ Pořadí elementů určené, které iterátory v rozsahu [`First`, `Last`) je haldy seřazené podle **operátor <** Pokud pro každou *N* v rozsahu [1, `Last`  -  `First`) predikát! (\*`First` < \*(`First` + *N*)) hodnotu true. (První prvek je největší.) Jeho vnitřní struktura je známé jenom k funkcím šablony [make_heap –](../standard-library/algorithm-functions.md#make_heap), [pop_heap –](../standard-library/algorithm-functions.md#pop_heap), a [push_heap –](../standard-library/algorithm-functions.md#push_heap). Stejně jako u seřazené posloupnosti, funkce predikátu **operátor <**, nebo jakékoli náhradou, nesmí změnit buď jejími operandy, a musí použít, striktní slabé řazení u operandů porovná. Musí zaručit, stejné `bool` způsobit pokaždé, když je vyhodnocena a pokud je kopie buď operand nahradit pro operand ho musí zaručit stejný výsledek.  
   
  Standardní knihovna C++ algoritmy jsou umístěné v [ \<algoritmus >](../standard-library/algorithm.md) a [ \<číselné >](../standard-library/numeric.md) soubory hlaviček.  
   

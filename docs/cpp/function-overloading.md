@@ -1,33 +1,38 @@
 ---
 title: "Přetížení funkcí | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
-Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Takové funkce jsou označovány za přetížené a jsou podrobně popsány v tématu Přetížení. Přetížené funkce umožňují programátorům poskytnout různé sémantiky funkce v závislosti na typech a počtu argumentů.  
+Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Toto nastavení se nazývá *přetížený* funkce. Přetížené funkce umožňují zadat jiný sémantiku pro funkci, v závislosti na typy a počet argumentů. 
   
- Například **tisku** funkce, která přebírá řetězec (nebo **char \*** ) argument provádí velmi jiné úlohy než ten, který používá argument typu **dvojité** . Přetížení umožňuje jednotné pojmenování a zbavuje programátory nutnosti vytvářet názvy jako `print_sz` nebo `print_d`. Následující tabulka ukazuje, které části deklarace funkce používá jazyk C++ k rozlišení skupin funkcí stejného názvu ve stejném oboru.  
+ Například **tisku** funkce, která přebírá **std::string** argument může provádět velmi jiné úlohy než ten, který používá argument typu **dvojité**. Přetížení ušetří můžete s pomocí názvů, jako například `print_string` nebo `print_double`. Při kompilaci kompilátor zvolí, které přetížení pro použití na základě typu argumentů předaná volající funkcí.  Když zavoláte **print(42.0)** potom **void tisk (dvojité d)** funkce bude volána. Když zavoláte **tisku ("hello world")** potom **void print(std::string)** přetížení bude volána.
+
+Můžete použít přetížení členských funkcí a třetí funkce. Následující tabulka ukazuje, které části deklarace funkce používá jazyk C++ k rozlišení skupin funkcí stejného názvu ve stejném oboru.  
   
 ### <a name="overloading-considerations"></a>Okolnosti přetížení  
   
@@ -39,9 +44,8 @@ Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném 
 |Přítomnost nebo absence tří teček|Ano|  
 |Použití názvů `typedef`|Ne|  
 |Nespecifikované hranice pole|Ne|  
-|**Const** nebo `volatile` (viz níže)|Ano|  
-  
- I když funkce dají rozlišovat na základě návratový typ, nemohou být přetíženy na základě.  `Const`nebo `volatile` se používají pouze jako základ pro přetížení, když jsou použity v třídě pro použití **to** ukazatele pro třídu, není návratový typ funkce.  Jinými slovy, přetížení platí jenom v případě **const** nebo `volatile` – klíčové slovo následuje seznam argumentů funkce v deklaraci.  
+|**Const** nebo`volatile`|Ano, při použití celý – funkce|
+|[ref-qualifier](#ref-qualifier)|Ano|  
   
 ## <a name="example"></a>Příklad  
  Následující příklad znázorňuje, jak lze přetížení použít.  
@@ -51,68 +55,71 @@ Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném 
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |Převod z typu|Převést na typ|  
 |-----------------------|---------------------|  
-|*Název typu*|*Název typu***&**|  
-|*Název typu***&**|*Název typu*|  
-|*Název typu* **]**|*Název typu\**|  
+|*type-name*|*Název typu***&**|  
+|*Název typu***&**|*type-name*|  
+|*Název typu* **]**|*type-name\**|  
 |*Název typu* **(** *seznam argumentů* **)**|**(**  *\*název typu* **) (** *seznam argumentů* **)**|  
-|*Název typu*|**Const** *název typu*|  
-|*Název typu*|`volatile`*název typu*|  
-|*Název typu\**|**Const** *název typu\**|  
-|*Název typu\**|`volatile`*název typu\**|  
+|*type-name*|**Const** *název typu*|  
+|*type-name*|`volatile`*název typu*|  
+|*type-name\**|**Const** *název typu\**|  
+|*type-name\**|`volatile`*název typu\**|  
   
  Pořadí, ve které jsou aplikovány převody vypadá takto:  
   
@@ -399,15 +406,54 @@ obj.name
 ```  
   
  Levý operand `->*` a `.*` operátory (ukazatel na člena) jsou zpracovány stejným způsobem jako `.` a `->` operátory (výběru členů) s ohledem na porovnávání argumentů.  
+
+## <a name="ref-qualifiers"></a>REF – kvalifikátory na členské funkce  
+REF kvalifikátory umožňují přetížení členské funkce na základě objekt propojená tímto `this` rvalue nebo lvalue.  Tuto funkci lze použít předejdete operace nepotřebné kopírování ve scénářích, kde rozhodnete poskytovat ukazatel přístup k datům. Předpokládejme například, třída **C** některá data v jeho konstruktor inicializuje a vrátí kopii dat – členská funkce **get_data()**. Pokud objekt typu **C** je rvalue, který má být zničený, pak bude vyberte kompilátor **get_data() & &** přetížení, které se přesouvají data než ho zkopírovat. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Omezení  
+## <a name="restrictions-on-overloading"></a>Omezení přetížení  
  Několik omezení řídí přijatelné sadu přetížených funkcí:  
   
 -   Jakékoli dvě funkce v sadě přetížených funkcí musí mít jiný argument seznamy.  
   
 -   Přetížení funkcí s argumentem seznam stejné typy, podle návratový typ samostatně, je k chybě.  
   
-     **Konkrétní Microsoft**  
+     **Microsoft Specific**  
   
  Můžete použít přetížení **new – operátor** výhradně na základě těchto návratový typ – konkrétně na základě modifikátor modelu paměti zadaná.  
   
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Porovnávání deklarací  
+## <a name="overloading-overriding-and-hiding"></a>Přetížení, přepsání a skrytí
+  
  Jakékoli dvě deklarace funkcí se stejným názvem ve stejném oboru mohou odkazovat na stejnou funkci nebo na dvě samostatné funkce, které jsou přetížené. Pokud seznam deklarací argumentu obsahuje argumenty ekvivalentních typů (jak je popsáno v předchozí části), deklarace funkce odkazují na stejnou funkci. V opačném případě odkazují na dvě různé funkce, které jsou vybrány pomocí přetížení.  
   
- Obor třídy je přísně respektován. Proto se funkce deklarovaná v základní třídě nenachází ve stejném oboru jako funkce deklarovaná v odvozené třídě. Pokud je funkce v odvozené třídě deklarována se stejným názvem jako funkce v základní třídě, funkce odvozené třídy skryje funkci základní třídy místo toho, aby způsobila přetížení.  
+ Obor třídy je přísně respektován. Proto se funkce deklarovaná v základní třídě nenachází ve stejném oboru jako funkce deklarovaná v odvozené třídě. Pokud je funkce v odvozené třídě deklarovaný se stejným názvem jako virtuální funkce ve funkci odvozené třídy základní třídy *přepsání* funkce základní třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
+
+Pokud funkce základní třída není deklarovaný jako virtuální, pak funkce odvozené třídy říká, že je *skrýt* ho. Přepsání i skrytí se liší od přetížení.  
   
  Obor bloku je přísně respektován. Proto se funkce deklarovaná v rozsahu souboru nenachází ve stejném oboru jako funkce deklarovaná místně. Pokud má funkce deklarovaná místně stejný název jako funkce deklarovaná v rozsahu souboru, funkce deklarovaná místně skryje funkci s rozsahem souboru místo toho, aby způsobila přetížení. Příklad:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Viz také  
  [Funkce (C++)](../cpp/functions-cpp.md)

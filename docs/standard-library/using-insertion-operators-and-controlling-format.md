@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Používání operátorů insertion a řízení formátu
 Toto téma ukazuje, jak řídit formát a postup vytvoření operátorů insertion pro vaše vlastní třídy. Vložení (**<<**) operátor, který je naprogramovaných, pro všechny standardní datové typy C++, odešle do výstupního datového proudu objekt bajtů. Operátorů insertion pracovat předdefinované "manipulátory,", které jsou elementy, které Změna výchozího formátu argumentů celé číslo.  
@@ -32,7 +36,7 @@ Toto téma ukazuje, jak řídit formát a postup vytvoření operátorů inserti
   
 - [Přesnost](#vclrfprecisionanchor5)  
   
-- [Základ –](#vclrfradixanchor6)  
+- [Radix](#vclrfradixanchor6)  
   
 ##  <a name="vclrfoutputwidthanchor3"></a>Šířka výstupu  
  Chcete-li zarovnat výstup, zadejte šířku výstup pro každou položku tím, že `setw` manipulator v datovém proudu nebo voláním **šířka** – členská funkce. Tento příklad vpravo zarovná hodnoty ve sloupci minimálně 10 znaků, který je široké:  
@@ -192,7 +196,7 @@ Stan    4.4e+003
   
  Program znovu, vytiskne jedna číslice za desetinnou čárkou. Pokud má jedna **ios::fixed** nebo **ios::scientific** není nastaven, hodnota přesnosti určuje počet číslic za desetinnou čárkou. Pokud ani příznak nastaven, hodnota přesnosti určuje celkový počet platných číslic. `resetiosflags` Manipulator vymaže tyto příznaky.  
   
-##  <a name="vclrfradixanchor6"></a>Základ –  
+##  <a name="vclrfradixanchor6"></a> Radix  
  **Dec**, **oct**, a **šestnáctkových** manipulátory nastavit základ – výchozí pro vstup a výstup. Například, pokud je vložit **šestnáctkových** manipulator do výstupního datového proudu objekt správně překládá reprezentace interních datových celých čísel do formátu hexadecimální výstup. Jsou čísla zobrazí pomocí číslic a až f v malá Pokud [velká](../standard-library/ios-functions.md#uppercase) příznak je clear (výchozí); jinak, jsou zobrazeny velkými písmeny. Základ – výchozí je **dec** (decimal).  
   
 ## <a name="quoted-strings-c14"></a>Uvozovkách řetězce (C ++ 14)  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Toto chování lze překonat ručně, ale aby odezvy řetězec pohodlnější, C ++ 14 přidá `std::quoted` stream manipulator v `<iomanip>`. Při vložení `quoted()` obklopuje řetězec s oddělovačem (dvojitých uvozovek ' "' ve výchozím nastavení) a při extrakci zpracovává datový proud extrahujte všechny znaky až do konečného oddělovač. Jsou uvozeny uvozovacím znakem žádné embedded uvozovky s řídicí znak ('\\\\se ve výchozím nastavení).  
   
- Oddělovače jsou k dispozici pouze v objektu datového proudu. se nenachází v extrahované řetězec, ale jsou přítomna v řetězec vrácený [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Oddělovače jsou k dispozici pouze v objektu datového proudu. se nenachází v extrahované řetězec, ale jsou přítomna v řetězec vrácený [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).  
   
  Prázdné znaky chování operací vložení a extrakce je nezávisle na tom, jak je řetězec reprezentována v kódu tak uvozovkách operátor je užitečné, bez ohledu na to, jestli vstupní řetězec je nezpracované řetězcový literál nebo řetězec regulárního. Vstupní řetězec, ať formát, můžete s vloženými uvozovky, zalomení řádků, karty a podobně a všechny tyto se zachovají quoted() manipulator.  
   
- Další informace a příklady úplného kódu, najdete v tématu [uvozovkách]--brokenlink--(.. / Topic/%3Cios%3E%20functions.md#quoted).  
+ Další informace a příklady úplného kódu najdete v tématu [v uvozovkách](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Viz také  
  [Výstupní streamy](../standard-library/output-streams.md)   

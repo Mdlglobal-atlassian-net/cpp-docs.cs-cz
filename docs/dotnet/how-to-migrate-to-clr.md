@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 Toto téma popisuje problémy, které se vynoří během kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) informace). **/ CLR** umožňuje modulům Visual C++ pro vyvolání a jde volat z sestavení .NET a přitom zachovat kompatibilitu s nespravovanými moduly. V tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>Použití nových funkcí Visual C++  
  Po aplikaci zkompiluje, odkazy a běží, můžete začít používat funkce rozhraní .NET v jakémkoliv kompilovaném modulu s **/CLR**. Další informace najdete v tématu [rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
   
- Pokud jste použili spravovaných rozšíření jazyka C++, můžete převést kód a použít nové syntaxe. Přehled syntaktické rozdíly, naleznete [(NOTINBUILD) spravovaných rozšíření pro C++ Syntax Upgrade Checklist](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada). Podrobnosti o převodu spravovaných rozšíření pro C++ najdete v tématu [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md).  
+ Pokud jste použili spravovaných rozšíření jazyka C++, můžete převést kód a použít nové syntaxe. Podrobnosti o převodu spravovaných rozšíření pro C++ najdete v tématu [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md).  
   
  Informace o programování v jazyce Visual C++ .NET najdete v části:  
   

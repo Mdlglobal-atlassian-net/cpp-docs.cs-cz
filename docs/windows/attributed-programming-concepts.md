@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributed programming [C++]
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e5477d91d50ab239732adf3521a2bf07d92a1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
 Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití atributů v programy můžou. Atributy, nová funkce v jazyce Visual C++, jsou navrženy pro zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele dynamické knihovny (DLL) k vložení kódu nebo úpravě kódu v souborech generovaný objekt. Existují atributy, které pomáhají při vytváření soubory .idl, rozhraní, knihovny typů a další elementy COM. Atributy v integrované vývojové prostředí (IDE), jsou podporovány prostřednictvím průvodců a okno vlastností.  
@@ -57,5 +59,3 @@ Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití a
  [__super](../cpp/super.md)a [__interface](../cpp/interface.md)  
  Odkazy na nové klíčová slova jazyka C++ související s programování s atributy.  
   
- [(NOTINBUILD) Metody programování Visual C++](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- Obsahuje odkazy na témata popisující rámcové informace o knihovnách Visual C++ a témata pojednávající o různých technikách a technologiích programování kódu.

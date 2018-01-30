@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmousemanager-class"></a>CMouseManager – třída
 Uživatel může přidružit jiné příkazy na konkrétní [CView](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř tohoto zobrazení.  
@@ -94,19 +97,19 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iViewId`  
+ [in] `iViewId`  
  ID zobrazení.  
   
- [v]`uiViewNameResId`  
+ [in] `uiViewNameResId`  
  ID prostředku řetězec, který odkazuje na název zobrazení.  
   
- [v]`uiIconId`  
+ [in] `uiIconId`  
  Ikona ID zobrazení  
   
- [v]`iId`  
+ [in] `iId`  
  ID zobrazení.  
   
- [v]`lpszViewName`  
+ [in] `lpszViewName`  
  Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -132,7 +135,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iId`  
+ [in] `iId`  
  ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -146,7 +149,7 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iViewId`  
+ [in] `iViewId`  
  ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -163,7 +166,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [in] `lpszName`  
  Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -194,7 +197,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -213,7 +216,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -234,14 +237,14 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iViewId`  
+ [in] `iViewId`  
  Identifikátor zobrazení.  
   
- [v]`uiCmd`  
+ [in] `uiCmd`  
  Identifikátor příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
- Aby bylo možné přidružit vlastního příkazu k zobrazení, je nutné nejprve zaregistrovat zobrazení pomocí [CMouseManager::AddView](#addview). `AddView` Metoda vyžaduje identifikátor zobrazení jako vstupní parametr. Jakmile si zaregistrujete zobrazení, můžete volat `CMouseManager::SetCommandForDblClk` s stejné zobrazení identifikátor vstupní parametr, který jste zadali do `AddView`. Při poklepání myši v registrovaných zobrazení, následně bude aplikace spustit příkaz indikován `uiCmd.` pro podporu chování vlastní myš, budete také muset přizpůsobit zobrazení zaregistrována správce myši. Další informace o chování vlastní myši, najdete v části [přizpůsobení klávesnice a myši]--brokenlink--(.. / myši a klávesnice customization.md).  
+ Aby bylo možné přidružit vlastního příkazu k zobrazení, je nutné nejprve zaregistrovat zobrazení pomocí [CMouseManager::AddView](#addview). `AddView` Metoda vyžaduje identifikátor zobrazení jako vstupní parametr. Jakmile si zaregistrujete zobrazení, můžete volat `CMouseManager::SetCommandForDblClk` s stejné zobrazení identifikátor vstupní parametr, který jste zadali do `AddView`. Při poklepání myši v registrovaných zobrazení, následně bude aplikace spustit příkaz indikován `uiCmd.` pro podporu chování vlastní myš, budete také muset přizpůsobit zobrazení zaregistrována správce myši. Další informace o chování vlastní myši najdete v tématu [přizpůsobení klávesnice a myši](../keyboard-and-mouse-customization.md).  
   
  Pokud `uiCmd` je nastaven na hodnotu 0, zadané zobrazení je už přidružený příkaz.  
   

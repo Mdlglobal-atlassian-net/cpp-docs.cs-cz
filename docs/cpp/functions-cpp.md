@@ -1,13 +1,15 @@
 ---
 title: Funkce (C++) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>Funkce (C++)
 Funkce je blok kódu, který provádí nějaké operace. Funkce můžete volitelně definovat vstupní parametry, které umožňují volající předání argumentů do funkce. Funkce můžete volitelně vrátit hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jednom opakovaně použitelné bloku, v ideálním případě s názvem, který jasně popisuje, jaké funkce. Následující funkce přijímá dvě celá čísla od volající a vrátí jejich součet; `a` a `b` jsou *parametry* typu `int`.  
@@ -50,6 +53,8 @@ int main()
  Neexistuje žádné praktické omezení délky funkce, ale pro funkce, které provedení jednoho úkolu dobře definovaný cílem je dobré návrhu. Složité algoritmy by měl být rozdělena na snadno pochopit jednodušší funkce kdykoli je to možné.  
   
  Funkce, které jsou definované na rozsah třídy se nazývají členské funkce. V jazyce C++ na rozdíl od jiných jazyků, funkce lze také definovat v oboru názvů (včetně implicitní globálního oboru názvů). Takové funkce se nazývají *bez funkce* nebo *třetí funkce*; používají se hojně ve standardní knihovně.  
+
+Může být funkce *přetížený*, což znamená, že různé verze funkce může sdílet stejný název, pokud se liší podle číslo nebo typ formální parametry. Další informace najdete v tématu [přetížení funkcí](../cpp/function-overloading.md).
   
 ## <a name="parts-of-a-function-declaration"></a>Součástí deklaraci – funkce  
  Minimální funkce *deklarace* se skládá z návratový typ, název funkce a seznam parametrů (který může být prázdné), spolu s volitelné klíčová slova, která obsahují další pokyny pro kompilátor. V následujícím příkladu je deklaraci funkce:
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (jenom členské funkce) `static` použít na člena, funkce znamená, že funkce není spojen s všechny instance objektů třídy.  
   
-8.  (Jenom nestatické členské funkce) Ref – kvalifikátor, který určuje kompilátoru, které přetížení funkce, která se vybrat, kdy parametr implicitní objektu (* to) je odkaz rvalue oproti odkazu lvalue.  
+8.  (Jenom nestatické členské funkce) Ref – kvalifikátor, který určuje kompilátoru, které přetížení funkce, která se vybrat, kdy parametr implicitní objektu (* to) je odkaz rvalue oproti odkazu lvalue. Další informace najdete v tématu [přetížení funkcí](function-overloading.md#ref-qualifiers). 
   
  Následující obrázek znázorňuje části definici funkce. Podbarvené oblasti je tělo funkce.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. Kromě používání návratovou hodnotu sám sebe, můžete "vrátit" hodnoty tak, že definujete libovolný počet parametrů k dispozici průchodu odkazem, takže můžete upravit nebo inicializovat hodnoty objekty, které poskytuje volající funkce. Další informace najdete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).
+4. Kromě používání návratovou hodnotu sám sebe, můžete "vrátit" hodnoty tak, že definujete libovolný počet parametrů k dispozici průchodu odkazem, takže můžete upravit nebo inicializovat hodnoty objekty, které poskytuje volající funkce. Další informace najdete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).  
   
 ## <a name="function-pointers"></a>Ukazatele na funkce  
  C++ podporuje ukazatelů na funkce stejným způsobem jako jazyk C. Nicméně alternativní typově bezpečný je obvykle použít objekt funkce.  

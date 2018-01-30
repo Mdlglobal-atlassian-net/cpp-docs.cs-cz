@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ – referenční dokumentace preprocesoru
 *Referenční dokumentace jazyka C/C++ Preprocessor* preprocesor vysvětluje, jak je implementované v Microsoft C/C++. Preprocesor provede předběžné soubory C a C++ operace předtím, než jsou předávány kompilátoru. Podmíněná kompilace kódu, vložit soubory, zadejte kompilace chybové zprávy a specifické pro počítač pravidla použít na části kódu můžete preprocesor.  
@@ -48,9 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  [Sestavení programu C/C++](../build/reference/c-cpp-building-reference.md)  
  Obsahuje odkazy na témata pojednávající o možnosti kompilátoru a linkeru.  
-  
- [Knihovny jazyka Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Obsahuje odkazy na knihovny součástí Visual C++, včetně ATL, MFC, technologie OLE DB, běhové knihovny jazyka C a standardní knihovny C++.  
   
  [Vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)  
  Popisuje uživatelské rozhraní v sadě Visual Studio, který umožňuje určit adresáře, které bude systém projektu vyhledávat najít soubory pro projektu jazyka C++.

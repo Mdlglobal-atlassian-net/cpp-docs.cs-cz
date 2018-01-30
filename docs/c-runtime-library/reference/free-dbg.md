@@ -1,13 +1,15 @@
 ---
-title: "_free_dbg – | Microsoft Docs"
+title: _free_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _free_dbg
+apiname:
+- _free_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,23 +25,25 @@ apitype: DLLExport
 f1_keywords:
 - _free_dbg
 - free_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, deallocating
 - freeing memory
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fccae4629bc4c1c9b6af71f254c28311210ec0e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 575c683ed1726d9bcaf5e4a1eb850f4b589b4492
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="freedbg"></a>_free_dbg
 Uvolní blok paměti haldy (pouze ladicí verze).  
@@ -73,12 +77,12 @@ void _free_dbg(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_free_dbg`|\<crtdbg.h >|  
+|`_free_dbg`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="example"></a>Příklad  
- Příklad, jak pomocí `_free_dbg`, najdete v části [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
+ Příklad, jak pomocí `_free_dbg`, najdete v části [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).  
   
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
