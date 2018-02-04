@@ -4,32 +4,38 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: breaking changes [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++
-Tento článek popisuje nejnovějších změn z Visual Studia 2015, přejděte zpět na Visual Studio 2003 a v tomto článku podmínky "nové chování" nebo "teď" prostudujte pro Visual Studio 2015 a novější. Podmínky "staré chování" a "před" odkazovat na Visual Studio 2013 a starších verzích. 
- 
- Informace o Visual Studio 2017 najdete v tématu [co je nového pro Visual C++ v aplikaci Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) a [shoda vylepšení v jazyce Visual C++ v aplikaci Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
- > [!NOTE]
- > Neexistují žádné binární nejnovější změny mezi Visual Studio 2015 a Visual Studio 2017.
 
-Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke kompilačním nebo běhovým chybám v kódu, který se dříve kompiloval a běžel správně. Změny v nové verzi, které způsobují tyto problémy se označují jako *nejnovější změny*, a obvykle se vyžadovanou úpravy v standardní jazyk C++, funkce podpisy nebo rozložení objektů v paměti.  
-  
+Tento článek popisuje nejnovějších změn z Visual Studia 2015, přejděte zpět na Visual Studio 2003 a v tomto článku podmínky "nové chování" nebo "teď" prostudujte pro Visual Studio 2015 a novější. Podmínky "staré chování" a "před" odkazovat na Visual Studio 2013 a starších verzích.
+
+Informace o Visual Studio 2017 najdete v tématu [co je nového pro Visual C++ v aplikaci Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) a [shoda vylepšení v jazyce Visual C++ v aplikaci Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
+
+> [!NOTE]
+> Neexistují žádné binární nejnovější změny mezi Visual Studio 2015 a Visual Studio 2017.
+
+Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/nebo chyby za běhu v kódu, který dříve zkompilovat a spustil správně. Změny v nové verzi, které způsobují tyto problémy se označují jako *nejnovější změny*, a obvykle se vyžadovanou úpravy v standardní jazyk C++, funkce podpisy nebo rozložení objektů v paměti.
+
  Aby se zabránilo chybám za běhu, které by bylo obtížné najít a diagnostikovat, doporučujeme vám nikdy nevytvářet statická propojení na binární soubory, které byly zkompilovány pomocí jiných verzí kompilátoru. Když upgradujete projekt EXE nebo DLL, nezapomeňte také provést upgrade knihoven, na které odkazuje. Pokud používáte CRT (C Runtime) nebo typy standardní knihovny C++ (standardní knihovna C++), není jejich předání binárních souborů (včetně knihovny DLL), které byly zkompilovány pomocí různých verzích kompilátoru. Další informace najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
  Dále doporučujeme nikdy nepsat kód závislý na konkrétním rozložení pro objekt, který není rozhraním modelu COM nebo objektem POD. Pokud takový kód napíšete, musíte zajistit, aby po upgradu fungoval. Další informace najdete v tématu [přenositelnost v ABI hranice](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
@@ -105,9 +111,8 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
 -   **Printf a scanf řadu funkcí jsou nyní definována vložené.** Definice všechny funkce printf a scanf byly přesunuté vložené do \<stdio.h >, \<conio.h > a další CRT záhlaví. Je to narušující změně, který vede k linkeru chyby (LNK2019, nerozpoznané externí symbol) pro všechny programy, které deklarované tyto funkce místně bez zahrnutí odpovídající CRT hlavičky. Pokud je to možné, by měl aktualizovat kód, který patří hlavičky CRT (to znamená, přidat #include \<stdio.h >) a vložené funkce, ale pokud nechcete změnit svůj kód zahrnují tyto soubory hlaviček, je alternativní řešení Chcete-li přidat další Knihovna pro vaše vstupní, legacy_stdio_definitions.lib linkeru.  
   
-     Pokud chcete přidat tuto knihovnu pro váš vstup linkeru v prostředí IDE, otevřete v místní nabídce uzlu projektu, zvolte **vlastnosti**, potom v **vlastnosti projektu** dialogové okno Vyberte **Linkeru**a upravit **vstup Linkeru** legacy_stdio_definitions.lib přidat do seznamu oddělených na návěs colon.  
-  
-     Pokud váš projekt odkazuje statických knihoven, které byly kompilovat s Visual C++ verze starší než 2015 a linkeru hlásit symbol nerozpoznané externí. Tyto chyby může odkazovat na interní stdio definice pro _iob –, _iob_func nebo související importy pro určité funkce stdio ve formě\_*. Společnost Microsoft doporučuje při upgradu na projekt překompilovat všechny statické knihovny s nejnovější verzí aplikace Visual C++ compiler a knihovny. Pokud je knihovna knihovnu třetích stran pro zdroj, který není k dispozici, si vyžádat aktualizované binární od třetích stran nebo zapouzdřují vaše použití této knihovny do samostatné knihovnu DLL, kterou zkompilujete pomocí starší verze – kompilátor Visual C++ a knihovny.  
+     Pokud chcete přidat tuto knihovnu pro váš vstup linkeru v prostředí IDE, otevřete v místní nabídce uzlu projektu, zvolte **vlastnosti**, potom v **vlastnosti projektu** dialogové okno Vyberte **Linkeru**a upravit **vstup Linkeru** legacy_stdio_definitions.lib přidat do seznamu oddělených na návěs colon.
+     Pokud váš projekt odkazuje statických knihoven, které byly kompilovat s verzí starších než 2015 sady Visual Studio a linkeru hlásit symbol nerozpoznané externí. Tyto chyby může odkazovat na interní stdio definice pro _iob –, _iob_func nebo související importy pro určité funkce stdio ve formě\_*. Společnost Microsoft doporučuje při upgradu na projekt překompilovat všechny statické knihovny s nejnovější verzí kompilátoru C++ a knihovny. Pokud je knihovna knihovnu třetích stran pro zdroj, který není k dispozici, si vyžádat aktualizované binární od třetích stran nebo zapouzdřují vaše použití této knihovny do samostatné knihovny DLL, které zkompilujete se starší verzí kompilátoru a knihovny .
   
     > [!WARNING]
     >  Pokud se připojujete se systémem Windows 8.1 SDK nebo dřívější, může dojít k chybám tyto nerozpoznané externí symbol. V takovém případě byste měli vyřešit chyby přidáním legacy_stdio_definitions.lib linkeru zadejte, jak je popsáno výše.  
@@ -122,7 +127,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
 -   **_cgets – a _cgetws –** [_cgets –](../c-runtime-library/cgets-cgetws.md) a [_cgetws –](../c-runtime-library/cgets-cgetws.md) funkce byly odebrány. Jako alternativy tyto funkce, zvažte použití [_cgets_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md) a [_cgetws_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **Infinity a formátování NaN** v předchozích verzích nekonečno a NaN by být naformátován pomocí sady Visual C++ – konkrétní sentinel řetězce.  
+-   **Infinity a formátování NaN** v předchozích verzích nekonečno a NaN by formátován pomocí sadu specifické MSVC sentinel řetězce.  
   
     -   Infinity: 1. #INF  
   
@@ -132,7 +137,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
     -   Neomezené NaN: 1. #IND  
   
-     Některý z těchto může mít předponu znakem a může mít naformátován trochu jinak v závislosti na šířku pole a přesnost (někdy s neobvyklou důsledky, například printf ("%.2f\n", INFINITY) by vytisknout 1. #J vzhledem k tomu, že #INF by "zaokrouhlen" přesností 2 číslic). C99 zavedeny nové požadavky na tom, jak nekonečno a NaN mají být ve formátu. Visual C++ implementace teď vyhovuje tyto požadavky. Nové řetězce jsou následující:  
+     Některý z těchto může mít předponu znakem a může mít naformátován trochu jinak v závislosti na šířku pole a přesnost (někdy s neobvyklou důsledky, například printf ("%.2f\n", INFINITY) by vytisknout 1. #J vzhledem k tomu, že #INF by "zaokrouhlen" přesností 2 číslic). C99 zavedeny nové požadavky na tom, jak nekonečno a NaN mají být ve formátu. Implementace MSVC teď vyhovuje tyto požadavky. Nové řetězce jsou následující:  
   
     -   Infinity: inf  
   
@@ -240,11 +245,11 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
 -   **CLOCKS_PER_SEC** CLOCKS_PER_SEC makro teď zasahuje do celé clock_t – typ, podle potřeby podle jazyka C.  
   
 ####  <a name="BK_STL"></a>Standardní knihovna C++  
- Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (Je _msc_ver – makro, který obsahuje hlavní verzi kompilátoru – například 1 800 pro Visual Studio 2013.) Tato kontrola nemůže zjistit kombinování knihovny DLL a nerozpozná kombinování, který zahrnuje Visual C++ 2008 nebo starším.  
+ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (Je _msc_ver – makro, který obsahuje hlavní verzi kompilátoru – například 1 800 pro Visual Studio 2013.) Tato kontrola nemůže zjistit kombinování knihovny DLL a nerozpozná kombinování, která zahrnuje sady Visual Studio 2008 nebo starším.  
   
 -   **Standardní knihovna C++ zahrnout soubory** byly provedeny některé změny na strukturu zahrnout v hlavičkách standardní knihovna C++. Hlavičky standardní knihovna C++ mohou zahrnovat navzájem neurčené způsoby. Obecně platí by měl zadejte kód, tak, že všechny hlavičky, které se musí podle C++ standard a nemá spoléhají na které standardní knihovna C++ hlavičky zahrnují které jiné záhlaví standardní knihovna C++ pečlivě obsahují. Díky tomu kód přenosné mezi verzemi a platformy. Alespoň dva záhlaví změny v sadě Visual Studio 2015 ovlivnit uživatelského kódu. První, \<řetězec > už obsahuje \<iterator >. Druhý, \<řazené kolekce členů > teď deklaruje std::array bez včetně všech \<pole >, který může dojít k narušení kódu pomocí následující kombinace kódu konstrukce: váš kód obsahuje proměnné s názvem "pole" a vy musíte pomocí direktiva "pomocí obor názvů – std; ", a zahrnete hlavičku standardní knihovna C++ (například \<funkční >), který obsahuje \<řazené kolekce členů >, které teď deklaruje std::array.  
   
--   **steady_clock –** \<typu chrono > implementace [steady_clock –](../standard-library/steady-clock-struct.md) došlo ke změně splnění C++ Standard pro steadiness a monotonicity. steady_clock – je teď na základě [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a high_resolution_clock je nyní typedef pro steady_clock –. V důsledku toho v jazyce Visual C++ steady_clock::time_point je nyní typedef pro chrono::time_point < steady_clock – >; je to ale není nutně případ jiné implementace.  
+-   **steady_clock –** \<typu chrono > implementace [steady_clock –](../standard-library/steady-clock-struct.md) došlo ke změně splnění C++ Standard pro steadiness a monotonicity. steady_clock – je teď na základě [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a high_resolution_clock je nyní typedef pro steady_clock –. V důsledku toho v sadě Visual Studio steady_clock::time_point je nyní typedef pro chrono::time_point < steady_clock – >; je to ale není nutně případ jiné implementace.  
   
 -   **alokátorů a const** teď vyžadujeme porovnání rovnost či nerovnost allocator tak, aby přijímal const argumenty na obou stranách.  Pokud vaše alokátorů definujte tyto operátory takto:  
   
@@ -258,9 +263,9 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **Const elementy** C++ standard má vždy zakázáno kontejnery elementů const (například vektoru\<const T >, nebo nastavte\<const T >). Visual C++ 2013 a starší přijaté takové kontejnery. V aktuální verzi tyto kontejnery nepodaří zkompilovat.  
+-   **Const elementy** C++ standard má vždy zakázáno kontejnery elementů const (například vektoru\<const T >, nebo nastavte\<const T >). Visual Studio 2013 a starší přijaté takové kontejnery. V aktuální verzi tyto kontejnery nepodaří zkompilovat.  
   
--   **std::Allocator:: navrácení** v jazyce Visual C++ 2013 a starší, std::allocator::deallocate(p, n) ignorovat argument předaná n.  Standardní C++ vždy vyžaduje, že n být stejná jako hodnota předaná jako první argument vyvolání přidělit, který vrátil p. V aktuální verzi, ale hodnota n se prozkoumá. Kód, který předá argumenty pro n, které se liší od jaké standardní vyžaduje může dojít k chybě za běhu.  
+-   **std::Allocator:: navrácení** v sadě Visual Studio 2013 a starší, std::allocator::deallocate(p, n) ignorovat argument předaná n.  Standardní C++ vždy vyžaduje, že n být stejná jako hodnota předaná jako první argument vyvolání přidělit, který vrátil p. V aktuální verzi, ale hodnota n se prozkoumá. Kód, který předá argumenty pro n, které se liší od jaké standardní vyžaduje může dojít k chybě za běhu.  
   
 -   **hash_map – a hash_set** nestandardní hlavičky souborů hash_map a hash_set jsou zastaralé v sadě Visual Studio 2015 a bude v budoucí verzi odebrána. Místo toho použijte unordered_map a unordered_set.  
   
@@ -316,16 +321,16 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Vylepšení kompilátoru shoda v sadě Visual C++ 2015  
- Při upgradu kódu z předchozích verzí, může dojít také chyby kompilátoru, které jsou z důvodu vylepšení shoda provedené v aplikaci Visual C++ 2015. Tato vylepšení nedojde k narušení binární kompatibilitu z dřívějších verzí aplikace Visual C++, ale může vést k chybám kompilátoru kde žádné byly vygenerované před. Další informace najdete v tématu [Visual C++ Co je nového 2003 až 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Vylepšení kompilátoru shoda v sadě Visual Studio 2015  
+ Při upgradu kódu z předchozích verzí, může dojít také chyby kompilátoru, které jsou z důvodu vylepšení shoda provedené v sadě Visual Studio 2015. Tato vylepšení nedojde k narušení binární kompatibilitu z dřívějších verzí sady Visual Studio, ale může vést k chybám kompilátoru kde žádné byly vygenerované před. Další informace najdete v tématu [Visual C++ Co je nového 2003 až 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- Ve Visual C++ 2015 probíhající vylepšení shoda s kompilátorem prostředí můžete někdy změnit, jak kompilátor rozumí existujícím zdrojovém kódu. Pokud k tomu dojde, můžete během sestavení nebo i chování rozdíly v kódu, který dříve vytvořené a došlo ke správnému setkat nové nebo jiné chyby.  
+ V sadě Visual Studio 2015 probíhající vylepšení shoda s kompilátorem prostředí můžete někdy změnit, jak kompilátor rozumí existujícím zdrojovém kódu. Pokud k tomu dojde, můžete během sestavení nebo i chování rozdíly v kódu, který dříve vytvořené a došlo ke správnému setkat nové nebo jiné chyby.  
   
  Naštěstí tyto rozdíly mít žádné nebo téměř žádné dopad na většinu vašeho zdrojového kódu a vyřešit tyto rozdíly jsou potřeba zdrojový kód nebo další změny, opravy jsou obvykle malé a jednoduché. Jsme zahrnuli mnoho příklady dříve přijatelné zdrojový kód, který může být nutné změnit *(před)* a opravy a opravte je *(po)*.  
   
- I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo artefaktů sestavení, neovlivňují binární kompatibilitu mezi jednotlivými aktualizace Visual C++ verze. Další závažné druhu změny, *nejnovější změny* může mít vliv na binární kompatibilitu, ale tyto typy binární kompatibilitu zalomení dojít pouze mezi hlavní verzí aplikace Visual C++. Například mezi Visual C++ 2013 a Visual C++ 2015. Informace o nejnovějších změn, které došlo mezi Visual C++ 2013 a Visual C++ 2015, najdete v části [Visual C++ 2015 shoda změny](#VC_2015).  
+ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo artefaktů sestavení, neovlivňují binární kompatibilitu mezi jednotlivými aktualizace verzí sady Visual Studio. Další závažné druhu změny, *nejnovější změny* může mít vliv na binární kompatibilitu, ale tyto typy binární kompatibilitu zalomení dojít pouze mezi hlavní verze sady Visual Studio. Například mezi Visual Studio 2013 a Visual Studio 2015. Informace o nejnovějších změn, které došlo mezi Visual Studio 2013 a Visual Studio 2015, najdete v části [Visual Studio 2015 shoda změny](#VC_2015).  
   
--   [Vylepšení shoda v sadě Visual C++ 2015](#VS_RTM)  
+-   [Vylepšení shoda v sadě Visual Studio 2015](#VS_RTM)  
   
 -   [Shoda vylepšení v aktualizaci 1](#VS_Update1)  
   
@@ -333,7 +338,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
 -   [Shoda vylepšení v aktualizaci 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a>Vylepšení shoda v sadě Visual C++ 2015  
+###  <a name="VS_RTM"></a>Vylepšení shoda v sadě Visual Studio 2015  
   
 -   Možnost /Zc:forScope-  
   
@@ -376,7 +381,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
     ```  
   
-     Předchozí verze Visual C++ compiler přijata to, ale teď kompilátor dává k následující chybě:  
+     To akceptovat předchozí verze kompilátoru, ale teď kompilátor dává k následující chybě:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
@@ -408,7 +413,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
 -   **Parametry šablony non-type**  
   
-     Některé kód, který zahrnuje parametry šablon bez typu je nyní správně kontrolována typ kompatibility při zadat explicitní šablony argumenty. Například následující kód kompilovat bez chyby v předchozích verzích Visual C++.  
+     Některé kód, který zahrnuje parametry šablon bez typu je nyní správně kontrolována typ kompatibility při zadat explicitní šablony argumenty. Například následující kód kompilovat bez chyby v předchozích verzích sady Visual Studio.  
   
     ```cpp  
     struct S1  
@@ -574,7 +579,7 @@ Při upgradu na novou verzi kompilátoru jazyka Visual C++ může dojít ke komp
   
     ```  
   
-     K problému dochází kvůli shodu v signatury funkce mezi operátor delete umístění, kterou jste definovali a operátor new globální velikostí odstranit. Zvažte, jestli můžete použít jiného typu než size_t – pro všechny umístění nový a odstranit operátory.  Upozorňujeme, že je typ size_t – typedef kompilátoru závislé; je typedef pro nepodepsané int v jazyce Visual C++. Dobrým řešením je použití Výčtový typ jako je tato:  
+     K problému dochází kvůli shodu v signatury funkce mezi operátor delete umístění, kterou jste definovali a operátor new globální velikostí odstranit. Zvažte, jestli můžete použít jiného typu než size_t – pro všechny umístění nový a odstranit operátory.  Upozorňujeme, že je typ size_t – typedef kompilátoru závislé; je typedef pro nepodepsané int v MSVC. Dobrým řešením je použití Výčtový typ jako je tato:  
   
     ```cpp  
     enum class my_type : size_t {};  
@@ -2298,7 +2303,7 @@ C c;
   
 -   **Statické členské funkce nepodporují kvalifikátory odchylka nákladů.**  
   
-     Předchozí verze Visual C++ 2015 povoleno statické členské funkce tak, aby měl kvalifikátory odchylka nákladů. Toto chování je z důvodu regrese v Visual C++ 2015 a Visual C++ 2015 Update 1; Visual C++ 2013 a předchozích verzích Visual C++ odmítnout kód napsaný v tímto způsobem. Chování Visual C++ 2015 a Visual C++ 2015 Update 1 není správná a neodpovídá standardní C++.  Visual Studio 2015 Update 2 odmítne kód napsaný v tímto způsobem a vydá Chyba kompilátoru C2511 místo.  
+     Předchozí verze sady Visual Studio 2015 povoleno statické členské funkce tak, aby měl kvalifikátory odchylka nákladů. Toto chování je z důvodu regrese v sadě Visual Studio 2015 a Visual Studio 2015 Update 1; Visual Studio 2013 a předchozích verzích kompilátor odmítnout kód napsaný v tímto způsobem. Chování sady Visual Studio 2015 a Visual Studio 2015 Update 1 není správná a neodpovídá standardní C++.  Visual Studio 2015 Update 2 odmítne kód napsaný v tímto způsobem a vydá Chyba kompilátoru C2511 místo.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
@@ -2452,7 +2457,7 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     V předchozích verzích Visual C++, statické kontrolní výrazy v dolní části v tomto příkladu předat protože `std::is_convertable<>::value` nebyl správně nastaven `true`. Nyní `std::is_convertable<>::value` je správně nastavena na `false`, způsobuje statické kontrolní výrazy k selhání.  
+     V předchozích verzích kompilátor statické kontrolní výrazy v dolní části v tomto příkladu předat protože `std::is_convertable<>::value` nebyl správně nastaven `true`. Nyní `std::is_convertable<>::value` je správně nastavena na `false`, způsobuje statické kontrolní výrazy k selhání.  
   
 -   **Uvedena odstranění trivial kopírování nebo přesunutí specifikátory přístupu ohledem konstruktory**  
   
@@ -2505,7 +2510,7 @@ C c;
   
 -   **S atributy podpory kódu ATL** (úroveň 1 (/ W1) na výchozím)  
   
-     Kódu ATL s atributy předchozích verzích kompilátoru podporována. Jako další fáze odebrání podporu pro knihovny ATL s atributy kód, který [začal ve Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), s atributy ATL kód je zastaralá. Kompilátor nyní vydává kompilátoru upozornění C4467 k identifikaci tento druh nepoužívané kódu.  
+     Kódu ATL s atributy předchozích verzích kompilátoru podporována. Jako další fáze odebrání podporu pro knihovny ATL s atributy kód, který [začal v sadě Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), s atributy ATL kód je zastaralá. Kompilátor nyní vydává kompilátoru upozornění C4467 k identifikaci tento druh nepoužívané kódu.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
@@ -2683,7 +2688,7 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 shoda změny  
+## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 shoda změny  
   
 ### <a name="compiler"></a>Kompilátoru  
   
@@ -2740,7 +2745,7 @@ C c;
   
     ```  
   
--   Standardní C++ neumožňuje explicitní specializace v třídě. Visual C++ to sice v některých případech umožňuje, ale v případech, jako je následující příklad, je nyní generována chyba, protože kompilátor nezahrne druhou funkci jako specializaci té první.  
+-   Standardní C++ neumožňuje explicitní specializace v třídě. I když Microsoft Visual C++ compiler umožňuje v některých případech se v případech, například následujícím příkladu je nyní generována chyba, protože kompilátor nepovažuje funkce second být specializace první z nich.  
   
     ```cpp  
     template < int N>  
@@ -2761,7 +2766,7 @@ C c;
   
     ```  
   
--   Visual C++ už se pokusí odstranit nejednoznačnost dvě funkce v následujícím příkladu a teď vysílá chybu:  
+-   Už se pokusí odstranit nejednoznačnost dvě funkce v následujícím příkladu a nyní vysílá chybu:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2833,7 +2838,7 @@ C c;
   
     ```  
   
--   Vyhledávání názvu se změnila. Následující kód je jinak přeložit v jazycích Visual C++ v sadě Visual Studio 2012 a Visual C++ v sadě Visual Studio 2013:  
+-   Vyhledávání názvu se změnila. Následující kód je jinak přeložit v kompilátoru C++ v sadě Visual Studio 2012 a Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2847,9 +2852,9 @@ C c;
   
     ```  
   
-     V jazyce Visual C++ v sadě Visual Studio 2012 E1 ve výrazu E1::b přeložit na:: E1 v globálním oboru. V jazyce Visual C++ v sadě Visual Studio 2013, E1 ve výrazu E1::b přeloží na typedef E2 definice v main() a má typ:: E2.  
+     V sadě Visual Studio 2012 E1 ve výrazu E1::b přeložit na:: E1 v globálním oboru. V sadě Visual Studio 2013, E1 ve výrazu E1::b přeloží na typedef E2 definice v main() a má typ:: E2.  
   
--   Došlo ke změně rozložení objektu. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má virtuální funkci, ale neobsahuje základní třídu, která obsahuje virtuální funkci, objektový model kompilátoru vloží ukazatel na tabulku virtuálních funkcí za rozložení datových členů. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích představuje optimalizaci pro x64 se pokusit o zlepšení rozložení pro vás, ale protože se nepodařilo správně fungovat v situacích, složitý kód, byla odebrána v jazyce Visual C++ v sadě Visual Studio 2013. Podívejte se například na tento kód:  
+-   Došlo ke změně rozložení objektu. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má virtuální funkci, ale neobsahuje základní třídu, která obsahuje virtuální funkci, objektový model kompilátoru vloží ukazatel na tabulku virtuálních funkcí za rozložení datových členů. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích představuje optimalizaci pro x64 se pokusit o zlepšení rozložení pro vás, ale protože se nepodařilo správně fungovat v situacích, složitý kód, byla odebrána v sadě Visual Studio 2013. Podívejte se například na tento kód:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2863,7 +2868,7 @@ C c;
   
     ```  
   
--   V jazyce Visual C++ v sadě Visual Studio 2013 výsledkem sizeof(S2) na x64 je 48, ale v předchozích verzích vyhodnotí 32 znaků. Chcete-li to vyhodnotit 32 znaků v jazyce Visual C++ v sadě Visual Studio 2013 pro x64, přidejte fiktivní základní třídy, která má virtuální funkce:  
+-   V sadě Visual Studio 2013 výsledkem sizeof(S2) na x64 je 48, ale v předchozích verzích vyhodnotí 32 znaků. Chcete-li to vyhodnocení na 32 v kompilátoru C++ v sadě Visual Studio 2013 pro x64, přidejte fiktivní základní třídy, která má virtuální funkce:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2896,9 +2901,9 @@ C c;
   
     ```  
   
-     V jazyce Visual C++ kompilátory před Visual C++ v sadě Visual Studio 2013, tento kód výstupy tuto zprávu: upozornění C4370: "S2": z předchozí verze kompilátoru kvůli lepší okolních došlo ke změně rozložení – třída  
+     Před Visual Studio 2013, tento kód výstupy tuto zprávu: "upozornění C4370:"S2": rozložení třídy se změnil z předchozí verze kompilátoru kvůli lepší okolních".  
   
-     V kompilátoru pro x86 existuje má stejný problém s optimalizací rozložení ve všech verzích Visual C++. Pokud je například tento kód je zkompilován pro platformu x86:  
+     X86 kompilátoru má stejný problém optimální rozložení ve všech verzích kompilátoru. Pokud je například tento kód je zkompilován pro platformu x86:  
   
     ```cpp  
     struct S {  
@@ -2925,7 +2930,7 @@ C c;
     ```  
   
 ### <a name="standard-library"></a>Standardní knihovna  
- Visual C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEBUG_LEVEL, které bylo implementováno ve Visual C++ 2010, a neshody RuntimeLibrary. Tyto dojít, když kompilátoru možnosti/MT (statické vydání), jsou kombinované /MTd (statické ladění), /MD (dynamické verzi) a /MDd (dynamické debug).  
+ Kompilátor C++ v sadě Visual Studio 2013 zjišťuje neshody v _ITERATOR_DEBUG_LEVEL, které je implementované v sadě Visual Studio 2010, a RuntimeLibrary neshody. Tyto dojít, když kompilátoru možnosti/MT (statické vydání), jsou kombinované /MTd (statické ladění), /MD (dynamické verzi) a /MDd (dynamické debug).  
   
 -   Pokud váš kód uznává na předchozí vydání simulované alias šablony, musíte ho změnit. Například místo allocator_traits\<A >:: rebind_alloc\<U >:: dalších, nyní je třeba k vyslovení allocator_traits\<A >:: rebind_alloc\<U >. I když ratio_add\<R1, R2 >:: typ již nejsou potřebné, a doporučujeme nyní sdělení ratio_add\<R1, R2 >, první bude stále kompilovat, protože poměr\<N, D > je potřeba mít typedef "type" pro snížené poměr, který bude stejného typu, pokud už je nižší.  
   
@@ -2947,7 +2952,7 @@ C c;
   
 -   Standardní knihovna C++ nepodporuje /clr:oldSyntax.  
   
--   C ++ 11 specifikace pro common_type <> měl neočekávané a nežádoucí důsledky; konkrétně umožňuje common_type\<int, int >:: typ návratové int & &. Proto Visual C++ implementuje navrhované řešení pro knihovny pracovní skupina problém 2141, takže je common_type\<int, int = "" >:: Zadejte návratové int.  
+-   C ++ 11 specifikace pro common_type <> měl neočekávané a nežádoucí důsledky; konkrétně umožňuje common_type\<int, int >:: typ návratové int & &. Proto kompilátor implementuje navrhované řešení pro knihovny pracovní skupina problém 2141, takže je common_type\<int, int = "" >:: Zadejte návratové int.  
   
      Jako vedlejším účinkem této změny, případě identity již nefunguje (common_type\<T > vždy nevede typu t.). To odpovídá navrženému řešení, ale dojde k porušení jakéhokoli kódu, který spoléhal na předchozí chování.  
   
@@ -2962,7 +2967,7 @@ C c;
   
 ### <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL  
   
--  **Visual Studio 2013 pouze**: knihovny MFC MBCS není zahrnutý v sadě Visual Studio, protože je tak známý kódování Unicode a použití MBCS se výrazně snižuje. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Ale pokud budete musí pokračovat na používání knihovny MFC MBCS, můžete ji stáhnout z webu Stažení softwaru MSDN v [knihovny MFC vícebajtových pro Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: MBCS DLL je součástí instalace součásti Visual C++ v sadě Visual Studio 2015 a novější).
+-  **Visual Studio 2013 pouze**: knihovny MFC MBCS není zahrnutý v sadě Visual Studio, protože je tak známý kódování Unicode a použití MBCS se výrazně snižuje. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Ale pokud budete musí pokračovat na používání knihovny MFC MBCS, můžete ji stáhnout z webu Stažení softwaru MSDN v [knihovny MFC vícebajtových pro Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: MBCS DLL je součástí instalace součásti C++ v sadě Visual Studio 2015 a novější).
   
 -   Usnadnění pro pásu karet MFC se změní.  Místo jednu úroveň architekturu není nyní hierarchickou architekturu. Můžete dál používat staré chování pomocí volání CRibbonBar::EnableSingleLevelAccessibilityMode().  
   
@@ -3043,19 +3048,19 @@ C c;
   
 -   Následující narušující změně mezi 03 C ++ 98/a C ++ 11 standardy, pomocí explicitní šablony argumenty pro volání (make_pair –) – jako inmake_pair\<int, int >(x, y) – obvykle nekompiluje v jazyce Visual C++ v sadě Visual Studio 2012. Řešení, je vždy volání make_pair – (bez argumentů explicitní šablony) – jako make_pair – (x, y). Poskytuje explicitní šablony argumenty popírá svůj účel funkce. Pokud budete potřebovat přesnou kontrolu nad výsledný typ, použijte místo make_pair – pár – jako dvojice\<krátký, krátké >(int1, int2).  
   
--   Jiné narušující změně mezi 03 C ++ 98/a C ++ 11 standardy: po implicitně převést na A B a server B je implicitně převést na C, ale není implicitně převést na C a C ++ 98/03 Visual C++ 2010 povolené pár A\<A, X > být převést ( implicitně nebo explicitně) pár\<C, X >. (Typ, X, není zde zajímají, a to není specifické pro daný typ první ve dvojici.) Protože C ++ 11 a aplikace Visual C++ v sadě Visual Studio 2012 zjistit, zda A není implicitně převést na C, odeberou pár převod rozlišení přetížení. Toto je kladné změnu pro mnoho scénářů. Například přetížení func (const pár\<int, int > &) a func (const pár\<řetězec, řetězec > &) a volání func() dvojice\<const char *, const char \*> bude kompilovat s tuto změnu. Tato změna však dělí kód, který spoléhali na převody agresivní pár. Takový kód obvykle odstraněny provedením jedné části převod explicitně – například podle předávání make_pair – (static_cast\<B > (a), x) k funkci, která očekává pár\<C, X >.  
+-   Jiné narušující změně mezi 03 C ++ 98/a C ++ 11 standardy: po implicitně převést na A B a server B je implicitně převést na C, ale není implicitně převést na C a C ++ 98/03 Visual C++ 2010 povolené pár A\<A, X > být převést ( implicitně nebo explicitně) pár\<C, X >. (Typ, X, není zde zajímají, a to není specifické pro daný typ první ve dvojici.) Protože C ++ 11 a kompilátor C++ v sadě Visual Studio 2012 zjistit, zda A není implicitně převést na C, odeberou pár převod rozlišení přetížení. Toto je kladné změnu pro mnoho scénářů. Například přetížení func (const pár\<int, int > &) a func (const pár\<řetězec, řetězec > &) a volání func() dvojice\<const char *, const char \*> bude kompilovat s tuto změnu. Tato změna však dělí kód, který spoléhali na převody agresivní pár. Takový kód obvykle odstraněny provedením jedné části převod explicitně – například podle předávání make_pair – (static_cast\<B > (a), x) k funkci, která očekává pár\<C, X >.  
   
--   Visual C++ 2010 simulated variadické šablony – například make_shared –\<T > (arg1, arg2, argN) – až limitu 10 argumenty, podle časového razítka přetížení a specializací preprocesoru zařízení. V jazyce Visual C++ v sadě Visual Studio 2012 je tento limit snížit na 5 argumenty ke zlepšení kompilace časy a kompilátoru využití paměti pro většinu uživatelů. Však můžete nastavit limit předchozí explicitně definováním _VARIADIC_MAX jako 10, úrovni projektu.  
+-   Visual C++ 2010 simulated variadické šablony – například make_shared –\<T > (arg1, arg2, argN) – až limitu 10 argumenty, podle časového razítka přetížení a specializací preprocesoru zařízení. V sadě Visual Studio 2012 je tento limit snížit na 5 argumenty ke zlepšení kompilace časy a kompilátoru využití paměti pro většinu uživatelů. Však můžete nastavit limit předchozí explicitně definováním _VARIADIC_MAX jako 10, úrovni projektu.  
   
 -   C ++ 11 17.6.4.3.1 [macro.names]/2 zakazuje makro izing klíčová slova, když standardní knihovna C++ hlavičky jsou zahrnuty. Hlavičky teď emitování chyby kompilátoru, pokud zjistí makro ized klíčová slova. (Definování _ALLOW_KEYWORD_MACROS umožňuje takový kód mohl zkompilovat, ale důrazně jsme bránit toto využití.) Jako výjimku makro ized nové je povolená ve výchozím nastavení, protože hlavičky komplexně vlastní ochranu pomocí #pragma push_macro("new") / #undef nové / #pragma pop_macro("new"). Definování _ENFORCE_BAN_OF_MACRO_NEW nemá přesně co naznačuje její název.  
   
--   K implementaci různých optimalizace a ladění kontroly, implementace standardní knihovna C++ záměrně dělí binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Pokud se používá standardní knihovna C++, to zakazuje smíšených soubory objektů a statických knihoven, které jsou kompilovaná pomocí různých verzí do jednoho binárního souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovna C++ mezi binární soubory, které jsou kompilovaná používání různých verzí. Kombinování objekt souborů a statických knihoven (standardní knihovna C++, který se zkompiluje pomocí Visual C++ 2010 s těmi, které byly zkompilovány pomocí Visual C++ v sadě Visual Studio 2012 pomocí vysílá chybami linkeru o _msc_ver – neshoda, kde je _msc_ver – makro kompilátoru hlavní verzi (1 700 pro Visual C++ v sadě Visual Studio 2012), která obsahuje. Tato kontrola nemůže zjistit kombinování knihovny DLL a nerozpozná kombinování, který zahrnuje Visual C++ 2008 nebo starším.  
+-   K implementaci různých optimalizace a ladění kontroly, implementace standardní knihovna C++ záměrně dělí binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Pokud se používá standardní knihovna C++, to zakazuje smíšených soubory objektů a statických knihoven, které jsou kompilovaná pomocí různých verzí do jednoho binárního souboru (EXE nebo DLL) a zakazuje předávání objektů standardní knihovna C++ mezi binární soubory, které jsou kompilovaná používání různých verzí. Kombinování objekt souborů a statických knihoven (standardní knihovna C++, který se zkompiluje pomocí Visual C++ 2010 s těmi, které byly zkompilovány pomocí C++ pomocí kompilátoru v sadě Visual Studio 2012 vysílá chybami linkeru o _msc_ver – neshoda, kde je _msc_ver – makro, který obsahuje kompilátoru hlavní verzi (1 700 pro Visual C++ v sadě Visual Studio 2012). Tato kontrola nemůže zjistit kombinování knihovny DLL a nerozpozná kombinování, který zahrnuje Visual C++ 2008 nebo starším.  
   
--   Kromě zjišťování _ITERATOR_DEBUG_LEVEL neshody, který byl implementován ve Visual C++ 2010, zjistí Visual C++ v sadě Visual Studio 2012 Runtime Library neshody. Tyto dojít, když kompilátor možnosti/MT (statické vydání), jsou kombinované /MTd (statické ladění), /MD (dynamické verzi) a /MDd (dynamické debug).  
+-   Kromě zjišťování _ITERATOR_DEBUG_LEVEL neshody, který byl implementován ve Visual C++ 2010, zjistí kompilátoru C++ v sadě Visual Studio 2012 Runtime Library neshody. Tyto dojít, když kompilátor možnosti/MT (statické vydání), jsou kombinované /MTd (statické ladění), /MD (dynamické verzi) a /MDd (dynamické debug).  
   
 -   operátor\<(), operátor > (), operátor\<= () a operator > = () byly dřív dostupné rodin andstdext::hash_map std::unordered_map kontejnerů, i když jejich implementace nebyly ve skutečnosti užitečné. Byly odebrány tyto nestandardní operátory v jazyce Visual C++ v sadě Visual Studio 2012. Kromě toho provádění operator==() a operator!=() pro řadu thestd::unordered_map rozšířilo tak, aby pokrývalo stdext::hash_map rodiny. (Doporučujeme Vyhněte se použití rodiny thestdext::hash_map v nový kód.)  
   
--   C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že codecvt::length() a codecvt::do_length() zabere upravitelnými stateT & parametry, ale Visual C++ 2010 trvalo const stateT &. Visual C++ v sadě Visual Studio 2012 trvá stateT & jako mandátem ve standardní. Tento rozdíl je důležité pro každého, kdo se pokouší o přepsání do_length() virtuální funkce.  
+-   C ++ 11 22.4.1.4 [locale.codecvt] Určuje, že codecvt::length() a codecvt::do_length() zabere upravitelnými stateT & parametry, ale Visual C++ 2010 trvalo const stateT &. Kompilátor C++ v sadě Visual Studio 2012 trvá stateT & jako mandátem ve standardní. Tento rozdíl je důležité pro každého, kdo se pokouší o přepsání do_length() virtuální funkce.  
   
 ### <a name="crt"></a>CRT  
   

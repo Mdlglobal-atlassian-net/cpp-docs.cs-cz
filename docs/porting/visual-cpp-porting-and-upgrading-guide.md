@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 Toto téma obsahuje Průvodce pro upgrade Visual C++ – kód. To zahrnuje získání kód, který zkompilování a spuštění správně na novější verzi nástroje, jakož i využívat výhod nového jazyka a funkcích nástroje Visual Studio. Toto téma obsahuje také informace o migraci starší verze aplikací na více moderní platformy.  
@@ -82,7 +85,7 @@ Toto téma obsahuje Průvodce pro upgrade Visual C++ – kód. To zahrnuje získ
 |Název|Popis|  
 |-----------|-----------------|  
 |[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projektů vytvořených v dřívějších verzích systému Visual C++.|  
-|[Co je nového pro Visual C++ v sadě Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástrojů pro Visual Studio 2017 ze sady Visual Studio 2015|  
+|[Co je nového pro kompilátor C++ v sadě Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástrojů pro Visual Studio 2017 ze sady Visual Studio 2015|  
 |[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Vylepšení shoda standardy z Visual Studia 2015 Visual Studio 2017|  
 |[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn ve Visual C++ knihovny a nástroje pro sestavení ze sady Visual Studio 2003 prostřednictvím 2015, které může vyžadovat změny v kódu.|  
 |[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro Visual C++ ze sady Visual Studio 2003 pomocí sady Visual Studio 2015.|  

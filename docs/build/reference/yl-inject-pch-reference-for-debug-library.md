@@ -1,14 +1,17 @@
 ---
 title: "-Yi (Vložit referenci PCH ladicí knihovny) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /yl
-dev_langs: C++
+f1_keywords:
+- /yl
+dev_langs:
+- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
@@ -17,16 +20,17 @@ ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e777977f6d869d2bbc28d980f6445851e54396b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43e960906c504e5378a77d047c8eb1ab4d4594fe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Vložit referenci PCH do ladicí knihovny)
 
-**/Yl** možnost vytvoří společná značka pro předkompilovaný hlavičkový soubor a vloží odkazy na tento symbol v všechny soubory, které používají předkompilovaných hlaviček. To zpřístupní informace o dokončení typu předkompilovaných hlaviček symbolů pro všechny soubory, které používají předkompilovaných hlaviček v ladicím programu. Tato možnost je povolená ve výchozím nastavení. Použití této možnosti můžete zabránit chybami linkeru z důvodu chybějící informace o ladění do propojené knihovny, které použití předkompilovaných hlaviček.
+**/Yl** možnost generuje jedinečné symbol v předkompilovaný hlavičkový soubor, a je ve všech objekt soubory, které používají předkompilovaných hlaviček vložit odkaz na tento symbol.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +40,23 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="arguments"></a>Arguments
 
-*Jméno*  
-Volitelné jméno používá k definování symbol, který má být objekt uložené a odkazovaná v soubory, které definují nebo použití předkompilovaných hlaviček.
+*name*  
+Volitelné jméno používá jako součást jedinečný symbolu.
 
 *\-*  
 Explicitně zakáže pomlčkou (-) **/Yl** – možnost kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Yl** možnost umožňuje získat úplné informace o typech v předkompilovaných hlaviček v každý soubor, který zahrnuje předkompilovaných hlaviček ladicího programu. Tato možnost vytvoří název interní symbol, vloží do souboru objektu použitý k vytvoření předkompilovaných hlaviček podle definice symbolu [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost a vloží odkaz na symbol v všechny soubory, které zahrnují předkompilovaných záhlaví s použitím [/Yu](../../build/reference/yu-use-precompiled-header-file.md) – možnost kompilátoru. Protože všechny zdrojové soubory, které používají předkompilovaných hlaviček odkazují pojmenované symbol, linkeru vždy propojí soubor objekt, který definuje symbol a přidružené předkompilovaných hlaviček ladicí informace. Tato možnost je povolená ve výchozím nastavení.
+**/Yl** – možnost kompilátoru vytvoří definici jedinečný symbol v předkompilovaný hlavičkový soubor vytvořili pomocí [/Yc](../../build/reference/yc-create-precompiled-header-file.md) možnost. Odkazy na tento symbol jsou automaticky vložit v všechny soubory, které zahrnují předkompilovaných hlaviček pomocí [/Yu](../../build/reference/yu-use-precompiled-header-file.md) – možnost kompilátoru. **/Yl** ve výchozím nastavení je povolena možnost při **/Yc** se používá k vytvoření předkompilovaný hlavičkový soubor.
 
-**/Yl**_název_ možnost se používá k vytvoření explicitně identifikační symbol pro předkompilovaný hlavičkový soubor. Kompilátor používá *název* argument pro vytvoření symbolu podobná \_ \_ @@ \_PchSym\_@00@... @*název* , kde řetězec znaků představuje linkeru generované třemi tečkami (...). Pokud je argument vynechán, kompilátor automaticky vygeneruje název symbolu.
+**/Yl**_název_ možnost se používá k vytvoření osobní symbol v předkompilovaný hlavičkový soubor. Kompilátor používá *název* argument jako část názvu dekorované symbol vytvoří, podobně jako \_ \_ @@ \_PchSym\_@00@... @ *název*, kde znak výpustky (...) představuje jedinečnou generované kompilátorem řetězec znaků. Pokud *název* je tento argument vynechán, kompilátor automaticky vygeneruje název symbolu. Za normálních okolností není potřeba znát název symbolu. Ale když projektu používá více než jeden soubor předkompilovaných hlaviček **/Yl**_název_ možnost může být užitečné k určení, který objekt soubory použití, která předkompilované hlavičky. Můžete použít *název* jako hledaný řetězec pro odkaz symbol najít v souboru výpisu.
 
-**/Yl-** zakáže výchozí chování a nevystavuje identifikační symbol odkazu v objektu soubory, které zahrnují předkompilovaných hlaviček. Tato možnost může být vyžadováno pro soubory kompilovat bez přítomen předkompilovaný hlavičkový soubor.
+**/Yl-** zakáže výchozí chování a nevystavuje identifikační symbol předkompilovaný hlavičkový soubor. Zkompilované soubory, které obsahují tento předkompilovaných hlaviček Nezískávat běžné symbol odkazu.
 
-Pokud používáte **/Yl-**, **/Yc** a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti pro sestavení knihovny, kompilátor vytvoří soubor předkompilovaných hlaviček, který obsahuje informace o ladění uložených v objekt souboru nikoli soubor .pdb. [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) chyby nebo [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) upozornění se může objevit v sestavení, které knihovnu používají a předkompilovaných hlaviček, pokud zdrojový soubor se používá k vytvoření předkompilovaných hlaviček nedefinuje žádné symboly. Při nic do souboru objektu se odkazuje v klientovi knihovny, může linkeru vyloučit tento soubor knihovny objekt z odkazu, který je společně s ladicí informace o přidružených předkompilovaných hlaviček. Chcete-li problém vyřešit, zadejte **/Yl** při použití **/Yc** vytvořit předkompilovaný hlavičkový soubor a **/Yu** ji použít. Tím se zajistí, že souboru objektu, který obsahuje informace o ladění součástí buildu.
+Když **/Yc** není zadán, všechny **/Yl** možnost nemá žádný vliv, ale pokud zadán, musí se shodovat žádné **/Yl** možnost předaná při **/Yc** je zadat.
+
+Pokud používáte **/Yl-**, **/Yc** a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti Vytvořit předkompilovaný hlavičkový soubor, informace o ladění je uložený v souboru objektu pro zdrojový soubor použitý k vytvoření Předkompilované hlavičky, nikoli soubor .pdb samostatné. Pokud se tento objekt soubor pak součást knihovny, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) chyby nebo [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) upozornění se může objevit v sestavení, které používají tuto knihovnu a předkompilovaný hlavičkový soubor, pokud zdrojový soubor se používá k vytvoření předkompilovaný hlavičkový soubor nebyla definována žádné symboly. Linkeru mohou vyloučit soubor objektu z odkazu, který je společně s související informace pro ladění, když nic do souboru objektu se odkazuje v klientovi knihovny. Chcete-li tento problém vyřešit, zadejte **/Yl** (nebo odebrat **/Yl-** možnost) při použití **/Yc** vytvořit předkompilovaný hlavičkový soubor. Tím se zajistí, že soubor objektu z knihovny, který obsahuje informace o ladění získá propojené v buildu.
 
 Další informace o předkompilovaných hlaviček najdete v tématu:
 
@@ -62,7 +68,7 @@ Další informace o předkompilovaných hlaviček najdete v tématu:
 
 1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Vyberte **příkazového řádku** stránka vlastností v **C/C++** složky.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
 1. Přidat **/Yl**_název_ – možnost kompilátoru v **další možnosti** pole. Zvolte **OK** uložte provedené změny.
 

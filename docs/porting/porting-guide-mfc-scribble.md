@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny starší verze sady Visual Studio pro Visual Studio 2017. Tato část představuje příklad, počínaje velmi jednoduché projektu a přesunutí chcete trochu složitější proces upgradu. V tomto tématu jsme fungovat prostřednictvím procesu upgradu pro konkrétní projekt, Klikyháky MFC. Je vhodné jako základní informace o procesu upgradu pro projekty C++.  
@@ -85,7 +88,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
  Neexistuje žádné testovací sady, který jsme právě spuštění aplikace a otestovat jeho funkce ručně přes uživatelské rozhraní. Byly dodrženy žádné problémy.  
   
 ### <a name="step-4-improve-the-code"></a>Krok 4. Zlepšení kód  
- Teď, když jste migrovali na Visual Studio 2017, můžete chtít provést některé změny využívat výhod nových funkcí jazyka C++. Aktuální verze – kompilátor Visual C++ je mnohem víc vyhovující na C++ standardní pak předchozí verze, takže pokud budete mít paměti, aby nějaký kód změny aby váš kód bezpečnější a víc přenosného k jiné kompilátory a operační systémy, měli byste zvážit Některé vylepšení.  
+ Teď, když jste migrovali na Visual Studio 2017, můžete chtít provést některé změny využívat výhod nových funkcí jazyka C++. Aktuální verze kompilátoru C++ je mnohem víc vyhovující na C++ standardní pak předchozí verze, takže pokud budete mít paměti, aby nějaký kód změní aby váš kód bezpečnější a víc přenosného k jiné kompilátory a operační systémy, měli byste zvážit některé vylepšení.  
   
 ## <a name="next-steps"></a>Další kroky  
  Scribble bylo malé a jednoduché desktopová aplikace systému Windows a nebyl těžko převést. Mnoho aplikací malé, jednoduché stejným způsobem převést na novou verzi.  U složitějších aplikací, s mnoha další řádky kódu, starší starší kód, který nemusí být až moderních standardů, více projektů a knihovny, vlastní kroky sestavení nebo pro komplexní skriptované automatizovaných sestaveních, bude trvat déle k upgradu. Před pokračováním [další příklad](../porting/porting-guide-com-spy.md), ATL nebo COM aplikaci s názvem COM Spy.  

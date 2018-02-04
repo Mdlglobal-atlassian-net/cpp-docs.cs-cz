@@ -1,23 +1,26 @@
 ---
 title: "Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs"
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Postup nahlásit problém s sady nástrojů Visual C++
 
-Pokud narazíte na potíže s Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich.
+Pokud narazíte na potíže s Microsoft Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich.
 
 Nejlepší způsob a dejte nám vědět o problému, je pošlete nám sestavu, která obsahuje popis problému byla zjištěna, podrobnosti o jak sestavujete vašeho programu a *zkopírujte*, můžeme použít pro reprodukci dokončení testovacího případu problém na vlastní počítače. Tyto informace umožňují nám rychle ověřte, zda problém existuje v našem kódu a není místní pro vaše prostředí a zjistit, zda ovlivňuje jiných verzích kompilátor a diagnostikovat jeho příčinu.
 

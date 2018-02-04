@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 
-Toto téma obsahuje informace pro uživatele systému UNIX, kteří jsou nové pro aplikaci Visual C++ a chcete zvýšení produktivity s Visual C++ a prostředí Visual Studio integrované vývoj prostředí (IDE).  
+Toto téma obsahuje informace pro uživatele systému UNIX, kteří jsou nové pro Visual Studio a chcete zvýšení produktivity s C++ a prostředí Visual Studio integrované vývoj prostředí (IDE).
   
 ## <a name="getting-started-on-the-command-line"></a>Začínáme na příkazovém řádku  
 
-Podobným způsobem, že byste použili prostředí příkazového řádku systému UNIX můžete použít Visual C++ v příkazovém řádku. Při kompilaci z příkazového řádku pomocí příkazového řádku kompilátoru jazyka C a C++ (CL. Soubor EXE), linkeru (odkaz. Soubor EXE) a dalších nástrojů, včetně NMAKE. EXE verze Microsoft UNIX Zkontrolujte nástroj.  
+Kompilátor C++ z příkazového řádku můžete použít podobným způsobem, že byste použili prostředí příkazového řádku systému UNIX. Při kompilaci z příkazového řádku pomocí příkazového řádku kompilátoru jazyka C a C++ (CL. Soubor EXE), linkeru (odkaz. Soubor EXE) a dalších nástrojů, včetně NMAKE. EXE verze Microsoft UNIX Zkontrolujte nástroj.  
   
-V systému UNIX příkazy jsou nainstalovány v běžné složce, například/usr/bin. V jazyce Visual C++ jsou nainstalované nástroje příkazového řádku v adresáři instalace sady Visual Studio v podadresáři VC\bin a jejích podadresářů. Na rozdíl od systému UNIX tyto nástroje nejsou k dispozici v okně prostý příkazového řádku. Použití nástroje příkazového řádku, použijte zástupce příkazového řádku vývojáře nebo spustit příkaz vývojář souboru, například vcvarsall.bat. Toto nastaví cestu a jiné proměnné prostředí, které jsou nezbytné pro kompilaci Visual C++ – programy z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+V systému UNIX příkazy jsou nainstalovány v běžné složce, například/usr/bin. V sadě Visual Studio jsou nainstalované nástroje příkazového řádku v adresáři instalace sady Visual Studio v podadresáři VC\bin a jejích podadresářů. Na rozdíl od systému UNIX tyto nástroje nejsou k dispozici v okně prostý příkazového řádku. Použití nástroje příkazového řádku, použijte zástupce příkazového řádku vývojáře nebo spustit příkaz vývojář souboru, například vcvarsall.bat. Toto nastaví cestu a jiné proměnné prostředí, které jsou nezbytné pro kompilaci C++ – programy z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 Otevřete příkazový řádek vývojáře zástupce, zadejte *příkazového řádku vývojáře* v ploše vyhledávání ovládací prvek a vyberte **příkazový řádek vývojáře** výsledek pro vaši verzi sady Visual Studio. Chcete-li zvolit příkazový řádek vývojáře, který je předem nakonfigurován pro konkrétního hostitele a architektura cíl, otevřete **spustit** nabídky (ikona Windows v horním rohu plochy) a pak přejděte do složky pro vaši verzi sady Visual Studio , jako například **Visual Studio 2017**. Otevřete složku a zvolte zástupce příkazového řádku pro upřednostňované hostitele a cílové architektury.
   
@@ -47,11 +51,11 @@ Aplikace, která se skládá z více knihoven a spustitelné soubory, každý po
   
 ## <a name="importing-your-existing-code"></a>Import existujícího kódu 
  
-Visual C++ můžete použít k vytvoření stávající kód, který je nastavený pro kompilaci s nebo bez souboru pravidel a umístí jej do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Kompilátor C++ můžete použít k vytvoření stávající kód, který je nastavený pro kompilaci s nebo bez souboru pravidel a umístí jej do [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Vytvoření nového projektu  
 
-Můžete vytvořit nové projekty ve vývojovém prostředí. Visual C++ poskytuje mnoho šablon, které poskytují standardní kód pro mnoho běžných projektů. Průvodci aplikací můžete použít ke generování projekty s osnovou kódu pro různé typy aplikací.  
+Můžete vytvořit nové projekty ve vývojovém prostředí. Visual Studio poskytuje mnoho šablon, které poskytují standardní kód pro mnoho běžných projektů. Průvodci aplikací můžete použít ke generování projekty s osnovou kódu pro různé typy aplikací.  
   
 Můžete začít s prázdným projektem pomocí **konzolové aplikace (Win32) průvodce**. Vyberte **prázdný projekt** zaškrtávací políčko. Můžete pak přidat nové nebo stávající soubory do projektu později.  
   
@@ -59,9 +63,9 @@ Když vytvoříte projekt, musí název projektu. Ve výchozím nastavení náze
   
 ## <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft  
 
-Visual C++ obsahuje několik rozšíření pro standardní programovací jazyk C++ pro podporu programování pro operační systémy Windows. Tato rozšíření se používají k určení atributy třídy úložiště, zásad volání funkce a základní adresování kromě jiných věcí. Úplný seznam všech rozšíření Visual C++, najdete v části [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
+Microsoft Visual C++ compiler implementuje několik rozšíření pro standardní programovací jazyk C++ pro podporu programování pro operační systémy Windows. Tato rozšíření se používají k určení atributy třídy úložiště, zásad volání funkce a základní adresování kromě jiných věcí. Úplný seznam všech podporovaných rozšíření C++, najdete v části [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-Můžete zakázat všechna rozšíření specifické pro společnost Microsoft c++ pomocí **/Za** – možnost kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód pro spuštění ve více platformách. Další informace o **/Za** – možnost kompilátoru, najdete v části [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md). Další informace o přizpůsobení Visual C++ najdete v tématu [nestandardní chování](../cpp/nonstandard-behavior.md).  
+Můžete zakázat všechna rozšíření specifické pro společnost Microsoft c++ pomocí **/Za** – možnost kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód pro spuštění ve více platformách. Další informace o **/Za** – možnost kompilátoru, najdete v části [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md). Další informace o přizpůsobení kompilátoru C++ najdete v tématu [přizpůsobení jazyka Visual C++](../visual-cpp-language-conformance.md) a [nestandardní chování](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Předkompilované hlavičky  
 

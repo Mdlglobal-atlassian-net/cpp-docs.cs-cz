@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co & č. 39; s novou 2003 až 2015
 
@@ -1485,7 +1487,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
 #### <a name="compiler"></a>Kompilátoru
 
-Microsoft C++ compiler podporuje tyto ISO funkce C ++ 11 jazyka:
+Microsoft Visual C++ compiler podporuje tyto ISO funkce C ++ 11 jazyka:
 
 - Výchozí šablony argumenty pro šablony funkce.
 - Delegování konstruktorů
@@ -1502,8 +1504,8 @@ Microsoft C++ compiler podporuje tyto ISO funkce C ++ 11 jazyka:
 - Složené literály.
 - Určené inicializátory.
 - Kombinování deklarace s kódem.
-- Převod řetězce literálu upravitelnými hodnoty můžete nepovolené pomocí nové možnosti kompilátoru/Zc: strictstrings. C ++ 98, převod textové literály typu char\* (a celý textové literály na wchar_t\*) se považovat za zastaralou. Převod C ++ 11, byla odebrána úplně. I když kompilátor může výhradně v souladu s standardní, místo toho poskytuje možnost/Zc: strictstrings tak, abyste je mohli řídit převod. Ve výchozím nastavení je možnost je vypnuta. Všimněte si, že při použití této možnosti v režimu ladění, nebude kompilace STL.
-- deklarátor/lvalue odkaz přetypování. S odkazy rvalue C ++ 11 můžete od sebe jasně odlišit hodnoty lvalue a rvalue. Dříve Visual C++ compiler neposkytnul to ve scénářích konkrétní přetypování. Přidaná nová možnost kompilátoru/Zc: rvaluecast, aby splňovaly kompilátoru Paper(see section 5.4, [expr.cast]/1) práce jazyka C++. Výchozí chování, pokud není tato možnost zadána, je stejné jako v sadě Visual Studio 2012.
+- Řetězec literálu převod upravitelnými hodnoty můžete nepovolené pomocí nové možnosti kompilátoru **/Zc: strictstrings**. C ++ 98, převod textové literály typu char\* (a celý textové literály na wchar_t\*) se považovat za zastaralou. Převod C ++ 11, byla odebrána úplně. I když kompilátor může výhradně v souladu s standardní, místo toho poskytuje **/Zc: strictstrings** možnost, abyste mohli řídit převod. Ve výchozím nastavení je možnost je vypnuta. Všimněte si, že při použití této možnosti v režimu ladění, nebude kompilace STL.
+- deklarátor/lvalue odkaz přetypování. S odkazy rvalue C ++ 11 můžete od sebe jasně odlišit hodnoty lvalue a rvalue. Dříve kompilátor neposkytnul to ve scénářích konkrétní přetypování. Nová možnost kompilátoru **/Zc: rvaluecast**, byl přidán do zkontrolujte kompilátoru shoduje s Paper(see section 5.4, [expr.cast]/1) práce jazyka C++. Výchozí chování, pokud není tato možnost zadána, je stejné jako v sadě Visual Studio 2012.
   - Poznámka: pro uvedena funkce, pomocí = výchozí žádosti o přesunutí memberwise konstruktory a přesuňte operátory přiřazení není podporován.
 
 ### <a name="c99-libraries"></a>C99 knihovny

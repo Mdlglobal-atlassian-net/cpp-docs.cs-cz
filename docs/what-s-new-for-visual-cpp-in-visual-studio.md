@@ -1,22 +1,24 @@
 ---
 title: "Co je nového pro Visual C++ v sadě Visual Studio | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Co je nového pro Visual C++ v[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]poskytuje mnoho aktualizací a opravy pro prostředí Visual C++. Jsme vyřešili více než 250 chyb a hlášené problémy v kompilátoru a nástroje, mnoho odeslané zákazníky pomocí [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poskytují zlepšení](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o co je nového ve všech sady Visual Studio, navštivte [co je nového v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] poskytuje mnoho aktualizací a opravy pro prostředí Visual C++. Jsme vyřešili více než 250 chyb a hlášené problémy v kompilátoru a nástroje, mnoho odeslané zákazníky pomocí [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poskytují zlepšení](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o co je nového ve všech sady Visual Studio, navštivte [co je nového v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozš�
 
    **Visual Studio 2017 verze 15.3**:
 
-   **/Std: c ++ 17** možnost umožňuje sadu funkce C ++ 17 implementované – kompilátor Visual C++. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se změnily nebo nové verze aktualizací práce koncept a vadou standardní C++ po C ++ 17. Chcete-li tyto funkce povolit, použijte **/std: c ++ nejnovější**.
+   **/Std: c ++ 17** možnost umožňuje sadu funkce C ++ 17 implementované kompilátoru. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se změnily nebo nové verze aktualizací práce koncept a vadou standardní C++ po C ++ 17. Chcete-li tyto funkce povolit, použijte **/std: c ++ nejnovější**.
 
    **Visual Studio 2017 verze 15,5**:
 
-   Visual C++ compiler podporuje přibližně 75 % funkce, které jsou nové v C ++ 17, včetně strukturovaných vazby `constexpr` lambdas, `if constexpr`, vložené proměnné přeložte výrazy a přidání `noexcept` typ systému. Tyto jsou k dispozici v části **/std: c ++ 17** možnost. Další informace najdete v tématu [C++ shoda vylepšení v nástroji Visual Studio 2017](cpp-conformance-improvements-2017.md)
+   Kompilátor podporuje přibližně 75 % funkce, které jsou nové v C ++ 17, včetně strukturovaných vazby `constexpr` lambdas, `if constexpr`, vložené proměnné přeložte výrazy a přidání `noexcept` typ systému. Tyto jsou k dispozici v části **/std: c ++ 17** možnost. Další informace najdete v tématu [C++ shoda vylepšení v nástroji Visual Studio 2017](cpp-conformance-improvements-2017.md)
 
 - [/ projektovou-](build/reference/permissive-standards-conformance.md): všechny shoda striktní standardy – možnosti kompilátoru povolení a zakázání rozšíření kompilátoru většina specifické pro společnost Microsoft (ale ne `__declspec(dllimport)`, například). Tato možnost je ve výchozím nastavení vypnutý, ale se bude nacházet na ve výchozím nastavení v určitém okamžiku v budoucnu.
 
@@ -48,7 +50,7 @@ V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozš�
 
 - [/Debug:fastlink](build/reference/debug-generate-debug-info.md): povolit až 30 % rychlejší přírůstkové odkaz krát (vs. Visual Studio 2015) není zkopírováním všechny informace o ladění do souboru PDB. Soubor PDB místo odkazuje na informace o ladění pro objekt a knihovna soubory použít k vytvoření spustitelného souboru. V tématu [rychlejší C++ sestavení cyklu v sadě VS "15" s /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) a [doporučení, která rychlost sestavení C++ v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/).
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]umožňuje používat [SDL](build/reference/sdl-enable-additional-security-checks.md) s [/ await](build/reference/await-enable-coroutine-support.md). Jsme odebrali [/RTC](build/reference/rtc-run-time-error-checks.md) omezení coroutines.
+- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] umožňuje používat [SDL](build/reference/sdl-enable-additional-security-checks.md) s [/ await](build/reference/await-enable-coroutine-support.md). Jsme odebrali [/RTC](build/reference/rtc-run-time-error-checks.md) omezení coroutines.
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, zabezpečení, diagnostiky a správy verzí
 
@@ -260,7 +262,7 @@ Několik operací v jazyce C++ využívající modul IntelliSense pro refaktorin
 |||
 |-|-|
 |Funkce|Zlepšení výkonu|
-|přejmenování|5.3 x|
+|přejmenování|5.3x|
 |Změna podpisu |4.5 x|
 |Najít všechny odkazy|4.7 x|
 

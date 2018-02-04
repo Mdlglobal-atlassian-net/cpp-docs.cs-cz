@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -42,7 +43,7 @@ Pokud aktualizujete projekty Visual C++, pokud jste nastavili projektu **Linkeru
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Nasazení a další šíření Universal CRT
   
-Vzhledem k tomu, že UCRT je nyní součástí operačního systému Microsoft Windows, je součástí operačního systému ve Windows 10 a je k dispozici prostřednictvím služby Windows Update pro starší operační systémy Windows Vista prostřednictvím Windows 8.1. Redistributable verze je k dispozici pro systém Windows XP. Jako součást operačního systému UCRT aktualizace a údržba jsou spravovány službou Windows Update nezávisle na Visual Studio a Visual C++ verze kompilátoru. Protože UCRT je součástí systému Windows pro zabezpečení a snadné aktualizací a menší velikost bitové kopie, důrazně doporučujeme centrální nasazení UCRT pro vaši aplikaci.  
+Vzhledem k tomu, že UCRT je nyní součástí operačního systému Microsoft Windows, je součástí operačního systému ve Windows 10 a je k dispozici prostřednictvím služby Windows Update pro starší operační systémy Windows Vista prostřednictvím Windows 8.1. Redistributable verze je k dispozici pro systém Windows XP. Jako součást operačního systému UCRT aktualizace a údržba jsou spravovány službou Windows Update nezávisle na verze kompilátoru Visual Studio a Microsoft C++. Protože UCRT je součástí systému Windows pro zabezpečení a snadné aktualizací a menší velikost bitové kopie, důrazně doporučujeme centrální nasazení UCRT pro vaši aplikaci.  
   
 Můžete UCRT na libovolnou verzi systému Windows nepodporuje Visual Studio 2015 nebo Visual Studio 2017. Můžete znovu distribuovat pomocí balíčku pro balíček vcredist pro podporované verze systému Windows než Windows 10. Balíčky vcredist zahrnout UCRT součásti a automaticky nainstalovány v operačních systémech Windows, které nemají je ve výchozím nastavení nainstalovaná. Další informace najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

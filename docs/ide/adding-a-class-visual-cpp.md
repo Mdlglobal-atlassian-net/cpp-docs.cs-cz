@@ -4,33 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.adding
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.adding
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL projects, adding classes
 - classes [C++], creating
 - classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d767bd0afa85bc417cd33ce305ffe0061104bf64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ac87368f2bd38c32425799103fa3999dd11b3298
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-class-visual-c"></a>Přidání třídy (Visual C++)
 Přidání třídy v projektu Visual C++ v **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt, klikněte na **přidat**a potom klikněte na **třída**. Tím se otevře [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.  
   
- Když přidáte třídu, musíte zadat název, který se liší od třídy, které již existují v knihovně MFC nebo ATL. Pokud zadáte název, který již v knihovně existuje, Visual C++ zobrazí zprávu, která označuje, že zadaný název je vyhrazený.  
+ Když přidáte třídu, musíte zadat název, který se liší od třídy, které již existují v knihovně MFC nebo ATL. Pokud zadáte název, který již v knihovně existuje, rozhraní IDE zobrazuje chybovou zprávu.  
   
- Pokud projekt zásady vytváření názvů vyžaduje, abyste existující název, potom můžete právě změnit malá a velká písmena jeden nebo více v názvu protože Visual C++ je malá a velká písmena. Například i když nelze pojmenovat třídu `CDocument`, můžete ho pojmenovat `cdocument`.  
+ Pokud projekt zásady vytváření názvů vyžaduje, abyste existující název, potom můžete právě změnit malá a velká písmena jeden nebo více v názvu protože C++ je malá a velká písmena. Například i když nelze pojmenovat třídu `CDocument`, můžete ho pojmenovat `cdocument`.  
   
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Jaký druh třídy chcete přidat?  
  V **přidat třídu** dialogové okno, když rozšiřujete **Visual C++** uzlu v levém podokně se zobrazí několik seskupení nainstalovaných šablon. Zahrnout skupiny **CLR**, **ATL**, **MFC**, a **C++**. Když vyberete skupinu, se v prostředním podokně zobrazí seznam dostupných šablon v této skupině. Každá šablona obsahuje soubory a zdrojového kódu, které jsou požadovány pro třídu.  

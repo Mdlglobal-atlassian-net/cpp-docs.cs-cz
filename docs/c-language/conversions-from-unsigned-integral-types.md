@@ -1,13 +1,15 @@
 ---
 title: "Převody z nepodepsaných integrálních typů | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -15,70 +17,73 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1c00afa6ee5f084365663ca6c1e11c569b4e6be0
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
-Celé číslo bez znaménka jsou převedeny na kratší číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů, nebo již nepodepsaný nebo podepsaný celočíselná a tím, že rozšíří nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).  
-  
- Pokud hodnotu s integrální typ převeden na znaménkem s menší velikostí, nebo celé číslo bez znaménka jsou převedeny na jeho odpovídající číslo se znaménkem, hodnota je beze změny, pokud může být reprezentován v nového typu. Ale hodnota představuje změny, pokud je bit přihlašovací nastavený, jako v následujícím příkladu.  
-  
-```  
-int j;  
-unsigned short k = 65533;  
-  
-j = k;  
-printf_s( "%hd\n", j );   // Prints -3  
-```  
-  
- Pokud není možné vyjádřit, výsledkem je, definované implementací. V tématu [převody přetypování](../c-language/type-cast-conversions.md) informace o zpracování kompilátoru Microsoft C degradace celých čísel. Stejné výsledky chování z převod celé číslo nebo přetypování na celé číslo.  
-  
- Nepodepsané hodnoty se převedou způsobem, který zachovává jejich hodnota a není reprezentovat přímo C. Jedinou výjimkou je převod z `unsigned long` k **float**, který ztratí maximálně nejnižší bits. Jinak je zachovaná hodnotu, podepsaný držitelem nebo bez znaménka. Pokud se hodnota typu integrální jsou převedeny na plovoucí a hodnota je mimo rozsah reprezentovat, výsledkem je definovaný. (Viz [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o rozsahu pro typy s plovoucí desetinnou čárkou a integrální.)  
-  
- Následující tabulka shrnuje převody z nepodepsaných integrálních typů.  
-  
-### <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů  
-  
-|From|Chcete-li|Metoda|  
-|----------|--------|------------|  
-|`unsigned char`|`char`|Zachovat bitový; bit horní stane přihlašovací bit|  
-|`unsigned char`|**short**|Rozšíření nula.|  
-|`unsigned char`|**long**|Rozšíření nula.|  
-|`unsigned char`|**short bez znaménka**|Rozšíření nula.|  
-|`unsigned char`|`unsigned long`|Rozšíření nula.|  
-|`unsigned char`|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|`unsigned char`|**double**|Převést na **dlouho**; převést **dlouho** k **double**|  
-|`unsigned char`|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
-|**short bez znaménka**|`char`|Zachovat nejnižší bajtů|  
-|**short bez znaménka**|**short**|Zachovat bitový; bit horní stane přihlašovací bit|  
-|**short bez znaménka**|**long**|Rozšíření nula.|  
-|**short bez znaménka**|`unsigned char`|Zachovat nejnižší bajtů|  
-|**short bez znaménka**|`unsigned long`|Rozšíření nula.|  
-|**short bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|**short bez znaménka**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|  
-|**short bez znaménka**|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
-|`unsigned long`|`char`|Zachovat nejnižší bajtů|  
-|`unsigned long`|**short**|Zachovat nejnižší aplikace word|  
-|`unsigned long`|**long**|Zachovat bitový; bit horní stane přihlašovací bit|  
-|`unsigned long`|`unsigned char`|Zachovat nejnižší bajtů|  
-|`unsigned long`|**short bez znaménka**|Zachovat nejnižší aplikace word|  
-|`unsigned long`|**float**|Převést na **dlouho**; převést **dlouho** k **float**|  
-|`unsigned long`|**double**|Převést přímo na **double**|  
-|`unsigned long`|`long double`|Převést na **dlouho**; převést **dlouho** k **double**|  
-  
- **Konkrétní Microsoft**  
-  
- Pro kompilátor C Microsoft 32bitová verze `unsigned int` typ je ekvivalentní `unsigned long` typu. Převod `unsigned int` hodnotu pokračuje stejným způsobem jako převod `unsigned long`. Převody z `unsigned long` hodnoty k **float** nejsou přesné, pokud je hodnota převáděné větší než maximální kladnou podepsané **dlouho** hodnotu.  
-  
- **Konkrétní Microsoft END**  
-  
-## <a name="see-also"></a>Viz také  
- [Převody přiřazení](../c-language/assignment-conversions.md)
+
+Celé číslo bez znaménka jsou převedeny na kratší číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů, nebo již nepodepsaný nebo podepsaný celočíselná a tím, že rozšíří nula (viz [převody z nepodepsaných integrálních typů](#_clang_table_4..3) tabulky).
+
+Pokud hodnotu s integrální typ převeden na znaménkem s menší velikostí, nebo celé číslo bez znaménka jsou převedeny na jeho odpovídající číslo se znaménkem, hodnota je beze změny, pokud může být reprezentován v nového typu. Ale hodnota představuje změny, pokud je bit přihlašovací nastavený, jako v následujícím příkladu.
+
+```C
+int j;
+unsigned short k = 65533;
+
+j = k;
+printf_s( "%hd\n", j );   // Prints -3
+```
+
+Pokud není možné vyjádřit, výsledkem je, definované implementací. V tématu [převody přetypování](../c-language/type-cast-conversions.md) informace o zpracování kompilátoru Microsoft C degradace celých čísel. Stejné výsledky chování z převod celé číslo nebo přetypování na celé číslo.
+
+Nepodepsané hodnoty se převedou způsobem, který zachovává jejich hodnota a není reprezentovat přímo C. Jedinou výjimkou je převod z **nepodepsané dlouho** k **float**, který ztratí maximálně nejnižší bits. Jinak je zachovaná hodnotu, podepsaný držitelem nebo bez znaménka. Pokud se hodnota typu integrální jsou převedeny na plovoucí a hodnota je mimo rozsah reprezentovat, výsledkem je definovaný. (Viz [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o rozsahu pro typy s plovoucí desetinnou čárkou a integrální.)
+
+Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
+
+## <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
+
+|From|Chcete-li|Metoda|
+|----------|--------|------------|
+|**unsigned char**|**char**|Zachovat bitový; bit horní stane přihlašovací bit|
+|**unsigned char**|**short**|Rozšíření nula.|
+|**unsigned char**|**long**|Rozšíření nula.|
+|**unsigned char**|**short bez znaménka**|Rozšíření nula.|
+|**unsigned char**|**dlouho bez znaménka**|Rozšíření nula.|
+|**unsigned char**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
+|**unsigned char**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|
+|**unsigned char**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
+|**short bez znaménka**|**char**|Zachovat nejnižší bajtů|
+|**short bez znaménka**|**short**|Zachovat bitový; bit horní stane přihlašovací bit|
+|**short bez znaménka**|**long**|Rozšíření nula.|
+|**short bez znaménka**|**unsigned char**|Zachovat nejnižší bajtů|
+|**short bez znaménka**|**dlouho bez znaménka**|Rozšíření nula.|
+|**short bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
+|**short bez znaménka**|**double**|Převést na **dlouho**; převést **dlouho** k **double**|
+|**short bez znaménka**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
+|**dlouho bez znaménka**|**char**|Zachovat nejnižší bajtů|
+|**dlouho bez znaménka**|**short**|Zachovat nejnižší aplikace word|
+|**dlouho bez znaménka**|**long**|Zachovat bitový; bit horní stane přihlašovací bit|
+|**dlouho bez znaménka**|**unsigned char**|Zachovat nejnižší bajtů|
+|**dlouho bez znaménka**|**short bez znaménka**|Zachovat nejnižší aplikace word|
+|**dlouho bez znaménka**|**float**|Převést na **dlouho**; převést **dlouho** k **float**|
+|**dlouho bez znaménka**|**double**|Převést přímo na **double**|
+|**dlouho bez znaménka**|**dlouhé double**|Převést na **dlouho**; převést **dlouho** k **double**|
+
+**Microsoft Specific**
+
+Pro kompilátor Microsoft C **nepodepsané int** typ je ekvivalentní **nepodepsané dlouho** typu. Převod **nepodepsané int** hodnotu pokračuje stejným způsobem jako převod **nepodepsané dlouho**. Převody z **nepodepsané dlouho** hodnoty k **float** nejsou přesné, pokud je hodnota převáděné větší než maximální kladnou podepsané **dlouho** hodnotu.
+
+**Konkrétní Microsoft END**
+
+## <a name="see-also"></a>Viz také
+
+[Převody přiřazení](../c-language/assignment-conversions.md)  
