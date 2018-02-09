@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
 ID národního prostředí odráží místní konvence a jazyk pro určitou zeměpisnou oblast. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.  
@@ -44,7 +47,7 @@ ID národního prostředí odráží místní konvence a jazyk pro určitou zem�
   
  Další informace o znakové stránky najdete v tématu [znakové stránky](../c-runtime-library/code-pages.md).  
   
- Knihovny runtime jazyka C obsahují dva typy vnitřních znakových stránek: národní prostředí a vícebajtové. Při spuštění programu můžete změnit aktuální znaková stránka (naleznete v dokumentaci k [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md) funkce). Běhové knihovny může také získat a použít hodnotu znaková stránka operačního systému. V systému Windows 2000 operačního systému znaková stránka je znaková stránka "výchozí systém ANSI". Tato znaková stránka je konstantní po dobu trvání provádění tohoto programu.  
+ Knihovny runtime jazyka C obsahují dva typy vnitřních znakových stránek: národní prostředí a vícebajtové. Při spuštění programu můžete změnit aktuální znaková stránka (naleznete v dokumentaci k [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md) funkce). Běhové knihovny může také získat a použít hodnotu znaková stránka operačního systému, což je konstantní po dobu trvání provádění tohoto programu.  
   
  Když znaková stránka národního prostředí změní, chování závislých na národním prostředí sadu funkcí se změní podle zvolené znakové stránky. Ve výchozím nastavení začínají všech funkcí závislých na národním prostředí se znaková stránka národního prostředí jedinečné pro národní prostředí "C". Znaková stránka interní národního prostředí (stejně jako ostatní vlastnosti specifické pro národní prostředí) můžete změnit pomocí volání `setlocale` funkce. Volání `setlocale`(LC_ALL, "") nastaví národní prostředí podle národního prostředí uživatele operačního systému.  
   

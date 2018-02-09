@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Povolit podporu OpenMP 2.0)
 Způsobí, že kompilátor zpracovat `#pragma` [omp –](../../preprocessor/omp.md).  
@@ -37,8 +40,6 @@ Způsobí, že kompilátor zpracovat `#pragma` [omp –](../../preprocessor/omp.
   
 ## <a name="remarks"></a>Poznámky  
  `#pragma omp`slouží k určení [direktivy](../../parallel/openmp/reference/openmp-directives.md) a [klauzule](../../parallel/openmp/reference/openmp-clauses.md). Pokud **/OpenMP** není zadán v kompilaci, kompilátor ignoruje OpenMP – klauzule a direktivy. [Funkce OpenMP](../../parallel/openmp/reference/openmp-functions.md) zpracovává volání kompilátoru i když **/OpenMP** není zadán.  
-  
- Aplikace, kompilovat s **/OpenMP** a pomocí [knihovny](../../parallel/openmp/reference/openmp-libraries.md) lze spustit jen u systému Windows 2000 nebo novější operační systémy.  
   
  Aplikace, kompilovat s **/OpenMP** a **/CLR** lze spustit pouze v jedné aplikace domény procesu; více domén aplikací nejsou podporovány. To znamená, když se spustí modul konstruktoru (.cctor), poté zjistit, proces je kompilovat s **/OpenMP** a pokud aplikace do jiné než výchozí runtime načítá. Další informace najdete v tématu [appdomain](../../cpp/appdomain.md), [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), a [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).  
   

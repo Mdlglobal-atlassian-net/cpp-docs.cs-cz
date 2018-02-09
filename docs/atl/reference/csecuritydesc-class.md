@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc – třída
 Tato třída je obálka pro **SECURITY_DESCRIPTOR** struktura.  
@@ -70,7 +74,7 @@ class CSecurityDesc
 |Název|Popis|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Konstruktor|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Destruktor.|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -163,7 +167,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Poznámky  
  Řetězec lze vytvořit pomocí [CSecurityDesc::ToString](#tostring). Převádění na řetězce popisovače zabezpečení usnadňuje ukládání a přenosu.  
   
- Tato metoda je k dispozici pouze v systému Windows 2000 a novějších protože zavolá [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Tato metoda volá [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
  Načte řídit informace z popisovač zabezpečení.  
@@ -180,9 +184,9 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Vrátí hodnotu true Pokud metoda úspěšné, false Pokud selže.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je pouze smysluplný při použití systému Windows 2000 nebo novější, protože zavolá [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Tato metoda volá [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
-##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Načte volitelný řízení přístupu (DACL) seznamu informace z popisovač zabezpečení.  
   
 ```
@@ -205,7 +209,7 @@ bool GetDacl(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true Pokud metoda úspěšné, false Pokud selže.  
   
-##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>  CSecurityDesc::GetGroup  
  Načte informace o primární skupině z popisovač zabezpečení.  
   
 ```
@@ -323,7 +327,7 @@ bool IsDaclPresent() const throw();
   
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetDacl](#setdacl) metoda.  
   
-##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected  
  Určuje, zda seznamu volitelného řízení přístupu (DACL) je konfigurována pro zabránit úpravy.  
   
 ```
@@ -336,7 +340,7 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetDacl](#setdacl) metoda.  
   
- Tato metoda má smysl pouze pro systém Windows 2000 nebo novější, protože automatické šíření zděditelné ACE podporuje pouze systém Windows 2000.  
+ Tato metoda podporuje automatické šíření zděditelné položky řízení přístupu.  
   
 ##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
  Určuje, pokud se ve výchozím nastavení popisovač zabezpečení skupiny identifikátor zabezpečení (SID).  
@@ -418,7 +422,7 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetSacl](#setsacl) metoda.  
   
- Tato metoda má smysl pouze pro systém Windows 2000 nebo novější, protože automatické šíření zděditelné ACE podporuje pouze systém Windows 2000.  
+ Tato metoda podporuje automatické šíření zděditelné položky řízení přístupu.  
   
 ##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
  Určuje, zda popisovač zabezpečení do seberelativního formátu.  
@@ -498,9 +502,9 @@ bool SetControl(
  Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je k dispozici, pouze v systému Windows 2000 nebo novější, protože zavolá [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Tato metoda volá [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
-##  <a name="setdacl"></a>CSecurityDesc::SetDacl  
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Nastaví informace v seznamu volitelného řízení přístupu (DACL). Pokud seznam DACL se již nachází ve popisovač zabezpečení, je nahradit.  
   
 ```
@@ -529,7 +533,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>Poznámky  
  Není k dispozici důležitý rozdíl mezi prázdná a neexistující DACL. Pokud seznam DACL je prázdná, neobsahuje žádné položky řízení přístupu a byl výslovně udělen žádné přístupová práva. V důsledku toho je implicitně odepřen přístup k objektu. Objekt se žádný seznam DACL ho ZAMEZUJE, na druhé straně žádná ochrana je přiřazena k objektu, a všechny žádosti o přístup je povolen.  
   
-##  <a name="setgroup"></a>CSecurityDesc::SetGroup  
+##  <a name="setgroup"></a>  CSecurityDesc::SetGroup  
  Nastaví informace o primární skupině absolutním formátu popisovače zabezpečení, nahraďte všechny informace o primární skupině již existuje.  
   
 ```
@@ -571,7 +575,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *SACL*  
+ *Sacl*  
  Ukazatel na `CSacl` zadání SACL pro popisovač zabezpečení objektu. Tento parametr nesmí mít hodnotu NULL a musí být objekt CSacl. Na rozdíl od seznamů DACL není žádný rozdíl mezi hodnotu NULL a prázdný SACL, jako objekty SACL nezadávejte přístupová práva, jenom auditování informace.  
   
  `bDefaulted`  
@@ -616,7 +620,7 @@ bool ToString(
   
  Pokud seznam DACL má hodnotu NULL a v vstupní popisovač zabezpečení není nastaven bit Řízení SE_DACL_PRESENT, výsledný řetězec popisovač zabezpečení nemá D: součásti. V tématu [formát řetězce popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379570) další podrobnosti.  
   
- Tato metoda je k dispozici pouze v systému Windows 2000 nebo novější, protože zavolá [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Tato metoda volá [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   

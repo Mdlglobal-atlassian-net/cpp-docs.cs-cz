@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _inp
 - _inpw
 - _inpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - inp function
 - inpw function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Vstupy z portu, bajtů (`_inp`), slova (`_inpw`), nebo slovo, double (`_inpd`).  
@@ -80,15 +83,15 @@ unsigned long _inpd(
 ## <a name="remarks"></a>Poznámky  
  `_inp`, `_inpw`, A `_inpd` funkce Číst bajt, slovo a dvojitou slova, v uvedeném pořadí, z zadaný vstupní port. Vstupní hodnota může být jakékoli krátké celé číslo bez znaménka v rozsahu 0 – 65 535.  
   
- Protože tyto funkce pro čtení přímo z k portu vstupně-výstupních operací, nemusí být použít v uživatelském kódu v systému Windows NT, Windows 2000, Windows XP a Windows Server 2003.  
+ Protože tyto funkce pro čtení přímo z k portu vstupně-výstupních operací, nelze použít v uživatelském kódu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_inp`|\<conio.h >|  
-|`_inpw`|\<conio.h >|  
-|`_inpd`|\<conio.h >|  
+|`_inp`|\<conio.h>|  
+|`_inpw`|\<conio.h>|  
+|`_inpd`|\<conio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../c-runtime-library/compatibility.md).  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Registrace
 Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů můžete vybrat ze seznamu. OLE získá tento seznam z registrační databáze systému, který obsahuje informace, které poskytuje všechny serverové aplikace. Když server registruje, položky, které se uloží do databáze systému registrace (registr) popisují každý typ objektu, který poskytne, soubor rozšíření a cestu sama na sebe, mimo jiné informace o.  
@@ -44,12 +47,12 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
 > [!NOTE]
 >  Aplikace MFC generované průvodcem aplikace automaticky zaregistrovat při spuštění jako samostatné aplikace.  
   
- Pokud chcete pro registraci aplikace během instalace, použijte RegEdit.exe program. (V systému Windows 95, Windows 98 a Windows ME, RegEdit je v adresáři systému Windows. V systému Windows NT a systému Windows 2000 RegEdit je v adresáři Windows System32.) Pokud zahrnete instalačního programu s vaší aplikací, mají instalační program spustit "RegEdit /S *appname*.reg". (Příznak /S Určuje tichou operace, tedy nezobrazuje dialogu reporting úspěšné dokončení příkazu.) Jinak vyzvat uživatele k spuštění RegEdit ručně.  
+ Pokud chcete pro registraci aplikace během instalace, použijte RegEdit.exe program. Pokud zahrnete instalačního programu s vaší aplikací, mají instalační program spustit "RegEdit /S *appname*.reg". (Příznak /S Určuje tichou operace, tedy nezobrazuje dialogu reporting úspěšné dokončení příkazu.) Jinak vyzvat uživatele k spuštění RegEdit ručně.  
   
 > [!NOTE]
 >  Soubor .reg vytvořený pomocí Průvodce aplikací neobsahuje úplnou cestu pro tento spustitelný soubor. Instalační program musí buď upravit soubor .reg zahrnout úplná cesta ke spustitelnému souboru nebo změnit proměnné prostředí PATH zahrnout instalační adresář.  
   
- RegEdit sloučí obsah textový soubor .reg registrační databáze. Ověření databázi nebo ji opravit, pomocí Editoru registru. Postará neodstraňujte nezbytné položky OLE. (V systému Windows 95, Windows 98 a Windows ME, je RegEdit.exe editor registru. V systému Windows NT a systému Windows 2000 je RegEdit32.exe.)  
+ RegEdit sloučí obsah textový soubor .reg registrační databáze. Ověření databázi nebo ji opravit, pomocí Editoru registru. Postará neodstraňujte nezbytné položky OLE.  
   
 ##  <a name="_core_server_initialization"></a>Inicializace serveru  
  Když vytvoříte aplikaci server pomocí Průvodce aplikací, průvodce dokončí všechny úlohy inicializace pro vás automaticky. Tato část popisuje, co musíte udělat ručně zápisu serverová aplikace.  
@@ -66,7 +69,7 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
   
 ## <a name="see-also"></a>Viz také  
  [OLE](../mfc/ole-in-mfc.md)   
- [Servery](../mfc/servers.md)   
+ [Servers](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
  [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [COleTemplateServer – třída](../mfc/reference/coletemplateserver-class.md)

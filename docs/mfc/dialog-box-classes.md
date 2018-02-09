@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Třídy dialogových oken
 Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. Vzhledem k tomu, že je zvláštní druh okna, dialogové okno `CDialog` je odvozený od `CWnd`. Vaše dialogové okno odvozovat z `CDialog` nebo některý z společné třídy dialogových oken pro standardní dialogová okna, jako je otevření nebo uložení souboru, tisk, výběr písma a barev, inicializaci operaci vyhledávání a nahrazování nebo provádění různých související s rozhraním OLE operace.  
@@ -58,7 +62,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  Poskytuje standardní dialogové okno pro tisk souboru.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Poskytuje seznam vlastností Tisk systému Windows 2000.  
+ Poskytuje seznam vlastností Tisk systému Windows.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Zapouzdří služeb poskytovaných běžných nastavení stránky dialogové okno s dodatečnou podporou pro nastavení a úprava tisku okraje.  
@@ -102,7 +106,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
  Poskytuje na jednotlivých stránkách v rámci seznamu vlastností. Odvození třídy z `CPropertyPage` pro jednotlivé stránky, které chcete přidat do vašeho seznamu vlastností.  
   
- [Cpropertysheet –](../mfc/reference/cpropertysheet-class.md)  
+ [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
  Poskytuje rámečku pro více stránky vlastností. Odvození třídě vlastnost list z `CPropertySheet` rychle implementovat vaše vlastností.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
@@ -121,7 +125,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
  Ovládací prvek panel, který je založený na šabloně dialogové okno pole.  
   
- [Třídy CFormView](../mfc/reference/cformview-class.md)  
+ [CFormView](../mfc/reference/cformview-class.md)  
  Posuňte zobrazení, jejichž rozložení je definována v poli šablony dialogového okna. Odvození třídy z `CFormView` implementovat uživatelské rozhraní založené na pole šablony dialogového okna.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
@@ -130,7 +134,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  [CRecordView](../mfc/reference/crecordview-class.md)  
  Nabízí způsob zobrazení přímo připojený k objektu sady záznamů připojení ODBC (Open Database). Jako všechna zobrazení formuláře `CRecordView` je založená na šabloně dialogové okno pole.  
   
- [Cprintinfo –](../mfc/reference/cprintinfo-structure.md)  
+ [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
  Struktura obsahující informace o úloze nebo tiskového náhledu. Používá architektura pro tisk z [CView](../mfc/reference/cview-class.md).  
   
 ## <a name="see-also"></a>Viz také  

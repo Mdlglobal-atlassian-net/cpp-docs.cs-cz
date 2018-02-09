@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>Obecné rady k programování se znakovou sadou MBCS
 Použijte následující tipy:  
@@ -39,7 +43,7 @@ Použijte následující tipy:
   
 -   Při navrhování dialogových oken, povolit přibližně 30 % místo navíc je na konci – ovládací prvky pro překlad MBCS statický text.  
   
--   Buďte opatrní při výběru písem pro aplikaci, protože některá písma nejsou dostupné na všech systémech. Například japonské verzi systému Windows 2000 nepodporuje písmo Helvetica.  
+-   Buďte opatrní při výběru písem pro aplikaci, protože některá písma nejsou dostupné na všech systémech.  
   
 -   Když vyberete písmo pro dialogová okna, použijte [dialogové okno prostředí MS](http://msdn.microsoft.com/library/windows/desktop/dd374112) místo MS Sans Serif nebo Helvetica. Dialogové okno prostředí MS se nahradí správné písmo v systému před vytvořením dialogové okno. Použití prostředí MS dialogové okno zajišťuje, že všechny změny v operačním systému, jak nakládat s toto písmo bude automaticky k dispozici. (MFC nahradí dialogové okno prostředí MS DEFAULT_GUI_FONT nebo systém písmo v systému Windows 95, Windows 98 a systému Windows NT 4 vzhledem k tomu, že tyto systémy neukládají dialogové okno prostředí MS správně.)  
   

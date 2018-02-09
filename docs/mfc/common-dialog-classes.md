@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Společné třídy dialogových oken
 Kromě třída [CDialog](../mfc/reference/cdialog-class.md), MFC poskytuje několik třídy odvozené od třídy `CDialog` zapouzdřují běžně používané dialogových oken, jak je znázorněno v následující tabulce. Dialogová okna zapouzdřené se používá označení "běžné dialogových oken" a jsou součástí Windows běžné dialogové okno knihovny (COMMDLG. KNIHOVNY DLL). Šablony dialogového okna prostředků a kód pro tyto třídy jsou uvedeny v systému Windows běžné dialogových oken, které jsou součástí systému Windows verze 3.1 nebo novější.  
@@ -41,7 +44,7 @@ Kromě třída [CDialog](../mfc/reference/cdialog-class.md), MFC poskytuje něko
 |[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Umožňuje, aby uživatel zahájit najít nebo nahradit operace v textovém souboru.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Umožní uživateli zadat písmo.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Umožní uživateli zadat informace pro tiskové úlohy.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Tiskové vlastností systému Windows 2000.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Dialogové okno Tisk systému Windows.|  
   
  Další informace o společné třídy dialogových oken, najdete v části názvy jednotlivých tříd v *odkaz knihovny MFC*. MFC také poskytuje řadu standardního dialogového okna třídy používané pro OLE. Informace o těchto tříd naleznete v tématu základní třídy, [COleDialog](../mfc/reference/coledialog-class.md)v *odkaz knihovny MFC*.  
   

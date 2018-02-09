@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - multiple language support [C++]
 - localization [C++], MFC resources
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Místní zdroje v aplikacích MFC: Satelitní knihovny DLL
 MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkce, která pomáhají při vytváření aplikací lokalizovaný pro víc jazyků. Satelitní knihovny DLL je [DLL obsahuje pouze](../build/creating-a-resource-only-dll.md) obsahující prostředky aplikace, které lokalizovaný pro konkrétní jazyk. Když aplikace spustí, MFC automaticky načte lokalizovaný prostředek, který je nejvhodnější pro prostředí. Například můžete mít aplikace s anglickými prostředky s dvě satelitní knihovny DLL, jeden obsahuje francouzský překlad vašich prostředků a dalších obsahující němčině překlad. Když je aplikace spuštěna v anglické verzi systému, používá anglické prostředky. Pokud je spuštěna ve francouzštině systému, používá francouzské prostředky; Pokud je spuštěna na německém systému, používá německé prostředky.  
@@ -37,11 +40,11 @@ MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní kni
   
  MFC, pokusí se načíst knihovnu DLL prostředku pro každý z těchto jazyků v pořadí, zastavení, pokud jej nalezne:  
   
-1.  (Windows 2000 nebo vyšší) Aktuální uživatel výchozí jazyk uživatelského rozhraní, jak ho vrátila z rozhraní API Win32 GetUserDefaultUILanguage().  
+1. Aktuální uživatel výchozí jazyk uživatelského rozhraní, jak ho vrátila z rozhraní API Win32 GetUserDefaultUILanguage().  
   
-2.  (Windows 2000 nebo vyšší) Aktuální uživatel výchozí jazyk uživatelského rozhraní, bez jakéhokoli konkrétního dílčího jazyka (tedy ŠIF [Kanadští anglické] stane ENU [USA V angličtině]).  
+2.  Aktuální uživatel výchozí jazyk uživatelského rozhraní, bez jakéhokoli konkrétního dílčího jazyka (tedy ŠIF [Kanadští anglické] stane ENU [USA V angličtině]).  
   
-3.  Výchozí jazyk uživatelského rozhraní systému. V systému Windows 2000 nebo novější se vrátí z GetSystemDefaultUILanguage() rozhraní API. Na jiných platformách to je jazyk operačního systému.  
+3.  Systémové výchozí jazyk uživatelského rozhraní, jak ho vrátila z GetSystemDefaultUILanguage() rozhraní API. Na jiných platformách to je jazyk operačního systému.  
   
 4.  Systémové výchozí jazyk uživatelského rozhraní, bez jakéhokoli konkrétního dílčího jazyka.  
   
@@ -49,7 +52,7 @@ MFC verze 7.0 nebo novější poskytuje rozšířenou podporu pro satelitní kni
   
  Pokud MFC nebyly nalezeny žádné satelitní knihovny DLL, používá ho, ať prostředky jsou obsažené v samotné aplikace.  
   
- Jako příklad předpokládejme, že aplikace LangExample.exe používá MFC a je spuštěna v systému Windows 2000 více uživatelského rozhraní systému; systémový jazyk uživatelského rozhraní je ENU [USA V angličtině] a jazyk uživatelského rozhraní aktuální uživatel je nastaven na FRC [francouzština (Kanada)]. MFC hledá následující knihovny DLL v následujícím pořadí:  
+ Jako příklad předpokládejme, že aplikace LangExample.exe používá MFC a běží na více uživatelského rozhraní systému; systémový jazyk uživatelského rozhraní je ENU [USA V angličtině] a jazyk uživatelského rozhraní aktuální uživatel je nastaven na FRC [francouzština (Kanada)]. MFC hledá následující knihovny DLL v následujícím pořadí:  
   
 1.  LangExampleFRC.dll (jazyk uživatelského rozhraní uživatele).  
   

@@ -1,13 +1,15 @@
 ---
 title: "Multithreading s použitím jazyka C a Win32 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows API [C++], multithreading
 - multithreading [C++], C and Win32
@@ -17,19 +19,20 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading s použitím jazyka C a prostředí Win32
-Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny se systémem Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me a Windows 98. Měli byste zvážit použití více než jedno vlákno, pokud aplikace potřebuje ke správě více aktivit, jako je vstup souběžných klávesnice a myši. Jedno vlákno může zpracovat vstup z klávesnice, zatímco druhé filtruje aktivity myši. Třetí vlákno můžete aktualizovat obrazovku na základě dat z vláken myši a klávesnice. Jiná vlákna ve stejnou dobu, můžete získat přístup k souborům disku nebo získat data z komunikační port.  
+Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny. Měli byste zvážit použití více než jedno vlákno, pokud aplikace potřebuje k provedení drahými operacemi, které by způsobily uživatelského rozhraní pro přestat reagovat.  
   
  S Visual C++, existují dva způsoby, jak program s více vlákny: pomocí knihovny Microsoft Foundation Class (MFC) nebo běhové knihovny jazyka C a Win32 API. Informace o vytváření aplikací s více vlákny s knihovnou MFC najdete v tématu [Multithreading s C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md) po přečtení v následujících tématech o multithreading v C.  
   

@@ -1,10 +1,11 @@
 ---
 title: "CImage – třída | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +51,8 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cimage-class"></a>CImage – třída
 `CImage`poskytuje podporu rozšířené rastrového obrázku, včetně možnosti spouštění a ukládání bitových kopií ve formátech JPEG, GIF, BMP a Portable Network Graphics (PNG).  
@@ -120,7 +123,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Určuje, zda připojené rastrový obrázek DIB oddíl.|  
 |[CImage::IsIndexed](#isindexed)|Označuje, že barvy rastrového obrázku jsou namapované na indexované palety.|  
 |[CImage::IsNull](#isnull)|Označuje, pokud je momentálně načtených rastrový obrázek zdroje.|  
-|[CImage::IsTransparencySupported](#istransparencysupported)|Určuje, jestli aplikace podporuje transparentní rastrové obrázky a kompilace pro systém Windows 2000 nebo novější.|  
+|[CImage::IsTransparencySupported](#istransparencysupported)|Určuje, jestli aplikace podporuje transparentní bitmapy.|  
 |[CImage::Load](#load)|Načte obrázek ze zadaného souboru.|  
 |[CImage::LoadFromResource](#loadfromresource)|Načte obrázek ze zadaného prostředku.|  
 |[CImage::MaskBlt](#maskblt)|Kombinuje data barvu pro zdrojové a cílové rastrové obrázky, pomocí zadané maska a rastrové operace.|  
@@ -198,17 +201,6 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
   
  Prostřednictvím `CImage`, máte přístup k skutečné bits DIB oddílu. Můžete použít `CImage` objektu kdekoli použil Win32 HBITMAP nebo DIB části.  
-  
-> [!NOTE]
->  Následující `CImage` metody mají omezení na jejich použití:  
-  
-|Metoda|Omezení|  
-|------------|----------------|  
-|[PlgBlt](#plgblt)|Funguje s pouze systému Windows NT 4.0 nebo novější. Nebudou fungovat na aplikace běžící na systému Windows 95/98 nebo novějším.|  
-|[MaskBlt](#maskblt)|Funguje s pouze systému Windows NT 4.0 nebo novější. Nebudou fungovat na aplikace běžící na systému Windows 95/98 nebo novějším.|  
-|[AlphaBlend](#alphablend)|Funguje pouze s Windows 2000, Windows 98 a novějších systémech.|  
-|[TransparentBlt](#transparentblt)|Funguje pouze s Windows 2000, Windows 98 a novějších systémech.|  
-|[Kreslení](#draw)|Podporuje průhlednost pouze s Windows 2000, Windows 98 a novějších systémech.|  
   
  Můžete použít `CImage` z MFC nebo ATL.  
   
@@ -978,7 +970,7 @@ bool IsNull() const throw();
  Tato metoda vrátí hodnotu **True** Pokud rastrový obrázek není aktuálně načíst; jinak hodnota **False**.  
   
 ##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
- Určuje, jestli aplikace podporuje transparentní rastrové obrázky a kompilace pro systém Windows 2000 nebo novější.  
+ Určuje, jestli aplikace podporuje transparentní bitmapy.  
   
 ```
 static BOOL IsTransparencySupported() throw();
@@ -989,8 +981,6 @@ static BOOL IsTransparencySupported() throw();
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je vrácená hodnota nenulové hodnoty a průhlednost je podporováno, volání [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), nebo [kreslení](#draw) zpracuje transparentní barvy.  
-  
- Pokud aplikace zkompilován pro použití s operačními systémy než Windows 2000 nebo Windows 98, tato metoda vždy vrátí 0, a to i v novějších operačních systémech.  
   
 
 ##  <a name="load"></a>CImage::Load  
@@ -1216,7 +1206,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>Poznámky  
  Vzhledem k tomu, že lze vybrat pouze jeden rastrového obrázku v kontextu zařízení současně, je třeba volat `ReleaseDC` pro každé volání [GetDC](#getdc).  
   
-##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>  CImage::ReleaseGDIPlus  
  Uvolní prostředky využívané třídou GDI +.  
   
 ```
@@ -1307,7 +1297,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda selže, pokud pixelů koordinuje leží mimo oblast ořezu vybrané.  
   
-##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>  CImage::SetPixelIndexed  
  Nastaví barvu pixelů na barvu nacházející se v `iIndex` palety barev.  
   
 ```
@@ -1324,7 +1314,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  Index barvy palety barev.  
   
-##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB  
  Nastaví pixel v umístěních určeného *x* a *y* pro barev indikován *r*, *g*, a *b*, červeně, zelená, modrá bitové kopie (RGB).  
   
 ```

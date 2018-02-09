@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,19 +20,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
 - ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
 - ATLSECURITY/ATL::CTokenGroups::LookupSid
-dev_langs: C++
-helpviewer_keywords: CTokenGroups class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups – třída
 Tato třída je obálka pro **TOKEN_GROUPS** struktury.  
@@ -52,7 +56,7 @@ class CTokenGroups
 |Název|Popis|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor|  
-|[CTokenGroups:: ~ CTokenGroups](#dtor)|Destruktor.|  
+|[CTokenGroups::~CTokenGroups](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -75,7 +79,7 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|Operátor přiřazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen všem uživatelům přihlášení systému Windows NT nebo Windows 2000.  
+ [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen všem uživatelům přihlášení systému Windows.  
   
  **CTokenGroups** třída je obálka pro [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura, která obsahuje informace o tokenu přístupu skupiny identifikátory zabezpečení (SID).  
   
@@ -221,7 +225,7 @@ bool LookupSid(
  Vrátí hodnotu true, pokud `CSid` je nalezena, false jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavení `pdwAttributes` na hodnotu NULL zajištěný potvrzení existenci `CSid` bez přístupu k atributu. Poznamenat, že tato metoda by neměl použít ke kontrole přístupová práva jako v systému Windows 2000 může dojít k nesprávné výsledkům. Aplikace by měly používat místo toho [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) metoda.  
+ Nastavení `pdwAttributes` na hodnotu NULL zajištěný potvrzení existenci `CSid` bez přístupu k atributu. Poznamenat, že tato metoda by neměl použít ke kontrole přístupová práva. Aplikace by měly používat místo toho [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) metoda.  
   
 ##  <a name="operator_eq"></a>CTokenGroups::operator =  
  Operátor přiřazení.  

@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 Systém Windows nabízí celou řadu kreslení nástroje dostupné v kontextech zařízení. Poskytuje pera kreslení čar, štětce výplně vnitřek a písem pro kreslení textu. Knihovna MFC poskytuje třídy grafických objektů ekvivalentní nástrojů pro kreslení v systému Windows. Následující tabulka uvádí dostupných tříd a ekvivalentní grafika Windows typy popisovač rozhraní GDI zařízení.  
   
 > [!NOTE]
->  Rozhraní GDI + je součástí systému Windows XP a je k dispozici jako redistributable pro systém Windows NT 4.0 SP6, Windows 2000, Windows 98 a Windows Me. Si můžete stáhnout nejnovější distribuovatelné [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). Další informace najdete v dokumentaci rozhraní GDI + SDK na: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Další informace najdete v dokumentaci rozhraní GDI + SDK na: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Tento článek vysvětluje použití tyto třídy grafických objektů:  
   
@@ -111,8 +114,6 @@ Systém Windows nabízí celou řadu kreslení nástroje dostupné v kontextech 
 -   [Výběr grafického objektu v kontextu zařízení](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [Kontexty zařízení](../mfc/device-contexts.md)  
-  
--   [Omezení služby CImage ve starších operačních systémech](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Objekty oken](../mfc/window-objects.md)

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>Identifikační číslo volané stanice – třída
 Tato třída je obálka pro `SID` struktury (security identifier).  
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  Pokud žádný název účtu pro `SID` najdete, **domény** vrátí do domény jako prázdný řetězec. Tato situace může nastat, pokud časový limit sítě brání hledání názvu této metody. Může také nastat pro identifikátory zabezpečení bez odpovídající názvu účtu, jako je například přihlášení k `SID` identifikující relace přihlášení.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Testy `SID` předpony (security identifier) rovnosti.  
   
 ```
@@ -487,7 +491,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `SID` struktura jako řetězec ve formátu, který je vhodný pro zobrazení, úložiště a přenosu. Ekvivalentní [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), i když tato funkce je pouze k dispozici v systému Windows 2000 nebo novější a proto je emulovaných pro starší operační systémy.  
+ Vrátí `SID` struktura jako řetězec ve formátu, který je vhodný pro zobrazení, úložiště a přenosu. Ekvivalentní [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
 ##  <a name="sidnameuse"></a>CSid::SidNameUse  
  Vrátí popis stavu `CSid` objektu.  

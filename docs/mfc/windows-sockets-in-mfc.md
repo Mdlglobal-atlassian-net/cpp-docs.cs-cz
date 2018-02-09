@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - WINSOCK.DLL
 - sockets [MFC], programming models
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdade770449b7ae5db9db9a170198b81cbeaf970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows sockets v prostředí MFC
 > [!NOTE]
@@ -51,9 +54,6 @@ ms.lasthandoff: 12/21/2017
   
 ##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows Sockets – knihovny DLL  
  Windows Sockets dynamické knihovny (DLL), zadejte operační systémy Microsoft Windows. Visual C++ poskytuje odpovídající hlavičkových souborů a knihoven a specifikace rozhraní Windows Sockets.  
-  
-> [!NOTE]
->  V systému Windows NT a Windows 2000 je podpora rozhraní Windows Sockets 16bitové aplikace založená na rozhraní WINSOCK. KNIHOVNY DLL. Pro 32bitové aplikace podpora je v WSOCK32. KNIHOVNY DLL. Poskytuje rozhraní API jsou shodné s tím rozdílem, že 32bitové verze mít parametry rozšířit na 32 bitů. V části Win32 je zadána bezpečný přístup z více vláken.  
   
  Další informace o rozhraní Windows Sockets najdete v tématu:  
   

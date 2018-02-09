@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary a AfxLoadLibrary
 Zpracovává volání [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (nebo [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) explicitně propojit s knihovnou DLL. Pokud funkci úspěšné, mapuje zadané DLL do adresního prostoru volajícího procesu a vrátí popisovač pro knihovnu DLL, kterou lze použít s jinými funkcemi v explicitní propojování – například `GetProcAddress` a `FreeLibrary`.  
@@ -39,7 +43,7 @@ Zpracovává volání [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259
  Pokud systém Windows nemůže načíst knihovnu DLL, můžete proces pokusí o zotavení z chyby. Proces může například upozornit uživatele chyby a požádat uživatele o zadejte jinou cestu ke knihovně DLL.  
   
 > [!IMPORTANT]
->  Pokud je kód pro spuštění v systému Windows NT 4, Windows 2000 nebo Windows XP (před aktualizací SP1), nezapomeňte zadat celou cestu všechny knihovny DLL. V těchto operačních systémech je aktuální adresář vyhledávat nejprve při soubory jsou načteny. Pokud nemáte kvalifikovanou cestu k souboru, soubor, který není zamýšlené může načíst.  
+>  Nezapomeňte zadat úplnou cestu všechny knihovny DLL. Když jsou soubory načteny, prohledají se aktuální adresář nejdřív. Pokud nemáte kvalifikovanou cestu k souboru, soubor, který není zamýšlené může načíst.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
   

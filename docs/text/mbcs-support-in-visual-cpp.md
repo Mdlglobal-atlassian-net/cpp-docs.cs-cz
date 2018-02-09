@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Podpora znakové sady MBCS v jazyku Visual C++
-Když se spustí na znakovou sadou MBCS verzi operačního systému Windows 2000 nebo Windows XP, vývojový systém Visual C++ (včetně integrovaného editoru zdrojového kódu, ladicího programu a nástroje příkazového řádku) se znakovou sadou MBCS, s výjimkou paměť – okno.  
+Při spuštění na znakovou sadou MBCS verzi Windows, vývoj systému Visual C++ (včetně nástroje editor, příkazový řádek a ladicí program integrované zdrojový kód) se znakovou sadou MBCS, s výjimkou paměť – okno.  
   
  Okna paměti neinterpretuje bajtů dat jako znaky znakové sady MBCS, i když je lze interpretovat jako znaky ANSI nebo Unicode. ANSI znaky jsou vždy 1 bajt a znaky znakové sady Unicode mají velikost 2 bajtů. Se znakovou sadou MBCS znaků může být 1 nebo 2 bajty velikost a jejich interpretace závisí na znakovou stránku, která se používá. Z toho důvodu je pro okno paměti spolehlivě zobrazit znaky znakové sady MBCS. Okna paměti nemůže vědět, který bajt je spuštění znaku. Vývojář můžete zobrazit hodnoty bajtů v okně paměti a vyhledat hodnotu v tabulkách určení reprezentace znaku. To je možné, protože vývojář zná počáteční adresa řetězec v závislosti na zdrojový kód.  
   

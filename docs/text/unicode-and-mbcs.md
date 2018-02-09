@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode a MBCS
 Knihovna Microsoft Foundation třídy (MFC), běhové knihovny jazyka C pro Visual C++ a vývojové prostředí Visual C++ jsou povolené pomůže mezinárodní programování. Poskytují:  
   
--   Podpora standardu Unicode v systému Windows 2000 (dříve systému Windows NT). Znaková sada Unicode je aktuálním standardem a měla by být použita vždy, kdy je to možné.  
+-   Podpora standardu Unicode v systému Windows. Znaková sada Unicode je aktuálním standardem a měla by být použita vždy, kdy je to možné.  
   
      Unicode je znak 16bitové kódování, poskytující dostatek kódování pro všechny jazyky. Všechny znaky ASCII jsou součástí Unicode jako rozšířené znaky.  
-  
-    > [!NOTE]
-    >  Standardu Unicode není podporována v systému Windows 95, Windows 98 nebo Windows Millennium Edition.  
   
 -   Podpora pro formulář vícebajtové znakové sady (MBCS) názvem dvoubajtové znakové sady (DBCS) na všech platformách.  
   

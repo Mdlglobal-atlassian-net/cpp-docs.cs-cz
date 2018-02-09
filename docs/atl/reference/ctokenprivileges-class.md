@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges – třída
 Tato třída je obálka pro **TOKEN_PRIVILEGES** struktury.  
@@ -54,7 +58,7 @@ class CTokenPrivileges
 |Název|Popis|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Konstruktor|  
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Destruktor.|  
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operátor přiřazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen všem uživatelům přihlášení systému Windows NT nebo Windows 2000.  
+ [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen všem uživatelům přihlášení systému Windows.  
   
  Přístupový token se používá k popisu různých udělena všem uživatelům oprávnění zabezpečení. Oprávnění se skládá z 64bitové číslo názvem místně jedinečný identifikátor ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) a řetězce popisovače.  
   
@@ -155,7 +159,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  Vrátí hodnotu PRAVDA, pokud oprávnění byla úspěšně odstraněna, false jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je užitečná jako nástroj pro vytváření tokenů s omezeným přístupem v systému Windows 2000.  
+ Tato metoda je užitečná jako nástroj pro vytváření tokenů s omezeným přístupem.  
   
 ##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  Odstraní všechna oprávnění z `CTokenPrivileges` objektu tokenu přístupu.  

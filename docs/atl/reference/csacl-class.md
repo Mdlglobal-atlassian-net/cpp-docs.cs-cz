@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>CSacl – třída
 Tato třída je obálku pro strukturu SACL (seznam řízení přístupu systému).  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |Název|Popis|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Konstruktor|  
-|[CSacl:: ~ CSacl](#dtor)|Destruktor.|  
+|[CSacl::~CSacl](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -129,7 +133,7 @@ bool AddAuditAce(
  Vrátí **true** Pokud je položka řízení přístupu je přidán do `CSacl` objekt, **false** při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- A `CSacl` objekt obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení. Tato metoda přidá ACE, na `CSacl` objektu. O druhou podobu `AddAuditAce` jenom je k dispozici v systému Windows 2000 nebo novější.  
+ A `CSacl` objekt obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení. Tato metoda přidá ACE, na `CSacl` objektu.  
   
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
@@ -208,7 +212,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>Viz také  
  [CAcl – třída](../../atl/reference/cacl-class.md)   
- [Seznamy ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Přehled třídy](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialog::PrintRange
 - AFXDLGS/CPrintDialog::PrintSelection
 - AFXDLGS/CPrintDialog::m_pd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialog [MFC], CPrintDialog
 - CPrintDialog [MFC], CreatePrinterDC
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 653cdc4580862288d98600603c1b45526ea38675
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog – třída
 Zapouzdří služeb poskytovaných běžné dialogové okno pro tisk.  
@@ -105,7 +108,7 @@ class CPrintDialog : public CCommonDialog
  Společná dialogová tiskové poskytují snadný způsob, jak implementovat dialogová okna Nastavení tisku a tisk v souladu s normami systému Windows.  
   
 > [!NOTE]
->  `CPrintDialogEx` Třída zapouzdří služeb poskytovaných vlastností Tisk systému Windows 2000. Další informace najdete v článku [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Přehled.  
+>  `CPrintDialogEx` Třída zapouzdří služeb poskytovaných vlastností Tisk systému Windows. Další informace najdete v článku [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Přehled.  
   
  `CPrintDialog`pro funkci oprávněni u [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), který slouží k poskytnout běžné dialogové okno pro obě tisku nastavení a nastavení stránky.  
   
@@ -253,7 +256,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView#107](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPrintDialog::GetDeviceName  
  Načte název zařízení aktuálně vybrané tiskárny.  
   
 ```  
@@ -287,7 +290,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName  
  Načte název aktuálně vybraného ovladače tiskárny.  
   
 ```  
@@ -367,7 +370,7 @@ int GetToPage() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>  CPrintDialog::m_pd  
  Struktura, jejíž členové uložení charakteristiky objektu dialogového okna.  
   
 ```  

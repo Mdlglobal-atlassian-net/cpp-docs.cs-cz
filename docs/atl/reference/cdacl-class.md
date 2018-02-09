@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,19 +17,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CDacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cdacl-class"></a>CDacl – třída
 Tato třída je obálku pro strukturu DACL (seznam volitelného řízení přístupu).  
@@ -49,7 +53,7 @@ class CDacl : public CAcl
 |Název|Popis|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|Konstruktor|  
-|[CDacl:: ~ CDacl](#dtor)|Destruktor.|  
+|[CDacl::~CDacl](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -123,9 +127,6 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Poznámky  
  A `CDacl` objekt obsahuje nula nebo více ACE (položky řízení přístupu), které identifikují uživatele a skupiny, kteří mohou přistupovat k tomuto objektu. Tato metoda přidá ACE položky, která umožňuje přístup k `CDacl` objektu.  
   
-> [!NOTE]
->  O druhou podobu `AddAllowedAce` jenom je k dispozici v systému Windows 2000 nebo novější.  
-  
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
 ##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
@@ -167,9 +168,6 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Poznámky  
  A `CDacl` objekt obsahuje nula nebo více ACE (položky řízení přístupu), které identifikují uživatele a skupiny, kteří mohou přistupovat k tomuto objektu. Tato metoda přidá ACE, které zakazuje přístup `CDacl` objektu.  
   
-> [!NOTE]
->  O druhou podobu `AddDeniedAce` jenom je k dispozici v systému Windows 2000 nebo novější.  
-  
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
 ##  <a name="cdacl"></a>CDacl::CDacl  
@@ -187,7 +185,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Poznámky  
  `CDacl` Objekt můžete volitelně vytvořit pomocí existující **seznamu ACL** struktura. Je důležité si uvědomit pouze DACL (seznam volitelného řízení přístupu), a ne SACL (seznam řízení přístupu systému), mají být předány jako tento parametr. V sestavení pro ladění předávání SACL způsobí, že vyhodnocení. V sestavení pro vydání předávání SACL způsobí, že položky řízení přístupu (položky řízení přístupu) v seznamu ACL, který se má ignorovat a dojde k žádné chybě.  
   
-##  <a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>  CDacl::~CDacl  
  Destruktor.  
   
 ```
@@ -251,7 +249,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
  [CAcl – třída](../../atl/reference/cacl-class.md)   
- [Seznamy ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Přehled třídy](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

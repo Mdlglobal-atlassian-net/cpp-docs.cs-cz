@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,7 +27,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialogEx::PrintRange
 - AFXDLGS/CPrintDialogEx::PrintSelection
 - AFXDLGS/CPrintDialogEx::m_pdex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialogEx [MFC], CPrintDialogEx
 - CPrintDialogEx [MFC], CreatePrinterDC
@@ -45,19 +47,20 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx – třída
-Zapouzdří služeb poskytovaných vlastností Tisk systému Windows 2000.  
+Zapouzdří služeb poskytovaných vlastností Tisk systému Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -138,7 +141,7 @@ class CPrintDialogEx : public CCommonDialog
  **Záhlaví:** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
- Vytvoří seznam vlastností Tisk systému Windows 2000.  
+ Vytvoří seznam vlastností Tisk systému Windows.  
   
 ```  
 CPrintDialogEx(
@@ -156,7 +159,7 @@ CPrintDialogEx(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen pouze vytvoří objekt. Použití `DoModal` členské funkce k zobrazení dialogového okna.  
   
-##  <a name="createprinterdc"></a>CPrintDialogEx::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
  Vytvoří z kontextu zařízení tiskárny (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
@@ -172,7 +175,7 @@ HDC CreatePrinterDC();
  Tento řadič domény předpokládá se, že aktuální tiskárny řadiče domény a všechny další dříve získány tiskárny, řadiče domény musí být odstraněny. Tato funkce se dá volat a výsledný řadič domény použít bez někdy zobrazení dialogového okna Tisk.  
   
 ##  <a name="domodal"></a>CPrintDialogEx::DoModal  
- Volání této funkce můžete zobrazit seznam vlastností systému Windows 2000 běžné tisku a povolit uživateli vybrat různé možnosti tisku, jako je například počet kopií, rozsahu stránek, a zda mají být tříděny kopie.  
+ Volání této funkce můžete zobrazit seznam vlastností Tisk systému Windows a umožní uživateli vybrat různé možnosti tisku, jako je například počet kopií, rozsahu stránek, a zda mají být tříděny kopie.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -215,7 +218,7 @@ BOOL GetDefaults();
   
  Pokud **PD_RETURNDC** nastavený příznak, tato funkce nebude vrátit pouze **hDevNames je** a **hDevMode** (umístěné v **m_pdex.hDevNames** a **m_pdex.hDevMode**) volajícího, ale také vrátí tiskárnu řadiče domény v **m_pdex.hDC**. Zodpovídá volající odstranit tiskárny řadiče domény a volání Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkce na obslužné rutiny pro zpracování po dokončení se `CPrintDialogEx` objektu.  
   
-##  <a name="getdevicename"></a>CPrintDialogEx::GetDeviceName  
+##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName  
  Volání této funkce po volání [DoModal](#domodal) získávání názvu aktuálně vybrané tiskárny, nebo po volání [GetDefaults](#getdefaults) načíst název výchozí tiskárny.  
   
 ```  
@@ -238,7 +241,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Návratová hodnota  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) datová struktura, která obsahuje informace o zařízení inicializace a prostředí ovladače tiskárny. Je třeba odemknout paměť provedenou tuto strukturu s Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkce, která je popsána v sadě Windows SDK.  
   
-##  <a name="getdrivername"></a>CPrintDialogEx::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
  Volání této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název definované systémem ovladače zařízení.  
   
 ```  
@@ -261,7 +264,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Název portu aktuálně vybrané tiskárny.  
   
-##  <a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC  
  Vrátí popisovač kontextu zařízení tiskárny.  
   
 ```  
@@ -274,7 +277,7 @@ HDC GetPrinterDC() const;
 ### <a name="remarks"></a>Poznámky  
  Je třeba volat Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkce můžete odstranit kontextu zařízení, když jste hotovi jeho použití.  
   
-##  <a name="m_pdex"></a>CPrintDialogEx::m_pdex  
+##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
  Struktura PRINTDLGEX, jejíž členové uložení charakteristiky objektu dialogového okna.  
   
 ```  

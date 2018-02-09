@@ -531,7 +531,6 @@
 ##### [Grafické objekty](graphic-objects.md)
 ###### [Jednofázová a dvoufázová konstrukce objektů](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Výběr grafického objektu v kontextu zařízení](selecting-a-graphic-object-into-a-device-context.md)
-###### [Omezení služby CImage ve starších operačních systémech](cimage-limitations-with-earlier-operating-systems.md)
 #### [Okna s rámečkem](frame-windows.md)
 ##### [Třídy oken s rámečkem](frame-window-classes.md)
 ###### [Třídy oken s rámečkem vytvořené průvodcem aplikací](frame-window-classes-created-by-the-application-wizard.md)
