@@ -1,44 +1,50 @@
 ---
 title: noalias | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
-**Konkrétní Microsoft**
+**Microsoft Specific**
 
 `noalias`znamená, že volání funkce upravit nebo odkazovat viditelné globální stav a pouze upraví paměti ukazuje *přímo* parametry ukazatele (první úrovně indirections).
 
 Pokud je funkce označena jako `noalias`, optimalizátor může předpokládat, že kromě parametrů samotných jsou odkazována pouze nepřímá odkazování parametrů ukazatele nebo jsou upraveny uvnitř funkce. Stav globální viditelnosti je sada všech dat, která nejsou definována nebo odkazována mimo rozsah kompilace a jejich adresa není přebrána. Kompilace obor je všechny zdrojové soubory ([/ltgc (vytváření kódu v době propojování)](../build/reference/ltcg-link-time-code-generation.md) sestavení) nebo jeden zdrojový soubor (jinou hodnotu než**/ltgc** sestavení).
 
+`noalias` Poznámky platí jenom v rámci obsah opatřen poznámkami funkce. Označení funkce jako `__declspec(noalias)` nemá vliv aliasy ukazatele vráceným funkcí.
+
+Další poznámky, která může ovlivnit aliasy, najdete v části [__declspec(restrict)](../cpp/restrict.md).
+
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `__declspec(restrict)` a `__declspec(noalias)`. Za normálních okolností paměti vrácená z `malloc` je `restrict` vzhledem k tomu, že jsou správně dekorované CRT hlavičky.
+Následující příklad ukazuje použití `__declspec(noalias)`.
 
-Ale v tomto příkladu následující ukazatele `mempool` a `memptr` jsou globální, takže kompilátor má záruka, že velikost paměti není v souladu aliasy. Upravení funkcí, které vracejí ukazatele s `__declspec(restrict)`, informuje kompilátor, že paměť, na níž je odkazováno návratovou hodnotou, není aliasována.
-
-Upravení funkce, která v tomto příkladu přistupuje do paměti pomocí `__declspec(noalias)`, sděluje kompilátoru, že se tato funkce neovlivňuje s globálním stavem, s výjimkou ukazatelů jejího seznamu parametrů.
+Když funkce `multiply` , přistupuje paměti je poznámkou `__declspec(noalias)`, říká kompilátoru tuto funkci nelze změnit stav globální kromě prostřednictvím ukazatele ve svém seznamu parametr.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ Upravení funkce, která v tomto příkladu přistupuje do paměti pomocí `__de
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)  
-[Klíčová slova](../cpp/keywords-cpp.md)
+[Klíčová slova](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
