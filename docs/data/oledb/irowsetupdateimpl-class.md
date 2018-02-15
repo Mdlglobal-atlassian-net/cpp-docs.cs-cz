@@ -4,38 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36282ea38922656484b208f3215c881f8ed8cf34
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
 Implementace šablony technologie OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) rozhraní.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template <  
    class T,   
    class Storage,   
@@ -43,13 +45,13 @@ template <
    class RowClass = CSimpleRow,   
    class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
 >  
+
 class IRowsetUpdateImpl : public IRowsetChangeImpl<  
    T,   
    Storage,   
    IRowsetUpdate,   
    RowClass,   
-   MapClass  
->  
+   MapClass>  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -74,23 +76,23 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 |||  
 |-|-|  
-|[SetData –](../../data/oledb/irowsetupdateimpl-setdata.md)|Nastaví hodnoty dat v jedné nebo více sloupců.|  
+|[SetData](../../data/oledb/irowsetupdateimpl-setdata.md)|Nastaví hodnoty dat v jedné nebo více sloupců.|  
   
 ### <a name="interface-methods-used-with-irowsetupdate"></a>Metody rozhraní (používá se s IRowsetUpdate)  
   
 |||  
 |-|-|  
-|[Getoriginaldata –](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Získá data naposledy přenášeny do nebo získat ze zdroje dat, ignoruje změny čekající na zpracování.|  
-|[Getpendingrows –](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Vrátí seznam hodnot řádků s čekajícími změnami.|  
-|[GetRowStatus –](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Vrátí stav zadané řádky.|  
-|[Vrácení zpět](../../data/oledb/irowsetupdateimpl-undo.md)|Zruší všechny změny na řádek od posledního načtení nebo aktualizace.|  
+|[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Získá data naposledy přenášeny do nebo získat ze zdroje dat, ignoruje změny čekající na zpracování.|  
+|[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Vrátí seznam hodnot řádků s čekajícími změnami.|  
+|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Vrátí stav zadané řádky.|  
+|[vrácení zpět](../../data/oledb/irowsetupdateimpl-undo.md)|Zruší všechny změny na řádek od posledního načtení nebo aktualizace.|  
 |[Aktualizace](../../data/oledb/irowsetupdateimpl-update.md)|Přenáší všechny změny na řádek od posledního načtení nebo aktualizace.|  
   
 ### <a name="implementation-methods-callback"></a>Implementace metody (zpětného volání)  
   
 |||  
 |-|-|  
-|[IsUpdateAllowed –](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Používá k ověření zabezpečení, integritu, a tak dále před povolením aktualizace.|  
+|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Používá k ověření zabezpečení, integritu, a tak dále před povolením aktualizace.|  
   
 ### <a name="data-members"></a>Datové členy  
   
@@ -101,7 +103,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="remarks"></a>Poznámky  
  Doporučujeme nejprve číst a pochopit v dokumentaci k [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), protože všechno popsané existuje platí i zde. Doporučujeme přečíst kapitoly 6 *referenční příručka programátora technologie OLE DB* na nastavení data.  
   
- `IRowsetUpdateImpl`implementuje OLE DB `IRowsetUpdate` rozhraní, která umožňuje příjemci sdělovat změny provedené s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.  
+ `IRowsetUpdateImpl` implementuje OLE DB `IRowsetUpdate` rozhraní, která umožňuje příjemci sdělovat změny provedené s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.  
   
 > [!IMPORTANT]
 >  Důrazně doporučujeme, abyste si přečetli následující dokumentace před pokusem o implementovat poskytovatele:  

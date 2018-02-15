@@ -1,7 +1,8 @@
 ---
 title: "Kompilátoru C4800 upozornění prostřednictvím C5999 | Microsoft Docs"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4806
@@ -21,6 +22,8 @@ f1_keywords:
 - C4840
 - C4841
 - C4842
+- C4843
+- C4844
 - C4872
 - C4880
 - C4881
@@ -92,19 +95,27 @@ f1_keywords:
 - C5036
 - C5037
 - C5038
-dev_langs: C++
+- C5039
+- C5040
+- C5041
+- C5042
+- C5043
+- C5044
+dev_langs:
+- C++
 ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6f3c9a15c61a859564bb5613a3b8059cb011ca80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Kompilátoru C4800 upozornění prostřednictvím C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Compiler Warnings C4800 Through C5999
 
 Články v této části dokumentace vysvětlují podmnožinu zprávy upozornění, které jsou generované kompilátorem.
 
@@ -114,85 +125,87 @@ ms.lasthandoff: 12/21/2017
 
 |Upozornění|Zpráva|
 |-------------|-------------|
-|[Upozornění kompilátoru (úroveň 3) C4800](compiler-warning-level-3-c4800.md)|'type': vynucení hodnoty bool: true, nebo "Nepravda" (upozornění výkonu)|
-|[Upozornění kompilátoru (úroveň 1) C4803](compiler-warning-level-1-c4803.md)|"metody": metoda pro vyvolání obsahuje třídu jiného úložiště od události, 'událost'|
-|[Upozornění kompilátoru (úroveň 1) C4804](compiler-warning-level-1-c4804.md)|'operace': unsafe použití typu, bool, v operaci|
-|[Upozornění kompilátoru (úroveň 1) C4805](compiler-warning-level-1-c4805.md)|'operace': unsafe směs typu "typ" a typu "typ" v operaci|
-|Upozornění kompilátoru (úroveň 1) C4806|'operace': nebezpečné operace: žádná hodnota typu "typ" povýšit na typ "typ" může rovnat dané konstanta|
-|Upozornění kompilátoru (úroveň 1) C4807|'operace': unsafe směs typu "typ" a podepsaný bitová pole typu "typ"|
-|Upozornění kompilátoru (úroveň 1) C4808|případ 'Hodnota' není platná hodnota pro podmínku přepínač typu 'bool.|
+|[Upozornění kompilátoru (úroveň 3) C4800](compiler-warning-level-3-c4800.md)|'*typ*': vynucení hodnoty bool: true, nebo "Nepravda" (upozornění výkonu)|
+|[Upozornění kompilátoru (úroveň 1) C4803](compiler-warning-level-1-c4803.md)|'*metoda*': metoda pro vyvolání obsahuje třídu jiného úložiště od události, se*událostí*'|
+|[Upozornění kompilátoru (úroveň 1) C4804](compiler-warning-level-1-c4804.md)|'*operace*': unsafe použití typu, bool, v operaci|
+|[Upozornění kompilátoru (úroveň 1) C4805](compiler-warning-level-1-c4805.md)|'*operace*': unsafe kombinaci typu '*type1*"a typ"*type2*' v operaci|
+|Upozornění kompilátoru (úroveň 1) C4806|'*operace*': nebezpečné operace: žádná hodnota typu '*type1*"propagovaných na typ"*type2*se může rovnat dané konstanta|
+|Upozornění kompilátoru (úroveň 1) C4807|'*operace*': unsafe kombinaci typu '*type1*'a podepsaný bitová pole typu'*type2*.|
+|Upozornění kompilátoru (úroveň 1) C4808|případ '*hodnotu*' není platná hodnota pro podmínku přepínač typu 'bool.|
 |Upozornění kompilátoru (úroveň 1) C4809|příkaz Switch má popisek redundantní "default"; jsou uvedeny všechny možné 'případu, popisky|
 |Upozornění kompilátoru (úroveň 1) C4810|Hodnota – Direktiva pragma pack(show) == n|
 |Upozornění kompilátoru (úroveň 1) C4811|Hodnota – Direktiva pragma odpovídat (forScope, zobrazit) == – hodnota|
-|Upozornění kompilátoru (úroveň 1) C4812|zastaralé deklarace styl: místo toho použijte 'new_syntax.|
-|Upozornění kompilátoru (úroveň 1) C4813|'function': funkce friend místní třídy musí mít bylo dříve deklarované|
-|Upozornění kompilátoru (úroveň 4) C4816|'param': parametr má nulovou velikostí pole, která bude zkrácen (Pokud je objekt předán odkazem)|
-|Upozornění kompilátoru (úroveň 1) C4817|"člen": Neplatné použití '.' pro přístup k tomuto členu; nahradí kompilátoru '->.|
+|Upozornění kompilátoru (úroveň 1) C4812|zastaralé deklarace styl: použijte '*new_syntax*' místo toho|
+|Upozornění kompilátoru (úroveň 1) C4813|'*funkce*': funkce friend místní třídy musí mít bylo dříve deklarované|
+|Upozornění kompilátoru (úroveň 4) C4816|'*param*': parametr má nulovou velikostí pole, která bude zkrácen (Pokud je objekt předán odkazem)|
+|Upozornění kompilátoru (úroveň 1) C4817|'*člen*': Neplatné použití '.' pro přístup k tomuto členu; kompilátoru nahradí '->.|
 |[Upozornění kompilátoru (úroveň 1) C4819](compiler-warning-level-1-c4819.md)|Tento soubor obsahuje znak, který není možné vyjádřit v aktuální znakové stránky (number). Uložte soubor ve formátu Unicode, aby se zabránilo ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 4) C4820](compiler-warning-level-4-c4820.md)|odsazení 'bytes' bajtů přidáno po vytvoření 'member_name'|
+|[Upozornění kompilátoru (úroveň 4) C4820](compiler-warning-level-4-c4820.md)|'*bajtů*'bajtů odsazení přidat po konstrukce'*member_name*.|
 |[Upozornění kompilátoru (úroveň 1) C4821](compiler-warning-level-1-c4821.md)|Nelze určit typ kódování Unicode, uložte soubor s podpisem (BOM)|
 |Upozornění kompilátoru (úroveň 1) C4822|'člen function': místní třídy – členská funkce nemá text|
-|[Upozornění kompilátoru (úroveň 3) C4823](compiler-warning-level-3-c4823.md)|'function': používá přídavných ukazatelů ale unwind sémantiku nejsou povoleny. Zvažte použití/EHa|
+|[Upozornění kompilátoru (úroveň 3) C4823](compiler-warning-level-3-c4823.md)|'*funkce*': používá přídavných ukazatelů ale unwind sémantiku nejsou povoleny. Zvažte použití/EHa|
 |Upozornění kompilátoru (úroveň 2) C4826|Převod z '*type1*'do'*type2*' je rozšířeny. To může způsobit neočekávané modul runtime chování.|
 |Upozornění kompilátoru (úroveň 3) C4827|Veřejná metoda 'ToString' s 0 parametry by měl být označen jako virtuální a přepsání|
 |[Upozornění kompilátoru (úroveň 1) C4829](compiler-warning-level-1-c4829.md)|Může být nesprávné parametry hlavní funkce. Vezměte v úvahu, int hlavní (Platform::Array\<Platform::String ^ > ^ argv –).|
-|[Upozornění kompilátoru (úroveň 1) C4835](compiler-warning-level-1-c4835.md)|"proměnné": inicializátoru pro exportovaná data se nespustí, dokud spravovaný kód je nejdřív provést v sestavení hostitele|
+|[Upozornění kompilátoru (úroveň 1) C4835](compiler-warning-level-1-c4835.md)|'*proměnná*': inicializátoru pro exportovaná data se nespustí, dokud spravovaný kód je nejdřív provést v sestavení hostitele|
 |Upozornění kompilátoru (úroveň 4) C4837|trigraph zjistil: '?? *znak*"nahradit"*znak*.|
-|[Upozornění kompilátoru (úroveň 1) C4838](compiler-warning-level-1-c4838.md)|Převod z 'type_1' do 'type_2' vyžaduje zužující převod|
+|[Upozornění kompilátoru (úroveň 1) C4838](compiler-warning-level-1-c4838.md)|Převod z '*type_1*'do'*type_2*se vyžaduje zužující převod|
 |[Upozornění kompilátoru (úroveň 3) C4839](compiler-warning-level-3-c4839.md)|nestandardní použití třídy se*typu*' jako argument funkce variadická|
 |Upozornění kompilátoru (úroveň 4) C4840|Použijte jiný přenositelností třídy '*typu*' jako argument funkce variadická|
 |Upozornění kompilátoru (úroveň 4) C4841|nestandardní rozšíření používané: označení složené člen použít v offsetof –|
 |Upozornění kompilátoru (úroveň 4) C4842|výsledek offsetof "–", které se použijí k typu pomocí vícenásobná dědičnost nemusí být konzistentní mezi verzemi kompilátoru|
-|[C4867 kompilátoru upozornění (chyba)](compiler-warning-c4867.md)|'function': volání funkce chybí seznam argumentů; Vytvořte ukazatel na člena pomocí 'volání.|
+|Upozornění C4843 kompilátoru|'*type1*': Obslužná rutina výjimky z odkazu na typ pole nebo funkce nedostupný, použijte '*type2*' místo toho|
+|Upozornění C4844 kompilátoru|"export modulu *module_name*;' je nyní upřednostňované syntaxe deklarace rozhraní modulu|
+|[C4867 kompilátoru upozornění (chyba)](compiler-warning-c4867.md)|'*funkce*': chybí seznam argumentů volání funkce, pomocí '*volání*, vytvořte ukazatel na člena|
 |[C4868 kompilátoru upozornění (úroveň 4)](compiler-warning-c4868.md)|'_soubor_(*line_number*), kompilátor nemusí vynutit pořadí vyhodnocení zleva doprava v seznamu braced inicializace|
 |Upozornění kompilátoru (úroveň 2) C4872|plovoucí bodu dělení nulou zjistil při kompilování graf volání pro concurrency::parallel_for_each v: '*umístění*.|
-|Upozornění kompilátoru (úroveň 1) C4880|přetypování z 'const type_1' do 'type_2': přetypování rychle constness z ukazatel nebo odkaz může vést k nedefinované chování v amp omezený funkci|
-|Upozornění kompilátoru (úroveň 4) C4881|v konstruktoru nebo destruktoru nebude možné volat pro proměnnou tile_static "proměnné"|
+|Upozornění kompilátoru (úroveň 1) C4880|přetypování z ' const *type_1*'do'*type_2*': přetypování rychle constness z ukazatel nebo odkaz může vést k nedefinované chování v amp omezený funkci|
+|Upozornění kompilátoru (úroveň 4) C4881|v konstruktoru nebo destruktoru nebude možné volat pro proměnnou tile_static '*proměnná*.|
 |Upozornění kompilátoru (úroveň 1) C4882|předání functors s operátory volání bez const concurrency::parallel_for_each je zastaralý.|
-|Upozornění C4900 kompilátoru|IL neshody mezi 'tool1' verze 'version1' a 'tool2' verze 'version2.|
+|Upozornění C4900 kompilátoru|IL neshody mezi '*tool1*'version'*version1*'a'*tool2*'version'*version2*.|
 |[Upozornění kompilátoru (úroveň 1) C4905](compiler-warning-level-1-c4905.md)|široký řetězcový literál přetypován na 'LPSTR'|
 |[Upozornění kompilátoru (úroveň 1) C4906](compiler-warning-level-1-c4906.md)|řetězcový literál přetypován na 'LPWSTR'|
 |Upozornění kompilátoru (úroveň 1) C4910|'\<identifikátor >: '__declspec(dllexport)' a 'extern, jsou nekompatibilní na explicitní vytvoření instance|
-|Upozornění kompilátoru (úroveň 1) C4912|'atribut': atribut má undefined chování na vnořené UDT|
+|Upozornění kompilátoru (úroveň 1) C4912|'*atribut*': atribut má undefined chování na vnořené UDT|
 |Upozornění kompilátoru (úroveň 4) C4913|uživatel definované binární operátor ',' existuje, ale žádné přetížení může převést všechny operandy, výchozí integrovanou binární operátor ',' použité|
 |Upozornění kompilátoru (úroveň 1) C4916|aby bylo možné používat dispid '*popis*': je nutné zavést pomocí rozhraní|
-|[Upozornění kompilátoru (úroveň 1) C4917](compiler-warning-level-1-c4917.md)|'deklarátor': identifikátor GUID může být přidružen pouze třídy, rozhraní nebo obor názvů|
-|Upozornění kompilátoru (úroveň 4) C4918|'znak': neplatný znak v seznamu optimalizace – Direktiva pragma|
+|[Upozornění kompilátoru (úroveň 1) C4917](compiler-warning-level-1-c4917.md)|'*deklarátor*': identifikátor GUID může být přidružen pouze třídy, rozhraní nebo obor názvů|
+|Upozornění kompilátoru (úroveň 4) C4918|'*znak*': neplatný znak v seznamu optimalizace – Direktiva pragma|
 |Upozornění kompilátoru (úroveň 1) C4920|member_1 člen výčtu výčtového typu = value_1 ve výčtu výčtu již považovat za member_2 = value_2|
 |Upozornění kompilátoru (úroveň 3) C4921|'*popis*': hodnota atributu '*atribut*' by neměl být určen násobkem|
-|Upozornění kompilátoru (úroveň 1) C4925|"metody": dispinterface metodu nelze volat ze skriptu|
-|Upozornění kompilátoru (úroveň 1) C4926|"identifikátor": symbol je již definován: atributy ignorovat|
+|Upozornění kompilátoru (úroveň 1) C4925|'*metoda*': dispinterface metodu nelze volat ze skriptu|
+|Upozornění kompilátoru (úroveň 1) C4926|'*identifikátor*': symbol je již definován: atributy ignorovat|
 |[Upozornění kompilátoru (úroveň 1) C4927](compiler-warning-level-1-c4927.md)|Neplatný převod; implicitně použilo více než jeden uživatelem definovaný převod|
 |[Upozornění kompilátoru (úroveň 1) C4928](compiler-warning-level-1-c4928.md)|nelegální inicializace kopírování; implicitně použit více než jeden uživatelem definovaný převod|
-|[Upozornění kompilátoru (úroveň 1) C4929](compiler-warning-level-1-c4929.md)|'file': knihovny typů obsahuje sjednocení; ignoruje kvalifikátor 'embedded_idl –.|
-|[Upozornění kompilátoru (úroveň 1) C4930](compiler-warning-level-1-c4930.md)|'prototypu': deklaraci není volaná funkce (byl definici proměnné určené?)|
+|[Upozornění kompilátoru (úroveň 1) C4929](compiler-warning-level-1-c4929.md)|'*souboru*': knihovny typů obsahuje sjednocení; ignoruje kvalifikátor 'embedded_idl –.|
+|[Upozornění kompilátoru (úroveň 1) C4930](compiler-warning-level-1-c4930.md)|'*prototypu*': deklaraci není volaná funkce (byl definici proměnné určené?)|
 |[Upozornění kompilátoru (úroveň 4) C4931](compiler-warning-level-4-c4931.md)|Předpokládáme, že knihovna typů byla sestavena pro ukazatele počtu bitů.|
 |Upozornění kompilátoru (úroveň 4) C4932|__identifier (*identifikátor*) a \__identifier (*identifikátor*) jsou|
 |Upozornění kompilátoru (úroveň 1) C4934|'__delegate(multicast)' je zastaralý, použijte '\__delegate' místo toho|
-|Upozornění kompilátoru (úroveň 1) C4935|specifikátor přístupu sestavení změnil z 'přístup.|
+|Upozornění kompilátoru (úroveň 1) C4935|specifikátor přístupu sestavení změnil z '*přístup*.|
 |Upozornění kompilátoru (úroveň 1, chyba) C4936|Tato __declspec je podporována pouze, když kompilujete s/CLR nebo/CLR: pure|
-|Upozornění kompilátoru (úroveň 4) C4937|'text1' a 'text2, jsou jako argumenty pro "směrnice"|
-|Upozornění kompilátoru (úroveň 4) C4938|'příkaz var': plovoucí redukční proměnnou bod může způsobit nekonzistentní výsledky v rámci /fp: striktní nebo fenv_access – #pragma|
+|Upozornění kompilátoru (úroveň 4) C4937|'*text1*'a'*text2*se neodlišuje jako argumenty pro*– direktiva*.|
+|Upozornění kompilátoru (úroveň 4) C4938|'*var*': plovoucí redukční proměnnou bod může způsobit nekonzistentní výsledky v rámci /fp: striktní nebo fenv_access – #pragma|
 |Upozornění C4939 kompilátoru|#pragma vtordisp je zastaralá a budou odebrány v budoucí verzi Visual C++|
-|Upozornění kompilátoru (úroveň 1) C4944|'symbol': nelze importovat symbol 'assembly1': jako 'symbol' již existuje v aktuálním oboru|
-|[Upozornění kompilátoru (úroveň 1) C4945](compiler-warning-level-1-c4945.md)|'symbol': nelze importovat symbol 'assembly1': jako 'symbol' již byla naimportována ze sestavení 'assembly2'|
-|[Upozornění kompilátoru (úroveň 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast použito mezi souvisejícími třídami: 'class1' a 'class2'|
-|Upozornění kompilátoru (úroveň 1) C4947|'typ nebo člen': označené jako zastaralé|
-|[Upozornění kompilátoru (úroveň 2) C4948](compiler-warning-level-2-c4948.md)|Návratový typ "objekt" neodpovídá poslední parametr typ odpovídající nastavovací metoda|
+|Upozornění kompilátoru (úroveň 1) C4944|'*symbol*': nelze importovat symbol '*assembly1*': jako*symbol*' již existuje v aktuálním oboru|
+|[Upozornění kompilátoru (úroveň 1) C4945](compiler-warning-level-1-c4945.md)|'*symbol*': nelze importovat symbol '*assembly1*': jako*symbol*'již byla naimportována ze sestavení'*assembly2* '|
+|[Upozornění kompilátoru (úroveň 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast – používá se mezi související třídy: '*class1*'a'*class2*.|
+|Upozornění kompilátoru (úroveň 1) C4947|'*typ nebo člen*': označené jako zastaralé|
+|[Upozornění kompilátoru (úroveň 2) C4948](compiler-warning-level-2-c4948.md)|Návratový typ se*přistupujícího objektu*' neodpovídá poslední parametr typ odpovídající nastavovací metoda|
 |[Upozornění kompilátoru (úrovně 1 a 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|direktivy 'spravované' a 'nespravované, dávat smysl jenom v případě, že kompilovat s ' / clr [: možnost].|
-|Upozornění kompilátoru (úroveň 1, chyba) C4950|'typ nebo člen': označené jako zastaralé|
-|Upozornění kompilátoru (úroveň 1) C4951|Po profil, který data nebyla shromážděna, data profilu funkce nepoužívá upraven 'function'.|
-|Upozornění kompilátoru (úroveň 1) C4952|'function': v programu databáze 'pgd_file' nalezena žádná data profilu|
-|Upozornění kompilátoru (úroveň 1) C4953|Po profil, který data nebyla shromážděna, data profilu nepoužívá upraven Inlinee 'function'.|
-|Upozornění C4954 kompilátoru|'function': není profilovaným (obsahuje výraz přepínače __int64)|
-|Upozornění C4955 kompilátoru|'import2': import ignorován; již byla naimportována ze 'import1.|
-|Upozornění kompilátoru (úroveň 1, chyba) C4956|'type': Tento typ není ověřitelný|
-|Upozornění kompilátoru (úroveň 1, chyba) C4957|'přetypovat': explicitní přetypování z 'přetypování z' do 'cast_to' není ověřitelný|
-|Upozornění kompilátoru (úroveň 1, chyba) C4958|'operace': není ověřitelný aritmetika ukazatele|
-|Upozornění kompilátoru (úroveň 1, chyba) C4959|v/CLR: safe nemůže definovat nespravované typu "typ", protože přístup k jeho členy vypočítá neověřitelný kód|
-|Upozornění kompilátoru (úroveň 4) C4960|'function' je příliš dlouhý pro být vytvořený profil|
+|Upozornění kompilátoru (úroveň 1, chyba) C4950|'*typ nebo člen*': označené jako zastaralé|
+|Upozornění kompilátoru (úroveň 1) C4951|'*funkce*' bylo upraveno od data nebyla shromážděna, profil nepoužívá data profilu – funkce|
+|Upozornění kompilátoru (úroveň 1) C4952|'*funkce*': v databázi programu nalezena žádná data profilu se*pgd_file*.|
+|Upozornění kompilátoru (úroveň 1) C4953|Inlinee '*funkce*' bylo upraveno od data nebyla shromážděna, profil data profilu nepoužívá|
+|Upozornění C4954 kompilátoru|'*funkce*': není profilovaným (obsahuje výraz přepínače __int64)|
+|Upozornění C4955 kompilátoru|'*import2*': import ignorován; již byla naimportována ze '*import1*.|
+|Upozornění kompilátoru (úroveň 1, chyba) C4956|'*typ*': Tento typ není ověřitelný|
+|Upozornění kompilátoru (úroveň 1, chyba) C4957|'*přetypování*': explicitní přetypování z '*cast_from*'do'*cast_to*' není ověřitelný|
+|Upozornění kompilátoru (úroveň 1, chyba) C4958|'*operace*': není ověřitelný aritmetika ukazatele|
+|Upozornění kompilátoru (úroveň 1, chyba) C4959|nelze definovat nespravovaný typ '*typu*, v/CLR: safe vzhledem k tomu, že přístup k jeho členy vypočítá neověřitelný kód|
+|Upozornění kompilátoru (úroveň 4) C4960|'*funkce*' je příliš dlouhý pro být vytvořený profil|
 |Upozornění kompilátoru (úroveň 1) C4961|Žádná data profilu se sloučí .pgd souboru, zakázat optimalizace na základě profilu|
-|Upozornění kompilátoru (úroveň 4) C4962|'function': optimalizace na základě profilu zakázán, protože optimalizace způsobily nekonzistenci dat profilu|
+|Upozornění kompilátoru (úroveň 4) C4962|'*funkce*': optimalizace na základě profilu zakázán, protože optimalizace způsobily nekonzistenci dat profilu|
 |Upozornění kompilátoru (úroveň 1) C4963|'*popis*': nalezena žádná data profilu; kompilátoru různé možnosti, které byly používány v instrumentovaného sestavení|
 |[Upozornění kompilátoru (úroveň 1) C4964](compiler-warning-level-1-c4964.md)|Nebyly zadány žádné možnosti optimalizace; informace o profilu nebudou shromažďovány.|
 |[Upozornění kompilátoru (úroveň 1) C4965](compiler-warning-level-1-c4965.md)|implicitní pole celé číslo 0; použít nullptr nebo explicitní přetypování|
@@ -211,9 +224,9 @@ ms.lasthandoff: 12/21/2017
 |Upozornění kompilátoru (úroveň 3) C4990|Warbird: *zpráv*|
 |Upozornění kompilátoru (úroveň 3) C4991|Warbird: funkce '*funkce*' označen jako __forceinline není vložená protože je větší než nadřazené úrovně ochrany inlinee|
 |Upozornění kompilátoru (úroveň 3) C4992|Warbird: funkce '*funkce*' označen jako __forceinline není vložená protože obsahuje vložené sestavení, které nelze chránit|
-|[Upozornění kompilátoru (úroveň 3) C4995](compiler-warning-level-3-c4995.md)|'function': název byl označen jako zastaralý #pragma|
+|[Upozornění kompilátoru (úroveň 3) C4995](compiler-warning-level-3-c4995.md)|'*funkce*': název byl označen jako zastaralý #pragma|
 |[Upozornění kompilátoru (úroveň 3) C4996](compiler-warning-level-3-c4996.md)|'*popis*': *zpráv*|
-|Upozornění kompilátoru (úroveň 1) C4997|'class': Třída typu coclass neimplementuje rozhraní modelu COM nebo pseudorozhraní|
+|Upozornění kompilátoru (úroveň 1) C4997|'*třída*': Třída typu coclass neimplementuje rozhraní modelu COM nebo pseudorozhraní|
 |Upozornění kompilátoru (úroveň 1) C4998|OČEKÁVÁ se nezdařilo: *očekávání*(*hodnotu*)|
 |Upozornění C4999 kompilátoru|Neznámý upozornění Zvolte prosím příkaz se na technickou podporu v nabídce Nápověda Visual C++, nebo otevřít soubor nápovědy se na technickou podporu pro další informace|
 |Upozornění C5022 kompilátoru|'*typ*': více přesunutí konstruktory zadaný|
@@ -232,3 +245,9 @@ ms.lasthandoff: 12/21/2017
 |Upozornění C5035 kompilátoru|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta|
 |Upozornění kompilátoru (úroveň 1) C5036|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.|
 |Upozornění kompilátoru (chyba) C5037|'*– členská funkce*': definici z přesahujících člena třídy šablony nemůže mít výchozí argumenty|
+|Upozornění C5039 kompilátoru|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku.|
+|Upozornění C5040 kompilátoru|specifikace výjimek dynamické jsou platné pouze v C ++ 14 a starší; práce jako s noexcept(false)|
+|Upozornění C5041 kompilátoru|'*definice*':--line definice pro constexpr statických dat člena není potřebné a je zastaralý součástí C ++ 17|
+|Upozornění C5042 kompilátoru|'*deklarace*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odeberte specifikátor 'vložené.|
+|Upozornění C5043 kompilátoru|'*specifikace*': specifikace výjimek neodpovídá předchozí deklarace|
+|Upozornění C5044 kompilátoru|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu, '*cesta*, který neexistuje|

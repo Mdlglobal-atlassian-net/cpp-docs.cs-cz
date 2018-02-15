@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,25 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs: C++
-helpviewer_keywords: task_continuation_context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b78688493bbb8d8bdad0696a7c8fcf467519000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context – třída
-`task_continuation_context` Třída umožňuje určit, kam chcete pokračování spouštění. Je užitečné k použití této třídy z aplikace pro Windows Store. Pro aplikace pro Windows Store kontext provádění úkolů pokračování je určené modulem runtime a nejde konfigurovat.  
+`task_continuation_context` Třída umožňuje určit, kam chcete pokračování spouštění. Je užitečné k použití této třídy z prostředí Windows Runtime aplikace. Pro aplikace Windows Runtime kontext provádění úkolů pokračování je určené modulem runtime a nejde konfigurovat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +49,9 @@ class task_continuation_context : public details::_ContextCallback;
 |Název|Popis|  
 |----------|-----------------|  
 |[get_current_winrt_context](#get_current_winrt_context)|Vrátí objekt úkolů pokračování kontextu, který představuje aktuální kontext winrt přístup z více vláken.|  
-|[use_arbitrary –](#use_arbitrary)|Vytvoří kontext pokračování úlohy, která umožňuje modulu Runtime zvolte kontext spuštění pro pokračování.|  
-|[use_current –](#use_current)|Vrátí objekt úkolů pokračování kontext, který představuje aktuální kontext spuštění.|  
-|[use_default –](#use_default)|Vytvoří výchozí úkolů pokračování kontext.|  
+|[use_arbitrary](#use_arbitrary)|Vytvoří kontext pokračování úlohy, která umožňuje modulu Runtime zvolte kontext spuštění pro pokračování.|  
+|[use_current](#use_current)|Vrátí objekt úkolů pokračování kontext, který představuje aktuální kontext spuštění.|  
+|[use_default](#use_default)|Vytvoří výchozí úkolů pokračování kontext.|  
 |[use_synchronous_execution](#use_synchronous_execution)|Vrátí objekt úkolů pokračování kontext, který představuje kontext synchronní zpracování.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -60,7 +64,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Namespace:** souběžnosti  
 
-## <a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a> get_current_winrt_context
  Vrátí objekt úkolů pokračování kontextu, který představuje aktuální kontext WinRT přístup z více vláken.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -80,7 +84,7 @@ static task_continuation_context get_current_winrt_context();
  Tato metoda je podobná `use_current` metoda, ale je také k dispozici pro nativní kód C++ bez C + +/ CX rozšíření podpory. Je určena pro použití pro pokročilé uživatele zápis C + +/ CX bez ohledu na kód knihovny pro nativní a prostředí Windows Runtime volající. Pokud potřebujete tuto funkci, doporučujeme `use_current` metodu, která je k dispozici pouze C + +/ CX klientů.  
   
   
-##  <a name="use_arbitrary"></a>use_arbitrary – 
+##  <a name="use_arbitrary"></a> use_arbitrary – 
 
  Vytvoří kontext pokračování úlohy, která umožňuje modulu Runtime zvolte kontext spuštění pro pokračování.  
   
@@ -94,11 +98,11 @@ static task_continuation_context use_arbitrary();
 ### <a name="remarks"></a>Poznámky  
  Pokud se používá tento kontext pokračování pokračování spustí v kontextu, které modul runtime rozhodne, i když je předchozí úlohou apartment vědět.  
   
- `use_arbitrary`umožňuje vypnout výchozí chování pro pokračování v úloze objektu apartment vědět vytvořené v STA  
+ `use_arbitrary` umožňuje vypnout výchozí chování pro pokračování v úloze objektu apartment vědět vytvořené v STA  
   
- Tato metoda je pouze k dispozici pro aplikace pro Windows Store.  
+ Tato metoda je pouze k dispozici pro aplikace Windows Runtime.  
   
-##  <a name="use_current"></a>use_current – 
+##  <a name="use_current"></a> use_current – 
 
  Vrátí objekt úkolů pokračování kontext, který představuje aktuální kontext spuštění.  
   
@@ -114,9 +118,9 @@ static task_continuation_context use_current();
   
  Hodnoty vrácené `use_current` slouží k označení modulu runtime, by měl pokračování spouštění v kontextu zaznamenané (STA vs MTA) bez ohledu na to, zda je předchozí úlohou apartment vědět. Izolovaný prostor vědět úloh je úkol, který rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo úlohu, která je následníky takových úloh.  
   
- Tato metoda je pouze k dispozici pro aplikace pro Windows Store.  
+ Tato metoda je pouze k dispozici pro aplikace Windows Runtime.  
   
-##  <a name="use_default"></a>use_default – 
+##  <a name="use_default"></a> use_default – 
 
  Vytvoří výchozí úkolů pokračování kontext.  
   
@@ -128,13 +132,13 @@ static task_continuation_context use_default();
  Výchozí kontext pokračování.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí kontext se používá, pokud nezadáte pokračování kontextu při volání `then` metoda. Ve Windows aplikace pro systém Windows 7 a níže, a také aplikací klasické pracovní plochy v systému Windows 8 a vyšší modul runtime určuje, kde budou spuštěny při pokračování úlohy. Výchozí kontext pokračování pro pokračování v úloze vědět objektu apartment je však v aplikaci Windows Store, nastavení typu apartment kde `then` je volána.  
+ Výchozí kontext se používá, pokud nezadáte pokračování kontextu při volání `then` metoda. Ve Windows aplikace pro systém Windows 7 a níže, a také aplikací klasické pracovní plochy v systému Windows 8 a vyšší modul runtime určuje, kde budou spuštěny při pokračování úlohy. Výchozí kontext pokračování pro pokračování v úloze vědět objektu apartment je však v aplikaci pomocí prostředí Windows Runtime, nastavení typu apartment kde `then` je volána.  
   
  Izolovaný prostor vědět úloh je úkol, který rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo úlohu, která je následníky takových úloh. Proto pokud naplánujete pokračování na objektu apartment vědět úkolu v STA Windows Runtime, pokračování bude vykonán v této STA  
   
  Pokračování na úlohu vědět-objektu apartment bude spuštěn v kontextu, které vybere modul Runtime.  
 
-## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution  
 Vrátí objekt úkolů pokračování kontext, který představuje kontext synchronní zpracování.  
   
 ## <a name="syntax"></a>Syntaxe  

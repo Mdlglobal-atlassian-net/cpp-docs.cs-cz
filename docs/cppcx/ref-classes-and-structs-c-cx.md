@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>REF třídy a struktury (C + +/ CX)
 C + +/ CX podporuje uživatelem definované *ref třídy* a *ref struktury*a uživatelem definovanými *hodnota třídy* a *hodnota struktury*. Tyto datové struktury jsou primární kontejnery, které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité konkrétní pravidla jsou vygenerované jejich obsah, a díky tomu mohou být předán mezi součástmi prostředí Windows Runtime a univerzální platformu Windows aplikace, které jsou zapsány v C++ nebo jiných jazyků.  
@@ -100,7 +101,7 @@ C + +/ CX podporuje uživatelem definované *ref třídy* a *ref struktury*a už
   
  Toto chování je definován, pokud se pokusíte přístup ke členům třídy, která má jeho destruktor spustit; může to způsobit s největší pravděpodobností program, který má havárie. Volání metody `delete t` na typ, který nemá žádný veřejný destruktor nemá žádný vliv. Volání metody `delete this` na typ nebo základní třída, která má známá `private` nebo `protected private` – destruktor v rámci jeho typ hierarchie taky nemá žádný vliv.  
   
- Po deklarování veřejné destruktor kompilátor generuje kód tak, aby ref třída implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metoda. `Platform::IDisposable`je C + +/ CX projekci `Windows::Foundation::IClosable`. Implementovat nikdy explicitně tato rozhraní.  
+ Po deklarování veřejné destruktor kompilátor generuje kód tak, aby ref třída implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metoda. `Platform::IDisposable` je C + +/ CX projekci `Windows::Foundation::IClosable`. Implementovat nikdy explicitně tato rozhraní.  
   
 ## <a name="inheritance"></a>Dědičnost  
  Platform::Object je univerzální základní třídu pro všechny třídy ref. Všechny třídy ref jsou implicitně převést na Platform::Object a můžete přepsat [Object::ToString](../cppcx/platform-object-class.md#tostring). Však model dědičnosti prostředí Windows Runtime nejsou určené jako obecné model dědičnosti; v jazyce C + +/ CX, to znamená, že třídu uživatelem definované veřejné ref nemůže sloužit jako základní třídu.  

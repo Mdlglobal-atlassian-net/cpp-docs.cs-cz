@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-Průvodce vytvoří třídu obsahující jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je generován průvodcem a uvádí všechny soubory v adresáři pomocí **WIN32_FIND_DATA** struktura. `CMyProviderWindowsFile`dědí z **WIN32_FIND_DATA** strukturu:  
+Průvodce vytvoří třídu obsahující jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je generován průvodcem a uvádí všechny soubory v adresáři pomocí **WIN32_FIND_DATA** struktura. `CMyProviderWindowsFile` dědí z **WIN32_FIND_DATA** strukturu:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`je volána [třída uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapu popisující sloupce v sadě řádků zprostředkovatele. Mapování sloupce zprostředkovatele obsahuje jeden záznam pro každé pole v sadě řádků pomocí makra PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadové číslo a posunutí k položce struktury. Položky sloupce zprostředkovatele ve výše uvedeném kódu obsahují posun do **WIN32_FIND_DATA** struktura. Když příjemce volá **IRowset::GetData**, data se přenáší v jedné souvislé vyrovnávací paměti. Namísto provádění aritmetika ukazatele, mapy umožňuje zadat datový člen.  
+ `CMyProviderWindowsFile` je volána [třída uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapu popisující sloupce v sadě řádků zprostředkovatele. Mapování sloupce zprostředkovatele obsahuje jeden záznam pro každé pole v sadě řádků pomocí makra PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadové číslo a posunutí k položce struktury. Položky sloupce zprostředkovatele ve výše uvedeném kódu obsahují posun do **WIN32_FIND_DATA** struktura. Když příjemce volá **IRowset::GetData**, data se přenáší v jedné souvislé vyrovnávací paměti. Namísto provádění aritmetika ukazatele, mapy umožňuje zadat datový člen.  
   
- `CMyProviderRowset` Třída také obsahuje `Execute` metoda. `Execute`je ve skutečnosti co čte data z nativní zdroje. Následující kód ukazuje vygenerované průvodcem `Execute` metoda. Funkce, která používá Win32 **FindFirstFile** a `FindNextFile` rozhraní API pro načtení informací o souborech v adresáři a umístit je instance `CMyProviderWindowsFile` třídy.  
+ `CMyProviderRowset` Třída také obsahuje `Execute` metoda. `Execute` je ve skutečnosti co čte data z nativní zdroje. Následující kód ukazuje vygenerované průvodcem `Execute` metoda. Funkce, která používá Win32 **FindFirstFile** a `FindNextFile` rozhraní API pro načtení informací o souborech v adresáři a umístit je instance `CMyProviderWindowsFile` třídy.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

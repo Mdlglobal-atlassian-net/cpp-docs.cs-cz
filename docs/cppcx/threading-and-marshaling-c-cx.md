@@ -7,23 +7,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: C4451
+ms.topic: language-reference
+f1_keywords:
+- C4451
 helpviewer_keywords:
 - threading issues, C++/CX
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74a00ece1e1853346b88c0340b32911618a9ff24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Dělení na vlákna a zařazování (C + +/ CX)
 V valná většina případů instance tříd prostředí Windows Runtime, jako je standardními objekty C++ je přístupná z libovolného vlákna. Tyto třídy jsou označovány jako "agile". Ale malý počet prostředí Windows Runtime třídy, dodávané se systémem Windows jsou bez agilní a musí být využívány více jako objektů COM než standardními objekty C++. Nemusíte být COM expert používat-agilní třídy, ale nutné vzít v úvahu třídy modelu vláken a její chování zařazování. Tento článek obsahuje základní informace a pokyny pro tyto výjimečných scénářů, ve kterých budete muset používat instanci-agilní třídy.  
@@ -31,9 +33,9 @@ V valná většina případů instance tříd prostředí Windows Runtime, jako 
 ## <a name="threading-model-and-marshaling-behavior"></a>Model vláken a chování zařazování  
  Prostředí Windows Runtime třídy může podporovat souběžných vláken přístup různými způsoby, jak dva atributy, které se použijí k němu:  
   
--   `ThreadingModel`atribut může mít jednu z hodnot – STA, MTA, nebo obojí, podle definice `ThreadingModel` výčtu.  
+-   `ThreadingModel` atribut může mít jednu z hodnot – STA, MTA, nebo obojí, podle definice `ThreadingModel` výčtu.  
   
--   `MarshallingBehavior`atribut může mít jednu z hodnot – agilní, None, nebo Standard podle definice `MarshallingType` výčtu.  
+-   `MarshallingBehavior` atribut může mít jednu z hodnot – agilní, None, nebo Standard podle definice `MarshallingType` výčtu.  
   
  `ThreadingModel` Atribut určuje, kde je třída načtena při aktivaci: pouze v kontextu vláken (STA) uživatelského rozhraní, pouze v kontextu vláken (MTA) pozadí nebo v kontextu vlákna, který vytvoří objekt (oba). `MarshallingBehavior` Hodnoty atributu odkazovat na chování objektu v různých kontextech vláken; ve většině případů nemusíte pochopit tyto hodnoty podrobně.  Třídy, které jsou k dispozici rozhraním API systému Windows, o 90 procent mít `ThreadingModel`= obě a `MarshallingType`= Agile. To znamená, že jejich zpracovat detailech vláken transparentně a efektivně.   Při použití `ref new` vytvořit třídu "agile", nebo můžete volat metody na něm z vlákna vaší hlavní aplikace z jednoho nebo více pracovních vláken.  Jinými slovy, můžete použít třídu agilní – bez ohledu na to, jestli je poskytnut Windows nebo třetí strany – z libovolného místa v kódu. Nemusíte dělat starosti s třídu model vláken nebo chování zařazování.  
   

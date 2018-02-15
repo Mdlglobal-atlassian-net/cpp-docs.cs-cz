@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Postupy: Vytvoření klasické komponenty COM s použitím knihovny WRL
-Windows Runtime C++ šablony knihovny (WRL) můžete použít k vytvoření základní klasické komponenty COM pro použití v aplikacích klasické pracovní plochy, navíc k použití pro [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] aplikace. Vytváření komponenty modelu COM může knihovna šablon C++ Runtime Windows vyžadují méně kódu než ATL. Informace o podmnožinu COM, která podporuje knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
+Windows Runtime C++ šablony knihovny (WRL) můžete použít k vytvoření základní klasické komponenty COM pro použití v aplikacích klasické pracovní plochy, kromě používání pro univerzální platformu Windows (UWP) aplikace. Vytváření komponenty modelu COM může knihovna šablon C++ Runtime Windows vyžadují méně kódu než ATL. Informace o podmnožinu COM, která podporuje knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
  Tento dokument ukazuje, jak vytvořit základní komponenty modelu COM pomocí knihovny šablon jazyka C++ Runtime systému Windows. Přestože je možné použít nasazení mechanismus, který nejlépe vyhovuje vašim potřebám, tento dokument také ukazuje základní způsob, jak zaregistrovat a využívat komponenty modelu COM z aplikace na ploše.  
   
@@ -39,7 +41,7 @@ Windows Runtime C++ šablony knihovny (WRL) můžete použít k vytvoření zák
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  V CalculatorComponent.cpp, zadejte `CalculatorComponent` třídy. `CalculatorComponent` Třída dědí z [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Určuje, že třída odvozená z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) a není [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` je k dispozici pouze [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] součásti aplikace.) `CoCreatableClass` vytvoří objekt pro vytváření pro třídu, která lze použít s funkcemi, jako například [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+5.  V CalculatorComponent.cpp, zadejte `CalculatorComponent` třídy. `CalculatorComponent` Třída dědí z [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Určuje, že třída odvozená z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) a není [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` je k dispozici pouze pro komponenty prostředí Windows Runtime aplikací.) `CoCreatableClass` vytvoří objekt pro vytváření pro třídu, která lze použít s funkcemi, jako například [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

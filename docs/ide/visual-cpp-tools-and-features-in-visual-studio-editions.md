@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Funkcí v edicích sady Visual Studio a nástrojů pro Visual C++
 Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v následujících tabulkách. Znak X v buňce označuje, že je tato funkce není k dispozici. prázdná buňka označuje, že tato funkce není k dispozici. Poznámky v závorkách znamenat, že funkce je k dispozici, ale s omezeným přístupem.  
@@ -31,10 +34,10 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
   
 ||||||  
 |-|-|-|-|-|  
-|Platforma|Visual Studio Express pro Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
+|Platforma|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
 |Windows Desktop||X|X|X|  
 |Univerzální platformu Windows ((telefon, tablet, počítače, Xbox, IoT a HoloLens))|X||X|X|  
-|Windows Store 8.1|||X|X|  
+|Microsoft Store 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,14 +69,14 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |Šablony XAML pro UPW, Windows 8.1, Windows Phone 8.0|X||X|X|  
 |Aplikace Direct3D|X||X|X|  
-|Knihovna DLL (aplikace pro Windows Store)|X||X|X|  
-|Statická knihovna (aplikace pro Windows Store)|X||X|X|  
+|Knihovny DLL (Universal Windows)|X||X|X|  
+|Statické knihovny (Universal Windows)|X||X|X|  
 |Součást prostředí Windows Runtime|X||X|X|  
-|Knihovna testování částí (aplikace pro Windows Store)|X||X|X|  
+|Jednotka testování aplikace (univerzální pro Windows)|X||X|X|  
 |Projekt knihovny ATL|||X|X|  
 |Knihovna tříd (CLR)||X|X|X|  
 |Konzolová aplikace CLR||X|X|X|  
-|Prázdný projekt CLR||X|X|X|  
+|CLR Empty Project||X|X|X|  
 |Vlastní průvodce|||X|X|  
 |Prázdný projekt||X|X|X|  
 |Projektem souboru pravidel||X|X|X|  
@@ -90,7 +93,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |Přírůstkové Linkeru (Link.exe)|X|X|X|X|  
 |Nástroj Údržba programu (Nmake.exe)||X|X|X|  
-|Generátor lib (Lib.exe)|X|X|X|X|  
+|Lib Generator (Lib.exe)|X|X|X|X|  
 |Kompilátor prostředků Windows (Rc.exe)|X|X|X|X|  
 |Prostředek systému Windows pro objekt převaděče (CvtRes.exe)||X|X|X|  
 |Nástroj Údržba informací (BscMake.exe) procházení|X|X|X|X|  
@@ -117,7 +120,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |Využití GPU|X||X|X|  
 |Využití paměti|X||X|X|  
 |Vzdálené ladění|X|X|X|X|  
-|Ladění SQL|||X|X|  
+|SQL Debugging|||X|X|  
 |Statická analýza kódu|Omezené|Omezené|X|X|  
   
 ## <a name="designers-and-editors"></a>Návrháři a editory  

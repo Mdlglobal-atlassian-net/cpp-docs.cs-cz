@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -286,7 +289,7 @@ Microsoft Visual C++ podporuje tyto další předdefinovaná makra.
 
 - **&#95; CPPRTTI** definované jako 1-li [/GR (Povolit Run-Time informace typu)](../build/reference/gr-enable-run-time-type-information.md) – možnost kompilátoru nastavena. Jinak hodnota není definovaná.
 
-- **&#95; CPPUNWIND** definován jako 1, pokud jeden nebo více [/GX (povolení zpracování výjimek)](../build/reference/gx-enable-exception-handling.md), [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), nebo [/EH (Model zpracování výjimek) ](../build/reference/eh-exception-handling-model.md) nastavení možností kompilátoru. Jinak hodnota není definovaná.
+- **&#95; CPPUNWIND** definován jako 1, pokud jeden nebo více [/GX (povolení zpracování výjimek)](../build/reference/gx-enable-exception-handling.md), [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), nebo [/EH (výjimka zpracování modelu)](../build/reference/eh-exception-handling-model.md) nastavení možností kompilátoru. Jinak hodnota není definovaná.
 
 - **&#95; ladění** definován jako v případě 1 [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), nebo [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) – možnost kompilátoru nastavena. Jinak hodnota není definovaná.
 
@@ -372,7 +375,7 @@ Microsoft Visual C++ podporuje tyto další předdefinovaná makra.
 
 - **&#95; MSC &#95; VER** definován jako literál celé číslo, které kóduje hlavní a podverze počet prvků kompilátoru číslo verze. Hlavní číslo je první prvek číslo verze tečkou a druhý prvkem je menší číslo. Pokud je číslo verze Visual C++ compiler 17.00.51106.1, například **&#95; MSC &#95; VER** makro vyhodnocen jako 1 700. Zadejte **cl /?** na příkazovém řádku zobrazíte kompilátoru číslo verze. Toto makro je vždy definováno.
 
-- **&#95; MSVC &#95; JAZYK** definován jako literál celé číslo, které určuje cílem kompilátor standardní jazyka C++. Při kompilaci jako C++, makro je literálovou hodnotou 201402 celé číslo, pokud [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru není nastaven, nebo ve výchozím nastavení; jinak je nastavená na 201703 Pokud [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru nastavena; a je nastaven na hodnotu vyšší, Neurčeno hodnotu v případě [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md). Makro, jinak hodnota není definován. **&#95; MSVC &#95; JAZYK** makro a [/std (zadejte jazyk standardní verze)](../build/reference/std-specify-language-standard-version.md) – možnosti kompilátoru jsou k dispozici od verze Visual Studio 2015 Update 3.
+- **&#95; MSVC &#95; JAZYK** definován jako literál celé číslo, které určuje cílem kompilátor standardní jazyka C++. Při kompilaci jako C++, makro je literálovou hodnotou 201402L celé číslo, pokud [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru není nastaven, nebo ve výchozím nastavení; jinak je nastavená na 201703 L Pokud [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru nastavena; a je nastaven na hodnotu vyšší, Neurčeno hodnotu v případě [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md). Makro, jinak hodnota není definován. **&#95; MSVC &#95; JAZYK** makro a [/std (zadejte jazyk standardní verze)](../build/reference/std-specify-language-standard-version.md) – možnosti kompilátoru jsou k dispozici od verze Visual Studio 2015 Update 3.
 
 - **&#95; &#95; MSVC &#95; Modul RUNTIME &#95; KONTROLUJE** definován jako 1, pokud jeden z [/RTC](../build/reference/rtc-run-time-error-checks.md) – možnosti kompilátoru nastavena. Jinak hodnota není definovaná.
 

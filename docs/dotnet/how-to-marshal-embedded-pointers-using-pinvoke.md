@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - embedded pointers [C++]
 - interop [C++], embedded pointers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd2717e5ffc5dc25f7a98f679a23d6f97fd335a5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Postupy: Zařazení vložených ukazatelů pomocí služby PInvoke
 Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) a [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
@@ -35,8 +37,6 @@ Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze sp
  Předávání struktur do nativního kódu vyžaduje vytvořený spravované strukturu, která je ekvivalentní z hlediska rozložení dat nativní struktuře. Struktury, které obsahují ukazatele ale vyžadují speciální zacházení. Pro každý vložený ukazatel ve struktuře nativní spravovaná verze struktury musí obsahovat instanci <xref:System.IntPtr> typu. Navíc paměti pro tyto instance musí být explicitně přidělena, inicializovat a vydání pomocí <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, a <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> metody.  
   
  Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovna DLL, která definuje funkci, která přijímá strukturu s názvem ListString, který obsahuje ukazatel a funkci nazvanou TakesListStruct. Spravovaný modul je aplikace příkazového řádku, která importuje funkci TakesListStruct a definuje strukturu s názvem MListStruct, která je ekvivalentní nativní ListStruct s tím rozdílem, že double * je reprezentována pomocí <xref:System.IntPtr> instance. Před voláním TakesListStruct, hlavní funkce přidělí a inicializuje paměti, která odkazuje na toto pole.  
-  
- Spravovaný modul je kompilovat s/CLR, ale/CLR: pure pracuje stejně dobře. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
   
 ```cpp  
 // TraditionalDll6.cpp  

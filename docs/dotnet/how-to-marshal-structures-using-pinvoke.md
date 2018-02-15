@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
 Tento dokument popisuje, jak nativních funkcí, které přijímají řetězce stylu jazyka C nelze volat ze spravovaných funkcí, které poskytují instanci <xref:System.String> pomocí P/Invoke. Přestože doporučujeme použít funkce interoperability C++ místo P/Invoke protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být obtížné implementovat, pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností. Jinak najdete v následujících dokumentech:  
@@ -48,8 +50,6 @@ Tento dokument popisuje, jak nativních funkcí, které přijímají řetězce s
   
 ## <a name="example"></a>Příklad  
  Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovna DLL, která definuje strukturu s názvem umístění a funkci s názvem GetDistance, který přijímá dvě instance struktury umístění. Druhý modul je spravovaná aplikace příkazového řádku, která importuje funkci GetDistance, ale definuje z hlediska spravovaného ekvivalentu struktury Location, MLocation. V praxi by se stejným názvem pravděpodobně použít pro obě verze struktury; jiný název se ale používá zde prokázat, že prototyp DllImport jsou definovány na základě spravovaná verze.  
-  
- Spravovaný modul je kompilovat s/CLR, ale/CLR: pure pracuje stejně dobře. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
   
  Všimněte si, že žádná část knihovny DLL je vystaven spravovaného kódu pomocí tradiční #include – direktiva. Ve skutečnosti knihovnu DLL přístupná v době běhu, takže problémy s funkcemi, které jsou importovány s DllImport nejsou v době kompilace.  
   

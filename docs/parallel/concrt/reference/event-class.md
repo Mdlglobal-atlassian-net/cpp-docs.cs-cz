@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c14cce1f34e4957b8c22bdbb8eab82fb4c0c58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="event-class"></a>event – třída
 Ruční vynulování události, které explicitně zná Concurrency Runtime.  
@@ -50,10 +54,10 @@ class event;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[resetování](#reset)|Obnoví události do stavu signál.|  
+|[reset](#reset)|Obnoví události do stavu signál.|  
 |[set](#set)|Signály události.|  
-|[Počkej](#wait)|Čeká na událost, která má být signál.|  
-|[wait_for_multiple –](#wait_for_multiple)|Čeká na více událostí k stát signál.|  
+|[wait](#wait)|Čeká na událost, která má být signál.|  
+|[wait_for_multiple](#wait_for_multiple)|Čeká na více událostí k stát signál.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -72,7 +76,7 @@ class event;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a>události 
+##  <a name="ctor"></a> Události 
 
  Vytvoří novou událost.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="dtor"></a>~ událostí 
+##  <a name="dtor"></a> ~ událostí 
 
  Zničí událost.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Poznámky  
  Očekává se, že neexistují žádné vláken čekajících na událost, když běží destruktoru. Povolení události destruct s vláken, která čekají na něm výsledkem nedefinované chování.  
   
-##  <a name="reset"></a>resetování 
+##  <a name="reset"></a> Resetování 
 
  Obnoví události do stavu signál.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>nastavení 
+##  <a name="set"></a> nastavení 
 
  Signály události.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Poznámky  
  Signalizace události může způsobit libovolný počet kontexty čekání na událost se spustitelného.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Hodnota označující, počkejte by nikdy neměly vypršení časového limitu.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>Počkej 
+##  <a name="wait"></a> Počkej 
 
  Čeká na událost, která má být signál.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Pokud byla splněna čekání, hodnota `0` je vrácená, jinak hodnota `COOPERATIVE_WAIT_TIMEOUT` indikující, že dobu vypršení časového limitu bez událost signál, aby se aktivovala.  
   
 > [!IMPORTANT]
->  V [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace, nevolejte `wait` na ASTA vláken, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat.  
+>  V aplikaci pro univerzální platformu Windows (UWP), nevolejte `wait` na ASTA vláken, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple – 
+##  <a name="wait_for_multiple"></a> wait_for_multiple – 
 
  Čeká na více událostí k stát signál.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Pokud parametr `_FWaitAll` je nastaven na hodnotu `true` k označení, že všechny události musí stát signál, aby pokryl čekání, představuje index vráceným funkcí žádný speciální význam než fakt, že se nejedná o hodnotě `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  V [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace, nevolejte `wait_for_multiple` na ASTA vláken, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat.  
+>  V aplikaci pro univerzální platformu Windows (UWP), nevolejte `wait_for_multiple` na ASTA vláken, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

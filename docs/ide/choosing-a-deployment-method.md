@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Volba metody nasazení
 Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie příkazu, doporučujeme použít instalační služby systému Windows pro nasazení. Instalační služba systému Windows podporuje instalace, opravy a odinstalace a také atomické aktualizace souborů aplikace, závislostí a položek registru.  
@@ -45,7 +45,7 @@ Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie p�
 ## <a name="redistributing-visual-c-libraries"></a>Distribuce knihoven Visual C++  
  Ve svých nasazeních můžete distribuovat jakoukoli verzi knihovny Visual C++, která disponuje licencí pro distribuci. Můžete je nasadit třemi způsoby:  
   
--   Centrální nasazení pomocí Distribuovatelné balíčky, který se nainstaluje knihovny jazyka Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Také si můžete stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Na webu Stažení softwaru, vyhledejte "distribuovatelného balíčku Visual C++ *verze sady Visual Studio a aktualizace*" odpovídající vaší aplikace. Pokud jste například k sestavení aplikace použili sadu Visual Studio 2012 s aktualizací 4, vyhledejte „Distribuovatelný balíček Visual C++ 2012 s aktualizací 4“.) Informace o použití redistribuovatelného balíčku najdete v tématu [návod: nasazení Visual C++ aplikace s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Centrální nasazení pomocí Distribuovatelné balíčky, který se nainstaluje knihovny jazyka Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Můžete vytvořit skript nebo instalační program, který spustí distribuovatelný balíček před instalací aplikace do cílového počítače. Distribuovatelné balíčky jsou k dispozici pro platformy x86, x64 a ARM (VCRedist_x86.exe, VCRedist_x64.exe nebo VCRedist_arm.exe). Visual Studio obsahuje tyto balíčky v % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Také si můžete stáhnout z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Použijte vyhledávací pole pro vyhledávání na webu Download Center "distribuovatelného balíčku Visual C++ *verze sady Visual Studio a aktualizace*" odpovídající vaší aplikace. For example, pokud použijete Visual Studio 2015 update 3 sestavit aplikaci, poté vyhledejte "Visual C++ Redistributable Package 2015 update 3".) Informace o použití redistribuovatelného balíčku najdete v tématu [návod: nasazení Visual C++ aplikace s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Centrální nasazení s použitím slučovacích modulů, z nichž každý nainstaluje konkrétní knihovny Visual C++ jako sdílené knihovny DLL v %windir%\system32\\. (Instalace do této složky vyžaduje oprávnění správce.) Slučovací moduly se stanou součástí instalačního souboru .msi pro vaši aplikaci. Visual C++ redistributable slučovacích modulů jsou zahrnuté v sadě Visual Studio v \Program soubory (x86) \Common Files\Merge moduly\\. Další informace najdete v tématu [Redistribuce podle použití slučovacích modulů](../ide/redistributing-components-by-using-merge-modules.md).  
   

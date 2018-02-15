@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>Automatizace
 Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo ke zveřejnění objekty, budou se dá upravit.  
@@ -47,7 +50,7 @@ Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplik
   
 -   Automatizovaná (místní počítač).  
   
--   [Vzdálená automatizace](../mfc/remote-automation.md) (přes síť pomocí Distributed COM nebo DCOM).  
+-   Vzdálená automatizace (přes síť pomocí Distributed COM nebo DCOM).  
   
  Vystavení objektů je užitečné, když aplikace poskytují funkce, které jsou užitečné k ostatním aplikacím. Například ovládacího prvku ActiveX je typ automatizační server; hostování ovládacího prvku ActiveX aplikace je klient automatizace tohoto ovládacího prvku.  
   
@@ -57,7 +60,7 @@ Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplik
   
  Mnoho obchodních aplikací, jako je například aplikace Microsoft Excel a Microsoft Visual C++, umožňují automatizovat většinu jejich funkce. Například v jazyce Visual C++, může zapisovat makra jazyk VBScript k automatizaci sestavení, aspektů kód úprav a ladění úloh.  
   
-##  <a name="_core_passing_parameters_in_automation"></a>Předávání parametrů v automatizace  
+##  <a name="_core_passing_parameters_in_automation"></a> Předávání parametrů v automatizace  
  Jeden potíže při vytváření automatizace metody pomáhá zajistit uniform "bezpečnou" mechanismus k předávání dat mezi automatizační servery a klienty. Automatizace používá **VARIANT** typ k předávání dat. **VARIANT** je typ s příznakem union. Obsahuje člena dat pro hodnotu (jedná se anonymní sjednocení C++) a data člena označující typ informací uložených v sjednocení. **VARIANT** typu podporuje několik standardní datových typů: 2 a 4 bajtů celá čísla, čísla s plovoucí desetinnou čárkou 4 a 8 bajtů, řetězce a logické hodnoty. Kromě toho podporuje `HRESULT` (OLE kódy chyb), **MĚNA** (s pevnou desetinnou čárkou číselný typ.), a **datum** (absolutní datum a čas), typy a také odkazy na **IUnknown**  a `IDispatch` rozhraní.  
   
  **VARIANT** typ je zapouzdřené v [COleVariant](../mfc/reference/colevariant-class.md) třídy. V podporu **MĚNA** a **datum** třídy jsou zapouzdřené v [COleCurrency](../mfc/reference/colecurrency-class.md) a [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třídy.  
@@ -81,8 +84,6 @@ Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplik
 -   [Klienti automatizace](../mfc/automation-clients.md)  
   
 -   [Automatizační servery](../mfc/automation-servers.md)  
-  
--   [Vzdálená automatizace](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

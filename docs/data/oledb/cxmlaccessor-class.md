@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
 - ATL.CXMLAccessor
-dev_langs: C++
-helpviewer_keywords: CXMLAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 96620f287522168cd7b6b78d43163e8c4bb64217
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 00d9caa5c49d47eb005e85bdd715864651634a5a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor – třída
 Umožňuje přístup ke zdrojům dat jako řetězce data, když nemáte žádné znalosti schéma úložiště dat (podkladová struktura).  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   
@@ -42,8 +45,8 @@ class CXMLAccessor : public CDynamicStringAccessorW
   
 |||  
 |-|-|  
-|[GetXMLColumnData –](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Načte informace o sloupci.|  
-|[GetXMLRowData –](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Načte celý obsah tabulky po řádcích.|  
+|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Načte informace o sloupci.|  
+|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Načte celý obsah tabulky po řádcích.|  
   
 ## <a name="remarks"></a>Poznámky  
  Ale `CXMLAccessor` se liší od `CDynamicStringAccessorW` , převede ji všechna data z úložiště dat jako (s příznakem) data ve formátu XML. To je užitečné zejména pro výstup na používajícím XML webové stránky. Názvy značek XML bude co nejblíže odpovídat úložiště dat názvy sloupců.  

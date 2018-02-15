@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -28,7 +30,7 @@ Jazyk Visual C++ lze použít pro vytvoření širokého spektra programů, kter
 
 Existuje několik široký kategorií aplikací pro Windows, které můžete vyvíjet pomocí Visual C++. Tyto kategorie mají různé programovací modely nebo modely aplikace, což znamená, že používají různé knihovny a rozhraní API, které poskytují přístup na platformu a zadejte uživatelské rozhraní.
 
-- [Univerzální aplikace Windows](#BK_WindowsUniversal). Třetí kategorii aplikací systému Windows byla zavedena v systému Windows 8 a podpora pro tuto kategorii aplikace pokračuje v systému Windows 10. Tyto aplikace jsou často označovány jako "Windows aplikací" a patří mezi ně desktop a mobile aplikací, které se zaměřují na široké škále zařízení. Můžete napsat tyto aplikace v jazyce C + +/ CX dialekt c++, která zahrnuje podporu pro vývoj pro prostředí Windows Runtime nebo ve standardní C++ v modelu COM pomocí knihovny Windows Runtime (WRL). Tyto aplikace byly původně navrženy pro spuštění celou obrazovku, i když v systému Windows 10 uživatelé mají možnost jejich spouštění v okně plochy. Tyto aplikace jsou dotykovým ovládáním, ale je snadno použitelné myši provoz preferujete uživatelé, nebo pokud není k dispozici dotykovou obrazovku. Tyto aplikace jsou distribuované z Windows Store, faktu, která vedla k nim volané "Aplikace pro Windows Store."
+- [Univerzální aplikace Windows](#BK_WindowsUniversal). Třetí kategorii aplikací systému Windows byla zavedena v systému Windows 8 a podpora pro tuto kategorii aplikace pokračuje v systému Windows 10. Tyto aplikace jsou často označovány jako "Windows aplikací" a patří mezi ně desktop a mobile aplikací, které se zaměřují na široké škále zařízení. Můžete napsat tyto aplikace v jazyce C + +/ CX dialekt c++, která zahrnuje podporu pro vývoj pro prostředí Windows Runtime nebo ve standardní C++ v modelu COM pomocí knihovny Windows Runtime (WRL). Tyto aplikace byly původně navrženy pro spuštění celou obrazovku, i když v systému Windows 10 uživatelé mají možnost jejich spouštění v okně plochy. Tyto aplikace jsou dotykovým ovládáním, ale je snadno použitelné myši provoz preferujete uživatelé, nebo pokud není k dispozici dotykovou obrazovku. Tyto aplikace se distribuují z Microsoft Store, faktu, která vedla k nim volané aplikace "Úložiště".
 
 - [Plocha, Server a cloudové aplikace a hry](#BK_Native). Tato kategorie zahrnuje aplikace Windows Desktop, někdy označuje jako aplikace Win32, protože tyto aplikace byly pomocí rozhraní API Win32 na před Windows 8, všechny aplikace systému Windows byly v této kategorii. Aplikace v této kategorii můžete použít pro uživatelské rozhraní MFC a knihovna ATL pro interakci s součásti systému Windows, které jsou obvykle COM – objekty.
 
@@ -38,12 +40,12 @@ Existuje několik široký kategorií aplikací pro Windows, které můžete vyv
 
 - **Aplikace rozhraní .NET framework**. Většina aplikací rozhraní .NET Framework, které jsou napsané v C# nebo Visual Basic, ale můžete také C + +/ CLI (/ CLR – možnost kompilátoru v jazyce Visual C++). Doporučujeme používat C + +/ CLI pro vrstvu minimální spolupráce v větší aplikace, která zahrnuje spravovaná a nativní kód.
 
-##  <a name="BK_WindowsUniversal"></a>Univerzální aplikace pro Windows
+##  <a name="BK_WindowsUniversal"></a> Univerzální aplikace pro Windows
 
 S Windows 10 aplikace je možné spouštět ve všech zařízeních Windows 10, jako jsou tablety a mobilní telefon, a také na ploše. Na ploše, budou moci spouštět jako plochy okno místo vždy spuštěn přes celou obrazovku. Tyto aplikace můžete také spouštět v zařízení Xbox a v budoucích zařízeních.  Programovací model pro oba typy aplikací se liší od aplikací klasické pracovní plochy Win32. Tyto aplikace systému Windows spustit v prostředí Windows Runtime, která obsahuje elementy uživatelského rozhraní, základní služby pro tyto aplikace a poskytuje, a rozhraní na různých hardwarová zařízení, které jsou podporovány. Tyto aplikace kompilace nativního kódu a mít uživatelské rozhraní jazyka XAML nebo pomocí rozhraní DirectX. Je také možné zapsat komponenty prostředí Windows Runtime v nativním kódu, který mohou využívat jiné aplikace pro Windows – patří mezi ně aplikace, které jsou napsané v C#, Visual Basic nebo JavaScript. Další informace najdete v tématu [vytvořit aplikaci UWP "Hello, world" v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [vytvořit jednoduchou UWP hru s DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), a [vytváření prostředí Windows Runtime komponent v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
-> Pro Windows 10 můžete aplikaci převaděč plochy do balíčku plochy aplikace pro nasazení prostřednictvím portálu Windows Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Pro Windows 10 můžete aplikaci převaděč plochy do balíčku plochy aplikace pro nasazení prostřednictvím Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Ukázky univerzální platformu Windows naleznete v části [Windows Universal ukázky z webu GitHub](https://github.com/Microsoft/Windows-universal-samples)
 
@@ -59,7 +61,7 @@ Nová koncepce zavedená v systému Windows 10 volat rozhraní API kontrakty nah
 
 Další informace o všech těchto pojmech najdete v tématu [Průvodce univerzálních aplikací pro Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
-##  <a name="BK_Native"></a>Plocha, Server a cloudové aplikace a hry
+##  <a name="BK_Native"></a> Plocha, Server a cloudové aplikace a hry
 
 V cloudu můžete napsat sestavení Azure nativního kódu v jazyce C++ a volání do nich z webové role, které jsou vytvořené v C#. Další informace najdete v tématu [Azure SDK](http://go.microsoft.com/fwlink/p/?LinkId=256416).
 

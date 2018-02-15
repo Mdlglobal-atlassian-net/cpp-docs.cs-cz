@@ -1,29 +1,31 @@
 ---
-title: "Návod: Vytvoření aplikace pro Windows Store pomocí knihovny WRL a platformy Media Foundation | Microsoft Docs"
+title: "Návod: Vytvoření aplikace pro UPW pomocí knihovny WRL a platformy Media Foundation | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Postupy: Vytvoření aplikace pro Windows Store s použitím knihovny WRL a platformy Media Foundation
-Další informace o použití Windows Runtime C++ šablony knihovny (WRL) Chcete-li vytvořit aplikaci pro univerzální platformu Windows, která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace pro UPW pomocí knihovny WRL a platformy Media Foundation
+Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace univerzální platformu Windows (UWP), která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  Tento příklad vytvoří vlastní transformace Media Foundation, která se použije ve stupních šedi vliv na obrázky, které jsou zachyceny z webová kamera. Aplikace C++ používá k definování vlastní transformace a C# k použití komponentu k transformaci zaznamenané bitové kopie.  
   
@@ -59,13 +61,13 @@ Další informace o použití Windows Runtime C++ šablony knihovny (WRL) Chcete
   
 -   Propojte runtimeobject.lib příslušné součásti knihovny DLL. Zadat také [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) na řádek linkeru pro generování metadat Windows.  
   
--   Použijte odkazy na projekt zpřístupněte komponent knihovny WRL pro univerzální platformu Windows aplikace.  
+-   Použijte odkazy na projekt zpřístupněte komponent knihovny WRL pro aplikace UWP.  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Použití knihovny WRL vytvořit ve stupních šedi Media Foundation transformace součásti  
   
 1.  V sadě Visual Studio, vytvoření **prázdného řešení** projektu. Název projektu, například `MediaCapture`.  
   
-2.  Přidat **knihovny DLL (aplikace pro Windows Store)** projektu k řešení. Název projektu, například `GrayscaleTransform`.  
+2.  Přidat **knihovny DLL (Universal Windows)** projektu k řešení. Název projektu, například `GrayscaleTransform`.  
   
 3.  Přidat **soubor Midl (.)** souboru do projektu. Název souboru, například `GrayscaleTransform.idl`.  
   

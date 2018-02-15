@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Plánovač úloh (Concurrency Runtime)
 Témata v této části dokumentace popisují důležité funkce Plánovač úloh Concurrency Runtime. Plánovač úloh je užitečné, pokud chcete optimalizovat výkon váš stávající kód, který používá Concurrency Runtime.  
   
 > [!IMPORTANT]
->  Plánovač úloh není k dispozici z [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace najdete v tématu [vytváření asynchronních operací v C++ pro aplikace Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Plánovač úloh není k dispozici z aplikace pro univerzální platformu Windows (UWP). Další informace najdete v tématu [vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
 >   
 >  V sadě Visual Studio 2015 a novější [concurrency::task](../../parallel/concrt/reference/task-class.md) třídy a souvisejících typů v ppltasks.h použít zachovalo Windows jako jejich plánovače. Toto téma se týká už typy, které jsou definovány v ppltasks.h. Paralelní algoritmy například parallel_for – dál používat jako výchozí plánovač Concurrency Runtime.  
   

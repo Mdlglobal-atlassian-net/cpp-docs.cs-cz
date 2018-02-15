@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co & č. 39; s novou 2003 až 2015
 
@@ -46,7 +46,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
 - [Shoda vylepšení v nástroji Visual Studio 2015 Update 3](#VS_Update3)
 
-### <a name="VS_RTM"></a>Vylepšení shoda v sadě Visual Studio 2015
+### <a name="VS_RTM">Vylepšení shoda v sadě Visual Studio 2015</a>
 
 - **Možnost /Zc:forScope-** možnost kompilátoru **/Zc:forScope-** je zastaralá a bude v budoucí verzi odebrána.
 
@@ -503,7 +503,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
 - **Zkopírujte konstruktory** v obou [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] a Visual Studio 2015, kompilátor generuje kopírovacího konstruktoru třídy Pokud třídy má konstruktor move definovaný uživatelem, ale žádné uživatelem definované kopírovacího konstruktoru. Dev14 je tento konstruktor implicitně generovaného kopie také označený "= odstranění".
 
-### <a name="VS_Update1"></a>Shoda vylepšení v nástroji Visual Studio 2015 Update 1
+### <a name="VS_Update1">Shoda vylepšení v nástroji Visual Studio 2015 Update 1</a>
 
 - **Privátní virtuální základní třídy a nepřímé dědění** předchozí verze kompilátoru povolené odvozené třídy za účelem zavolejte členské funkce jeho *nepřímo odvozené* `private virtual` základní třídy. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor už akceptuje kód napsaný v tímto způsobem a v důsledku vydá Chyba kompilátoru C2280.
 
@@ -577,7 +577,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
       Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
 
-- **Volání ' operátor *typ*() ' (uživatelem definovaný převod) na typy jiné třídy** předchozí verze kompilátoru povolené ' operátor *typu*(), k volání na typy jiné třídy při bezobslužná ignoruje se. Toto chování staré vytvořit riziko generování tichou chybného kódu, což vede k nepředvídatelným modul runtime chování. Kompilátor už akceptuje kód napsaný v tímto způsobem a vydá Chyba kompilátoru C2228 místo.
+- **Volání ' operátor *typ*() ' (uživatelem definovaný převod) na typy jiné třídy** předchozí verze kompilátoru povolené ' operátor *typu*(), k volání na typy jiné třídy při tiché ignoruje se. Toto chování staré vytvořit riziko generování tichou chybného kódu, což vede k nepředvídatelným modul runtime chování. Kompilátor už akceptuje kód napsaný v tímto způsobem a vydá Chyba kompilátoru C2228 místo.
 
    ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -996,7 +996,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
     }
    ```
 
-### <a name="VS_Update2"></a>Shoda vylepšení v nástroji Visual Studio 2015 Update 2
+### <a name="VS_Update2">Shoda vylepšení v nástroji Visual Studio 2015 Update 2</a>
 
 - **Další upozornění a chyby může být vydaný v důsledku částečné podporu pro výraz sfinae u výrazů** předchozí verze kompilátoru analyzovat určité druhy výrazů uvnitř `decltype` specifikátory z důvodu nedostatku podpory pro výraz. SFINAE U VÝRAZŮ. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor teď analyzuje tyto výrazy a částečné podporu pro výraz sfinae u výrazů z důvodu vylepšení probíhající shoda. V důsledku toho nyní vydá upozornění a chyby nalezené ve výrazech, že předchozí verze kompilátoru není analyzovat.
 
@@ -1085,7 +1085,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
     };
    ```
 
-- `volatile`**členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** předchozí verze kompilátoru povolené třídy, která má `volatile` kopírování nebo přesunutí členské proměnné tak, aby měl výchozí konstruktory a výchozí kopírování nebo přesunutí operátory přiřazení automaticky generovány. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor nyní brány v úvahu třídy, která má volatile členské proměnné tak, aby měl netriviální vytváření a operátory přiřazení, která brání automaticky generován výchozí implementace těchto operátorů.  Když tyto třídy je členem sjednocení (nebo anonymní sjednocení uvnitř třídu), zkopírovat nebo přesunout konstruktory a operátory přiřazení pro kopírování nebo přesunutí sjednocení (nebo třída obsahující sjednocení unonymous) budou implicitně definovány odstranit. Probíhá pokus o vytvoření nebo zkopírujte sjednocení (nebo třída obsahující anonymní sjednocení) bez nutnosti explicitně definovat je je chybu a Chyba kompilátoru problémy kompilátoru C2280 v důsledku.
+- `volatile` **Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení** předchozí verze kompilátoru povolené třídy, která má `volatile` členské proměnné tak, aby měl výchozí konstruktory kopírování nebo přesunutí a výchozí kopírování či přesunutí operátory přiřazení automaticky generovány. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor nyní brány v úvahu třídy, která má volatile členské proměnné tak, aby měl netriviální vytváření a operátory přiřazení, která brání automaticky generován výchozí implementace těchto operátorů.  Když tyto třídy je členem sjednocení (nebo anonymní sjednocení uvnitř třídu), zkopírovat nebo přesunout konstruktory a operátory přiřazení pro kopírování nebo přesunutí sjednocení (nebo třída obsahující sjednocení unonymous) budou implicitně definovány odstranit. Probíhá pokus o vytvoření nebo zkopírujte sjednocení (nebo třída obsahující anonymní sjednocení) bez nutnosti explicitně definovat je je chybu a Chyba kompilátoru problémy kompilátoru C2280 v důsledku.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1251,7 +1251,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
    Opravě kód, který je zapsaný tímto způsobem může vyžadovat, aby definice operátor přesunout mimo soubor hlaviček a do odpovídající zdrojový soubor.
 
-### <a name="VS_Update3"></a>Shoda vylepšení v nástroji Visual Studio 2015 Update 3
+### <a name="VS_Update3">Shoda vylepšení v nástroji Visual Studio 2015 Update 3</a>
 
 - **std::is_convertable nyní rozpozná vlastní přiřazení** (standardní knihovna) předchozí verze `std::is_convertable` typ znak se nepodařilo rozpoznat správně vlastní přiřazení typu třídy, když se odstraní. jeho kopie konstruktoru nebo privátní. Nyní `std::is_convertable<>::value` je správně nastavena na `false` při použití typu třídy s odstraněný nebo soukromý kopírovacího konstruktoru.
 
@@ -1545,16 +1545,16 @@ Tato vylepšená podpora pro standardy ISO C/C++ může vyžadovat změny existu
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Vylepšení profil na základě optimalizace (PGO)
 
 - Vylepšení výkonu z snížení pracovní sadu aplikací, které jsou optimalizovány s použitím PGO.
-- Vývoj aplikací pro nové PGO pro Windows Store
+- Vývoj aplikací pro nové PGO pro prostředí Windows Runtime
 
-### <a name="windows-store-app-development-support"></a>Podpora vývoje aplikace Windows Store
+### <a name="windows-runtime-app-development-support"></a>Podpora prostředí Windows Runtime vývoj aplikací
 
-- **Podpora pro do pole typů v hodnota struktury.** Nyní můžete určit typy hodnot s použitím pole, která může mít hodnotu null, například IBox<int>^ oproti int. To znamená, že pole můžete buď mít hodnotu, nebo být roven nullptr.
+- **Podpora pro do pole typů v hodnota struktury.** Nyní můžete určit typy hodnot s použitím pole, která může mít hodnotu null, například IBox\<int > ^ oproti int. To znamená, že pole můžete buď mít hodnotu, nebo být roven nullptr.
 - **Širší informace o výjimce.** C + +/ CX podporuje nový model chyby systému Windows, který umožňuje zaznamenat a šíření bohaté výjimka informace napříč binární rozhraní aplikace (ABI); To zahrnuje zásobníky volání a vlastní zprávu řetězce.
 - **Teď je virtuální objekt:: ToString().** Nyní můžete přepsat ToString v uživatelem definované typy ref prostředí Windows Runtime.
 - **Podpora pro zastaralé rozhraní API.** Veřejné rozhraní API systému Windows Runtime můžete nyní označeny jako zastaralé a mají vlastní zprávu, která se zobrazí jako upozornění sestavení a může poskytnout pokyny pro migraci.
-- **Ladicí program vylepšení.** Podpora pro nativní/JavaScript spolupráce ladění, prostředí Windows Runtime výjimka diagnostiky a kód asynchronní ladění (prostředí Windows Runtime a PPL).
-  - Poznámka: Kromě C++ specifické funkce a vylepšení, které jsou popsané v této části, další vylepšení v sadě Visual Studio také můžete zapsat lepší aplikace pro Windows Store.
+- Ladicí program vylepšení. Podpora pro nativní/JavaScript spolupráce ladění, prostředí Windows Runtime výjimka diagnostiky a kód asynchronní ladění (prostředí Windows Runtime a PPL).
+  - Poznámka: Kromě C++ specifické funkce a vylepšení, které jsou popsané v této části, další vylepšení v sadě Visual Studio také můžete zapsat lepší aplikace Windows Runtime.
 
 ### <a name="diagnostics-enhancements"></a>Vylepšení diagnostiky
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Podpora vývoje aplikace Windows Store
+### <a name="windows-runtime-app-development-support"></a>Podpora prostředí Windows Runtime vývoj aplikací
 
-- **Nativní založených na XAML uživatelského rozhraní modelu**. Pro aplikace Windows Store můžete použít nový model nativní založených na XAML uživatelského rozhraní.
-- **Visual C++ Component Extensions**. Tato rozšíření zjednodušit používání prostředí Windows Runtime objekty, které jsou nezbytné součástí aplikace pro Windows Store. Další informace najdete v tématu aplikace plán pro Windows Store pomocí C++ a referenční dokumentace jazyka Visual C++ (C + +/ CX)
-- **Hry DirectX**. Nestačí, aby hry můžete vyvíjet pomocí nové rozhraní DirectX podporu pro aplikace pro Windows Store.
-- **Zprostředkovatel komunikace s objekty jazyka XAML a rozhraní DirectX**. Aplikace pro Windows Store, které používají XAML a DirectX teď spolupracovat efektivně.
+- **Nativní založených na XAML uživatelského rozhraní modelu**. Pro aplikace Windows Runtime můžete použít nový model nativní založených na XAML uživatelského rozhraní.
+- **Visual C++ Component Extensions**. Tato rozšíření zjednodušit používání prostředí Windows Runtime objekty, které jsou nezbytné součástí aplikace Windows Runtime. Další informace najdete v tématu [plán pro prostředí Windows Runtime aplikací C++ pomocí](../windows/universal-windows-apps-cpp.md) a [referenční příručka jazyka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Hry DirectX**. Nestačí, aby hry můžete vyvíjet pomocí nové rozhraní DirectX podporu pro aplikace Windows Runtime.
+- **Zprostředkovatel komunikace s objekty jazyka XAML a rozhraní DirectX**. Prostředí Windows Runtime aplikace, které používají XAML a DirectX teď spolupracovat efektivně.
 - **Vývoj pro Windows Runtime součást DLL**. Součást knihovny DLL vývoj díky prostředí Windows Runtime extensible.
 
 ### <a name="compiler-and-linker"></a>Kompilátoru a Linkeru
@@ -1684,7 +1684,7 @@ Kromě okno paralelních úloh a okna paralelní zásobníky Visual Studio 2012 
 
 **Automatické nasazení pro vzdálené ladění.** Nasazení souborů pro vzdálené ladění v jazyce Visual C++ je jednodušší. Ke vzdálenému počítači možnost nasazení na místní nabídky projektu automaticky zkopíruje soubory, které jsou určené v ladění vlastnosti konfigurace. Ruční kopírování souborů do vzdáleného počítače se už nevyžaduje.
 
-**C + +/ CLI IntelliSense.** C + +/ CLI nyní má plnou podporu technologie IntelliSense. IntelliSense funkce, jako je rychlé informace, parametr nápovědy, vypsat členy a automatické doplňování teď pracovat pro C + +/ CLI. Kromě toho ostatní IntelliSense a IDE rozšířením uvedené v tomto dokumentu také funkční pro C + +/ CLI.
+**C++/CLI IntelliSense.** C + +/ CLI nyní má plnou podporu technologie IntelliSense. IntelliSense funkce, jako je rychlé informace, parametr nápovědy, vypsat členy a automatické doplňování teď pracovat pro C + +/ CLI. Kromě toho ostatní IntelliSense a IDE rozšířením uvedené v tomto dokumentu také funkční pro C + +/ CLI.
 
 **Popisy tlačítek bohatší IntelliSense.** Širší dokumentační komentáře XML C++ IntelliSense rychlé informace nyní zobrazit informace o stylu. Pokud používáte rozhraní API z knihovny – například C++ AMP, který má dokumentační komentáře XML a potom popis tlačítka IntelliSense zobrazí další informace než jenom deklarace. Navíc má váš kód dokumentační komentáře XML, popisy tlačítek IntelliSense zobrazí rozsáhlejší informace.
 
@@ -1730,16 +1730,16 @@ Pokrytí kódu se aktualizovalo a dynamicky nástrojích binárních souborů za
 
 ### <a name="c-compiler-and-linker"></a>Kompilátor C++ a Linkeru
 
-**Auto – klíčové slovo.** Auto – klíčové slovo má nový účel. Použijte výchozí význam auto – klíčové slovo deklarovat proměnnou, jejichž typ je odvozen z inicializace výrazu v deklaraci proměnné. Možnost/Zc: Auto kompilátoru vyvolá nový nebo předchozí význam auto – klíčové slovo.
+**auto Keyword.** Auto – klíčové slovo má nový účel. Použijte výchozí význam auto – klíčové slovo deklarovat proměnnou, jejichž typ je odvozen z inicializace výrazu v deklaraci proměnné. Možnost/Zc: Auto kompilátoru vyvolá nový nebo předchozí význam auto – klíčové slovo.
 
 **decltype – specifikátor typu.** Specifikátor typu decltype vrátí typ zadaného výrazu. Specifikátor typu decltype použijte v kombinaci s auto – klíčové slovo deklarovat typ, který je komplexní nebo známý pouze kompilátoru. Například pomocí kombinace deklarovat funkce šablony, jejichž návratový typ závisí na typech argumentů šablony. Nebo deklarovat funkci šablony, která volá jinou funkci a vrátí návratový typ volaná funkce.
 
-**Výrazy lambda.** Lambda funkce mají tělo funkce, ale žádný název. Lambda funkce kombinují nejlepší vlastnosti ukazatelů na funkce a objekty funkcí.
+**Lambda Expressions.** Lambda funkce mají tělo funkce, ale žádný název. Lambda funkce kombinují nejlepší vlastnosti ukazatelů na funkce a objekty funkcí.
 Použijte funkci lambda samostatně, jako parametr funkce šablony místo objekt funkce nebo společně s auto – klíčové slovo deklarovat proměnnou jejichž typ je lambda.
 
 **Deklarátor odkazu.** Rvalue – deklarátor odkazu (& &) deklaruje odkaz na rvalue. Umožňuje odkaz rvalue, které používáte, přesuňte sémantiku a ideální předávání zápis efektivnější konstruktory, funkce a šablony.
 
-**static_assert deklarace.** Static_assert deklarace testuje assertion softwaru při kompilaci, na rozdíl od jiných kontrolní mechanismy, které testování v době běhu. Pokud kontrolní výraz selže, kompilace se nezdaří a vydání zadanou chybovou zprávu.
+**static_assert Declaration.** Static_assert deklarace testuje assertion softwaru při kompilaci, na rozdíl od jiných kontrolní mechanismy, které testování v době běhu. Pokud kontrolní výraz selže, kompilace se nezdaří a vydání zadanou chybovou zprávu.
 
 **nullptr a __nullptr klíčová slova.** Kompilátor Visual C++ vám umožní používat nullptr – klíčové slovo s nativním kódem nebo se spravovaným kódem. Nullptr – klíčové slovo označuje, že popisovač objektu, vnitřní ukazatel nebo nativní ukazatel typu neodkazuje na objekt. Kompilátor interpretuje nullptr jako spravovaného kódu, pokud použijete / CLR – možnost kompilátoru a nativní kód, pokud nepoužijete možnost/CLR.
 __Nullptr – klíčové slovo specifické pro společnost Microsoft nemá stejný význam jako nullptr, ale se vztahuje pouze na nativní kód. Pokud při kompilaci nativního kódu C/C++ pomocí / CLR – možnost kompilátoru, kompilátor nemůže určit, zda nullptr – klíčové slovo je nativní nebo spravovaný termín. Pokud chcete mít vaším záměrem zrušte pro kompilátor, použijte k určení spravované termín a __nullptr k určení termínu nativním nullptr – klíčové slovo.
@@ -1761,7 +1761,7 @@ Trigraph se skládá ze dvou po sobě jdoucích otazníky (?) následuje jedine�
 
 **Adresáře VC ++.** Nastavení adresáře VC ++ se nyní nachází na dvou místech. Stránky vlastností projektu slouží k nastavení hodnoty na projekt pro adresáře VC ++. Pomocí Správce vlastností a seznamu vlastností pro globální nastavení konfiguračních hodnot pro adresáře VC ++.
 
-**Závislosti projektu k projektu.** V dřívějších verzích byly definované závislostí mezi projekty uložené v souboru řešení. Když tato řešení se převedou na nový formát souboru projektu, závislosti jsou převedeny na odkazy na projekt na projekt. Tato změna může ovlivnit aplikace, protože se koncepty závislostí řešení a odkazy na projekt na projekt se liší.
+**Project-to-Project Dependencies.** V dřívějších verzích byly definované závislostí mezi projekty uložené v souboru řešení. Když tato řešení se převedou na nový formát souboru projektu, závislosti jsou převedeny na odkazy na projekt na projekt. Tato změna může ovlivnit aplikace, protože se koncepty závislostí řešení a odkazy na projekt na projekt se liší.
 
 **Makra a proměnných prostředí.** Nové makro _ITERATOR_DEBUG_LEVEL vyvolá podpora ladění iterátorů. Použití tohoto makra místo starší _SECURE_SCL a _HAS_ITERATOR_DEBUGGING makra.
 
@@ -1784,7 +1784,7 @@ Trigraph se skládá ze dvou po sobě jdoucích otazníky (?) následuje jedine�
 
 ### <a name="microsoft-foundation-class-mfc-library"></a>Knihovny Microsoft Foundation Class (MFC)
 
-**Funkce systému Windows 7.** MFC podporuje mnoho funkcí systému Windows 7, například uživatelské rozhraní (UI) pásu karet, hlavní panel, seznam odkazů, záložkách miniatur, miniaturami, indikátor průběhu, překryvnou ikonu a indexování pro hledání. Protože MFC automaticky podporuje mnoho funkcí systému Windows 7, nemusí mít k úpravě stávající aplikace. Pro podporu dalších funkcí v nové aplikace, použijte Průvodce aplikací MFC k zadání funkce, kterou chcete použít.
+**Windows 7 Features.** MFC podporuje mnoho funkcí systému Windows 7, například uživatelské rozhraní (UI) pásu karet, hlavní panel, seznam odkazů, záložkách miniatur, miniaturami, indikátor průběhu, překryvnou ikonu a indexování pro hledání. Protože MFC automaticky podporuje mnoho funkcí systému Windows 7, nemusí mít k úpravě stávající aplikace. Pro podporu dalších funkcí v nové aplikace, použijte Průvodce aplikací MFC k zadání funkce, kterou chcete použít.
 
 **Zvýšení povědomí více touch.** MFC podporuje aplikace, které mají více touch uživatelské rozhraní, například aplikace, které jsou určeny pro operační systém Microsoft Surface. Aplikace s více touch dokáže zpracovat touch zpráv systému Windows a gesto zprávy, které jsou kombinace touch zprávy. Právě registrace vaší aplikace pro dotykové ovládání a gesto události a operační systém bude směrovat více touch události vaší obslužné rutiny událostí.
 
@@ -1871,7 +1871,7 @@ Přidání YMMWORD datového typu podporuje multimediální operandy 256 bitů, 
 
 - C++ zavádí knihovny zařazování. Knihovny zařazování poskytuje snadný a optimalizované způsob zařazování dat mezi nativní a spravovaná prostředí. Knihovna je alternativa k přístupy složitější a méně efektivní, například pomocí služby PInvoke. Další informace naleznete v tématu Přehled zařazování v jazyku C++.
 
-#### <a name="atl-server"></a>Server knihovny ATL
+#### <a name="atl-server"></a>ATL Server
 
 - Jako zdroj sdílené projekt vydání ATL Server.
 - Většinu kódu ATL Server základní byla vydána jako sdílený zdroj projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio 2008. Několik souborů, které jsou přidružené k serveru ATL již nejsou součástí sady Visual Studio. Seznam odebrané soubory naleznete v části odebrat soubory serveru ATL.
@@ -1941,7 +1941,7 @@ Kompilátor má nejnovější změny v této verzi.
 - nativní ' 64bitová verze a mezi kompilátory.
 - / analyze (Analýza kódu Enterprise) – možnost kompilátoru byla přidána.
 - / bigobj – možnost kompilátoru byla přidána.
-- / CLR: pure, / CLR: safe a /clr:oldSyntax byly přidány.
+- / CLR: pure, / CLR: safe a /clr:oldSyntax byly přidány. (Později nepoužívané ve Visual Studiu 2015.)
 - Možnosti kompilátoru zastaralé: v této verzi; jsou zastaralé mnoho – možnosti kompilátoru Další informace najdete v části – možnosti kompilátoru zastaralé.
 - Dvojitý převod adres v/CLR kódu se snižuje; Další informace najdete v části dvojitý převod adres (C++).
 - /EH (Model zpracování výjimek) nebo /EHs už umožňuje zachytit výjimku, která se vyvolá s něco jiného než throw; Použijte/EHa.
@@ -2170,7 +2170,7 @@ Kompilátor má nejnovější změny v této verzi.
 
 ### <a name="attributes"></a>Atributy
 
-- `implements`atribut je nyní zdokumentované.
+- `implements` atribut je nyní zdokumentované.
 
 ### <a name="linker-features"></a>Funkce linkeru
 
@@ -2179,7 +2179,7 @@ Byly přidány následující linkerů přepínače:
 - / ASSEMBLYDEBUG
 - / ASSEMBLYLINKRESOURCE
 - DELAYSIGN
-- / KEYFILE
+- /KEYFILE
 - / KEYCONTAINER
 - / SAFESEH
 

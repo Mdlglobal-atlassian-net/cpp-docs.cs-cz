@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl – třída
 Implementuje OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) rozhraní, která načte libovolný řádky ze sady řádků.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -78,10 +79,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
 |||  
 |-|-|  
-|[Porovnání](../../data/oledb/irowsetlocateimpl-compare.md)|Porovná dvě záložky.|  
-|[GetRowsAt –](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Načte řádky počínaje řádkem určeného posun vůči záložky.|  
-|[Getrowsbybookmark –](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Načte řádky, které odpovídají zadané záložky.|  
-|[Hodnota hash](../../data/oledb/irowsetlocateimpl-hash.md)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Porovná dvě záložky.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Načte řádky počínaje řádkem určeného posun vůči záložky.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Načte řádky, které odpovídají zadané záložky.|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Vrátí hodnotu hash hodnoty pro zadaný záložky.|  
   
 ### <a name="data-members"></a>Datové členy  
   
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Pole záložky.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IRowsetLocateImpl`představuje implementaci šablony technologie OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) rozhraní. `IRowsetLocate`slouží k načtení libovolné řádky ze sady řádků. Sada řádků, který neimplementuje toto rozhraní je `sequential` sady řádků. Když `IRowsetLocate` je k dispozici pro sadu řádků, sloupců 0 je záložku řádků; čtení v tomto sloupci se získat hodnotu záložku, která lze změnit umístění na stejný řádek.  
+ `IRowsetLocateImpl` představuje implementaci šablony technologie OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) rozhraní. `IRowsetLocate` slouží k načtení libovolné řádky ze sady řádků. Sada řádků, který neimplementuje toto rozhraní je `sequential` sady řádků. Když `IRowsetLocate` je k dispozici pro sadu řádků, sloupců 0 je záložku řádků; čtení v tomto sloupci se získat hodnotu záložku, která lze změnit umístění na stejný řádek.  
   
- `IRowsetLocateImpl`slouží k implementaci podpora záložek ve zprostředkovatelích. Záložky jsou zástupné symboly (indexů pro sadu řádků) umožňující příjemce rychle vrátit na řádek, což vysokorychlostní přístup k datům. Určuje zprostředkovatele, co záložky lze jedinečně identifikovat řádek. Pomocí `IRowsetLocateImpl` metod, můžete porovnat záložky, načtení řádků pomocí posun načtení řádků záložkou a návratové hodnoty hash pro záložky.  
+ `IRowsetLocateImpl` slouží k implementaci podpora záložek ve zprostředkovatelích. Záložky jsou zástupné symboly (indexů pro sadu řádků) umožňující příjemce rychle vrátit na řádek, což vysokorychlostní přístup k datům. Určuje zprostředkovatele, co záložky lze jedinečně identifikovat řádek. Pomocí `IRowsetLocateImpl` metod, můžete porovnat záložky, načtení řádků pomocí posun načtení řádků záložkou a návratové hodnoty hash pro záložky.  
   
  Pro podporu technologie OLE DB záložky v sadě řádků, zkontrolujte řádků z této třídy dědit.  
   

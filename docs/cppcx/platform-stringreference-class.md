@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference – třída
 Typ optimalizace, které můžete použít k předávání dat řetězec z `Platform::String^` vstupní parametry pro jiné metody s minimální operace kopírování.  
@@ -58,7 +60,7 @@ class StringReference
   
 |Název|Popis|  
 |----------|-----------------|  
-|[StringReference::operator =](#operator-assign)|Přiřadí `StringReference` na nový `StringReference` instance.|  
+|[StringReference::operator=](#operator-assign)|Přiřadí `StringReference` na nový `StringReference` instance.|  
 |[StringReference::operator()](#operator-call)|Převede `StringReference` k `Platform::String^`.|  
   
 ### <a name="requirements"></a>Požadavky  
@@ -70,7 +72,7 @@ class StringReference
   
  **Záhlaví:** vccorlib.h  
 
-## <a name="data"></a>StringReference::Data – metoda
+## <a name="data"></a>  StringReference::Data – metoda
 Vrátí obsah tohoto `StringReference` jako pole hodnot char16.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>StringReference::GetHSTRING – metoda
+## <a name="gethstring"></a>  StringReference::GetHSTRING – metoda
 Vrátí obsah jako řetězec `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>StringReference::GetString – metoda
+## <a name="getstring"></a>  StringReference::GetString – metoda
 Vrátí obsah jako řetězec `Platform::String^`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Návratová hodnota  
  A `Platform::String^` obsahující dat řetězce.  
 
-## <a name="length"></a>StringReference::Length – metoda
+## <a name="length"></a>  StringReference::Length – metoda
 Vrátí počet znaků v řetězci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>StringReference::operator = – operátor
+## <a name="operator-assign"></a>  StringReference::operator = – operátor
 Zadaný objekt přiřadí aktuální `StringReference` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>StringReference::operator() – operátor
+## <a name="operator-call"></a>  StringReference::operator() – operátor
 Převede `StringReference` do objektu `Platform::String^` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -170,7 +172,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro objekt typu `Platform::String`.  
 
-## <a name="ctor"></a>StringReference::StringReference – konstruktor
+## <a name="ctor"></a>  StringReference::StringReference – konstruktor
 Inicializuje novou instanci třídy `StringReference` třídy.  
   
 ### <a name="syntax"></a>Syntaxe  

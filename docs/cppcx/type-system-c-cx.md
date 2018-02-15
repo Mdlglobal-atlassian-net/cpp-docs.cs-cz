@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="type-system-ccx"></a>Systém typů (C + +/ CX)
 Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Visual Basic, Visual C# a JavaScript pro zápis aplikace a součásti, které přímo přístup k rozhraní API systému Windows a zajistit vzájemnou funkční spolupráci s jinými aplikace Windows Runtime a součásti. Univerzální aplikace platformy Windows, které jsou napsané v jazyce C++ kompilace nativního kódu, které provádí přímo v procesoru. Univerzální platforma Windows aplikace, které jsou napsané v C# nebo Visual Basic zkompilovat do převodního jazyka Microsoft (MSIL) a spustit v common language runtime (CLR). Univerzální aplikace platformy Windows, které jsou napsané v jazyce JavaScript spustit v prostředí runtime. Sami součásti operačního systému Windows Runtime jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a Universal Windows Platform apps komunikovat přímo přes rozhraní binární aplikace Windows Runtime (ABI).  

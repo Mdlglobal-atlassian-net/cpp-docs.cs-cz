@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
 Průvodce příjemcem knihovny ATL technologie OLE DB a Průvodce aplikací MFC generovat určité funkce, kterých byste měli vědět. Všimněte si, že některé metody jsou implementované jinak v s atributy projekty, takže se několik aspektů; každý případ je popsané níže. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`zdroj dat, sadu řádků, se otevře a spustí záložky, pokud jsou k dispozici.  
+-   `OpenAll` zdroj dat, sadu řádků, se otevře a spustí záložky, pokud jsou k dispozici.  
   
--   `CloseAll`Zavře všechny otevřené sady řádků a uvolní všechny spuštění příkazu.  
+-   `CloseAll` Zavře všechny otevřené sady řádků a uvolní všechny spuštění příkazu.  
   
--   `OpenRowset`je volána OpenAll k otevření sady řádků příjemce nebo sady řádků.  
+-   `OpenRowset` je volána OpenAll k otevření sady řádků příjemce nebo sady řádků.  
   
--   `GetRowsetProperties`načte ukazatel nastavit vlastnosti, které lze nastavit vlastností sady řádků.  
+-   `GetRowsetProperties` načte ukazatel nastavit vlastnosti, které lze nastavit vlastností sady řádků.  
   
--   `OpenDataSource`Otevře se zdroji dat pomocí inicializačního řetězce, které jste zadali v **vlastnosti propojení dat** dialogové okno.  
+-   `OpenDataSource` Otevře se zdroji dat pomocí inicializačního řetězce, které jste zadali v **vlastnosti propojení dat** dialogové okno.  
   
--   `CloseDataSource`Zavře zdroj dat odpovídajícím způsobem.  
+-   `CloseDataSource` Zavře zdroj dat odpovídajícím způsobem.  
   
 ## <a name="openall-and-closeall"></a>OpenAll a CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** volá tuto metodu za účelem otevření sady řádků nebo sady řádků v příjemci. Obvykle není potřeba volat `OpenRowset` Pokud chcete pracovat s více zdrojů dat nebo relací nebo sady řádků. `OpenRowset`je deklarován v souboru záhlaví třídy příkazu nebo tabulky:  
+ **OpenAll** volá tuto metodu za účelem otevření sady řádků nebo sady řádků v příjemci. Obvykle není potřeba volat `OpenRowset` Pokud chcete pracovat s více zdrojů dat nebo relací nebo sady řádků. `OpenRowset` je deklarován v souboru záhlaví třídy příkazu nebo tabulky:  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Tato metoda načte ukazatel na sadu vlastností sady řádků; Chcete-li nastavit vlastnosti, například DBPROP_IRowsetChange můžete použít tento ukazatel. `GetRowsetProperties`se používá v třídě uživatelského záznamu následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
+ Tato metoda načte ukazatel na sadu vlastností sady řádků; Chcete-li nastavit vlastnosti, například DBPROP_IRowsetChange můžete použít tento ukazatel. `GetRowsetProperties` se používá v třídě uživatelského záznamu následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

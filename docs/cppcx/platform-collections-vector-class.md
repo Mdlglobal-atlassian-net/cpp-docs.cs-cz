@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector – třída
 
@@ -117,7 +120,7 @@ Pokud pokus o použití **vektoru** zadejte veřejný návratovou hodnotu nebo p
 
 **Namespace:** Platform::Collections
 
-## <a name="append"></a>Vector::append – metoda
+## <a name="append"></a>  Vector::append – metoda
 
 Vloží zadanou položku za poslední položky v aktuální vektoru.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Položka ke vložení do vektoru. Typ *položky* je definována *T* typename.
 
-## <a name="clear"></a>Vector::clear – metoda
+## <a name="clear"></a>  Vector::clear – metoda
 
 Odstraní všechny elementy v aktuálním vektoru.
 
@@ -142,7 +145,7 @@ Odstraní všechny elementy v aktuálním vektoru.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector::First – metoda
+## <a name="first"></a>  Vector::First – metoda
 
 Vrátí iterovat této body prvním elementem v vektoru.
 
@@ -162,7 +165,7 @@ Pohodlný způsob pro uložení iterator vrácený First() je přiřadit návrat
 
 Pokud budete potřebovat pár iterátory předat do funkce STL, používat bezplatné funkce [Windows::Foundation::Collections:: začít](../cppcx/begin-function.md) a [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector::GetAt – metoda
+## <a name="getat"></a>  Vector::GetAt – metoda
 
 Načte element aktuální vektor, který je identifikovat pomocí zadaného indexu.
 
@@ -181,7 +184,7 @@ Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v ob
 
 Element určeného *index* parametr. Typ elementu je definován *T* typename.
 
-## <a name="getmany"></a>Vector::GetMany – metoda
+## <a name="getmany"></a>  Vector::GetMany – metoda
 
 Načte posloupnost položek z aktuální vektoru, počínaje zadaným indexem a zkopíruje je do pole přidělené volajícího.
 
@@ -198,7 +201,7 @@ virtual unsigned int GetMany(
 *startIndex*  
 Index založený na nule spouštění položky, které chcete načíst.
 
-*cíle*  
+*Cíle*  
 Volající přidělené řadu položky, které začínají na element určeného *počáteční index* a konec na posledním prvkem v vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -209,7 +212,7 @@ Počet položek, které načíst.
 
 Tato funkce není určen pro použití přímo v kódu klienta. Používá se interně v [to_vector funkce](../cppcx/to-vector-function.md) umožňující efektivní převod Platform::Vector intances std::vector instance.
 
-## <a name="getview"></a>Vector::GetView – metoda
+## <a name="getview"></a>  Vector::GetView – metoda
 
 Vrátí vektor; zobrazení jen pro čtení To znamená, IVectorView.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Objekt IVectorView.
 
-## <a name="indexof"></a>Vector::IndexOf – metoda
+## <a name="indexof"></a>  Vector::IndexOf – metoda
 
 Vyhledá zadanou položku v aktuální vektoru a pokud najde, vrátí index položky.
 
@@ -245,13 +248,13 @@ Index založený na nule položky Pokud parametr *hodnotu* , jinak hodnota je 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`Pokud zadaná položka není nalezena; v opačném `false`.
+`true` Pokud zadaná položka není nalezena; v opačném `false`.
 
 ### <a name="remarks"></a>Poznámky
 
 IndexOf std::find_if používá k nalezení položky. Vlastní element typy by proto přetížení == a! = – operátor Chcete-li povolit rovnosti vyžaduje tento find_if – porovnání.
 
-##  <a name="insertat"></a>Vector::InsertAt – metoda
+##  <a name="insertat"></a>  Vector::InsertAt – metoda
 
 Vloží zadanou položku do aktuální vektoru za elementem identifikovanou pomocí zadaného indexu.
 
@@ -266,10 +269,10 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v objektu vektoru.
 
-*Položka*  
+Položka  
 Položku, kterou chcete vložit do vektoru za elementem určeného *index*. Typ *položky* je definována *T* typename.
 
-## <a name="removeat"></a>Vector::removeAt – metoda
+## <a name="removeat"></a>  Vector::removeAt – metoda
 
 Odstraní element identifikovanou pomocí zadaného indexu z aktuální vektoru.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v objektu vektoru.
 
-## <a name="removeatend"></a>Vector::RemoveAtEnd – metoda
+## <a name="removeatend"></a>  Vector::RemoveAtEnd – metoda
 
 Odstraní prvek na konec aktuální vektoru.
 
@@ -294,7 +297,7 @@ Odstraní prvek na konec aktuální vektoru.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector::ReplaceAll – metoda
+## <a name="replaceall"></a>  Vector::ReplaceAll – metoda
 
 Odstraní elementy v aktuálním vektoru a vloží elementy ze zadaného pole.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 Pole objektů, jejichž typ je definován *T* typename.
 
-## <a name="setat"></a>Vector::SetAt – metoda
+## <a name="setat"></a>  Vector::SetAt – metoda
 
 Zadaná hodnota přiřadí element v aktuální vektor, který je identifikován pomocí zadaného indexu.
 
@@ -324,10 +327,10 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v objektu vektoru.
 
-*Položka*  
+Položka  
 Hodnota pro přiřazení daného elementu. Typ *položky* je definována *T* typename.
 
-## <a name="size"></a>Vector::size – metoda
+## <a name="size"></a>  Vector::size – metoda
 
 Vrátí počet prvků v aktuálním objektu vektoru.
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 Počet elementů v aktuální vektoru.
 
-## <a name="ctor"></a>Vector::Vector – konstruktor
+## <a name="ctor"></a>  Vector::Vector – konstruktor
 
 Inicializuje novou instanci třídy vektoru.
 
@@ -381,7 +384,7 @@ A [std::initializer_list](../standard-library/initializer-list-class.md) objekt�
 *N*  
 Počet elementů v kolekci objektů, které slouží k inicializaci aktuální vektoru.
 
-*velikost*  
+*Velikost*  
 Počet elementů v vektoru.
 
 *value*  

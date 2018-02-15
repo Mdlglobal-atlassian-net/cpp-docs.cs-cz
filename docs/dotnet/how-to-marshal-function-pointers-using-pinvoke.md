@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Postupy: Zařazení ukazatelů na funkce pomocí služby PInvoke
 Toto téma vysvětluje, jak spravované delegáti jde použít místo ukazatelů na funkce při vzájemné spolupráci se službou nespravovaných funkcí pomocí funkcí rozhraní .NET Framework P/Invoke. Programátory v jazyce Visual C++ jsou ale místo toho používají funkce interoperability C++ (Pokud je to možné), protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být zdlouhavé pro implementaci. Pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností. Jinak najdete v následujících tématech:  
@@ -42,8 +44,6 @@ Toto téma vysvětluje, jak spravované delegáti jde použít místo ukazatelů
  Spravovaný modul definuje delegáta, který je zařazen do nativního kódu jako ukazatel na funkci a používá <xref:System.Runtime.InteropServices.DllImportAttribute> atribut vystavit nativní funkce TakesCallback do spravovaného kódu. V hlavní funkce je instance delegáta, vytvořit a předaný funkci TakesCallback. Výstup programu ukazuje, že tato funkce získá provedený nativní funkce TakesCallback.  
   
  Spravovaná funkce potlačí uvolňování paměti pro spravovaného delegáta k zabránění uvolňování paměti rozhraní .NET Framework z přemístění delegáta, zatímco nativní funkce.  
-  
- Spravovaný modul je kompilovat s/CLR, ale/CLR: pure pracuje stejně dobře. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
   
 ```cpp  
 // TraditionalDll5.cpp  

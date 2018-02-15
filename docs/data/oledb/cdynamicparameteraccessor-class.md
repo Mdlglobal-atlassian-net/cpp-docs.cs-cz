@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.CDynamicParameterAccessor
 - ATL::CDynamicParameterAccessor
 - CDynamicParameterAccessor
-dev_langs: C++
-helpviewer_keywords: CDynamicParameterAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicParameterAccessor class
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b0c2590866db418f1652ebd1a46c0465ccb99086
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 6c0bf234bd0f8a3de96c545e2bbdfe492822d627
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor – třída
 Podobně jako [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ale získává informace o parametrech, chcete-li nastavit, že zavoláte [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) rozhraní.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class CDynamicParameterAccessor : public CDynamicAccessor  
 ```  
   
@@ -43,18 +46,18 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |||  
 |-|-|  
 |[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-cdynamicparameteraccessor.md)|Konstruktor|  
-|[GetParam –](../../data/oledb/cdynamicparameteraccessor-getparam.md)|Načte parametr dat z vyrovnávací paměti.|  
-|[Getparamcount –](../../data/oledb/cdynamicparameteraccessor-getparamcount.md)|Načte počet parametrů v přistupujícím objektu.|  
-|[Getparamio –](../../data/oledb/cdynamicparameteraccessor-getparamio.md)|Určuje, zda je zadaný parametr vstupní nebo výstupní parametr.|  
-|[Getparamlength –](../../data/oledb/cdynamicparameteraccessor-getparamlength.md)|Načte délka zadaný parametr uložené ve vyrovnávací paměti.|  
-|[Getparamname –](../../data/oledb/cdynamicparameteraccessor-getparamname.md)|Načte název zadaného parametru.|  
-|[Getparamstatus –](../../data/oledb/cdynamicparameteraccessor-getparamstatus.md)|Načte stav zadaný parametr uložené ve vyrovnávací paměti.|  
-|[Getparamstring –](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)|Načte řetězec data zadaný parametr uložené ve vyrovnávací paměti.|  
-|[GetParamType –](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)|Načte datový typ zadaný parametr.|  
-|[SetParam –](../../data/oledb/cdynamicparameteraccessor-setparam.md)|Nastaví vyrovnávací paměti, pomocí parametru data.|  
-|[Setparamlength –](../../data/oledb/cdynamicparameteraccessor-setparamlength.md)|Nastaví délku zadaný parametr uložené ve vyrovnávací paměti.|  
-|[Setparamstatus –](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|Nastaví stav zadaný parametr uložené ve vyrovnávací paměti.|  
-|[Setparamstring –](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|Nastaví data řetězce zadaného parametru uložené ve vyrovnávací paměti.|  
+|[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)|Načte parametr dat z vyrovnávací paměti.|  
+|[GetParamCount](../../data/oledb/cdynamicparameteraccessor-getparamcount.md)|Načte počet parametrů v přistupujícím objektu.|  
+|[GetParamIO](../../data/oledb/cdynamicparameteraccessor-getparamio.md)|Určuje, zda je zadaný parametr vstupní nebo výstupní parametr.|  
+|[GetParamLength](../../data/oledb/cdynamicparameteraccessor-getparamlength.md)|Načte délka zadaný parametr uložené ve vyrovnávací paměti.|  
+|[GetParamName](../../data/oledb/cdynamicparameteraccessor-getparamname.md)|Načte název zadaného parametru.|  
+|[GetParamStatus](../../data/oledb/cdynamicparameteraccessor-getparamstatus.md)|Načte stav zadaný parametr uložené ve vyrovnávací paměti.|  
+|[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)|Načte řetězec data zadaný parametr uložené ve vyrovnávací paměti.|  
+|[GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)|Načte datový typ zadaný parametr.|  
+|[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)|Nastaví vyrovnávací paměti, pomocí parametru data.|  
+|[SetParamLength](../../data/oledb/cdynamicparameteraccessor-setparamlength.md)|Nastaví délku zadaný parametr uložené ve vyrovnávací paměti.|  
+|[SetParamStatus](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|Nastaví stav zadaný parametr uložené ve vyrovnávací paměti.|  
+|[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|Nastaví data řetězce zadaného parametru uložené ve vyrovnávací paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Zprostředkovatel musí podporovat `ICommandWithParameters` pro příjemce k použití této třídy.  

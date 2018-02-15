@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -75,7 +75,7 @@ Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepš
 ## <a name="writing-applications-in-c"></a>Psaní aplikací v jazyce C++
 
 [Univerzální aplikace pro Windows](windows/universal-windows-apps-cpp.md)  
-Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v operačním systému Windows. Informace o vývoji aplikací pro Windows Store najdete v tématu [aplikace pro vývoj Windows Store pomocí sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) a [aplikace plán pro Windows Store pomocí C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v operačním systému Windows. Informace o vývoji aplikací UWP najdete v tématu [Úvod do univerzální platformy Windows](/windows/uwp/get-started/universal-application-platform-guide) a [vytvoření první aplikace UWP pomocí C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Aplikací klasické pracovní plochy (C++)](windows/desktop-applications-visual-cpp.md)  
 Získejte informace o vytváření aplikací klasické pracovní plochy, které mají smyčky zpráv a zpětná volání.
@@ -131,7 +131,7 @@ Asynchronní a paralelní algoritmy, které jsou spouštěny na CPU.
 Masivně paralelní algoritmy, které jsou spouštěny na GPU.
 
 [Knihovna Windows šablon Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] aplikace a součásti.
+Univerzální platformu Windows (UWP) aplikace a součásti.
 
 [.NET – programování s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programování pro modul Common Language Runtime (CLR).

@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
 Schéma sad řádků umožňují spotřebitelům získat informace o úložišti dat bez znalosti jeho podkladová struktura nebo schéma. Úložiště dat, které může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, takže by být žádný způsob, jak zajistit, aby znalosti o schématu s výjimkou jeho čtení. (Například Upozorňujeme, že průvodci Visual C++ použít sady řádků schématu pro generování přístupových objektů pro spotřebitele.) Povolit příjemce k tomu, vystavuje objekt relace poskytovatele metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) rozhraní. V aplikacích Visual C++, můžete použít [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`podporuje následující metody:  
+ `IDBSchemaRowsetImpl` podporuje následující metody:  
   
 -   [CheckRestrictions –](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) kontroluje platnost omezení proti sadě řádků schématu.  
   
@@ -57,11 +59,11 @@ Schéma sad řádků umožňují spotřebitelům získat informace o úložišti
   
 -   **C** *ShortName* **SessionColSchemaRowset** zpracovává požadavky pro informace o sloupcích ( **DBSCHEMA_COLUMNS** sada řádků schématu). Průvodce poskytuje vzorové implementace pro tyto třídy, které vrací informace o schématu pro poskytovatele DOS.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** zpracovává požadavky na schéma informace o typu poskytovatele ( **DBSCHEMA_PROVIDER_TYPES** Sada řádků schématu). Vrátí výchozí implementace zadaným průvodcem `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** zpracovává požadavky na schéma informace o typu poskytovatele ( **DBSCHEMA_PROVIDER_TYPES** schématu Sada řádků). Vrátí výchozí implementace zadaným průvodcem `S_OK`.  
   
  Můžete přizpůsobit tyto třídy pro zpracování informací o schématu na základě vašeho poskytovatele:  
   
--   V **C***ShortName***SessionTRSchemaRowset**, musíte vyplnit pole katalog, tabulky a popis (**trData.m_szType**, **trData.m_szTable**, a **trData.m_szDesc**). Příklad generované v Průvodci používá jenom jeden řádek (tabulky). Ostatní poskytovatele může vrátit více než jedna tabulka.  
+-   V **C***ShortName***SessionTRSchemaRowset**, musíte vyplnit pole katalog, tabulky a popis (**trData.m_szType**, **trData.m_szTable** , a **trData.m_szDesc**). Příklad generované v Průvodci používá jenom jeden řádek (tabulky). Ostatní poskytovatele může vrátit více než jedna tabulka.  
   
 -   V **C***ShortName***SessionColSchemaRowset**, předáte název tabulky jako **DBID**.  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

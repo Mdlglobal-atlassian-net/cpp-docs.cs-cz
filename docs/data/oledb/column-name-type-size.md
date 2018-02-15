@@ -4,42 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_SIZE
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_SIZE macro
+f1_keywords:
+- COLUMN_NAME_TYPE_SIZE
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_SIZE macro
 ms.assetid: b10f8ef9-78ce-4ec9-b4cc-4278271a46dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b18e79dd38c61ae6ddd25e697af04a5c25f014dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d771a505aeabbf7096ad4bdafa967025927fa8ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametypesize"></a>COLUMN_NAME_TYPE_SIZE
 Představuje vazbu na sadě řádků konkrétní sloupec v dané sadě řádků. Podobně jako [COLUMN_NAME](../../data/oledb/column-name.md)kromě toho, že tento makro také trvá datový typ a velikost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-COLUMN_NAME_TYPE_SIZE(  
-pszName  
-,   
-wType  
-,   
-nLength  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
   
 ```  
   
@@ -65,7 +60,7 @@ data
 ## <a name="see-also"></a>Viz také  
  [Makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN_ACCESSOR_MAP –](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   

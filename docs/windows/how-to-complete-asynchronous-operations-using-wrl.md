@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Postupy: Dokončení asynchronních operací s použitím knihovny WRL
 Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) ke spuštění asynchronní operace a práci při dokončení operace.  
@@ -36,7 +38,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
  Následující postup spuštění asynchronní časovače a čekání na časovač vyprší. Úplný příklad následuje.  
   
 > [!WARNING]
->  I když používáte obvykle Windows knihovna šablon C++ Runtime v aplikaci pro univerzální platformu Windows, tento příklad používá konzolovou aplikaci pro obrázek. Funkce, jako `wprintf_s` nejsou k dispozici z aplikace pro univerzální platformu Windows. Další informace o typy a funkce, které můžete použít v aplikaci pro univerzální platformu Windows najdete v tématu [funkcí CRT nepodporuje /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) a [aplikace Win32 a COM pro Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  I když používáte obvykle Windows knihovna šablon C++ Runtime v aplikaci pro univerzální platformu Windows (UWP), tento příklad používá konzolovou aplikaci pro obrázek. Funkce, jako `wprintf_s` nejsou k dispozici z aplikace UWP. Další informace o typy a funkce, které můžete použít v aplikaci UWP najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) a [Win32 a COM pro aplikace UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Zahrnout (`#include`) potřebné prostředí Windows Runtime, knihovna šablon C++ prostředí Windows Runtime nebo standardní knihovna C++ hlavičky.  
   
@@ -78,7 +80,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
  Kompilace kódu, zkopírujte jej a vložte ji do projektu sady Visual Studio nebo ho vložte do souboru, který je pojmenován `wrl-consume-async.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
   
- **cl.exe knihovny wrl využívat async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>Příklad: Práce s vlákna na pozadí  
  Následující kroky spustit pracovní vlákno a definovat akci, kterou provádí tento přístup z více vláken. Úplný příklad následuje.  
@@ -126,7 +128,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
  Kompilace kódu, zkopírujte jej a vložte ji do projektu sady Visual Studio nebo ho vložte do souboru, který je pojmenován `wrl-consume-asyncOp.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
   
- **cl.exe knihovny wrl využívat asyncOp.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Viz také  
  [Knihovna šablon C++ prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

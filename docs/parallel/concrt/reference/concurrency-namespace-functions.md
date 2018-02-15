@@ -37,39 +37,41 @@ f1_keywords:
 - concrt/concurrency::wait
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c40cd99c03d4e6e3adcef9d709ae85163804c94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: db8dd57c912c62dab895d613c5d7bbe0d5c3cd9a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funkce obor názvů souběžnosti
 ||||  
 |-|-|-|  
 |[Alokační](#alloc)|[Createresourcemanager –](#createresourcemanager)|[Disabletracing –](#disabletracing)|  
-|[Enabletracing –](#enabletracing)|[Volné](#free)|[Getexecutioncontextid –](#getexecutioncontextid)|  
-|[Getosversion –](#getosversion)|[Getprocessorcount –](#getprocessorcount)|[Getprocessornodecount –](#getprocessornodecount)|  
-|[Getschedulerid –](#getschedulerid)|[Trace_agents_register_name –](#trace_agents_register_name)|[asend –](#asend)|  
-|[cancel_current_task –](#cancel_current_task)|[Vymazat](#clear)|[create_async –](#create_async)|  
-|[create_task –](#create_task)|[get_ambient_scheduler –](#get_ambient_scheduler)|[internal_assign_iterators –](#internal_assign_iterators)|  
-|[interruption_point –](#interruption_point)|[is_current_task_group_canceling –](#is_current_task_group_canceling)|[make_choice –](#make_choice)|  
-|[make_greedy_join –](#make_greedy_join)|[make_join –](#make_join)|[make_task –](#make_task)|  
-|[parallel_buffered_sort –](#parallel_buffered_sort)|[parallel_for –](#parallel_for)|[parallel_for_each –](#parallel_for_each)|  
-|[parallel_invoke –](#parallel_invoke)|[parallel_radixsort –](#parallel_radixsort)|[parallel_reduce –](#parallel_reduce)|  
-|[parallel_sort –](#parallel_sort)|[parallel_transform –](#parallel_transform)|[přijímat](#receive)|  
-|[run_with_cancellation_token –](#run_with_cancellation_token)|[Odeslat](#send)|[set_ambient_scheduler –](#set_ambient_scheduler)|  
-|[set_task_execution_resources –](#set_task_execution_resources)|[swap](#swap)|[task_from_exception –](#task_from_exception)|  
-|[task_from_result –](#task_from_result)|[try_receive –](#try_receive)|[Počkej](#wait)|  
-|[when_all –](#when_all)|[when_any –](#when_any)|  
+|[EnableTracing](#enabletracing)|[Volné](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
+|[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
+|[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend –](#asend)|  
+|[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|  
+|[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|  
+|[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|  
+|[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|  
+|[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|  
+|[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|  
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
+|[run_with_cancellation_token](#run_with_cancellation_token)|[Odeslat](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
+|[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
+|[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc"></a>Alokační  
+##  <a name="alloc">Alokační</a>  
  Přiděluje blok paměti zadaná velikost z Suballocator ukládání do mezipaměti Concurrency Runtime.  
   
 ```
@@ -86,7 +88,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="remarks"></a>Poznámky  
  Další informace o tom, které scénáře v aplikaci může využívat Suballocator ukládání do mezipaměti najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="asend"></a>asend –  
+##  <a name="asend">asend –</a>  
  Operace asynchronní odesílání, která plánuje úlohy rozšíření dat na cílový blok.  
   
 ```
@@ -112,12 +114,12 @@ bool asend(
  Odkaz na data, která mají být odeslány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla přijata dřív, než metoda vrátí, `false` jinak.  
+ `true` Pokud zpráva byla přijata dřív, než metoda vrátí, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="cancel_current_task"></a>cancel_current_task –  
+##  <a name="cancel_current_task"></a>  cancel_current_task  
  Zruší aktuálně spuštěné úlohy. Tuto funkci lze volat z v textu úlohu přerušit provádění úkolu a způsobit, že ho zadat `canceled` stavu.  
   
  Není podporováno pro volání této funkce, pokud nejsou v rámci textu `task`. Díky tomu bude mít za následek nedefinované chování například chybě nebo zablokování v aplikaci.  
@@ -126,7 +128,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="clear"></a>Vymazat  
+##  <a name="clear"></a>  Zrušte zaškrtnutí  
  Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.  
   
 ```
@@ -138,7 +140,7 @@ void concurrent_queue<T, _Ax>::clear();
  `T`  
  `_Ax`  
   
-##  <a name="create_async"></a>create_async –  
+##  <a name="create_async"></a>  create_async  
  Vytvoří prostředí Windows Runtime asynchronní konstrukce podle objekt uživatelem dodaný lambda nebo funkce. Návratový typ `create_async` je jedním z buď `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`, nebo `IAsyncOperationWithProgress<TResult, TProgress>^` podle podpis lambda předaný metodě.  
   
 ```
@@ -168,9 +170,9 @@ __declspec(noinline) auto create_async(const _Function& _Func)
   
  Pokud se text vrátí lambda a úloh, lamba provede vložené a deklarováním lambda provést argument typu `cancellation_token` můžete aktivovat zrušení všech úkolů, které vytvoříte v rámci argument lambda předáním ve při jejich vytváření. Můžete také používat `register_callback` metodu na token, který má způsobit modulu Runtime vyvolání zpětné volání při volání `IAsyncInfo::Cancel` na async operace nebo akce vytváří...  
   
- Tato funkce je pouze k dispozici pro aplikace pro Windows Store.  
+ Tato funkce je pouze k dispozici pro aplikace Windows Runtime.  
   
-##  <a name="createresourcemanager"></a>Createresourcemanager –  
+##  <a name="createresourcemanager">Createresourcemanager –</a>  
  Vrátí rozhraní, které představuje instanci typu singleton z Concurrency Runtime Resource Manager. Resource Manager zodpovídá za přiřazení zdrojů k plánovače, které chcete vzájemně spolupracovat.  
   
 ```
@@ -185,8 +187,8 @@ IResourceManager* __cdecl CreateResourceManager();
   
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="create_task"></a>create_task –  
- Vytvoří PPL [úloh](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task`lze použít kdekoli byste použili jste konstruktor úloh. Je poskytována především pro usnadnění práce, protože umožňuje použít `auto` – klíčové slovo při vytváření úlohy.  
+##  <a name="create_task"></a>  create_task –  
+ Vytvoří PPL [úloh](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objektu. `create_task` lze použít kdekoli byste použili jste konstruktor úloh. Je poskytována především pro usnadnění práce, protože umožňuje použít `auto` – klíčové slovo při vytváření úlohy.  
   
 ```
 template<typename T>
@@ -203,7 +205,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  `_ReturnType`  
  `_Param`  
- Parametr, ze kterého má být vytvořená úloha. To může být objekt lambda nebo funkce, `task_completion_event` objektu, na jiný `task` objekt nebo Windows::Foundation::IAsyncInfo rozhraní, pokud používáte úlohy v aplikaci Windows Store.  
+ Parametr, ze kterého má být vytvořená úloha. To může být objekt lambda nebo funkce, `task_completion_event` objektu, na jiný `task` objekt nebo Windows::Foundation::IAsyncInfo rozhraní, pokud používáte úlohy v aplikaci UWP.  
   
  `_TaskOptions`  
  `_Task`  
@@ -218,9 +220,9 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  Typ vrácený úlohy, která je odvozeno z první parametr funkce. Pokud `_Param` je `task_completion_event<T>`, `task<T>`, nebo functor, který vrací buď typ `T` nebo `task<T>`, typ vytvořená úloha je `task<T>`.  
   
- V aplikaci Windows Store Pokud `_Param` je typu Windows::Foundation::IAsyncOperation\<T > ^ nebo Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, nebo functor, která vrátí jednu z těchto typů, vytvořený Úloha bude typu `task<T>`. Pokud `_Param` je typu Windows::Foundation::IAsyncAction ^ nebo Windows::Foundation::IAsyncActionWithProgress\<P > ^, nebo functor, která vrátí jednu z těchto typů, bude mít typ vytvořená úloha `task<void>`.  
+ V aplikaci pro UPW Pokud `_Param` je typu Windows::Foundation::IAsyncOperation\<T > ^ nebo Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, nebo functor, která vrátí jednu z těchto typů, bude mít vytvořená úloha typ `task<T>`. Pokud `_Param` je typu Windows::Foundation::IAsyncAction ^ nebo Windows::Foundation::IAsyncActionWithProgress\<P > ^, nebo functor, která vrátí jednu z těchto typů, bude mít typ vytvořená úloha `task<void>`.  
   
-##  <a name="disabletracing"></a>Disabletracing –  
+##  <a name="disabletracing">Disabletracing –</a>  
  Zakáže trasování v Concurrency Runtime. Tato funkce je zastaralý, protože je ve výchozím nastavení neregistrovaná trasování událostí pro Windows.  
   
 ```
@@ -230,7 +232,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud zakázal správně trasování, `S_OK` je vrácen. Pokud trasování nebyla zahájena dříve, `E_NOT_STARTED` je vrácen  
   
-##  <a name="enabletracing"></a>Enabletracing –  
+##  <a name="enabletracing"></a>  Enabletracing –  
  Umožňuje trasování v Concurrency Runtime. Tato funkce je zastaralý, protože trasování událostí pro Windows je teď na ve výchozím nastavení.  
   
 ```
@@ -240,7 +242,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud trasování byl správně inicializován, `S_OK` je vrácená, jinak hodnota `E_NOT_STARTED` je vrácen.  
   
-##  <a name="free"></a>Volné  
+##  <a name="free">Volné</a>  
  Uvolní blok paměti dříve přidělené `Alloc` metodu Suballocator ukládání do mezipaměti Concurrency Runtime.  
   
 ```
@@ -254,7 +256,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="remarks"></a>Poznámky  
  Další informace o tom, které scénáře v aplikaci může využívat Suballocator ukládání do mezipaměti najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="get_ambient_scheduler"></a>get_ambient_scheduler –  
+##  <a name="get_ambient_scheduler"></a>  get_ambient_scheduler  
   
 ```
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
@@ -262,7 +264,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="getexecutioncontextid"></a>Getexecutioncontextid –  
+##  <a name="getexecutioncontextid"></a>  GetExecutionContextId  
  Vrací jedinečný identifikátor, který lze přiřadit ke kontextu spuštění, který implementuje `IExecutionContext` rozhraní.  
   
 ```
@@ -275,7 +277,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete získat identifikátor pro váš kontext provádění před předáte `IExecutionContext` rozhraní jako parametr pro některou z metod nabízí Resource Manager.  
   
-##  <a name="getosversion"></a>Getosversion –  
+##  <a name="getosversion"></a>  Getosversion –  
  Vrátí verzi operačního systému.  
   
 ```
@@ -288,7 +290,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 ### <a name="remarks"></a>Poznámky  
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="getprocessorcount"></a>Getprocessorcount –  
+##  <a name="getprocessorcount"></a>  Getprocessorcount –  
  Vrátí počet vláken hardwaru v základním systému.  
   
 ```
@@ -301,7 +303,7 @@ unsigned int __cdecl GetProcessorCount();
 ### <a name="remarks"></a>Poznámky  
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="getprocessornodecount"></a>Getprocessornodecount –  
+##  <a name="getprocessornodecount"></a>  Getprocessornodecount –  
  Vrátí počet uzlů NUMA nebo balíčky procesoru v základním systému.  
   
 ```
@@ -316,7 +318,7 @@ unsigned int __cdecl GetProcessorNodeCount();
   
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="getschedulerid"></a>Getschedulerid –  
+##  <a name="getschedulerid"></a>  GetSchedulerId  
  Vrací jedinečný identifikátor, který lze přiřadit k Plánovač, který implementuje `IScheduler` rozhraní.  
   
 ```
@@ -329,7 +331,7 @@ unsigned int __cdecl GetSchedulerId();
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete získat identifikátor vašeho scheduleru před předáte `IScheduler` rozhraní jako parametr pro některou z metod nabízí Resource Manager.  
   
-##  <a name="internal_assign_iterators"></a>internal_assign_iterators –  
+##  <a name="internal_assign_iterators"></a>  internal_assign_iterators –  
   
 ```
 template<typename T, class _Ax>
@@ -346,7 +348,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
  `first`  
  `last`  
   
-##  <a name="interruption_point"></a>interruption_point –  
+##  <a name="interruption_point"></a>  interruption_point –  
  Vytvoří bod přerušení pro zrušení. Pokud zrušení probíhá v kontextu, kde tato funkce je volána, to vyvolá výjimku interní, která zruší provádění aktuálně prováděné paralelní práce. Pokud zrušení není v průběhu, funkce neprovede žádnou akci.  
   
 ```
@@ -356,7 +358,7 @@ inline void interruption_point();
 ### <a name="remarks"></a>Poznámky  
  Neměli zachycení interní zrušení výjimky vyvolané `interruption_point()` funkce. Výjimka zachycena, který se zpracovávají modulem runtime a zachytávání ho může způsobit vašeho programu chovat neobvyklým způsobem.  
   
-##  <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling –  
+##  <a name="is_current_task_group_canceling"></a>  is_current_task_group_canceling –  
  Vrátí údaj o tom, jestli úloha skupiny vložené který je právě prováděných v aktuálním kontextu je in the midst of active zrušení (nebo bude zanedlouho). Všimněte si, že pokud neexistuje žádná skupina úloh aktuálně spuštěných vložené v aktuálním kontextu se `false` bude vrácen.  
   
 ```
@@ -364,12 +366,12 @@ bool __cdecl is_current_task_group_canceling();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je skupina úkolů, které právě probíhá rušení, `false` jinak.  
+ `true` Pokud je skupina úkolů, které právě probíhá rušení, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [zrušení](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="make_choice"></a>make_choice –  
+##  <a name="make_choice"></a>  make_choice –  
  Vytvoří `choice` zasílání zpráv bloku z volitelný `Scheduler` nebo `ScheduleGroup` a dvě nebo více vstupních zdrojů.  
   
 ```
@@ -419,7 +421,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 ### <a name="return-value"></a>Návratová hodnota  
  A `choice` blok zpráv s dvě nebo více vstupních zdrojů.  
   
-##  <a name="make_greedy_join"></a>make_greedy_join –  
+##  <a name="make_greedy_join"></a>  make_greedy_join –  
  Vytvoří `greedy multitype_join` zasílání zpráv bloku z volitelný `Scheduler` nebo `ScheduleGroup` a dvě nebo více vstupních zdrojů.  
   
 ```
@@ -469,7 +471,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 ### <a name="return-value"></a>Návratová hodnota  
  A `greedy multitype_join` blok zpráv s dvě nebo více vstupních zdrojů.  
   
-##  <a name="make_join"></a>make_join –  
+##  <a name="make_join"></a>  make_join –  
  Vytvoří `non_greedy multitype_join` zasílání zpráv bloku z volitelný `Scheduler` nebo `ScheduleGroup` a dvě nebo více vstupních zdrojů.  
   
 ```
@@ -520,7 +522,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 ### <a name="return-value"></a>Návratová hodnota  
  A `non_greedy multitype_join` blok zpráv s dvě nebo více vstupních zdrojů.  
   
-##  <a name="make_task"></a>make_task –  
+##  <a name="make_task"></a>  make_task –  
  Metoda factory pro vytváření `task_handle` objektu.  
   
 ```
@@ -541,7 +543,7 @@ task_handle<_Function> make_task(const _Function& _Func);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je užitečné, když je potřeba vytvořit `task_handle` objekt pomocí výrazu lambda, protože umožňuje vytvořit objekt, aniž by věděly, true typ lambda functor.  
   
-##  <a name="parallel_buffered_sort"></a>parallel_buffered_sort –  
+##  <a name="parallel_buffered_sort"></a>  parallel_buffered_sort –  
  Uspořádá elementů v zadaném rozsahu do nondescending pořadí, nebo podle řazení kritérium určeného predikátu Binární paralelně. Tato funkce je sémanticky podobná `std::sort` , jsou na základě porovnání nestabilním, místní řazení, s tím rozdílem, že je nutné `O(n)` další prostor a vyžaduje výchozí inicializace pro elementy řazen.  
   
 ```
@@ -625,8 +627,8 @@ inline void parallel_buffered_sort(
   
  Algoritmus rozdělí vstupní oblast na dva bloky a postupně rozdělí každého bloku na dvě dílčí bloky dat pro provedení paralelně. Nepovinný argument `_Chunk_size` slouží k označení algoritmus, že by měl zpracovává bloky o velikosti < `_Chunk_size` sériově.  
   
-##  <a name="parallel_for"></a>parallel_for –  
- `parallel_for`iteruje nad rozsah indexy a provede funkci uživatelem zadané při každé iteraci paralelně.  
+##  <a name="parallel_for"></a>  parallel_for –  
+ `parallel_for` iteruje nad rozsah indexy a provede funkci uživatelem zadané při každé iteraci paralelně.  
   
 ```
 template <typename _Index_type, typename _Function, typename _Partitioner>
@@ -701,8 +703,8 @@ void parallel_for(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_for_each"></a>parallel_for_each –  
- `parallel_for_each`Zadaná funkce se vztahuje na každý prvek v rozsahu, paralelně. Je sémanticky ekvivalentní `for_each` v fungovat `std` obor názvů, s tím rozdílem, že iteraci přes elementy provádí paralelně a neurčené pořadí iterace. Argument `_Func` musí podporovat operátor volání funkce formuláře `operator()(T)` kde parametr `T` je typ položky kontejneru se vstupní přes.  
+##  <a name="parallel_for_each"></a>  parallel_for_each –  
+ `parallel_for_each` Zadaná funkce se vztahuje na každý prvek v rozsahu, paralelně. Je sémanticky ekvivalentní `for_each` v fungovat `std` obor názvů, s tím rozdílem, že iteraci přes elementy provádí paralelně a neurčené pořadí iterace. Argument `_Func` musí podporovat operátor volání funkce formuláře `operator()(T)` kde parametr `T` je typ položky kontejneru se vstupní přes.  
   
 ```
 template <typename _Iterator, typename _Function>
@@ -746,7 +748,7 @@ void parallel_for_each(
   
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_invoke"></a>parallel_invoke –  
+##  <a name="parallel_invoke"></a>  parallel_invoke –  
  Provede zadané jako parametry současně a bloky, dokud dokončily spouštění funkce objekty. Každý objekt funkce může být výraz lambda ukazatel na funkci, nebo žádný objektu, který podporuje operátor volání funkce s podpisem `void operator()()`.  
   
 ```
@@ -942,7 +944,7 @@ void parallel_invoke(
   
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_radixsort"></a>parallel_radixsort –  
+##  <a name="parallel_radixsort"></a>  parallel_radixsort  
  Jiné sestupném pořadí pomocí radix, řazení algoritmus jsou uspořádány elementy v zadaném rozsahu. Toto je funkce stabilní řazení, který vyžaduje projekce funkci, která můžete promítnout elementy, který se má seřadit do nepodepsaných klíčů jako celé číslo. Výchozí inicializace se vyžaduje pro elementy řazen.  
   
 ```
@@ -1022,8 +1024,8 @@ inline void parallel_radixsort(
   
  Algoritmus rozdělí vstupní oblast na dva bloky a postupně rozdělí každého bloku na dvě dílčí bloky dat pro provedení paralelně. Nepovinný argument `_Chunk_size` slouží k označení algoritmus, že by měl zpracovává bloky o velikosti < `_Chunk_size` sériově.  
   
-##  <a name="parallel_reduce"></a>parallel_reduce –  
- Vypočítá součet všech elementů v zadaném rozsahu následných částečné součtů computing připravila nebo vypočítá výsledek následných částečné výsledky podobně získané z pomocí zadané operace binární jinak než součtem, paralelně. `parallel_reduce`je sémanticky podobná `std::accumulate`kromě toho, že vyžaduje binární operace jako asociativní a vyžaduje hodnotu identity namísto počáteční hodnoty.  
+##  <a name="parallel_reduce"></a>  parallel_reduce –  
+ Vypočítá součet všech elementů v zadaném rozsahu následných částečné součtů computing připravila nebo vypočítá výsledek následných částečné výsledky podobně získané z pomocí zadané operace binární jinak než součtem, paralelně. `parallel_reduce` je sémanticky podobná `std::accumulate`kromě toho, že vyžaduje binární operace jako asociativní a vyžaduje hodnotu identity namísto počáteční hodnoty.  
   
 ```
 template<typename _Forward_iterator>
@@ -1091,7 +1093,7 @@ inline _Reduce_type parallel_reduce(
   
  Pro třetí přetížení typ hodnoty identity musí být stejný jako typ výsledku snížení, ale iteraci `value_type` může lišit od obě. Funkce snížení rozsah `_Range_fun` se používá v první fázi s hodnotu identity jako výchozí hodnoty a binární funkce `_Sym_reduce_fun` se použije na dílčí výsledky v druhé fázi.  
   
-##  <a name="parallel_sort"></a>parallel_sort –  
+##  <a name="parallel_sort"></a>  parallel_sort –  
  Uspořádá elementů v zadaném rozsahu do nondescending pořadí, nebo podle řazení kritérium určeného predikátu Binární paralelně. Tato funkce je sémanticky podobná `std::sort` v, že je na základě porovnání nestabilním, místní řazení.  
   
 ```
@@ -1134,7 +1136,7 @@ inline void parallel_sort(
   
  Algoritmus rozdělí vstupní oblast na dva bloky a postupně rozdělí každého bloku na dvě dílčí bloky dat pro provedení paralelně. Nepovinný argument `_Chunk_size` slouží k označení algoritmus, že by měl zpracovává bloky o velikosti < `_Chunk_size` sériově.  
   
-##  <a name="parallel_transform"></a>parallel_transform –  
+##  <a name="parallel_transform"></a>  parallel_transform –  
  Každý prvek v zdrojový rozsah, nebo pár elementy ze dvou zdrojových oblastí se vztahuje objekt zadaná funkce a zkopíruje návratové hodnoty funkce objektu do cílový rozsah, paralelně. Tuto funkční je sémanticky ekvivalentní `std::transform`.  
   
 ```
@@ -1251,13 +1253,13 @@ _Output_iterator parallel_transform(
   
  Pro iterátory, které nepodporují náhodný přístup pouze k [auto_partitioner](auto-partitioner-class.md) je podporována.  
   
- Přetížení, která trvat argument `_Unary_op` transformace vstupní rozsah do rozsahu výstupu použitím functor unární na každý prvek ve vstupní oblasti. `_Unary_op`musí podporovat operátor volání funkce s podpisem `operator()(T)` kde `T` je typ hodnoty se vstupní přes rozsahu.  
+ Přetížení, která trvat argument `_Unary_op` transformace vstupní rozsah do rozsahu výstupu použitím functor unární na každý prvek ve vstupní oblasti. `_Unary_op` musí podporovat operátor volání funkce s podpisem `operator()(T)` kde `T` je typ hodnoty se vstupní přes rozsahu.  
   
- Přetížení, která trvat argument `_Binary_op` transformace dva vstupní rozsahy do rozsahu výstupu použitím binární functor na jeden element z první vstupní rozsah a jeden element z druhého vstupní rozsahu. `_Binary_op`musí podporovat operátor volání funkce s podpisem `operator()(T, U)` kde `T`, `U` se hodnota typy dva vstupní iterátory.  
+ Přetížení, která trvat argument `_Binary_op` transformace dva vstupní rozsahy do rozsahu výstupu použitím binární functor na jeden element z první vstupní rozsah a jeden element z druhého vstupní rozsahu. `_Binary_op` musí podporovat operátor volání funkce s podpisem `operator()(T, U)` kde `T`, `U` se hodnota typy dva vstupní iterátory.  
   
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="receive"></a>přijímat  
+##  <a name="receive"></a>  Přijímat  
  Obecné přijímat implementace povolení kontext, který má čekat na data z přesně jeden zdroj a filtrování hodnoty, které jsou přijaty.  
   
 ```
@@ -1305,7 +1307,7 @@ T receive(
   
  Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="run_with_cancellation_token"></a>run_with_cancellation_token –  
+##  <a name="run_with_cancellation_token"></a>  run_with_cancellation_token –  
  Spustí objekt funkce v kontextu token zrušení pro daný okamžitě a synchronně.  
   
 ```
@@ -1328,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Poznámky  
  Budou všechny body přerušení v objektu, funkce při aktivaci `cancellation_token` je zrušená. Explicitní token `_Ct` to bude izolovat `_Func` z nadřazené zrušení, pokud má nadřazený token jiné nebo žádné token.  
   
-##  <a name="send"></a>Odeslat  
+##  <a name="send">Odeslat</a>  
  Operaci synchronní odesílání, která čeká na cíl buď přijme nebo odmítne zprávy.  
   
 ```
@@ -1350,12 +1352,12 @@ bool send(ITarget<T>& _Trg, const T& _Data);
  Odkaz na data, která mají být odeslány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla přijata, `false` jinak.  
+ `true` Pokud zpráva byla přijata, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="set_ambient_scheduler"></a>set_ambient_scheduler –  
+##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler  
   
 ```
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
@@ -1364,7 +1366,7 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ### <a name="parameters"></a>Parametry  
  `_Scheduler`  
   
-##  <a name="set_task_execution_resources"></a>set_task_execution_resources –  
+##  <a name="set_task_execution_resources"></a>  set_task_execution_resources  
  Omezuje provádění prostředky využívané třídou Concurrency Runtime interní pracovních vláken na sady zadané spřažení.  
   
  Je možné volat tuto metodu jenom dříve, než byl vytvořen správce prostředků, nebo mezi dvě životnosti Resource Manager. Může být vyvolán několikrát, dokud správce prostředků neexistuje v čase volání. Po nastavení omezení vztahů zůstává v platnosti, dokud další platný volání `set_task_execution_resources` metoda.  
@@ -1397,7 +1399,7 @@ void __cdecl set_task_execution_resources(
   
  Programově úprava spřažení proces po tato metoda byla volána nezpůsobí správce prostředků, aby znovu vyhodnotit, který je omezen na spřažení. Proto všechny změny zpracovat spřažení by měl být provedeny před voláním této metody.  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Výměny dva elementy `concurrent_vector` objekty.  
   
 ```
@@ -1425,7 +1427,7 @@ inline void swap(
   
  Tato metoda není bezpečná souběžnosti. Je nutné zajistit, že nejsou žádná jiná vlákna provádění operací na buď souběžných vektory při volání této metody.  
   
-##  <a name="task_from_exception"></a>task_from_exception –  
+##  <a name="task_from_exception"></a>  task_from_exception  
   
 ```
 template<typename _TaskType, typename _ExType>
@@ -1442,7 +1444,7 @@ task<_TaskType> task_from_exception(
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="task_from_result"></a>task_from_result –  
+##  <a name="task_from_result"></a>  task_from_result  
   
 ```
 template<typename T>
@@ -1463,7 +1465,7 @@ inline task<void> task_from_result(
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="trace_agents_register_name"></a>Trace_agents_register_name –  
+##  <a name="trace_agents_register_name"></a>  Trace_agents_register_name  
  Přidruží daným názvem na blokování zpráv nebo agenta v trasování ETW.  
   
 ```
@@ -1483,7 +1485,7 @@ void Trace_agents_register_name(
  `_Name`  
  Název pro daný objekt.  
   
-##  <a name="try_receive"></a>try_receive –  
+##  <a name="try_receive"></a>  try_receive –  
  Obecné zkuste a přijetí implementace povolení kontextu hledat data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty. Pokud data není připraven, metoda vrátí hodnotu false.  
   
 ``` 
@@ -1525,7 +1527,7 @@ bool try_receive(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="wait"></a>Počkej  
+##  <a name="wait"></a>  Počkej  
  Aktuální kontext pozastaví na zadanou dobu.  
   
 ```
@@ -1539,7 +1541,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="remarks"></a>Poznámky  
  Pokud tato metoda je volána v kontextu scheduler Concurrency Runtime, zjistí Plánovač jiný kontext spuštění na základní prostředku. Plánovač je ve své podstatě spolupráci, a proto nelze tento kontext obnovit přesně po počet milisekund, po zadaný. Pokud plánovač je zaneprázdněn provedením dalších úloh, které zisk spolupráce při pro Plánovač, může být neomezené doba čekání.  
   
-##  <a name="when_all"></a>when_all –  
+##  <a name="when_all"></a>  when_all –  
  Vytvoří úlohu, která se dokončí úspěšně, když všechny úlohy, zadané jako argumenty úspěšně dokončit.  
   
 ```
@@ -1568,13 +1570,13 @@ auto when_all(
  Úloha, která se dokončí úspěšně po všechny vstupní úlohy byly úspěšně dokončeny. Pokud vstupní úlohy jsou typu `T`, bude výstup této funkce `task<std::vector<T>>`. Pokud vstupní úlohy jsou typu `void` bude také výstup úlohy `task<void>`.  
   
 ### <a name="remarks"></a>Poznámky  
- `when_all`je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](task-class.md#wait), je bezpečné volat tuto funkci v [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace na vlákno ASTA (STA aplikace).  
+ `when_all` je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (STA aplikace).  
   
  Pokud některou z úloh je zrušená nebo vyvolá výjimku, vrácený úloha dokončí již v rané fázi, v zrušené stavu, a, pokud je encoutered, dojde k výjimce při volání [Task::Get –](task-class.md#get) nebo `task::wait` na úlohu.  
   
  Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="when_any"></a>when_any –  
+##  <a name="when_any"></a>  when_any –  
  Vytvoří úlohu, která se úspěšně dokončí, když některé z úloh zadané jako argumenty úspěšně dokončena.  
   
 ```
@@ -1617,7 +1619,7 @@ auto when_any(
  Úloha, která dokončí úspěšně, pokud vstupní úloh byla úspěšně dokončena. Pokud vstupní úlohy jsou typu `T`, bude výstup této funkce `task<std::pair<T, size_t>>>`, kde je první prvek, které odpovídá páru výsledek dokončuje úlohy a druhý prvkem je index úloha, která bylo dokončeno. Pokud vstupní úlohy jsou typu `void` výstup `task<size_t>`, kde je výsledek index dokončuje úlohy.  
   
 ### <a name="remarks"></a>Poznámky  
- `when_any`je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](task-class.md#wait), je bezpečné volat tuto funkci v [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikace na vlákno ASTA (STA aplikace).  
+ `when_any` je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (STA aplikace).  
   
  Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>Výjimky (C + +/ CX)
 
@@ -27,7 +28,7 @@ Zpracování chyb v jazyce C + +/ CX podle výjimky. Na nejzákladnější úrov
 
 V programu C++, throw a catch výjimka, která pochází z prostředí Windows Runtime operace, výjimku, která je odvozena z `std::exception`, nebo typ definovaný uživatelem. Budete muset výjimku prostředí Windows Runtime vyvolat jenom v případě, že se překročí aplikace binární rozhraní (ABI) hranici, například když dojde k zapsání kód, který zachytí vaší výjimek v jazyce JavaScript. Když Windows Runtime C++ výjimka dosáhne ABI hranice, výjimka je přeložit na `Platform::FailureException` výjimka, která představuje E_FAIL HRESULT. Další informace o ABI najdete v tématu [vytváření součásti systému Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Je možné deklarovat [Platform::Exception](platform-exception-class.md) pomocí jedné z dva konstruktory, které provést buď parametru HRESULT, nebo parametr HRESULT a [Platform::String](platform-string-class.md)^ parametr, který může být předán přes ABI do žádné aplikace Windows Store, která ji zpracovává. Nebo můžete pomocí jedné ze dvou deklarovat výjimku [Exception::CreateException metoda](platform-exception-class.md#createexception) přetížení, které provést buď parametru HRESULT, nebo parametr HRESULT a `Platform::String^` parametr.
+Je možné deklarovat [Platform::Exception](platform-exception-class.md) pomocí jedné z dva konstruktory, které provést buď parametru HRESULT, nebo parametr HRESULT a [Platform::String](platform-string-class.md)^ parametr, který může být předán přes ABI do žádné aplikace Windows Runtime, která ji zpracovává. Nebo můžete pomocí jedné ze dvou deklarovat výjimku [Exception::CreateException metoda](platform-exception-class.md#createexception) přetížení, které provést buď parametru HRESULT, nebo parametr HRESULT a `Platform::String^` parametr.
 
 ## <a name="standard-exceptions"></a>Standardní výjimky
 

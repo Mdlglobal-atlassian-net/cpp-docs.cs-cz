@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - msvcm90[d].dll
 - mixed assemblies [C++], library support
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b3bc50416eceac64c134a31a4d7384e33db69b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f999a75a8f818fccabada840a2a6e9fc70447cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Podpora knihovny pro smíšená sestavení
 Podporuje použití standardní knihovny C++, knihovny (CRT), Visual C++ ATL a MFC pro aplikace, kompilovat s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). To umožňuje existující aplikace, které používají tyto knihovny používat taky funkce rozhraní .NET Framework.  
@@ -33,8 +35,6 @@ Podporuje použití standardní knihovny C++, knihovny (CRT), Visual C++ ATL a M
  Tato podpora zavádí následující nové knihovny DLL a import:  
   
 -   Pokud kompilace s volbou/CLR Msvcmrt [d] .lib. Smíšená sestavení odkazuje na tato knihovna importu.  
-  
--   Msvcm90 [d] .dll a .lib Msvcurt [d] Pokud kompilace s volbou/CLR: pure. Knihovny DLL je kombinované sestavení poskytující spravované podpory čas spuštění C (CRT) a je součástí spravované sestavení nainstalované v globální mezipaměti sestavení (GAC). Čistá sestavení odkaz na tento knihovny importu a skončí vázán na Msvcm90.dll.  
   
  Tato podpora zajišťuje několik souvisejících výhod:  
   
@@ -50,9 +50,7 @@ Podporuje použití standardní knihovny C++, knihovny (CRT), Visual C++ ATL a M
   
  Kromě toho tato podpora představuje následující omezení:  
   
--   Je podporován pouze model CRT DLL (pro kód kompilován s/CLR nebo/CLR: pure).  
-  
--   Pokud tyto objekty používají knihovny jazyka Visual C++ (protože všechny objekty musí být čistý v bitové kopii čistý) není možné kombinovat čisté a smíšené objekty do jediného image. Pokud to uděláte, zobrazí se chyba propojování.  
+-   Pro zkompilování kódu s/CLR je podporován pouze model CRT DLL.  
   
  Common language runtime (CLR) by měl aktualizovat na aktuální verzi jako není zaručena pro práci s předchozími verzemi. Kód vytvořené s nástroji tyto změny se nespustí na verze CLR 1.x.  
   

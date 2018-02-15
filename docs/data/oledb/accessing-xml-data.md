@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>Přístup k datům XML
 Existují dvě samostatné metody načítání dat XML ze zdroje dat: jeden používá [CStreamRowset](../../data/oledb/cstreamrowset-class.md) a jiné účely [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Obvykle při volání `CCommand::Open` (určení, například `CRowset` jako `TRowset` třída), získá `IRowset` ukazatel. `ICommand::Execute`Vrátí `IRowset` ukazatele, který je uložen v `m_spRowset` členem `CRowset` objektu. Metody, jako `MoveFirst`, `MoveNext`, a `GetData` používají tento ukazatel načíst data.  
+ Obvykle při volání `CCommand::Open` (určení, například `CRowset` jako `TRowset` třída), získá `IRowset` ukazatel. `ICommand::Execute` Vrátí `IRowset` ukazatele, který je uložen v `m_spRowset` členem `CRowset` objektu. Metody, jako `MoveFirst`, `MoveNext`, a `GetData` používají tento ukazatel načíst data.  
   
  Naopak při volání `CCommand::Open` (ale zadat `CStreamRowset` jako `TRowset` třída), `ICommand::Execute` vrátí `ISequentialStream` ukazatele, který je uložen v `m_spStream` dat členem [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Pak použijete `Read` metoda pro načtení dat (Unicode string) ve formátu XML. Příklad:  
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  Podpora XML pomocí `CStreamRowset` pracuje pouze se SQL Server 2000 a vyžaduje, abyste měli zprostředkovatele OLE DB pro SQL Server 2000 (instalovanou se MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Načítání dat XML pomocí CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) umožňuje přístup k datům ze zdroje dat jako řetězce data při nemají žádné informace o úložišti dat. schématu. `CXMLAccessor`funguje jako `CDynamicStringAccessorW` s tím rozdílem, že první převede všechna data z úložiště dat jako (s příznakem) data ve formátu XML. Názvy značek XML shodovat s názvy sloupců úložiště dat co nejblíže.  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) umožňuje přístup k datům ze zdroje dat jako řetězce data při nemají žádné informace o úložišti dat. schématu. `CXMLAccessor` funguje jako `CDynamicStringAccessorW` s tím rozdílem, že první převede všechna data z úložiště dat jako (s příznakem) data ve formátu XML. Názvy značek XML shodovat s názvy sloupců úložiště dat co nejblíže.  
   
  Použití `CXMLAccessor` stejně jako jakoukoli jinou přístupovou třídu, předání jako parametru šablony k `CCommand` nebo `CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

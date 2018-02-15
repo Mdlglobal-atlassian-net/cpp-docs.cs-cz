@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Concurrency Runtime jazyka C++ vám pomůže zápisu robustní, škálovatelnou a reaguje paralelní aplikace. Vyvolá úrovni abstrakce tak, že nemáte ke správě infrastruktury podrobnosti, které se vztahují k souběžnosti. Můžete ji použít i k určení plánování zásady, které splňují kvality služby požadavky aplikací. Pomocí těchto prostředků usnadňují začátek práce s komponentou Concurrency Runtime.  
@@ -41,7 +44,7 @@ Concurrency Runtime jazyka C++ vám pomůže zápisu robustní, škálovatelnou 
 |[Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|Porovná OpenMP do Concurrency Runtime a obsahuje příklady o tom, jak migrovat existující kód OpenMP na využití modulu Concurrency Runtime.|  
 |[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Vás seznámí s PPL, která poskytuje paralelní smyčky, úlohy a paralelní kontejnery.|  
 |[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)|Ukazuje, jak používat asynchronních agentů a usnadnění snadno začlenit toku dat a paralelní zpracování úloh ve svých aplikacích.|  
-|[Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Vás seznámí s Plánovač úloh, které umožňuje optimalizovat výkon desktopových aplikací, který používá Concurrency Runtime.|  
+|[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Vás seznámí s Plánovač úloh, které umožňuje optimalizovat výkon desktopových aplikací, který používá Concurrency Runtime.|  
   
 ## <a name="task-parallelism-in-the-ppl"></a>Paralelismus úloh v knihovně PPL  
   
@@ -67,13 +70,13 @@ Concurrency Runtime jazyka C++ vám pomůže zápisu robustní, škálovatelnou 
 |[Zrušení v knihovně PPL](cancellation-in-the-ppl.md)|Popisuje roli zrušení v knihovně PPL, včetně toho, jak k zahájení a reagovat na požadavky zrušení.|  
 |[Postupy: Přerušení paralelní smyčky pomocí zrušení](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Ukazuje dva způsoby, jak zrušit data paralelní práce.|  
   
-## <a name="windows-store-apps"></a>Aplikace pro Windows Store  
+## <a name="universal-windows-platform-apps"></a>Universal Windows Platform apps  
   
 |||  
 |-|-|  
-|[Vytváření asynchronních operací v jazyce C++ pro aplikace pro web Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Popisuje některé z klíčových bodů mít na paměti, když použijete k vytvoření asynchronních operací v Concurrency Runtime [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace.|  
-|[Návod: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Ukazuje, jak kombinovat PPL úlohy s `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` rozhraní k odesílání požadavků HTTP GET a POST na webovou službu v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace.|  
-|[Ukázky aplikace Windows Store](http://code.msdn.microsoft.com/windowsapps)|Obsahuje ukázky kódu ke stažení a ukázkové aplikace pro [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Ukázky C++ pomocí Concurrency Runtime funkce jako je například PPL úloh zpracování dat na pozadí udržovat uživatelského reaguje.|  
+|[Vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Popisuje některé z klíčových bodů třeba vzít v úvahu při použití Concurrency Runtime k vytváření asynchronních operací v aplikaci UWP.|  
+|[Návod: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Ukazuje, jak kombinovat PPL úlohy s `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` rozhraní k odesílání požadavků HTTP GET a POST na webovou službu v aplikaci UWP.|  
+|[Ukázky aplikace Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Obsahuje ukázky kódu ke stažení a ukázkové aplikace pro Windows 8.x. Ukázky C++ pomocí Concurrency Runtime funkce jako je například PPL úloh zpracování dat na pozadí udržovat uživatelského reaguje.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programování toku dat v knihovně asynchronních agentů  
   
@@ -108,7 +111,7 @@ Concurrency Runtime jazyka C++ vám pomůže zápisu robustní, škálovatelnou 
   
 |||  
 |-|-|  
-|[Asynchronní programování vzory a tipy v Hilo (aplikace pro Windows Store pomocí C++ a XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak jsme použili Concurrency Runtime k implementaci asynchronních operací v Hilo, [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikaci pomocí C++ a XAML.|  
+|[Asynchronní programování vzory a tipy v Hilo (aplikace pro Windows Store pomocí C++ a XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak jsme použili Concurrency Runtime k implementaci asynchronních operací v Hilo, aplikace prostředí Windows Runtime s použitím C++ a XAML.|  
 |[Ukázky kódu pro Concurrency Runtime a Parallel Library vzor v sadě Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Poskytuje ukázkové aplikace a nástroje, které ukazují Concurrency Runtime.|  
 |[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blog další články o paralelní programování v Concurrency Runtime.|  
 |[Paralelní výpočetní ve fóru C++ a nativní kód](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje komunity diskuze o Concurrency Runtime.|  

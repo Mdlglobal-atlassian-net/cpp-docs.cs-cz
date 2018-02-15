@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aca49513c52c5eff9c10461281bb4235fa39349f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
 `delegate` – Klíčové slovo se používá k deklaraci typu odkaz, který je ekvivalentní prostředí Windows Runtime objektu funkce v standardní C++. Deklarace delegáta podobné funkce podpisu; Určí návratový typ a typy parametrů, které musí mít jeho zabalené funkce. Toto je uživatelem definované delegáta deklarace:  
@@ -40,7 +41,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 > [!TIP]
 >  Visual Studio provede hodně práce při vytvoření obslužné rutiny události. Například pokud zadáte obslužné rutiny událostí v kódu XAML, zobrazí se popis tlačítka. Pokud si zvolíte popis tlačítka, Visual Studio automaticky vytvoří obslužná rutina události a přidruží ji k události k třídě publikování.  
   
- Následující příklad ukazuje základní vzor. `Windows::Foundation::TypedEventHandler`je typ delegáta. Obslužné rutiny je vytvořená pomocí pojmenovaného funkce.  
+ Následující příklad ukazuje základní vzor. `Windows::Foundation::TypedEventHandler` je typ delegáta. Obslužné rutiny je vytvořená pomocí pojmenovaného funkce.  
   
  V app.h:  
   

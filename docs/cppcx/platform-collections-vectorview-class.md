@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
 - COLLECTION/Platform::Collections::VectorView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::GetMany
 - COLLECTION/Platform::Collections::VectorView::IndexOf
 - COLLECTION/Platform::Collections::VectorView::Size
-dev_langs: C++
-helpviewer_keywords: VectorView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView – třída
 Představuje zobrazení sekvenční kolekcí objektů, které může být index individuálně získávat přístup jen pro čtení. Typ každý objekt v kolekci je určený parametrem šablony.  
@@ -74,7 +77,7 @@ template <typename T, typename E>
   
  **Namespace:** Platform::Collections  
 
-## <a name="first"></a>VectorView::First – metoda
+## <a name="first"></a>  VectorView::First – metoda
 Vrátí iterátor, který určuje první prvek v VectorView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -93,7 +96,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
   
 
 
-## <a name="getat"></a>VectorView::GetAt – metoda
+## <a name="getat"></a>  VectorView::GetAt – metoda
 Načte element aktuální VectorView, označené v zadaném indexu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -114,7 +117,7 @@ T GetAt(
   
 
 
-## <a name="getmany"></a>VectorView::GetMany – metoda
+## <a name="getmany"></a>  VectorView::GetMany – metoda
 Načte posloupnost položek z aktuální VectorView, počínaje zadaným indexem.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -139,7 +142,7 @@ virtual unsigned int GetMany(
   
 
 
-## <a name="indexof"></a>VectorView::IndexOf – metoda
+## <a name="indexof"></a>  VectorView::IndexOf – metoda
 Vyhledá zadanou položku v aktuální VectorView a pokud najde, vrátí index položky.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -162,11 +165,11 @@ virtual bool IndexOf(
  `index` Parametru je 0, pokud položka je první prvek VectorView nebo položka nebyla nalezena. Pokud je vrácenou hodnotou `true`, položka byla nalezena a je první prvek; jinak, položka nebyla nalezena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zadaná položka není nalezena; v opačném `false`.  
+ `true` Pokud zadaná položka není nalezena; v opačném `false`.  
   
 
 
-## <a name="size"></a>VectorView::Size – metoda
+## <a name="size"></a>  VectorView::Size – metoda
 Vrátí počet prvků v aktuálním objektu VectorView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -181,7 +184,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>VectorView::VectorView – konstruktor
+## <a name="ctor"></a>  VectorView::VectorView – konstruktor
 Inicializuje novou instanci třídy VectorView.  
   
 ### <a name="syntax"></a>Syntaxe  

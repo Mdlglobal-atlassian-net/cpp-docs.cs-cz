@@ -4,41 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IDBSchemaRowsetImpl::SetRestrictions
 - SetRestrictions
 - IDBSchemaRowsetImpl.SetRestrictions
-dev_langs: C++
-helpviewer_keywords: SetRestrictions method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetRestrictions method
 ms.assetid: 707d5065-b853-4d38-9b67-3066b4d3b279
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 23d4932508d8abeb96dad1dd0f70e396c7240168
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e1720fac25f68ae7c46e6ce758e0c0de0fe28b6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="idbschemarowsetimplsetrestrictions"></a>IDBSchemaRowsetImpl::SetRestrictions
 Určuje, která omezení podpory pro sadu řádků schématu konkrétní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-      void SetRestrictions(  
-   ULONG cRestrictions,  
-   GUID* /* rguidSchema */,  
-   ULONG* rgRestrictions   
-);  
+```
+void SetRestrictions(ULONG cRestrictions,  
+  GUID* /* rguidSchema */,  
+   ULONG* rgRestrictions);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -66,7 +66,7 @@ Určuje, která omezení podpory pro sadu řádků schématu konkrétní.
  **Záhlaví:** atldb.h  
   
 ## <a name="see-also"></a>Viz také  
- [IDBSchemaRowsetImpl – třída](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md)   
  [Členy IDBSchemaRowsetImpl – třída](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md)   
