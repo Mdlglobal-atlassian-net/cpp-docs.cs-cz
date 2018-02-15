@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Kde se uplatní vzdálená automatizace?
 Byla vydána v 1996 a je k dispozici v 32bitové a 64bitové verze platformy DCOM. Visual Basic team v Microsoft vždy zaznamenal jazyka Visual Basic jako pomocí automatizace umožňující komunikaci jeho součástí. Nedostatečná distribuované verze vážně omezenou využívat tyto možnosti v podnikovém prostředí, takže týmem vývoj Visual Basic 4.0 Enterprise Edition rozhodli prozkoumat vytvoření vlastní sadu součástí vzdálenou komunikaci pro automatizaci OLE a modelu COM. Hlavní cíl bylo zřejmé, zajistěte, aby výsledkem by být kompatibilní s a modelu DCOM může vyměnit, když jsou k dispozici. Potom pokračovalo implementovat vzdálené automatizace (RA) pro 16bitové a 32bitové verze platformy systému Windows.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Dlouhé celé číslo bez znaménka převeďte na řetězec. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_ultoa_s –, _ultow_s –](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  Každá z těchto funkcí vrátí ukazatel na `str`. Neexistuje žádný návratový chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `_ultoa` Funkce převede `value` na řetězec znaků ukončený hodnotou null a ukládá výsledků (až 33 bajtů) v `str`. Neprobíhá žádná kontrola přetečení. `radix`Určuje základ `value`; `radix` musí být v rozsahu 2 36. `_ultow`široká charakterová verze `_ultoa`.  
+ `_ultoa` Funkce převede `value` na řetězec znaků ukončený hodnotou null a ukládá výsledků (až 33 bajtů) v `str`. Neprobíhá žádná kontrola přetečení. `radix` Určuje základ `value`; `radix` musí být v rozsahu 2 36. `_ultow` široká charakterová verze `_ultoa`.  
   
 > [!IMPORTANT]
 >  Chcete-li zabránit přetečení vyrovnávací paměti, ověřte, zda `str` vyrovnávací paměť je dostatečně velký pro uložení převedený číslic plus koncové znak hodnoty null.  
@@ -112,7 +115,7 @@ wchar_t *_ultow(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_ultoa`|\<stdlib.h >|  
+|`_ultoa`|\<stdlib.h>|  
 |`_ultow`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

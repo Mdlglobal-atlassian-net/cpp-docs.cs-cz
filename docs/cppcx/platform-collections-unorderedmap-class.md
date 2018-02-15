@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
@@ -102,7 +104,7 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap::clear – metoda
+## <a name="clear"></a>  Unorderedmap::clear – metoda
 
 Odebere všechny páry klíč hodnota z aktuálního objektu UnorderedMap.
 
@@ -112,7 +114,7 @@ Odebere všechny páry klíč hodnota z aktuálního objektu UnorderedMap.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap::First – metoda
+## <a name="first"></a>  Unorderedmap::First – metoda
 
 Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<tisíc, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element v neuspořádaný mapy.
 
@@ -132,7 +134,7 @@ Iterator, která určuje první prvek v mapě.
 
 Pohodlný způsob pro uložení iterator vrácený First() je přiřadit návratovou hodnotu proměnné, která je deklarovaný s **automaticky** zadejte odvození – klíčové slovo. Například `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Unorderedmap::getview – metoda
+## <a name="getview"></a>  Unorderedmap::getview – metoda
 
 Vrátí zobrazení jen pro čtení aktuální UnorderedMap; To znamená [Platform::Collections:: unorderedmapview – třída](../cppcx/platform-collections-unorderedmapview-class.md) , která implementuje [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) rozhraní.
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` Objektu.
 
-## <a name="haskey"></a>Unorderedmap::haskey – metoda
+## <a name="haskey"></a>  Unorderedmap::haskey – metoda
 
 Určuje, zda aktuální UnorderedMap obsahuje zadaný klíč.
 
@@ -160,14 +162,14 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parametry
 
-*klíč*  
+*Klíč*  
 Klíč používaná k nalezení UnorderedMap elementu. Typ *klíč* je typename *tisíc*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`Pokud je nalezen klíč; v opačném `false`.
+`true` Pokud je nalezen klíč; v opačném `false`.
 
-## <a name="insert"></a>Unorderedmap::Insert – metoda
+## <a name="insert"></a>  Unorderedmap::Insert – metoda
 
 Přidá zadaný pár klíč hodnota s aktuálním objektem UnorderedMap.
 
@@ -182,7 +184,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parametry
 
-*klíč*  
+*Klíč*  
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *tisíc*.
 
 *value*  
@@ -190,9 +192,9 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`Pokud klíč existujícího elementu v aktuální mapu odpovídá *klíč* a hodnota část tohoto elementu je nastavena na *hodnotu*. `false`Pokud žádné existující elementy v aktuálním mapě *klíč* a *klíč* a *hodnotu* parametry provedou do pár klíč hodnota a pak přidá do aktuální UnorderedMap.
+`true` Pokud klíč existujícího elementu v aktuální mapu odpovídá *klíč* a hodnota část tohoto elementu je nastavena na *hodnotu*. `false` Pokud žádné existující elementy v aktuálním mapě *klíč* a *klíč* a *hodnotu* parametry provedou do pár klíč hodnota a pak přidá do aktuální UnorderedMap.
 
-## <a name="lookup"></a>Unorderedmap::Lookup – metoda
+## <a name="lookup"></a>  Unorderedmap::Lookup – metoda
 
 Načte hodnotu z typu V, který je přidružen k zadanému klíči typu K.
 
@@ -206,14 +208,14 @@ V Lookup(
 
 ### <a name="parameters"></a>Parametry
 
-*klíč*  
+*Klíč*  
 Klíč používaná k nalezení element v UnorderedMap. Typ *klíč* je typename *tisíc*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnota, která je spárován s *klíč*. Typ vrácené hodnoty je typename *V*.
 
-## <a name="mapchanged"></a>UnorderedMap::MapChanged
+## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 
 Vyvolá, když je položka vložena do nebo odebrat z mapování.
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<tisíc, V >](http://msdn.microsoft.com/library/window
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
-Aplikace pro Windows Store, nám C# nebo Visual Basic projektu IMap\<tisíc, V > jako IDictionary\<tisíc, V >.
+Aplikace Windows Runtime, že nám C# nebo Visual Basic projektu IMap\<tisíc, V > jako IDictionary\<tisíc, V >.
 
-## <a name="remove"></a>Unorderedmap::Remove – metoda
+## <a name="remove"></a>  Unorderedmap::Remove – metoda
 
 Odstraní zadaný pár klíč hodnota z objektu UnorderedMap.
 
@@ -244,10 +246,10 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*klíč*  
+*Klíč*  
 Část klíče dvojice klíč hodnota. Typ *klíč* je typename *tisíc*.
 
-## <a name="size"></a>Unorderedmap::size – metoda
+## <a name="size"></a>  Unorderedmap::size – metoda
 
 Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<tisíc, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementů v UnorderedMap.
 
@@ -261,7 +263,7 @@ virtual property unsigned int Size;
 
 Počet prvků v neuspořádaný mapování.
 
-## <a name="ctor"></a>Unorderedmap::unorderedmap – konstruktor
+## <a name="ctor"></a>  Unorderedmap::unorderedmap – konstruktor
 
 Inicializuje novou instanci třídy UnorderedMap.
 

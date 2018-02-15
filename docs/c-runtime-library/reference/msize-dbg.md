@@ -1,13 +1,15 @@
 ---
-title: "_msize_dbg – | Microsoft Docs"
+title: _msize_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _msize_dbg
+ms.topic: reference
+apiname:
+- _msize_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 018fb7fdce1aeb2a69ac2e6381df1c0da24036a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4c4168f6652e00d91fc1013c7acad04798b0bf03
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="msizedbg"></a>_msize_dbg
 Vypočítá velikost bloku paměti haldy (pouze ladicí verze).  
@@ -64,7 +68,7 @@ Vypočítá velikost bloku paměti haldy (pouze ladicí verze).
  Při úspěšném dokončení `_msize_dbg` vrátí velikost (v bajtech) zadaná paměťová bloku; jinak vrátí hodnotu NULL.  
   
 ## <a name="remarks"></a>Poznámky  
- `_msize_dbg`ladicí verze _[msize –](../../c-runtime-library/reference/msize.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_msize_dbg` byla snížena volání `_msize`. Obě `_msize` a `_msize_dbg` vypočítat velikost bloku paměti základní haldy, ale `_msize_dbg` přidá dvě funkce ladění: v vrácená velikost obsahuje vyrovnávací paměti na obou stranách části uživatele bloku paměti a umožňuje velikost výpočty pro typy konkrétní bloku.  
+ `_msize_dbg` ladicí verze _[msize –](../../c-runtime-library/reference/msize.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_msize_dbg` byla snížena volání `_msize`. Obě `_msize` a `_msize_dbg` vypočítat velikost bloku paměti základní haldy, ale `_msize_dbg` přidá dvě funkce ladění: v vrácená velikost obsahuje vyrovnávací paměti na obou stranách části uživatele bloku paměti a umožňuje velikost výpočty pro typy konkrétní bloku.  
   
  Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce standardní haldy a jeho ladicí verze v sestavení ladicí verze aplikace, najdete v tématu [ladění verzí z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
@@ -74,7 +78,7 @@ Vypočítá velikost bloku paměti haldy (pouze ladicí verze).
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_msize_dbg`|\<crtdbg.h >|  
+|`_msize_dbg`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

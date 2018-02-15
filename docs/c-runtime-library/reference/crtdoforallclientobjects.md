@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtDoForAllClientObjects
+ms.topic: reference
+apiname:
+- _CrtDoForAllClientObjects
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,21 +26,23 @@ f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
 - crtdbg/_CrdDoForAllClientObjects
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dff8b99d6378928583cea0c5eec7d69130c56557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1da4ada3286b863444bb567a4fad8cf693f9253
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 Volání funkce poskytované aplikací pro všechny `_CLIENT_BLOCK` typy v haldě (pouze ladicí verze).  
@@ -72,7 +76,7 @@ void _CrtDoForAllClientObjects(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_CrtDoForAllClientObjects`|\<crtdbg.h >, \<errno.h >|  
+|`_CrtDoForAllClientObjects`|\<crtdbg.h>, \<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -80,6 +84,6 @@ void _CrtDoForAllClientObjects(
   
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
- [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md)   
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)   
  [Funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details)   
  [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)

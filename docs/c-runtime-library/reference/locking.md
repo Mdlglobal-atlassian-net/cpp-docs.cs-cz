@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _locking
+ms.topic: reference
+apiname:
+- _locking
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _locking
-dev_langs: C++
+f1_keywords:
+- _locking
+dev_langs:
+- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 29211f494c905f3d82ebe3238706b2528dadce0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0acd33e3f33077dafee9bd6c4892a17b42e7afe0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="locking"></a>_locking
 Uzamkne nebo odemkne bajtů souboru.  
@@ -59,14 +64,14 @@ Uzamkne nebo odemkne bajtů souboru.
  `fd`  
  Popisovač souboru.  
   
- *režim*  
+ *Režim*  
  Uzamčení akce k provedení.  
   
  *nbytes*  
  Počet bajtů, které mají zamknout.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_locking`v případě úspěchu vrátí hodnotu 0. Vrácená hodnota -1 označuje selhání, v takovém případě [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven na jednu z následujících hodnot.  
+ `_locking` V případě úspěchu vrátí hodnotu 0. Vrácená hodnota -1 označuje selhání, v takovém případě [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven na jednu z následujících hodnot.  
   
  `EACCES`  
  Zamykání porušení (soubor již zamčený nebo odemčený).  
@@ -102,13 +107,13 @@ Uzamkne nebo odemkne bajtů souboru.
  `_LK_UNLCK`  
  Odemkne zadaný bajtů, které musí byla dříve uzamčena.  
   
- Více oblastí souboru, které se nepřekrývají může být uzamčena. V oblasti odemykají musí byla dříve uzamčena. `_locking`nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, každou oblast, musí být odemknout samostatně. Oblasti má být uzamčena pouze stručně a by měl být odemčené před zavřením souboru nebo ukončení programu.  
+ Více oblastí souboru, které se nepřekrývají může být uzamčena. V oblasti odemykají musí byla dříve uzamčena. `_locking` nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, každou oblast, musí být odemknout samostatně. Oblasti má být uzamčena pouze stručně a by měl být odemčené před zavřením souboru nebo ukončení programu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_locking`|\<IO.h > a \<sys/locking.h >|\<errno.h >|  
+|`_locking`|\<IO.h > a \<sys/locking.h >|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -182,5 +187,5 @@ Now I'm done. Do what you will with them
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97221d04dcd93fbaa32a3562320d0c098fa001ae
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 Otevře soubor. Tyto verze nástroje [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -70,13 +73,13 @@ errno_t _wfopen_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pFile`  
+ [out] `pFile`  
  Ukazatel na ukazatele souboru, který se zobrazí ukazatel na otevřený soubor.  
   
- [v]`filename`  
+ [in] `filename`  
  Název souboru.  
   
- [v]`mode`  
+ [in] `mode`  
  Typ přístupu povolena.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -84,7 +87,7 @@ errno_t _wfopen_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`pFile`|`filename`|`mode`|Návratová hodnota|Obsah`pFile`|  
+|`pFile`|`filename`|`mode`|Návratová hodnota|Obsah `pFile`|  
 |-------------|----------------|------------|------------------|------------------------|  
 |`NULL`|všechny|všechny|`EINVAL`|Beze změny|  
 |všechny|`NULL`|všechny|`EINVAL`|Beze změny|  
@@ -93,18 +96,18 @@ errno_t _wfopen_s(
 ## <a name="remarks"></a>Poznámky  
  Soubory, které jsou otevřené podle `fopen_s` a `_wfopen_s` nejsou lze sdílet. Pokud budete vyžadovat, aby byl soubor lze sdílet, použijte [_fsopen –, _wfsopen –](../../c-runtime-library/reference/fsopen-wfsopen.md) s příslušnou sdílení konstanta režimu – například `_SH_DENYNO` pro sdílení pro čtení a zápis.  
   
- `fopen_s` Funkce otevře soubor, který je zadán `filename`. `_wfopen_s`široká charakterová verze `fopen_s`; argumenty, které mají `_wfopen_s` jsou široká charakterová řetězce. `_wfopen_s`a `fopen_s` chovat jinak shodně.  
+ `fopen_s` Funkce otevře soubor, který je zadán `filename`. `_wfopen_s` široká charakterová verze `fopen_s`; argumenty, které mají `_wfopen_s` jsou široká charakterová řetězce. `_wfopen_s` a `fopen_s` chovat jinak shodně.  
   
- `fopen_s`přijímá cesty, které jsou platné v systému souborů v okamžiku spuštění; Přijal UNC cesty a cesty, které zahrnují namapované síťové jednotky `fopen_s` tak dlouho, dokud systém, který spouští kód má přístup ke sdílené složce nebo namapované síťové jednotky při spuštění. Když vytvoříte cesty pro `fopen_s`, nevytvářejte předpoklady o dostupnosti jednotek, cesty, nebo síťové sdílené složky v prostředí pro spuštění. Můžete použít buď lomítka (/) nebo zpětná lomítka (\\) jako oddělovače adresáře v cestě.  
+ `fopen_s` přijímá cesty, které jsou platné v systému souborů v okamžiku spuštění; Přijal UNC cesty a cesty, které zahrnují namapované síťové jednotky `fopen_s` tak dlouho, dokud systém, který spouští kód má přístup ke sdílené složce nebo namapované síťové jednotky při spuštění. Když vytvoříte cesty pro `fopen_s`, nevytvářejte předpoklady o dostupnosti jednotek, cesty, nebo síťové sdílené složky v prostředí pro spuštění. Můžete použít buď lomítka (/) nebo zpětná lomítka (\\) jako oddělovače adresáře v cestě.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `pFile`, `filename`, nebo `mode` je ukazatel s hodnotou null, tyto funkce vygeneruje výjimka neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
   
  Vždy Zkontrolujte návratovou hodnotu chcete zobrazit, pokud bylo úspěšné funkce před provedením jakékoli další operace na souboru. Pokud dojde k chybě, je vrácen kód chyby a globální proměnné `errno` nastavena. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="unicode-support"></a>Podpora kódování Unicode  
- `fopen_s`podporuje kódování Unicode souborů datových proudů. Chcete-li otevřít nové nebo existující souboru Unicode, předat `ccs` příznak, který určuje požadovanou kódování `fopen_s`:  
+ `fopen_s` podporuje kódování Unicode souborů datových proudů. Chcete-li otevřít nové nebo existující souboru Unicode, předat `ccs` příznak, který určuje požadovanou kódování `fopen_s`:  
   
- `fopen_s(&fp, "newfile.txt", "rw, ccs=`*kódování*`");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*Kódování*`");`  
   
  Povolené hodnoty *kódování* jsou `UNICODE`, `UTF-8`, a `UTF-16LE`. Pokud existuje není zadaná žádná hodnota pro *kódování*, `fopen_s` používá kódování ANSI.  
   
@@ -117,7 +120,7 @@ errno_t _wfopen_s(
   
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Použít na základě kódování ccs příznak a BOM  
   
-|`ccs`Příznak|Žádné BOM (nebo nový soubor)|BOM: UTF-8|BOM: UTF-16|  
+|`ccs` Příznak|Žádné BOM (nebo nový soubor)|BOM: UTF-8|BOM: UTF-16|  
 |----------------|----------------------------|-----------------|------------------|  
 |`UNICODE`|`UTF-16LE`|`UTF-8`|`UTF-16LE`|  
 |`UTF-8`|`UTF-8`|`UTF-8`|`UTF-16LE`|  
@@ -199,14 +202,14 @@ errno_t _wfopen_s(
   
  Platné znaky pro `mode` řetězec použitý v `fopen_s` a `_fdopen` odpovídají `oflag` argumenty použité v [_Otevřít](../../c-runtime-library/reference/open-wopen.md) a [_sopen –](../../c-runtime-library/reference/sopen-wsopen.md), a to takto.  
   
-|Znaky v řetězci režimu|Ekvivalentní `oflag` hodnota`_open`/`_sopen`|  
+|Znaky v řetězci režimu|Ekvivalentní `oflag` hodnota `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(obvykle `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
-|`a+`|`_O_RDWR &#124; _O_APPEND`(obvykle `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
+|`a`|`_O_WRONLY &#124; _O_APPEND` (obvykle `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` (obvykle `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(obvykle `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(obvykle `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (obvykle `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (obvykle `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Žádné|  
@@ -225,7 +228,7 @@ errno_t _wfopen_s(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fopen_s`|\<stdio.h >|  
+|`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -302,9 +305,9 @@ Number of files closed by _fcloseall: 1
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fclose –, _fcloseall –](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen –, _wfdopen –](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [ferror –](../../c-runtime-library/reference/ferror.md)   
- [_fileno –](../../c-runtime-library/reference/fileno.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [freopen –, _wfreopen –](../../c-runtime-library/reference/freopen-wfreopen.md)   
- [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

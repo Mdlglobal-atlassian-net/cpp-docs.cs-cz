@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,7 +13,8 @@ f1_keywords:
 - wenviron
 - _wenviron
 - _environ
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - environ function
 - _environ function
@@ -20,22 +22,23 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 277f8a853a5262d524016630f52bfcbfc8a8b18b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
-`_environ` Proměnné je ukazatel na pole ukazatele na řetězců vícebajtových znaků, které tvoří proces prostředí. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [getenv_s –, _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s –, _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md), který má být použit místo globální proměnné. `_environ`je v Stdlib.h deklarována.  
+`_environ` Proměnné je ukazatel na pole ukazatele na řetězců vícebajtových znaků, které tvoří proces prostředí. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [getenv_s –, _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s –, _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md), který má být použit místo globální proměnné. `_environ` je v Stdlib.h deklarována.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +51,7 @@ extern char **_environ;
   
  `ENVVARNAME``=string`  
   
- `getenv_s`a `putenv_s` použít `_environ` proměnnou pro přístup a úpravu tabulky prostředí. Když `_putenv` je volána k přidání nebo odstranění nastavení prostředí v tabulce prostředí změny velikosti. Její umístění v paměti se může změnit v závislosti na požadavcích paměti programu. Hodnota `_environ` je automaticky upravována odpovídajícím způsobem.  
+ `getenv_s` a `putenv_s` použít `_environ` proměnnou pro přístup a úpravu tabulky prostředí. Když `_putenv` je volána k přidání nebo odstranění nastavení prostředí v tabulce prostředí změny velikosti. Její umístění v paměti se může změnit v závislosti na požadavcích paměti programu. Hodnota `_environ` je automaticky upravována odpovídajícím způsobem.  
   
  `_wenviron` Proměnné deklarovány v Stdlib.h jako:  
   
@@ -85,7 +88,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
   
 ## <a name="see-also"></a>Viz také  
  [Globální proměnné](../c-runtime-library/global-variables.md)   
- [GETENV –, _wgetenv –](../c-runtime-library/reference/getenv-wgetenv.md)   
- [getenv_s –, _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [_putenv –, _wputenv –](../c-runtime-library/reference/putenv-wputenv.md)   
+ [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)   
+ [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)   
  [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)

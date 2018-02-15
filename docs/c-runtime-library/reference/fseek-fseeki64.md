@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fseeki64
 - fseek
@@ -25,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 90af1581910ceaadf814050be39bc537cfc3881c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4dd4c4e6550946bafdaf0ad8f521e1e942ae04c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 Přesune ukazatele souboru do zadaného umístění.  
@@ -88,7 +91,7 @@ int _fseeki64(
  `SEEK_SET`  
  Začátek souboru.  
   
- Můžete použít `fseek` a `_fseeki64` aby přemístil ukazatel kdekoli v souboru. Ukazatele mohou být také umístěny přesahuje za konec souboru. `fseek`a `_fseeki64` vymaže indikátoru end souboru a Neguje účinku žádné před `ungetc` volá proti `stream`.  
+ Můžete použít `fseek` a `_fseeki64` aby přemístil ukazatel kdekoli v souboru. Ukazatele mohou být také umístěny přesahuje za konec souboru. `fseek` a `_fseeki64` vymaže indikátoru end souboru a Neguje účinku žádné před `ungetc` volá proti `stream`.  
   
  Po otevření souboru pro připojování dat aktuální pozice v souboru je určen poslední vstupně-výstupní operace, nikoli kde bude probíhat další zápisu. Pokud žádná vstupně-výstupní operace došlo k ještě v souboru otevřen pro přidávání, pozice v souboru je spuštění souboru.  
   
@@ -108,8 +111,8 @@ int _fseeki64(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fseek`|\<stdio.h >|  
-|`_fseeki64`|\<stdio.h >|  
+|`fseek`|\<stdio.h>|  
+|`_fseeki64`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -156,6 +159,6 @@ This is the file 'fseek.out'.
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [ftell –, _ftelli64 –](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [_lseek –, _lseeki64 –](../../c-runtime-library/reference/lseek-lseeki64.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
  [rewind](../../c-runtime-library/reference/rewind.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _chsize
+ms.topic: reference
+apiname:
+- _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _chsize
-dev_langs: C++
+f1_keywords:
+- _chsize
+dev_langs:
+- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2b975f4a1191acc2a02d1edcae861c033d280d98
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="chsize"></a>_chsize
 Změní velikost souboru. Bezpečnější verze je k dispozici. v tématu [_chsize_s –](../../c-runtime-library/reference/chsize-s.md).  
@@ -61,7 +66,7 @@ int _chsize(
  Nové délka souboru v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_chsize`Vrátí hodnotu 0, pokud velikost souboru je úspěšně změnit. Vrácená hodnota -1 označuje chybu: `errno` je nastaven na `EACCES` Pokud je zadaný soubor uzamčen před přístupem, na `EBADF` Pokud zadaný soubor je jen pro čtení nebo je neplatná, popisovač `ENOSPC` Pokud již není místo na zařízení, nebo `EINVAL` Pokud `size` je menší než nula.  
+ `_chsize` Vrátí hodnotu 0, pokud velikost souboru je úspěšně změnit. Vrácená hodnota -1 označuje chybu: `errno` je nastaven na `EACCES` Pokud je zadaný soubor uzamčen před přístupem, na `EBADF` Pokud zadaný soubor je jen pro čtení nebo je neplatná, popisovač `ENOSPC` Pokud již není místo na zařízení, nebo `EINVAL` Pokud `size` je menší než nula.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
@@ -74,7 +79,7 @@ int _chsize(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_chsize`|\<IO.h >|\<errno.h >|  
+|`_chsize`|\<io.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -121,5 +126,5 @@ File length after:  329678
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_sopen –, _wsopen –](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_fmode
+ms.topic: reference
+apiname:
+- _get_fmode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50e3ebc4e1babed323200c720722648907b42c5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abfdd4d9b8838914a91b4db995fcaad573e80829
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getfmode"></a>_get_fmode
 Získá výchozí režim překladu souboru pro soubor vstupně-výstupních operací.  
@@ -53,7 +57,7 @@ errno_t _get_fmode(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pmode`  
+ [out] `pmode`  
  Ukazatel na celé číslo, aby byla vyplněna s aktuální výchozí režim: `_O_TEXT` nebo `_O_BINARY`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -66,7 +70,7 @@ errno_t _get_fmode(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_get_fmode`|\<stdlib.h >|\<fcntl.h >|  
+|`_get_fmode`|\<stdlib.h>|\<fcntl.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -74,7 +78,7 @@ errno_t _get_fmode(
  Podívejte se na příklad v [_set_fmode –](../../c-runtime-library/reference/set-fmode.md).  
   
 ## <a name="see-also"></a>Viz také  
- [_fmode –](../../c-runtime-library/fmode.md)   
- [_set_fmode –](../../c-runtime-library/reference/set-fmode.md)   
- [_setmode –](../../c-runtime-library/reference/setmode.md)   
+ [_fmode](../../c-runtime-library/fmode.md)   
+ [_set_fmode](../../c-runtime-library/reference/set-fmode.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
  [I/O soubor textového a binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md)

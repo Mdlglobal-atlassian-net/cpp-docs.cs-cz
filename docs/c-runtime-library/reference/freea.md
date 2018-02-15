@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _freea
+ms.topic: reference
+apiname:
+- _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freea"></a>_freea
 Zruší přidělení nebo uvolní blok paměti.  
@@ -59,9 +63,9 @@ void _freea(
  Žádné  
   
 ## <a name="remarks"></a>Poznámky  
- `_freea` Funkce zruší přidělení paměti blok (`memblock`), již bylo přiděleno voláním [_malloca –](../../c-runtime-library/reference/malloca.md). `_freea`zkontroluje, pokud byl přidělen paměť na haldě nebo zásobníku. Pokud byl přidělen do zásobníku, `_freea` se nic nestane. Pokud byl přidělen v haldě, počet uvolněné bajtů je ekvivalentní počet bajtů, které jsou požadovány při bloku byl přidělen. Pokud `memblock` je `NULL`, ukazatele je ignorován a `_freea` hned vrátí. Probíhá pokus o volné neplatný ukazatel (ukazatel na blok paměti, která nebyla přidělena `_malloca`) může mít vliv na následné přidělení požadavky a způsobit chyby.  
+ `_freea` Funkce zruší přidělení paměti blok (`memblock`), již bylo přiděleno voláním [_malloca –](../../c-runtime-library/reference/malloca.md). `_freea` zkontroluje, pokud byl přidělen paměť na haldě nebo zásobníku. Pokud byl přidělen do zásobníku, `_freea` se nic nestane. Pokud byl přidělen v haldě, počet uvolněné bajtů je ekvivalentní počet bajtů, které jsou požadovány při bloku byl přidělen. Pokud `memblock` je `NULL`, ukazatele je ignorován a `_freea` hned vrátí. Probíhá pokus o volné neplatný ukazatel (ukazatel na blok paměti, která nebyla přidělena `_malloca`) může mít vliv na následné přidělení požadavky a způsobit chyby.  
   
- `_freea`volání `free` interně, pokud zjistí, že je paměť přidělená v haldě. Zda je paměť v haldě nebo zásobníku je dáno značku umístěny v paměti na adrese bezprostředně předcházející přidělenou paměť.  
+ `_freea` volání `free` interně, pokud zjistí, že je paměť přidělená v haldě. Zda je paměť v haldě nebo zásobníku je dáno značku umístěny v paměti na adrese bezprostředně předcházející přidělenou paměť.  
   
  Pokud dojde k chybě v uvolnění paměti, `errno` je nastaven s informacemi z operačního systému, o povaze chyby. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -69,7 +73,7 @@ void _freea(
   
  Volání `_freea` musí doprovázet všechna volání `_malloca`. Je také chyba volání `_freea` dvakrát na stejnou paměť. Když je aplikace propojený s verzí ladicí běhové knihovny jazyka C, zejména s [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md) Funkce povolené definováním `_CRTDBG_MAP_ALLOC`, je snazší najít chybí nebo je duplicitní volání `_freea`. Další informace o spravováni haldě ladění během najdete v tématu [haldy ladění The CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `_freea`je označena `__declspec(noalias)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).  
+ `_freea` je označena `__declspec(noalias)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -84,10 +88,10 @@ void _freea(
   
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
- [_malloca –](../../c-runtime-library/reference/malloca.md)   
+ [_malloca](../../c-runtime-library/reference/malloca.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
- [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md)   
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
  [realloc –](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg –](../../c-runtime-library/reference/free-dbg.md)   
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
  [_heapmin](../../c-runtime-library/reference/heapmin.md)

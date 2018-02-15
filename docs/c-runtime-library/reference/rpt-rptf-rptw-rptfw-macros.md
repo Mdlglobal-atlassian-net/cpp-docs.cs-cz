@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -39,7 +40,8 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51668f9b286a6b438d7f7b686114b2fcf70c25ed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW – makra
 Sleduje aplikace probíhá generování sestavy ladění (pouze ladicí verze). Všimněte si, že  *n*  určuje počet argumentů `args` a může být 0, 1, 2, 3, 4 nebo 5.  
@@ -154,7 +157,7 @@ _RPTFWn(
   
  `_RPT` Makra volání [_crtdbgreport –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) funkce k vygenerování sestavy ladění zprávou uživatele. `_RPTW` Makra volání `_CrtDbgReportW` funkce při generování sestav o stejné s široké znaky. `_RPTF` a `_RPTFW` makra vytvoření sestavy ladění se zdrojový soubor a řádku číslem kde makro sestava byla volána, kromě uživatele zprávu. Vytvoří zprávu uživatele nahraďte `arg`[*n*] argumenty do `format` řetězce, pomocí stejných pravidel definované [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) funkce.  
   
- `_CrtDbgReport`nebo `_CrtDbgReportW` generuje sestavu, ladění a určí jeho cíle podle režimů aktuální sestavy a soubor definice pro `reportType`. [_Crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.  
+ `_CrtDbgReport` nebo `_CrtDbgReportW` generuje sestavu, ladění a určí jeho cíle podle režimů aktuální sestavy a soubor definice pro `reportType`. [_Crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.  
   
  Pokud `_RPT` makro nazývá a ani `_CrtSetReportMode` ani `_CrtSetReportFile` byla volána, zprávy se zobrazují následujícím způsobem.  
   
@@ -170,12 +173,12 @@ _RPTFWn(
   
 ## <a name="requirements"></a>Požadavky  
   
-|– Makro|Požadovaný hlavičkový soubor|  
+|Macro|Požadovaný hlavičkový soubor|  
 |-----------|---------------------|  
-|`_RPT`makra|\<crtdbg.h >|  
-|`_RPTF`makra|\<crtdbg.h >|  
-|`_RPTW`makra|\<crtdbg.h >|  
-|`_RPTFW`makra|\<crtdbg.h >|  
+|`_RPT` Makra|\<crtdbg.h>|  
+|`_RPTF` Makra|\<crtdbg.h>|  
+|`_RPTW` Makra|\<crtdbg.h>|  
+|`_RPTFW` Makra|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

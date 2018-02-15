@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtMemDumpAllObjectsSince
 apilocation:
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c04d21b1c4009bd93e608d1c243d5b459e2422
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 17a8f1cd518c0864006d836f551d99554d3cdf24
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 Vypíše informace o objektech v haldě od začátku spuštění programu, nebo ze stavu zadaného haldy (pouze ladicí verze).  
@@ -62,7 +62,7 @@ Vypíše informace o objektech v haldě od začátku spuštění programu, nebo 
 ## <a name="remarks"></a>Poznámky  
  `_CrtMemDumpAllObjectsSince` Funkce výpisy ladění informace hlavičky objektů přidělené v haldě ve formě uživatelem čitelný. Informace o výpisu lze aplikace ke sledování přidělování a zjišťování problémů paměti. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtMemDumpAllObjectsSince` jsou odebrány při předběžném zpracování.  
   
- `_CrtMemDumpAllObjectsSince`používá hodnotu `state` parametr k určení, kam inicializace operace výpisu. Zahájíte vypsání ze zadaného haldy stavu, `state` parametr musí být ukazatel na **_crtmemstate –** struktura, která má byla vyplněna objektem [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) před `_CrtMemDumpAllObjectsSince` byl volá se. Když `state` je **NULL**, funkce začne výpisu od začátku spuštění programu.  
+ `_CrtMemDumpAllObjectsSince` používá hodnotu `state` parametr k určení, kam inicializace operace výpisu. Zahájíte vypsání ze zadaného haldy stavu, `state` parametr musí být ukazatel na **_crtmemstate –** struktura, která má byla vyplněna objektem [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) před `_CrtMemDumpAllObjectsSince` byl volá se. Když `state` je **NULL**, funkce začne výpisu od začátku spuštění programu.  
   
  Pokud je aplikace nainstalována funkce háku výpisu voláním [_crtsetdumpclient –](../../c-runtime-library/reference/crtsetdumpclient.md), potom pokaždé, když `_CrtMemDumpAllObjectsSince` Vypíše informace o `_CLIENT_BLOCK` typ bloku, zavolá funkci výpisu zadané aplikace. Ve výchozím nastavení, interní bloky C Runtime (`_CRT_BLOCK`) nejsou zahrnuty do operace výpisu paměti. [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce slouží k zapnutí `_CRTDBG_CHECK_CRT_DF` bit z **_crtdbgflag –** zahrnout tyto bloky. Kromě toho bloky označen jako vydání nebo ignorovat (**_free_block –**, **_ignore_block –**) nejsou součástí výpis stavu paměti.  
   

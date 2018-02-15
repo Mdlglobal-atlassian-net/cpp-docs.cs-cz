@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
 Můžete volně používat regulární pole stylu jazyka C nebo [std::array](../standard-library/array-class-stl.md) v jazyce C + +/ CX program (i když [std::vector](../standard-library/vector-class.md) je často lepší volbou), ale v jakéhokoli rozhraní API, která je publikovaná v metadatech, je nutné převést pole ve stylu jazyka C nebo vector k [Platform::Array](../cppcx/platform-array-class.md) nebo [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu v závislosti na tom, jak je používán. [Platform::Array](../cppcx/platform-array-class.md) typ není jako efektivní ani výkonné jako [std::vector](../standard-library/vector-class.md), takže v rámci obecných pokynů byste neměli jeho použití v interní kód, který provádí velké množství operací na pole elementy.  

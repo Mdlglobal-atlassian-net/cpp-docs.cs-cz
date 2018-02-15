@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -31,7 +32,8 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0e9bfbad40112632642a0e0a4698e48a19cc334c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 22844c3cc43b0da3c6b2a1fad485abf208aaa329
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 Tisk formátovaných dat do datového proudu.  
@@ -103,12 +106,12 @@ int _fwprintf_p_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_fprintf_p`a `_fwprintf_p` vrátí počet znaků, které jsou zapsány nebo může vracet záporná při výskytu chyby výstupu.  
+ `_fprintf_p` a `_fwprintf_p` vrátí počet znaků, které jsou zapsány nebo může vracet záporná při výskytu chyby výstupu.  
   
 ## <a name="remarks"></a>Poznámky  
- `_fprintf_p`Naformátuje a vytiskne řady znaků a hodnot pro výstup `stream`. Jednotlivé funkce `argument` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. Pro `_fprintf_p`, `format` argument má stejnou syntaxi a použití, který má v `_printf_p`. Tyto funkce podporují poziční parametry, což znamená, že lze změnit pořadí parametrů používaných řetězec formátu. Další informace o poziční parametry najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).  
+ `_fprintf_p` Naformátuje a vytiskne řady znaků a hodnot pro výstup `stream`. Jednotlivé funkce `argument` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. Pro `_fprintf_p`, `format` argument má stejnou syntaxi a použití, který má v `_printf_p`. Tyto funkce podporují poziční parametry, což znamená, že lze změnit pořadí parametrů používaných řetězec formátu. Další informace o poziční parametry najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_fwprintf_p`široká charakterová verze `_fprintf_p`; v `_fwprintf_p`, `format` je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `_fprintf_p`nepodporuje aktuálně výstup do proudu kódování UNICODE.  
+ `_fwprintf_p` široká charakterová verze `_fprintf_p`; v `_fwprintf_p`, `format` je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `_fprintf_p` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.  
   
@@ -130,7 +133,7 @@ int _fwprintf_p_l(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fprintf_p`, `_fprintf_p_l`|\<stdio.h >|  
+|`_fprintf_p`, `_fprintf_p_l`|\<stdio.h>|  
 |`_fwprintf_p`, `_fwprintf_p_l`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -182,10 +185,10 @@ this is a string
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf –, _fscanf_l –, fwscanf –, _fwscanf_l –](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)   
- [_cprintf_p –, _cprintf_p_l –, _cwprintf_p –, _cwprintf_p_l –](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
- [_cprintf_s –, _cprintf_s_l –, _cwprintf_s –, _cwprintf_s_l –](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
+ [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
+ [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
  [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)   
  [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

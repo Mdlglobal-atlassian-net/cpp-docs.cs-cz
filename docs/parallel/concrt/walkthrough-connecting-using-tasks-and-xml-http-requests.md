@@ -4,40 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
-- connecting to web services, Windows Store apps [C++]
+- connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e778c03368a634c349ec7c3ef241a29314cac4ea
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
-Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) a [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) rozhraní společně s úkoly na odesílání žádostí HTTP GET a POST na webovou službu v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete úlohu stáhnout jako součást řetězce úloh. Úloha stažení také reagovat, když se zruší pracovní.  
+Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) a [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) rozhraní společně s úkoly na odesílání žádostí HTTP GET a POST na webovou službu v univerzální platformu Windows (UWP ) aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete úlohu stáhnout jako součást řetězce úloh. Úloha stažení také reagovat, když se zruší pracovní.  
   
 > [!TIP]
->  K provádění požadavků protokolu HTTP z aplikace [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] pomocí aplikace jazyka C++ nebo z aplikace pracovní plochy jazyka C++ lze také použít sadu C++ REST SDK. Další informace najdete v tématu [C++ REST SDK (kódové označení "Casablanca")](https://github.com/Microsoft/cpprestsdk).  
+>  C++ REST SDK můžete použít také k provedení požadavky HTTP z pomocí aplikace C++ UWP aplikace nebo z aplikace C++ pro stolní počítače. Další informace najdete v tématu [C++ REST SDK (kódové označení "Casablanca")](https://github.com/Microsoft/cpprestsdk).  
   
- Další informace o úlohách najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Další informace o tom, jak používat úlohy v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace, najdete v části [asynchronní programování v jazyce C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) a [vytváření asynchronních operací v C++ pro aplikace Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+ Další informace o úlohách najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Další informace o tom, jak používat úlohy v aplikaci UWP najdete v tématu [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) a [vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
- Tento dokument nejprve ukazuje, jak vytvořit `HttpRequest` a jeho podpůrné třídy. Potom ukazuje, jak použít tuto třídu z [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikaci, která používá C++ a XAML.  
+ Tento dokument nejprve ukazuje, jak vytvořit `HttpRequest` a jeho podpůrné třídy. Potom ukazuje, jak použít tuto třídu z aplikace pro UPW, který používá C++ a XAML.  
   
  Pro více kompletní příklad, který používá `HttpReader` třída popsané v tomto dokumentu najdete v části [vývoj Bing Maps cestě Optimalizátor, aplikace pro Windows Store v JavaScript a C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Další příklad, který používá `IXMLHTTPRequest2` , ale nemá použití úloh najdete v [rychlý start: připojení pomocí XML požadavek HTTP (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
   
 > [!TIP]
->  `IXMLHTTPRequest2`a `IXMLHTTPRequest2Callback` jsou rozhraní, které doporučujeme pro použití v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Můžete také přizpůsobit tento příklad pro použití v aplikace na ploše.  
+>  `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` jsou rozhraní, které doporučujeme pro použití v aplikaci UWP. Můžete také přizpůsobit tento příklad pro použití v aplikace na ploše.  
   
 ## <a name="prerequisites"></a>Požadavky  
   
@@ -68,8 +71,8 @@ Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](http://msdn.microso
   
      [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>Používání třídy požadavku HTTP v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace  
- V této části ukazuje, jak používat `HttpRequest` třídy v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Aplikace obsahuje vstupní pole definující prostředku adresy URL, a tlačítko příkazy, které provádějí operace GET a POST a tlačítko příkaz, který zruší aktuální operace.  
+## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Používání třídy požadavku HTTP v aplikaci UWP  
+ V této části ukazuje, jak používat `HttpRequest` třídy v aplikaci UWP. Aplikace obsahuje vstupní pole definující prostředku adresy URL, a tlačítko příkazy, které provádějí operace GET a POST a tlačítko příkaz, který zruší aktuální operace.  
   
 #### <a name="to-use-the-httprequest-class"></a>Použití třídy HttpRequest  
   
@@ -112,7 +115,7 @@ Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](http://msdn.microso
   
  Tady je spuštěné aplikaci:  
   
- ![Spuštěné aplikace pro Windows Store](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
+ ![Spuštěné aplikaci prostředí Windows Runtime](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
 ## <a name="next-steps"></a>Další kroky  
  [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
@@ -120,8 +123,8 @@ Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](http://msdn.microso
 ## <a name="see-also"></a>Viz také  
  [Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)   
- [Asynchronní programování v jazyce C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
- [Vytváření asynchronních operací v jazyce C++ pro aplikace Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [Asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
+ [Vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
  [Rychlý úvod: Připojení pomocí XML požadavek HTTP (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [Task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event – třída](../../parallel/concrt/reference/task-completion-event-class.md)

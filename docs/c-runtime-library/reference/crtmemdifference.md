@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtMemDifference
+ms.topic: reference
+apiname:
+- _CrtMemDifference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ba4dc873fbb0e77f3b2f939c9d62533849dab76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 68d0aa43167e9c4641851927bd56819e384fed4d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 Porovná dva paměti stavy a vrátí rozdíly mezi nimi (pouze ladicí verze).  
@@ -68,9 +72,9 @@ int _CrtMemDifference(
 ## <a name="remarks"></a>Poznámky  
  `_CrtMemDifference` Funkce porovná `oldState` a `newState` a ukládá jejich rozdíly v `stateDiff`, který pak lze aplikací ke zjišťování nevracení paměti a jiných problémů paměti. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtMemDifference` jsou odebrány při předběžném zpracování.  
   
- `newState`a `oldState` musí být platný ukazatel `_CrtMemState` struktuře, definované v Crtdbg.h, který má byla vyplněna objektem [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) před voláním `_CrtMemDifference`. `stateDiff`musí být ukazatel na dříve přidělené instanci `_CrtMemState` struktura. Pokud `stateDiff`, `newState`, nebo `oldState` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaven na `EINVAL` , funkce vrátí hodnotu FALSE.  
+ `newState` a `oldState` musí být platný ukazatel `_CrtMemState` struktuře, definované v Crtdbg.h, který má byla vyplněna objektem [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) před voláním `_CrtMemDifference`. `stateDiff` musí být ukazatel na dříve přidělené instanci `_CrtMemState` struktura. Pokud `stateDiff`, `newState`, nebo `oldState` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaven na `EINVAL` , funkce vrátí hodnotu FALSE.  
   
- `_CrtMemDifference`Porovná `_CrtMemState` pole hodnoty bloků v `oldState` na hodnoty v `newState` a ukládá výsledky v `stateDiff`. Počet přidělené bloku typů nebo mezi dvěma paměti stavy liší celkový počet přidělených bloků pro každý typ, jsou stavy označeny jako výrazně lišit. Rozdíl mezi největší velikost někdy přidělené najednou dva stavy a rozdíl mezi celkový přidělení pro dva stavy jsou také uloženy v `stateDiff`.  
+ `_CrtMemDifference` Porovná `_CrtMemState` pole hodnoty bloků v `oldState` na hodnoty v `newState` a ukládá výsledky v `stateDiff`. Počet přidělené bloku typů nebo mezi dvěma paměti stavy liší celkový počet přidělených bloků pro každý typ, jsou stavy označeny jako výrazně lišit. Rozdíl mezi největší velikost někdy přidělené najednou dva stavy a rozdíl mezi celkový přidělení pro dva stavy jsou také uloženy v `stateDiff`.  
   
  Ve výchozím nastavení, interní bloky C Runtime (`_CRT_BLOCK`) nejsou zahrnuty v operacích stavu paměti. [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce slouží k zapnutí `_CRTDBG_CHECK_CRT_DF` bit z `_crtDbgFlag` zjištění paměti a dalších operací stavu paměti zahrnout tyto bloky. Vydání bloky paměti (`_FREE_BLOCK`) nezpůsobí `_CrtMemDifference` vrátí hodnotu TRUE.  
   
@@ -80,7 +84,7 @@ int _CrtMemDifference(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_CrtMemDifference`|\<crtdbg.h >|\<errno.h >|  
+|`_CrtMemDifference`|\<crtdbg.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

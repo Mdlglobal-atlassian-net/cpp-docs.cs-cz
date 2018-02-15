@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _beginthread
 - _beginthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f39ca2a386e605911f01ffe40cf23032d7ca7cb0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Vytvoří vlákno.  
@@ -112,13 +115,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ## <a name="remarks"></a>Poznámky  
  `_beginthread` Funkce vytvoří vlákno, které zahájí provádění rutiny v `start_address`. Rutiny v `start_address` musí používat `__cdecl` (pro nativní kód) nebo `__clrcall` (pro spravovaný kód) konvence volání a měl by obsahovat žádnou návratovou hodnotu. Po návratu vlákno z této rutiny je ukončen automaticky. Další informace o vláken najdete v tématu [podpora více vláken ve starším kódu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- `_beginthreadex`vypadá takto: Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) další rozhraní API úzce než `_beginthread` nepodporuje. `_beginthreadex`se liší od `_beginthread` následujícími způsoby:  
+ `_beginthreadex` vypadá takto: Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) další rozhraní API úzce než `_beginthread` nepodporuje. `_beginthreadex` se liší od `_beginthread` následujícími způsoby:  
   
--   `_beginthreadex`má tři další parametry: `initflag`, `security`, a `threadaddr`. Nové vlákno lze vytvořit v pozastaveném stavu, zadaný zabezpečení a je přístupný pomocí `thrdaddr`, což je identifikátor přístup z více vláken.  
+-   `_beginthreadex` má tři další parametry: `initflag`, `security`, a `threadaddr`. Nové vlákno lze vytvořit v pozastaveném stavu, zadaný zabezpečení a je přístupný pomocí `thrdaddr`, což je identifikátor přístup z více vláken.  
   
 -   Rutiny v `start_address` předá do `_beginthreadex` musí používat `__stdcall` (pro nativní kód) nebo `__clrcall` (pro spravovaný kód) konvence volání a musí vracet ukončovací kód přístup z více vláken.  
   
--   `_beginthreadex`selhání, nikoli L-1, vrátí hodnotu 0.  
+-   `_beginthreadex` selhání, nikoli L-1, vrátí hodnotu 0.  
   
 -   Vlákno, která je vytvořená pomocí `_beginthreadex` je ukončen voláním [_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md).  
   
@@ -128,14 +131,14 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  Můžete volat [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) nebo `_endthreadex` explicitně k ukončení vlákna; však `_endthread` nebo `_endthreadex` je volána automaticky, když vlákno vrátí z rutiny, která se předá jako parametr. Ukončení vlákna pomocí volání `_endthread` nebo `_endthreadex` pomáhá zajistit, aby správné obnovení prostředků, které jsou přiděleny pro vlákno.  
   
- `_endthread`Zatímco se automaticky zavře popisovač podprocesu `_endthreadex` neexistuje. Proto při použití `_beginthread` a `_endthread`, popisovač podprocesu explicitně nezavírejte voláním Win32 [funkce CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API. Toto chování se liší od Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) rozhraní API.  
+ `_endthread` Zatímco se automaticky zavře popisovač podprocesu `_endthreadex` neexistuje. Proto při použití `_beginthread` a `_endthread`, popisovač podprocesu explicitně nezavírejte voláním Win32 [funkce CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API. Toto chování se liší od Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) rozhraní API.  
   
 > [!NOTE]
->  Pro spustitelný soubor, propojený s Libcmt.lib, nevolejte Win32 `ExitThread` rozhraní API, takže nemusíte běhu systému zabránit opětovného získání přidělené prostředky. `_endthread`a `_endthreadex` uvolnit prostředky přidělené vláken a pak zavolají `ExitThread`.  
+>  Pro spustitelný soubor, propojený s Libcmt.lib, nevolejte Win32 `ExitThread` rozhraní API, takže nemusíte běhu systému zabránit opětovného získání přidělené prostředky. `_endthread` a `_endthreadex` uvolnit prostředky přidělené vláken a pak zavolají `ExitThread`.  
   
  Operační systém zpracovává přidělení zásobníku při buď `_beginthread` nebo `_beginthreadex` nazývá; nemáte adresu zásobníku vlákno předat některé z těchto funkcí. Kromě toho `stack_size` argument může mít hodnotu 0, ve kterém případ operačního systému používá stejnou hodnotu jako zásobníku, která je zadána pro hlavní vlákno.  
   
- `arglist`je parametr mají být předány nově vytvořený vlákno. Obvykle je to adresa položky dat, jako je řetězec znaků. `arglist`může mít hodnotu NULL, pokud není nutné ji, ale `_beginthread` a `_beginthreadex` musí být uvedeny některé hodnoty, které mají být předána do nové vlákno. Všechna vlákna budou ukončena, pokud žádný přístup z více vláken volání `abort`, `exit`, `_exit`, nebo `ExitProcess`.  
+ `arglist` je parametr mají být předány nově vytvořený vlákno. Obvykle je to adresa položky dat, jako je řetězec znaků. `arglist` může mít hodnotu NULL, pokud není nutné ji, ale `_beginthread` a `_beginthreadex` musí být uvedeny některé hodnoty, které mají být předána do nové vlákno. Všechna vlákna budou ukončena, pokud žádný přístup z více vláken volání `abort`, `exit`, `_exit`, nebo `ExitProcess`.  
   
  Národní prostředí nové vlákno je zděděno od její nadřazené přístup z více vláken. Pokud je ve volání povoleno národní prostředí podle vláken [_configthreadlocale –](../../c-runtime-library/reference/configthreadlocale.md) (globálně nebo pro nové vlákna), vlákno lze změnit pouze jeho národního prostředí nezávisle z nadřazené voláním `setlocale` nebo `_wsetlocale`. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -145,8 +148,8 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_beginthread`|\<Process.h >|  
-|`_beginthreadex`|\<Process.h >|  
+|`_beginthread`|\<process.h>|  
+|`_beginthreadex`|\<process.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -325,7 +328,7 @@ Counter should be 1000000; it is-> 1000000
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [_endthread –, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
- [přerušení](../../c-runtime-library/reference/abort.md)   
- [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
+ [abort](../../c-runtime-library/reference/abort.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

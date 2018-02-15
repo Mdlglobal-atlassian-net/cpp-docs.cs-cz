@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetDbgFlag
+ms.topic: reference
+apiname:
+- _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,7 +35,8 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -56,16 +59,17 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fb2af7756db37e3c5021894936d801d11705f0c6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Načte nebo upraví stav **_crtdbgflag –** příznak můžete řídit chování přidělení haldy ladění správce (pouze ladicí verze).  
@@ -93,24 +97,24 @@ Načte nebo upraví stav **_crtdbgflag –** příznak můžete řídit chován�
   
 |Bitová pole|Výchozí|Popis|  
 |---------------|-------------|-----------------|  
-|**_CRTDBG_ALLOC_MEM_DF –**|ON|ON: Povolit přidělení haldy ladění a použití paměti identifikátory typ bloku, například `_CLIENT_BLOCK`. OFF: Přidat nové přidělení haldy odkazovaného seznamu, ale nastavení blokovat typ **_ignore_block –**.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
-|**_CRTDBG_CHECK_ALWAYS_DF –**|VYPNOUT|ON: Volání [_crtcheckmemory –](../../c-runtime-library/reference/crtcheckmemory.md) při každé žádosti o přidělení a zrušení přidělení. OFF: `_CrtCheckMemory` musí být explicitně volána.<br /><br /> Makra Kontrola haldy frekvence nemají žádný vliv, pokud je nastavený tento příznak.|  
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Povolit přidělení haldy ladění a použití paměti identifikátory typ bloku, například `_CLIENT_BLOCK`. OFF: Přidat nové přidělení haldy odkazovaného seznamu, ale nastavení blokovat typ **_ignore_block –**.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
+|**_CRTDBG_CHECK_ALWAYS_DF**|VYPNOUT|ON: Volání [_crtcheckmemory –](../../c-runtime-library/reference/crtcheckmemory.md) při každé žádosti o přidělení a zrušení přidělení. OFF: `_CrtCheckMemory` musí být explicitně volána.<br /><br /> Makra Kontrola haldy frekvence nemají žádný vliv, pokud je nastavený tento příznak.|  
 |`_CRTDBG_CHECK_CRT_DF`|VYPNOUT|ON: Zahrnout `_CRT_BLOCK` typy v úniku detekce a paměť stavu rozdíl operace. VYPNUTO: Je paměť používaná interně k běhové knihovny ignorován v těchto operací.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
-|**_CRTDBG_DELAY_FREE_MEM_DF –**|VYPNOUT|ON: Zachování uvolněné paměti bloky v haldě je propojená seznamu, přiřaďte jim **_free_block –** zadejte a vyplnit je hodnota bajtu 0xDD. VYPNUTO: Není mějte uvolněné bloky haldy odkazovaného seznamu.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
+|**_CRTDBG_DELAY_FREE_MEM_DF**|VYPNOUT|ON: Zachování uvolněné paměti bloky v haldě je propojená seznamu, přiřaďte jim **_free_block –** zadejte a vyplnit je hodnota bajtu 0xDD. VYPNUTO: Není mějte uvolněné bloky haldy odkazovaného seznamu.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
 |`_CRTDBG_LEAK_CHECK_DF`|VYPNOUT|ON: Provést automatické úniku kontrola při ukončení programu prostřednictvím volání [_crtdumpmemoryleaks –](../../c-runtime-library/reference/crtdumpmemoryleaks.md) a vygenerovat zprávu o chybách v případě, že aplikace se nezdařilo uvolnit všechny jeho přidělené paměti. VYPNUTÍ: Neprovádět automaticky úniku kontrola při ukončení programu.<br /><br /> Můžete také kombinovat s žádným z makra Kontrola haldy frekvence.|  
   
  **Kontrola haldy frekvence makra**  
   
  Můžete určit, jak často běhové knihovny jazyka C provede ověření haldy ladění (`_CrtCheckMemory`) na základě počtu volání `malloc`, `realloc`, **volné**, a `_msize`.  
   
- `_CrtSetDbgFlag`pak zkontroluje horní 16 bitů `newFlag` parametr pro hodnotu. Zadaná hodnota je počet `malloc`, `realloc`, **volné**, a `_msize` volání mezi `_CrtCheckMemory` volání. Čtyři předdefinovaná makra jsou k dispozici pro tento účel.  
+ `_CrtSetDbgFlag` pak zkontroluje horní 16 bitů `newFlag` parametr pro hodnotu. Zadaná hodnota je počet `malloc`, `realloc`, **volné**, a `_msize` volání mezi `_CrtCheckMemory` volání. Čtyři předdefinovaná makra jsou k dispozici pro tento účel.  
   
-|– Makro|Počet volání malloc, realloc – volné a _msize – mezi _crtcheckmemory – volání|  
+|Macro|Počet volání malloc, realloc – volné a _msize – mezi _crtcheckmemory – volání|  
 |-----------|------------------------------------------------------------------------------------------|  
-|_CRTDBG_CHECK_EVERY_16_DF –|16|  
-|_CRTDBG_CHECK_EVERY_128_DF –|128|  
-|_CRTDBG_CHECK_EVERY_1024_DF –|1024|  
-|_CRTDBG_CHECK_DEFAULT_DF –|0 (ve výchozím nastavení žádné kontroly haldy)|  
+|_CRTDBG_CHECK_EVERY_16_DF|16|  
+|_CRTDBG_CHECK_EVERY_128_DF|128|  
+|_CRTDBG_CHECK_EVERY_1024_DF|1024|  
+|_CRTDBG_CHECK_DEFAULT_DF|0 (ve výchozím nastavení žádné kontroly haldy)|  
   
  Ve výchozím nastavení `_CrtCheckMemory` je volána po každých 1 024 časy zavoláte `malloc`, `realloc`, **volné**, a `_msize`.  
   
@@ -135,7 +139,7 @@ _CrtSetDbgFlag(tmp);
   
  Horní 16 bitů `newFlag` parametru jsou ignorovány, když je zadané _crtdbg_check_always_df –. V takovém případě `_CrtCheckMemory` je volána při každém volání `malloc`, `realloc`, **volné**, a `_msize`.  
   
- `newFlag`je nový stav pro použití **_crtdbgflag –** a je kombinace hodnot pro každé pole verze.  
+ `newFlag` je nový stav pro použití **_crtdbgflag –** a je kombinace hodnot pro každé pole verze.  
   
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Změnit jeden nebo více těchto bitových polí a vytvořit nový stav pro příznak  
   
@@ -176,7 +180,7 @@ _CrtSetDbgFlag( tmpFlag );
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_CrtSetDbgFlag`|\<crtdbg.h >|  
+|`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -263,5 +267,5 @@ int main( )
   
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
- [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md)   
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
  [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

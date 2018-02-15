@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -27,7 +28,8 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06f9fb737ac57ad04a661eb0e8438b3d557c0e3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af95e4b11048ebda50ac4d73fc87b6b67903494b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 Znak se zapíše do datového proudu.  
@@ -77,7 +80,7 @@ wint_t fputwc(
 ## <a name="remarks"></a>Poznámky  
  Každá z těchto funkcí zapíše jednoho znaku `c` do souboru na pozici indikován označení pozice přidružený soubor (je-li definována) a přejde na indikátor podle potřeby. U `fputc` a `fputwc`, soubor je přidružen `stream`. Pokud je soubor nemůže podporovat umísťovací požadavky nebo byl otevřen v režimu připojení, znak, který je připojen na konec datového proudu.  
   
- Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fputc`aktuálně nepodporuje výstup do proudu kódování UNICODE.  
+ Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fputc` aktuálně nepodporuje výstup do proudu kódování UNICODE.  
   
  Verzi pomocí `_nolock` příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Další informace najdete v tématu[_fputc_nolock –, _fputwc_nolock –](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
   
@@ -98,10 +101,10 @@ wint_t fputwc(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fputc`|\<stdio.h >|  
+|`fputc`|\<stdio.h>|  
 |`fputwc`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   

@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ecf0b0590942aad133cb7b8f478200525e4f4519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60e628f84dcadf7b1e214d526981191036428042
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 Určuje kladné rozdíl mezi hodnotami prvním a druhém.  
@@ -84,10 +86,10 @@ long double fdiml(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [in] `x`  
  První hodnota.  
   
- [v]`y`  
+ [in] `y`  
  Druhá hodnota.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -95,8 +97,8 @@ long double fdiml(
   
 |Návratová hodnota|Scénář|  
 |------------------|--------------|  
-|x-y|Pokud x > y|  
-|0|Pokud x < = y|  
+|x-y|if x > y|  
+|0|if x <= y|  
   
  Jinak může vrátit jednu z těchto chyb:  
   
@@ -104,7 +106,7 @@ long double fdiml(
 |-----------|------------|  
 |Rozsah chybu přetečení|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|  
 |Podtečení rozsah chyby|správnou hodnotu (po zaokrouhlení)|  
-|`x`nebo `y` je NaN.|NaN|  
+|`x` nebo `y` je NaN.|NaN|  
   
  Vznikly chyby uvedené v [_matherr –](../../c-runtime-library/reference/matherr.md).  
   
@@ -117,11 +119,11 @@ long double fdiml(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`fdim`, `fdimf`, `fdiml`|\<Math.h >|\<cmath – >|  
+|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Fmax, fmaxf –, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
+ [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
  [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)

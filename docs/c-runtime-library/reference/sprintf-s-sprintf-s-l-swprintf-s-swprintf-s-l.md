@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -33,7 +34,8 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e1dda25ab045262dffb34085519f4cf8b8bf226c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0ebdfb3745378088799883e1263686c44a8239f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 Zápis formátovaná data na řetězec. Toto jsou verze [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -125,7 +128,7 @@ int swprintf_s(
 ## <a name="return-value"></a>Návratová hodnota  
  Počet znaků, které jsou zapsány nebo -1, pokud došlo k chybě. Pokud `buffer` nebo `format` je ukazatel s hodnotou null, `sprintf_s` a `swprintf_s` vrátí hodnotu -1 a nastavte `errno` k `EINVAL`.  
   
- `sprintf_s`Vrátí počet bajtů, které jsou uložené v `buffer`, není počítání ukončující znak hodnoty null. `swprintf_s`Vrátí počet široké znaky, které jsou uložené v `buffer`, není počítání ukončující široká znaková hodnotu null.  
+ `sprintf_s` Vrátí počet bajtů, které jsou uložené v `buffer`, není počítání ukončující znak hodnoty null. `swprintf_s` Vrátí počet široké znaky, které jsou uložené v `buffer`, není počítání ukončující široká znaková hodnotu null.  
   
 ## <a name="remarks"></a>Poznámky  
  `sprintf_s` Funkce naformátuje a ukládá řady znaků a hodnot v `buffer`. Každý `argument` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. Formát obsahuje obyčejnou znaky a má stejné tvoří a fungovat jako `format` argument pro [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Znak hodnoty null se připojí po poslední znak zapsána. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.  
@@ -134,7 +137,7 @@ int swprintf_s(
   
  Další hlavní rozdíl mezi `sprintf_s` a `sprintf` je, že `sprintf_s` přebírá parametr délky ve znacích zadání velikost výstupní vyrovnávací paměť. Pokud vyrovnávací paměť je příliš malá pro formátovaný text, včetně ukončující null, pak vyrovnávací paměť je nastavena na prázdný řetězec umístěním znak hodnoty null v `buffer[0]`, a je volána obslužná rutina neplatný parametr. Na rozdíl od `_snprintf`, `sprintf_s` zaručuje, že vyrovnávací paměť bude null ukončena Pokud velikost vyrovnávací paměti je nulová.  
   
- `swprintf_s`široká charakterová verze `sprintf_s`; ukazatel argumenty, které mají `swprintf_s` jsou široká charakterová řetězce. Detekce chyb v kódování `swprintf_s` se můžou lišit od v `sprintf_s`. Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
+ `swprintf_s` široká charakterová verze `sprintf_s`; ukazatel argumenty, které mají `swprintf_s` jsou široká charakterová řetězce. Detekce chyb v kódování `swprintf_s` se můžou lišit od v `sprintf_s`. Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
  V jazyce C++ těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení můžete odvození délka vyrovnávací paměti automaticky, takže není potřeba zadávat argumentem velikosti a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -151,7 +154,7 @@ int swprintf_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`sprintf_s`, `_sprintf_s_l`|C: \<stdio.h ><br /><br /> C++: \<cstdio – > nebo \<stdio.h >|  
+|`sprintf_s`, `_sprintf_s_l`|C: \<stdio.h><br /><br /> C++: \<cstdio – > nebo \<stdio.h >|  
 |`swprintf_s`, `_swprintf_s_l`|C: \<stdio.h > nebo \<wchar.h ><br /><br /> C++: \<cstdio – >, \<cwchar – >, \<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -219,7 +222,7 @@ wrote -1 characters
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)

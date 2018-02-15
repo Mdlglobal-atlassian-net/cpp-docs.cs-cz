@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -42,7 +43,8 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -65,18 +67,19 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f94c67fe75f5675192dbd0f306d8eef0aace70f5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime –, _utime32 –, _utime64 –, _wutime –, _wutime32 –, _wutime64 –
+# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 Nastavte čas modifikace souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -132,7 +135,7 @@ int _wutime64(
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
- Datum můžete změnit pro soubor, pokud je datum změny po půlnoc 1. ledna 1970 a před datem ukončení funkce používá. `_utime`a `_wutime` použít hodnotu 64-bit čas tak, aby koncové datum 23:59:59, 31. prosince 3000, UTC. Pokud `_USE_32BIT_TIME_T` je definována přinutit staré chování je koncové datum 23:59:59 18 leden 2038 UTC. `_utime32`nebo `_wutime32` použít typu time 32-bit bez ohledu na to, jestli se `_USE_32BIT_TIME_T` je definovaný a mít vždy starší koncové datum. `_utime64`nebo `_wutime64` vždy používat typ času 64-bit, takže tyto funkce podporují vždy novější koncové datum.  
+ Datum můžete změnit pro soubor, pokud je datum změny po půlnoc 1. ledna 1970 a před datem ukončení funkce používá. `_utime` a `_wutime` použít hodnotu 64-bit čas tak, aby koncové datum 23:59:59, 31. prosince 3000, UTC. Pokud `_USE_32BIT_TIME_T` je definována přinutit staré chování je koncové datum 23:59:59 18 leden 2038 UTC. `_utime32` nebo `_wutime32` použít typu time 32-bit bez ohledu na to, jestli se `_USE_32BIT_TIME_T` je definovaný a mít vždy starší koncové datum. `_utime64` nebo `_wutime64` vždy používat typ času 64-bit, takže tyto funkce podporují vždy novější koncové datum.  
   
 ## <a name="remarks"></a>Poznámky  
  `_utime` Funkce nastaví čas změny pro soubor určený touto `filename` *.* Proces musí mít oprávnění k zápisu do souboru, chcete-li změnit čas. V operačním systému Windows, můžete změnit čas přístupu a čas změny v `_utimbuf` struktura. Pokud `times` je `NULL` ukazatele, čas změny nastavena na aktuálním místním časem. V opačném `times` musí odkazovat na strukturu typu `_utimbuf`, definované v SYS\UTIME. H.  
@@ -145,11 +148,11 @@ int _wutime64(
  `modtime`  
  Čas modifikace souboru  
   
- Konkrétní verze `_utimbuf` struktury (`_utimebuf32` a `__utimbuf64`) jsou definovány pomocí 32bitové a 64bitové verze typu time. Ty se používají v 32bitové a 64bitové verze konkrétních verzí této funkce. `_utimbuf`samotný ve výchozím nastavení používá typu time 64-bit, pokud `_USE_32BIT_TIME_T` je definována.  
+ Konkrétní verze `_utimbuf` struktury (`_utimebuf32` a `__utimbuf64`) jsou definovány pomocí 32bitové a 64bitové verze typu time. Ty se používají v 32bitové a 64bitové verze konkrétních verzí této funkce. `_utimbuf` samotný ve výchozím nastavení používá typu time 64-bit, pokud `_USE_32BIT_TIME_T` je definována.  
   
- `_utime`je stejný jako `_futime` s tím rozdílem, že `filename` argument `_utime` je název souboru nebo cestu k souboru, místo popisovače souborů otevřeného souboru.  
+ `_utime` je stejný jako `_futime` s tím rozdílem, že `filename` argument `_utime` je název souboru nebo cestu k souboru, místo popisovače souborů otevřeného souboru.  
   
- `_wutime`široká charakterová verze `_utime`; `filename` argument `_wutime` je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.  
+ `_wutime` široká charakterová verze `_utime`; `filename` argument `_wutime` je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -163,9 +166,9 @@ int _wutime64(
   
 |Rutina|Požadované hlavičky|Volitelné hlavičky|  
 |-------------|----------------------|----------------------|  
-|`_utime`, `_utime32`, `_utime64`|\<SYS/utime.h >|\<errno.h >|  
-|`_utime64`|\<SYS/utime.h >|\<errno.h >|  
-|`_wutime`|\<utime.h > nebo \<wchar.h >|\<errno.h >|  
+|`_utime`, `_utime32`, `_utime64`|\<sys/utime.h>|\<errno.h>|  
+|`_utime64`|\<sys/utime.h>|\<errno.h>|  
+|`_wutime`|\<utime.h > nebo \<wchar.h >|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -241,12 +244,12 @@ File time modified
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_fstat –, _fstat32 –, _fstat64 –, _fstati64 –, _fstat32i64 –, _fstat64i32 –](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [_futime – _futime32 –, _futime64 –](../../c-runtime-library/reference/futime-futime32-futime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [_futime, _futime32, _futime64](../../c-runtime-library/reference/futime-futime32-futime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [_stat, _wstat – funkce](../../c-runtime-library/reference/stat-functions.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

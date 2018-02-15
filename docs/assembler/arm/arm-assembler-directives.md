@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
 Ve většině případů assembleru Microsoft ARM používá jazyk sestavení ARM, která je popsána v kapitole 7 [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Ale implementace Microsoft direktiv některé sestavení se liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.  
@@ -31,7 +34,7 @@ Ve většině případů assembleru Microsoft ARM používá jazyk sestavení AR
   
  V assembleru Microsoft ARM Flash označuje, že část kódu obsahuje kód, Flash a je výchozí pro části kódu.  ARM znamená, že oddíl obsahuje kód ARM.  
   
- LINE  
+ ATTR  
  Není podporováno.  
   
  CODE16  
@@ -57,7 +60,7 @@ Ve většině případů assembleru Microsoft ARM používá jazyk sestavení AR
 EXPORTsym {[type]}  
 ```  
   
- `sym`je symbol pro export.  `[type]`, pokud jsou zadané, může být buď `[DATA]` indikující, zda je symbol ukazuje na data nebo `[FUNC]` indikující, zda je symbol ukazuje na kódu.  
+ `sym` je symbol pro export.  `[type]`, pokud jsou zadané, může být buď `[DATA]` indikující, zda je symbol ukazuje na data nebo `[FUNC]` indikující, zda je symbol ukazuje na kódu.  
   
  GLOBÁLNÍ je synonymum pro EXPORT.  
   
@@ -75,13 +78,13 @@ EXPORTsym {[type]}
 IMPORT sym{, WEAK alias{, TYPE t}}  
 ```  
   
- `sym`je název symbol, který má být importován.  
+ `sym` je název symbol, který má být importován.  
   
  Pokud SLABÉ `alias` není zadaný, značí to, `sym` je slabé externí. Pokud je nalezena žádná definice pro něj v době spojení, pak všechny odkazy na jeho místo navázat na `alias`.  
   
  Pokud typ `t` se `t` označuje linkeru mají pokusit o tom, jak vyřešit `sym`.  Tyto hodnoty pro `t` je možné:   
-1 – neprovádět knihovny Hledat`sym`  
-2 – knihovna hledání pro`sym`  
+1 – neprovádět knihovny Hledat `sym`  
+2 – knihovna hledání pro `sym`  
 3 –`sym` je alias `alias` (výchozí)  
   
  EXTERN je synonymum pro IMPORT, vyjma toho, že `sym` importu pouze v případě, že existují odkazy na ni v aktuální sestavení.  
@@ -99,7 +102,7 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  Není podporováno.  
   
  RELOC  
- `RELOC n`může používat pouze instrukce nebo direktivu definice data. Neexistuje žádné "anonymní symbol", může být přemístění.  
+ `RELOC n` může používat pouze instrukce nebo direktivu definice data. Neexistuje žádné "anonymní symbol", může být přemístění.  
   
  VYŽADOVAT  
  Není podporováno.  

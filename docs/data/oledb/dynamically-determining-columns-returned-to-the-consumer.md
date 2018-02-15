@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamické určování sloupců vrácených příjemci
 Makra PROVIDER_COLUMN_ENTRY obvykle zpracovávají **IColumnsInfo::GetColumnsInfo** volání. Ale vzhledem k tomu, že příjemce může zvolit použití záložek, zprostředkovatele musí být možné změnit sloupců vrácených v závislosti na tom, jestli příjemce požádá o záložku.  
   
  Zpracování **IColumnsInfo::GetColumnsInfo** volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CAgentMan` uživatele záznam v souboru MyProviderRS.h a nahraďte ji metodou vlastní definici `GetColumnInfo` funkce:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 class CAgentMan  
@@ -53,11 +55,11 @@ public:
   
  V dalším kroku implementovat `GetColumnInfo` fungovat v MyProviderRS.cpp, jak je znázorněno v následujícím kódu.  
   
- `GetColumnInfo`kontroluje, nejprve Pokud vlastnost OLE DB **DBPROP_BOOKMARKS** nastavena. GET pro vlastnost `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvořila sadu řádků, které je třída, kde je uložena mapa vlastností. `GetColumnInfo`přiřadí typ ukazatel `pThis` ukazatel na `RMyProviderRowset` ukazatel.  
+ `GetColumnInfo` kontroluje, nejprve Pokud vlastnost OLE DB **DBPROP_BOOKMARKS** nastavena. GET pro vlastnost `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvořila sadu řádků, které je třída, kde je uložena mapa vlastností. `GetColumnInfo` přiřadí typ ukazatel `pThis` ukazatel na `RMyProviderRowset` ukazatel.  
   
  Zkontrolujte **DBPROP_BOOKMARKS** vlastnost `GetColumnInfo` používá `IRowsetInfo` rozhraní, které můžete získat voláním `QueryInterface` na `pRowset` rozhraní. Jako alternativu, můžete použít ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metoda místo.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
@@ -118,12 +120,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  Tento příklad používá statické pole tak, aby obsahovala informace o sloupci. Pokud příjemce nechce sloupec záložky, jedna položka v poli se nepoužívá. Pro zpracování informací, můžete vytvořit dvě pole makra: ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX trvá další parametr `flags`, který je nutný v případě, že určíte sloupec záložky.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision,   
-scale, guid, dataClass, member) \  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
@@ -134,8 +135,7 @@ scale, guid, dataClass, member) \
    _rgColumns[ulCols].bScale = (BYTE)scale; \  
    _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
   
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type,   
-precision, scale, guid, dataClass, member, flags) \  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  

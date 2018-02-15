@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _gcvt
+ms.topic: reference
+apiname:
+- _gcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _gcvt
-dev_langs: C++
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -33,16 +37,17 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22561495a972c7561f827c4b7f445bb3fa5c256f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97f1487b770ac761a2555985a69069155e51cf74
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gcvt"></a>_gcvt
 Převede hodnotu s plovoucí desetinnou čárkou na řetězec, který je uložený ve vyrovnávací paměti. Bezpečnější verze této funkce je k dispozici. v tématu [_gcvt_s –](../../c-runtime-library/reference/gcvt-s.md).  
@@ -68,10 +73,10 @@ char *_gcvt(
  Umístění úložiště pro výsledek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_gcvt`vrací ukazatel na řetězec číslic.  
+ `_gcvt` vrací ukazatel na řetězec číslic.  
   
 ## <a name="remarks"></a>Poznámky  
- `_gcvt` Funkce převede s plovoucí desetinnou čárkou `value` na řetězec znaků (která zahrnuje desetinné čárky a možné přihlašovací bajtů) a ukládá řetězec v `buffer`. `buffer` By měl být dostatečně velký na to, aby dokázala pojmout převedená hodnota plus ukončující prázdný znak, který se automaticky připojí. Pokud velikost vyrovnávací paměti `digits` + 1 se používá, funkce přepíše konce vyrovnávací paměti. Je to proto, že převedený řetězec obsahuje desetinné čárky a může obsahovat znak a exponentu informace. Neexistuje žádné přidělení pro přetečení. `_gcvt`pokusí se vytvořit `digits` číslic ve formátu desetinného čísla. Pokud ne, vyvolá `digits` číslic v exponenciálním formátu. Koncové nuly může potlačit v převodu.  
+ `_gcvt` Funkce převede s plovoucí desetinnou čárkou `value` na řetězec znaků (která zahrnuje desetinné čárky a možné přihlašovací bajtů) a ukládá řetězec v `buffer`. `buffer` By měl být dostatečně velký na to, aby dokázala pojmout převedená hodnota plus ukončující prázdný znak, který se automaticky připojí. Pokud velikost vyrovnávací paměti `digits` + 1 se používá, funkce přepíše konce vyrovnávací paměti. Je to proto, že převedený řetězec obsahuje desetinné čárky a může obsahovat znak a exponentu informace. Neexistuje žádné přidělení pro přetečení. `_gcvt` pokusí se vytvořit `digits` číslic ve formátu desetinného čísla. Pokud ne, vyvolá `digits` číslic v exponenciálním formátu. Koncové nuly může potlačit v převodu.  
   
  A `buffer` délky `_CVTBUFSIZE` je dostatečná pro všechny plovoucí bodu hodnotu.  
   
@@ -81,7 +86,7 @@ char *_gcvt(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_gcvt`|\<stdlib.h >|  
+|`_gcvt`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -144,6 +149,6 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)

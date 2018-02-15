@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fmax
 - fmaxf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/fmax
 - math/fmaxf
 - math/fmaxl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fmax function
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6f580738ba73a7e0a8fac8662be7126edb5a9e95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d9992c149dca5a2fc5be52ae0029494b10e4bbe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 Určení větší ze dvou zadaný číselných hodnot.  
@@ -84,10 +86,10 @@ long double fmaxl(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [in] `x`  
  První hodnota pro porovnání.  
   
- [v]`y`  
+ [in] `y`  
  Druhá hodnota pro porovnání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -97,9 +99,9 @@ long double fmaxl(
   
 |Problém|Vrátí|  
 |-----------|------------|  
-|`x`= NaN.|`y`|  
-|`y`= NaN.|`x`|  
-|`x`a `y` = NaN.|NaN|  
+|`x` = NaN.|`y`|  
+|`y` = NaN.|`x`|  
+|`x` a `y` = NaN.|NaN|  
   
  Tato funkce nepoužívá chyby uvedené v [_matherr –](../../c-runtime-library/reference/matherr.md).  
   
@@ -110,7 +112,7 @@ long double fmaxl(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`fmax`, `fmaxf`, `fmaxl`|\<Math.h >|\<cmath – > nebo \<math.h >|  
+|`fmax`, `fmaxf`, `fmaxl`|\<math.h>|\<cmath – > nebo \<math.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

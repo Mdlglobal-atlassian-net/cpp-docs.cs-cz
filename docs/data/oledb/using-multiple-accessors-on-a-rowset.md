@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro
 - BEGIN_ACCESSOR macro, multiple accessors
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eda994a3b1312c4721a185c3f4a39938df1272a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06a9e668ecf2a16a933a9accd727284fa0f4bab6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Použití více přístupových objektů pro sadu řádků
 Existují tři základní scénáře, ve kterých budete muset použít několik přístupových objektů:  
@@ -36,7 +38,7 @@ Existují tři základní scénáře, ve kterých budete muset použít několik
   
     -   Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.  
   
--   **Výkon.** V tomto scénáři obsahovat jeden nebo více sloupců velké množství dat, například grafiky, zvuk nebo video soubory. Pokaždé, když přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkého množství dat, protože je to proto by zpomalit výkon aplikace.  
+-   Výkon. V tomto scénáři obsahovat jeden nebo více sloupců velké množství dat, například grafiky, zvuk nebo video soubory. Pokaždé, když přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkého množství dat, protože je to proto by zpomalit výkon aplikace.  
   
      Můžete nastavit samostatné přistupující objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkého množství dat a automaticky; načítá data z těchto sloupců Toto je automatický přistupující objekt. Druhý přistupující objekt načítá pouze se sloupcem obsahující velkého množství dat, ale nenačítá data z tohoto sloupce automaticky. Můžete mít další metody aktualizace nebo načítání velkých dat na vyžádání.  
   
@@ -117,7 +119,7 @@ int main(int argc, char* argv[])
         if (hr == S_OK)  
         {  
             // Ready to fetch/access data  
-            CTable<CAccessor<CJobs> > jobs;  
+            CTable<CAccessor<CJobs>> jobs;  
   
             // Set properties for making the rowset a read/write cursor  
             CDBPropSet dbRowset(DBPROPSET_ROWSET);  

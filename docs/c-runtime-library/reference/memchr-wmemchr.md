@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wmemchr
 - memchr
@@ -25,21 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d008c0dfaae7490dd23fdd5fe3206b0c5c1d76fc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 Najít znaků do vyrovnávací paměti.  
@@ -93,7 +96,7 @@ const wchar_t *wmemchr(
  V případě úspěchu vrátí ukazatel na první umístění `c` v `buf`. V opačném případě vrátí `NULL`.  
   
 ## <a name="remarks"></a>Poznámky  
- `memchr`a `wmemchr` vyhledejte první výskyt `c` v prvním `count` bajtů `buf`. Zastaví, pokud najde `c` nebo když byl zkontrolován první `count` bajtů.  
+ `memchr` a `wmemchr` vyhledejte první výskyt `c` v prvním `count` bajtů `buf`. Zastaví, pokud najde `c` nebo když byl zkontrolován první `count` bajtů.  
   
  V jazyce C, proveďte tyto funkce `const` pro první argument ukazatel. V jazyce C++ jsou k dispozici dva přetížení. Přetížení trvá ukazatel na `const` vrací ukazatel na `const`; na verzi, která přebírá ukazatel na jinou hodnotu než`const` vrací ukazatel na jinou hodnotu než`const`. Makro _CRT_CONST_CORRECT_OVERLOADS je definována, pokud obě `const` a jiných-`const` verze tyto funkce jsou k dispozici. Pokud budete potřebovat jinou hodnotu než`const` chování pro obě overloadsin C++, C++, definovat symbol _CONST_RETURN.  
   
@@ -102,7 +105,7 @@ const wchar_t *wmemchr(
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
 |`memchr`|\<Memory.h > nebo \<string.h >|  
-|`wmemchr`|\<wchar.h >|  
+|`wmemchr`|\<wchar.h>|  
   
  Další informace o kompatibilitě najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -154,7 +157,7 @@ Result:      r found at position 12
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy –](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcmp wmemcmp –](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy wmemcpy –](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset –, wmemset –](../../c-runtime-library/reference/memset-wmemset.md)   

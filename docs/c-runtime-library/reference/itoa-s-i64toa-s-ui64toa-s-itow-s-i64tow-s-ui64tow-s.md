@@ -1,12 +1,13 @@
 ---
-title: "_itoa_s –, _i64toa_s –, _ui64toa_s –, _itow_s –, _i64tow_s –, _ui64tow_s – | Microsoft Docs"
+title: _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ui64tow_s
 - _itoa_s
@@ -45,7 +46,8 @@ f1_keywords:
 - _ui64tot_s
 - i64tow_s
 - itot_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -65,16 +67,17 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d349627bfe5f6c5049de128937215301411b86e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Převede na řetězec, celé číslo. Toto jsou verze [_itoa –, _i64toa –, _ui64toa –, _itow –, _i64tow –, _ui64tow –](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -133,16 +136,16 @@ errno_t _itow_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`value`  
+ [in] `value`  
  Číslo, které má být převeden.  
   
- [out]`buffer`  
+ [out] `buffer`  
  Naplní se výsledek převodu.  
   
- [v]`sizeInCharacters`  
+ [in] `sizeInCharacters`  
  Velikost vyrovnávací paměti v jednobajtové znaky nebo široké znaky.  
   
- [v]`radix`  
+ [in] `radix`  
  Základ `value`; které musí být v rozsahu 2 36.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -150,12 +153,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|value|Vyrovnávací paměti|sizeInCharacters|základ –|Vrátí|  
+|value|Vyrovnávací paměti|sizeInCharacters|radix|Vrátí|  
 |-----------|------------|----------------------|-----------|------------|  
 |všechny|`NULL`|všechny|všechny|`EINVAL`|  
 |všechny|všechny|<=0|všechny|`EINVAL`|  
 |všechny|všechny|< = délka řetězce výsledek požadované|všechny|`EINVAL`|  
-|všechny|všechny|všechny|`radix`< 2 nebo `radix` > 36|`EINVAL`|  
+|všechny|všechny|všechny|`radix` < 2 nebo `radix` > 36|`EINVAL`|  
   
  **Problémy se zabezpečením**  
   
@@ -180,9 +183,9 @@ errno_t _itow_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_itoa_s`|\<stdlib.h >|  
-|`_i64toa_s`|\<stdlib.h >|  
-|`_ui64toa_s`|\<stdlib.h >|  
+|`_itoa_s`|\<stdlib.h>|  
+|`_i64toa_s`|\<stdlib.h>|  
+|`_ui64toa_s`|\<stdlib.h>|  
 |`_itow_s`|\<stdlib.h > nebo \<wchar.h >|  
 |`_i64tow_s`|\<stdlib.h > nebo \<wchar.h >|  
 |`_ui64tow_s`|\<stdlib.h > nebo \<wchar.h >|  
@@ -256,5 +259,5 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
- [_ltoa –, _ltow –](../../c-runtime-library/reference/ltoa-ltow.md)   
+ [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

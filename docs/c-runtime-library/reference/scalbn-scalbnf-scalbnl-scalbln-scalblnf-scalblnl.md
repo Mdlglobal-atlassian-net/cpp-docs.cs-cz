@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - scalblnl
 - scalbnl
@@ -34,7 +35,8 @@ f1_keywords:
 - scalbln
 - scalbn
 - scalbnf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - scalbn function
 - scalbln function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6ef24a46d7152934351fddf4be6b58392ce0a0ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bfdc1e666ddee2baae88fce558dfe1b49318b628
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 Integrální možností flt_radix – vynásobí číslo s plovoucí desetinnou čárkou.  
@@ -115,7 +118,7 @@ long double scalblnl(
  Další informace o `errno` a možná chyba návratové hodnoty, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `FLT_RADIX`je definována v \<float.h – > jako nativní s plovoucí desetinnou čárkou základ –; v systémech binárního souboru má hodnotu 2, a `scalbn` je ekvivalentní [ldexp –](../../c-runtime-library/reference/ldexp.md).  
+ `FLT_RADIX` je definována v \<float.h – > jako nativní s plovoucí desetinnou čárkou základ –; v systémech binárního souboru má hodnotu 2, a `scalbn` je ekvivalentní [ldexp –](../../c-runtime-library/reference/ldexp.md).  
   
  Protože C++ umožňuje, aby přetížení, můžete volat přetížení `scalbn` a `scalbln` , přijmout a vrátit `float` nebo `long double` typy. V programu C `scalbn` má vždy `double` a `int` a vrátí `double`, a `scalbln` má vždy `double` a `long` a vrátí `double`.  
   
@@ -123,7 +126,7 @@ long double scalblnl(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`scalbn`, `scalbnf`, `scalbnl`, `scalbln`, `scalblnf`, `scalblnl`|\<Math.h >|\<cmath – >|  
+|`scalbn`, `scalbnf`, `scalbnl`, `scalbln`, `scalblnf`, `scalblnl`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -153,6 +156,6 @@ int main( void )
   
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [frexp –](../../c-runtime-library/reference/frexp.md)   
- [ldexp –](../../c-runtime-library/reference/ldexp.md)   
+ [frexp](../../c-runtime-library/reference/frexp.md)   
+ [ldexp](../../c-runtime-library/reference/ldexp.md)   
  [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _searchenv
 - _wsearchenv
@@ -29,7 +30,8 @@ f1_keywords:
 - wsearchenv
 - _searchenv
 - searchenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wsearchenv function
 - files [C++], finding
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9996c9aad085beaef46d2a3188503eba582602d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6968d77e118b78b4b61f990e37047b9be7ee03c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 Cesty prostředí se používá k vyhledání souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_searchenv_s –, _wsearchenv_s –](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -102,7 +105,7 @@ void _wsearchenv(
   
  `pathname` Vyrovnávací paměti by měla být minimálně `_MAX_PATH` znaků dlouhé zohlednit úplné délka sestavené cesta. V opačném `_searchenv` může přetečení `pathname` vyrovnávací paměti a způsobit neočekávané chování.  
   
- `_wsearchenv`široká charakterová verze `_searchenv`a argumenty, které mají `_wsearchenv` jsou široká charakterová řetězce. `_wsearchenv`a `_searchenv` chovat jinak shodně.  
+ `_wsearchenv` široká charakterová verze `_searchenv`a argumenty, které mají `_wsearchenv` jsou široká charakterová řetězce. `_wsearchenv` a `_searchenv` chovat jinak shodně.  
   
  Pokud `filename` je řetězec prázdný, vrátí tyto funkce `ENOENT`.  
   
@@ -122,7 +125,7 @@ void _wsearchenv(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_searchenv`|\<stdlib.h >|  
+|`_searchenv`|\<stdlib.h>|  
 |`_wsearchenv`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -161,6 +164,6 @@ C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)   
- [GETENV –, _wgetenv –](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_putenv –, _wputenv –](../../c-runtime-library/reference/putenv-wputenv.md)   
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)

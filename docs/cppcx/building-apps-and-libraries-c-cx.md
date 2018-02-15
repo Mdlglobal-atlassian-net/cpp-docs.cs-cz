@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae9da167a3210e704b9d8b209e601e8269311513
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13ec00a692fc6bb884694b6f70689cf58636869e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Vytváření aplikací a knihovny (C + +/ CX)
 Témata v této části obsahují několik podrobnosti o používání systém sestavení k vytvoření aplikace pro univerzální platformu Windows nebo prostředí Windows Runtime součásti.  
@@ -28,6 +29,6 @@ Témata v této části obsahují několik podrobnosti o používání systém s
   
 -   [Statické knihovny](../cppcx/static-libraries-c-cx.md)  
   
--   [Knihovny DLL](../cppcx/dlls-c-cx.md)  
+-   [DLLs](../cppcx/dlls-c-cx.md)  
   
  Poznámka: Visual C++ nepodporuje optimalizace na základě profilu pro univerzální platformu Windows. Pokusíte-li se sestavit projekt s těmito možnostmi nastavenými v prostředí IDE, dojde k chybě sestavení. Konzolové aplikace také nejsou podporovány.

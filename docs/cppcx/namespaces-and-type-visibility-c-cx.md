@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 Obor názvů je standardní C++ konstrukce pro typy, které mají související s funkcí seskupování a brání kolize názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, aby všechny veřejné typy prostředí Windows Runtime, včetně těch, které v kódu, musí být deklarován v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarované v globálním oboru nebo vnořit do jiné třídy, způsobí chybu kompilace.  
@@ -41,9 +42,9 @@ Obor názvů je standardní C++ konstrukce pro typy, které mají související 
 |private|Výchozí usnadnění. Stejný význam jako standardní C++.|Ne|  
 |protected|Stejný význam jako standardní C++, jak v rámci aplikace nebo součásti i v metadatech.|Ano|  
 |public|Stejný význam jako standardní C++.|Ano|  
-|`public protected`- nebo -`protected public`|Chráněný usnadnění v metadatech, veřejné v rámci aplikace nebo součást.|Ano|  
-|`protected private`nebo`private protected`|Nejsou viditelné v metadatech; usnadnění přístupu v rámci aplikace nebo součást chráněný.||  
-|`internal`nebo`private public`|Člen je veřejný v rámci aplikace nebo součásti, ale není viditelná v metadatech.|Ne|  
+|`public protected` - nebo - `protected public`|Chráněný usnadnění v metadatech, veřejné v rámci aplikace nebo součást.|Ano|  
+|`protected private` Nebo `private protected`|Nejsou viditelné v metadatech; usnadnění přístupu v rámci aplikace nebo součást chráněný.||  
+|`internal` Nebo `private public`|Člen je veřejný v rámci aplikace nebo součásti, ale není viditelná v metadatech.|Ne|  
   
 ## <a name="windows-runtime-namespaces"></a>Obory názvů prostředí Windows Runtime  
  Rozhraní API systému Windows se skládá z typů, které jsou deklarované v systému Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **Prohlížeč objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní API systému Windows](http://msdn.microsoft.com/library/windows/apps/br211377).  

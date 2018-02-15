@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,23 +29,25 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2af7888be70a95aed35190b942e55a8a8247abba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2499e48ffd87171df50d46bd58327dc8c7cac47a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
 Určuje, zda je zadaný znak vícebajtové tiskové znak.  
@@ -69,20 +72,20 @@ int _ismbbprint_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_ismbbprint`vrátí nenulovou hodnotu, pokud výraz:  
+ `_ismbbprint` Vrátí nenulovou hodnotu, pokud výraz:  
   
 ```  
 isprint || _ismbbkprint  
 ```  
   
- je nenulové hodnoty pro `c`, nebo 0, pokud není. `_ismbbprint`používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_ismbbprint_l`se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ je nenulové hodnoty pro `c`, nebo 0, pokud není. `_ismbbprint` používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_ismbbprint_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_ismbbprint`|\<Mbctype.h >|  
-|`_ismbbprint_l`|\<Mbctype.h >|  
+|`_ismbbprint`|\<mbctype.h>|  
+|`_ismbbprint_l`|\<mbctype.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

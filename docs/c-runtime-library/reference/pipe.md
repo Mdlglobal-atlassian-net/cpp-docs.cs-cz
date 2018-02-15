@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _pipe
+ms.topic: reference
+apiname:
+- _pipe
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,29 +26,31 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a14fa401b2a46bbfb3d5aafcda4d05c0167b3d9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 95169aa5070493be76db6306f4d5863d6a2e654f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="pipe"></a>_pipe
 Vytvoří kanálu pro čtení a zápis.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +86,7 @@ int _pipe(
 ## <a name="remarks"></a>Poznámky  
  `_pipe` Funkce vytvoří *kanálu*, což je umělé vstupně-výstupního kanálu, který program používá k předávání informací do jiných programů. Protože jsou popisovače souborů, ukazatele souboru nebo obojí, a může číst nebo zapisovat do pomocí standardní knihovna vstup a výstup funkce se podobá svislicí soubor. Svislicí však nepředstavuje konkrétní soubor nebo zařízení. Místo toho představuje dočasné úložiště v paměti, která je nezávislá vlastní paměti programu a řídí zcela operačního systému.  
   
- `_pipe`podobá `_open` ale otevře kanál pro čtení a zápis a vrátí dva popisovače místo jeden soubor. Program můžete použít obě strany kanálu nebo zavřete ten, který nepotřebuje. Například procesor příkazů ve Windows vytváří kanál, jakmile je spuštěn příkaz například `PROGRAM1 | PROGRAM2`.  
+ `_pipe` podobá `_open` ale otevře kanál pro čtení a zápis a vrátí dva popisovače místo jeden soubor. Program můžete použít obě strany kanálu nebo zavřete ten, který nepotřebuje. Například procesor příkazů ve Windows vytváří kanál, jakmile je spuštěn příkaz například `PROGRAM1 | PROGRAM2`.  
   
  Standardní výstupní popisovač `PROGRAM1` je připojen k popisovač zápisu do kanálu. Standardní vstupní popisovač `PROGRAM2` je připojen k popisovač pro čtení kanálu. Tím se eliminuje potřebu vytvářet dočasné soubory předávat informace do jiných programů.  
   
@@ -100,7 +104,7 @@ int _pipe(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_pipe`|\<IO.h >|\<fcntl.h >, 1 \<errno.h > 2|  
+|`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
  1 pro `_O_BINARY` a `_O_TEXT` definice.  
   

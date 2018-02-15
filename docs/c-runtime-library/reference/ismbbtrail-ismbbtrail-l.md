@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -28,23 +29,25 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc0a56d64a44f9c2fc0c72ec7019cc56420c7dda
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Určuje, zda je bajt koncové bajt vícebajtových znaků.  
@@ -69,19 +72,19 @@ int _ismbbtrail_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_ismbbtrail`vrátí nenulovou hodnotu, pokud na celé číslo `c` je druhý bajt vícebajtových znaků. Například v kódu stránka 932 pouze, platné rozsahy jsou 0x40 k 0x7E a 0x80 k 0xFC.  
+ `_ismbbtrail` vrátí nenulovou hodnotu, pokud na celé číslo `c` je druhý bajt vícebajtových znaků. Například v kódu stránka 932 pouze, platné rozsahy jsou 0x40 k 0x7E a 0x80 k 0xFC.  
   
 ## <a name="remarks"></a>Poznámky  
- `_ismbbtrail`používá aktuální národní prostředí pro chování závislých na národním prostředí. `_ismbbtrail_l`se shoduje s tím rozdílem, že používá národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `_ismbbtrail` používá aktuální národní prostředí pro chování závislých na národním prostředí. `_ismbbtrail_l` se shoduje s tím rozdílem, že používá národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_ismbbtrail`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
-|`_ismbbtrail_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
+|`_ismbbtrail`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbbtrail_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
- \*Pro manifest konstanty podmínky testu.  
+ \* Pro manifest konstanty podmínky testu.  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

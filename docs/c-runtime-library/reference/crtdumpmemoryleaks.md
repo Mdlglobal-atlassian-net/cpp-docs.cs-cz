@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
 apilocation:
@@ -45,11 +45,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 859f1918afc69054b13cab161f2d7b4801bcbd78
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8f71e37da509d4e8dd05c5a41afa9fe539294347
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 Výpisy veškerou paměť bloků v haldě ladění při nevrácené paměti došlo k chybě (pouze ladicí verze).  
@@ -62,14 +62,14 @@ int _CrtDumpMemoryLeaks( void );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_CrtDumpMemoryLeaks`Vrátí hodnotu PRAVDA, pokud je nalezen nevrácenou pamětí. Funkce, jinak vrátí hodnotu FALSE.  
+ `_CrtDumpMemoryLeaks` Vrátí hodnotu PRAVDA, pokud je nalezen nevrácenou pamětí. Funkce, jinak vrátí hodnotu FALSE.  
   
 ## <a name="remarks"></a>Poznámky  
  `_CrtDumpMemoryLeaks` Funkce určuje, zda nevrácenou pamětí došlo od spuštění tohoto programu. Když se najde nevrácenou, informace o ladění záhlaví pro všechny objekty v haldě vypsána ve formě uživatelem čitelný. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtDumpMemoryLeaks` jsou odebrány při předběžném zpracování.  
   
- `_CrtDumpMemoryLeaks`se často nazývá na konci spuštění programu pro ověření, že bylo uvolněno všechny paměti přidělené aplikace. Funkci nelze volat automaticky v ukončení programu zapnutím `_CRTDBG_LEAK_CHECK_DF` bit pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) příznak pomocí [_crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce.  
+ `_CrtDumpMemoryLeaks` se často nazývá na konci spuštění programu pro ověření, že bylo uvolněno všechny paměti přidělené aplikace. Funkci nelze volat automaticky v ukončení programu zapnutím `_CRTDBG_LEAK_CHECK_DF` bit pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) příznak pomocí [_crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce.  
   
- `_CrtDumpMemoryLeaks`volání [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) se získat aktuální stav haldy a pak kontroluje stav bloků, které nebyly bylo uvolněno. Když je zjištěna neuvolněných bloku, `_CrtDumpMemoryLeaks` volání [_crtmemdumpallobjectssince –](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) k výpisu informace pro všechny objekty přidělené v haldě od začátku spuštění programu.  
+ `_CrtDumpMemoryLeaks` volání [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) se získat aktuální stav haldy a pak kontroluje stav bloků, které nebyly bylo uvolněno. Když je zjištěna neuvolněných bloku, `_CrtDumpMemoryLeaks` volání [_crtmemdumpallobjectssince –](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) k výpisu informace pro všechny objekty přidělené v haldě od začátku spuštění programu.  
   
  Ve výchozím nastavení, interní bloky C Runtime (`_CRT_BLOCK`) nejsou zahrnuty do operace výpisu paměti. [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce slouží k zapnutí `_CRTDBG_CHECK_CRT_DF` bit z `_crtDbgFlag` zahrnout tyto bloky v procesu zjišťování úniku.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _heapchk
+ms.topic: reference
+apiname:
+- _heapchk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +35,17 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 790d887009137ccc9115484b2ace57302c94d851
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1656c488b722d2ed791da16db8a014e53568e82d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="heapchk"></a>_heapchk
 Spustí kontrolu konzistence na haldě.  
@@ -53,7 +57,7 @@ int _heapchk( void );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_heapchk`Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
+ `_heapchk` Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
   
  `_HEAPBADBEGIN`  
  Informace počáteční hlavičky je chybný nebo nebyl nalezen.  
@@ -79,7 +83,7 @@ int _heapchk( void );
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_heapchk`|\<malloc.h >|\<errno.h >|  
+|`_heapchk`|\<malloc.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -128,7 +132,7 @@ OK - heap is fine
   
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
- [_heapadd –](../../c-runtime-library/heapadd.md)   
- [_heapmin –](../../c-runtime-library/reference/heapmin.md)   
- [_heapset –](../../c-runtime-library/heapset.md)   
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../../c-runtime-library/heapset.md)   
  [_heapwalk](../../c-runtime-library/reference/heapwalk.md)

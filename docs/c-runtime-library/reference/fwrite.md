@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fwrite
+ms.topic: reference
+apiname:
+- fwrite
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fwrite
-dev_langs: C++
+f1_keywords:
+- fwrite
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b830dfd7b0a9dace46336f8f02da14fc268daf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73b5328ce6851ceb61ad3260760e95cd329ee064
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fwrite"></a>fwrite
 Zapíše data do datového proudu.  
@@ -66,7 +71,7 @@ size_t fwrite(
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fwrite`Vrátí počet úplné položek ve skutečnosti zapisovat, což může být menší než `count` Pokud dojde k chybě. Navíc pokud dojde k chybě, nelze určit indikátoru pozice souboru. Pokud má jedna `stream` nebo `buffer` je ukazatel s hodnotou null, nebo pokud je v režimu Unicode je zadán lichý počet bajtů, které mají být zapsána, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
+ `fwrite` Vrátí počet úplné položek ve skutečnosti zapisovat, což může být menší než `count` Pokud dojde k chybě. Navíc pokud dojde k chybě, nelze určit indikátoru pozice souboru. Pokud má jedna `stream` nebo `buffer` je ukazatel s hodnotou null, nebo pokud je v režimu Unicode je zadán lichý počet bajtů, které mají být zapsána, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
   
 ## <a name="remarks"></a>Poznámky  
  `fwrite` Funkce zapíše až `count` položek, z `size` délka, z `buffer` k výstupu `stream`. Ukazatele souboru přidružené `stream` (pokud existuje) se zvýší o počet skutečně zapsaných bajtů. Pokud `stream` je otevřen v režimu textových každý konce řádku nahradí znak-konce - pár konce řádku. Pokud chcete nahrazení nemá žádný vliv na návratovou hodnotu.  
@@ -79,7 +84,7 @@ size_t fwrite(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fwrite`|\<stdio.h >|  
+|`fwrite`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -88,7 +93,7 @@ size_t fwrite(
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_setmode –](../../c-runtime-library/reference/setmode.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
  [fread –](../../c-runtime-library/reference/fread.md)   
- [_fwrite_nolock –](../../c-runtime-library/reference/fwrite-nolock.md)   
+ [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
  [_write](../../c-runtime-library/reference/write.md)

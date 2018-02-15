@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -31,7 +32,8 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -39,18 +41,19 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ea88de83d10699c07dd387a616178c0043e925c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 10d0997b1a6b304634c612f0f1615a059fd812b2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="isnan-isnan-isnanf"></a>isNaN, _isnan –, _isnanf
+# <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 Testy, pokud hodnotu s plovoucí desetinnou čárkou není číslo (NAN).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -94,7 +97,7 @@ bool isnan(
   
 |Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|  
 |-------------|---------------------------|-------------------------------|  
-|`isnan`, `_isnanf`|\<Math.h >|\<Math.h > nebo \<cmath – >|  
+|`isnan`, `_isnanf`|\<math.h>|\<Math.h > nebo \<cmath – >|  
 |`_isnan`|\<float.h – >|\<float.h – > nebo \<cfloat – >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

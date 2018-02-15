@@ -1,13 +1,15 @@
 ---
-title: "imaxdiv – | Microsoft Docs"
+title: imaxdiv | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: imaxdiv
+ms.topic: reference
+apiname:
+- imaxdiv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: imaxdiv
-dev_langs: C++
-helpviewer_keywords: imaxdiv function
+f1_keywords:
+- imaxdiv
+dev_langs:
+- C++
+helpviewer_keywords:
+- imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a6dbcd5b25fe1a8b1b21b2e2f6ac7a8cc99cc06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93416cd105b90cd68ad9224a4726f507e2689c82
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="imaxdiv"></a>imaxdiv
 Vypočítá podílu a zbývající dva celočíselné hodnoty libovolnou velikost jako jednu operaci.  
@@ -56,7 +62,7 @@ imaxdiv_t imaxdiv(
  Jmenovatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `imaxdiv`volat s argumenty typu [intmax_t](../../c-runtime-library/standard-types.md) vrací strukturu typu [imaxdiv_t](../../c-runtime-library/standard-types.md) , zahrnuje podílu a zbytek.  
+ `imaxdiv` volat s argumenty typu [intmax_t](../../c-runtime-library/standard-types.md) vrací strukturu typu [imaxdiv_t](../../c-runtime-library/standard-types.md) , zahrnuje podílu a zbytek.  
   
 ## <a name="remarks"></a>Poznámky  
  `imaxdiv` Funkce vydělí `numer` podle `denom` a tím vypočítá podílu a zbytek. `imaxdiv_t` Struktura obsahuje podílu, `intmax_t quot`a zbývající, `intmax_t rem`. Znaménko podílu je stejný jako u matematickém podílu. Jeho absolutní hodnota je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou.  
@@ -65,7 +71,7 @@ imaxdiv_t imaxdiv(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`imaxdiv`|\<inttypes.h >|  
+|`imaxdiv`|\<inttypes.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

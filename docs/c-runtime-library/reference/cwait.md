@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _cwait
+ms.topic: reference
+apiname:
+- _cwait
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,28 +23,31 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _cwait
-dev_langs: C++
+f1_keywords:
+- _cwait
+dev_langs:
+- C++
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 483b98f005a77ff41d2a319a9d07ccc88ad32721
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cwait"></a>_cwait
 Čeká na jiný proces se ukončuje.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,9 +80,9 @@ intptr_t _cwait(
  Další informace o těchto a dalších návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `_cwait` Funkce čeká na ukončení ID procesu zadaný procesu od `procHandle`. Hodnota `procHandle` předá do `_cwait` by měla být hodnota, kterou vrátí volání [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkce, která vytvořila určený proces. Pokud ID procesu ukončí před `_cwait` je volána, `_cwait` vrátí okamžitě. `_cwait`Umožňuje žádné procesem čekat na jiný známé proces, pro který platný popisovač (`procHandle`) existuje.  
+ `_cwait` Funkce čeká na ukončení ID procesu zadaný procesu od `procHandle`. Hodnota `procHandle` předá do `_cwait` by měla být hodnota, kterou vrátí volání [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkce, která vytvořila určený proces. Pokud ID procesu ukončí před `_cwait` je volána, `_cwait` vrátí okamžitě. `_cwait` Umožňuje žádné procesem čekat na jiný známé proces, pro který platný popisovač (`procHandle`) existuje.  
   
- `termstat`body k uložení návratový kód určený proces vyrovnávací paměti. Hodnota `termstat` označuje, zda zadaný proces ukončen normálně voláním Windows [exitprocess –](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) rozhraní API. `ExitProcess`je volána interně, pokud zadaný procesu volání `exit` nebo `_exit`, vrátí z `main`, nebo dosáhne konce `main`. Další informace o hodnotě, který se předává zpátky pomocí `termstat`, najdete v části [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Pokud `_cwait` nazývá pomocí hodnoty NULL pro `termstat`, není uložen návratový kód určený proces.  
+ `termstat` body k uložení návratový kód určený proces vyrovnávací paměti. Hodnota `termstat` označuje, zda zadaný proces ukončen normálně voláním Windows [exitprocess –](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) rozhraní API. `ExitProcess` je volána interně, pokud zadaný procesu volání `exit` nebo `_exit`, vrátí z `main`, nebo dosáhne konce `main`. Další informace o hodnotě, který se předává zpátky pomocí `termstat`, najdete v části [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Pokud `_cwait` nazývá pomocí hodnoty NULL pro `termstat`, není uložen návratový kód určený proces.  
   
  `action` Parametr je ignorován v operačního systému Windows, protože vztahů nadřazenosti a podřízenosti nejsou implementované v těchto prostředích.  
   
@@ -87,7 +92,7 @@ intptr_t _cwait(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_cwait`|\<Process.h >|\<errno.h >|  
+|`_cwait`|\<process.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

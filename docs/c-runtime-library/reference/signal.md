@@ -1,13 +1,15 @@
 ---
 title: "signál | Microsoft Docs"
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>signal
 
@@ -44,21 +50,19 @@ Nastaví přerušení zpracování signál.
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Parametry
-_SIG_  
+_sig_  
 Hodnota signál.
 
 _Func_  
-Funkce, která má být proveden. První parametr je hodnota signál a druhý parametr je dílčí kód, který lze použít při první parametr je sigfpe –.
+Druhý parametr je ukazatel na funkci spouštění. První parametr je hodnota signál a druhý parametr je dílčí kód, který lze použít při první parametr je sigfpe –.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`signal`Vrátí předchozí hodnotu _func_ který je spojen s danou signál. Například pokud předchozí hodnotu _func_ byla `SIG_IGN`, vrácená hodnota je také `SIG_IGN`. Vrácená hodnota `SIG_ERR` označuje chybu; v takovém případě `errno` je nastaven na `EINVAL`.
+`signal` Vrátí předchozí hodnotu func, který je spojen s danou signál. Například pokud předchozí hodnotu _func_ byla `SIG_IGN`, vrácená hodnota je také `SIG_IGN`. Vrácená hodnota `SIG_ERR` označuje chybu; v takovém případě `errno` je nastaven na `EINVAL`.
 
 V tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o návratové kódy.
 
@@ -80,7 +84,7 @@ Pokud _sig_ není jedním z výše uvedené hodnoty, je vyvolána obslužná rut
 Ve výchozím nastavení `signal` ukončí volací program s ukončovacím kódem 3, bez ohledu na hodnotu _sig_.
 
 > [!NOTE]
-> `SIGINT`není podporován pro všechny aplikace typu Win32. Když dojde k přerušení CTRL + C, operační systémy Win32 generovat nové vlákno konkrétně zpracování této přerušení. To může způsobit jedním vláknem aplikaci, například ten, který v systému UNIX se stane s více vlákny a způsobit neočekávané chování.
+> `SIGINT` není podporován pro všechny aplikace typu Win32. Když dojde k přerušení CTRL + C, operační systémy Win32 generovat nové vlákno konkrétně zpracování této přerušení. To může způsobit jedním vláknem aplikaci, například ten, který v systému UNIX se stane s více vlákny a způsobit neočekávané chování.
 
 _Func_ argument je adresu na signál obslužnou rutinu, která můžete psát, nebo na jednu z předdefinovaných konstanty `SIG_DFL` nebo `SIG_IGN`, která je definována v SIGNÁL. H. Pokud _func_ je funkce, je nainstalován jako obslužná rutina signál pro danou signál. Obslužná rutina signál prototypu vyžaduje jeden argument formální, _sig_, typu `int`. Operační systém poskytuje skutečné argument prostřednictvím _sig_ když dojde k přerušení; argument je signál, která generuje přerušení. Proto můžete šesti manifestu konstanty (uvedené v předchozí tabulce) ve vaší obslužné rutiny signál k určení které přerušení došlo k chybě a proveďte příslušnou akci. Například můžete volat `signal` na dvou různých signály přiřadit stejné obslužné rutiny a otestujte dvakrát _sig_ argument v rutině k provádění různých akcí podle signál přijata.
 
@@ -116,7 +120,7 @@ V vytvářený procesy, které jsou vytvořené pomocí volání nejsou zachová
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`signal`|\<Signal.h >|
+|`signal`|\<signal.h>|
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 

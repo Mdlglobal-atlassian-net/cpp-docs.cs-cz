@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fpreset
+ms.topic: reference
+apiname:
+- _fpreset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5d4381d45adc2e6b1330bfbacd960b2dac8d51d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d6868978b27428dc6f2290fea69ec2f2527e28e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpreset"></a>_fpreset
 Obnoví balíček s plovoucí desetinnou čárkou.  
@@ -51,7 +55,7 @@ void _fpreset( void );
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `_fpreset` Funkce znovu inicializuje s plovoucí desetinnou čárkou matematického balíku. `_fpreset`Obvykle se používá s `signal`, `system`, nebo `_exec` nebo `_spawn` funkce. Pokud program traps s plovoucí desetinnou čárkou chyba signály (`SIGFPE`) s `signal`, ho můžete bezpečně zotavit s plovoucí desetinnou čárkou chyby vyvoláním `_fpreset` a pomocí `longjmp`.  
+ `_fpreset` Funkce znovu inicializuje s plovoucí desetinnou čárkou matematického balíku. `_fpreset` Obvykle se používá s `signal`, `system`, nebo `_exec` nebo `_spawn` funkce. Pokud program traps s plovoucí desetinnou čárkou chyba signály (`SIGFPE`) s `signal`, ho můžete bezpečně zotavit s plovoucí desetinnou čárkou chyby vyvoláním `_fpreset` a pomocí `longjmp`.  
   
  Tato funkce je zastaralý, když kompilujete s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul common language runtime podporuje pouze výchozí přesnost s plovoucí desetinnou čárkou.  
   
@@ -180,6 +184,6 @@ Error 131: Divide by zero
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)   
- [signál](../../c-runtime-library/reference/signal.md)   
+ [Signál](../../c-runtime-library/reference/signal.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

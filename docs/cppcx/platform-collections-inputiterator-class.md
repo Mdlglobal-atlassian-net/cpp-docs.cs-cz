@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator – třída
 Poskytuje standardní InputIterator knihovny šablony pro kolekce, které jsou odvozené z prostředí Windows Runtime.  
@@ -44,8 +48,8 @@ class InputIterator;
 |----------|-----------------|  
 |`difference_type`|Ukazatel rozdíl (ptrdiff_t –).|  
 |`iterator_category`|Kategorie vstupní iterator (:: std::input_iterator_tag).|  
-|`pointer`|Ukazatel na`const X`|  
-|`reference`|Odkaz na`const X`|  
+|`pointer`|Ukazatel na `const X`|  
+|`reference`|Odkaz na `const X`|  
 |`value_type`|`X` Typename.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
@@ -72,7 +76,7 @@ class InputIterator;
   
  **Namespace:** Platform::Collections  
 
-## <a name="ctor"></a>InputIterator::InputIterator – konstruktor
+## <a name="ctor"></a>  InputIterator::InputIterator – konstruktor
 Inicializuje novou instanci třídy InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>InputIterator::operator -&gt; – operátor
+## <a name="operator-arrow"></a>  InputIterator::operator -&gt; – operátor
 Načte adresu určeného aktuální InputIterator elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>InputIterator::operator * – operátor
+## <a name="operator-dereference">InputIterator::operator * – operátor</a>
 Získá odkaz na element určeného aktuální InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>InputIterator::operator == – operátor
+## <a name="operator-equality">InputIterator::operator == – operátor</a>
 Určuje, zda je aktuální InputIterator rovná zadané InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -130,11 +134,11 @@ bool operator== (const InputIterator& other) const;
  Jiné InputIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud se rovná aktuální InputIterator `other`, jinak hodnota `false`.  
+ `true` Pokud se rovná aktuální InputIterator `other`, jinak hodnota `false`.  
   
 
 
-## <a name="operator-increment"></a>InputIterator::operator ++ – operátor
+## <a name="operator-increment">InputIterator::operator ++ – operátor</a>
 Zvýší aktuální InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>InputIterator::operator! = – operátor
+## <a name="operator-inequality">InputIterator::operator! = – operátor</a>
 Určuje, zda aktuální InputIterator se nerovná zadané InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -168,7 +172,7 @@ bool operator!=(const InputIterator& other) const;
  Jiné InputIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud aktuální InputIterator není rovno `other`, jinak hodnota `false`.   
+ `true` Pokud aktuální InputIterator není rovno `other`, jinak hodnota `false`.   
 
   
 ## <a name="see-also"></a>Viz také  

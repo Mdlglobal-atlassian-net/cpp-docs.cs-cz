@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -29,7 +30,8 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a94c21cb35237f08a4a8860b1a414c91d5e8801
-ms.sourcegitcommit: 4df3cf1ae6ac1154a9dff9de0063377df43380a2
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b7ca09b2ae9e9428647cbc0dc8778be0c58616fc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 Vytvoří nový adresář.  
@@ -82,9 +85,9 @@ int _wmkdir(
  Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `_mkdir` Funkce vytvoří nový adresář se zadaným *adresář.* `_mkdir`můžete vytvořit pouze jeden nový adresář na volání, takže jenom poslední součástí `dirname` můžete název nového adresáře. `_mkdir`nepřekládá cesta oddělovače. V systému Windows NT, oba zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače v znakových řetězců v běhové rutiny.  
+ `_mkdir` Funkce vytvoří nový adresář se zadaným *adresář.* `_mkdir` můžete vytvořit pouze jeden nový adresář na volání, takže jenom poslední součástí `dirname` můžete název nového adresáře. `_mkdir` nepřekládá cesta oddělovače. V systému Windows NT, oba zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače v znakových řetězců v běhové rutiny.  
   
- `_wmkdir`široká charakterová verze `_mkdir`; `dirname` argument `_wmkdir` je široká charakterová řetězec. `_wmkdir`a `_mkdir` chovat jinak shodně.  
+ `_wmkdir` široká charakterová verze `_mkdir`; `dirname` argument `_wmkdir` je široká charakterová řetězec. `_wmkdir` a `_mkdir` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   

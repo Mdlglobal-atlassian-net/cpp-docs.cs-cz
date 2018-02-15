@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsplitpath_s
 - _splitpath_s
@@ -28,7 +29,8 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9baa71ca1a3d624c08df8ff1cbd14a9386e1b83d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Název cesty dělí do součásti. Toto jsou verze [_splitpath –, _wsplitpath –](../../c-runtime-library/reference/splitpath-wsplitpath.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -95,31 +98,31 @@ errno_t _wsplitpath_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`path`  
+ [in] `path`  
  Úplná cesta.  
   
- [out]`drive`  
+ [out] `drive`  
  Jednotka písmenem následovaným dvojtečkou (`:`). Abyste mohli předávat `NULL` pro tento parametr, pokud není nutné písmeno jednotky.  
   
- [v]`driveNumberOfElements`  
+ [in] `driveNumberOfElements`  
  Velikost `drive` vyrovnávací paměti v jednobajtové nebo široké znaky. Pokud `drive` je `NULL`, tato hodnota musí být 0.  
   
- [out]`dir`  
+ [out] `dir`  
  Cesta k adresáři, včetně koncové lomítko. Předávání lomítka ( `/` ), zpětná lomítka ( `\` ), nebo mohou být použity obě. Abyste mohli předávat `NULL` pro tento parametr, pokud není nutné cesta k adresáři.  
   
- [v]`dirNumberOfElements`  
+ [in] `dirNumberOfElements`  
  Velikost `dir` vyrovnávací paměti v jednobajtové nebo široké znaky. Pokud `dir` je `NULL`, tato hodnota musí být 0.  
   
- [out]`fname`  
+ [out] `fname`  
  Základní název souboru (bez přípony). Abyste mohli předávat `NULL` pro tento parametr, pokud není nutné název souboru.  
   
- [v]`nameNumberOfElements`  
+ [in] `nameNumberOfElements`  
  Velikost `fname` vyrovnávací paměti v jednobajtové nebo široké znaky. Pokud `fname` je `NULL`, tato hodnota musí být 0.  
   
- [out]`ext`  
+ [out] `ext`  
  Příponu názvu souboru, včetně úvodní období (**.**). Abyste mohli předávat `NULL` pro tento parametr, pokud není nutné příponu názvu souboru.  
   
- [v]`extNumberOfElements`  
+ [in] `extNumberOfElements`  
  Velikost `ext` vyrovnávací paměti v jednobajtové nebo široké znaky. Pokud `ext` je `NULL`, tato hodnota musí být 0.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -129,22 +132,22 @@ errno_t _wsplitpath_s(
   
 |Podmínka|Návratová hodnota|  
 |---------------|------------------|  
-|`path`je`NULL`|`EINVAL`|  
-|`drive`je `NULL`, `driveNumberOfElements` je nulová|`EINVAL`|  
-|`drive`jinou hodnotu než`NULL`, `driveNumberOfElements` je nulová.|`EINVAL`|  
-|`dir`je `NULL`, `dirNumberOfElements` je nulová|`EINVAL`|  
-|`dir`jinou hodnotu než`NULL`, `dirNumberOfElements` je nulová.|`EINVAL`|  
-|`fname`je `NULL`, `nameNumberOfElements` je nulová|`EINVAL`|  
-|`fname`jinou hodnotu než`NULL`, `nameNumberOfElements` je nulová.|`EINVAL`|  
-|`ext`je `NULL`, `extNumberOfElements` je nulová|`EINVAL`|  
-|`ext`jinou hodnotu než`NULL`, `extNumberOfElements` je nulová.|`EINVAL`|  
+|`path` je `NULL`|`EINVAL`|  
+|`drive` je `NULL`, `driveNumberOfElements` je nulová|`EINVAL`|  
+|`drive` jinou hodnotu než`NULL`, `driveNumberOfElements` je nulová.|`EINVAL`|  
+|`dir` je `NULL`, `dirNumberOfElements` je nulová|`EINVAL`|  
+|`dir` jinou hodnotu než`NULL`, `dirNumberOfElements` je nulová.|`EINVAL`|  
+|`fname` je `NULL`, `nameNumberOfElements` je nulová|`EINVAL`|  
+|`fname` jinou hodnotu než`NULL`, `nameNumberOfElements` je nulová.|`EINVAL`|  
+|`ext` je `NULL`, `extNumberOfElements` je nulová|`EINVAL`|  
+|`ext` jinou hodnotu než`NULL`, `extNumberOfElements` je nulová.|`EINVAL`|  
   
  Pokud dojde k některé z výše uvedených podmínek, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `EINVAL`.  
   
  Pokud některé z vyrovnávací paměti je příliš krátká pro uložení výsledek, tyto funkce zrušte všechny vyrovnávací paměti do prázdné řetězce, nastavte `errno` k `ERANGE`a vrátí `ERANGE`.  
   
 ## <a name="remarks"></a>Poznámky  
- `_splitpath_s` Funkce dělí do jeho součástí čtyři cestu. `_splitpath_s`automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používán. `_wsplitpath_s`široká charakterová verze `_splitpath_s`; argumenty, které mají `_wsplitpath_s` jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak  
+ `_splitpath_s` Funkce dělí do jeho součástí čtyři cestu. `_splitpath_s` automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používán. `_wsplitpath_s` široká charakterová verze `_splitpath_s`; argumenty, které mají `_wsplitpath_s` jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -158,10 +161,10 @@ errno_t _wsplitpath_s(
   
 |Název|Hodnota|  
 |----------|-----------|  
-|_MAX_DRIVE –|3|  
-|_MAX_DIR –|256|  
-|_MAX_FNAME –|256|  
-|_MAX_EXT –|256|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
  Pokud úplná cesta neobsahuje součásti (například název souboru), `_splitpath_s` přiřadí prázdný řetězec odpovídající vyrovnávací paměti.  
   
@@ -173,7 +176,7 @@ errno_t _wsplitpath_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_splitpath_s`|\<stdlib.h >|  
+|`_splitpath_s`|\<stdlib.h>|  
 |`_wsplitpath_s`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -183,8 +186,8 @@ errno_t _wsplitpath_s(
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_splitpath –, _wsplitpath –](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_fullpath –, _wfullpath –](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp –](../../c-runtime-library/reference/getmbcp.md)   
- [_makepath –, _wmakepath –](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
  [_setmbcp](../../c-runtime-library/reference/setmbcp.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0b211c15077f62ecd3af0f774125e91f53017a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 39149a3963e6950e708499d64efe3c412df96fb5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 Znak číst z datového proudu.  
@@ -67,14 +70,14 @@ wint_t fgetwc(
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fgetc`Vrátí znak přečíst jako `int` nebo vrátí `EOF` udávajících chyba nebo konec souboru. `fgetwc`Vrátí hodnotu, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí `WEOF` udávajících chyba nebo konec souboru. Pro obě funkce použijte `feof` nebo `ferror` rozlišit mezi chybu a podmínku end souboru. Pokud dojde k chybě čtení, je nastavit označení chyb pro datový proud. Pokud `stream` je `NULL`, `fgetc` a `fgetwc` vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `EOF`.  
+ `fgetc` Vrátí znak přečíst jako `int` nebo vrátí `EOF` udávajících chyba nebo konec souboru. `fgetwc` Vrátí hodnotu, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí `WEOF` udávajících chyba nebo konec souboru. Pro obě funkce použijte `feof` nebo `ferror` rozlišit mezi chybu a podmínku end souboru. Pokud dojde k chybě čtení, je nastavit označení chyb pro datový proud. Pokud `stream` je `NULL`, `fgetc` a `fgetwc` vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `EOF`.  
   
 ## <a name="remarks"></a>Poznámky  
  Každá z těchto funkcí čte jeden znak z aktuální pozici soubor přidružený k `stream`. Funkce pak zvýší přidružený soubor ukazatele (je-li definována) tak, aby odkazoval na další znak. Pokud datový proud je na konci souboru, je nastavit koncové souboru indikátor pro datový proud.  
   
- `fgetc`je ekvivalentní `getc`, ale je implementována pouze jako funkci, nikoli jako funkce a makra.  
+ `fgetc` je ekvivalentní `getc`, ale je implementována pouze jako funkci, nikoli jako funkce a makra.  
   
- `fgetwc`je verze široká charakterová `fgetc`; přečte `c` jako vícebajtových znaků nebo široká znaková podle jestli `stream` je otevřen v režimu textových nebo binárního režimu.  
+ `fgetwc` je verze široká charakterová `fgetc`; přečte `c` jako vícebajtových znaků nebo široká znaková podle jestli `stream` je otevřen v režimu textových nebo binárního režimu.  
   
  Verzi pomocí `_nolock` příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna.  
   
@@ -90,7 +93,7 @@ wint_t fgetwc(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fgetc`|\<stdio.h >|  
+|`fgetc`|\<stdio.h>|  
 |`fgetwc`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

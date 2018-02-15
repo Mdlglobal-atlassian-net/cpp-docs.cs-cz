@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -31,7 +32,8 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7124b8236550f9e86e04ac56460426a080f137b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13fb4af11e17dbd0303b435090661c1b73456479
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 Získá s plovoucí desetinnou čárkou stavového slova.  
@@ -80,7 +83,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 ## <a name="remarks"></a>Poznámky  
  `_statusfp` Funkce získá s plovoucí desetinnou čárkou stavového slova. Stavové slovo je kombinací stav s plovoucí desetinnou čárkou procesoru a další podmínky zjištěný obslužné rutiny výjimek plovoucí desetinné čárky – například přetečení zásobníku s plovoucí desetinnou čárkou a podtečení. Odmaskovaná výjimky jsou zaškrtnutá políčka pro dřív, než se vrátí obsah stavového slova. To znamená, že je volající informováni o čekající na vyřízení výjimky. Na x86 platforem, `_statusfp` vrátí kombinaci x87 a stav SSE2 s plovoucí desetinnou čárkou. Na x64 platforem, stav, který je vrácen je na základě SSE MXCSR stavu. Na platformách ARM `_statusfp` vrátí stav z registru FPSCR.  
   
- `_statusfp`je nezávislé na platformě, přenosné verze `_status87`. Je stejný jako `_status87` na platformách Intel (x86) a také podporuje x64 a ARM platformy. K zajištění, že váš kód s plovoucí desetinnou čárkou je přenosný na všechny architektury, použijte `_statusfp`. Pokud cílíte pouze x86 platformy, můžete použít buď `_status87` nebo `_statusfp`.  
+ `_statusfp` je nezávislé na platformě, přenosné verze `_status87`. Je stejný jako `_status87` na platformách Intel (x86) a také podporuje x64 a ARM platformy. K zajištění, že váš kód s plovoucí desetinnou čárkou je přenosný na všechny architektury, použijte `_statusfp`. Pokud cílíte pouze x86 platformy, můžete použít buď `_status87` nebo `_statusfp`.  
   
  Doporučujeme, abyste `_statusfp2` pro čipy (například Pentium IV), kteří mají x87 a procesor SSE2 s plovoucí desetinnou čárkou. Pro `_statusfp2`, adresy jsou vyplněny v aplikaci word s plovoucí desetinnou čárkou stav x87 nebo SSE2 procesor s plovoucí desetinnou čárkou. Čip TPM podporující x87 a SSE2 s plovoucí desetinnou čárkou procesory, EM_AMBIGUOUS je nastavena na 1 v případě `_statusfp` nebo `_controlfp` se používá a akce se nejednoznačné, protože může odkazovat x87 nebo SSE2 s plovoucí desetinnou čárkou stavového slova. `_statusfp2` Funkce je podporována pouze na x86 platformy.  
   
@@ -142,5 +145,5 @@ Status = 0x00080003 - inexact, underflow, denormal
   
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [_clear87 –, _clearfp –](../../c-runtime-library/reference/clear87-clearfp.md)   
+ [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

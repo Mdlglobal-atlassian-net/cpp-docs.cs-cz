@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: bsearch
+ms.topic: reference
+apiname:
+- bsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: bsearch
-dev_langs: C++
+f1_keywords:
+- bsearch
+dev_langs:
+- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1db24ea4be15c4111b94a28323903dd3f2c3ed7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6b855292a99313aad6b2431c7cecf77538b38d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bsearch"></a>bsearch
 Provede binární vyhledávání seřazené pole. Bezpečnější verze této funkce je k dispozici. v tématu [bsearch_s –](../../c-runtime-library/reference/bsearch-s.md).  
@@ -70,7 +75,7 @@ void *bsearch(
  Funkce zpětného volání, který porovnává dva elementy. První je ukazatel na klíč pro hledání a druhý je ukazatel na element pole, který se má porovnat s klíčem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `bsearch`vrací ukazatel na výskyt `key` v poli, na kterou odkazuje `base`. Pokud `key` není nalezeno, vrátí funkce `NULL`. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, výsledkem nepředvídatelné.  
+ `bsearch` vrací ukazatel na výskyt `key` v poli, na kterou odkazuje `base`. Pokud `key` není nalezeno, vrátí funkce `NULL`. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, výsledkem nepředvídatelné.  
   
 ## <a name="remarks"></a>Poznámky  
  `bsearch` Funkce provádí binární hledání seřazené pole `num` elementy, každý z `width` velikost bajtů. `base` Hodnota je ukazatel na základní pole má proběhnout, a `key` je hodnota vyhledané. `compare` Parametr je ukazatel na uživatelem zadané rutiny, který porovnává požadovaný klíč k elementu pole a vrátí jednu z následujících hodnot zadání jejich relace:  
@@ -138,5 +143,5 @@ cat found at 002F0F04
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
  [_lfind –](../../c-runtime-library/reference/lfind.md)   
- [_lsearch –](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ltoa
 - _ltow
@@ -27,7 +28,8 @@ f1_keywords:
 - _ltot
 - _ltoa
 - _ltow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - converting integers
 - _ltoa function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - long integer conversion to string
 - converting numbers, to strings
 ms.assetid: 14036104-2c25-4759-87c0-918ed8521e47
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e7ae79ed3505e4570b453e7fd56b68730010388
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 25dc7c06f2e5eadacb568a096fda30f81a16570b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 Převede dlouhých celých čísel na řetězec. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_ltoa_s –, _ltow_s –](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
@@ -92,7 +95,7 @@ wchar_t *_ltow(
  Každá z těchto funkcí vrátí ukazatel na `str`. Neexistuje žádný návratový chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `_ltoa` Funkce převede číslice z `value` na řetězec znaků ukončený hodnotou null a ukládá výsledků (až 33 bajtů) v `str`. `radix` Argument určuje základ `value`, která musí být v rozsahu 2 36. Pokud `radix` rovná 10 a `value` je záporná, je první znak uložené řetězce znaménka minus (-). `_ltow`široká charakterová verze `_ltoa`; druhý argument a vrátí hodnotu `_ltow` jsou široká charakterová řetězce. Každá z těchto funkcí je specifické pro společnost Microsoft.  
+ `_ltoa` Funkce převede číslice z `value` na řetězec znaků ukončený hodnotou null a ukládá výsledků (až 33 bajtů) v `str`. `radix` Argument určuje základ `value`, která musí být v rozsahu 2 36. Pokud `radix` rovná 10 a `value` je záporná, je první znak uložené řetězce znaménka minus (-). `_ltow` široká charakterová verze `_ltoa`; druhý argument a vrátí hodnotu `_ltow` jsou široká charakterová řetězce. Každá z těchto funkcí je specifické pro společnost Microsoft.  
   
 > [!IMPORTANT]
 >  Chcete-li zabránit přetečení vyrovnávací paměti, ověřte, zda `str` vyrovnávací paměť je dostatečně velký pro uložení převedený číslic plus koncové znak hodnoty null a znak znaménka.  
@@ -109,8 +112,8 @@ wchar_t *_ltow(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_ltoa`|\<stdlib.h >|  
-|`_ltow`|\<stdlib.h >|  
+|`_ltoa`|\<stdlib.h>|  
+|`_ltow`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -119,5 +122,5 @@ wchar_t *_ltow(
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
- [_itoa –, _i64toa –, _ui64toa –, _itow –, _i64tow –, _ui64tow –](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
+ [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
  [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -31,7 +32,8 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d64200b38fb206426b037c0c12d008739e0509b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 25051ad5e6c712328f216ed703e17d3d101b35b8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 Zápis formátovaného výstupu pomocí ukazatel na seznam argumentů, s možností určit pořadí, ve kterém se používají argumenty.  
@@ -112,7 +115,7 @@ int _vswprintf_p_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_vsprintf_p`a `_vswprintf_p` vrátí počet znaků zapsána, pokud dojde k chybě výstup není včetně ukončující znak hodnoty null nebo záporná hodnota.  
+ `_vsprintf_p` a `_vswprintf_p` vrátí počet znaků zapsána, pokud dojde k chybě výstup není včetně ukončující znak hodnoty null nebo záporná hodnota.  
   
 ## <a name="remarks"></a>Poznámky  
  Každá z těchto funkcí má ukazatel na seznam argumentů a naformátuje a zapíše daná data do paměti, na kterou odkazuje `buffer`.  
@@ -134,10 +137,10 @@ int _vswprintf_p_l(
   
 |Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|  
 |-------------|---------------------|----------------------|  
-|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h > a \<stdarg.h >|\<VarArgs.h > *|  
-|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<VarArgs.h > *|  
+|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|  
+|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|  
   
- \*Vyžaduje se pro kompatibility V systému UNIX.  
+ \* Vyžaduje se pro kompatibility V systému UNIX.  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -195,6 +198,6 @@ This is a string
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)   
  [Syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

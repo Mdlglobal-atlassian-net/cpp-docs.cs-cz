@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _localtime64
 - _localtime32
@@ -30,7 +31,8 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 77a0a297413c053dee3e165ece07034487535b06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1fa4d1b9c0f33df5f172500195edd4f50321d4e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 Převést hodnotu čas a opravte pro místní časovou zónu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
@@ -82,7 +85,7 @@ struct tm *_localtime64(
   
  `_localtime64`, které používá `__time64_t` struktury, umožňuje data, která se vyjádřit až do 23:59:59, 31. prosince 3000, koordinovaný světový čas (UTC), zatímco `_localtime32` představuje datům až 23:59:59 18 leden 2038 UTC.  
   
- `localtime`Vložená funkce, jehož výsledkem je `_localtime64`, a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `localtime` k vyhodnocení `_localtime32`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
+ `localtime` Vložená funkce, jehož výsledkem je `_localtime64`, a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `localtime` k vyhodnocení `_localtime32`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
   
  Pole typu Struktura [tm](../../c-runtime-library/standard-types.md) ukládat následující hodnoty, z nichž každý je `int`:  
   
@@ -118,7 +121,7 @@ struct tm *_localtime64(
   
  32bitové a 64bitové verze systému `gmtime`, `mktime`, `mkgmtime`, a `localtime` všichni používají jeden `tm` struktura na vlákno pro převod. Každé volání na jednu z těchto rutin zničí výsledek předchozí volání.  
   
- `localtime`pro místní časové pásmo opraví, pokud uživatel nejprve nastaví proměnnou prostředí globální `TZ`. Když `TZ` nastavena, tři další systémové proměnné (`_timezone`, `_daylight`, a `_tzname`) se nastaví automaticky také. Pokud `TZ` proměnná není nastavena, `localtime` pokusí použít informace o časovém pásmu, který je zadán v aplikaci datum a čas v Ovládacích panelech. Pokud tyto informace nelze získat, PST8PDT, která označuje, že tichomořském časovém pásmu, se používá ve výchozím nastavení. V tématu [_tzset –](../../c-runtime-library/reference/tzset.md) popis těchto proměnných. `TZ`rozšíření Microsoft a není součástí standardní definice ANSI `localtime`.  
+ `localtime` pro místní časové pásmo opraví, pokud uživatel nejprve nastaví proměnnou prostředí globální `TZ`. Když `TZ` nastavena, tři další systémové proměnné (`_timezone`, `_daylight`, a `_tzname`) se nastaví automaticky také. Pokud `TZ` proměnná není nastavena, `localtime` pokusí použít informace o časovém pásmu, který je zadán v aplikaci datum a čas v Ovládacích panelech. Pokud tyto informace nelze získat, PST8PDT, která označuje, že tichomořském časovém pásmu, se používá ve výchozím nastavení. V tématu [_tzset –](../../c-runtime-library/reference/tzset.md) popis těchto proměnných. `TZ` rozšíření Microsoft a není součástí standardní definice ANSI `localtime`.  
   
 > [!NOTE]
 >  Cílové prostředí by měl pokusit určit, zda je v platnosti letní čas.  
@@ -129,9 +132,9 @@ struct tm *_localtime64(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`localtime`|\<Time.h >|  
-|`_localtime32`|\<Time.h >|  
-|`_localtime64`|\<Time.h >|  
+|`localtime`|\<time.h>|  
+|`_localtime32`|\<time.h>|  
+|`_localtime64`|\<time.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -181,10 +184,10 @@ Tue Feb 12 10:05:58 AM
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

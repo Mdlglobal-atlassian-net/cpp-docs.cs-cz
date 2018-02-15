@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Získá řetězec z datového proudu.  
@@ -76,16 +79,16 @@ wchar_t *fgetws(
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Každá z těchto funkcí vrátí `str`. `NULL`je vrácen do indikují chybu nebo podmínku end souboru. Použití `feof` nebo `ferror` k určení, zda došlo k chybě. Pokud `str` nebo `stream` je ukazatel s hodnotou null, nebo `n` je menší než nebo rovna hodnotě nula, tato funkce volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`.  
+ Každá z těchto funkcí vrátí `str`. `NULL` je vrácen do indikují chybu nebo podmínku end souboru. Použití `feof` nebo `ferror` k určení, zda došlo k chybě. Pokud `str` nebo `stream` je ukazatel s hodnotou null, nebo `n` je menší než nebo rovna hodnotě nula, tato funkce volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
   
 ## <a name="remarks"></a>Poznámky  
- `fgets` Funkce načte řetězec ze vstupu `stream` argument a uloží jej do `str`. `fgets`čte znaků z aktuální pozici datového proudu a včetně první znak nového řádku na konec datového proudu, nebo dokud se rovná počet znaků pro čtení `n` – 1, nastane dříve. Výsledek uložené v `str` spolu s znak hodnoty null. Znak nový řádek, pokud pro čtení, je zahrnuta v řetězci.  
+ `fgets` Funkce načte řetězec ze vstupu `stream` argument a uloží jej do `str`. `fgets` čte znaků z aktuální pozici datového proudu a včetně první znak nového řádku na konec datového proudu, nebo dokud se rovná počet znaků pro čtení `n` – 1, nastane dříve. Výsledek uložené v `str` spolu s znak hodnoty null. Znak nový řádek, pokud pro čtení, je zahrnuta v řetězci.  
   
- `fgetws`široká charakterová verze `fgets`.  
+ `fgetws` široká charakterová verze `fgets`.  
   
- `fgetws`přečte argument široká charakterová `str` jako vícebajtových znaků řetězec nebo řetězec široká charakterová podle jestli `stream` je otevřen v režimu textových nebo binárních, v uvedeném pořadí. Další informace o používání textovém a binárním režimu v kódování Unicode a vícebajtové datového proudu I/O najdete v tématu [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [vstupně-výstupní datový proud Unicode v textovém a binárním režimu](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
+ `fgetws` přečte argument široká charakterová `str` jako vícebajtových znaků řetězec nebo řetězec široká charakterová podle jestli `stream` je otevřen v režimu textových nebo binárních, v uvedeném pořadí. Další informace o používání textovém a binárním režimu v kódování Unicode a vícebajtové datového proudu I/O najdete v tématu [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [vstupně-výstupní datový proud Unicode v textovém a binárním režimu](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -97,7 +100,7 @@ wchar_t *fgetws(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fgets`|\<stdio.h >|  
+|`fgets`|\<stdio.h>|  
 |`fgetws`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

@@ -6,24 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::ArrayReference::ArrayReference
-dev_langs: C++
-helpviewer_keywords: Platform::ArrayReference Class
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::ArrayReference::ArrayReference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7d624422fd7dc1fcdb5e96f0995e8beef5fb8239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference – třída
-`ArrayReference`je typ optimalizace, které může nahradit pro [Platform::Array ^](../cppcx/platform-array-class.md) ve vstupní parametry, když vyplníte pole stylu jazyka C s vloženými daty.  
+`ArrayReference` je typ optimalizace, které může nahradit pro [Platform::Array ^](../cppcx/platform-array-class.md) ve vstupní parametry, když vyplníte pole stylu jazyka C s vloženými daty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +64,7 @@ class ArrayReference
   
  **Záhlaví:** vccorlib.h  
   
-## <a name="ctor"></a>ArrayReference::ArrayReference – konstruktor
+## <a name="ctor"></a>  ArrayReference::ArrayReference – konstruktor
 Inicializuje novou instanci třídy [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -85,7 +89,7 @@ ArrayReference(ArrayReference&& otherArg)
   
 
 
-## <a name="operator-assign"></a>ArrayReference::operator = – operátor
+## <a name="operator-assign">ArrayReference::operator = – operátor</a>
 Zadaný objekt přiřadí aktuální [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) objekt pomocí sémantiky přesunutí.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -104,11 +108,11 @@ ArrayReference& operator=(ArrayReference&& otherArg);
  Odkaz na objekt typu `ArrayReference`.  
   
 ### <a name="remarks"></a>Poznámky  
- `Platform::ArrayReference`je standardní šablona C++ třídy, ne třídu ref.  
+ `Platform::ArrayReference` je standardní šablona C++ třídy, ne třídu ref.  
   
 
 
-## <a name="operator-call"></a>ArrayReference::operator() – operátor
+## <a name="operator-call">ArrayReference::operator() – operátor</a>
 Převede aktuální [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) zpět do objektu [Platform::Array](../cppcx/platform-array-class.md) třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -120,7 +124,7 @@ Array<TArg>^ operator ();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Na objekt popisovače typu`Array<TArg>^`  
+ Na objekt popisovače typu `Array<TArg>^`  
   
 ### <a name="remarks"></a>Poznámky  
  [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) a [Platform::Array](../cppcx/platform-array-class.md) jsou šablony třídy standard C++, není ref třídy.  

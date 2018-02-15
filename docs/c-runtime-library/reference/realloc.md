@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: realloc
+ms.topic: reference
+apiname:
+- realloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,7 +28,8 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +41,17 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 525b0f0877471b5bfd6d9fa16551b21908f229a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e378f907c864f534173f746404f853ffa415c70c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="realloc"></a>realloc
 Změnit přidělení bloků paměti.  
@@ -69,7 +73,7 @@ void *realloc(
  Nová velikost v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `realloc`Vrátí `void` ukazatel na oblast paměti opětovnému přidělení (a případně přesouvat).  
+ `realloc` Vrátí `void` ukazatel na oblast paměti opětovnému přidělení (a případně přesouvat).  
   
  Pokud není k dispozici dostatek paměti k rozšíření na danou velikost bloku, původní blok je vlevo beze změny, a `NULL` je vrácen.  
   
@@ -80,11 +84,11 @@ void *realloc(
 ## <a name="remarks"></a>Poznámky  
  `realloc` Funkce se změní velikost bloku přidělené paměti. `memblock` Argument odkazuje na začátku bloku paměti. Pokud `memblock` je `NULL`, `realloc` se chová stejně jako `malloc` a přiděluje nový blok `size` bajtů. Pokud `memblock` není `NULL`, by mělo být ukazatel vrácené z předchozího volání `calloc`, `malloc`, nebo `realloc`.  
   
- `size` Argument poskytuje novou velikost bloku, v bajtech. Obsah bloku jsou stejné až kratší velikostí novém i starém, i když může být nový blok v jiném umístění. Vzhledem k nového bloku můžou být nové umístění paměti, ukazatele vrácený `realloc` nemusí být předána ukazatele `memblock` argument. `realloc`nemá nulový počet nově přidělených paměti v případě růstu vyrovnávací paměti.  
+ `size` Argument poskytuje novou velikost bloku, v bajtech. Obsah bloku jsou stejné až kratší velikostí novém i starém, i když může být nový blok v jiném umístění. Vzhledem k nového bloku můžou být nové umístění paměti, ukazatele vrácený `realloc` nemusí být předána ukazatele `memblock` argument. `realloc` nemá nulový počet nově přidělených paměti v případě růstu vyrovnávací paměti.  
   
- `realloc`Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo velikost paměti požadované překračuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `realloc` Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo velikost paměti požadované překračuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `realloc`volání `malloc` Chcete-li použít C++ [_set_new_mode –](../../c-runtime-library/reference/set-new-mode.md) funkce nastavit nový režim obslužné rutiny. Nový režim obslužná rutina označuje, jestli při selhání, `malloc` je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](../../c-runtime-library/reference/set-new-handler.md). Ve výchozím nastavení `malloc` nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když `realloc` nepodaří přidělit paměť, `malloc` volání nové rutiny obslužná rutina ve stejné způsobem, jako `new` operátor nepodporuje, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí nastavení, volejte  
+ `realloc` volání `malloc` Chcete-li použít C++ [_set_new_mode –](../../c-runtime-library/reference/set-new-mode.md) funkce nastavit nový režim obslužné rutiny. Nový režim obslužná rutina označuje, jestli při selhání, `malloc` je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](../../c-runtime-library/reference/set-new-handler.md). Ve výchozím nastavení `malloc` nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když `realloc` nepodaří přidělit paměť, `malloc` volání nové rutiny obslužná rutina ve stejné způsobem, jako `new` operátor nepodporuje, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí nastavení, volejte  
   
 ```  
 _set_new_mode(1)  
@@ -94,7 +98,7 @@ _set_new_mode(1)
   
  Když aplikace je spojená s verzí ladicí běhové knihovny jazyka C, `realloc` přeloží na [_realloc_dbg –](../../c-runtime-library/reference/realloc-dbg.md). Další informace o spravováni haldě ladění během najdete v tématu [haldy ladění The CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `realloc`je označena `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce záruku, že není k úpravě globálních proměnných, že ukazatele vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).  
+ `realloc` je označena `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce záruku, že není k úpravě globálních proměnných, že ukazatele vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -154,5 +158,5 @@ Size of block after realloc of 1000 more longs: 8000
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
- [Uvolněte](../../c-runtime-library/reference/free.md)   
+ [Volné](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)

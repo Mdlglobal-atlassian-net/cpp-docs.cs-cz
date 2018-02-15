@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime_s
 - asctime_s
@@ -27,7 +28,8 @@ f1_keywords:
 - asctime_s
 - _wasctime_s
 - _tasctime_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tasctime_s function
 - _tasctime_s function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30a48101ea2db80f7c8a37434c1fd73c9c535286
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6914dd9c305a1313cde43e69f012786462f1d4a6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 Převést `tm` čas struktura na řetězec znaků. Tyto funkce jsou verze [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,13 +94,13 @@ errno_t _wasctime_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`buffer`|`numberOfElements`|`tm`|Vrátí|Hodnota v`buffer`|  
+|`buffer`|`numberOfElements`|`tm`|Vrátí|Hodnota v `buffer`|  
 |--------------|------------------------|----------|------------|-----------------------|  
 |`NULL`|všechny|všechny|`EINVAL`|nedojde ke změně|  
 |Není `NULL` (odkazuje na platný paměti)|0|všechny|`EINVAL`|nedojde ke změně|  
-|není`NULL`|0 < velikost < 26|všechny|`EINVAL`|prázdný řetězec.|  
-|není`NULL`|>= 26|`NULL`|`EINVAL`|prázdný řetězec.|  
-|není`NULL`|>= 26|Neplatná doba struktura nebo mimo rozsah hodnoty pro součásti času|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|0 < velikost < 26|všechny|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|>= 26|`NULL`|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|>= 26|Neplatná doba struktura nebo mimo rozsah hodnoty pro součásti času|`EINVAL`|prázdný řetězec.|  
   
 > [!NOTE]
 >  Chyba podmínky pro `wasctime_s` jsou podobné `asctime_s` s tím rozdílem, že omezení velikosti se měří v slova.  
@@ -121,7 +124,7 @@ errno_t _wasctime_s(
   
  Výsledek řetězec produkovaný `asctime_s` obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. 24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku a znak hodnoty null zabírají posledních dvou pozic řetězce. Hodnota předaná jako druhý parametr by mělo obsahovat aspoň Tento velký. Pokud je menší, kód chyby, `EINVAL`, bude vrácen.  
   
- `_wasctime_s`široká charakterová verze `asctime_s`. `_wasctime_s`a `asctime_s` chovat jinak shodně.  
+ `_wasctime_s` široká charakterová verze `asctime_s`. `_wasctime_s` a `asctime_s` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mapping"></a>Rutiny mapování obecného textu  
   
@@ -135,7 +138,7 @@ errno_t _wasctime_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`asctime_s`|\<Time.h >|  
+|`asctime_s`|\<time.h>|  
 |`_wasctime_s`|\<Time.h > nebo \<wchar.h >|  
   
 ## <a name="security"></a>Zabezpečení  
@@ -180,9 +183,9 @@ Current date and time: Wed May 14 15:30:17 2003
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [ctime_s –, _ctime32_s –, _ctime64_s –, _wctime_s –, _wctime32_s –, _wctime64_s –](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

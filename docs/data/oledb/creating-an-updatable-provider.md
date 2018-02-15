@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d65bce2b262b7582f9194eb8047d71ce06f3ca16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 Visual C++ podporuje aktualizovatelní zprostředkovatelé nebo poskytovatelů, které můžete aktualizovat (zapisovat na) úložišti. Toto téma popisuje postup vytvoření aktualizovatelní zprostředkovatelé pomocí šablony technologie OLE DB.  
@@ -36,7 +38,7 @@ Visual C++ podporuje aktualizovatelní zprostředkovatelé nebo poskytovatelů, 
 > [!NOTE]
 >  UpdatePV je příkladem aktualizovatelného zprostředkovatele. UpdatePV je stejný jako MyProv, ale s podporou.  
   
-##  <a name="vchowmakingprovidersupdatable"></a>Tvorba aktualizovat  
+##  <a name="vchowmakingprovidersupdatable"></a> Tvorba aktualizovat  
  Klíč k tvorbě aktualizovatelného zprostředkovatele je pochopení, jaké operace, které má váš poskytovatel k plnění úložiště dat a jak chcete, aby zprostředkovatel k provádění těchto operací. Konkrétně závažný problém je, jestli se mají provést okamžitě nebo odložení aktualizace do úložiště dat (zpracovat v dávce) až do vydání příkazu pro aktualizaci.  
   
  Musíte napřed rozhodnout, zda dědění z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl` ve vaší třídě řádků. V závislosti na tom, které z těchto rozhodnete implementovat, bude mít vliv funkce tři metody: `SetData`, **InsertRows**, a `DeleteRows`.  
@@ -146,7 +148,7 @@ Visual C++ podporuje aktualizovatelní zprostředkovatelé nebo poskytovatelů, 
   
      Například jak jsou nastaveny vlastnosti, najdete v části vlastnost nastavena mapy **CUpdateCommand** (v Rowset.h) v [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f).  
   
-##  <a name="vchowwritingtothedatasource"></a>Zápis do zdroje dat  
+##  <a name="vchowwritingtothedatasource"></a> Zápis do zdroje dat  
  Čtení ze zdroje dat, volání **Execute** funkce. K zápisu do zdroje dat, volání `FlushData` funkce. (V obecném smyslu vyprázdnění způsob, jak uložit změny provedené u tabulky nebo indexu na disk.)  
   
 ```  
@@ -217,7 +219,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  Následující příklad ukazuje způsob `FlushData` je implementována ve `RUpdateRowset` třídy v [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ukázkové (viz Rowset.h v ukázkovém kódu):  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
 ...  
@@ -308,7 +310,7 @@ HRESULT FlushData(HROW, HACCESSOR)
  Podívejte se na kód v [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ukázku; ukazuje, jak zpracovávat zprostředkovatele **NULL** data. V UpdatePV zprostředkovatel ukládá **NULL** data zápisem řetězce "NULL" v úložišti. Při čtení **NULL** úložiště dat z data, vidí tento řetězec a pak vyprázdní vyrovnávací paměť, vytváření **NULL** řetězec. Je také přepsání `IRowsetImpl::GetDBStatus` v která vrací **DBSTATUS_S_ISNULL** v případě, že hodnota dat je prázdná.  
   
 ### <a name="marking-nullable-columns"></a>Označení sloupce s možnou hodnotou Null  
- Pokud implementujete sad řádků schématu (najdete v části `IDBSchemaRowsetImpl`), vaše implementace musí určit v **DBSCHEMA_COLUMNS** sady řádků (obvykle označený ve zprostředkovateli podle **C***xxx* **SchemaColSchemaRowset**), že je sloupec s možnou hodnotou Null.  
+ Pokud implementujete sad řádků schématu (najdete v části `IDBSchemaRowsetImpl`), vaše implementace musí určit v **DBSCHEMA_COLUMNS** sady řádků (obvykle označený ve zprostředkovateli podle **C***xxx*** SchemaColSchemaRowset**), že je sloupec s možnou hodnotou Null.  
   
  Musíte také určit, že všechny sloupce s možnou hodnotou NULL obsahovat **DBCOLUMNFLAGS_ISNULLABLE** hodnotu ve vaší verzi `GetColumnInfo`.  
   
@@ -316,7 +318,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  Následující příklad ukazuje jak **CommonGetColInfo** funkce je implementována v **CUpdateCommand** (viz UpProvRS.cpp) v UpdatePV. Všimněte si, jak to mít sloupce **DBCOLUMNFLAGS_ISNULLABLE** pro sloupce s možnou hodnotou Null.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////////  
 // CUpdateCommand (in UpProvRS.cpp)  
   
@@ -412,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Příznaky sloupce  
- Pokud vaše sloupce podporují výchozí hodnoty, budete muset nastavit použití metadat v  **\<**  *třída zprostředkovatele***> SchemaRowset** třídy. Nastavit *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Pokud vaše sloupce podporují výchozí hodnoty, budete muset nastavit použití metadat v  **\< ***třída zprostředkovatele***> SchemaRowset** třídy. Nastavit *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Máte také nastavit příznaky sloupce, které jsou určeny pomocí **DBCOLUMNFLAGS** výčtového typu. Příznaky sloupce popisují charakteristiku sloupce.  
   
@@ -428,6 +430,7 @@ trData[0].m_nNumericPrecision = 10;
 trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
                             DBCOLUMNFLAGS_ISFIXEDLENGTH;  
 lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+
 m_rgRowData.Add(trData[0]);  
 ```  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fclose_nolock
+ms.topic: reference
+apiname:
+- _fclose_nolock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a993376f1174a86506f5c61d3b403953bedec3f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba6e5a0955088a7acdbef5ecb7b9c746c0b37674
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 Zavře datového proudu bez blokování vláken.  
@@ -57,7 +61,7 @@ int _fclose_nolock(
  Ukazatel `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fclose`Vrátí hodnotu 0, pokud datový proud je uzavřen úspěšně. Vrátí `EOF` indikující chybu.  
+ `fclose` Vrátí hodnotu 0, pokud datový proud je uzavřen úspěšně. Vrátí `EOF` indikující chybu.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato funkce je verze bez uzamčení `fclose`. Je identický s tím rozdílem, že není chráněn před narušení další vlákna. Může být rychlejší, protože není nesnižuje režii uzamykání jiná vlákna. Tuto funkci můžete používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
@@ -66,14 +70,14 @@ int _fclose_nolock(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fclose_nolock`|\<stdio.h >|  
+|`_fclose_nolock`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_fdopen –, _wfdopen –](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fflush –](../../c-runtime-library/reference/fflush.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

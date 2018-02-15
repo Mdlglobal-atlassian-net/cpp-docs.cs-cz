@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -41,7 +42,8 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -63,22 +65,23 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a716e229aa5ca7bb45fdcbd6cba9e3a85301df96
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Provede porovnávání řetězců.  
   
 > [!IMPORTANT]
->  `_mbsicmp`a `_mbsicmp_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsicmp` a `_mbsicmp_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -124,17 +127,17 @@ int _mbsicmp_l(
   
 |Návratová hodnota|Popis|  
 |------------------|-----------------|  
-|< 0|`string1`menší než`string2`|  
-|0|`string1`stejný jako`string2`|  
-|> 0|`string1`větší než`string2`|  
+|< 0|`string1` Menší než `string2`|  
+|0|`string1` stejný jako `string2`|  
+|> 0|`string1` Větší než `string2`|  
   
  Při chybě `_mbsicmp` vrátí `_NLSCMPERROR`, která je definována v \<string.h > a \<mbstring.h >.  
   
 ## <a name="remarks"></a>Poznámky  
- `_stricmp` Funkce ordinally porovná `string1` a `string2` po převodu každý znak na malá a vrátí hodnotu, která určuje jejich vztahu. `_stricmp`se liší od `_stricoll` v tom, že `_stricmp` porovnání pouze ovlivněné `LC_CTYPE`, která určuje, jaké znaky jsou malá a velká písmena. `_stricoll` Funkce porovná řetězce podle i `LC_CTYPE` a `LC_COLLATE` kategorie národního prostředí, včetně případu a pořadí kolace. Další informace o `LC_COLLATE` kategorie, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) a [kategorie národního prostředí](../../c-runtime-library/locale-categories.md). Verze tyto funkce bez `_l` příponu použít aktuální národní prostředí pro chování závislých na národním prostředí. Verze s příponou jsou identické s tím rozdílem, že používají místo předaná národní prostředí. Pokud nebyla nastavena jako národní prostředí, použije se národní prostředí C. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `_stricmp` Funkce ordinally porovná `string1` a `string2` po převodu každý znak na malá a vrátí hodnotu, která určuje jejich vztahu. `_stricmp` se liší od `_stricoll` v tom, že `_stricmp` porovnání pouze ovlivněné `LC_CTYPE`, která určuje, jaké znaky jsou malá a velká písmena. `_stricoll` Funkce porovná řetězce podle i `LC_CTYPE` a `LC_COLLATE` kategorie národního prostředí, včetně případu a pořadí kolace. Další informace o `LC_COLLATE` kategorie, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) a [kategorie národního prostředí](../../c-runtime-library/locale-categories.md). Verze tyto funkce bez `_l` příponu použít aktuální národní prostředí pro chování závislých na národním prostředí. Verze s příponou jsou identické s tím rozdílem, že používají místo předaná národní prostředí. Pokud nebyla nastavena jako národní prostředí, použije se národní prostředí C. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
->  `_stricmp`je ekvivalentní `_strcmpi`. Použitím zcela zaměnitelným významem, ale `_stricmp` je upřednostňovaný standard.  
+>  `_stricmp` je ekvivalentní `_strcmpi`. Použitím zcela zaměnitelným významem, ale `_stricmp` je upřednostňovaný standard.  
   
  `_strcmpi` Funkce je ekvivalentní volání `_stricmp` a se poskytuje pouze z důvodů zpětné kompatibility.  
   
@@ -144,9 +147,9 @@ int _mbsicmp_l(
   
  Pokud [strcmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) místo je použita funkce `_stricmp`, JOHN_HENRY bude větší než JOHNSTONŮV.  
   
- `_wcsicmp`a `_mbsicmp` jsou široká charakterová a vícebajtových znaků verze `_stricmp`. Argumenty a vrací hodnotu `_wcsicmp` jsou široká charakterová řetězce; u `_mbsicmp` jsou řetězců vícebajtových znaků. `_mbsicmp`rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtové znakové stránky a vrátí `_NLSCMPERROR` na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce chovají stejně jako jinak.  
+ `_wcsicmp` a `_mbsicmp` jsou široká charakterová a vícebajtových znaků verze `_stricmp`. Argumenty a vrací hodnotu `_wcsicmp` jsou široká charakterová řetězce; u `_mbsicmp` jsou řetězců vícebajtových znaků. `_mbsicmp` rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtové znakové stránky a vrátí `_NLSCMPERROR` na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce chovají stejně jako jinak.  
   
- `_wcsicmp`a `wcscmp` vyjma toho, že se chovají stejně jako `wcscmp` není převedena na malá písmena před porovnáním je její argumenty. `_mbsicmp`a `_mbscmp` vyjma toho, že se chovají stejně jako `_mbscmp` není převedena na malá písmena před porovnáním je její argumenty.  
+ `_wcsicmp` a `wcscmp` vyjma toho, že se chovají stejně jako `wcscmp` není převedena na malá písmena před porovnáním je její argumenty. `_mbsicmp` a `_mbscmp` vyjma toho, že se chovají stejně jako `_mbscmp` není převedena na malá písmena před porovnáním je její argumenty.  
   
  Je třeba volat [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) pro `_wcsicmp` pro práci s znaky latinky 1. Národní prostředí C je platí ve výchozím nastavení, tedy například ä nebude porovnat rovna Ä. Volání `setlocale` s kterémkoli národním prostředí než C národní prostředí před voláním `_wcsicmp`. Následující příklad ukazuje, jak `_wcsicmp` je citlivá na národní prostředí:  
   
@@ -236,11 +239,11 @@ Compare strings:
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp wmemcmp –](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [_memicmp –, _memicmp_l –](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
+ [_memicmp, _memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr –, wcsrchr –, _mbsrchr –, _mbsrchr_l –](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset –, _strset_l –, _wcsset –, _wcsset_l –, _mbsset –, _mbsset_l –](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

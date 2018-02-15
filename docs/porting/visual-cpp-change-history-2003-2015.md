@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++
 
@@ -51,9 +51,9 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 4.  [Concurrency Runtime nejnovější změny](#BK_ConcRT)  
   
-## <a name="VC_2015"></a>Visual C++ 2015 shoda změny  
+## <a name="VC_2015"></a> Visual C++ 2015 shoda změny  
   
-###  <a name="BK_CRT"></a>Běhové knihovny jazyka C (CRT)  
+###  <a name="BK_CRT"></a> Běhové knihovny jazyka C (CRT)  
   
 #### <a name="general-changes"></a>Obecné změny  
   
@@ -65,7 +65,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
      Pokud chcete použít pro národní prostředí vlákna, zkontrolujte používání localeconv – Pokud chcete zobrazit, pokud kód předpokládá, že data lconv – vrátí je pro globální národní prostředí a příslušným způsobem upravte.  
   
-#### <a name="mathh"></a>\<Math.h >  
+#### <a name="mathh"></a>\<math.h>  
   
 -   **C++ přetížení funkce knihovny math** v předchozích verzích \<math.h > definované některé, ale ne všechny přetížení C++ pro matematické funkce knihovny. \<cmath – > definované zbývající přetížení, takže zobrazíte všechny přetížení, jeden obsahovat \<cmath – > záhlaví. To vedlo k problémům s překladem přetížení funkce v kódu, který zahrnuty pouze \<math.h >. Nyní, byly odebrány všechny přetížení C++ z \<math.h > a jsou nyní k dispozici pouze v \<cmath – >.  
   
@@ -97,13 +97,13 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 -   **nové a odstranit** v předchozích verzích knihovny definované implementací new – operátor a odstranění funkce byly exportovány z modulu runtime knihovny DLL (například msvcr120.dll). Tyto funkce operátor jsou nyní vždy staticky propojené do vaší binární soubory, i když pomocí běhové knihovny DLL.  
   
-     Toto není narušující změně pro smíšený nebo nativní kód (/ clr), ale pro zkompilovaný kód jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), to může způsobit selhání kompilace kódu. Pokud při kompilaci kódu jako/CLR: pure, budete muset přidat #include \<nové > nebo #include \<new.h > obejít sestavení chyb v důsledku této změny. Všimněte si, že/CLR: pure je zastaralé v sadě Visual Studio 2015 a v budoucích verzích může být odstraněna.  
+     Toto není narušující změně pro smíšený nebo nativní kód (/ clr), ale pro zkompilovaný kód jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), to může způsobit selhání kompilace kódu. Pokud při kompilaci kódu jako/CLR: pure, budete muset přidat #include \<nové > nebo #include \<new.h > obejít sestavení chyb v důsledku této změny. Všimněte si, že/CLR: pure je zastaralé v sadě Visual Studio 2015 a v budoucích verzích může být odstraněna. Kód, který musí být "čistý" musí být přesně do jazyka C#.  
   
-#### <a name="processh"></a>\<Process.h >  
+#### <a name="processh"></a>\<process.h>  
   
 -   **_beginthread – a _beginthreadex** [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) funkce teď obsahovat odkaz na modul, ve kterém je definovaný postup vlákno po dobu trvání přístup z více vláken. To pomáhá zajistit, že moduly nejsou odstraněny, až do dokončení má spuštění vlákna.  
   
-#### <a name="stdargh"></a>\<stdarg.h >  
+#### <a name="stdargh"></a>\<stdarg.h>  
   
 -   **referenční dokumentace a va_start – typy** při kompilaci kódu C++ [va_start –](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověří při kompilaci, který není předaný argument odkazového typu. Argumenty typu odkazu je zakázáno C++ Standard.  
   
@@ -226,7 +226,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
      Byla přidána nové funkce _wcstok s původním podpisu k usnadnění portování. Při kompilování kódu C++, je také vložené přetížení wcstok –, které má starý podpis. Toto přetížení je deklarován jako zastaralé. V kódu jazyka C může define_CRT_NON_CONFORMING_WCSTOK způsobí _wcstok má být použit místo wcstok –.  
   
-#### <a name="timeh"></a>\<Time.h >  
+#### <a name="timeh"></a>\<time.h>  
   
 -   **hodiny** v předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce byla implementována pomocí rozhraní API systému Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). S touto implementací funkce hodin byl citlivé systémového času a nebyl proto nutně monotónní. Funkce hodin má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a nyní je monotónní.  
   
@@ -244,7 +244,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 -   **CLOCKS_PER_SEC** CLOCKS_PER_SEC makro teď zasahuje do celé clock_t – typ, podle potřeby podle jazyka C.  
   
-####  <a name="BK_STL"></a>Standardní knihovna C++  
+####  <a name="BK_STL"></a> Standardní knihovna C++  
  Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (Je _msc_ver – makro, který obsahuje hlavní verzi kompilátoru – například 1 800 pro Visual Studio 2013.) Tato kontrola nemůže zjistit kombinování knihovny DLL a nerozpozná kombinování, která zahrnuje sady Visual Studio 2008 nebo starším.  
   
 -   **Standardní knihovna C++ zahrnout soubory** byly provedeny některé změny na strukturu zahrnout v hlavičkách standardní knihovna C++. Hlavičky standardní knihovna C++ mohou zahrnovat navzájem neurčené způsoby. Obecně platí by měl zadejte kód, tak, že všechny hlavičky, které se musí podle C++ standard a nemá spoléhají na které standardní knihovna C++ hlavičky zahrnují které jiné záhlaví standardní knihovna C++ pečlivě obsahují. Díky tomu kód přenosné mezi verzemi a platformy. Alespoň dva záhlaví změny v sadě Visual Studio 2015 ovlivnit uživatelského kódu. První, \<řetězec > už obsahuje \<iterator >. Druhý, \<řazené kolekce členů > teď deklaruje std::array bez včetně všech \<pole >, který může dojít k narušení kódu pomocí následující kombinace kódu konstrukce: váš kód obsahuje proměnné s názvem "pole" a vy musíte pomocí direktiva "pomocí obor názvů – std; ", a zahrnete hlavičku standardní knihovna C++ (například \<funkční >), který obsahuje \<řazené kolekce členů >, které teď deklaruje std::array.  
@@ -289,31 +289,31 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
     |has_default_constructor|is_default_constructible|  
     |has_copy_constructor|is_copy_constructible|  
     |has_move_constructor|is_move_constructible|  
-    |has_nothrow_|is_nothrow_default_constructible|  
+    |has_nothrow_constructor|is_nothrow_default_constructible|  
     |has_nothrow_default_constructor|is_nothrow_default_constructible|  
-    |has_nothrow_copy –|is_nothrow_copy_constructible|  
+    |has_nothrow_copy|is_nothrow_copy_constructible|  
     |has_nothrow_copy_constructor|is_nothrow_copy_constructible|  
     |has_nothrow_move_constructor|is_nothrow_move_constructible|  
-    |has_nothrow_assign –|is_nothrow_copy_assignable|  
+    |has_nothrow_assign|is_nothrow_copy_assignable|  
     |has_nothrow_copy_assign|is_nothrow_copy_assignable|  
     |has_nothrow_move_assign|is_nothrow_move_assignable|  
     |has_trivial_constructor|is_trivially_default_constructible|  
-    |has_trivial_default_|is_trivially_default_constructible|  
-    |has_trivial_copy –|is_trivially_copy_constructible|  
+    |has_trivial_default_constructor|is_trivially_default_constructible|  
+    |has_trivial_copy|is_trivially_copy_constructible|  
     |has_trivial_move_constructor|is_trivially_move_constructible|  
-    |has_trivial_assign –|is_trivially_copy_assignable|  
+    |has_trivial_assign|is_trivially_copy_assignable|  
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
 -   **zásady Launch::Any a launch::sync** nestandardní zásady launch::any a launch::sync byly odebrány. Místo toho pro launch::any, použijte spuštění: asynchronní &#124; Spusťte: odložené. Pro launch::sync použijte launch::deferred. V tématu [launch – výčet](../standard-library/future-enums.md#launch).  
   
-####  <a name="BK_MFC"></a>MFC a knihovna ATL  
+####  <a name="BK_MFC"></a> MFC a knihovna ATL  
   
 -   **Microsoft Foundation třídy (MFC)** je už součástí "Typické" instalací sady Visual Studio z důvodu jeho velké. Chcete-li nainstalovat MFC, zvolte možnost Vlastní instalace v instalačním programu sady Visual Studio 2015. Pokud je již nainstalovaná sada Visual Studio 2015, můžete nainstalovat MFC opětovné spuštění instalačního programu sady Visual Studio, zvolíte možnost Vlastní instalace a zvolením Microsoft Foundation třídy. Můžete znovu spustit instalaci sady Visual Studio z ovládacích panelů, programů a funkcí, nebo z instalačního média.  
   
      Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  
   
-####  <a name="BK_ConcRT"></a>Concurrency Runtime  
+####  <a name="BK_ConcRT"></a> Concurrency Runtime  
   
 -   **YIELD – makro z konfliktní s concurrency::Context::Yield odkazující na Windows** Concurrency Runtime použil #undef k nedefinované makro Yield jak zamezit konfliktům mezi makro Yield definované v h odkazující na Windows a concurrency::Context: : Yield funkce. Odebrali jsme tento #undef a nové-konfliktní ekvivalentní rozhraní API volat [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) byla přidána. Je v konfliktu s Yield obejít, můžete buď aktualizujte kód a místo toho zavolejte funkci YieldExecution nebo uveďte název funkce Yield v hranatých závorkách v lokalitách, volání, jako v následujícím příkladu:  
   
@@ -338,7 +338,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 -   [Shoda vylepšení v aktualizaci 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a>Vylepšení shoda v sadě Visual Studio 2015  
+###  <a name="VS_RTM">Vylepšení shoda v sadě Visual Studio 2015</a>  
   
 -   Možnost /Zc:forScope-  
   
@@ -1435,7 +1435,7 @@ struct S {
     A(); // error
 };
 ```
-Chcete-li opravit problém změňte horní řádek pro`#define A();`
+Chcete-li opravit problém změňte horní řádek pro `#define A();`
 
 Následující kód vytvoří chyba C2059: Chyba syntaxe: ').
 ```cpp
@@ -1599,7 +1599,7 @@ C c;
 
 
   
-###  <a name="VS_Update1"></a>Shoda vylepšení v aktualizaci 1  
+###  <a name="VS_Update1"></a> Shoda vylepšení v aktualizaci 1  
   
 -   **Privátní virtuální základní třídy a nepřímé dědění**  
   
@@ -2144,7 +2144,7 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a>Shoda vylepšení v aktualizaci 2  
+###  <a name="VS_Update2"></a> Shoda vylepšení v aktualizaci 2  
   
 -   **Další upozornění a chyby může být vydaný v důsledku částečné podporu pro výraz sfinae u výrazů**  
   
@@ -2243,7 +2243,7 @@ C c;
   
     ```  
   
--   `volatile`**členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení**  
+-   `volatile` **Členské proměnné zabránit implicitně definované konstruktory a operátory přiřazení**  
   
      Předchozí verze kompilátoru povolené třídy, která má `volatile` členské proměnné tak, aby měl výchozí kopírování nebo přesunutí konstruktory a operátory přiřazení pro kopírování nebo přesunutí automaticky generovány výchozí. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor nyní brány v úvahu třídy, která má volatile členské proměnné tak, aby měl netriviální vytváření a operátory přiřazení, která brání automaticky generován výchozí implementace těchto operátorů.  Když tyto třídy je členem sjednocení (nebo anonymní sjednocení uvnitř třídu), zkopírovat nebo přesunout konstruktory a operátory přiřazení pro kopírování nebo přesunutí sjednocení (nebo třída obsahující sjednocení unonymous) budou implicitně definovány odstranit. Probíhá pokus o vytvoření nebo zkopírujte sjednocení (nebo třída obsahující anonymní sjednocení) bez nutnosti explicitně definovat je je chybu a Chyba kompilátoru problémy kompilátoru C2280 v důsledku.  
   
@@ -2429,7 +2429,7 @@ C c;
   
      Opravě kód, který je zapsaný tímto způsobem může vyžadovat, aby definice operátor přesunout mimo soubor hlaviček a do odpovídající zdrojový soubor.  
   
-###  <a name="VS_Update3"></a>Shoda vylepšení v aktualizaci 3  
+###  <a name="VS_Update3"></a> Shoda vylepšení v aktualizaci 3  
   
 -   **std::is_convertable nyní rozpozná vlastní přiřazení** (standardní knihovna)  
   
@@ -3104,9 +3104,9 @@ C c;
   
 -   AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable odebrat, protože je vždy hodnotu TRUE v systému Windows Vista, Windows 7 a Windows 8.  
   
--   Odebrané AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
   
--   Odebrané AFX_GLOBAL_DATA::DwmDefWindowProc. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
   
 -   AFX_GLOBAL_DATA::DwmIsCompositionEnabled přejmenován na isdwmcompositionenabled – eliminovat kolize názvů.  
   
@@ -3164,7 +3164,7 @@ C c;
   
     -   CMFCListCtrl  
   
-    -   CMFCStatusBar –  
+    -   CMFCStatusBar  
   
 -   Interní metoda FontFamalyProcFonts přejmenován na FontFamilyProcFonts.  
   
@@ -3204,13 +3204,13 @@ C c;
   
     -   Getwicfactory –  
   
-    -   Initd2d –  
+    -   InitD2D  
   
     -   ReleaseD2DRefs  
   
-    -   Isd2dinitialized –  
+    -   IsD2DInitialized  
   
-    -   D2d1makerotatematrix –  
+    -   D2D1MakeRotateMatrix  
   
     -   Namísto volání, například afxGlobalData.IsD2DInitialized, volání AfxGetD2DState -> isd2dinitialized –.  
   

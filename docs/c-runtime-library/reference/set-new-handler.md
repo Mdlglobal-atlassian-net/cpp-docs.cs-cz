@@ -1,13 +1,15 @@
 ---
-title: "_set_new_handler – | Microsoft Docs"
+title: _set_new_handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_new_handler
+ms.topic: reference
+apiname:
+- _set_new_handler
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 581942f828bb666606b8f176ae3e2bb3454cbf98
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d82d37e13e941f98d51f2f171b9fb6f1b8071058
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 Přenosy ovládacího prvku na váš mechanismus zpracování chyb, pokud `new` operátor se nepodařilo přidělit paměť.  
@@ -65,7 +69,7 @@ _PNH _set_new_handler(
   
  Neexistuje žádný výchozí obslužnou rutinu.  
   
- `_set_new_handler`je v podstatě schéma kolekce paměti. Běhu systému opakuje přidělení pokaždé, když funkce vrátí nenulovou hodnotu, se nezdaří, pokud funkce vrátí hodnotu 0.  
+ `_set_new_handler` je v podstatě schéma kolekce paměti. Běhu systému opakuje přidělení pokaždé, když funkce vrátí nenulovou hodnotu, se nezdaří, pokud funkce vrátí hodnotu 0.  
   
  Výskyt `_set_new_handler` funkce v programu zaregistruje funkci zpracování výjimek, který je uvedený v seznamu argument s běhu systému:  
   
@@ -109,7 +113,7 @@ _set_new_mode(1)
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_set_new_handler`|\<New.h >|  
+|`_set_new_handler`|\<new.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -165,5 +169,5 @@ Please contact the application's support team for more information.
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
- [Uvolněte](../../c-runtime-library/reference/free.md)   
+ [Volné](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

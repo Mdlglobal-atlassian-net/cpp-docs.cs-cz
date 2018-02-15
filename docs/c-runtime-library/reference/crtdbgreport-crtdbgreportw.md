@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtDbgReport
 - _CrtDbgReportW
@@ -43,11 +43,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720053f96972c6ff0d846b9641d9ddc2d256f20
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 45cd908519fbacb42e017676a245451a5966891e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 Vytváří sestavu ladění zprávou a odešle sestavy tři možné cíle (pouze ladicí verze).  
@@ -98,11 +98,11 @@ int _CrtDbgReportW(
  [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) ladění makra volání `_CrtDbgReport` jejich ladění generování sestav. Široká charakterová verze těchto makra a také [_ASSERT &#91; V &#93; ](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` a `_RPTFW n`, použijte `_CrtDbgReportW` jejich ladění generování sestav. Když `_CrtDbgReport` nebo `_CrtDbgReportW` 1, vrátí tato makra spuštění ladicího programu, za předpokladu, že je povoleno ladění v běhu (JIT).  
   
 ## <a name="remarks"></a>Poznámky  
- `_CrtDbgReport`a `_CrtDbgReportW` můžete odeslat zprávu o ladění tři různé cíle: soubor sestavy ladění, ladění monitorování ( [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ladicí program), nebo okno zprávy ladění. Dvě konfigurace funkce [_crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md), slouží k zadání cílového nebo cíle pro každý typ sestavy. Tyto funkce povolit generování sestav cílového nebo cíle pro každý typ sestavy pro samostatně řízení. Například je možné určit, že `reportType` z `_CRT_WARN` pouze se odesílá do monitorování ladění, při `reportType` z `_CRT_ASSERT` odeslat na okno zprávy ladění a soubor vlastní sestavy.  
+ `_CrtDbgReport` a `_CrtDbgReportW` můžete odeslat zprávu o ladění tři různé cíle: soubor sestavy ladění, ladění monitorování ( [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ladicí program), nebo okno zprávy ladění. Dvě konfigurace funkce [_crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md), slouží k zadání cílového nebo cíle pro každý typ sestavy. Tyto funkce povolit generování sestav cílového nebo cíle pro každý typ sestavy pro samostatně řízení. Například je možné určit, že `reportType` z `_CRT_WARN` pouze se odesílá do monitorování ladění, při `reportType` z `_CRT_ASSERT` odeslat na okno zprávy ladění a soubor vlastní sestavy.  
   
- `_CrtDbgReportW`je verze široká charakterová `_CrtDbgReport`. Všechny její výstup a řetězec parametry jsou v řetězcích široká charakterová; v opačném případě je stejná jako verze znakovou.  
+ `_CrtDbgReportW` je verze široká charakterová `_CrtDbgReport`. Všechny její výstup a řetězec parametry jsou v řetězcích široká charakterová; v opačném případě je stejná jako verze znakovou.  
   
- `_CrtDbgReport`a `_CrtDbgReportW` vytvoření uživatelské zprávy ladění sestavy nahrazením `argument`[`n`] argumenty do `format` řetězce, pomocí stejných pravidel definované `printf` nebo `wprintf` funkce. Tyto funkce generování sestav o ladění a určení cílového nebo cíle, podle režimů aktuální sestavy, a soubor definované pro `reportType`. Odeslání sestavy do okno zprávy ladění `filename`, `lineNumber`, a `moduleName` jsou součástí informace zobrazené v okně.  
+ `_CrtDbgReport` a `_CrtDbgReportW` vytvoření uživatelské zprávy ladění sestavy nahrazením `argument`[`n`] argumenty do `format` řetězce, pomocí stejných pravidel definované `printf` nebo `wprintf` funkce. Tyto funkce generování sestav o ladění a určení cílového nebo cíle, podle režimů aktuální sestavy, a soubor definované pro `reportType`. Odeslání sestavy do okno zprávy ladění `filename`, `lineNumber`, a `moduleName` jsou součástí informace zobrazené v okně.  
   
  V následující tabulce jsou uvedeny dostupné možnosti pro režim sestav nebo režimy souboru a výsledné chování `_CrtDbgReport` a `_CrtDbgReportW`. Tyto možnosti jsou definovány jako bitové příznaky v \<crtdbg.h >.  
   
@@ -125,7 +125,7 @@ int _CrtDbgReportW(
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  
   
- `_CrtDbgReport`a `_CrtDbgReportW` jsou rozšíření Microsoft. Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
+ `_CrtDbgReport` a `_CrtDbgReportW` jsou rozšíření Microsoft. Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Knihovny  
  Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.  

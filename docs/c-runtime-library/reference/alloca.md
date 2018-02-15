@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 Přidělí paměť v zásobníku. Tato funkce je zastaralý, protože bezpečnější verze je k dispozici. v tématu [_malloca –](../../c-runtime-library/reference/malloca.md).  
@@ -52,7 +56,7 @@ void *_alloca(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`size`  
+ [in] `size`  
  Počet bajtů přidělování v zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -61,7 +65,7 @@ void *_alloca(
  Pokud nelze přidělit prostor, je vygenerována výjimce přetečení zásobníku. Výjimce přetečení zásobníku není C++ výjimka; je strukturovaného výjimek. Místo použití zpracovávání výjimek v jazyce C++, je nutné použít [strukturované zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Poznámky  
- `_alloca`přiděluje `size` bajtů z programu zásobníku. Přidělené místo automaticky uvolněno při ukončení volání funkce (není při přidělení předá jenom mimo rozsah). Proto nepředávejte ukazatel hodnoty vrácené `_alloca` jako argument pro [volné](../../c-runtime-library/reference/free.md).  
+ `_alloca` přiděluje `size` bajtů z programu zásobníku. Přidělené místo automaticky uvolněno při ukončení volání funkce (není při přidělení předá jenom mimo rozsah). Proto nepředávejte ukazatel hodnoty vrácené `_alloca` jako argument pro [volné](../../c-runtime-library/reference/free.md).  
   
  Existují omezení explicitně volání `_alloca` v obslužné rutiny výjimek (EH). EH rutiny, které běží na procesory x86 – třída fungovat ve vlastním rámečku paměti: jejich vykonávat úkoly v paměti, který není založen na aktuální umístění ukazatele zásobníku nadřazených funkce. Většina běžné implementace patří zpracování (SEH) systému Windows NT strukturovaná výjimek a výrazy klauzule catch C++. Proto explicitně volání `_alloca` v některém z následujících scénářů výsledků v programu selhání při návratu do volání rutiny EH:  
   
@@ -82,7 +86,7 @@ void *_alloca(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_alloca`|\<malloc.h >|  
+|`_alloca`|\<malloc.h>|  
   
 ## <a name="example"></a>Příklad  
   
@@ -147,5 +151,5 @@ Allocated 1000 bytes of stack at 0x0012FB50
  [calloc –](../../c-runtime-library/reference/calloc.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
  [realloc –](../../c-runtime-library/reference/realloc.md)   
- [_resetstkoflw –](../../c-runtime-library/reference/resetstkoflw.md)   
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)   
  [_malloca](../../c-runtime-library/reference/malloca.md)

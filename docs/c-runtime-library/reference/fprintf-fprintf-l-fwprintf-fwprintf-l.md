@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -28,7 +29,8 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 13f358548b7155b281ffd77821b9a413e1e6fb43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ed0a1d2d2368e99b6e920e5236de989afb97981
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 Tisk formátovaných dat do datového proudu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l –](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
@@ -97,14 +100,14 @@ int _fwprintf_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fprintf`Vrátí počet zapsaných bajtů. `fwprintf`Vrátí počet široké znaky zapsána. Každá z těchto funkcí vrátí zápornou hodnotu. místo toho při výskytu chyby výstupu. Pokud `stream` nebo `format` je `NULL`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte `errno` k `EINVAL`. Řetězec formátu není zaškrtnuta možnost platnost formátování znaků, jako je při použití `fprintf_s` nebo `fwprintf_s`.  
+ `fprintf` Vrátí počet zapsaných bajtů. `fwprintf` Vrátí počet široké znaky zapsána. Každá z těchto funkcí vrátí zápornou hodnotu. místo toho při výskytu chyby výstupu. Pokud `stream` nebo `format` je `NULL`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte `errno` k `EINVAL`. Řetězec formátu není zaškrtnuta možnost platnost formátování znaků, jako je při použití `fprintf_s` nebo `fwprintf_s`.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
   
 ## <a name="remarks"></a>Poznámky  
- `fprintf`Naformátuje a vytiskne řady znaků a hodnot pro výstup `stream`. Jednotlivé funkce `argument` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. Pro `fprintf`, `format` argument má stejnou syntaxi a použití, který má v `printf`.  
+ `fprintf` Naformátuje a vytiskne řady znaků a hodnot pro výstup `stream`. Jednotlivé funkce `argument` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. Pro `fprintf`, `format` argument má stejnou syntaxi a použití, který má v `printf`.  
   
- `fwprintf`široká charakterová verze `fprintf`; v `fwprintf`, `format` je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fprintf`aktuálně nepodporuje výstup do proudu kódování UNICODE.  
+ `fwprintf` široká charakterová verze `fprintf`; v `fwprintf`, `format` je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fprintf` aktuálně nepodporuje výstup do proudu kódování UNICODE.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -124,7 +127,7 @@ int _fwprintf_l(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fprintf`, `_fprintf_l`|\<stdio.h >|  
+|`fprintf`, `_fprintf_l`|\<stdio.h>|  
 |`fwprintf`, `_fwprintf_l`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -169,6 +172,6 @@ this is a string
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf –, _fscanf_l –, fwscanf –, _fwscanf_l –](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [Syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Vytvoření kódu C/C++ v příkazovém řádku
 
@@ -82,7 +85,7 @@ Další příkaz soubory jsou k dispozici nastavit konkrétní sestavení archit
 >   
 > Soubor vcvarsall.bat se také liší v závislosti na verzi. Pokud je aktuální verze Visual C++ nainstalovaná na počítači, který má také dřívější verzi Visual C++, nespouštějte vcvarsall.bat nebo jiný příkaz soubor z různých verzí ve stejném okně příkazového řádku.  
  
-Nejjednodušší způsob, jak určit konkrétní sestavení architektura v existující příkazové okno je chcete použít soubor vcvarsall.bat. Vcvarsall.bat můžete použít k nastavení proměnných prostředí ke konfiguraci příkazového řádku pro nativní kompilace 32bitové nebo 64bitové, nebo mezi kompilace x86, x64 nebo procesory ARM; cílit na Windows Store, univerzální platformu Windows nebo platformy Windows Desktop; Chcete-li určit Windows SDK, které se použije. a zadejte verzi sady nástrojů platformy. Pokud jsou k dispozici žádné argumenty, vcvarsall.bat nakonfiguruje proměnných prostředí pro používání aktuální 32-bit nativního kompilátoru pro x86 Windows Desktop cíle. Ale můžete použít ke konfiguraci libovolné nativního nebo křížové nástrojů kompilátoru. Pokud zadáte konfigurace kompilátoru, která není nainstalována nebo není k dispozici v vaší sestavení počítače architektury, se zobrazí chybová zpráva. Tato tabulka ukazuje podporovaná architektura argumenty:  
+Nejjednodušší způsob, jak určit konkrétní sestavení architektura v existující příkazové okno je chcete použít soubor vcvarsall.bat. Vcvarsall.bat můžete použít k nastavení proměnných prostředí ke konfiguraci příkazového řádku pro nativní kompilace 32bitové nebo 64bitové, nebo mezi kompilace x86, x64 nebo procesory ARM; cíl Microsoft Store, univerzální platformu Windows nebo platformy Windows Desktop; Chcete-li určit Windows SDK, které se použije. a zadejte verzi sady nástrojů platformy. Pokud jsou k dispozici žádné argumenty, vcvarsall.bat nakonfiguruje proměnných prostředí pro používání aktuální 32-bit nativního kompilátoru pro x86 Windows Desktop cíle. Ale můžete použít ke konfiguraci libovolné nativního nebo křížové nástrojů kompilátoru. Pokud zadáte konfigurace kompilátoru, která není nainstalována nebo není k dispozici v vaší sestavení počítače architektury, se zobrazí chybová zpráva. Tato tabulka ukazuje podporovaná architektura argumenty:  
   
 |Argument vcvarsall.bat architektura|Kompilátoru|Architektura počítače hostitele|Vytvoření výstupní architektura|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
@@ -135,7 +138,7 @@ Pro vytvoření projektu jazyka C nebo C++ v příkazovém řádku, můžete pou
 [CL](../build/reference/compiling-a-c-cpp-program.md)  
 Pro zkompilování a spojení soubory zdrojového kódu do aplikace, knihovny a knihovny DLL pomocí kompilátoru (cl.exe).  
   
-[Odkaz](../build/reference/linking.md)  
+[Link](../build/reference/linking.md)  
 Použijte linker (link.exe) pro propojení zkompilovaný objekt soubory a knihovny do aplikace a knihovny DLL.  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -144,7 +147,7 @@ Pomocí nástroje MSBuild (msbuild.exe) můžete vytvářet projekty Visual C++ 
 [NÁSTROJE DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)  
 Použití nástroje DEVENV (devenv.exe) v kombinaci s přepínačem příkazového řádku – například **/Build** nebo **/Clean**– k provedení určité příkazy bez zobrazení sestavení [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE.  
   
-[PŘÍKAZ NMAKE](../build/nmake-reference.md)  
+[NMAKE](../build/nmake-reference.md)  
 Použijte k automatizaci úloh, které sestavení projektů Visual C++ pomocí tradičních souboru pravidel NMAKE (nmake.exe).  
   
 Když vytvoříte na příkazovém řádku, můžete získat informace o upozornění, chyby a zprávy. Spustit [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] a potom na panelu nabídek vyberte **pomoci**, **vyhledávání**.  
@@ -176,7 +179,7 @@ Obsahuje odkazy na články, které vysvětluje použití MSBuild.EXE.
   
 ## <a name="related-sections"></a>Související oddíly  
 
-[/ MD, / MT, /LD (použít běhovou knihovnu)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD (použití knihovny run-time)](../build/reference/md-mt-ld-use-run-time-library.md)  
 Popisuje, jak pomocí těchto možností kompilátoru pro použití běhové knihovny ladění nebo verze.  
   
 [Možnosti kompilátoru C/C++](../build/reference/compiler-options.md)  

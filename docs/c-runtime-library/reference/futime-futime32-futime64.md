@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _futime64
 - _futime32
@@ -29,7 +30,8 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8caa47cd82f61c46ee10f03987bac9735ce506cc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 Nastaví čas změny pro soubor otevřený.  
@@ -81,7 +84,7 @@ int _futime64(
  Vrátí 0, pokud bylo úspěšné. Pokud dojde k chybě, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a `errno` je nastaven na `EBADF`, označující popisovač souboru je neplatný nebo `EINVAL`, označující neplatný parametr.  
   
 ## <a name="remarks"></a>Poznámky  
- `_futime` Rutiny nastaví datum změny a doba přístupu k otevření souboru spojené s `fd`. `_futime`je stejný jako [_utime –](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)kromě toho, že je její argument popisovače souborů otevřeného souboru, nikoli název souboru nebo cestu k souboru. `_utimbuf` Struktura obsahuje pole pro nové změny datum a čas přístup. Obě pole musí obsahovat platné hodnoty. `_utimbuf32`a `_utimbuf64` jsou stejné jako `_utimbuf` s výjimkou použití typů 32bitové a 64bitové verze čas, v uvedeném pořadí. `_futime`a `_utimbuf` použít typu time 64-bit a `_futime` je stejný jako v chování `_futime64`. Pokud potřebujete vynutit staré chování, definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `_futime` být identické v chování `_futime32` a způsobí, že `_utimbuf` strukturu chcete použít typ čas 32-bit, což odpovídá `__utimbuf32`.  
+ `_futime` Rutiny nastaví datum změny a doba přístupu k otevření souboru spojené s `fd`. `_futime` je stejný jako [_utime –](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)kromě toho, že je její argument popisovače souborů otevřeného souboru, nikoli název souboru nebo cestu k souboru. `_utimbuf` Struktura obsahuje pole pro nové změny datum a čas přístup. Obě pole musí obsahovat platné hodnoty. `_utimbuf32` a `_utimbuf64` jsou stejné jako `_utimbuf` s výjimkou použití typů 32bitové a 64bitové verze čas, v uvedeném pořadí. `_futime` a `_utimbuf` použít typu time 64-bit a `_futime` je stejný jako v chování `_futime64`. Pokud potřebujete vynutit staré chování, definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `_futime` být identické v chování `_futime32` a způsobí, že `_utimbuf` strukturu chcete použít typ čas 32-bit, což odpovídá `__utimbuf32`.  
   
  `_futime64`, které používá `__utimbuf64` struktury, může číst a upravovat soubor datům až 23:59:59, 31. prosince 3000, UTC; zatímco volání `_futime32` selže, pokud data v souboru je novější než 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro tyto funkce.  
   
@@ -89,9 +92,9 @@ int _futime64(
   
 |Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |--------------|---------------------|---------------------|  
-|`_futime`|\<SYS/utime.h >|\<errno.h >|  
-|`_futime32`|\<SYS/utime.h >|\<errno.h >|  
-|`_futime64`|\<SYS/utime.h >|\<errno.h >|  
+|`_futime`|\<sys/utime.h>|\<errno.h>|  
+|`_futime32`|\<sys/utime.h>|\<errno.h>|  
+|`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

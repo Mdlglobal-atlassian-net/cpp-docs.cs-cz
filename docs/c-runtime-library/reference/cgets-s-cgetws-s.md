@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -28,7 +29,8 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -37,22 +39,23 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28e35d5f2eb2f07cd1b02fa8b1edc3f41b2c2174
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72022fe28be410592ca9da24be11e7dfc649e70
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 Získá řetězec znaků z konzoly. Tyto verze nástroje [_cgets – a _cgetws –](../../c-runtime-library/cgets-cgetws.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,13 +83,13 @@ errno_t _cgetws_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Umístění úložiště pro data.  
   
- [v]`numberOfElements`  
+ [in] `numberOfElements`  
  Velikost vyrovnávací paměti v jednobajtové nebo široké znaky, což je také maximální počet znaků ke čtení.  
   
- [v]`pSizeRead`  
+ [in] `pSizeRead`  
  Počet znaků, ve skutečnosti přečíst.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -94,14 +97,14 @@ errno_t _cgetws_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`buffer`|`numberOfElements`|`pSizeRead`|Vrátí|Obsah`buffer`|  
+|`buffer`|`numberOfElements`|`pSizeRead`|Vrátí|Obsah `buffer`|  
 |--------------|------------------------|-----------------|------------|--------------------------|  
 |`NULL`|všechny|všechny|`EINVAL`|není k dispozici|  
-|není`NULL`|nula|všechny|`EINVAL`|nedojde ke změně|  
-|není`NULL`|všechny|`NULL`|`EINVAL`|řetězec nulové délky|  
+|není `NULL`|nula|všechny|`EINVAL`|nedojde ke změně|  
+|není `NULL`|všechny|`NULL`|`EINVAL`|řetězec nulové délky|  
   
 ## <a name="remarks"></a>Poznámky  
- `_cgets_s`a `_cgetws_s` Přečtěte řetězec z konzoly a zkopírujte řetězec (s hodnotou null ukončovací znak) do `buffer`. `_cgetws_s`široká znaková verze funkce; než velikost znak je stejný jako chování tyto dvě funkce. Maximální velikost řetězce čtení, je předaná jako `numberOfElements` parametr. Tato velikost by měla obsahovat jeden znak pro ukončující hodnotu null. Skutečný počet znaků pro čtení je umístěn v `pSizeRead`.  
+ `_cgets_s` a `_cgetws_s` Přečtěte řetězec z konzoly a zkopírujte řetězec (s hodnotou null ukončovací znak) do `buffer`. `_cgetws_s` široká znaková verze funkce; než velikost znak je stejný jako chování tyto dvě funkce. Maximální velikost řetězce čtení, je předaná jako `numberOfElements` parametr. Tato velikost by měla obsahovat jeden znak pro ukončující hodnotu null. Skutečný počet znaků pro čtení je umístěn v `pSizeRead`.  
   
  Pokud dojde k chybě během operace nebo při ověřování parametry, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a `EINVAL` je vrácen.  
   
@@ -117,7 +120,7 @@ errno_t _cgetws_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_cgets_s`|\<conio.h >|  
+|`_cgets_s`|\<conio.h>|  
 |`_cgetws_s`|\<conio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

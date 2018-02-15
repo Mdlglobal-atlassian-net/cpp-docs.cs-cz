@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lfind_s
+ms.topic: reference
+apiname:
+- _lfind_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -33,16 +36,17 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7986e6ad93eb8b4372f6ec058d0758d849b48363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lfinds"></a>_lfind_s
 Provede lineárního hledání pro zadaný klíč. Verzi [_lfind –](../../c-runtime-library/reference/lfind.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -86,7 +90,7 @@ void *_lfind_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|klíč|base|compare|Poče|velikost|Kód chyby|  
+|klíč|base|compare|Poče|velikost|errno|  
 |---------|----------|-------------|---------|----------|-----------|  
 |`NULL`|všechny|všechny|všechny|všechny|`EINVAL`|  
 |všechny|`NULL`|všechny|!= 0|všechny|`EINVAL`|  
@@ -94,15 +98,15 @@ void *_lfind_s(
 |všechny|všechny|`NULL`|k|všechny|`EINVAL`|  
   
 ## <a name="remarks"></a>Poznámky  
- `_lfind_s` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch_s`, `_lfind_s` nevyžaduje pole, která se má seřadit. `base` Argument je ukazatel na základní pole má proběhnout. `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovná dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lfind_s`volání `compare` rutiny jeden či více krát během hledání, předávání `context` ukazatele a ukazatele na dva elementy pole při každém volání. `compare` Rutinu musí porovnat elementy pak vrátí nenulové hodnoty (tj. že elementy se liší), nebo 0 (tj. elementy jsou identické).  
+ `_lfind_s` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch_s`, `_lfind_s` nevyžaduje pole, která se má seřadit. `base` Argument je ukazatel na základní pole má proběhnout. `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovná dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lfind_s` volání `compare` rutiny jeden či více krát během hledání, předávání `context` ukazatele a ukazatele na dva elementy pole při každém volání. `compare` Rutinu musí porovnat elementy pak vrátí nenulové hodnoty (tj. že elementy se liší), nebo 0 (tj. elementy jsou identické).  
   
- `_lfind_s`je podobná `_lfind` s výjimkou přidání `context` ukazatel na argumenty funkce porovnání a seznam parametrů funkce. `context` Ukazatel může být užitečné, pokud je součástí objektu vyhledávaná datovou strukturu a `compare` funkce potřebujete přístup ke členům v objektu. `compare` Funkce může odevzdat neplatný ukazatel do příslušného objektu typu a přístupu členů tohoto objektu. Přidání `context` díky parametr `_lfind_s` bezpečnější, protože další kontext umožňuje vyhnout opětovné zadání chyby spojené s použitím statické proměnné pro zpřístupnění dat `compare` funkce.  
+ `_lfind_s` je podobná `_lfind` s výjimkou přidání `context` ukazatel na argumenty funkce porovnání a seznam parametrů funkce. `context` Ukazatel může být užitečné, pokud je součástí objektu vyhledávaná datovou strukturu a `compare` funkce potřebujete přístup ke členům v objektu. `compare` Funkce může odevzdat neplatný ukazatel do příslušného objektu typu a přístupu členů tohoto objektu. Přidání `context` díky parametr `_lfind_s` bezpečnější, protože další kontext umožňuje vyhnout opětovné zadání chyby spojené s použitím statické proměnné pro zpřístupnění dat `compare` funkce.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_lfind_s`|\<Search.h >|  
+|`_lfind_s`|\<search.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -188,7 +192,7 @@ weit found
   
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch_s –](../../c-runtime-library/reference/bsearch-s.md)   
- [_lsearch_s –](../../c-runtime-library/reference/lsearch-s.md)   
- [qsort_s –](../../c-runtime-library/reference/qsort-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [qsort_s](../../c-runtime-library/reference/qsort-s.md)   
  [_lfind](../../c-runtime-library/reference/lfind.md)

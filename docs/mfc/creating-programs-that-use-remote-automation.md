@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Vytváření programů využívajících vzdálenou automatizaci
 Jakýkoli objekt automatizace a jakýkoli řadič automatizace je možné používat vzdálenou automatizaci bez jakékoli změny do zdrojového kódu, bez nutnosti rekompilace a bez nutnosti opakované propojování. Až budete mít instalačního programu, která funguje místně (který je na stejném počítači), musí projít jenom pár kroků provést vzdáleně.  

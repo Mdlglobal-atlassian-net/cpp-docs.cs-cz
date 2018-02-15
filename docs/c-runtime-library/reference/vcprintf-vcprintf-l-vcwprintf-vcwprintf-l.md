@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vcwprintf
 - _vcprintf_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _vcprintf
 - vcprintf
 - vcwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vcwprintf function
 - _vcwprintf_l function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fd761e434b9fa9d9db694955d17cac0f33d84b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fdf5292278e52f9f36858024db90071084f9b9a9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 Zápis ve formátu výstup do konzoly pomocí ukazatel na seznam argumentů. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [_vcprintf_s –, _vcprintf_s_l –, _vcwprintf_s –, _vcwprintf_s_l –](../../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -106,7 +109,7 @@ int _vcwprintf_l(
  Počet znaků, které jsou zapsány nebo záporná, pokud dojde k chybě výstup. Pokud `format` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a vrátí hodnotu -1.  
   
 ## <a name="remarks"></a>Poznámky  
- Každá z těchto funkcí má ukazatel na seznam argumentů, potom naformátuje a zapíše daná data do konzoly. `_vcwprintf`je verze široká charakterová `_vcprintf`. Jako argument trvá široká charakterová řetězec.  
+ Každá z těchto funkcí má ukazatel na seznam argumentů, potom naformátuje a zapíše daná data do konzoly. `_vcwprintf` je verze široká charakterová `_vcprintf`. Jako argument trvá široká charakterová řetězec.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.  
   
@@ -124,10 +127,10 @@ int _vcwprintf_l(
   
 |Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|  
 |-------------|---------------------|----------------------|  
-|`_vcprintf`, `_vcprintf_l`|\<conio.h > a \<stdarg.h >|\<VarArgs.h > *|  
-|`_vcwprintf`, `_vcwprintf_l`|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<VarArgs.h > *|  
+|`_vcprintf`, `_vcprintf_l`|\<conio.h > a \<stdarg.h >|\<varargs.h>*|  
+|`_vcwprintf`, `_vcwprintf_l`|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|  
   
- \*Vyžaduje se pro kompatibility V systému UNIX.  
+ \* Vyžaduje se pro kompatibility V systému UNIX.  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -168,6 +171,6 @@ int main()
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)   
  [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

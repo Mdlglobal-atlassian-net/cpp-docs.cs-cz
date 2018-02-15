@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _scwprintf_p
 - _scprintf_p_l
@@ -35,7 +36,8 @@ f1_keywords:
 - scwprintf_p_l
 - _scprintf_p
 - _scwprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sctprintf_p_l function
 - _scwprintf_p_l function
@@ -50,16 +52,17 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84e0cae612e1ee27b841089176ce1e2dfa368d29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 732b299eabffcea2b505921cf55fb23916063058
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 Vrátí počet znaků v formátovaný řetězec, umožňuje určit pořadí, ve kterém se používají parametry v řetězci formátu.  
@@ -98,7 +101,7 @@ int _scwprintf_p _l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí počet znaků, které by vytvořilo by šlo vytisknout nebo odeslat buď do souboru nebo pomocí zadané formátování kódy vyrovnávací paměti. Hodnota vrácená nezahrnuje ukončující znak hodnoty null. `_scwprintf_p`provede stejnou funkci pro široké znaky.  
+ Vrátí počet znaků, které by vytvořilo by šlo vytisknout nebo odeslat buď do souboru nebo pomocí zadané formátování kódy vyrovnávací paměti. Hodnota vrácená nezahrnuje ukončující znak hodnoty null. `_scwprintf_p` provede stejnou funkci pro široké znaky.  
   
  Rozdíl mezi `_scprintf_p` a `_scprintf` je, že `_scprintf_p` podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít v řetězec formátu. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).  
   
@@ -125,12 +128,12 @@ int _scwprintf_p _l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_scprintf_p`, `_scprintf_p_l`|\<stdio.h >|  
+|`_scprintf_p`, `_scprintf_p_l`|\<stdio.h>|  
 |`_scwprintf_p`, `_scwprintf_p_l`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_scprintf –, _scprintf_l –, _scwprintf –, _scwprintf_l –](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
+ [_scprintf, _scprintf_l, _scwprintf, _scwprintf_l](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
  [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)

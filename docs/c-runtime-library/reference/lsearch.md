@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lsearch
+ms.topic: reference
+apiname:
+- _lsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch
 - lsearch
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ffb2c0ec3547278f048855bb72a2e4ae1bb00287
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4cb64b9287de11a894a8ca7c7cdd4490fcc446
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lsearch"></a>_lsearch
 Provede lineárního hledání pro hodnotu; Přidá na konec seznamu, pokud není nalezen. Bezpečnější verze této funkce je k dispozici. v tématu [_lsearch_s –](../../c-runtime-library/reference/lsearch-s.md).  
@@ -82,7 +86,7 @@ void *_lsearch(
 ## <a name="remarks"></a>Poznámky  
  `_lsearch` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch`, `_lsearch` nevyžaduje pole, která se má seřadit. Pokud `key` není nalezen, `_lsearch` přidá na konec pole a zvýší `num`.  
   
- `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lsearch`volání `compare` rutiny jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare`musí porovnat elementy a vrátit buď nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
+ `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lsearch` volání `compare` rutiny jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare` musí porovnat elementy a vrátit buď nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
   
  Tato funkce ověří jeho parametry. Pokud `compare`, `key` nebo `num` je `NULL`, nebo pokud `base` má hodnotu NULL a *`num` je nenulové hodnoty, nebo pokud `width` je menší než nula, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`.  
   
@@ -90,7 +94,7 @@ void *_lsearch(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_lsearch`|\<Search.h >|  
+|`_lsearch`|\<search.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -138,6 +142,6 @@ wordlist after _lsearch: hello thanks bye extra
   
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch –](../../c-runtime-library/reference/bsearch.md)   
+ [bsearch](../../c-runtime-library/reference/bsearch.md)   
  [_lfind –](../../c-runtime-library/reference/lfind.md)   
  [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)

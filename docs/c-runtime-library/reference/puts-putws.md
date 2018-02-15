@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -45,11 +45,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 06f90cf85d19fab3dd08b8b0c3d789d263c55fbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="puts-putws"></a>puts, _putws
 Zapíše řetězec tak, aby **stdout**.  
@@ -78,7 +78,7 @@ int _putws(
 ## <a name="remarks"></a>Poznámky  
  `puts` Funkce zápisy `str` do standardního výstupního datového proudu **stdout**, nahraďte řetězec je ukončován znak hodnoty null (\0) s znak nového řádku (\n) do výstupního datového proudu.  
   
- `_putws`je verze široká charakterová `puts`; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `puts`nepodporuje aktuálně výstup do proudu kódování UNICODE.  
+ `_putws` je verze široká charakterová `puts`; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `puts` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
   
   **_putwch –** zapíše na aktuální nastavení národního prostředí KONZOLY pomocí znaků Unicode.  
   
@@ -95,7 +95,7 @@ int _putws(
 |`puts`|\<stdio.h>|  
 |`_putws`|\<stdio.h>|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Knihovny  
  Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  

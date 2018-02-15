@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: bsearch_s
+ms.topic: reference
+apiname:
+- bsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: bsearch_s
-dev_langs: C++
+f1_keywords:
+- bsearch_s
+dev_langs:
+- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c1ec2b76d64f9a65d19362f592483490c8b9bb3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bsearchs"></a>bsearch_s
 Provede binární vyhledávání seřazené pole. Toto je verze [bsearch –](../../c-runtime-library/reference/bsearch.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -74,7 +79,7 @@ void *bsearch_s(
  Ukazatel na objekt, který je přístupná ve funkci porovnání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `bsearch_s`vrací ukazatel na výskyt `key` v poli, na kterou odkazuje `base`. Pokud `key` není nalezeno, vrátí funkce `NULL`. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, výsledkem nepředvídatelné.  
+ `bsearch_s` vrací ukazatel na výskyt `key` v poli, na kterou odkazuje `base`. Pokud `key` není nalezeno, vrátí funkce `NULL`. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, výsledkem nepředvídatelné.  
   
  Pokud jsou předány neplatné parametry pro funkce, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -195,5 +200,5 @@ cat found at 002F0F04
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
  [_lfind –](../../c-runtime-library/reference/lfind.md)   
- [_lsearch –](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

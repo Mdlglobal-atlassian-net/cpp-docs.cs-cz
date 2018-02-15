@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -27,23 +28,25 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ed7c12cfc0755360c8512a60ba89b924518b5a1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec98ae83793d2f72026bd71ea1c625069df23b7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 Instaluje nebo odinstaluje klienta definované funkce vytváření sestav podle zapojování do procesu vytváření sestav běhové ladění C (pouze ladicí verze).  
@@ -76,9 +79,9 @@ int _CrtSetReportHookW2(
  -1, pokud došlo k chybě, s `EINVAL` nebo `ENOMEM` nastavit; v opačném případě vrátí počet odkazů `pfnNewHook` po volání.  
   
 ## <a name="remarks"></a>Poznámky  
- `_CrtSetReportHook2`a `_CrtSetReportHookW2` umožňují připojit nebo vyjmutí funkce, zatímco [_crtsetreporthook –](../../c-runtime-library/reference/crtsetreporthook.md) pouze umožňuje připojit funkce.  
+ `_CrtSetReportHook2` a `_CrtSetReportHookW2` umožňují připojit nebo vyjmutí funkce, zatímco [_crtsetreporthook –](../../c-runtime-library/reference/crtsetreporthook.md) pouze umožňuje připojit funkce.  
   
- `_CrtSetReportHook2`nebo `_CrtSetReportHookW2` by měl použít místo `_CrtSetReportHook` při volání háku se provádí v knihovny DLL a když několik knihoven DLL může načíst a nastavení vlastní funkce háku. V takové situaci můžete knihovny DLL odpojeno, v jiném pořadí než jakém byly načteny a funkce háku může být ponecháno jednotka ukazovat na odpojen knihovny DLL. Žádný výstup ladění chyby proces, pokud funkce háku byly přidány s `_CrtSetReportHook`.  
+ `_CrtSetReportHook2` nebo `_CrtSetReportHookW2` by měl použít místo `_CrtSetReportHook` při volání háku se provádí v knihovny DLL a když několik knihoven DLL může načíst a nastavení vlastní funkce háku. V takové situaci můžete knihovny DLL odpojeno, v jiném pořadí než jakém byly načteny a funkce háku může být ponecháno jednotka ukazovat na odpojen knihovny DLL. Žádný výstup ladění chyby proces, pokud funkce háku byly přidány s `_CrtSetReportHook`.  
   
  Některé funkce, které se přidaly háku `_CrtSetReportHook` se volají, pokud nejsou žádné háku funkce přidána s `_CrtSetReportHook2` nebo `_CrtSetReportHookW2` nebo pokud všechny funkce, které se přidaly háku `_CrtSetReportHook2` a `_CrtSetReportHookW2` vrátit `FALSE`.  
   
@@ -103,8 +106,8 @@ int YourReportHook( int reportType, char *message, int *returnValue );
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_CrtSetReportHook2`|\<crtdbg.h >|\<errno.h >|  
-|`_CrtSetReportHookW2`|\<crtdbg.h >|\<errno.h >|  
+|`_CrtSetReportHook2`|\<crtdbg.h>|\<errno.h>|  
+|`_CrtSetReportHookW2`|\<crtdbg.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

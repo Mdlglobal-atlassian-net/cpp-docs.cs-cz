@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fgetchar
 - _fgetwchar
@@ -29,7 +30,8 @@ f1_keywords:
 - _fgetchar
 - _fgetwchar
 - fgettchar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgetwchar function
 - _fgetchar function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b82613d11d2002c0236a720072826e66cb87d7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 Přečte znak z `stdin`.  
@@ -61,12 +64,12 @@ wint_t _fgetwchar( void );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_fgetchar`Vrátí znak přečíst jako `int` , nebo může vracet `EOF` udávajících chyba nebo konec souboru. **_** `fgetwchar` vrátí, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí `WEOF` udávajících chyba nebo konec souboru. Pro obě funkce použijte `feof` nebo `ferror` rozlišit mezi chybu a podmínku end souboru.  
+ `_fgetchar` Vrátí znak přečíst jako `int` , nebo může vracet `EOF` udávajících chyba nebo konec souboru. **_** `fgetwchar` vrátí, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí `WEOF` udávajících chyba nebo konec souboru. Pro obě funkce použijte `feof` nebo `ferror` rozlišit mezi chybu a podmínku end souboru.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto funkce číst jeden znak z `stdin`. Funkce pak zvýší přidružený soubor ukazatele (je-li definována) tak, aby odkazoval na další znak. Pokud datový proud je na konci souboru, je nastavit koncové souboru indikátor pro datový proud.  
   
- `_fgetchar`je ekvivalentní `fgetc( stdin )`. Je také ekvivalentní `getchar`, ale implementována pouze jako funkci, nikoli jako funkce a makra. `_fgetwchar`je verze široká charakterová `_fgetchar`.  
+ `_fgetchar` je ekvivalentní `fgetc( stdin )`. Je také ekvivalentní `getchar`, ale implementována pouze jako funkci, nikoli jako funkce a makra. `_fgetwchar` je verze široká charakterová `_fgetchar`.  
   
  Tyto funkce nejsou kompatibilní se standardem ANSI.  
   
@@ -80,10 +83,10 @@ wint_t _fgetwchar( void );
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fgetchar`|\<stdio.h >|  
+|`_fgetchar`|\<stdio.h>|  
 |`_fgetwchar`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [! INCLUDEUWP aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   

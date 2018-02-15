@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - getchar
 - getwchar
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - getwchar
 - GetChar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - gettchar function
 - characters, reading
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc45c7d367008745b7cfa7e933ec65909c37fde8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2e3af8fbc613a3c1634e24011e22283dd8520f7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 Čte znak z standardní vstup.  
@@ -59,7 +62,7 @@ wint_t getwchar();
  Vrátí znak pro čtení. K označení došlo k chybě nebo podmínku end souborového `getchar` vrátí `EOF`, a `getwchar` vrátí `WEOF`. Chcete-li pro funkci `getchar` zkontrolovat chybu nebo konec souboru, použijte `ferror` nebo `feof` .  
   
 ## <a name="remarks"></a>Poznámky  
- Každá rutina načte jeden znak ze standardního vstupu `stdin` a zvýší přidružený ukazatel na soubor, aby ukazoval na další znak. `getchar`je stejný jako [_fgetchar –](../../c-runtime-library/reference/fgetc-fgetwc.md), ale jsou implementované jako funkce a jako makra.  
+ Každá rutina načte jeden znak ze standardního vstupu `stdin` a zvýší přidružený ukazatel na soubor, aby ukazoval na další znak. `getchar` je stejný jako [_fgetchar –](../../c-runtime-library/reference/fgetc-fgetwc.md), ale jsou implementované jako funkce a jako makra.  
   
  Tyto funkce Uzamknout volající vlákno a proto jsou bezpečné pro přístup z více vláken. Bez uzamčení verze, najdete v části [_getchar_nolock –, _getwchar_nolock –](../../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md).  
   
@@ -73,10 +76,10 @@ wint_t getwchar();
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`getchar`|\<stdio.h >|  
+|`getchar`|\<stdio.h>|  
 |`getwchar`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   
@@ -112,6 +115,6 @@ This textInput was: This text
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [getc, getwc –](../../c-runtime-library/reference/getc-getwc.md)   
  [fgetc –, fgetwc –](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [_getch –, _getwch –](../../c-runtime-library/reference/getch-getwch.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc –, putwc –](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _ecvt_s
+ms.topic: reference
+apiname:
+- _ecvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 536f9f70547727f2a7a0a4231b1031a67203b1e1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ecvts"></a>_ecvt_s
 Převede `double` čísel na řetězec. Toto je verze [_ecvt –](../../c-runtime-library/reference/ecvt.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -67,22 +71,22 @@ errno_t _ecvt_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`_Buffer`  
+ [out] `_Buffer`  
  Naplní se má ukazatel na řetězec číslic, výsledek převodu.  
   
- [v]`_SizeInBytes`  
+ [in] `_SizeInBytes`  
  Velikost vyrovnávací paměti v bajtech.  
   
- [v]`_Value`  
+ [in] `_Value`  
  Číslo, které má být převeden.  
   
- [v]`_Count`  
+ [in] `_Count`  
  Počet číslic, které jsou uložené.  
   
- [out]`_Dec`  
+ [out] `_Dec`  
  Uložené pozice desetinné čárky.  
   
- [out]`_Sign`  
+ [out] `_Sign`  
  Znak převedený číslo.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -92,7 +96,7 @@ errno_t _ecvt_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v`buffer`|  
+|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v `buffer`|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
 |`NULL`|všechny|všechny|všechny|všechny|všechny|`EINVAL`|Nedojde ke změně.|  
 |Není `NULL` (odkazuje na platný paměti)|<=0|všechny|všechny|všechny|všechny|`EINVAL`|Nedojde ke změně.|  
@@ -101,7 +105,7 @@ errno_t _ecvt_s(
   
  **Problémy se zabezpečením**  
   
- `_ecvt_s`může generovat narušení přístupu, pokud `buffer` neodkazuje na platný paměti a není `NULL`.  
+ `_ecvt_s` může generovat narušení přístupu, pokud `buffer` neodkazuje na platný paměti a není `NULL`.  
   
 ## <a name="remarks"></a>Poznámky  
  `_ecvt_s` Funkce převede na řetězec znaků číslo s plovoucí desetinnou čárkou. `_Value` Parametr je číslo s plovoucí desetinnou čárkou má být převeden. Tato funkce ukládá až `count` číslice `_Value` jako řetězec a připojí znak hodnoty null ('\0'). Pokud počet číslic v `_Value` překračuje `_Count`, se zaokrouhlí na nejnižší číslici. Pokud máte méně než `count` číslic, řetězec je doplněno nulami.  
@@ -110,7 +114,7 @@ errno_t _ecvt_s(
   
  Vyrovnávací paměť délky `_CVTBUFSIZE` je dostatečná pro všechny hodnoty s plovoucí desetinnou čárkou.  
   
- Rozdíl mezi `_ecvt_s` a `_fcvt_s` je při interpretaci `_Count` parametr. `_ecvt_s`interpretuje `_Count` jako celkový počet číslic do výstupního řetězce, zatímco `_fcvt_s` interpretuje `_Count` jako počet číslic za desetinnou čárkou.  
+ Rozdíl mezi `_ecvt_s` a `_fcvt_s` je při interpretaci `_Count` parametr. `_ecvt_s` interpretuje `_Count` jako celkový počet číslic do výstupního řetězce, zatímco `_fcvt_s` interpretuje `_Count` jako počet číslic za desetinnou čárkou.  
   
  V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -120,7 +124,7 @@ errno_t _ecvt_s(
   
 |Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |--------------|---------------------|---------------------|  
-|`_ecvt_s`|\<stdlib.h >|\<errno.h >|  
+|`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -160,7 +164,7 @@ Converted value: 12000
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt_s –](../../c-runtime-library/reference/fcvt-s.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
  [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)

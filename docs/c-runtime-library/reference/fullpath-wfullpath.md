@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -28,7 +29,8 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9874d4c0b3576f79880d95a04285be9ff299c7c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Vytvoří název absolutní nebo úplnou cestu pro zadaný relativní cesta.  
@@ -94,7 +97,7 @@ wchar_t *_wfullpath(
 \\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h  
 ```  
   
- `_fullpath`automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používán. `_wfullpath`široká charakterová verze `_fullpath`; argumenty řetězce, které mají `_wfullpath` jsou široká charakterová řetězce. `_wfullpath`a `_fullpath` vyjma toho, že se chovají stejně jako `_wfullpath` nezpracovává řetězců vícebajtových znaků.  
+ `_fullpath` automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používán. `_wfullpath` široká charakterová verze `_fullpath`; argumenty řetězce, které mají `_wfullpath` jsou široká charakterová řetězce. `_wfullpath` a `_fullpath` vyjma toho, že se chovají stejně jako `_wfullpath` nezpracovává řetězců vícebajtových znaků.  
   
  Pokud `_DEBUG` a `_CRTDBG_MAP_ALLOC` jsou obě definovány, volání `_fullpath` a `_wfullpath` jsou nahrazovány volání `_fullpath_dbg` a `_wfullpath_dbg` umožňující ladění přidělení paměti. Další informace najdete v tématu [_fullpath_dbg –, _wfullpath_dbg –](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
@@ -112,7 +115,7 @@ wchar_t *_wfullpath(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fullpath`|\<stdlib.h >|  
+|`_fullpath`|\<stdlib.h>|  
 |`_wfullpath`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -154,7 +157,7 @@ Full path is: C:\Documents and Settings\user\test
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_getcwd –, _wgetcwd –](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdcwd –, _wgetdcwd –](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
- [_makepath –, _wmakepath –](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
  [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)

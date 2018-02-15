@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilace C + +/ CX Program na příkazovém řádku
-Můžete vytvořit programy Visual C++, které cílí na prostředí Windows Runtime a sestavit je na příkazovém řádku. Visual C++ podporuje rozšíření komponent v jazyce Visual C++ (C + +/ CX), který má operátory a další typy, jehož cílem je programovací model Windows Runtime. Můžete použít C + +/ CX pro vývoj aplikací pro Windows Phone 8.1, Windows Store a Windows desktop. Další informace najdete v tématu [A prohlídka c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) a [rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
+Můžete vytvořit programy Visual C++, které cílí na prostředí Windows Runtime a sestavit je na příkazovém řádku. Visual C++ podporuje rozšíření komponent v jazyce Visual C++ (C + +/ CX), který má operátory a další typy, jehož cílem je programovací model Windows Runtime. Můžete použít C + +/ CX pro vývoj aplikací pro univerzální platformu Windows (UWP), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídka c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) a [rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
   
  V tomto názorném postupu získáte pomocí textového editoru k vytvoření základní C + +/ CX programu a zkompilujte jej na příkazovém řádku. (Můžete použít vlastní C + +/ CX program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CX ukázka kódu z jiný článek nápovědy. Tato metoda je užitečná pro vytváření a testování malé modulů, které obsahují žádné elementy uživatelského rozhraní.)  
   
 > [!NOTE]
->  Můžete také použít Visual Studio IDE zkompilovat C + +/ CX programy. Prostředí IDE zahrnuje návrh, ladění, emulace a podpora nasazení, která není k dispozici na příkazovém řádku, a proto doporučujeme vytvářet aplikace pro Windows Store pomocí rozhraní IDE. Další informace najdete v tématu [vytvoření základní aplikace pro C++ Store](http://msdn.microsoft.com/library/windows/apps/dn263168).  
+>  Můžete také použít Visual Studio IDE zkompilovat C + +/ CX programy. Prostředí IDE zahrnuje návrh, ladění, emulace a podpora nasazení, která není k dispozici na příkazovém řádku, a proto doporučujeme vytvářet aplikace pro univerzální platformu Windows (UWP) pomocí rozhraní IDE. Další informace najdete v tématu [vytvoření aplikace pro UPW v jazyce C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).  
   
 ## <a name="prerequisites"></a>Požadavky  
  Je potřeba pochopit základy jazyka C++.  

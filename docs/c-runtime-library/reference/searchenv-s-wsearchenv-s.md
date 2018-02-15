@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -28,7 +29,8 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -43,22 +45,23 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a92a7b0d76f2f6d3fd1cb4027e17ecbf014baec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Vyhledá soubor pomocí cesty prostředí. Tyto verze nástroje [_searchenv –, _wsearchenv –](../../c-runtime-library/reference/searchenv-wsearchenv.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,16 +93,16 @@ errno_t _wsearchenv_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`filename`  
+ [in] `filename`  
  Název souboru pro vyhledávání.  
   
- [v]`varname`  
+ [in] `varname`  
  Prostředí pro vyhledávání.  
   
- [out]`pathname`  
+ [out] `pathname`  
  Vyrovnávací paměť pro uložení úplnou cestu.  
   
- [v]`numberOfElements`  
+ [in] `numberOfElements`  
  Velikost `pathname` vyrovnávací paměti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -109,7 +112,7 @@ errno_t _wsearchenv_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`filename`|`varname`|`pathname`|`numberOfElements`|Návratová hodnota|Obsah`pathname`|  
+|`filename`|`varname`|`pathname`|`numberOfElements`|Návratová hodnota|Obsah `pathname`|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
 |všechny|všechny|`NULL`|všechny|`EINVAL`|není k dispozici|  
 |`NULL`|všechny|všechny|všechny|`EINVAL`|nebyl změněn.|  
@@ -124,7 +127,7 @@ errno_t _wsearchenv_s(
   
  `pathname` Vyrovnávací paměti by měla být minimálně `_MAX_PATH` znaků dlouhé zohlednit úplné délka sestavené cesta. V opačném `_searchenv_s` může přetečení `pathname` vyrovnávací paměti, což vede k neočekávanému chování.  
   
- `_wsearchenv_s`široká charakterová verze `_searchenv_s`; argumenty, které mají `_wsearchenv_s` jsou široká charakterová řetězce. `_wsearchenv_s`a `_searchenv_s` chovat jinak shodně.  
+ `_wsearchenv_s` široká charakterová verze `_searchenv_s`; argumenty, které mají `_wsearchenv_s` jsou široká charakterová řetězce. `_wsearchenv_s` a `_searchenv_s` chovat jinak shodně.  
   
  V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -138,7 +141,7 @@ errno_t _wsearchenv_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_searchenv_s`|\<stdlib.h >|  
+|`_searchenv_s`|\<stdlib.h>|  
 |`_wsearchenv_s`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -181,6 +184,6 @@ C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)   
- [_searchenv –, _wsearchenv –](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
- [GETENV –, _wgetenv –](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
  [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)

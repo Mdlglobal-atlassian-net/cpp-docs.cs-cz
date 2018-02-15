@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _resetstkoflw
+ms.topic: reference
+apiname:
+- _resetstkoflw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,29 +25,31 @@ apitype: DLLExport
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - resetstkoflw function
 - stack overflow
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5bebef156656ba3618c216ad8266e1baf5dd7f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 89a62ddd07f21a89e8b34cb62f1a5e5147d92b06
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 Obnoví z přetečení zásobníku.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +87,7 @@ int _resetstkoflw ( void );
   
  Všimněte si, že v tomto bodě zásobníku už má ochranu stránku. Při příštím, program zvětšování zásobníku úplně za účelem, kde by měla být na stránce ochrana, program zapíše přesahuje za konec zásobníku a způsobí, že porušení přístupu.  
   
- Volání `_resetstkoflw` obnovit ochranná stránka vždy, když obnovení probíhá po výjimce přetečení zásobníku. Tuto funkci lze volat z hlavní část `__except` bloku nebo mimo **__except** bloku. Nicméně existují určitá omezení na Pokud se má použít. `_resetstkoflw`by měla být volána nikdy z:  
+ Volání `_resetstkoflw` obnovit ochranná stránka vždy, když obnovení probíhá po výjimce přetečení zásobníku. Tuto funkci lze volat z hlavní část `__except` bloku nebo mimo **__except** bloku. Nicméně existují určitá omezení na Pokud se má použít. `_resetstkoflw` by měla být volána nikdy z:  
   
 -   Výraz filtru.  
   
@@ -109,7 +113,7 @@ int _resetstkoflw ( void );
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_resetstkoflw`|\<malloc.h >|  
+|`_resetstkoflw`|\<malloc.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

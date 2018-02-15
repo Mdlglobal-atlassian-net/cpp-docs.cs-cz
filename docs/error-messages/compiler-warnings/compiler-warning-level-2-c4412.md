@@ -4,28 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4412
-dev_langs: C++
-helpviewer_keywords: C4412
+f1_keywords:
+- C4412
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92898b9c8e8845ecc8bc650b80cf41a33b3a59d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>C4412 kompilátoru upozornění (úroveň 2)
 'function': podpis funkce obsahuje typu "typ"; Objekty C++ jsou unsafe předat mezi čistý kód a smíšený nebo nativní.  
   
- **/CLR: pure** – možnost kompilátoru je zastaralá ve Visual Studiu 2015.  
+ **/CLR: pure** – možnost kompilátoru je zastaralá ve Visual Studiu 2015. Pokud máte kód, který musí být "čistý", doporučujeme portu jazyka C#.  
   
  Kompilátor zjistil potenciálně nebezpečného situaci, která by mohla vést k chybě běhového prostředí: Probíhá Přišla žádost o z **/CLR: čistý** kompilace funkce, která byla importována pomocí příkazů dllimport a podpis funkce obsahuje typ nezabezpečený . Typ nebezpečné, pokud obsahuje členské funkce nebo má data člena, který je typ nezabezpečený nebo dereference na typ unsafe.  
   
@@ -33,7 +38,6 @@ ms.lasthandoff: 12/21/2017
   
  Virtuální členské funkce je obzvláště náchylné k neočekávaným výsledkům.  Ale i bez virtuální funkce by měla být testována zajistit, že dostanete správné výsledky. Pokud jste si jistí, že jste správné výsledky, můžete toto upozornění ignorovat.  
   
- Další informace o **/CLR: čistý**, najdete v části [postupy: přechod na/CLR: pure (C + +/ rozhraní příkazového řádku)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md).  
   
  C4412 je ve výchozím nastavení vypnuté. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) a [dllexport, dllimport](../../cpp/dllexport-dllimport.md) Další informace.  
   

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation [MFC], installation
 - installing Remote Automation [MFC]
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: acd8ee55261dfa03c68aef506dc90188d8d27d37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-installation"></a>Instalace vzdálené automatizace
 Vzdálená automatizace má poměrně málo součásti:  
@@ -36,7 +39,7 @@ Vzdálená automatizace má poměrně málo součásti:
   
  Pokud zkopírujete komponenty pro vzdálenou automatizaci k počítači na Visual C++ verze Enterprise Edition není nainstalovaná, ujistěte se, že REGSRV32. EXE v cestě počítače a zaregistrujte RACREG32. Knihovny DLL pomocí následující příkazový řádek:  
   
- REGSRVR32 RACREG32. KNIHOVNY DLL  
+ REGSRVR32 RACREG32.DLL  
   
 > [!NOTE]
 >  Verze nástroje RAC Manager před Visual C++ 5.0 potřebné GUAGE32. OCX a TABCTL32. OCX. Ani jeden z nich je vyžadována pro verzi RAC Manager, který se dodává s Visual C++ Enterprise Edition, verze 5.0 nebo novější.  

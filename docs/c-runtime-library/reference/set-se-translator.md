@@ -1,13 +1,15 @@
 ---
-title: "_set_se_translator – | Microsoft Docs"
+title: _set_se_translator | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_se_translator
+ms.topic: reference
+apiname:
+- _set_se_translator
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _set_se_translator
 - set_se_translator
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - set_se_translator function
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7ce46b8db587337b7a9c98279efd4b89ffa8f9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ceedca9d26b92d96a3796a3deadee5e62f7f02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 Obslužné rutiny výjimky Win32 (C strukturovaná výjimky) jako C++ zadali výjimky.  
@@ -67,7 +71,7 @@ _se_translator_function _set_se_translator(
   
  Překladač funkce měli dělat žádné další než throw jazyka C++ zadali výjimka. Pokud k tomu nic kromě vyvolání (například zápis do souboru protokolu, například) vašeho programu nemusí chovat podle očekávání, protože počet, kolikrát je volána funkce překladač je závislá na platformu.  
   
- V prostředí s více vlákny jsou funkce překladač udržovány odděleně pro každé vlákno. Každé vlákno je potřeba nainstalovat funkci vlastní překladač. Proto každé vlákno má na starosti vlastní zpracování překlad. `_set_se_translator`je specifická pro jedno vlákno; jiné knihovny DLL může nainstalovat funkci různých překlad.  
+ V prostředí s více vlákny jsou funkce překladač udržovány odděleně pro každé vlákno. Každé vlákno je potřeba nainstalovat funkci vlastní překladač. Proto každé vlákno má na starosti vlastní zpracování překlad. `_set_se_translator` je specifická pro jedno vlákno; jiné knihovny DLL může nainstalovat funkci různých překlad.  
   
  `seTransFunction` Funkce, které můžete psát musí být zkompilovány nativní funkce (není kompilovat s volbou/CLR). Celé číslo bez znaménka a ukazatel musí provést na Win32 `_EXCEPTION_POINTERS` struktury jako argumenty. Argumenty jsou vrácené hodnoty volání do rozhraní API Win32 `GetExceptionCode` a `GetExceptionInformation` funguje, v uvedeném pořadí.  
   
@@ -83,7 +87,7 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_set_se_translator`|\<EH.h >|  
+|`_set_se_translator`|\<eh.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -205,7 +209,7 @@ Caught CMyException.
   
 ## <a name="see-also"></a>Viz také  
  [Rutiny zpracování výjimek](../../c-runtime-library/exception-handling-routines.md)   
- [set_terminate –](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected –](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [ukončení](../../c-runtime-library/reference/terminate-crt.md)   
- [neočekávané](../../c-runtime-library/reference/unexpected-crt.md)
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [Ukončení](../../c-runtime-library/reference/terminate-crt.md)   
+ [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

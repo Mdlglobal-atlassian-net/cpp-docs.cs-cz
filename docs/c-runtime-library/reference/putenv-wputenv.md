@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 Vytvoří, upraví nebo odstraní proměnné prostředí. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_putenv_s –, _wputenv_s –](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +80,7 @@ int _wputenv(
  Vrátí 0, pokud bylo úspěšné nebo -1 v případě k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
- `_putenv` Funkce přidá nové proměnné prostředí nebo upraví hodnoty existujících proměnných prostředí. Proměnné prostředí definují prostředí, ve kterém proces provádí (například výchozí cesta hledání pro knihovny propojení v aplikaci). `_wputenv`široká charakterová verze `_putenv`; `envstring` argument `_wputenv` je široká charakterová řetězec.  
+ `_putenv` Funkce přidá nové proměnné prostředí nebo upraví hodnoty existujících proměnných prostředí. Proměnné prostředí definují prostředí, ve kterém proces provádí (například výchozí cesta hledání pro knihovny propojení v aplikaci). `_wputenv` široká charakterová verze `_putenv`; `envstring` argument `_wputenv` je široká charakterová řetězec.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -87,20 +90,20 @@ int _wputenv(
   
  `envstring` Argument musí být ukazatel na řetězec ve formátu `varname=string`, kde `varname` je název proměnné prostředí, chcete-li přidat nebo upravit a `string` je hodnota proměnné. Pokud `varname` už je součástí prostředí, jeho hodnota je nahrazena `string`, jinak hodnota nové `varname` proměnnou a její `string` hodnota se přidá do prostředí. Proměnnou z prostředí můžete odebrat tak, že zadáte prázdnou `string` – jinými slovy, tak, že zadáte pouze `varname=`.  
   
- `_putenv`a `_wputenv` ovlivňují jenom prostředí, ve kterém je lokální vzhledem k aktuální proces; se nedá použít k úpravě prostředí příkaz úrovni. To znamená tyto funkce fungují pouze na datové struktury přístupné běhové knihovny a ne na prostředí segmentu pro proces vytvořené operačního systému. Aktuální proces ukončí, stane se prostředí úroveň proces volání (ve většině případů úroveň operačního systému). Ale upravený prostředí se dá předat do jakékoli nové procesů vytvořených službou `_spawn`, `_exec`, nebo `system`, a získat tyto nové procesy žádné nové položky přidal `_putenv` a `_wputenv`.  
+ `_putenv` a `_wputenv` ovlivňují jenom prostředí, ve kterém je lokální vzhledem k aktuální proces; se nedá použít k úpravě prostředí příkaz úrovni. To znamená tyto funkce fungují pouze na datové struktury přístupné běhové knihovny a ne na prostředí segmentu pro proces vytvořené operačního systému. Aktuální proces ukončí, stane se prostředí úroveň proces volání (ve většině případů úroveň operačního systému). Ale upravený prostředí se dá předat do jakékoli nové procesů vytvořených službou `_spawn`, `_exec`, nebo `system`, a získat tyto nové procesy žádné nové položky přidal `_putenv` a `_wputenv`.  
   
  Neměňte položku prostředí přímo: místo toho použijte `_putenv` nebo `_wputenv` ho změnit. Na konkrétní prvky uvolnění přímo `_environ[]` globální pole může vést k neplatné paměti adresovaném.  
   
- `getenv`a `_putenv` pomocí globální proměnné `_environ` pro přístup k tabulce prostředí; `_wgetenv` a `_wputenv` použít `_wenviron`. `_putenv`a `_wputenv` může změnit hodnotu `_environ` a `_wenviron`, proto zrušení platnosti `_envp` argument `main` a `_wenvp` argument `wmain`. Proto je bezpečnější používat `_environ` nebo `_wenviron` pro přístup k informacím prostředí. Další informace o vztahu z `_putenv` a `_wputenv` globální proměnné, najdete v tématu [_environ –, _wenviron –](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` a `_putenv` pomocí globální proměnné `_environ` pro přístup k tabulce prostředí; `_wgetenv` a `_wputenv` použít `_wenviron`. `_putenv` a `_wputenv` může změnit hodnotu `_environ` a `_wenviron`, proto zrušení platnosti `_envp` argument `main` a `_wenvp` argument `wmain`. Proto je bezpečnější používat `_environ` nebo `_wenviron` pro přístup k informacím prostředí. Další informace o vztahu z `_putenv` a `_wputenv` globální proměnné, najdete v tématu [_environ –, _wenviron –](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
->  `_putenv` a `_getenv` řady funkcí nejsou bezpečné pro přístup z více vláken. `_getenv`může vrátit ukazatel řetězec při `_putenv` upravuje řetězec, způsobuje náhodné chyby. Ujistěte se, že jsou synchronizovány volání na tyto funkce.  
+>  `_putenv` a `_getenv` řady funkcí nejsou bezpečné pro přístup z více vláken. `_getenv` může vrátit ukazatel řetězec při `_putenv` upravuje řetězec, způsobuje náhodné chyby. Ujistěte se, že jsou synchronizovány volání na tyto funkce.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_putenv`|\<stdlib.h >|  
+|`_putenv`|\<stdlib.h>|  
 |`_wputenv`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -110,5 +113,5 @@ int _wputenv(
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [GETENV –, _wgetenv –](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
  [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)

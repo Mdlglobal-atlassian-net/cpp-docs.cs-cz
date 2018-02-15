@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _access_s
 - _waccess_s
@@ -28,7 +29,8 @@ f1_keywords:
 - access_s
 - _waccess_s
 - _access_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - access_s function
 - taccess_s function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f562d62f3edb1f09fe6d7ebe7b509411ad2dc8c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fca577dee68bef8da30a8e6fe64aa3478ceeffe8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 Určuje oprávnění pro čtení a zápis souborů. Toto je verze [_access –, _waccess –](../../c-runtime-library/reference/access-waccess.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -97,7 +100,7 @@ errno_t _waccess_s(
   
  Oprávnění pro čtení nebo zápis souboru není dostatek zajistit možnost otevření souboru. Například pokud soubor uzamčen jiným procesem, nemusí být dostupné i když `_access_s` vrátí hodnotu 0.  
   
- `_waccess_s`široká charakterová verze `_access_s`, kde `path` argument `_waccess_s` je široká charakterová řetězec. V opačném `_waccess_s` a `_access_s` chovají stejně jako.  
+ `_waccess_s` široká charakterová verze `_access_s`, kde `path` argument `_waccess_s` je široká charakterová řetězec. V opačném `_waccess_s` a `_access_s` chovají stejně jako.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `path` je `NULL` nebo `mode` neurčuje platný režim obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `EINVAL`.  
   
@@ -111,8 +114,8 @@ errno_t _waccess_s(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_access_s`|\<IO.h >|\<errno.h >|  
-|`_waccess_s`|\<wchar.h > nebo \<io.h >|\<errno.h >|  
+|`_access_s`|\<io.h>|\<errno.h>|  
+|`_waccess_s`|\<wchar.h > nebo \<io.h >|\<errno.h>|  
   
 ## <a name="example"></a>Příklad  
  Tento příklad používá `_access_s` zkontrolujte soubor s názvem crt_access_s.c toho, zda existuje a zda je povolen zápis.  
@@ -159,8 +162,8 @@ File crt_access_s.c does not have write permission.
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_access –, _waccess –](../../c-runtime-library/reference/access-waccess.md)   
- [_chmod –, _wchmod –](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_fstat –, _fstat32 –, _fstat64 –, _fstati64 –, _fstat32i64 –, _fstat64i32 –](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
  [_stat, _wstat – funkce](../../c-runtime-library/reference/stat-functions.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _open
 - _wopen
@@ -27,7 +28,8 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e8abb4d652c993f3cf45f1840c820261ac989c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="open-wopen"></a>_open, _wopen
 Otevře soubor. Tyto funkce jsou zastaralé, protože bezpečnější verze jsou k dispozici. v tématu [_sopen_s –, _wsopen_s –](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -84,7 +87,7 @@ int _wopen(
  Se pokusil otevřít jen pro čtení souboru pro zápis souboru režimu sdílení neumožňuje zadané operace, nebo zadaná cesta je adresář.  
   
  `EEXIST`  
- `_O_CREAT`a `_O_EXCL` příznaků zadaných, ale `filename` již existuje.  
+ `_O_CREAT` a `_O_EXCL` příznaků zadaných, ale `filename` již existuje.  
   
  `EINVAL`  
  Neplatný `oflag` nebo `pmode` argument.  
@@ -98,7 +101,7 @@ int _wopen(
  Další informace o těchto a dalších návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `_open` Funkce otevře soubor určený touto `filename` a připraví ho pro čtení nebo zápisu podle specifikace `oflag`. `_wopen`široká charakterová verze `_open`; `filename` argument `_wopen` je široká charakterová řetězec. `_wopen`a `_open` chovat jinak shodně.  
+ `_open` Funkce otevře soubor určený touto `filename` a připraví ho pro čtení nebo zápisu podle specifikace `oflag`. `_wopen` široká charakterová verze `_open`; `filename` argument `_wopen` je široká charakterová řetězec. `_wopen` a `_open` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -106,7 +109,7 @@ int _wopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_topen`|`_open`|`_open`|`_wopen`|  
   
- `oflag`výraz celého čísla je vytvořen z jedné nebo více následujících manifestu konstanty nebo konstantní kombinace, které jsou definovány v \<fcntl.h >.  
+ `oflag` výraz celého čísla je vytvořen z jedné nebo více následujících manifestu konstanty nebo konstantní kombinace, které jsou definovány v \<fcntl.h >.  
   
  `_O_APPEND`  
  Přesune ukazatele souboru na konec souboru před každou operaci zápisu.  
@@ -145,7 +148,7 @@ int _wopen(
  Otevře soubor v režimu textových (přeložit). (Další informace najdete v tématu [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [fopen –](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC`použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
+ Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC` použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
   
 > [!NOTE]
 >  `_O_TRUNC` Příznak zničí obsah zadaného souboru.  
@@ -172,7 +175,7 @@ int _wopen(
   
  Při použití dvou nebo více manifestu konstanty do formuláře `oflag` argument, konstanty spolu se operátoru bitové operace OR ( `|` ). Informace z binárního souboru a text režimů, naleznete v [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
   
- `pmode` Se vyžaduje jenom v případě `_O_CREAT` je zadán. Pokud soubor již existuje, `pmode` je ignorována. V opačném `pmode` určuje nastavení oprávnění souborů, které lze nastavit při zavření první nový soubor. `_open`použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Další informace najdete v tématu [_umask –](../../c-runtime-library/reference/umask.md).) `pmode` je použit celočíselný výraz, který obsahuje jedno nebo obě následující manifestu konstanty, které jsou definovány v \<sys\stat.h >.  
+ `pmode` Se vyžaduje jenom v případě `_O_CREAT` je zadán. Pokud soubor již existuje, `pmode` je ignorována. V opačném `pmode` určuje nastavení oprávnění souborů, které lze nastavit při zavření první nový soubor. `_open` použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Další informace najdete v tématu [_umask –](../../c-runtime-library/reference/umask.md).) `pmode` je použit celočíselný výraz, který obsahuje jedno nebo obě následující manifestu konstanty, které jsou definovány v \<sys\stat.h >.  
   
  `_S_IREAD`  
  Pouze čtení povolené.  
@@ -191,10 +194,10 @@ int _wopen(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_open`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >|  
-|`_wopen`|\<IO.h > nebo \<wchar.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >|  
+|`_open`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
+|`_wopen`|\<IO.h > nebo \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
   
- `_open`a `_wopen` jsou rozšíření Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ `_open` a `_wopen` jsou rozšíření Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Knihovny  
  Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
@@ -249,9 +252,9 @@ Open succeeded on output file
   
 ## <a name="see-also"></a>Viz také  
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
- [_chmod –, _wchmod –](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup –, _dup2 –](../../c-runtime-library/reference/dup-dup2.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)

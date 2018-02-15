@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -68,10 +71,10 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*  
+*fd*  
 Soubor popisovače otevření souboru.
 
-*režim*  
+*Režim*  
 Typ přístup k souborům.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -82,7 +85,7 @@ Další informace o těchto a dalších kódy chyb najdete v tématu [_doserrno 
 
 ## <a name="remarks"></a>Poznámky
 
-`_fdopen` Funkce přidruží vstupně-výstupní datový proud souboru, která je identifikovaná *fd*a proto umožňuje soubor, který je otevřen pro nižší úroveň vstupně-výstupní vyrovnávací paměti a formátu. `_wfdopen`široká charakterová verze `_fdopen`; *režimu* argument `_wfdopen` je široká charakterová řetězec. `_wfdopen`a `_fdopen` jinak chovají stejně jako.
+`_fdopen` Funkce přidruží vstupně-výstupní datový proud souboru, která je identifikovaná *fd*a proto umožňuje soubor, který je otevřen pro nižší úroveň vstupně-výstupní vyrovnávací paměti a formátu. `_wfdopen` široká charakterová verze `_fdopen`; *režimu* argument `_wfdopen` je široká charakterová řetězec. `_wfdopen` a `_fdopen` jinak chovají stejně jako.
 
 Soubor popisovače předaný do `_fdopen` patří ve vráceném `FILE *` datového proudu. Pokud `_fdopen` úspěšně, nevolejte [ \_zavřete](../../c-runtime-library/reference/close.md) na popisovače souborů. Volání metody [fclose –](../../c-runtime-library/reference/fclose-fcloseall.md) na vrácený `FILE *` také zavře popisovače souborů.
 
@@ -134,7 +137,7 @@ Pokud `t` nebo `b` není uveden v *režimu*, je výchozí režim překladu defin
 
 Platné znaky pro *režimu* řetězec použitý v `fopen` a `_fdopen` odpovídají *oflag* argumenty použité v [ \_otevřete](../../c-runtime-library/reference/open-wopen.md) a [ \_sopen –](../../c-runtime-library/reference/sopen-wsopen.md), jak je znázorněno v této tabulce:
 
-|Znaky v *režimu* řetězec|Ekvivalentní *oflag* hodnota `_open` a`_sopen`|
+|Znaky v *režimu* řetězec|Ekvivalentní *oflag* hodnota `_open` a `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124; \_O\_připojení** (obvykle  **\_O\_WRONLY &#124; \_O\_creat – &#124; \_O\_připojení**)|
 |`a+`|**\_O\_RDWR &#124; \_O\_připojení** (obvykle  **\_O\_RDWR &#124; \_O\_připojení &#124; \_O\_creat –** )|
@@ -143,7 +146,7 @@ Platné znaky pro *režimu* řetězec použitý v `fopen` a `_fdopen` odpovídaj
 |`w`|**\_O\_WRONLY** (obvykle  **\_O\_WRONLY &#124; \_O\_creat – &#124; \_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (obvykle  **\_O\_RDWR &#124; \_O\_creat – &#124; \_O\_TRUNC**)|
 |`b`|**\_O\_BINÁRNÍ**|
-|`t`|**\_O\_TEXTU**|
+|`t`|**\_O\_TEXT**|
 |`c`|Žádné|
 |`n`|Žádné|
 
@@ -151,7 +154,7 @@ Platné znaky pro *režimu* řetězec použitý v `fopen` a `_fdopen` odpovídaj
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|`_fdopen`|\<stdio.h >|
+|`_fdopen`|\<stdio.h>|
 |`_wfdopen`|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).

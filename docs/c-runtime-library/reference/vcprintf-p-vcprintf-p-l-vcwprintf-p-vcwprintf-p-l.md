@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vcprintf_p
 - _vcwprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - vcprintf_p
 - _vcwprintf_p
 - _vcwprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _vtcprintf_p_l function
 - vcprintf_p_l function
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0909838cb526212d52d156f9af0366bcdcb7f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86e4966b7e8d693037e6038a06820894c3c64204
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 Zapíše formátovaný výstup do konzoly pomocí ukazatel na seznam argumentů a podporuje poziční parametry v řetězci formátu.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,7 +107,7 @@ int _vcwprintf_p_l(
  Počet znaků, které jsou zapsány nebo záporná, pokud dojde k chybě výstup. Pokud `format` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a vrátí hodnotu -1.  
   
 ## <a name="remarks"></a>Poznámky  
- Každá z těchto funkcí má ukazatel na seznam argumentů a pak používá `_putch` funkce můžete naformátovat a zápis daná data do konzoly. (`_vcwprintf_p` používá `_putwch` místo `_putch`. `_vcwprintf_p`je verze široká charakterová `_vcprintf_p`. Trvá široká charakterová řetězec jako argument.)  
+ Každá z těchto funkcí má ukazatel na seznam argumentů a pak používá `_putch` funkce můžete naformátovat a zápis daná data do konzoly. (`_vcwprintf_p` používá `_putwch` místo `_putch`. `_vcwprintf_p` je verze široká charakterová `_vcprintf_p`. Trvá široká charakterová řetězec jako argument.)  
   
  Verze tyto funkce, které mají `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí, který se předává v místo aktuální národní prostředí.  
   
@@ -167,5 +170,5 @@ parameter 2 = 222; parameter 1 = one
 ## <a name="see-also"></a>Viz také  
  [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)   
  [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [va_arg –, va_copy –, va_end –, va_start –](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
  [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)

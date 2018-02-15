@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
-Poskytuje společné chování pro ref třídy a struktury ref v aplikacích pro Windows Store. Všechny ref třídy a instance ref struktura jsou implicitně převést na Platform::Object ^ a jeho virtuální metody ToString můžete přepsat.  
+Poskytuje společné chování pro ref třídy a struktury ref v prostředí Windows Runtime aplikace. Všechny ref třídy a instance ref struktura jsou implicitně převést na Platform::Object ^ a jeho virtuální metody ToString můžete přepsat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Namespace:** platformy  
 
   
-## <a name="equals"></a>Object::Equals – metoda
+## <a name="equals"></a> Object::Equals – metoda
 Určuje, zda se zadaný objekt rovná aktuálnímu objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -79,15 +82,15 @@ bool Equals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj  
+ obj  
  Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud jsou objekty stejné, jinak `false`.  
+ `true` Pokud jsou objekty stejné, jinak `false`.  
   
 
 
-## <a name="gethashcode"></a>Object::GetHashCode – metoda
+## <a name="gethashcode"></a>  Object::GetHashCode – metoda
 Vrátí `IUnknown`* hodnotu identity pro tuto instanci, pokud je objekt COM nebo hodnotu hash počítaný, pokud není objekt COM.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object::gettype – metoda
+## <a name="gettype"></a>  Object::gettype – metoda
 Vrátí [Platform::Type](../cppcx/platform-type-class.md) objekt, který popisuje typ objektu v modulu runtime.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -131,9 +134,9 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>Viz také  
  [Platform::type – třída](../cppcx/platform-type-class.md)   
  [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)   
- [Systém typů] (.. /cppcx/Type-System-c-CX.MD
+ [Type System](../cppcx/type-system-c-cx.md
   
-## <a name="ctor"></a>Object::Object – konstruktor
+## <a name="ctor"></a>  Object::Object – konstruktor
 Inicializuje novou instanci třídy objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -142,7 +145,7 @@ Inicializuje novou instanci třídy objektu.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object::ReferenceEquals – metoda
+## <a name="referenceequals"></a>  Object::ReferenceEquals – metoda
 Určuje, zda jsou zadané instance objektu stejné instanci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -152,16 +155,16 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj1  
+ obj1  
  První objekt k porovnání.  
   
  obj2  
  Druhý objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud dva objekty jsou stejné. v opačném `false`.  
+ `true` Pokud dva objekty jsou stejné. v opačném `false`.  
  
-## <a name="tostring"></a>Metoda Object::ToString (C + +/ CX)
+## <a name="tostring"></a>  Metoda Object::ToString (C + +/ CX)
 Vrací řetězec, který představuje aktuální objekt.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _popen
 - _wpopen
@@ -30,7 +31,8 @@ f1_keywords:
 - _popen
 - _wpopen
 - _tpopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tpopen function
 - pipes, creating
@@ -40,22 +42,23 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0e5cf1fc935bbee75eb8acc31cfd7ae0e8d92c3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16e779a514cc68722eca79540929d41e34155174
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 Vytváří kanál a provede příkaz.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,10 +74,10 @@ const wchar_t *mode
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *příkaz*  
+ příkaz  
  Příkaz má být proveden.  
   
- *režim*  
+ *Režim*  
  Režim vráceném datovém proudu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -98,9 +101,9 @@ const wchar_t *mode
  Otevřete v textovém režimu.  
   
 > [!NOTE]
->  Pokud se používá v programu systému Windows, `_popen` funkce vrátí souboru je neplatný. ukazatele, který vede k nereaguje po neomezenou dobu. `_popen`funguje správně v konzolové aplikaci. Vytvoření aplikace systému Windows, který provede přesměrování vstupu a výstupu, naleznete v části [vytváření podřízený proces s přesměrování vstupu a výstupu](http://msdn.microsoft.com/library/windows/desktop/ms682499) ve Windows SDK.  
+>  Pokud se používá v programu systému Windows, `_popen` funkce vrátí souboru je neplatný. ukazatele, který vede k nereaguje po neomezenou dobu. `_popen` funguje správně v konzolové aplikaci. Vytvoření aplikace systému Windows, který provede přesměrování vstupu a výstupu, naleznete v části [vytváření podřízený proces s přesměrování vstupu a výstupu](http://msdn.microsoft.com/library/windows/desktop/ms682499) ve Windows SDK.  
   
- `_wpopen`široká charakterová verze `_popen`; *cesta* argument `_wpopen` je široká charakterová řetězec. `_wpopen`a `_popen` chovat jinak shodně.  
+ `_wpopen` široká charakterová verze `_popen`; *cesta* argument `_wpopen` je široká charakterová řetězec. `_wpopen` a `_popen` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -112,7 +115,7 @@ const wchar_t *mode
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_popen`|\<stdio.h >|  
+|`_popen`|\<stdio.h>|  
 |`_wpopen`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -182,5 +185,5 @@ Process returned 0
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [_pclose –](../../c-runtime-library/reference/pclose.md)   
+ [_pclose](../../c-runtime-library/reference/pclose.md)   
  [_pipe](../../c-runtime-library/reference/pipe.md)

@@ -4,39 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::IErrorRecordsImpl
 - ATL.IErrorRecordsImpl
 - IErrorRecordsImpl
-dev_langs: C++
-helpviewer_keywords: IErrorRecordsImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IErrorRecordsImpl class
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e69db8c89a60b7dee543bbdf87997514ba5f0cd7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) rozhraní, přidání záznamů do a z datový člen načítání záznamů ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **CAtlArray <** `RecordClass`**>**.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <  
-   class T,   
-   class RecordClass = ATLERRORINFO  
->  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <class T, class RecordClass = ATLERRORINFO>  
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
@@ -53,22 +53,22 @@ class IErrorRecordsImpl : public IErrorRecords
   
 |||  
 |-|-|  
-|[Geterrordescriptionstring –](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Získá řetězec popis chyby z záznam chyby.|  
-|[Geterrorguid –](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Získá chybu identifikátoru GUID z záznam chyby.|  
-|[Geterrorhelpcontext –](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Získá ID kontextové nápovědy z záznam chyby.|  
-|[Geterrorhelpfile –](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Získá úplnou cestu k souboru nápovědy z záznam chyby.|  
+|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Získá řetězec popis chyby z záznam chyby.|  
+|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Získá chybu identifikátoru GUID z záznam chyby.|  
+|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Získá ID kontextové nápovědy z záznam chyby.|  
+|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Získá úplnou cestu k souboru nápovědy z záznam chyby.|  
 |[Geterrorsource –](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|Získá zdroj kód chyby z záznam chyby.|  
   
 ### <a name="interface-methods"></a>Metody rozhraní  
   
 |||  
 |-|-|  
-|[Adderrorrecord –](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Přidá záznam objektu Chyba OLE DB.|  
-|[Getbasicerrorinfo –](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Vrátí základní informace o této chybě, např. Návratový kód a číslo chyby specifický pro zprostředkovatele.|  
-|[Getcustomerrorobject –](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Vrací ukazatel na rozhraní na objekt vlastní chyby.|  
+|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Přidá záznam objektu Chyba OLE DB.|  
+|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Vrátí základní informace o této chybě, např. Návratový kód a číslo chyby specifický pro zprostředkovatele.|  
+|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Vrací ukazatel na rozhraní na objekt vlastní chyby.|  
 |[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Vrátí [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) ukazatel rozhraní na zadaný záznam.|  
-|[Geterrorparameters –](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Vrátí parametry chyby.|  
-|[Getrecordcount –](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Vrátí počet záznamů v objektu záznamů technologie OLE DB.|  
+|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Vrátí parametry chyby.|  
+|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Vrátí počet záznamů v objektu záznamů technologie OLE DB.|  
   
 ### <a name="data-members"></a>Datové členy  
   

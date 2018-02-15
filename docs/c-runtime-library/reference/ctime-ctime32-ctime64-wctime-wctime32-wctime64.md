@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ctime64
 - _wctime32
@@ -36,7 +37,8 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -57,16 +59,17 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97c6f5f4c827ca315eb1de36ee8d4f19d94214bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c3154b71654f0b4fc944daa94a354db32c981c2f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 Převést na řetězec hodnotu času a upravit nastavení místního časového pásma. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [ctime_s –, _ctime32_s –, _ctime64_s –, _wctime_s –, _wctime32_s –, _wctime64_s –](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).  
@@ -99,15 +102,15 @@ wchar_t *_wctime64(
  Ukazatel na uložené čas.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na výsledném řetězci znaků. `NULL`bude vrácen, pokud:  
+ Ukazatel na výsledném řetězci znaků. `NULL` bude vrácen, pokud:  
   
--   `time`představuje datum před půlnoc, 1. ledna 1970 UTC.  
+-   `time` představuje datum před půlnoc, 1. ledna 1970 UTC.  
   
 -   Pokud používáte `_ctime32` nebo `_wctime32` a `time` představuje datum po 23:59:59 18 leden 2038 UTC.  
   
 -   Pokud používáte `_ctime64` nebo `_wctime64` a `time` představuje datum po 23:59:59, 31. prosince 3000, UTC.  
   
- `ctime`Vložená funkce, jehož výsledkem je `_ctime64` a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `ctime` k vyhodnocení `_ctime32`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
+ `ctime` Vložená funkce, jehož výsledkem je `_ctime64` a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `ctime` k vyhodnocení `_ctime32`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
   
 ## <a name="remarks"></a>Poznámky  
  `ctime` Funkce převede hodnotu čas, který je uložený jako [time_t](../../c-runtime-library/standard-types.md) hodnotu na řetězec znaků. `timer` Hodnota se obvykle získávají z volání [čas](../../c-runtime-library/reference/time-time32-time64.md), která vrátí počet sekund uběhlých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC). Návratová hodnota řetězec obsahuje přesně 26 znaků a má tvar:  
@@ -120,9 +123,9 @@ Wed Jan 02 02:03:55 1980\n\0
   
  Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Najdete v článku `time`, [_ftime –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), a [místní čas](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) funkce informace o konfiguraci místní čas a [_tzset –](../../c-runtime-library/reference/tzset.md) funkce podrobné informace o definování časové pásmo prostředí a globální proměnné.  
   
- Volání `ctime` upraví jedné staticky přidělené vyrovnávací paměti používané `gmtime` a `localtime` funkce. Každé volání na jednu z těchto rutin zničí výsledek předchozí volání. `ctime`sdílí statické vyrovnávací paměti s `asctime` funkce. Proto volání `ctime` zničí výsledky všech předchozích volání `asctime`, `localtime`, nebo `gmtime`.  
+ Volání `ctime` upraví jedné staticky přidělené vyrovnávací paměti používané `gmtime` a `localtime` funkce. Každé volání na jednu z těchto rutin zničí výsledek předchozí volání. `ctime` sdílí statické vyrovnávací paměti s `asctime` funkce. Proto volání `ctime` zničí výsledky všech předchozích volání `asctime`, `localtime`, nebo `gmtime`.  
   
- `_wctime`a `_wctime64` jsou verze široká charakterová `ctime` a `_ctime64`; ukazatel vrácením široká charakterová řetězec. V opačném `_ctime64`, `_wctime`, a `_wctime64` chovají stejně jako na `ctime`.  
+ `_wctime` a `_wctime64` jsou verze široká charakterová `ctime` a `_ctime64`; ukazatel vrácením široká charakterová řetězec. V opačném `_ctime64`, `_wctime`, a `_wctime64` chovají stejně jako na `ctime`.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `timer` je ukazatel s hodnotou null, nebo pokud je hodnota časovače záporná, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce `NULL` a nastavte `errno` k `EINVAL`.  
   
@@ -138,9 +141,9 @@ Wed Jan 02 02:03:55 1980\n\0
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`ctime`|\<Time.h >|  
-|`_ctime32`|\<Time.h >|  
-|`_ctime64`|\<Time.h >|  
+|`ctime`|\<time.h>|  
+|`_ctime32`|\<time.h>|  
+|`_ctime64`|\<time.h>|  
 |`_wctime`|\<Time.h > nebo \<wchar.h >|  
 |`_wctime32`|\<Time.h > nebo \<wchar.h >|  
 |`_wctime64`|\<Time.h > nebo \<wchar.h >|  
@@ -176,9 +179,9 @@ The time is Wed Feb 13 16:04:43 2002
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime_s –, _ctime32_s –, _ctime64_s –, _wctime_s –, _wctime32_s –, _wctime64_s –](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

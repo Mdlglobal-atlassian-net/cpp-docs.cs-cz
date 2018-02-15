@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (vytváření kódu v době propojování)
 ```  
@@ -61,29 +64,29 @@ ms.lasthandoff: 12/21/2017
   
  S následujícími výjimkami nemůžete přidat možnosti linkeru PGO kombinace/ltgc a /USEPROFILE, které nebyly zadány v předchozí kombinace inicializace PGO/ltgc a /GENPROFILE možnosti:  
   
--   [/ BASE](../../build/reference/base-base-address.md)  
+-   [/BASE](../../build/reference/base-base-address.md)  
   
 -   [/ FIXED](../../build/reference/fixed-fixed-base-address.md)  
   
--   / LTCG  
+-   /LTCG  
   
--   [/ MAP](../../build/reference/map-generate-mapfile.md)  
+-   [/MAP](../../build/reference/map-generate-mapfile.md)  
   
 -   [/ MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)  
   
--   [/ NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)  
+-   [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)  
   
--   [/ OUT](../../build/reference/out-output-file-name.md)  
+-   [/OUT](../../build/reference/out-output-file-name.md)  
   
--   [/ PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)  
+-   [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)  
   
--   [/ PDB](../../build/reference/pdb-use-program-database.md)  
+-   [/PDB](../../build/reference/pdb-use-program-database.md)  
   
--   [/ PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)  
+-   [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)  
   
--   [/ STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
+-   [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
   
--   [/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)  
+-   [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)  
   
  Všechny možnosti linkeru, které jsou zadány společně s / ltgc a možnosti /GENPROFILE k chybě při inicializaci PGO není potřeba zadat při vytváření pomocí/ltgc a /USEPROFILE; že jsou implicitní.  
   
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/ LTCG a moduly MSIL  
  Moduly, které jsou kompilovaná pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) a [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) lze použít jako vstup linkeru při **/ltgc** je zadán.  
   
--   **/ LTCG** může přijmout nativní objekt soubory, soubory nativní nebo spravovaný objektů ve smíšeném (zkompilovat pomocí **/CLR**) a soubory čistý objektů (zkompilovat pomocí **/CLR: pure**), a bezpečné objekt soubory ( zkompilovat pomocí **/CLR: safe**). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
+-   **/ LTCG** může přijmout soubory nativní objektů a smíšený nativní nebo spravovaný objekt soubory (zkompilovat pomocí **/CLR**). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
   
--   **/ LTCG** může přijmout bezpečné .netmodules, který lze vytvořit pomocí **/CLR: safe /LN** v jazyce Visual C++ a **/target: Module** v žádné sadě Visual Studio .NET kompilátoru. . Netmodules vytvořeného pomocí **/CLR** nebo **/CLR: pure** nejsou přijímány **/ltgc**.  
-  
--   /LTCG:PGI nepřijímá nativní moduly zkompilovat pomocí **/GL** a **/CLR**, nebo čisté moduly (vytvořeného pomocí **/CLR: pure**)  
+-   /LTCG:PGI nepřijímá nativní moduly zkompilovat pomocí **/GL** a   **/CLR**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   

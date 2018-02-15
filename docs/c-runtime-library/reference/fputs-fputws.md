@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -27,7 +28,8 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e4fcfe29abceb102534cd376c563917f3804d6df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 31c559e49712fa74d5cd457b528266c4eaeaa17a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 Řetězec se zapíše do datového proudu.  
@@ -75,9 +78,9 @@ int fputws(
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
   
 ## <a name="remarks"></a>Poznámky  
- Každá z těchto funkcí kopie `str` k výstupu `stream` na aktuální pozici. `fputws`zkopíruje argument široká charakterová `str` k `stream` jako vícebajtových znaků řetězec nebo řetězec široká charakterová podle jestli `stream` je otevřen v režimu textových nebo binárních, v uvedeném pořadí. Ani funkcí zkopíruje ukončující znak hodnoty null.  
+ Každá z těchto funkcí kopie `str` k výstupu `stream` na aktuální pozici. `fputws` zkopíruje argument široká charakterová `str` k `stream` jako vícebajtových znaků řetězec nebo řetězec široká charakterová podle jestli `stream` je otevřen v režimu textových nebo binárních, v uvedeném pořadí. Ani funkcí zkopíruje ukončující znak hodnoty null.  
   
- Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fputs`aktuálně nepodporuje výstup do proudu kódování UNICODE.  
+ Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fputs` aktuálně nepodporuje výstup do proudu kódování UNICODE.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -89,10 +92,10 @@ int fputws(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fputs`|\<stdio.h >|  
+|`fputs`|\<stdio.h>|  
 |`fputws`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   

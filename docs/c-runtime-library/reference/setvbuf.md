@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: setvbuf
+ms.topic: reference
+apiname:
+- setvbuf
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: setvbuf
-dev_langs: C++
+f1_keywords:
+- setvbuf
+dev_langs:
+- C++
 helpviewer_keywords:
 - controlling stream buffering
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0855982627c60c51ec5753031ae932ffd430f024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 072a1a9b1fca01dc8c6266f65232e4a8d8183580
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setvbuf"></a>setvbuf
 Ovládací prvky datového proudu do vyrovnávací paměti a velikost vyrovnávací paměti.  
@@ -74,7 +79,7 @@ int setvbuf(
  Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `setvbuf` Funkce umožňuje programu řídit i ukládání do vyrovnávací paměti a velikost vyrovnávací paměti `stream`. `stream`musí odkazovat na otevření souboru, který neprošel vstupně-výstupní operace, protože byl otevřen. Toto pole ukazuje `buffer` slouží jako vyrovnávací paměť, pokud je `NULL`, v takovém případě `setvbuf` používá automaticky přidělené vyrovnávací paměti o délce `size`/2 * 2 bajtů.  
+ `setvbuf` Funkce umožňuje programu řídit i ukládání do vyrovnávací paměti a velikost vyrovnávací paměti `stream`. `stream` musí odkazovat na otevření souboru, který neprošel vstupně-výstupní operace, protože byl otevřen. Toto pole ukazuje `buffer` slouží jako vyrovnávací paměť, pokud je `NULL`, v takovém případě `setvbuf` používá automaticky přidělené vyrovnávací paměti o délce `size`/2 * 2 bajtů.  
   
  Musí být v režimu `_IOFBF`, `_IOLBF`, nebo `_IONBF`. Pokud `mode` je `_IOFBF` nebo `_IOLBF`, pak `size` se používá jako velikost vyrovnávací paměti. Pokud `mode` je `_IONBF`, datový proud je bez vyrovnávací paměti a `size` a `buffer` jsou ignorovány. Hodnoty pro `mode` a jejich významy jsou:  
   
@@ -91,7 +96,7 @@ int setvbuf(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`setvbuf`|\<stdio.h >|  
+|`setvbuf`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

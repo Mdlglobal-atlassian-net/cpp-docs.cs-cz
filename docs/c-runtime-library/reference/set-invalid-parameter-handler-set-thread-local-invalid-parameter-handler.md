@@ -1,12 +1,13 @@
 ---
-title: "_set_invalid_parameter_handler –, _set_thread_local_invalid_parameter_handler | Microsoft Docs"
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -27,25 +28,27 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7827b8c538a90c39c0dc32320aaab01ada7e2318
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler –, _set_thread_local_invalid_parameter_handler
+# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 Nastaví funkci, která se má volat při CRT zjistí neplatný argument.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -60,7 +63,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`pNew`  
+ [in] `pNew`  
  Ukazatel funkce na nový popisovač neplatný parametr.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -89,7 +92,7 @@ void _invalid_parameter(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h ><br /><br /> C++: \<cstdlib – > nebo \<stdlib.h >|  
+|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib – > nebo \<stdlib.h >|  
   
  `_set_invalid_parameter_handler` a `_set_thread_local_invalid_parameter_handler` funkce se konkrétní společnosti Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -139,6 +142,6 @@ Expression: format != nullptr
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
+ [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
  [Verze funkcí CRT se zdokonaleným zabezpečení](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)   
  [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

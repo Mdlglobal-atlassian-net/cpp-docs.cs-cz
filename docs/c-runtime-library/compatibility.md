@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>Kompatibilita
 Univerzální knihoven C Run-Time (UCRT) podporuje většinu standardní knihovny jazyka C požadované pro přizpůsobení C++. Implementuje knihovnu C99 (ISO/IEC 9899:1999) s výjimky obecného typu makra definované v \<tgmath.h > a striktní typ kompatibility v \<complex.h >. UCRT také implementuje podmnožinu POSIX.1 velké (ISO/IEC 9945-1:1996, rozhraní API systému POSIX) knihovny jazyka C, ale není plně vyhovující pro všechny konkrétní standard POSIX.  Kromě toho UCRT implementuje několik specifické pro společnost Microsoft funkcemi a makry, které nejsou součástí standardní.  
@@ -44,7 +44,7 @@ Univerzální knihoven C Run-Time (UCRT) podporuje většinu standardní knihovn
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Aplikace pro Windows Store, prostředí Windows Runtime a knihovna CRT](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud rutiny UCRT nejsou kompatibilní s univerzální aplikace pro Windows nebo aplikace pro Windows Store.|  
+|[Aplikace UWP, prostředí Windows Runtime a běhu C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud nejsou kompatibilní s aplikací Microsoft Store pro univerzální aplikace pro Windows nebo rutiny UCRT.|  
 |[Kompatibilita s ANSI C](../c-runtime-library/ansi-c-compliance.md)|Popisuje kompatibilní se standardem standardní pojmenování v UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Poskytuje pokyny pro přenos programů UNIX.|  
 |[Platformy systému Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Seznam operačních systémů, které jsou CRT podporuje.|  

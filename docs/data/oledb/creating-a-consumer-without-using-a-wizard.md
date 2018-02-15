@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB consumers, creating
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b31f1ad51d9015c491439650060ab3cefaf3270b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a61de0a4621f6f9387da23093f9f450749129ac3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
 V následujícím příkladu se předpokládá, že přidáváte podporu příjemce technologie OLE DB do existujícího projektu knihovny ATL. Pokud chcete přidat do aplikace MFC podporu příjemce technologie OLE DB, byste měli spustit Průvodce aplikací MFC, který vytvoří nezbytné všechny podporu a vyvolá MFC rutiny, které jsou nezbytné ke spuštění aplikace.  
@@ -48,7 +51,7 @@ V následujícím příkladu se předpokládá, že přidáváte podporu příje
     ```  
     CDataSource ds;  
     CSession ss;  
-    class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
+    class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
 -   Volání **funkce CoInitialize** k inicializaci modelu COM. To se obvykle nazývá v hlavní kódu. Příklad:  

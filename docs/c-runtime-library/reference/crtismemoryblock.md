@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsMemoryBlock
+ms.topic: reference
+apiname:
+- _CrtIsMemoryBlock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 58faccd95e831dd264910abf063529db12701bf6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 Ověřuje, zda blok zadaný paměti je v lokální haldy a který obsahuje identifikátor typ bloku platný ladění haldy (pouze ladicí verze).  
@@ -55,23 +59,23 @@ int _CrtIsMemoryBlock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`userData`  
+ [in] `userData`  
  Ukazatel na začátku bloku paměti k ověření.  
   
- [v]`size`  
+ [in] `size`  
  Velikost zadaný blok (v bajtech).  
   
- [out]`requestNumber`  
+ [out] `requestNumber`  
  Ukazatel na číslo přidělení bloku nebo `NULL`.  
   
- [out]`filename`  
+ [out] `filename`  
  Ukazatel na název zdrojového souboru, který požadovaný blok nebo `NULL`.  
   
- [out]`linenumber`  
+ [out] `linenumber`  
  Ukazatel na číslo řádku ve zdrojovém souboru nebo `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_CrtIsMemoryBlock`Vrátí `TRUE` Pokud bloku zadaná paměťová se nachází v rámci lokální haldy a má platný ladění haldy bloku typ identifikátor; jinak vrátí `FALSE`.  
+ `_CrtIsMemoryBlock` Vrátí `TRUE` Pokud bloku zadaná paměťová se nachází v rámci lokální haldy a má platný ladění haldy bloku typ identifikátor; jinak vrátí `FALSE`.  
   
 ## <a name="remarks"></a>Poznámky  
  `_CrtIsMemoryBlock` Funkce ověřuje, zda blok zadaná paměťová se nachází v rámci aplikace lokální haldy a že má identifikátor platný blok typem. Tato funkce slouží také k získání objektu přidělení pořadové číslo a číslo zdrojového souboru název nebo čáry kde původně požádal bloku přidělení paměti. Probíhá předání hodnoty NULL `requestNumber`, `filename`, nebo `linenumber` parametry příčiny `_CrtIsMemoryBlock` pro tyto parametry nastavit na hodnoty v hlavičce ladění bloku paměti, pokud najde bloku v haldě místní. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtIsMemoryBlock` jsou odebrány při předběžném zpracování.  
@@ -91,7 +95,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_CrtIsMemoryBlock`|\<crtdbg.h >|  
+|`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

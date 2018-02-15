@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/PlatformSizeT::SizeT constructor
-dev_langs: C++
-helpviewer_keywords: Platform::SizeT Struct
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/PlatformSizeT::SizeT constructor
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf47d911dc348b23e371175cf46fc6d677ce9f36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f3646c07d5f351ac0c357fa99efc0148e643271
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT – hodnotová třída
 Představuje velikost objektu. SizeT je typ nepodepsaná data.  
@@ -46,7 +50,7 @@ public ref class SizeT sealed : ValueType
   
  **Metadata:** platform.winmd  
 
- ## <a name="ctor"></a>SizeT::SizeT – konstruktor
+ ## <a name="ctor">SizeT::SizeT – konstruktor</a>
 Inicializuje novou instanci třídy SizeT se zadanou hodnotou.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -59,7 +63,7 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
  value1  
  Nepodepsané 32bitovou hodnotu.  
   
- Value2  
+ value2  
  Ukazatel na hodnotu 32-bit bez znaménka.  
   
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wexeclp
 - _execlp
@@ -27,29 +28,31 @@ f1_keywords:
 - _wexeclp
 - wexeclp
 - _execlp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - execlp function
 - _execlp function
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e91bf18c9e6595d6122dc1add527e9a4e1193a53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ccb8839311b3b946461cd8ae1e0c9866c1aa4c2e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="execlp-wexeclp"></a>_execlp, _wexeclp
 Načte a spustí novou podřízené procesy.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +81,7 @@ intptr_t _wexeclp(
 ## <a name="return-value"></a>Návratová hodnota  
  Pokud bylo úspěšné, nevrátí se tyto funkce pro proces volání. Vrácená hodnota -1 označuje chybu, v takovém případě `errno` globální proměnná je nastavená.  
   
-|`errno`Hodnota|Popis|  
+|`errno` Hodnota|Popis|  
 |-------------------|-----------------|  
 |`E2BIG`|Místo požadované pro argumenty a nastavení prostředí je větší než 32 KB.|  
 |`EACCES`|Zadaný soubor došlo k narušení uzamčení nebo sdílení.|  
@@ -99,8 +102,8 @@ intptr_t _wexeclp(
   
 |Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |--------------|---------------------|---------------------|  
-|`_execlp`|\<Process.h >|\<errno.h >|  
-|`_wexeclp`|\<Process.h > nebo \<wchar.h >|\<errno.h >|  
+|`_execlp`|\<process.h>|\<errno.h>|  
+|`_wexeclp`|\<Process.h > nebo \<wchar.h >|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -110,9 +113,9 @@ intptr_t _wexeclp(
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
  [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)   
- [přerušení](../../c-runtime-library/reference/abort.md)   
+ [abort](../../c-runtime-library/reference/abort.md)   
  [AtExit](../../c-runtime-library/reference/atexit.md)   
- [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit –, _onexit_m –](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vscprintf
 - _vscprintf_l
@@ -33,7 +34,8 @@ f1_keywords:
 - vscwprintf_l
 - vscprintf
 - _vscwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vsctprintf function
 - _vscprintf_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a52c7643a465bfaf24db6988d531943284e6416
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0ba44a2e23baf8d901cb6bf5d9abd8306c32527
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 Vrátí počet znaků v řetězci formátovaný pomocí ukazatel na seznam argumentů.  
@@ -99,7 +102,7 @@ int _vscwprintf_l(
  Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_vscprintf`Vrátí počet znaků, které by vytvořilo Pokud řetězec odkazoval na seznam argumentů, bylo vytisknout nebo odesílány do souboru nebo pomocí zadané formátování kódy vyrovnávací paměti. Hodnota vrácená nezahrnuje ukončující znak hodnoty null. `_vscwprintf`provede stejnou funkci pro široké znaky.  
+ `_vscprintf` Vrátí počet znaků, které by vytvořilo Pokud řetězec odkazoval na seznam argumentů, bylo vytisknout nebo odesílány do souboru nebo pomocí zadané formátování kódy vyrovnávací paměti. Hodnota vrácená nezahrnuje ukončující znak hodnoty null. `_vscwprintf` provede stejnou funkci pro široké znaky.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -122,7 +125,7 @@ int _vscwprintf_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_vscprintf`, `_vscprintf_l`|\<stdio.h >|  
+|`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
 |`_vscwprintf`, `_vscwprintf_l`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -133,7 +136,7 @@ int _vscwprintf_l(
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)

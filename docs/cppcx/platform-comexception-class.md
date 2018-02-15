@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException – třída
 Reprezentuje chyby COM, ke kterým došlo během provádění aplikací. COMException je základní třída pro sadu předdefinovaných, standard výjimky.  
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Metadata:** platform.winmd  
 
-## <a name="ctor"></a>COMException::COMException – konstruktor
+## <a name="ctor"></a> COMException::COMException – konstruktor
 Intializes novou instanci třídy COMException.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Vlastnost COMException::HResult
+## <a name="hresult"></a> Vlastnost COMException::HResult
 HRESULT, která odpovídá výjimku.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>Poznámky  
  Další informace o tom, jak interpretovat hodnota HRESULT najdete v tématu [struktura kódy chyb COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
-## <a name="message"></a>Vlastnost COMException::Message
+## <a name="message"></a> Vlastnost COMException::Message
 Zpráva, která popisuje výjimku.  
   
 ### <a name="syntax"></a>Syntaxe  

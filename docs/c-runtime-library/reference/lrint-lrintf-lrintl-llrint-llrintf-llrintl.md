@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -42,7 +42,8 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -51,16 +52,17 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2774b22f0b108349d90abc113430f1a573d2cbb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 80a331618df913040ea145346299ebd30509ce8e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 Zaokrouhlí na nejbližší hodnotu integrální zadaná hodnota s plovoucí desetinnou čárkou s použitím aktuální režim zaokrouhlení a směr.  
@@ -111,7 +113,7 @@ long long int llrintl(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [in] `x`  
  Hodnota, která má být zaokrouhleno.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -119,7 +121,7 @@ long long int llrintl(
   
 |Problém|Vrátí|  
 |-----------|------------|  
-|`x`je mimo rozsah návratový typ<br /><br /> `x` = ±∞<br /><br /> `x`= NaN.|Vyvolá FE_INVALID a vrátí nula (0).|  
+|`x` je mimo rozsah návratový typ<br /><br /> `x` = ±∞<br /><br /> `x` = NaN.|Vyvolá FE_INVALID a vrátí nula (0).|  
   
 ## <a name="remarks"></a>Poznámky  
  Protože C++ umožňuje, aby přetížení, můžete volat přetížení `lrint` a `llrint` které přebírají float a typy long double. V programu C `lrint` a `llrint` vždy provést datový typ double.  
@@ -132,7 +134,7 @@ long long int llrintl(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`lrint`,                `lrintf`, `lrintl`, `llrint`, `llrintf`, `llrintl`|\<Math.h >|\<cmath – >|  
+|`lrint`,                `lrintf`, `lrintl`, `llrint`, `llrintf`, `llrintl`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

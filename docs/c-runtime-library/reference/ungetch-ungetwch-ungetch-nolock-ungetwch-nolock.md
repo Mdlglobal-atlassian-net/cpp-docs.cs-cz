@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -36,7 +37,8 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -51,22 +53,23 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f853b32f22da872c918fbc60137606b651390827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e47415af123b592e55b0f01f5556bc19bcfb3a2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 Vynutí zpět poslední znak, který je pro čtení z konzoly.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,7 +96,7 @@ wint_t _ungetwch_nolock(
  Obě funkce vrátí znak `c` v případě úspěchu. Pokud dojde k chybě `_ungetch` vrací hodnotu `EOF` a `_ungetwch` vrátí `WEOF`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto funkce nabízené znak `c` zpět do konzoly nástroje způsobuje `c` jako další znak číst `_getch` nebo `_getche` (nebo `_getwch` nebo `_getwche`). `_ungetch`a `_ungetwch` nezdaří, pokud jsou volaná víc než jednou před další čtení. `c` Argument nesmí být `EOF` (nebo `WEOF`).  
+ Tyto funkce nabízené znak `c` zpět do konzoly nástroje způsobuje `c` jako další znak číst `_getch` nebo `_getche` (nebo `_getwch` nebo `_getwche`). `_ungetch` a `_ungetwch` nezdaří, pokud jsou volaná víc než jednou před další čtení. `c` Argument nesmí být `EOF` (nebo `WEOF`).  
   
  Verzi pomocí `_nolock` příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
   
@@ -108,7 +111,7 @@ wint_t _ungetwch_nolock(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h >|  
+|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
 |`_ungetwch`, `_ungetwch_nolock`|\<conio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -157,5 +160,5 @@ Whitetoken = White
   
 ## <a name="see-also"></a>Viz také  
  [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cscanf –, _cscanf_l –, _cwscanf –, _cwscanf_l –](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
  [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

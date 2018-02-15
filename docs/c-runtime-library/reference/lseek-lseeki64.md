@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -27,7 +28,8 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e9b711af0b5f8c5aec24ccfa4e395951b1caf302
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 Přesune ukazatele souboru do zadaného umístění.  
@@ -70,14 +73,14 @@ __int64 _lseeki64(
  `fd`  
  Odkaz na soubor otevřený popisovač souboru.  
   
- *Posun*  
+ *offset*  
  Počet bajtů z *původu*.  
   
- *počátek*  
+ *origin*  
  Počáteční pozice.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_lseek`Vrátí posun v bajtech nový pozici od začátku souboru. `_lseeki64`Vrátí posunutí v 64bitové celé číslo. Funkce vrátí hodnotu-1 L indikující chybu. Pokud předán neplatný parametr, jako jsou popisovače souborů, nebo hodnotu *původu* je neplatný nebo pozice určeného *posun* je před začátkem souboru je neplatný parametr obslužná rutina vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EBADF` a vrátí hodnotu-1 L. Na zařízeních nepodporující vyhledávání (jako jsou terminály a tiskárny) není definován návratovou hodnotu.  
+ `_lseek` Vrátí posun v bajtech nový pozici od začátku souboru. `_lseeki64` Vrátí posunutí v 64bitové celé číslo. Funkce vrátí hodnotu-1 L indikující chybu. Pokud předán neplatný parametr, jako jsou popisovače souborů, nebo hodnotu *původu* je neplatný nebo pozice určeného *posun* je před začátkem souboru je neplatný parametr obslužná rutina vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EBADF` a vrátí hodnotu-1 L. Na zařízeních nepodporující vyhledávání (jako jsou terminály a tiskárny) není definován návratovou hodnotu.  
   
  Další informace o těchto a dalších kódy chyb najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -99,8 +102,8 @@ __int64 _lseeki64(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_lseek`|\<IO.h >|  
-|`_lseeki64`|\<IO.h >|  
+|`_lseek`|\<io.h>|  
+|`_lseeki64`|\<io.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -179,5 +182,5 @@ Position for end of file seek = 57
   
 ## <a name="see-also"></a>Viz také  
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
- [fseek, _fseeki64 –](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_tell, _telli64](../../c-runtime-library/reference/tell-telli64.md)

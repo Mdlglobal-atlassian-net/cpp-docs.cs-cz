@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fread_s
+ms.topic: reference
+apiname:
+- fread_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,18 +26,20 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d77f0f7eb0c9eabf8626a920e04534c79048bd90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5fedb1419b3558fc773933619de247cfd3685e06
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freads"></a>fread_s
 Čte data z datového proudu. Tato verze [fread –](../../c-runtime-library/reference/fread.md) má rozšířené zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -69,7 +73,7 @@ size_t fread_s(
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fread_s`Vrátí počet (celé) položky, které byly čtení do vyrovnávací paměti, který může být menší než `count` Pokud je zaznamenána chyba čtení nebo konec souboru před `count` je dosaženo. Použití `feof` nebo `ferror` funkce k rozlišení chybu z podmínku end souboru. Pokud `size` nebo `count` 0, `fread_s` vrátí 0 a obsah vyrovnávací paměti jsou stejné. Pokud `stream` nebo `buffer` je ukazatel s hodnotou null, `fread_s` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
+ `fread_s` Vrátí počet (celé) položky, které byly čtení do vyrovnávací paměti, který může být menší než `count` Pokud je zaznamenána chyba čtení nebo konec souboru před `count` je dosaženo. Použití `feof` nebo `ferror` funkce k rozlišení chybu z podmínku end souboru. Pokud `size` nebo `count` 0, `fread_s` vrátí 0 a obsah vyrovnávací paměti jsou stejné. Pokud `stream` nebo `buffer` je ukazatel s hodnotou null, `fread_s` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
   
  Další informace o chybových kódech najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -82,7 +86,7 @@ size_t fread_s(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fread_s`|\<stdio.h >|  
+|`fread_s`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

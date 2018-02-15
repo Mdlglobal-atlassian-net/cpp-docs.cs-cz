@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_tzname
+ms.topic: reference
+apiname:
+- _get_tzname
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _get_tzname
 - get_tzname
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _get_tzname function
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a44accc317bf387fcdd3ab7879020b13fba6858
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gettzname"></a>_get_tzname
 Načte řetězcovou reprezentaci znak název časového pásma nebo letní názvu standardního časového pásma (letní čas).  
@@ -56,16 +60,16 @@ errno_t _get_tzname(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Délka řetězce `timeZoneName` včetně zakončením hodnotu NULL.  
   
- [out]`timeZoneName`  
+ [out] `timeZoneName`  
  Adresa řetězec znaků pro reprezentaci název časového pásma nebo letní názvu standardního časového pásma (letní čas), v závislosti na `index`.  
   
- [v]`sizeInBytes`  
+ [in] `sizeInBytes`  
  Velikost `timeZoneName` znak řetězec v bajtech.  
   
- [v]`index`  
+ [in] `index`  
  Index jeden ze zadaných názvů dva časové pásmo pro načtení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -75,7 +79,7 @@ errno_t _get_tzname(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Návratová hodnota|Obsah`timeZoneName`|  
+|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Návratová hodnota|Obsah `timeZoneName`|  
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |velikost TZ název|`NULL`|0|0 nebo 1|0|nedojde ke změně|  
 |velikost TZ název|všechny|> 0|0 nebo 1|0|Název TZ|  
@@ -88,11 +92,11 @@ errno_t _get_tzname(
   
 ### <a name="index-values"></a>Index hodnoty  
   
-|`index`|Obsah`timeZoneName`|`timeZoneName`Výchozí hodnota|  
+|`index`|Obsah `timeZoneName`|`timeZoneName` Výchozí hodnota|  
 |-------------|--------------------------------|----------------------------------|  
 |0|Název časového pásma|"PST"|  
 |1|Název zóny letního času (běžný čas)|"PDT"|  
-|< 0 nebo > 1|`errno`Nastavte na`EINVAL`|nedojde ke změně|  
+|< 0 nebo > 1|`errno` Nastavte na `EINVAL`|nedojde ke změně|  
   
  Pokud během doby běhu jsou explicitně změnit hodnoty, výchozí hodnoty jsou "PST" a "PDT".  Velikosti tyto znaková pole se řídí `TZNAME_MAX` hodnotu.  
   
@@ -100,14 +104,14 @@ errno_t _get_tzname(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_get_tzname`|\<Time.h >|  
+|`_get_tzname`|\<time.h>|  
   
  Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight –](../../c-runtime-library/reference/get-daylight.md)   
- [_get_dstbias –](../../c-runtime-library/reference/get-dstbias.md)   
- [_get_timezone –](../../c-runtime-library/reference/get-timezone.md)   
+ [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
  [TZNAME_MAX](../../c-runtime-library/tzname-max.md)

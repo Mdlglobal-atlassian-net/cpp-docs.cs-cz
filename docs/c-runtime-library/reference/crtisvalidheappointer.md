@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsValidHeapPointer
+ms.topic: reference
+apiname:
+- _CrtIsValidHeapPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0af543a4462c5cc9dec32c279750be744efa7303
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4f888466e0b1625f93c4e1cf66fab0bb85678094
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 Ověří, že zadaný ukazatel v haldy přidělené některé běhové knihovny jazyka C, ale nemusí nutně jít knihovny CRT volajícího. Ve verzích CRT před Visual Studio 2010 to ověří, že zadaný ukazatele v lokální haldy (pouze ladicí verze).  
@@ -56,7 +60,7 @@ Ověří, že zadaný ukazatel v haldy přidělené některé běhové knihovny 
  Ukazatel na začátku bloku přidělené paměti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_CrtIsValidHeapPointer`Vrátí hodnotu TRUE, pokud je zadaný ukazatel v haldě sdílí všechny instance knihovny CRT. Ve verzích CRT před Visual Studio 2010 vrátí hodnotu TRUE Pokud je zadaný ukazatel v haldě místní. Funkce, jinak vrátí hodnotu FALSE.  
+ `_CrtIsValidHeapPointer` Vrátí hodnotu TRUE, pokud je zadaný ukazatel v haldě sdílí všechny instance knihovny CRT. Ve verzích CRT před Visual Studio 2010 vrátí hodnotu TRUE Pokud je zadaný ukazatel v haldě místní. Funkce, jinak vrátí hodnotu FALSE.  
   
 ## <a name="remarks"></a>Poznámky  
  Nedoporučujeme použití této funkce. Od verze Visual Studio 2010 CRT knihovny, všechny knihovny CRT sdílet jeden haldy operačního systému, *haldy procesu*. `_CrtIsValidHeapPointer` Funkce hlásí, zda má ukazatel byl přidělen CRT haldy, ale ne které byl přidělen pomocí knihovny CRT volajícího. Představte si třeba přidělené pomocí sady Visual Studio 2010 verzi knihovny CRT blok. Pokud `_CrtIsValidHeapPointer` funkce exportované sadou Visual Studio 2012 verzi knihovny CRT testy ukazatele, vrátí hodnotu TRUE. Toto je už užitečné test. Ve verzích knihovny CRT před Visual Studio 2010 funkce slouží k zajištění, že adresa konkrétní paměti je v rámci lokální haldy. Lokální haldy odkazuje na haldě vytvořen a spravován společností konkrétní instanci běhové knihovny jazyka C. Pokud dynamická knihovna (DLL) obsahuje statický odkaz na běhové knihovny, má svou vlastní instanci haldě běhu a proto vlastní haldy, nezávisle na lokální haldy aplikace. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtIsValidHeapPointer` jsou odebrány při předběžném zpracování.  
@@ -73,7 +77,7 @@ _ASSERTE( _CrtIsValidHeapPointer( userData ) );
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_CrtIsValidHeapPointer`|\<crtdbg.h >|  
+|`_CrtIsValidHeapPointer`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

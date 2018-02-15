@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +25,8 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -33,18 +35,19 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07be60643ad77e1138c3c23a1dd358a1d4177f25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b5dae684d922287c1301338ed3a59844ff6313ac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _asserte –, _ASSERT_EXPR makra
+# <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR Macros
 Vyhodnocení výrazu a vygenerovat sestavu ladění, když je výsledkem `False` (pouze ladicí verze).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -75,7 +78,7 @@ _ASSERTE(
   
  `_ASSERT_EXPR`, `_ASSERT` a `_ASSERTE` vyhodnotit jejich `booleanExpression` argument a výsledek je `false` (0), budou tisknout diagnostické zprávy a volání [_crtdbgreportw –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) k vygenerování sestavy ladění. `_ASSERT` Makro vytiskne jednoduché diagnostické zprávy, `_ASSERTE` zahrnuje řetězcovou reprezentaci výrazu se nezdařilo ve zprávě, a `_ASSERT_EXPR` zahrnuje `message` řetězec v diagnostické zprávy. Tyto makra nedělat nic při `booleanExpression` vyhodnocen jako nenulové hodnoty.  
   
- `_ASSERT_EXPR`, `_ASSERT` a `_ASSERTE` vyvolání `_CrtDbgReportW`, což způsobí, že veškerý výstup v široké znaky. `_ASSERTE`správně vytiskne znaky kódování Unicode v `booleanExpression` a `_ASSERT_EXPR` vytiskne znaky kódování Unicode v `message`.  
+ `_ASSERT_EXPR`, `_ASSERT` a `_ASSERTE` vyvolání `_CrtDbgReportW`, což způsobí, že veškerý výstup v široké znaky. `_ASSERTE` správně vytiskne znaky kódování Unicode v `booleanExpression` a `_ASSERT_EXPR` vytiskne znaky kódování Unicode v `message`.  
   
  Protože `_ASSERTE` makro Určuje výraz se nezdařila, a `_ASSERT_EXPR` umožňuje zadat zprávu v vygenerovanou sestavu, umožňují uživatelům určit problém bez odkazující ke zdrojovému kódu aplikace. Ale nevýhodou existuje v tom, že každý `message` tištěné `_ASSERT_EXPR` a každý výraz vyhodnocovaný `_ASSERTE` je zahrnutá ve výstupním souboru (ladicí verze) vaší aplikace jako řetězcová konstanta. Proto pokud velký počet volání `_ASSERT_EXPR` nebo `_ASSERTE`, těchto výrazů může výrazně zvýšit velikost výstupního souboru.  
   
@@ -83,7 +86,7 @@ _ASSERTE(
   
 `_CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);`  
   
- `_CrtDbgReportW`vytváří sestavu ladění a určuje jeho cílového nebo cíle, na základě aktuální režim sestav nebo režimy a soubor definice pro `_CRT_ASSERT` typu Sestava. Ve výchozím nastavení selhání vyhodnocení a chyb jsou směrované okno zprávy ladění. [_Crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.  
+ `_CrtDbgReportW` vytváří sestavu ladění a určuje jeho cílového nebo cíle, na základě aktuální režim sestav nebo režimy a soubor definice pro `_CRT_ASSERT` typu Sestava. Ve výchozím nastavení selhání vyhodnocení a chyb jsou směrované okno zprávy ladění. [_Crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md) a [_crtsetreportfile –](../../c-runtime-library/reference/crtsetreportfile.md) funkce slouží k určení cíle pro každý typ sestavy.  
   
  Pokud je cílem okno zprávy ladění a uživatel klikne **opakujte** tlačítko `_CrtDbgReportW` vrátí hodnotu 1, způsobuje `_ASSERT_EXPR`, `_ASSERT` a `_ASSERTE` maker, pro spuštění ladicího programu za předpokladu, že je povolené ladění v běhu (JIT).  
   
@@ -95,9 +98,9 @@ _ASSERTE(
   
 ## <a name="requirements"></a>Požadavky  
   
-|– Makro|Požadovaný hlavičkový soubor|  
+|Macro|Požadovaný hlavičkový soubor|  
 |-----------|---------------------|  
-|`_ASSERT_EXPR`,                  `_ASSERT`, `_ASSERTE`|\<crtdbg.h >|  
+|`_ASSERT_EXPR`,                  `_ASSERT`, `_ASSERTE`|\<crtdbg.h>|  
   
 ## <a name="example"></a>Příklad  
  V tomto programu volání `_ASSERT` a `_ASSERTE` makra, která otestuje podmínku `string1 == string2`. V případě selhání podmínku tyto makra tisk diagnostické zprávy. `_RPTn` a `_RPTFn` skupinu maker je také provést tento program jako alternativu k `printf` funkce.  
@@ -176,5 +179,5 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
   
 ## <a name="see-also"></a>Viz také  
  [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
- [Assert – makro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [assert Macro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_RPT, _RPTF, _RPTW, _RPTFW – makra](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)

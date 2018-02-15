@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _malloc_dbg
 apilocation:
@@ -38,11 +38,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6693b362bcc69b6ca8e8b97dc350eb57b802436f
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 616fd3b71cd97e6abffb7c8a06d30a0f69146408
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 Přiděluje blok paměti v haldě s další prostor pro ladění hlavičky a přepsání vyrovnávací paměti (pouze ladicí verze).  
@@ -77,11 +77,11 @@ void *_malloc_dbg(
  Při úspěšném dokončení této funkce vrací ukazatel na části uživatele bloku přidělenou paměť, volá nové funkce obslužné rutiny nebo vrátí hodnotu NULL. Úplný popis návratový chování najdete v následující části poznámky. Další informace o používání nové funkce obslužné rutiny najdete v tématu [malloc](../../c-runtime-library/reference/malloc.md) funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- `_malloc_dbg`ladicí verze [malloc](../../c-runtime-library/reference/malloc.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_malloc_dbg` byla snížena volání `malloc`. Obě `malloc` a `_malloc_dbg` přidělit blok paměti v haldě základní ale `_malloc_dbg` nabízí několik funkce ladění: vyrovnávací paměti na obou stranách části uživatele bloku chcete otestovat nevracení, parametr typ bloku ke sledování konkrétní přidělení typy a `filename` / `linenumber` informací k určení původu požadavků na přidělení.  
+ `_malloc_dbg` ladicí verze [malloc](../../c-runtime-library/reference/malloc.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_malloc_dbg` byla snížena volání `malloc`. Obě `malloc` a `_malloc_dbg` přidělit blok paměti v haldě základní ale `_malloc_dbg` nabízí několik funkce ladění: vyrovnávací paměti na obou stranách části uživatele bloku chcete otestovat nevracení, parametr typ bloku ke sledování konkrétní přidělení typy a `filename` / `linenumber` informací k určení původu požadavků na přidělení.  
   
- `_malloc_dbg`přiděluje blok paměti s něco víc místa, než požadovaný `size`. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Při přidělení bloku části uživatele bloku je vyplněnou hodnotou 0xCD a každý z vyrovnávací paměti přepsat jsou vyplněny 0xFD.  
+ `_malloc_dbg` přiděluje blok paměti s něco víc místa, než požadovaný `size`. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Při přidělení bloku části uživatele bloku je vyplněnou hodnotou 0xCD a každý z vyrovnávací paměti přepsat jsou vyplněny 0xFD.  
   
- `_malloc_dbg`Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo pokud přesahuje množství paměti nutné (včetně režie, již bylo zmíněno dříve) `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_malloc_dbg` Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo pokud přesahuje množství paměti nutné (včetně režie, již bylo zmíněno dříve) `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce standardní haldy a jeho ladicí verze v sestavení ladicí verze aplikace, najdete v tématu [ladění verzí z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   

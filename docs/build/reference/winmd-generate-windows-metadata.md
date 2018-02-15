@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs: C++
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs:
+- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 903ab6875457aa8c069c47a2be7f8ff1f5c884a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7517ec459677659067e80930ee48caccf84d52f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Generování metadat Windows)
 Umožňuje generování metadat Windows Runtime (.winmd) souboru.  
@@ -30,12 +34,12 @@ Umožňuje generování metadat Windows Runtime (.winmd) souboru.
   
 ## <a name="remarks"></a>Poznámky  
  / WINMD  
- Výchozí nastavení pro [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Linkeru generuje binární spustitelný soubor a soubor metadat .winmd.  
+ Výchozí nastavení pro aplikace pro univerzální platformu Windows. Linkeru generuje binární spustitelný soubor a soubor metadat .winmd.  
   
  /WINMD:NO  
  Linkeru generuje pouze binární spustitelný soubor, ale nejedná se o soubor .winmd.  
   
- / WINMD: JENOM  
+ /WINMD:ONLY  
  Linkeru generuje pouze soubor .winmd, ale ne binární spustitelný soubor.  
   
  Ve výchozím nastavení, název výstupního souboru má tvar `binaryname`.winmd. Pokud chcete zadat jiný název souboru, použijte [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) možnost.  

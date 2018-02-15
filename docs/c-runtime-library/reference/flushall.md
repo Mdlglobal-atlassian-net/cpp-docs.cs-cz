@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _flushall
+ms.topic: reference
+apiname:
+- _flushall
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _flushall
-dev_langs: C++
+f1_keywords:
+- _flushall
+dev_langs:
+- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 76a99cbdd3376579bac0126704a4df496905446e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 25e8a0045758d22a9b519cd1ffe4cc675a7674c2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="flushall"></a>_flushall
 Počet vyprázdnění všechny datové proudy; Vymaže všechny vyrovnávací paměti.  
@@ -50,7 +55,7 @@ int _flushall( void );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_flushall`Vrátí počet otevřete datových proudů (vstup a výstup). Neexistuje žádný návratový chyby.  
+ `_flushall` Vrátí počet otevřete datových proudů (vstup a výstup). Neexistuje žádný návratový chyby.  
   
 ## <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `_flushall` funkce zapisuje do příslušné soubory obsahu vyrovnávacích pamětí všechny přidružené otevřít výstupní datové proudy. Všechny vyrovnávací paměti přidružené otevřete vstupní datové proudy vyjmuty z jejich aktuálního obsahu. (Tyto vyrovnávací paměti se obvykle spravuje podle operačního systému, která určuje optimální čas automaticky zapsat data na disk: Pokud vyrovnávací paměť je plná, když datový proud je uzavřen nebo když program ukončí normálně bez zavření datové proudy.)  
@@ -65,7 +70,7 @@ int _flushall( void );
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_flushall`|\<stdio.h >|  
+|`_flushall`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -93,7 +98,7 @@ There were 3 streams flushed
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_commit –](../../c-runtime-library/reference/commit.md)   
+ [_commit](../../c-runtime-library/reference/commit.md)   
  [fclose –, _fcloseall –](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush –](../../c-runtime-library/reference/fflush.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _controlfp_s
+ms.topic: reference
+apiname:
+- _controlfp_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - controlfp_s
 - _controlfp_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - controlfp_s function
@@ -32,16 +35,17 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8c8f651e04a1d68cd27f8321d6a30250c0e6ce1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ed5896a723ec44d460b0d9588878b431ff7ef14
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="controlfps"></a>_controlfp_s
 Získá a nastaví s plovoucí desetinnou čárkou řídicího slova. Tato verze [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) má rozšířené zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -79,9 +83,9 @@ errno_t _controlfp_s(
 > [!NOTE]
 >  Ve výchozím nastavení masku běhové knihovny všechny výjimky s plovoucí desetinnou čárkou.  
   
- `_controlfp_s`je téměř shodná `_control87` funkce na Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]a platformy ARM. Pokud cílíte x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], nebo ARM platformy, můžete použít `_control87` nebo `_controlfp_s`.  
+ `_controlfp_s` je téměř shodná `_control87` funkce na Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]a platformy ARM. Pokud cílíte x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], nebo ARM platformy, můžete použít `_control87` nebo `_controlfp_s`.  
   
- Rozdíl mezi `_control87` a `_controlfp_s` je v tom, jak se považovat `DENORMAL` hodnoty. Pro technologii Intel (x86) [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]a platformy ARM `_control87` můžete nastavit a vymazat maska DENORMAL OPERAND výjimka. `_controlfp_s`Maska výjimka DENORMAL OPERAND nelze změnit. Tento příklad ukazuje rozdíl:  
+ Rozdíl mezi `_control87` a `_controlfp_s` je v tom, jak se považovat `DENORMAL` hodnoty. Pro technologii Intel (x86) [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]a platformy ARM `_control87` můžete nastavit a vymazat maska DENORMAL OPERAND výjimka. `_controlfp_s` Maska výjimka DENORMAL OPERAND nelze změnit. Tento příklad ukazuje rozdíl:  
   
 ```C  
 _control87( _EM_INVALID, _MCW_EM );   
@@ -119,11 +123,11 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 |Maska|Šestnáctkové hodnoty|Konstanta|Šestnáctkové hodnoty|  
 |----------|---------------|--------------|---------------|  
-|`_MCW_DN`(Denormal řízení)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
-|`_MCW_EM`(Přerušení maska výjimka)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
-|`_MCW_IC`(Infinity řízení)<br /><br /> (Není podporováno v ARM nebo [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0x00040000<br /><br /> 0x00000000|  
-|`_MCW_RC`(Zaokrouhlení řízení)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
-|`_MCW_PC`(Přesností řízení)<br /><br /> (Není podporováno v ARM nebo [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00030000|`_PC_24`(24 bits)<br /><br /> `_PC_53`(53 bits)<br /><br /> `_PC_64`(64bitová verze)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
+|`_MCW_DN` (Denormal řízení)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
+|`_MCW_EM` (Přerušení maska výjimka)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
+|`_MCW_IC` (Infinity řízení)<br /><br /> (Není podporováno v ARM nebo [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0x00040000<br /><br /> 0x00000000|  
+|`_MCW_RC` (Zaokrouhlení řízení)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
+|`_MCW_PC` (Přesností řízení)<br /><br /> (Není podporováno v ARM nebo [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00030000|`_PC_24` (24 bits)<br /><br /> `_PC_53` (53 bits)<br /><br /> `_PC_64` (64bitová verze)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -186,6 +190,6 @@ Default:  0x9001f
   
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [_clear87 –, _clearfp –](../../c-runtime-library/reference/clear87-clearfp.md)   
- [_status87 – _statusfp –, _statusfp2 –](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
+ [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
+ [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
  [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

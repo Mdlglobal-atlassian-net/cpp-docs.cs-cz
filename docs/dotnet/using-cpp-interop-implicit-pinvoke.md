@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)
 Na rozdíl od jiných jazyků .NET, Visual C++ má interoperabilita podpory, který umožňuje spravovanými a nespravovanými kód existovat ve stejné aplikaci a to i ve stejném souboru (s [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy). To umožňuje vývojářům Visual C++ integrovat funkce .NET do stávajících aplikací Visual C++ bez narušení zbývající aplikace.  
@@ -54,7 +56,7 @@ Na rozdíl od jiných jazyků .NET, Visual C++ má interoperabilita podpory, kte
  Explicitního volání PInvoke podporuje rozhraní .NET Framework a je dostupný ve většině jazyků .NET. Ale jak již název napovídá, zprostředkovatele komunikace C++ je specifické pro aplikaci Visual C++.  
   
 ## <a name="c-interop"></a>interoperabilita C++  
- Interoperabilita C++ se doporučuje namísto explicitního volání PInvoke, protože poskytuje lepší zabezpečení typů, je obvykle méně náročná na implementaci, je více forgiving, pokud nespravovaného rozhraní API se mění a umožňuje vylepšení výkonu, které nejsou možné pomocí explicitní PInvoke. Interoperabilita C++ však není možné, pokud není k dispozici nespravovaný zdrojový kód, nebo když kompilujete s **/CLR: safe**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015. Informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Interoperabilita C++ se doporučuje namísto explicitního volání PInvoke, protože poskytuje lepší zabezpečení typů, je obvykle méně náročná na implementaci, je více forgiving, pokud nespravovaného rozhraní API se mění a umožňuje vylepšení výkonu, které nejsou možné pomocí explicitní PInvoke. Interoperabilita C++ však není možné, pokud není k dispozici nespravovaný zdrojový kód.  
   
 ## <a name="c-com-interop"></a>interoperabilita C++ COM  
  Funkce interoperability podporované Visual C++ nabízí konkrétní výhody oproti jinými jazyky rozhraní .NET, pokud jde o vzájemné spolupráci se službou COM – součásti. Namísto omezení rozhraní .NET Framework [Tlbimp.exe (Importér knihovny)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), jako je například omezenou podporu pro datové typy a povinné vystavení každého člena každé rozhraní modelu COM, umožňuje Interoperabilita C++ COM součástí získat přístup na adrese bude a nevyžaduje samostatnou spolupráce – sestavení. Další informace najdete v tématu [pomocí modelu COM pomocí technologie .NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15).  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - putchar
 - putwchar
@@ -27,7 +28,8 @@ f1_keywords:
 - putchar
 - putwchar
 - _puttchar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - putchar function
 - _puttchar function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f3320f40f822c9559b411144ecc621824eedbd3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 687cacfbf59f2d905de8f14bcebb6e7bbf68fb53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 Zapíše znak pro **stdout**.  
@@ -71,7 +74,7 @@ wint_t putwchar(
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
   
 ## <a name="remarks"></a>Poznámky  
- `putc` Rutiny zapíše jednoho znaku `c` k výstupu `stream` na aktuální pozici. Jakékoliv celé číslo se dá předat do `putc`, ale jsou zapsány pouze nižších 8 bitů. `putchar` Rutiny je stejný jako **putc – (** `c` **, stdout)**. Pro každou rutinu Pokud dojde k chybě čtení, označení chyb pro datový proud nastavena. `putc`a `putchar` jsou podobné `fputc` a `_fputchar`, ale jsou implementované jako funkce i jako makra (najdete v části [výběru mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc`a `putwchar` jsou verze široká charakterová `putc` a `putchar`, v uvedeném pořadí.  
+ `putc` Rutiny zapíše jednoho znaku `c` k výstupu `stream` na aktuální pozici. Jakékoliv celé číslo se dá předat do `putc`, ale jsou zapsány pouze nižších 8 bitů. `putchar` Rutiny je stejný jako **putc – (** `c` **, stdout)**. Pro každou rutinu Pokud dojde k chybě čtení, označení chyb pro datový proud nastavena. `putc` a `putchar` jsou podobné `fputc` a `_fputchar`, ale jsou implementované jako funkce i jako makra (najdete v části [výběru mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` a `putwchar` jsou verze široká charakterová `putc` a `putchar`, v uvedeném pořadí.  
   
  Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
   
@@ -79,16 +82,16 @@ wint_t putwchar(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_puttchar`|`putchar`|`putchar`|**putwchar –**|  
+|`_puttchar`|`putchar`|`putchar`|**putwchar**|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`putchar`|\<stdio.h >|  
+|`putchar`|\<stdio.h>|  
 |`putwchar`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Knihovny  
  Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  

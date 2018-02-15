@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _endthread
 - _endthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - endthreadex
 - _endthreadex
 - endthread
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _endthread function
 - endthread function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5abe2f0aa2f62048fefb2f79614e018fbdb51e08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 794dc5c4bbaf9653c5b6bbb08ea3e0a60ca438c4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 Ukončí podprocesu. `_endthread` ukončuje podproces, který byl vytvořený `_beginthread` a `_endthreadex` ukončuje podproces, který byl vytvořený `_beginthreadex`.  
@@ -68,21 +71,21 @@ void _endthreadex(
  Můžete volat `_endthread` nebo `_endthreadex` explicitně k ukončení vlákna; však `_endthread` nebo `_endthreadex` při vlákno vrátí z rutiny předány jako parametr, který se nazývá automaticky `_beginthread` nebo `_beginthreadex`. Ukončení vlákna pomocí volání `endthread` nebo `_endthreadex` pomáhá zajistit, aby správné obnovení prostředky přidělené pro vlákno.  
   
 > [!NOTE]
->  Pro spustitelný soubor, propojený s Libcmt.lib, nevolejte Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) rozhraní API; to brání spuštění systému opětovného získání přidělené prostředky. `_endthread`a `_endthreadex` uvolnit prostředky přidělené vláken a pak zavolají `ExitThread`.  
+>  Pro spustitelný soubor, propojený s Libcmt.lib, nevolejte Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) rozhraní API; to brání spuštění systému opětovného získání přidělené prostředky. `_endthread` a `_endthreadex` uvolnit prostředky přidělené vláken a pak zavolají `ExitThread`.  
   
- `_endthread`automaticky zavře popisovač podprocesu. (Toto chování se liší od Win32 `ExitThread` rozhraní API.) Proto při použití `_beginthread` a `_endthread`, popisovač podprocesu explicitně nezavírejte voláním Win32 [funkce CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API.  
+ `_endthread` automaticky zavře popisovač podprocesu. (Toto chování se liší od Win32 `ExitThread` rozhraní API.) Proto při použití `_beginthread` a `_endthread`, popisovač podprocesu explicitně nezavírejte voláním Win32 [funkce CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API.  
   
  Jako Win32 `ExitThread` rozhraní API, `_endthreadex` nezavře popisovač podprocesu. Proto při použití `_beginthreadex` a `_endthreadex`, je třeba nejprve zavřít popisovač podprocesu voláním Win32 `CloseHandle` rozhraní API.  
   
 > [!NOTE]
->  `_endthread`a `_endthreadex` způsobit C++ destruktory čekající na vyřízení ve vláknu není, která se má volat.  
+>  `_endthread` a `_endthreadex` způsobit C++ destruktory čekající na vyřízení ve vláknu není, která se má volat.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_endthread`|\<Process.h >|  
-|`_endthreadex`|\<Process.h >|  
+|`_endthread`|\<process.h>|  
+|`_endthreadex`|\<process.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

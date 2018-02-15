@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -27,7 +28,8 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e26ebd870d30e61b06aff1f7c13298883c99aae5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34da3f704f3350a9fbd8750c940cdc4e847cfb40
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 Přejmenujte soubor nebo adresář.  
@@ -93,19 +96,19 @@ int _wrename(
 ## <a name="remarks"></a>Poznámky  
  **Přejmenovat** funkce přejmenuje soubor nebo adresář zadaný *oldname* na daný název podle *newname*. Starý název musí být cesta existující soubor nebo adresář. Nový název nesmí být název existující soubor nebo adresář. Můžete použít **přejmenovat** přesunout soubor z jednoho adresáře nebo zařízení do jiné tím, že jiné cestě *newname* argument. Ale nemůžete použít **přejmenovat** k přesunutí adresáře. Adresáře můžete přejmenovat, ale není přesunut.  
   
- `_wrename`široká charakterová verze **_rename**; argumenty, které mají `_wrename` jsou široká charakterová řetězce. `_wrename`a **_rename** chovat jinak shodně.  
+ `_wrename` široká charakterová verze **_rename**; argumenty, které mají `_wrename` jsou široká charakterová řetězce. `_wrename` a **_rename** chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_trename`|**Přejmenování**|**Přejmenování**|`_wrename`|  
+|`_trename`|**rename**|**rename**|`_wrename`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|**Přejmenování**|\<IO.h > nebo \<stdio.h >|  
+|**rename**|\<IO.h > nebo \<stdio.h >|  
 |`_wrename`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

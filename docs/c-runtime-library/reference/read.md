@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -58,18 +63,18 @@ int _read(
   
 ### <a name="parameters"></a>Parametry  
 
-*FD*  
+*fd*  
 Popisovače souborů na otevření souboru.  
   
-*vyrovnávací paměti*  
+Vyrovnávací paměti  
 Umístění úložiště pro data.  
   
-*počet*  
+*Počet*  
 Maximální počet bajtů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
 
-`_read`Vrátí počet bajtů přečtených, což může být menší než *počet* Pokud méně než *počet* left bajtů v souboru nebo pokud byl soubor otevřít v textovém režimu, v takovém případě každý vrátí řádek znaků CR kanálu pár `\r\n` se nahradí znak jednoho konce řádku `\n`. Pouze jeden konce řádku znak se počítá v návratovou hodnotu. Pokud chcete nahrazení neovlivňuje ukazatele souboru.  
+`_read` Vrátí počet bajtů přečtených, což může být menší než *počet* Pokud méně než *počet* left bajtů v souboru nebo pokud byl soubor otevřít v textovém režimu, v takovém případě každý vrátí řádek znaků CR kanálu pár `\r\n` se nahradí znak jednoho konce řádku `\n`. Pouze jeden konce řádku znak se počítá v návratovou hodnotu. Pokud chcete nahrazení neovlivňuje ukazatele souboru.  
   
 Pokud funkce se pokusí přečíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčený, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu -1 a nastaví je povoleno spuštění `errno` k `EBADF`.  
   
@@ -87,7 +92,7 @@ Pokud byl soubor otevřít v textovém režimu, čtení ukončí při `_read` za
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_read`|\<IO.h >|  
+|`_read`|\<io.h>|  
   
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -151,7 +156,7 @@ Read 19 bytes from file
 ## <a name="see-also"></a>Viz také  
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
-[_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
+[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
 [fread –](../../c-runtime-library/reference/fread.md)   
-[_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
+[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
 [_write](../../c-runtime-library/reference/write.md)

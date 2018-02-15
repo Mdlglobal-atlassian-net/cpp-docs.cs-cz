@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.  
@@ -45,7 +47,7 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  Tady jsou některé prostředky, které vám může pomoct získat práce knihovna šablon C++ Runtime Windows hned.  
   
  [Knihovna Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- V tomto videu Channel 9 Další informace o tom, jak vám může pomoci knihovna šablon C++ Runtime Windows zápisu aplikace pro univerzální platformu Windows a jak vytvářet a využívat komponenty prostředí Windows Runtime.  
+ V tomto videu Channel 9 Další informace o tom, jak vám může pomoci knihovna šablon C++ Runtime Windows zápisu aplikace pro univerzální platformu Windows (UWP) a jak vytvářet a využívat komponenty prostředí Windows Runtime.  
   
  [Postupy: Aktivace a používání komponent prostředí Windows Runtime](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Ukazuje, jak používat knihovna šablon C++ Runtime Windows k inicializaci prostředí Windows Runtime a aktivace a používání komponent prostředí Windows Runtime.  
@@ -57,10 +59,10 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  Ukazuje, jak používat k přihlášení k odběru a zpracování událostí objektu prostředí Windows Runtime knihovna šablon C++ Runtime systému Windows.  
   
  [Návod: Vytvoření komponenty základní služby Windows Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Ukazuje, jak vytvořit základní komponenty prostředí Windows Runtime, která sečte dvě čísla pomocí knihovny šablon jazyka C++ Runtime systému Windows. Také ukazuje, jak aktivovat události a používání komponent z aplikace univerzální platformu Windows, která používá jazyk JavaScript.  
+ Ukazuje, jak vytvořit základní komponenty prostředí Windows Runtime, která sečte dvě čísla pomocí knihovny šablon jazyka C++ Runtime systému Windows. Také ukazuje, jak aktivovat události a používání komponent z aplikace pro UPW, která používá jazyk JavaScript.  
   
- [Návod: Vytvoření aplikace pro Windows Store s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Zjistěte, jak vytvořit aplikaci pro univerzální platformu Windows, která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Návod: Vytvoření aplikace pro UPW pomocí knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Naučte se vytvářet aplikace pro UPW, který používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Ukazuje, jak použít knihovna šablon C++ Runtime Windows k vytvoření základní komponenty modelu COM a základní způsob, jak zaregistrovat a využívat komponenty modelu COM z aplikace na ploše.  
@@ -72,10 +74,10 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  Ukazuje, jak používat vlastní komponenty prostředí Windows Runtime z knihovny WRL vytvořením souboru IDL z .winmd metadat.  
   
  [Návod: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Ukazuje, jak používat [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) a [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) rozhraní společně s úkoly na odesílání žádostí HTTP GET a POST na webovou službu v aplikaci pro univerzální platformu Windows.  
+ Ukazuje, jak používat [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) a [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) rozhraní společně s úkoly na odesílání žádostí HTTP GET a POST na webovou službu v aplikaci UWP.  
   
  [Ukázka Optimalizátor cestě Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Používá `HttpRequest` třídu, která je definována v [návod: připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) v kontextu kompletní aplikace pro univerzální platformu Windows.  
+ Používá `HttpRequest` třídu, která je definována v [návod: připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) v kontextu kompletní aplikace UWP.  
   
  [Vytvoření komponenty prostředí Windows Runtime DLL s ukázkou C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Ukazuje, jak používat knihovna šablon C++ Runtime Windows vytvořit komponentu knihovny DLL v procesu a využívat z C + +/ CX, JavaScript a C#.  
@@ -89,7 +91,7 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Knihovna šablon C++ prostředí Windows Runtime ve srovnání s ATL  
  Vzhledem k tomu slouží k vytvoření malého, rychlé objekty modelu COM se podobá knihovna šablon C++ prostředí Windows Runtime Active šablony Library (ATL). Knihovna šablon C++ prostředí Windows Runtime a knihovna ATL také sdílet koncepty, jako je například definice objektů v modulech explicitní registrační rozhraní a otevřete vytváření objektů s použitím objektů Factory. Knihovna šablon C++ prostředí Windows Runtime celý může být, pokud jste obeznámeni s ATL.  
   
- Knihovna šablon C++ prostředí Windows Runtime podporuje funkce COM, která je požadována pro univerzální platformu Windows aplikace. Proto se liší od knihovny ATL vzhledem k tomu vynechán přímé podpory pro funkce COM, jako:  
+ Knihovna šablon C++ prostředí Windows Runtime podporuje funkci COM, která je požadována pro aplikace UWP. Proto se liší od knihovny ATL vzhledem k tomu vynechán přímé podpory pro funkce COM, jako:  
   
 -   Agregace  
   
@@ -113,7 +115,7 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  Knihovna šablon C++ prostředí Windows Runtime obsahuje typy, které představují několik základní koncepty. Následující části popisují tyto typy.  
   
 ### <a name="comptr"></a>ComPtr  
- [ComPtr](../windows/comptr-class.md) je *chytré ukazatele* typ, který představuje rozhraní, která je zadána parametr šablony. Použití `ComPtr` deklarovat proměnnou a tu můžete přístup ke členům v objektu, který je odvozený z rozhraní. `ComPtr`automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, kdy přestane počet odkazů na nulu.  
+ [ComPtr](../windows/comptr-class.md) je *chytré ukazatele* typ, který představuje rozhraní, která je zadána parametr šablony. Použití `ComPtr` deklarovat proměnnou a tu můžete přístup ke členům v objektu, který je odvozený z rozhraní. `ComPtr` automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, kdy přestane počet odkazů na nulu.  
   
 ### <a name="runtimeclass"></a>RuntimeClass  
  [RuntimeClass](../windows/runtimeclass-class.md) představuje instancí třídu, která dědí sada zadaný rozhraní. A `RuntimeClass` objekt můžete poskytovat kombinaci podpory pro jeden nebo více rozhraní Windows Runtime COM nebo slabé odkaz na komponentu.  
@@ -131,7 +133,7 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  [AsyncBase](../windows/asyncbase-class.md) poskytuje virtuální metody, které představují asynchronní programovací model Windows Runtime. Přepsání členů v této třídy pro vytvoření vlastní třídy, které můžete spustit, zastavit nebo průběh asynchronní operace.  
   
 ### <a name="ftmbase"></a>FtmBase  
- [FtmBase](../windows/ftmbase-class.md) představuje volné zařazování vláken objektu. `FtmBase`vytvoří tabulku globální rozhraní (GIT) a pomáhá spravovat objekty zařazování a proxy serveru.  
+ [FtmBase](../windows/ftmbase-class.md) představuje volné zařazování vláken objektu. `FtmBase` vytvoří tabulku globální rozhraní (GIT) a pomáhá spravovat objekty zařazování a proxy serveru.  
   
 ### <a name="weakref"></a>WeakRef  
  [WeakRef](../windows/weakref-class.md) je typ čipové ukazatele, který reprezentuje *slabé odkaz*, který odkazuje na objekt, který může nebo nemusí být dostupné. A `WeakRef` objekt lze použít pouze prostředí Windows Runtime a ne klasického modelu COM.  

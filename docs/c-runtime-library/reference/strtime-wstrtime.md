@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -29,7 +30,8 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 112e5b6c29f73cb162a1d417fb23842fafc80ff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00c355d5d11fe403b8004eeb3b90dc46ba34dab3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 Kopírování času do vyrovnávací paměti. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strtime_s –, _wstrtime_s –](../../c-runtime-library/reference/strtime-s-wstrtime-s.md).  
@@ -83,7 +86,7 @@ wchar_t *_wstrtime(
 ## <a name="remarks"></a>Poznámky  
  `_strtime` Funkce zkopíruje aktuálním místním časem do vyrovnávací paměti, na kterou odkazuje `timestr`. Formát času je jako `hh:mm:ss` kde `hh` je dvě číslice představující hodinu ve 24hodinovém formátu `mm` je dvě číslice představující minut po hodině, a `ss` je dvě číslice představující sekund. Například řetězec `18:23:44` představuje 23 minut a 44 sekund po 6 hodin Vyrovnávací paměti musí být minimálně 9 bajtů.  
   
- `_wstrtime`široká charakterová verze `_strtime`; argument a vrátí hodnotu `_wstrtime` jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak. Pokud `timestr` je `NULL` ukazatel nebo, pokud `timestr` je v nesprávném formátu, neplatný parametr rutina je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud výjimka může pokračovat, tyto funkce vrátí hodnotu NULL a sadu `errno` k `EINVAL` Pokud `timestr` byla NULL nebo nastavte `errno` k `ERANGE` Pokud `timestr` je v nesprávném formátu.  
+ `_wstrtime` široká charakterová verze `_strtime`; argument a vrátí hodnotu `_wstrtime` jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak. Pokud `timestr` je `NULL` ukazatel nebo, pokud `timestr` je v nesprávném formátu, neplatný parametr rutina je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud výjimka může pokračovat, tyto funkce vrátí hodnotu NULL a sadu `errno` k `EINVAL` Pokud `timestr` byla NULL nebo nastavte `errno` k `ERANGE` Pokud `timestr` je v nesprávném formátu.  
   
  V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -97,7 +100,7 @@ wchar_t *_wstrtime(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_strtime`|\<Time.h >|  
+|`_strtime`|\<time.h>|  
 |`_wstrtime`|\<Time.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -126,10 +129,10 @@ The current time is 14:21:44
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [mktime – _mktime32 –, _mktime64 –](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

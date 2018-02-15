@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wmktemp
 - _mktemp
@@ -29,7 +30,8 @@ f1_keywords:
 - tmktemp
 - _wmktemp
 - _mktemp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wmktemp function
 - _mktemp function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ac2fd19254cce03b7cd7efc4324f5dc03c608b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f87321b24e96ff00f54ecefbf67b5bd211595d71
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 Vytvoří jedinečný název souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_mktemp_s –, _wmktemp_s –](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md).  
@@ -81,7 +84,7 @@ wchar_t *_wmktemp(
  Každá z těchto funkcí vrací ukazatel na šabloně upravené. Funkce vrátí hodnotu `NULL` Pokud `template` je chybně vytvořen nebo je možné vytvářet žádné další jedinečné názvy z dané šablony.  
   
 ## <a name="remarks"></a>Poznámky  
- `_mktemp` Funkce vytvoří jedinečný název souboru změnou `template` argument. `_mktemp`automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používána v běhu systému. `_wmktemp`široká charakterová verze `_mktemp`; argument a vrátí hodnotu `_wmktemp` jsou široká charakterová řetězce. `_wmktemp`a `_mktemp` chovat jinak, stejně jako vyjma toho, že `_wmktemp` nezpracovává řetězců vícebajtových znaků.  
+ `_mktemp` Funkce vytvoří jedinečný název souboru změnou `template` argument. `_mktemp` automaticky zpracovává argumenty řetězce vícebajtových znaků podle potřeby, rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky aktuálně používána v běhu systému. `_wmktemp` široká charakterová verze `_mktemp`; argument a vrátí hodnotu `_wmktemp` jsou široká charakterová řetězce. `_wmktemp` a `_mktemp` chovat jinak, stejně jako vyjma toho, že `_wmktemp` nezpracovává řetězců vícebajtových znaků.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -89,7 +92,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
   
- `template` Argument má formulář `base` *XXXXXX*, kde `base` je součástí nový název souboru, který zadáte a každá X je zástupný symbol pro znak poskytl `_mktemp`. Každý zástupný znak v `template` musí být velká X. `_mktemp` zachovává `base` a nahradí první Koncové X znakem abecedy. `_mktemp`nahrazuje následující koncové značkou s hodnotou pět číslic; Tato hodnota je jedinečné číslo identifikující volání zpracovat, nebo programy s více vlákny, volající vlákno.  
+ `template` Argument má formulář `base` *XXXXXX*, kde `base` je součástí nový název souboru, který zadáte a každá X je zástupný symbol pro znak poskytl `_mktemp`. Každý zástupný znak v `template` musí být velká X. `_mktemp` zachovává `base` a nahradí první Koncové X znakem abecedy. `_mktemp` nahrazuje následující koncové značkou s hodnotou pět číslic; Tato hodnota je jedinečné číslo identifikující volání zpracovat, nebo programy s více vlákny, volající vlákno.  
   
  Každé úspěšné volání `_mktemp` upraví `template`. Při každém následných volání z stejný postup nebo vlákno se stejným `template` argument, `_mktemp` kontroly pro názvy souborů, které odpovídají názvy vrácené `_mktemp` v předchozích volání. Pokud pro daného názvu, neexistuje žádný soubor `_mktemp` vrátí tímto názvem. Pokud soubory existují pro všechny názvy, předtím vrátila `_mktemp` vytvoří nový název nahrazením znak abecedy použije v názvu dříve vrácený s další dostupné malé písmeno, v pořadí od 'a' do 'z'. Například pokud `base` je:  
   
@@ -115,7 +118,7 @@ fnb12345
 fna12345  
 ```  
   
- `_mktemp`můžete vytvořit maximálně 26 jedinečných názvů souborů pro libovolnou kombinaci dané hodnoty základní a šablony. Proto je FNZ12345 příjmení jedinečný soubor `_mktemp` můžete vytvořit pro `base` a `template` hodnoty používané v tomto příkladu.  
+ `_mktemp` můžete vytvořit maximálně 26 jedinečných názvů souborů pro libovolnou kombinaci dané hodnoty základní a šablony. Proto je FNZ12345 příjmení jedinečný soubor `_mktemp` můžete vytvořit pro `base` a `template` hodnoty používané v tomto příkladu.  
   
  Při selhání `errno` nastavena. Pokud `template` má neplatný formát (například méně než 6 značkou), `errno` je nastaven na `EINVAL`. Pokud `_mktemp` se nepodařilo vytvořit jedinečný název, protože názvy všech 26 možné soubor již existuje, `_mktemp` nastaví šablonu na prázdný řetězec a vrátí `EEXIST`.  
   
@@ -125,7 +128,7 @@ fna12345
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_mktemp`|\<IO.h >|  
+|`_mktemp`|\<io.h>|  
 |`_wmktemp`|\<IO.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -219,9 +222,9 @@ Out of unique filenames.
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_getmbcp –](../../c-runtime-library/reference/getmbcp.md)   
- [_getpid –](../../c-runtime-library/reference/getpid.md)   
- [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
- [_setmbcp –](../../c-runtime-library/reference/setmbcp.md)   
- [_tempnam –, _wtempnam –, tmpnam –, _wtmpnam –](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_getpid](../../c-runtime-library/reference/getpid.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)

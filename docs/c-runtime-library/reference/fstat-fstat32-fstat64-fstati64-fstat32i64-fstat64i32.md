@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -40,7 +41,8 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -56,16 +58,17 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2993016e9c6b3a4ea7d47ba8071fab1267e483f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c9518a0ea841a252717c225df7f07deba3a1ffbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 Získá informace o otevření souboru.  
@@ -122,7 +125,7 @@ int _fstat64i32(
  Pokud zařízení, `fd`; jinak hodnota 0.  
   
  `st_mode`  
- Bitová maska režim souboru informace. `_S_IFCHR` Pokud je nastaven bit `fd` odkazuje na zařízení. `_S_IFREG` Pokud je nastaven bit `fd` odkazuje na soubor obyčejnou. Službu bits pro čtení a zápis jsou nastavena podle režimu oprávnění souboru. `_S_IFCHR`a ostatní konstanty jsou definovány v SYS\Stat.h.  
+ Bitová maska režim souboru informace. `_S_IFCHR` Pokud je nastaven bit `fd` odkazuje na zařízení. `_S_IFREG` Pokud je nastaven bit `fd` odkazuje na soubor obyčejnou. Službu bits pro čtení a zápis jsou nastavena podle režimu oprávnění souboru. `_S_IFCHR` a ostatní konstanty jsou definovány v SYS\Stat.h.  
   
  `st_mtime`  
  Čas poslední změny souboru.  
@@ -144,7 +147,7 @@ int _fstat64i32(
   
  Variace tyto funkce podporují typy času 32bitové nebo 64bitové a 32bitové nebo 64bitové verze souboru délky. První číselná přípona (`32` nebo `64`) označuje velikost času typu používaného; druhý přípona buď `i32` nebo `i64`, což značí zda velikost souboru je reprezentována jako 32bitové nebo 64bitové celé číslo.  
   
- `_fstat`je ekvivalentní `_fstat64i32`, a `struct _stat` obsahuje 64-bit čas. Toto je hodnota true, pokud `_USE_32BIT_TIME_T` je definována v takovém případě staré chování je v platnosti; `_fstat` používá 32bitové čas a `struct _stat` obsahuje 32-bit čas. Totéž platí pro `_fstati64`.  
+ `_fstat` je ekvivalentní `_fstat64i32`, a `struct _stat` obsahuje 64-bit čas. Toto je hodnota true, pokud `_USE_32BIT_TIME_T` je definována v takovém případě staré chování je v platnosti; `_fstat` používá 32bitové čas a `struct _stat` obsahuje 32-bit čas. Totéž platí pro `_fstati64`.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Typ času a soubor délka typu Variant _stat –  
   
@@ -239,7 +242,7 @@ Time modified : Wed May 07 15:25:11 2003
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_access –, _waccess –](../../c-runtime-library/reference/access-waccess.md)   
- [_chmod –, _wchmod –](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_filelength –, _filelengthi64 –](../../c-runtime-library/reference/filelength-filelengthi64.md)   
  [_stat, _wstat – funkce](../../c-runtime-library/reference/stat-functions.md)

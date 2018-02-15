@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _recalloc
+ms.topic: reference
+apiname:
+- _recalloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,21 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - _recalloc
 - recalloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d1f6052e71746bb05701e0d34f10585d5533be4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: de1b57dfed2d678722c2ccf496ac7a6f6d6a2fcb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="recalloc"></a>_recalloc
 Kombinace `realloc` a `calloc`. Přidělí pole v paměti a inicializuje jeho prvky na hodnotu 0.  
@@ -64,7 +68,7 @@ void *_recalloc(
  Délka v bajtech jednotlivých prvků.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_recalloc`Vrátí `void` ukazatel na oblast paměti opětovnému přidělení (a případně přesouvat).  
+ `_recalloc` Vrátí `void` ukazatel na oblast paměti opětovnému přidělení (a případně přesouvat).  
   
  Pokud není k dispozici dostatek paměti k rozšíření na danou velikost bloku, původní blok je vlevo beze změny, a `NULL` je vrácen.  
   
@@ -77,9 +81,9 @@ void *_recalloc(
   
  Vzhledem k nového bloku můžou být nové umístění paměti, ukazatele vrácený `_recalloc` nemusí být předána ukazatele `memblock` argument.  
   
- `_recalloc`Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo velikost paměti požadované překračuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_recalloc` Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti nebo velikost paměti požadované překračuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `recalloc`volání `realloc` Chcete-li použít C++ [_set_new_mode –](../../c-runtime-library/reference/set-new-mode.md) funkce nastavit nový režim obslužné rutiny. Nový režim obslužná rutina označuje, jestli při selhání, `realloc` je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](../../c-runtime-library/reference/set-new-handler.md). Ve výchozím nastavení `realloc` nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když `_recalloc` nepodaří přidělit paměť, `realloc` volání nové rutiny obslužná rutina ve stejné způsobem, jako `new` operátor nepodporuje, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí nastavení, volejte  
+ `recalloc` volání `realloc` Chcete-li použít C++ [_set_new_mode –](../../c-runtime-library/reference/set-new-mode.md) funkce nastavit nový režim obslužné rutiny. Nový režim obslužná rutina označuje, jestli při selhání, `realloc` je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](../../c-runtime-library/reference/set-new-handler.md). Ve výchozím nastavení `realloc` nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když `_recalloc` nepodaří přidělit paměť, `realloc` volání nové rutiny obslužná rutina ve stejné způsobem, jako `new` operátor nepodporuje, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí nastavení, volejte  
   
 ```  
 _set_new_mode(1)  
@@ -89,7 +93,7 @@ _set_new_mode(1)
   
  Když aplikace je spojená s verzí ladicí běhové knihovny jazyka C, `_recalloc` přeloží na [_recalloc_dbg –](../../c-runtime-library/reference/recalloc-dbg.md). Další informace o spravováni haldě ladění během najdete v tématu [haldy ladění The CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `_recalloc`je označena `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce záruku, že není k úpravě globálních proměnných, že ukazatele vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).  
+ `_recalloc` je označena `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce záruku, že není k úpravě globálních proměnných, že ukazatele vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -101,8 +105,8 @@ _set_new_mode(1)
   
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
- [_recalloc_dbg –](../../c-runtime-library/reference/recalloc-dbg.md)   
- [_aligned_recalloc –](../../c-runtime-library/reference/aligned-recalloc.md)   
- [_aligned_offset_recalloc –](../../c-runtime-library/reference/aligned-offset-recalloc.md)   
- [Uvolněte](../../c-runtime-library/reference/free.md)   
+ [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md)   
+ [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)   
+ [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)   
+ [Volné](../../c-runtime-library/reference/free.md)   
  [Možnosti odkazů](../../c-runtime-library/link-options.md)

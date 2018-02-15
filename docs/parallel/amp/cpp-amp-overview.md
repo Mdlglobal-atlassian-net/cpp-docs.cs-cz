@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) zrychluje spuštění kódu C++ a využívají data paralelní hardwaru, jako jsou grafický procesor (GPU) na kartě diskrétní grafiky. Pomocí C++ AMP můžete kódu algoritmy vícerozměrných dat tak, aby spuštění lze urychlit pomocí paralelismus na heterogenní hardwaru. Programovací model C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, dlaždice a knihovnu matematické funkce. Rozšíření jazyka C++ AMP můžete použít k řízení, jak přesunout data z procesoru na grafický procesor a zpět, takže může zlepšit výkon.  
   
 ## <a name="system-requirements"></a>Požadavky na systém  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], nebo[!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], nebo [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   Rozhraní DirectX 11 funkce úroveň 11.0 nebo novější hardwaru  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Sdílené paměti u pole a array_view  
  Sdílené paměti je paměť, která je přístupná procesoru a akcelerátorem. Použití sdílené paměti eliminuje nebo výrazně snižuje zatížení sady kopírování dat mezi procesoru a akcelerátorem. I když je sdílená paměť, jej nelze získat přístup, souběžně procesoru a akcelerátorem, a to způsobí tak, že nedefinované chování.  
   
- `array`objekty slouží k určení jemně odstupňovanou kontrolu nad použití sdílené paměti, pokud ji podporuje přidružené akcelerátoru. Jestli akcelerátor podporuje sdílené paměti je dáno akcelerátoru [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) vlastnost, která vrací `true` případě, že podporuje sdílené paměti. Pokud je podporováno sdílené paměti, výchozí [access_type – výčet](reference/concurrency-namespace-enums-amp.md#access_type) paměti je dáno přidělení na akcelerátor `default_cpu_access_type` vlastnost. Ve výchozím nastavení `array` a `array_view` trvat objekty na stejné `access_type` jako primární přidružené `accelerator`.  
+ `array` objekty slouží k určení jemně odstupňovanou kontrolu nad použití sdílené paměti, pokud ji podporuje přidružené akcelerátoru. Jestli akcelerátor podporuje sdílené paměti je dáno akcelerátoru [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) vlastnost, která vrací `true` případě, že podporuje sdílené paměti. Pokud je podporováno sdílené paměti, výchozí [access_type – výčet](reference/concurrency-namespace-enums-amp.md#access_type) paměti je dáno přidělení na akcelerátor `default_cpu_access_type` vlastnost. Ve výchozím nastavení `array` a `array_view` trvat objekty na stejné `access_type` jako primární přidružené `accelerator`.  
   
  Nastavením [Array::cpu_access_type data – datový člen](reference/array-class.md#cpu_access_type) vlastnost `array` explicitně, které můžou podrobné cvičení řídit přes jak sdílené paměti se používá, tak, aby můžete optimalizovat aplikace pro výkon hardwaru vlastnosti, na základě způsobů přístupu k paměti z jeho výpočetní jádra. `array_view` Odráží stejné `cpu_access_type` jako `array` , k němuž se; nebo, pokud array_view je vytvořený bez zdroje dat, jeho `access_type` odráží prostředí, ve kterém nejprve způsobuje, že se přidělit úložiště. To znamená, pokud nejprve je přístupný pro hostitele (CPU), pak se chová jako kdyby byly vytvořeny přes procesoru zdroj dat a sdílených složek `access_type` z `accelerator_view` přidružený k podle zachycení; ale pokud je první přistupují `accelerator_view`, pak se chová jako by šlo vytvořit přes `array` vytvořen, na který `accelerator_view` a sdílených složek `array`na `access_type`.  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Krátké knihovna vektoru](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): definuje sadu typů krátké vektoru o délce 2, 3 a 4, které jsou založeny na `int`, `uint`, `float`, `double`, [norm](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]Aplikace  
- Stejně jako jiné knihovny jazyka C++ použijete C++ AMP v vaší [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Tyto články popisují, jak zahrnout kódu C++ AMP v aplikacích vytvořené pomocí C++, C#, Visual Basic nebo JavaScript:  
+## <a name="universal-windows-platform-uwp-apps"></a>Aplikace pro Universal Windows Platform (UWP)  
+ Jako další knihovny C++ můžete použít C++ AMP v aplikacích pro UPW. Tyto články popisují, jak zahrnout kódu C++ AMP v aplikacích vytvořené pomocí C++, C#, Visual Basic nebo JavaScript:  
   
-- [Používání modelu C++ AMP v aplikacích pro Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Používání modelu C++ AMP v aplikacích pro UPW](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání z jazyka JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
@@ -500,6 +503,6 @@ void MathExample() {
   
 ## <a name="see-also"></a>Viz také  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)   
+ [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md)   
  [Referenční dokumentace (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
  [Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=238472)

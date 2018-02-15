@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -26,21 +27,23 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b0da3f3578e1ee2176ffca8358d5f5276732cf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e44deb1faee27ea571151c45945b44dac647c2d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 Čtení formátovaných dat z řetězce. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [vsscanf_s vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
@@ -83,7 +86,7 @@ int vswscanf(
 > [!IMPORTANT]
 >  Při použití `vsscanf` číst řetězce, vždycky zadat šířku pro `%s` formátu (například `"%32s"` místo `"%s"`), jinak hodnota nesprávně naformátovanou vstup může způsobit přetečení vyrovnávací paměti.  
   
- `vswscanf`široká charakterová verze `vsscanf`; argumenty, které mají `vswscanf` jsou široká charakterová řetězce. `vsscanf`nezpracovává vícebajtové hexadecimálních znaků. `vswscanf`nezpracovává šestnáctkové kódování Unicode s plnou šířkou nebo znaků "kompatibility zóna". V opačném `vswscanf` a `vsscanf` chovají stejně jako.  
+ `vswscanf` široká charakterová verze `vsscanf`; argumenty, které mají `vswscanf` jsou široká charakterová řetězce. `vsscanf` nezpracovává vícebajtové hexadecimálních znaků. `vswscanf` nezpracovává šestnáctkové kódování Unicode s plnou šířkou nebo znaků "kompatibility zóna". V opačném `vswscanf` a `vsscanf` chovají stejně jako.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -95,7 +98,7 @@ int vswscanf(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`vsscanf`|\<stdio.h >|  
+|`vsscanf`|\<stdio.h>|  
 |`vswscanf`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -153,7 +156,7 @@ Real:     = 15.000000
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

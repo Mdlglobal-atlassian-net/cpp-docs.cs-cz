@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - getenv_s
 - _wgetenv_s
@@ -27,7 +28,8 @@ f1_keywords:
 - getenv_s
 - _tgetenv_s
 - _wgetenv_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tgetenv_s function
 - wgetenv_s function
@@ -36,22 +38,23 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34ba832030e3ad5580dd46deb39c1cbe62738ee9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 Získá hodnotu z aktuální prostředí. Tyto verze nástroje [getenv _wgetenv –](../../c-runtime-library/reference/getenv-wgetenv.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -111,9 +114,9 @@ errno_t _wgetenv_s(
  Navíc pokud vyrovnávací paměť je příliš malá, vrátí tyto funkce `ERANGE`. Nevolejte obslužnou rutinu neplatný parametr. Se zapsat požadované vyrovnávací paměť v `pReturnValue`a tím povolit programy pro volání funkce s větší vyrovnávací paměť.  
   
 ## <a name="remarks"></a>Poznámky  
- `getenv_s` Funkce vyhledá seznamu proměnných prostředí pro `varname`. `getenv_s`není malá a velká písmena v operačním systému Windows. `getenv_s`a `_putenv_s` použít kopii prostředí, ve kterém je odkazoval na globální proměnnou `_environ` pro přístup k prostředí. `getenv_s`funguje pouze na datové struktury, které jsou k dispozici běhové knihovny a ne na prostředí "segment", který se vytvoří pro proces v operačním systému. Proto programy, které používají `envp` argument [hlavní](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) může načíst neplatné informace.  
+ `getenv_s` Funkce vyhledá seznamu proměnných prostředí pro `varname`. `getenv_s` není malá a velká písmena v operačním systému Windows. `getenv_s` a `_putenv_s` použít kopii prostředí, ve kterém je odkazoval na globální proměnnou `_environ` pro přístup k prostředí. `getenv_s` funguje pouze na datové struktury, které jsou k dispozici běhové knihovny a ne na prostředí "segment", který se vytvoří pro proces v operačním systému. Proto programy, které používají `envp` argument [hlavní](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) může načíst neplatné informace.  
   
- `_wgetenv_s`široká charakterová verze `getenv_s`; argument a vrátí hodnotu `_wgetenv_s` jsou široká charakterová řetězce. `_wenviron` – Globální proměnná je verze široká charakterová `_environ`.  
+ `_wgetenv_s` široká charakterová verze `getenv_s`; argument a vrátí hodnotu `_wgetenv_s` jsou široká charakterová řetězce. `_wenviron` – Globální proměnná je verze široká charakterová `_environ`.  
   
  V aplikaci sady MBCS (například v aplikaci SBCS ASCII) `_wenviron` je původně `NULL` protože prostředí se skládá z řetězců vícebajtových znaků. Poté, v prvním volání `_wputenv`, nebo při prvním volání `_wgetenv_s`, pokud prostředí (MBCS) již existuje, odpovídající široká charakterová řetězec prostředí se vytvoří a pak ukazuje `_wenviron`.  
   
@@ -125,7 +128,7 @@ errno_t _wgetenv_s(
 >  Ve výjimečných případech při běhu systému údržbu Unicode verze a vícebajtové verzi prostředí, prostředí dvě verze nemusí odpovídat přesně. K tomu dojde, protože i když všechny jedinečné řetězce vícebajtových znaků se mapuje na jedinečné řetězce Unicode, mapování z jedinečné řetězce Unicode do řetězce vícebajtových znaků není nutně jedinečný. Další informace najdete v tématu [_environ –, _wenviron –](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
->  `_putenv_s` a `_getenv_s` řady funkcí nejsou bezpečné pro přístup z více vláken. `_getenv_s`může vrátit ukazatel řetězec při `_putenv_s` upravuje řetězec a tím způsobit náhodné chyby. Ujistěte se, že jsou synchronizovány volání na tyto funkce.  
+>  `_putenv_s` a `_getenv_s` řady funkcí nejsou bezpečné pro přístup z více vláken. `_getenv_s` může vrátit ukazatel řetězec při `_putenv_s` upravuje řetězec a tím způsobit náhodné chyby. Ujistěte se, že jsou synchronizovány volání na tyto funkce.  
   
  V jazyce C++ těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení můžete automaticky odvození délka vyrovnávací paměti a tím eliminovat potřeba zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -141,7 +144,7 @@ errno_t _wgetenv_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`getenv_s`|\<stdlib.h >|  
+|`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -212,5 +215,5 @@ New LIB variable is: c:\mylib;c:\yourlib
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
  [Konstanty prostředí](../../c-runtime-library/environmental-constants.md)   
- [_putenv –, _wputenv –](../../c-runtime-library/reference/putenv-wputenv.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [_dupenv_s, _wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md)

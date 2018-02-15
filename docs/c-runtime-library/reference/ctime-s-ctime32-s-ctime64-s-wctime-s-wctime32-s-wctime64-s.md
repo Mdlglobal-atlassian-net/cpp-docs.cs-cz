@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ctime64_s
 - _wctime32_s
@@ -37,7 +38,8 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -58,16 +60,17 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4a2029db9b38ca1edad0e20764278ec77d205c04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 998046c0d59d12cd14d9091d9054312c5d1d48a2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 Převést na řetězec hodnotu času a upravit nastavení místního časového pásma. Toto jsou verze [ctime _ctime64 –, _wctime –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -128,10 +131,10 @@ errno_t _wctime64_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Musí být dostatečně velký pro uložení 26 znaků. Ukazatel na výsledném řetězci znaků, nebo `NULL` pokud:  
   
--   `time`představuje datum před půlnoc, 1. ledna 1970 UTC.  
+-   `time` představuje datum před půlnoc, 1. ledna 1970 UTC.  
   
 -   Pokud používáte `_ctime32_s` nebo `_wctime32_s` a `time` představuje datum po 23:59:59 18 leden 2038 UTC.  
   
@@ -139,10 +142,10 @@ errno_t _wctime64_s(
   
 -   Pokud používáte `_ctime_s` nebo `_wctime_s`, tyto funkce jsou obálky na předchozí funkce. Najdete v části poznámky.  
   
- [v]`numberOfElements`  
+ [in] `numberOfElements`  
  Velikost vyrovnávací paměti.  
   
- [v]`time`  
+ [in] `time`  
  Ukazatel na uložené čas.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -150,13 +153,13 @@ errno_t _wctime64_s(
   
 ## <a name="error-conditions"></a>Chybové stavy  
   
-|`buffer`|`numberOfElements`|`time`|Vrátí|Hodnota v`buffer`|  
+|`buffer`|`numberOfElements`|`time`|Vrátí|Hodnota v `buffer`|  
 |--------------|------------------------|------------|------------|-----------------------|  
 |`NULL`|všechny|všechny|`EINVAL`|nedojde ke změně|  
 |Není `NULL` (odkazuje na platný paměti)|0|všechny|`EINVAL`|nedojde ke změně|  
-|není`NULL`|0 < velikost < 26|všechny|`EINVAL`|prázdný řetězec.|  
-|není`NULL`|>= 26|NULL|`EINVAL`|prázdný řetězec.|  
-|není`NULL`|>= 26|< 0|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|0 < velikost < 26|všechny|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|>= 26|NULL|`EINVAL`|prázdný řetězec.|  
+|není `NULL`|>= 26|< 0|`EINVAL`|prázdný řetězec.|  
   
 ## <a name="remarks"></a>Poznámky  
  `ctime_s` Funkce převede hodnotu čas, který je uložený jako [time_t](../../c-runtime-library/standard-types.md) struktura na řetězec znaků. `time` Hodnota se obvykle získávají z volání [čas](../../c-runtime-library/reference/time-time32-time64.md), která vrátí počet sekund uběhlých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC). Návratová hodnota řetězec obsahuje přesně 26 znaků a má tvar:  
@@ -169,9 +172,9 @@ Wed Jan 02 02:03:55 1980\n\0
   
  Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Najdete v článku `time`, [_ftime –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), a [localtime32_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) funkce informace o konfiguraci místní čas a [_tzset –](../../c-runtime-library/reference/tzset.md) funkce informace o definování časové pásmo prostředí a globální proměnné.  
   
- `_wctime32_s`a `_wctime64_s` jsou verze široká charakterová `_ctime32_s` a `_ctime64_s`; ukazatel vrácením široká charakterová řetězec. V opačném `_ctime64_s`, `_wctime32_s`, a `_wctime64_s` chovají stejně jako na `_ctime32_s`.  
+ `_wctime32_s` a `_wctime64_s` jsou verze široká charakterová `_ctime32_s` a `_ctime64_s`; ukazatel vrácením široká charakterová řetězec. V opačném `_ctime64_s`, `_wctime32_s`, a `_wctime64_s` chovají stejně jako na `_ctime32_s`.  
   
- `ctime_s`Vložená funkce, jehož výsledkem je `_ctime64_s` a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `ctime_s` k vyhodnocení `_ctime32_s`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
+ `ctime_s` Vložená funkce, jehož výsledkem je `_ctime64_s` a `time_t` je ekvivalentní `__time64_t`. Pokud potřebujete vynutit kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`. Provedete to způsobí, že `ctime_s` k vyhodnocení `_ctime32_s`. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.  
   
  V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -187,7 +190,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<Time.h >|  
+|`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
 |`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<Time.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -234,9 +237,9 @@ The time is Fri Apr 25 13:03:39 2003
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime_s –, _wasctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

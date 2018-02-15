@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ungetwc
 - ungetc
@@ -27,7 +28,8 @@ f1_keywords:
 - _ungettc
 - ungetwc
 - ungetc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ungetwc function
 - ungettc function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d266ea3d4be06994efcd7ceb8a155f8530b30ed5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65453f1254e4c42658ef6f27d7c90d2ad0022b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 Vynutí znak zpět do datového proudu.  
@@ -81,7 +84,7 @@ wint_t ungetwc(
   
  Výsledky mohou být nepředvídatelné Pokud `ungetc` je volána dvakrát bez čtení nebo umístění souboru operace mezi dvěma volání. Po volání `fscanf`, volání `ungetc` může selhat, pokud jiné operace čtení (například `getc`) nebylo provedeno. Důvodem je, že `fscanf` samotné volá `ungetc`.  
   
- `ungetwc`široká charakterová verze `ungetc`. Však na každém úspěšné `ungetwc` volání na text nebo binární datový proud, hodnota indikátoru pozice souboru neurčené dokud všechny poslat zpět znaky jsou přečteny nebo zahozeny.  
+ `ungetwc` široká charakterová verze `ungetc`. Však na každém úspěšné `ungetwc` volání na text nebo binární datový proud, hodnota indikátoru pozice souboru neurčené dokud všechny poslat zpět znaky jsou přečteny nebo zahozeny.  
   
  Tyto funkce jsou bezpečné pro přístup z více vláken a zamknout citlivá data během provádění. Bez uzamčení verze, najdete v části [_ungetc_nolock –, _ungetwc_nolock –](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
   
@@ -95,10 +98,10 @@ wint_t ungetwc(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`ungetc`|\<stdio.h >|  
+|`ungetc`|\<stdio.h>|  
 |`ungetwc`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   

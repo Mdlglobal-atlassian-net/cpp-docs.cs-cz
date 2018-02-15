@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: setbuf
+ms.topic: reference
+apiname:
+- setbuf
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: setbuf
-dev_langs: C++
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3b57d77172204c54ac0079beecd920c7fdfab829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73de6c601f6a01fca15e8270104e2d8148539a4c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setbuf"></a>setbuf
 Ovládací prvky datového proudu do vyrovnávací paměti. Tato funkce je zastaralé; použít [setvbuf –](../../c-runtime-library/reference/setvbuf.md) místo.  
@@ -60,13 +65,13 @@ void setbuf(
 ## <a name="remarks"></a>Poznámky  
  `setbuf` Funkce ukládání do vyrovnávací paměti pro ovládací prvky `stream`. `stream` Argument musí odkazovat na soubor otevřete, který nebyl číst nebo zapisovat. Pokud `buffer` argument je `NULL`, datový proud je zrušení ve vyrovnávací paměti. Pokud ne, vyrovnávací paměti musí odkazovat na pole znaků délky `BUFSIZ`, kde `BUFSIZ` je velikost vyrovnávací paměti, jak jsou definovány v STDIO. H. Uživatelem zadanou vyrovnávací paměť, místo vyrovnávací paměti výchozí přidělená systémem pro daný datový proud, se používá pro vstupně-výstupní operace ukládání do vyrovnávací paměti. `stderr` Datový proud je zrušení ve vyrovnávací paměti ve výchozím nastavení, ale můžete použít `setbuf` přiřadit vyrovnávací paměti do `stderr`.  
   
- `setbuf`nahradila [setvbuf –](../../c-runtime-library/reference/setvbuf.md), což je upřednostňovaný rutiny pro nový kód. `setbuf`se zachovává kvůli kompatibilitě s existujícího kódu.  
+ `setbuf` nahradila [setvbuf –](../../c-runtime-library/reference/setvbuf.md), což je upřednostňovaný rutiny pro nový kód. `setbuf` se zachovává kvůli kompatibilitě s existujícího kódu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`setbuf`|\<stdio.h >|  
+|`setbuf`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - __wcserror_s
 - _strerror_s
@@ -33,7 +34,8 @@ f1_keywords:
 - tcserror_s
 - strerror_s
 - _strerror_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __wcserror_s function
 - error messages, printing
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 791f9b7408fded070fe61206d4303c26c8926d3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Se objeví chybová zpráva systému (`strerror_s`, `_wcserror_s`) nebo vytisknout uživatelem zadané chybová zpráva (`_strerror_s`, `__wcserror_s`). Toto jsou verze [strerror – _strerror –, _wcserror –, \__wcserror –](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +126,13 @@ errno_t __wcserror_s(
   
 ### <a name="error-condtions"></a>Chyba způsobilost  
   
-|`buffer`|`numberOfElements`|`strErrMsg`|Obsah`buffer`|  
+|`buffer`|`numberOfElements`|`strErrMsg`|Obsah `buffer`|  
 |--------------|------------------------|-----------------|--------------------------|  
 |`NULL`|všechny|všechny|není k dispozici|  
 |všechny|0|všechny|nedojde ke změně|  
   
 ## <a name="remarks"></a>Poznámky  
- `strerror_s` Funkce mapy `errnum` na řetězec chybová zpráva, vrátí řetězec v `buffer`. `_strerror_s`neberou číslo chyby; používá aktuální hodnota `errno` určit příslušnou zprávu. Ani `strerror_s` ani `_strerror_s` ve skutečnosti vytiskne zprávy:, takže je třeba volat výstup funkce, jako [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
+ `strerror_s` Funkce mapy `errnum` na řetězec chybová zpráva, vrátí řetězec v `buffer`. `_strerror_s` neberou číslo chyby; používá aktuální hodnota `errno` určit příslušnou zprávu. Ani `strerror_s` ani `_strerror_s` ve skutečnosti vytiskne zprávy:, takže je třeba volat výstup funkce, jako [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
   
 ```  
 if (( _access( "datafile",2 )) == -1 )  
@@ -143,9 +146,9 @@ if (( _access( "datafile",2 )) == -1 )
   
  Tyto funkce zkrátit chybovou zprávu, pokud jeho délka přesahuje `numberOfElements` -1. Výsledný řetězec v `buffer` je vždy ukončené hodnotou null.  
   
- Číslo chyby pro `_strerror_s` je uložené v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Systém chybové zprávy, které jsou přístupné prostřednictvím proměnnou [_sys_errlist –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv, které jsou seřazené podle číslo chyby. `_strerror_s`přistupuje k příslušná chybová zpráva s použitím `errno` hodnotu jako index pro proměnnou `_sys_errlist`. Hodnota proměnné [_sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definován jako maximální počet elementů v `_sys_errlist` pole. Chcete-li vytvořit přesné výsledky, volejte `_strerror_s` ihned po rutiny knihovny vrátí chybu. Jinak, následných volání `strerror_s` nebo `_strerror_s` můžete přepsat `errno` hodnotu.  
+ Číslo chyby pro `_strerror_s` je uložené v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Systém chybové zprávy, které jsou přístupné prostřednictvím proměnnou [_sys_errlist –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv, které jsou seřazené podle číslo chyby. `_strerror_s` přistupuje k příslušná chybová zpráva s použitím `errno` hodnotu jako index pro proměnnou `_sys_errlist`. Hodnota proměnné [_sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definován jako maximální počet elementů v `_sys_errlist` pole. Chcete-li vytvořit přesné výsledky, volejte `_strerror_s` ihned po rutiny knihovny vrátí chybu. Jinak, následných volání `strerror_s` nebo `_strerror_s` můžete přepsat `errno` hodnotu.  
   
- `_wcserror_s`a `__wcserror_s` jsou verze široká charakterová `strerror_s` a `_strerror_s`, v uvedeném pořadí.  
+ `_wcserror_s` a `__wcserror_s` jsou verze široká charakterová `strerror_s` a `_strerror_s`, v uvedeném pořadí.  
   
  Tyto funkce ověřit jejich parametrů. Pokud vyrovnávací paměť je `NULL` nebo pokud je parametr velikosti 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce `EINVAL` a nastavte `errno` k `EINVAL`.  
   
@@ -175,6 +178,6 @@ if (( _access( "datafile",2 )) == -1 )
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [clearerr –](../../c-runtime-library/reference/clearerr.md)   
+ [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror –](../../c-runtime-library/reference/ferror.md)   
  [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

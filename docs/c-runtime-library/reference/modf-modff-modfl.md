@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - modff
 - modf
@@ -32,22 +33,24 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a75cc474d66a42f3faeb7444f3168c7cc3283514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9744b82cd14d29234fabf1edbe379c2c5d14ac85
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="modf-modff-modfl"></a>modf – modff –, modfl
 Rozdělí do desetinnou hodnotu s plovoucí desetinnou čárkou a částí celé číslo.  
@@ -88,9 +91,9 @@ long double modfl(
  Tato funkce vrátí podepsaný zlomkové části *x*. Neexistuje žádný návratový chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `modf` Funkce rozdělení s plovoucí desetinnou čárkou `x` do zlomkové části celé číslo, z nichž každá má stejné znaménko jako a `x`. Podepsaný zlomkové části `x` je vrácen. Celočíselnou část je uložený jako hodnotu s plovoucí desetinnou čárkou v`intptr.`  
+ `modf` Funkce rozdělení s plovoucí desetinnou čárkou `x` do zlomkové části celé číslo, z nichž každá má stejné znaménko jako a `x`. Podepsaný zlomkové části `x` je vrácen. Celočíselnou část je uložený jako hodnotu s plovoucí desetinnou čárkou v `intptr.`  
   
- `modf`má implementace, která používá Streaming SIMD Extensions 2 (SSE2). V tématu [_set_sse2_enable –](../../c-runtime-library/reference/set-sse2-enable.md) informace a omezení používání SSE2 implementace.  
+ `modf` má implementace, která používá Streaming SIMD Extensions 2 (SSE2). V tématu [_set_sse2_enable –](../../c-runtime-library/reference/set-sse2-enable.md) informace a omezení používání SSE2 implementace.  
   
  C++ umožňuje přetížení, takže můžete volat přetížení `modf` , přijmout a vrátit `float` nebo `long double` parametry. V programu C `modf` vždy má dvě hodnoty double a vrátí hodnotu double.  
   
@@ -133,5 +136,5 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
   
 ## <a name="see-also"></a>Viz také  
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [frexp –](../../c-runtime-library/reference/frexp.md)   
+ [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

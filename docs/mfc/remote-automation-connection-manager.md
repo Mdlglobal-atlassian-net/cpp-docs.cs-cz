@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>Správce připojení pro vzdálenou automatizaci
 Chcete-li nakonfigurovat klienta a serveru, musíte provést změny v registru. Místo díky tomuto ručně, je mnohem snazší pomocí nástroje Správce připojení vzdálené automatizace (RAC). Tento nástroj RACMGR32. EXE, společně s RACREG32. DLL, musí být zkopírován do libovolného adresáře, který zvolíte. Vložíte ho v CESTĚ, mohou být provedeny z hlavního panelu použít příkaz spustit. Alternativně můžete vytvořit zástupce nebo umístit na něj odkaz v nabídce Start.  

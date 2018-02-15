@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _free_dbg
 apilocation:
@@ -39,11 +39,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575c683ed1726d9bcaf5e4a1eb850f4b589b4492
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: fa3df169a968313d2a29fbf9c08643748d3196d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freedbg"></a>_free_dbg
 Uvolní blok paměti haldy (pouze ladicí verze).  
@@ -67,7 +67,7 @@ void _free_dbg(
 ## <a name="remarks"></a>Poznámky  
  `_free_dbg` Funkce je ladicí verze [volné](../../c-runtime-library/reference/free.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_free_dbg` byla snížena volání `free`. Obě `free` a `_free_dbg` volné paměti blok základní haldy, ale `_free_dbg` může vyrovnávat dvě funkce ladění: schopnost zachovat uvolněné bloků v do haldy odkazovaného seznamu k simulaci nedostatek paměti a parametr typ bloku k bezplatným typy konkrétní přidělení.  
   
- `_free_dbg`provede kontrolu platnosti na všechny zadané soubory a umístění bloku před provedením operace volné. Aplikace není očekáván poskytnout tyto informace. Když po uvolnění paměti blok správce haldy ladění automaticky ověří integritu vyrovnávací paměti na obou stranách části uživatele a vydá zprávu o chybách v případě, že došlo k přepsání. Pokud `_CRTDBG_DELAY_FREE_MEM_DF` bitová pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) je příznak nastaven, uvolněné blok je vyplněn přiřazenou hodnotu 0xDD, `_FREE_BLOCK` blokovat typ a uchovává se v haldě na odkazovaného seznamu bloků paměti.  
+ `_free_dbg` provede kontrolu platnosti na všechny zadané soubory a umístění bloku před provedením operace volné. Aplikace není očekáván poskytnout tyto informace. Když po uvolnění paměti blok správce haldy ladění automaticky ověří integritu vyrovnávací paměti na obou stranách části uživatele a vydá zprávu o chybách v případě, že došlo k přepsání. Pokud `_CRTDBG_DELAY_FREE_MEM_DF` bitová pole [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) je příznak nastaven, uvolněné blok je vyplněn přiřazenou hodnotu 0xDD, `_FREE_BLOCK` blokovat typ a uchovává se v haldě na odkazovaného seznamu bloků paměti.  
   
  Pokud dojde k chybě v uvolnění paměti, `errno` je nastaven s informacemi z operačního systému, o povaze chyby. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

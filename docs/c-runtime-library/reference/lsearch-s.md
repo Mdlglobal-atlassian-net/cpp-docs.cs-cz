@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lsearch_s
+ms.topic: reference
+apiname:
+- _lsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a680c990ec91edf225057ea729fd3343a57610d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Provede lineárního hledání pro hodnotu. Verzi [_lsearch –](../../c-runtime-library/reference/lsearch.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -97,7 +101,7 @@ void *_lsearch_s(
 ## <a name="remarks"></a>Poznámky  
  `_lsearch_s` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch_s`, `_lsearch_s` nevyžaduje pole, která se má seřadit. Pokud `key` není nalezen, pak `_lsearch_s` přidá na konec pole a zvýší `num`.  
   
- `compare` Funkce je ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `compare` Funkce také přebírá má ukazatel na kontext jako první argument. `_lsearch_s`volání `compare` jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare`musí porovnat elementy a pak se vraťte buď nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
+ `compare` Funkce je ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `compare` Funkce také přebírá má ukazatel na kontext jako první argument. `_lsearch_s` volání `compare` jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare` musí porovnat elementy a pak se vraťte buď nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
   
  `context` Ukazatel může být užitečné, pokud je součástí objektu vyhledávaná datovou strukturu a `compare` funkce potřebujete přístup ke členům v objektu. Například v kódu `compare` funkce může odevzdat neplatný ukazatel do příslušného objektu typu a přístupu členů tohoto objektu. Přidání `context` ukazatel díky `_lsearch_s` bezpečnější, protože další kontext umožňuje vyhnout opětovné zadání chyby související s použitím statické proměnné pro zpřístupnění dat pro `compare` funkce.  
   
@@ -105,12 +109,12 @@ void *_lsearch_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_lsearch_s`|\<Search.h >|  
+|`_lsearch_s`|\<search.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch_s –](../../c-runtime-library/reference/bsearch-s.md)   
- [_lfind_s –](../../c-runtime-library/reference/lfind-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [_lsearch](../../c-runtime-library/reference/lsearch.md)

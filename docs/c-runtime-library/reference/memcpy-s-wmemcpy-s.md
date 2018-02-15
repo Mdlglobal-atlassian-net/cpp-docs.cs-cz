@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -26,21 +27,23 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16926cfb0f95911b3e272013167e7fa09b072b25
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Počet bajtů kopie mezi vyrovnávací paměti. Toto jsou verze [memcpy wmemcpy –](../../c-runtime-library/reference/memcpy-wmemcpy.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -80,15 +83,15 @@ errno_t wmemcpy_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`dest`|`destSize`|`src`|`count`|Návratová hodnota|Obsah`dest`|  
+|`dest`|`destSize`|`src`|`count`|Návratová hodnota|Obsah `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
 |všechny|všechny|všechny|0|0|nedojde ke změně|  
 |`NULL`|všechny|všechny|nulová|`EINVAL`|nedojde ke změně|  
-|všechny|všechny|`NULL`|nulová|`EINVAL`|`dest`je dojde k vynulování|  
-|všechny|< `count`|všechny|nulová|`ERANGE`|`dest`je dojde k vynulování|  
+|všechny|všechny|`NULL`|nulová|`EINVAL`|`dest` je dojde k vynulování|  
+|všechny|< `count`|všechny|nulová|`ERANGE`|`dest` je dojde k vynulování|  
   
 ## <a name="remarks"></a>Poznámky  
- `memcpy_s`kopie `count` bajtů z `src` k `dest`; `wmemcpy_s` kopie `count` široké znaky (dva bajty). Pokud zdrojové a cílové překrývají, chování `memcpy_s` není definován. Použití `memmove_s` pro zpracování překrývající se oblasti.  
+ `memcpy_s` kopie `count` bajtů z `src` k `dest`; `wmemcpy_s` kopie `count` široké znaky (dva bajty). Pokud zdrojové a cílové překrývají, chování `memcpy_s` není definován. Použití `memmove_s` pro zpracování překrývající se oblasti.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `count` je nulová a `dest` nebo `src` je ukazatel s hodnotou null, nebo `destSize` je menší než `count`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `EINVAL` nebo `ERANGE` a nastavte `errno` na návratovou hodnotu.  
   
@@ -97,7 +100,7 @@ errno_t wmemcpy_s(
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
 |`memcpy_s`|\<Memory.h > nebo \<string.h >|  
-|`wmemcpy_s`|\<wchar.h >|  
+|`wmemcpy_s`|\<wchar.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -143,8 +146,8 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy –](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr –](../../c-runtime-library/reference/memchr-wmemchr.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp wmemcmp –](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memmove –, wmemmove –](../../c-runtime-library/reference/memmove-wmemmove.md)   
  [memset –, wmemset –](../../c-runtime-library/reference/memset-wmemset.md)   

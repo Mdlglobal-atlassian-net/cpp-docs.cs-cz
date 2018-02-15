@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _gmtime32
 - gmtime
@@ -28,7 +29,8 @@ f1_keywords:
 - gmtime
 - _gmtime32
 - _gmtime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - gmtime32 function
 - _gmtime64 function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 78213f97021ad1e7c89d5dfde6c1cea8b6e12a7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4646902145796ede0659493cb0805cfdf85bb52e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime, _gmtime32, _gmtime64
 Převede hodnotu času pro strukturu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md).  
@@ -104,7 +107,7 @@ struct tm *_gmtime64(
   
  `_gmtime64`, které používá `__time64_t` struktury, umožňuje data, která se vyjádřit až do 23:59:59, 31. prosince 3000, UTC, zatímco `_gmtime32` pouze představují datům až 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro obě funkce.  
   
- `gmtime`Vložená funkce, jehož výsledkem je `_gmtime64`, a `time_t` je ekvivalentní `__time64_t` Pokud `_USE_32BIT_TIME_T` je definována. Pokud vynutíte musí kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`, ale to Ano příčiny `gmtime` jako v leží na `_gmtime32` a `time_t` být definován jako `__time32_t`. Doporučujeme vám, že neprovedete, protože není povolená na 64bitových platformách a v každém případě mohou vaše aplikace po 18 leden 2038 selhat.  
+ `gmtime` Vložená funkce, jehož výsledkem je `_gmtime64`, a `time_t` je ekvivalentní `__time64_t` Pokud `_USE_32BIT_TIME_T` je definována. Pokud vynutíte musí kompilátoru interpretovat `time_t` jako starý 32bitovou verzi `time_t`, můžete definovat `_USE_32BIT_TIME_T`, ale to Ano příčiny `gmtime` jako v leží na `_gmtime32` a `time_t` být definován jako `__time32_t`. Doporučujeme vám, že neprovedete, protože není povolená na 64bitových platformách a v každém případě mohou vaše aplikace po 18 leden 2038 selhat.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `timer` je ukazatel s hodnotou null, nebo pokud je hodnota časovače záporná, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce `NULL` a nastavte `errno` k `EINVAL`.  
   
@@ -118,9 +121,9 @@ struct tm *_gmtime64(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`gmtime`|\<Time.h >|  
-|`_gmtime32`|\<Time.h >|  
-|`_gmtime64`|\<Time.h >|  
+|`gmtime`|\<time.h>|  
+|`_gmtime32`|\<time.h>|  
+|`_gmtime64`|\<time.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -159,11 +162,11 @@ Coordinated universal time is Tue Feb 12 23:11:31 2002
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [_mkgmtime – _mkgmtime32 –, _mkgmtime64 –](../../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)   
- [mktime – _mktime32 –, _mktime64 –](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [_mkgmtime, _mkgmtime32, _mkgmtime64](../../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

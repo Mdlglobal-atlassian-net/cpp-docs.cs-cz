@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen
 - _wsopen
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6429eefe8c79337086fb8ec94215f171ae4b0bb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Otevře soubor pro sdílení. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [_sopen_s –, _wsopen_s –](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -92,7 +95,7 @@ int _wsopen(
  Zadaná cesta je adresář, nebo soubor je jen pro čtení, ale došlo k pokusu o operaci otevřít pro zápis.  
   
  `EEXIST`  
- `_O_CREAT`a `_O_EXCL` příznaky byly zadány, ale `filename` již existuje.  
+ `_O_CREAT` a `_O_EXCL` příznaky byly zadány, ale `filename` již existuje.  
   
  `EINVAL`  
  Neplatný `oflag` nebo `shflag` argument.  
@@ -106,7 +109,7 @@ int _wsopen(
  Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `_sopen` Funkce otevře soubor určený touto `filename` a připraví soubor sdílený čtení nebo zápisu, podle definice `oflag` a `shflag`. `_wsopen`široká charakterová verze `_sopen`; `filename` argument `_wsopen` je široká charakterová řetězec. `_wsopen`a `_sopen` chovat jinak shodně.  
+ `_sopen` Funkce otevře soubor určený touto `filename` a připraví soubor sdílený čtení nebo zápisu, podle definice `oflag` a `shflag`. `_wsopen` široká charakterová verze `_sopen`; `filename` argument `_wsopen` je široká charakterová řetězec. `_wsopen` a `_sopen` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -153,7 +156,7 @@ int _wsopen(
  Otevře soubor v režimu textových (přeložit). (Další informace najdete v tématu [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [fopen –](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC`použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
+ Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC` použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
   
 > [!NOTE]
 >  `_O_TRUNC` Příznak zničí obsah zadaného souboru.  
@@ -190,7 +193,7 @@ int _wsopen(
  `_SH_DENYNO`  
  Povolí přístup čtení a zápisu.  
   
- `pmode` Se vyžaduje jenom v případě `_O_CREAT` je zadán. Pokud soubor neexistuje, `pmode` určuje nastavení v souboru oprávnění, která jsou nastavena při prvním zavření nový soubor. V opačném `pmode` je ignorována. `pmode`je použit celočíselný výraz, který obsahuje jedno nebo obě manifestu konstanty `_S_IWRITE` a `_S_IREAD`, která jsou definována v \<sys\stat.h >. Pokud jsou zadány oba konstanty, jsou kombinovat s operátoru bitové operace OR. Význam `pmode` je následující.  
+ `pmode` Se vyžaduje jenom v případě `_O_CREAT` je zadán. Pokud soubor neexistuje, `pmode` určuje nastavení v souboru oprávnění, která jsou nastavena při prvním zavření nový soubor. V opačném `pmode` je ignorována. `pmode` je použit celočíselný výraz, který obsahuje jedno nebo obě manifestu konstanty `_S_IWRITE` a `_S_IREAD`, která jsou definována v \<sys\stat.h >. Pokud jsou zadány oba konstanty, jsou kombinovat s operátoru bitové operace OR. Význam `pmode` je následující.  
   
  `_S_IWRITE`  
  Zápis povolen.  
@@ -203,14 +206,14 @@ int _wsopen(
   
  Není-li oprávnění k zápisu, soubor je jen pro čtení. V operačním systému Windows jsou všechny soubory čitelný; není možné udělit oprávnění jen pro zápis. Proto režimů `_S_IWRITE` a `_S_IREAD | _S_IWRITE` odpovídají.  
   
- `_sopen`použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Viz [_umask –](../../c-runtime-library/reference/umask.md).)  
+ `_sopen` použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Viz [_umask –](../../c-runtime-library/reference/umask.md).)  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_sopen`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
-|`_wsopen`|\<IO.h > nebo \<wchar.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
+|`_sopen`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
+|`_wsopen`|\<IO.h > nebo \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -220,7 +223,7 @@ int _wsopen(
 ## <a name="see-also"></a>Viz také  
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_fsopen –, _wfsopen –](../../c-runtime-library/reference/fsopen-wfsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

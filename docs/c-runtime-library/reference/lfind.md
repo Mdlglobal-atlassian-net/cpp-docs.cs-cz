@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lfind
+ms.topic: reference
+apiname:
+- _lfind
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +36,17 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 930a8ebf26be12bdaa5b596578c28a7b1adcf574
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4b6df994306ad9a7d51d619a9bd409c021386a11
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lfind"></a>_lfind
 Provede lineárního hledání pro zadaný klíč. Bezpečnější verze této funkce je k dispozici. v tématu [_lfind_s –](../../c-runtime-library/reference/lfind-s.md).  
@@ -79,7 +83,7 @@ void *_lfind(
  Pokud je nalezen klíč, `_lfind` vrací ukazatel na element pole v `base` odpovídající `key`. Pokud není nalezen klíč, `_lfind` vrátí `NULL`.  
   
 ## <a name="remarks"></a>Poznámky  
- `_lfind` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch`, `_lfind` nevyžaduje pole, která se má seřadit. `base` Argument je ukazatel na základní pole má proběhnout. `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovná dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lfind`volání `compare` rutiny jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare` Rutinu musí porovnat elementy a pak se vraťte nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
+ `_lfind` Funkce provádí lineárního hledání pro hodnotu `key` v pole `num` elementy, každý z `width` bajtů. Na rozdíl od `bsearch`, `_lfind` nevyžaduje pole, která se má seřadit. `base` Argument je ukazatel na základní pole má proběhnout. `compare` Argument je ukazatel na rutiny zadanou uživatelem, který porovná dva elementy pole a vrátí hodnotu udávající, jejich vztahu. `_lfind` volání `compare` rutiny jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. `compare` Rutinu musí porovnat elementy a pak se vraťte nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).  
   
  Tato funkce ověří jeho parametry. Pokud `compare`, `key` nebo `num` je `NULL`, nebo pokud `base` má hodnotu NULL a *`num` je nenulové hodnoty, nebo pokud `width` je menší než nula, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`.  
   
@@ -87,7 +91,7 @@ void *_lfind(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_lfind`|\<Search.h >|  
+|`_lfind`|\<search.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -130,7 +134,7 @@ Hello found
   
 ## <a name="see-also"></a>Viz také  
  [Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)   
- [_lfind_s –](../../c-runtime-library/reference/lfind-s.md)   
- [bsearch –](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch –](../../c-runtime-library/reference/lsearch.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
+ [bsearch](../../c-runtime-library/reference/bsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

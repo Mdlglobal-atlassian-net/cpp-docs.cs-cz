@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -27,7 +28,8 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 476df668657739c9f67ca1323c2c0ce630260110
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caa4c732449864c4803a25f3bb123c43495f5fc1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 Zaregistruje rutinu, která má být volána v době ukončení.  
@@ -67,20 +70,20 @@ _onexit_t_m _onexit_m(
  Ukazatel na funkci, která se má volat při ukončení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_onexit`vrací ukazatel na funkci, pokud bylo úspěšné nebo `NULL` Pokud není místa k uložení ukazatel na funkci.  
+ `_onexit` vrací ukazatel na funkci, pokud bylo úspěšné nebo `NULL` Pokud není místa k uložení ukazatel na funkci.  
   
 ## <a name="remarks"></a>Poznámky  
  `_onexit` Funkce je předán na adresu funkce (`function`) se volá, když se program ukončí normálně. Následná volání `_onexit` vytvořit registrace funkcí, které jsou spouštěny v pořadí LIFO (last-in-first-out). Funkce předaný `_onexit` nepřijímají parametry.  
   
  V případě, že když `_onexit` je volána v rámci knihovny DLL, rutiny zaregistrována `_onexit` spustit na knihovny DLL je uvolnění po `DllMain` je volán s DLL_PROCESS_DETACH.  
   
- `_onexit`představuje rozšíření Microsoft. Přenositelnost ANSI použít [atexit](../../c-runtime-library/reference/atexit.md). `_onexit_m` Verze funkce je pro použití ve smíšeném režimu.  
+ `_onexit` představuje rozšíření Microsoft. Přenositelnost ANSI použít [atexit](../../c-runtime-library/reference/atexit.md). `_onexit_m` Verze funkce je pro použití ve smíšeném režimu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_onexit`|\<stdlib.h >|  
+|`_onexit`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -139,5 +142,5 @@ This is executed next.
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
  [AtExit](../../c-runtime-library/reference/atexit.md)   
- [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [__dllonexit](../../c-runtime-library/dllonexit.md)

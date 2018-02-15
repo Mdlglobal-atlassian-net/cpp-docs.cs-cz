@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsValidPointer
+ms.topic: reference
+apiname:
+- _CrtIsValidPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2a5063a82ca90b9f854adb1ef68328272df54f4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e81cd074c9bd69386b300d307525a76515e02522
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 Ověřuje, že ukazatel není null. Ve verzích běhové knihovny jazyka C před Visual Studio 2010 ověřuje, že zadaná paměťová rozsah je platný pro čtení a zápis (pouze ladicí verze).  
@@ -63,7 +67,7 @@ int _CrtIsValidPointer(
  Usnadnění přístupu pro čtení a zápis k určení rozsahu paměti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_CrtIsValidPointer`Vrátí hodnotu TRUE, pokud není zadaný ukazatele null. Ve verzi knihovny CRT před Visual Studio 2010 vrátí hodnotu TRUE, pokud paměti rozsah je platný pro zadanou operaci nebo operace. Funkce, jinak vrátí hodnotu FALSE.  
+ `_CrtIsValidPointer` Vrátí hodnotu TRUE, pokud není zadaný ukazatele null. Ve verzi knihovny CRT před Visual Studio 2010 vrátí hodnotu TRUE, pokud paměti rozsah je platný pro zadanou operaci nebo operace. Funkce, jinak vrátí hodnotu FALSE.  
   
 ## <a name="remarks"></a>Poznámky  
  Od verze knihovny CRT v sadě Visual Studio 2010, parametry velikost a přístupu jsou ignorovány, a `_CrtIsValidPointer` pouze ověřuje, že zadaná adresa není null. Protože tento test je snadné provést sami, nedoporučujeme používat tuto funkci. Ve verzi před Visual Studio 2010, funkce ověřuje, že rozsah paměti začínající na `address` a rozšíření pro `size` bajty je platný pro zadaný usnadnění operaci nebo operace. Když `access` je nastavena na hodnotu TRUE, rozsah paměti ověření pro čtení i zápis. Když `access` hodnotu FALSE, rozsah paměti je ověřen pouze pro čtení. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtIsValidPointer` jsou odebrány při předběžném zpracování.  
@@ -80,9 +84,9 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_CrtIsValidPointer`|\<crtdbg.h >|  
+|`_CrtIsValidPointer`|\<crtdbg.h>|  
   
- `_CrtIsValidPointer`představuje rozšíření Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ `_CrtIsValidPointer` představuje rozšíření Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Knihovny  
  Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.  

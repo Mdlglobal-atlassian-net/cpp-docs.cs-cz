@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_recalloc_dbg
+ms.topic: reference
+apiname:
+- _aligned_recalloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_recalloc_dbg
 - aligned_recalloc_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f434c09e22933859b227f2517e124e9ca668e2cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dfa1d87d363fb0c306e3befb3d2fd7fd6a0d3bf0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc –](../../c-runtime-library/reference/aligned-malloc.md) nebo [_aligned_offset_malloc –](../../c-runtime-library/reference/aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).  
@@ -56,35 +60,35 @@ void * _aligned_recalloc_dbg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`memblock`  
+ [in] `memblock`  
  Aktuální ukazatel bloku paměti.  
   
- [v]`num`  
+ [in] `num`  
  Počet elementů.  
   
- [v]`size`  
+ [in] `size`  
  Velikost v bajtech jednotlivých prvků.  
   
- [v]`alignment`  
+ [in] `alignment`  
  Zarovnání hodnota, která musí být celé číslo mocninou 2.  
   
- [v]`filename`  
+ [in] `filename`  
  Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo `NULL`.  
   
- [v]`linenumber`  
+ [in] `linenumber`  
  Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_aligned_recalloc_dbg`vrací neplatný ukazatel k opětovnému přidělení (a případně přesouvat) paměti bloku. Vrácená hodnota je `NULL` Pokud velikost je nula a argument vyrovnávací paměti není `NULL`, nebo pokud není k dispozici dostatek paměti k rozšíření bloku na danou velikost. V prvním případě původní blok uvolněno. V druhém případě je původní blok beze změny. Návratová hodnota odkazuje na prostor úložiště, který zaručeně vhodně zarovnána pro ukládání jakéhokoli typu objektu. Získání ukazatele na typ než void, použijte typ přetypovat na návratovou hodnotu.  
+ `_aligned_recalloc_dbg` vrací neplatný ukazatel k opětovnému přidělení (a případně přesouvat) paměti bloku. Vrácená hodnota je `NULL` Pokud velikost je nula a argument vyrovnávací paměti není `NULL`, nebo pokud není k dispozici dostatek paměti k rozšíření bloku na danou velikost. V prvním případě původní blok uvolněno. V druhém případě je původní blok beze změny. Návratová hodnota odkazuje na prostor úložiště, který zaručeně vhodně zarovnána pro ukládání jakéhokoli typu objektu. Získání ukazatele na typ než void, použijte typ přetypovat na návratovou hodnotu.  
   
  Jedná se o chybu, znovu přidělte paměť a změňte zarovnání bloku.  
   
 ## <a name="remarks"></a>Poznámky  
- `_aligned_recalloc_dbg`ladicí verze [_aligned_recalloc –](../../c-runtime-library/reference/aligned-recalloc.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_aligned_recalloc_dbg` byla snížena volání `_aligned_recalloc`. Obě `_aligned_recalloc` a `_aligned_recalloc_dbg` znovu přidělte blok paměti základní haldy, ale `_aligned_recalloc_dbg` může vyrovnávat několik funkce ladění: vyrovnávací paměti na obou stranách části uživatele bloku chcete otestovat nevracení, parametr typ bloku ke sledování konkrétní typy přidělování a `filename` / `linenumber` informací k určení původu požadavků na přidělení.  
+ `_aligned_recalloc_dbg` ladicí verze [_aligned_recalloc –](../../c-runtime-library/reference/aligned-recalloc.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_aligned_recalloc_dbg` byla snížena volání `_aligned_recalloc`. Obě `_aligned_recalloc` a `_aligned_recalloc_dbg` znovu přidělte blok paměti základní haldy, ale `_aligned_recalloc_dbg` může vyrovnávat několik funkce ladění: vyrovnávací paměti na obou stranách části uživatele bloku chcete otestovat nevracení, parametr typ bloku ke sledování konkrétní typy přidělování a `filename` / `linenumber` informací k určení původu požadavků na přidělení.  
   
- `_aligned_recalloc_dbg`přidělí blok zadaná paměťová se něco víc místa, než požadovaná velikost (`num` * `size`) který může být větší nebo menší než velikost bloku původně přidělenou paměť. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Přerozdělení může způsobit přesunutí původní bloku paměti do jiného umístění v haldě, jakož i změníte velikost bloku paměti. Část uživatele bloku je vyplněnou hodnotou 0xCD a přepsat vyrovnávací paměti jsou vyplněny 0xFD.  
+ `_aligned_recalloc_dbg` přidělí blok zadaná paměťová se něco víc místa, než požadovaná velikost (`num` * `size`) který může být větší nebo menší než velikost bloku původně přidělenou paměť. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Přerozdělení může způsobit přesunutí původní bloku paměti do jiného umístění v haldě, jakož i změníte velikost bloku paměti. Část uživatele bloku je vyplněnou hodnotou 0xCD a přepsat vyrovnávací paměti jsou vyplněny 0xFD.  
   
- `_aligned_recalloc_dbg`Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti; `EINVAL` je vrácena, pokud objem paměti vyžadované (včetně režie, již bylo zmíněno dříve) přesahuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_aligned_recalloc_dbg` Nastaví `errno` k `ENOMEM` Pokud selže přidělení paměti; `EINVAL` je vrácena, pokud objem paměti vyžadované (včetně režie, již bylo zmíněno dříve) přesahuje `_HEAP_MAXREQ`. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Navíc `_aligned_recalloc_dbg` ověří jeho parametry. Pokud `alignment` není napájení 2, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `NULL` a nastaví `errno` k `EINVAL`.  
   
@@ -94,7 +98,7 @@ void * _aligned_recalloc_dbg(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_aligned_recalloc_dbg`|\<crtdbg.h >|  
+|`_aligned_recalloc_dbg`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

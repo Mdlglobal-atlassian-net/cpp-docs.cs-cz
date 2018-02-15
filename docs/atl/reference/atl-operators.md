@@ -4,24 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
-helpviewer_keywords: operators [ATL]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bcd8ce5e46617958f0188a3563771061a37d22c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bcbe04fb057ffc8077f422cd784b5d31691df1e3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="atl-operators"></a>ATL – operátory
+# <a name="atl-operators"></a>ATL Operators
 Tato část obsahuje referenční témata pro globální operátory ATL.  
   
 |Operátor|Popis|  
@@ -36,7 +40,7 @@ Tato část obsahuje referenční témata pro globální operátory ATL.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h.  
   
-##  <a name="operator_eq_eq"></a>Operator ==  
+##  <a name="operator_eq_eq">Operator ==</a>  
  Porovná `CSid` objekty nebo `SID` struktury (security identifier) rovnosti.  
   
 ```   
@@ -53,7 +57,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud objekty jsou stejné, **false** Pokud nejsou stejné.  
   
-##  <a name="operator_neq"></a>Operator! =  
+##  <a name="operator_neq">Operator! =</a>  
  Porovná `CSid` objekty nebo `SID` struktury (security identifier) nerovnost.  
   
 ```   
@@ -70,7 +74,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud objekty nejsou stejné, **false** Pokud jsou stejné.  
   
-##  <a name="operator_lt"></a>operátor <  
+##  <a name="operator_lt">operátor <</a>  
  Testuje, pokud `CSid` objekt nebo `SID` struktura na levé straně operátoru je menší než `CSid` objekt nebo `SID` struktura na pravé straně (z důvodu kompatibility standardní knihovna C++).  
   
 ```   
@@ -90,7 +94,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor funguje na adresu `CSid` objekt nebo `SID` struktury a je implementována zajistit kompatibilitu s standardní knihovna C++ – třídy kolekce.  
   
-##  <a name="operator_gt"></a>operátor >  
+##  <a name="operator_gt">operátor ></a>  
  Testů, pokud `CSid` objekt nebo `SID` struktura na levé straně operátoru je větší než `CSid` objekt nebo `SID` struktura na pravé straně (z důvodu kompatibility standardní knihovna C++).  
   
 ```   
@@ -110,7 +114,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor funguje na adresu `CSid` objekt nebo `SID` struktury a je implementována zajistit kompatibilitu s standardní knihovna C++ – třídy kolekce.  
   
-##  <a name="operator_lt__eq"></a>Operator < =  
+##  <a name="operator_lt__eq">Operator < =</a>  
  Testuje, pokud `CSid` objekt nebo `SID` struktura na levé straně operátoru je menší než nebo rovno `CSid` objekt nebo `SID` struktura na pravé straně (z důvodu kompatibility standardní knihovna C++).  
   
 ```   
@@ -130,7 +134,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor funguje na adresu `CSid` objekt nebo `SID` struktury a je implementována zajistit kompatibilitu s standardní knihovna C++ – třídy kolekce.  
   
-##  <a name="operator_gt__eq"></a>Operator > =  
+##  <a name="operator_gt__eq">Operator > =</a>  
  Testuje, pokud `CSid` objekt nebo `SID` struktura na levé straně operátoru je větší než nebo rovna hodnotě `CSid` objekt nebo `SID` struktura na pravé straně (z důvodu kompatibility standardní knihovna C++).  
   
 ```   

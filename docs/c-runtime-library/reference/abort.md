@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: abort
+ms.topic: reference
+apiname:
+- abort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Abort
-dev_langs: C++
+f1_keywords:
+- Abort
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting current process
 - abort function
@@ -30,19 +34,20 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6577ca7927d42e12aa62ed100b9572b7270208f
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abort"></a>abort
 
 Zruší aktuální proces a vrátí kód chyby.
 
 > [!NOTE]
-> Nepoužívejte tuto metodu pro vypnutí aplikace Microsoft Store nebo [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace, kromě testování nebo ladění scénáře. Zavřete aplikaci ve Store způsoby programový nebo uživatelského rozhraní nejsou povolené podle požadavků [Microsoft Store zásady](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životní cyklus aplikace UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Nepoužívejte tuto metodu a ukončí se na aplikaci Microsoft Store nebo aplikace pro univerzální platformu Windows (UWP), s výjimkou testování nebo ladění scénáře. Zavřete aplikaci ve Store způsoby programový nebo uživatelského rozhraní nejsou povolené podle požadavků [Microsoft Store zásady](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životní cyklus aplikace UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,11 +57,11 @@ void abort( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`abort`nevrátí volající proces řízení. Ve výchozím nastavení, vyhledává signál obslužné rutiny přerušení a vyvolá `SIGABRT` je-li nastavena. Potom `abort` ukončí aktuální proces a vrátí ukončovací kód nadřazeného procesu.
+`abort` nevrátí volající proces řízení. Ve výchozím nastavení, vyhledává signál obslužné rutiny přerušení a vyvolá `SIGABRT` je-li nastavena. Potom `abort` ukončí aktuální proces a vrátí ukončovací kód nadřazeného procesu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Konkrétní Microsoft**
+**Microsoft Specific**
 
 Ve výchozím nastavení, pokud je aplikace vytvořené s nástroji knihovně spuštění ladění `abort` rutiny zobrazí chybovou zprávu před `SIGABRT` je vyvolána. Pro aplikace konzoly, spuštěna v režimu konzoly, je zpráva odeslána na `STDERR`. Desktopové aplikace systému Windows a konzole aplikace běžící v režimu zobrazení v okně zobrazení zprávy v okně se zprávou. K potlačení zprávy, použijte [_set_abort_behavior –](../../c-runtime-library/reference/set-abort-behavior.md) zrušte `_WRITE_ABORT_MSG` příznak. Zpráva zobrazí závisí na verzi modulu runtime prostředí použít. Pro aplikace vytvořené pomocí nejnovější verze aplikace Visual C++ zpráva vypadá takto:
 
@@ -72,7 +77,7 @@ V sestavení pro ladění a prodejní `abort` zkontroluje, zda je nastaven obslu
 
 Ve výchozím nastavení v sestavení bez ladění aplikací, plocha nebo konzoly `abort` poté vyvolá mechanismus Windows Error Reporting Service (dříve označované jako zotavení po havárii. Watson) do sestav chyb společnosti Microsoft. Toto chování můžete povolit nebo zakázat voláním `_set_abort_behavior` a nastavení nebo maskování `_CALL_REPORTFAULT` příznak. Když je nastavený příznak, systém Windows zobrazí okno se zprávou, která má text něco jako "Problém způsobil, že program přestane fungovat správně." Uživatel může vybrat, má být vyvolán ladicí program s **ladění** tlačítko, nebo zvolte **ukončení programu** tlačítko Ukončit aplikaci s kódem chyby, která je definována v operačním systému.
 
-Pokud není vyvolána o chybách systému Windows obslužná rutina, pak `abort` volání [_exit –](../../c-runtime-library/reference/exit-exit-exit.md) ukončit proces řízení 3 a vrátí kód ukončení nadřazeného procesu nebo operačního systému. `_exit`Vyprázdní vyrovnávací paměti datového proudu nebo provést `atexit` / `_onexit` zpracování.
+Pokud není vyvolána o chybách systému Windows obslužná rutina, pak `abort` volání [_exit –](../../c-runtime-library/reference/exit-exit-exit.md) ukončit proces řízení 3 a vrátí kód ukončení nadřazeného procesu nebo operačního systému. `_exit` Vyprázdní vyrovnávací paměti datového proudu nebo provést `atexit` / `_onexit` zpracování.
 
 Další informace o ladění CRT najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -132,3 +137,4 @@ File could not be opened: No such file or directory
 [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)  
 [_DEBUG](../../c-runtime-library/debug.md)  
 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
+

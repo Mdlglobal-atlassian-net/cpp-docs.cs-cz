@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21eab7d0adc6cf1952f6f26cdda23c885c63a3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Vynásobí dvě hodnoty společně, přidá třetí hodnota a pak zaokrouhlí výsledek, aniž by došlo ke ztrátě všech přesnost kvůli zprostředkující zaokrouhlení.  
@@ -89,13 +91,13 @@ long double fmal(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [in] `x`  
  První hodnota k násobení.  
   
- [v]`y`  
+ [in] `y`  
  Druhá hodnota mají vynásobit.  
   
- [v]`z`  
+ [in] `z`  
  Hodnota k přidání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -105,9 +107,9 @@ long double fmal(
   
 |Problém|Vrátí|  
 |-----------|------------|  
-|`x`= INFINITY, `y` = 0 nebo<br /><br /> `x`= 0, `y` = INFINITY|NaN|  
-|`x`nebo `y` = přesný rozmezí INFINITY, `z` = INFINITY s opačným znaménkem|NaN|  
-|`x`nebo `y` = NaN.|NaN|  
+|`x` = INFINITY, `y` = 0 nebo<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
+|`x` nebo `y` = přesný rozmezí INFINITY, `z` = INFINITY s opačným znaménkem|NaN|  
+|`x` nebo `y` = NaN.|NaN|  
 |Ne (`x` = 0, `y`= neomezené) a `z` = NaN.<br /><br /> Ne (`x`= neomezené, `y`= 0) a `z` = NaN.|NaN|  
 |Rozsah chybu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|  
 |Podtečení rozsah chyby|správnou hodnotu po zaokrouhlení.|  
@@ -123,7 +125,7 @@ long double fmal(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`fma`, `fmaf`, `fmal`|\<Math.h >|\<cmath – >|  
+|`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

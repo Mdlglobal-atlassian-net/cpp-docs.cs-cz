@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -36,22 +36,24 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 681f9d125a7f45dae2a8e604df655facdd246067
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13b85eef72ed1a2180af1b41bf93eefe499967bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
 Nastaví interval ukazuje první argument na aktuální čas kalendáře podle základní zadané doby.  
@@ -87,7 +89,7 @@ int _timespec64_get(
 ## <a name="remarks"></a>Poznámky  
  `timespec_get` Funkce nastavit aktuální čas v struktura, na kterou odkazuje `time_spec` argument. Všechny verze tato struktura mít dva členy `tv_sec` a `tv_nsec`. `tv_sec` Hodnota nastavena na celočíselný počet sekund a `tv_nsec` na celočíselný počet nanosekundách zaokrouhlené na řešení systémové hodiny od začátku epoch určeného `base`.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Tyto funkce podporují pouze `TIME_UTC` jako `base` hodnotu. Tím se nastaví `time_spec` hodnota počet sekund a nanosekundách od okamžiku spuštění epoch, půlnoc, 1. ledna 1970 koordinovaný světový čas (UTC). V `struct _timespec32`, `tv_sec` je `__time32_t` hodnotu. V `struct _timespec64`, `tv_sec` je `__time64_t` hodnotu. V `struct timespec`, `tv_sec` je `time_t` typu, který je 32bitová verze nebo 64 bitů v závislosti na tom, zda je definována _USE_32BIT_TIME_T makro preprocesoru. `timespec_get` Funkce je vložená funkce, která volá `_timespec32_get` Pokud _USE_32BIT_TIME_T je definován; jinak zavolá `_timespec64_get`.  
   
@@ -103,12 +105,12 @@ int _timespec64_get(
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [asctime –, _wasctime –](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s –, _wasctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

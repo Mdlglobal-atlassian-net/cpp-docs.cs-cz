@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -36,22 +38,23 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1c470717d48836fd405e98f5fccca222e87a9c33
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e3d46fd4b4df463bfce940360744a0a548652e2b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 Spustí příkaz.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,11 +89,11 @@ int _wsystem(
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pro další informace o těchto návratové kódy.  
   
 ## <a name="remarks"></a>Poznámky  
- `system` Funkce předává `command` k překladač příkazů, které provede řetězec jako příkaz operačního systému. `system`používá `COMSPEC` a `PATH` proměnné prostředí najít překladač příkazů soubor CMD.exe. Pokud `command` je `NULL`, funkce právě ověří, zda existuje překladač příkazů.  
+ `system` Funkce předává `command` k překladač příkazů, které provede řetězec jako příkaz operačního systému. `system` používá `COMSPEC` a `PATH` proměnné prostředí najít překladač příkazů soubor CMD.exe. Pokud `command` je `NULL`, funkce právě ověří, zda existuje překladač příkazů.  
   
  Musíte explicitně flush – pomocí `fflush` nebo `_flushall`– nebo zavřete jakýkoli proud před voláním `system`.  
   
- `_wsystem`široká charakterová verze `system`; `command` argument `_wsystem` je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.  
+ `_wsystem` široká charakterová verze `system`; `command` argument `_wsystem` je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -121,7 +124,7 @@ int main( void )
 }  
 ```  
   
-## <a name="input-crtsystemtxt"></a>Vstup: crt_system.txt  
+## <a name="input-crtsystemtxt"></a>Input: crt_system.txt  
   
 ```  
 Line one.  
@@ -138,6 +141,6 @@ Line two.
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
  [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)   
- [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_flushall –](../../c-runtime-library/reference/flushall.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)

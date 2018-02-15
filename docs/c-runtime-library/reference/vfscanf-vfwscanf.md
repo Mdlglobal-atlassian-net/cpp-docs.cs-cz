@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vfwscanf
 - vfscanf
@@ -26,18 +27,20 @@ f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8abe9916aa7b64663edcf05a400dd5cb0107c482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3cbf345f686a08fbcd7e3ead6ebcd24d9cd803
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 Čtení formátovaných dat z datového proudu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [vfscanf_s vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md).  
@@ -73,9 +76,9 @@ int vfwscanf(
  Tyto funkce ověřit jejich parametrů. Pokud `stream` nebo `format` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `EOF` a nastavte `errno` k `EINVAL`.  
   
 ## <a name="remarks"></a>Poznámky  
- `vfscanf` Funkce čte data z aktuální pozici `stream` do umístění, která se poskytují `arglist` seznam argumentů. Každý argument v seznamu musí být ukazatel na proměnné typu, která odpovídá specifikátor typu v `format`. `format`ovládací prvky výklad vstupní pole a má stejnou tvoří a fungovat jako `format` argument pro `scanf`; najdete v části [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) popis `format`.  
+ `vfscanf` Funkce čte data z aktuální pozici `stream` do umístění, která se poskytují `arglist` seznam argumentů. Každý argument v seznamu musí být ukazatel na proměnné typu, která odpovídá specifikátor typu v `format`. `format` ovládací prvky výklad vstupní pole a má stejnou tvoří a fungovat jako `format` argument pro `scanf`; najdete v části [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) popis `format`.  
   
- `vfwscanf`široká charakterová verze `vfscanf`; argument formátu `vfwscanf` je široká charakterová řetězec. Tyto funkce chovají stejně jako stejně jako datový proud se při otevření v režimu ANSI. `vfscanf`vstup z datového proudu kódování UNICODE nepodporuje.  
+ `vfwscanf` široká charakterová verze `vfscanf`; argument formátu `vfwscanf` je široká charakterová řetězec. Tyto funkce chovají stejně jako stejně jako datový proud se při otevření v režimu ANSI. `vfscanf` vstup z datového proudu kódování UNICODE nepodporuje.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -89,7 +92,7 @@ int vfwscanf(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`vfscanf`|\<stdio.h >|  
+|`vfscanf`|\<stdio.h>|  
 |`vfwscanf`|\<stdio.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -164,9 +167,9 @@ x
   
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_cscanf –, _cscanf_l –, _cwscanf –, _cwscanf_l –](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf –, _sscanf_l –, swscanf –, _swscanf_l –](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [fscanf_s –, _fscanf_s_l –, fwscanf_s –, _fwscanf_s_l –](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
  [vfscanf_s, vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)

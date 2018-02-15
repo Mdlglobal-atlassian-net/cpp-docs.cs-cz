@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fpieee_flt
+ms.topic: reference
+apiname:
+- _fpieee_flt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63472ad24a981a39a20e6c0cabb82f7c96d1e59e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88d05d4d8c7f403cc2702c5a0ec3b2af840bd320
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 Vyvolá obslužnou rutinu depeše uživatelem definované výjimky plovoucí desetinné čárky IEEE.  
@@ -77,8 +81,8 @@ int _fpieee_flt(
 |----------------------------|-----------------|  
 |`unsigned int RoundingMode`, `unsigned int Precision`|Tato pole obsahují informace o prostředí s plovoucí desetinnou čárkou v době, že se vyskytla výjimka.|  
 |`unsigned int Operation`|Určuje typ operace, která způsobila, že depeše. Pokud je typ porovnání (`_FpCodeCompare`), můžete zadat jednu z speciální `_FPIEEE_COMPARE_RESULT` hodnoty (podle definice v Fpieee.h) ve `Result.Value` pole. Typ převodu (`_FpCodeConvert`) označuje, že depeše došlo k chybě během operace převody plovoucí desetinné čárky. Můžete si prohlédnout `Operand1` a `Result` typy určit typ převodu Probíhá pokus o provedení.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Tyto struktury znamenat typy a hodnoty navrhované výsledek a operandy:<br /><br /> `OperandValid`Příznak určující, zda je hodnota odpovídá platný.<br /><br /> `Format`Datový typ s odpovídající hodnotou. Typ formátu může být vrácena, i když odpovídající hodnota není platná.<br /><br /> `Value`Výsledek nebo operand hodnota data.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS obsahuje jeden bit pole na každý typ plovoucí bodu výjimky.<br /><br /> Je korespondence mezi těmito poli a argumenty použít k maskování výjimky zadaný do [_controlfp –](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Přesný význam každý bit záviset na kontextu:<br /><br /> `Cause`Každá nastavit chvíli indikuje konkrétní výjimku, která byla vyvolána.<br /><br /> `Enable`Každé nastavení chvíli označuje, že je aktuálně odmaskovaná určité výjimky.<br /><br /> `Status`Každý nastavit chvíli označuje, že konkrétní výjimka je momentálně neprobíhá. To zahrnuje výjimky, které nebyly bylo vyvoláno, protože byly maskovat pomocí `_controlfp`.|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Tyto struktury znamenat typy a hodnoty navrhované výsledek a operandy:<br /><br /> `OperandValid` Příznak určující, zda je hodnota odpovídá platný.<br /><br /> `Format` Datový typ s odpovídající hodnotou. Typ formátu může být vrácena, i když odpovídající hodnota není platná.<br /><br /> `Value` Výsledek nebo operand hodnota data.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS obsahuje jeden bit pole na každý typ plovoucí bodu výjimky.<br /><br /> Je korespondence mezi těmito poli a argumenty použít k maskování výjimky zadaný do [_controlfp –](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Přesný význam každý bit záviset na kontextu:<br /><br /> `Cause` Každá nastavit chvíli indikuje konkrétní výjimku, která byla vyvolána.<br /><br /> `Enable` Každé nastavení chvíli označuje, že je aktuálně odmaskovaná určité výjimky.<br /><br /> `Status` Každý nastavit chvíli označuje, že konkrétní výjimka je momentálně neprobíhá. To zahrnuje výjimky, které nebyly bylo vyvoláno, protože byly maskovat pomocí `_controlfp`.|  
   
  Čekající na vyřízení výjimky, které jsou zakázány se vyvolá, když je povolit. To může vést k nedefinované chování při použití `_fpieee_flt` jako filtr výjimek. Vždy volat [_clearfp –](../../c-runtime-library/reference/clear87-clearfp.md) před povolením plovoucí bodu výjimky.  
   
@@ -86,7 +90,7 @@ int _fpieee_flt(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fpieee_flt`|\<fpieee.h >|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

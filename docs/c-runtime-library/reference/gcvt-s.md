@@ -1,13 +1,15 @@
 ---
-title: "_gcvt_s – | Microsoft Docs"
+title: _gcvt_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _gcvt_s
+ms.topic: reference
+apiname:
+- _gcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +38,17 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 567738b488ae648dbd67ea1d2b5cdf34b649170c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gcvts"></a>_gcvt_s
 Převede hodnotu s plovoucí desetinnou čárkou na řetězec. Toto je verze [_gcvt –](../../c-runtime-library/reference/gcvt.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -67,16 +71,16 @@ errno_t _gcvt_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Vyrovnávací paměť pro uložení výsledek převodu.  
   
- [v]`sizeInBytes`  
+ [in] `sizeInBytes`  
  Velikost vyrovnávací paměti.  
   
- [v]`value`  
+ [in] `value`  
  Hodnota má být převeden.  
   
- [v]`digits`  
+ [in] `digits`  
  Počet platných číslic, které jsou uložené.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -84,7 +88,7 @@ errno_t _gcvt_s(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Vrátí|Hodnota v`buffer`|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Vrátí|Hodnota v `buffer`|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
 |`NULL`|všechny|všechny|všechny|`EINVAL`|Nedojde ke změně.|  
 |Není `NULL` (odkazuje na platný paměti)|nula|všechny|všechny|`EINVAL`|Nedojde ke změně.|  
@@ -92,10 +96,10 @@ errno_t _gcvt_s(
   
  **Problémy se zabezpečením**  
   
- `_gcvt_s`může vygenerovat porušení přístupu, pokud `buffer` neodkazuje na platný paměti a není `NULL`.  
+ `_gcvt_s` může vygenerovat porušení přístupu, pokud `buffer` neodkazuje na platný paměti a není `NULL`.  
   
 ## <a name="remarks"></a>Poznámky  
- `_gcvt_s` Funkce převede s plovoucí desetinnou čárkou `value` na řetězec znaků (která zahrnuje desetinné čárky a možné přihlašovací bajtů) a ukládá řetězec v `buffer`. `buffer`musí být dostatečně velký na to, aby dokázala pojmout převedená hodnota plus ukončující prázdný znak, který se automaticky připojí. Vyrovnávací paměť délky `_CVTBUFSIZE` je dostatečná pro všechny plovoucí bodu hodnotu. Pokud velikost vyrovnávací paměti `digits` + 1 se používá, funkce nepřepíše do konce vyrovnávací paměti, takže je nutné zadat dostatečná vyrovnávací paměti pro tuto operaci. `_gcvt_s`pokusí se vytvořit `digits` číslic ve formátu desetinného čísla. Pokud ne, vyvolá `digits` číslic v exponenciálním formátu. Koncové nuly lze potlačit v převodu.  
+ `_gcvt_s` Funkce převede s plovoucí desetinnou čárkou `value` na řetězec znaků (která zahrnuje desetinné čárky a možné přihlašovací bajtů) a ukládá řetězec v `buffer`. `buffer` musí být dostatečně velký na to, aby dokázala pojmout převedená hodnota plus ukončující prázdný znak, který se automaticky připojí. Vyrovnávací paměť délky `_CVTBUFSIZE` je dostatečná pro všechny plovoucí bodu hodnotu. Pokud velikost vyrovnávací paměti `digits` + 1 se používá, funkce nepřepíše do konce vyrovnávací paměti, takže je nutné zadat dostatečná vyrovnávací paměti pro tuto operaci. `_gcvt_s` pokusí se vytvořit `digits` číslic ve formátu desetinného čísla. Pokud ne, vyvolá `digits` číslic v exponenciálním formátu. Koncové nuly lze potlačit v převodu.  
   
  V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -105,7 +109,7 @@ errno_t _gcvt_s(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_gcvt_s`|\<stdlib.h >|\<Error.h >|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -144,7 +148,7 @@ Converted value: 1.2
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt_s –](../../c-runtime-library/reference/ecvt-s.md)   
- [_fcvt_s –](../../c-runtime-library/reference/fcvt-s.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)

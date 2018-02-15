@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 403fc7f285aeebf5fc7b6d4ebb39d1e922d8edc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bc88f047806e21245389837b9f712d3491033a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 Otevře soubor pro sdílení. Tyto verze nástroje [_sopen – a _wsopen –](../../c-runtime-library/reference/sopen-wsopen.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -72,19 +75,19 @@ errno_t _wsopen_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pfh`  
+ [out] `pfh`  
  Popisovač souboru, nebo -1 v případě k chybě.  
   
- [v]`filename`  
+ [in] `filename`  
  Název souboru.  
   
- [v]`oflag`  
+ [in] `oflag`  
  Druh operace povoleny.  
   
- [v]`shflag`  
+ [in] `shflag`  
  Druh sdílení povoleno.  
   
- [v]`pmode`  
+ [in] `pmode`  
  Nastavení oprávnění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -94,7 +97,7 @@ errno_t _wsopen_s(
  Zadaná cesta je adresář, nebo soubor je jen pro čtení, ale došlo k pokusu o operaci otevřít pro zápis.  
   
  `EEXIST`  
- `_O_CREAT`a `_O_EXCL` příznaky byly zadány, ale `filename` již existuje.  
+ `_O_CREAT` a `_O_EXCL` příznaky byly zadány, ale `filename` již existuje.  
   
  `EINVAL`  
  Neplatný `oflag`, `shflag`, nebo `pmode` argument, nebo `pfh` nebo `filename` byla ukazatele null.  
@@ -112,7 +115,7 @@ errno_t _wsopen_s(
  V případě chybu, se vrátí hodnotu -1 prostřednictvím `pfh` (Pokud `pfh` je ukazatel s hodnotou null).  
   
 ## <a name="remarks"></a>Poznámky  
- `_sopen_s` Funkce otevře soubor určený touto `filename` a připraví soubor sdílený čtení nebo zápisu, podle definice `oflag` a `shflag`. `_wsopen_s`široká charakterová verze `_sopen_s`; `filename` argument `_wsopen_s` je široká charakterová řetězec. `_wsopen_s`a `_sopen_s` chovat jinak shodně.  
+ `_sopen_s` Funkce otevře soubor určený touto `filename` a připraví soubor sdílený čtení nebo zápisu, podle definice `oflag` a `shflag`. `_wsopen_s` široká charakterová verze `_sopen_s`; `filename` argument `_wsopen_s` je široká charakterová řetězec. `_wsopen_s` a `_sopen_s` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -159,7 +162,7 @@ errno_t _wsopen_s(
  Otevře soubor v režimu textových (přeložit). (Další informace najdete v tématu [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [fopen –](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC`použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
+ Otevře soubor a zkrátí ho nule length; soubor musí mít oprávnění k zápisu. Nelze zadat u `_O_RDONLY`. `_O_TRUNC` použít s `_O_CREAT` otevře existující soubor nebo soubor se vytvoří.  
   
 > [!NOTE]
 >  `_O_TRUNC` Příznak zničí obsah zadaného souboru.  
@@ -196,7 +199,7 @@ errno_t _wsopen_s(
  `_SH_DENYNO`  
  Povolí přístup čtení a zápisu.  
   
- `pmode` Vždy je nutné, na rozdíl od v argumentu `_sopen`. Pokud zadáte `_O_CREAT`, pokud soubor neexistuje, `pmode` určuje nastavení v souboru oprávnění, která jsou nastavena při prvním zavření nový soubor. V opačném `pmode` je ignorována. `pmode`je použit celočíselný výraz, který obsahuje jedno nebo obě manifestu konstanty `_S_IWRITE` a `_S_IREAD`, která jsou definována v \<sys\stat.h >. Pokud jsou zadány oba konstanty, jsou kombinovat s operátoru bitové operace OR. Význam `pmode` je následující.  
+ `pmode` Vždy je nutné, na rozdíl od v argumentu `_sopen`. Pokud zadáte `_O_CREAT`, pokud soubor neexistuje, `pmode` určuje nastavení v souboru oprávnění, která jsou nastavena při prvním zavření nový soubor. V opačném `pmode` je ignorována. `pmode` je použit celočíselný výraz, který obsahuje jedno nebo obě manifestu konstanty `_S_IWRITE` a `_S_IREAD`, která jsou definována v \<sys\stat.h >. Pokud jsou zadány oba konstanty, jsou kombinovat s operátoru bitové operace OR. Význam `pmode` je následující.  
   
  `_S_IWRITE`  
  Zápis povolen.  
@@ -209,16 +212,16 @@ errno_t _wsopen_s(
   
  Není-li oprávnění k zápisu, soubor je jen pro čtení. V operačním systému Windows jsou všechny soubory čitelný; není možné udělit oprávnění jen pro zápis. Proto režimů `_S_IWRITE` a `_S_IREAD | _S_IWRITE` odpovídají.  
   
- `_sopen_s`použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Viz [_umask –](../../c-runtime-library/reference/umask.md).)  
+ `_sopen_s` použije aktuální maska souboru oprávnění k `pmode` předtím, než jsou oprávnění nastavena. (Viz [_umask –](../../c-runtime-library/reference/umask.md).)  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_sopen_s`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
-|`_wsopen_s`|\<IO.h > nebo \<wchar.h >|\<fcntl.h >, \<sys/types.h >, \<sys/stat.h >, \<share.h >|  
+|`_sopen_s`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
+|`_wsopen_s`|\<IO.h > nebo \<wchar.h >|\<fcntl.h>, \<sys/types.h>, \<sys/stat.h>, \<share.h>|  
   
- `_sopen_s`a `_wsopen_s` jsou rozšíření Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ `_sopen_s` a `_wsopen_s` jsou rozšíření Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [_locking –](../../c-runtime-library/reference/locking.md).  
@@ -226,7 +229,7 @@ errno_t _wsopen_s(
 ## <a name="see-also"></a>Viz také  
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_fsopen –, _wfsopen –](../../c-runtime-library/reference/fsopen-wfsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

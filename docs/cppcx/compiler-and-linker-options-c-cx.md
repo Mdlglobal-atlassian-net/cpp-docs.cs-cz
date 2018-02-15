@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
 Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti podporují vytváření aplikací pro prostředí Windows Runtime.  
@@ -39,11 +40,11 @@ Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti
 |Možnost|Popis|  
 |------------|-----------------|  
 |/ APPCONTAINER [: NE]|Označí tento spustitelný soubor jako spustitelného v kontejneru appcontainer (pouze).|  
-|/ WINMD [: {Č &#124; POUZE}]|Vysílá soubor .winmd a přidružený binární soubor. Tuto možnost, musí být předán linkeru pro .winmd pro vypuštění.<br /><br /> **Ne**– není emitování soubor .winmd, ale emitování binární soubor.<br /><br /> **POUZE**– vysílá soubor .winmd, ale není emitování binární soubor.|  
-|/ WINMDFILE:*filename*|Název souboru .winmd pro vydávání místo výchozí název souboru .winmd. Pokud více názvů souborů jsou nastaveny na příkazovém řádku, použije se příjmení.|  
+|/WINMD[:{NO&#124;ONLY}]|Vysílá soubor .winmd a přidružený binární soubor. Tuto možnost, musí být předán linkeru pro .winmd pro vypuštění.<br /><br /> **Ne**– není emitování soubor .winmd, ale emitování binární soubor.<br /><br /> **POUZE**– vysílá soubor .winmd, ale není emitování binární soubor.|  
+|/WINMDFILE:*filename*|Název souboru .winmd pro vydávání místo výchozí název souboru .winmd. Pokud více názvů souborů jsou nastaveny na příkazovém řádku, použije se příjmení.|  
 |/ WINMDDELAYSIGN [: NE]|Částečně podepíše soubor .winmd a umístí veřejný klíč do binárního souboru.<br /><br /> **Ne**—(Default) není podepsání souboru .winmd.<br /><br /> / WINMDDELAYSIGN nemá žádný vliv, pokud /WINMDKEYFILE nebo /WINMDKEYCONTAINER rovněž je zadán.|  
 |/ WINMDKEYCONTAINER:*název*|Určuje kontejner klíčů pro podepsání sestavení. *Název* parametr odpovídá kontejneru klíčů, který se používá k podepsání souboru metadat.|  
-|/ WINMDFILE:*filename*|Určuje klíč nebo pár klíčů k podepsání sestavení. *Filename* parametr odpovídá klíč, který se používá k podepsání souboru metadat.|  
+|/WINMDKEYFILE:*filename*|Určuje klíč nebo pár klíčů k podepsání sestavení. *Filename* parametr odpovídá klíč, který se používá k podepsání souboru metadat.|  
   
 ### <a name="remarks"></a>Poznámky  
  Při použití **/ZW**, kompilátor automaticky odkazuje na knihovnu DLL verze z modulu Runtime jazyka C (CRT). Propojení na verzi statické knihovny není povolen a jakékoli použití funkcí CRT, které nejsou povoleny v aplikaci pro univerzální platformu Windows může způsobit chyby kompilace.  

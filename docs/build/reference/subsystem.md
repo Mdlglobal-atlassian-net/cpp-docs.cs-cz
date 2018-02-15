@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /subsystem
-dev_langs: C++
+f1_keywords:
+- /subsystem
+dev_langs:
+- C++
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Určuje prostředí pro spuštění, který je požadován spustitelné bitové kopie.  
@@ -40,7 +44,7 @@ Určuje prostředí pro spuštění, který je požadován spustitelné bitové 
  Můžete zadat jakýkoli subsystémů následující:  
   
  BOOT_APPLICATION  
- Aplikace, která běží v prostředí spouštění systému Windows. Další informace o spouštění aplikací najdete v tématu[o BCD WMI poskytovatel](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Aplikace, která běží v prostředí spouštění systému Windows. Další informace o spouštění aplikací najdete v tématu [o BCD WMI poskytovatel](http://msdn.microsoft.com/library/aa362639.aspx).  
   
  KONZOLA  
  Aplikace systému Windows režim znaků. Operační systém poskytuje konzoli pro konzolové aplikace.  
@@ -55,7 +59,7 @@ Určuje prostředí pro spuštění, který je požadován spustitelné bitové 
  Aplikaci, která běží v subsystému POSIX v systému Windows.  
   
  WINDOWS  
- Aplikaci, která běží v grafickém prostředí systému Windows. To zahrnuje aplikace klasické pracovní plochy a aplikace pro Windows Store.  
+ Aplikaci, která běží v grafickém prostředí systému Windows. To zahrnuje aplikace klasické pracovní plochy a aplikace pro univerzální platformu Windows (UWP).  
   
  WINDOWSCE  
  Subsystém WINDOWSCE označuje, že aplikace je určený pro spouštění v zařízení, které má verzi jádra Windows CE. Verze jádra obsahují počítače PocketPC, Windows Mobile, Windows Phone 7, Windows CE verze 1.0 6.0R3 a systém Windows Embedded Compact 7.  

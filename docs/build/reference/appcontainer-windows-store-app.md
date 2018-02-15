@@ -1,26 +1,29 @@
 ---
-title: -APPCONTAINER (aplikace pro Windows Store) | Microsoft Docs
+title: / APPCONTAINER (aplikace pro UPW nebo Microsoft Store) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="appcontainer-windows-store-app"></a>/APPCONTAINER (Aplikace pro web Windows Store)
+# <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (aplikace Microsoft Store)
 Určuje, zda linkeru vytvoří spustitelné bitové kopie, který se musí spustit v kontejnerem aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -32,7 +35,7 @@ Určuje, zda linkeru vytvoří spustitelné bitové kopie, který se musí spust
 ## <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je /APPCONTAINER vypnuté.  
   
- Tato možnost upravuje spustitelný soubor indikující, zda aplikace musí být spuštěn v kontejneru appcontainer izolace procesu prostředí. Zadejte /APPCONTAINER pro aplikaci, která musí být spuštěný v prostředí appcontainer – například [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] aplikace. (Možnost nastavena automaticky v sadě Visual Studio při vytváření [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] aplikace ze šablony.) Pro desktopové aplikace zadejte /APPCONTAINER:NO nebo právě vynechejte možnost.  
+ Tato možnost upravuje spustitelný soubor indikující, zda aplikace musí být spuštěn v kontejneru appcontainer izolace procesu prostředí. Zadejte /APPCONTAINER pro aplikaci, která musí být spuštěný v prostředí appcontainer – například univerzální platformu Windows (UWP) nebo Windows Phone 8.x aplikace. (Možnost nastavena automaticky v sadě Visual Studio při vytvoření aplikace pro univerzální Windows ze šablony.) Pro desktopové aplikace zadejte /APPCONTAINER:NO nebo právě vynechejte možnost.  
   
  Možnost /APPCONTAINER byla zavedena v [!INCLUDE[win8](../../build/reference/includes/win8_md.md)].  
   

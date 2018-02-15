@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - va_arg
 - va_end
@@ -32,7 +33,8 @@ f1_keywords:
 - va_dcl
 - va_copy
 - va_end
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - variable argument lists, accessing
 - va_start macro
@@ -44,16 +46,17 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d131a02caf931a7696076094372678741c7a897e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 91d3b2037e131f071feb2f22dfe25c21d3af2562
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 Seznamy argumentů s proměnnou přístupů.  
@@ -89,7 +92,7 @@ void va_start(
  Ukazatel na seznam argumentů.  
   
  `dest`  
- Ukazatel na seznam argumentů inicializované ze`src`  
+ Ukazatel na seznam argumentů inicializované ze `src`  
   
  `src`  
  Ukazatel na inicializovaného seznam argumentů, zkopírujte do `dest`.  
@@ -98,7 +101,7 @@ void va_start(
  Parametr, který se nachází před první nepovinný argument.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `va_arg`Vrátí aktuální argument. `va_copy`, `va_start` a `va_end` nevrátí hodnoty.  
+ `va_arg` Vrátí aktuální argument. `va_copy`, `va_start` a `va_end` nevrátí hodnoty.  
   
 ## <a name="remarks"></a>Poznámky  
  `va_arg`, `va_copy`, `va_end`, A `va_start` makra poskytnout přenosný způsob, jak přístupu argumenty pro funkci v případě, že funkce přijímá proměnný počet argumentů. Existují dvě verze makra: makra definované v STDARG. H odpovídat standardní; ISO C99 makra definované v vararg. H jsou zastaralé, ale se zachovává kvůli zpětné kompatibilitě s kódem, který byla zapsána před standardní kompilátorem C89 ANSI.  
@@ -107,13 +110,13 @@ void va_start(
   
  Standardní makra C definované v STDARG. H, používají se následujícím způsobem:  
   
--   `va_start`Nastaví `arg_ptr` na první nepovinný argument v seznamu argumentů, který je předán do funkce. Argument `arg_ptr` musí mít `va_list` typu. Argument `prev_param` je název povinný parametr, který okamžitě předchází první nepovinný argument v seznamu argumentů. Pokud `prev_param` je deklarovaný s třídy úložiště registrace jeho chování není definován. `va_start`než se musí použít `va_arg` se používá pro první.  
+-   `va_start` Nastaví `arg_ptr` na první nepovinný argument v seznamu argumentů, který je předán do funkce. Argument `arg_ptr` musí mít `va_list` typu. Argument `prev_param` je název povinný parametr, který okamžitě předchází první nepovinný argument v seznamu argumentů. Pokud `prev_param` je deklarovaný s třídy úložiště registrace jeho chování není definován. `va_start` než se musí použít `va_arg` se používá pro první.  
   
--   `va_arg`načte hodnotu `type` z umístění, které je dán `arg_ptr`a zvýší `arg_ptr` tak, aby odkazoval na další argument v seznamu pomocí velikost `type` k určení, kdy začne další argument. `va_arg`lze použít libovolný počet časy ve funkci k načtení argumentů ze seznamu.  
+-   `va_arg` načte hodnotu `type` z umístění, které je dán `arg_ptr`a zvýší `arg_ptr` tak, aby odkazoval na další argument v seznamu pomocí velikost `type` k určení, kdy začne další argument. `va_arg` lze použít libovolný počet časy ve funkci k načtení argumentů ze seznamu.  
   
--   `va_copy`Vytvoří kopii seznam argumentů v jejím aktuálním stavu. `src` Parametr musí být již inicializován s `va_start`; je pravděpodobně byly aktualizovány s `va_arg` volá, ale nesmí resetován s `va_end`. Další argument, který načte `va_arg` z `dest` je stejný jako další argument, které se načítají ze `src`.  
+-   `va_copy` Vytvoří kopii seznam argumentů v jejím aktuálním stavu. `src` Parametr musí být již inicializován s `va_start`; je pravděpodobně byly aktualizovány s `va_arg` volá, ale nesmí resetován s `va_end`. Další argument, který načte `va_arg` z `dest` je stejný jako další argument, které se načítají ze `src`.  
   
--   Poté, co byly získány všechny argumenty, `va_end` resetuje má ukazatel na **NULL**. `va_end`musí být volána pro každý seznam argumentů, který je inicializován s `va_start` nebo `va_copy` před funkce vrátí hodnotu.  
+-   Poté, co byly získány všechny argumenty, `va_end` resetuje má ukazatel na **NULL**. `va_end` musí být volána pro každý seznam argumentů, který je inicializován s `va_start` nebo `va_copy` před funkce vrátí hodnotu.  
   
 > [!NOTE]
 >  Makra v vararg. H jsou zastaralé a jsou uchovány pouze pro zpětné kompatibility s kódem, který byla zapsána před standardní kompilátorem C89 ANSI. Ve všech ostatních případech použitím makra v STDARGS. H.  

@@ -1,12 +1,13 @@
 ---
-title: _seh_filter_dll _seh_filter_exe | Microsoft Docs
+title: _seh_filter_dll, _seh_filter_exe | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _XcptFilter
 - _seh_filter_dll
@@ -31,25 +32,27 @@ f1_keywords:
 - _seh_filter_exe
 - corecrt_startup/_seh_filter_exe
 - corecrt_startup/_seh_filter_dll
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - XcptFilter function
 - _XcptFilter function
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b97fa6d6d2c9b7bb5de45e2f74eef524ec0f2746
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ccdaa9f89a45d957b0d56bc435e5cf61cd152e8d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll _seh_filter_exe
+# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
 Identifikuje výjimku a související provést akci.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -66,10 +69,10 @@ int __cdecl _seh_filter_exe(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`_ExceptionNum`  
+ [in] `_ExceptionNum`  
  Identifikátor pro výjimku.  
   
- [v]`_ExceptionPtr`  
+ [in] `_ExceptionPtr`  
  Ukazatel na informace o výjimce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -80,7 +83,7 @@ int __cdecl _seh_filter_exe(
   
 |Číslo výjimky (dlouho bez znaménka)|Číslo signál|  
 |----------------------------------------|-------------------|  
-|STATUS_ACCESS_VIOLATION|SIGSEGV –|  
+|STATUS_ACCESS_VIOLATION|SIGSEGV|  
 |STATUS_ILLEGAL_INSTRUCTION|SIGILL –|  
 |STATUS_PRIVILEGED_INSTRUCTION|SIGILL –|  
 |STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE –|  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: free
+ms.topic: reference
+apiname:
+- free
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: free
-dev_langs: C++
+f1_keywords:
+- free
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1be3f7141a8483aa7b0d43195b08506691e34fe3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 161b067c432a30e58db51410f0540d60d5e74bc8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="free"></a>free
 Zruší přidělení nebo uvolní blok paměti.  
@@ -62,7 +67,7 @@ void free(
   
  Když aplikace je spojená s verzí ladicí běhové knihovny jazyka C, `free` přeloží na [_free_dbg –](../../c-runtime-library/reference/free-dbg.md). Další informace o spravováni haldě ladění během najdete v tématu [haldy ladění The CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `free`je označena `__declspec(noalias)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).  
+ `free` je označena `__declspec(noalias)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).  
   
  Uvolnit paměť, kterým je přiřazen [_malloca –](../../c-runtime-library/reference/malloca.md), použijte [_freea –](../../c-runtime-library/reference/freea.md).  
   
@@ -79,10 +84,10 @@ void free(
   
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
- [_alloca –](../../c-runtime-library/reference/alloca.md)   
+ [_alloca](../../c-runtime-library/reference/alloca.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
  [realloc –](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg –](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin –](../../c-runtime-library/reference/heapmin.md)   
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
  [_freea](../../c-runtime-library/reference/freea.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ldiv
 - lldiv
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - ldiv
 - lldiv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ldiv function
 - lldiv function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - remainder computing
 - computing quotients
 ms.assetid: 68ab5d83-27a4-479c-9d52-d055eb139eca
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0443ce4ec90a9c6aef8fb07854200341cc369cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cdd241eca666570a47e1ce3ceb74730c6fe35de7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ldiv-lldiv"></a>ldiv, lldiv
 Vypočítá podílu a zbytek dvě celá čísla jako jednu operaci.  
@@ -70,10 +73,10 @@ lldiv_t lldiv(
  Jmenovatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `ldiv`Vrátí struktura typu [ldiv_t –](../../c-runtime-library/standard-types.md) , se skládá z podílu a zbytek. `lldiv`Vrátí struktura typu [lldiv_t](../../c-runtime-library/standard-types.md) , se skládá z podílu a zbytek.  
+ `ldiv` Vrátí struktura typu [ldiv_t –](../../c-runtime-library/standard-types.md) , se skládá z podílu a zbytek. `lldiv` Vrátí struktura typu [lldiv_t](../../c-runtime-library/standard-types.md) , se skládá z podílu a zbytek.  
   
 ## <a name="remarks"></a>Poznámky  
- `ldiv` a `lldiv` funkce rozdělení `numer` podle `denom`a tím výpočetní podílu a zbytek. Znaménko podílu je stejný jako u matematickém podílu. Absolutní hodnota podílu je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou. `ldiv`a `lldiv` jsou stejné jako `div`kromě toho, že argumenty `ldiv` a členové struktury vrácený jsou všechny typu `long`a argumenty `lldiv` a členů struktury vráceného typu `long long`.  
+ `ldiv` a `lldiv` funkce rozdělení `numer` podle `denom`a tím výpočetní podílu a zbytek. Znaménko podílu je stejný jako u matematickém podílu. Absolutní hodnota podílu je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou. `ldiv` a `lldiv` jsou stejné jako `div`kromě toho, že argumenty `ldiv` a členové struktury vrácený jsou všechny typu `long`a argumenty `lldiv` a členů struktury vráceného typu `long long`.  
   
  `ldiv_t` a `lldiv_t` struktury jsou definovány v \<stdlib.h >.  
   
@@ -81,7 +84,7 @@ lldiv_t lldiv(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`ldiv`, `lldiv`|\<stdlib.h >|  
+|`ldiv`, `lldiv`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

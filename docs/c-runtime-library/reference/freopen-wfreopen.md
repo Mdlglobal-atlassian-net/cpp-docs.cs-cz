@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - freopen
 - _wfreopen
@@ -27,7 +28,8 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49f1e2cd11606d2ebe53281a9d2f1d27533b4068
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 Znovu přiřadí ukazatel souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [freopen_s –, _wfreopen_s –](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -83,7 +86,7 @@ FILE *_wfreopen(
 ## <a name="remarks"></a>Poznámky  
  Bezpečnější verzích tyto funkce neexistuje, najdete v části [freopen_s –, _wfreopen_s –](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
   
- `freopen` Funkce zavře soubor aktuálně přidružen `stream` a znovu přidělí `stream` do souboru určeného `path`. `_wfreopen`široká charakterová verze `_freopen`; `path` a `mode` argumenty, které mají `_wfreopen` jsou široká charakterová řetězce. `_wfreopen`a `_freopen` chovat jinak shodně.  
+ `freopen` Funkce zavře soubor aktuálně přidružen `stream` a znovu přidělí `stream` do souboru určeného `path`. `_wfreopen` široká charakterová verze `_freopen`; `path` a `mode` argumenty, které mají `_wfreopen` jsou široká charakterová řetězce. `_wfreopen` a `_freopen` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -133,10 +136,10 @@ FILE *_wfreopen(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`freopen`|\<stdio.h >|  
+|`freopen`|\<stdio.h>|  
 |`_wfreopen`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -176,8 +179,8 @@ This will go to the file 'freopen.out'
 ## <a name="see-also"></a>Viz také  
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fclose –, _fcloseall –](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen –, _wfdopen –](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno –](../../c-runtime-library/reference/fileno.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -28,7 +29,8 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fb487a2db1938c173a8b926319adcfb57fc7e80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e1afc7bd1b5921a7ac24e8df2ed0adf0a807616
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 Získá a vymaže s plovoucí desetinnou čárkou stavového slova.  
@@ -63,7 +66,7 @@ unsigned int _clearfp( void );
 ## <a name="remarks"></a>Poznámky  
  `_clear87` Funkce vymaže příznaky výjimka v aplikaci word s plovoucí desetinnou čárkou stav, nastaví zaneprázdněn bit na hodnotu 0 a vrátí stavového slova. S plovoucí desetinnou čárkou stavového slova je kombinací 8087/80287 stavového slova a další podmínky zjištěný obslužná rutina výjimky 8087/80287, jako je přetečení zásobníku s plovoucí desetinnou čárkou a podtečení.  
   
- `_clearfp`je nezávislé na platformě, přenosné verze `_clear87` rutiny. Je stejný jako `_clear87` na platformách Intel (x86) a také podporuje x64 a ARM platformy. K zajištění, že váš kód s plovoucí desetinnou čárkou je přenosné x64 a ARM, použijte `_clearfp`. Pokud cílíte pouze x86 platformy, můžete použít buď `_clear87` nebo `_clearfp`.  
+ `_clearfp` je nezávislé na platformě, přenosné verze `_clear87` rutiny. Je stejný jako `_clear87` na platformách Intel (x86) a také podporuje x64 a ARM platformy. K zajištění, že váš kód s plovoucí desetinnou čárkou je přenosné x64 a ARM, použijte `_clearfp`. Pokud cílíte pouze x86 platformy, můžete použít buď `_clear87` nebo `_clearfp`.  
   
  Tyto funkce jsou zastaralé, když kompilujete s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul common language runtime podporuje pouze výchozí přesnost s plovoucí desetinnou čárkou.  
   

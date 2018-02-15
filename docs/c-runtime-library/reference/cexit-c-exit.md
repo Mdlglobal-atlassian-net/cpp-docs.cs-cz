@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _c_exit
 - _cexit
@@ -28,7 +29,8 @@ f1_keywords:
 - c_exit
 - _c_exit
 - cexit
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cleanup operations during processes
 - cexit function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 099114e2c05a1466b11e88c176d40a6ec70fe360
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 825ed933d5a164fd6a07f13319d30fdf97a928e1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 Operace vyčištění provede a vrátí bez proces se ukončuje.  
@@ -58,7 +61,7 @@ void _c_exit( void );
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `_cexit` Funkce volání v last-in, pořadí ven (LIFO), funkce registrovaných `atexit` a `_onexit`. Potom `_cexit` vyprázdnění všech vstupně-výstupní vyrovnávací paměti a zavře všechny otevřené datové proudy před vrácením. `_c_exit`je stejný jako `_exit` , ale vrací do procesu volání bez zpracování `atexit` nebo `_onexit` nebo abyste vyprázdnili vyrovnávací paměti datového proudu. Chování `exit`,`_exit`, `_cexit`, a `_c_exit` je uvedené v následující tabulce.  
+ `_cexit` Funkce volání v last-in, pořadí ven (LIFO), funkce registrovaných `atexit` a `_onexit`. Potom `_cexit` vyprázdnění všech vstupně-výstupní vyrovnávací paměti a zavře všechny otevřené datové proudy před vrácením. `_c_exit` je stejný jako `_exit` , ale vrací do procesu volání bez zpracování `atexit` nebo `_onexit` nebo abyste vyprázdnili vyrovnávací paměti datového proudu. Chování `exit`,`_exit`, `_cexit`, a `_c_exit` je uvedené v následující tabulce.  
   
 |Funkce|Chování|  
 |--------------|--------------|  
@@ -77,17 +80,17 @@ myObject.myClass::~myClass( );
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_cexit`|\<Process.h >|  
-|`_c_exit`|\<Process.h >|  
+|`_cexit`|\<process.h>|  
+|`_c_exit`|\<process.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [přerušení](../../c-runtime-library/reference/abort.md)   
+ [abort](../../c-runtime-library/reference/abort.md)   
  [AtExit](../../c-runtime-library/reference/atexit.md)   
  [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)   
- [ukončení, _exit –, _exit –](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit –, _onexit_m –](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

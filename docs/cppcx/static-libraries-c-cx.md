@@ -7,35 +7,34 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C + +/ CX)
-Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows může obsahovat kód ISO standard C++, včetně typů STL a také volání rozhraní API Win32, které nejsou vyloučené z aplikační platforma univerzální platformu Windows. Statické knihovny využívá komponenty prostředí Windows Runtime a může vytvořit komponenty prostředí Windows Runtime s určitými omezeními.  
+Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows (UWP) může obsahovat kód ISO standard C++, včetně typů STL a také volání rozhraní API Win32, které nejsou vyloučené z prostředí Windows Runtime aplikační platforma. Statické knihovny využívá komponenty prostředí Windows Runtime a může vytvořit komponenty prostředí Windows Runtime s určitými omezeními.  
   
 ## <a name="creating-static-libraries"></a>Vytvoření statické knihovny  
   
-#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>Chcete-li vytvořit statickou knihovnu pro použití v aplikaci pro univerzální platformu Windows  
+#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Chcete-li vytvořit statickou knihovnu pro použití v aplikaci UWP  
   
-1.  Na řádku nabídek zvolte **soubor** > **nový** > **projektu** > **prázdné statické knihovny** pro Universal Windows Platform apps.  
+1.  Na řádku nabídek zvolte **soubor** > **nový** > **projektu**. V části **Visual C++** > **univerzální pro Windows** zvolte **statické knihovny (Universal Windows)**.  
   
-2.  V **Průzkumníku řešení**, otevřete místní nabídky projektu a zvolte **vlastnosti**. V **vlastnosti** v dialogovém **vlastnosti konfigurace** > **Obecné** nastavte podpora aplikací pro univerzální platformu Windows  **Ano**.  
+2.  V **Průzkumníku řešení**, otevřete místní nabídky projektu a zvolte **vlastnosti**. V **vlastnosti** v dialogovém **vlastnosti konfigurace** > **C/C++** nastavte **využívat Windows Runtime Extension** k **Ano (/ZW)**.  
   
-3.  Na **vlastnosti konfigurace** > **C/C++** nastavte **spotřebě** prostředí Windows Runtime **rozšíření** k **Ano (/ZW)**.  
+ Když zkompilujete novou statickou knihovnu, pokud provedete volání Win32 API, která je vyloučená pro aplikace UWP, kompilátor dosáhne chyby C3861, "Identifikátor nebyl nalezen." Vyhledejte alternativní metoda, která je podporována pro prostředí Windows Runtime, najdete v tématu [alternativy k rozhraní API systému Windows v aplikacích pro UPW](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- Když zkompilujete novou statickou knihovnu, pokud provedete volání Win32 API, která je vyloučená pro univerzální platformu Windows aplikace, kompilátor dosáhne chyby C3861, "Identifikátor nebyl nalezen." Vyhledejte alternativní metoda, která je podporována pro prostředí Windows Runtime, najdete v tématu [alternativy k rozhraní API systému Windows v aplikacích pro Windows Store](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec).  
-  
- Pokud přidáte projektu statické knihovny jazyka C++ na řešení aplikace univerzální platformu Windows, bude pravděpodobně nutné aktualizovat nastavení vlastností projektu knihovny, tak, aby vlastnost podporu univerzální platformu Windows je nastavena na **Ano**. Bez tohoto nastavení kód sestaví a odkazy, ale k chybě dochází při pokusu o ověření pro aplikaci [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. Statické lib má kompilovat s stejné nastavení kompilátoru jako projekt, který využívá ho.  
+ Pokud přidáte projektu statické knihovny jazyka C++ na řešení aplikace UPW, bude pravděpodobně nutné aktualizovat nastavení vlastností projektu knihovny, tak, aby vlastnost podporu UWP je nastavena na **Ano**. Bez tohoto nastavení, vytvoří kód a odkazy, ale k chybě dochází při pokusu o ověření aplikace Microsoft Store. Statické lib má kompilovat s stejné nastavení kompilátoru jako projekt, který využívá ho.  
   
  Pokud využívat statickou knihovnu, která vytvoří veřejné `ref` tříd, veřejné rozhraní a třídy hodnota veřejného linkeru vyvolá toto upozornění:  
   

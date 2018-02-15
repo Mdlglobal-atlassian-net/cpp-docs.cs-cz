@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _dup
 - _dup2
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _dup2
 - _dup
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _dup2 function
 - dup function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 687c8e0d2f9f8f860e78a1c8e44cab6886e3cf04
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 Vytvoří druhý popisovače souborů, pro otevření souboru (`_dup`), nebo pouze Změna přiřazení popisovače souborů (`_dup2`).  
@@ -69,12 +72,12 @@ int _dup2(
  Všechny popisovače souborů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_dup`vrátí nový popisovač souboru. `_dup2`Vrátí hodnotu 0, čímž indikuje úspěšné provedení. Pokud dojde k chybě, každý funkce vrátí hodnotu -1 a nastaví `errno` k `EBADF` Pokud popisovače souborů je neplatný nebo k `EMFILE` Pokud jsou k dispozici žádné další popisovače souborů. V případě popisovač souboru je neplatný. funkce také vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
+ `_dup` vrátí nový popisovač souboru. `_dup2` Vrátí hodnotu 0, čímž indikuje úspěšné provedení. Pokud dojde k chybě, každý funkce vrátí hodnotu -1 a nastaví `errno` k `EBADF` Pokud popisovače souborů je neplatný nebo k `EMFILE` Pokud jsou k dispozici žádné další popisovače souborů. V případě popisovač souboru je neplatný. funkce také vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
   
  Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `_dup` a `_dup2` funkce přidružit aktuálně otevřených souborů druhý popisovače souborů. Tyto funkce lze použít k přiřazení popisovač předdefinovaného souboru, jako je například `stdout`, s jiný soubor. Operace na souboru se dá provést pomocí buď popisovače souborů. Typ přístupová oprávnění k souboru je vytvoření nový popisovač nemá vliv. `_dup`Vrátí popisovač další soubor k dispozici pro daný soubor. `_dup2`Vynutí `fd2` k odkazování na stejném souboru jako `fd1`. Pokud `fd2` souvisí s otevřete soubor v době volání, že soubor zavřený.  
+ `_dup` a `_dup2` funkce přidružit aktuálně otevřených souborů druhý popisovače souborů. Tyto funkce lze použít k přiřazení popisovač předdefinovaného souboru, jako je například `stdout`, s jiný soubor. Operace na souboru se dá provést pomocí buď popisovače souborů. Typ přístupová oprávnění k souboru je vytvoření nový popisovač nemá vliv. `_dup` Vrátí popisovač další soubor k dispozici pro daný soubor. `_dup2` Vynutí `fd2` k odkazování na stejném souboru jako `fd1`. Pokud `fd2` souvisí s otevřete soubor v době volání, že soubor zavřený.  
   
  Obě `_dup` a `_dup2` přijmout popisovače souborů jako parametry. Předávání datového proudu `(FILE *)` na jednu z těchto funkcí používat [_fileno –](../../c-runtime-library/reference/fileno.md). `fileno` Rutina vrátí popisovače souborů, které jsou aktuálně přidružen s daným datovým proudem. Následující příklad ukazuje, jak přidružit `stderr` (definován jako `FILE` `*` v Stdio.h) s popisovače souborů:  
   
@@ -86,10 +89,10 @@ int cstderr = _dup( _fileno( stderr ));
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_dup`|\<IO.h >|  
-|`_dup2`|\<IO.h >|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [! INCLUDEUWP aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -156,5 +159,5 @@ This goes to file 'data'
 ## <a name="see-also"></a>Viz také  
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
  [_close –](../../c-runtime-library/reference/close.md)   
- [_creat –, _wcreat –](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

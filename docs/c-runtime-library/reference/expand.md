@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _expand
+ms.topic: reference
+apiname:
+- _expand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -30,22 +32,24 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 103ff4077bdc68b8886c5181ce317b5c0d0d2b79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b6b2bf8ba3e30165f11e3392e04519a3d49cfd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="expand"></a>_expand
 Změní velikost bloku paměti.  
@@ -67,16 +71,16 @@ void *_expand(
  Nová velikost v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_expand`vrací neplatný ukazatel k opětovnému přidělení paměti bloku. `_expand`, na rozdíl od `realloc`, nelze přesunout blok změnit jeho velikost. Proto, pokud je dostatek paměti k dispozici bez přesouvání, rozbalte položku bloku `memblock` parametru `_expand` je stejný jako návratovou hodnotu.  
+ `_expand` vrací neplatný ukazatel k opětovnému přidělení paměti bloku. `_expand`, na rozdíl od `realloc`, nelze přesunout blok změnit jeho velikost. Proto, pokud je dostatek paměti k dispozici bez přesouvání, rozbalte položku bloku `memblock` parametru `_expand` je stejný jako návratovou hodnotu.  
   
- `_expand`Vrátí `NULL` při rozpoznání chyby při své činnosti. Například pokud `_expand` se používá ke zmenšení blok paměti, se může zjišťovat poškození v haldě malé bloku nebo bloku neplatný ukazatel a vrátit `NULL`.  
+ `_expand` Vrátí `NULL` při rozpoznání chyby při své činnosti. Například pokud `_expand` se používá ke zmenšení blok paměti, se může zjišťovat poškození v haldě malé bloku nebo bloku neplatný ukazatel a vrátit `NULL`.  
   
- Pokud je rozšíření bloku na danou velikost bez přesouvání je k dispozici dostatek paměti, funkce vrátí hodnotu `NULL`. `_expand`nikdy vrátí blok rozšířit na velikost menší než požadovaný. Pokud dojde k selhání, `errno` označuje podstatu tohoto selhání. Další informace o `errno`, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pokud je rozšíření bloku na danou velikost bez přesouvání je k dispozici dostatek paměti, funkce vrátí hodnotu `NULL`. `_expand` nikdy vrátí blok rozšířit na velikost menší než požadovaný. Pokud dojde k selhání, `errno` označuje podstatu tohoto selhání. Další informace o `errno`, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Návratová hodnota odkazuje na prostor úložiště, který zaručeně vhodně zarovnána pro ukládání jakéhokoli typu objektu. Chcete-li zkontrolovat novou velikost položky, použijte `_msize`. Získání ukazatele na typ jinými než `void`, používat typ, který přetypovat na návratovou hodnotu.  
   
 ## <a name="remarks"></a>Poznámky  
- `_expand` Funkce změny velikosti bloku dříve přidělené paměti tak, že zkusíte rozbalit nebo sbalit bloku bez přesouvání její umístění v haldě. `memblock` Parametr odkazuje na začátku bloku. `size` Parametr poskytuje novou velikost bloku, v bajtech. Obsah bloku jsou stejné až kratší velikostí novém i starém. `memblock`by neměl být blok bylo uvolněno.  
+ `_expand` Funkce změny velikosti bloku dříve přidělené paměti tak, že zkusíte rozbalit nebo sbalit bloku bez přesouvání její umístění v haldě. `memblock` Parametr odkazuje na začátku bloku. `size` Parametr poskytuje novou velikost bloku, v bajtech. Obsah bloku jsou stejné až kratší velikostí novém i starém. `memblock` by neměl být blok bylo uvolněno.  
   
 > [!NOTE]
 >  Na 64bitových platformách `_expand` nemusí smlouvy bloku, pokud novou velikost je menší než aktuální velikost; zejména, pokud byl menší než 16 kB velikostí bloku, proto přidělené v haldě fragmentace nízká `_expand` opustí bloku beze změny a Vrátí `memblock`.  
@@ -89,7 +93,7 @@ void *_expand(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_expand`|\<malloc.h >|  
+|`_expand`|\<malloc.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -130,7 +134,7 @@ Expanded block to 1024 bytes at 002C12BC
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
  [calloc –](../../c-runtime-library/reference/calloc.md)   
- [Uvolněte](../../c-runtime-library/reference/free.md)   
+ [Volné](../../c-runtime-library/reference/free.md)   
  [malloc –](../../c-runtime-library/reference/malloc.md)   
- [_msize –](../../c-runtime-library/reference/msize.md)   
+ [_msize](../../c-runtime-library/reference/msize.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

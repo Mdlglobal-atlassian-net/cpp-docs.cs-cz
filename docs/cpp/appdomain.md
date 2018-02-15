@@ -4,34 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: appdomain_cpp
-dev_langs: C++
+f1_keywords:
+- appdomain_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677206e37cb4761112f66dc59dc44b2eccbabaf5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="appdomain"></a>appdomain
 Určuje, že každou doménu aplikace spravované aplikace musí mít svůj vlastní kopii konkrétní globální proměnné nebo statické členské proměnné. V tématu [domény aplikace a jazyk Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.  
   
  Každá doména aplikací má vlastní kopii proměnné na appdomain. Konstruktor proměnné objektu třídy appdomain je spuštěn, když je načteno do domény aplikace sestavení a destruktoru je spuštěn, když je odpojen domény aplikace.  
   
- Pokud chcete, aby všechny domény aplikace v rámci procesu v modulu common language runtime sdílet globální proměnné, použijte `__declspec(process)` modifikátor. `__declspec(process)`Výsledkem je ve výchozím nastavení v části [/CLR](../build/reference/clr-common-language-runtime-compilation.md) a `__declspec(appdomain)` je používána ve výchozím nastavení v části **/CLR: pure**. `__declspec(appdomain)`Vynucený pod **/CLR: safe**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
+ Pokud chcete, aby všechny domény aplikace v rámci procesu v modulu common language runtime sdílet globální proměnné, použijte `__declspec(process)` modifikátor. `__declspec(process)` Výsledkem je ve výchozím nastavení v části [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
   
- `__declspec(appdomain)`je platný pouze při mezi **/CLR** – možnosti kompilátoru se používá. Může být označen pouze globální proměnné, statické členské proměnné nebo statické místní proměnné `__declspec(appdomain)`. Jedná se o chybu použít `__declspec(appdomain)` pro statické členy spravované typy, protože mají vždy toto chování.  
+ `__declspec(appdomain)` je platný pouze při mezi **/CLR** – možnosti kompilátoru se používá. Může být označen pouze globální proměnné, statické členské proměnné nebo statické místní proměnné `__declspec(appdomain)`. Jedná se o chybu použít `__declspec(appdomain)` pro statické členy spravované typy, protože mají vždy toto chování.  
   
  Pomocí `__declspec(appdomain)` je podobný používání [vláken místní úložiště (TLS)](../parallel/thread-local-storage-tls.md). Vlákna jsou vlastní úložiště, stejně jako domény aplikace. Pomocí `__declspec(appdomain)` zajišťuje globální proměnná má svou vlastní úložiště v každé doméně aplikace vytvořené pro tuto aplikaci.  
   

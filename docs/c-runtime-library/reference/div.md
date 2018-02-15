@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: div
+ms.topic: reference
+apiname:
+- div
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: div
-dev_langs: C++
+f1_keywords:
+- div
+dev_langs:
+- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a942c3414fa7801912de59ec41fd6477d7c19f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2090ca5e08af74854177f02d6313d6c1304ed2c6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="div"></a>div
 Vypočítá podílu a zbývající dva celočíselné hodnoty.  
@@ -69,7 +74,7 @@ lldiv_t div(
  Jmenovatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `div`volat pomocí argumenty typu `int` vrací strukturu typu `div_t`, což zahrnuje podílu a zbytek. Návratová hodnota přetížení argumentů typu `long` je `ldiv_t`. Obě `div_t` a `ldiv_t` jsou definovány v STDLIB. H.  
+ `div` volat pomocí argumenty typu `int` vrací strukturu typu `div_t`, což zahrnuje podílu a zbytek. Návratová hodnota přetížení argumentů typu `long` je `ldiv_t`. Obě `div_t` a `ldiv_t` jsou definovány v STDLIB. H.  
   
 ## <a name="remarks"></a>Poznámky  
  `div` Funkce vydělí `numer` podle `denom` a tím vypočítá podílu a zbytek. [Div_t –](../../c-runtime-library/standard-types.md) struktura obsahuje podílu, `int quot`a zbývající, `int rem`. Znaménko podílu je stejný jako u matematickém podílu. Jeho absolutní hodnota je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou.  
@@ -80,7 +85,7 @@ lldiv_t div(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`div`|\<stdlib.h >|  
+|`div`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

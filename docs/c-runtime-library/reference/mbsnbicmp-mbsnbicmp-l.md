@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbicmp_l
 - _mbsnbicmp
@@ -34,7 +35,8 @@ f1_keywords:
 - _tcsnicmp_l
 - _wcsnicmp
 - _mbsnbicmp_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tcsnicmp_l function
 - _strnicmp function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ba2bd2e7b4857d6c1bd57f608c20e4a2a7a85d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16f4125727177b4bb32730aabe2ec0798ca1b622
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 Porovná `n` bajtů dvě vícebajtových znaků řetězce a ignoruje velikost písmen.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,20 +89,20 @@ int _mbsnbicmp(
   
 |Návratová hodnota|Popis|  
 |------------------|-----------------|  
-|< 0|`string1`substring menší než `string2` dílčí řetězec.|  
-|0|`string1`substring identické `string2` dílčí řetězec.|  
-|> 0|`string1`substring větší než `string2` dílčí řetězec.|  
+|< 0|`string1` substring menší než `string2` dílčí řetězec.|  
+|0|`string1` substring identické `string2` dílčí řetězec.|  
+|> 0|`string1` substring větší než `string2` dílčí řetězec.|  
   
  Při chybě `_mbsnbcmp` vrátí `_NLSCMPERROR`, která je definována v String.h a Mbstring.h.  
   
 ## <a name="remarks"></a>Poznámky  
  `_mbsnbicmp` Funkce provádí ordinální porovnávání maximálně prvního `count` bajtů `string1` a `string2`. Porovnání se provádí převod na malá písmena; každý znak `_mbsnbcmp` je malá a velká písmena verze `_mbsnbicmp`. Porovnání končí, když je dosaženo ukončující znak hodnoty null v buď řetězec před `count` jsou porovnávány znaků. Pokud jsou si rovny řetězce při dosažení ukončující znak hodnoty null v buď řetězec před `count` znaky jsou porovnávány, kratší řetězec je menší.  
   
- `_mbsnbicmp`je podobná `_mbsnicmp`kromě toho, že až porovná řetězce `count` bajtů místo znaky.  
+ `_mbsnbicmp`  je podobná `_mbsnicmp`kromě toho, že až porovná řetězce `count` bajtů místo znaky.  
   
  Dva řetězce obsahující znaky umístěný mezi 'Z' a 'a' v tabulce ASCII ('[','\\', ']', ' ^', '_', a '\`') porovnat odlišně, v závislosti na jejich případě. Například dva řetězce "`ABCDE`"a"`ABCD^`" porovnat jedním ze způsobů, je-li porovnání malá písmena ("`abcde`" > "`abcd^`") a jiným způsobem ("`ABCDE`" < "`ABCD^`") Pokud je velká písmena.  
   
- `_mbsnbicmp`rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán. Nemá vliv na aktuální nastavení národního prostředí.  
+ `_mbsnbicmp` rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán. Nemá vliv na aktuální nastavení národního prostředí.  
   
  Pokud má jedna `string1` nebo `string2` je ukazatel s hodnotou null, `_mbsnbicmp` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `_NLSCMPERROR` a nastaví `errno` k `EINVAL`.  
   
@@ -123,6 +126,6 @@ int _mbsnbicmp(
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat –, _mbsnbcat_l –](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbcmp –, _mbsnbcmp_l –](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
  [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)

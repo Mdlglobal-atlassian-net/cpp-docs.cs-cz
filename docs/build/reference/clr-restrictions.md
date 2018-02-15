@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr – omezení
 Všimněte si následujících omezení pro použití **/CLR**:  
@@ -52,19 +56,15 @@ Všimněte si následujících omezení pro použití **/CLR**:
   
     -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [/GM](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
-    -   [/ MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
+    -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
-    -   [/ RTC](../../build/reference/rtc-run-time-error-checks.md)  
+    -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
     -   **/ZI**  
   
--   Kombinace `_STATIC_CPPLIB` definování preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** nebo **/CLR: pure** – možnost kompilátoru není podporován. Je to tak proto definici by způsobit, že aplikace pro propojení statické vícevláknové standardní knihovna C++, což není podporováno. Další informace najdete v tématu [/MD, / MT, /LD (použít běhovou knihovnu)](../../build/reference/md-mt-ld-use-run-time-library.md) tématu.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) není podporovaný s **/CLR: safe** nebo **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
-  
--   Čistý režimu kompilace nepodporuje knihovny ATL a MFC (**/CLR: pure**). Můžete použít **/CLR: pure** s standardní knihovna C++ a CRT, pokud je také kompilovat s **/MD** nebo **/MDd**.  
+-   Kombinace `_STATIC_CPPLIB` definování preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** – možnost kompilátoru není podporován. Je to tak proto definici by způsobit, že aplikace pro propojení statické vícevláknové standardní knihovna C++, což není podporováno. Další informace najdete v tématu [/MD, / MT, /LD (použít běhovou knihovnu)](../../build/reference/md-mt-ld-use-run-time-library.md) tématu.  
   
 -   Při použití **/Zi** s **/CLR**, existují ovlivnit výkon. Další informace najdete v tématu [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ Všimněte si následujících omezení pro použití **/CLR**:
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md) se ignoruje při kompilaci s **/CLR**, pokud je funkce pod `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilovány v nativním režimu, v takovém případě kompilátor Generovat upozornění C4793, který je ve výchozím nastavení vypnutá.  
+-   [/GS](../../build/reference/gs-buffer-security-check.md) se ignoruje při kompilaci s **/CLR**, pokud je funkce pod `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilovány v nativním režimu, v takovém případě bude generovat kompilátoru upozornění C4793, který je ve výchozím nastavení vypnutá.  
   
 -   V tématu [/Entry](../../build/reference/entry-entry-point-symbol.md) požadavky podpis funkce spravované aplikace.  
   
@@ -84,8 +84,6 @@ Všimněte si následujících omezení pro použití **/CLR**:
 -   Jako nativní funkce se budou generovat funkcí, které přijímají proměnný počet argumentů (vararg). Všechny spravované datové typy argumentů s proměnnou pozici zařazeno pro nativní typy. Všimněte si, že <xref:System.String?displayProperty=fullName> typy jsou ve skutečnosti široká charakterová řetězce, ale jsou zařazené do znakovou řetězců. Proto pokud specifikátor printf %S (wchar_t *), ji budou zařazování na řetězec %s místo.  
   
 -   Pokud používáte va_arg – makro, můžete obdržet neočekávané výsledky, když kompilujete s **/CLR: pure**.  Další informace najdete v tématu [va_arg –, va_copy –, va_end –, va_start –](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Pokud vaše aplikace předá argument typu [VA_LIST –](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) funkci deklarovaný provést proměnný počet argumentů a aplikace je kompilovat s **/CLR: pure**, vyvolá <xref:System.NotSupportedException>. Pokud **/CLR** se používá místo toho ovlivněných funkce jsou zkompilovány do nativního kódu a spustit správně. Pokud **/CLR: safe** se používá, jsou vydávány chybu diagnostiky.  
   
 -   Neměli volat ze spravovaného kódu, všechny funkce, které provede zásobníku se získat informace o parametrech (argumenty funkce); vrstva P/Invoke způsobí, že tyto informace dále dolů v zásobníku.  Například nejde kompilovat proxy/stub s **/CLR**.  
   
@@ -101,7 +99,5 @@ Všimněte si následujících omezení pro použití **/CLR**:
   
     -   Funkci, která obsahuje odkazy na zarovnán typů, který je typy deklarováno s použitím `__declspec(align(...))`.  
   
--   Nelze použít [podpory modelu comp kompilátoru](../../cpp/compiler-com-support.md) třídy s **/CLR: pure** nebo **/CLR: safe**.  
-  
 ## <a name="see-also"></a>Viz také  
- [/ CLR (kompilace common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

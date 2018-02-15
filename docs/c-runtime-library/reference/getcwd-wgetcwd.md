@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -30,7 +31,8 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 91e660f548fdb8814e521f9c63c58e1b965949d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Získá aktuální pracovní adresář.  
@@ -84,7 +87,7 @@ wchar_t *_wgetcwd(
   
  Funkce `_getcwd` vrátí řetězec představující cestu k aktuálnímu pracovnímu adresáři. Pokud aktuální pracovní adresář je kořenový adresář, řetězec končí zpětné lomítko ( `\` ). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.  
   
- `_wgetcwd`široká charakterová verze `_getcwd`; `buffer` argument a vrátí hodnotu `_wgetcwd` jsou široká charakterová řetězce. `_wgetcwd`a `_getcwd` chovat jinak shodně.  
+ `_wgetcwd` široká charakterová verze `_getcwd`; `buffer` argument a vrátí hodnotu `_wgetcwd` jsou široká charakterová řetězce. `_wgetcwd` a `_getcwd` chovat jinak shodně.  
   
  Když jsou definovány konstanty `_DEBUG` a `_CRTDBG_MAP_ALLOC`, volání funkcí `_getcwd` a `_wgetcwd` jsou nahrazena voláními funkcí `_getcwd_dbg` a `_wgetcwd_dbg`, což umožňuje ladit přidělování paměti. Další informace najdete v tématu [_getcwd_dbg –, _wgetcwd_dbg –](../../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md).  
   
@@ -98,7 +101,7 @@ wchar_t *_wgetcwd(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_getcwd`|\<Direct.h >|  
+|`_getcwd`|\<direct.h>|  
 |`_wgetcwd`|\<Direct.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -138,6 +141,6 @@ C:\Code
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)   
- [_chdir –, _wchdir –](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_mkdir –, _wmkdir –](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

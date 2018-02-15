@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -30,7 +31,8 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1dd1849b212871db05dcab85111ece7d2a98fc57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ab68099c6a07ac83fc5a48e37761a1b4ed938eb7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 Najde rozdíl mezi dvěma časy.  
@@ -78,14 +81,14 @@ double _difftime64(
  Počáteční čas.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `difftime`Vrátí uplynulý čas v sekundách, z `timer0` k `timer1`. Hodnota vrácená je číslo s plovoucí desetinnou čárkou a dvojitou přesností. Návratová hodnota může být 0, která znamená chybu.  
+ `difftime` Vrátí uplynulý čas v sekundách, z `timer0` k `timer1`. Hodnota vrácená je číslo s plovoucí desetinnou čárkou a dvojitou přesností. Návratová hodnota může být 0, která znamená chybu.  
   
 ## <a name="remarks"></a>Poznámky  
  `difftime` Funkce vypočítá rozdíl mezi dvěma hodnotami zadaný čas `timer0` a `timer1`.  
   
- Zadaná hodnota času se musí vejít v rozsahu `time_t`. `time_t`je hodnota 64-bit. Proto konec rozsahu byla rozšířena z 23:59:59 18 leden 2038 UTC do 23:59:59, 31. prosince 3000. Nižší rozsah `time_t` je stále půlnoc, 1. ledna 1970.  
+ Zadaná hodnota času se musí vejít v rozsahu `time_t`. `time_t` je hodnota 64-bit. Proto konec rozsahu byla rozšířena z 23:59:59 18 leden 2038 UTC do 23:59:59, 31. prosince 3000. Nižší rozsah `time_t` je stále půlnoc, 1. ledna 1970.  
   
- `difftime`je vložená funkce, která vyhodnotí buď `_difftime32` nebo `_difftime64` podle toho, jestli `_USE_32BIT_TIME_T` je definována. _difftime32 – a _difftime64 – lze přímo můžete vynutit používání určité velikosti typu time.  
+ `difftime` je vložená funkce, která vyhodnotí buď `_difftime32` nebo `_difftime64` podle toho, jestli `_USE_32BIT_TIME_T` je definována. _difftime32 – a _difftime64 – lze přímo můžete vynutit používání určité velikosti typu time.  
   
  Tyto funkce ověřit jejich parametrů. Pokud z parametrů je nula nebo záporná, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tyto funkce vrátí 0 a nastavte `errno` k `EINVAL`.  
   
@@ -93,9 +96,9 @@ double _difftime64(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`difftime`|\<Time.h >|  
-|`_difftime32`|\<Time.h >|  
-|`_difftime64`|\<Time.h >|  
+|`difftime`|\<time.h>|  
+|`_difftime32`|\<time.h>|  
+|`_difftime64`|\<time.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

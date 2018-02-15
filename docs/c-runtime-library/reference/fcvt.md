@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt
+ms.topic: reference
+apiname:
+- _fcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _fcvt
-dev_langs: C++
+f1_keywords:
+- _fcvt
+dev_langs:
+- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c66666d615dc94f74f17736de6011ec05f1eeca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def428073c15f3d408174916098573ddff98cde0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvt"></a>_fcvt
 Převede dvě desetinná čísla na řetězec. Bezpečnější verze této funkce je k dispozici. v tématu [_fcvt_s –](../../c-runtime-library/reference/fcvt-s.md).  
@@ -69,18 +74,18 @@ char *_fcvt(
  Ukazatel na uložené přihlašovací indikátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_fcvt`vrací ukazatel na řetězec číslic, NULL v případě chyby.  
+ `_fcvt` vrací ukazatel na řetězec číslic, NULL v případě chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `_fcvt` Funkce převede dvě desetinná čísla na řetězec znaků ukončený hodnotou null. `value` Parametr je číslo s plovoucí desetinnou čárkou má být převeden. `_fcvt`ukládá číslice z `value` jako řetězec a připojí znak hodnoty null ('\0'). `count` Parametr určuje počet číslic ukládaly za desetinnou čárkou. Jsou nadbytečné číslic zaokrouhlen `count` umístí. Pokud máte méně než `count` platných číslic, řetězec je doplněno nulami.  
+ `_fcvt` Funkce převede dvě desetinná čísla na řetězec znaků ukončený hodnotou null. `value` Parametr je číslo s plovoucí desetinnou čárkou má být převeden. `_fcvt` ukládá číslice z `value` jako řetězec a připojí znak hodnoty null ('\0'). `count` Parametr určuje počet číslic ukládaly za desetinnou čárkou. Jsou nadbytečné číslic zaokrouhlen `count` umístí. Pokud máte méně než `count` platných číslic, řetězec je doplněno nulami.  
   
  Celkový počet číslic vrácený `_fcvt` nesmí překročit `_CVTBUFSIZE`.  
   
  Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko `value` lze získat z `dec` a přihlásit po volání. `dec` Parametr odkazuje na celočíselnou hodnotu; uvádí tato hodnota celé číslo pozice od desetinné čárky s ohledem na začátku řetězce. Nula nebo záporná celočíselná hodnota označuje, zda desetinné čárky je nalevo od první číslice. Parametr `sign` odkazuje na celé číslo udávající znaménko `value`. Celé číslo nastavena na 0, pokud `value` kladné a je nastavená na nenulové číslo Pokud `value` záporné.  
   
- Rozdíl mezi `_ecvt` a `_fcvt` je při interpretaci `count` parametr. `_ecvt`interpretuje `count` jako celkový počet číslic do výstupního řetězce, zatímco `_fcvt` interpretuje `count` jako počet číslic za desetinnou čárkou.  
+ Rozdíl mezi `_ecvt` a `_fcvt` je při interpretaci `count` parametr. `_ecvt` interpretuje `count` jako celkový počet číslic do výstupního řetězce, zatímco `_fcvt` interpretuje `count` jako počet číslic za desetinnou čárkou.  
   
- `_ecvt`a `_fcvt` ke konverzi použijte jeden staticky přidělené vyrovnávací paměti. Každé volání na jednu z těchto rutin zničí výsledky z předchozího volání.  
+ `_ecvt` a `_fcvt` ke konverzi použijte jeden staticky přidělené vyrovnávací paměti. Každé volání na jednu z těchto rutin zničí výsledky z předchozího volání.  
   
  Tato funkce ověří jeho parametry. Pokud `dec` nebo `sign` má hodnotu NULL, nebo `count` je 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a vrátí se hodnota NULL.  
   
@@ -88,7 +93,7 @@ char *_fcvt(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`_fcvt`|\<stdlib.h >|  
+|`_fcvt`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -124,6 +129,6 @@ source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)

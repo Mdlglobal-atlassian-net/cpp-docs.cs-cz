@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_msize_dbg
+ms.topic: reference
+apiname:
+- _aligned_msize_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,20 +22,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: _aligned_msize_dbg
-dev_langs: C++
-helpviewer_keywords: _aligned_msize_dbg
+f1_keywords:
+- _aligned_msize_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7f09b6429b8ffd4ecb34af1213ebb62100238af8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0c26a876f6ef4f77d4f9c649a3993fe666cb6f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 Vrátí velikost bloku paměti přidělené v haldě (pouze ladicí verze).  
@@ -49,13 +55,13 @@ size_t _aligned_msize_dbg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`memblock`  
+ [in] `memblock`  
  Ukazatel na oblast paměti.  
   
- [v]`alignment`  
+ [in] `alignment`  
  Zarovnání hodnota, která musí být celé číslo mocninou 2.  
   
- [v]`offset`  
+ [in] `offset`  
  Posun do přidělení paměti vynutit zarovnání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -64,7 +70,7 @@ size_t _aligned_msize_dbg(
 ## <a name="remarks"></a>Poznámky  
  `alignment` a `offset` hodnoty musí být stejný jako hodnoty předané funkce, která přidělené bloku.  
   
- `_aligned_msize_dbg`ladicí verze [_aligned_msize –](../../c-runtime-library/reference/aligned-msize.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_aligned_msize_dbg` byla snížena volání `_aligned_msize`. Obě `_aligned_msize` a `_aligned_msize_dbg` vypočítat velikost bloku paměti v haldě základní ale `_aligned_msize_dbg` přidá funkce ladění: v vrácená velikost obsahuje vyrovnávací paměti na obou stranách části uživatele bloku paměti.  
+ `_aligned_msize_dbg` ladicí verze [_aligned_msize –](../../c-runtime-library/reference/aligned-msize.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_aligned_msize_dbg` byla snížena volání `_aligned_msize`. Obě `_aligned_msize` a `_aligned_msize_dbg` vypočítat velikost bloku paměti v haldě základní ale `_aligned_msize_dbg` přidá funkce ladění: v vrácená velikost obsahuje vyrovnávací paměti na obou stranách části uživatele bloku paměti.  
   
  Tato funkce ověří jeho parametru. Pokud `memblock` je nulový ukazatel nebo `alignment` není mocninou 2, `_msize` vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud se zpracovává chyby, nastaví funkci `errno` k `EINVAL` a vrátí hodnotu -1.  
   
@@ -74,7 +80,7 @@ size_t _aligned_msize_dbg(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_aligned_msize_dbg`|\<crtdbg.h >|  
+|`_aligned_msize_dbg`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _setmbcp
+ms.topic: reference
+apiname:
+- _setmbcp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _setmbcp
 - setmbcp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - setmbcp function
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b09953ffdb1523078f31cad08d53253b9d79892
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 42d2d43726ea533ab689a61c5211317c8dc033c4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setmbcp"></a>_setmbcp
 Nastaví nové vícebajtové znakové stránky.  
@@ -66,21 +70,21 @@ int _setmbcp(
   
 ||||  
 |-|-|-|  
-|[_exec – funkce](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp –](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat –](../../c-runtime-library/reference/stat-functions.md)|  
-|[_fullpath –](../../c-runtime-library/reference/fullpath-wfullpath.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam –](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[_makepath –](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath –](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam –](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
+|[_exec – funkce](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat](../../c-runtime-library/reference/stat-functions.md)|  
+|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
+|[_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
   
  Kromě toho všechny rutiny běhové knihovny, které přijímají vícebajtových znaků `argv` nebo `envp` programu argumenty jako parametry (například `_exec` a `_spawn` rodiny) zpracovat tyto řetězce podle vícebajtové znakové stránky . Proto tyto rutiny jsou také ovlivněné volání `_setmbcp` , změní vícebajtové znakové stránky.  
   
  `codepage` Argument může být nastaven na žádný z následujících hodnot:  
   
--   `_MB_CP_ANSI`Znaková stránka ANSI použití získané z operačního systému při spuštění programu.  
+-   `_MB_CP_ANSI` Znaková stránka ANSI použití získané z operačního systému při spuštění programu.  
   
--   `_MB_CP_LOCALE`Použití aktuální národní prostředí znaková stránka získané z předchozího volání [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
+-   `_MB_CP_LOCALE` Použití aktuální národní prostředí znaková stránka získané z předchozího volání [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
--   `_MB_CP_OEM`Znaková stránka použití OEM získané z operačního systému při spuštění programu.  
+-   `_MB_CP_OEM` Znaková stránka použití OEM získané z operačního systému při spuštění programu.  
   
--   `_MB_CP_SBCS`Na stránce jednobajtové kódu. Pokud se nastaví znaková stránka `_MB_CP_SBCS`, rutiny jako [_ismbblead –](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) vždy vrátí hodnotu false.  
+-   `_MB_CP_SBCS` Na stránce jednobajtové kódu. Pokud se nastaví znaková stránka `_MB_CP_SBCS`, rutiny jako [_ismbblead –](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) vždy vrátí hodnotu false.  
   
 -   Žádné jiné platné hodnotu znakové stránky, bez ohledu na to, zda je hodnota ANSI, OEM nebo jiné operační systém – podporované znakové stránky (s výjimkou znakové sady UTF-7 a UTF-8, které nejsou podporovány).  
   
@@ -88,10 +92,10 @@ int _setmbcp(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_setmbcp`|\<Mbctype.h >|  
+|`_setmbcp`|\<mbctype.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
- [_getmbcp –](../../c-runtime-library/reference/getmbcp.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

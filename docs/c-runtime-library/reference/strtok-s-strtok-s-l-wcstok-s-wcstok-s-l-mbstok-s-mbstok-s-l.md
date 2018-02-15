@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -37,7 +38,8 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -54,23 +56,24 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 868d9d3fc206931b20858ee360c2380cc5f03d61
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Vyhledá další token v řetězci pomocí aktuálního národního prostředí nebo pomocí předaného národního prostředí. Tyto verze nástroje [strtok –, _strtok_l –, wcstok –, _wcstok_l –, _mbstok –, _mbstok_l –](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbstok_s`a `_mbstok_s_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok_s` a `_mbstok_s_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -117,16 +120,16 @@ unsigned char* _mbstok_s(
   
 ### <a name="parameters"></a>Parametry  
 
-*str –*  
+*str*  
 Řetězec obsahující tokeny najít.  
   
-*oddělovače*  
+*delimiters*  
 Sada oddělovač znaků se má použít.  
   
-*kontext*  
+*context*  
 Slouží k ukládání informací pozici mezi volání funkce.  
   
-*národní prostředí*  
+*Národní prostředí*  
 Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -135,7 +138,7 @@ Vrátí ukazatel na další token nalezen v *str*. Vrátí `NULL` při nebyly na
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|*str –*|*oddělovače*|*kontext*|Návratová hodnota|`errno`|  
+|*str*|*delimiters*|*context*|Návratová hodnota|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
 |`NULL`|všechny|ukazatel na ukazatel s hodnotou null|`NULL`|`EINVAL`|  
 |všechny|`NULL`|všechny|`NULL`|`EINVAL`|  
@@ -145,7 +148,7 @@ Pokud *str* je `NULL` ale *kontextu* ukazatel na ukazatel platný kontext, se ne
   
 ## <a name="remarks"></a>Poznámky  
 
-`strtok_s` Řady funkcí vyhledá na další token v *str*. Sadu znaků *oddělovače* Určuje možné oddělovače token, který má být nalezena v *str* v aktuálním volání. `wcstok_s`a `_mbstok_s` jsou široká charakterová a vícebajtových znaků verze `strtok_s`. Argumenty a vrácené hodnoty funkcí `wcstok_s` a `_wcstok_s_l` jsou širokoznaké řetězce. Argumenty a vrácené hodnoty funkcí `_mbstok_s` a `_mbstok_s_l` jsou vícebajtové znakové řetězce. Tyto funkce chovají stejně jako jinak.  
+`strtok_s` Řady funkcí vyhledá na další token v *str*. Sadu znaků *oddělovače* Určuje možné oddělovače token, který má být nalezena v *str* v aktuálním volání. `wcstok_s` a `_mbstok_s` jsou široká charakterová a vícebajtových znaků verze `strtok_s`. Argumenty a vrácené hodnoty funkcí `wcstok_s` a `_wcstok_s_l` jsou širokoznaké řetězce. Argumenty a vrácené hodnoty funkcí `_mbstok_s` a `_mbstok_s_l` jsou vícebajtové znakové řetězce. Tyto funkce chovají stejně jako jinak.  
 
 Tato funkce ověří jeho parametry. Pokud dojde k chybový stav, stejně jako chybové stavy tabulky, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `NULL`.
 

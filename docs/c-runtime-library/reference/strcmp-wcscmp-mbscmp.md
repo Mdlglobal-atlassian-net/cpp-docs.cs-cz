@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcscmp
 - _mbscmp
@@ -32,7 +33,8 @@ f1_keywords:
 - strcmp
 - _tcscmp
 - _ftcscmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcscmp function
 - strcmp function
@@ -45,22 +47,23 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f133027b2f1e7dfef494baeed9df6e9e56447889
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ced77db630f0cffede96192dbb9fc69ec0061db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
 Porovnávání řetězců.  
   
 > [!IMPORTANT]
->  `_mbscmp`nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscmp` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,14 +91,14 @@ int _mbscmp(
   
 |Hodnota|Relace řetězec1 k řetězec2|  
 |-----------|----------------------------------------|  
-|< 0|`string1`je menší než`string2`|  
-|0|`string1`je stejný jako`string2`|  
-|> 0|`string1`je větší než`string2`|  
+|< 0|`string1` Je menší než `string2`|  
+|0|`string1` je stejný jako `string2`|  
+|> 0|`string1` Je větší než `string2`|  
   
  Parametr chyby ověření `_mbscmp` vrátí `_NLSCMPERROR`, která je definována v \<string.h > a \<mbstring.h >.  
   
 ## <a name="remarks"></a>Poznámky  
- `strcmp` Funkce provádí porovnávání pomocí pořadového čísla `string1` a `string2` a vrátí hodnotu, která určuje jejich vztahu. `wcscmp`a `_mbscmp` , jsou široká charakterová a vícebajtových znaků verze `strcmp`. `_mbscmp`rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtové znakové stránky a vrátí `_NLSCMPERROR` na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Navíc pokud `string1` nebo `string2` je ukazatel s hodnotou null, `_mbscmp` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbscmp` vrátí `_NLSCMPERROR` a nastaví `errno` k `EINVAL`. `strcmp`a `wcscmp` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
+ `strcmp` Funkce provádí porovnávání pomocí pořadového čísla `string1` a `string2` a vrátí hodnotu, která určuje jejich vztahu. `wcscmp` a `_mbscmp` , jsou široká charakterová a vícebajtových znaků verze `strcmp`. `_mbscmp` rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtové znakové stránky a vrátí `_NLSCMPERROR` na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Navíc pokud `string1` nebo `string2` je ukazatel s hodnotou null, `_mbscmp` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbscmp` vrátí `_NLSCMPERROR` a nastaví `errno` k `EINVAL`. `strcmp` a `wcscmp` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -103,7 +106,7 @@ int _mbscmp(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscmp`|`strcmp`|`_mbscmp`|`wcscmp`|  
   
- `strcmp` Funkce liší od `strcoll` funkce v tom, že `strcmp` porovnání se podle pořadového čísla a nemá vliv národního prostředí. `strcoll`Porovná řetězce lexicographically pomocí `LC_COLLATE` kategorii aktuální národní prostředí. Další informace o `LC_COLLATE` kategorie, najdete v části [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
+ `strcmp` Funkce liší od `strcoll` funkce v tom, že `strcmp` porovnání se podle pořadového čísla a nemá vliv národního prostředí. `strcoll` Porovná řetězce lexicographically pomocí `LC_COLLATE` kategorii aktuální národní prostředí. Další informace o `LC_COLLATE` kategorie, najdete v části [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
  Pořadí znaky znakové sady (znaková sada ASCII) v národním prostředí "C", je stejná jako pořadí lexicographic znaků. V jiným národním prostředím, ale pořadí znaků ve znakové sadě může lišit od lexicographic pořadí. Například v některých evropských národní prostředí znak "a" (hodnota 0x61) zaslána před znak 'č. (hodnota 0xE4) v znaková sada, ale znak 'č' dodává před znak "a" lexicographically.  
   
@@ -176,11 +179,11 @@ Compare strings:
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp wmemcmp –](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [_memicmp –, _memicmp_l –](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
+ [_memicmp, _memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
  [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
- [_stricmp –, _wcsicmp –, _mbsicmp –, _stricmp_l –, _wcsicmp_l –, _mbsicmp_l –](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr –, wcsrchr –, _mbsrchr –, _mbsrchr_l –](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn –, wcsspn –, _mbsspn –, _mbsspn_l –](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _getw
+ms.topic: reference
+apiname:
+- _getw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _getw
-dev_langs: C++
+f1_keywords:
+- _getw
+dev_langs:
+- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dbfba71c98b347cec3ef56143cce34b1550e4149
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getw"></a>_getw
 Získá celé číslo z datového proudu.  
@@ -55,16 +60,16 @@ int _getw(
  Ukazatel `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_getw`Vrací celočíselnou hodnotu pro čtení. Vrácená hodnota `EOF` označuje chyba nebo konec souboru. Ale protože `EOF` hodnota je také legitimní celočíselná hodnota, použijte `feof` nebo `ferror` ověření podmínku end souborového nebo chyba. Pokud `stream` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `EOF`.  
+ `_getw` Vrací celočíselnou hodnotu pro čtení. Vrácená hodnota `EOF` označuje chyba nebo konec souboru. Ale protože `EOF` hodnota je také legitimní celočíselná hodnota, použijte `feof` nebo `ferror` ověření podmínku end souborového nebo chyba. Pokud `stream` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `EOF`.  
   
 ## <a name="remarks"></a>Poznámky  
- `_getw` Funkce přečte další binární hodnota typu `int` ze souboru přidružené `stream` a zvýší ukazatele přidružený soubor tak, aby odkazoval na další znak nepřečtená (pokud existuje). `_getw`nepředpokládá žádné speciální zarovnání položek v datovém proudu. Může dojít k problémům s přenosem s `_getw` protože velikost `int` typ a pořadí bajtů v rámci `int` typ liší mezi systémy.  
+ `_getw` Funkce přečte další binární hodnota typu `int` ze souboru přidružené `stream` a zvýší ukazatele přidružený soubor tak, aby odkazoval na další znak nepřečtená (pokud existuje). `_getw` nepředpokládá žádné speciální zarovnání položek v datovém proudu. Může dojít k problémům s přenosem s `_getw` protože velikost `int` typ a pořadí bajtů v rámci `int` typ liší mezi systémy.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_getw`|\<stdio.h >|  
+|`_getw`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

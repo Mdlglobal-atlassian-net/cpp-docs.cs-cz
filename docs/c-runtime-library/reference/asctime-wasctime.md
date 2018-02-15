@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -27,7 +28,8 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c89b43613e1eb82eb35876ea733e13c5d2995352
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 Převést `tm` čas struktura na řetězec znaků. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [asctime_s –, _wasctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -67,7 +70,7 @@ wchar_t *_wasctime(
  Struktura času a data.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `asctime`vrací ukazatel na výsledném řetězci znaků; `_wasctime` vrací ukazatel na řetězec znaků celou výsledek. Není k dispozici žádnou návratovou hodnotu chyby.  
+ `asctime` vrací ukazatel na výsledném řetězci znaků; `_wasctime` vrací ukazatel na řetězec znaků celou výsledek. Není k dispozici žádnou návratovou hodnotu chyby.  
   
 ## <a name="remarks"></a>Poznámky  
  Bezpečnější verze tyto funkce jsou k dispozici. v tématu [asctime_s –, _wasctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -88,9 +91,9 @@ wchar_t *_wasctime(
   
  Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Informace o konfiguraci místního času najdete v tématu [čas](../../c-runtime-library/reference/time-time32-time64.md), [_ftime –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), a [místní čas](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) funkce a [_tzset –](../../c-runtime-library/reference/tzset.md) – funkce informace o definování časové pásmo prostředí a globální proměnné.  
   
- Výsledek řetězec produkovaný `asctime` obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. 24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku a znak hodnoty null zabírají posledních dvou pozic řetězce. `asctime`jeden, staticky přidělené vyrovnávací paměti se používá k ukládání vrácený řetězec. Každé volání této funkce zničí výsledek předchozí volání.  
+ Výsledek řetězec produkovaný `asctime` obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. 24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku a znak hodnoty null zabírají posledních dvou pozic řetězce. `asctime` jeden, staticky přidělené vyrovnávací paměti se používá k ukládání vrácený řetězec. Každé volání této funkce zničí výsledek předchozí volání.  
   
- `_wasctime`široká charakterová verze `asctime`. `_wasctime`a `asctime` chovat jinak shodně.  
+ `_wasctime` široká charakterová verze `asctime`. `_wasctime` a `asctime` chovat jinak shodně.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `timeptr` je ukazatel s hodnotou null, nebo pokud obsahuje hodnoty out-of-range, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `NULL` a nastaví `errno` k `EINVAL`.  
   
@@ -104,7 +107,7 @@ wchar_t *_wasctime(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`asctime`|\<Time.h >|  
+|`asctime`|\<time.h>|  
 |`_wasctime`|\<Time.h > nebo \<wchar.h >|  
   
 ## <a name="example"></a>Příklad  
@@ -140,10 +143,10 @@ Current date and time: Sun Feb 03 11:38:58 2002
   
 ## <a name="see-also"></a>Viz také  
  [Správa času](../../c-runtime-library/time-management.md)   
- [CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 –](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_ftime – _ftime32 –, _ftime64 –](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [místní čas, _localtime32 –, _localtime64 –](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset –](../../c-runtime-library/reference/tzset.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)   
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)

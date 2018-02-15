@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -36,7 +37,8 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a3d44722daa76e7409a43887f91d127c732dd6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Provede kontextová testy pro řetězec vícebajtových znaků úvodní bajty a druhé bajty a určuje, zda ukazatel daného podřetězce odkazuje na úvodní bajt nebo druhý bajt.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,10 +101,10 @@ int _ismbstrail_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_ismbslead`Vrátí hodnotu -1, pokud znak je úvodní bajt a `_ismbstrail` vrátí hodnotu -1, pokud znak je druhý bajt. Pokud vstupní řetězce jsou platné, ale nejsou vedoucí bajt nebo bajt, vrátí tato funkce nula. Pokud je buď argument `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `NULL` a nastavte `errno` k `EINVAL`.  
+ `_ismbslead` Vrátí hodnotu -1, pokud znak je úvodní bajt a `_ismbstrail` vrátí hodnotu -1, pokud znak je druhý bajt. Pokud vstupní řetězce jsou platné, ale nejsou vedoucí bajt nebo bajt, vrátí tato funkce nula. Pokud je buď argument `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `NULL` a nastavte `errno` k `EINVAL`.  
   
 ## <a name="remarks"></a>Poznámky  
- `_ismbslead`a `_ismbstrail` pomalejší, než `_ismbblead` a `_ismbbtrail` verze protože kontext řetězec berou v úvahu.  
+ `_ismbslead` a `_ismbstrail` pomalejší, než `_ismbblead` a `_ismbbtrail` verze protože kontext řetězec berou v úvahu.  
   
  Verze tyto funkce, které mají `_l` příponu jsou shodné s tím rozdílem, že pro jejich chování závislých na národním prostředí používají národní prostředí, je předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -109,17 +112,17 @@ int _ismbstrail_l(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_ismbslead`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
-|`_ismbstrail`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
-|`_ismbslead_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
-|`_ismbstrail_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|  
+|`_ismbslead`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbslead_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbstrail_l`|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
- \*Pro manifest konstanty podmínky testu.  
+ \* Pro manifest konstanty podmínky testu.  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Klasifikace znaků](../../c-runtime-library/character-classification.md)   
- [_ismbc – rutiny](../../c-runtime-library/ismbc-routines.md)   
+ [_ismbc Routines](../../c-runtime-library/ismbc-routines.md)   
  [je, isw – rutiny](../../c-runtime-library/is-isw-routines.md)   
  [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)

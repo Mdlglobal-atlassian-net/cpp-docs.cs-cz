@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ftelli64
 - ftell
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b7bb0c1954d79261298cccccec980fa446d0cf00
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Získá aktuální umístění ukazatele souboru.  
@@ -64,7 +67,7 @@ __int64 _ftelli64(
  Cíl `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `ftell`a `_ftelli64` vrátí aktuální pozice v souboru. Hodnoty vrácené `ftell` a `_ftelli64` nemusí odrážet posun fyzické bajtů pro datové proudy otevřít v textovém režimu, protože režim textové způsobí, že překlad znaků CR vrátit-konce řádku. Použití `ftell` s `fseek` nebo `_ftelli64` s `_fseeki64` se vraťte do umístění souborů správně. V případě chyby `ftell` a `_ftelli64` vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tyto funkce vrátí hodnotu-1 L a sadu `errno` na jednu z dvě konstanty, definované v kód chyby. H. `EBADF` Konstanta znamená `stream` argument není platný soubor hodnota ukazatele nebo neodkazuje na otevření souboru. `EINVAL`znamená neplatný `stream` funkci byl předán argument. Na zařízeních nepodporující vyhledávání (jako jsou terminály a tiskárny) nebo když `stream` neodkazuje na soubor otevřít, není definován návratovou hodnotu.  
+ `ftell` a `_ftelli64` vrátí aktuální pozice v souboru. Hodnoty vrácené `ftell` a `_ftelli64` nemusí odrážet posun fyzické bajtů pro datové proudy otevřít v textovém režimu, protože režim textové způsobí, že překlad znaků CR vrátit-konce řádku. Použití `ftell` s `fseek` nebo `_ftelli64` s `_fseeki64` se vraťte do umístění souborů správně. V případě chyby `ftell` a `_ftelli64` vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tyto funkce vrátí hodnotu-1 L a sadu `errno` na jednu z dvě konstanty, definované v kód chyby. H. `EBADF` Konstanta znamená `stream` argument není platný soubor hodnota ukazatele nebo neodkazuje na otevření souboru. `EINVAL` znamená neplatný `stream` funkci byl předán argument. Na zařízeních nepodporující vyhledávání (jako jsou terminály a tiskárny) nebo když `stream` neodkazuje na soubor otevřít, není definován návratovou hodnotu.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
@@ -81,8 +84,8 @@ __int64 _ftelli64(
   
 |Funkce|Požadovaný hlavičkový soubor|Volitelné hlavičky|  
 |--------------|---------------------|----------------------|  
-|`ftell`|\<stdio.h >|\<errno.h >|  
-|`_ftelli64`|\<stdio.h >|\<errno.h >|  
+|`ftell`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -124,5 +127,5 @@ Position after trying to read 100 bytes: 100
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos –](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, _fseeki64 –](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

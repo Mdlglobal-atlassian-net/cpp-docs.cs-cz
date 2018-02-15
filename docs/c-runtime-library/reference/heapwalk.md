@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _heapwalk
+ms.topic: reference
+apiname:
+- _heapwalk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,28 +26,30 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87ff27007734f84b93d0ecb36f637ae22f72098b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82b2a69fba87d86b01c4f4e3b8ad140e2bcde3ef
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="heapwalk"></a>_heapwalk
 Prochází halda a vrátí informace o další položky.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime s výjimkou v sestavení pro ladění. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime s výjimkou v sestavení pro ladění. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +64,7 @@ int _heapwalk(
  Vyrovnávací paměť tak, aby obsahovala haldy informace.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_heapwalk`Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
+ `_heapwalk` Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
   
  `_HEAPBADBEGIN`  
  Počáteční záhlaví informace neplatná nebo nebyla nalezena.  
@@ -69,7 +73,7 @@ int _heapwalk(
  Kvůli poškození haldy nebo chybných uzlu byl nalezen.  
   
  `_HEAPBADPTR`  
- `_pentry`pole z `_HEAPINFO` struktura neobsahuje platný ukazatel do haldy nebo `entryinfo` je ukazatel s hodnotou null.  
+ `_pentry` pole z `_HEAPINFO` struktura neobsahuje platný ukazatel do haldy nebo `entryinfo` je ukazatel s hodnotou null.  
   
  `_HEAPEND`  
  Úspěšně bylo dosaženo konce haldě.  
@@ -102,7 +106,7 @@ int _heapwalk(
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_heapwalk`|\<malloc.h >|\<errno.h >|  
+|`_heapwalk`|\<malloc.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -191,7 +195,7 @@ OK - end of heap
   
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../../c-runtime-library/memory-allocation.md)   
- [_heapadd –](../../c-runtime-library/heapadd.md)   
- [_heapchk –](../../c-runtime-library/reference/heapchk.md)   
- [_heapmin –](../../c-runtime-library/reference/heapmin.md)   
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
  [_heapset](../../c-runtime-library/heapset.md)

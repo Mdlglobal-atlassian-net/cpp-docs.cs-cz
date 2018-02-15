@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>Soubory .netmodule jako vstup linkeru
 Link.exe nyní přijme MSIL .obj a .netmodules jako vstup. Výstupní soubor vyprodukované linkeru bude sestavení nebo .netmodule s žádné běhu závislost na .obj nebo .netmodules, že se vstupní linkeru.  
   
  .netmodules jsou vytvořené pomocí – kompilátor Visual C++ s [/LN (vytvořit modul MSIL)](../../build/reference/ln-create-msil-module.md) nebo linkeru s [/NOASSEMBLY (vytvořit modul MSIL)](../../build/reference/noassembly-create-a-msil-module.md). .objs se vytváří vždy v kompilaci Visual C++. Pro ostatní kompilátory Visual Studio, použijte **/target: Module** – možnost kompilátoru.  
   
- Ve většině případů je potřeba předat linkeru souboru .obj z kompilace Visual C++, který vytvořili .netmodule, pokud byl vytvořen .netmodule [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). MSIL .netmodules použít jako vstup linkeru musí být čistá MSIL, které je možné vytvořit pomocí kompilátoru Visual C++ **/CLR: safe**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015. Kompilátory .NET Visual Studio vytvořit čistá MSIL modulů ve výchozím nastavení.  
+  Musíte předat linkeru souboru .obj z kompilace Visual C++, který vytvořili .netmodule. Předávání .netmodule se už nepodporuje, protože **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a bude v budoucí verzi systému kompilátoru odebrána.   
   
  Informace o tom, jak vyvolání linkeru z příkazového řádku najdete v tématu [syntaxe příkazového řádku Linkeru](../../build/reference/linker-command-line-syntax.md), [kódu sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md), a [nastavení cesty a proměnných prostředí pro Sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Předávání soubor .netmodule nebo .dll linkeru se zkompilují – kompilátor Visual C++ s **/CLR** nebo s **/CLR: pure** může způsobit chybu linkeru. Další informace najdete v tématu [Volba formátu .netmodule vstupních souborů](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Předávání soubor .netmodule nebo .dll linkeru se zkompilují – kompilátor Visual C++ s **/CLR** může způsobit chybu linkeru. Další informace najdete v tématu [Volba formátu .netmodule vstupních souborů](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- Linkeru přijímá soubory .obj nativní, jakož i soubory .obj MSIL kompilovat s **/CLR**, **/CLR: pure**, nebo **/CLR: safe**. Při předávání smíšený .objs ve stejném sestavení, ověřitelnosti výsledné výstupního souboru, ve výchozím nastavení, bude rovnat nejnižší úroveň ověřitelnosti vstupní modulů. Například pokud předáte bezpečné a čisté .obj linkeru, výstupní soubor bude čistý. [/ CLRIMAGETYPE (zadat typ z obrázku CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) umožňuje určit s nižší úrovní ověřitelnosti, pokud je to, co potřebujete.  
+ Linkeru přijímá soubory .obj nativní, jakož i soubory .obj MSIL kompilovat s **/CLR**. Při předávání smíšený .objs ve stejném sestavení, ověřitelnosti výsledné výstupního souboru, ve výchozím nastavení, bude rovnat nejnižší úroveň ověřitelnosti vstupní modulů. 
   
  Pokud aktuálně máte aplikaci, která se skládá ze dvou nebo více sestavení a chcete, aby aplikace, které mají být obsažena v jednom sestavení, musíte znovu zkompiluje sestavení a potom na odkaz .objs nebo .netmodules k vytvoření jednoho sestavení.  
   

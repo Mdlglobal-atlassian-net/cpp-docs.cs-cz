@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfreopen_s
 - freopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - freopen_s
 - _tfreopen_s
 - _wfreopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tfreopen_s function
 - _wfreopen_s function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2276de6c4539dffe4456c18fdeff88f852a44c2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a62165fee7ed54a7eeadf5f381945936bb441908
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 Znovu přiřadí ukazatel souboru. Tyto verze nástroje [freopen –, _wfreopen –](../../c-runtime-library/reference/freopen-wfreopen.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -68,23 +71,23 @@ errno_t _wfreopen(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pFile`  
+ [out] `pFile`  
  Ukazatel na ukazatel souboru poskytnutý voláním.  
   
- [v]`path`  
+ [in] `path`  
  Cesta k novému souboru.  
   
- [v]`mode`  
+ [in] `mode`  
  Typ přístupu povolena.  
   
- [v]`stream`  
+ [in] `stream`  
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Každá z těchto funkcí vrací kód chyby. Dojde-li k chybě, je původní soubor uzavřen.  
   
 ## <a name="remarks"></a>Poznámky  
- `freopen_s` Funkce zavře soubor aktuálně přidružen `stream` a znovu přidělí `stream` do souboru určeného `path.` `_wfreopen_s` je verze široká charakterová `_freopen_s`; `path` a `mode` argumenty, které mají `_wfreopen_s` jsou široká charakterová řetězce. `_wfreopen_s`a `_freopen_s` chovat jinak shodně.  
+ `freopen_s` Funkce zavře soubor aktuálně přidružen `stream` a znovu přidělí `stream` do souboru určeného `path.` `_wfreopen_s` je verze široká charakterová `_freopen_s`; `path` a `mode` argumenty, které mají `_wfreopen_s` jsou široká charakterová řetězce. `_wfreopen_s` a `_freopen_s` chovat jinak shodně.  
   
  Pokud platí jedna z `pFile`, `path`, `mode`, nebo `stream` jsou `NULL`, nebo pokud `path` je prázdný řetězec, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `EINVAL`.  
   
@@ -136,10 +139,10 @@ errno_t _wfreopen(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`freopen_s`|\<stdio.h >|  
+|`freopen_s`|\<stdio.h>|  
 |`_wfreopen_s`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+ Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -180,8 +183,8 @@ This will go to the file 'freopen.out'
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [freopen –, _wfreopen –](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [fclose –, _fcloseall –](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen –, _wfdopen –](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno –](../../c-runtime-library/reference/fileno.md)   
+ [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_Otevřít _wopen –](../../c-runtime-library/reference/open-wopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

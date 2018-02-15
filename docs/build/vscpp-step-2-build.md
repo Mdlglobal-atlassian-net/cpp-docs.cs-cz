@@ -4,19 +4,22 @@ description: "Nainstalovat Visual Studio – podpora pro Visual C++"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly jazyka C++
 
@@ -83,6 +86,8 @@ Pokud se zobrazí červený podtržení vlnovkou pod nic v editoru zdrojového k
 ### <a name="run-your-code-in-a-command-window-issues"></a>Spuštění kódu v příkazovém okně problémy
 
 Můžete také přejít do složky ladění řešení na příkazovém řádku ke spouštění vaší aplikace. Aplikaci nelze spustit z dalších adresářů bez určení cesty k aplikaci. Můžete však kopírovat aplikace do jiného adresáře a spusťte jej z.
+
+Pokud nevidíte **kopie jako cestu** v místní nabídce zavření v nabídce a potom podržte stisknutou klávesu Shift a znovu otevřete. Toto je pouze ke zvýšení pohodlí. Můžete také zkopírovat cestu ke složce z panelu Hledat Průzkumníka souborů a vložte ji do **spustit** dialogové okno a pak zadejte název vaší spustitelný soubor na konci. Je jen málo zadáte více, ale má stejný výsledek.
 
 [Vrať se.](#run-your-code-in-a-command-window)
 

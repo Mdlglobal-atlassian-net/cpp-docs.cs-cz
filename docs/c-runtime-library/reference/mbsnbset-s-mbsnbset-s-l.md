@@ -1,12 +1,13 @@
 ---
-title: "_mbsnbset_s –, _mbsnbset_s_l – | Microsoft Docs"
+title: _mbsnbset_s, _mbsnbset_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -28,7 +29,8 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dbda0fd8e7a3957d072bcaa95e510903fb84cb5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0fb1219bbe7343ad3644f64f8f3d017b45d1b51
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 Nastaví první `n` bajtů řetězce vícebajtových znaků pro zadaný znak. Tyto verze nástroje [_mbsnbset –, _mbsnbset_l –](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -107,9 +110,9 @@ errno_t _mbsnbset_s_l(
  Nula v případě úspěšného; jinak kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `_mbsnbset_s` a `_mbsnbset_s_l` funkce nastavovat maximálně první `count` bajtů `str` k `c`. Pokud `count` je větší než délka `str`, délka `str` se používá místo `count`. Pokud `c` je vícebajtových znaků a nelze ji nastavit zcela do posledního bajtu, která je zadána `count`, poslední bajt doplněno prázdný znak. `_mbsnbset_s`a `_mbsnbset_s_l` Neumísťujte ukončující null na konci `str`.  
+ `_mbsnbset_s` a `_mbsnbset_s_l` funkce nastavovat maximálně první `count` bajtů `str` k `c`. Pokud `count` je větší než délka `str`, délka `str` se používá místo `count`. Pokud `c` je vícebajtových znaků a nelze ji nastavit zcela do posledního bajtu, která je zadána `count`, poslední bajt doplněno prázdný znak. `_mbsnbset_s` a `_mbsnbset_s_l` Neumísťujte ukončující null na konci `str`.  
   
- `_mbsnbset_s`a `_mbsnbset_s_l` vypadat `_mbsnset`kromě toho, že nastavují `count` bajtů místo `count` znaků `c`.  
+ `_mbsnbset_s` a `_mbsnbset_s_l` vypadat `_mbsnset`kromě toho, že nastavují `count` bajtů místo `count` znaků `c`.  
   
  Pokud `str` je `NULL` nebo `count` rovná nule, tato funkce vygeneruje výjimku neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a funkce vrátí hodnotu `NULL`. Navíc pokud `c` není platný vícebajtových znaků `errno` je nastaven na `EINVAL` a místo toho používá mezeru.  
   
@@ -161,6 +164,6 @@ After:  **** is a test
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat –, _mbsnbcat_l –](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_strnset –, _strnset_l –, _wcsnset –, _wcsnset_l –, _mbsnset –, _mbsnset_l –](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
  [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

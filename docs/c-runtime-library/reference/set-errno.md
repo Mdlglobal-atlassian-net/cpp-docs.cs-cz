@@ -1,13 +1,15 @@
 ---
-title: "_set_errno – | Microsoft Docs"
+title: _set_errno | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_errno
+ms.topic: reference
+apiname:
+- _set_errno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - set_errno
 - _set_errno
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - errno global variable
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e6ff28df1645446e159e4fc3b0658a8b209ba2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f1f5a87ab9f40eb229d4ebb7c23d584a5347094
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="seterrno"></a>_set_errno
 Nastavte hodnotu `errno` – globální proměnná.  
@@ -53,7 +57,7 @@ errno_t _set_errno(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`value`  
+ [in] `value`  
  Nová hodnota `errno`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -84,10 +88,10 @@ Oops: Illegal byte sequence
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_set_errno`|\<stdlib.h >|\<errno.h >|  
+|`_set_errno`|\<stdlib.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
 ## <a name="see-also"></a>Viz také  
- [_get_errno –](../../c-runtime-library/reference/get-errno.md)   
+ [_get_errno](../../c-runtime-library/reference/get-errno.md)   
  [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

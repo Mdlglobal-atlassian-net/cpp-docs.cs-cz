@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 Třídy zprostředkovatele použití vícenásobné dědičnosti. Následující kód ukazuje řetězec dědičnosti pro objekt zdroje dat:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Všechny komponenty modelu COM odvozena od `CComObjectRootEx` a `CComCoClass`. `CComObjectRootEx`poskytuje implementaci pro **IUnknown** rozhraní. Ho může zpracovávat všechny model vláken. `CComCoClass`zpracovává všechny podporu chyby. Pokud chcete odeslat klientovi bohatší informace o chybě, můžete některé chybové rozhraní API v `CComCoClass`.  
+ Všechny komponenty modelu COM odvozena od `CComObjectRootEx` a `CComCoClass`. `CComObjectRootEx` poskytuje implementaci pro **IUnknown** rozhraní. Ho může zpracovávat všechny model vláken. `CComCoClass` zpracovává všechny podporu chyby. Pokud chcete odeslat klientovi bohatší informace o chybě, můžete některé chybové rozhraní API v `CComCoClass`.  
   
  Objekt zdroje dat se také dědí z několika 'Impl' tříd. Každá třída poskytuje implementaci pro rozhraní. Implementuje objekt zdroje dat `IPersist`, `IDBProperties`, **IDBInitialize**, a **IDBCreateSession** rozhraní. Každé rozhraní je vyžadují k implementaci objekt zdroje dat OLE DB. Můžete podporovat nebo není dědění nebo není dědění z jedné z těchto tříd 'Impl' konkrétní funkce. Pokud chcete zajistit podporu **IDBDataSourceAdmin** rozhraní dědit z **IDBDataSourceAdminImpl** třídy pro získání požadované funkce.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _expand_dbg
+ms.topic: reference
+apiname:
+- _expand_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41f3d59cec6ec4a064143e0211ebd956f30e16e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Změní velikost zadaný blok paměti v haldě rozšiřování nebo smluvní blok (pouze ladicí verze).  
@@ -79,7 +83,7 @@ void *_expand_dbg(
 ## <a name="remarks"></a>Poznámky  
  `_expand_dbg` Funkce je ladicí verze _[rozbalte](../../c-runtime-library/reference/expand.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání `_expand_dbg` byla snížena volání `_expand`. Obě `_expand` a `_expand_dbg` změnit velikost bloku paměti základní haldy, ale `_expand_dbg` může vyrovnávat několik funkce ladění: vyrovnávací paměti na obou stranách části uživatele bloku chcete otestovat nevracení, parametr typ bloku ke sledování konkrétní přidělení typy a `filename` / `linenumber` informací k určení původu požadavků na přidělení.  
   
- `_expand_dbg`Změní velikost bloku zadaná paměťová se něco víc místa, než požadovaný `newSize`. `newSize`může být větší nebo menší než velikost bloku původně přidělenou paměť. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Změna provádí rozšiřování či smluvní původní bloku paměti. `_expand_dbg`nepřesouvá bloku paměti, stejně jako [_realloc_dbg –](../../c-runtime-library/reference/realloc-dbg.md) funkce.  
+ `_expand_dbg` Změní velikost bloku zadaná paměťová se něco víc místa, než požadovaný `newSize`. `newSize` může být větší nebo menší než velikost bloku původně přidělenou paměť. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Změna provádí rozšiřování či smluvní původní bloku paměti. `_expand_dbg` nepřesouvá bloku paměti, stejně jako [_realloc_dbg –](../../c-runtime-library/reference/realloc-dbg.md) funkce.  
   
  Když `newSize` je větší než původní bloku je velikost bloku paměti rozšířena. Během rozšiřování, pokud blok paměti nelze rozšířit tak, aby dokázala pojmout požadovanou velikost `NULL` je vrácen. Když `newSize` je menší než původní blok velikost bloku paměti sjednané dokud novou velikost.  
   
@@ -91,7 +95,7 @@ void *_expand_dbg(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_expand_dbg`|\<crtdbg.h >|  
+|`_expand_dbg`|\<crtdbg.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

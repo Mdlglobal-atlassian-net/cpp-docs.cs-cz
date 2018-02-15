@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wmakepath_s
 - _makepath_s
@@ -28,7 +29,8 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bef7cdbd58ba21396c78a1945e272e0a0e1baa4d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 Název cesty vytvoří z komponenty. Toto jsou verze [_makepath –, _wmakepath –](../../c-runtime-library/reference/makepath-wmakepath.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -88,41 +91,41 @@ errno_t _wmakepath_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`path`  
+ [out] `path`  
  Úplná cesta vyrovnávací paměti.  
   
- [v]`sizeInWords`  
+ [in] `sizeInWords`  
  Velikost vyrovnávací paměti v slova.  
   
- [v]`sizeInBytes`  
+ [in] `sizeInBytes`  
  Velikost vyrovnávací paměti v bajtech.  
   
- [v]`drive`  
- Obsahuje písmeno (A, B a tak dále) odpovídající požadované jednotky a volitelné koncové dvojtečkou. `_makepath_s`Pokud není nalezena, vloží v cestě k složené automaticky dvojtečkou. Pokud `drive` je `NULL` nebo odkazuje na prázdný řetězec, se zobrazí v složené žádné písmeno jednotky `path` řetězec.  
+ [in] `drive`  
+ Obsahuje písmeno (A, B a tak dále) odpovídající požadované jednotky a volitelné koncové dvojtečkou. `_makepath_s` Pokud není nalezena, vloží v cestě k složené automaticky dvojtečkou. Pokud `drive` je `NULL` nebo odkazuje na prázdný řetězec, se zobrazí v složené žádné písmeno jednotky `path` řetězec.  
   
- [v]`dir`  
+ [in] `dir`  
  Obsahuje cestu adresáře není včetně označení jednotky nebo název skutečného souboru. Do adresy koncové lomítko je volitelná a buď lomítkem (/) ani zpětné lomítko (\\) nebo obě může být použit v jedné `dir` argument. Pokud žádné koncové lomítko (/ nebo \\) je zadána, je-li vložit automaticky. Pokud `dir` je `NULL` nebo odkazuje na prázdný řetězec, neexistuje žádná cesta adresáře je vložen do složeného `path` řetězec.  
   
- [v]`fname`  
+ [in] `fname`  
  Obsahuje název základního souboru bez žádné přípony názvů souborů. Pokud `fname` je `NULL` nebo odkazuje na prázdný řetězec, žádný název souboru je vložen do složeného `path` řetězec.  
   
- [v]`ext`  
- Obsahuje příponu názvu souboru skutečný, s nebo bez úvodní tečky (.). `_makepath_s`Vloží období automaticky, pokud se nezobrazí v `ext`. Pokud `ext` je `NULL` nebo odkazuje na prázdný řetězec, bez přípony se vloží do složeného `path` řetězec.  
+ [in] `ext`  
+ Obsahuje příponu názvu souboru skutečný, s nebo bez úvodní tečky (.). `_makepath_s` Vloží období automaticky, pokud se nezobrazí v `ext`. Pokud `ext` je `NULL` nebo odkazuje na prázdný řetězec, bez přípony se vloží do složeného `path` řetězec.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Nula v případě úspěšného; Kód chyby při selhání.  
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`path`|`sizeInWords` / `sizeInBytes`|Vrátí|Obsah`path`|  
+|`path`|`sizeInWords` / `sizeInBytes`|Vrátí|Obsah `path`|  
 |------------|------------------------------------|------------|------------------------|  
 |`NULL`|všechny|`EINVAL`|nedojde ke změně|  
 |všechny|<= 0|`EINVAL`|nedojde ke změně|  
   
- Pokud dojde k některé z výše uvedených podmínek chyba, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a vrátí funkce `EINVAL`. `NULL`je povolen pro parametry `drive`, `fname`, a `ext`. Informace o chování při tyto parametry jsou ukazatelé s hodnotou null nebo prázdné řetězce, najdete v části poznámky.  
+ Pokud dojde k některé z výše uvedených podmínek chyba, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL` a vrátí funkce `EINVAL`. `NULL` je povolen pro parametry `drive`, `fname`, a `ext`. Informace o chování při tyto parametry jsou ukazatelé s hodnotou null nebo prázdné řetězce, najdete v části poznámky.  
   
 ## <a name="remarks"></a>Poznámky  
- `_makepath_s` Funkce vytvoří řetězec složené cesty z jednotlivých součástí, ukládání výsledků v `path`. `path` Může obsahovat písmeno jednotky, cesta k adresáři, název souboru a příponu názvu souboru. `_wmakepath_s`široká charakterová verze `_makepath_s`; argumenty, které mají `_wmakepath_s` jsou široká charakterová řetězce. `_wmakepath_s`a `_makepath_s` chovat jinak shodně.  
+ `_makepath_s` Funkce vytvoří řetězec složené cesty z jednotlivých součástí, ukládání výsledků v `path`. `path` Může obsahovat písmeno jednotky, cesta k adresáři, název souboru a příponu názvu souboru. `_wmakepath_s` široká charakterová verze `_makepath_s`; argumenty, které mají `_wmakepath_s` jsou široká charakterová řetězce. `_wmakepath_s` a `_makepath_s` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -132,7 +135,7 @@ errno_t _wmakepath_s(
   
  `path` Argument musí ukazovat na prázdnou dostatečně velký pro uložení úplná cesta vyrovnávací paměti. Složené `path` musí být větší než `_MAX_PATH` konstanta, definované v Stdlib.h.  
   
- Pokud se cesta `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Kromě toho `errno` je nastaven na `EINVAL`. `NULL`hodnoty jsou povolené pro všechny ostatní parametry.  
+ Pokud se cesta `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Kromě toho `errno` je nastaven na `EINVAL`. `NULL` hodnoty jsou povolené pro všechny ostatní parametry.  
   
  V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -142,7 +145,7 @@ errno_t _wmakepath_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_makepath_s`|\<stdlib.h >|  
+|`_makepath_s`|\<stdlib.h>|  
 |`_wmakepath_s`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
@@ -201,6 +204,6 @@ Path extracted with _splitpath_s:
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_fullpath –, _wfullpath –](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_splitpath_s –, _wsplitpath_s –](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
  [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)

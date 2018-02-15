@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fread
+ms.topic: reference
+apiname:
+- fread
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fread
-dev_langs: C++
+f1_keywords:
+- fread
+dev_langs:
+- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e1230c3a309fc4fbbf382df4bb07ca2bebf0d5a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d01c3362c94b0c644cb53aec6e45ce83b98dbf07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fread"></a>fread
 Čte data z datového proudu.  
@@ -68,7 +73,7 @@ size_t fread(
  Ukazatel na `FILE` struktura.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fread`Vrátí počet položek úplné ve skutečnosti čtení, které můžou být menší než `count` Pokud dojde k chybě, nebo pokud je nalezen konec souboru dříve, než dorazila `count`. Použití `feof` nebo `ferror` funkce k rozlišení chybu čtení z podmínku end souboru. Pokud `size` nebo `count` 0, `fread` vrátí 0 a obsah vyrovnávací paměti jsou stejné. Pokud `stream` nebo `buffer` je ukazatel s hodnotou null, `fread` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
+ `fread` Vrátí počet položek úplné ve skutečnosti čtení, které můžou být menší než `count` Pokud dojde k chybě, nebo pokud je nalezen konec souboru dříve, než dorazila `count`. Použití `feof` nebo `ferror` funkce k rozlišení chybu čtení z podmínku end souboru. Pokud `size` nebo `count` 0, `fread` vrátí 0 a obsah vyrovnávací paměti jsou stejné. Pokud `stream` nebo `buffer` je ukazatel s hodnotou null, `fread` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
   
@@ -81,7 +86,7 @@ size_t fread(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fread`|\<stdio.h >|  
+|`fread`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
