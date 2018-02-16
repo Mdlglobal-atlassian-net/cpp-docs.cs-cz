@@ -1,7 +1,7 @@
 # [Referenční dokumentace knihovny CRT](c-run-time-library-reference.md)
 # [Funkce knihovny CRT](crt-library-features.md)
 ## [Kompatibilita](compatibility.md)
-### [Aplikace pro Windows Store, prostředí Windows Runtime a knihovna CRT](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
+### [Aplikace pro UPW, prostředí Windows Runtime a knihovna CRT (C Run-Time)](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
 ### [Kompatibilita s ANSI C](ansi-c-compliance.md)
 ### [UNIX](unix.md)
 ### [Platformy systému Windows (CRT)](windows-platforms-crt.md)

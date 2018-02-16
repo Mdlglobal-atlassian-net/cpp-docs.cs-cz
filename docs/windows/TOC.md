@@ -287,7 +287,7 @@
 ### [Postupy: Zpracování událostí s použitím knihovny WRL](how-to-handle-events-using-wrl.md)
 ### [Šablona projektu knihovny tříd WRL](wrl-class-library-project-template.md)
 ### [Návod: Vytvoření základní komponenty prostředí Windows Runtime s použitím knihovny WRL](walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)
-### [Návod: Vytvoření aplikace pro Windows Store s použitím knihovny WRL a platformy Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
+### [Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
 ### [Postupy: Vytvoření klasické komponenty COM s použitím knihovny WRL](how-to-create-a-classic-com-component-using-wrl.md)
 ### [Postupy: Přímé vytváření instancí komponent knihovny WRL](how-to-instantiate-wrl-components-directly.md)
 ### [Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)

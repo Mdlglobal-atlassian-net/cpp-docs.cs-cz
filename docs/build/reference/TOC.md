@@ -182,7 +182,7 @@
 ### [/ALIGN (zarovnání oddílů)](align-section-alignment.md)
 ### [/ALLOWBIND (zabránění vazbě knihoven DLL)](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION (vyhledání manifestu)](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER (aplikace pro Windows Store)](appcontainer-windows-store-app.md)
+### [/APPCONTAINER (UPW/Microsoft Store App)](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG (přidání atributu DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE (odkaz na prostředek rozhraní .NET Framework)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE (přidání modulu MSIL do sestavení)](assemblymodule-add-a-msil-module-to-the-assembly.md)
