@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro systém Windows XP
 
 Protože Visual Studio podporuje více modulové platformy, můžete určit cílovou operačních systémů a runtime knihovny, které nepodporují výchozí sady nástrojů. Například přepínání sada nástrojů platformy, můžete pomocí C ++ 11 a C ++ 14, vylepšení C ++ 17 jazyk podporuje – kompilátor Visual C++ v sadě Visual Studio k vytvoření aplikace cílených [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Můžete také použít starší platformy modulové zachovat starší verze kódu binární kompatibilní a nadále využívat výhody nejnovějších funkcí Visual Studio IDE.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalace sady nástrojů systému Windows XP
-
 Sada nástrojů platformy a součásti cíl [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Visual Studio 2017, spusťte instalační program Visual Studio. Po počáteční instalaci sady Visual Studio, nebo když zvolíte **upravit** Pokud chcete upravit existující instalace, ujistěte se, že **vývoj aplikací s jazykem C++** je vybrané úlohy. V seznamu volitelné součásti pro tuto úlohu, vyberte **Windows XP podporu pro jazyk C++**a potom zvolte **nainstalovat** nebo **upravit**.
 
 ## <a name="windows-xp-targeting-experience"></a>Cílení na prostředí Windows XP
@@ -65,7 +64,7 @@ Vzhledem k rozdílům v podpora platformy a knihovna není vývojového prostře
 
 - **Funkce jazyka C++**
 
-   Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2012 implementována v aplikacích, které používají v110\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2013 implementována v aplikacích, které používají v120\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2012 implementována v aplikacích, které používají v140\_xp sada nástrojů platformy. Visual Studio použije odpovídající kompilátoru k sestavení pomocí starší modulové platformy. Použijte nejnovější sada nástrojů platformy systému Windows XP využívat další funkce jazyka C++ implementovaná v této verzi kompilátoru.
+   Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2012 implementována v aplikacích, které používají v110\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2013 implementována v aplikacích, které používají v120\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2015 implementována v aplikacích, které používají v140\_xp sada nástrojů platformy. Visual Studio použije odpovídající kompilátoru k sestavení pomocí starší modulové platformy. Použijte nejnovější sada nástrojů platformy systému Windows XP využívat další funkce jazyka C++ implementovaná v této verzi kompilátoru.
 
 - **Vzdálené ladění**
 
