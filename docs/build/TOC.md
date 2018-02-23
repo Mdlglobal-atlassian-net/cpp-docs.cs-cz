@@ -96,7 +96,6 @@
 ### [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 ## [Aktivní technologie a knihovny DLL](active-technology-and-dlls.md)
 ## [Automatizace v knihovně DLL](automation-in-a-dll.md)
-## [Zásady vytváření názvů pro knihovny MFC DLL](naming-conventions-for-mfc-dlls.md)
 ## [Volání funkcí knihovny DLL z aplikací Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
 # [Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/TOC.md)
 # [Sestavení kódu C/C++ na příkazovém řádku](building-on-the-command-line.md)
