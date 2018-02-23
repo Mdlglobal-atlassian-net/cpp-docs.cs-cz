@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b6ff3f709e5db16f06569ab3406cfef44cabf11
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE a nástrojů pro vývoj Visual C++
 
@@ -131,4 +131,4 @@ Další informace o nasazení C + +/ CLI programu, najdete v části [Průvodce 
 |[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)|Popisuje, jak k sestavení projektů C++.|
 |[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)|Poskytuje přehled o nasazení aplikací C++ a odkazy na další články, které popisují nasazení podrobně.|
 |[Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Podrobné informace o tom, jak upgradovat aplikací C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a také k migraci aplikace, které byly vytvořeny pomocí nástrojů pro jiné než Visual Studio.|
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|

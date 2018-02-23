@@ -1,12 +1,13 @@
 ---
-title: "_strtoui64 –, _wcstoui64 –, _strtoui64_l –, _wcstoui64_l – | Microsoft Docs"
+title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtoui64
 - _strtoui64_l
@@ -34,7 +35,8 @@ f1_keywords:
 - strtoui64
 - _strtoui64
 - wcstoui64_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtoui64_l function
 - _wcstoui64_l function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 73f648d9b895c7947892fa91fa1efd5d45773a45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ad6ce06ef428005ea07214b426df0c61f623429
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 Převést řetězec na nepodepsaný `__int64` hodnotu.  
@@ -101,16 +104,16 @@ unsigned __int64 _wcstoui64(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_strtoui64`Funkce vrátí určený v řetězci `nptr`, s výjimkou při reprezentaci by způsobilo přetečení, v takovém případě se vrátí `_UI64_MAX`. `_strtoui64`Vrátí hodnotu 0, pokud žádný převod lze provést.  
+ `_strtoui64` Funkce vrátí určený v řetězci `nptr`, s výjimkou při reprezentaci by způsobilo přetečení, v takovém případě se vrátí `_UI64_MAX`. `_strtoui64` Vrátí hodnotu 0, pokud žádný převod lze provést.  
   
- `_UI64_MAX`je definována v omezení. H.  
+ `_UI64_MAX` je definována v omezení. H.  
   
  Pokud `nptr` je `NULL` nebo `base` nenulový a je menší než 2 nebo vyšší než 36, `errno` je nastaven na `EINVAL`.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
 ## <a name="remarks"></a>Poznámky  
- `_strtoui64` Funkce převede `nptr` k `unsigned` `__int64`. `_wcstoui64`široká charakterová verze `_strtoui64`; jeho `nptr` je argumentem široká charakterová řetězce. V opačném případě se tyto funkce chovají stejně jako.  
+ `_strtoui64` Funkce převede `nptr` k `unsigned` `__int64`. `_wcstoui64` široká charakterová verze `_strtoui64`; jeho `nptr` je argumentem široká charakterová řetězce. V opačném případě se tyto funkce chovají stejně jako.  
   
  Obě funkce Zastavit čtení řetězec `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`.  
   
@@ -125,7 +128,7 @@ unsigned __int64 _wcstoui64(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, na kterou odkazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, na kterou odkazuje `endptr`.  
   
- `_strtoui64`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `_strtoui64` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
@@ -135,9 +138,9 @@ unsigned __int64 _wcstoui64(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_strtoui64`|\<stdlib.h >|  
+|`_strtoui64`|\<stdlib.h>|  
 |`_wcstoui64`|\<stdlib.h > nebo \<wchar.h >|  
-|`_strtoui64_l`|\<stdlib.h >|  
+|`_strtoui64_l`|\<stdlib.h>|  
 |`_wcstoui64_l`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

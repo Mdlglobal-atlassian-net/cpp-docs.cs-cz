@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -39,7 +40,8 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 904f897a36c3db24ce78983e3c02cc0f019bf16e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 Převede řetězec na velká písmena. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strupr_s –, _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l –](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsupr`a `_mbsupr_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsupr` a `_mbsupr_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -150,7 +153,7 @@ unsigned char *_mbsupr_l(
 ## <a name="remarks"></a>Poznámky  
  `_strupr` Funkce převede na místě, každý malé písmeno v `str` na velká písmena. Převod je dáno `LC_CTYPE` kategorie nastavení národního prostředí. Ovlivněné nejsou jiné znaky. Další informace o `LC_CTYPE`, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Verze tyto funkce bez `_l` přípona použití aktuální národní prostředí; verze s `_l` příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
- `_wcsupr`a `_mbsupr` jsou široká charakterová a vícebajtových znaků verze `_strupr`. Hodnota argumentu a vraťte se `_wcsupr` jsou široká charakterová řetězce; u `_mbsupr` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
+ `_wcsupr` a `_mbsupr` jsou široká charakterová a vícebajtových znaků verze `_strupr`. Hodnota argumentu a vraťte se `_wcsupr` jsou široká charakterová řetězce; u `_mbsupr` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
   
  Pokud `str` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, tyto funkce vrátí původní řetězec a sadu `errno` k `EINVAL`.  
   

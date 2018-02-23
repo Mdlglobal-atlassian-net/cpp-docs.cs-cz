@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC – rozšiřující knihovny DLL
 MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy odvozené z existujících tříd Microsoft Foundation Class Library.  
@@ -61,7 +65,7 @@ MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy 
   
  Před verzí 4.0 knihovny MFC byl tento typ knihovny DLL označuje AFXDLL. AFXDLL odkazuje `_AFXDLL` symbol preprocesoru, který je definován při vytváření knihovny DLL.  
   
- Import knihoven pro sdílené verze knihovny MFC jsou pojmenovány podle zásady, popsané v [konvence vytváření názvů pro knihovny MFC DLL](../build/naming-conventions-for-mfc-dlls.md). Visual C++ dodává připravené verze knihovny MFC DLL plus číslo z non - MFC DLL, kterou můžete použít a distribuovat s vašimi aplikacemi. Ty jsou popsané v souboru Redist.txt, který je nainstalován do složky, Program Files\Microsoft Visual Studio.  
+ Import knihoven pro sdílené verze knihovny MFC jsou pojmenovány podle zásady, popsané v [konvence vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ dodává připravené verze knihovny MFC DLL plus číslo z non - MFC DLL, kterou můžete použít a distribuovat s vašimi aplikacemi. Ty jsou popsané v souboru Redist.txt, který je nainstalován do složky, Program Files\Microsoft Visual Studio.  
   
  Pokud exportujete pomocí souborů .def, vložte následující kód na začátku a konci hlavičkový soubor:  
   
@@ -89,7 +93,7 @@ MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy 
 ## <a name="sharing-resources-and-classes"></a>Sdílení prostředků a třídy  
  Export zdrojů se provádí pomocí seznamu prostředků. Každá aplikace obsahuje jednotlivě propojený seznam **CDynLinkLibrary** objekty. Při hledání prostředku, většina standardní MFC implementací, které načíst prostředky, nejprve vyhledává v aktuálním modulu prostředků (`AfxGetResourceHandle`) a pokud není nalezena prostředku provede seznam **CDynLinkLibrary** objekty došlo k pokusu o načtení požadovaný prostředek.  
   
- Procházení seznamem má nevýhody, že je něco pomalejší a vyžaduje správu rozsahů ID prostředků. Má výhodu v podobě, klientská aplikace, která obsahuje odkazy na několik knihoven DLL rozšíření MFC můžete jakémukoli prostředku, poskytuje knihovnu DLL bez nutnosti zadávat popisovač instance knihovny DLL. `AfxFindResourceHandle`rozhraní API slouží k procházení seznamu prostředků a hledat odpovídající shody. Přebírá název a typ prostředku a vrátí popisovač prostředku, kde byl nalezen první (nebo hodnota NULL).  
+ Procházení seznamem má nevýhody, že je něco pomalejší a vyžaduje správu rozsahů ID prostředků. Má výhodu v podobě, klientská aplikace, která obsahuje odkazy na několik knihoven DLL rozšíření MFC můžete jakémukoli prostředku, poskytuje knihovnu DLL bez nutnosti zadávat popisovač instance knihovny DLL. `AfxFindResourceHandle` rozhraní API slouží k procházení seznamu prostředků a hledat odpovídající shody. Přebírá název a typ prostředku a vrátí popisovač prostředku, kde byl nalezen první (nebo hodnota NULL).  
   
  Pokud nechcete načíst pouze prostředky z konkrétní místa a provede seznamu, použijte funkce `AfxGetResourceHandle` a `AfxSetResourceHandle` uložte starý popisovač a nastavit nový popisovač. Ujistěte se, že obnovit starý popisovač prostředku, pak se vraťte do klientské aplikace. Příklad použití tohoto přístupu explicitně načíst nabídky, naleznete v části sada Testdll2 v ukázce MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk).  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - atol
 - _wtol_l
@@ -33,7 +34,8 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -50,16 +52,17 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0f8f16f513d6ec56337453755a7ce982519a5155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c727f51d67e3ef64362f36c3a6f3cbd04d9f00c4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 Převeďte řetězec na dlouhé celé číslo.  
@@ -106,7 +109,7 @@ long _wtol_l(
   
  A `whitespace` se skládá z místa nebo kartě znaků, které se mají ignorovat; `sign` je buď plus (+) nebo minus (-) a `digits` jsou jeden nebo více číslic.  
   
- `_wtol`je stejný jako `atol` s tím rozdílem, že trvá řetězec široké znaků.  
+ `_wtol` je stejný jako `atol` s tím rozdílem, že trvá řetězec široké znaků.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -121,7 +124,7 @@ long _wtol_l(
   
 |Rutiny|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`atol`|\<stdlib.h >|  
+|`atol`|\<stdlib.h>|  
 |`_atol_l`, `_wtol`, `_wtol_l`|\<stdlib.h > a \<wchar.h >|  
   
 ## <a name="example"></a>Příklad  
@@ -176,8 +179,8 @@ Overflow condition occurred.
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
- [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt –](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt –](../../c-runtime-library/reference/gcvt.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
  [setlocale –, _wsetlocale –](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Určuje, zda celé reprezentuje malé písmeno.  
@@ -89,7 +92,7 @@ int _iswlower_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace malé písmeno. `islower`vrátí nenulovou hodnotu, pokud `c` je malé písmeno (a – z). `iswlower`vrátí nenulovou hodnotu, pokud `c` je široké znak, který odpovídá malé písmeno, nebo pokud `c` je jedním z definované implementací sadu široké znaky pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
+ Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace malé písmeno. `islower` vrátí nenulovou hodnotu, pokud `c` je malé písmeno (a – z). `iswlower` vrátí nenulovou hodnotu, pokud `c` je široké znak, který odpovídá malé písmeno, nebo pokud `c` je jedním z definované implementací sadu široké znaky pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
   
  Verze tyto funkce, které mají `_l` používat příponu národní prostředí, je předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -99,16 +102,16 @@ int _iswlower_l(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istlower`|`islower`|[_ismbclower –](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
-|`_istlower_l`|`_islower _l`|[_ismbclower_l –](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
+|`_istlower`|`islower`|[_ismbclower](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
+|`_istlower_l`|`_islower _l`|[_ismbclower_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`islower`|\<ctype.h >|  
+|`islower`|\<ctype.h>|  
 |`iswlower`|\<ctype.h > nebo \<wchar.h >|  
-|`_islower_l`|\<ctype.h >|  
+|`_islower_l`|\<ctype.h>|  
 |`_swlower_l`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

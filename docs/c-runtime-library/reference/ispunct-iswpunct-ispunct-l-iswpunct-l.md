@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ispunct
 - _iswpunct_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswpunct
 - _istpunct
 - ispunct
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istpunct function
 - _ispunct_l function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fc86de73132dcefc57602586b679b95333c99c2e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Určuje, zda celé reprezentuje interpunkční znaménko.  
@@ -81,7 +84,7 @@ int _iswpunct_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace interpunkční znaménko. `ispunct`Vrátí hodnotu nenulové hodnoty pro všechny tisknutelná znak, který není znak mezery nebo znak, pro který `isalnum` nenulový. `iswpunct`Vrátí hodnotu nenulové hodnoty pro všechny tisknutelná široké znak, který není široké znak mezery ani široké znak, pro který `iswalnum` nenulový. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
+ Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace interpunkční znaménko. `ispunct` Vrátí hodnotu nenulové hodnoty pro všechny tisknutelná znak, který není znak mezery nebo znak, pro který `isalnum` nenulový. `iswpunct` Vrátí hodnotu nenulové hodnoty pro všechny tisknutelná široké znak, který není široké znak mezery ani široké znak, pro který `iswalnum` nenulový. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
   
  Výsledek testu podmínky pro `ispunct` funkce závisí na `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce, které nemají `_l` příponu využívání aktuální národní prostředí pro chování všech závislých na národním prostředí, verze, které mají `_l` příponu jsou shodné s tím rozdílem, že používají národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -91,15 +94,15 @@ int _iswpunct_l(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istpunct`|`ispunct`|[_ismbcpunct –](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswpunct`|  
+|**_** `istpunct`|`ispunct`|[_ismbcpunct](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswpunct`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`ispunct`|\<ctype.h >|  
+|`ispunct`|\<ctype.h>|  
 |`iswpunct`|\<ctype.h > nebo \<wchar.h >|  
-|`_ispunct_l`|\<ctype.h >|  
+|`_ispunct_l`|\<ctype.h>|  
 |`_iswpunct_l`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Určuje, zda celé reprezentuje řídicí znak.  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace řídicí znak. `iscntrl`vrátí nenulovou hodnotu, pokud `c` je řídicí znak (0x00-0x1F nebo 0x7F). `iswcntrl`vrátí nenulovou hodnotu, pokud `c` je ovládací prvek celý znak. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
+ Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace řídicí znak. `iscntrl` vrátí nenulovou hodnotu, pokud `c` je řídicí znak (0x00-0x1F nebo 0x7F). `iswcntrl` vrátí nenulovou hodnotu, pokud `c` je ovládací prvek celý znak. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
   
  Verze tyto funkce, které mají `_l` příponu použijte parametr národního prostředí, je předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -100,9 +103,9 @@ int _iswcntrl_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`iscntrl`|\<ctype.h >|  
+|`iscntrl`|\<ctype.h>|  
 |`iswcntrl`|\<ctype.h > nebo \<wchar.h >|  
-|`_iscntrl_l`|\<ctype.h >|  
+|`_iscntrl_l`|\<ctype.h>|  
 |`_iswcntrl_l`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

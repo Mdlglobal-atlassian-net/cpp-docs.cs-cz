@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: localeconv
+ms.topic: reference
+apiname:
+- localeconv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: localeconv
-dev_langs: C++
+f1_keywords:
+- localeconv
+dev_langs:
+- C++
 helpviewer_keywords:
 - lconv type
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cbd897b353f8a915fb4a29d61d0954b9b5a7f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e93e21505a661deb470e4b31c8807ef5133a774
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="localeconv"></a>localeconv
 Získá podrobné informace o nastavení národního prostředí.  
@@ -48,7 +53,7 @@ struct lconv *localeconv( void );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `localeconv`vrací ukazatel na objekt vyplněné typu [lconv – struktura](../../c-runtime-library/standard-types.md). Hodnoty obsažené v objektu, se zkopírují z nastavení národního prostředí v místní úložiště vláken a může ji přepsat následující volání `localeconv`. Změny provedené na hodnoty v tomto objektu neměňte nastavení národního prostředí. Volání [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) s `category` hodnoty `LC_ALL`, `LC_MONETARY`, nebo `LC_NUMERIC` přepsat obsah struktury.  
+ `localeconv` vrací ukazatel na objekt vyplněné typu [lconv – struktura](../../c-runtime-library/standard-types.md). Hodnoty obsažené v objektu, se zkopírují z nastavení národního prostředí v místní úložiště vláken a může ji přepsat následující volání `localeconv`. Změny provedené na hodnoty v tomto objektu neměňte nastavení národního prostředí. Volání [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) s `category` hodnoty `LC_ALL`, `LC_MONETARY`, nebo `LC_NUMERIC` přepsat obsah struktury.  
   
 ## <a name="remarks"></a>Poznámky  
  `localeconv` Funkce získá podrobné informace o formátování čísel pro aktuální národní prostředí. Tyto informace jsou uloženy ve struktuře typu `lconv`. `lconv` Struktuře, definované v národním prostředí. H, obsahuje následující členy:  
@@ -113,11 +118,11 @@ S výjimkou jako zadaný, členy `lconv` struktury, která má `char *` a `wchar
   
 Hodnoty `grouping` a `mon_grouping` se interpretují podle následujících pravidel:  
   
-- `CHAR_MAX`-Neprovádět další seskupení.  
+- `CHAR_MAX` -Neprovádět další seskupení.  
   
 - 0 – pomocí předchozí elementu pro každý zbývající číslic.  
   
-- *n*-Počet číslic, které tvoří aktuální skupiny. Další prvek je ověřuje velikosti další skupiny číslic před aktuální skupiny.  
+- *n* -Počet číslic, které tvoří aktuální skupiny. Další prvek je ověřuje velikosti další skupiny číslic před aktuální skupiny.  
   
 Hodnoty pro `int_curr_symbol` se interpretují podle následujících pravidel:  
   

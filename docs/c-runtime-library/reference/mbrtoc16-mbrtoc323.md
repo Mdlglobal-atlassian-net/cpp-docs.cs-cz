@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - mbrtoc16
 - mbrtoc32
@@ -30,23 +30,25 @@ f1_keywords:
 - mbrtoc32
 - uchar/mbrtoc16
 - uchar/mbrtoc32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16 mbrtoc32
+# <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 Změní první vícebajtových znaků v řetězci omezený na ekvivalentní UTF-16 nebo UTF-32 znaků.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -86,11 +88,11 @@ size_t mbrtoc32(
   
 |Hodnota|Podmínka|  
 |-----------|---------------|  
-|0|Další `max_bytes` nebo méně znaků převedena z `source` odpovídají null široké znaku, který je uložen, pokud hodnota `destination` není null.<br /><br /> `state`obsahuje stav počáteční shift.|  
+|0|Další `max_bytes` nebo méně znaků převedena z `source` odpovídají null široké znaku, který je uložen, pokud hodnota `destination` není null.<br /><br /> `state` obsahuje stav počáteční shift.|  
 |Mezi 1 a `max_bytes`(včetně)|Hodnota vrácená je počet bajtů `source` , dokončete platný vícebajtových znaků. Převedený široká znaková je uložen, pokud `destination` není null.|  
 |-3|Další široká znaková vyplývající z předchozího volání funkce byla uložena v `destination` Pokud `destination` není null. Žádné bajtů z `source` se spotřebovávají toto volání funkce.<br /><br /> Když `source` odkazuje na vícebajtových znaků, který vyžaduje více než jeden znak širokou představovat (například náhradní pár), pak se `state` hodnota je aktualizována tak, aby další volání funkce zapíše na další znak.|  
 |-2|Další `max_bytes` bajtů představují neúplnou, ale potenciálně platný, vícebajtových znaků. Žádná hodnota je uložena v `destination`. Tento výsledek může dojít, pokud `max_bytes` je nulová.|  
-|-1|Došlo k chybě kódování. Další `max_bytes` nebo méně bajtů nepřispívají k dokončení a platné vícebajtových znaků. Žádná hodnota je uložena v `destination`.<br /><br /> `EILSEQ`je uložený v `errno` a stav převodu `state` není zadáno.|  
+|-1|Došlo k chybě kódování. Další `max_bytes` nebo méně bajtů nepřispívají k dokončení a platné vícebajtových znaků. Žádná hodnota je uložena v `destination`.<br /><br /> `EILSEQ` je uložený v `errno` a stav převodu `state` není zadáno.|  
   
 ## <a name="remarks"></a>Poznámky  
  `mbrtoc16` Funkce přečte až `max_bytes` bajtů z `source` najít první dokončení, platný vícebajtových znaků a potom úložiště ekvivalentní UTF-16 znaků v `destination`. Počet bajtů zdroje se interpretují podle aktuální vícebajtové národní prostředí vlákna. Pokud vícebajtových znaků vyžaduje více než jeden znak výstup UTF-16, jako je například náhradní pár, pak se `state` hodnota nastavena na ukládat další znak UTF-16 v `destination` na další volání `mbrtoc16`. `mbrtoc32` Funkce je stejné, ale výstup se ukládají jako znakové sady UTF-32 znaků.  
@@ -103,7 +105,7 @@ size_t mbrtoc32(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`mbrtoc16`,                `mbrtoc32`|\<uchar.h >|\<cuchar >|  
+|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -111,7 +113,7 @@ size_t mbrtoc32(
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [c16rtomb c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
+ [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
  [mbrtowc –](../../c-runtime-library/reference/mbrtowc.md)   
  [mbsrtowcs –](../../c-runtime-library/reference/mbsrtowcs.md)   
  [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)

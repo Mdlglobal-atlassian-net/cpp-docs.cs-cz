@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strtoll
 - wcstoll
@@ -32,7 +33,8 @@ f1_keywords:
 - _wcstoll_l
 - strtoll
 - wcstoll
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tcstoll_l function
 - _wcstoll_l function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f449cd73a8536fb7dbdf46b7c7d1d45ad449cb10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 954b529b894b61f2f4d8566f70145460656a702c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 Převede řetězec na `long long` hodnotu.  
@@ -96,16 +99,16 @@ long long _wcstoll_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strtoll`Vrátí hodnotu, která je reprezentována v řetězci `nptr`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě vrátí `LLONG_MAX` nebo `LLONG_MIN`. Funkce vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoll`Vrátí hodnoty analogicky na `strtoll`.  
+ `strtoll` Vrátí hodnotu, která je reprezentována v řetězci `nptr`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě vrátí `LLONG_MAX` nebo `LLONG_MIN`. Funkce vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoll` Vrátí hodnoty analogicky na `strtoll`.  
   
- `LLONG_MAX`a `LLONG_MIN` jsou definovány v omezení. H.  
+ `LLONG_MAX` a `LLONG_MIN` jsou definovány v omezení. H.  
   
  Pokud `nptr` je `NULL` nebo `base` nenulový a je menší než 2 nebo vyšší než 36, `errno` je nastaven na `EINVAL`.  
   
  Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `strtoll` Funkce převede `nptr` k `long long`. Obě funkce Zastavit čtení řetězec `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak, který je větší než nebo rovno `base`. `wcstoll`široká charakterová verze `strtoll`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
+ `strtoll` Funkce převede `nptr` k `long long`. Obě funkce Zastavit čtení řetězec `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak, který je větší než nebo rovno `base`. `wcstoll` široká charakterová verze `strtoll`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -118,7 +121,7 @@ long long _wcstoll_l(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, které ukazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, které ukazuje `endptr`.  
   
- `strtoll`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtoll` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
   
@@ -128,7 +131,7 @@ long long _wcstoll_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strtoll`, `_strtoll_l`|\<stdlib.h >|  
+|`strtoll`, `_strtoll_l`|\<stdlib.h>|  
 |`wcstoll`, `_wcstoll_l`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

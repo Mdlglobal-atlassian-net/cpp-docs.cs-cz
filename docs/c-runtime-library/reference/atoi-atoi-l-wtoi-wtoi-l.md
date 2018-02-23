@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -32,7 +33,8 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1482bbb10604b78874112b72f99b7ae18bab206e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 Převeďte řetězec na celé číslo.  
@@ -90,7 +93,7 @@ int _wtoi_l(
 ## <a name="return-value"></a>Návratová hodnota  
  Jednotlivé funkce vrátí `int` hodnotu vyprodukované interpretace vstupu znaky jako číslo. Vrácená hodnota je 0 pro `atoi` a `_wtoi`, pokud vstupní nelze převést na hodnotu daného typu.  
   
- V případě přetečení s velké záporné celočíselné hodnoty `LONG_MIN` je vrácen. `atoi`a `_wtoi` vrátit `INT_MAX` a `INT_MIN` na těchto podmínkách. Ve všech případech out-of-range `errno` je nastaven na `ERANGE`. Pokud parametr byl předán v `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí 0.  
+ V případě přetečení s velké záporné celočíselné hodnoty `LONG_MIN` je vrácen. `atoi` a `_wtoi` vrátit `INT_MAX` a `INT_MIN` na těchto podmínkách. Ve všech případech out-of-range `errno` je nastaven na `ERANGE`. Pokud parametr byl předán v `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí 0.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto funkce převést řetězec znaků na celočíselnou hodnotu (`atoi` a `_wtoi`). Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupní řetězec u prvního znaku, který nelze rozpoznat jako součást číslo. Tento znak může být znak hodnoty null ('\0' nebo L '\0') ukončující řetězec.  
@@ -114,7 +117,7 @@ int _wtoi_l(
   
 |Rutiny|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`atoi`|\<stdlib.h >|  
+|`atoi`|\<stdlib.h>|  
 |`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h > nebo \<wchar.h >|  
   
 ## <a name="example"></a>Příklad  
@@ -168,8 +171,8 @@ Overflow condition occurred.
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
- [_ecvt –](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt –](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt –](../../c-runtime-library/reference/gcvt.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
  [setlocale –, _wsetlocale –](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

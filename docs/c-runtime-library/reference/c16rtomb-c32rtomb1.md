@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -30,21 +30,23 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9eb43d6b225bce002eb2ce5293cb048d3062bcd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2deca697a3dcb338ae9e9ea9e071c73979695ad8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb c32rtomb
 Převeďte UTF-16 nebo UTF-32 široká znaková vícebajtových znaků v aktuální národní prostředí.  
@@ -65,13 +67,13 @@ size_t c32rtomb(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`mbchar`  
+ [out] `mbchar`  
  Ukazatel na pole k uložení vícebajtových znaků převeden.  
   
- [v]`wchar`  
+ [in] `wchar`  
  Široká znaková převést.  
   
- [ve out]`state`  
+ [ve out] `state`  
  Ukazatel na `mbstate_t` objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -96,6 +98,6 @@ size_t c32rtomb(
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtoc16 mbrtoc32](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)   
+ [mbrtoc16, mbrtoc32](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)   
  [wcrtomb –](../../c-runtime-library/reference/wcrtomb.md)   
  [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)

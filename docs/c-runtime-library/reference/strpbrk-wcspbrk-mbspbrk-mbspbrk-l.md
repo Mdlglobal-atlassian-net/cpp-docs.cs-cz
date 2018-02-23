@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbspbrk
 - wcspbrk
@@ -33,7 +34,8 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -51,22 +53,23 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 323ee2842799cdfe948bdf0a8af7ec2bfad92439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 360877af83694d969e07ff0a8933f1f6df64072a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Kontroluje řetězců znaků v zadané znakových sad.  
   
 > [!IMPORTANT]
->  `_mbspbrk`a `_mbspbrk_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbspbrk` a `_mbspbrk_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -140,11 +143,11 @@ const unsigned char *_mbspbrk_l(
 ## <a name="remarks"></a>Poznámky  
  `strpbrk` Funkce vrací ukazatel na první výskyt znaku v `str` který patří do sady znaků v `strCharSet`. Hledání nezahrnuje ukončující znak hodnoty null.  
   
- `wcspbrk`a `_mbspbrk` jsou široká charakterová a vícebajtových znaků verze `strpbrk`. Argumenty a vrací hodnotu `wcspbrk` jsou široká charakterová řetězce; u `_mbspbrk` jsou řetězců vícebajtových znaků.  
+ `wcspbrk` a `_mbspbrk` jsou široká charakterová a vícebajtových znaků verze `strpbrk`. Argumenty a vrací hodnotu `wcspbrk` jsou široká charakterová řetězce; u `_mbspbrk` jsou řetězců vícebajtových znaků.  
   
- `_mbspbrk`ověří jeho parametry. Pokud `str` nebo `strCharSet` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbspbrk` vrátí `NULL` a nastaví `errno` k `EINVAL`. `strpbrk`a `wcspbrk` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
+ `_mbspbrk` ověří jeho parametry. Pokud `str` nebo `strCharSet` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbspbrk` vrátí `NULL` a nastaví `errno` k `EINVAL`. `strpbrk` a `wcspbrk` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
   
- `_mbspbrk`je podobná `_mbscspn` s tím rozdílem, že `_mbspbrk` vrátí ukazatel, nikoli hodnotu typu [size_t –](../../c-runtime-library/standard-types.md).  
+ `_mbspbrk` je podobná `_mbscspn` s tím rozdílem, že `_mbspbrk` vrátí ukazatel, nikoli hodnotu typu [size_t –](../../c-runtime-library/standard-types.md).  
   
  V jazyce C, proveďte tyto funkce `const` pro první argument ukazatel. V jazyce C++ jsou k dispozici dva přetížení. Přetížení trvá ukazatel na `const` vrací ukazatel na `const`; na verzi, která přebírá ukazatel na jinou hodnotu než`const` vrací ukazatel na jinou hodnotu než`const`. Makro `_CRT_CONST_CORRECT_OVERLOADS` je definována, pokud obě `const` a jiných-`const` verze tyto funkce jsou k dispozici. Pokud budete potřebovat jinou hodnotu než`const` chování pro obě přetížení C++ definujte symbol `_CONST_RETURN`.  
   
@@ -155,7 +158,7 @@ const unsigned char *_mbspbrk_l(
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
-|**není k dispozici**|**není k dispozici**|`_mbspbrk_l`|**není k dispozici**|  
+|**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -205,6 +208,6 @@ int main( void )
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn –, wcscspn –, _mbscspn –, _mbscspn_l –](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strchr –, wcschr –, _mbschr –, _mbschr_l –](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
  [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

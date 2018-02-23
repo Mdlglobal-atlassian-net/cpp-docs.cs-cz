@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -33,7 +34,8 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 19bbe19ed2cf753d07cfe9c7e42fe533bc90a834
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 74f33e1f11eed9b1757da1062fab9b494d43b61f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 Vytiskne formátovaný výstup do standardního výstupního datového proudu a umožňuje specifikaci pořadí, ve kterém se používají parametry v řetězci formátu.  
@@ -101,7 +104,7 @@ int _wprintf_p_l(
   
  Rozdíl mezi `_printf_p` a `printf_s` je, že `_printf_p` podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít v řetězec formátu. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_wprintf_p`je verze široká charakterová `_printf_p`; chovají stejně jako datový proud se při otevření v režimu ANSI. `_printf_p`nepodporuje aktuálně výstup do proudu kódování UNICODE.  
+ `_wprintf_p` je verze široká charakterová `_printf_p`; chovají stejně jako datový proud se při otevření v režimu ANSI. `_printf_p` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -121,10 +124,10 @@ int _wprintf_p_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_printf_p`, `_printf_p_l`|\<stdio.h >|  
+|`_printf_p`, `_printf_p_l`|\<stdio.h>|  
 |`_wprintf_p`, `_wprintf_p_l`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   
@@ -161,12 +164,12 @@ Width specifiers:     Hello
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fprintf_p –, _fprintf_p_l –, _fwprintf_p –, _fwprintf_p_l –](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l –](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [_sprintf_p –, _sprintf_p_l –, _swprintf_p –, _swprintf_p_l –](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [sprintf_s –, _sprintf_s_l –, swprintf_s –, _swprintf_s_l –](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strncat
 - _strncat_l
@@ -40,7 +41,8 @@ f1_keywords:
 - _ftcsncat
 - wcsncat
 - _tcsncat
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - concatenating strings
 - ftcsncat function
@@ -64,22 +66,23 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04c3e1979fa3eb7cc02a8be2236496fbdaaac83a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 411b480acde9a5fad1144a7ebf95cd23ee3b3fd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat –, _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –
 Připojí znaky řetězce. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [strncat_s –, _strncat_s_l, wcsncat_s –, _wcsncat_s_l, _mbsncat_s –, _mbsncat_s_l –](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .  
   
 > [!IMPORTANT]
->  `_mbsncat`a `_mbsncat_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncat` a `_mbsncat_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -152,9 +155,9 @@ unsigned char *_mbsncat_l(
  `strncat` Funkce připojí maximálně první `count` znaků `strSource` k `strDest`. Počáteční znak `strSource` přepíše ukončující znak null `strDest`. Pokud se objeví znak hodnoty null v `strSource` před `count` znaky jsou připojena, `strncat` připojí všechny znaky z `strSource`, až do znaku, hodnotu null. Pokud `count` je větší než délka `strSource`, délka `strSource` slouží místě `count`. Všechny případy, výsledný řetězec je byla ukončena s znak hodnoty null. Pokud kopírování probíhá mezi řetězce, které se překrývají, chování nedefinovaný.  
   
 > [!IMPORTANT]
->  `strncat`nekontroluje dostatek místa v `strDest`; je proto potenciální příčinou přetečení vyrovnávací paměti. Mějte na paměti, `count` omezuje počet znaků připojí, nejedná se o omezení velikosti `strDest`. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  `strncat` nekontroluje dostatek místa v `strDest`; je proto potenciální příčinou přetečení vyrovnávací paměti. Mějte na paměti, `count` omezuje počet znaků připojí, nejedná se o omezení velikosti `strDest`. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- `wcsncat`a `_mbsncat` jsou široká charakterová a vícebajtových znaků verze `strncat`. Argumenty řetězce a návratová hodnota `wcsncat` jsou široká charakterová řetězce; u `_mbsncat` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
+ `wcsncat` a `_mbsncat` jsou široká charakterová a vícebajtových znaků verze `strncat`. Argumenty řetězce a návratová hodnota `wcsncat` jsou široká charakterová řetězce; u `_mbsncat` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez `_l` příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s `_l` příponu jsou shodné s tím rozdílem, že používají předaný v místo toho parametr národního prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -168,7 +171,7 @@ unsigned char *_mbsncat_l(
 |`_tcsncat_l`|`_strncat_l`|`_mbsnbcat_l`|`_wcsncat_l`|  
   
 > [!NOTE]
->  `_strncat_l`a `_wcsncat_l` mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním `_tcsncat_l`.  
+>  `_strncat_l` a `_wcsncat_l` mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním `_tcsncat_l`.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -232,15 +235,15 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat –, _mbsnbcat_l –](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat – wcscat –, _mbscat –](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcpy – wcscpy –, _mbscpy –](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
  [strncpy –, _strncpy_l –, wcsncpy –, _wcsncpy_l –, _mbsncpy –, _mbsncpy_l –](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr –, wcsrchr –, _mbsrchr –, _mbsrchr_l –](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset –, _strset_l –, _wcsset –, _wcsset_l –, _mbsset –, _mbsset_l –](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn –, wcsspn –, _mbsspn –, _mbsspn_l –](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

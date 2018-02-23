@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strftime
 - _wcsftime_l
@@ -29,7 +30,8 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 990dab2b4cedbdb464a2e546a4c83758cb46c89a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Čas řetězec formátu.  
@@ -95,20 +98,20 @@ size_t _wcsftime_l(
  Řetězec řízení formátu  
   
  `timeptr`  
- `tm`Datová struktura.  
+ `tm` Datová struktura.  
   
  `locale`  
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strftime`Vrátí počet znaků, které jsou umístěny v `strDest` a `wcsftime` vrátí odpovídající počet široké znaky.  
+ `strftime` Vrátí počet znaků, které jsou umístěny v `strDest` a `wcsftime` vrátí odpovídající počet široké znaky.  
   
  Celkový počet znaků, včetně ukončující null, je-li více než `maxsize`, oba `strftime` a `wcsftime` vrátit 0 a obsah `strDest` jsou neurčitou.  
   
  Počet znaků v `strDest` se rovná počet literálu znaků v `format` a také znaky, které mohou být přidány do `format` prostřednictvím formátování kódy. Ukončující null řetězce nepočítá v návratovou hodnotu.  
   
 ## <a name="remarks"></a>Poznámky  
- `strftime` a `wcsftime` funkce formát `tm` čas hodnota v `timeptr` podle zadaných `format` argument a uložit výsledek ve vyrovnávací paměti `strDest`. Maximálně `maxsize` znaky jsou umístěny v řetězci. Popis polí v `timeptr` struktury najdete v tématu [asctime –](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime`je ekvivalentem široká charakterová `strftime`; její argument řetězec ukazatel odkazuje na řetězec znaků celou. Tyto funkce chovají stejně jako jinak.  
+ `strftime` a `wcsftime` funkce formát `tm` čas hodnota v `timeptr` podle zadaných `format` argument a uložit výsledek ve vyrovnávací paměti `strDest`. Maximálně `maxsize` znaky jsou umístěny v řetězci. Popis polí v `timeptr` struktury najdete v tématu [asctime –](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` je ekvivalentem široká charakterová `strftime`; její argument řetězec ukazatel odkazuje na řetězec znaků celou. Tyto funkce chovají stejně jako jinak.  
   
 > [!NOTE]
 >  Ve verzi před Visual C++ 2005 popsané v dokumentaci `format` parametr `wcsftime` tak, že má datový typ `const wchar_t *`, ale skutečný implementace `format` datový typ byla `const char *`. Implementace `format` datový typ je aktualizovaná tak, aby odrážela předchozí a aktuální dokumentaci, který je `const wchar_t *`.  
@@ -195,7 +198,7 @@ size_t _wcsftime_l(
   
 |Formátovat kód|Význam|  
 |-----------------|-------------|  
-|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#`příznaku je ignorována.|  
+|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#` příznaku je ignorována.|  
 |`%#c`|Dlouhé datum a čas reprezentace vhodné pro aktuální národní prostředí. Například: "Úterý, 14 března 1995, 12:41:29".|  
 |`%#x`|Reprezentace dlouhého data, vhodné pro aktuální národní prostředí. Například: "Úterý, 14 března 1995".|  
 |`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Odebere úvodní nuly (pokud existuje).|  
@@ -204,9 +207,9 @@ size_t _wcsftime_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strftime`|\<Time.h >|  
+|`strftime`|\<time.h>|  
 |`wcsftime`|\<Time.h > nebo \<wchar.h >|  
-|`_strftime_l`|\<Time.h >|  
+|`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<Time.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

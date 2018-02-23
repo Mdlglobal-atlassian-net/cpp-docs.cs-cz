@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>CException – třída
 Základní třída pro všechny výjimky v knihovny Microsoft Foundation Class.  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception">CException::CException</a>  
  Tato funkce člen vytvoří `CException` objektu.  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Poznámky  
  Potřebovali byste normálně nikdy přímo volat tento konstruktor. Funkci, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volat jeho konstruktoru, nebo pomocí některé z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), má být vyvolána předdefinované typu. Tato dokumentace se poskytuje jen pro úplnost.  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete">CException::Delete</a>  
  Tato funkce zkontroluje, zda **CException** objekt byl vytvořen v haldě, a pokud ano, zavolá **odstranit** operátor v objektu.  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror">CException::ReportError</a>  
  V okně se zprávou uživateli volání této funkce člena na text chyby sestavy.  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>Parametry  
  `nType`  
- Určuje styl do pole zpráva. Použít libovolnou kombinaci [styly oken zpráv](message-box-styles.md) do pole. Pokud tento parametr nezadáte, výchozí hodnota je **mb_ok –**.  
+ Určuje styl do pole zpráva. Použít libovolnou kombinaci [styly oken zpráv](styles-used-by-mfc.md#message-box-styles) do pole. Pokud tento parametr nezadáte, výchozí hodnota je **mb_ok –**.  
   
  *nMessageID*  
  Určuje ID prostředku (řetězec položka) zprávy, které chcete zobrazit, pokud objekt výjimky nemá chybovou zprávu. Zobrazí se v případě 0, zpráva "není žádná chybová zpráva k dispozici".  

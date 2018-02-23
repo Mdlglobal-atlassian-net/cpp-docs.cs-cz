@@ -1,12 +1,13 @@
 ---
-title: "_strrev –, _wcsrev –, _mbsrev _mbsrev_l – | Microsoft Docs"
+title: _strrev, _wcsrev, _mbsrev, _mbsrev_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsrev
 - _mbsrev
@@ -34,7 +35,8 @@ f1_keywords:
 - mbsrev_l
 - _wcsrev_fstrrev
 - _mbsrev
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsrev_l function
 - characters [C++], switching
@@ -53,22 +55,23 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b40acaa02a4907f0bcc49741312b55ea41224601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a0c70634dc0942004eb1045a72e0354e59526ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 Obrátí znaky řetězce.  
   
 > [!IMPORTANT]
->  `_mbsrev`a `_mbsrev_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsrev` a `_mbsrev_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -99,9 +102,9 @@ unsigned char *_mbsrev_l(
  Vrací ukazatel na změněna řetězec. Žádnou návratovou hodnotu je vyhrazena indikující chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- `_strrev` Funkce obrátí pořadí znaků v `string`. Ukončovací znak hodnoty null zůstává na místě. `_wcsrev`a `_mbsrev` jsou široká charakterová a vícebajtových znaků verze `_strrev`. Argumenty a vrací hodnotu `_wcsrev` jsou široká charakterová řetězce; u `_mbsrev` jsou řetězců vícebajtových znaků. Pro `_mbsrev`, pořadí bajtů v každé vícebajtových znaků v `string` se nezmění. Tyto tři funkce chovají stejně jako jinak.  
+ `_strrev` Funkce obrátí pořadí znaků v `string`. Ukončovací znak hodnoty null zůstává na místě. `_wcsrev` a `_mbsrev` jsou široká charakterová a vícebajtových znaků verze `_strrev`. Argumenty a vrací hodnotu `_wcsrev` jsou široká charakterová řetězce; u `_mbsrev` jsou řetězců vícebajtových znaků. Pro `_mbsrev`, pořadí bajtů v každé vícebajtových znaků v `string` se nezmění. Tyto tři funkce chovají stejně jako jinak.  
   
- `_mbsrev`ověří jeho parametry. Pokud má jedna `string1` nebo `string2` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbsrev` vrátí `NULL` a nastaví `errno` k `EINVAL`. `_strrev`a `_wcsrev` neověřují jejich parametrů.  
+ `_mbsrev` ověří jeho parametry. Pokud má jedna `string1` nebo `string2` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbsrev` vrátí `NULL` a nastaví `errno` k `EINVAL`. `_strrev` a `_wcsrev` neověřují jejich parametrů.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s tím rozdílem, že ty, které nejsou mít `_l` příponu použít aktuální národní prostředí a ty, které mají `_l` příponu, použijte parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -113,7 +116,7 @@ unsigned char *_mbsrev_l(
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsrev`|`_strrev`|`_mbsrev`|`_wcsrev`|  
-|**není k dispozici**|**není k dispozici**|`_mbsrev_l`|**není k dispozici**|  
+|**n/a**|**n/a**|`_mbsrev_l`|**n/a**|  
   
 ## <a name="requirements"></a>Požadavky  
   

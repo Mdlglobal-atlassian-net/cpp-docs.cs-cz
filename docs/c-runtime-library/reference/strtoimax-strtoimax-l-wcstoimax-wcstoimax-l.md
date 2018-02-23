@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstoimax
 - _wcstoimax_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _wcstoimax_l
 - _strtoimax_l
 - _tcstoimax_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strtoimax funciton
 - conversion functions
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14bbcfcdb96db3b64bd1cb06df999e0c64796773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4125ebf922ed3525d5efd6a92b1273ca18d0fd7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 Převede řetězec na celočíselnou hodnotu typu největší podporovaná číslo se znaménkem.  
@@ -95,9 +98,9 @@ intmax_t _wcstoimax_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strtoimax`Vrátí hodnotu, která je reprezentována v řetězci `nptr`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě vrátí `INTMAX_MAX` nebo `INTMAX_MIN`, a `errno` je nastaven na `ERANGE`. Funkce vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoimax`Vrátí hodnoty analogicky na `strtoimax`.  
+ `strtoimax` Vrátí hodnotu, která je reprezentována v řetězci `nptr`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě vrátí `INTMAX_MAX` nebo `INTMAX_MIN`, a `errno` je nastaven na `ERANGE`. Funkce vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoimax` Vrátí hodnoty analogicky na `strtoimax`.  
   
- `INTMAX_MAX`a `INTMAX_MIN` jsou definovány v stdint.h.  
+ `INTMAX_MAX` a `INTMAX_MIN` jsou definovány v stdint.h.  
   
  Pokud `nptr` je `NULL` nebo `base` nenulový a je menší než 2 nebo vyšší než 36, `errno` je nastaven na `EINVAL`.  
   
@@ -117,7 +120,7 @@ intmax_t _wcstoimax_l(
 |`_tcstoimax`|`strtoimax`|`strtoimax`|`wcstoimax`|  
 |`_tcstoimax_l`|`strtoimax_l`|`_strtoimax_l`|`_wcstoimax_l`|  
   
- `strtoimax`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtoimax` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
   
@@ -127,7 +130,7 @@ intmax_t _wcstoimax_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h >|  
+|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -140,5 +143,5 @@ intmax_t _wcstoimax_l(
  [strtod –, _strtod_l –, wcstod –, _wcstod_l –](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
  [strtol –, wcstol –, _strtol_l –, _wcstol_l –](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
  [strtoul –, _strtoul_l –, wcstoul –, _wcstoul_l –](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [strtoumax –, _strtoumax_l –, wcstoumax –, _wcstoumax_l –](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
+ [strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

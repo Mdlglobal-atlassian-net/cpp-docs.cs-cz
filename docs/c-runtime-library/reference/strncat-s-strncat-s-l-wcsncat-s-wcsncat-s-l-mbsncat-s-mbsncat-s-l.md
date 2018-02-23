@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -37,7 +38,8 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -54,22 +56,23 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 789ac892ab4d91ea88e563079599ae4422e55a79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41acafc03f11cd306696bcf27dd1eed60ee11287
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 Připojí na řetězec znaků. Tyto verze nástroje [strncat –, _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsncat_s`a `_mbsncat_s_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncat_s` a `_mbsncat_s_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -155,7 +158,7 @@ errno_t _mbsncat_s_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`strDest`  
+ [out] `strDest`  
  Řetězce ukončené hodnotou Null cílový.  
   
  [v]`numberOfElements`  
@@ -167,7 +170,7 @@ errno_t _mbsncat_s_l(
  [v]`count`  
  Počet znaků pro připojení, nebo [_truncate –](../../c-runtime-library/truncate.md).  
   
- [v]`locale`  
+ [in] `locale`  
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -175,9 +178,9 @@ errno_t _mbsncat_s_l(
   
 ### <a name="error-conditions"></a>Chybové stavy  
   
-|`strDestination`|`numberOfElements`|`strSource`|Návratová hodnota|Obsah`strDestination`|  
+|`strDestination`|`numberOfElements`|`strSource`|Návratová hodnota|Obsah `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`nebo neukončený|všechny|všechny|`EINVAL`|nedojde ke změně|  
+|`NULL` nebo neukončený|všechny|všechny|`EINVAL`|nedojde ke změně|  
 |všechny|všechny|`NULL`|`EINVAL`|nedojde ke změně|  
 |všechny|0, nebo příliš malá|všechny|`ERANGE`|nedojde ke změně|  
   
@@ -208,7 +211,7 @@ errno_t _mbsncat_s_l(
   
  Pokud `strSource` nebo `strDest` je `NULL`, nebo je `numberOfElements` rovná nule, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `EINVAL` beze změny jeho parametry.  
   
- `wcsncat_s`a `_mbsncat_s` jsou široká charakterová a vícebajtových znaků verze `strncat_s`. Argumenty řetězce a návratová hodnota `wcsncat_s` jsou široká charakterová řetězce; u `_mbsncat_s` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
+ `wcsncat_s` a `_mbsncat_s` jsou široká charakterová a vícebajtových znaků verze `strncat_s`. Argumenty řetězce a návratová hodnota `wcsncat_s` jsou široká charakterová řetězce; u `_mbsncat_s` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez `_l` příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s `_l` příponu jsou shodné s tím rozdílem, že používají předaný v místo toho parametr národního prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -223,7 +226,7 @@ errno_t _mbsncat_s_l(
 |`_tcsncat_s`|`strncat_s`|`_mbsnbcat_s`|`wcsncat_s`|  
 |`_tcsncat_s_l`|`_strncat_s_l`|`_mbsnbcat_s_l`|`_wcsncat_s_l`|  
   
- `_strncat_s_l`a `_wcsncat_s_l` mají žádná závislost na národním prostředí, jsou poskytovány pouze pro `_tcsncat_s_l`.  
+ `_strncat_s_l` a `_wcsncat_s_l` mají žádná závislost na národním prostředí, jsou poskytovány pouze pro `_tcsncat_s_l`.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -376,13 +379,13 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcat –, _mbsnbcat_l –](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat – wcscat –, _mbscat –](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcpy – wcscpy –, _mbscpy –](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
  [strncpy –, _strncpy_l –, wcsncpy –, _wcsncpy_l –, _mbsncpy –, _mbsncpy_l –](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr –, wcsrchr –, _mbsrchr –, _mbsrchr_l –](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset –, _strset_l –, _wcsset –, _wcsset_l –, _mbsset –, _mbsset_l –](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

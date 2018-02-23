@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -28,7 +29,8 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 60ac5a99e307e73569fe165d675e90c5da2af3a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f2ebdd4061b50646f9450bfdfaf2ea4db90b5774
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 Výstup do standardního výstupního datového proudu ve formátu výtisků. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [printf_s –, _printf_s_l –, wprintf_s –, _wprintf_s_l –](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).  
@@ -98,9 +101,9 @@ int _wprintf_l(
  Informace o `errno` a kódy chyb, najdete v části [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `printf` Funkce naformátuje a vytiskne řady znaků a hodnot do standardního výstupního datového proudu `stdout`. Pokud postupovat podle argumenty `format` řetězce, `format` řetězec musí obsahovat specifikace, které určují formát výstupu pro argumenty. `printf`a [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) vyjma toho, že se chovají stejně jako `printf` zapíše výstup do `stdout` spíše než do cílového umístění v typu `FILE`.  
+ `printf` Funkce naformátuje a vytiskne řady znaků a hodnot do standardního výstupního datového proudu `stdout`. Pokud postupovat podle argumenty `format` řetězce, `format` řetězec musí obsahovat specifikace, které určují formát výstupu pro argumenty. `printf` a [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) vyjma toho, že se chovají stejně jako `printf` zapíše výstup do `stdout` spíše než do cílového umístění v typu `FILE`.  
   
- `wprintf`široká charakterová verze `printf`; `format` je široká charakterová řetězec. `wprintf`a `printf` chovají stejně jako datový proud se při otevření v režimu ANSI. `printf`aktuálně nepodporuje výstup do proudu kódování UNICODE.  
+ `wprintf` široká charakterová verze `printf`; `format` je široká charakterová řetězec. `wprintf` a `printf` chovají stejně jako datový proud se při otevření v režimu ANSI. `printf` aktuálně nepodporuje výstup do proudu kódování UNICODE.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -139,10 +142,10 @@ Line one
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`printf`, `_printf_l`|\<stdio.h >|  
+|`printf`, `_printf_l`|\<stdio.h>|  
 |`wprintf`, `_wprintf_l`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   
@@ -235,8 +238,8 @@ Address as:   0012FF3C
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fprintf_p –, _fprintf_p_l –, _fwprintf_p –, _fwprintf_p_l –](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)   
  [_set_output_format](../../c-runtime-library/set-output-format.md)

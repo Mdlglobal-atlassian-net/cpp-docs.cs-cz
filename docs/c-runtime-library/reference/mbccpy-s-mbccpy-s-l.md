@@ -1,12 +1,13 @@
 ---
-title: "_mbccpy_s –, _mbccpy_s_l – | Microsoft Docs"
+title: _mbccpy_s, _mbccpy_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -28,7 +29,8 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 942267c2632e6ffafec3d2fa9308bfb3db69aa87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72b2e155dafe0b5fb5a83e5e62ea95fd2c3657e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 Zkopíruje jeden vícebajtových znaků z řetězce na jiný řetězec. Tyto verze nástroje [_mbccpy –, _mbccpy_l –](../../c-runtime-library/reference/mbccpy-mbccpy-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,19 +91,19 @@ errno_t _mbccpy_s_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`dest`  
+ [out] `dest`  
  Cíl kopírování.  
   
- [v]`buffSizeInBytes`  
+ [in] `buffSizeInBytes`  
  Velikost cílové vyrovnávací paměti.  
   
- [out]`pCopied`  
+ [out] `pCopied`  
  Naplní se počet bajtů zkopírovaný (1 nebo 2 v případě úspěšného). Předat `NULL` Pokud vám nezáleží číslo.  
   
- [v]`src`  
+ [in] `src`  
  Vícebajtové znakové ke kopírování.  
   
- [v]`locale`  
+ [in] `locale`  
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -109,11 +112,11 @@ errno_t _mbccpy_s_l(
 ## <a name="remarks"></a>Poznámky  
  `_mbccpy_s` Funkce zkopíruje jeden vícebajtových znaků z `src` k `dest`. Pokud `src` neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání [_ismbblead –](../../c-runtime-library/reference/ismbblead-ismbblead-l.md), pak jeden bajt, `src` zkopíruje body. Pokud `src` bodů úvodní bajt, ale následující bajtu je 0 a proto neplatný pak 0 se zkopíruje do `dest`, `errno` je nastaven na `EILSEQ`, a vrátí funkce `EILSEQ`.  
   
- `_mbccpy_s`připojení není null ukončovací; ale pokud `src` odkazuje na prázdný znak, pak tuto hodnotu null se zkopíruje do `dest` (Toto je právě regulární jednobajtové kopie).  
+ `_mbccpy_s` připojení není null ukončovací; ale pokud `src` odkazuje na prázdný znak, pak tuto hodnotu null se zkopíruje do `dest` (Toto je právě regulární jednobajtové kopie).  
   
  Hodnota v `pCopied` , naplní se počet bajtů, které jsou zkopírovány. Možné hodnoty jsou 1 a 2, pokud byla operace úspěšná. Pokud `NULL` je předán, je tento parametr ignorován.  
   
-|`src`|zkopírovat do`dest`|`pCopied`|Návratová hodnota|  
+|`src`|zkopírovat do `dest`|`pCopied`|Návratová hodnota|  
 |-----------|----------------------|---------------|------------------|  
 |úvodní bajt|úvodní bajt|1|0|  
 |0|0|1|0|  
@@ -122,7 +125,7 @@ errno_t _mbccpy_s_l(
   
  Všimněte si, druhý řádek je právě ve speciálním případě první. Také Upozorňujeme, že v tabulce předpokládá `buffSizeInBytes`  >=  `pCopied`.  
   
- `_mbccpy_s`používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_mbccpy_s_l`je stejný jako `_mbccpy_s` s tím rozdílem, že `_mbccpy_s_l` používá národní prostředí předaná chování všech závislých na národním prostředí.  
+ `_mbccpy_s` používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_mbccpy_s_l` je stejný jako `_mbccpy_s` s tím rozdílem, že `_mbccpy_s_l` používá národní prostředí předaná chování všech závislých na národním prostředí.  
   
  V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   

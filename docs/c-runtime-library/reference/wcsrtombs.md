@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: wcsrtombs
+ms.topic: reference
+apiname:
+- wcsrtombs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: wcsrtombs
-dev_langs: C++
+f1_keywords:
+- wcsrtombs
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 45dd47ed3c6136c4aff860efd51de18e120803ec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 Široká znaková řetězec převeďte na řetězcovou reprezentaci vícebajtových znaků. Bezpečnější verze této funkce je k dispozici. v tématu [wcsrtombs_s –](../../c-runtime-library/reference/wcsrtombs-s.md).  
@@ -61,16 +66,16 @@ size_t wcsrtombs(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`mbstr`  
+ [out] `mbstr`  
  Výsledná převést vícebajtový řetězec adresu umístění.  
   
- [v]`wcstr`  
+ [in] `wcstr`  
  Nepřímo odkazuje na umístění široká znaková řetězce, který má být převeden.  
   
- [v]`count`  
+ [in] `count`  
  Počet znaků, které má být převeden.  
   
- [v]`mbstate`  
+ [in] `mbstate`  
  Ukazatel na `mbstate_t` převodu stavu objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -79,7 +84,7 @@ size_t wcsrtombs(
 ## <a name="remarks"></a>Poznámky  
  `wcsrtombs` Funkce převede řetězec z široké znaky, počínaje zadanou konverzi stav obsažené v `mbstate`, z nepřímých hodnot nastavena v `wcstr`, do adresu `mbstr`. Převod bude pokračovat pro každý znak dokud: po došlo s hodnotou null se ukončuje široká znaková, když je zjištěna bez odpovídajícího znaku nebo pokud další znak by překročilo limit obsažené v `count`. Pokud `wcsrtombs` zaznamená znak hodnoty null široká charakterová (L '\0') před nebo po `count` dojde, převede ji 0 8bitové a zastaví se.  
   
- Proto řetězce vícebajtových znaků na `mbstr` je ukončené hodnotou null jenom v případě `wcsrtombs` širokého znaku prázdný znak, zaznamená při převodu. Pokud daná pořadí na kterou odkazuje `wcstr` a `mbstr` překrývají, chování `wcsrtombs` není definován. `wcsrtombs`je ovlivňován LC_TYPE kategorii aktuální národní prostředí.  
+ Proto řetězce vícebajtových znaků na `mbstr` je ukončené hodnotou null jenom v případě `wcsrtombs` širokého znaku prázdný znak, zaznamená při převodu. Pokud daná pořadí na kterou odkazuje `wcstr` a `mbstr` překrývají, chování `wcsrtombs` není definován. `wcsrtombs` je ovlivňován LC_TYPE kategorii aktuální národní prostředí.  
   
  `wcsrtombs` Funkce se liší od [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) podle jeho restartability. Stav převodu je uložený ve `mbstate` pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování.  Například byste použili aplikaci `wcsrlen` místo `wcsnlen`, pokud následných volání `wcsrtombs` používaly místo `wcstombs`.  
   
@@ -140,14 +145,14 @@ The string was successfuly converted.
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`wcsrtombs`|\<wchar.h >|  
+|`wcsrtombs`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb –](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb_s –](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb –, _wctomb_l –](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

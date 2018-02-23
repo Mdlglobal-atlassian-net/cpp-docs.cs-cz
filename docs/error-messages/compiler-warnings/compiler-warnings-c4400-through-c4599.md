@@ -1,7 +1,8 @@
 ---
 title: "C4400 upozornění kompilátoru prostřednictvím C4599 | Microsoft Docs"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,19 +144,21 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>C4400 upozornění kompilátoru prostřednictvím C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
 
 Články v této části dokumentace vysvětlují podmnožinu zprávy upozornění, které jsou generované kompilátorem.
 
@@ -165,7 +184,7 @@ ms.lasthandoff: 12/21/2017
 |[Upozornění kompilátoru (úroveň 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*funkce*': podpis funkce obsahuje typ '*typ*'; Objekty C++ jsou unsafe předat mezi čistý kód a smíšený nebo nativní.|
 |Upozornění C4413 kompilátoru|'classname::member': referenční dokumentace je inicializován do dočasného, který není zachován po ukončení konstruktoru|
 |[Upozornění kompilátoru (úroveň 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*funkce*': krátké přechod na funkce převést na téměř|
-|Upozornění kompilátoru (úroveň 1) C4415|duplicitní __declspec (code_seg ('*název*.))|
+|Upozornění kompilátoru (úroveň 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Upozornění kompilátoru (úroveň 1) C4416|__declspec(code_seg(...)) obsahuje prázdný řetězec: Ignorovat|
 |Upozornění kompilátoru (úroveň 1) C4417|Vytvoření instance šablony explicitní nemůže mít __declspec(code_seg(...)): Ignorovat|
 |Upozornění kompilátoru (úroveň 1) C4418|__declspec(code_seg(...)) u výčtu ignorovat|
@@ -214,7 +233,13 @@ ms.lasthandoff: 12/21/2017
 |[Upozornění kompilátoru (úroveň 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|direktivy s plovoucí desetinnou čárkou řízení ignorovat v/CLR|
 |[Upozornění kompilátoru (úroveň 4) C4471](compiler-warning-level-4-c4471.md)|'*výčtu*': deklaraci předat dál bez ohledu na obor výčtu musí mít základní typ (int předpokládá, že)|
 |Upozornění kompilátoru (úroveň 1) C4472|'*identifikátor*' je nativní výčet: přidejte specifikátor přístupu (soukromého a veřejného) deklarovat ' WinRT &#124; spravované ' výčtu|
-|Upozornění C4480 kompilátoru|nestandardní rozšíření používané: určení podkladovým typem výčtu '*výčtu*.|
+|[Upozornění kompilátoru (úroveň 1) C4473](c4473.md)|'*funkce*': předáno není dostatečný počet argumentů pro řetězec formátu|
+|Upozornění kompilátoru (úroveň 3) C4474|'*funkce*': předáno příliš mnoho argumentů pro řetězec formátu|
+|Upozornění kompilátoru (úroveň 3) C4475|'*funkce*': délka modifikátor '*modifikátor*"nelze použít s – znak typu pole"*znak*' ve formátu specifikátor|
+|Upozornění kompilátoru (úroveň 3) C4476|'*funkce*': Neznámý typ pole znak '*znak*' v specifikace formátu|
+|[Upozornění kompilátoru (úroveň 1) C4477](c4477.md)|'*funkce*': řetězec formátu,*řetězec*, vyžaduje argument typu'*typ*', ale argument variadická *číslo* má typ '*typu*.|
+|Upozornění kompilátoru (úroveň 1) C4478|'*funkce*': poziční a – poziční zástupné symboly nelze směšovat do jednoho řetězce formátu|
+|Kompilátoru upozornění C4480 (chyba)|nestandardní rozšíření používané: určení podkladovým typem výčtu '*výčtu*.|
 |[Upozornění kompilátoru (úroveň 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|nestandardní rozšíření používané: override – specifikátor '*– klíčové slovo*.|
 |Upozornění C4482 kompilátoru|nestandardní rozšíření používané: výčtu '*výčtu*se používá kvalifikovaný název|
 |Upozornění kompilátoru (úroveň 1, chyba) C4483|Chyba syntaxe: očekáváno C++ – klíčové slovo|
@@ -229,6 +254,10 @@ ms.lasthandoff: 12/21/2017
 |Upozornění kompilátoru (úroveň 1, chyba) C4492|'*function1*': odpovídá základní metody třídy ref '*funkce2*', ale nebyla označena jako 'přepsat.|
 |Upozornění kompilátoru (úroveň 3, chyba) C4493|odstranění výraz nemá žádný účinek jako destruktoru objektu '*typ*' nemá 'veřejné' usnadnění přístupu|
 |Upozornění kompilátoru (úroveň 1) C4494|'*funkce*': ignorování __declspec(allocator), protože funkce návratový typ není ukazatel nebo odkaz|
+|Upozornění C4495 kompilátoru|nestandardní rozšíření '__super používané: nahraďte názvem explicitní základní třída|
+|Upozornění C4496 kompilátoru|nestandardní rozšíření 'pro každou' použito: nahraďte pohyboval pro příkaz|
+|Upozornění C4497 kompilátoru|nestandardní rozšíření 'zapečetěné' používané: nahraďte 'konečné.|
+|Upozornění C4498 kompilátoru|nestandardní rozšíření používané: '*rozšíření*.|
 |Upozornění kompilátoru (úroveň 4) C4499|"*funkce*': explicitní specializace nemůže mít třídy úložiště (Ignorovat)"|
 |[Upozornění kompilátoru (úroveň 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*specifikaci propojení*se vyžaduje použití – klíčové slovo 'extern' a musí předcházet všechny ostatní specifikátory|
 |[Upozornění kompilátoru (úroveň 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*identifikátor*': dekorované délka názvu překročí, název byl zkrácen.|
@@ -255,7 +284,7 @@ ms.lasthandoff: 12/21/2017
 |[Upozornění kompilátoru (úroveň 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': přechod z bloku ' __finally/finally' má undefined chování při ukončení zpracování|
 |[Upozornění kompilátoru (úroveň 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Inicializace '*proměnná*'je vynecháno'*popisek goto*.|
 |[Upozornění kompilátoru (úroveň 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'*konstruktor*, nebudou pro, třída nebo struktura, výchozí konstruktor,*identifikátor*se z důvodu argument výchozí|
-|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|volání _set_se_translator() vyžaduje/EHa|
+|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Upozornění kompilátoru (úroveň 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': název typu překračuje limit meta-data "*character_limit*' znaků|
 |[Upozornění kompilátoru (úroveň 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objekt*': '.' u jiných UDT typu|
 |[Upozornění kompilátoru (úroveň 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*typ*': const nebo volatile kvalifikátory u tohoto typu nejsou podporovány.|

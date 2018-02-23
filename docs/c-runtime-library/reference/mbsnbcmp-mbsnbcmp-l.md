@@ -1,12 +1,13 @@
 ---
-title: "_mbsnbcmp –, _mbsnbcmp_l – | Microsoft Docs"
+title: _mbsnbcmp, _mbsnbcmp_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -29,7 +30,8 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77c93655f393db07c4051c0917ea4022f7c5a8e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Porovná první `n` bajtů dvou řetězců vícebajtových znaků.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,16 +89,16 @@ int _mbsnbcmp_l(
   
 |Návratová hodnota|Popis|  
 |------------------|-----------------|  
-|< 0|`string1`dílčí řetězec je menší než `string2` dílčí řetězec.|  
-|0|`string1`dílčí řetězec je stejný jako `string2` dílčí řetězec.|  
-|> 0|`string1`je větší než Substring `string2` dílčí řetězec.|  
+|< 0|`string1` dílčí řetězec je menší než `string2` dílčí řetězec.|  
+|0|`string1` dílčí řetězec je stejný jako `string2` dílčí řetězec.|  
+|> 0|`string1` je větší než Substring `string2` dílčí řetězec.|  
   
  Parametr chyby ověření `_mbsnbcmp` a `_mbsnbcmp_l` vrátit `_NLSCMPERROR`, která je definována v \<string.h > a \<mbstring.h >.  
   
 ## <a name="remarks"></a>Poznámky  
- `_mbsnbcmp` Funkce Porovnat maximálně první `count` bajtů `string1` a `string2` a vrátí hodnotu, která určuje vztah mezi dílčích řetězců. `_mbsnbcmp`je malá a velká písmena verze `_mbsnbicmp`. Na rozdíl od `_mbsnbcoll`, `_mbsnbcmp` nemá vliv pořadí kolace národní prostředí. `_mbsnbcmp`rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtových [znaková stránka](../../c-runtime-library/code-pages.md).  
+ `_mbsnbcmp` Funkce Porovnat maximálně první `count` bajtů `string1` a `string2` a vrátí hodnotu, která určuje vztah mezi dílčích řetězců. `_mbsnbcmp` je malá a velká písmena verze `_mbsnbicmp`. Na rozdíl od `_mbsnbcoll`, `_mbsnbcmp` nemá vliv pořadí kolace národní prostředí. `_mbsnbcmp` rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtových [znaková stránka](../../c-runtime-library/code-pages.md).  
   
- `_mbsnbcmp`podobá `_mbsncmp`kromě toho, že `_mbsncmp` porovná řetězce znaky, a nikoli bajtů.  
+ `_mbsnbcmp` podobá `_mbsncmp`kromě toho, že `_mbsncmp` porovná řetězce znaky, a nikoli bajtů.  
   
  Hodnota výstupu je ovlivněna `LC_CTYPE` kategorie nastavení národního prostředí, která určuje počet bajtů realizace a na konci bajtů více-bajtové znaky. Další informace najdete v tématu [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `_mbsnbcmp` Funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí. `_mbsnbcmp_l` Funkce se shoduje s tím rozdílem, že se používá `locale` parametr místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -105,8 +108,8 @@ int _mbsnbcmp_l(
   
 |Rutina Tchar.h|_UNICODE a _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|---------------------------------------|--------------------|-----------------------|  
-|`_tcsncmp`|[strncmp –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcmp`|[wcsncmp –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
-|`_tcsncmp_l`|[strncmp –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcml`|[wcsncmp –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
+|`_tcsncmp`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcmp`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
+|`_tcsncmp_l`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcml`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -170,9 +173,9 @@ Result:   String 1 is equal to string 2
   
 ## <a name="see-also"></a>Viz také  
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat –, _mbsnbcat_l –](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbicmp –, _mbsnbicmp_l –](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

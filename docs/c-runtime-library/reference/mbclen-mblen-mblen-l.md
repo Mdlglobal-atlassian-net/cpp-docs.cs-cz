@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -33,7 +34,8 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -43,22 +45,23 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dcd45f8ccd7147fae7036c88477722b77f150193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 460de51d8f969f275ed392d293f90f517c168971
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 Získá délku a určí, platnost vícebajtových znaků.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,12 +94,12 @@ int _mblen_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_mbclen`Vrátí 1 nebo 2, podle jestli vícebajtových znaků `c` délce 1 nebo 2 bajty. Neexistuje žádná chyba návratový pro `_mbclen`. Pokud `mbstr` není `NULL`, `mblen` vrátí délku v bajtech vícebajtových znaků. Pokud `mbstr` je `NULL` nebo odkazuje na celou znaku prázdný znak, `mblen` vrátí hodnotu 0. Pokud objekt, `mbstr` body netvoří platnou vícebajtových znaků v rámci první `count` znaky, `mblen` vrátí hodnotu -1.  
+ `_mbclen` Vrátí 1 nebo 2, podle jestli vícebajtových znaků `c` délce 1 nebo 2 bajty. Neexistuje žádná chyba návratový pro `_mbclen`. Pokud `mbstr` není `NULL`, `mblen` vrátí délku v bajtech vícebajtových znaků. Pokud `mbstr` je `NULL` nebo odkazuje na celou znaku prázdný znak, `mblen` vrátí hodnotu 0. Pokud objekt, `mbstr` body netvoří platnou vícebajtových znaků v rámci první `count` znaky, `mblen` vrátí hodnotu -1.  
   
 ## <a name="remarks"></a>Poznámky  
  `_mbclen` Funkce vrátí délku v bajtech vícebajtových znaků `c`. Pokud `c` neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání `_ismbblead`, výsledek `_mbclen` předpovědět.  
   
- `mblen`Vrátí délku v bajtech `mbstr` , pokud je platný vícebajtových znaků a určuje platnosti vícebajtových znaků, které jsou přidružené k znaková stránka. `mblen`prozkoumá `count` nebo méně bajtů obsažených v `mbstr`, ale ne víc než `MB_CUR_MAX` bajtů.  
+ `mblen` Vrátí délku v bajtech `mbstr` , pokud je platný vícebajtových znaků a určuje platnosti vícebajtových znaků, které jsou přidružené k znaková stránka. `mblen` prozkoumá `count` nebo méně bajtů obsažených v `mbstr`, ale ne víc než `MB_CUR_MAX` bajtů.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez `_l` příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s `_l` příponu jsou shodné s tím rozdílem, že používají předaný v místo toho parametr národního prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -111,8 +114,8 @@ int _mblen_l(
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
 |`_mbclen`|\<Mbstring.h >|  
-|`mblen`|\<stdlib.h >|  
-|`_mblen_l`|\<stdlib.h >|  
+|`mblen`|\<stdlib.h>|  
+|`_mblen_l`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -161,5 +164,5 @@ Length in bytes of NULL multibyte character 0: 0
  [Klasifikace znaků](../../c-runtime-library/character-classification.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbccpy –, _mbccpy_l –](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
+ [_mbccpy, _mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
  [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

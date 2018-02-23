@@ -2,7 +2,6 @@
 title: "Dělení na vlákna a zařazování (C + +/ CX) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/30/2016
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +20,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b1544f18d0d5206e178cf42705d9567fad2423c
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Dělení na vlákna a zařazování (C + +/ CX)
 V valná většina případů instance tříd prostředí Windows Runtime, jako je standardními objekty C++ je přístupná z libovolného vlákna. Tyto třídy jsou označovány jako "agile". Ale malý počet prostředí Windows Runtime třídy, dodávané se systémem Windows jsou bez agilní a musí být využívány více jako objektů COM než standardními objekty C++. Nemusíte být COM expert používat-agilní třídy, ale nutné vzít v úvahu třídy modelu vláken a její chování zařazování. Tento článek obsahuje základní informace a pokyny pro tyto výjimečných scénářů, ve kterých budete muset používat instanci-agilní třídy.  

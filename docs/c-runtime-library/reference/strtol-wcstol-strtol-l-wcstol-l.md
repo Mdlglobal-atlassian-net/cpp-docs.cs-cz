@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -32,7 +33,8 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -44,16 +46,17 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 08a476172291c52865fe2abb9fb872e388078ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3fd2d3a78138ca4c6f94cf77bb33de9fda89743d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 Převede řetězce na hodnotu typu long integer.  
@@ -99,14 +102,14 @@ long _wcstol_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Funkce `strtol` vrátí hodnotu představovanou řetězcem `nptr` s výjimkou případů, kdy by reprezentace způsobila přetečení. V takovém případě vrátí hodnotu `LONG_MAX` nebo `LONG_MIN`. `strtol`Vrátí hodnotu 0, pokud žádný převod lze provést. `wcstol`Vrátí hodnoty analogicky na `strtol`. Pro obě funkce `errno` je nastaven na `ERANGE` případě přetečení nebo podtečení.  
+ Funkce `strtol` vrátí hodnotu představovanou řetězcem `nptr` s výjimkou případů, kdy by reprezentace způsobila přetečení. V takovém případě vrátí hodnotu `LONG_MAX` nebo `LONG_MIN`. `strtol` Vrátí hodnotu 0, pokud žádný převod lze provést. `wcstol` Vrátí hodnoty analogicky na `strtol`. Pro obě funkce `errno` je nastaven na `ERANGE` případě přetečení nebo podtečení.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
 ## <a name="remarks"></a>Poznámky  
- `strtol` Funkce převede `nptr` k `long`. `strtol`ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`.  
+ `strtol` Funkce převede `nptr` k `long`. `strtol` ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`.  
   
- `wcstol`široká charakterová verze `strtol`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.  
+ `wcstol` široká charakterová verze `strtol`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -119,7 +122,7 @@ long _wcstol_l(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, na kterou odkazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, na kterou odkazuje `endptr`.  
   
- `strtol`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtol` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
@@ -129,9 +132,9 @@ long _wcstol_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strtol`|\<stdlib.h >|  
+|`strtol`|\<stdlib.h>|  
 |`wcstol`|\<stdlib.h > nebo \<wchar.h >|  
-|`_strtol_l`|\<stdlib.h >|  
+|`_strtol_l`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

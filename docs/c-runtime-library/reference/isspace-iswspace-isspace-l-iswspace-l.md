@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 Určuje, zda celé představuje znak mezery.  
@@ -81,9 +84,9 @@ int _iswspace_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace mezerou. `isspace`vrátí nenulovou hodnotu, pokud `c` je prázdný znak (0x09-0x0D nebo 0x20). Výsledek testu podmínky pro `isspace` funkce závisí na `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce, které nemají `_l` příponu využívání aktuální národní prostředí pro chování všech závislých na národním prostředí, verze, které mají `_l` příponu jsou shodné s tím rozdílem, že používají národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace mezerou. `isspace` vrátí nenulovou hodnotu, pokud `c` je prázdný znak (0x09-0x0D nebo 0x20). Výsledek testu podmínky pro `isspace` funkce závisí na `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce, které nemají `_l` příponu využívání aktuální národní prostředí pro chování všech závislých na národním prostředí, verze, které mají `_l` příponu jsou shodné s tím rozdílem, že používají národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
- `iswspace`vrátí nenulovou hodnotu, pokud `c` je široké znak, který odpovídá standardní prázdný znak.  
+ `iswspace` vrátí nenulovou hodnotu, pokud `c` je široké znak, který odpovídá standardní prázdný znak.  
   
  Chování `isspace` a `_isspace_l` není definován, pokud `c` není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a `c` není jednou z těchto hodnot, funkce raise kontrolní výrazy.  
   
@@ -91,15 +94,15 @@ int _iswspace_l(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istspace`|`isspace`|[_ismbcspace –](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswspace`|  
+|**_** `istspace`|`isspace`|[_ismbcspace](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswspace`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`isspace`|\<ctype.h >|  
+|`isspace`|\<ctype.h>|  
 |`iswspace`|\<ctype.h > nebo \<wchar.h >|  
-|`_isspace_l`|\<ctype.h >|  
+|`_isspace_l`|\<ctype.h>|  
 |`_iswspace_l`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

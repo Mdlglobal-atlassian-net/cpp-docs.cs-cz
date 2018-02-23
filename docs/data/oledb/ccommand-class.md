@@ -4,47 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CCommand
 - CCommand
 - ATL.CCommand
-dev_langs: C++
-helpviewer_keywords: CCommand class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 5ec786bff30745a986ecc643cd42f0d8975b0ccf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ccommand-class"></a>CCommand – třída
 Poskytuje metody k nastavení a spuštění příkazu.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <  
-   class TAccessor = CNoAccessor,  
-   template < typename T > class TRowset = CRowset,  
-   class TMultiple = CNoMultipleResults   
->  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <class TAccessor = CNoAccessor,  
+          template <typename T> class TRowset = CRowset,  
+          class TMultiple = CNoMultipleResults>  
 class CCommand :   
-   public CAccessorRowset <  
-      TAccessor,   
-      TRowset   
-   >,  
-   public CCommandBase,  
-   public TMultiple  
+           public CAccessorRowset <TAccessor, TRowset>,  
+           public CCommandBase,  
+           public TMultiple  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -64,8 +62,8 @@ class CCommand :
 |||  
 |-|-|  
 |[Zavřete](../../data/oledb/ccommand-close.md)|Zavře aktuální příkaz.|  
-|[GetNextResult –](../../data/oledb/ccommand-getnextresult.md)|Načte další výsledek při použití více výsledků sad.|  
-|[Otevřete](../../data/oledb/ccommand-open.md)|Spustí a volitelně váže příkaz.|  
+|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Načte další výsledek při použití více výsledků sad.|  
+|[Open](../../data/oledb/ccommand-open.md)|Spustí a volitelně váže příkaz.|  
   
 ### <a name="inherited-methods"></a>Zděděné metody  
   
@@ -73,10 +71,10 @@ class CCommand :
 |-|-|  
 |[Vytvoření](../../data/oledb/ccommand-create.md)|Vytvoří nový příkaz pro zadaná relace a poté nastaví text příkazu.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Vytvoří nový příkaz.|  
-|[Getparameterinfo –](../../data/oledb/ccommand-getparameterinfo.md)|Získá seznam parametrů příkazu, jejich názvy a jejich typy.|  
+|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Získá seznam parametrů příkazu, jejich názvy a jejich typy.|  
 |[Příprava](../../data/oledb/ccommand-prepare.md)|Ověří a optimalizuje aktuální příkaz.|  
-|[ReleaseCommand –](../../data/oledb/ccommand-releasecommand.md)|Uvolní přistupujícího objektu parametr, v případě potřeby pak uvolní příkaz.|  
-|[SetParameterInfo –](../../data/oledb/ccommand-setparameterinfo.md)|Určuje typ nativní každý parametr příkazu.|  
+|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Uvolní přistupujícího objektu parametr, v případě potřeby pak uvolní příkaz.|  
+|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Určuje typ nativní každý parametr příkazu.|  
 |[Unprepare –](../../data/oledb/ccommand-unprepare.md)|Zruší aktuální plán spuštění příkazu.|  
   
 ## <a name="remarks"></a>Poznámky  

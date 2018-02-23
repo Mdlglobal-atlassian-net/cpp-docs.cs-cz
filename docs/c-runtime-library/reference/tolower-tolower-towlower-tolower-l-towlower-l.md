@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _tolower_l
 - towlower
@@ -32,7 +33,8 @@ f1_keywords:
 - tolower
 - _tolower
 - towlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tolower_l function
 - _tolower_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7fe06748a6e349f612fdf564c9aed917e43f164b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c5e6f77960cb0beca886ec18125e47cd929a9dfe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 Převádí znak na malá písmena.  
@@ -86,10 +89,10 @@ int _towlower_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`c`  
+ [in] `c`  
  Znak, který má převést.  
   
- [v]`locale`  
+ [in] `locale`  
  Národní prostředí pro překlad specifická pro národní prostředí.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -108,14 +111,14 @@ int _towlower_l(
 |`_totlower_l`|`_tolower_l`|`_mbctolower_l`|`_towlower_l`|  
   
 > [!NOTE]
->  `_tolower_l`a `_towlower_l` mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním `_totlower_l`.  
+>  `_tolower_l` a `_towlower_l` mít žádná závislost na národním prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití rozhraním `_totlower_l`.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`tolower`|\<ctype.h >|  
-|`_tolower`|\<ctype.h >|  
+|`tolower`|\<ctype.h>|  
+|`_tolower`|\<ctype.h>|  
 |`towlower`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

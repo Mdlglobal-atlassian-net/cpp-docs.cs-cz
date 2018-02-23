@@ -2,7 +2,6 @@
 title: "Místo začne typy a členy (C + +/ CX) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/30/2016
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +14,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1062a507d6281e003d9294de1c1cb39b7c01f9e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1cc0ef30006afb9fcad65bc64e3f12fe9586d920
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Místo začne typy a členy (C + +/ CX)
 V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenti a spotřebitelé pomocí [zastaralé](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atribut podporovaný. Jestliže jste využívají rozhraní API, do které byl použit tento atribut, můžete získat kompilaci zprávu upozornění, která označuje, že rozhraní API je zastaralá a také doporučuje rozhraní API alternativní používat. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.  

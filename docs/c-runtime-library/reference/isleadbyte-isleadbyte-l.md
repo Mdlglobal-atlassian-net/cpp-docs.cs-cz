@@ -1,12 +1,13 @@
 ---
-title: "isleadbyte –, _isleadbyte_l – | Microsoft Docs"
+title: isleadbyte, _isleadbyte_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 Určuje, zda znak je realizace bajt vícebajtových znaků.  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,10 +71,10 @@ int _isleadbyte_l(
  Celé číslo pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `isleadbyte`vrátí nenulovou hodnotu, pokud argument splňuje podmínky testu nebo 0, pokud neexistuje. V národního prostředí "C" a jednobajtové znaková sada (SBCS) národní prostředí, `isleadbyte` vždy vrátí hodnotu 0.  
+ `isleadbyte` vrátí nenulovou hodnotu, pokud argument splňuje podmínky testu nebo 0, pokud neexistuje. V národního prostředí "C" a jednobajtové znaková sada (SBCS) národní prostředí, `isleadbyte` vždy vrátí hodnotu 0.  
   
 ## <a name="remarks"></a>Poznámky  
- `isleadbyte` Makro vrátí nenulovou hodnotu, pokud jeho argument je první bajt vícebajtových znaků. `isleadbyte`vytvoří výsledek smysl pro některý argument celé číslo od -1 (`EOF`) k `UCHAR_MAX` (0xFF), včetně.  
+ `isleadbyte` Makro vrátí nenulovou hodnotu, pokud jeho argument je první bajt vícebajtových znaků. `isleadbyte` vytvoří výsledek smysl pro některý argument celé číslo od -1 (`EOF`) k `UCHAR_MAX` (0xFF), včetně.  
   
  Očekávaný argument typ `isleadbyte` je `int`; Pokud je předán podepsaný znak, kompilátor může ho převést na celé číslo rozšířením přihlášení je vést k neočekávaným výsledkům.  
   
@@ -87,8 +90,8 @@ int _isleadbyte_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`isleadbyte`|\<ctype.h >|  
-|`_isleadbyte_l`|\<ctype.h >|  
+|`isleadbyte`|\<ctype.h>|  
+|`_isleadbyte_l`|\<ctype.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

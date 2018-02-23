@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -95,18 +98,18 @@ double wcstod_l(
 *endptr*  
 Ukazatel na znak, který zastaví kontroly.
 
-*národní prostředí*  
+*Národní prostředí*  
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`strtod`Vrátí hodnotu číslo s plovoucí desetinnou čárkou s výjimkou případů, kdy reprezentace by způsobilo přetečení, ve kterém případ funkce vrátí +/-`HUGE_VAL`. Znaménko `HUGE_VAL` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtod`Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.
+`strtod` Vrátí hodnotu číslo s plovoucí desetinnou čárkou s výjimkou případů, kdy reprezentace by způsobilo přetečení, ve kterém případ funkce vrátí +/-`HUGE_VAL`. Znaménko `HUGE_VAL` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtod` Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.
 
-`wcstod`Vrátí hodnoty analogicky na `strtod`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a ostatní návratové kódy.
+`wcstod` Vrátí hodnoty analogicky na `strtod`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a ostatní návratové kódy.
 
 ## <a name="remarks"></a>Poznámky
 
-Jednotlivé funkce převede vstupní řetězec *nptr* k `double`. `strtod` Funkce převede *nptr* na hodnotu dvojitou přesností. `strtod`ukončí čtení řetězce *nptr* u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. `wcstod`široká charakterová verze `strtod`; jeho *nptr* je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.
+Jednotlivé funkce převede vstupní řetězec *nptr* k `double`. `strtod` Funkce převede *nptr* na hodnotu dvojitou přesností. `strtod` ukončí čtení řetězce *nptr* u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. `wcstod` široká charakterová verze `strtod`; jeho *nptr* je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -119,12 +122,12 @@ Jednotlivé funkce převede vstupní řetězec *nptr* k `double`. `strtod` Funkc
 
 Pokud *endptr* není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, na kterou odkazuje *endptr*. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota *nptr* je uložený v umístění, na kterou odkazuje *endptr*.
 
-`strtod`očekává *nptr* tak, aby odkazoval na řetězec jednoho z následujících podob:
+`strtod` očekává *nptr* tak, aby odkazoval na řetězec jednoho z následujících podob:
 
-[*prázdné*] [*přihlašovací*] {*číslic* [*základ –* *číslic*] &#124; *základ –* *číslic*} [{**e** &#124; **E**} [*přihlašovací*] *číslic*]  
-[*prázdné*] [*přihlašovací*] {**0 x** &#124; **0 X**} {*hexdigits* [*základ –* *hexdigits*] &#124; *základ –* *hexdigits*} [{**p** &#124; **P**} [*přihlašovací*] *hexdigits*]  
-[*prázdné*] [*přihlašovací*] {**INF** &#124; **INFINITY**}  
-[*prázdné*] [*přihlašovací*] **NAN** [*pořadí*]
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
+[*whitespace*] [*sign*] {**0x** &#124; **0X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*sign*] *hexdigits*]  
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 Volitelné úvodního *prázdné* může obsahovat místa a karta znaků, které se mají ignorovat; *přihlašovací* je buď plus (+) nebo minus (-); *číslic* jsou jeden nebo více desetinných míst; *hexdigits* jsou jeden nebo více šestnáctkové číslice; *základ –* je základ – bod znak, buď tečkou (.) v výchozí národní prostředí "C", nebo národní prostředí – konkrétní hodnotu aktuální národní prostředí je jiné, nebo když *národního prostředí* je zadán; *pořadí* je posloupnost alfanumerické znaky nebo podtržítka. Ve formulářích decimal i hexadecimální číslo žádné číslic se zobrazí před bod je základ – znak alespoň jeden musí být uvedena za základ – znak bodu. Ve formuláři, decimal, může následovat desetinných míst exponent, který se skládá z úvodní písmeno (**e** nebo **E**) a volitelně znaménkem. V šestnáctkovém formátu může následovat šestnáctkové číslice exponentem, který se skládá z úvodní písmeno (**p** nebo **P**) a volitelně podepsaný hexadecimální číslo, které představuje exponent jako druhou mocninou 2. V jakémkoli tvaru Pokud se zobrazí exponentu část ani znak základ – bod, bod znak základ – se předpokládá, podle poslední číslice v řetězci. V obou se ignoruje velikost písmen **INF** a **NAN** formulářů. První znak, který neodpovídá jedné z těchto podob zastaví kontroly.
 
@@ -213,7 +216,7 @@ string = 10110134932
 [Funkce řetězců na číselné hodnoty](../../c-runtime-library/string-to-numeric-value-functions.md)   
 [strtol –, wcstol –, _strtol_l –, _wcstol_l –](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
 [strtoul –, _strtoul_l –, wcstoul –, _wcstoul_l –](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
-[atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+[atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
 [localeconv –](../../c-runtime-library/reference/localeconv.md)   
-[_create_locale –, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+[_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
 [_free_locale](../../c-runtime-library/reference/free-locale.md)

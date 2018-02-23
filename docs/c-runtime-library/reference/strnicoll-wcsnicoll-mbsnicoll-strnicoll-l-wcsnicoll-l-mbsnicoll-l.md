@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -42,7 +43,8 @@ f1_keywords:
 - _mbsnicoll
 - strinicoll
 - _tcsncicoll
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - ftcsncicoll function
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2580ab455ead213edf21fa7f3e20307c8d2938b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37ce547f56ce635d7abb2577b1c8278783ba360d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 Porovnání řetězců pomocí informace specifické pro národní prostředí.  
   
 > [!IMPORTANT]
->  `_mbsnicoll`a `_mbsnicoll_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnicoll` a `_mbsnicoll_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -137,11 +140,11 @@ int _mbsnicoll_l(
   
 |Návratová hodnota|Relace řetězec1 k řetězec2|  
 |------------------|----------------------------------------|  
-|< 0|`string1`menší než`string2`|  
-|0|`string1`stejný jako`string2`|  
-|> 0|`string1`větší než`string2`|  
+|< 0|`string1` Menší než `string2`|  
+|0|`string1` stejný jako `string2`|  
+|> 0|`string1` Větší než `string2`|  
   
- Každá z těchto funkcí vrátí `_NLSCMPERROR`. Chcete-li použít `_NLSCMPERROR`, zahrnout buď řetězec. H nebo MBSTRING. H. `_wcsnicoll`může selhat, pokud buď `string1` nebo `string2` obsahuje kódy široká charakterová mimo doménu pořadí řazení. Když dojde k chybě, `_wcsnicoll` může nastavit `errno` k `EINVAL`. Zkontrolujte chybu na volání `_wcsnicoll`, nastavte `errno` na hodnotu 0 a poté zkontrolujte `errno` po volání `_wcsnicoll` **.**  
+ Každá z těchto funkcí vrátí `_NLSCMPERROR`. Chcete-li použít `_NLSCMPERROR`, zahrnout buď řetězec. H nebo MBSTRING. H. `_wcsnicoll` může selhat, pokud buď `string1` nebo `string2` obsahuje kódy široká charakterová mimo doménu pořadí řazení. Když dojde k chybě, `_wcsnicoll` může nastavit `errno` k `EINVAL`. Zkontrolujte chybu na volání `_wcsnicoll`, nastavte `errno` na hodnotu 0 a poté zkontrolujte `errno` po volání `_wcsnicoll` **.**  
   
 ## <a name="remarks"></a>Poznámky  
  Každá z těchto funkcí provádí porovnávání prvního `count` znaky v `string1` a `string2` podle znakové stránky. Tyto funkce by měly používat jenom v případě, že je rozdíl mezi znak nastavit pořadí a pořadí lexicographic znak v kódu stránky a tento rozdíl je určen pro porovnání řetězců. Verze tyto funkce bez `_l` příponu pomocí aktuální stránky národního prostředí a kód. Verzi pomocí `_l` příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
@@ -153,7 +156,7 @@ int _mbsnicoll_l(
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncicoll`|`_strnicoll`|`_mbsnbicoll`|`_wcsnicoll`|  
-|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll –](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
+|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
 |`_tcsnicoll_l`|`_strnicoll_l`|`_mbsnbicoll_l`|`_wcsnicoll_l`|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -171,10 +174,10 @@ int _mbsnicoll_l(
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
  [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll –, _mbsnbcoll_l –, _mbsnbicoll –, _mbsnbicoll_l –](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
  [setlocale –, _wsetlocale –](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp –, _wcsicmp –, _mbsicmp –, _stricmp_l –, _wcsicmp_l –, _mbsicmp_l –](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

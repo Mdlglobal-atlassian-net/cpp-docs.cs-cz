@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strxfrm
 - _wcsxfrm_l
@@ -29,7 +30,8 @@ f1_keywords:
 - strxfrm
 - _tcsxfrm
 - wcsxfrm
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strxfrm_l function
 - _tcsxfrm function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0545fd71f571caa2fbb12cefb010c274cbda9f28
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 Transformace řetězec v závislosti na informace specifické pro národní prostředí.  
@@ -100,11 +103,11 @@ size_t wcsxfrm_l(
  Vrátí délku transformovaných řetězec, není počítání ukončující znak hodnoty null. Pokud vrácená hodnota je větší než nebo rovna hodnotě `count`, obsah `strDest` předpovědět. Při chybě jednotlivé funkce nastaví `errno` a vrátí `INT_MAX`. Pro neplatný znak `errno` je nastaven na `EILSEQ`.  
   
 ## <a name="remarks"></a>Poznámky  
- `strxfrm` Funkce transformuje řetězec, na kterou odkazuje `strSource` do nového kompletován formulář, který je uložen v `strDest`. Více než `count` jsou transformuje a umístí do výsledný řetězec znaků, včetně znak hodnoty null. Transformace se uskuteční pomocí jako národní prostředí `LC_COLLATE` kategorie nastavení. Další informace o `LC_COLLATE`, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm`používá aktuální národní prostředí pro své chování závislých na národním prostředí; `_strxfrm_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `strxfrm` Funkce transformuje řetězec, na kterou odkazuje `strSource` do nového kompletován formulář, který je uložen v `strDest`. Více než `count` jsou transformuje a umístí do výsledný řetězec znaků, včetně znak hodnoty null. Transformace se uskuteční pomocí jako národní prostředí `LC_COLLATE` kategorie nastavení. Další informace o `LC_COLLATE`, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm` používá aktuální národní prostředí pro své chování závislých na národním prostředí; `_strxfrm_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  Po transformaci volání `strcmp` s dva řetězce transformovaných dává výsledky, které jsou stejné jako ty volání `strcoll` u původního dva řetězce. Stejně jako u `strcoll` a `stricoll`, `strxfrm` automaticky zpracovává řetězců vícebajtových znaků podle potřeby.  
   
- `wcsxfrm`široká charakterová verze `strxfrm`; argumenty řetězce `wcsxfrm` jsou široká charakterová ukazatele. Pro `wcsxfrm`, po transformaci řetězec, volání `wcscmp` s dva řetězce transformovaných dává výsledky, které jsou stejné jako ty volání `wcscoll` u původního dva řetězce. `wcsxfrm`a `strxfrm` chovat jinak shodně. `wcsxfrm`používá aktuální národní prostředí pro své chování závislých na národním prostředí; `_wcsxfrm_l` používá národní prostředí předaná místo aktuální národní prostředí.  
+ `wcsxfrm` široká charakterová verze `strxfrm`; argumenty řetězce `wcsxfrm` jsou široká charakterová ukazatele. Pro `wcsxfrm`, po transformaci řetězec, volání `wcscmp` s dva řetězce transformovaných dává výsledky, které jsou stejné jako ty volání `wcscoll` u původního dva řetězce. `wcsxfrm` a `strxfrm` chovat jinak shodně. `wcsxfrm` používá aktuální národní prostředí pro své chování závislých na národním prostředí; `_wcsxfrm_l` používá národní prostředí předaná místo aktuální národní prostředí.  
   
  Tyto funkce ověřit jejich parametrů. Pokud `strSource` je ukazatel s hodnotou null, nebo `strDest` je ukazatele s hodnotou NULL (není-li počet nula), nebo pokud `count` je větší než `INT_MAX`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí `INT_MAX`.  
   
@@ -119,7 +122,7 @@ size_t wcsxfrm_l(
   
  V národní prostředí, pro které se liší znakovou sadu a znak lexicographic pořadí, použijte `strxfrm` na původní řetězce a potom `strcmp` výsledné řetězce k vytvoření porovnání lexicographic řetězců podle aktuální národní prostředí pro `LC_COLLATE` kategorie nastavení. Proto k porovnání dvou řetězců lexicographically ve výše uvedené národním prostředí použijte `strxfrm` na původní řetězce, pak `strcmp` výsledné řetězce. Alternativně můžete použít `strcoll` místo `strcmp` na původní řetězce.  
   
- `strxfrm`je v podstatě představuje obálku kolem [LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700) s `LCMAP_SORTKEY`.  
+ `strxfrm` je v podstatě představuje obálku kolem [LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700) s `LCMAP_SORTKEY`.  
   
  Následující výraz hodnotu velikost pole potřebné k uchování `strxfrm` transformace řetězec zdroje:  
   

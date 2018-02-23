@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbccpy
 - _mbccpy_l
@@ -30,7 +31,8 @@ f1_keywords:
 - mbccpy
 - _tccpy
 - _ftccpy
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tccpy function
 - _tccpy_l function
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96273d317409f8c79740b1c7200af1533467d9f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9ad2ff9b8d9b1369b009898ae9b78c34c3643f85
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 Zkopíruje vícebajtových znaků z jednoho řetězce k jiným řetězcem. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_mbccpy_s –, _mbccpy_s_l –](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
   
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,7 +90,7 @@ void _mbccpy_l(
   
  Tato funkce ověří jeho parametry. Pokud `_mbccpy` byla předána ukazatel s hodnotou null pro `dest` nebo `src`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EINVAL`.  
   
- `_mbccpy`používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_mbccpy_l`je stejný jako `_mbccpy` s tím rozdílem, že `_mbccpy_l` používá národní prostředí předaná chování všech závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `_mbccpy` používá aktuální národní prostředí pro chování všech závislých na národním prostředí. `_mbccpy_l` je stejný jako `_mbccpy` s tím rozdílem, že `_mbccpy_l` používá národní prostředí předaná chování všech závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  **Poznámka k zabezpečení** pomocí řetězce ukončené hodnotou null. Řetězce ukončené hodnotou null nesmí překročit velikost cílové vyrovnávací paměti. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795). Přetečení vyrovnávací paměti problémy jsou často metodu systému útoku, výsledkem bude vyplacena neoprávněně zvýšení úrovně oprávnění.  
   
@@ -102,8 +105,8 @@ void _mbccpy_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_mbccpy`|\<Mbctype.h >|  
-|`_mbccpy_l`|\<Mbctype.h >|  
+|`_mbccpy`|\<mbctype.h>|  
+|`_mbccpy_l`|\<mbctype.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

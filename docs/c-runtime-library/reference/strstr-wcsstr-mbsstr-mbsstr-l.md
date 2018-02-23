@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsstr
 - wcsstr
@@ -33,7 +34,8 @@ f1_keywords:
 - wcsstr
 - _mbsstr
 - _tcsstr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbsstr function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d67a57a698fdc4069c2de15520e014c7c3491e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f085af36f08d3b2c0b27fa581089b478463d0e7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Vrací ukazatel na první výskyt řetězec pro vyhledávání v řetězci.  
   
 > [!IMPORTANT]
->  `_mbsstr`a `_mbsstr_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsstr` a `_mbsstr_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -137,7 +140,7 @@ const unsigned char *_mbsstr_l(
  Vrací ukazatel na první výskyt `strSearch` v `str`, nebo `NULL` Pokud `strSearch` nezobrazí v `str`. Pokud `strSearch` odkazuje na řetězec nulové délky, funkce vrátí hodnotu `str`.  
   
 ## <a name="remarks"></a>Poznámky  
- `strstr` Funkce vrací ukazatel na první výskyt `strSearch` v `str`. Hledání nezahrnuje ukončení znaky null. `wcsstr`je verze široká charakterová `strstr` a `_mbsstr` je verze vícebajtových znaků. Argumenty a vrací hodnotu `wcsstr` jsou široká charakterová řetězce; u `_mbsstr` jsou řetězců vícebajtových znaků. `_mbsstr`ověří jeho parametry. Pokud `str` nebo `strSearch` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění `_mbsstr` nastaví `errno` k `EINVAL` a vrátí hodnotu 0. `strstr`a `wcsstr` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
+ `strstr` Funkce vrací ukazatel na první výskyt `strSearch` v `str`. Hledání nezahrnuje ukončení znaky null. `wcsstr` je verze široká charakterová `strstr` a `_mbsstr` je verze vícebajtových znaků. Argumenty a vrací hodnotu `wcsstr` jsou široká charakterová řetězce; u `_mbsstr` jsou řetězců vícebajtových znaků. `_mbsstr` ověří jeho parametry. Pokud `str` nebo `strSearch` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění `_mbsstr` nastaví `errno` k `EINVAL` a vrátí hodnotu 0. `strstr` a `wcsstr` neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.  
   
 > [!IMPORTANT]
 >  Tato funkce může způsobit ohrožení z problému přetečení vyrovnávací paměti. Problémy přetečení vyrovnávací paměti lze použít k útokům systému, protože umožňují provádění libovolný kód, který může způsobit, že bude vyplacena neoprávněně zvýšení úrovně oprávnění. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -151,7 +154,7 @@ const unsigned char *_mbsstr_l(
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
-|**není k dispozici**|**není k dispozici**|`_mbsstr_l`|**není k dispozici**|  
+|**n/a**|**n/a**|`_mbsstr_l`|**n/a**|  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -204,9 +207,9 @@ lazy found at position 36
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn –, wcscspn –, _mbscspn –, _mbscspn_l –](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strpbrk –, wcspbrk –, _mbspbrk –, _mbspbrk_l –](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr –, wcsrchr –, _mbsrchr –, _mbsrchr_l –](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn –, wcsspn –, _mbsspn –, _mbsspn_l –](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [basic_string::Find](../../standard-library/basic-string-class.md#find)  

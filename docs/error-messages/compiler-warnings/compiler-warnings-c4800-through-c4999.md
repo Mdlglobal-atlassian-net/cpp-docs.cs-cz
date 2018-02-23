@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compiler Warnings C4800 Through C5999
 
@@ -245,6 +243,7 @@ ms.lasthandoff: 02/14/2018
 |Upozornění C5035 kompilátoru|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta|
 |Upozornění kompilátoru (úroveň 1) C5036|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.|
 |Upozornění kompilátoru (chyba) C5037|'*– členská funkce*': definici z přesahujících člena třídy šablony nemůže mít výchozí argumenty|
+|[Upozornění C5038 kompilátoru](c5038.md)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.|
 |Upozornění C5039 kompilátoru|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku.|
 |Upozornění C5040 kompilátoru|specifikace výjimek dynamické jsou platné pouze v C ++ 14 a starší; práce jako s noexcept(false)|
 |Upozornění C5041 kompilátoru|'*definice*':--line definice pro constexpr statických dat člena není potřebné a je zastaralý součástí C ++ 17|

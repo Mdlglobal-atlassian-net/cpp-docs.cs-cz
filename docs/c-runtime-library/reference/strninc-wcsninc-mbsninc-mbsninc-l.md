@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsninc
 - _mbsninc_l
@@ -36,7 +37,8 @@ f1_keywords:
 - _ftcsninc
 - _wcsninc
 - _mbsninc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsninc_l function
 - mbsninc function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 43f22862d8177298458e0f872d6ec22312c9d22c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0f5e72ee4ae340ac11b932dcdb468321f4527b0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 Posune ukazatel řetězec podle `n` znaků.  
   
 > [!IMPORTANT]
->  `_mbsninc`a `_mbsninc_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsninc` a `_mbsninc_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -102,7 +105,7 @@ unsigned char *_mbsninc(
  Všechny tyto rutiny vrátí ukazatel na `str` po `str` byla zvýšena pomocí `count` znaků nebo `NULL` Pokud je zadaný ukazatel `NULL`. Pokud `count` je větší než nebo rovno počet znaků v `str`, výsledkem nedefinovaný.  
   
 ## <a name="remarks"></a>Poznámky  
- `_mbsninc` Funkce přírůstcích `str` podle `count` více-bajtové znaky. `_mbsninc`rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.  
+ `_mbsninc` Funkce přírůstcích `str` podle `count` více-bajtové znaky. `_mbsninc` rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -110,9 +113,9 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc`a `_wcsninc` jsou jedním znaková řetězec a verze široká charakterová řetězec `_mbsninc`. `_wcsninc`a `_strninc` jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).  
+ `_strninc` a `_wcsninc` jsou jedním znaková řetězec a verze široká charakterová řetězec `_mbsninc`. `_wcsninc` a `_strninc` jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsninc_l`se shoduje s tím rozdílem, že používá parametr národního prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `_mbsninc_l` se shoduje s tím rozdílem, že používá parametr národního prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -120,8 +123,8 @@ unsigned char *_mbsninc(
 |-------------|---------------------|  
 |`_mbsninc`|\<Mbstring.h >|  
 |`_mbsninc_l`|\<Mbstring.h >|  
-|`_strninc`|\<Tchar.h >|  
-|`_wcsninc`|\<Tchar.h >|  
+|`_strninc`|\<tchar.h>|  
+|`_wcsninc`|\<tchar.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -129,6 +132,6 @@ unsigned char *_mbsninc(
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_strdec –, _wcsdec –, _mbsdec, _mbsdec_l –](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
- [_strinc –, _wcsinc –, _mbsinc, _mbsinc_l –](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
+ [_strdec, _wcsdec, _mbsdec, _mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
+ [_strinc, _wcsinc, _mbsinc, _mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
  [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)

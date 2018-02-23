@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: wcrtomb_s
+ms.topic: reference
+apiname:
+- wcrtomb_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: wcrtomb_s
-dev_langs: C++
+f1_keywords:
+- wcrtomb_s
+dev_langs:
+- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 13134a3e6b34be13d6d878cf94f204bb6c87a458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bb7ae5e3246d020844bdd31f970f9678fede78c2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 Široká znaková převeďte do reprezentace vícebajtových znaků. Verzi [wcrtomb –](../../c-runtime-library/reference/wcrtomb.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -63,19 +68,19 @@ errno_t wcrtomb_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Vrátí počet bajtů zapsaných nebo -1, pokud došlo k chybě.  
   
- [out]`mbchar`  
+ [out] `mbchar`  
  Převést výsledné vícebajtových znaků.  
   
- [v]`sizeOfmbchar`  
+ [in] `sizeOfmbchar`  
  Velikost `mbchar` proměnné v bajtech.  
   
- [v]`wchar`  
+ [in] `wchar`  
  Široká znaková převést.  
   
- [v]`mbstate`  
+ [in] `mbstate`  
  Ukazatel na `mbstate_t` objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -86,7 +91,7 @@ errno_t wcrtomb_s(
   
  Pokud `mbstate` má hodnotu null, interní `mbstate_t` převod stavu se používá. Pokud je znak obsažené v `wchar` nemá odpovídající vícebajtových znaků, hodnota `pReturnValue` bude mít hodnotu -1 a vrátí funkce `errno` hodnotu `EILSEQ`.  
   
- `wcrtomb_s` Funkce se liší od [wctomb_s –, _wctomb_s_l –](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) podle jeho restartability. Stav převodu je uložený ve `mbstate` pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování. Například byste použili aplikaci `wcsrlen` místo `wcslen`, pokud následných volání `wcsrtombs_s` používaly místo`wcstombs_s.`  
+ `wcrtomb_s` Funkce se liší od [wctomb_s –, _wctomb_s_l –](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) podle jeho restartability. Stav převodu je uložený ve `mbstate` pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování. Například byste použili aplikaci `wcsrlen` místo `wcslen`, pokud následných volání `wcsrtombs_s` používaly místo `wcstombs_s.`  
   
  V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -141,7 +146,7 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`wcrtomb_s`|\<wchar.h >|  
+|`wcrtomb_s`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   

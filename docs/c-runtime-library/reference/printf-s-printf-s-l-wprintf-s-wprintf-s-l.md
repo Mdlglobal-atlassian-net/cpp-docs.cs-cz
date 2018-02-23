@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26db1617206393b8a3756987233d1e38e8ea79c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2929c79c9ab5cfa5e4455e8a75c76988a1f7cf86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 Výstup do standardního výstupního datového proudu ve formátu výtisků. Tyto verze nástroje [printf _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,9 +103,9 @@ int _wprintf_s_l(
   
  Informace o `errno` a kódy chyb, najdete v části [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `printf_s`a `fprintf_s` vyjma toho, že se chovají stejně jako `printf_s` zapíše výstup do `stdout` spíše než do cílového umístění v typu `FILE`. Další informace najdete v tématu [fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l –](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s` a `fprintf_s` vyjma toho, že se chovají stejně jako `printf_s` zapíše výstup do `stdout` spíše než do cílového umístění v typu `FILE`. Další informace najdete v tématu [fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l –](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
- `wprintf_s`široká charakterová verze `printf_s`; `format` je široká charakterová řetězec. `wprintf_s`a `printf_s` chovají stejně jako datový proud se při otevření v režimu ANSI. `printf_s`nepodporuje aktuálně výstup do proudu kódování UNICODE.  
+ `wprintf_s` široká charakterová verze `printf_s`; `format` je široká charakterová řetězec. `wprintf_s` a `printf_s` chovají stejně jako datový proud se při otevření v režimu ANSI. `printf_s` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -135,10 +138,10 @@ Line one
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`printf_s`, `_printf_s_l`|\<stdio.h >|  
+|`printf_s`, `_printf_s_l`|\<stdio.h>|  
 |`wprintf_s`, `_wprintf_s_l`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   
@@ -224,6 +227,6 @@ Address as:   0012FF78
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, _scanf_l –, wscanf, _wscanf_l –](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)

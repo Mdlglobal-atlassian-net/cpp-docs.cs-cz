@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtoi64
 - _strtoi64_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _wcstoi64
 - wcstoi64
 - strtoi64_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtoi64 function
 - _wcstoi64 function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 316bab1fe4023189ef206fb04fd26d6406a2123e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5a383d53c762f4bd15d7a45288bb2ef4e7e452ee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 Převést řetězec na `__int64` hodnotu.  
@@ -101,16 +104,16 @@ __int64 _wcstoi64_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Funkce `_strtoi64` vrátí hodnotu představovanou řetězcem `nptr` s výjimkou případů, kdy by reprezentace způsobila přetečení. V takovém případě vrátí hodnotu `_I64_MAX` nebo `_I64_MIN`. Pokud žádný převod lze provést, vrátí funkce 0. `_wcstoi64`Vrátí hodnoty analogicky na `strtoi64`.  
+ Funkce `_strtoi64` vrátí hodnotu představovanou řetězcem `nptr` s výjimkou případů, kdy by reprezentace způsobila přetečení. V takovém případě vrátí hodnotu `_I64_MAX` nebo `_I64_MIN`. Pokud žádný převod lze provést, vrátí funkce 0. `_wcstoi64` Vrátí hodnoty analogicky na `strtoi64`.  
   
- `_I64_MAX`a `_I64_MIN` jsou definovány v omezení. H.  
+ `_I64_MAX` a `_I64_MIN` jsou definovány v omezení. H.  
   
  Pokud `nptr` je `NULL` nebo `base` nenulový a je menší než 2 nebo vyšší než 36, `errno` je nastaven na `EINVAL`.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
   
 ## <a name="remarks"></a>Poznámky  
- `_strtoi64` Funkce převede `nptr` k `__int64`. Obě funkce Zastavit čtení řetězec `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`. `_wcstoi64`široká charakterová verze `_strtoi64`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.  
+ `_strtoi64` Funkce převede `nptr` k `__int64`. Obě funkce Zastavit čtení řetězec `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`. `_wcstoi64` široká charakterová verze `_strtoi64`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -123,7 +126,7 @@ __int64 _wcstoi64_l(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, na kterou odkazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, na kterou odkazuje `endptr`.  
   
- `_strtoi64`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `_strtoi64` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
@@ -133,7 +136,7 @@ __int64 _wcstoi64_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_strtoi64`, `_strtoi64_l`|\<stdlib.h >|  
+|`_strtoi64`, `_strtoi64_l`|\<stdlib.h>|  
 |`_wcstoi64`, `_wcstoi64_l`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

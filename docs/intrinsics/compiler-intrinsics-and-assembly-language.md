@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6a10201edd55c378d1df3a244b0732d64ecd08f
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Vnitřní prvky kompilátoru a jazyk sestavení
 Tato část dokumentace obsahuje informace o vnitřních objektech kompilátoru a o jazyku sestavení.  
@@ -31,4 +34,4 @@ Tato část dokumentace obsahuje informace o vnitřních objektech kompilátoru
 |[Vkládaný assembler](../assembler/inline/inline-assembler.md)|Popisuje způsob použití inline assembleru Visual C/C++ u procesorů x86.|  
 |[Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)|Poskytuje referenční materiál pro assembler Microsoft ARM (armasm) a související nástroje.|  
 |[Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)|Poskytuje referenční materiál pro assembler Microsoft Macro (masm).|  
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Článek nejvyšší úrovně v dokumentaci k Visual C++|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Článek nejvyšší úrovně v dokumentaci k Visual C++|

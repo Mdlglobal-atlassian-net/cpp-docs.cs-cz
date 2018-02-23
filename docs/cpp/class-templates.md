@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Šablony třídy
 Toto téma popisuje pravidla, které jsou specifické pro šablony třídy C++.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  Místní třídy nemohou mít členské šablony.  
   
 ## <a name="template-friends"></a>Šablona – friends  
- Šablony třídy může mít [přátel](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
+ Šablony třídy může mít [přátel](friend-cpp.md). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
   
  V následujícím příkladu je definována spřátelená funkce jako šablona funkce uvnitř šablony třídy. Tento kód vytvoří verzi spřátelené funkce pro všechny instance šablony. Tato konstrukce je užitečná, závisí-li spřátelená funkce na stejných parametrech šablony, na kterých závisí třída.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsset
 - _mbsset
@@ -43,7 +44,8 @@ f1_keywords:
 - _wcsset_l
 - _fstrset
 - _tcsset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcsset_l function
 - _tcsset function
@@ -66,22 +68,23 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58e3369ac57b5d7903bdd6f98f2197849b78a1fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fec05f650789581065357aa4ce90cfde121d99e7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 Nastaví znaky řetězce z znaku. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strset_s –, _strset_s_l –, _wcsset_s –, _wcsset_s_l –, _mbsset_s –, _mbsset_s_l –](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsset`a `_mbsset_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována s /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsset` a `_mbsset_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,9 +132,9 @@ unsigned char *_mbsset_l(
  Vrací ukazatel na změněna řetězec.  
   
 ## <a name="remarks"></a>Poznámky  
- `_strset` Funkce nastaví všechny znaky (s výjimkou ukončující znak hodnoty null) `str` k `c`, převést na `char`. `_wcsset`a `_mbsset_l` jsou široká charakterová a vícebajtových znaků verze `_strset`, a datové typy argumentů a návratové hodnoty se liší podle toho. Tyto funkce chovají stejně jako jinak.  
+ `_strset` Funkce nastaví všechny znaky (s výjimkou ukončující znak hodnoty null) `str` k `c`, převést na `char`. `_wcsset` a `_mbsset_l` jsou široká charakterová a vícebajtových znaků verze `_strset`, a datové typy argumentů a návratové hodnoty se liší podle toho. Tyto funkce chovají stejně jako jinak.  
   
- `_mbsset`ověří jeho parametry. Pokud `str` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbsset` vrátí `NULL` a nastaví `errno` k `EINVAL`. `_strset`a `_wcsset` neověřují jejich parametrů.  
+ `_mbsset` ověří jeho parametry. Pokud `str` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `_mbsset` vrátí `NULL` a nastaví `errno` k `EINVAL`. `_strset` a `_wcsset` neověřují jejich parametrů.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s tím rozdílem, že ty, které nejsou mít `_l` příponu použít aktuální národní prostředí a ty, které mají `_l` příponu, použijte parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -150,9 +153,9 @@ unsigned char *_mbsset_l(
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
 |`_strset`|\<String.h >|  
-|`_strset_l`|\<Tchar.h >|  
+|`_strset_l`|\<tchar.h>|  
 |`_wcsset`|\<String.h > nebo \<wchar.h >|  
-|`_wcsset_l`|\<Tchar.h >|  
+|`_wcsset_l`|\<tchar.h>|  
 |`_mbsset`, `_mbsset_l`|\<Mbstring.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -185,9 +188,9 @@ After:  *******************************
  [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbset –, _mbsnbset_l –](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
+ [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
  [memset –, wmemset –](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat – wcscat –, _mbscat –](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcpy – wcscpy –, _mbscpy –](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
  [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

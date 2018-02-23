@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -31,7 +32,8 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36b82950361a236d8c2a5dc9db955aa108cf78b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56b4c46c5b13ed5e1ca20c604fbc95168af1dfe5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 Čtení formátovaných dat z standardní vstupní proud. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
@@ -107,7 +110,7 @@ int _wscanf_l(
 > [!IMPORTANT]
 >  Při čtení řetězec s `scanf`, vždycky zadat šířku pro `%s` formátu (například `"%32s"` místo `"%s"`), jinak hodnota nesprávně naformátovaný vstup může způsobit snadno přetečení vyrovnávací paměti. Případně, zvažte použití [scanf_s –, _scanf_s_l –, wscanf_s –, _wscanf_s_l –](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) nebo [fgets –](../../c-runtime-library/reference/fgets-fgetws.md).  
   
- `wscanf`široká charakterová verze `scanf`; `format` argument `wscanf` je široká charakterová řetězec. `wscanf`a `scanf` chovají stejně jako datový proud se při otevření v režimu ANSI. `scanf`vstup z datového proudu UNICODE není aktuálně podporován.  
+ `wscanf` široká charakterová verze `scanf`; `format` argument `wscanf` je široká charakterová řetězec. `wscanf` a `scanf` chovají stejně jako datový proud se při otevření v režimu ANSI. `scanf` vstup z datového proudu UNICODE není aktuálně podporován.  
   
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
@@ -124,10 +127,10 @@ int _wscanf_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`scanf`, `_scanf_l`|\<stdio.h >|  
+|`scanf`, `_scanf_l`|\<stdio.h>|  
 |`wscanf`, `_wscanf_l`|\<stdio.h > nebo \<wchar.h >|  
   
- Konzole není podporována v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce je mohli používat, musí být přesměrována [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Příklad  
   
@@ -169,7 +172,7 @@ The contents are: 36 92.300003 y n Wide characters
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
  [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
- [fscanf –, _fscanf_l –, fwscanf –, _fwscanf_l –](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, _printf_l –, wprintf, _wprintf_l –](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

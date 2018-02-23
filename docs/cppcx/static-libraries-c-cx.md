@@ -2,7 +2,6 @@
 title: "Statické knihovny (C + +/ CX) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +14,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C + +/ CX)
 Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows (UWP) může obsahovat kód ISO standard C++, včetně typů STL a také volání rozhraní API Win32, které nejsou vyloučené z prostředí Windows Runtime aplikační platforma. Statické knihovny využívá komponenty prostředí Windows Runtime a může vytvořit komponenty prostředí Windows Runtime s určitými omezeními.  

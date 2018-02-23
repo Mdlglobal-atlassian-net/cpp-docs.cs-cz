@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím natavení vypnuta.
+# <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté
 
-Kompilátor obsahuje upozornění, která jsou ve výchozím nastavení vypnuté protože většina vývojářů nechcete zobrazovat. Tato varování však můžete povolit pomocí jedné z následujících možností.
+Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete zobrazovat. V některých případech se představují stylových výběr, nebo jsou běžné idioms ve starším kódu nebo využívat výhod rozšíření Microsoft pro jazyk. V ostatních případech označují oblast, kde programátory často provést nesprávný předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi aktivní v hlavičkách knihovny.
 
-**#pragma – upozornění (výchozí:** *warning_number* **)**  
-Zadaný upozornění (*warning_number*) je povoleno na výchozí úrovni. Dokumentace pro upozornění obsahuje výchozí úroveň upozornění.
+Tato upozornění můžete povolit pomocí jedné z následujících možností:
 
-**#pragma – upozornění (** *warning_level* **:** *warning_number* **)**  
-Zadaný upozornění (*warning_number*) je povolena na zadané úrovni (*warning_level*).
+- **#pragma – upozornění (výchozí:** *warning_number* **)**  
+   Zadaný upozornění (*warning_number*) je povoleno na výchozí úrovni. Dokumentace pro upozornění obsahuje výchozí úroveň upozornění.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Horní** umožňuje všech upozornění, které jsou ve výchozím nastavení vypnuté.
+- **#pragma – upozornění (** *warning_level* **:** *warning_number* **)**  
+   Zadaný upozornění (*warning_number*) je povolena na zadané úrovni (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Horní** umožňuje všech upozornění, které jsou ve výchozím nastavení vypnuté. Pokud použijete tuto možnost, můžete vypnout jednotlivé upozornění pomocí [/wd](../build/reference/compiler-option-warning-level.md) možnost.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   To umožňuje upozornění  *nnnn*  na úrovni *l*.
 
 Následující upozornění jsou ve výchozím stavu vypnuta.
 
@@ -131,6 +136,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |C5032 (level 4)|zjištěna #pragma warning(push) se žádné odpovídající warning(pop) #pragma|
 |C5035|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta|
 |C5036 (level 1)|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.|
 
 Tato upozornění jsou vypnuté, pokud [/ projektovou-](../build/reference/permissive-standards-conformance.md) nastavena – možnost kompilátoru:
 

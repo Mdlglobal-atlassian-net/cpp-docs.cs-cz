@@ -1,13 +1,15 @@
 ---
 title: "Deferenční operátory a operátory adresy | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/16/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - address-of operator (&)
 - '* operator'
@@ -22,77 +24,80 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="indirection-and-address-of-operators"></a>Deferenční operátory a operátory adresy
-Deferenční operátor (**\***) přistupuje hodnotu nepřímo prostřednictvím ukazatele. Operandem musí být hodnota ukazatele. Výsledkem operace je hodnota adresovaná operandem, tedy hodnota na adrese, na kterou operand ukazuje. Typ výsledku je typ adresovaný operandem.  
-  
- Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li na umístění úložiště, je výsledkem l-hodnota označující umístění úložiště.  
-  
- Pokud je hodnota ukazatele je neplatná, výsledkem nedefinovaný. Následující seznam zahrnuje některé z nejběžnějších situací, které zneplatňují hodnotu ukazatele.  
-  
--   Ukazatel je nulový.  
-  
--   Ukazatel určuje adresu místní položky, která není v době reference viditelná.  
-  
--   Ukazatel určuje adresu, která je pro typ objektu, na který ukazatel ukazuje, nesprávně zarovnána.  
-  
--   Ukazatel určuje adresu, která není používána spuštěným programem.  
-  
- Address-of – operátor (**&**) poskytuje adresu jeho operand. Operand operátoru adresa může být označení funkce nebo je l hodnota, který určuje objekt, který není pole bit a není deklarovaný s **zaregistrovat** – specifikátor třídy úložiště.  
-  
- Výsledkem operace adresa je ukazatel na operand. Typ adresovaný ukazatelem je typ operandu.  
-  
- Operátor adresa lze použít pouze pro proměnné základních typů, struktur nebo sjednocení deklarovaných na úrovni souboru nebo na indexované reference polí. V těchto výrazech lze konstantní výraz, který neobsahuje operátor adresa, přičíst nebo odečíst od výrazu adresy.  
-  
-## <a name="examples"></a>Příklady  
- Následující příklady používají tyto deklarace:  
-  
+
+Deferenční operátor unární (__&#42;__) přistupuje hodnotu nepřímo prostřednictvím ukazatele. Operand musí být typu ukazatele. Výsledkem operace je hodnota adresovaná operandem, tedy hodnota na adrese, na kterou operand ukazuje. Typ výsledku je typ adresovaný operandem.
+
+Výsledkem deferenční operátor je *typ* Pokud operand typu *ukazatel na typ*. Ukazuje-li operand na funkci, je výsledkem označení funkce. Odkazuje na objekt, výsledkem je lvalue, který určuje objekt.
+
+Pokud je hodnota ukazatele je neplatná, není definován výsledek deferenční operátor. Toto jsou některé z nejběžnějších podmínky, které zneplatnit hodnota ukazatele:
+
+- Ukazatel je nulový.
+
+- Ukazatele určuje adresu objektu po konci životnosti (například objekt, který je mimo rozsah nebo který je navrácena) v době odkaz.
+
+- Ukazatel určuje adresu, která je pro typ objektu, na který ukazatel ukazuje, nesprávně zarovnána.
+
+- Ukazatel určuje adresu, která není používána spuštěným programem.
+
+Operátor unární adresy (**&**) poskytuje adresu jeho operand. Operand musí být buď lvalue, který určuje objekt, který není deklarovaný __zaregistrovat__ a není bitové pole nebo výsledek unární operátor __&#42;__ dereference – operátor nebo pole ( __&#91; &#93;__ ) operátor nebo označení funkce. Výsledkem je typu *ukazatel na typ* pro operand typu *typu*.
+
+Pokud je výsledkem unární operátor operand __&#42;__ operátor, ani operátor je vyhodnocena a výsledkem je, jako kdyby byly vynechání obě. Výsledek není lvalue a omezení u operátory platit stále. Pokud je výsledkem operand __&#91; &#93;__ operátor, ani  __&__  operátor ani unární __&#42;__ předpokládané podle  __&#91; &#93;__  vyhodnotí operátor. Výsledek obsahuje stejného efektu jako odebrání  __&__  operátor a změna __&#91; &#93;__ operátor a  __+__  operátor. Výsledkem je, jinak hodnota ukazatele na objekt nebo funkce, které jsou určené operandem.
+
+
+## <a name="examples"></a>Příklady
+
+Následující příklady použijte tyto společné deklarace:
+
+```C
+int *pa, x;
+int a[20];
+double d;
+```
+
+Tento příkaz používá address-of – operátor (**&**) provést adresu šesté elementu pole `a`. Výsledek je uložen v proměnné ukazatele `pa`:
+
+```C  
+pa = &a[5];
+```
+
+Deferenční operátor (__&#42;__) se v tomto příkladu používá pro přístup `int` hodnotu na adrese uložené v `pa`. Hodnota je přiřazena k proměnné celé číslo `x`:
+
+```C
+x = *pa;
+```
+
+Tento příklad ukazuje, který výsledek použití deferenční operátor na adresu `x` je stejný jako `x`:
+
+```C
+assert( x == *&x );
+```
+
+Tento příklad ukazuje ekvivalentní způsoby deklarování ukazatel na funkci:
+
+```C
+int roundup( void );     /* Function declaration */
+
+int  *proundup  = roundup;
+int  *pround  = &roundup;
+assert( pround == proundup );
 ```  
-int *pa, x;  
-int a[20];  
-double d;  
-```  
-  
- Tento příkaz používá operátor adresa:  
-  
-```  
-pa = &a[5];  
-```  
-  
- Address-of – operátor (**&**) přebírá adresu šesté elementu pole `a`. Výsledek je uložen v proměnné ukazatele `pa`.  
-  
-```  
-x = *pa;  
-```  
-  
- Deferenční operátor (**\***) se v tomto příkladu používá pro přístup `int` hodnotu na adrese uložené v `pa`. Hodnota je přiřazená k celočíselné proměnné `x`.  
-  
-```  
-if( x == *&x )  
-    printf( "True\n" );  
-```  
-  
- Tento příklad vytiskne slovo `True` jako ukázku, že je výsledek použití operátoru dereference na adresu proměnné `x` shodný s výrazem `x`.  
-  
-```  
-int roundup( void );     /* Function declaration */  
-  
-int  *proundup  = roundup;  
-int  *pround  = &roundup;  
-```  
-  
- Po deklaraci funkce `roundup` jsou na tuto funkci `roundup` deklarovány a inicializovány dva ukazatele. První ukazatel `proundup` je inicializován pouze pomocí názvu funkce, zatímco druhý ukazatel `pround` v inicializaci používá operátor adresa. Tyto inicializace jsou ekvivalentní.  
-  
-## <a name="see-also"></a>Viz také  
- [Deferenční operátor: *](../cpp/indirection-operator-star.md)   
- [Operátor address-of: &](../cpp/address-of-operator-amp.md)
+
+Po deklaraci funkce `roundup` jsou na tuto funkci `roundup` deklarovány a inicializovány dva ukazatele. První ukazatel `proundup` je inicializován pouze pomocí názvu funkce, zatímco druhý ukazatel `pround` v inicializaci používá operátor adresa. Tyto inicializace jsou ekvivalentní.
+
+## <a name="see-also"></a>Viz také
+
+[Deferenční operátor: &#42;](../cpp/indirection-operator-star.md)  
+[Operátor address-of: &](../cpp/address-of-operator-amp.md)  

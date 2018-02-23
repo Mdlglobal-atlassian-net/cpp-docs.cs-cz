@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstombs_s_l
 - wcstombs_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstombs_s function
 - string conversion, wide characters
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 863f6dc5b1c7a41145607e8f8ba83466324dac07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -113,10 +116,10 @@ Národní prostředí, které se má použít
 
 Nula v případě úspěchu, kód chyby při selhání.  
   
-|Chybový stav|Vrátí hodnotu a`errno`|  
+|Chybový stav|Vrátí hodnotu a `errno`|  
 |---------------------|------------------------------|  
 |*mbstr* je `NULL` a *sizeInBytes* > 0|`EINVAL`|  
-|*wcstr* je`NULL`|`EINVAL`|  
+|*wcstr* je `NULL`|`EINVAL`|  
 |Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (Pokud *počet* je `_TRUNCATE`; viz poznámky níže)|`ERANGE`|  
   
 Pokud dojde k některé z těchto podmínek, jak je popsáno v je vyvolána výjimka neplatný parametr [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, funkce vrátí kód chyby a nastaví `errno` , které je uvedené v tabulce.  
@@ -144,7 +147,7 @@ Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chován
 > [!IMPORTANT]
 >  Ujistěte se, že *wcstr* a *mbstr* se nepřekrývají a že *počet* správně odpovídá počtu široké znaky převést.  
   
-`wcstombs_s`používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_wcstombs_s_l` je stejný jako `wcstombs` s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+`wcstombs_s` používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_wcstombs_s_l` je stejný jako `wcstombs` s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
 V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -152,7 +155,7 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`wcstombs_s`|\<stdlib.h >|  
+|`wcstombs_s`|\<stdlib.h>|  
   
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   
@@ -205,8 +208,8 @@ Convert wide-character string:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)   
 [Národní prostředí](../../c-runtime-library/locale.md)   
-[_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
-[mbstowcs –, _mbstowcs_l –](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
-[mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
-[wctomb_s –, _wctomb_s_l –](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
+[_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+[mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+[mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+[wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
 [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

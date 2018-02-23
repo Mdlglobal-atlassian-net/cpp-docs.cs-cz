@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - mbstowcs
 - _mbstowcs_l
@@ -23,23 +24,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbstowcs
-dev_langs: C++
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbstowcs_l function
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63036262536adea68a4c44bde735a48b2f896b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b422dbcb1d2fc07ff3fb1f00302b62da0500ebdc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 Převede posloupnost více-bajtové znaky na odpovídající posloupnost široké znaky. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [mbstowcs_s –, _mbstowcs_s_l –](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
@@ -74,16 +78,16 @@ size_t _mbstowcs_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`wcstr`  
+ [out] `wcstr`  
  Adresa posloupnost široké znaky.  
   
- [v]`mbstr`  
+ [in] `mbstr`  
  Adresu pořadí Null byla ukončena více-bajtové znaky.  
   
- [v]`count`  
+ [in] `count`  
  Maximální počet více-bajtové znaky převést.  
   
- [v]`locale`  
+ [in] `locale`  
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -99,7 +103,7 @@ size_t _mbstowcs_l(
   
  Pokud `mbstr` argument je `NULL`, nebo pokud `count` je > `INT_MAX`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, kód chyby je nastavena na `EINVAL` a funkce vrátí hodnotu -1.  
   
- `mbstowcs`používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_mbstowcs_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `mbstowcs` používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_mbstowcs_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -107,8 +111,8 @@ size_t _mbstowcs_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`mbstowcs`|\<stdlib.h >|  
-|`_mbstowcs_l`|\<stdlib.h >|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -211,8 +215,8 @@ Convert back to wide-character string:
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb –, _wctomb_l –](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

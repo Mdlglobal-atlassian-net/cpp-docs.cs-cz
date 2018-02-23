@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 Určuje, zda celé reprezentuje alfanumerický znak.  
@@ -84,7 +87,7 @@ int _iswalnum_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace alfanumerický znak. `isalnum`vrátí nenulovou hodnotu, pokud buď `isalpha` nebo `isdigit` je nenulové hodnoty pro `c`, to znamená, pokud `c` je v rámci rozsahu A - Z, a - z nebo 0 - 9. `iswalnum`vrátí nenulovou hodnotu, pokud buď `iswalpha` nebo `iswdigit` je nenulové hodnoty pro `c`. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
+ Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace alfanumerický znak. `isalnum` vrátí nenulovou hodnotu, pokud buď `isalpha` nebo `isdigit` je nenulové hodnoty pro `c`, to znamená, pokud `c` je v rámci rozsahu A - Z, a - z nebo 0 - 9. `iswalnum` vrátí nenulovou hodnotu, pokud buď `iswalpha` nebo `iswdigit` je nenulové hodnoty pro `c`. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.  
   
  Verze tyto funkce, které mají `_l` příponu použijte parametr národního prostředí, je předaná místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
@@ -94,16 +97,16 @@ int _iswalnum_l(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istalnum`|`isalnum`|[_ismbcalnum –](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
+|`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
 |`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`isalnum`|\<ctype.h >|  
+|`isalnum`|\<ctype.h>|  
 |`iswalnum`|\<ctype.h > nebo \<wchar.h >|  
-|`_isalnum_l`|\<ctype.h >|  
+|`_isalnum_l`|\<ctype.h>|  
 |`_iswalnum_l`|\<ctype.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  

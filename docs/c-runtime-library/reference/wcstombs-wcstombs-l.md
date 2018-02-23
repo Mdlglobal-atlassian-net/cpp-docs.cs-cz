@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstombs
 - _wcstombs_l
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs
 - _wcstombs_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcstombs_l function
 - wcstombs function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ee05d4e8c8b36d92794293679992cb2c5ad5c36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7d0a5fa1fd7eb869602d8428a7cc087174739a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 Převede posloupnost široké znaky na odpovídající posloupnost více-bajtové znaky. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [wcstombs_s –, _wcstombs_s_l –](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
@@ -102,9 +105,9 @@ size_t _wcstombs_l(
   
  Pokud `mbstr` argument je `NULL`, `wcstombs` vrátí požadovaná velikost v bajtech cílový řetězec.  
   
- `wcstombs`ověří jeho parametry. Pokud `wcstr` je `NULL`, nebo pokud `count` je větší než `INT_MAX`, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastaví funkci `errno` k `EINVAL` a vrátí hodnotu -1.  
+ `wcstombs` ověří jeho parametry. Pokud `wcstr` je `NULL`, nebo pokud `count` je větší než `INT_MAX`, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastaví funkci `errno` k `EINVAL` a vrátí hodnotu -1.  
   
- `wcstombs`používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_wcstombs_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `wcstombs` používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_wcstombs_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -112,8 +115,8 @@ size_t _wcstombs_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`wcstombs`|\<stdlib.h >|  
-|`_wcstombs_l`|\<stdlib.h >|  
+|`wcstombs`|\<stdlib.h>|  
+|`_wcstombs_l`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -161,8 +164,8 @@ Convert wide-character string:
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs –, _mbstowcs_l –](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb –, _wctomb_l –](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

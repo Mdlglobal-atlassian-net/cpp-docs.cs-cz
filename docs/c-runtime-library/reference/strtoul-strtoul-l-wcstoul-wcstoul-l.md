@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstoul_l
 - _strtoul_l
@@ -29,7 +30,8 @@ f1_keywords:
 - strtoul
 - _tcstoul
 - wcstoul
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcstoul_l function
 - _tcstoul function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 32bc9c63ec148d8e5c39d2aa6a38da974bfc6d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38e96d9e8de90585fe9b85ea248c1c74eadfbf1c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 Převod řetězců na nepodepsané dlouho celočíselnou hodnotu.  
@@ -96,18 +99,18 @@ unsigned long _wcstoul_l(
  Národní prostředí použít.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strtoul`Vrátí převedenou hodnotu, pokud existuje, nebo `ULONG_MAX` na přetečení. `strtoul`Vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoul`Vrátí hodnoty analogicky na `strtoul`. Pro obě funkce `errno` je nastaven na `ERANGE` případě přetečení nebo podtečení.  
+ `strtoul` Vrátí převedenou hodnotu, pokud existuje, nebo `ULONG_MAX` na přetečení. `strtoul` Vrátí hodnotu 0, pokud žádný převod lze provést. `wcstoul` Vrátí hodnoty analogicky na `strtoul`. Pro obě funkce `errno` je nastaven na `ERANGE` případě přetečení nebo podtečení.  
   
  V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratové kódy.  
   
 ## <a name="remarks"></a>Poznámky  
  Každá z těchto funkcí převede vstupní řetězec `nptr` k `unsigned` `long`.  
   
- `strtoul`ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`. `LC_NUMERIC` Kategorie nastavení národního prostředí určuje rozpoznávání základ – znak v `nptr`; Další informace najdete v tématu [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul`a `wcstoul` použít aktuální národní prostředí; `_strtoul_l` a `_wcstoul_l` jsou identické s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `strtoul` ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null, nebo to může být první číselné znak větší než nebo rovna hodnotě `base`. `LC_NUMERIC` Kategorie nastavení národního prostředí určuje rozpoznávání základ – znak v `nptr`; Další informace najdete v tématu [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul` a `wcstoul` použít aktuální národní prostředí; `_strtoul_l` a `_wcstoul_l` jsou identické s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, na kterou odkazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, na kterou odkazuje `endptr`.  
   
- `wcstoul`široká charakterová verze `strtoul`; jeho `nptr` je argumentem široká charakterová řetězce. V opačném případě se tyto funkce chovají stejně jako.  
+ `wcstoul` široká charakterová verze `strtoul`; jeho `nptr` je argumentem široká charakterová řetězce. V opačném případě se tyto funkce chovají stejně jako.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -116,19 +119,19 @@ unsigned long _wcstoul_l(
 |`_tcstoul`|`strtoul`|`strtoul`|`wcstoul`|  
 |`_tcstoul_l`|`strtoul_l`|`_strtoul_l`|`_wcstoul_l`|  
   
- `strtoul`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtoul` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
- A `whitespace` může obsahovat místa a karta znaků, které se mají ignorovat; `digits` jsou jeden nebo více desetinných míst. První znak, který se nevejde tento formulář zastaví kontroly. Pokud `base` mezi 2 a 36, je použita jako základní číslo. Pokud `base` 0, počáteční znaky řetězce, na kterou odkazuje `nptr` se používají k určení ve znalostní bázi. Pokud první znak je 0 a druhý znak není 'x' nebo 'X', řetězec interpretována jako osmičková celé číslo. Pokud první znak je '0' a druhá znak je písmeno "x" nebo "X", řetězec interpretována jako hexadecimální celé číslo. Pokud je první znak ' 1' přes ' 9', řetězec interpretována jako desítkové celé číslo. Písmena 'a' do 'z' (nebo 'A' až 'Z') jsou přiřazeny hodnoty 10 až 35; pouze písmena, jejichž přiřazené hodnoty jsou menší než `base` jsou povoleny. První znak mimo rozsah základní zastaví kontroly. Například pokud `base` je 0 a první znak zkontrolovat je '0', osmičková celé číslo se předpokládá, a znak "8" nebo "9" zastaví kontroly. `strtoul`Umožňuje plus (`+`) nebo minus (`-`) přihlašovací předpony – úvodní znaménka minus označuje, že je Negované návratovou hodnotu.  
+ A `whitespace` může obsahovat místa a karta znaků, které se mají ignorovat; `digits` jsou jeden nebo více desetinných míst. První znak, který se nevejde tento formulář zastaví kontroly. Pokud `base` mezi 2 a 36, je použita jako základní číslo. Pokud `base` 0, počáteční znaky řetězce, na kterou odkazuje `nptr` se používají k určení ve znalostní bázi. Pokud první znak je 0 a druhý znak není 'x' nebo 'X', řetězec interpretována jako osmičková celé číslo. Pokud první znak je '0' a druhá znak je písmeno "x" nebo "X", řetězec interpretována jako hexadecimální celé číslo. Pokud je první znak ' 1' přes ' 9', řetězec interpretována jako desítkové celé číslo. Písmena 'a' do 'z' (nebo 'A' až 'Z') jsou přiřazeny hodnoty 10 až 35; pouze písmena, jejichž přiřazené hodnoty jsou menší než `base` jsou povoleny. První znak mimo rozsah základní zastaví kontroly. Například pokud `base` je 0 a první znak zkontrolovat je '0', osmičková celé číslo se předpokládá, a znak "8" nebo "9" zastaví kontroly. `strtoul` Umožňuje plus (`+`) nebo minus (`-`) přihlašovací předpony – úvodní znaménka minus označuje, že je Negované návratovou hodnotu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strtoul`|\<stdlib.h >|  
+|`strtoul`|\<stdlib.h>|  
 |`wcstoul`|\<stdlib.h > nebo \<wchar.h >|  
-|`_strtoul_l`|\<stdlib.h >|  
+|`_strtoul_l`|\<stdlib.h>|  
 |`_wcstoul_l`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  

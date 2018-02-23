@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 Převede řetězce na hodnotu s plovoucí desetinnou čárkou dlouho dvojitou přesností.  
@@ -82,14 +85,14 @@ long double wcstold_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strtold`Vrátí hodnotu číslo s plovoucí desetinnou čárkou jako `long double`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě funkce vrátí hodnotu`HUGE_VALL`. Znaménko `HUGE_VALL` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtold`Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.  
+ `strtold` Vrátí hodnotu číslo s plovoucí desetinnou čárkou jako `long double`, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě funkce vrátí hodnotu`HUGE_VALL`. Znaménko `HUGE_VALL` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtold` Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.  
   
- `wcstold`Vrátí hodnoty analogicky na `strtold`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
+ `wcstold` Vrátí hodnoty analogicky na `strtold`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
   
  Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- Jednotlivé funkce převede vstupní řetězec `nptr` k `long double`. `strtold` Funkce převede `nptr` na hodnotu dlouho dvojitou přesností. `strtold`ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. Široká charakterová verzi `strtold` je `wcstold`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
+ Jednotlivé funkce převede vstupní řetězec `nptr` k `long double`. `strtold` Funkce převede `nptr` na hodnotu dlouho dvojitou přesností. `strtold` ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. Široká charakterová verzi `strtold` je `wcstold`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -102,7 +105,7 @@ long double wcstold_l(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, které ukazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, které ukazuje `endptr`.  
   
- `strtold`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtold` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`d` &#124; `D` &#124; `e` &#124; `E`}[`sign`]`digits`]  
   
@@ -112,7 +115,7 @@ long double wcstold_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`strtold`, `_strtold_l`|\<stdlib.h >|  
+|`strtold`, `_strtold_l`|\<stdlib.h>|  
 |`wcstold`, `_wcstold_l`|\<stdlib.h > nebo \<wchar.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
@@ -158,7 +161,7 @@ string = 3.1415926535898This stopped it
  [strtod –, _strtod_l –, wcstod –, _wcstod_l –](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
  [strtol –, wcstol –, _strtol_l –, _wcstol_l –](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
  [strtoul –, _strtoul_l –, wcstoul –, _wcstoul_l –](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_create_locale –, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+ [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
  [_free_locale](../../c-runtime-library/reference/free-locale.md)

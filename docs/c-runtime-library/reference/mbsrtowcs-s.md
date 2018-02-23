@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: mbsrtowcs_s
+ms.topic: reference
+apiname:
+- mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbsrtowcs_s
-dev_langs: C++
-helpviewer_keywords: mbsrtowcs_s function
+f1_keywords:
+- mbsrtowcs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b701362fd8ed19575f5de34f998bc8fd4f7e6de1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ef0b422fdc809d979fa64cf49e96e8991c4df0f6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Převod řetězce vícebajtových znaků v aktuální národní prostředí na jeho široká znaková řetězcová reprezentace. Verzi [mbsrtowcs –](../../c-runtime-library/reference/mbsrtowcs.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -61,31 +67,31 @@ errno_t mbsrtowcs_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Počet znaků převést.  
   
- [out]`wcstr`  
+ [out] `wcstr`  
  Adresa vyrovnávací paměti k uložení výsledná převést řetězec široké znaků.  
   
- [out]`sizeInWords`  
+ [out] `sizeInWords`  
  Velikost `wcstr` v slova (široké znaky).  
   
- [ve out]`mbstr`  
+ [ve out] `mbstr`  
  Nepřímý odkaz na umístění řetězce vícebajtových znaků, který má být převeden.  
   
- [v]`count`  
+ [in] `count`  
  Maximální počet široké znaky a uložit v `wcstr` vyrovnávací paměti není včetně ukončující null, nebo [_truncate –](../../c-runtime-library/truncate.md).  
   
- [ve out]`mbstate`  
+ [ve out] `mbstate`  
  Ukazatel na `mbstate_t` převodu stavu objektu. Pokud tato hodnota je ukazatel s hodnotou null, použije se objekt statické vnitřní převod stavu. Protože interní `mbstate_t` objekt není bezpečné pro přístup z více vláken, doporučujeme, aby vždy předáte vlastní `mbstate` parametr.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Pokud převod úspěšný 0 pro nulu nebo kód chyby při selhání.  
   
-|Chybový stav|Vrátí hodnotu a`errno`|  
+|Chybový stav|Vrátí hodnotu a `errno`|  
 |---------------------|------------------------------|  
-|`wcstr`je ukazatel s hodnotou null a `sizeInWords` > 0|`EINVAL`|  
-|`mbstr`je ukazatel s hodnotou null|`EINVAL`|  
+|`wcstr` je ukazatel s hodnotou null a `sizeInWords` > 0|`EINVAL`|  
+|`mbstr` je ukazatel s hodnotou null|`EINVAL`|  
 |Řetězec nepřímo na kterou odkazuje `mbstr` obsahuje posloupnost vícebajtové, který není platný pro aktuální národní prostředí.|`EILSEQ`|  
 |Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (Pokud `count` je `_TRUNCATE`; Další informace najdete v tématu poznámky)|`ERANGE`|  
   
@@ -112,12 +118,12 @@ errno_t mbsrtowcs_s(
   
  Pokud `mbsrtowcs_s` zaznamená vícebajtových znaků, který není platný pro aktuální prostředí, odešle -1 do `*pReturnValue`, nastaví cílové vyrovnávací paměti `wcstr` na prázdný řetězec, nastaví `errno` k `EILSEQ`a vrátí `EILSEQ`.  
   
- Pokud daná pořadí na kterou odkazuje `mbstr` a `wcstr` překrývají, chování `mbsrtowcs_s` není definován. `mbsrtowcs_s`je ovlivňován LC_TYPE kategorii aktuální národní prostředí.  
+ Pokud daná pořadí na kterou odkazuje `mbstr` a `wcstr` překrývají, chování `mbsrtowcs_s` není definován. `mbsrtowcs_s` je ovlivňován LC_TYPE kategorii aktuální národní prostředí.  
   
 > [!IMPORTANT]
 >  Ujistěte se, že `wcstr` a `mbstr` se nepřekrývají a že `count` správně odpovídá počtu více-bajtové znaky převést.  
   
- `mbsrtowcs_s` Funkce se liší od [mbstowcs_s –, _mbstowcs_s_l –](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) podle jeho restartability. Stav převodu je uložený ve `mbstate` pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování. Například by měla použít aplikace `mbsrlen` místo `mbslen`, pokud následných volání `mbsrtowcs_s` se používá místo`mbstowcs_s.`  
+ `mbsrtowcs_s` Funkce se liší od [mbstowcs_s –, _mbstowcs_s_l –](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) podle jeho restartability. Stav převodu je uložený ve `mbstate` pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování. Například by měla použít aplikace `mbsrlen` místo `mbslen`, pokud následných volání `mbsrtowcs_s` se používá místo `mbstowcs_s.`  
   
  V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (což eliminuje požadavek na zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit pomocí jejich protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -128,13 +134,13 @@ errno_t mbsrtowcs_s(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`mbsrtowcs_s`|\<wchar.h >|  
+|`mbsrtowcs_s`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [mbrtowc –](../../c-runtime-library/reference/mbrtowc.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [mbstowcs_s –, _mbstowcs_s_l –](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

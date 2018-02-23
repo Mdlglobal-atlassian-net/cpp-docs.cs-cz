@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -36,7 +37,8 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof –, _strtof_l –, wcstof –, _wcstof_l –
 Převede řetězce na hodnotu s plovoucí desetinnou čárkou jednoduchou přesností.  
@@ -93,14 +96,14 @@ float wcstof_l(
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `strtof`Vrátí hodnotu číslo s plovoucí desetinnou čárkou s výjimkou případů, kdy reprezentace by způsobilo přetečení, ve kterém případ funkce vrátí +/-`HUGE_VALF`. Znaménko `HUGE_VALF` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtof`Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.  
+ `strtof` Vrátí hodnotu číslo s plovoucí desetinnou čárkou s výjimkou případů, kdy reprezentace by způsobilo přetečení, ve kterém případ funkce vrátí +/-`HUGE_VALF`. Znaménko `HUGE_VALF` odpovídá znaménko hodnotu, která není možné vyjádřit. `strtof` Vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.  
   
- `wcstof`Vrátí hodnoty analogicky na `strtof`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
+ `wcstof` Vrátí hodnoty analogicky na `strtof`. Pro obě funkce `errno` je nastaven na `ERANGE` Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).  
   
  Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Poznámky  
- Jednotlivé funkce převede vstupní řetězec `nptr` k `float`. `strtof` Funkce převede `nptr` na hodnotu jednoduchou přesností. `strtof`ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. `wcstof`široká charakterová verze `strtof`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
+ Jednotlivé funkce převede vstupní řetězec `nptr` k `float`. `strtof` Funkce převede `nptr` na hodnotu jednoduchou přesností. `strtof` ukončí čtení řetězce `nptr` u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. `wcstof` široká charakterová verze `strtof`; jeho `nptr` je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -113,7 +116,7 @@ float wcstof_l(
   
  Pokud `endptr` není `NULL`, ukazatel na znak, který zastavena kontroly je uložený v umístění, které ukazuje `endptr`. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota `nptr` je uložený v umístění, které ukazuje `endptr`.  
   
- `strtof`očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
+ `strtof` očekává `nptr` tak, aby odkazoval na řetězec v následujícím formátu:  
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E`}[`sign`]`digits`]  
   
@@ -169,7 +172,7 @@ string = 3.14159This stopped it
  [strtod –, _strtod_l –, wcstod –, _wcstod_l –](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
  [strtol –, wcstol –, _strtol_l –, _wcstol_l –](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
  [strtoul –, _strtoul_l –, wcstoul –, _wcstoul_l –](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof –, _atof_l –, _wtof –, _wtof_l –](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_create_locale –, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+ [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
  [_free_locale](../../c-runtime-library/reference/free-locale.md)

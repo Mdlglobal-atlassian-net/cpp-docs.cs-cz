@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbstowcs_s_l
 - mbstowcs_s
@@ -26,22 +27,24 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 822a7058afd6588be6f953c5c2b89d41ec02c87f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28f038c1529c2f7fb7bbc28127ee5b528474e0f0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 Převede posloupnost více-bajtové znaky na odpovídající posloupnost široké znaky. Verze [mbstowcs –, _mbstowcs_l –](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -82,33 +85,33 @@ errno_t _mbstowcs_s_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Počet znaků převést.  
   
- [out]`wcstr`  
+ [out] `wcstr`  
  Adresa vyrovnávací paměti pro výsledný řetězec převedený široká znaková.  
   
- [v]`sizeInWords`  
+ [in] `sizeInWords`  
  Velikost `wcstr` vyrovnávací paměti v slova.  
   
  [v]`mbstr`  
  Adresu pořadí Null byla ukončena více-bajtové znaky.  
   
- [v]`count`  
+ [in] `count`  
  Maximální počet široké znaky a uložit v `wcstr` vyrovnávací paměti není včetně ukončující null, nebo [_truncate –](../../c-runtime-library/truncate.md).  
   
- [v]`locale`  
+ [in] `locale`  
  Národní prostředí, které se má použít  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Nula v případě úspěchu, kód chyby při selhání.  
   
-|Chybový stav|Vrátí hodnotu a`errno`|  
+|Chybový stav|Vrátí hodnotu a `errno`|  
 |---------------------|------------------------------|  
-|`wcstr`je `NULL` a `sizeInWords` > 0|`EINVAL`|  
-|`mbstr`je`NULL`|`EINVAL`|  
+|`wcstr` je `NULL` a `sizeInWords` > 0|`EINVAL`|  
+|`mbstr` je `NULL`|`EINVAL`|  
 |Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (Pokud `count` je `_TRUNCATE`; viz poznámky níže)|`ERANGE`|  
-|`wcstr`není `NULL` a `sizeInWords` == 0|`EINVAL`|  
+|`wcstr` není `NULL` a `sizeInWords` == 0|`EINVAL`|  
   
  Pokud dojde k některé z těchto podmínek, jak je popsáno v je vyvolána výjimka neplatný parametr [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, funkce vrátí kód chyby a nastaví `errno` , které je uvedené v tabulce.  
   
@@ -134,7 +137,7 @@ errno_t _mbstowcs_s_l(
 > [!IMPORTANT]
 >  Ujistěte se, že `wcstr` a `mbstr` se nepřekrývají a že `count` správně odpovídá počtu více-bajtové znaky převést.  
   
- `mbstowcs_s`používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_mbstowcs_s_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
+ `mbstowcs_s` používá aktuální národní prostředí pro chování všech závislých na národním prostředí; `_mbstowcs_s_l` se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
   
  V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -142,8 +145,8 @@ errno_t _mbstowcs_s_l(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`mbstowcs_s`|\<stdlib.h >|  
-|`_mbstowcs_s_l`|\<stdlib.h >|  
+|`mbstowcs_s`|\<stdlib.h>|  
+|`_mbstowcs_s_l`|\<stdlib.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -152,7 +155,7 @@ errno_t _mbstowcs_s_l(
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
