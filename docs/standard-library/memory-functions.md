@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -32,9 +32,10 @@ f1_keywords:
 - memory/std::uninitialized_fill_n
 - memory/std::get_temporary_buffer
 - memory/std::return_temporary_buffer
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -84,26 +85,27 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: c8b8b3f311861fe8a98d66cef02e3d1c2c11d787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 070b6c9e532f1148484a3b7381c7ae13015b0a67
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmemorygt-functions"></a>&lt;paměť&gt; funkce
 ||||  
 |-|-|-|  
-|[AddressOf](#addressof)|[Zarovnat](#align)|[allocate_shared](#allocate_shared)|  
+|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete –](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter –](#get_deleter)|  
-|[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared –](#make_shared)|  
-|[make_unique](#make_unique)|[owner_less –](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
+|[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
+|[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap (standardní knihovna C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="addressof"></a>AddressOf  
+##  <a name="addressof"></a>  AddressOf  
  Získá adresu true objektu.  
   
 ```  
@@ -120,7 +122,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="align"></a>Zarovnat  
+##  <a name="align"></a>  Zarovnat  
  Přizpůsobí úložiště určité velikosti, zarovnané danou specifikací zarovnání, do první možné adresy daného úložiště.  
   
 ```  
@@ -179,7 +181,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="allocate_shared"></a>allocate_shared  
+##  <a name="allocate_shared"></a>  allocate_shared  
  Vytvoří `shared_ptr` na objekty, které jsou přidělené a vytvořená pro daný typ pomocí zadané přidělujícího modulu. Vrátí `shared_ptr`.  
   
 ```  
@@ -198,7 +200,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>Poznámky  
  Funkce vytvoří objekt `shared_ptr<Type>`, ukazatel na `Type(Args...)` jako přidělené a vytvořený pomocí `Alloc`.  
   
-##  <a name="const_pointer_cast"></a>const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  Const přetypování na shared_ptr.  
   
 ```  
@@ -245,7 +247,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="declare_no_pointers"></a>declare_no_pointers  
+##  <a name="declare_no_pointers"></a>  declare_no_pointers  
  Informuje o uvolňování, který znaky v bloku paměti definované ukazatel základní adresa a velikost bloku obsahuje žádné zjistitelný ukazatele.  
   
 ```  
@@ -264,7 +266,7 @@ void declare_no_pointers(
 ### <a name="remarks"></a>Poznámky  
  Funkce žádné systém uvolňování paměti informuje o tom, který rozsah adres `[ ptr, ptr + _Size)` již neobsahovaly zjistitelný ukazatele. (Všechny odkazy na úložiště přidělené nesmí přímo odkázat pouze tehdy, pokud dostupná.)  
   
-##  <a name="declare_reachable"></a>declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  Informuje uvolňování paměti, že je uvedena adresa pro přidělení úložištěm a je k dispozici.  
   
 ```  
@@ -278,7 +280,7 @@ void declare_reachable(void* ptr);
 ### <a name="remarks"></a>Poznámky  
  Pokud `ptr` nemá hodnotu null, funkce žádné systém uvolňování paměti informuje o tom, který `ptr` dále je dostupný (bodů na platné úložiště přidělené).  
   
-##  <a name="default_delete"></a>default_delete –  
+##  <a name="default_delete"></a>  default_delete  
 
 Odstraní objektů, kterým je přiřazen `operator new`. Vhodné pro použití s `unique_ptr`.  
 
@@ -300,7 +302,7 @@ struct default_delete {
 ### <a name="remarks"></a>Poznámky  
  Popisuje třídy šablony `deleter` , odstraní skalární objektů, kterým je přiřazen `operator new`, je vhodné pro použití s třídou šablony `unique_ptr`. Explicitní specializace je také `default_delete<Type[]>`.  
   
-##  <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  Dynamické přetypování na shared_ptr.  
   
 ```  
@@ -358,7 +360,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="get_deleter"></a>get_deleter –
+##  <a name="get_deleter"></a>  get_deleter –
  Metoda odstranění sám shared_ptr.  
   
 ```  
@@ -424,7 +426,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="get_pointer_safety"></a>get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  Vrátí typ zabezpečení ukazatele uvedený v rámci uvolňování paměti.  
   
 ```  
@@ -434,7 +436,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>Poznámky  
  Funkce vrátí hodnotu typu ukazatele zabezpečení předpokládá ve všech automatické systém uvolňování paměti.  
   
-##  <a name="get_temporary_buffer"></a>get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  Přidělí dočasné úložiště pro řadu prvků, která není větší než zadaný počet prvků.  
   
 ```  
@@ -487,7 +489,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="make_shared"></a>make_shared –  
+##  <a name="make_shared"></a>  make_shared –  
  Vytváří a vrací `shared_ptr` odkazující na alokované objekty vytvořené z nuly nebo více argumentů pomocí výchozího alokátoru. Přiděluje a vytvoří obou objekt zadaného typu a `shared_ptr` ke správě sdílených vlastnictví objektu, a vrátí `shared_ptr`.  
   
 ```  
@@ -580,7 +582,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="make_unique"></a>make_unique  
+##  <a name="make_unique"></a>  make_unique  
  Vytvoří a vrátí [unique_ptr](../standard-library/unique-ptr-class.md) na objekt zadaného typu, který je vytvořený pomocí zadaných argumentů.  
   
 ```  
@@ -633,7 +635,7 @@ make_unique(Types&&...) = delete;
   
   Až se zobrazí chyba C2280 ve spojení s `unique_ptr`, je skoro určitě vzhledem k tomu, že se pokoušíte vyvolat kopírovací konstruktor, který je odstraněný funkce.  
   
-##  <a name="owner_less"></a>owner_less –  
+##  <a name="owner_less"></a>  owner_less –  
  Umožňuje smíšené porovnání sdílených a slabých ukazatelů na základě vlastnictví. Vrátí `true` pokud levý parametr je seřadí před pravý parametr funkce člen `owner_before`.  
   
 ```  
@@ -681,7 +683,7 @@ struct owner_less<weak_ptr<Type>>
 ### <a name="remarks"></a>Poznámky  
  Šablony třídy definují jejich operátory členy jako vrácení `left.owner_before(right)`.  
   
-##  <a name="return_temporary_buffer"></a>return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  Zruší přidělení dočasné paměti, který byl přidělen s použitím `get_temporary_buffer` funkce šablony.  
   
 ```  
@@ -734,7 +736,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="static_pointer_cast"></a>static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  Statické přetypování na shared_ptr.  
   
 ```  
@@ -791,7 +793,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="swap"></a>swap (standardní knihovna C++)  
+##  <a name="swap">swap (standardní knihovna C++)</a>  
  Swap – dvě shared_ptr nebo weak_ptr objektů.  
   
 ```  
@@ -871,7 +873,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="undeclare_no_pointers"></a>undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  Informuje uvolňování paměti, že některé znaky v bloku paměti definované ukazatelem základní adresy a velikostí bloku mohou nyní obsahovat sledovatelné ukazatele.  
   
 ```  
@@ -883,7 +885,7 @@ void undeclare_no_pointers(
 ### <a name="remarks"></a>Poznámky  
  Funkce žádné systém uvolňování paměti informuje o tom, který rozsah adres `[ptr, ptr + _Size)` teď může obsahovat zjistitelný ukazatele.  
   
-##  <a name="undeclare_reachable"></a>undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  Odvolá prohlášení o dostupnosti pro umístění zadaná paměťová.  
   
 ```  
@@ -900,7 +902,7 @@ Type *undeclare_reachable(Type* ptr);
 ### <a name="remarks"></a>Poznámky  
  Pokud `ptr` není `nullptr`, funkce žádné systém uvolňování paměti informuje o tom, který `ptr` není dostupný. Vrátí rovna bezpečně odvozené ukazatele, který porovnává `ptr`.  
   
-##  <a name="uninitialized_copy"></a>uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  Zkopíruje objekty ze zadaného zdrojového rozsahu do neinicializovaného cílového rozsahu.  
   
 ```  
@@ -1001,7 +1003,7 @@ int main()
 }
 ```  
   
-##  <a name="uninitialized_copy_n"></a>uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  Vytvoří kopii zadaného počtu prvků ze vstupního iterátoru. Kopie jsou umístěny v dopředném iterátoru.  
   
 ```  
@@ -1037,7 +1039,7 @@ ForwardIterator uninitialized_copy_n(
   
  pokud kód nevyvolá výjimku. V takovém případě jsou všechny vytvořené objekty zničeny a znovu se vyvolá výjimka.  
   
-##  <a name="uninitialized_fill"></a>uninitialized_fill  
+##  <a name="uninitialized_fill">uninitialized_fill</a>  
  Zkopíruje objekty ze zadané hodnoty do neinicializované cílové oblasti.  
   
 ```  
@@ -1106,7 +1108,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="uninitialized_fill_n"></a>uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  Zkopíruje objekty zadané hodnoty do zadaného počtu prvků do neinicializovaného cílového rozsahu.  
   
 ```  

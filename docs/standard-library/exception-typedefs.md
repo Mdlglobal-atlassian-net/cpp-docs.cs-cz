@@ -5,26 +5,26 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::exception_ptr
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e674e7ca53338b379ea029f5d9ad802443ccbb30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 24f4fc5d30a95d55b5a4241d9c70eca31255fc18
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;výjimka&gt; – definice TypeDef
 ||||  
 |-|-|-|  
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
-##  <a name="exception_ptr"></a>exception_ptr  
+##  <a name="exception_ptr"></a>  exception_ptr  
  Typ, který popisuje ukazatele na výjimku.  
   
 ```cpp  
@@ -46,7 +46,7 @@ typedef unspecified exception_ptr;
   
  Můžete rovno ( `==`) a není rovno ( `!=`) operátory k porovnání dvou `exception_ptr` objekty. Operátory porovnání není binární hodnotu (bitový) `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnání adresy v poli výjimka odkazu `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a porovnání jako rovnocenné hodnotu NULL.  
   
-##  <a name="terminate_handler"></a>terminate_handler  
+##  <a name="terminate_handler"></a>  terminate_handler  
  Popisuje typ ukazatel na funkci, která je vhodná pro použití jako `terminate_handler`.  
   
 ```
@@ -59,7 +59,7 @@ typedef void (*terminate_handler)();
 ### <a name="example"></a>Příklad  
   V tématu [set_terminate –](../standard-library/exception-functions.md#set_terminate) příklad použití `terminate_handler`.  
   
-##  <a name="unexpected_handler"></a>unexpected_handler  
+##  <a name="unexpected_handler"></a>  unexpected_handler  
  Popisuje typ ukazatel na funkci, která je vhodná pro použití jako `unexpected_handler`.  
   
 ```

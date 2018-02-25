@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -17,7 +18,8 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e7f8fe2594dcfe3d0535bf02470e76e8356ab20e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="queue-class"></a>queue – třída
 Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí pro některé základní typ kontejneru omezení přístupu k elementům přední a zadní. Elementy lze přidat na pozadí nebo odebrat z přední a elementy může být prověřovány na libovolném konci fronty.  
@@ -51,7 +54,7 @@ class queue
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Datový typ elementu k uložení do fronty  
   
  `Container`  
@@ -76,14 +79,14 @@ class queue
   
 |||  
 |-|-|  
-|[fronty](#queue)|Vytvoří `queue` který je prázdný nebo je kopie základní kontejnerového objektu.|  
+|[queue](#queue)|Vytvoří `queue` který je prázdný nebo je kopie základní kontejnerového objektu.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type –](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit pomocí `queue`.|  
-|[size_type –](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `queue`.|  
+|[container_type](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit pomocí `queue`.|  
+|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `queue`.|  
 |[value_type](#value_type)|Typ, který reprezentuje typ objektu uložené jako element v `queue`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
@@ -92,17 +95,17 @@ class queue
 |-|-|  
 |[zpět](#back)|Vrátí odkaz na poslední a naposledy přidají element v zálohování `queue`.|  
 |[prázdný](#empty)|Pokud testy `queue` je prázdný.|  
-|[přední](#front)|Vrátí odkaz na první prvek na před `queue`.|  
-|[POP](#pop)|Odebere element z před `queue`.|  
+|[Přední](#front)|Vrátí odkaz na první prvek na před `queue`.|  
+|[pop](#pop)|Odebere element z před `queue`.|  
 |[push](#push)|Přidá prvek na zadní straně `queue`.|  
-|[velikost](#size)|Vrátí počet prvků v `queue`.|  
+|[Velikost](#size)|Vrátí počet prvků v `queue`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<fronty >  
   
  **Namespace:** – std  
   
-##  <a name="back"></a>Queue::back  
+##  <a name="back"></a>  Queue::back  
  Vrátí že odkaz na poslední a naposledy přidají element zadní straně fronty.  
   
 ```  
@@ -145,7 +148,7 @@ int main( )
 }  
 ```  
   
-##  <a name="container_type"></a>Queue::container_type  
+##  <a name="container_type"></a>  Queue::container_type  
  Typ, který poskytuje základní kontejner, aby se přizpůsobit.  
   
 ```  
@@ -160,7 +163,7 @@ typedef Container container_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [fronty](#queue) příklad toho, jak deklarace a používání `container_type`.  
   
-##  <a name="empty"></a>Queue::Empty  
+##  <a name="empty"></a>  Queue::Empty  
  Testy, pokud fronta je prázdný.  
   
 ```  
@@ -204,7 +207,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="front"></a>Queue::front  
+##  <a name="front"></a>  Queue::front  
  Vrátí odkaz na první prvek na začátek fronty.  
   
 ```  
@@ -253,7 +256,7 @@ int main() {
 }  
 ```  
   
-##  <a name="pop"></a>Queue::POP  
+##  <a name="pop"></a>  Queue::POP  
  Odebere element z začátek fronty.  
   
 ```  
@@ -307,7 +310,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="push"></a>Queue::push  
+##  <a name="push"></a>  Queue::push  
  Přidá prvek na stránce do pozadí fronty.  
   
 ```  
@@ -353,7 +356,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue"></a>Queue::Queue  
+##  <a name="queue"></a>  Queue::Queue  
  Vytvoří frontu, který je prázdný nebo který je kopií základní kontejnerového objektu.  
   
 ```  
@@ -417,7 +420,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="size"></a>Queue::size  
+##  <a name="size"></a>  Queue::size  
  Vrátí počet elementů ve frontě.  
   
 ```  
@@ -456,7 +459,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="size_type"></a>Queue::size_type  
+##  <a name="size_type"></a>  queue::size_type  
  Typ celé číslo bez znaménka, která představuje počet elementů ve frontě.  
   
 ```  
@@ -469,7 +472,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [queue::front](#front) příklad toho, jak deklarace a používání `size_type`.  
   
-##  <a name="value_type"></a>Queue::value_type  
+##  <a name="value_type"></a>  Queue::value_type  
  Typ, který představuje typ objektu uložené jako element ve frontě.  
   
 ```  

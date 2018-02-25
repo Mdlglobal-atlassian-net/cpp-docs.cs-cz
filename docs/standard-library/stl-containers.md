@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a69230b190671fe768cdf4473b24d0c942743943
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-containers"></a>Kontejnery knihovny C++ Standard
 Standardní knihovna obsahuje různé kontejnery bezpečnost typů ukládání kolekcí související objekty. Kontejnery jsou šablony třídy; Když je deklarovat proměnnou kontejneru, můžete zadat typ prvků, které bude obsahovat kontejneru. Kontejnery konstruovat s inicializační seznamy. Mají členské funkce pro přidávání a odebírání elementů a provádění dalších operací.  
@@ -30,7 +33,7 @@ Standardní knihovna obsahuje různé kontejnery bezpečnost typů ukládání k
   
  Kontejnery je možné rozdělit do tří kategorií: pořadí kontejnery, asociativní kontejnerů a kontejner adaptéry.  
   
-##  <a name="sequence_containers"></a>Pořadí kontejnery  
+##  <a name="sequence_containers"></a> Pořadí kontejnery  
  Kontejnery pořadí zachovávají řazení vložené prvky zda jste zadali.  
   
  A `vector` kontejneru se chová jako pole, ale můžou automaticky růst podle potřeby. Je náhodný přístup a souvisle uložené, a délka je vysoce flexibilní. Z těchto důvodů a informace `vector` je kontejner upřednostňované pořadí pro většinu aplikací. Pokud máte pochybnosti, jaký typ kontejneru pořadí použití, spusťte pomocí vektor! Další informace najdete v tématu [vector – třída](../standard-library/vector-class.md).  

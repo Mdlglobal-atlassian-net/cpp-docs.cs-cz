@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::timed_mutex
 - mutex/std::timed_mutex::timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::timed_mutex::try_lock_for
 - mutex/std::timed_mutex::try_lock_until
 - mutex/std::timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: b8b27489ce275cde4d0493a496980afd844f2378
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec0d34d83d19185730216af6ca9280fa14246214
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timedmutex-class"></a>timed_mutex – třída
 Představuje *vypršel časový limit typu mutex*. Objekty tohoto typu se používají k vynucení vzájemné vyloučení prostřednictvím časově omezené blokování v rámci programu.  
@@ -52,24 +55,24 @@ class timed_mutex;
 |Název|Popis|  
 |----------|-----------------|  
 |[timed_mutex](#timed_mutex)|Vytvoří `timed_mutex` objekt, který není uzamčený.|  
-|[timed_mutex:: ~ timed_mutex – destruktor](#dtortimed_mutex_destructor)|Uvolní všechny prostředky, které jsou používány `timed_mutex` objektu.|  
+|[timed_mutex::~timed_mutex Destructor](#dtortimed_mutex_destructor)|Uvolní všechny prostředky, které jsou používány `timed_mutex` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[lock](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.|  
-|[try_lock –](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|  
-|[try_lock_for –](#try_lock_for)|Pokusí se získat vlastnictví `mutex` zadaný časový interval.|  
+|[try_lock](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|  
+|[try_lock_for](#try_lock_for)|Pokusí se získat vlastnictví `mutex` zadaný časový interval.|  
 |[try_lock_until](#try_lock_until)|Pokusí se získat vlastnictví `mutex` až po zadanou dobu.|  
-|[odemknutí](#unlock)|Uvolní vlastnictví `mutex`.|  
+|[unlock](#unlock)|Uvolní vlastnictví `mutex`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<mutex >  
   
  **Namespace:** – std  
   
-##  <a name="lock"></a>timed_mutex::LOCK –
+##  <a name="lock"></a>  timed_mutex::LOCK –
  Blokuje volající vlákno, dokud vlákno získá vlastnictví `mutex`.  
   
 ```cpp  
@@ -79,14 +82,14 @@ void lock();
 ### <a name="remarks"></a>Poznámky  
  Pokud již vlastní volající vlákno `mutex`, chování není definován.  
   
-##  <a name="timed_mutex"></a>timed_mutex::timed_mutex – konstruktor  
+##  <a name="timed_mutex"></a>  timed_mutex::timed_mutex – konstruktor  
  Vytvoří `timed_mutex` objekt, který není uzamčený.  
   
 ```cpp  
 timed_mutex();
 ```  
   
-##  <a name="dtortimed_mutex_destructor"></a>timed_mutex:: ~ timed_mutex – destruktor  
+##  <a name="dtortimed_mutex_destructor"></a>  timed_mutex:: ~ timed_mutex – destruktor  
  Uvolní všechny prostředky, které jsou používány `mutex` objektu.  
   
 ```cpp  
@@ -96,7 +99,7 @@ timed_mutex();
 ### <a name="remarks"></a>Poznámky  
  Pokud při spuštění destruktoru, není objekt uzamčen, chování nedefinovaný.  
   
-##  <a name="try_lock"></a>timed_mutex::try_lock –
+##  <a name="try_lock"></a>  timed_mutex::try_lock
  Pokusí se získat vlastnictví `mutex` bez blokování.  
   
 ```cpp  
@@ -104,12 +107,12 @@ bool try_lock();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud již vlastní volající vlákno `mutex`, chování není definován.  
   
-##  <a name="try_lock_for"></a>timed_mutex::try_lock_for –
+##  <a name="try_lock_for"></a>  timed_mutex::try_lock_for
  Pokusí se získat vlastnictví `mutex` bez blokování.  
   
 ```cpp  
@@ -122,12 +125,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
  A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud již vlastní volající vlákno `mutex`, chování není definován.  
   
-##  <a name="try_lock_until"></a>timed_mutex::try_lock_until –
+##  <a name="try_lock_until"></a>  timed_mutex::try_lock_until
  Pokusí se získat vlastnictví `mutex` bez blokování.  
   
 ```cpp  
@@ -142,12 +145,12 @@ bool try_lock_until(const xtime* Abs_time);
  Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metodu již nebude pokoušet o získání vlastnictví `mutex`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud již vlastní volající vlákno `mutex`, chování není definován.  
   
-##  <a name="unlock"></a>timed_mutex::Unlock –
+##  <a name="unlock"></a>  timed_mutex::Unlock –
  Uvolní vlastnictví `mutex`.  
   
 ```cpp  
@@ -159,7 +162,7 @@ void unlock();
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex >](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
 
 
 

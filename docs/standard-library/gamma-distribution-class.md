@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::gamma_distribution
 - random/std::gamma_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::gamma_distribution [C++]
 - std::gamma_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d3cb7f844a579dced503186f8d786aef0fb6cd2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution – třída
 Generuje gama rozdělení.  
@@ -87,8 +90,8 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
   
 ||||  
 |-|-|-|  
-|[gamma_distribution –](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type –](#param_type)|  
+|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
+|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|  
   
 Funkce vlastností `alpha()` a `beta()` vrátit jejich příslušné hodnoty pro parametry uložené distribuční *alpha* a *beta*.  
   
@@ -192,7 +195,7 @@ Distribution for 10 samples:
   
 **Namespace:** – std  
   
-##  <a name="gamma_distribution"></a>gamma_distribution::gamma_distribution  
+##  <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -201,23 +204,23 @@ explicit gamma_distribution(const param_type& parm);
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*Alpha*  
+*alpha*  
 `alpha` Distribuční parametr.  
   
-*Beta verze*  
+*beta*  
 `beta` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 Struktura parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0.0 < alpha` a`0.0 < beta`  
+**Předběžnou:** `0.0 < alpha` a `0.0 < beta`  
   
 První konstruktoru vytvoří objekt jehož uložené `alpha` hodnota obsahuje hodnotu *alpha* a jehož uložené `beta` hodnota obsahuje hodnotu *beta*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>gamma_distribution::param_type  
+##  <a name="param_type"></a>  gamma_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```cpp   
@@ -232,22 +235,22 @@ struct param_type {
    };  
 ```  
 ### <a name="parameters"></a>Parametry  
-*Alpha*  
+*alpha*  
 `alpha` Distribuční parametr.  
   
-*Beta verze*  
+*beta*  
 `beta` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Instance k k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0.0 < alpha` a`0.0 < beta`  
+**Předběžnou:** `0.0 < alpha` a `0.0 < beta`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
-[\<náhodné >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)
 
 
 

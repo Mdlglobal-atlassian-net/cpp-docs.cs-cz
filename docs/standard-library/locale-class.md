@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -17,7 +18,8 @@ f1_keywords:
 - xlocale/std::locale::operator( )
 - xlocale/std::locale::facet
 - xlocale/std::locale::id
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::locale [C++]
 - std::locale [C++], category
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 770a8715cc6f5cfb17530ac8cf7cc7a00cb88730
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="locale-class"></a>locale – třída
 Třída, která popisuje místní objekt, který zapouzdří informace specifické pro jazykovou verzi jako sadu omezujících vlastností, jež společně definují určité lokalizované prostředí.  
@@ -151,26 +154,26 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[národní prostředí](#locale)|Vytvoří národní prostředí nebo kopii národního prostředí či kopii národního prostředí, kde byla omezující vlastnost nebo kategorie nahrazena omezující vlastností nebo kategorií z jiného národního prostředí.|  
+|[Národní prostředí](#locale)|Vytvoří národní prostředí nebo kopii národního prostředí či kopii národního prostředí, kde byla omezující vlastnost nebo kategorie nahrazena omezující vlastností nebo kategorií z jiného národního prostředí.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[kategorie](#category)|Typ integer, který poskytuje hodnoty bitové masky pro skupiny standardních omezujících vlastností.|  
+|[Kategorie](#category)|Typ integer, který poskytuje hodnoty bitové masky pro skupiny standardních omezujících vlastností.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[kombinování](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|  
-|[Jméno](#name)|Vrátí název uloženého národního prostředí.|  
+|[name](#name)|Vrátí název uloženého národního prostředí.|  
   
 ### <a name="static-functions"></a>Statické funkce  
   
 |||  
 |-|-|  
-|[Classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|  
+|[classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|  
 |[global](#global)|Obnoví výchozí národní prostředí pro program.|  
   
 ### <a name="operators"></a>Operátory  
@@ -179,7 +182,7 @@ cout.imbue(loc);
 |-|-|  
 |[operator!=](#op_neq)|Testuje dvě národní prostředí na nerovnost.|  
 |[operátor)](#op_call)|Porovná dva `basic_string` objekty.|  
-|[Operator ==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|  
+|[operator==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|  
   
 ### <a name="classes"></a>Třídy  
   
@@ -193,7 +196,7 @@ cout.imbue(loc);
   
  **Namespace:** – std  
   
-##  <a name="category"></a>locale::category  
+##  <a name="category"></a>  locale::category  
  Typ integer, který poskytuje hodnoty bitové masky pro skupiny standardních omezujících vlastností.  
   
 ```  
@@ -231,7 +234,7 @@ static const int none = 0;
   
  Může představovat libovolný skupiny kategorie pomocí `OR` s tyto konstanty, jako v **peněžní** &#124; **čas**.  
   
-##  <a name="classic"></a>locale::Classic  
+##  <a name="classic"></a>  locale::Classic  
  Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.  
   
 ```  
@@ -283,7 +286,7 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="combine"></a>locale::Combine  
+##  <a name="combine"></a>  locale::Combine  
  Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.  
   
 ```  
@@ -328,7 +331,7 @@ int main() {
 }  
 ```  
   
-##  <a name="facet_class"></a>facet – třída  
+##  <a name="facet_class"></a>  facet – třída  
  Třída, která slouží jako základní třída pro všechny omezující vlastnosti národního prostředí.  
 
 ```    
@@ -347,7 +350,7 @@ private:
   
  V takových případech by měl mít v konstruktoru pro základní třídu omezující vlastnost nulu `_Refs` argument. Pokud objekt je již nepotřebujete, je odstraněn. Proto je zadat nenulové hodnoty _ *odolný systém souborů* argument pouze v těchto výjimečných případech, kdy převzít odpovědnost za dobu životnosti objektu.  
   
-##  <a name="global"></a>locale::Global  
+##  <a name="global"></a>  locale::Global  
  Obnoví výchozí národní prostředí pro program. Tato akce ovlivní globální národní prostředí pro C a C++.  
   
 ```  
@@ -392,7 +395,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="id_class"></a>ID – třída  
+##  <a name="id_class"></a>  ID – třída  
  Třída členu poskytuje jedinečnou identifikaci omezující podmínky, která se používá jako index při vyhledávání omezujících vlastností v národním prostředí.  
   
 id třídy {chráněné: id(); privátní: id(const id&) / / není definována void – operátor =(const id&) / / není definována};  
@@ -400,7 +403,7 @@ id třídy {chráněné: id(); privátní: id(const id&) / / není definována v
 ### <a name="remarks"></a>Poznámky  
  Třída členů popisuje objekt statický člen vyžaduje každý omezující vlastnost jedinečný národního prostředí. Poznámka: nelze kopírovat nebo přiřadit objekt třídy **id**.  
   
-##  <a name="locale"></a>locale::Locale  
+##  <a name="locale"></a>  locale::Locale  
  Vytvoří národní prostředí nebo kopii národního prostředí či kopii národního prostředí, kde byla omezující vlastnost nebo kategorie nahrazena omezující vlastností nebo kategorií z jiného národního prostředí.  
   
 ```  
@@ -491,7 +494,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="name"></a>locale::Name  
+##  <a name="name"></a>  locale::Name  
  Vrátí název uloženého národního prostředí.  
   
 ```  
@@ -528,7 +531,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="op_neq"></a>locale::Operator! =  
+##  <a name="op_neq"></a>  locale::Operator! =  
  Testuje dvě národní prostředí na nerovnost.  
   
 ```  
@@ -585,7 +588,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="op_call"></a>locale:: operator()  
+##  <a name="op_call"></a>  locale:: operator()  
  Porovná dva `basic_string` objekty.  
   
 ```  
@@ -653,7 +656,7 @@ int main( )
 0  
 ```  
   
-##  <a name="op_eq_eq"></a>locale::Operator ==  
+##  <a name="op_eq_eq"></a>  locale::Operator ==  
  Testuje dvě národní prostředí na rovnost.  
   
 ```  

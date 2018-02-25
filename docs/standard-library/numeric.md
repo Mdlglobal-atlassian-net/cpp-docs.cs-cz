@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <numeric>
-dev_langs: C++
-helpviewer_keywords: <numeric> header
+ms.topic: reference
+f1_keywords:
+- <numeric>
+dev_langs:
+- C++
+helpviewer_keywords:
+- <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2fae023ad0750e150c326ab094e2a89e48d2a39f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8069b55f03bd1ed22627732741043ab9eaa4f838
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnumericgt"></a>&lt;číselné&gt;
 Definuje funkce šablony kontejneru, které provádějí algoritmy numerického zpracování.  
@@ -42,9 +47,9 @@ Definuje funkce šablony kontejneru, které provádějí algoritmy numerického 
 |-|-|  
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Vypočítá součet všech prvků v určeném rozsahu, včetně některých počátečních hodnot, podle výpočtu po sobě jdoucích částečných součtů nebo vypočítá výsledek po sobě jdoucích částečných výsledků, které jsou získány pomocí zadané binární operace místo operace součtu.|  
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.|  
-|[inner_product –](../standard-library/numeric-functions.md#inner_product)|Vypočítá součet prvků produktu ve dvou rozsazích a přidá jej k zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou operace součtu a produktu nahrazeny jinými zadanými binárními operacemi.|  
+|[inner_product](../standard-library/numeric-functions.md#inner_product)|Vypočítá součet prvků produktu ve dvou rozsazích a přidá jej k zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou operace součtu a produktu nahrazeny jinými zadanými binárními operacemi.|  
 |[iota](../standard-library/numeric-functions.md#iota)|Ukládá počáteční hodnotu, počínaje prvním elementem a vyplnění pomocí následných přírůstcích hodnoty (`value++`) v jednotlivých prvků v intervalu `[first, last)`.|  
-|[partial_sum –](../standard-library/numeric-functions.md#partial_sum)|Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím *i*element TD a ukládá výsledek každé součet v *i*element TD cílového rozsahu, nebo vypočítá výsledek zobecněný postup, kde je součet operaci nahrazen jiným zadat binární operace.|  
+|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím *i*element TD a ukládá výsledek každé součet v *i*element TD cílového rozsahu, nebo vypočítá výsledek zobecněný postup, kde je součet operaci nahrazen jiným zadat binární operace.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   

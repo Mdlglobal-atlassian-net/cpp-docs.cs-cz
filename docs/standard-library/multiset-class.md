@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multiset [C++]
 - std::multiset [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8953fd24b62784e36f12fb96e3005e21a86bc62
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multiset-class"></a>multiset – třída
 Standardní knihovně C++ multiset – třída se používá pro ukládání a načítání dat z kolekce, v kterém hodnoty elementů obsažených nemusí být jedinečný a které budou sloužit jako klíčové hodnoty, podle které data automaticky řazení. Hodnotu klíče prvku v multisadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.  
@@ -118,13 +121,13 @@ class multiset
  *Key*  
  Typ dat prvku, který bude uložen do multisady.  
   
- *Porovnání*  
+ *Compare*  
  Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v multisadě. Binární predikát **menší**\<klíč > je výchozí hodnota.  
   
  V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je **allocator***\<klíč >.*  
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět multisady. Výchozí hodnota je **allocator ***\<klíč >.*  
   
 ## <a name="remarks"></a>Poznámky  
  Knihovna Standard C++, kterou je multiset – třída:  
@@ -155,70 +158,70 @@ class multiset
   
 |||  
 |-|-|  
-|[multimnožina](#multiset)|Vytvoří `multiset` který je prázdný nebo který je kopie všech nebo součástí zadané `multiset`.|  
+|[multiset](#multiset)|Vytvoří `multiset` který je prázdný nebo který je kopie všech nebo součástí zadané `multiset`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typedef pro `allocator` třídy pro `multiset` objektu.|  
-|[const_iterator –](#const_iterator)|Typedef pro obousměrnou iterator, který může číst `const` element v `multiset`.|  
-|[const_pointer –](#const_pointer)|Typedef pro ukazatel `const` element v `multiset`.|  
-|[const_reference –](#const_reference)|Typedef pro odkaz na `const` element uložené v `multiset` pro čtení a provádění `const` operace.|  
-|[const_reverse_iterator –](#const_reverse_iterator)|Typedef pro obousměrnou iterator, který může číst všechny `const` element v `multiset`.|  
-|[difference_type –](#difference_type)|Číslo se znaménkem typedef pro počet prvků `multiset` v rozsahu mezi elementy, na kterou iterátory odkazuje.|  
+|[allocator_type](#allocator_type)|Typedef pro `allocator` třídy pro `multiset` objektu.|  
+|[const_iterator](#const_iterator)|Typedef pro obousměrnou iterator, který může číst `const` element v `multiset`.|  
+|[const_pointer](#const_pointer)|Typedef pro ukazatel `const` element v `multiset`.|  
+|[const_reference](#const_reference)|Typedef pro odkaz na `const` element uložené v `multiset` pro čtení a provádění `const` operace.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Typedef pro obousměrnou iterator, který může číst všechny `const` element v `multiset`.|  
+|[difference_type](#difference_type)|Číslo se znaménkem typedef pro počet prvků `multiset` v rozsahu mezi elementy, na kterou iterátory odkazuje.|  
 |[iterator](#iterator)|Typedef pro obousměrnou iterator, který může číst nebo upravovat libovolný element v `multiset`.|  
-|[key_compare –](#key_compare)|Typedef pro objekt funkce, která můžete porovnat dva klíče k určení relativních pořadí dva elementy v `multiset`.|  
-|[key_type –](#key_type)|Typedef pro objekt funkce, která můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `multiset`.|  
-|[ukazatele](#pointer)|Typedef pro ukazatel na prvek v `multiset`.|  
-|[referenční dokumentace](#reference)|Typedef pro odkaz na element uložené v `multiset`.|  
-|[reverse_iterator –](#reverse_iterator)|Typedef pro obousměrnou iterator, které můžou číst nebo upravte element v odstínech `multiset`.|  
-|[size_type –](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `multiset`.|  
-|[value_compare –](#value_compare)|Typedef pro objekt funkce, která můžete porovnat dva elementy jako klíči řazení určit jejich relativní pořadí v `multiset`.|  
+|[key_compare](#key_compare)|Typedef pro objekt funkce, která můžete porovnat dva klíče k určení relativních pořadí dva elementy v `multiset`.|  
+|[key_type](#key_type)|Typedef pro objekt funkce, která můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `multiset`.|  
+|[pointer](#pointer)|Typedef pro ukazatel na prvek v `multiset`.|  
+|[reference](#reference)|Typedef pro odkaz na element uložené v `multiset`.|  
+|[reverse_iterator](#reverse_iterator)|Typedef pro obousměrnou iterator, které můžou číst nebo upravte element v odstínech `multiset`.|  
+|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `multiset`.|  
+|[value_compare](#value_compare)|Typedef pro objekt funkce, která můžete porovnat dva elementy jako klíči řazení určit jejich relativní pořadí v `multiset`.|  
 |[value_type](#value_type)|Typedef, která popisuje uložené jako element jako objekt `multiset` jako hodnotu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[začít](#begin)|Vrátí iterátor, který odkazuje na prvním elementem v `multiset`.|  
-|[cbegin –](#cbegin)|Vrátí const iterator, která řeší prvním elementem v `multiset`.|  
+|[Začátek](#begin)|Vrátí iterátor, který odkazuje na prvním elementem v `multiset`.|  
+|[cbegin](#cbegin)|Vrátí const iterator, která řeší prvním elementem v `multiset`.|  
 |[cend –](#cend)|Vrátí const iterator, která řeší úspěšné posledním prvkem v umístění `multiset`.|  
-|[Vymazat](#clear)|Vymaže všechny elementy `multiset`.|  
-|[počet](#count)|Vrátí počet prvků v `multiset` odpovídá jejichž klíč je klíč zadaný jako parametr.|  
-|[crbegin –](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|  
+|[clear](#clear)|Vymaže všechny elementy `multiset`.|  
+|[Počet](#count)|Vrátí počet prvků v `multiset` odpovídá jejichž klíč je klíč zadaný jako parametr.|  
+|[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|  
 |[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|  
 |[emplace –](#emplace)|Vloží element v místě do zkonstruovat `multiset`.|  
 |[emplace_hint –](#emplace_hint)|Vloží element v místě do zkonstruovat `multiset`, s pomocným parametrem umístění.|  
 |[prázdný](#empty)|Pokud testy `multiset` je prázdný.|  
-|[end](#end)|Vrátí iterátor, který odkazuje na umístění po posledním prvkem v `multiset`.|  
-|[equal_range –](#equal_range)|Vrátí pár iterátorů. První iterator v páru odkazuje na prvním elementem v `multiset` s klíčem, který je větší než je zadaný klíč. Druhý iterator v páru odkazuje na prvním elementem v `multiset` s klíčem, který je rovna nebo větší než klíč.|  
+|[End](#end)|Vrátí iterátor, který odkazuje na umístění po posledním prvkem v `multiset`.|  
+|[equal_range](#equal_range)|Vrátí pár iterátorů. První iterator v páru odkazuje na prvním elementem v `multiset` s klíčem, který je větší než je zadaný klíč. Druhý iterator v páru odkazuje na prvním elementem v `multiset` s klíčem, který je rovna nebo větší než klíč.|  
 |[vymazání](#erase)|Odebere element nebo rozsah elementů v `multiset` ze zadaných pozic nebo odebere elementy, které odpovídají zadaným klíčem.|  
 |[Najít](#find)|Vrátí iterátor, který odkazuje na první umístění elementu v `multiset` má klíče rovná se zadaným klíčem.|  
-|[get_allocator –](#get_allocator)|Vrátí kopii `allocator` objekt, který se používá pro konstrukci `multiset`.|  
-|[Vložení](#insert)|Vloží elementu nebo rozsahu prvků do `multiset`.|  
-|[key_comp –](#key_comp)|Poskytuje objekt funkce, který můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `multiset`.|  
-|[lower_bound –](#lower_bound)|Vrátí iterovat prvním elementem v `multiset` s klíčem, který je rovna nebo větší než je zadaný klíč.|  
-|[max_size –](#max_size)|Vrátí maximální délka `multiset`.|  
-|[rbegin –](#rbegin)|Vrátí iterátor, který odkazuje na prvním elementem v odstínech `multiset`.|  
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objekt, který se používá pro konstrukci `multiset`.|  
+|[insert](#insert)|Vloží elementu nebo rozsahu prvků do `multiset`.|  
+|[key_comp](#key_comp)|Poskytuje objekt funkce, který můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `multiset`.|  
+|[lower_bound](#lower_bound)|Vrátí iterovat prvním elementem v `multiset` s klíčem, který je rovna nebo větší než je zadaný klíč.|  
+|[max_size](#max_size)|Vrátí maximální délka `multiset`.|  
+|[rbegin](#rbegin)|Vrátí iterátor, který odkazuje na prvním elementem v odstínech `multiset`.|  
 |[rend –](#rend)|Vrátí iterátor, který odkazuje na umístění úspěšné posledním prvkem v odstínech `multiset`.|  
-|[velikost](#size)|Vrátí počet prvků v `multiset`.|  
+|[Velikost](#size)|Vrátí počet prvků v `multiset`.|  
 |[swap](#swap)|Výměny dva elementy `multiset`s.|  
-|[upper_bound –](#upper_bound)|Vrátí iterovat prvním elementem v `multiset` s klíčem, který je větší než je zadaný klíč.|  
-|[value_comp –](#value_comp)|Načte kopii porovnání objekt, který se používá k hodnoty element pořadí v `multiset`.|  
+|[upper_bound](#upper_bound)|Vrátí iterovat prvním elementem v `multiset` s klíčem, který je větší než je zadaný klíč.|  
+|[value_comp](#value_comp)|Načte kopii porovnání objekt, který se používá k hodnoty element pořadí v `multiset`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Nahradí elementy `multiset` kopii jiného `multiset`.|  
+|[operator=](#op_eq)|Nahradí elementy `multiset` kopii jiného `multiset`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<nastavit >  
   
  **Namespace:** – std  
   
-##  <a name="allocator_type"></a>multiset::allocator_type  
+##  <a name="allocator_type"></a>  multiset::allocator_type  
  Typ, který reprezentuje allocator – třída multiset objektu  
   
 ```  
@@ -226,14 +229,14 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `allocator_type`je synonymum pro parametr šablony `Allocator`.  
+ `allocator_type` je synonymum pro parametr šablony `Allocator`.  
   
  Další informace o `Allocator`, najdete v části poznámky [multiset – třída](../standard-library/multiset-class.md) tématu.  
   
 ### <a name="example"></a>Příklad  
-  Podívejte se na příklad pro [get_allocator –](#get_allocator) pro příklad použití`allocator_type`  
+  Podívejte se na příklad pro [get_allocator –](#get_allocator) pro příklad použití `allocator_type`  
   
-##  <a name="begin"></a>multiset::begin  
+##  <a name="begin"></a>  multiset::begin  
  Vrátí iterator adresování prvním elementem v multimnožina.  
   
 ```  
@@ -284,7 +287,7 @@ The first element of ms1 is 1
 The first element of ms1 is now 2  
 ```  
   
-##  <a name="cbegin"></a>multiset::cbegin  
+##  <a name="cbegin"></a>  multiset::cbegin  
  Vrátí `const` iterator, která řeší prvním elementem v rozsahu.  
   
 ```  
@@ -307,7 +310,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>multiset::cend  
+##  <a name="cend"></a>  multiset::cend  
  Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.  
   
 ```  
@@ -318,7 +321,7 @@ const_iterator cend() const;
  A `const` iterator obousměrného přístup, který odkazuje právě přesahuje za konec rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
- `cend`slouží k ověření, zda iterovat uplynutí konec její rozsah.  
+ `cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.  
   
  Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.  
   
@@ -332,7 +335,7 @@ auto i2 = Container.cend();
   
  Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
   
-##  <a name="clear"></a>multiset::clear  
+##  <a name="clear"></a>  multiset::clear  
  Vymaže všechny elementy multimnožina.  
   
 ```  
@@ -369,7 +372,7 @@ The size of the multiset is initially 2.
 The size of the multiset after clearing is 0.  
 ```  
   
-##  <a name="const_iterator"></a>multiset::const_iterator  
+##  <a name="const_iterator"></a>  multiset::const_iterator  
  Typ, který poskytuje obousměrné iterator, který může číst **const** element v multimnožina.  
   
 ```  
@@ -382,7 +385,7 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin) pro příklad použití `const_iterator`.  
   
-##  <a name="const_pointer"></a>multiset::const_pointer  
+##  <a name="const_pointer"></a>  multiset::const_pointer  
  Typ, který poskytuje odkazy **const** element v multimnožina.  
   
 ```  
@@ -394,7 +397,7 @@ typedef typename allocator_type::const_pointer const_pointer;
   
  Ve většině případů [iterator](#iterator) se má použít pro přístup k elementům v multiset objektu.  
   
-##  <a name="const_reference"></a>multiset::const_reference  
+##  <a name="const_reference"></a>  multiset::const_reference  
  Typ, který obsahuje odkaz na **const** element uložené v multimnožina pro čtení a provádění **const** operace.  
   
 ```  
@@ -434,7 +437,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="const_reverse_iterator"></a>multiset::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  multiset::const_reverse_iterator  
  Typ, který poskytuje obousměrné iterator, který může číst všechny **const** element v multimnožina.  
   
 ```  
@@ -447,7 +450,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`.  
   
-##  <a name="count"></a>multiset::Count  
+##  <a name="count"></a>  multiset::Count  
  Vrátí počet prvků v multimnožina jejichž klíč odpovídá parametru zadaný klíč.  
   
 ```  
@@ -507,7 +510,7 @@ The number of elements in ms1 with a sort key of 2 is: 1.
 The number of elements in ms1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="crbegin"></a>multiset::crbegin  
+##  <a name="crbegin"></a>  multiset::crbegin  
  Vrátí const iterator adresování prvním elementem v invertovaných multimnožina.  
   
 ```  
@@ -518,11 +521,11 @@ const_reverse_iterator crbegin() const;
  Const reverse obousměrného iterator adresování prvním elementem v invertovaných multimnožina nebo řešení, co je posledním prvkem v unreversed multimnožina.  
   
 ### <a name="remarks"></a>Poznámky  
- `crbegin`se používá s odstínech multimnožina stejným způsobem jako začít se používá s multimnožina.  
+ `crbegin` se používá s odstínech multimnožina stejným způsobem jako začít se používá s multimnožina.  
   
  S návratovou hodnotou `crbegin`, multiset objekt nelze změnit.  
   
- `crbegin`můžete použít k iteraci v rámci multimnožina zpětné.  
+ `crbegin` můžete použít k iteraci v rámci multimnožina zpětné.  
   
 ### <a name="example"></a>Příklad  
   
@@ -552,7 +555,7 @@ int main( )
 The first element in the reversed multiset is 30.  
 ```  
   
-##  <a name="crend"></a>multiset::crend  
+##  <a name="crend"></a>  multiset::crend  
  Vrátí const iterator, která řeší umístění úspěšné posledním prvkem v invertovaných multimnožina.  
   
 ```  
@@ -563,11 +566,11 @@ const_reverse_iterator crend() const;
  Const reverse iterator obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných multimnožina (umístění, které měl před prvním elementem v unreversed multiset).  
   
 ### <a name="remarks"></a>Poznámky  
- `crend`se používá s odstínech multimnožina stejně jako [end](#end) se používá s multimnožina.  
+ `crend` se používá s odstínech multimnožina stejně jako [end](#end) se používá s multimnožina.  
   
  S návratovou hodnotou `crend`, multiset objekt nelze změnit.  
   
- `crend`slouží k testování, aby se jestli zpětné iterator dosáhne konce své multimnožina.  
+ `crend` slouží k testování, aby se jestli zpětné iterator dosáhne konce své multimnožina.  
   
  Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.  
   
@@ -595,7 +598,7 @@ int main() {
 }  
 ```  
   
-##  <a name="difference_type"></a>multiset::difference_type  
+##  <a name="difference_type"></a>  multiset::difference_type  
  Typ se znaménkem, který můžete použít k reprezentování počet elementů multimnožina v rozsahu mezi elementy, na kterou iterátory odkazuje.  
   
 ```  
@@ -665,7 +668,7 @@ The number '20' occurs 2 times in multiset ms1.
 The number of elements in the multiset ms1 is: 3.  
 ```  
   
-##  <a name="emplace"></a>multiset::emplace  
+##  <a name="emplace"></a>  multiset::emplace  
  Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací), s pomocným parametrem umístění.  
   
 ```  
@@ -730,7 +733,7 @@ int main()
   
 ```  
   
-##  <a name="emplace_hint"></a>multiset::emplace_hint  
+##  <a name="emplace_hint"></a>  multiset::emplace_hint  
  Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací), s pomocným parametrem umístění.  
   
 ```  
@@ -758,7 +761,7 @@ iterator emplace_hint(
   
  Příklad kódu, najdete v části [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
-##  <a name="empty"></a>multiset::Empty  
+##  <a name="empty"></a>  multiset::Empty  
  Testy, pokud je prázdná multimnožina.  
   
 ```  
@@ -799,7 +802,7 @@ The multiset ms1 is not empty.
 The multiset ms2 is empty.  
 ```  
   
-##  <a name="end"></a>multiset::end  
+##  <a name="end"></a>  multiset::end  
  Vrátí iterátor za koncem.  
   
 ```  
@@ -820,7 +823,7 @@ iterator end();
   
  Příklad kódu, najdete v části [multiset::find](#find).  
   
-##  <a name="equal_range"></a>multiset::equal_range  
+##  <a name="equal_range"></a>  multiset::equal_range  
  Vrátí funkce pár iterátory prvním elementem v multimnožina s klíčem, který je větší než je zadaný klíč a prvním elementem v multimnožina s klíčem, který je rovna nebo větší než klíč.  
   
 ```  
@@ -896,7 +899,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The multiset ms1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="erase"></a>multiset::Erase  
+##  <a name="erase"></a>  multiset::Erase  
  Odebere element nebo rozsahu prvků v multimnožina ze zadaných pozic nebo odebere prvky, které odpovídají zadaným klíčem.  
   
 ```  
@@ -932,7 +935,7 @@ size_type erase(
 ### <a name="remarks"></a>Poznámky  
  Příklad kódu, najdete v části [set::erase](../standard-library/set-class.md#erase).  
   
-##  <a name="find"></a>multiset::Find  
+##  <a name="find"></a>  multiset::Find  
  Vrátí iterátor, který odkazuje na umístění elementu v multimnožina s klíčem ekvivalentní k zadanému klíči.  
   
 ```  
@@ -1015,7 +1018,7 @@ int main()
 }  
 ```  
   
-##  <a name="get_allocator"></a>multiset::get_allocator  
+##  <a name="get_allocator"></a>  multiset::get_allocator  
  Vrátí kopii allocator objekt použitý k vytvoření multimnožina.  
   
 ```  
@@ -1080,7 +1083,7 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>multiset::Insert  
+##  <a name="insert"></a>  multiset::Insert  
  Vloží do multimnožina elementu nebo rozsahu prvků.  
   
 ```  
@@ -1244,7 +1247,7 @@ int main()
   
 ```  
   
-##  <a name="iterator"></a>multiset::iterator  
+##  <a name="iterator"></a>  multiset::iterator  
  Typ, který poskytuje konstanta [obousměrného iterator](../standard-library/bidirectional-iterator-tag-struct.md) libovolný element, který může číst v multimnožina.  
   
 ```  
@@ -1254,7 +1257,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání **iterator**.  
   
-##  <a name="key_comp"></a>multiset::key_comp  
+##  <a name="key_comp"></a>  multiset::key_comp  
  Načte kopii porovnání objekt použitý k pořadí klíčů v multimnožina.  
   
 ```  
@@ -1326,7 +1329,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.  
 ```  
   
-##  <a name="key_compare"></a>multiset::key_compare  
+##  <a name="key_compare"></a>  multiset::key_compare  
  Typ, který poskytuje funkce objekt, který můžete porovnat dva klíče řazení pro určení pořadí relativní ze dvou prvků v multimnožina.  
   
 ```  
@@ -1341,7 +1344,7 @@ typedef Compare key_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [key_comp –](#key_comp) příklad toho, jak deklarace a používání `key_compare`.  
   
-##  <a name="key_type"></a>multiset::key_type  
+##  <a name="key_type"></a>  multiset::key_type  
  Typ, který poskytuje funkce objekt, který můžete porovnat klíči řazení k určení relativní pořadí dva elementy v multimnožina.  
   
 ```  
@@ -1349,14 +1352,14 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `key_type`je synonymum pro parametr šablony `Key`.  
+ `key_type` je synonymum pro parametr šablony `Key`.  
   
  Další informace o `Key`, najdete v části poznámky [multiset – třída](../standard-library/multiset-class.md) tématu.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.  
   
-##  <a name="lower_bound"></a>multiset::lower_bound  
+##  <a name="lower_bound"></a>  multiset::lower_bound  
  Vrátí iterovat prvním elementem v multimnožina s klíčem, který je rovna nebo větší než je zadaný klíč.  
   
 ```  
@@ -1421,7 +1424,7 @@ The multiset ms1 doesn't have an element with a key of 40.
 The element of ms1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="max_size"></a>multiset::max_size  
+##  <a name="max_size"></a>  multiset::max_size  
  Vrátí maximální délka multimnožina.  
   
 ```  
@@ -1451,7 +1454,7 @@ int main( )
 }  
 ```  
   
-##  <a name="multiset"></a>multiset::multiset  
+##  <a name="multiset"></a>  multiset::multiset  
  Vytvoří multiset, který je prázdný nebo se kopírování všech nebo součástí některých jiných multimnožina.  
   
 ```  
@@ -1632,7 +1635,7 @@ int main()
 }  
 ```  
   
-##  <a name="op_eq"></a>multiset::Operator =  
+##  <a name="op_eq"></a>  multiset::Operator =  
  Nahradí elementy tohoto `multiset` pomocí elementů z jiné `multiset`.  
   
 ```  
@@ -1649,7 +1652,7 @@ multiset& operator=(multiset&& right);
 |`right`|`multiset` z prvky, které jsou zkopírovat nebo přesunout.|  
   
 ### <a name="remarks"></a>Poznámky  
- `operator=`kopíruje nebo přesouvá elementy `right` do této `multiset`, v závislosti na typu odkazu (lvalue a rvalue) používá. Prvky, které jsou v tomto `multiset` před `operator=` provede se zahodí.  
+ `operator=` kopíruje nebo přesouvá elementy `right` do této `multiset`, v závislosti na typu odkazu (lvalue a rvalue) používá. Prvky, které jsou v tomto `multiset` před `operator=` provede se zahodí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1688,7 +1691,7 @@ int main( )
    }  
 ```  
   
-##  <a name="pointer"></a>multiset::Pointer  
+##  <a name="pointer"></a>  multiset::Pointer  
  Typ, který obsahuje odkaz na element v multimnožina.  
   
 ```  
@@ -1700,7 +1703,7 @@ typedef typename allocator_type::pointer pointer;
   
  Ve většině případů [iterator](#iterator) se má použít pro přístup k elementům v multiset objektu.  
   
-##  <a name="rbegin"></a>multiset::rbegin  
+##  <a name="rbegin"></a>  multiset::rbegin  
  Vrátí iterator adresování prvním elementem v invertovaných multimnožina.  
   
 ```  
@@ -1713,11 +1716,11 @@ reverse_iterator rbegin();
  Iterator zpětné obousměrného adresování prvním elementem v invertovaných multimnožina nebo řešení, co je posledním prvkem v unreversed multimnožina.  
   
 ### <a name="remarks"></a>Poznámky  
- `rbegin`se používá s odstínech multimnožina, stejně jako rbegin – se používá s multimnožina.  
+ `rbegin` se používá s odstínech multimnožina, stejně jako rbegin – se používá s multimnožina.  
   
  Pokud vrátí hodnotu, která `rbegin` je přiřazena k `const_reverse_iterator`, pak multiset objekt nelze změnit. Pokud vrátí hodnotu, která `rbegin` je přiřazena k `reverse_iterator`, pak je možné upravit objekt multiset.  
   
- `rbegin`můžete použít k iteraci v rámci multimnožina zpětné.  
+ `rbegin` můžete použít k iteraci v rámci multimnožina zpětné.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1774,7 +1777,7 @@ The reversed multiset is: 30 20 10
 After the erasure, the first element in the reversed multiset is 20.  
 ```  
   
-##  <a name="reference"></a>multiset::Reference  
+##  <a name="reference"></a>  multiset::Reference  
  Typ, který obsahuje odkaz na element uložené v multimnožina.  
   
 ```  
@@ -1809,7 +1812,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="rend"></a>multiset::rend  
+##  <a name="rend"></a>  multiset::rend  
  Vrátí iterátor, který řeší umístění úspěšné posledním prvkem v invertovaných multimnožina.  
   
 ```  
@@ -1822,11 +1825,11 @@ reverse_iterator rend();
  Iterator zpětné obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných multimnožina (umístění, které měl před prvním elementem v unreversed multiset).  
   
 ### <a name="remarks"></a>Poznámky  
- `rend`se používá s odstínech multimnožina stejně jako [end](#end) se používá s multimnožina.  
+ `rend` se používá s odstínech multimnožina stejně jako [end](#end) se používá s multimnožina.  
   
  Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, pak multiset objekt nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, pak je možné upravit objekt multiset.  
   
- `rend`slouží k testování, aby se jestli zpětné iterator dosáhne konce své multimnožina.  
+ `rend` slouží k testování, aby se jestli zpětné iterator dosáhne konce své multimnožina.  
   
  Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.  
   
@@ -1879,7 +1882,7 @@ int main() {
 }  
 ```  
   
-##  <a name="reverse_iterator"></a>multiset::reverse_iterator  
+##  <a name="reverse_iterator"></a>  multiset::reverse_iterator  
  Typ, který poskytuje obousměrné iterator, které můžou číst nebo upravit element v invertovaných multimnožina.  
   
 ```  
@@ -1892,7 +1895,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se příklad [rbegin –](#rbegin) příklad toho, jak deklarace a používání `reverse_iterator`.  
   
-##  <a name="size"></a>multiset::size  
+##  <a name="size"></a>  multiset::size  
  Vrátí počet prvků multimnožina.  
   
 ```  
@@ -1931,7 +1934,7 @@ The multiset length is 1.
 The multiset length is now 2.  
 ```  
   
-##  <a name="size_type"></a>multiset::size_type  
+##  <a name="size_type"></a>  multiset::size_type  
  Typ celé číslo bez znaménka, která představuje počet elementů v multimnožina.  
   
 ```  
@@ -1939,9 +1942,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>Příklad  
-  Podívejte se příklad [velikost](#size) příklad toho, jak deklarace a používání`size_type`  
+  Podívejte se příklad [velikost](#size) příklad toho, jak deklarace a používání `size_type`  
   
-##  <a name="swap"></a>multiset::swap  
+##  <a name="swap"></a>  multiset::swap  
  Elementy dvě multisets výměny.  
   
 ```  
@@ -2006,7 +2009,7 @@ After swapping with ms2, list ms1 is: 100 200.
 After swapping with ms3, list ms1 is: 300.  
 ```  
   
-##  <a name="upper_bound"></a>multiset::upper_bound  
+##  <a name="upper_bound"></a>  multiset::upper_bound  
  Vrátí iterator na prvním elementem v multimnožina s klíčem, který je větší než je zadaný klíč.  
   
 ```  
@@ -2071,7 +2074,7 @@ The first element of ms1 with a key greater than
 that of the initial element of ms1 is: 20.  
 ```  
   
-##  <a name="value_comp"></a>multiset::value_comp  
+##  <a name="value_comp"></a>  multiset::value_comp  
  Načte kopii porovnání objekt použitý k hodnoty element pořadí v multimnožina.  
   
 ```  
@@ -2143,7 +2146,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of ms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.  
 ```  
   
-##  <a name="value_compare"></a>multiset::value_compare  
+##  <a name="value_compare"></a>  multiset::value_compare  
  Typ, který poskytuje funkce objekt, který můžete porovnat dva klíče řazení určit jejich relativní pořadí v multimnožina.  
   
 ```  
@@ -2151,7 +2154,7 @@ typedef key_compare value_compare;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_compare`je synonymum pro parametr šablony `Compare`.  
+ `value_compare` je synonymum pro parametr šablony `Compare`.  
   
  Všimněte si, že oba [key_compare –](#key_compare) a **value_compare –** jsou synonyma pro parametr šablony `Compare`. Oba typy jsou uvedené pro třídy sady a multiset tam, kde jsou identické, zajištění kompatibility se službou mapy třídy a multimap, kde jsou jedinečné.  
   
@@ -2160,7 +2163,7 @@ typedef key_compare value_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_comp –](#value_comp) příklad toho, jak deklarace a používání `value_compare`.  
   
-##  <a name="value_type"></a>multiset::value_type  
+##  <a name="value_type"></a>  multiset::value_type  
  Typ, který popisuje objekt uložené jako element jako multimnožina jako hodnotu.  
   
 ```  
@@ -2168,7 +2171,7 @@ typedef Key value_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_type`je synonymum pro parametr šablony `Key`.  
+ `value_type` je synonymum pro parametr šablony `Key`.  
   
  Všimněte si, že oba [key_type –](#key_type) a `value_type` jsou synonyma pro parametr šablony **klíč**. Oba typy jsou uvedené pro třídy sady a multiset tam, kde jsou identické, zajištění kompatibility se službou mapy třídy a multimap, kde jsou jedinečné.  
   

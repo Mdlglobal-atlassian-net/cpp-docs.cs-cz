@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e12c446ec97bc4cf9d2f2caff642b0ed6fb210d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5cb39aa4158f69b1c6e168742e6c7a2b3dcdc97
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="randomdevice-class"></a>random_device – třída
 Generuje náhodné pořadí z externí zařízení.  
@@ -63,15 +66,15 @@ public:
   
 |||  
 |-|-|  
-|[random_device –](#random_device)|[šifrování](#entropy)|  
-|[random_device::Operator()](#op_call)||  
+|[random_device](#random_device)|[šifrování](#entropy)|  
+|[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>Poznámky  
 Třída popisuje zdroj náhodných čísel a je povolená ale nevyžaduje Nedeterministický nebo kryptograficky zabezpečené pomocí standardní C++ ISO. V sadě Visual Studio implementace hodnoty vytvořeného jsou nedeterministické a kryptograficky zabezpečená, ale pracuje pomaleji než generátory vytvořené z motorů a modul adaptéry (například [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), vysoké kvality a rychlé modul výběru pro většinu aplikací).  
   
-`random_device`výsledky jsou rovnoměrně rozložen v rozsahu uzavřené [ `0, 2` <sup>32</sup>).  
+`random_device` výsledky jsou rovnoměrně rozložen v rozsahu uzavřené [ `0, 2` <sup>32</sup>).  
   
-`random_device`není zaručeno, aby výsledkem volání neblokující.  
+`random_device` není zaručeno, aby výsledkem volání neblokující.  
   
 Obecně platí `random_device` slouží k další generátory vytvořen s moduly nebo modul adaptéry počáteční hodnoty. Další informace najdete v tématu [ \<náhodných >](../standard-library/random.md).  
   
@@ -115,7 +118,7 @@ V tomto příkladu je zneužívající vlastností prohlížeče a není repreze
   
  **Namespace:** – std  
   
-##  <a name="random_device"></a>random_device::random_device  
+##  <a name="random_device"></a>  random_device::random_device  
 Vytvoří generátor.  
   
 ```  
@@ -125,7 +128,7 @@ random_device(const std::string& = "");
 ### <a name="remarks"></a>Poznámky  
 Konstruktor inicializuje generátor podle potřeby, ignoruje parametr řetězce. Vrátí hodnotu typu definované implementací odvozené od [výjimka](../standard-library/exception-class.md) Pokud `random_device` nebylo možné inicializovat.  
   
-##  <a name="entropy"></a>random_device::entropy  
+##  <a name="entropy"></a>  random_device::entropy  
 Odhadne náhodnost zdroje.  
   
 ```  
@@ -135,7 +138,7 @@ double entropy() const noexcept;
 ### <a name="remarks"></a>Poznámky  
 Členská funkce vrátí odhad náhodnost zdroje, jako je měřen v bitech.  
   
-##  <a name="op_call"></a>random_device::Operator()  
+##  <a name="op_call"></a>  random_device::Operator()  
 Vrátí náhodná hodnota.  
   
 ```  
@@ -146,5 +149,5 @@ result_type operator()();
 Vrátí hodnoty rovnoměrně rozložen v intervalu uzavřené [ `min, max`] určeného členské funkce `min()` a `max()`. Vrátí hodnotu typu definované implementací odvozené od [výjimka](../standard-library/exception-class.md) Pokud nebylo možné získat náhodné číslo.  
   
 ## <a name="see-also"></a>Viz také  
-[\<náhodné >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)
 

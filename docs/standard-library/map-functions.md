@@ -5,25 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-caps.latest.revision: "6"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7972ff0d03f0c7b2378f87c311db633dff2a5d13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 29fa327fe892cba8c7cd9d9f4f428baa130ded29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-functions"></a>&lt;Mapa&gt; funkce
 |||  
 |-|-|  
 |[swap (map)](#swap)|[swap (multimap)](#swap_multimap)|  
   
-##  <a name="swap_multimap"></a>swap (map)
+##  <a name="swap_multimap"></a>  swap (map)
  Zamění prvky dvou objektů map.  
   
 ```  
@@ -46,7 +46,7 @@ void swap(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad kódu pro funkce člen [map::swap](../standard-library/map-class.md#swap) pro příklad, který používá verzi šablony služby `swap`.  
   
-##  <a name="swap"></a>swap (multimap)
+##  <a name="swap"></a>  swap (multimap)
  Elementy dvě multimaps výměny.  
   
 ```  
@@ -70,4 +70,4 @@ void swap(
   Podívejte se na příklad kódu pro funkce člen [multimap::swap](../standard-library/multimap-class.md#swap) pro příklad, který používá verzi šablony služby `swap`.  
   
 ## <a name="see-also"></a>Viz také  
- [\<Mapa >](../standard-library/map.md)
+ [\<map>](../standard-library/map.md)

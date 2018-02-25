@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
 - atomic/std::atomic_compare_exchange_strong_explicit
@@ -37,7 +37,7 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -71,28 +71,29 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 232333280ae44838b0afd41bf0e00255d8a78dc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56b28ab071c2094d336678f2e66e0c2ed1ab32dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkce
 ||||  
 |-|-|-|  
-|[atomic_compare_exchange_strong –](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit –](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak –](#atomic_compare_exchange_weak)|  
-|[atomic_compare_exchange_weak_explicit –](#atomic_compare_exchange_weak_explicit)|[atomic_exchange –](#atomic_exchange)|[atomic_exchange_explicit –](#atomic_exchange_explicit)|  
-|[atomic_fetch_add –](#atomic_fetch_add)|[atomic_fetch_add_explicit –](#atomic_fetch_add_explicit)|[atomic_fetch_and –](#atomic_fetch_and)|  
-|[atomic_fetch_and_explicit –](#atomic_fetch_and_explicit)|[atomic_fetch_or –](#atomic_fetch_or)|[atomic_fetch_or_explicit –](#atomic_fetch_or_explicit)|  
-|[atomic_fetch_sub –](#atomic_fetch_sub)|[atomic_fetch_sub_explicit –](#atomic_fetch_sub_explicit)|[atomic_fetch_xor –](#atomic_fetch_xor)|  
-|[atomic_fetch_xor_explicit –](#atomic_fetch_xor_explicit)|[atomic_flag_clear –](#atomic_flag_clear)|[atomic_flag_clear_explicit –](#atomic_flag_clear_explicit)|  
-|[atomic_flag_test_and_set –](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit –](#atomic_flag_test_and_set_explicit)|[atomic_init –](#atomic_init)|  
-|[atomic_is_lock_free –](#atomic_is_lock_free)|[atomic_load –](#atomic_load)|[atomic_load_explicit –](#atomic_load_explicit)|  
-|[atomic_signal_fence –](#atomic_signal_fence)|[atomic_store –](#atomic_store)|[atomic_store_explicit –](#atomic_store_explicit)|  
-|[atomic_thread_fence –](#atomic_thread_fence)|[kill_dependency –](#kill_dependency)|  
+|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)|  
+|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)|[atomic_exchange](#atomic_exchange)|[atomic_exchange_explicit](#atomic_exchange_explicit)|  
+|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and](#atomic_fetch_and)|  
+|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)|[atomic_fetch_or](#atomic_fetch_or)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)|  
+|[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|  
+|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|  
+|[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|  
+|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|  
+|[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|  
+|[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|  
   
-##  <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong –  
+##  <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong  
  Provede atomická operace porovnání a serveru exchange.  
   
 ```
@@ -125,7 +126,7 @@ inline bool atomic_compare_exchange_strong(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda provádí atomická operace porovnání a exchange pomocí implicitní `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_strong_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).  
   
-##  <a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit –  
+##  <a name="atomic_compare_exchange_strong_explicit"></a>  atomic_compare_exchange_strong_explicit  
  Provede *atomic porovnání a exchange* operaci.  
   
 ```
@@ -168,7 +169,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 ### <a name="remarks"></a>Poznámky  
  *Atomické operace porovnání a exchange* porovnává hodnotu, která je uložená v objektu, která ukazuje `Atom` s hodnotou, která ukazuje `Exp`. Pokud jsou hodnoty stejné, hodnotou, která je uložená v objektu, která ukazuje `atom` se nahradí `Val` pomocí `read-modify-write` operace a použití paměti pořadí omezení, které jsou určené `Order1`. Pokud tyto hodnoty nebudou stejné, operace nahradí hodnotu, která ukazuje `Exp` s hodnotou, která je uložená v objektu, která ukazuje `Atom` a platí omezení paměti pořadí, které jsou určené `Order2`.  
   
-##  <a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak –  
+##  <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak  
  Provede *weak atomic porovnat a exchange* operaci.  
   
 ```
@@ -201,7 +202,7 @@ inline bool atomic_compare_exchange_strong(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda provádí *weak atomic porovnat a exchange operaci* má implicitní `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_weak_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).  
   
-##  <a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit –  
+##  <a name="atomic_compare_exchange_weak_explicit"></a>  atomic_compare_exchange_weak_explicit  
  Provede *weak atomic porovnat a exchange* operaci.  
   
 ```
@@ -246,7 +247,7 @@ inline bool atomic_compare_exchange_weak_explicit(
   
  A *slabé* atomické operace porovnání a exchange provede exchange, pokud jsou porovnávané hodnoty rovny. Ale pokud tyto hodnoty nebudou stejné, není zaručena operaci provést exchange.  
   
-##  <a name="atomic_exchange"></a>atomic_exchange –  
+##  <a name="atomic_exchange"></a>  atomic_exchange –  
  Používá `Value` nahradit uložené hodnotu `Atom`.  
   
 ```
@@ -270,7 +271,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ### <a name="remarks"></a>Poznámky  
  `atomic_exchange` Provádí funkce `read-modify-write` operaci Exchange hodnotou, která je uložená v `Atom` s `Value`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="atomic_exchange_explicit"></a>atomic_exchange_explicit –  
+##  <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit  
  Nahradí hodnotu uložené `Atom` s `Value`.  
   
 ```
@@ -303,7 +304,7 @@ inline Ty atomic_exchange_explicit(
 ### <a name="remarks"></a>Poznámky  
  `atomic_exchange_explicit` Provádí funkce `read-modify-write` operaci Exchange hodnotou, která je uložená v `Atom` s `Value`, v rámci omezení paměti, které jsou určené `Order`.  
   
-##  <a name="atomic_fetch_add"></a>atomic_fetch_add –  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add –  
  Přidá hodnotu do stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -336,7 +337,7 @@ integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="atomic_fetch_add_explicit"></a>atomic_fetch_add_explicit –  
+##  <a name="atomic_fetch_add_explicit"></a>  atomic_fetch_add_explicit  
  Přidá hodnotu do stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -382,7 +383,7 @@ integral atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="atomic_fetch_and"></a>atomic_fetch_and –  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and –  
  Provede bitové `and` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -405,7 +406,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_and` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `and` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.  
   
-##  <a name="atomic_fetch_and_explicit"></a>atomic_fetch_and_explicit –  
+##  <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit –  
  Provede bitové `and` hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -438,7 +439,7 @@ inline T atomic_fetch_and_explicit(
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_and_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `and` z `Value` a aktuální hodnotu, která je uložená v `Atom`, v rámci omezení paměti, které jsou specifikace `Order`.  
   
-##  <a name="atomic_fetch_or"></a>atomic_fetch_or –  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or –  
  Provede bitové `or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -461,7 +462,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_or` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `or` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="atomic_fetch_or_explicit"></a>atomic_fetch_or_explicit –  
+##  <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit  
  Provede bitové `or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -494,7 +495,7 @@ inline T atomic_fetch_or_explicit(
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_or_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `or` z `Value` a aktuální hodnotu, která je uložená v `Atom`, uvnitř [memory_ pořadí](../standard-library/atomic-enums.md#memory_order_enum) omezení určeného `Order`.  
   
-##  <a name="atomic_fetch_sub"></a>atomic_fetch_sub –  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub  
  Odečte hodnotu od stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -531,7 +532,7 @@ integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="atomic_fetch_sub_explicit"></a>atomic_fetch_sub_explicit –  
+##  <a name="atomic_fetch_sub_explicit"></a>  atomic_fetch_sub_explicit  
  Odečte hodnotu od stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -576,7 +577,7 @@ integral atomic_fetch_sub_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="atomic_fetch_xor"></a>atomic_fetch_xor –  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor –  
  Provede bitové `exclusive or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -600,7 +601,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_xor` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `exclusive or` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="atomic_fetch_xor_explicit"></a>atomic_fetch_xor_explicit –  
+##  <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit  
  Provede bitové `exclusive or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.  
   
 ```
@@ -633,7 +634,7 @@ inline T atomic_fetch_xor_explicit(
 ### <a name="remarks"></a>Poznámky  
  `atomic_fetch_xor_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `exclusive or` z `Value` a aktuální hodnotu, která je uložená v `Atom`, uvnitř [memory_ pořadí](../standard-library/atomic-enums.md#memory_order_enum) omezení, které jsou určené `Order`.  
   
-##  <a name="atomic_flag_clear"></a>atomic_flag_clear –  
+##  <a name="atomic_flag_clear"></a>  atomic_flag_clear –  
  Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `false`, uvnitř `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
 ```
@@ -645,7 +646,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
  `Flag`  
  Ukazatel na `atomic_flag` objektu.  
   
-##  <a name="atomic_flag_clear_explicit"></a>atomic_flag_clear_explicit –  
+##  <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit  
  Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `false`, v rámci zadaného [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.  
   
 ```
@@ -660,7 +661,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
  `Order`  
  A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="atomic_flag_test_and_set"></a>atomic_flag_test_and_set –  
+##  <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set  
  Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `true`, v rámci omezení `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
 ```
@@ -675,7 +676,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ### <a name="return-value"></a>Návratová hodnota  
  Počáteční hodnota `Flag`.  
   
-##  <a name="atomic_flag_test_and_set_explicit"></a>atomic_flag_test_and_set_explicit –  
+##  <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit  
  Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `true`, v rámci zadaného [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.  
   
 ```
@@ -693,7 +694,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 ### <a name="return-value"></a>Návratová hodnota  
  Počáteční hodnota `Flag`.  
   
-##  <a name="atomic_init"></a>atomic_init –  
+##  <a name="atomic_init"></a>  atomic_init –  
  Nastaví hodnotu uloženou v `atomic` objektu.  
   
 ```
@@ -711,9 +712,9 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
  Hodnotu typu `Ty`.  
   
 ### <a name="remarks"></a>Poznámky  
- `atomic_init`není atomické operace. Není bezpečné pro přístup z více vláken.  
+ `atomic_init` není atomické operace. Není bezpečné pro přístup z více vláken.  
   
-##  <a name="atomic_is_lock_free"></a>atomic_is_lock_free –  
+##  <a name="atomic_is_lock_free"></a>  atomic_is_lock_free –  
  Určuje, zda atomické operací na `atomic` objekty *uvolnění zámku*.  
   
 ```
@@ -728,12 +729,12 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
  Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud atomické operací na `Atom` jsou bez uzamčení, jinak hodnota `false`.  
+ `true` Pokud atomické operací na `Atom` jsou bez uzamčení, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Atomic typ zámku bez Pokud žádné atomické operací na daný typ používat zámky. Pokud funkce vrátí hodnotu true, typ je bezpečné pro použití v signál-obslužné rutiny.  
   
-##  <a name="atomic_load"></a>atomic_load –  
+##  <a name="atomic_load"></a>  atomic_load –  
  Načte hodnotu uloženou v `atomic` objektu.  
   
 ```
@@ -751,9 +752,9 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
  Načtené hodnoty, které jsou uloženy v `Atom`.  
   
 ### <a name="remarks"></a>Poznámky  
- `atomic_load`implicitně používá `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
+ `atomic_load` implicitně používá `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="atomic_load_explicit"></a>atomic_load_explicit –  
+##  <a name="atomic_load_explicit"></a>  atomic_load_explicit –  
  Načte hodnotu uloženou v `atomic` objekt, v rámci zadané [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).  
   
 ```
@@ -773,7 +774,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 ### <a name="return-value"></a>Návratová hodnota  
  Načtené hodnoty, které jsou uloženy v `Atom`.  
   
-##  <a name="atomic_signal_fence"></a>atomic_signal_fence –  
+##  <a name="atomic_signal_fence"></a>  atomic_signal_fence  
  Funguje jako *ochranná*– tedy paměti synchronizaci primitivní který vynucuje řazení mezi operacemi zatížení nebo úložiště – mezi ostatní ochranné volající vlákno, které mají signál obslužné rutiny, které jsou spouštěny ve stejném vlákně.  
   
 ```
@@ -796,7 +797,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|Ochranná představuje získání ochranná a ochranná verze.|  
 |`memory_order_seq_cst`|Ohraničení je získání ochranná i ochranná verze a postupně konzistentní.|  
   
-##  <a name="atomic_store"></a>atomic_store –  
+##  <a name="atomic_store"></a>  atomic_store –  
  Atomicky ukládá hodnotu v atomic objektu.  
   
 ```
@@ -814,9 +815,9 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
  Hodnotu typu `Ty`.  
   
 ### <a name="remarks"></a>Poznámky  
- `atomic_store`ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.  
+ `atomic_store` ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.  
   
-##  <a name="atomic_store_explicit"></a>atomic_store_explicit –  
+##  <a name="atomic_store_explicit"></a>  atomic_store_explicit –  
  Atomicky ukládá hodnotu v atomic objektu.  
   
 ```
@@ -844,9 +845,9 @@ inline Ty atomic_store_explicit(
  A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.  
   
 ### <a name="remarks"></a>Poznámky  
- `atomic_store`ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order` , který je určen podle `Order`.  
+ `atomic_store` ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order` , který je určen podle `Order`.  
   
-##  <a name="atomic_thread_fence"></a>atomic_thread_fence –  
+##  <a name="atomic_thread_fence"></a>  atomic_thread_fence –  
  Funguje jako *ochranná*– tedy paměti synchronizaci primitivní který vynucuje řazení mezi operacemi zatížení nebo úložiště – bez přidružených atomické operace.  
   
 ```
@@ -869,7 +870,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|Ochranná představuje získání ochranná a ochranná verze.|  
 |`memory_order_seq_cst`|Ohraničení je získání ochranná i ochranná verze a postupně konzistentní.|  
   
-##  <a name="kill_dependency"></a>kill_dependency –  
+##  <a name="kill_dependency"></a>  kill_dependency –  
  Odebere závislost.  
   
 ```

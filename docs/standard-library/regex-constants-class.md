@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
 - regex/std::regex_constants::error_collate
@@ -47,7 +48,8 @@ f1_keywords:
 - regex/std::regex_constants::nosubs
 - regex/std::regex_constants::optimize
 - regex/std::regex_constants::collate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::regex_constants [C++]
 - std::regex_constants [C++], error_collate
@@ -89,16 +91,17 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df0e2b795b7ba19b4981ae3caecd1d14f36e11e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants – třída
 Obor názvů pro příznaky regulárního výrazu  
@@ -121,7 +124,7 @@ namespace regex_constants {
   
  **Namespace:** – std  
   
-##  <a name="error_type"></a>regex_constants::error_type  
+##  <a name="error_type"></a>  regex_constants::error_type  
  Příznaky pro zasílání zpráv o chybách syntaxi regulárního výrazu.  
   
 ```  
@@ -148,39 +151,39 @@ enum error_type
 ### <a name="remarks"></a>Poznámky  
  Typ je výčtového typu, která popisuje objekt, který můžou obsahovat příznaky chyby. Příznak odlišné hodnoty jsou:  
   
- `error_backref`--výraz obsahovala neplatný odkaz na pozadí  
+ `error_backref` --výraz obsahovala neplatný odkaz na pozadí  
   
- `error_badbrace`--výraz obsažené neplatný počet ve výrazu {}  
+ `error_badbrace` --výraz obsažené neplatný počet ve výrazu {}  
   
- `error_badrepeat`– výraz opakování (jeden z ' *', '', '+', ' {' ve většině případů,) nebyla před sebou výrazu  
+ `error_badrepeat` – výraz opakování (jeden z ' *', '', '+', ' {' ve většině případů,) nebyla před sebou výrazu  
   
- `error_brace`--výraz obsažené neodpovídajícím ' {' nebo '}'  
+ `error_brace` --výraz obsažené neodpovídajícím ' {' nebo '}'  
   
- `error_brack`--výraz obsažené neodpovídajícím ' [' nebo ']'  
+ `error_brack` --výraz obsažené neodpovídajícím ' [' nebo ']'  
   
- `error_collate`--výraz obsahovala neplatný název elementu řazení  
+ `error_collate` --výraz obsahovala neplatný název elementu řazení  
   
- `error_complexity`--Pokus o shody se nezdařila, protože byl příliš složitý.  
+ `error_complexity` --Pokus o shody se nezdařila, protože byl příliš složitý.  
   
- `error_ctype`--výraz obsažené název neplatný znak – třída  
+ `error_ctype` --výraz obsažené název neplatný znak – třída  
   
- `error_escape`--výraz obsažené neplatná řídicí sekvence  
+ `error_escape` --výraz obsažené neplatná řídicí sekvence  
   
- `error_paren`--výraz obsažené neodpovídajícím '(' nebo').  
+ `error_paren` --výraz obsažené neodpovídajícím '(' nebo').  
   
- `error_parse`– výrazu se nezdařila  
+ `error_parse` – výrazu se nezdařila  
   
- `error_range`--výraz obsažené specifikátor rozsah neplatný znak  
+ `error_range` --výraz obsažené specifikátor rozsah neplatný znak  
   
- `error_space`--Analýza regulární výraz se nezdařila, protože nebyly dostatek prostředků k dispozici  
+ `error_space` --Analýza regulární výraz se nezdařila, protože nebyly dostatek prostředků k dispozici  
   
- `error_stack`--Pokus o shody se nezdařila, protože nebyl k dispozici dostatek paměti k dispozici  
+ `error_stack` --Pokus o shody se nezdařila, protože nebyl k dispozici dostatek paměti k dispozici  
   
- `error_syntax`--Analýza na chybu syntaxe se nezdařila.  
+ `error_syntax` --Analýza na chybu syntaxe se nezdařila.  
   
- `error_backref`--výraz obsahovala neplatný odkaz na pozadí  
+ `error_backref` --výraz obsahovala neplatný odkaz na pozadí  
   
-##  <a name="match_flag_type"></a>regex_constants::match_flag_type  
+##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
  Příznaky pro regulární výraz odpovídající možnosti.  
   
 ```  
@@ -210,33 +213,33 @@ enum match_flag_type
   
  `match_default`  
   
- `match_not_bol`--není považovat za první pozici v pořadí cíl začátek řádku  
+ `match_not_bol` --není považovat za první pozici v pořadí cíl začátek řádku  
   
- `match_not_eol`--pozice minulosti the-end v pořadí cíl není považovat za konec řádku  
+ `match_not_eol` --pozice minulosti the-end v pořadí cíl není považovat za konec řádku  
   
- `match_not_bow`--není považovat za první pozici v pořadí cíl začátku slova  
+ `match_not_bow` --není považovat za první pozici v pořadí cíl začátku slova  
   
- `match_not_eow`--není považovat za pozice minulosti the-end v pořadí target konci slova  
+ `match_not_eow` --není považovat za pozice minulosti the-end v pořadí target konci slova  
   
- `match_any`– Pokud více než jednu shodu je možné je přijatelné všechny shody  
+ `match_any` – Pokud více než jednu shodu je možné je přijatelné všechny shody  
   
- `match_not_null`--nebude pracovat s prázdnou dalším jako shoda  
+ `match_not_null` --nebude pracovat s prázdnou dalším jako shoda  
   
- `match_continuous`--Nevyhledávat odpovídá jinak než na začátek pořadí cíl  
+ `match_continuous` --Nevyhledávat odpovídá jinak než na začátek pořadí cíl  
   
- `match_prev_avail` -- `--first`je platné iterator; Ignorovat `match_not_bol` a `match_not_bow` -li nastavit  
+ `match_prev_avail` -- `--first` je platné iterator; Ignorovat `match_not_bol` a `match_not_bow` -li nastavit  
   
  Formát příznaky jsou:  
   
- `format_default`– pomocí pravidel ECMAScript formátu  
+ `format_default` – pomocí pravidel ECMAScript formátu  
   
- `format_sed`– pomocí pravidel menšit formátu  
+ `format_sed` – pomocí pravidel menšit formátu  
   
- `format_no_copy`--Nekopírovat text, který se neshoduje s regulárním výrazem  
+ `format_no_copy` --Nekopírovat text, který se neshoduje s regulárním výrazem  
   
- `format_first_only`--Nevyhledávat odpovídá po první  
+ `format_first_only` --Nevyhledávat odpovídá po první  
   
-##  <a name="syntax_option_type"></a>regex_constants::syntax_option_type  
+##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
  Příznaky pro výběr možnosti syntaxe.  
   
 ```  
@@ -262,30 +265,30 @@ enum syntax_option_type
   
  Specifikátory jazyk jsou:  
   
- `ECMAScript`--zkompilovat jako ECMAScript  
+ `ECMAScript` --zkompilovat jako ECMAScript  
   
- `basic`--zkompilovat jako BRE  
+ `basic` --zkompilovat jako BRE  
   
- `extended`--zkompilovat jako ERE  
+ `extended` --zkompilovat jako ERE  
   
- `awk`--zkompilovat jako awk  
+ `awk` --zkompilovat jako awk  
   
- `grep`--zkompilovat jako grep  
+ `grep` --zkompilovat jako grep  
   
- `egrep`--zkompilovat jako egrep  
+ `egrep` --zkompilovat jako egrep  
   
  Modifikátory syntaxe je:  
   
- `icase`– Zkontrolujte odpovídá velká a malá písmena  
+ `icase` – Zkontrolujte odpovídá velká a malá písmena  
   
- `nosubs`– implementaton nemusí udržování přehledu o obsah zachycení skupiny  
+ `nosubs` – implementaton nemusí udržování přehledu o obsah zachycení skupiny  
   
- `optimize`– implementace by měl zdůraznil rychlost odpovídajících spíš než rychlosti kompilace regulárních výrazů  
+ `optimize` – implementace by měl zdůraznil rychlost odpovídajících spíš než rychlosti kompilace regulárních výrazů  
   
- `collate`– Zkontrolujte odpovídá konkrétní národní prostředí  
+ `collate` – Zkontrolujte odpovídá konkrétní národní prostředí  
   
 ## <a name="see-also"></a>Viz také  
-[\<regulární výraz >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_error – třída](../standard-library/regex-error-class.md)  
 [\<regulární výraz > funkce](../standard-library/regex-functions.md)  
 [regex_iterator – třída](../standard-library/regex-iterator-class.md)  

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <fstream>
-dev_langs: C++
-helpviewer_keywords: fstream header
+ms.topic: reference
+f1_keywords:
+- <fstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d41719c7ff7ce2d7a906395ed65b891e2583bac8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e479caecbca33a19854f6800a037eb093d0b2f5a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 Definuje několik tříd, které podporují operace iostreams v pořadí, které jsou uložené v externích souborů.  
@@ -49,10 +54,10 @@ Definuje několik tříd, které podporují operace iostreams v pořadí, které
   
 |||  
 |-|-|  
-|[basic_filebuf –](../standard-library/basic-filebuf-class.md)|Šablony třídy popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, do a z pořadí elementů uložená v externí soubor.|  
-|[basic_fstream –](../standard-library/basic-fstream-class.md)|Šablony třídy popisuje objekt, který řídí vložení a extrakce elementů a kódovaného objekty pomocí datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
-|[basic_ifstream –](../standard-library/basic-ifstream-class.md)|Šablony třídy popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
-|[basic_ofstream –](../standard-library/basic-ofstream-class.md)|Šablony třídy popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Šablony třídy popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, do a z pořadí elementů uložená v externí soubor.|  
+|[basic_fstream](../standard-library/basic-fstream-class.md)|Šablony třídy popisuje objekt, který řídí vložení a extrakce elementů a kódovaného objekty pomocí datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Šablony třídy popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Šablony třídy popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   

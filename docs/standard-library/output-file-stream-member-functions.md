@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output streams [C++], member functions
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: df21f473659577a7175b6a44033ee4d19fb28fee
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="output-file-stream-member-functions"></a>Členské funkce datového proudu výstupního souboru
 Členské funkce datového proudu výstupního mít tři typy: ty, které odpovídají manipulátory, takové, které provádějí neformátovaný operací zápisu, a ty, které jinak změnit datový proud stavu a mít žádná ekvivalentní manipulator nebo operátor vložení. Pro sekvenční, formátovaný výstup můžete použít pouze operátorů insertion a manipulátory. Pro výstup disku binární náhodný přístup použijte jiné členské funkce s nebo bez operátorů insertion.  
@@ -107,17 +111,17 @@ int main( )
   
  Výstupní datový proud destruktoru automaticky zavře datový proud souboru pouze v případě konstruktoru nebo **otevřete** – členská funkce Otevřít soubor. Pokud předáte konstruktoru popisovač souboru pro soubor už otevřený, nebo použijte **připojit** – členská funkce, je třeba nejprve zavřít soubor explicitně.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a>Chyba zpracování funkce  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Chyba zpracování funkce  
  Pomocí těchto členských funkcí testování chyb při zápisu do datového proudu:  
   
 |Funkce|Návratová hodnota|  
 |--------------|------------------|  
-|[Špatné](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|  
-|[selhání](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Vrátí **true** Pokud dojde k neodstranitelné chybě nebo podmínku "očekávané", jako je Chyba převodu, nebo pokud soubor nebyl nalezen. Zpracování můžete často obnovit po volání **vymazat** s argumentem nula.|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|  
+|[Selhání](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Vrátí **true** Pokud dojde k neodstranitelné chybě nebo podmínku "očekávané", jako je Chyba převodu, nebo pokud soubor nebyl nalezen. Zpracování můžete často obnovit po volání **vymazat** s argumentem nula.|  
 |[Dobré](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Vrátí **true** Pokud není žádná chybová podmínka (neopravitelné nebo jinak) a není nastaven příznak end souboru.|  
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Vrátí **true** na podmínky end souboru.|  
-|[Vymazat](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Nastaví stav vnitřní chybě. Pokud je volána s výchozí argumenty, vymaže všechny chyby služby bits.|  
-|[rdstate –](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Vrátí aktuální chybový stav.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Nastaví stav vnitřní chybě. Pokud je volána s výchozí argumenty, vymaže všechny chyby služby bits.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Vrátí aktuální chybový stav.|  
   
  **!** operátor je přetížena provést totéž, jako **nezdaří** funkce. Proto výraz:  
   

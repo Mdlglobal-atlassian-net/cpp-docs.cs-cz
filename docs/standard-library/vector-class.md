@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -49,7 +50,8 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::vector [C++], allocator_type
 - std::vector [C++], const_iterator
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15fca6437626b09ee2995f9afe268f44a5f4b34f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vector-class"></a>vector – třída
 Vector – třída standardní knihovna C++ je třída šablony pořadí kontejnerů, které umožňuje uspořádat prvky daného typu v lineární uspořádání a povolit vysoká rychlost náhodného přístup k libovolného elementu. Měly by být upřednostňované kontejneru pro pořadí, když výkonu náhodný přístup premium.  
@@ -115,11 +118,11 @@ class vector
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Datový typ elementu k uložení do vektoru  
   
  `Allocator`  
- Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o vektoru přidělení a zrušení přidělení paměti. Tento argument je volitelný a výchozí hodnota je **allocator***\<typ >.*  
+ Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o vektoru přidělení a zrušení přidělení paměti. Tento argument je volitelný a výchozí hodnota je **allocator ***\<typ >.*  
   
 ## <a name="remarks"></a>Poznámky  
  Vektory povolí vložení konstantní čas a odstranění na konci pořadí. Vložením či odstraněním elementy uprostřed vektor vyžaduje lineární času. Výkon [deque – třída](../standard-library/deque-class.md) kontejner je nadřízená s ohledem na vložení a odstranění na začátku a konci sekvenci. [List – třída](../standard-library/list-class.md) kontejner je nadřízená s ohledem na vložení a odstranění v libovolném umístění v rámci posloupnosti.  
@@ -142,66 +145,66 @@ class vector
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typ, který reprezentuje `allocator` tříd pro objekt vektoru.|  
-|[const_iterator –](#const_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst `const` element v vektor.|  
-|[const_pointer –](#const_pointer)|Typ, který poskytuje odkazy `const` element v vektor.|  
-|[const_reference –](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v vektor pro čtení a provádění `const` operace.|  
-|[const_reverse_iterator –](#const_reverse_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst všechny `const` element v vektoru.|  
-|[difference_type –](#difference_type)|Typ, který poskytuje rozdíl mezi adresy dva elementy v objektu vector.|  
+|[allocator_type](#allocator_type)|Typ, který reprezentuje `allocator` tříd pro objekt vektoru.|  
+|[const_iterator](#const_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst `const` element v vektor.|  
+|[const_pointer](#const_pointer)|Typ, který poskytuje odkazy `const` element v vektor.|  
+|[const_reference](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v vektor pro čtení a provádění `const` operace.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst všechny `const` element v vektoru.|  
+|[difference_type](#difference_type)|Typ, který poskytuje rozdíl mezi adresy dva elementy v objektu vector.|  
 |[iterator](#iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v vektor.|  
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v vektor.|  
-|[referenční dokumentace](#reference)|Typ, který obsahuje odkaz na element uložené v vektor.|  
-|[reverse_iterator –](#reverse_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v invertovaných vektoru.|  
-|[size_type –](#size_type)|Typ, který udává počet elementů v vektor.|  
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v vektor.|  
+|[reference](#reference)|Typ, který obsahuje odkaz na element uložené v vektor.|  
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v invertovaných vektoru.|  
+|[size_type](#size_type)|Typ, který udává počet elementů v vektor.|  
 |[value_type](#value_type)|Typ, který představuje typ data uložená v vektor.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[přiřazení](#assign)|Vymaže vektor a zkopíruje zadaných elementů prázdný vektoru.|  
-|[v](#at)|Vrátí odkaz na element v zadaném umístění v vektoru.|  
+|[assign](#assign)|Vymaže vektor a zkopíruje zadaných elementů prázdný vektoru.|  
+|[at](#at)|Vrátí odkaz na element v zadaném umístění v vektoru.|  
 |[zpět](#back)|Vrátí odkaz na posledním elementem vektoru.|  
-|[začít](#begin)|Vrátí první prvek v vektoru iterator náhodný přístup.|  
-|[kapacita](#capacity)|Vrátí počet prvků, které by mohly obsahovat vektoru bez přidělení další úložiště.|  
-|[cbegin –](#cbegin)|Vrátí první prvek v vektoru const iterator náhodným přístupem.|  
+|[Začátek](#begin)|Vrátí první prvek v vektoru iterator náhodný přístup.|  
+|[capacity](#capacity)|Vrátí počet prvků, které by mohly obsahovat vektoru bez přidělení další úložiště.|  
+|[cbegin](#cbegin)|Vrátí první prvek v vektoru const iterator náhodným přístupem.|  
 |[cend –](#cend)|Vrátí const iterator náhodným přístupem této body právě přesahuje za konec vektoru.|  
-|[crbegin –](#crbegin)|Vrátí const iterator prvním elementem v invertovaných vektoru.|  
+|[crbegin](#crbegin)|Vrátí const iterator prvním elementem v invertovaných vektoru.|  
 |[crend –](#crend)|Vrátí const iterator na konec odstínech vektoru.|  
-|[Vymazat](#clear)|Vymaže elementy vektoru.|  
+|[clear](#clear)|Vymaže elementy vektoru.|  
 |[data](#data)|Vrací ukazatel na prvním elementem v vektoru.|  
 |[emplace –](#emplace)|Vloží element sestavený na místě do vektoru na zadané pozici.|  
-|[emplace_back –](#emplace_back)|Přidá element v místě na konec vektoru zkonstruovat.|  
+|[emplace_back](#emplace_back)|Přidá element v místě na konec vektoru zkonstruovat.|  
 |[prázdný](#empty)|Testy, pokud kontejneru vektoru je prázdný.|  
-|[end](#end)|Vrátí iterator náhodný přístup, který odkazuje na konec vektoru.|  
+|[End](#end)|Vrátí iterator náhodný přístup, který odkazuje na konec vektoru.|  
 |[vymazání](#erase)|Odebere element nebo rozsah elementů u funkce vector ze zadaných pozic.|  
-|[přední](#front)|Vrátí odkaz na prvním elementem v vektor.|  
-|[get_allocator –](#get_allocator)|Vrátí objekt tak, aby `allocator` třídy používané vektor.|  
-|[Vložení](#insert)|Vloží elementu nebo počet elementů do vektoru na zadané pozici.|  
-|[max_size –](#max_size)|Vrátí maximální délku vektoru.|  
-|[pop_back –](#pop_back)|Odstraní prvek na konec vektoru.|  
-|[push_back –](#push_back)|Přidáte element do konce vektoru.|  
-|[rbegin –](#rbegin)|Vrátí iterovat prvním elementem v invertovaných vektoru.|  
+|[Přední](#front)|Vrátí odkaz na prvním elementem v vektor.|  
+|[get_allocator](#get_allocator)|Vrátí objekt tak, aby `allocator` třídy používané vektor.|  
+|[insert](#insert)|Vloží elementu nebo počet elementů do vektoru na zadané pozici.|  
+|[max_size](#max_size)|Vrátí maximální délku vektoru.|  
+|[pop_back](#pop_back)|Odstraní prvek na konec vektoru.|  
+|[push_back](#push_back)|Přidáte element do konce vektoru.|  
+|[rbegin](#rbegin)|Vrátí iterovat prvním elementem v invertovaných vektoru.|  
 |[rend –](#rend)|Vrátí iterator na konec odstínech vektoru.|  
-|[Rezervovat](#reserve)|Si vyhrazuje minimální délku úložiště pro objekt vektoru.|  
-|[Změna velikosti](#resize)|Určuje novou velikost vektor.|  
-|[shrink_to_fit –](#shrink_to_fit)|Zahození přebytečnou kapacitou.|  
-|[velikost](#size)|Vrátí počet prvků v vektoru.|  
+|[reserve](#reserve)|Si vyhrazuje minimální délku úložiště pro objekt vektoru.|  
+|[resize](#resize)|Určuje novou velikost vektor.|  
+|[shrink_to_fit](#shrink_to_fit)|Zahození přebytečnou kapacitou.|  
+|[Velikost](#size)|Vrátí počet prvků v vektoru.|  
 |[swap](#swap)|Výměny elementy dvěma způsoby.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor &#91; &#93;](#op_at)|Vrátí odkaz na prvek vektoru na určené pozici.|  
-|[operátor =](#op_eq)|Nahradí elementy vektoru kopii jiným způsobem.|  
+|[operator&#91;&#93;](#op_at)|Vrátí odkaz na prvek vektoru na určené pozici.|  
+|[operator=](#op_eq)|Nahradí elementy vektoru kopii jiným způsobem.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<vektoru >  
   
  **Namespace:** – std  
   
-##  <a name="allocator_type"></a>Vector::allocator_type  
+##  <a name="allocator_type"></a>  Vector::allocator_type  
  Typ, který reprezentuje allocator – třída objektu vektoru.  
   
 ```  
@@ -209,12 +212,12 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `allocator_type`je synonymum pro parametr šablony **přidělení.**  
+ `allocator_type` je synonymum pro parametr šablony **přidělení.**  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_allocator –](#get_allocator) pro příklad, který používá `allocator_type`.  
   
-##  <a name="assign"></a>Vector::Assign  
+##  <a name="assign"></a>  Vector::Assign  
  Vymaže vektor a zkopíruje zadaných elementů prázdný vektoru.  
   
 ```  
@@ -292,7 +295,7 @@ int main()
   
 ```  
   
-##  <a name="at"></a>Vector::AT  
+##  <a name="at"></a>  Vector::AT  
  Vrátí odkaz na element v zadaném umístění v vektoru.  
   
 ```  
@@ -339,7 +342,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="back"></a>Vector::back  
+##  <a name="back"></a>  Vector::back  
  Vrátí odkaz na posledním elementem vektoru.  
   
 ```  
@@ -380,7 +383,7 @@ int main() {
 }  
 ```  
   
-##  <a name="begin"></a>Vector::begin  
+##  <a name="begin"></a>  Vector::begin  
  Vrátí první prvek v vektoru iterator náhodný přístup.  
   
 ```  
@@ -441,7 +444,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2  
 ```  
   
-##  <a name="capacity"></a>Vector::Capacity  
+##  <a name="capacity"></a>  Vector::Capacity  
  Vrátí počet prvků, které by mohly obsahovat vektoru bez přidělení další úložiště.  
   
 ```  
@@ -482,7 +485,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.  
 ```  
   
-##  <a name="cbegin"></a>Vector::cbegin  
+##  <a name="cbegin"></a>  Vector::cbegin  
  Vrátí `const` iterator, která řeší prvním elementem v rozsahu.  
   
 ```  
@@ -505,7 +508,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>Vector::cend  
+##  <a name="cend"></a>  Vector::cend  
  Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.  
   
 ```  
@@ -516,7 +519,7 @@ const_iterator cend() const;
  A `const` iterator náhodný přístup, který odkazuje právě přesahuje za konec rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
- `cend`slouží k ověření, zda iterovat uplynutí konec její rozsah.  
+ `cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.  
   
  Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.  
   
@@ -530,7 +533,7 @@ auto i2 = Container.cend();
   
  Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
   
-##  <a name="clear"></a>Vector::clear  
+##  <a name="clear"></a>  Vector::clear  
  Vymaže elementy vektoru.  
   
 ```  
@@ -565,7 +568,7 @@ The size of v1 is 3
 The size of v1 after clearing is 0  
 ```  
   
-##  <a name="const_iterator"></a>Vector::const_iterator  
+##  <a name="const_iterator"></a>  Vector::const_iterator  
  Typ, který poskytuje iterator náhodný přístup, který může číst **const** element v vektor.  
   
 ```  
@@ -578,7 +581,7 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [zpět](#back) pro příklad, který používá `const_iterator`.  
   
-##  <a name="const_pointer"></a>Vector::const_pointer  
+##  <a name="const_pointer"></a>  Vector::const_pointer  
  Typ, který poskytuje odkazy **const** element v vektor.  
   
 ```  
@@ -590,7 +593,7 @@ typedef typename Allocator::const_pointer const_pointer;
   
  [Iterator](#iterator) se běžně používá pro přístup vektoru elementu.  
   
-##  <a name="const_reference"></a>Vector::const_reference  
+##  <a name="const_reference"></a>  Vector::const_reference  
  Typ, který obsahuje odkaz na **const** element uložené v vektor pro čtení a provádění **const** operace.  
   
 ```  
@@ -632,7 +635,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="const_reverse_iterator"></a>Vector::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  Vector::const_reverse_iterator  
  Typ, který poskytuje iterator náhodný přístup, který může číst všechny **const** element v vektoru.  
   
 ```  
@@ -645,7 +648,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>Příklad  
   V tématu [rbegin –](#rbegin) příklad toho, jak deklarace a pomocí iterace.  
   
-##  <a name="crbegin"></a>Vector::crbegin  
+##  <a name="crbegin"></a>  Vector::crbegin  
  Vrátí const iterator prvním elementem v invertovaných vektoru.  
   
 ```  
@@ -691,7 +694,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.  
 ```  
   
-##  <a name="crend"></a>Vector::crend  
+##  <a name="crend"></a>  Vector::crend  
  Vrátí const iterator, která řeší umístění úspěšné posledním prvkem v invertovaných vektoru.  
   
 ```  
@@ -702,11 +705,11 @@ const_reverse_iterator crend() const;
  Const reverse iterator náhodný přístup, která řeší umístění úspěšné posledním prvkem v odstínech [vektoru](../standard-library/vector-class.md) (umístění, které měl před prvním elementem v unreversed `vector`).  
   
 ### <a name="remarks"></a>Poznámky  
- `crend`se používá s odstínech `vector` stejně jako [vector::cend](#cend) se používá s `vector`.  
+ `crend` se používá s odstínech `vector` stejně jako [vector::cend](#cend) se používá s `vector`.  
   
  S návratovou hodnotou `crend` (vhodně odečte), `vector` objekt nelze změnit.  
   
- `crend`můžete použít k testování na tom, jestli má zpětné iterator dosáhla konce jeho `vector`.  
+ `crend` můžete použít k testování na tom, jestli má zpětné iterator dosáhla konce jeho `vector`.  
   
  Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.  
   
@@ -737,7 +740,7 @@ int main( )
 1  
 ```  
   
-##  <a name="data"></a>Vector::data  
+##  <a name="data"></a>  Vector::data  
  Vrací ukazatel na prvním elementem v vektoru.  
   
 ```  
@@ -792,7 +795,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2  
 ```  
   
-##  <a name="difference_type"></a>Vector::difference_type  
+##  <a name="difference_type"></a>  Vector::difference_type  
  Typ, který poskytuje rozdíl mezi dvěma iterátory, které odkazují na elementů v rámci stejné vektoru.  
   
 ```  
@@ -847,7 +850,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.  
 ```  
   
-##  <a name="emplace"></a>Vector::emplace  
+##  <a name="emplace"></a>  Vector::emplace  
  Vloží element sestavený na místě do vektoru na zadané pozici.  
   
 ```  
@@ -912,7 +915,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30  
 ```  
   
-##  <a name="emplace_back"></a>Vector::emplace_back  
+##  <a name="emplace_back"></a>  Vector::emplace_back  
  Přidá element v místě na konec vektoru zkonstruovat.  
   
 ```  
@@ -943,7 +946,7 @@ int main()
   
 ```  
   
-##  <a name="empty"></a>Vector::Empty  
+##  <a name="empty"></a>  Vector::Empty  
  Testy, pokud vektoru je prázdný.  
   
 ```  
@@ -979,7 +982,7 @@ int main( )
 The vector is not empty.  
 ```  
   
-##  <a name="end"></a>Vector::end  
+##  <a name="end"></a>  Vector::end  
  Vrátí iterátor za koncem.  
   
 ```  
@@ -1020,7 +1023,7 @@ int main( )
 2  
 ```  
   
-##  <a name="erase"></a>Vector::Erase  
+##  <a name="erase"></a>  Vector::Erase  
  Odebere element nebo rozsah elementů u funkce vector ze zadaných pozic.  
   
 ```  
@@ -1089,7 +1092,7 @@ v1 = 20 30 40 50
 v1 = 20 50  
 ```  
   
-##  <a name="front"></a>Vector::front  
+##  <a name="front"></a>  Vector::front  
  Vrátí odkaz na prvním elementem v vektor.  
   
 ```  
@@ -1132,7 +1135,7 @@ int main( )
 }  
 ```  
   
-##  <a name="get_allocator"></a>Vector::get_allocator  
+##  <a name="get_allocator"></a>  Vector::get_allocator  
  Vrátí kopii allocator objekt použitý k vytvoření vektoru.  
   
 ```  
@@ -1168,7 +1171,7 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>Vector::Insert  
+##  <a name="insert"></a>  Vector::Insert  
  Vloží elementu nebo počet elementů nebo rozsah elementů do vektoru na zadané pozici.  
   
 ```  
@@ -1273,7 +1276,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30  
 ```  
   
-##  <a name="iterator"></a>Vector::iterator  
+##  <a name="iterator"></a>  Vector::iterator  
  Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v vektor.  
   
 ```  
@@ -1286,7 +1289,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin).  
   
-##  <a name="max_size"></a>Vector::max_size  
+##  <a name="max_size"></a>  Vector::max_size  
  Vrátí maximální délku vektoru.  
   
 ```  
@@ -1315,7 +1318,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_at"></a>Vector::Operator]  
+##  <a name="op_at"></a>  Vector::Operator]  
  Vrátí odkaz na prvek vektoru na určené pozici.  
   
 ```  
@@ -1360,7 +1363,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>Vector::Operator =  
+##  <a name="op_eq"></a>  Vector::Operator =  
  Nahradí elementy vektoru kopii jiným způsobem.  
   
 ```  
@@ -1420,7 +1423,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>Vector::Pointer  
+##  <a name="pointer"></a>  Vector::Pointer  
  Typ, který poskytuje ukazatel na prvek v vektor.  
   
 ```  
@@ -1460,7 +1463,7 @@ int main( )
 44  
 ```  
   
-##  <a name="pop_back"></a>Vector::pop_back  
+##  <a name="pop_back"></a>  Vector::pop_back  
  Odstraní prvek na konec vektoru.  
   
 ```  
@@ -1470,7 +1473,7 @@ void pop_back();
 ### <a name="remarks"></a>Poznámky  
  Příklad kódu, najdete v části [vector:: push_back()](#push_back).  
   
-##  <a name="push_back"></a>Vector::push_back  
+##  <a name="push_back"></a>  Vector::push_back  
  Přidá prvek na konec vektoru.  
   
 ```  
@@ -1524,7 +1527,7 @@ int main()
 }  
 ```  
   
-##  <a name="rbegin"></a>Vector::rbegin  
+##  <a name="rbegin"></a>  Vector::rbegin  
  Vrátí iterovat prvním elementem v invertovaných vektoru.  
   
 ```  
@@ -1571,7 +1574,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.  
 ```  
   
-##  <a name="reference"></a>Vector::Reference  
+##  <a name="reference"></a>  Vector::Reference  
  Typ, který obsahuje odkaz na element uložené v vektor.  
   
 ```  
@@ -1581,7 +1584,7 @@ typedef typename Allocator::reference reference;
 ### <a name="example"></a>Příklad  
   Najdete v části [v](#at) příklad použití **odkaz** ve třídě vektoru.  
   
-##  <a name="rend"></a>Vector::rend  
+##  <a name="rend"></a>  Vector::rend  
  Vrátí iterátor, který řeší umístění úspěšné posledním prvkem v invertovaných vektoru.  
   
 ```  
@@ -1593,11 +1596,11 @@ reverse_iterator rend();
  Zpětné iterator náhodný přístup, která řeší umístění úspěšné posledním prvkem v invertovaných vektoru (umístění, které měl před prvním elementem v unreversed vektoru).  
   
 ### <a name="remarks"></a>Poznámky  
- `rend`se používá s odstínech vektoru stejně jako [end](#end) se používá s vektor.  
+ `rend` se používá s odstínech vektoru stejně jako [end](#end) se používá s vektor.  
   
  Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, pak vektoru objekt nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, pak je možné upravit objekt vektoru.  
   
- `rend`slouží k testování, aby se jestli zpětné iterator dosáhne konce své vektoru.  
+ `rend` slouží k testování, aby se jestli zpětné iterator dosáhne konce své vektoru.  
   
  Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.  
   
@@ -1628,7 +1631,7 @@ int main( )
 1  
 ```  
   
-##  <a name="reserve"></a>Vector::Reserve  
+##  <a name="reserve"></a>  Vector::Reserve  
  Si vyhrazuje minimální délku úložiště pro objekt vector přidělení místa v případě potřeby.  
   
 ```  
@@ -1667,7 +1670,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20  
 ```  
   
-##  <a name="resize"></a>Vector::Resize  
+##  <a name="resize"></a>  Vector::Resize  
  Určuje novou velikost vektor.  
   
 ```  
@@ -1793,7 +1796,7 @@ int main()
 }  
 ```  
   
-##  <a name="reverse_iterator"></a>Vector::reverse_iterator  
+##  <a name="reverse_iterator"></a>  Vector::reverse_iterator  
  Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v invertovaných vektoru.  
   
 ```  
@@ -1806,7 +1809,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [rbegin –](#rbegin).  
   
-##  <a name="shrink_to_fit"></a>Vector::shrink_to_fit  
+##  <a name="shrink_to_fit"></a>  Vector::shrink_to_fit  
  Zahození přebytečnou kapacitou.  
   
 ```  
@@ -1845,7 +1848,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1  
 ```  
   
-##  <a name="size"></a>Vector::size  
+##  <a name="size"></a>  Vector::size  
  Vrátí počet prvků v vektoru.  
   
 ```  
@@ -1884,7 +1887,7 @@ Vector length is 1.
 Vector length is now 2.  
 ```  
   
-##  <a name="size_type"></a>Vector::size_type  
+##  <a name="size_type"></a>  Vector::size_type  
  Typ, který udává počet elementů v vektor.  
   
 ```  
@@ -1894,7 +1897,7 @@ typedef typename Allocator::size_type size_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [kapacity](#capacity).  
   
-##  <a name="swap"></a>Vector::swap  
+##  <a name="swap"></a>  Vector::swap  
  Výměny elementy dvěma způsoby.  
   
 ```  
@@ -1952,7 +1955,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3  
 ```  
   
-##  <a name="value_type"></a>Vector::value_type  
+##  <a name="value_type"></a>  Vector::value_type  
  Typ, který představuje typ data uložená v vektor.  
   
 ```  
@@ -1960,7 +1963,7 @@ typedef typename Allocator::value_type value_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_type`je synonymum pro parametr šablony **typu**.  
+ `value_type` je synonymum pro parametr šablony **typu**.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1983,7 +1986,7 @@ int main( )
 44  
 ```  
   
-##  <a name="vector"></a>Vector::Vector  
+##  <a name="vector"></a>  Vector::Vector  
  Sestaví vektor určité velikosti, s elementy s konkrétní hodnotou, s konkrétním alokátorem nebo jako kopii celého existujícího vektoru nebo jeho části.  
   
 ```  

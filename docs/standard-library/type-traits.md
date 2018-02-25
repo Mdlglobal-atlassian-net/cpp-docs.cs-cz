@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <type_traits>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <type_traits>
+dev_langs:
+- C++
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e0032070e20749a55a34218f7341914bc47501b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 932c30ade2e6aaf1f07c878a0f6ee8960e9c83d8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 Definuje šablony, které poskytují kompilaci konstanty, které poskytují informace o vlastnostech jejich argumenty typu nebo vytvořit transformována typy.  
@@ -63,8 +67,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Díky integrální konstanta z typu a hodnotu.|  
-|[true_type –](../standard-library/type-traits-typedefs.md#true_type)|Obsahuje integrální konstanta s hodnota true.|  
-|[false_type –](../standard-library/type-traits-typedefs.md#false_type)|Obsahuje integrální konstanta se hodnota false.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Obsahuje integrální konstanta s hodnota true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Obsahuje integrální konstanta se hodnota false.|  
   
  Primární typ kategorie  
   
@@ -145,8 +149,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[alignment_of](../standard-library/alignment-of-class.md)|Získá zarovnání typu.|  
-|[pořadí](../standard-library/rank-class.md)|Získá počet rozměry pole.|  
-|[rozsah](../standard-library/extent-class.md)|Získá počet elementů v dimenzi zadané pole.|  
+|[Pořadí](../standard-library/rank-class.md)|Získá počet rozměry pole.|  
+|[extent](../standard-library/extent-class.md)|Získá počet elementů v dimenzi zadané pole.|  
   
  Vztahy typu  
   
@@ -202,7 +206,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|  
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Přidělí Neinicializovaný paměť pro typ zarovnaný.|  
 |[aligned_union](../standard-library/aligned-union-class.md)|Zarovnaný – typ union netriviální konstruktor nebo destruktor přidělí neinicializované paměti.|  
-|[common_type –](../standard-library/common-type-class.md)|Vytvoří typ běžné všech typů sady parametrů.|  
+|[common_type](../standard-library/common-type-class.md)|Vytvoří typ běžné všech typů sady parametrů.|  
 |[Podmíněné](../standard-library/conditional-class.md)|Pokud je podmínka pravdivá, vytvoří první zadaný typ, jinak druhý zadaného typu.|  
 |[decay](../standard-library/decay-class.md)|Vytvoří typ jako předaná hodnota. Díky – referenční dokumentace, bez const nebo stálé typ nebo je ukazatel typu.|  
 |[enable_if](../standard-library/enable-if-class.md)|Pokud je podmínka pravdivá, vytváří zadaný typ, jinak žádný typ.|  

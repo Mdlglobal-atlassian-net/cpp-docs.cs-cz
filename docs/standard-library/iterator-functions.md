@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::advance
 - xutility/std::back_inserter
@@ -22,7 +22,7 @@ f1_keywords:
 - xutility/std::next
 - xutility/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
-caps.latest.revision: "16"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::advance [C++]
@@ -39,22 +39,22 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 0474e52f9d5f0f68ec4a404ebe9c60d9e48f64d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 48b07418520402f4765c2f7cd3488dde112e192d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; funkce
 ||||  
 |-|-|-|  
-|[zálohy](#advance)|[back_inserter](#back_inserter)|[začít](#begin)|  
-|[cbegin –](#cbegin)|[cend –](#cend)|[vzdálenost](#distance)|  
-|[end](#end)|[front_inserter](#front_inserter)|[Vkládací modul](#inserter)|  
+|[advance](#advance)|[back_inserter](#back_inserter)|[Začátek](#begin)|  
+|[cbegin](#cbegin)|[cend –](#cend)|[Vzdálenost](#distance)|  
+|[End](#end)|[front_inserter](#front_inserter)|[inserter](#inserter)|  
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|  
-|[Další](#next)|[prev](#prev)|  
+|[next](#next)|[prev](#prev)|  
   
-##  <a name="advance"></a>zálohy  
+##  <a name="advance"></a>  zálohy  
  Zvýší iterátor o zadaný počet pozic.  
   
 ```  
@@ -125,7 +125,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.  
 ```  
   
-##  <a name="back_inserter"></a>back_inserter  
+##  <a name="back_inserter"></a>  back_inserter  
  Vytvoří iterátor, který může vložit prvky do zadní části zadaného kontejneru.  
   
 ```  
@@ -192,7 +192,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="begin"></a>začít  
+##  <a name="begin">Začátek</a>  
  Načte iterátor na první prvek v zadaném kontejneru.  
   
 ```  
@@ -292,7 +292,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
-##  <a name="cbegin"></a>cbegin –  
+##  <a name="cbegin"></a>  cbegin –  
  Načte konstantní iterátor na první prvek v zadaném kontejneru.  
   
 ```  
@@ -321,7 +321,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>cend –  
+##  <a name="cend">cend –</a>  
  Načte iterátor const na prvek, který následuje po posledním prvku v zadaném kontejneru.  
   
 ```  
@@ -350,7 +350,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="distance"></a>vzdálenost  
+##  <a name="distance">Vzdálenost</a>  
  Určuje počet kroků mezi polohami řešenými dvěma iterátory.  
   
 ```  
@@ -419,7 +419,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.  
 ```  
   
-##  <a name="end"></a>end  
+##  <a name="end">End</a>  
  Načte iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.  
   
 ```  
@@ -450,7 +450,7 @@ Ty *end(Ty (& array)[Size]);
 ### <a name="remarks"></a>Poznámky  
  Příklad kódu, najdete v části [začít](../standard-library/iterator-functions.md#begin).  
   
-##  <a name="front_inserter"></a>front_inserter  
+##  <a name="front_inserter"></a>  front_inserter  
  Vytvoří iterátor, který může vložit prvky do přední části zadaného kontejneru.  
   
 ```  
@@ -517,7 +517,7 @@ After the front insertions, the list L is:
  ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).  
 ```  
   
-##  <a name="inserter"></a>Vkládací modul  
+##  <a name="inserter"></a>  Vkládací modul  
  Podpůrná funkce šablony, která vám umožní používat `inserter(_Cont, _Where)` místo `insert_iterator<Container>(_Cont, _Where)`.  
   
 ```  
@@ -585,7 +585,7 @@ After the insertions, the list L is:
  ( 1 20 30 40 500 ).  
 ```  
   
-##  <a name="make_checked_array_iterator"></a>make_checked_array_iterator  
+##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
  Vytvoří [checked_array_iterator –](../standard-library/checked-array-iterator-class.md) který mohou využívat jiné algoritmy.  
   
 > [!NOTE]
@@ -675,7 +675,7 @@ int main()
   
 ```  
   
-##  <a name="make_move_iterator"></a>make_move_iterator  
+##  <a name="make_move_iterator"></a>  make_move_iterator  
  Vytvoří `move iterator` obsahující zadané iterator jako `stored` iterator.  
   
 ```  
@@ -691,7 +691,7 @@ make_move_iterator(const Iterator& _It);
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vrátí `move_iterator` `<Iterator>(_It)`.  
   
-##  <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator  
+##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
  Vytvoří [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) který mohou využívat jiné algoritmy.  
   
 > [!NOTE]
@@ -766,7 +766,7 @@ int main()
   
 ```  
   
-##  <a name="next"></a>Další  
+##  <a name="next"></a>  Další  
  Iteruje zadaný počet iterací a vrátí novou pozici iterace.  
   
 ```  
@@ -789,7 +789,7 @@ InputIterator next(
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vrátí `next` zvýšena `_Off` časy  
   
-##  <a name="prev"></a>prev  
+##  <a name="prev"></a>  Prev  
  Iteruje v opačném pořadí zadaný počet iterací a vrátí novou pozici iterace.  
   
 ```  
@@ -810,5 +810,5 @@ BidirectionalIterator prev(
  Funkce šablony vrátí `next` odečte `off` časy.  
   
 ## <a name="see-also"></a>Viz také  
- [\<iterator >](../standard-library/iterator.md)
+ [\<iterator>](../standard-library/iterator.md)
 

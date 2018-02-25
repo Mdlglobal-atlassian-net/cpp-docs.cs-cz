@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::experimental::filesystem::path
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::experimental::filesystem::path
+dev_langs:
+- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e91ee287b1403b49f7a70ab3d96686650d6b2f0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="path-class"></a>path – třída
 **Cesta** třída uloží objekt typu řetězec\_typu, s názvem myname sem pro účely budeme vhodné pro použití jako pathname. řetězec\_typ je synonymum pro základní\_řetězec\<value_type >, kde hodnota\_typ je synonymum pro znaky v systému Windows nebo wchar_t pod Posix.  
@@ -198,55 +202,55 @@ wstring generic_wstring() const;
 bool has_extension() const;
 ```  
   
- Vrátí! extension().empty().  
+ Returns !extension().empty().  
   
-## <a name="pathhasfilename"></a>path::has_filename –  
+## <a name="pathhasfilename"></a>path::has_filename  
   
 ```cpp  
 bool has_filename() const;
 ```  
   
- Vrátí! filename().empty().  
+ Returns !filename().empty().  
   
-## <a name="pathhasparentpath"></a>path::has_parent_path –  
+## <a name="pathhasparentpath"></a>path::has_parent_path  
   
 ```cpp  
 bool has_parent_path() const;
 ```  
   
- Vrátí! parent_path().empty().  
+ Returns !parent_path().empty().  
   
-## <a name="pathhasrelativepath"></a>path::has_relative_path –  
+## <a name="pathhasrelativepath"></a>path::has_relative_path  
   
 ```cpp  
 bool has_relative_path() const;
 ```  
   
- Vrátí! relative_path().empty().  
+ Returns !relative_path().empty().  
   
-## <a name="pathhasrootdirectory"></a>path::has_root_directory –  
+## <a name="pathhasrootdirectory"></a>path::has_root_directory  
   
 ```cpp  
 bool has_root_directory() const;
 ```  
   
- Vrátí! root_directory().empty().  
+ Returns !root_directory().empty().  
   
-## <a name="pathhasrootname"></a>path::has_root_name –  
+## <a name="pathhasrootname"></a>path::has_root_name  
   
 ```cpp  
 bool has_root_name() const;
 ```  
   
- Vrátí! root_name().empty().  
+ Returns !root_name().empty().  
   
-## <a name="pathhasrootpath"></a>path::has_root_path –  
+## <a name="pathhasrootpath"></a>path::has_root_path  
   
 ```cpp  
 bool has_root_path() const;
 ```  
   
- Vrátí! root_path().empty().  
+ Returns !root_path().empty().  
   
 ## <a name="pathhasstem"></a>path::has_stem  
   
@@ -254,9 +258,9 @@ bool has_root_path() const;
 bool has_stem() const;
 ```  
   
- Vrátí! stem().empty().  
+ Returns !stem().empty().  
   
-## <a name="pathisabsolute"></a>path::is_absolute –  
+## <a name="pathisabsolute"></a>path::is_absolute  
   
 ```cpp  
 bool is_absolute() const;
@@ -264,7 +268,7 @@ bool is_absolute() const;
   
  Pro systém Windows, funkce vrátí hodnotu has_root_name() & & has_root_directory(). Posix funkce vrátí hodnotu has_root_directory().  
   
-## <a name="pathisrelative"></a>path::is_relative –  
+## <a name="pathisrelative"></a>path::is_relative  
   
 ```cpp  
 bool is_relative() const;
@@ -309,7 +313,7 @@ class iterator
   
 6.  Změna myname zruší platnost všech iterátory určení elementů v myname.  
   
-## <a name="pathmakepreferred"></a>path::make_preferred –  
+## <a name="pathmakepreferred"></a>path::make_preferred  
   
 ```cpp  
 path& make_preferred();
@@ -356,7 +360,7 @@ path& operator+=(Elem elem);
   
 1.  concat(Right);  
   
-2.  concat(Path(str));  
+2.  concat(path(str));  
   
 3.  concat(PTR);  
   
@@ -364,7 +368,7 @@ path& operator+=(Elem elem);
   
 5.  concat(Source);  
   
-6.  concat (cesta (basic_string\<Elem >(1, elem)));  
+6.  concat(path(basic_string\<Elem>(1, elem)));  
   
 ## <a name="pathoperator"></a>path::Operator / =  
   
@@ -446,7 +450,7 @@ static constexpr value_type preferred_separator == '/';
   
  Objekt konstantní dává upřednostňované znak oddělení komponenty cesty, v závislosti na operačním systému hostitele. Upozorňujeme, že se stejnou měrou povolenou ve většině případů, v části Windows používat L '/' na příslušné místo.  
   
-## <a name="pathrelativepath"></a>path::RELATIVE_PATH –  
+## <a name="pathrelativepath"></a>path::relative_path  
   
 ```cpp  
 path relative_path() const;
@@ -454,7 +458,7 @@ path relative_path() const;
   
  Vrátí komponentu relativní cestu myname, konkrétně příponu myname po odebrání root_path().native() a oddělovačů okamžitě následné redundantní adresáře. Součást může být prázdná.  
   
-## <a name="pathremovefilename"></a>path::remove_filename –  
+## <a name="pathremovefilename"></a>path::remove_filename  
   
 ```cpp  
 path& remove_filename();
@@ -483,7 +487,7 @@ remove_filename();
 return (*this);
 ```  
   
-## <a name="pathrootdirectory"></a>path::root_directory –  
+## <a name="pathrootdirectory"></a>path::root_directory  
   
 ```cpp  
 path root_directory() const;
@@ -491,7 +495,7 @@ path root_directory() const;
   
  Vrátí komponentu myname kořenový adresář. Součást může být prázdná.  
   
-## <a name="pathrootname"></a>path::root_name –  
+## <a name="pathrootname"></a>path::root_name  
   
 ```cpp  
 path root_name() const;
@@ -499,7 +503,7 @@ path root_name() const;
   
  Vrátí komponentu název kořenové myname. Součást může být prázdná.  
   
-## <a name="pathrootpath"></a>path::root_path –  
+## <a name="pathrootpath"></a>path::root_path  
   
 ```cpp  
 path root_path() const;
@@ -535,7 +539,7 @@ string string() const;
   
  Druhý členská funkce převede pořadí uložené v cesta k kódování podporuje v systému hostitele pro char pořadí a vrátí že je uložená v objektu typu řetězec.  
   
-## <a name="pathstringtype"></a>path::STRING_TYPE  
+## <a name="pathstringtype"></a>path::string_type  
   
 ```cpp  
 typedef basic_string<value_type> string_type;  

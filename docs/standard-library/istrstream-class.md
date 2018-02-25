@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - strstream/std::istrstream::rdbuf
 - strstream/std::istrstream::str
-dev_langs: C++
-helpviewer_keywords: istrstream class
+dev_langs:
+- C++
+helpviewer_keywords:
+- istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e3e91e809980f32c839497ac13b4641bf72c8a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aec0c2bbac29da5406002aefbd6a6adcac926a33
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="istrstream-class"></a>istrstream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [strstreambuf](../standard-library/strstreambuf-class.md).  
@@ -43,21 +47,21 @@ class istrstream : public istream
   
 |||  
 |-|-|  
-|[istrstream –](#istrstream)|Vytvoří objekt typu `istrstream`.|  
+|[istrstream](#istrstream)|Vytvoří objekt typu `istrstream`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[rdbuf –](#rdbuf)|Vrátí přidruženému ukazatel na datový proud `strstreambuf` objektu.|  
-|[str –](#str)|Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
+|[rdbuf](#rdbuf)|Vrátí přidruženému ukazatel na datový proud `strstreambuf` objektu.|  
+|[str](#str)|Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<strstream – >  
   
  **Namespace:** – std  
   
-##  <a name="istrstream"></a>istrstream::istrstream  
+##  <a name="istrstream"></a>  istrstream::istrstream  
  Vytvoří objekt typu `istrstream`.  
   
 ```
@@ -86,7 +90,7 @@ istrstream(
 ### <a name="remarks"></a>Poznámky  
  Všechny konstruktory inicializovat základní třídu voláním [IStream on Request](../standard-library/istream-typedefs.md#istream)( **sb**), kde **sb** je objekt uložené třídy [strstreambuf](../standard-library/strstreambuf-class.md) . První dva konstruktory také inicializovat **sb** voláním `strstreambuf`(( **const** `char` \*) `ptr`, 0). Místo toho volat zbývající dva konstruktory `strstreambuf`(( **const** `char` *) `ptr`, `count` ).  
   
-##  <a name="rdbuf"></a>istrstream::rdbuf  
+##  <a name="rdbuf"></a>  istrstream::rdbuf  
  Vrátí ukazatel datový proud přidružený strstreambuf objektu.  
   
 ```
@@ -102,7 +106,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Příklad  
   V tématu [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) příklad, který používá `rdbuf`.  
   
-##  <a name="str"></a>istrstream::str  
+##  <a name="str"></a>  istrstream::str  
  Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.  
   
 ```
@@ -119,7 +123,7 @@ char *str();
   V tématu [strstream::str](../standard-library/strstreambuf-class.md#str) příklad, který používá **str**.  
   
 ## <a name="see-also"></a>Viz také  
- [IStream on Request](../standard-library/istream-typedefs.md#istream)   
+ [istream](../standard-library/istream-typedefs.md#istream)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream – programování](../standard-library/iostream-programming.md)   
  [iostreams – konvence](../standard-library/iostreams-conventions.md)

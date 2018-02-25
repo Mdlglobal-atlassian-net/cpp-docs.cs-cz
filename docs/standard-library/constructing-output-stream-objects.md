@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output stream objects
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04cbb5ae7433dc31e99136c11c4022e60ad4808e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cf40e6683462803fcf81a9be915a4672baefd3e9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constructing-output-stream-objects"></a>Vytváření objektů výstupního datového proudu
 Pokud používáte pouze předdefinovanou `cout`, `cerr`, nebo `clog` objekty, není potřeba vytvořit výstupního proudu. Je nutné použít konstruktory pro:  
@@ -28,7 +32,7 @@ Pokud používáte pouze předdefinovanou `cout`, `cerr`, nebo `clog` objekty, n
   
 - [Výstupní řetězec datového proudu konstruktory](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a>Výstupní soubor datového proudu konstruktory  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1">Výstupní soubor datového proudu konstruktory</a>  
  Můžete vytvořit výstupní proud souboru v jednom ze dvou způsobů:  
   
 -   Použít výchozí konstruktor a pak zavolají `open` – členská funkce.  
@@ -48,7 +52,7 @@ Pokud používáte pouze předdefinovanou `cout`, `cerr`, nebo `clog` objekty, n
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a>Výstupní řetězec datového proudu konstruktory  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2">Výstupní řetězec datového proudu konstruktory</a>  
  Chcete-li vytvořit řetězec výstupního datového proudu, můžete použít `ostringstream` následujícím způsobem:  
   
 ```  

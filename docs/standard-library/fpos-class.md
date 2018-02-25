@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
 - iosfwd/std::fpos::state
 - iosfwd/std::fpos::operator streamoff
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::fpos [C++]
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0647a5d4a9720b5628d5d540f055013bd40b8b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65ede65d1cd1b0d8cadb39ec18af42a007c023c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fpos-class"></a>fpos – třída
 Šablony třídy popisuje objekt, který může ukládat všechny informace potřebné k obnovení indikátor libovolný pozice souboru v rámci všech datového proudu. Objekt fpos – třída\< **St**> efektivně ukládá aspoň dva objekty člen:  
@@ -67,11 +70,11 @@ class fpos
 |||  
 |-|-|  
 |[operator!=](#op_neq)|Pozice souboru indikátory testy nerovnost.|  
-|[operátor +](#op_add)|Zvýší na ukazatel pozice souboru.|  
-|[+= – operátor](#op_add_eq)|Zvýší na ukazatel pozice souboru.|  
-|[Operator –](#operator-)|Snižuje pozice souboru indikátoru.|  
-|[-= – operátor](#operator-_eq)|Snižuje pozice souboru indikátoru.|  
-|[Operator ==](#op_eq_eq)|Pozice souboru indikátory testování rovnosti.|  
+|[operator+](#op_add)|Zvýší na ukazatel pozice souboru.|  
+|[operator+=](#op_add_eq)|Zvýší na ukazatel pozice souboru.|  
+|[operator-](#operator-)|Snižuje pozice souboru indikátoru.|  
+|[operator-=](#operator-_eq)|Snižuje pozice souboru indikátoru.|  
+|[operator==](#op_eq_eq)|Pozice souboru indikátory testování rovnosti.|  
 |[streamoff – operátor](#op_streamoff)|Přetypování typu objektu `fpos` na objekt typu `streamoff`.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -79,7 +82,7 @@ class fpos
   
  **Namespace:** – std  
   
-##  <a name="fpos"></a>fpos::fpos  
+##  <a name="fpos"></a>  fpos::fpos  
  Vytvořte objekt, který obsahuje informace o pozice (posun) v datovém proudu.  
   
 ```  
@@ -103,7 +106,7 @@ fpos(Statetype _State, fpos_t _Filepos);
   
  Druhý konstruktor ukládá nulové posunutí a objekt `_State`.  
   
-##  <a name="op_neq"></a>fpos::Operator! =  
+##  <a name="op_neq"></a>  fpos::Operator! =  
  Pozice souboru indikátory testy nerovnost.  
   
 ```  
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add"></a>fpos::Operator +  
+##  <a name="op_add"></a>  fpos::Operator +  
  Zvýší na ukazatel pozice souboru.  
   
 ```  
@@ -192,7 +195,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 ### <a name="example"></a>Příklad  
   V tématu [operátor! =](#op_neq) pro ukázkové použití `operator+`.  
   
-##  <a name="op_add_eq"></a>fpos::Operator +=  
+##  <a name="op_add_eq"></a>  fpos::Operator +=  
  Zvýší na ukazatel pozice souboru.  
   
 ```  
@@ -212,7 +215,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 ### <a name="example"></a>Příklad  
   V tématu [operátor! =](#op_neq) pro ukázkové použití `operator+=`.  
   
-##  <a name="fpos__operator-"></a>fpos::Operator-  
+##  <a name="fpos__operator-"></a>  fpos::Operator-  
  Snižuje pozice souboru indikátoru.  
   
 ```  
@@ -234,7 +237,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 ### <a name="example"></a>Příklad  
   V tématu [operátor! =](#op_neq) pro ukázkové použití `operator-`.  
   
-##  <a name="fpos__operator-_eq"></a>fpos::Operator-=  
+##  <a name="fpos__operator-_eq"></a>  fpos::Operator-=  
  Snižuje pozice souboru indikátoru.  
   
 ```  
@@ -254,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 ### <a name="example"></a>Příklad  
   V tématu [operátor! =](#op_neq) pro ukázkové použití `operator-=`.  
   
-##  <a name="op_eq_eq"></a>fpos::Operator ==  
+##  <a name="op_eq_eq"></a>  fpos::Operator ==  
  Pozice souboru indikátory testování rovnosti.  
   
 ```  
@@ -274,7 +277,7 @@ bool operator==(const fpos<Statetype>& right) const;
 ### <a name="example"></a>Příklad  
   V tématu [operátor! =](#op_neq) pro ukázkové použití `operator+=`.  
   
-##  <a name="op_streamoff"></a>fpos::Operator streamoff  
+##  <a name="op_streamoff"></a>  fpos::Operator streamoff  
  Typ objektu `fpos` na objekt typu `streamoff`.  
   
 ```  
@@ -311,14 +314,14 @@ int main( )
 0  
 ```  
   
-##  <a name="seekpos"></a>fpos::seekpos  
+##  <a name="seekpos"></a>  fpos::seekpos  
  Tato metoda používá standardní knihovny C++ jen interně. Tato metoda není volána z vašeho kódu.  
   
 ```  
 fpos_t seekpos() const;
 ```  
   
-##  <a name="state"></a>fpos::State  
+##  <a name="state"></a>  fpos::State  
  Nastaví nebo vrátí stav převodu.  
   
 ```  

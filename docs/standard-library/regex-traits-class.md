@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_traits
 - regex/std::regex_traits::char_type
@@ -25,7 +26,8 @@ f1_keywords:
 - regex/std::regex_traits::value
 - regex/std::regex_traits::imbue
 - regex/std::regex_traits::getloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::regex_traits [C++]
 - std::regex_traits [C++], char_type
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5acde3fe50cb470be79018d4bee9bf75401fe72d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 267461681ef3d70e1ac6d30867c86d8f33a58faa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regextraits-class"></a>regex_traits – třída
 Popisuje vlastností elementů k porovnání.  
@@ -102,7 +105,7 @@ public:
   
  **Namespace:** – std  
   
-##  <a name="char_class_type"></a>regex_traits::char_class_type  
+##  <a name="char_class_type"></a>  regex_traits::char_class_type  
  Typ třídy označení znak.  
   
 ```  
@@ -183,7 +186,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="char_type"></a>regex_traits::char_type  
+##  <a name="char_type"></a>  regex_traits::char_type  
  Typ prvku  
   
 ```  
@@ -264,7 +267,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="getloc"></a>regex_traits::getloc  
+##  <a name="getloc"></a>  regex_traits::getloc  
  Vrací objekt uložené národního prostředí.  
   
 ```  
@@ -345,7 +348,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="imbue"></a>regex_traits::imbue  
+##  <a name="imbue"></a>  regex_traits::imbue  
  Mění objekt uložené národního prostředí.  
   
 ```  
@@ -430,7 +433,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="isctype"></a>regex_traits::isctype  
+##  <a name="isctype"></a>  regex_traits::isctype  
  Testy pro členství ve třídě.  
   
 ```  
@@ -518,7 +521,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="length"></a>regex_traits::length  
+##  <a name="length"></a>  regex_traits::length  
  Vrátí délku sekvenci byl ukončen nul.  
   
 ```  
@@ -603,7 +606,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="locale_type"></a>regex_traits::locale_type  
+##  <a name="locale_type"></a>  regex_traits::locale_type  
  Typ objektu uložené národního prostředí.  
   
 ```  
@@ -684,7 +687,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="lookup_classname"></a>regex_traits::lookup_classname  
+##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
  Mapuje sekvenci třída znaků.  
   
 ```  
@@ -777,7 +780,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="lookup_collatename"></a>regex_traits::lookup_collatename  
+##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
  Posloupnost se mapuje na element řazení.  
   
 ```  
@@ -866,7 +869,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits"></a>regex_traits::regex_traits  
+##  <a name="regex_traits"></a>  regex_traits::regex_traits  
  Vytvoří objekt.  
   
 ```  
@@ -947,7 +950,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="size_type"></a>regex_traits::size_type  
+##  <a name="size_type"></a>  regex_traits::size_type  
  Typ délky pořadí.  
   
 ```  
@@ -1030,7 +1033,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="string_type"></a>regex_traits::STRING_TYPE  
+##  <a name="string_type"></a>  regex_traits::STRING_TYPE  
  Typ řetězec elementů.  
   
 ```  
@@ -1111,7 +1114,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="transform"></a>regex_traits::Transform  
+##  <a name="transform"></a>  regex_traits::Transform  
  Převede na ekvivalentní pořadí řazení.  
   
 ```  
@@ -1200,7 +1203,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="transform_primary"></a>regex_traits::transform_primary  
+##  <a name="transform_primary"></a>  regex_traits::transform_primary  
  Převede na ekvivalentní caseless pořadí řazení.  
   
 ```  
@@ -1289,7 +1292,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="translate"></a>regex_traits::translate  
+##  <a name="translate"></a>  regex_traits::translate  
  Převede na ekvivalentní odpovídající element.  
   
 ```  
@@ -1374,7 +1377,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="translate_nocase"></a>regex_traits::translate_nocase  
+##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
  Převede na ekvivalentní caseless odpovídající element.  
   
 ```  
@@ -1459,7 +1462,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="value"></a>regex_traits::Value  
+##  <a name="value"></a>  regex_traits::Value  
  Element převádí na hodnotu číslice.  
   
 ```  
@@ -1548,7 +1551,7 @@ hex C == 12
 ```  
   
 ## <a name="see-also"></a>Viz také  
-[\<regulární výraz >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_constants – třída](../standard-library/regex-constants-class.md)  
 [regex_error – třída](../standard-library/regex-error-class.md)  
 [\<regulární výraz > funkce](../standard-library/regex-functions.md)  
@@ -1557,5 +1560,5 @@ hex C == 12
 [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)  
 [\<regulární výraz > Definice TypeDef](../standard-library/regex-typedefs.md)  
  [regex_traits –\<char > – třída](../standard-library/regex-traits-char-class.md)   
- [regex_traits –\<wchar_t > – třída](../standard-library/regex-traits-wchar-t-class.md)
+ [regex_traits\<wchar_t> Class](../standard-library/regex-traits-wchar-t-class.md)
 

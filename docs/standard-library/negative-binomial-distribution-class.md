@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::negative_binomial_distribution
 - random/std::negative_binomial_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::negative_binomial_distribution::param_type::p
 - random/std::negative_binomial_distribution::param_type::operator==
 - random/std::negative_binomial_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::negative_binomial_distribution [C++]
 - std::negative_binomial_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ea765a3a6f0b7d713b0807129d04cc9b8653951b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c8bab02bc5a5561f296f3e7af8585e015af228f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution – třída
 Generuje negativní binomické rozdělení.  
@@ -228,7 +231,7 @@ Histogram for 100 samples:
   
 **Namespace:** – std  
   
-##  <a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution  
+##  <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -243,21 +246,21 @@ explicit negative_binomial_distribution(const param_type& parm);
 *p*  
 `p` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 Struktura parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0.0 < k` a`0.0 < p ≤ 1.0`  
+**Předběžnou:** `0.0 < k` a `0.0 < p ≤ 1.0`  
   
 První konstruktoru vytvoří objekt jehož uložené `p` hodnota obsahuje hodnotu *p* a jehož uložené `k` hodnota obsahuje hodnotu *tisíc*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>negative_binomial_distribution::param_type  
+##  <a name="param_type"></a>  negative_binomial_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 {param_type – struktura  
-   negative_binomial_distribution – typedef`<`result_type > distribution_type –;  
+   typedef negative_binomial_distribution`<`result_type> distribution_type;  
    param_type – (result_type tisíc = 1, dvakrát p = 0,5); result_type k() const; dvojité p() const;
 
    BOOL – operátor == (const param_type – & doprava) const; BOOL – operátor! = (const param_type – & doprava) const; };  
@@ -269,13 +272,13 @@ Ukládá parametry rozdělení.
 *p*  
 `p` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Struktura použit k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0.0 < k` a`0.0 < p ≤ 1.0`  
+**Předběžnou:** `0.0 < k` a `0.0 < p ≤ 1.0`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)

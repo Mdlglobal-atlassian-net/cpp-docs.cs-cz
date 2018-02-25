@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_stringbuf
 - sstream/std::basic_stringbuf::allocator_type
@@ -21,7 +22,8 @@ f1_keywords:
 - sstream/std::basic_stringbuf::seekpos
 - sstream/std::basic_stringbuf::str
 - sstream/std::basic_stringbuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_stringbuf [C++]
 - std::basic_stringbuf [C++], allocator_type
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 472d63a58c9a44682e942a5ebb6ebdcc7c7b1d2f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf – třída
 Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v objektu array.  
@@ -82,44 +85,44 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_stringbuf –](#basic_stringbuf)|Vytvoří objekt typu `basic_stringbuf`.|  
+|[basic_stringbuf](#basic_stringbuf)|Vytvoří objekt typu `basic_stringbuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|  
-|[char_type –](#char_type)|Přidruží název typu s `Elem` parametr šablony.|  
-|[int_type –](#int_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
-|[off_type –](#off_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
-|[pos_type –](#pos_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
-|[traits_type –](#traits_type)|Přidruží název typu s `Tr` parametr šablony.|  
+|[allocator_type](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|  
+|[char_type](#char_type)|Přidruží název typu s `Elem` parametr šablony.|  
+|[int_type](#int_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
+|[off_type](#off_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
+|[pos_type](#pos_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|  
+|[traits_type](#traits_type)|Přidruží název typu s `Tr` parametr šablony.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[přetečení](#overflow)|Chráněné, virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|  
-|[pbackfail –](#pbackfail)|Funkce chráněného člena virtuální se pokusí vrátit zpět element do vstupní vyrovnávací paměť, pak umožňuje aktuálního elementu (ukazuje další ukazatel).|  
-|[seekoff –](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
+|[overflow](#overflow)|Chráněné, virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|  
+|[pbackfail](#pbackfail)|Funkce chráněného člena virtuální se pokusí vrátit zpět element do vstupní vyrovnávací paměť, pak umožňuje aktuálního elementu (ukazuje další ukazatel).|  
+|[seekoff](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
 |[seekpos –](#seekpos)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|  
-|[str –](#str)|Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.|  
+|[str](#str)|Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.|  
 |swap||  
-|[podtečení](#underflow)|Chráněný člen virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|  
+|[underflow](#underflow)|Chráněný člen virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<sstream – >  
   
  **Namespace:** – std  
   
-##  <a name="allocator_type"></a>basic_stringbuf::allocator_type  
+##  <a name="allocator_type"></a>  basic_stringbuf::allocator_type  
  Typ je synonymum pro parametr šablony `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_stringbuf"></a>basic_stringbuf::basic_stringbuf  
+##  <a name="basic_stringbuf"></a>  basic_stringbuf::basic_stringbuf  
  Vytvoří objekt typu `basic_stringbuf`.  
   
 ```  
@@ -143,28 +146,28 @@ basic_stringbuf(
   
  Druhý konstruktor přiděluje kopii pořadí řízené objekt řetězce `str`. Pokud `_Mode & ios_base::in` je nenulové hodnoty, nastaví vstupní vyrovnávací paměť zahájíte čtení při spuštění pořadí. Pokud `_Mode & ios_base::out` je nenulové hodnoty, nastaví výstupní vyrovnávací paměť má začít zapisovat na začátku pořadí. Ukládá také `_Mode` stringbuf – režim. Další informace najdete v části poznámky [basic_stringbuf – třída](../standard-library/basic-stringbuf-class.md).  
   
-##  <a name="char_type"></a>basic_stringbuf::char_type  
+##  <a name="char_type"></a>  basic_stringbuf::char_type  
  Přidruží název typu s **Elem** parametr šablony.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-##  <a name="int_type"></a>basic_stringbuf::int_type  
+##  <a name="int_type"></a>  basic_stringbuf::int_type  
  Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="off_type"></a>basic_stringbuf::off_type  
+##  <a name="off_type"></a>  basic_stringbuf::off_type  
  Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="overflow"></a>basic_stringbuf::Overflow  
+##  <a name="overflow"></a>  basic_stringbuf::Overflow  
  Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.  
   
 ```  
@@ -185,7 +188,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
   
 -   K dispozici na pozici zápisu mohl zajistit přidělí nové nebo další úložiště pro výstupní vyrovnávací paměť. Rozšíření výstupní vyrovnávací paměť tímto způsobem taky ji rozšiřuje na všechny přidružené vstupní vyrovnávací paměť.  
   
-##  <a name="pbackfail"></a>basic_stringbuf::pbackfail  
+##  <a name="pbackfail"></a>  basic_stringbuf::pbackfail  
  Chráněný člen virtuální funkce se pokusí vrátit zpět element do vstupní vyrovnávací paměť a proveďte aktuálního elementu (ukazuje další ukazatel).  
   
 ```  
@@ -206,14 +209,14 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
   
 -   Pokud pozice putback – je k dispozici, a pokud stringbuf – režim umožňuje pořadí upravit ( **režimu & ios_base::out** nenulový), můžete ukládat bajtů do pozice putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.  
   
-##  <a name="pos_type"></a>basic_stringbuf::pos_type  
+##  <a name="pos_type"></a>  basic_stringbuf::pos_type  
  Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="seekoff"></a>basic_stringbuf::seekoff  
+##  <a name="seekoff"></a>  basic_stringbuf::seekoff  
  Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.  
   
 ```  
@@ -251,7 +254,7 @@ virtual pos_type seekoff(
   
  Pokud funkci podaří změna jedné nebo obou pozic datového proudu, vrátí pozici výsledné datového proudu. Jinak selže a vrátí pozici neplatný datový proud.  
   
-##  <a name="seekpos"></a>basic_stringbuf::seekpos  
+##  <a name="seekpos"></a>  basic_stringbuf::seekpos  
  Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.  
   
 ```  
@@ -273,7 +276,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
   
  Pokud **režimu & ios_base::in** je nenulové hodnoty, funkce mění další pozice číst vstupní vyrovnávací paměti. Pokud **režimu & ios_base::out** je nenulové hodnoty, funkce mění další pozice se zapisovat do výstupní vyrovnávací paměť. Pro datový proud má pravděpodobně musí existovat jeho vyrovnávací paměti. Umísťovací operace úspěšná výsledný datový proud pozice musí ležet v řízené sekvenci. V opačném případě (nebo pokud je ovlivněno ani pozice), umísťovací operace selže.  
   
-##  <a name="str"></a>basic_stringbuf::str  
+##  <a name="str"></a>  basic_stringbuf::str  
  Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.  
   
 ```  
@@ -332,7 +335,7 @@ zest
 be  
 ```  
   
-##  <a name="traits_type"></a>basic_stringbuf::traits_type  
+##  <a name="traits_type"></a>  basic_stringbuf::traits_type  
  Přidruží název typu s **Tr** parametr šablony.  
   
 ```  
@@ -342,7 +345,7 @@ typedef Tr traits_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **Tr**.  
   
-##  <a name="underflow"></a>basic_stringbuf::underflow  
+##  <a name="underflow"></a>  basic_stringbuf::underflow  
  Chráněný, virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.  
   
 ```  
@@ -355,7 +358,7 @@ virtual int_type underflow();
 ### <a name="remarks"></a>Poznámky  
  Chráněný člen virtuální funkce pokusí extrahovat aktuálního elementu **bajtů** ze vstupní vyrovnávací paměť, přechodu na aktuální pozici datového proudu a vrátí prvek jako **traits_type –::**[na _int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtů**). Je to lze provést jedním způsobem: na pozici pro čtení je k dispozici, pak má **bajtů** jako element uložené ve čtení pozici a přejde na další ukazatele pro vstupní vyrovnávací paměť.  
   
-##  <a name="swap"></a>basic_streambuf::swap  
+##  <a name="swap"></a>  basic_streambuf::swap  
  Zamění obsah této vyrovnávací paměti řetězců s jinou vyrovnávací paměti.  
   
 ```  
@@ -368,7 +371,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="op_eq"></a>basic_stringbuf::Operator =  
+##  <a name="op_eq"></a>  basic_stringbuf::Operator =  
  Obsah basic_stringbuf na pravé straně operátoru přiřadí basic_stringbuf na levé straně.  
   
 ```  

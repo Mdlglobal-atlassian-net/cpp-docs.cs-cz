@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::gslice
 - valarray/std::gslice::size
 - valarray/std::gslice::start
 - valarray/std::gslice::stride
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::gslice [C++]
 - std::gslice [C++], size
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52170e08d3118b5eb0ef7bb1e34edbe29b3d38f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75dd4e6b4745bbf710541ecc423c3a01b46fc119
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="gslice-class"></a>gslice – třída
 Třída nástrojů k valarray –, který se používá k definování multidimenzionální podmnožiny valarray –. Pokud valarray – považuje za multidimenzionální matice se všechny elementy ve pole, řez extrahuje vector mimo multidimenzionálního pole.  
@@ -52,14 +55,14 @@ Třída nástrojů k valarray –, který se používá k definování multidime
   
 |||  
 |-|-|  
-|[gslice –](#gslice)|Definuje podmnožinu `valarray` , se skládá z několika řezů `valarray` všechny začínají zadaný element.|  
+|[gslice](#gslice)|Definuje podmnožinu `valarray` , se skládá z několika řezů `valarray` všechny začínají zadaný element.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[velikost](#size)|Vyhledá hodnoty pole určení počtu prvky v obecné řezy `valarray`.|  
-|[spuštění](#start)|Vyhledá počáteční index obecné řezy `valarray`.|  
+|[Velikost](#size)|Vyhledá hodnoty pole určení počtu prvky v obecné řezy `valarray`.|  
+|[start](#start)|Vyhledá počáteční index obecné řezy `valarray`.|  
 |[STRIDE](#stride)|Najde rozdíl mezi prvky v obecné řezy `valarray`.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -67,7 +70,7 @@ Třída nástrojů k valarray –, který se používá k definování multidime
   
  **Namespace:** – std  
   
-##  <a name="gslice"></a>gslice::gslice  
+##  <a name="gslice"></a>  gslice::gslice  
  Třída nástrojů k valarray –, který se používá k definování vícerozměrných řezy valarray –.  
   
 ```  
@@ -142,7 +145,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)  
 ```  
   
-##  <a name="size"></a>gslice::size  
+##  <a name="size"></a>  gslice::size  
  Vyhledá určení počtu prvky v obecné řezy valarray – hodnoty pole.  
   
 ```  
@@ -217,7 +220,7 @@ The size of vaResult is:
  vaGSlice.size ( ) = ( 4 4 ).  
 ```  
   
-##  <a name="start"></a>gslice::Start  
+##  <a name="start"></a>  gslice::Start  
  Vyhledá počáteční index obecné řezy valarray –.  
   
 ```  
@@ -278,7 +281,7 @@ The valarray for vaGSlice is vaResult:
 The index of the first element of vaResult is: 0.  
 ```  
   
-##  <a name="stride"></a>gslice::STRIDE  
+##  <a name="stride"></a>  gslice::STRIDE  
  Najde rozdíl mezi prvky v obecné řezy valarray –.  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::lognormal_distribution
 - random/std::lognormal_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::lognormal_distribution [C++]
 - std::lognormal_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03eda021ea5ff1e1515cf58cfb19cb4f332a6938
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution – třída
 Generuje protokolu normálního rozdělení.  
@@ -84,7 +87,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type –](#param_type)|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|  
   
 Funkce vlastností `m()` a `s()` návratové hodnoty pro parametry uložené distribuční *m* a *s*, v uvedeném pořadí.  
   
@@ -189,7 +192,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution  
+##  <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -204,17 +207,17 @@ explicit lognormal_distribution(const param_type& parm);
 *s*  
 `s` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < s`  
+**Předběžnou podmínku:** `0.0 < s`  
   
 První konstruktoru vytvoří objekt jehož uložené `m` hodnota obsahuje hodnotu *m* a jehož uložené `s` hodnota obsahuje hodnotu *s*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>lognormal_distribution::param_type  
+##  <a name="param_type"></a>  lognormal_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```  
@@ -235,14 +238,14 @@ struct param_type {
 *s*  
 `s` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Struktura použit k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < s`  
+**Předběžnou podmínku:** `0.0 < s`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
-[\<náhodné >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)
 

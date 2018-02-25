@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::current_exception
 - exception/std::get_terminate
@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,21 +31,21 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: ea24d26ed840d1c7222abbbf9fce2bc18c2a7a5f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;výjimka&gt; funkce
 ||||  
 |-|-|-|  
-|[current_exception](#current_exception)|[get_terminate –](#get_terminate)|[get_unexpected –](#get_unexpected)|  
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate –](#set_terminate)|  
-|[set_unexpected –](#set_unexpected)|[ukončení](#terminate)|[uncaught_exception](#uncaught_exception)|  
-|[neočekávané](#unexpected)|  
+|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
+|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|  
+|[set_unexpected](#set_unexpected)|[Ukončení](#terminate)|[uncaught_exception](#uncaught_exception)|  
+|[unexpected](#unexpected)|  
   
-##  <a name="current_exception"></a>current_exception  
+##  <a name="current_exception"></a>  current_exception  
  Získá inteligentní ukazatel na aktuální výjimku.  
   
 ```cpp  
@@ -64,7 +64,7 @@ exception_ptr current_exception();
   
  Následná volání `current_exception` funkce vrátí `exception_ptr` objekty, které odkazují na různé kopie aktuální výjimku. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.  
   
-##  <a name="make_exception_ptr"></a>make_exception_ptr  
+##  <a name="make_exception_ptr"></a>  make_exception_ptr  
  Vytvoří [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) objekt, který obsahuje kopii výjimku.  
   
 ```cpp  
@@ -84,7 +84,7 @@ exception_ptr make_exception_ptr(E Except);
   
  Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a budeme bránit jeho použití.  
   
-##  <a name="rethrow_exception"></a>rethrow_exception  
+##  <a name="rethrow_exception"></a>  rethrow_exception  
  Vyvolá výjimku předanou jako parametr.  
   
 ```cpp  
@@ -98,14 +98,14 @@ void rethrow_exception(exception_ptr P);
 ### <a name="remarks"></a>Poznámky  
  Po uložení zachycená výjimka v `exception_ptr` objektu primární vlákno může zpracovat objekt. Ve vaší primární vláknu volání `rethrow_exception` fungovat společně s `exception_ptr` objektu jako její argument. `rethrow_exception` Extrahuje výjimky z funkce `exception_ptr` objekt a potom v kontextu primární vlákno vyvolá výjimku.  
   
-##  <a name="get_terminate"></a>get_terminate –  
+##  <a name="get_terminate"></a>  get_terminate –  
  Získá aktuální `terminate_handler` funkce.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
-##  <a name="set_terminate"></a>set_terminate –  
+##  <a name="set_terminate"></a>  set_terminate –  
  Vytvoří nový `terminate_handler` má být volána v ukončení programu.  
   
 ```  
@@ -151,14 +151,14 @@ int main()
   
 ```  
   
-##  <a name="get_unexpected"></a>get_unexpected –  
+##  <a name="get_unexpected"></a>  get_unexpected –  
  Získá aktuální `unexpected_handler` funkce.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
-##  <a name="set_unexpected"></a>set_unexpected –  
+##  <a name="set_unexpected"></a>  set_unexpected –  
  Vytvoří nový `unexpected_handler` být, když je k neočekávané výjimce došlo.  
   
 ```  
@@ -173,7 +173,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
  Adresa předchozí `unexpected_handler`.  
   
 ### <a name="remarks"></a>Poznámky  
- `fnew`nesmí být nulový ukazatel.  
+ `fnew` nesmí být nulový ukazatel.  
   
  Standardní C++ vyžaduje, aby `unexpected` je volána, když funkce vyvolá výjimku, která není v seznamu throw. Aktuální implementace nepodporují. Následující příklad volání `unexpected` přímo, který potom volá `unexpected_handler`.  
   
@@ -203,7 +203,7 @@ int main()
   
 ```  
   
-##  <a name="terminate"></a>ukončení  
+##  <a name="terminate">Ukončení</a>  
  Zavolá obslužnou rutinu ukončení.  
   
 ```  
@@ -218,7 +218,7 @@ void terminate();
 ### <a name="example"></a>Příklad  
   V tématu [set_unexpected –](../standard-library/exception-functions.md#set_unexpected) příklad použití **ukončit**.  
   
-##  <a name="uncaught_exception"></a>uncaught_exception  
+##  <a name="uncaught_exception"></a>  uncaught_exception  
  Vrátí `true` pouze v případě, že vyvolaná výjimka je aktuálně zpracovávána.  
   
 ```  
@@ -281,7 +281,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0  
 ```  
   
-##  <a name="unexpected"></a>neočekávané  
+##  <a name="unexpected"></a>  neočekávané  
  Volá obslužnou rutinu neočekávané.  
   
 ```  

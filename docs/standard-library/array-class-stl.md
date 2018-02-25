@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array/std::array
 - array/std::array::const_iterator
@@ -40,7 +41,8 @@ f1_keywords:
 - array/std::array::swap
 - array/std::array::operator=
 - array/std::array::operator[]
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::array [C++]
 - std::array [C++], const_iterator
@@ -103,16 +105,17 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c874e6249bd106a3eaa2265e3e62a9bf5d47438d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="array-class-c-standard-library"></a>Array – třída (standardní knihovna C++)
 Popisuje objekt, který určuje posloupnost délka `N` elementů typu `Ty`. Pořadí je uloženo jako pole `Ty`, obsažené v `array<Ty, N>` objektu.  
@@ -137,46 +140,46 @@ class array;
 |||  
 |-|-|  
 |Definice typu|Popis|  
-|[const_iterator –](#const_iterator)|Typ konstantního iterátoru řízené sekvence|  
-|[const_pointer –](#const_pointer)|Typ konstantního ukazatele na prvek|  
-|[const_reference –](#const_reference)|Typ konstantního odkazu na prvek|  
-|[const_reverse_iterator –](#const_reverse_iterator)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
-|[difference_type –](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
+|[const_iterator](#const_iterator)|Typ konstantního iterátoru řízené sekvence|  
+|[const_pointer](#const_pointer)|Typ konstantního ukazatele na prvek|  
+|[const_reference](#const_reference)|Typ konstantního odkazu na prvek|  
+|[const_reverse_iterator](#const_reverse_iterator)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
+|[difference_type](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[iterator](#iterator)|Typ iterátoru řízené sekvence|  
-|[ukazatele](#pointer)|Typ ukazatele na prvek|  
-|[referenční dokumentace](#reference)|Typ odkazu na prvek|  
-|[reverse_iterator –](#reverse_iterator)|Typ zpětné iterator pro řízené sekvenci.|  
-|[size_type –](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|  
+|[pointer](#pointer)|Typ ukazatele na prvek|  
+|[reference](#reference)|Typ odkazu na prvek|  
+|[reverse_iterator](#reverse_iterator)|Typ zpětné iterator pro řízené sekvenci.|  
+|[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|  
 |[value_type](#value_type)|Typ prvku|  
   
 |||  
 |-|-|  
 |Členská funkce|Popis|  
-|[pole](#array)|Vytvoří objekt array.|  
-|[přiřazení](#assign)|Nahradí všechny elementy.|  
-|[v](#at)|Přístup k elementu na zadané pozici.|  
+|[array](#array)|Vytvoří objekt array.|  
+|[assign](#assign)|Nahradí všechny elementy.|  
+|[at](#at)|Přístup k elementu na zadané pozici.|  
 |[zpět](#back)|Přístup k posledním elementem.|  
-|[začít](#begin)|Určuje začátek řízené sekvence.|  
-|[cbegin –](#cbegin)|Vrátí první prvek v poli const iterator náhodným přístupem.|  
+|[Začátek](#begin)|Určuje začátek řízené sekvence.|  
+|[cbegin](#cbegin)|Vrátí první prvek v poli const iterator náhodným přístupem.|  
 |[cend –](#cend)|Vrátí const iterator náhodným přístupem této body právě přesahuje za konec pole.|  
-|[crbegin –](#crbegin)|Vrátí const iterator prvním elementem v invertovaných pole.|  
+|[crbegin](#crbegin)|Vrátí const iterator prvním elementem v invertovaných pole.|  
 |[crend –](#crend)|Vrátí const iterator na konec odstínech pole.|  
 |[data](#data)|Získá adresu první prvek.|  
 |[prázdný](#empty)|Testy, jestli jsou elementy nabízejí.|  
-|[end](#end)|Určuje konec řízené sekvence.|  
+|[End](#end)|Určuje konec řízené sekvence.|  
 |[výplně](#fill)|Nahradí všechny elementy se zadanou hodnotou.|  
-|[přední](#front)|Přístup k první prvek.|  
-|[max_size –](#max_size)|Spočítá počet prvků.|  
-|[rbegin –](#rbegin)|Označuje začátek odstínech řízené sekvenci.|  
+|[Přední](#front)|Přístup k první prvek.|  
+|[max_size](#max_size)|Spočítá počet prvků.|  
+|[rbegin](#rbegin)|Označuje začátek odstínech řízené sekvenci.|  
 |[rend –](#rend)|Označuje konec odstínech řízené sekvenci.|  
-|[velikost](#size)|Spočítá počet prvků.|  
+|[Velikost](#size)|Spočítá počet prvků.|  
 |[swap](#swap)|Zamění obsah dvou kontejnerů.|  
   
 |||  
 |-|-|  
 |Operátor|Popis|  
-|[Array::Operator =](#op_eq)|Nahradí řízené sekvenci.|  
-|[Array::Operator]](#op_at)|Přístup k elementu na zadané pozici.|  
+|[array::operator=](#op_eq)|Nahradí řízené sekvenci.|  
+|[array::operator[]](#op_at)|Přístup k elementu na zadané pozici.|  
   
 ## <a name="remarks"></a>Poznámky  
  Typ, má výchozí konstruktor `array()` a operátor přiřazení výchozí `operator=`a splňuje požadavky na `aggregate`. Proto objekty typu `array<Ty, N>` jde inicializovat pomocí inicializátoru agregační. Například  
@@ -192,7 +195,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **Namespace:** – std  
   
-##  <a name="array"></a>Array::Array –  
+##  <a name="array"></a>  Array::Array –  
  Vytvoří objekt array.  
   
 ```  
@@ -202,7 +205,7 @@ array(const array& right);
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*vpravo*  
+Vpravo  
  Objekt, nebo rozsah k vložení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -247,7 +250,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="assign"></a>Array::Assign  
+##  <a name="assign"></a>  Array::Assign  
 Zastaralé v C ++ 11, nahrazuje [výplně](#fill). Nahradí všechny elementy.  
   
 ```  
@@ -299,7 +302,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="at"></a>Array::AT  
+##  <a name="at"></a>  Array::AT  
  Přístup k elementu na zadané pozici.  
   
 ```  
@@ -344,7 +347,7 @@ int main()
   
 ```  
   
-##  <a name="back"></a>Array::back  
+##  <a name="back"></a>  Array::back  
  Přístup k posledním elementem.  
   
 ```  
@@ -389,7 +392,7 @@ int main()
 3  
 ```  
   
-##  <a name="begin"></a>Array::begin  
+##  <a name="begin"></a>  Array::begin  
  Určuje začátek řízené sekvence.  
   
 ```  
@@ -434,7 +437,7 @@ int main()
 0  
 ```  
   
-##  <a name="cbegin"></a>Array::cbegin  
+##  <a name="cbegin"></a>  Array::cbegin  
  Vrátí `const` iterator, která řeší prvním elementem v rozsahu.  
   
 ```  
@@ -457,7 +460,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>Array::cend  
+##  <a name="cend"></a>  Array::cend  
  Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.  
   
 ```  
@@ -468,7 +471,7 @@ const_iterator cend() const noexcept;
  Iterátor pro náhodný přístup, který ukazuje přesně za konec rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
- `cend`slouží k ověření, zda iterovat uplynutí konec její rozsah.  
+ `cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.  
   
  Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.  
   
@@ -482,7 +485,7 @@ auto i2 = Container.cend();
   
  Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
   
-##  <a name="const_iterator"></a>Array::const_iterator  
+##  <a name="const_iterator"></a>  Array::const_iterator  
  Typ konstantního iterátoru řízené sekvence  
   
 ```  
@@ -533,7 +536,7 @@ it2: 0
   
 ```  
   
-##  <a name="const_pointer"></a>Array::const_pointer  
+##  <a name="const_pointer"></a>  Array::const_pointer  
  Typ konstantního ukazatele na prvek  
   
 ```  
@@ -577,7 +580,7 @@ int main()
 0  
 ```  
   
-##  <a name="const_reference"></a>Array::const_reference  
+##  <a name="const_reference"></a>  Array::const_reference  
  Typ konstantního odkazu na prvek  
   
 ```  
@@ -621,7 +624,7 @@ int main()
 0  
 ```  
   
-##  <a name="const_reverse_iterator"></a>Array::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  Array::const_reverse_iterator  
  Typ konstantní zpětné iterator pro řízené sekvenci.  
   
 ```  
@@ -665,7 +668,7 @@ int main()
 3  
 ```  
   
-##  <a name="crbegin"></a>Array::crbegin  
+##  <a name="crbegin"></a>  Array::crbegin  
  Vrátí const iterator prvním elementem v invertovaných pole.  
   
 ```  
@@ -708,7 +711,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="crend"></a>Array::crend  
+##  <a name="crend"></a>  Array::crend  
  Vrátí const iterator, která řeší umístění úspěšné posledním prvkem v invertovaných pole.  
   
 ```  
@@ -719,11 +722,11 @@ const_reverse_iterator crend() const noexcept;
  Const reverse iterator náhodný přístup, která řeší umístění úspěšné posledním prvkem v invertovaných pole (umístění, které měl před první prvek v poli unreversed).  
   
 ### <a name="remarks"></a>Poznámky  
- `crend`se používá s odstínech pole stejně jako [array::cend](#cend) se používá s polem.  
+ `crend` se používá s odstínech pole stejně jako [array::cend](#cend) se používá s polem.  
   
  S návratovou hodnotou `crend` (vhodně odečte), objekt pole nemůže být upraven.  
   
- `crend`dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své pole.  
+ `crend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své pole.  
   
  Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.  
   
@@ -751,7 +754,7 @@ int main( )
 1  
 ```  
   
-##  <a name="data"></a>Array::data –  
+##  <a name="data"></a>  Array::data –  
  Získá adresu první prvek.  
   
 ```  
@@ -797,7 +800,7 @@ int main()
 0  
 ```  
   
-##  <a name="difference_type"></a>Array::difference_type  
+##  <a name="difference_type"></a>  Array::difference_type  
  Typ vzdálenosti se znaménkem mezi dvěma prvky  
   
 ```  
@@ -841,7 +844,7 @@ int main()
 -4  
 ```  
   
-##  <a name="empty"></a>Array::Empty  
+##  <a name="empty"></a>  Array::Empty  
  Zkouší, zda nejsou přítomny žádné prvky.  
   
 ```  
@@ -891,7 +894,7 @@ false
 true  
 ```  
   
-##  <a name="end"></a>Array::end  
+##  <a name="end"></a>  Array::end  
  Určuje konec řízené sekvence.  
   
 ```  
@@ -937,7 +940,7 @@ int main()
 3  
 ```  
   
-##  <a name="fill"></a>Array::Fill  
+##  <a name="fill"></a>  Array::Fill  
  Pole se vymaže a zkopíruje zadaných elementů prázdné pole.  
   
 ```  
@@ -952,7 +955,7 @@ void fill(const Type& val);
 |`val`|Hodnota elementu vkládání do pole.|  
   
 ### <a name="remarks"></a>Poznámky  
- `fill`nahrazuje každý element pole se zadanou hodnotou.  
+ `fill` nahrazuje každý element pole se zadanou hodnotou.  
   
 ### <a name="example"></a>Příklad  
   
@@ -981,7 +984,7 @@ int main( )
 }  
 ```  
   
-##  <a name="front"></a>Array::front  
+##  <a name="front"></a>  Array::front  
  Přístup k první prvek.  
   
 ```  
@@ -1026,7 +1029,7 @@ int main()
 0  
 ```  
   
-##  <a name="iterator"></a>Array::iterator  
+##  <a name="iterator"></a>  Array::iterator  
  Typ iterátoru řízené sekvence  
   
 ```  
@@ -1077,7 +1080,7 @@ it2: 0
   
 ```  
   
-##  <a name="max_size"></a>Array::max_size  
+##  <a name="max_size"></a>  Array::max_size  
  Spočítá počet prvků.  
   
 ```  
@@ -1120,7 +1123,7 @@ int main()
 4  
 ```  
   
-##  <a name="op_at"></a>Array::Operator]  
+##  <a name="op_at"></a>  Array::Operator]  
  Přístup k elementu na zadané pozici.  
   
 ```  
@@ -1172,7 +1175,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="op_eq"></a>Array::Operator =  
+##  <a name="op_eq"></a>  Array::Operator =  
  Nahradí řízené sekvenci.  
   
 ```  
@@ -1224,7 +1227,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="pointer"></a>Array::Pointer  
+##  <a name="pointer"></a>  Array::Pointer  
  Typ ukazatele na prvek  
   
 ```  
@@ -1268,7 +1271,7 @@ int main()
 0  
 ```  
   
-##  <a name="rbegin"></a>Array::rbegin  
+##  <a name="rbegin"></a>  Array::rbegin  
  Označuje začátek odstínech řízené sekvenci.  
   
 ```  
@@ -1313,7 +1316,7 @@ int main()
 3  
 ```  
   
-##  <a name="reference"></a>Array::Reference  
+##  <a name="reference"></a>  Array::Reference  
  Typ odkazu na prvek  
   
 ```  
@@ -1357,7 +1360,7 @@ int main()
 0  
 ```  
   
-##  <a name="rend"></a>Array::rend  
+##  <a name="rend"></a>  Array::rend  
  Označuje konec odstínech řízené sekvenci.  
   
 ```  
@@ -1402,7 +1405,7 @@ int main()
 0  
 ```  
   
-##  <a name="reverse_iterator"></a>Array::reverse_iterator  
+##  <a name="reverse_iterator"></a>  Array::reverse_iterator  
  Typ zpětné iterator pro řízené sekvenci.  
   
 ```  
@@ -1446,7 +1449,7 @@ int main()
 3  
 ```  
   
-##  <a name="size"></a>Array::size  
+##  <a name="size"></a>  Array::size  
  Spočítá počet prvků.  
   
 ```  
@@ -1489,7 +1492,7 @@ int main()
 4  
 ```  
   
-##  <a name="size_type"></a>Array::size_type  
+##  <a name="size_type"></a>  Array::size_type  
  Typ je nepodepsané vzdálenost mezi dvěma elementu.  
   
 ```  
@@ -1533,7 +1536,7 @@ int main()
 4  
 ```  
   
-##  <a name="swap"></a>Array::swap  
+##  <a name="swap"></a>  Array::swap  
 Zamění obsah toto pole s jiné pole.  
   
 ```  
@@ -1596,7 +1599,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="value_type"></a>Array::value_type  
+##  <a name="value_type"></a>  Array::value_type  
  Typ prvku  
   
 ```  
@@ -1645,5 +1648,5 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<pole >](../standard-library/array.md)
+ [\<array>](../standard-library/array.md)
 

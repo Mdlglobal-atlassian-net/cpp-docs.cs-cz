@@ -4,33 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output streams
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ae5179ee14534ed0982f4b996c8f88f1cfc560a8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="output-streams"></a>Výstupní datové proudy
 Objekt výstupní datový proud je cíl pro bajtů. Jsou tři nejdůležitější tříd výstupní datový proud `ostream`, `ofstream`, a `ostringstream`.  
   
  `ostream` Třídu, v rámci odvozené třídy `basic_ostream`, podporuje objektů předdefinované datového proudu:  
   
--   `cout`standardní výstup  
+-   `cout` Standardní výstup  
   
--   `cerr`Standardní chyba s omezenou ukládání do vyrovnávací paměti  
+-   `cerr` Standardní chyba s omezenou ukládání do vyrovnávací paměti  
   
--   `clog`Podobně jako `cerr` , ale s úplnou ukládání do vyrovnávací paměti  
+-   `clog` Podobně jako `cerr` , ale s úplnou ukládání do vyrovnávací paměti  
   
  Objekty zřídka se vytvářejí na základě `ostream`; předdefinované objekty se obecně používají. V některých případech můžete opětovně přiřazovat předdefinované objekty po spuštění programu. `ostream` Třídy, která můžete nakonfigurovat pro operace bez vyrovnávací paměti nebo ve vyrovnávací paměti, je nejvhodnější pro výstup sekvenční textovém režimu. Všechny funkce základní třídy, `ios`, je součástí `ostream`. Pokud vytvoříte objekt třídy `ostream`, je nutné zadat `streambuf` objekt konstruktoru.  
   

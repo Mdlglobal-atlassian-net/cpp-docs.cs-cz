@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::money_put
 - xlocmon/std::money_put::char_type
@@ -14,7 +15,8 @@ f1_keywords:
 - xlocmon/std::money_put::string_type
 - xlocmon/std::money_put::do_put
 - xlocmon/std::money_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::money_put [C++]
 - std::money_put [C++], char_type
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd47afe55f1e2625dfe216afd6ef98cbcba7b21f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 33554a3c3422a06693a7daee60c1ccaa47bd00c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneyput-class"></a>money_put – třída
 Šablony třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody hodnot peněžní pořadí typu `CharType`.  
@@ -59,29 +62,29 @@ class money_put : public locale::facet;
   
 |||  
 |-|-|  
-|[money_put –](#money_put)|V konstruktoru pro objekty typu `money_put`.|  
+|[money_put](#money_put)|V konstruktoru pro objekty typu `money_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
-|[iter_type –](#iter_type)|Typ, který popisuje výstupní iterátor.|  
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|  
+|[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
+|[iter_type](#iter_type)|Typ, který popisuje výstupní iterátor.|  
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[do_put –](#do_put)|Virtuální funkce volaná k převodu buď čísla, nebo řetězce na sekvenci znaků, která představuje finanční hodnotu.|  
-|[PUT](#put)|Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.|  
+|[do_put](#do_put)|Virtuální funkce volaná k převodu buď čísla, nebo řetězce na sekvenci znaků, která představuje finanční hodnotu.|  
+|[put](#put)|Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>money_put::char_type  
+##  <a name="char_type"></a>  money_put::char_type  
  Typ, který se používá k popisu znaku používaného národním prostředním.  
   
 ```  
@@ -91,7 +94,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="do_put"></a>money_put::do_put  
+##  <a name="do_put"></a>  money_put::do_put  
  Virtuální funkce volaná k převodu buď čísla, nebo řetězce na sekvenci znaků, která představuje finanční hodnotu.  
   
 ```  
@@ -139,29 +142,29 @@ virtual iter_type do_put(
   
  Konkrétně:  
   
-- **FAC**. [pos_format –](../standard-library/moneypunct-class.md#pos_format) určuje pořadí, ve které jsou součástí pole vygenerované nezáporná hodnota.  
+- **fac**. [pos_format –](../standard-library/moneypunct-class.md#pos_format) určuje pořadí, ve které jsou součástí pole vygenerované nezáporná hodnota.  
   
-- **FAC**. [neg_format –](../standard-library/moneypunct-class.md#neg_format) určuje pořadí, ve které jsou součástí pole vygenerované zápornou hodnotu.  
+- **fac**. [neg_format –](../standard-library/moneypunct-class.md#neg_format) určuje pořadí, ve které jsou součástí pole vygenerované zápornou hodnotu.  
   
-- **FAC**. [curr_symbol –](../standard-library/moneypunct-class.md#curr_symbol) určuje pořadí elementů generovat pro symbolu měny.  
+- **fac**. [curr_symbol –](../standard-library/moneypunct-class.md#curr_symbol) určuje pořadí elementů generovat pro symbolu měny.  
   
-- **FAC**. [positive_sign –](../standard-library/moneypunct-class.md#positive_sign) určuje pořadí elementů generovat pro kladné znaménko.  
+- **fac**. [positive_sign –](../standard-library/moneypunct-class.md#positive_sign) určuje pořadí elementů generovat pro kladné znaménko.  
   
-- **FAC**. [negative_sign –](../standard-library/moneypunct-class.md#negative_sign) určuje pořadí elementů generovat pro znaménkem záporné.  
+- **fac**. [negative_sign –](../standard-library/moneypunct-class.md#negative_sign) určuje pořadí elementů generovat pro znaménkem záporné.  
   
-- **FAC**. [seskupování](../standard-library/moneypunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky.  
+- **fac**. [seskupování](../standard-library/moneypunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky.  
   
-- **FAC**. [thousands_sep –](../standard-library/moneypunct-class.md#thousands_sep) určuje element, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
+- **fac**. [thousands_sep –](../standard-library/moneypunct-class.md#thousands_sep) určuje element, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
   
-- **FAC**. [decimal_point –](../standard-library/moneypunct-class.md#decimal_point) určuje elementu, který odděluje číslic celé číslo od všech zlomek číslic.  
+- **fac**. [decimal_point –](../standard-library/moneypunct-class.md#decimal_point) určuje elementu, který odděluje číslic celé číslo od všech zlomek číslic.  
   
-- **FAC**. [frac_digits –](../standard-library/moneypunct-class.md#frac_digits) určuje počet číslic významné zlomek napravo od všech desetinné čárky.  
+- **fac**. [frac_digits –](../standard-library/moneypunct-class.md#frac_digits) určuje počet číslic významné zlomek napravo od všech desetinné čárky.  
   
- Pokud řetězec přihlašovací ( **fac**. `negative_sign`nebo **fac**. `positive_sign`) má více než jeden element pouze první prvek se vygeneruje kde rovna element **money_base::sign** se zobrazí ve formátu vzoru ( **fac**. `neg_format`nebo **fac**. `pos_format`). Všechny zbývající elementy jsou generovány na konci tohoto pole peněžní výstup.  
+ Pokud řetězec přihlašovací ( **fac**. `negative_sign` nebo **fac**. `positive_sign`) má více než jeden element pouze první prvek se vygeneruje kde rovna element **money_base::sign** se zobrazí ve formátu vzoru ( **fac**. `neg_format` nebo **fac**. `pos_format`). Všechny zbývající elementy jsou generovány na konci tohoto pole peněžní výstup.  
   
- Pokud **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) nenulový, řetězec **fac**. `curr_symbol`kde se vygeneruje rovna element **money_base::symbol** se zobrazí ve formátu vzoru. Jinak se generuje bez symbolu měny.  
+ Pokud **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) nenulový, řetězec **fac**. `curr_symbol` kde se vygeneruje rovna element **money_base::symbol** se zobrazí ve formátu vzoru. Jinak se generuje bez symbolu měny.  
   
- Pokud se nevyžaduje žádná omezení seskupení **fac**. **seskupování** (jeho první prvek má hodnotu char_max –), pak žádné instance **fac**. `thousands_sep`jsou generovány, v části hodnotu pole peněžní výstup (kde rovna element **money_base::value** se zobrazí ve formátu vzoru). Pokud **fac**. `frac_digits`je nulové pak žádné instance **fac**. `decimal_point`Generuje se po desetinných míst. Jinak hodnota pole výsledný výstup peněžní umístí nejnižší **fac**. `frac_digits`desetinných číslic vpravo od desetinné čárky.  
+ Pokud se nevyžaduje žádná omezení seskupení **fac**. **seskupování** (jeho první prvek má hodnotu char_max –), pak žádné instance **fac**. `thousands_sep` jsou generovány, v části hodnotu pole peněžní výstup (kde rovna element **money_base::value** se zobrazí ve formátu vzoru). Pokud **fac**. `frac_digits` je nulové pak žádné instance **fac**. `decimal_point` Generuje se po desetinných míst. Jinak hodnota pole výsledný výstup peněžní umístí nejnižší **fac**. `frac_digits` desetinných číslic vpravo od desetinné čárky.  
   
  Jako u jakékoli číselné výstup pole, s výjimkou, že pokud dojde k odsazení **iosbase**. **příznaky** & **iosbase**. [interní](../standard-library/ios-functions.md#internal) je nenulové hodnoty, všechny interní odsazení se vygeneruje kde rovna element **money_base::space** se zobrazí ve formátu vzoru, pokud se zobrazí. Interní odsazení, jinak dojde před generovaným pořadí. Znak odsazení je **výplně**.  
   
@@ -170,7 +173,7 @@ virtual iter_type do_put(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [put](#put), kde je volána funkce člena virtuální **put**.  
   
-##  <a name="iter_type"></a>money_put::iter_type  
+##  <a name="iter_type"></a>  money_put::iter_type  
  Typ, který popisuje výstupní iterátor.  
   
 ```  
@@ -180,7 +183,7 @@ typedef OutputIterator iter_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **OutputIterator.**  
   
-##  <a name="money_put"></a>money_put::money_put  
+##  <a name="money_put"></a>  money_put::money_put  
  V konstruktoru pro objekty typu `money_put`.  
   
 ```  
@@ -198,13 +201,13 @@ explicit money_put(size_t _Refs = 0);
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   
  Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="put"></a>money_put::Put  
+##  <a name="put"></a>  money_put::Put  
  Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.  
   
 ```  
@@ -278,7 +281,7 @@ int main( )
 money_put( ) = "CAD1,000.12"  
 ```  
   
-##  <a name="string_type"></a>money_put::STRING_TYPE  
+##  <a name="string_type"></a>  money_put::STRING_TYPE  
  Typ, který popisuje řetězec obsahující znaky typu **CharType**.  
   
 ```  

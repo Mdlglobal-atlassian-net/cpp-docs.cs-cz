@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmes/std::messages
 - xlocmes/std::messages::char_type
@@ -17,7 +18,8 @@ f1_keywords:
 - xlocmes/std::messages::do_open
 - xlocmes/std::messages::get
 - xlocmes/std::messages::open
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::messages [C++]
 - std::messages [C++], char_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 809a5fc0a74408c484948309a62096c2e89b7af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messages-class"></a>messages – třída
 Třída šablony popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí k načítání lokalizovaných zpráv z katalogu internacionalizovaných zpráv pro dané národní prostředí.  
@@ -65,23 +68,23 @@ class messages : public messages_base;
   
 |||  
 |-|-|  
-|[zprávy](#messages)|Funkce konstruktoru omezující vlastnosti zpráv.|  
+|[Zprávy](#messages)|Funkce konstruktoru omezující vlastnosti zpráv.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ znaku, který je používán pro zobrazení zpráv.|  
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|  
+|[char_type](#char_type)|Typ znaku, který je používán pro zobrazení zpráv.|  
+|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[close](#close)|Zavře katalog zpráv.|  
-|[do_close –](#do_close)|Virtuální funkce volaná k zavření katalogu zpráv.|  
-|[do_get –](#do_get)|Virtuální funkce volaná k načtení katalogu zpráv.|  
-|[do_open –](#do_open)|Virtuální funkce volaná k otevření katalogu zpráv.|  
+|[do_close](#do_close)|Virtuální funkce volaná k zavření katalogu zpráv.|  
+|[do_get](#do_get)|Virtuální funkce volaná k načtení katalogu zpráv.|  
+|[do_open](#do_open)|Virtuální funkce volaná k otevření katalogu zpráv.|  
 |[get](#get)|Načte katalog zpráv.|  
 |[open](#open)|Otevře katalog zpráv.|  
   
@@ -90,7 +93,7 @@ class messages : public messages_base;
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>Messages::char_type  
+##  <a name="char_type"></a>  Messages::char_type  
  Typ znaku, který je používán pro zobrazení zpráv.  
   
 ```
@@ -100,7 +103,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="close"></a>Messages::Close  
+##  <a name="close"></a>  Messages::Close  
  Zavře katalog zpráv.  
   
 ```
@@ -114,7 +117,7 @@ void close(catalog _Catval) const;
 ### <a name="remarks"></a>Poznámky  
  Volání členských funkcí [do_close –](#do_close)(_ *Catval*).  
   
-##  <a name="do_close"></a>Messages::do_close  
+##  <a name="do_close"></a>  Messages::do_close  
  Virtuální funkce volaná k zavření katalogu zpráv.  
   
 ```
@@ -133,7 +136,7 @@ virtual void do_close(catalog _Catval) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [zavřete](#close), který volá `do_close`.  
   
-##  <a name="do_get"></a>Messages::do_get  
+##  <a name="do_get"></a>  Messages::do_get  
  Virtuální funkce volaná k načtení katalogu zpráv.  
   
 ```
@@ -166,7 +169,7 @@ virtual string_type do_get(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [získat](#get), který volá `do_get`.  
   
-##  <a name="do_open"></a>Messages::do_open  
+##  <a name="do_open"></a>  Messages::do_open  
  Virtuální funkce volaná k otevření katalogu zpráv.  
   
 ```
@@ -193,7 +196,7 @@ virtual catalog do_open(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [otevřete](#open), který volá `do_open`.  
   
-##  <a name="get"></a>Messages::Get  
+##  <a name="get"></a>  Messages::Get  
  Načte katalog zpráv.  
   
 ```
@@ -223,7 +226,7 @@ string_type get(
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu [do_get –](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
   
-##  <a name="messages"></a>Messages::Messages  
+##  <a name="messages"></a>  Messages::Messages  
  Funkce konstruktoru omezující vlastnosti zpráv.  
   
 ```
@@ -249,13 +252,13 @@ protected: messages(
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   
  Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="open"></a>Messages::Open  
+##  <a name="open"></a>  Messages::Open  
  Otevře katalog zpráv.  
   
 ```
@@ -277,7 +280,7 @@ catalog open(
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu [do_open –](#do_open)( `_Catname`, `_Loc`).  
   
-##  <a name="string_type"></a>Messages::STRING_TYPE  
+##  <a name="string_type"></a>  Messages::STRING_TYPE  
  Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu **CharType**.  
   
 ```

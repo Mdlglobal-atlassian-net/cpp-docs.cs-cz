@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-class"></a>set – třída
 Sada standardní knihovna C++ kontejner – třída se používá pro ukládání a načítání dat z kolekce, ve kterém jsou jedinečné hodnoty elementů obsažených a slouží jako klíčové hodnoty, podle kterých automaticky řazení dat. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.  
@@ -126,7 +129,7 @@ class set
  V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět sady. Tento argument je volitelný a výchozí hodnota je **allocator***\<klíč >.*  
+ Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět sady. Tento argument je volitelný a výchozí hodnota je **allocator ***\<klíč >.*  
   
 ## <a name="remarks"></a>Poznámky  
  Standardní knihovna C++ sada je:  
@@ -161,64 +164,64 @@ class set
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typ, který reprezentuje `allocator` tříd pro objekt set.|  
-|[const_iterator –](#const_iterator)|Typ, který poskytuje obousměrné iterator, který může číst `const` element v sadě.|  
-|[const_pointer –](#const_pointer)|Typ, který poskytuje odkazy `const` element v sadě.|  
-|[const_reference –](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v sadě pro čtení a provádění `const` operace.|  
-|[const_reverse_iterator –](#const_reverse_iterator)|Typ, který poskytuje obousměrné iterator, který může číst všechny `const` element v sadě.|  
-|[difference_type –](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu set v rozsahu mezi prvky, na které odkazují iterátory.|  
+|[allocator_type](#allocator_type)|Typ, který reprezentuje `allocator` tříd pro objekt set.|  
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrné iterator, který může číst `const` element v sadě.|  
+|[const_pointer](#const_pointer)|Typ, který poskytuje odkazy `const` element v sadě.|  
+|[const_reference](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v sadě pro čtení a provádění `const` operace.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrné iterator, který může číst všechny `const` element v sadě.|  
+|[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu set v rozsahu mezi prvky, na které odkazují iterátory.|  
 |[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu set.|  
-|[key_compare –](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu set.|  
-|[key_type –](#key_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako klíč řazení.|  
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|  
-|[referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v objektu set.|  
-|[reverse_iterator –](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu set.|  
-|[size_type –](#size_type)|Celočíselný typ bez znaménka představující počet prvků v objektu set.|  
-|[value_compare –](#value_compare)|Typ poskytující objekt funkce, který může porovnat dva prvků pro určení jejich relativního pořadí v sadě.|  
+|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu set.|  
+|[key_type](#key_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako klíč řazení.|  
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|  
+|[reference](#reference)|Typ, který poskytuje odkaz na prvek uložený v objektu set.|  
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu set.|  
+|[size_type](#size_type)|Celočíselný typ bez znaménka představující počet prvků v objektu set.|  
+|[value_compare](#value_compare)|Typ poskytující objekt funkce, který může porovnat dva prvků pro určení jejich relativního pořadí v sadě.|  
 |[value_type](#value_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako hodnotu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[začít](#begin)|Vrátí iterátor adresující první prvek v sadě.|  
-|[cbegin –](#cbegin)|Vrátí iterátor const adresující první prvek v sadě.|  
+|[Začátek](#begin)|Vrátí iterátor adresující první prvek v sadě.|  
+|[cbegin](#cbegin)|Vrátí iterátor const adresující první prvek v sadě.|  
 |[cend –](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v objektu set.|  
-|[Vymazat](#clear)|Odstraní všechny prvky objektu set.|  
-|[počet](#count)|Vrátí počet prvků objektu set, jejichž klíč odpovídá klíči se zadaným parametrem.|  
-|[crbegin –](#rbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|  
+|[clear](#clear)|Odstraní všechny prvky objektu set.|  
+|[Počet](#count)|Vrátí počet prvků objektu set, jejichž klíč odpovídá klíči se zadaným parametrem.|  
+|[crbegin](#rbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|  
 |[crend –](#rend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|  
 |[emplace –](#emplace)|Vloží vytvořený prvek na místo do objektu set.|  
 |[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu set.|  
 |[prázdný](#empty)|Testuje, zda je objekt set prázdný.|  
-|[end](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v objektu set.|  
-|[equal_range –](#equal_range)|Vrátí pár iterátorů, respektive, na první prvek objektu set s klíčem, který je větší než zadaný klíč a na první prvek objektu set s klíčem, který je roven nebo větší než tento klíč.|  
+|[End](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v objektu set.|  
+|[equal_range](#equal_range)|Vrátí pár iterátorů, respektive, na první prvek objektu set s klíčem, který je větší než zadaný klíč a na první prvek objektu set s klíčem, který je roven nebo větší než tento klíč.|  
 |[vymazání](#erase)|Odebere prvek nebo rozsah prvků v objektu set od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.|  
 |[Najít](#find)|Vrátí iterátor adresující umístění prvku v objektu set, který má klíč odpovídající zadanému klíči.|  
-|[get_allocator –](#get_allocator)|Vrátí kopii `allocator` objekt použitý k vytvoření sady.|  
-|[Vložení](#insert)|Vloží prvek nebo rozsah prvků do objektu set.|  
-|[key_comp –](#key_comp)|Načte kopii objektu porovnání, která je použita pro seřazení klíčů v objektu set.|  
-|[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je roven nebo větší než zadaný klíč.|  
-|[max_size –](#max_size)|Vrátí maximální délku objektu set.|  
-|[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu set.|  
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objekt použitý k vytvoření sady.|  
+|[insert](#insert)|Vloží prvek nebo rozsah prvků do objektu set.|  
+|[key_comp](#key_comp)|Načte kopii objektu porovnání, která je použita pro seřazení klíčů v objektu set.|  
+|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je roven nebo větší než zadaný klíč.|  
+|[max_size](#max_size)|Vrátí maximální délku objektu set.|  
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu set.|  
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|  
-|[velikost](#size)|Vrátí počet prvků v objektu set.|  
+|[Velikost](#size)|Vrátí počet prvků v objektu set.|  
 |[swap](#swap)|Vymění prvky dvou sad.|  
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je větší než zadaný klíč.|  
-|[value_comp –](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu set.|  
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je větší než zadaný klíč.|  
+|[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu set.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Nahradí prvky objektu set kopií jiného objektu set.|  
+|[operator=](#op_eq)|Nahradí prvky objektu set kopií jiného objektu set.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<nastavit >  
   
  **Namespace:** – std  
   
-##  <a name="allocator_type"></a>set::allocator_type  
+##  <a name="allocator_type"></a>  set::allocator_type  
  Typ, který reprezentuje allocator – třída pro objekt set.  
   
 ```  
@@ -235,7 +238,7 @@ typedef Allocator allocator_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_allocator –](#get_allocator) pro příklad, který používá `allocator_type`.  
   
-##  <a name="begin"></a>set::begin  
+##  <a name="begin"></a>  set::begin  
  Vrátí iterátor adresující první prvek v sadě.  
   
 ```  
@@ -289,7 +292,7 @@ The first element of s1 is 1
 The first element of s1 is now 2  
 ```  
   
-##  <a name="cbegin"></a>set::cbegin  
+##  <a name="cbegin"></a>  set::cbegin  
  Vrátí `const` iterator, která řeší prvním elementem v rozsahu.  
   
 ```  
@@ -312,7 +315,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>set::cend  
+##  <a name="cend"></a>  set::cend  
  Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.  
   
 ```  
@@ -323,7 +326,7 @@ const_iterator cend() const;
  A `const` iterator obousměrného přístup, který odkazuje právě přesahuje za konec rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  
- `cend`slouží k ověření, zda iterovat uplynutí konec její rozsah.  
+ `cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.  
   
  Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.  
   
@@ -337,7 +340,7 @@ auto i2 = Container.cend();
   
  Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
   
-##  <a name="clear"></a>set::clear  
+##  <a name="clear"></a>  set::clear  
  Odstraní všechny prvky objektu set.  
   
 ```  
@@ -374,7 +377,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.  
 ```  
   
-##  <a name="const_iterator"></a>set::const_iterator  
+##  <a name="const_iterator"></a>  set::const_iterator  
  Typ, který poskytuje obousměrné iterator, který může číst **const** element v sadě.  
   
 ```  
@@ -387,7 +390,7 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin) pro příklad, který používá `const_iterator`.  
   
-##  <a name="const_pointer"></a>set::const_pointer  
+##  <a name="const_pointer"></a>  set::const_pointer  
  Typ, který poskytuje odkazy **const** element v sadě.  
   
 ```  
@@ -399,7 +402,7 @@ typedef typename allocator_type::const_pointer const_pointer;
   
  Ve většině případů [const_iterator –](#const_iterator) se má použít pro přístup k elementům v const objekt set.  
   
-##  <a name="const_reference"></a>set::const_reference  
+##  <a name="const_reference"></a>  set::const_reference  
  Typ, který obsahuje odkaz na **const** element uložené v sadě pro čtení a provádění **const** operace.  
   
 ```  
@@ -439,7 +442,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="const_reverse_iterator"></a>set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  set::const_reverse_iterator  
  Typ, který poskytuje obousměrné iterator, který může číst všechny **const** element v sadě.  
   
 ```  
@@ -452,7 +455,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`.  
   
-##  <a name="count"></a>set::Count  
+##  <a name="count"></a>  set::Count  
  Vrátí počet prvků objektu set, jejichž klíč odpovídá klíči se zadaným parametrem.  
   
 ```  
@@ -505,7 +508,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="crbegin"></a>set::crbegin  
+##  <a name="crbegin"></a>  set::crbegin  
  Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.  
   
 ```  
@@ -516,7 +519,7 @@ const_reverse_iterator crbegin() const;
  Const reverse obousměrného iterator adresování první prvek v sadě odstínech nebo řešení, co je posledním prvkem v sadě unreversed.  
   
 ### <a name="remarks"></a>Poznámky  
- `crbegin`se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.  
+ `crbegin` se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.  
   
  S návratovou hodnotou `crbegin`, nemůže být upraven objekt set.  
   
@@ -548,7 +551,7 @@ int main( )
 The first element in the reversed set is 30.  
 ```  
   
-##  <a name="crend"></a>set::crend  
+##  <a name="crend"></a>  set::crend  
  Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.  
   
 ```  
@@ -559,11 +562,11 @@ const_reverse_iterator crend() const;
  Const reverse iterator obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných sadu (umístění, které měl před první prvek v sadě unreversed).  
   
 ### <a name="remarks"></a>Poznámky  
- `crend`se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.  
+ `crend` se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.  
   
  S návratovou hodnotou `crend`, nemůže být upraven objekt set. Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.  
   
- `crend`dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.  
+ `crend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.  
   
 ### <a name="example"></a>Příklad  
   
@@ -589,7 +592,7 @@ int main() {
 }  
 ```  
   
-##  <a name="difference_type"></a>set::difference_type  
+##  <a name="difference_type"></a>  set::difference_type  
  Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu set v rozsahu mezi prvky, na které odkazují iterátory.  
   
 ```  
@@ -660,7 +663,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.  
 ```  
   
-##  <a name="emplace"></a>set::emplace  
+##  <a name="emplace"></a>  set::emplace  
  Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací).  
   
 ```  
@@ -740,7 +743,7 @@ int main()
   
 ```  
   
-##  <a name="emplace_hint"></a>set::emplace_hint  
+##  <a name="emplace_hint"></a>  set::emplace_hint  
  Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací), s pomocným parametrem umístění.  
   
 ```  
@@ -813,7 +816,7 @@ int main()
   
 ```  
   
-##  <a name="empty"></a>set::Empty  
+##  <a name="empty"></a>  set::Empty  
  Testuje, zda je objekt set prázdný.  
   
 ```  
@@ -854,7 +857,7 @@ The set s1 is not empty.
 The set s2 is empty.  
 ```  
   
-##  <a name="end"></a>set::end  
+##  <a name="end"></a>  set::end  
  Vrátí iterátor za koncem.  
   
 ```  
@@ -875,7 +878,7 @@ iterator end();
   
  Příklad kódu, najdete v části [set::find](#find).  
   
-##  <a name="equal_range"></a>set::equal_range  
+##  <a name="equal_range"></a>  set::equal_range  
  Vrátí pár iterátory v uvedeném pořadí první prvek v sadě s klíčem, který je větší než nebo rovna zadaný klíč a první prvek v sadě s klíčem, který je větší než klíč.  
   
 ```  
@@ -951,7 +954,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="erase"></a>set::Erase  
+##  <a name="erase"></a>  set::Erase  
  Odebere prvek nebo rozsah prvků v objektu set od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.  
   
 ```  
@@ -1065,7 +1068,7 @@ int main()
   
 ```  
   
-##  <a name="find"></a>set::Find  
+##  <a name="find"></a>  set::Find  
  Vrátí iterátor, který odkazuje na umístění elementu v sadě, s klíčem ekvivalentní k zadanému klíči.  
   
 ```  
@@ -1149,7 +1152,7 @@ int main()
   
 ```  
   
-##  <a name="get_allocator"></a>set::get_allocator  
+##  <a name="get_allocator"></a>  set::get_allocator  
  Vrátí kopii allocator objekt použitý k vytvoření sady.  
   
 ```  
@@ -1220,7 +1223,7 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>set::Insert  
+##  <a name="insert"></a>  set::Insert  
  Vloží prvek nebo rozsah prvků do objektu set.  
   
 ```  
@@ -1394,7 +1397,7 @@ int main()
   
 ```  
   
-##  <a name="iterator"></a>set::iterator  
+##  <a name="iterator"></a>  set::iterator  
  Typ, který poskytuje konstanta [obousměrného iterator](../standard-library/bidirectional-iterator-tag-struct.md) který může číst libovolný element v sadě.  
   
 ```  
@@ -1404,7 +1407,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání **iterator**.  
   
-##  <a name="key_comp"></a>set::key_comp  
+##  <a name="key_comp"></a>  set::key_comp  
  Načte kopii objektu porovnání, která je použita pro seřazení klíčů v objektu set.  
   
 ```  
@@ -1476,7 +1479,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.  
 ```  
   
-##  <a name="key_compare"></a>set::key_compare  
+##  <a name="key_compare"></a>  set::key_compare  
  Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu set.  
   
 ```  
@@ -1484,7 +1487,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `key_compare`je synonymum pro parametr šablony `Traits`.  
+ `key_compare` je synonymum pro parametr šablony `Traits`.  
   
  Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.  
   
@@ -1493,7 +1496,7 @@ typedef Traits key_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [key_comp –](#key_comp) příklad toho, jak deklarace a používání `key_compare`.  
   
-##  <a name="key_type"></a>set::key_type  
+##  <a name="key_type"></a>  set::key_type  
  Typ, který popisuje objekt uložené jako element sady jako klíč řazení.  
   
 ```  
@@ -1501,7 +1504,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `key_type`je synonymum pro parametr šablony `Key`.  
+ `key_type` je synonymum pro parametr šablony `Key`.  
   
  Další informace o `Key`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.  
   
@@ -1510,7 +1513,7 @@ typedef Key key_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.  
   
-##  <a name="lower_bound"></a>set::lower_bound  
+##  <a name="lower_bound"></a>  set::lower_bound  
  Vrátí iterátor na první prvek objektu set s klíčem, který je roven nebo větší než zadaný klíč.  
   
 ```  
@@ -1575,7 +1578,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="max_size"></a>set::max_size  
+##  <a name="max_size"></a>  set::max_size  
  Vrátí maximální délku objektu set.  
   
 ```  
@@ -1605,7 +1608,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>set::Operator =  
+##  <a name="op_eq"></a>  set::Operator =  
  Nahradí elementy tohoto `set` pomocí elementů z jiné `set`.  
   
 ```  
@@ -1665,7 +1668,7 @@ int main( )
    }  
 ```  
   
-##  <a name="pointer"></a>set::Pointer  
+##  <a name="pointer"></a>  set::Pointer  
  Typ, který poskytuje ukazatel na prvek v objektu set.  
   
 ```  
@@ -1677,7 +1680,7 @@ typedef typename allocator_type::pointer pointer;
   
  Ve většině případů [iterator](#iterator) se má použít pro přístup k elementům v objektu sady.  
   
-##  <a name="rbegin"></a>set::rbegin  
+##  <a name="rbegin"></a>  set::rbegin  
  Vrátí iterátor adresující první prvek v obráceném objektu set.  
   
 ```  
@@ -1690,11 +1693,11 @@ reverse_iterator rbegin();
  Iterator zpětné obousměrného adresování první prvek v sadě odstínech nebo řešení, co je posledním prvkem v sadě unreversed.  
   
 ### <a name="remarks"></a>Poznámky  
- `rbegin`se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.  
+ `rbegin` se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.  
   
  Pokud vrátí hodnotu, která `rbegin` je přiřazena k `const_reverse_iterator`, pak objekt set nelze změnit. Pokud vrátí hodnotu, která `rbegin` je přiřazena k `reverse_iterator`, pak je možné upravit objekt set.  
   
- `rbegin`můžete použít k iteraci v rámci sady zpětné.  
+ `rbegin` můžete použít k iteraci v rámci sady zpětné.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1750,7 +1753,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.  
 ```  
   
-##  <a name="reference"></a>set::Reference  
+##  <a name="reference"></a>  set::Reference  
  Typ, který poskytuje odkaz na prvek uložený v objektu set.  
   
 ```  
@@ -1785,7 +1788,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="rend"></a>set::rend  
+##  <a name="rend"></a>  set::rend  
  Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu set.  
   
 ```  
@@ -1798,11 +1801,11 @@ reverse_iterator rend();
  Iterator zpětné obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných sadu (umístění, které měl před první prvek v sadě unreversed).  
   
 ### <a name="remarks"></a>Poznámky  
- `rend`se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.  
+ `rend` se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.  
   
  Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, pak objekt set nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, pak je možné upravit objekt set. Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.  
   
- `rend`dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.  
+ `rend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1853,7 +1856,7 @@ int main() {
 }  
 ```  
   
-##  <a name="reverse_iterator"></a>set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  set::reverse_iterator  
  Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu set.  
   
 ```  
@@ -1866,7 +1869,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [rbegin –](#rbegin) příklad toho, jak deklarace a používání `reverse_iterator`.  
   
-##  <a name="set"></a>set::set  
+##  <a name="set"></a>  set::set  
  Zkonstruuje objekt set, který je prázdný nebo který je kopií celého nebo části některého jiného objektu set.  
   
 ```  
@@ -2059,7 +2062,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40  
 ```  
   
-##  <a name="size"></a>set::size  
+##  <a name="size"></a>  set::size  
  Vrátí počet prvků v objektu set.  
   
 ```  
@@ -2098,7 +2101,7 @@ The set length is 1.
 The set length is now 2.  
 ```  
   
-##  <a name="size_type"></a>set::size_type  
+##  <a name="size_type"></a>  set::size_type  
  Celočíselný typ bez znaménka představující počet prvků v objektu set.  
   
 ```  
@@ -2106,9 +2109,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>Příklad  
-  Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání`size_type`  
+  Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`  
   
-##  <a name="swap"></a>set::swap  
+##  <a name="swap"></a>  set::swap  
  Vymění prvky dvou sad.  
   
 ```  
@@ -2173,7 +2176,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.  
 ```  
   
-##  <a name="upper_bound"></a>set::upper_bound  
+##  <a name="upper_bound"></a>  set::upper_bound  
  Vrátí iterovat první prvek v sadě, s klíčem, který je větší než je zadaný klíč.  
   
 ```  
@@ -2238,7 +2241,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.  
 ```  
   
-##  <a name="value_comp"></a>set::value_comp  
+##  <a name="value_comp"></a>  set::value_comp  
  Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu set.  
   
 ```  
@@ -2310,7 +2313,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.  
 ```  
   
-##  <a name="value_compare"></a>set::value_compare  
+##  <a name="value_compare"></a>  set::value_compare  
  Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty elementu a určit jejich relativní pořadí v sadě.  
   
 ```  
@@ -2318,7 +2321,7 @@ typedef key_compare value_compare;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_compare`je synonymum pro parametr šablony `Traits`.  
+ `value_compare` je synonymum pro parametr šablony `Traits`.  
   
  Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.  
   
@@ -2327,7 +2330,7 @@ typedef key_compare value_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_comp –](#value_comp) příklad toho, jak deklarace a používání `value_compare`.  
   
-##  <a name="value_type"></a>set::value_type  
+##  <a name="value_type"></a>  set::value_type  
  Typ, který popisuje objekt uložené jako element sady jako hodnotu.  
   
 ```  
@@ -2335,7 +2338,7 @@ typedef Key value_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_type`je synonymum pro parametr šablony `Key`.  
+ `value_type` je synonymum pro parametr šablony `Key`.  
   
  Další informace o `Key`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.  
   
@@ -2377,7 +2380,7 @@ The set has elements: 10 20.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<Nastavení >](../standard-library/set.md)   
+ [\<set>](../standard-library/set.md)   
  [Kontejnery](../cpp/containers-modern-cpp.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

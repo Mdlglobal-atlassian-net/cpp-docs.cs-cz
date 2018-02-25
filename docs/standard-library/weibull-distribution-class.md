@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::weibull_distribution
 - random/std::weibull_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::weibull_distribution [C++]
 - std::weibull_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e08b64c18a44083f1af0fd899f71409c69473981
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34d9877b820da9185c348e4590438ecdc30625d8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution – třída
 Generuje Weibullova rozdělení.  
@@ -86,7 +89,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|  
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type –](#param_type)|  
+|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|  
   
 Funkce vlastností `a()` a `b()` vrátit jejich příslušné hodnoty pro parametry uložené distribuční *a* a *b*.  
   
@@ -218,7 +221,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="weibull_distribution"></a>weibull_distribution::weibull_distribution  
+##  <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution  
   
 ```  
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -232,17 +235,17 @@ explicit weibull_distribution(const param_type& parm);
 *b*  
 `b` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:** `0.0 < a` a`0.0 < b`  
+ **Předběžnou:** `0.0 < a` a `0.0 < b`  
   
  První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a* a jehož uložené `b` hodnota obsahuje hodnotu *b*.  
   
  Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>weibull_distribution::param_type  
+##  <a name="param_type"></a>  weibull_distribution::param_type  
  Ukládá parametry rozdělení.  
 ```  
 struct param_type {  
@@ -262,16 +265,16 @@ struct param_type {
 *b*  
 `b` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0.0 < a` a`0.0 < b`  
+**Předběžnou:** `0.0 < a` a `0.0 < b`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

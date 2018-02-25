@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -16,7 +17,8 @@ f1_keywords:
 - ostream/std::basic_ostream::swap
 - ostream/std::basic_ostream::tellp
 - ostream/std::basic_ostream::write
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ostream [C++]
 - std::basic_ostream [C++], flush
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c9890fcbcebb86357d344b13c346a849cad4bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicostream-class"></a>basic_ostream – třída
 Tato třída šablony popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu elementy typu **Elem**, také známé jako [char_type –](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znak jsou Určuje třídu **Tr**, také známé jako [traits_type –](../standard-library/basic-ios-class.md#traits_type).  
@@ -119,25 +122,25 @@ return (*this);
   
 |||  
 |-|-|  
-|[basic_ostream –](#basic_ostream)|Vytvoří `basic_ostream` objektu.|  
+|[basic_ostream](#basic_ostream)|Vytvoří `basic_ostream` objektu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[vyprázdnění](#flush)|Vyprázdní vyrovnávací paměť.|  
-|[PUT](#put)|Vloží znak v datovém proudu.|  
-|[seekp –](#seekp)|Resetování pozice v výstupního datového proudu.|  
-|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup funkce a funkce neformátovaný výstup.|  
+|[Vyprázdnění](#flush)|Vyprázdní vyrovnávací paměť.|  
+|[put](#put)|Vloží znak v datovém proudu.|  
+|[seekp](#seekp)|Resetování pozice v výstupního datového proudu.|  
+|[sentry](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup funkce a funkce neformátovaný výstup.|  
 |[swap](#op_eq)|Výměny hodnoty tohoto `basic_ostream` objekt pro ty poskytnutého `basic_ostream` objektu.|  
-|[tellp –](#tellp)|Umístění sestavy ve výstupní datový proud.|  
+|[tellp](#tellp)|Umístění sestavy ve výstupní datový proud.|  
 |[write](#write)|Převádí znaky v datovém proudu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#basic_ostream_operator_eq)|Přiřadí hodnota poskytnutého `basic_ostream` objektu parametr k tomuto objektu.|  
+|[operator=](#basic_ostream_operator_eq)|Přiřadí hodnota poskytnutého `basic_ostream` objektu parametr k tomuto objektu.|  
 |[operátor <<](#basic_ostream_operator_lt_lt)|Zapíše do datového proudu.|  
 
 ## <a name="requirements"></a>Požadavky  
@@ -145,7 +148,7 @@ return (*this);
   
  **Namespace:** – std  
   
-##  <a name="basic_ostream"></a>basic_ostream::basic_ostream  
+##  <a name="basic_ostream"></a>  basic_ostream::basic_ostream  
  Vytvoří `basic_ostream` objektu.  
   
 ```  
@@ -161,7 +164,7 @@ basic_ostream(basic_ostream&& right);
  Objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
- `true`Pokud se jedná o standardní datový proud; v opačném `false`.  
+ `true` Pokud se jedná o standardní datový proud; v opačném `false`.  
   
  `right`  
  Rvalue odkaz na objekt typu `basic_ostream`.  
@@ -172,7 +175,7 @@ basic_ostream(basic_ostream&& right);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) Další informace o výstupní datové proudy.  
   
-##  <a name="flush"></a>basic_ostream::Flush  
+##  <a name="flush"></a>  basic_ostream::Flush  
  Vyprázdní vyrovnávací paměť.  
   
 ```  
@@ -204,7 +207,7 @@ int main( )
 test  
 ```  
   
-##  <a name="basic_ostream_operator_lt_lt"></a>basic_ostream::Operator&lt;&lt;  
+##  <a name="basic_ostream_operator_lt_lt"></a>  basic_ostream::Operator&lt;&lt;  
  Zapíše do datového proudu.  
   
 ```  
@@ -343,7 +346,7 @@ int main()
 }
 ```  
   
-##  <a name="op_eq"></a>basic_ostream::Operator =  
+##  <a name="op_eq"></a>  basic_ostream::Operator =  
  Přiřadí hodnoty pro poskytnutého `basic_ostream` objektu parametr k tomuto objektu.  
   
 ```  
@@ -357,7 +360,7 @@ basic_ostream& operator=(basic_ostream&& right);
 ### <a name="remarks"></a>Poznámky  
  Operátor členů volá swap `(right)`.  
   
-##  <a name="put"></a>basic_ostream::Put  
+##  <a name="put"></a>  basic_ostream::Put  
  Vloží znak v datovém proudu.  
   
 ```  
@@ -395,7 +398,7 @@ v
 l  
 ```  
   
-##  <a name="seekp"></a>basic_ostream::seekp  
+##  <a name="seekp"></a>  basic_ostream::seekp  
  Resetovat pozice v výstupního datového proudu.  
   
 ```  
@@ -450,7 +453,7 @@ int main()
 7  
 ```  
   
-##  <a name="sentry"></a>basic_ostream::SENTRY  
+##  <a name="sentry"></a>  basic_ostream::SENTRY  
  Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný výstup funkce a funkce neformátovaný výstup.  
   
 {sentry – třída  
@@ -462,7 +465,7 @@ int main()
   
  Pokud `uncaught_exception` vrátí **false** a [příznaky](../standard-library/ios-base-class.md#flags)  **&**  [unitbuf](../standard-library/ios-functions.md#unitbuf) nenulový, volání destruktoru [vyprázdnění](#flush).  
   
-##  <a name="swap"></a>basic_ostream::swap  
+##  <a name="swap"></a>  basic_ostream::swap  
  Výměny hodnoty tohoto `basic_ostream` objekt pro hodnoty poskytnutého `basic_ostream`.  
   
 ```  
@@ -476,7 +479,7 @@ void swap(basic_ostream& right);
 ### <a name="remarks"></a>Poznámky  
  Volání členských funkcí [basic_ios::swap](../standard-library/basic-ios-class.md#swap) `(right)` k výměně obsahu tohoto objektu pro obsah `right`.  
   
-##  <a name="tellp"></a>basic_ostream::tellp  
+##  <a name="tellp"></a>  basic_ostream::tellp  
  Umístění sestavy ve výstupní datový proud.  
   
 ```  
@@ -492,7 +495,7 @@ pos_type tellp();
 ### <a name="example"></a>Příklad  
   V tématu [seekp –](#seekp) pro příklad použití `tellp`.  
   
-##  <a name="write"></a>basic_ostream::Write  
+##  <a name="write"></a>  basic_ostream::Write  
  Uveďte znaků v datovém proudu.  
   
 ```  

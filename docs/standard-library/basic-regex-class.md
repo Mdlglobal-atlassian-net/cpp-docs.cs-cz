@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: regex/std::basic_regex
-dev_langs: C++
-helpviewer_keywords: basic_regex class
+ms.topic: reference
+f1_keywords:
+- regex/std::basic_regex
+dev_langs:
+- C++
+helpviewer_keywords:
+- basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 27557cdbd251a123f914609ac81c1dc1834e44f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51d607151b31c196b8bcd756538e2afdeba7ffa2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicregex-class"></a>basic_regex – třída
 Zabalí regulární výraz.  
@@ -94,15 +99,15 @@ class basic_regex {
   
  Některé funkce provádějí sekvenci operandu, která definuje regulární výraz. Tuto sekvenci operandů můžete zadat několika způsoby:  
   
- `ptr`--sekvenci ukončené hodnotou null (například řetězec C pro `Elem` typu `char`) začínající na `ptr` (které nesmí být ukazatele null), kde ukončující elementu je hodnota `value_type()` a není součástí operand pořadí  
+ `ptr` --sekvenci ukončené hodnotou null (například řetězec C pro `Elem` typu `char`) začínající na `ptr` (které nesmí být ukazatele null), kde ukončující elementu je hodnota `value_type()` a není součástí operand pořadí  
   
  `ptr`, `count` – posloupnost `count` elementy začínající na `ptr` (které nesmí být nulový ukazatel)  
   
- `str`– pořadí určeného `basic_string` objektu`str`  
+ `str` – pořadí určeného `basic_string` objektu `str`  
   
- `first`, `last` – pořadí elementů oddělená iterátory `first` a `last`, v rozsahu`[first, last)`  
+ `first`, `last` – pořadí elementů oddělená iterátory `first` a `last`, v rozsahu `[first, last)`  
   
- `right`– `basic_regex` objektu`right`  
+ `right` – `basic_regex` objektu `right`  
   
  Tyto funkce člen také provést argument `flags` určující různé možnosti pro výklad regulární výraz kromě těch, které popsaného `RXtraits` typu.  
   
@@ -111,7 +116,7 @@ class basic_regex {
   
  **Namespace:** – std  
   
-##  <a name="assign"></a>basic_regex::Assign  
+##  <a name="assign"></a>  basic_regex::assign  
  Objekt regulárního expressoin přiřazuje hodnotu.  
   
 ```  
@@ -261,7 +266,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc") == true  
 ```  
   
-##  <a name="basic_regex"></a>basic_regex::basic_regex  
+##  <a name="basic_regex"></a>  basic_regex::basic_regex  
  Vytvořte objekt regulárního výrazu.  
   
 ```  
@@ -418,7 +423,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc", "abc") == true  
 ```  
   
-##  <a name="flag_type"></a>basic_regex::flag_type  
+##  <a name="flag_type"></a>  basic_regex::flag_type  
  Typ příznaky možnost syntaxe.  
   
 ```  
@@ -513,7 +518,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="flags"></a>basic_regex::Flags  
+##  <a name="flags"></a>  basic_regex::Flags  
  Vrátí syntaxe příznaky možnost.  
   
 ```  
@@ -608,7 +613,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="getloc"></a>basic_regex::getloc  
+##  <a name="getloc"></a>  basic_regex::getloc  
  Vrací objekt uložené národního prostředí.  
   
 ```  
@@ -703,7 +708,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="imbue"></a>basic_regex::imbue  
+##  <a name="imbue"></a>  basic_regex::imbue  
  Mění objekt uložené národního prostředí.  
   
 ```  
@@ -802,7 +807,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="locale_type"></a>basic_regex::locale_type  
+##  <a name="locale_type"></a>  basic_regex::locale_type  
  Typ objektu uložené národního prostředí.  
   
 ```  
@@ -897,7 +902,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="mark_count"></a>basic_regex::mark_count  
+##  <a name="mark_count"></a>  basic_regex::mark_count  
  Vrátí počet podvýrazy odpovídá.  
   
 ```  
@@ -992,7 +997,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="op_eq"></a>basic_regex::Operator =  
+##  <a name="op_eq"></a>  basic_regex::operator=  
  Hodnotu přiřadí objekt regulárního výrazu.  
   
 ```  
@@ -1105,7 +1110,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="swap"></a>basic_regex::swap  
+##  <a name="swap"></a>  basic_regex::swap  
  Zamění dva objekty regulární výraz.  
   
 ```  
@@ -1204,7 +1209,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="value_type"></a>basic_regex::value_type  
+##  <a name="value_type"></a>  basic_regex::value_type  
  Typ elementu.  
   
 ```  
@@ -1300,11 +1305,11 @@ getloc == imbued == true
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<regulární výraz >](../standard-library/regex.md)   
- [regex_match –](../standard-library/regex-functions.md#regex_match)   
- [regex_search –](../standard-library/regex-functions.md#regex_search)   
- [regex_replace –](../standard-library/regex-functions.md#regex_replace)   
- [regulární výraz](../standard-library/regex-typedefs.md#regex)   
- [wregex –](../standard-library/regex-typedefs.md#wregex)   
+ [\<regex>](../standard-library/regex.md)   
+ [regex_match](../standard-library/regex-functions.md#regex_match)   
+ [regex_search](../standard-library/regex-functions.md#regex_search)   
+ [regex_replace](../standard-library/regex-functions.md#regex_replace)   
+ [regex](../standard-library/regex-typedefs.md#regex)   
+ [wregex](../standard-library/regex-typedefs.md#wregex)   
  [regex_traits – třída](../standard-library/regex-traits-class.md)
 

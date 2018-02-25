@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 09/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -17,19 +18,22 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs: C++
-helpviewer_keywords: iostream header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 430981da5ec304bf832e759d40870ee88f3e6557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 774e99f99e01c9eb0fbdcad0100d12212e19831e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 Deklaruje objekty, které řídí čtení a zápis do standardní datových proudů. Tento problém je často jenom hlavičky, kterou je nutné zahrnout provést vstup a výstup z programu C++.  
@@ -59,7 +63,7 @@ Deklaruje objekty, které řídí čtení a zápis do standardní datových prou
 |||  
 |-|-|  
 |[cerr](#cerr)|Určuje, `cerr` globální datového proudu.|  
-|[CIN](#cin)|Určuje, `cin` globální datového proudu.|  
+|[cin](#cin)|Určuje, `cin` globální datového proudu.|  
 |[clog](#clog)|Určuje, `clog` globální datového proudu.|  
 |[cout](#cout)|Určuje, `cout` globální datového proudu.|  
 |[wcerr](#wcerr)|Určuje, `wcerr` globální datového proudu.|  
@@ -67,7 +71,7 @@ Deklaruje objekty, které řídí čtení a zápis do standardní datových prou
 |[wclog](#wclog)|Určuje, `wclog` globální datového proudu.|  
 |[wcout](#wcout)|Určuje, `wcout` globální datového proudu.|  
   
-###  <a name="cerr"></a>cerr  
+###  <a name="cerr"></a>  cerr  
  Objekt `cerr` řídí výstup do vyrovnávací paměti datový proud přidružený k objektu `stderr`, deklarované v \<cstdio – >.  
   
 ```  
@@ -110,7 +114,7 @@ int main( )
 }  
 ```  
   
-###  <a name="cin"></a>CIN  
+###  <a name="cin"></a>  cin  
  Určuje, `cin` globální datového proudu.  
   
 ```  
@@ -159,7 +163,7 @@ int main()
   
 ```  
   
-###  <a name="clog"></a>clog  
+###  <a name="clog"></a>  clog  
  Určuje, `clog` globální datového proudu.  
   
 ```  
@@ -175,7 +179,7 @@ extern ostream clog;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `clog`.  
   
-###  <a name="cout"></a>cout  
+###  <a name="cout">cout</a>  
  Určuje, `cout` globální datového proudu.  
   
 ```  
@@ -191,7 +195,7 @@ extern ostream cout;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `cout`.  
   
-###  <a name="wcerr"></a>wcerr  
+###  <a name="wcerr"></a>  wcerr  
  Určuje, `wcerr` globální datového proudu.  
   
 ```  
@@ -207,7 +211,7 @@ extern wostream wcerr;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `wcerr`.  
   
-###  <a name="wcin"></a>wcin  
+###  <a name="wcin"></a>  wcin  
  Určuje, `wcin` globální datového proudu.  
   
 ```  
@@ -223,7 +227,7 @@ extern wistream wcin;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `wcin`.  
   
-###  <a name="wclog"></a>wclog  
+###  <a name="wclog"></a>  wclog  
  Určuje, `wclog` globální datového proudu.  
   
 ```  
@@ -239,7 +243,7 @@ extern wostream wclog;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `wclog`.  
   
-###  <a name="wcout"></a>wcout  
+###  <a name="wcout"></a>  wcout  
  Určuje, `wcout` globální datového proudu.  
   
 ```  
@@ -255,7 +259,7 @@ extern wostream wcout;
 #### <a name="example"></a>Příklad  
   V tématu [cerr](#cerr) příklad použití `wcout`.  
   
- `CString`instance v `wcout` musí být příkaz přetypovat `const wchar_t*`, jak je znázorněno v následujícím příkladu.  
+ `CString` instance v `wcout` musí být příkaz přetypovat `const wchar_t*`, jak je znázorněno v následujícím příkladu.  
   
 ```  
  

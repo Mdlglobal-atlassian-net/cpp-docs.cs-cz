@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - locale/std::has_facet
 - locale/std::isalnum
@@ -23,7 +23,7 @@ f1_keywords:
 - locale/std::toupper
 - locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
-caps.latest.revision: "15"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::has_facet [C++]
@@ -41,22 +41,22 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 28274279da6422edf7e92e4aca9a6425cd21a9e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8f038a52d996fb33564e073b07beba501cc053cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt-functions"></a>&lt;národní prostředí&gt; funkce
 ||||  
 |-|-|-|  
-|[has_facet](#has_facet)|[isalnum –](#isalnum)|[isalpha –](#isalpha)|  
-|[iscntrl –](#iscntrl)|[IsDigit –](#isdigit)|[isgraph –](#isgraph)|  
-|[islower –](#islower)|[isprint –](#isprint)|[ispunct –](#ispunct)|  
-|[isspace –](#isspace)|[isupper –](#isupper)|[isxdigit –](#isxdigit)|  
+|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|  
+|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|  
+|[islower](#islower)|[isprint](#isprint)|[ispunct –](#ispunct)|  
+|[isspace](#isspace)|[isupper –](#isupper)|[isxdigit](#isxdigit)|  
 |[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="has_facet"></a>has_facet  
+##  <a name="has_facet"></a>  has_facet  
  Ověřuje, zda je v zadaném národním prostředí uložena konkrétní omezující vlastnost.  
   
 ```  
@@ -95,7 +95,7 @@ int main( )
 1  
 ```  
   
-##  <a name="isalnum"></a>isalnum –  
+##  <a name="isalnum"></a>  isalnum –  
  Ověřuje, zda je prvek v národním prostředí abecední, nebo číselný znak.  
   
 ```  
@@ -159,7 +159,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="isalpha"></a>isalpha –  
+##  <a name="isalpha"></a>  isalpha –  
  Ověřuje, zda se jedná o prvek v národního prostředí je znak abecedy.  
   
 ```  
@@ -220,7 +220,7 @@ int main( )
 }  
 ```  
   
-##  <a name="iscntrl"></a>iscntrl –  
+##  <a name="iscntrl"></a>  iscntrl –  
  Ověřuje, zda je prvek v národním prostředí řídicí znak.  
   
 ```  
@@ -281,7 +281,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isdigit"></a>IsDigit –  
+##  <a name="isdigit"></a>  IsDigit –  
  Ověřuje, zda je prvek v národním prostředí číselný znak.  
   
 ```  
@@ -342,7 +342,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isgraph"></a>isgraph –  
+##  <a name="isgraph"></a>  isgraph –  
  Ověřuje, zda je prvek v národním prostředí alfanumerický znak nebo znak interpunkce.  
   
 ```  
@@ -403,7 +403,7 @@ int main( )
 }  
 ```  
   
-##  <a name="islower"></a>islower –  
+##  <a name="islower"></a>  islower –  
  Ověřuje, zda je prvek v národním prostředí malé písmeno.  
   
 ```  
@@ -464,7 +464,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isprint"></a>isprint –  
+##  <a name="isprint"></a>  isprint –  
  Ověřuje, zda je prvek v národním prostředí znak, který lze vytisknout.  
   
 ```  
@@ -524,7 +524,7 @@ int main( )
 }  
 ```  
   
-##  <a name="ispunct"></a>ispunct –  
+##  <a name="ispunct">ispunct –</a>  
  Ověřuje, zda je prvek v národním prostředí znak interpunkce.  
   
 ```  
@@ -585,7 +585,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isspace"></a>isspace –  
+##  <a name="isspace"></a>  isspace –  
  Ověřuje, zda je prvek v národním prostředí prázdný znak.  
   
 ```  
@@ -646,7 +646,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isupper"></a>isupper –  
+##  <a name="isupper">isupper –</a>  
  Ověřuje, zda je element v národního prostředí velkými písmeny.  
   
 ```  
@@ -707,7 +707,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isxdigit"></a>isxdigit –  
+##  <a name="isxdigit"></a>  isxdigit –  
  Ověřuje, zda je prvek v národním prostředí znak používaný ke znázornění šestnáctkového čísla.  
   
 ```  
@@ -770,7 +770,7 @@ int main( )
 }  
 ```  
   
-##  <a name="tolower"></a>ToLower  
+##  <a name="tolower">ToLower</a>  
  Převede znak na malé písmeno.  
   
 ```  
@@ -815,7 +815,7 @@ int main( )
 }  
 ```  
   
-##  <a name="toupper"></a>ToUpper  
+##  <a name="toupper">ToUpper</a>  
  Převede znak na velké písmeno.  
   
 ```  
@@ -860,7 +860,7 @@ int main( )
 }  
 ```  
   
-##  <a name="use_facet"></a>use_facet  
+##  <a name="use_facet"></a>  use_facet  
  Vrátí odkaz na omezující vlastnost určitého typu uloženou v národním prostředí.  
   
 ```  

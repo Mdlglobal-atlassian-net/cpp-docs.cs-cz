@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::normal_distribution
 - random/std::normal_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd2fcbd4b607df958aba3c1e3635b7a48f3837d8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a3d4de1e2316c2a406d6e2a3278c60c214201aa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="normaldistribution-class"></a>normal_distribution – třída
 Generuje normálního rozdělení.  
@@ -87,8 +90,8 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
   
 ||||  
 |-|-|-|  
-|[normal_distribution –](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|  
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type –](#param_type)|  
+|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|  
+|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|  
   
 Funkce vlastností `mean()` a `stddev()` návratové hodnoty pro parametry uložené distribuční `mean` a `stddev` v uvedeném pořadí.  
   
@@ -194,7 +197,7 @@ Distribution for 10 samples:
   
 **Namespace:** – std  
   
-##  <a name="normal_distribution"></a>normal_distribution::normal_distribution  
+##  <a name="normal_distribution"></a>  normal_distribution::normal_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -206,20 +209,20 @@ explicit normal_distribution(const param_type& parm);
 *střední*  
 `mean` Distribuční parametr.  
   
-*StdDev*  
+*stddev*  
 `stddev` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 Struktura parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 ≤ stddev`  
+**Předběžnou podmínku:** `0.0 ≤ stddev`  
   
 První konstruktoru vytvoří objekt jehož uložené `mean` hodnota obsahuje hodnotu *znamenat* a jehož uložené `stddev` hodnota obsahuje hodnotu *stddev*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>normal_distribution::param_type  
+##  <a name="param_type"></a>  normal_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```cpp  
@@ -237,19 +240,19 @@ struct param_type {
 *střední*  
 `mean` Distribuční parametr.  
   
-*StdDev*  
+*stddev*  
 `stddev` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Struktura použit k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 ≤ stddev`  
+**Předběžnou podmínku:** `0.0 ≤ stddev`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

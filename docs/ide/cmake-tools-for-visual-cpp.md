@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projektů v jazyce Visual C++
 
@@ -161,7 +165,7 @@ Také můžete uložit soubor, konfigurace automaticky spustí znovu a zobrazí 
 
    ![Chyby souboru CMakeLists.txt](media/cmake-cmakelists-error.png "chyby CMakeLists.txt souboru")
 
-## <a name="cmake_settings"></a>CMake nastavení a vlastní konfigurace
+## <a name="cmake_settings"></a> CMake nastavení a vlastní konfigurace
 
 Ve výchozím nastavení Visual Studio poskytuje šesti výchozí konfigurace CMake ("x86-Debug", "X86verze", "x64-Debug", "X64verze", "Linux-Debug" a "Linux-Release"). Tyto konfigurace definovat, jak je CMake.exe vyvolána k vytvoření mezipaměti CMake pro daný projekt. Chcete-li upravit tyto konfigurace nebo vytvořte novou vlastní konfiguraci, zvolte **CMake | Změna nastavení CMake**a potom zvolte soubor CMakeLists.txt, že nastavení platí pro. **Změnit nastavení CMake** je k dispozici na místní nabídky souboru v také **Průzkumníku řešení**. Tento příkaz vytvoří soubor CMakeSettings.json ve složce projektu. Tento soubor se používá k vytvoření souboru mezipaměti CMake znovu například po **Vyčistit** operaci. 
 
@@ -215,13 +219,13 @@ Chcete-li zadat generátor Visual Studio, otevřete CMakeSettings.json z hlavní
 CMakeSettings.json také podporuje využívání proměnné prostředí v žádném z vlastností uvedených výše. Syntaxe pro použití `${env.FOO}` rozšíření prostředí FOO % variable %.
 Máte také přístup k předdefinované makra uvnitř tohoto souboru:
 
-- `${workspaceRoot}`– poskytuje úplnou cestu ke složce pracovního prostoru
-- `${workspaceHash}`– Hodnota hash prostoru location; užitečné pro vytváření jedinečný identifikátor pro aktuální pracovní prostor (například pro použití v cestách ke složkám)
-- `${projectFile}`– úplnou cestu v kořenovém souboru CMakeLists.txt
-- `${projectDir}`– úplnou cestu ke složce v kořenovém souboru CMakeLists.txt
-- `${thisFile}`– úplnou cestu k souboru CMakeSettings.json
-- `${name}`– Název konfigurace
-- `${generator}`– Název generátoru CMake použít v této konfiguraci
+- `${workspaceRoot}` – poskytuje úplnou cestu ke složce pracovního prostoru
+- `${workspaceHash}` – Hodnota hash prostoru location; užitečné pro vytváření jedinečný identifikátor pro aktuální pracovní prostor (například pro použití v cestách ke složkám)
+- `${projectFile}` – úplnou cestu v kořenovém souboru CMakeLists.txt
+- `${projectDir}` – úplnou cestu ke složce v kořenovém souboru CMakeLists.txt
+- `${thisFile}` – úplnou cestu k souboru CMakeSettings.json
+- `${name}` – Název konfigurace
+- `${generator}` – Název generátoru CMake použít v této konfiguraci
 
 ### <a name="ninja-command-line-arguments"></a>Argumenty příkazového řádku expertem
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w příznak  | Upravte upozornění (použití -w seznamu upozornění)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Zděděné prostředí (Visual Studio 2017 verze 15,5)
-
-CmakeSettings.json teď podporuje zděděné prostředí. Tato funkce umožňuje (1) dědit výchozí prostředí a (2) vytvářet vlastní prostředí proměnné, které se budou předávat CMake.exe při spuštění.
+CMakeSettings.json teď podporuje zděděné prostředí. Tato funkce umožňuje (1) dědit výchozí prostředí a (2) vytvářet vlastní prostředí proměnné, které se budou předávat CMake.exe při spuštění.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ Následující tabulka uvádí výchozí hodnoty a jejich ekvivalenty příkazov
 |msvc_arm64_x64|Kompilace pro ARM64 pomocí nástrojů 64-bit|
 
 ### <a name="custom-environment-variables"></a>Vlastní proměnné prostředí
-V CmakeSettings.json, můžete definovat vlastní proměnné prostředí globálně nebo na konfiguraci v **prostředí** vlastnost. V následujícím příkladu definuje jednu globální proměnnou **BuildDir**, který zdědí v konfiguracích x86 ladění a x64-Debug. Každá konfigurace používá zadejte hodnotu pro proměnnou **buildRoot** vlastnost pro danou konfiguraci. Všimněte si také, jak každý konfigurace používá **inheritEnvironments** vlastnosti k určení, proměnné, která se vztahuje pouze na danou konfiguraci.
+V CMakeSettings.json, můžete definovat vlastní proměnné prostředí globálně nebo na konfiguraci v **prostředí** vlastnost. V následujícím příkladu definuje jednu globální proměnnou **BuildDir**, který zdědí v konfiguracích x86 ladění a x64-Debug. Každá konfigurace používá zadejte hodnotu pro proměnnou **buildRoot** vlastnost pro danou konfiguraci. Všimněte si také, jak každý konfigurace používá **inheritEnvironments** vlastnosti k určení, proměnné, která se vztahuje pouze na danou konfiguraci.
 
 ```json
 {
@@ -290,8 +293,7 @@ V CmakeSettings.json, můžete definovat vlastní proměnné prostředí globál
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ V následujícím příkladu definuje konfiguraci ladění x86 vlastní hodnotu 
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake konfigurace krok
+## <a name="cmake-configure-step"></a>CMake konfigurace krok
 
 Provedení významných změn CMakeSettings.json nebo CMakeLists.txt soubory, Visual Studio automaticky znovu spustí CMake nakonfigurujte krok. Krok konfigurace se dokončí bez chyb, informace, které jsou shromažďovány, je k dispozici v C++ IntelliSense a jazyk služby a také v sestavení a ladění operace.
 

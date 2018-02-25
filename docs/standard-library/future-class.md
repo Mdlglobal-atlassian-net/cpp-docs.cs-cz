@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>future – třída
 Popisuje, *asynchronní návratové objekt*.  
@@ -57,16 +60,16 @@ class future;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[budoucí](#future)|Vytvoří `future` objektu.|  
+|[Budoucí](#future)|Vytvoří `future` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[get](#get)|Načte výsledek, který je uložen v přidružený stav asynchronní.|  
-|[sdílené složky](#share)|Převede objekt, který má `shared_future`.|  
-|[platný](#valid)|Určuje, zda objekt není prázdný.|  
-|[Počkej](#wait)|Aktuální vlákno zablokuje, dokud přidružený stav asynchronní je připraven.|  
+|[share](#share)|Převede objekt, který má `shared_future`.|  
+|[Platný](#valid)|Určuje, zda objekt není prázdný.|  
+|[wait](#wait)|Aktuální vlákno zablokuje, dokud přidružený stav asynchronní je připraven.|  
 |[wait_for](#wait_for)|Bloky dokud přidružený stav asynchronní je připraven nebo dokud určený čas uplynul.|  
 |[wait_until](#wait_until)|Bloky dokud přidružený stav asynchronní je připravená, nebo dokud se zadaný bod v čase.|  
   
@@ -74,14 +77,14 @@ class future;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Future::Operator =](#op_eq)|Přenos přidružený stav asynchronní ze zadaného objektu.|  
+|[future::operator=](#op_eq)|Přenos přidružený stav asynchronní ze zadaného objektu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<budoucí >  
   
  **Namespace:** – std  
   
-##  <a name="future"></a>Future::Future – konstruktor  
+##  <a name="future"></a>  Future::Future – konstruktor  
  Vytvoří `future` objektu.  
   
 ```
@@ -96,9 +99,9 @@ future(future&& Other) noexcept;
 ### <a name="remarks"></a>Poznámky  
  První konstrukce konstruktor `future` objekt, který nemá žádné přidružené asynchronní stavu.  
   
- Druhý konstruktor konstrukce `future` objektu a přenáší přidružený stav asynchronní z `Other`. `Other`již nemá přidružený asynchronní stát.  
+ Druhý konstruktor konstrukce `future` objektu a přenáší přidružený stav asynchronní z `Other`. `Other` již nemá přidružený asynchronní stát.  
   
-##  <a name="get"></a>Future::Get –  
+##  <a name="get"></a>  Future::Get –  
  Načte výsledek, který je uložen v přidružený stav asynchronní.  
   
 ```
@@ -117,7 +120,7 @@ Ty get();
   
  V dalších specializací metodu přesune hodnoty z uložené hodnoty. Tato metoda proto volejte pouze jednou.  
   
-##  <a name="op_eq"></a>Future::Operator =  
+##  <a name="op_eq"></a>  Future::Operator =  
  Přenos přidružený asynchronní stát ze zadaného objektu.  
   
 ```
@@ -134,7 +137,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>Poznámky  
  Po předání `Right` již nemá přidružený asynchronní stát.  
   
-##  <a name="share"></a>Future::share –  
+##  <a name="share"></a>  Future::share –  
  Převede objekt, který má [shared_future](../standard-library/shared-future-class.md) objektu.  
   
 ```
@@ -144,7 +147,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>Návratová hodnota  
  `shared_future(move(*this))`  
   
-##  <a name="valid"></a>Future::valid –  
+##  <a name="valid"></a>  Future::valid –  
  Určuje, zda má objekt přidružený asynchronní stát.  
   
 ```
@@ -152,9 +155,9 @@ bool valid() noexcept;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud objekt má přidružený stav asynchronní; v opačném `false`.  
+ `true` Pokud objekt má přidružený stav asynchronní; v opačném `false`.  
   
-##  <a name="wait"></a>Future::wait –  
+##  <a name="wait"></a>  Future::wait –  
  Blokuje aktuální vlákno, dokud je přidružený stav asynchronní *připraven*.  
   
 ```cpp  
@@ -164,7 +167,7 @@ void wait() const;
 ### <a name="remarks"></a>Poznámky  
  Je k dispozici přidružený stav asynchronní *připraven* jenom v případě jeho asynchronní zprostředkovatelem má uložené návratovou hodnotu nebo uložené výjimku.  
   
-##  <a name="wait_for"></a>Future::wait_for –  
+##  <a name="wait_for"></a>  Future::wait_for –  
  Blokuje aktuální vlákno, dokud je přidružený stav asynchronní *připraven* nebo dokud neuplyne zadaného časového intervalu.  
   
 ```
@@ -182,7 +185,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 ### <a name="remarks"></a>Poznámky  
  Přidružený asynchronní stát je připraven jenom v případě jeho asynchronní zprostředkovatelem má uložené návratovou hodnotu nebo uložené výjimku.  
   
-##  <a name="wait_until"></a>Future::wait_until –  
+##  <a name="wait_until"></a>  Future::wait_until –  
  Blokuje aktuální vlákno, dokud je přidružený stav asynchronní *připraven* nebo dokud nebude po zadaném časovém bodě.  
   
 ```cpp  

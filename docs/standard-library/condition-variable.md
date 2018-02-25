@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <condition_variable>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <condition_variable>
+dev_langs:
+- C++
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: baabac0a4461c659a3e70c2c26bcb971f0e1c738
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bd3d3bd6ef4976f5f9c55d1905b02314a88438d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 Definuje třídy [condition_variable](../standard-library/condition-variable-class.md) a [condition_variable_any](../standard-library/condition-variable-any-class.md) které se používají k vytváření objektů, které počkejte podmínku, kterou chcete přestat hodnotu true.  
@@ -51,19 +55,19 @@ while (condition is false)
   
  `condition_variable_any` a `condition_variable` třídy každý mají tři metody, které čekat na podmínce.  
   
-- `wait`čeká bez vazby časové období.  
+- `wait` čeká bez vazby časové období.  
   
-- `wait_until`počká, dokud nebude zadané `time`.  
+- `wait_until` počká, dokud nebude zadané `time`.  
   
-- `wait_for`čeká na zadané `time interval`.  
+- `wait_for` čeká na zadané `time interval`.  
   
  Každá z těchto metod má dvě přetížené verze. Jeden právě vyčká a k buzení spuriously. Druhá trvá další šablony argument, který definuje predikátu. Metoda nevrátí, dokud nebude predikát `true`.  
   
  Každá třída také obsahuje dvě metody, které slouží k upozornění podmínku proměnné, která je jeho stav `true`.  
   
-- `notify_one`probudí jeden z vláken, která čeká na proměnnou podmínku.  
+- `notify_one` probudí jeden z vláken, která čeká na proměnnou podmínku.  
   
-- `notify_all`probudí všechny podprocesy, které čekají na proměnnou podmínku.  
+- `notify_all` probudí všechny podprocesy, které čekají na proměnnou podmínku.  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   

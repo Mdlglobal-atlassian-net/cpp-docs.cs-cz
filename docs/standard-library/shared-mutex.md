@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -50,20 +51,22 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_for
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cdfa90b137da2e1a4c7460dfa54663ddb9a3581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7d657a95822d66d34a6173cc775f99c80411f12
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 &lt;Shared_mutex > záhlaví poskytuje synchronizace primitiv pro ochranu sdílených datech, která je přístupná více vláken. Kromě prvku výhradní přístup poskytované mutex třídy třídy sdílené mutex také povolení sdílené vlastnictví podle více vláken pro nikoli výhradní přístup. Sdílené objekty mutex můžete použít k řízení prostředky, které může číst několik vlákna, aniž by to způsobilo konflikt časování, ale musí být napsané výhradně funkcí jedno vlákno.
 
@@ -71,9 +74,9 @@ Záhlaví &lt;shared_mutex > definuje třídy `shared_mutex` a `shared_timed_mut
 
 |Třídy|Popis|
 |-------------|-----------------|
-|[shared_mutex – třída](../standard-library/shared-mutex.md#class_shared_mutex)|Sdílené mutex typ, který můžete zamčeny jednoho agenta nebo jiných výhradně sdílen více agenty.|
-|[shared_timed_mutex – třída](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Sdílené vypršel mutex typ, který můžete zamčeny jednoho agenta nebo jiných výhradně sdílen více agenty.|
-|[shared_lock – třída](../standard-library/shared-mutex.md#class_shared_lock)|Třída šablony, která zabalí sdílené mutex pro podporu operací časově uzamknout a nikoli výhradní sdílení více agenty.|
+|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|Sdílené mutex typ, který můžete zamčeny jednoho agenta nebo jiných výhradně sdílen více agenty.|
+|[shared_timed_mutex Class](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Sdílené vypršel mutex typ, který můžete zamčeny jednoho agenta nebo jiných výhradně sdílen více agenty.|
+|[shared_lock Class](../standard-library/shared-mutex.md#class_shared_lock)|Třída šablony, která zabalí sdílené mutex pro podporu operací časově uzamknout a nikoli výhradní sdílení více agenty.|
 
 |Funkce|Popis|
 |---------------|-----------------|
@@ -119,7 +122,7 @@ Typ sdílené vypršel mutex podporuje další metody `try_lock_shared_for` a `t
 
 ## <a name="classes"></a>Třídy
 
-###  <a name="class_shared_mutex"></a>shared_mutex – třída
+###  <a name="class_shared_mutex"></a> shared_mutex – třída
 
 Třída `shared_mutex` implementuje tohoto nerekurzivního mutex s sémantiku sdílené vlastnictví.
 
@@ -146,7 +149,7 @@ public:
    };
 ```
 
-###  <a name="class_shared_timed_mutex"></a>shared_timed_mutex – třída
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex – třída
 
 Třída `shared_timed_mutex` implementuje tohoto nerekurzivního mutex s sémantiku sdílené vlastnictví, který splňuje požadavky na vypršel mutex typu.
 
@@ -178,7 +181,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a>shared_lock – třída
+###  <a name="&lt;shared"></a> shared_lock – třída
 
 Šablony třídy `shared_lock` řídí sdílené vlastnictví objekt mutex sdílené v rámci oboru. Parametr šablony musí být typu sdílené mutex.
 
@@ -226,7 +229,7 @@ private:
 
 ## <a name="functions"></a>Funkce
 
-###  <a name="function_swap"></a>swap
+###  <a name="function_swap"></a> Swap
 
 Umožňuje přepnout `shared_lock` objekty.
 
@@ -239,11 +242,11 @@ Výměny obsah dva `shared_lock` objekty. Efektivně stejný jako `x.swap(y)`.
 
 ## <a name="requirements"></a>Požadavky
 
- **Záhlaví:** &lt;shared_mutex >
+ **Header:** &lt;shared_mutex>
 
  **Namespace:** – std
 
 ## <a name="see-also"></a>Viz také
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)  
-[&lt;mutex >](../standard-library/mutex.md)
+[&lt;mutex>](../standard-library/mutex.md)

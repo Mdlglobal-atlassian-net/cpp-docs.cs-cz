@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::uniform_real_distribution
 - random/std::uniform_real_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::uniform_real_distribution::param_type::b
 - random/std::uniform_real_distribution::param_type::operator==
 - random/std::uniform_real_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::uniform_real_distribution [C++]
 - std::uniform_real_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 484997806cadb75b0322e9d194fe37ab30dae3b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be2205fc4795320c3d3998de7ff5324a23af00d1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution – třída
 Generuje uniform (každých hodnota je stejně pravděpodobných) s plovoucí desetinnou čárkou distribuční rozsahu výstupu, který je včetně vylučují.  
@@ -87,7 +90,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type –](#param_type)|  
+|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
 Vlastnost člena `a()` vrátí aktuálně uložené minimální vázaný distribuce, zatímco `b()` vrátí aktuálně uložené maximální hranice. Pro tuto třídu distribuční tyto minimální a maximální hodnoty jsou stejné jako vrácený běžné funkce vlastností `min()` a `max()` podrobněji popsaná [ \<náhodných >](../standard-library/random.md) tématu.  
   
@@ -184,7 +187,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution  
+##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -199,17 +202,17 @@ Dolní mez pro náhodných hodnot, včetně.
 *b*  
 Horní mez pro náhodných hodnot, které jsou výhradní.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`a < b`  
+ **Předběžnou podmínku:** `a < b`  
   
 První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a* a jehož uložené `b` hodnota obsahuje hodnotu *b*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>uniform_real_distribution::param_type  
+##  <a name="param_type"></a>  uniform_real_distribution::param_type  
  Uloží všechny parametry rozdělení.  
   
 ```  
@@ -230,16 +233,16 @@ Dolní mez pro náhodných hodnot, včetně.
 *b*  
 Horní mez pro náhodných hodnot, které jsou výhradní.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`a < b`  
+ **Předběžnou podmínku:** `a < b`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

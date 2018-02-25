@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::piecewise_linear_distribution
 - random/std::piecewise_linear_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::piecewise_linear_distribution::param_type::densities
 - random/std::piecewise_linear_distribution::param_type::operator==
 - random/std::piecewise_linear_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::piecewise_linear_distribution [C++]
 - std::piecewise_linear_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7764537c09b9e1d226e1a5d847f94d4825e50870
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc1019aee3246051d90c9b493592d86289af9cb8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution – třída
 Generuje piecewise lineární distribuce, který má různých šířka intervalech pomocí lineárně různých pravděpodobnosti v každém intervalu.  
@@ -98,7 +101,7 @@ public:
 ||||  
 |-|-|-|  
 |[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
-|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type –](#param_type)|  
+|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|  
   
 Funkce vlastnost `intervals()` vrátí `vector<result_type>` sadou uložené intervaly rozdělení.  
   
@@ -224,7 +227,7 @@ Distribution for 100 samples:
   
  **Namespace:** – std  
   
-##  <a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::piecewise_linear_distribution  
+##  <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -266,22 +269,22 @@ Vstupní iterator poslední elementu v rozsahu distribuce.
 *firstW*  
 Iterátor vstupní prvním elementem v rozsahu váhu.  
   
-*intervaly*  
+*intervals*  
 [Initializer_list](../cpp/initializers.md) s intervalů rozdělení.  
   
-*počet*  
+*Počet*  
 Počet elementů v rozsahu distribuce.  
   
-*Hodnoty xMin*  
+*xmin*  
 Nejnižší hodnotu v rozsahu distribuce.  
   
-*xMax*  
+*xmax*  
 Nejvyšší hodnotu v rozsahu distribuce. Musí být větší než *hodnoty xmin*.  
   
 *weightfunc*  
 Objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr i návratová hodnota musí být převoditelná na `double`.  
   
-*Parametr*  
+*parm*  
 Struktura parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -329,7 +332,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 ```  
 Vytvoří objekt distribuční pomocí `parm` jako strukturu uložený parametr.  
   
-##  <a name="param_type"></a>piecewise_linear_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_linear_distribution::param_type  
 Uloží všechny parametry rozdělení.  
   
 ```  
@@ -354,12 +357,12 @@ struct param_type {
 Naleznete na stránce parametry konstruktor pro [piecewise_linear_distribution](#piecewise_linear_distribution).  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`xmin < xmax`  
+ **Předběžnou podmínku:** `xmin < xmax`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future – třída
 Popisuje, *asynchronní návratové objekt*. Rozdíl s [budoucí](../standard-library/future-class.md) objektu, *asynchronní zprostředkovatele* lze přidružit libovolný počet `shared_future` objekty.  
@@ -49,7 +52,7 @@ class shared_future;
 ## <a name="remarks"></a>Poznámky  
  Nevolejte žádné metody jiné než `valid`, `operator=`a destruktor na `shared_future` objekt to je *prázdný*.  
   
- `shared_future`objekty nejsou synchronizovány. Volání metody na stejný objekt z více vláken představuje soupeření dat, který má vést k neočekávaným výsledkům.  
+ `shared_future` objekty nejsou synchronizovány. Volání metody na stejný objekt z více vláken představuje soupeření dat, který má vést k neočekávaným výsledkům.  
   
 ## <a name="members"></a>Členové  
   
@@ -64,8 +67,8 @@ class shared_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[get](#get)|Načte výsledek, který je uložen v *přidružené asynchronní stavu*.|  
-|[platný](#valid)|Určuje, zda objekt není prázdný.|  
-|[Počkej](#wait)|Aktuální vlákno zablokuje, dokud přidružený stav asynchronní je připraven.|  
+|[Platný](#valid)|Určuje, zda objekt není prázdný.|  
+|[wait](#wait)|Aktuální vlákno zablokuje, dokud přidružený stav asynchronní je připraven.|  
 |[wait_for](#wait_for)|Bloky dokud přidružený stav asynchronní je připraven nebo dokud určený čas uplynul.|  
 |[wait_until](#wait_until)|Bloky dokud přidružený stav asynchronní je připravená, nebo dokud se zadaný bod v čase.|  
   
@@ -73,14 +76,14 @@ class shared_future;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[shared_future::Operator =](#op_eq)|Přiřadí nový asynchronní přidružený stav.|  
+|[shared_future::operator=](#op_eq)|Přiřadí nový asynchronní přidružený stav.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<budoucí >  
   
  **Namespace:** – std  
   
-##  <a name="get"></a>shared_future::Get –
+##  <a name="get"></a>  shared_future::Get –
  Načte výsledek, který je uložen v *přidružené asynchronní stavu*.  
   
 ```
@@ -100,7 +103,7 @@ void get() const;
   
  Vzhledem k tomu, že neexistuje žádná hodnota uložené pro specializace `shared_future<void>`, vrátí metoda `void`.  
   
-##  <a name="op_eq"></a>shared_future::Operator =  
+##  <a name="op_eq"></a>  shared_future::Operator =  
  Přenosy *přidružené asynchronní stavu* ze zadaného objektu.  
   
 ```
@@ -120,7 +123,7 @@ shared_future& operator=(const shared_future& Right);
   
  Pro metodu druhý `Right` udržuje jeho přidružený stav asynchronní.  
   
-##  <a name="shared_future"></a>shared_future::shared_future – konstruktor  
+##  <a name="shared_future"></a>  shared_future::shared_future – konstruktor  
  Vytvoří `shared_future` objektu.  
   
 ```
@@ -137,11 +140,11 @@ shared_future(const shared_future& Right);
 ### <a name="remarks"></a>Poznámky  
  První konstrukce konstruktor `shared_future` objekt, který neobsahuje žádné *přidružené asynchronní stavu*.  
   
- Vytvořit druhý a třetí konstruktory `shared_future` objektu a přenos přidružený stav asynchronní z `Right`. `Right`již nemá přidružený asynchronní stát.  
+ Vytvořit druhý a třetí konstruktory `shared_future` objektu a přenos přidružený stav asynchronní z `Right`. `Right` již nemá přidružený asynchronní stát.  
   
  Čtvrtý konstrukce konstruktor `shared_future` objekt, který má stejné přidružené asynchronní stavu jako `Right`.  
   
-##  <a name="valid"></a>shared_future::valid –
+##  <a name="valid"></a>  shared_future::valid –
  Určuje, zda je objekt *přidružené asynchronní stavu*.  
   
 ```
@@ -149,9 +152,9 @@ bool valid() noexcept;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud objekt má přidružený stav asynchronní; v opačném `false`.  
+ `true` Pokud objekt má přidružený stav asynchronní; v opačném `false`.  
   
-##  <a name="wait"></a>shared_future::wait –
+##  <a name="wait"></a>  shared_future::wait –
  Blokuje aktuální vlákno, dokud *přidružené asynchronní stavu* je *připraven*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Poznámky  
  Přidružený asynchronní stát je připraven jenom v případě jeho asynchronní zprostředkovatelem má uložené návratovou hodnotu nebo uložené výjimku.  
   
-##  <a name="wait_for"></a>shared_future::wait_for –
+##  <a name="wait_for"></a>  shared_future::wait_for –
  Blokuje aktuální vlákno, dokud je přidružený stav asynchronní *připraven* nebo dokud uplynutí zadané doby.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Poznámky  
  Je k dispozici přidružený stav asynchronní *připraven* jenom v případě jeho asynchronní zprostředkovatelem má uložené návratovou hodnotu nebo uložené výjimku.  
   
-##  <a name="wait_until"></a>shared_future::wait_until –
+##  <a name="wait_until"></a>  shared_future::wait_until –
  Blokuje aktuální vlákno, dokud je přidružený stav asynchronní *připraven* nebo dokud nebude po zadaném časovém bodě.  
   
 ```

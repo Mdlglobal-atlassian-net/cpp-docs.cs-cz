@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <set>
-dev_langs: C++
-helpviewer_keywords: set header
+ms.topic: reference
+f1_keywords:
+- <set>
+dev_langs:
+- C++
+helpviewer_keywords:
+- set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 16338888d64155ddeab188159030ac060ebb2b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 83a933c889ad89ed7b5361217608303a9b42f500
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablony.  
@@ -38,12 +43,12 @@ Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablon
   
 |Nastavit verzi|Multiset verze|Popis|  
 |-----------------|----------------------|-----------------|  
-|[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[Operator! = (multiset)](../standard-library/set-operators.md#op_neq)|Testy, pokud set / multiset objekt na levé straně operátor není rovno set / multiset objekt na pravé straně.|  
+|[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Testy, pokud set / multiset objekt na levé straně operátor není rovno set / multiset objekt na pravé straně.|  
 |[Operator < (set)](../standard-library/set-operators.md#op_lt)|[Operator < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Testy, pokud set / multiset objekt na levé straně operátor je menší než set / multiset objekt na pravé straně.|  
-|[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operátor\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátor je menší než nebo rovna hodnotě set / multiset objekt na pravé straně.|  
-|[Operator == (set)](../standard-library/set-operators.md#op_eq_eq)|[Operator == (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru rovná set / multiset objekt na pravé straně.|  
-|[Operator > (set)](../standard-library/set-operators.md#op_gt)|[Operator > (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru je větší než set / multiset objekt na pravé straně.|  
-|[Operator > = (set)](../standard-library/set-operators.md#op_gt_eq)|[Operator > = (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Testy, pokud je sada nebo multiset objekt na levé straně operátor větší než nebo rovna hodnotě set / multiset objekt na pravé straně.|  
+|[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátor je menší než nebo rovna hodnotě set / multiset objekt na pravé straně.|  
+|[operator== (set)](../standard-library/set-operators.md#op_eq_eq)|[operator== (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru rovná set / multiset objekt na pravé straně.|  
+|[Operator > (set)](../standard-library/set-operators.md#op_gt)|[operator> (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru je větší než set / multiset objekt na pravé straně.|  
+|[operator>= (set)](../standard-library/set-operators.md#op_gt_eq)|[operator>= (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Testy, pokud je sada nebo multiset objekt na levé straně operátor větší než nebo rovna hodnotě set / multiset objekt na pravé straně.|  
   
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon  
   

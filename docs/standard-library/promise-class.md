@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::promise
 - future/std::promise::promise
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6673483beb2552ba1b3a11b76d65e9be484c2a39
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="promise-class"></a>promise – třída
 Popisuje, *asynchronní zprostředkovatele*.  
@@ -54,14 +57,14 @@ class promise;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Promise](#promise)|Vytvoří `promise` objektu.|  
+|[promise](#promise)|Vytvoří `promise` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) přidružené k této promise.|  
-|[set_exception –](#set_exception)|Atomicky nastaví výsledky této promise udávajících výjimku.|  
+|[set_exception](#set_exception)|Atomicky nastaví výsledky této promise udávajících výjimku.|  
 |[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomicky nastaví výsledky této promise udávajících výjimku a doručí oznámení, která byla zničena pouze po všech místní objekty v aktuální vlákno (obvykle při ukončení vlákna).|  
 |[set_value](#set_value)|Atomicky nastaví výsledky této promise pro zobrazení hodnoty.|  
 |[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomicky nastaví výsledky této promise pro zobrazení hodnoty a doručí oznámení, která byla zničena pouze po všech místní objekty v aktuální vlákno (obvykle při ukončení vlákna).|  
@@ -71,7 +74,7 @@ class promise;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Promise::Operator =](#op_eq)|Přiřazení sdílený stav tohoto objektu promise.|  
+|[promise::operator=](#op_eq)|Přiřazení sdílený stav tohoto objektu promise.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `promise`  
@@ -81,7 +84,7 @@ class promise;
   
  **Namespace:** – std  
   
-##  <a name="get_future"></a>Promise::get_future –  
+##  <a name="get_future"></a>  Promise::get_future –  
  Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejné *přidružené asynchronní stavu* jako tento promise.  
   
 ```
@@ -93,7 +96,7 @@ future<Ty> get_future();
   
  Pokud tato metoda již byla volána pro promise objekt, který má stejné přidružený stav asynchronní, vyvolá metoda `future_error` má `error_code` z `future_already_retrieved`.  
   
-##  <a name="op_eq"></a>Promise::Operator =  
+##  <a name="op_eq"></a>  Promise::Operator =  
  Přenosy *přidružené asynchronní stavu* ze zadané `promise` objektu.  
   
 ```
@@ -110,7 +113,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="remarks"></a>Poznámky  
  Tento operátor přenáší přidružený stav asynchronní z `Other`. Po předání `Other` je *prázdný*.  
   
-##  <a name="promise"></a>Promise::Promise – konstruktor  
+##  <a name="promise"></a>  Promise::Promise – konstruktor  
  Vytvoří `promise` objektu.  
   
 ```
@@ -134,7 +137,7 @@ promise(promise&& Other) noexcept;
   
  Třetí konstrukce konstruktor `promise` objektu a přenáší přidružený stav asynchronní z `Other`nebo je opustí `Other` prázdný.  
   
-##  <a name="set_exception"></a>Promise::set_exception –  
+##  <a name="set_exception"></a>  Promise::set_exception –  
  Atomicky ukládá výjimka v důsledku tohoto `promise` objekt a nastaví *přidružené asynchronní stavu* k *připraven*.  
   
 ```
@@ -152,7 +155,7 @@ void set_exception(exception_ptr Exc);
   
  V důsledku této metody stát žádné podprocesy, které blokují na přidružený stav asynchronní odblokování.  
   
-##  <a name="set_exception_at_thread_exit"></a>Promise::set_exception_at_thread_exit –  
+##  <a name="set_exception_at_thread_exit"></a>  Promise::set_exception_at_thread_exit –  
  Atomicky nastaví výsledek tohoto `promise` udávajících výjimku doručování oznámení pouze po všech místní objekty v aktuální vlákno zničena (obvykle při ukončení vlákna).  
   
 ```
@@ -170,7 +173,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
   
  Rozdíl k [set_exception –](#set_exception), tato metoda nenastaví přidružený stav asynchronní připravte až po všech místní objekty v aktuální vlákno zničena. Obvykle vláken, které blokují na přidružený stav asynchronní nejsou odblokuje, až do konce aktuální vlákno.  
   
-##  <a name="set_value"></a>Promise::set_value –  
+##  <a name="set_value"></a>  Promise::set_value –  
  Atomicky ukládá hodnotu jako výsledek tohoto `promise` objekt a nastaví *přidružené asynchronní stavu* k *připraven*.  
   
 ```
@@ -199,7 +202,7 @@ void promise<void>::set_value();
   
  Pro specializace `promise<void>`, neexistuje žádná hodnota uložené.  
   
-##  <a name="set_value_at_thread_exit"></a>Promise::set_value_at_thread_exit –  
+##  <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit  
  Atomicky ukládá hodnotu jako výsledek tohoto `promise` objektu.  
   
 ```
@@ -228,7 +231,7 @@ void promise<void>::set_value_at_thread_exit();
   
  Pro specializace `promise<void>`, neexistuje žádná hodnota uložené.  
   
-##  <a name="swap"></a>Promise::swap –  
+##  <a name="swap"></a>  Promise::swap –  
  Výměnu *přidružené asynchronní stavu* tohoto objektu promise se u zadaného objektu.  
   
 ```

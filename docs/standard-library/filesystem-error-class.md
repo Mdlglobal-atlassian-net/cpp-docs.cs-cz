@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::experimental::filesystem::filesystem_error
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::experimental::filesystem::filesystem_error
+dev_langs:
+- C++
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a70b489fa3e7a570cf4cd8ea4abf6af583e72a0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 764be5467282b04e4cd7fa13ee44fddee7c0a51b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="filesystemerror-class"></a>filesystem_error – třída
 Základní třída pro všechny výjimky, které jsou vyvolány nahlásit nízké úrovně systému přetečení.  
@@ -33,7 +37,7 @@ class filesystem_error    : public system_error;
 ## <a name="remarks"></a>Poznámky  
  Třída slouží jako základní třída pro všechny výjimky vydané nahlásit chybu v \<filesystem > funkce. Objekt typu řetězec, s názvem mymesg sem pro účely budeme v něm uložena. Ukládá také dva objekty typ cesty, jako mypval1 a mypval2.  
   
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error –  
+## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error  
   
 ```  
 filesystem_error(const string& what_arg,
@@ -67,7 +71,7 @@ const path& path2() const noexcept;
   
  Vrátí mypval2 – členská funkce  
   
-## <a name="filesystemerrorwhat"></a>filesystem_error::What  
+## <a name="filesystemerrorwhat"></a>filesystem_error::what  
   
 ```  
 const char *what() const noexcept;  
@@ -83,6 +87,6 @@ const char *what() const noexcept;
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
  [system_error – třída](../standard-library/system-error-class.md)   
- [\<FileSystem >](../standard-library/filesystem.md)   
+ [\<filesystem>](../standard-library/filesystem.md)   
  [\<Výjimka >](../standard-library/exception.md)
 

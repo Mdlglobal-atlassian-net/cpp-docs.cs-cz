@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c337d4188ccbc26280db59feab30ab7c11133bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60643375742ef02ef1ba8ea08e614d12c504c573
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lockguard-class"></a>lock_guard – třída
 Reprezentuje šablonu, která může být vytvořena instance pro vytvoření objektu jejichž destruktor odemkne `mutex`.  
@@ -56,7 +59,7 @@ class lock_guard;
   
  **Namespace:** – std  
   
-##  <a name="lock_guard"></a>lock_guard::lock_guard – konstruktor  
+##  <a name="lock_guard"></a>  lock_guard::lock_guard – konstruktor  
  Vytvoří `lock_guard` objektu.  
   
 ```cpp  
@@ -72,9 +75,9 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 ### <a name="remarks"></a>Poznámky  
  První konstruktoru vytvoří objekt typu `lock_guard` a zámky `Mtx`. Pokud `Mtx` není rekurzivní mutex, musí ho odemknout, když je volána tento konstruktor.  
   
- Druhý konstruktor nezamyká `Mtx`. `Mtx`je nutné uzamknout, když je volána tento konstruktor. Konstruktor, vyvolá žádné výjimky.  
+ Druhý konstruktor nezamyká `Mtx`. `Mtx` je nutné uzamknout, když je volána tento konstruktor. Konstruktor, vyvolá žádné výjimky.  
   
-##  <a name="dtorlock_guard_destructor"></a>lock_guard:: ~ lock_guard – destruktor  
+##  <a name="dtorlock_guard_destructor">lock_guard:: ~ lock_guard – destruktor</a>  
  Odemkne `mutex` byl předaný konstruktoru.  
   
 ```
@@ -86,7 +89,7 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex >](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
 
 
 

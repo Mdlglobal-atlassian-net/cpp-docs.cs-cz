@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::error_code
 - system_error/std::error_code::value_type
@@ -16,7 +17,8 @@ f1_keywords:
 - system_error/std::error_code::default_error_condition
 - system_error/std::error_code::message
 - system_error/std::error_code::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::error_code
 - std::error_code::value_type
@@ -26,16 +28,17 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b9521790906c591c3b459cc5efd70fe0ba021ccf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="errorcode-class"></a>error_code – třída
 Reprezentuje chyby nízké úrovně systému, které jsou specifické pro implementaci.  
@@ -65,28 +68,28 @@ class error_code;
   
 |||  
 |-|-|  
-|[přiřazení](#assign)|Přiřadí hodnotu kódu chyby a kategorie chybový kód.|  
-|[kategorie](#category)|Vrátí kategorie chyby.|  
-|[Vymazat](#clear)|Vymaže hodnotu kódu chyby a kategorie.|  
-|[default_error_condition –](#default_error_condition)|Vrátí výchozí chybový stav.|  
+|[assign](#assign)|Přiřadí hodnotu kódu chyby a kategorie chybový kód.|  
+|[Kategorie](#category)|Vrátí kategorie chyby.|  
+|[clear](#clear)|Vymaže hodnotu kódu chyby a kategorie.|  
+|[default_error_condition](#default_error_condition)|Vrátí výchozí chybový stav.|  
 |[message](#message)|Vrací název kód chyby.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[Operator ==](#op_eq_eq)|Testování rovnosti mezi `error_code` objekty.|  
+|[operator==](#op_eq_eq)|Testování rovnosti mezi `error_code` objekty.|  
 |[operator!=](#op_neq)|Testy nerovnost mezi `error_code` objekty.|  
 |[operátor <](#op_lt)|Testuje, pokud `error_code` objekt je menší než `error_code` objekt předaná pro porovnání.|  
-|[operátor =](#op_eq)|Přiřadí novou hodnotu výčtu k `error_code` objektu.|  
+|[operator=](#op_eq)|Přiřadí novou hodnotu výčtu k `error_code` objektu.|  
 |[operátor bool](#op_bool)|Vrhá proměnné typu `error_code`.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<system_error – >  
+ **Header:** \<system_error>  
   
  **Namespace:** – std  
   
-##  <a name="assign"></a>error_code::Assign  
+##  <a name="assign"></a>  error_code::Assign  
  Přiřadí hodnotu kódu chyby a kategorie chybový kód.  
   
 ```
@@ -103,7 +106,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>Poznámky  
  Členské funkce úložiště `val` jako hodnotu kódu chyby a ukazatel na `_Cat`.  
   
-##  <a name="category"></a>error_code::category  
+##  <a name="category"></a>  error_code::category  
  Vrátí kategorie chyby.  
   
 ```
@@ -112,7 +115,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="clear"></a>error_code::clear  
+##  <a name="clear"></a>  error_code::clear  
  Vymaže hodnotu kódu chyby a kategorie.  
   
 ```
@@ -122,7 +125,7 @@ clear();
 ### <a name="remarks"></a>Poznámky  
  Členská funkce ukládá nulová hodnota kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category) objektu.  
   
-##  <a name="default_error_condition"></a>error_code::default_error_condition  
+##  <a name="default_error_condition"></a>  error_code::default_error_condition  
  Vrátí výchozí chybový stav.  
   
 ```
@@ -135,7 +138,7 @@ error_condition default_error_condition() const;
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu `category().default_error_condition(value())`.  
   
-##  <a name="error_code"></a>error_code::error_code  
+##  <a name="error_code"></a>  error_code::error_code  
  Vytvoří objekt typu `error_code`.  
   
 ```
@@ -164,7 +167,7 @@ error_code(_Enum _Errcode,
   
  Třetí úložiště konstruktor `(value_type)_Errcode` jako hodnotu kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="message"></a>error_code::Message  
+##  <a name="message"></a>  error_code::Message  
  Vrací název kód chyby.  
   
 ```
@@ -177,7 +180,7 @@ string message() const;
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu `category().message(value())`.  
   
-##  <a name="op_eq_eq"></a>error_code::Operator ==  
+##  <a name="op_eq_eq"></a>  error_code::operator==  
  Testování rovnosti mezi `error_code` objekty.  
   
 ```
@@ -196,7 +199,7 @@ bool operator==(const error_code& right) const;
 ### <a name="remarks"></a>Poznámky  
  Vrací člena operátor `category() == right.category() && value == right.value()`.  
   
-##  <a name="op_neq"></a>error_code::Operator! =  
+##  <a name="op_neq"></a>  error_code::Operator! =  
  Testy nerovnost mezi `error_code` objekty.  
   
 ```
@@ -215,7 +218,7 @@ bool operator!=(const error_code& right) const;
 ### <a name="remarks"></a>Poznámky  
  Vrací člena operátor `!(*this == right)`.  
   
-##  <a name="op_lt"></a>error_code::Operator&lt;  
+##  <a name="op_lt"></a>  error_code::Operator&lt;  
  Testuje, pokud [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) objekt je menší než `error_code` objekt předaná pro porovnání.  
   
 ```
@@ -234,7 +237,7 @@ bool operator<(const error_code& right) const;
 ### <a name="remarks"></a>Poznámky  
  Vrací člena operátor `category() < right.category() || category() == right.category() && value < right.value()`.  
   
-##  <a name="op_eq"></a>error_code::Operator =  
+##  <a name="op_eq"></a>  error_code::Operator =  
  Přiřadí novou hodnotu výčtu k [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) objektu.  
   
 ```
@@ -256,7 +259,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 ### <a name="remarks"></a>Poznámky  
  Úložiště operátor člen `(value_type)_Errcode` jako hodnotu kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category). Vrátí `*this`.  
   
-##  <a name="op_bool"></a>error_code::Operator bool  
+##  <a name="op_bool"></a>  error_code::Operator bool  
  Vrhá proměnné typu `error_code`.  
   
 ```
@@ -269,7 +272,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>Poznámky  
  Vrátí hodnotu převoditelné na operátor `true` pouze v případě [hodnota](#value) není rovna hodnotě nula. Návratový typ je převést pouze na `bool`, nikoli k `void *` nebo jiné známé Skalární typy.  
   
-##  <a name="value"></a>error_code::Value  
+##  <a name="value"></a>  error_code::Value  
  Vrátí hodnotu kódu uložené chyby.  
   
 ```
@@ -281,7 +284,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="value_type"></a>error_code::value_type  
+##  <a name="value_type"></a>  error_code::value_type  
  Typ, který představuje hodnotu kódu uložené chyby.  
   
 ```

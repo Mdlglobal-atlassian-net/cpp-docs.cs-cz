@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
@@ -20,7 +21,8 @@ f1_keywords:
 - memory/std::shared_ptr::operator*
 - memory/std::shared_ptr::operator=
 - memory/std::shared_ptr::operator->
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::shared_ptr [C++]
 - std::shared_ptr [C++], element_type
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ef826862d49b5661b57faf3db1322cd91b273f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedptr-class"></a>shared_ptr – třída
 Zabalí inteligentní ukazatel počítaný odkazy do dynamicky alokovaného objektu.  
@@ -115,17 +118,17 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
  žádné argumenty – výsledný objekt je prázdná `shared_ptr` objektu nebo na prázdný `weak_ptr` objektu.  
   
- `ptr`– ukazatel typu `Other*` k prostředku pro správu. `T`musí být typu dokončení. Pokud funkce selže (protože řídicí blok nelze přidělit) se vyhodnotí výraz `delete ptr`.  
+ `ptr` – ukazatel typu `Other*` k prostředku pro správu. `T` musí být typu dokončení. Pokud funkce selže (protože řídicí blok nelze přidělit) se vyhodnotí výraz `delete ptr`.  
   
- `ptr, dtor`– ukazatel typu `Other*` prostředků ke správě a metoda odstranění pro tento prostředek. Pokud funkce selže (protože řídicí blok nelze přidělit), zavolá `dtor(ptr)`, která musí být dobře definované.  
+ `ptr, dtor` – ukazatel typu `Other*` prostředků ke správě a metoda odstranění pro tento prostředek. Pokud funkce selže (protože řídicí blok nelze přidělit), zavolá `dtor(ptr)`, která musí být dobře definované.  
   
- `ptr, dtor, alloc`– ukazatel typu `Other*` prostředků ke správě, metoda odstranění pro tento prostředek a přidělení ke správě jakékoli úložiště, které se musí přiřadit a uvolnit. Pokud funkce selže (protože řídicí blok nelze přidělit) zavolá `dtor(ptr)`, která musí být dobře definované.  
+ `ptr, dtor, alloc` – ukazatel typu `Other*` prostředků ke správě, metoda odstranění pro tento prostředek a přidělení ke správě jakékoli úložiště, které se musí přiřadit a uvolnit. Pokud funkce selže (protože řídicí blok nelze přidělit) zavolá `dtor(ptr)`, která musí být dobře definované.  
   
- `sp`-- `shared_ptr<Other>` objekt, který je vlastníkem prostředku pro správu.  
+ `sp` -- `shared_ptr<Other>` objekt, který je vlastníkem prostředku pro správu.  
   
- `wp`-- `weak_ptr<Other>` objekt, který odkazuje na prostředek pro správu.  
+ `wp` -- `weak_ptr<Other>` objekt, který odkazuje na prostředek pro správu.  
   
- `ap`– `auto_ptr<Other>` objekt, který obsahuje ukazatel k prostředku pro správu. Pokud funkci úspěšné volání `ap.release()`; v opačném případě opustí `ap` beze změny.  
+ `ap` – `auto_ptr<Other>` objekt, který obsahuje ukazatel k prostředku pro správu. Pokud funkci úspěšné volání `ap.release()`; v opačném případě opustí `ap` beze změny.  
   
  Ve všech případech je ukazatel typu `Other*` musí být převoditelná na `T*`.  
   
@@ -139,35 +142,35 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |||  
 |-|-|  
 |[shared_ptr](#shared_ptr)|Vytvoří `shared_ptr`.|  
-|[shared_ptr:: ~ shared_ptr](#dtorshared_ptr)|Zničí `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Zničí `shared_ptr`.|  
   
 ### <a name="methods"></a>Metody  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ prvku|  
+|[element_type](#element_type)|Typ prvku|  
 |[get](#get)|Získá adresu vlastní prostředek.|  
-|[owner_before –](#owner_before)|Vrátí hodnotu PRAVDA, pokud `shared_ptr` je seřadí před (nebo menší než) zadané ukazatele.|  
-|[resetování](#reset)|Nahraďte vlastní prostředek.|  
+|[owner_before](#owner_before)|Vrátí hodnotu PRAVDA, pokud `shared_ptr` je seřadí před (nebo menší než) zadané ukazatele.|  
+|[reset](#reset)|Nahraďte vlastní prostředek.|  
 |[swap](#swap)|Prohození dva `shared_ptr` objekty.|  
-|[jedinečné](#unique)|Testy, pokud je ve vlastnictví prostředků jedinečné.|  
-|[use_count –](#use_count)|Spočítá počet vlastníky prostředků.|  
+|[unique](#unique)|Testy, pokud je ve vlastnictví prostředků jedinečné.|  
+|[use_count](#use_count)|Spočítá počet vlastníky prostředků.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[shared_ptr::Operator logický – typ](#op_boolean-type)|Testy, pokud existuje vlastní prostředek.|  
-|[shared_ptr::Operator *](#op_star)|Získá určenou hodnotu.|  
-|[shared_ptr::Operator =](#op_eq)|Nahradí vlastní prostředek.|  
-|[shared_ptr::Operator-&gt;](#operator-_gt)|Získá ukazatel na určenou hodnotu.|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Testy, pokud existuje vlastní prostředek.|  
+|[shared_ptr::operator*](#op_star)|Získá určenou hodnotu.|  
+|[shared_ptr::operator=](#op_eq)|Nahradí vlastní prostředek.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Získá ukazatel na určenou hodnotu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<paměti >  
   
  **Namespace:** – std  
   
-##  <a name="element_type"></a>shared_ptr::ELEMENT_TYPE  
+##  <a name="element_type"></a>  shared_ptr::ELEMENT_TYPE  
  Typ prvku  
   
 ```  
@@ -201,7 +204,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="get"></a>shared_ptr::Get  
+##  <a name="get"></a>  shared_ptr::Get  
  Získá adresu vlastní prostředek.  
   
 ```  
@@ -238,7 +241,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="shared_ptr__operator_boolean-type"></a>shared_ptr::Operator logický – typ  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::Operator logický – typ  
  Testy, pokud existuje vlastní prostředek.  
   
 ```  
@@ -276,7 +279,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="op_star"></a>shared_ptr::Operator *  
+##  <a name="op_star"></a>  shared_ptr::Operator *  
  Získá určenou hodnotu.  
   
 ```  
@@ -309,7 +312,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="op_eq"></a>shared_ptr::Operator =  
+##  <a name="op_eq"></a>  shared_ptr::Operator =  
  Nahradí vlastní prostředek.  
   
 ```  
@@ -371,7 +374,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="shared_ptr__operator-_gt"></a>shared_ptr::Operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::Operator-&gt;  
  Získá ukazatel na určenou hodnotu.  
   
 ```  
@@ -407,7 +410,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="owner_before"></a>shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  Vrátí hodnotu PRAVDA, pokud `shared_ptr` je seřadí před (nebo menší než) zadané ukazatele.  
   
 ```  
@@ -425,7 +428,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Poznámky  
  Šablona členská funkce vrátí hodnotu true, pokud `*this` je `ordered before` `ptr`.  
   
-##  <a name="reset"></a>shared_ptr::Reset  
+##  <a name="reset"></a>  shared_ptr::Reset  
  Nahraďte vlastní prostředek.  
   
 ```  
@@ -510,7 +513,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="shared_ptr"></a>shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  Vytvoří `shared_ptr`.  
   
 ```  
@@ -643,7 +646,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="dtorshared_ptr"></a>shared_ptr:: ~ shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr:: ~ shared_ptr  
  Zničí `shared_ptr`.  
   
 ```  
@@ -697,7 +700,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="swap"></a>shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  Prohození dva `shared_ptr` objekty.  
   
 ```  
@@ -765,7 +768,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="unique"></a>shared_ptr::Unique  
+##  <a name="unique"></a>  shared_ptr::Unique  
  Testy, pokud je ve vlastnictví prostředků jedinečné.  
   
 ```  
@@ -811,7 +814,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="use_count"></a>shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  Spočítá počet vlastníky prostředků.  
   
 ```  
@@ -850,7 +853,7 @@ sp1.use_count() == 2
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [weak_ptr – třída](../standard-library/weak-ptr-class.md)   
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

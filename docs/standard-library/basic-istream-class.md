@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
@@ -23,7 +24,8 @@ f1_keywords:
 - istream/std::basic_istream::sync
 - istream/std::basic_istream::tellg
 - istream/std::basic_istream::unget
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_istream [C++]
 - std::basic_istream [C++], gcount
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cef43fa717e5b4c11257b3f44ef2bb76af2d9ba7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměť elementy typu `Elem`, také známé jako [char_type –](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znak určuje třídu *Tr* , také známé jako [traits_type –](../standard-library/basic-ios-class.md#traits_type).  
@@ -143,7 +146,7 @@ setstate(state);
   
 |||  
 |-|-|  
-|[basic_istream –](#basic_istream)|Vytvoří objekt typu `basic_istream`.|  
+|[basic_istream](#basic_istream)|Vytvoří objekt typu `basic_istream`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
@@ -153,30 +156,30 @@ setstate(state);
 |[get](#get)|Přečte jeden nebo více znaků ze vstupního datového proudu.|  
 |[getline](#getline)|Přečte řádek ze vstupního datového proudu.|  
 |[Ignorovat](#ignore)|Způsobí, že počet elementů přeskočil z aktuální číst pozici.|  
-|[funkce Náhled](#peek)|Vrací další znak, který má být číst.|  
-|[putback –](#putback)|Vloží zadaný znak do datového proudu.|  
+|[Prohlížení](#peek)|Vrací další znak, který má být číst.|  
+|[putback](#putback)|Vloží zadaný znak do datového proudu.|  
 |[read](#read)|Přečte zadaný počet znaků z datového proudu a ukládá je do pole.|  
 |[readsome –](#readsome)|Čtení z jenom vyrovnávací paměti.|  
-|[seekg –](#seekg)|Přesune čtení pozici v datovém proudu.|  
-|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupní funkce a neformátovaný vstupní funkce.|  
+|[seekg](#seekg)|Přesune čtení pozici v datovém proudu.|  
+|[sentry](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupní funkce a neformátovaný vstupní funkce.|  
 |[swap](#swap)|To výměny `basic_istream` objekt pro poskytnutého `basic_istream` parametru objektu.|  
-|[synchronizace](#sync)|Synchronizuje vstupní zařízení přidružená datový proud s vyrovnávací paměti datový proud.|  
-|[tellg –](#tellg)|Hlásí, že aktuální číst pozici v datovém proudu.|  
-|[unget –](#unget)|PUT naposledy přečíst znak zpět do datového proudu.|  
+|[sync](#sync)|Synchronizuje vstupní zařízení přidružená datový proud s vyrovnávací paměti datový proud.|  
+|[tellg](#tellg)|Hlásí, že aktuální číst pozici v datovém proudu.|  
+|[unget](#unget)|PUT naposledy přečíst znak zpět do datového proudu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor >>](#op_gt_gt)|Volání funkce na vstupního datového proudu nebo čte formátovaná data z vstupního datového proudu.|  
-|[operátor =](#op_eq)|Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Jedná se o přesunutí přiřazení zahrnující `rvalue` odkaz, který kopii nenechává za sebou.|  
+|[operator>>](#op_gt_gt)|Volání funkce na vstupního datového proudu nebo čte formátovaná data z vstupního datového proudu.|  
+|[operator=](#op_eq)|Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Jedná se o přesunutí přiřazení zahrnující `rvalue` odkaz, který kopii nenechává za sebou.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<IStream on Request >  
   
  **Namespace:** – std  
   
-##  <a name="basic_istream"></a>basic_istream::basic_istream  
+##  <a name="basic_istream"></a>  basic_istream::basic_istream  
  Vytvoří objekt typu `basic_istream`.  
   
 ```  
@@ -192,7 +195,7 @@ basic_istream(basic_istream&& right);
  Objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
- `true`Pokud se jedná o standardní datový proud; v opačném `false`.  
+ `true` Pokud se jedná o standardní datový proud; v opačném `false`.  
   
  `right`  
  A `basic_istream` objekt, který chcete kopírovat.  
@@ -205,7 +208,7 @@ basic_istream(basic_istream&& right);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) Další informace o vstupní datové proudy.  
   
-##  <a name="gcount"></a>basic_istream::gcount  
+##  <a name="gcount"></a>  basic_istream::gcount  
  Vrátí počet znaků pro čtení během poslední neformátovaný vstup.  
   
 ```  
@@ -253,7 +256,7 @@ a
 1  
 ```  
   
-##  <a name="get"></a>basic_istream::Get  
+##  <a name="get"></a>  basic_istream::Get  
  Přečte jeden nebo více znaků ze vstupního datového proudu.  
   
 ```  
@@ -333,7 +336,7 @@ int main( )
 1111  
 ```  
   
-##  <a name="getline"></a>basic_istream::getline  
+##  <a name="getline"></a>  basic_istream::getline  
  Získá řádku ze vstupního datového proudu.  
   
 ```  
@@ -395,7 +398,7 @@ int main( )
 121  
 ```  
   
-##  <a name="ignore"></a>basic_istream::Ignore  
+##  <a name="ignore"></a>  basic_istream::Ignore  
  Způsobí, že počet elementů přeskočil z aktuální číst pozici.  
   
 ```  
@@ -439,7 +442,7 @@ Type 'abcdef': abcdef
 def  
 ```  
   
-##  <a name="op_gt_gt"></a>základní\_istream::operator >>
+##  <a name="op_gt_gt"></a>  základní\_istream::operator >>
   
 Volání funkce na vstupního datového proudu nebo čte formátovaná data z vstupního datového proudu.  
   
@@ -565,7 +568,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>basic_istream::Operator =  
+##  <a name="op_eq"></a>  basic_istream::Operator =  
  Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Jedná se o přesunutí přiřazení zahrnující `rvalue` odkaz, který kopii nenechává za sebou.  
   
 ```  
@@ -582,7 +585,7 @@ basic_istream& operator=(basic_istream&& right);
 ### <a name="remarks"></a>Poznámky  
  Operátor členů volá swap `( right)`.  
   
-##  <a name="peek"></a>basic_istream::Peek  
+##  <a name="peek"></a>  basic_istream::Peek  
  Vrací další znak, který má být číst.  
   
 ```  
@@ -627,7 +630,7 @@ abcde
 a abcde  
 ```  
   
-##  <a name="putback"></a>basic_istream::putback  
+##  <a name="putback"></a>  basic_istream::putback  
  Vloží zadaný znak do datového proudu.  
   
 ```  
@@ -670,7 +673,7 @@ int main( )
 qwq  
 ```  
   
-##  <a name="read"></a>basic_istream::Read  
+##  <a name="read"></a>  basic_istream::Read  
  Přečte zadaný počet znaků z datového proudu a ukládá je do pole.  
   
  Tato metoda je potenciálně nebezpečné, jako je závislé na volajícího, aby zkontrolujte správnost předané hodnoty.  
@@ -730,7 +733,7 @@ abcde
 abcde  
 ```  
   
-##  <a name="readsome"></a>basic_istream::readsome  
+##  <a name="readsome"></a>  basic_istream::readsome  
  Přečte zadaný počet znaků hodnoty.  
   
  Tato metoda je potenciálně nebezpečné, jako je závislé na volajícího, aby zkontrolujte správnost předané hodnoty.  
@@ -785,7 +788,7 @@ int main( )
 }  
 ```  
   
-##  <a name="seekg"></a>basic_istream::seekg  
+##  <a name="seekg"></a>  basic_istream::seekg  
  Přesune čtení pozici v datovém proudu.  
   
 ```  
@@ -838,7 +841,7 @@ int main ( )
 }  
 ```  
   
-##  <a name="sentry"></a>basic_istream::SENTRY  
+##  <a name="sentry"></a>  basic_istream::SENTRY  
  Vnořené třídy popisuje objekt, jehož deklarace struktur vstupní funkce formátovaný a neformátovaný tvar.  
   
 {sentry – třída  
@@ -849,13 +852,13 @@ int main ( )
 ### <a name="remarks"></a>Poznámky  
  Pokud `_Istr.` [dobrý](../standard-library/basic-ios-class.md#good) je nastavena hodnota true, konstruktoru:  
   
--   Volání `_Istr`. [Tie –](../standard-library/basic-ios-class.md#tie) -> [vyprázdnění](../standard-library/basic-ostream-class.md#flush) Pokud `_Istr`. `tie`není ukazatele null.  
+-   Volání `_Istr`. [Tie –](../standard-library/basic-ios-class.md#tie) -> [vyprázdnění](../standard-library/basic-ostream-class.md#flush) Pokud `_Istr`. `tie` není ukazatele null.  
   
 -   Efektivně volá [ws](../standard-library/istream-functions.md#ws)( `_Istr`) Pokud `_Istr`. [příznaky](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) je nenulové hodnoty  
   
  Pokud po takové přípravy `_Istr`. **Dobrý** je nastavena hodnota false, volání konstruktoru `_Istr`. [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě konstruktoru ukládá hodnoty vrácené `_Istr`. **Dobrý** v **stav**. Novější volání **operátor bool** přináší tato uložené hodnoty.  
   
-##  <a name="swap"></a>basic_istream::swap  
+##  <a name="swap"></a>  basic_istream::swap  
  Výměny obsahu dvou `basic_istream` objekty.  
   
 ```  
@@ -869,7 +872,7 @@ void swap(basic_istream& right);
 ### <a name="remarks"></a>Poznámky  
  Volání členských funkcí [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. Také k výměně počet extrakce se počet extrakce pro `right`.  
   
-##  <a name="sync"></a>basic_istream::Sync  
+##  <a name="sync"></a>  basic_istream::Sync  
  Synchronizuje vstupní zařízení přidružená datový proud s vyrovnávací paměti datový proud.  
   
 ```  
@@ -879,7 +882,7 @@ int sync();
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) je ukazatel s hodnotou null, funkce vrátí hodnotu -1. Jinak zavolá `rdbuf`  ->  [pubsync –](../standard-library/basic-streambuf-class.md#pubsync). Pokud, vrátí hodnotu -1, zavolá funkci [setstate –](../standard-library/basic-ios-class.md#setstate)( **badbit**) a vrátí hodnotu -1. Funkce, jinak vrátí hodnotu nula.  
   
-##  <a name="tellg"></a>basic_istream::tellg  
+##  <a name="tellg"></a>  basic_istream::tellg  
  Hlásí, že aktuální číst pozici v datovém proudu.  
   
 ```  
@@ -918,7 +921,7 @@ int main()
 }  
 ```  
   
-##  <a name="unget"></a>basic_istream::unget  
+##  <a name="unget"></a>  basic_istream::unget  
  PUT naposledy přečíst znak zpět do datového proudu.  
   
 ```  

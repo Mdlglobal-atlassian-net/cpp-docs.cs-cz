@@ -1,19 +1,21 @@
 ---
-title: "auto_ptr – třída | Microsoft Docs"
+title: auto_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
 - memory/std::auto_ptr::release
 - memory/std::auto_ptr::reset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::auto_ptr [C++]
 - std::auto_ptr [C++], element_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a59ea3561c5e9e2b972421bbba0ecf6fc666ed46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="autoptr-class"></a>auto_ptr – třída
 Zabalí inteligentní ukazatel kolem na prostředek, který zajistí, že prostředek automaticky zničen při řízení opustí blok.  
@@ -86,32 +89,32 @@ public:
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ je synonymum pro parametr šablony `Type`.|  
+|[element_type](#element_type)|Typ je synonymum pro parametr šablony `Type`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[get](#get)|Členská funkce vrátí uložené ukazatele `myptr`.|  
-|[verze](#release)|Člen nahrazuje uložené ukazatele `myptr` s ukazatele null a vrátí dříve uložené ukazatele.|  
-|[resetování](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale jenom v případě uložené ukazatel hodnota `myptr` změny v důsledku volání funkce. Nahradí uložené ukazatel s `ptr`.|  
+|[release](#release)|Člen nahrazuje uložené ukazatele `myptr` s ukazatele null a vrátí dříve uložené ukazatele.|  
+|[reset](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale jenom v případě uložené ukazatel hodnota `myptr` změny v důsledku volání funkce. Nahradí uložené ukazatel s `ptr`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Operátor přiřazení, který přenos vlastnictví z jednoho `auto_ptr` objekt do jiné.|  
+|[operator=](#op_eq)|Operátor přiřazení, který přenos vlastnictví z jednoho `auto_ptr` objekt do jiné.|  
 |[operátor *](#op_star)|Při přesměrování operátor pro objekty typu `auto_ptr`.|  
 |[-> – operátor](#operator-_gt)|Operátor pro povolení přístup ke členu.|  
-|[operátor auto_ptr\<Další >](#op_auto_ptr_lt_other_gt)|Druh vrhá z jednoho `auto_ptr` k jinému typu služby `auto_ptr`.|  
-|[operátor auto_ptr_ref\<Další >](#op_auto_ptr_ref_lt_other_gt)|Vrhá z `auto_ptr` k `auto_ptr_ref`.|  
+|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Druh vrhá z jednoho `auto_ptr` k jinému typu služby `auto_ptr`.|  
+|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Vrhá z `auto_ptr` k `auto_ptr_ref`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<paměti >  
   
  **Namespace:** – std  
   
-##  <a name="auto_ptr"></a>auto_ptr::auto_ptr  
+##  <a name="auto_ptr"></a>  auto_ptr::auto_ptr  
  V konstruktoru pro objekty typu `auto_ptr`.  
   
 ```   
@@ -198,7 +201,7 @@ Constructing 00311AF8
 Destructing 00311AF8  
 ```  
   
-##  <a name="element_type"></a>auto_ptr::ELEMENT_TYPE  
+##  <a name="element_type"></a>  auto_ptr::element_type  
  Typ je synonymum pro parametr šablony **typu**.  
   
 ```  
@@ -206,7 +209,7 @@ Destructing 00311AF8
 typedef Type element  _type;  
 ```  
   
-##  <a name="get"></a>auto_ptr::Get  
+##  <a name="get"></a>  auto_ptr::Get  
  Členská funkce vrátí uložené ukazatele **myptr**.  
   
 ```   
@@ -263,7 +266,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="op_eq"></a>auto_ptr::Operator =  
+##  <a name="op_eq"></a>  auto_ptr::operator=  
  Operátor přiřazení, který přenos vlastnictví z jednoho `auto_ptr` objekt do jiné.  
   
 ```  
@@ -286,7 +289,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ### <a name="example"></a>Příklad  
   Příklad použití operátoru člen, naleznete v části [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="op_star"></a>auto_ptr::Operator *  
+##  <a name="op_star"></a>  auto_ptr::operator*  
  Při přesměrování operátor pro objekty typu `auto_ptr`.  
   
 ```   
@@ -302,7 +305,7 @@ Type& operator*() const throw();
 ### <a name="example"></a>Příklad  
   Příklad použití – členská funkce naleznete v části [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="auto_ptr__operator-_gt"></a>auto_ptr::Operator-&gt;  
+##  <a name="auto_ptr__operator-_gt"></a>  auto_ptr::operator-&gt;  
  Operátor pro povolení přístup ke členu.  
   
 ```   
@@ -318,7 +321,7 @@ Type * operator->() const throw();
 ### <a name="example"></a>Příklad  
   Příklad použití – členská funkce naleznete v části [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="op_auto_ptr_lt_other_gt"></a>auto_ptr::Operator auto_ptr&lt;jiné&gt;  
+##  <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::Operator auto_ptr&lt;jiné&gt;  
  Druh vrhá z jednoho `auto_ptr` k jinému typu služby `auto_ptr`.  
   
 ```   
@@ -346,7 +349,7 @@ int main()
 }  
 ```  
   
-##  <a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr::Operator auto_ptr_ref&lt;jiné&gt;  
+##  <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::Operator auto_ptr_ref&lt;jiné&gt;  
  Vrhá z `auto_ptr` k **auto_ptr_ref**.  
   
 ```   
@@ -405,7 +408,7 @@ main exiting
 ~C:  1  
 ```  
   
-##  <a name="release"></a>auto_ptr::Release  
+##  <a name="release"></a>  auto_ptr::release  
  Člen nahrazuje uložené ukazatele **myptr** s ukazatele null a vrátí dříve uložené ukazatele.  
   
 ```   
@@ -464,7 +467,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="reset"></a>auto_ptr::Reset  
+##  <a name="reset"></a>  auto_ptr::reset  
  Členská funkce vyhodnotí výraz **odstranit** **myptr**, ale jenom v případě uložené ukazatel hodnota **myptr** změny v důsledku volání funkce. Nahradí uložené ukazatel s **ptr**.  
   
 ```   

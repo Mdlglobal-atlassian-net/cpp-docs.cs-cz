@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::chi_squared_distribution
 - random/std::chi_squared_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::chi_squared_distribution::param_type::n
 - random/std::chi_squared_distribution::param_type::operator==
 - random/std::chi_squared_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::chi_squared_distribution [C++]
 - std::chi_squared_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d5ca4de3cd7192fa4847bf6090a02b156458340
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34c474df717b255a5b8774602cd775c236dfb892
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution – třída
 Generuje rozdělení chí-kvadrát.  
@@ -85,7 +88,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
-|`chi_squared_distribution::operator()`||[param_type –](#param_type)|  
+|`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
 Funkce vlastnost `n()` vrací hodnotu pro parametr uložené distribuční `n`.  
   
@@ -229,7 +232,7 @@ Distribution for 10 samples:
   
 **Namespace:** – std  
   
-##  <a name="chi_squared_distribution"></a>chi_squared_distribution::chi_squared_distribution  
+##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -241,17 +244,17 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*  
 `n` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
  Struktura parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < n`  
+**Předběžnou podmínku:** `0.0 < n`  
   
 První konstruktoru vytvoří objekt jehož uložené `n` hodnota obsahuje hodnotu  *n* .  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>chi_squared_distribution::param_type  
+##  <a name="param_type"></a>  chi_squared_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```cpp    
@@ -269,16 +272,16 @@ struct param_type {
 *n*  
 `n` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < n`  
+**Předběžnou podmínku:** `0.0 < n`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8cadc9a0dafcf4c97cd7c8381c5f4ee76fee915
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution – třída
 Generuje rozdělení diskrétní celé číslo, na které má uniform šířkou intervalech pomocí uniform pravděpodobnosti v každém intervalu.  
@@ -91,7 +94,7 @@ public:
 |||  
 |-|-|  
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
-|`discrete_distribution::operator()`|[param_type –](#param_type)|  
+|`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  Funkce vlastnost `vector<double> probabilities()` vrátí jednotlivých pravděpodobností pro každý celé číslo vygenerovat.  
   
@@ -181,7 +184,7 @@ Distribution for 100 samples:
   
  **Namespace:** – std  
   
-##  <a name="discrete_distribution"></a>discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -213,10 +216,10 @@ explicit discrete_distribution(const param_type& parm);
 *weightlist*  
  [Initializer_list](../cpp/initializers.md) ze kterého chcete vytvořit rozdělení.  
   
-*počet*  
+*Počet*  
  Počet elementů v rozsahu distribuce. Pokud `count==0`, ekvivalentní výchozího konstruktoru (vždy vygeneruje nula).  
   
-*nízkou*  
+*Nízká*  
  Nejnižší hodnotu v rozsahu distribuce.  
   
 *Vysoká*  
@@ -225,7 +228,7 @@ explicit discrete_distribution(const param_type& parm);
 *weightfunc*  
  Objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr i návratová hodnota musí být převoditelná na `double`.  
   
-*Parametr*  
+*parm*  
  `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -241,7 +244,7 @@ Konstruktor, který má *počet*, *nízkou*, *vysokou*, a *weightfunc* na zákla
   
 Konstruktor, který má `param_type` parametr *parametr* vytvoří objekt distribuční pomocí *parametr* jako strukturu uložený parametr.  
   
-##  <a name="param_type"></a>discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  Uloží všechny parametry rozdělení.  
   
 ```  
@@ -276,10 +279,10 @@ struct param_type {
 *weightlist*  
  [Initializer_list](../cpp/initializers.md) ze kterého chcete vytvořit rozdělení.  
   
-*počet*  
+*Počet*  
  Počet elementů v rozsahu distribuce. Pokud *počet* je 0, jde o ekvivalent výchozí konstruktor (vždy vygeneruje nula).  
   
-*nízkou*  
+*Nízká*  
  Nejnižší hodnotu v rozsahu distribuce.  
   
 *Vysoká*  
@@ -288,14 +291,14 @@ struct param_type {
 *weightfunc*  
  Objekt reprezentující funkce pravděpodobnosti pro distribuci. Parametr i návratová hodnota musí být převoditelná na `double`.  
   
-*vpravo*  
+Vpravo  
  `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento parametr balíček se dá předat do `operator()` ke generování návratovou hodnotu.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

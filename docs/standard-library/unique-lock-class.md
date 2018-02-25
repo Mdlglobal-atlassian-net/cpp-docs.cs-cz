@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: mutex/std::unique_lock
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- mutex/std::unique_lock
+dev_langs:
+- C++
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8974633a19e6f30f552eac4e5e7c3ec3b104c2ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff765ce861b0d593c3ff21c5da68de4b6ec0e15d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniquelock-class"></a>unique_lock – třída
 Reprezentuje šablonu, která se dá vytvořit instance k vytváření objektů, které spravují zamykání a odemykání `mutex`.  
@@ -49,7 +53,7 @@ class unique_lock;
 |Název|Popis|  
 |----------|-----------------|  
 |[unique_lock](#unique_lock)|Vytvoří `unique_lock` objektu.|  
-|[~ unique_lock – destruktor](#dtorunique_lock_destructor)|Uvolní všechny prostředky, které jsou přidružené `unique_lock` objektu.|  
+|[~unique_lock Destructor](#dtorunique_lock_destructor)|Uvolní všechny prostředky, které jsou přidružené `unique_lock` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -58,19 +62,19 @@ class unique_lock;
 |[lock](#lock)|Blokuje volající vlákno, dokud vlákno získá vlastnictví přidruženého `mutex`.|  
 |[mutex](#mutex)|Načte uložené ukazatel s příslušnými `mutex`.|  
 |[owns_lock](#owns_lock)|Určuje, zda vlastní volající vlákno přidruženého `mutex`.|  
-|[verze](#release)|Zrušíte `unique_lock` objekt z přidruženého `mutex` objektu.|  
+|[release](#release)|Zrušíte `unique_lock` objekt z přidruženého `mutex` objektu.|  
 |[swap](#swap)|Prohození přidruženého `mutex` a stav vlastnictví se u zadaného objektu.|  
-|[try_lock –](#try_lock)|Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.|  
-|[try_lock_for –](#try_lock_for)|Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.|  
+|[try_lock](#try_lock)|Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.|  
+|[try_lock_for](#try_lock_for)|Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.|  
 |[try_lock_until](#try_lock_until)|Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.|  
-|[odemknutí](#unlock)|Uvolní vlastnictví přidruženého `mutex`.|  
+|[unlock](#unlock)|Uvolní vlastnictví přidruženého `mutex`.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[operátor bool](#op_bool)|Určuje, zda volající vlákno je vlastnictví přidruženého `mutex`.|  
-|[operátor =](#op_eq)|Zkopíruje uložené `mutex` ukazatel a přidružené vlastnictví stav ze zadaného objektu.|  
+|[operator=](#op_eq)|Zkopíruje uložené `mutex` ukazatel a přidružené vlastnictví stav ze zadaného objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `unique_lock`  
@@ -80,7 +84,7 @@ class unique_lock;
   
  **Namespace:** – std  
   
-##  <a name="lock"></a>Zámek  
+##  <a name="lock"></a>  Zámek  
  Blokuje volající vlákno, dokud vlákno získá vlastnictví přidruženého `mutex`.  
   
 ```cpp  
@@ -94,14 +98,14 @@ void lock();
   
  Jinak tato metoda volá `lock` na přidruženého `mutex` a nastaví příznak vlastnictví interní vlákno `true`.  
   
-##  <a name="mutex"></a>mutex  
+##  <a name="mutex"></a>  mutex  
  Načte uložené ukazatel s příslušnými `mutex`.  
   
 ```cpp  
 mutex_type *mutex() const noexcept;
 ```  
   
-##  <a name="op_bool"></a>operátor bool  
+##  <a name="op_bool">operátor bool</a>  
  Určuje, zda volající vlákno je související objekt mutex vlastnictví.  
   
 ```cpp  
@@ -109,9 +113,9 @@ explicit operator bool() noexcept
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud vlákno vlastní objekt mutex; v opačném případě `false`.  
+ `true` Pokud vlákno vlastní objekt mutex; v opačném případě `false`.  
   
-##  <a name="op_eq"></a>operátor =  
+##  <a name="op_eq"></a>  operátor =  
  Zkopíruje uložené `mutex` ukazatel a přidružené vlastnictví stav ze zadaného objektu.  
   
 ```cpp  
@@ -130,7 +134,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
   
  Po kopírování, tato metoda nastaví `Other` sestavený výchozí stav.  
   
-##  <a name="owns_lock"></a>owns_lock  
+##  <a name="owns_lock"></a>  owns_lock  
  Určuje, zda vlastní volající vlákno přidruženého `mutex`.  
   
 ```cpp  
@@ -138,9 +142,9 @@ bool owns_lock() const noexcept;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud vlastní vlákno `mutex`, jinak hodnota `false`.  
+ `true` Pokud vlastní vlákno `mutex`, jinak hodnota `false`.  
   
-##  <a name="release"></a>verze  
+##  <a name="release"></a>  Verze  
  Zrušíte `unique_lock` objekt z přidruženého `mutex` objektu.  
   
 ```cpp  
@@ -153,7 +157,7 @@ mutex_type *release() noexcept;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví hodnotu uložené `mutex` ukazatel na 0 a nastaví interní `mutex` vlastnictví příznak, který `false`.  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Prohození přidruženého `mutex` a stav vlastnictví se u zadaného objektu.  
   
 ```
@@ -164,7 +168,7 @@ void swap(unique_lock& Other) noexcept;
  `Other`  
  A `unique_lock` objektu.  
   
-##  <a name="try_lock"></a>try_lock –  
+##  <a name="try_lock"></a>  try_lock –  
  Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.  
   
 ```cpp  
@@ -172,14 +176,14 @@ bool try_lock() noexcept;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud uložená `mutex` ukazatel `null`, vyvolá metoda [system_error –](../standard-library/system-error-class.md) s kódem chyby `operation_not_permitted`.  
   
  Pokud již vlastní volající vlákno `mutex`, vyvolá metoda `system_error` s kódem chyby `resource_deadlock_would_occur`.  
   
-##  <a name="try_lock_for"></a>try_lock_for –  
+##  <a name="try_lock_for"></a>  try_lock_for –  
  Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.  
   
 ```
@@ -193,14 +197,14 @@ bool try_lock_for(
  A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální množství času, která metoda se pokusí získat vlastnictví `mutex`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud uložená `mutex` ukazatel `null`, vyvolá metoda [system_error –](../standard-library/system-error-class.md) s kódem chyby `operation_not_permitted`.  
   
  Pokud již vlastní volající vlákno `mutex`, vyvolá metoda `system_error` s kódem chyby `resource_deadlock_would_occur`.  
   
-##  <a name="try_lock_until"></a>try_lock_until  
+##  <a name="try_lock_until"></a>  try_lock_until  
  Pokusí se získat vlastnictví přidruženého `mutex` bez blokování.  
   
 ```cpp  
@@ -215,14 +219,14 @@ bool try_lock_until(const xtime* Abs_time);
  Bod v čase, který určuje mezní hodnotu, po jejímž uplynutí metodu již nebude pokoušet o získání vlastnictví `mutex`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
+ `true` Pokud metoda úspěšně získá vlastnictví `mutex`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud uložená `mutex` ukazatel `null`, vyvolá metoda [system_error –](../standard-library/system-error-class.md) s kódem chyby `operation_not_permitted`.  
   
  Pokud již vlastní volající vlákno `mutex`, vyvolá metoda `system_error` s kódem chyby `resource_deadlock_would_occur`.  
   
-##  <a name="unique_lock"></a>unique_lock – konstruktor  
+##  <a name="unique_lock"></a>  unique_lock – konstruktor  
  Vytvoří `unique_lock` objektu.  
   
 ```cpp  
@@ -272,13 +276,13 @@ unique_lock(mutex_type& Mtx,
 |||  
 |-|-|  
 |`No argument`|Vlastnictví se získá voláním `lock` metodu přidruženého `mutex` objektu.|  
-|`Adopt`|Předpokládá se vlastnictví. `Mtx`je nutné uzamknout při volání konstruktoru.|  
-|`Defer`|Volající vlákno je předpokládá, že není vlastní `mutex` objektu. `Mtx`nesmí být uzamčena při volání konstruktoru.|  
+|`Adopt`|Předpokládá se vlastnictví. `Mtx` je nutné uzamknout při volání konstruktoru.|  
+|`Defer`|Volající vlákno je předpokládá, že není vlastní `mutex` objektu. `Mtx` nesmí být uzamčena při volání konstruktoru.|  
 |`Try`|Vlastnictví je dáno volání `try_lock` na přidruženého `mutex` objektu. Konstruktor, vyvolá nic.|  
 |`Rel_time`|Vlastnictví je dáno volání `try_lock_for(Rel_time)`.|  
 |`Abs_time`|Vlastnictví je dáno volání `try_lock_until(Abs_time)`.|  
   
-##  <a name="dtorunique_lock_destructor"></a>~ unique_lock – destruktor  
+##  <a name="dtorunique_lock_destructor"></a>  ~ unique_lock – destruktor  
  Uvolní všechny prostředky, které jsou přidružené `unique_lock` objektu.  
   
 ```cpp  
@@ -288,7 +292,7 @@ unique_lock(mutex_type& Mtx,
 ### <a name="remarks"></a>Poznámky  
  Pokud volající vlákno vlastní přidruženého `mutex`, vlastnictví verzích destruktor voláním odemknutí na `mutex` objektu.  
   
-##  <a name="unlock"></a>odemknutí  
+##  <a name="unlock"></a>  odemknutí  
  Uvolní vlastnictví přidruženého `mutex`.  
   
 ```cpp  
@@ -302,7 +306,7 @@ void unlock();
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex >](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
 
 
 

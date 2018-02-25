@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs: C++
-helpviewer_keywords: iterator header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0216c90a922050d4a752b4dbbd1209b26892ba05
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 Definuje základní iterátor, předdefinované iterátory a iterátory proudu, jakož i několik podpůrných šablon. Předdefinované iterátory zahrnují vkládací a reverzní adaptéry. Existují tři třídy adapterů iterátoru vložení: přední, zadní a obecný. Poskytují sémantiku vkládání, nikoliv sémantikou přepsání, kterou poskytují iterátory členské funkce kontejneru.  
@@ -55,19 +59,19 @@ Definuje základní iterátor, předdefinované iterátory a iterátory proudu, 
   
 |||  
 |-|-|  
-|[zálohy](../standard-library/iterator-functions.md#advance)|Zvýší iterátor o zadaný počet pozic.|  
+|[advance](../standard-library/iterator-functions.md#advance)|Zvýší iterátor o zadaný počet pozic.|  
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Vytvoří iterátor, který může vložit prvky do zadní části zadaného kontejneru.|  
-|[začít](../standard-library/iterator-functions.md#begin)|Načte iterátor na první prvek v zadaném kontejneru.|  
-|[cbegin –](../standard-library/iterator-functions.md#cbegin)|Načte konstantní iterátor na první prvek v zadaném kontejneru.|  
+|[Začátek](../standard-library/iterator-functions.md#begin)|Načte iterátor na první prvek v zadaném kontejneru.|  
+|[cbegin](../standard-library/iterator-functions.md#cbegin)|Načte konstantní iterátor na první prvek v zadaném kontejneru.|  
 |[cend –](../standard-library/iterator-functions.md#cend)|Načte konstantní iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.|  
-|[vzdálenost](../standard-library/iterator-functions.md#distance)|Určuje počet kroků mezi polohami řešenými dvěma iterátory.|  
-|[end](../standard-library/iterator-functions.md#end)|Načte iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.|  
+|[Vzdálenost](../standard-library/iterator-functions.md#distance)|Určuje počet kroků mezi polohami řešenými dvěma iterátory.|  
+|[End](../standard-library/iterator-functions.md#end)|Načte iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.|  
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Vytvoří iterátor, který může vložit prvky do přední části zadaného kontejneru.|  
-|[Vkládací modul](../standard-library/iterator-functions.md#inserter)|Adaptér iterátoru, který přidá nový prvek do kontejneru v určeném okamžiku vložení.|  
+|[inserter](../standard-library/iterator-functions.md#inserter)|Adaptér iterátoru, který přidá nový prvek do kontejneru v určeném okamžiku vložení.|  
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Vytvoří [checked_array_iterator –](../standard-library/checked-array-iterator-class.md) který mohou využívat jiné algoritmy. **Poznámka:** tato funkce je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.|  
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Vrátí iterátor přesunu obsahující zadaný iterátor jako svůj uložené základní iterátor.|  
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Vytvoří [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) který mohou využívat jiné algoritmy. **Poznámka:** tato funkce je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.|  
-|[Další](../standard-library/iterator-functions.md#next)|Iteruje zadaný počet iterací a vrátí novou pozici iterace.|  
+|[next](../standard-library/iterator-functions.md#next)|Iteruje zadaný počet iterací a vrátí novou pozici iterace.|  
 |[prev](../standard-library/iterator-functions.md#prev)|Iteruje v opačném pořadí zadaný počet iterací a vrátí novou pozici iterace.|  
   
 ### <a name="operators"></a>Operátory  
@@ -75,35 +79,35 @@ Definuje základní iterátor, předdefinované iterátory a iterátory proudu, 
 |||  
 |-|-|  
 |[operator!=](../standard-library/iterator-operators.md#op_neq)|Testuje, zda je objekt iterátoru na levé straně operátoru není roven objektu iterátoru na pravé straně.|  
-|[Operator ==](../standard-library/iterator-operators.md#op_eq_eq)|Testuje, zda je objekt iterátoru na levé straně operátoru roven objektu iterátoru na pravé straně.|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Testuje, zda je objekt iterátoru na levé straně operátoru roven objektu iterátoru na pravé straně.|  
 |[operátor <](../standard-library/iterator-operators.md#op_lt)|Testuje, zda je objekt iterátoru na levé straně operátoru menší než objekt iterátoru na pravé straně.|  
-|[operátor\<=](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, zda je objekt iterátoru na levé straně operátoru menší než nebo roven objektu iterátoru na pravé straně.|  
-|[operátor >](../standard-library/iterator-operators.md#op_gt)|Testuje, zda je objekt iterátoru na levé straně operátoru větší než objekt iterátoru na pravé straně.|  
+|[Operátor\<=](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, zda je objekt iterátoru na levé straně operátoru menší než nebo roven objektu iterátoru na pravé straně.|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|Testuje, zda je objekt iterátoru na levé straně operátoru větší než objekt iterátoru na pravé straně.|  
 |[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, zda je objekt iterátoru na levé straně operátoru větší než nebo roven objektu iterátoru na pravé straně.|  
-|[operátor +](../standard-library/iterator-operators.md#op_add)|Přidá posun do iterovat a vrátí nové `reverse_iterator` adresování vložené element na pozici posunutí nové.|  
-|[Operator –](../standard-library/iterator-operators.md#operator-)|Odečte jeden iterátor od druhého a vrátí rozdíl.|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|Přidá posun do iterovat a vrátí nové `reverse_iterator` adresování vložené element na pozici posunutí nové.|  
+|[operator-](../standard-library/iterator-operators.md#operator-)|Odečte jeden iterátor od druhého a vrátí rozdíl.|  
   
 ### <a name="classes"></a>Třídy  
   
 |||  
 |-|-|  
-|[back_insert_iterator –](../standard-library/back-insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner.|  
-|[bidirectional_iterator_tag –](../standard-library/bidirectional-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator obousměrné.|  
-|[checked_array_iterator –](../standard-library/checked-array-iterator-class.md)|Třída, která umožňuje přístup k poli pomocí náhodného přístupu, kontrolovaného iterátoru. **Poznámka:** Tato třída je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.|  
-|[forward_iterator_tag –](../standard-library/forward-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje dopředného iterator.|  
-|[front_insert_iterator –](../standard-library/front-insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner.|  
-|[input_iterator_tag –](../standard-library/input-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje vstupní iterator.|  
-|[insert_iterator –](../standard-library/insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner. Ukládá také chráněného **iterator** objekt třídy **Container::iterator**, volané **iter**.|  
-|[istream_iterator –](../standard-library/istream-iterator-class.md)|Třída šablony popisuje vstupní objekt iterátoru. Extrahuje objekty třídy **Ty** ze vstupního datového proudu, který přistupuje k prostřednictvím objektu ukládá typ ukazatele na `basic_istream` \< **Elem**, **Tr**>.|  
-|[istreambuf_iterator –](../standard-library/istreambuf-iterator-class.md)|Třída šablony popisuje vstupní objekt iterátoru. Vloží elementy třídy **Elem** do vyrovnávací paměť výstupní datový proud, který přistupuje prostřednictvím objektu je úložiště typu **ukazatel** k `basic_streambuf` \< **Elem**, **Tr**>.|  
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner.|  
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator obousměrné.|  
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Třída, která umožňuje přístup k poli pomocí náhodného přístupu, kontrolovaného iterátoru. **Poznámka:** Tato třída je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.|  
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje dopředného iterator.|  
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner.|  
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje vstupní iterator.|  
+|[insert_iterator](../standard-library/insert-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy do kontejneru typu **kontejneru**, který přistupuje k prostřednictvím chráněného **ukazatel** objekt ukládají se nazývá kontejner. Ukládá také chráněného **iterator** objekt třídy **Container::iterator**, volané **iter**.|  
+|[istream_iterator](../standard-library/istream-iterator-class.md)|Třída šablony popisuje vstupní objekt iterátoru. Extrahuje objekty třídy **Ty** ze vstupního datového proudu, který přistupuje k prostřednictvím objektu ukládá typ ukazatele na `basic_istream` \< **Elem**, **Tr**>.|  
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Třída šablony popisuje vstupní objekt iterátoru. Vloží elementy třídy **Elem** do vyrovnávací paměť výstupní datový proud, který přistupuje prostřednictvím objektu je úložiště typu **ukazatel** k `basic_streambuf` \< **Elem**, **Tr**>.|  
 |[iterator](../standard-library/iterator-struct.md)|Třída šablony slouží jako základní typ pro všechny iterátory.|  
-|[iterator_traits –](../standard-library/iterator-traits-struct.md)|Třída pomocné šablony poskytující kritické typy, které jsou spojeny s různými typy iterátoru, aby na ně bylo možné odkazovat stejným způsobem.|  
-|[move_iterator –](../standard-library/move-iterator-class.md)|A `move_iterator` objekt ukládá náhodný přístup iterator typu `RandomIterator`. Chová se jako iterátor s náhodným přístupem, pokud není dereferencován. Výsledek `operator*` je implicitně převést na `value_type&&:` Chcete-li `rvalue reference`.|  
-|[ostream_iterator –](../standard-library/ostream-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží objekty třídy **typ** do výstupního proudu, který přistupuje prostřednictvím objektu je úložiště typu **ukazatel** k `basic_ostream` \< **Elem** , **Tr**>.|  
+|[iterator_traits](../standard-library/iterator-traits-struct.md)|Třída pomocné šablony poskytující kritické typy, které jsou spojeny s různými typy iterátoru, aby na ně bylo možné odkazovat stejným způsobem.|  
+|[move_iterator](../standard-library/move-iterator-class.md)|A `move_iterator` objekt ukládá náhodný přístup iterator typu `RandomIterator`. Chová se jako iterátor s náhodným přístupem, pokud není dereferencován. Výsledek `operator*` je implicitně převést na `value_type&&:` Chcete-li `rvalue reference`.|  
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží objekty třídy **typ** do výstupního proudu, který přistupuje prostřednictvím objektu je úložiště typu **ukazatel** k `basic_ostream` \< **Elem** , **Tr**>.|  
 |[ostreambuf_iterator – třída](../standard-library/ostreambuf-iterator-class.md)|Třída šablony popisuje výstupní objekt iterátoru. Vloží elementy třídy **Elem** do vyrovnávací paměť výstupní datový proud, který přistupuje k prostřednictvím objektu ukládá typ ukazatele na `basic_streambuf` \< **Elem**, **Tr**>.|  
-|[output_iterator_tag –](../standard-library/output-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje výstupní iterace.|  
-|[random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator náhodný přístup.|  
-|[reverse_iterator –](../standard-library/reverse-iterator-class.md)|Třída šablony popisuje objekt, který se chová jako iterátor s náhodným přístupem, jen obráceně.|  
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje výstupní iterace.|  
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator náhodný přístup.|  
+|[reverse_iterator](../standard-library/reverse-iterator-class.md)|Třída šablony popisuje objekt, který se chová jako iterátor s náhodným přístupem, jen obráceně.|  
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Třída, která umožňuje přístup k poli pomocí náhodného přístupu, nekontrolovaného iterátoru. **Poznámka:** Tato třída je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.|  
   
 ## <a name="see-also"></a>Viz také  

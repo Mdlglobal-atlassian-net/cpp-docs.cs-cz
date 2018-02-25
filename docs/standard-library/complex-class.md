@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::complex [C++], value_type
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a4fe9411d306e08f16df138786d6d55e4ea1647c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc697726709f0c5dd7640af0b52b3f8176538267
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complex-class"></a>complex – třída
 Šablony třídy popisuje objekt, který ukládá dva objekty typu **typu**, ten, který reprezentuje část skutečné komplexního čísla a ten, který reprezentuje část pomyslná.  
@@ -57,7 +60,7 @@ class complex
   
 |||  
 |-|-|  
-|[komplexní](#complex)|Vytvoří komplexního čísla se zadanou skutečné a pomyslná částí nebo jako kopii některé komplexního čísla.|  
+|[complex](#complex)|Vytvoří komplexního čísla se zadanou skutečné a pomyslná částí nebo jako kopii některé komplexního čísla.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -69,25 +72,25 @@ class complex
   
 |||  
 |-|-|  
-|[Imag](#imag)|Extrahuje komponentu pomyslná komplexního čísla.|  
-|[skutečné](#real)|Extrahuje komponentu skutečné komplexního čísla.|  
+|[imag](#imag)|Extrahuje komponentu pomyslná komplexního čísla.|  
+|[real](#real)|Extrahuje komponentu skutečné komplexního čísla.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[Operator * =](#op_star_eq)|Vynásobí komplexního čísla cílového faktorem, který může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.|  
-|[+= – operátor](#op_add_eq)|Přidá číslo na číslo komplexní cíl, kde číslo přidat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|  
-|[-= – operátor](#operator-_eq)|Odečítá od číslo od cílového komplexního čísla, kde číslo odečítat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|  
+|[operator*=](#op_star_eq)|Vynásobí komplexního čísla cílového faktorem, který může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.|  
+|[operator+=](#op_add_eq)|Přidá číslo na číslo komplexní cíl, kde číslo přidat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|  
+|[operator-=](#operator-_eq)|Odečítá od číslo od cílového komplexního čísla, kde číslo odečítat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|  
 |[/ = – operátor](#op_div_eq)|Vydělí cíl komplexního čísla dělitelem, která může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.|  
-|[operátor =](#op_eq)|Přiřadí číslo na číslo komplexní cíl, kde může být složité číslo přiřazené nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, který je právě přiřazován.|  
+|[operator=](#op_eq)|Přiřadí číslo na číslo komplexní cíl, kde může být složité číslo přiřazené nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, který je právě přiřazován.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví**: \<komplexní >  
   
  **Namespace:** – std  
   
-##  <a name="complex"></a>COMPLEX::Complex  
+##  <a name="complex"></a>  COMPLEX::Complex  
  Vytvoří komplexního čísla se zadanou skutečné a pomyslná částí nebo jako kopii některé komplexního čísla.  
   
 ```  
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="imag"></a>COMPLEX::Imag  
+##  <a name="imag"></a>  COMPLEX::Imag  
  Extrahuje komponentu pomyslná komplexního čísla.  
   
 ```  
@@ -223,7 +226,7 @@ The real part of c1 is c1.real ( ) = 4.
 The imaginary part of c1 is c1.imag ( ) = 3.  
 ```  
   
-##  <a name="op_star_eq"></a>COMPLEX::Operator * =  
+##  <a name="op_star_eq"></a>  COMPLEX::Operator * =  
  Vynásobí komplexního čísla cílového faktorem, který může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.  
   
 ```  
@@ -303,7 +306,7 @@ int main() {
 }  
 ```  
   
-##  <a name="op_add_eq"></a>COMPLEX::Operator +=  
+##  <a name="op_add_eq"></a>  COMPLEX::Operator +=  
  Přidá číslo na číslo komplexní cíl, kde číslo přidat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.  
   
 ```  
@@ -402,7 +405,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="complex__operator-_eq"></a>COMPLEX::Operator-=  
+##  <a name="complex__operator-_eq"></a>  COMPLEX::Operator-=  
  Odečítá od číslo od cílového komplexního čísla, kde číslo odečítat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.  
   
 ```  
@@ -506,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.  
 ```  
   
-##  <a name="op_div_eq"></a>COMPLEX::Operator / =  
+##  <a name="op_div_eq"></a>  COMPLEX::Operator / =  
  Vydělí cíl komplexního čísla dělitelem, která může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.  
   
 ```  
@@ -606,7 +609,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq"></a>COMPLEX::Operator =  
+##  <a name="op_eq"></a>  COMPLEX::Operator =  
  Přiřadí číslo na číslo komplexní cíl, kde může být složité číslo přiřazené nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, který je právě přiřazován.  
   
 ```  
@@ -680,7 +683,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
  cl2 = (3,4)  
 ```  
   
-##  <a name="real"></a>COMPLEX::Real  
+##  <a name="real"></a>  COMPLEX::Real  
  Získá nebo nastaví komponentu skutečné komplexního čísla.  
   
 ```  
@@ -731,7 +734,7 @@ The real part of c1 is c1.real ( ) = 4.
 The imaginary part of c1 is c1.imag ( ) = 3.  
 ```  
   
-##  <a name="value_type"></a>COMPLEX::value_type  
+##  <a name="value_type"></a>  COMPLEX::value_type  
  Typ, který představuje typ dat používá k reprezentování části skutečné a pomyslná komplexního čísla.  
   
 ```  
@@ -740,7 +743,7 @@ typedef Type value_type;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `value_type`je komplexní synonymum pro třídu **typ** parametr šablony.  
+ `value_type` je komplexní synonymum pro třídu **typ** parametr šablony.  
   
 ### <a name="example"></a>Příklad  
   

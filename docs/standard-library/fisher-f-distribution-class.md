@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::fisher_f_distribution
 - random/std::fisher_f_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::fisher_f_distribution::param_type::n
 - random/std::fisher_f_distribution::param_type::operator==
 - random/std::fisher_f_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::fisher_f_distribution [C++]
 - std::fisher_f_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: da8fba1e5be97c692b08b8e89cf36b4ae6f5ddab
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 232edd9e13d0a58f42a11d1450383adb0f7e8fb2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution – třída
 Generuje Fisherovy F distribuce.  
@@ -87,7 +90,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type –](#param_type)|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
  Funkce vlastností `m()` a `n()` návratové hodnoty pro parametry uložené distribuční `m` a `n` v uvedeném pořadí.  
   
@@ -241,7 +244,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution  
+##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -256,17 +259,17 @@ explicit fisher_f_distribution(const param_type& parm);
 *n*  
  `n` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
  `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:** `0.0 < m` a`0.0 < n`  
+ **Předběžnou:** `0.0 < m` a `0.0 < n`  
   
  První konstruktoru vytvoří objekt jehož uložené `m` hodnota obsahuje hodnotu *m* a jehož uložené `n` hodnota obsahuje hodnotu  *n* .  
   
  Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>fisher_f_distribution::param_type  
+##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  Ukládá parametry rozdělení.  
   
 ```cpp  
@@ -287,16 +290,16 @@ struct param_type {
 *n*  
  `n` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:** `0.0 < m` a`0.0 < n`  
+ **Předběžnou:** `0.0 < m` a `0.0 < n`  
   
  Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

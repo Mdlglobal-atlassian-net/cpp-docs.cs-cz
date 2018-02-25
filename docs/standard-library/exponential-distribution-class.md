@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::exponential_distribution
 - random/std::exponential_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::exponential_distribution::param_type::lambda
 - random/std::exponential_distribution::param_type::operator==
 - random/std::exponential_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::exponential_distribution [C++]
 - std::exponential_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9ac960d219535746e34d51ce778c1464be2f6c43
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution – třída
 Generuje exponenciálního rozdělení.  
@@ -86,8 +89,8 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
   
 ||||  
 |-|-|-|  
-|[exponential_distribution –](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
-|`exponential_distribution::operator()`||[param_type –](#param_type)|  
+|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
+|`exponential_distribution::operator()`||[param_type](#param_type)|  
   
 Členská funkce vlastnost `lambda()` vrací hodnotu pro parametr uložené distribuční `lambda`.  
   
@@ -178,7 +181,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="exponential_distribution"></a>exponential_distribution::exponential_distribution  
+##  <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -190,17 +193,17 @@ explicit exponential_distribution(const param_type& parm);
 *lambda*  
  `lambda` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
  Balíček parametr použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < lambda`  
+**Předběžnou podmínku:** `0.0 < lambda`  
   
 První konstruktoru vytvoří objekt jehož uložené `lambda` hodnota obsahuje hodnotu *lambda*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>exponential_distribution::param_type  
+##  <a name="param_type"></a>  exponential_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```
@@ -218,14 +221,14 @@ struct param_type {
 *lambda*  
 `lambda` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`0.0 < lambda`  
+**Předběžnou podmínku:** `0.0 < lambda`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
-[\<náhodné >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)
 

@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::enable_if
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::enable_if
+dev_langs:
+- C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 627fd8fa2050141c570f6448bb3cf98142bb6ffc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enableif-class"></a>enable_if – třída
 Podmíněná vytváří instanci typu pro sfinae u výrazů řešení přetížení. Vnořené typedef `enable_if<Condition,Type>::type` existuje, a je synonymum pro `Type`– jenom v případě `Condition` je `true`.  
@@ -114,7 +118,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
   
  Scénář 4 pracuje v konstruktory, které nemají návratové typy a tím řeší omezení zabalení scénář 1.  Scénář 4 je ale omezený na argumenty bez použití šablon funkce, které nejsou vždy k dispozici.  (Pomocí scénář 4 na argument podle šablony funkce zabraňuje odvození argumentu šablony z na něm pracovat.)  
   
- `enable_if`je výkonný, ale také nebezpečné, pokud je došlo ke zneužití.  Protože jeho účel je aby kandidáty zmizí před rozlišení přetížení je nebezpečného, může být velmi matoucí jeho účinky.  Tady jsou některá doporučení:  
+ `enable_if` je výkonný, ale také nebezpečné, pokud je došlo ke zneužití.  Protože jeho účel je aby kandidáty zmizí před rozlišení přetížení je nebezpečného, může být velmi matoucí jeho účinky.  Tady jsou některá doporučení:  
   
 -   Nepoužívejte `enable_if` můžete vybrat, jestli implementace při kompilaci. Nemáte někdy zápisu jeden `enable_if` pro `CONDITION` a druhý pro `!CONDITION`.  Místo toho použijte *značky odesílání* vzor – například algoritmu, který vybere implementace v závislosti na silné stránky iterátory se získá.  
   
@@ -133,7 +137,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```  
   
-  V tomto příkladu `make_pair("foo", "bar")` vrátí `pair<const char *, const char *>`. Řešení přetížení má zjistíte, které `func()` chcete. `pair<A, B>`má implicitně převodu konstruktor z `pair<X, Y>`.  Tato akce není nový – byl C ++ 98. Ale v C ++ 98/03, implicitně převodu konstruktor podpis vždy existuje, i když je `pair<int, int>(const pair<const char *, const char *>&)`.  Rozlišení přetížení nebude vědět, že pokus o vytvoření instance tento konstruktor rozbalí horribly protože `const char *` není implicitně převést na `int`; je pouze prohlížení podpisy, než funkce definice instance.  Proto je ukázkový kód nejednoznačný, protože podpisy převést `pair<const char *, const char *>` do obou `pair<int, int>` a `pair<string, string>`.  
+  V tomto příkladu `make_pair("foo", "bar")` vrátí `pair<const char *, const char *>`. Řešení přetížení má zjistíte, které `func()` chcete. `pair<A, B>` má implicitně převodu konstruktor z `pair<X, Y>`.  Tato akce není nový – byl C ++ 98. Ale v C ++ 98/03, implicitně převodu konstruktor podpis vždy existuje, i když je `pair<int, int>(const pair<const char *, const char *>&)`.  Rozlišení přetížení nebude vědět, že pokus o vytvoření instance tento konstruktor rozbalí horribly protože `const char *` není implicitně převést na `int`; je pouze prohlížení podpisy, než funkce definice instance.  Proto je ukázkový kód nejednoznačný, protože podpisy převést `pair<const char *, const char *>` do obou `pair<int, int>` a `pair<string, string>`.  
   
  C ++ 11 vyřeší tato nejednoznačnost pomocí `enable_if` zajistit `pair<A, B>(const pair<X, Y>&)` existuje **pouze** při `const X&` implicitně převést na `A` a `const Y&` implicitně převést na `B`.  To umožňuje rozlišení přetížení k určení, který `pair<const char *, const char *>` není převoditelná na `pair<int, int>` a že přetížení, které nepřijímá `pair<string, string>` je přijatelná.  
   

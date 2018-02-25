@@ -1,28 +1,32 @@
 ---
-title: "random_access_iterator_tag – struktura | Microsoft Docs"
+title: random_access_iterator_tag Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xutility/std::random_access_iterator_tag
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- xutility/std::random_access_iterator_tag
+dev_langs:
+- C++
 helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f58235755081b2e0618388ede19e818784e8de0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96b18916b4842bcb7b52f79fe5c0b92965043040
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag – struktura
 Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator náhodný přístup.  
@@ -109,7 +113,7 @@ The iterators are not the same.
  **Namespace:** – std  
   
 ## <a name="see-also"></a>Viz také  
- [bidirectional_iterator_tag – struktura](../standard-library/bidirectional-iterator-tag-struct.md)   
+ [bidirectional_iterator_tag Struct](../standard-library/bidirectional-iterator-tag-struct.md)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
 

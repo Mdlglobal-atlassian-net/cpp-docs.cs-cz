@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::extreme_value_distribution
 - random/std::extreme_value_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93bf21b8dd17ddff4bf3de56417c85c6b415cb5e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution – třída
 Generuje jako distribučního krajní hodnotu.  
@@ -89,7 +92,7 @@ Použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `d
 ||||  
 |-|-|-|  
 |[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type –](#param_type)|  
+|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|  
   
  Funkce vlastností `a()` a `b()` vrátit jejich příslušné hodnoty pro parametry uložené distribuční `a` a `b`.  
   
@@ -185,7 +188,7 @@ Distribution for 10 samples:
   
  **Namespace:** – std  
   
-##  <a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution  
+##  <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution  
  Vytvoří rozdělení.  
   
 ```  
@@ -200,17 +203,17 @@ explicit extreme_value_distribution(const param_type& parm);
 *b_value*  
  `b` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
  `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`0.0 < b`  
+ **Předběžnou podmínku:** `0.0 < b`  
   
  První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a_value* a jehož uložené `b` hodnota obsahuje hodnotu *b_value*.  
   
  Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>extreme_value_distribution::param_type  
+##  <a name="param_type"></a>  extreme_value_distribution::param_type  
 Ukládá parametry rozdělení.  
   
 ```cpp  
@@ -232,16 +235,16 @@ struct param_type {
 *b_value*  
  `b` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
  `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`0.0 < b`  
+ **Předběžnou podmínku:** `0.0 < b`  
   
  Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <thread>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <thread>
+dev_langs:
+- C++
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0847d92d890026ce6cfb963b022a3859370877fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fa16f2f06a55122619741c5889f41ce3d6b53c1e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a různé podpůrné funkce.  
@@ -55,9 +59,9 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
   
 |Název|Popis|  
 |----------|-----------------|  
-|[get_id –](../standard-library/thread-functions.md#get_id)|Jednoznačně identifikuje aktuální vlákno provádění.|  
-|[sleep_for –](../standard-library/thread-functions.md#sleep_for)|Blokuje volající vlákno.|  
-|[sleep_until –](../standard-library/thread-functions.md#sleep_until)|Volající vlákno blokuje alespoň do zadané doby.|  
+|[get_id](../standard-library/thread-functions.md#get_id)|Jednoznačně identifikuje aktuální vlákno provádění.|  
+|[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blokuje volající vlákno.|  
+|[sleep_until](../standard-library/thread-functions.md#sleep_until)|Volající vlákno blokuje alespoň do zadané doby.|  
 |[swap](../standard-library/thread-functions.md#swap)|Výměny stavy dva `thread` objekty.|  
 |[yield](../standard-library/thread-functions.md#yield)|Signály operačního systému spustit jiná vlákna i v případě, že aktuální vlákno by normálně nadále fungoval.|  
   
@@ -65,12 +69,12 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator > = – operátor](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` je větší než nebo rovna hodnotě jiný objekt.|  
+|[operator>= Operator](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` je větší než nebo rovna hodnotě jiný objekt.|  
 |[Operator > – operátor](../standard-library/thread-operators.md#op_gt)|Určuje, zda jeden `thread::id` je větší než druhý objekt.|  
 |[Operator < = – operátor](../standard-library/thread-operators.md#op_lt_eq)|Určuje, zda jeden `thread::id` objektu je menší než nebo rovna do jiného.|  
 |[Operator < – operátor](../standard-library/thread-operators.md#op_lt)|Určuje, zda jeden `thread::id` objektu je menší než jiné.|  
 |[Operator! = – operátor](../standard-library/thread-operators.md#op_neq)|Porovná dva `thread::id` objekty nerovnost.|  
-|[Operator == – operátor](../standard-library/thread-operators.md#op_eq_eq)|Porovná dva `thread::id` objekty rovnosti.|  
+|[operator== Operator](../standard-library/thread-operators.md#op_eq_eq)|Porovná dva `thread::id` objekty rovnosti.|  
 |[operátor << – operátor](../standard-library/thread-operators.md#op_lt_lt)|Vloží text reprezentace `thread::id` objektu do datového proudu.|  
   
 ## <a name="see-also"></a>Viz také  

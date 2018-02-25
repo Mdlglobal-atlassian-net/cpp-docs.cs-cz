@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_ofstream
 - fstream/std::basic_ofstream::close
@@ -14,7 +15,8 @@ f1_keywords:
 - fstream/std::basic_ofstream::open
 - fstream/std::basic_ofstream::rdbuf
 - fstream/std::basic_ofstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ofstream [C++]
 - std::basic_ofstream [C++], close
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a85ff0d2b4aa59e956015478c1fc3eee77294fc8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicofstream-class"></a>basic_ofstream – třída
 Popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementy typu `Elem`, jejichž Určuje vlastnosti znak v třídě `Tr`.  
@@ -81,30 +84,30 @@ int main(int argc, char **argv)
   
 |||  
 |-|-|  
-|[basic_ofstream –](#basic_ofstream)|Vytvoří objekt typu `basic_ofstream`.|  
+|[basic_ofstream](#basic_ofstream)|Vytvoří objekt typu `basic_ofstream`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[close](#close)|Zavře soubor.|  
-|[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
+|[is_open](#is_open)|Určuje, zda je soubor otevřít.|  
 |[open](#open)|Otevře soubor.|  
-|[rdbuf –](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
+|[rdbuf](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
 |[swap](#swap)|Obsah tohoto Exchange `basic_ofstream` pro obsah ze zadaných `basic_ofstream`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí přiřazení zahrnující `rvalue reference` , nenechává kopie za sebou.|  
+|[operator=](#op_eq)|Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí přiřazení zahrnující `rvalue reference` , nenechává kopie za sebou.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<fstream >  
   
  **Namespace:** – std  
   
-##  <a name="basic_ofstream"></a>basic_ofstream::basic_ofstream  
+##  <a name="basic_ofstream"></a>  basic_ofstream::basic_ofstream  
  Vytvoří objekt typu `basic_ofstream`.  
   
 ```
@@ -165,7 +168,7 @@ int main(int argc, char **argv)
 }  
 ```  
   
-##  <a name="close"></a>basic_ofstream::Close  
+##  <a name="close"></a>  basic_ofstream::Close  
  Zavře soubor.  
   
 ```
@@ -178,7 +181,7 @@ void close();
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá **zavřete**.  
   
-##  <a name="is_open"></a>basic_ofstream::is_open  
+##  <a name="is_open"></a>  basic_ofstream::is_open  
  Určuje, zda je soubor otevřít.  
   
 ```
@@ -186,7 +189,7 @@ bool is_open() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je soubor otevřený `false` jinak.  
+ `true` Pokud je soubor otevřený `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu [rdbuf –](#rdbuf)  **->**  [is_open –](../standard-library/basic-filebuf-class.md#is_open).  
@@ -213,7 +216,7 @@ int main( )
 }  
 ```  
   
-##  <a name="open"></a>basic_ofstream::Open  
+##  <a name="open"></a>  basic_ofstream::Open  
  Otevře soubor.  
   
 ```
@@ -252,7 +255,7 @@ void open(
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) pro příklad, který používá **otevřete**.  
   
-##  <a name="op_eq"></a>basic_ofstream::Operator =  
+##  <a name="op_eq"></a>  basic_ofstream::Operator =  
  Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí přiřazení zahrnující `rvalue reference` , nenechává kopie za sebou.  
   
 ```
@@ -269,7 +272,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 ### <a name="remarks"></a>Poznámky  
  Operátor členů nahradí obsah objektu s použitím obsah `right`, považován za deklarátor odkazu.  
   
-##  <a name="rdbuf"></a>basic_ofstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_ofstream::rdbuf  
  Vrátí adresu vyrovnávací paměti uložené datového proudu.  
   
 ```
@@ -282,7 +285,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `rdbuf`.  
   
-##  <a name="swap"></a>basic_ofstream::swap  
+##  <a name="swap"></a>  basic_ofstream::swap  
  Výměny obsahu dvou `basic_ofstream` objekty.  
   
 ```

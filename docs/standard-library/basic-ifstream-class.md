@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_ifstream
 - fstream/std::basic_ifstream::close
@@ -14,7 +15,8 @@ f1_keywords:
 - fstream/std::basic_ifstream::open
 - fstream/std::basic_ifstream::rdbuf
 - fstream/std::basic_ifstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ifstream [C++]
 - std::basic_ifstream [C++], close
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9c923d4c3de5410ac65f9706d875300b0d07cbb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicifstream-class"></a>basic_ifstream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementy typu `Elem`, jejichž Určuje vlastnosti znak v třídě `Tr`.  
@@ -78,7 +81,7 @@ int main(int argc, char **argv)
 }  
 ```  
   
-## <a name="input-basicifstreamclasstxt"></a>Vstup: basic_ifstream_class.txt  
+## <a name="input-basicifstreamclasstxt"></a>Input: basic_ifstream_class.txt  
   
 ```  
 This is the contents of basic_ifstream_class.txt.  
@@ -94,30 +97,30 @@ This is the contents of basic_ifstream_class.txt.
   
 |||  
 |-|-|  
-|[basic_ifstream –](#basic_ifstream)|Inicializuje novou instanci třídy `basic_ifstream` objektu.|  
+|[basic_ifstream](#basic_ifstream)|Inicializuje novou instanci třídy `basic_ifstream` objektu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[close](#close)|Zavře soubor.|  
-|[is_open –](#is_open)|Určuje, zda je soubor otevřít.|  
+|[is_open](#is_open)|Určuje, zda je soubor otevřít.|  
 |[open](#open)|Otevře soubor.|  
-|[rdbuf –](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
+|[rdbuf](#rdbuf)|Vrátí adresu vyrovnávací paměti uložené datového proudu.|  
 |[swap](#swap)|Obsah této výměny `basic_ifstream` pro obsah ze zadaných `basic_ifstream`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí přiřazení zahrnující `rvalue` , nenechává kopie za sebou.|  
+|[operator=](#op_eq)|Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí přiřazení zahrnující `rvalue` , nenechává kopie za sebou.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<fstream >  
   
  **Namespace:** – std  
   
-##  <a name="basic_ifstream"></a>basic_ifstream::basic_ifstream  
+##  <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream  
  Vytvoří objekt typu `basic_ifstream`.  
   
 ```  
@@ -177,7 +180,7 @@ int main(int argc, char **argv)
 }  
 ```  
   
-##  <a name="close"></a>basic_ifstream::Close  
+##  <a name="close"></a>  basic_ifstream::Close  
  Zavře soubor.  
   
 ```  
@@ -190,7 +193,7 @@ void close();
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá **zavřete**.  
   
-##  <a name="is_open"></a>basic_ifstream::is_open  
+##  <a name="is_open"></a>  basic_ifstream::is_open  
  Určuje, zda je soubor otevřít.  
   
 ```  
@@ -206,7 +209,7 @@ bool is_open() const;
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) pro příklad, který používá `is_open`.  
   
-##  <a name="open"></a>basic_ifstream::Open  
+##  <a name="open"></a>  basic_ifstream::Open  
  Otevře soubor.  
   
 ```  
@@ -245,7 +248,7 @@ void open(
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) pro příklad, který používá **otevřete**.  
   
-##  <a name="op_eq"></a>basic_ifstream::Operator =  
+##  <a name="op_eq"></a>  basic_ifstream::operator=  
  Přiřadí obsah tohoto objektu datového proudu. Toto je přiřazení přesunutí zahrnující rvalue kopii nenechává za sebou.  
   
 ```  
@@ -262,7 +265,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 ### <a name="remarks"></a>Poznámky  
  Operátor členů nahradí obsah objektu s použitím obsah `right`, považován za deklarátor odkazu. Další informace najdete v tématu [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).  
   
-##  <a name="rdbuf"></a>basic_ifstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_ifstream::rdbuf  
  Vrátí adresu vyrovnávací paměti uložené datového proudu.  
   
 ```  
@@ -275,7 +278,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `rdbuf`.  
   
-##  <a name="swap"></a>basic_ifstream::swap  
+##  <a name="swap"></a>  basic_ifstream::swap  
  Výměny obsahu dvou `basic_ifstream` objekty.  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get
 - locale/std::time_get::char_type
@@ -25,7 +26,8 @@ f1_keywords:
 - locale/std::time_get::get_time
 - locale/std::time_get::get_weekday
 - locale/std::time_get::get_year
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::time_get [C++]
 - std::time_get [C++], char_type
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1c682110c032150c8406d93c83b89efbc5bc802
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timeget-class"></a>time_get – třída
 Šablony třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` hodnoty času.  
@@ -81,40 +84,40 @@ class time_get : public time_base;
   
 |||  
 |-|-|  
-|[time_get –](#time_get)|V konstruktoru pro objekty typu `time_get`.|  
+|[time_get](#time_get)|V konstruktoru pro objekty typu `time_get`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
-|[iter_type –](#iter_type)|Typ, který popisuje vstupní iterátor.|  
+|[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
+|[iter_type](#iter_type)|Typ, který popisuje vstupní iterátor.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[date_order –](#date_order)|Vrátí pořadí data používané omezující vlastností.|  
-|[do_date_order –](#do_date_order)|Chráněná virtuální členská funkce, která je volána k vrácení pořadí data používaného omezující vlastností.|  
-|[do_get –](#do_get)|Čte a převede data znaků na hodnotu času.|  
-|[do_get_date –](#do_get_date)|A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované `x` – specifikátor pro `strftime`.|  
-|[do_get_monthname –](#do_get_monthname)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu měsíce.|  
-|[do_get_time –](#do_get_time)|A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  
-|[do_get_weekday –](#do_get_weekday)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu týdnu.|  
-|[do_get_year –](#do_get_year)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu roku.|  
+|[date_order](#date_order)|Vrátí pořadí data používané omezující vlastností.|  
+|[do_date_order](#do_date_order)|Chráněná virtuální členská funkce, která je volána k vrácení pořadí data používaného omezující vlastností.|  
+|[do_get](#do_get)|Čte a převede data znaků na hodnotu času.|  
+|[do_get_date](#do_get_date)|A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované `x` – specifikátor pro `strftime`.|  
+|[do_get_monthname](#do_get_monthname)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu měsíce.|  
+|[do_get_time](#do_get_time)|A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  
+|[do_get_weekday](#do_get_weekday)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu týdnu.|  
+|[do_get_year](#do_get_year)|Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu roku.|  
 |[get](#get)|Čte ze zdroje data znaků a převede je na čas, který je uložen v časové struktuře.|  
-|[get_date –](#get_date)|Analyzuje řetězec jako datum vyprodukované `x` – specifikátor pro `strftime`.|  
-|[get_monthname –](#get_monthname)|Analyzuje řetězec jako název měsíce.|  
-|[get_time –](#get_time)|Analyzuje řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  
-|[get_weekday –](#get_weekday)|Analyzuje řetězec jako název dne v týdnu.|  
-|[get_year –](#get_year)|Analyzuje řetězec jako název roku.|  
+|[get_date](#get_date)|Analyzuje řetězec jako datum vyprodukované `x` – specifikátor pro `strftime`.|  
+|[get_monthname](#get_monthname)|Analyzuje řetězec jako název měsíce.|  
+|[get_time](#get_time)|Analyzuje řetězec jako datum vyprodukované `X` – specifikátor pro `strftime`.|  
+|[get_weekday](#get_weekday)|Analyzuje řetězec jako název dne v týdnu.|  
+|[get_year](#get_year)|Analyzuje řetězec jako název roku.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>time_get::char_type  
+##  <a name="char_type"></a>  time_get::char_type  
  Typ, který se používá k popisu znaku používaného národním prostředním.  
   
 ```  
@@ -124,7 +127,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="date_order"></a>time_get::date_order  
+##  <a name="date_order"></a>  time_get::date_order  
  Vrátí pořadí data používané omezující vlastností.  
   
 ```  
@@ -181,7 +184,7 @@ German_Germany.1252(day, month, year)
 English_United Kingdom.1252(day, month, year)  
 ```  
   
-##  <a name="do_date_order"></a>time_get::do_date_order  
+##  <a name="do_date_order"></a>  time_get::do_date_order  
  Chráněná virtuální členská funkce, která je volána k vrácení pořadí data používaného omezující vlastností.  
   
 ```  
@@ -197,7 +200,7 @@ virtual dateorder do_date_order() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [date_order –](#date_order), který volá `do_date_order`.  
   
-##  <a name="do_get"></a>time_get::do_get  
+##  <a name="do_get"></a>  time_get::do_get  
  Čte a převede data znaků na hodnotu času. Přijme jeden převod specifikace a modifikátor.  
   
 ```  
@@ -242,55 +245,55 @@ virtual iter_type
   
  Specifikátory převod jsou:  
   
- `'a'`nebo `'A'` – se chová stejně jako [time_get::get_weekday](#get_weekday).  
+ `'a'` nebo `'A'` – se chová stejně jako [time_get::get_weekday](#get_weekday).  
   
  `'b'`, `'B'`, nebo `'h'` – se chová stejně jako [time_get::get_monthname](#get_monthname).  
   
- `'c'`--se chová stejně jako `"%b %d %H : %M : %S %Y"`.  
+ `'c'` --se chová stejně jako `"%b %d %H : %M : %S %Y"`.  
   
- `'C'`--převádí na hodnotu decimal vstupní pole v rozsahu [0, 99] `val` a ukládá `val * 100 - 1900` v `pt-&tm_year`.  
+ `'C'` --převádí na hodnotu decimal vstupní pole v rozsahu [0, 99] `val` a ukládá `val * 100 - 1900` v `pt-&tm_year`.  
   
- `'d'`nebo `'e'` – převede decimal vstupní pole v rozsahu [1, 31] a ukládá její hodnota v `pt-&tm_mday`.  
+ `'d'` nebo `'e'` – převede decimal vstupní pole v rozsahu [1, 31] a ukládá její hodnota v `pt-&tm_mday`.  
   
- `'D'`--se chová stejně jako `"%m / %d / %y"`.  
+ `'D'` --se chová stejně jako `"%m / %d / %y"`.  
   
- `'H'`– Převede decimal vstupní pole v rozsahu [0, 23] a ukládá její hodnota v `pt-&tm_hour`.  
+ `'H'` – Převede decimal vstupní pole v rozsahu [0, 23] a ukládá její hodnota v `pt-&tm_hour`.  
   
- `'I'`– Převede decimal vstupní pole v rozsahu [0, 11] a ukládá její hodnota v `pt-&tm_hour`.  
+ `'I'` – Převede decimal vstupní pole v rozsahu [0, 11] a ukládá její hodnota v `pt-&tm_hour`.  
   
- `'j'`– Převede decimal vstupní pole v rozsahu [1, 366] a ukládá její hodnota v `pt-&tm_yday`.  
+ `'j'` – Převede decimal vstupní pole v rozsahu [1, 366] a ukládá její hodnota v `pt-&tm_yday`.  
   
- `'m'`--převádí na hodnotu decimal vstupní pole v rozsahu [1, 12] `val` a ukládá `val - 1` v a ukládá její hodnota v `pt-&tm_mon`.  
+ `'m'` --převádí na hodnotu decimal vstupní pole v rozsahu [1, 12] `val` a ukládá `val - 1` v a ukládá její hodnota v `pt-&tm_mon`.  
   
- `'M'`– Převede decimal vstupní pole v rozsahu [0, 59] a ukládá její hodnota v `pt-&tm_min`.  
+ `'M'` – Převede decimal vstupní pole v rozsahu [0, 59] a ukládá její hodnota v `pt-&tm_min`.  
   
- `'n'`nebo `'t'` – se chová stejně jako `" "`.  
+ `'n'` nebo `'t'` – se chová stejně jako `" "`.  
   
- `'p'`– Převede "M" nebo "m" nula "Odp." nebo "Odp." na 12 a přidá této hodnoty na `pt-&tm_hour`.  
+ `'p'` – Převede "M" nebo "m" nula "Odp." nebo "Odp." na 12 a přidá této hodnoty na `pt-&tm_hour`.  
   
- `'r'`--se chová stejně jako `"%I : %M : %S %p"`.  
+ `'r'` --se chová stejně jako `"%I : %M : %S %p"`.  
   
- `'R'`--se chová stejně jako `"%H %M"`.  
+ `'R'` --se chová stejně jako `"%H %M"`.  
   
- `'S'`– Převede decimal vstupní pole v rozsahu [0, 59] a ukládá její hodnota v `pt-&tm_sec`.  
+ `'S'` – Převede decimal vstupní pole v rozsahu [0, 59] a ukládá její hodnota v `pt-&tm_sec`.  
   
- `'T'`nebo `'X'` – se chová stejně jako `"%H : %M : S"`.  
+ `'T'` nebo `'X'` – se chová stejně jako `"%H : %M : S"`.  
   
- `'U'`– Převede decimal vstupní pole v rozsahu [0, 53] a ukládá její hodnota v `pt-&tm_yday`.  
+ `'U'` – Převede decimal vstupní pole v rozsahu [0, 53] a ukládá její hodnota v `pt-&tm_yday`.  
   
- `'w'`– Převede decimal vstupní pole v rozsahu [0, 6] a ukládá její hodnota v `pt-&tm_wday`.  
+ `'w'` – Převede decimal vstupní pole v rozsahu [0, 6] a ukládá její hodnota v `pt-&tm_wday`.  
   
- `'W'`– Převede decimal vstupní pole v rozsahu [0, 53] a ukládá její hodnota v `pt-&tm_yday`.  
+ `'W'` – Převede decimal vstupní pole v rozsahu [0, 53] a ukládá její hodnota v `pt-&tm_yday`.  
   
- `'x'`--se chová stejně jako `"%d / %m / %y"`.  
+ `'x'` --se chová stejně jako `"%d / %m / %y"`.  
   
- `'y'`--převádí na hodnotu decimal vstupní pole v rozsahu [0, 99] `val` a ukládá `val < 69  val + 100 : val` v `pt-&tm_year`.  
+ `'y'` --převádí na hodnotu decimal vstupní pole v rozsahu [0, 99] `val` a ukládá `val < 69  val + 100 : val` v `pt-&tm_year`.  
   
- `'Y'`--se chová stejně jako [time_get::get_year](#get_year).  
+ `'Y'` --se chová stejně jako [time_get::get_year](#get_year).  
   
  Všechny ostatní sady převod specifikátor `ios_base::failbit` v `state` a vrátí. V této implementaci žádné modifikátor nemá žádný vliv.  
   
-##  <a name="do_get_date"></a>time_get::do_get_date  
+##  <a name="do_get_date"></a>  time_get::do_get_date  
  A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované *x* – specifikátor pro `strftime`.  
   
 ```  
@@ -336,7 +339,7 @@ virtual iter_type do_get_date(iter_type first,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_date –](#get_date), který volá `do_get_date`.  
   
-##  <a name="do_get_monthname"></a>time_get::do_get_monthname  
+##  <a name="do_get_monthname"></a>  time_get::do_get_monthname  
  Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu měsíce.  
   
 ```  
@@ -374,7 +377,7 @@ virtual iter_type do_get_monthname(iter_type first,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_monthname –](#get_monthname), který volá `do_get_monthname`.  
   
-##  <a name="do_get_time"></a>time_get::do_get_time  
+##  <a name="do_get_time"></a>  time_get::do_get_time  
  A chráněná člena virtuální funkce, která je volána, analyzovat řetězec jako datum vyprodukované *X* – specifikátor pro `strftime`.  
   
 ```  
@@ -420,7 +423,7 @@ virtual iter_type do_get_time(iter_type first,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_time –](#get_time), který volá `do_get_time`.  
   
-##  <a name="do_get_weekday"></a>time_get::do_get_weekday  
+##  <a name="do_get_weekday"></a>  time_get::do_get_weekday  
  Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu týdnu.  
   
 ```  
@@ -458,7 +461,7 @@ virtual iter_type do_get_weekday(iter_type first,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_weekday –](#get_weekday), který volá `do_get_weekday`.  
   
-##  <a name="do_get_year"></a>time_get::do_get_year  
+##  <a name="do_get_year"></a>  time_get::do_get_year  
  Chráněná virtuální členská funkce, která je volána k analýze řetězce jako názvu roku.  
   
 ```  
@@ -496,7 +499,7 @@ virtual iter_type do_get_year(iter_type first,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [get_year –](#get_year), který volá `do_get_year`.  
   
-##  <a name="get"></a>time_get::Get  
+##  <a name="get"></a>  time_get::Get  
  Čte ze zdroje data znaků a převede je na čas, který je uložen v časové struktuře. První funkce přijímá jeden převod specifikátor a modifikátor, druhý přijímá několik.  
   
 ```  
@@ -561,7 +564,7 @@ iter_type get(
   
  Jakýkoli další prvek ve formátu musí odpovídat další vstupní element, který bude přeskočena. Selhání shody nastaví `ios_base::failbit` v `state` a vrátí.  
   
-##  <a name="get_date"></a>time_get::get_date  
+##  <a name="get_date"></a>  time_get::get_date  
  Analyzuje řetězec jako datum vyprodukované *x* – specifikátor pro `strftime`.  
   
 ```  
@@ -651,7 +654,7 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_monthname"></a>time_get::get_monthname  
+##  <a name="get_monthname"></a>  time_get::get_monthname  
  Analyzuje řetězec jako název měsíce.  
   
 ```  
@@ -739,7 +742,7 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_time"></a>time_get::get_time  
+##  <a name="get_time"></a>  time_get::get_time  
  Analyzuje řetězec jako datum vyprodukované *X* – specifikátor pro `strftime`.  
   
 ```  
@@ -816,7 +819,7 @@ tm_min: 13
 tm_hour: 11  
 ```  
   
-##  <a name="get_weekday"></a>time_get::get_weekday  
+##  <a name="get_weekday"></a>  time_get::get_weekday  
  Analyzuje řetězec jako název dne v týdnu.  
   
 ```  
@@ -889,7 +892,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3  
 ```  
   
-##  <a name="get_year"></a>time_get::get_year  
+##  <a name="get_year"></a>  time_get::get_year  
  Analyzuje řetězec jako název roku.  
   
 ```  
@@ -963,7 +966,7 @@ time_get::get_year(1928) =
 tm_year: 28  
 ```  
   
-##  <a name="iter_type"></a>time_get::iter_type  
+##  <a name="iter_type"></a>  time_get::iter_type  
  Typ, který popisuje vstupní iterátor.  
   
 ```  
@@ -973,7 +976,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **InputIterator**.  
   
-##  <a name="time_get"></a>time_get::time_get  
+##  <a name="time_get"></a>  time_get::time_get  
  V konstruktoru pro objekty typu `time_get`.  
   
 ```  
@@ -991,7 +994,7 @@ explicit time_get(size_t refs = 0);
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   

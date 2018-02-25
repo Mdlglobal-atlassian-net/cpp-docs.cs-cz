@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::raw_storage_iterator [C++]
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fd68bfc788231ddc954b1f6e8a70d63dbcf02592
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad14448e9ff8928a2ce2807e302b13086199d11e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator – třída
 Třída adaptéru, která je k dispozici pro povolení algoritmů pro ukládání výsledků do neinicializované paměti.  
@@ -42,7 +45,7 @@ class raw_storage_iterator
  `OutputIterator`  
  Určuje iterator výstup pro daný objekt uložené.  
   
- *Typ*  
+ Typ  
  Typ objektu, pro který je přidělen úložiště.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -56,29 +59,29 @@ class raw_storage_iterator
   
 |||  
 |-|-|  
-|[raw_storage_iterator –](#raw_storage_iterator)|Vytvoří iterator úložiště pomocí zadané základní iterator výstup.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Vytvoří iterator úložiště pomocí zadané základní iterator výstup.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Poskytuje možnosti pro typ, který odpovídá elementu být uložená iterator úložiště.|  
-|[iter_type –](#iter_type)|Poskytuje typ, který popisuje iterovat podkladovou iterator úložiště.|  
+|[element_type](#element_type)|Poskytuje možnosti pro typ, který odpovídá elementu být uložená iterator úložiště.|  
+|[iter_type](#iter_type)|Poskytuje typ, který popisuje iterovat podkladovou iterator úložiště.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
 |[operátor *](#op_star)|Při přesměrování operátor použít k implementaci výraz iterator výstup * `ii`  =  `x`.|  
-|[operátor =](#op_eq)|Operátor přiřazení použít k implementaci výraz iterator úložiště * `i`  =  `x` pro ukládání do paměti.|  
-|[Operator ++](#op_add_add)|Preincrement a postincrement operátory iterátory úložiště.|  
+|[operator=](#op_eq)|Operátor přiřazení použít k implementaci výraz iterator úložiště * `i`  =  `x` pro ukládání do paměti.|  
+|[operator++](#op_add_add)|Preincrement a postincrement operátory iterátory úložiště.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<paměti >  
   
  **Namespace:** – std  
   
-##  <a name="element_type"></a>raw_storage_iterator::ELEMENT_TYPE  
+##  <a name="element_type"></a>  raw_storage_iterator::ELEMENT_TYPE  
  Poskytuje možnosti pro typ, který odpovídá elementu být uložená iterator úložiště.  
   
 ```
@@ -88,7 +91,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony raw_storage_iterator – třída **typu**.  
   
-##  <a name="iter_type"></a>raw_storage_iterator::iter_type  
+##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
  Poskytuje typ, který popisuje iterovat podkladovou iterator úložiště.  
   
 ```
@@ -98,7 +101,7 @@ typedef ForwardIterator iter_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **ForwardIterator**.  
   
-##  <a name="op_star"></a>raw_storage_iterator::Operator *  
+##  <a name="op_star"></a>  raw_storage_iterator::Operator *  
  Při přesměrování operátor použít k implementaci výraz iterator úložiště \* *ii* = *x*.  
   
 ```
@@ -162,7 +165,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_eq"></a>raw_storage_iterator::Operator =  
+##  <a name="op_eq"></a>  raw_storage_iterator::Operator =  
  Operátor přiřazení použít k implementaci výraz iterator úložiště \* *i* = *x* pro ukládání do paměti.  
   
 ```
@@ -231,7 +234,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_add_add"></a>raw_storage_iterator::Operator ++  
+##  <a name="op_add_add"></a>  raw_storage_iterator::Operator ++  
  Preincrement a postincrement operátory iterátory úložiště.  
   
 ```
@@ -284,7 +287,7 @@ array 4 = 8
 *\  
 ```  
   
-##  <a name="raw_storage_iterator"></a>raw_storage_iterator::raw_storage_iterator  
+##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
  Vytvoří iterator úložiště pomocí zadané základní iterator výstup.  
   
 ```
