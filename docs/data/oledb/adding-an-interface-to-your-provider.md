@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 518cd5e67c734de48d7f021e558c7c4c3a718cdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Přidání rozhraní ke zprostředkovateli
 Určuje, které objekty, které chcete přidat rozhraní (obvykle datové zdroje, řádků, příkaz nebo relace objekty vytvořené průvodcem zprostředkovatele OLE DB). Je možné, že objekt je nutné přidat rozhraní je ten, který váš poskytovatel v současné době nepodporuje. V takovém případě spusťte ATL OLE DB Provider průvodce k vytvoření objektu. Klikněte pravým tlačítkem na projekt v zobrazení tříd, klikněte na tlačítko **přidat třídu** z **přidat** nabídce a pak klikněte na tlačítko **ATL zprostředkovatele technologie OLE DB**. Můžete chtít vložit kód rozhraní v samostatném adresáři a poté zkopírujte soubory do projektu zprostředkovatele.  

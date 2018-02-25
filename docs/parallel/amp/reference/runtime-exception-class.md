@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception – třída
 Základní typ pro výjimky v knihovně C++ Accelerated masivní paralelismus (AMP).  
@@ -41,21 +45,21 @@ class runtime_exception : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[runtime_exception – konstruktor](#ctor)|Inicializuje novou instanci třídy `runtime_exception` třídy.|  
-|[~ runtime_exception – destruktor](#dtor)|Zničí `runtime_exception` objektu.|  
+|[runtime_exception Constructor](#ctor)|Inicializuje novou instanci třídy `runtime_exception` třídy.|  
+|[~runtime_exception Destructor](#dtor)|Zničí `runtime_exception` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[get_error_code –](#runtime_exception__get_error_code)|Vrátí kód chyby, který způsobil výjimku.|  
+|[get_error_code](#runtime_exception__get_error_code)|Vrátí kód chyby, který způsobil výjimku.|  
 
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `runtime_exception` objekt s touto.|  
+|[operator=](#operator_eq)|Zkopíruje obsah zadaného `runtime_exception` objekt s touto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Namespace:** souběžnosti  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception – konstruktor  
+## <a name="runtime_exception__ctor"></a>  runtime_exception – konstruktor  
 Inicializuje novou instanci třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Návratová hodnota  
  `runtime_exception` Objektu.  
 
-## <a name="dtor"></a>~ runtime_exception – destruktor  
+## <a name="dtor"></a>  ~ runtime_exception – destruktor  
 Zničí objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,7 +110,7 @@ Zničí objektu.
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code –   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code –   
 Vrátí kód chyby, který způsobil výjimku.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -118,7 +122,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  HRESULT chyby, který způsobil výjimku.  
   
-## <a name="runtime_exception__operator_eq"></a>operátor =   
+## <a name="runtime_exception__operator_eq"></a>  operátor =   
   Zkopíruje obsah zadaného `runtime_exception` objekt s touto.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -5,29 +5,31 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d360a322cdc4ae82ebded5a441152a075e8a5fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funkce obor názvů Concurrency::Graphics
 |||  
 |-|-|  
-|[kopírování](#copy)|[copy_async –](#copy_async)|  
+|[Kopírování](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="copy"></a>copy – funkce (Namespace Concurrency::graphics)  
+##  <a name="copy"></a>  copy – funkce (Namespace Concurrency::graphics)  
  Zkopíruje texture zdrojové do cílové vyrovnávací paměti, nebo zkopíruje zdrojová vyrovnávací paměť do cílové vyrovnávací paměti. Obecná forma tato funkce je `copy(src, dest)`.  
   
 ```  
@@ -173,7 +175,7 @@ void copy (
  `last`  
  Koncová iterator do kontejneru zdroje.  
   
-##  <a name="copy_async"></a>copy_async – funkce (Namespace Concurrency::graphics)  
+##  <a name="copy_async"></a>  copy_async – funkce (Namespace Concurrency::graphics)  
  Asynchronně zkopíruje texture zdrojové do cílové vyrovnávací paměti, nebo zkopíruje zdrojová vyrovnávací paměť do cílové vyrovnávací paměti a vrátí [completion_future](completion-future-class.md) objekt, který může být čekali na. Data nelze kopírovat, pokud kód běží na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.  
   
 ```  

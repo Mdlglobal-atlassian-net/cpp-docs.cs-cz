@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs: C++
-helpviewer_keywords: IUMSScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsscheduler-structure"></a>Struktura rozhraní IUMSScheduler
 Rozhraní pro abstrakci plánovače pracovní, který chce Concurrency Runtime Resource Manager k ruční ho, které lze plánovat vláken (UMS) uživatelského režimu. Resource Manager používá toto rozhraní ke komunikaci s plánovače UMS přístup z více vláken. `IUMSScheduler` Rozhraní dědí z `IScheduler` rozhraní.  
@@ -40,7 +44,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Iumsscheduler::setcompletionlist –](#setcompletionlist)|Přiřadí `IUMSCompletionList` rozhraní pro přístup z více vláken plánovače UMS.|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Přiřadí `IUMSCompletionList` rozhraní pro přístup z více vláken plánovače UMS.|  
   
 ## <a name="remarks"></a>Poznámky  
  Pokud implementujete vlastní plánovače, který komunikuje s Resource Managerem a chcete UMS vláken možné předat do vašeho scheduleru místo obyčejnou Win32 vláken, by měl poskytovat implementace `IUMSScheduler` rozhraní. Kromě toho by měl nastavit zásady hodnotu pro klíč zásad plánovače `SchedulerKind` být `UmsThreadDefault`. Pokud tato zásada určuje UMS přístup z více vláken, `IScheduler` rozhraní, které se předá jako parametr, který se [iresourcemanager::registerscheduler –](iresourcemanager-structure.md#registerscheduler) musí být nastavena metoda `IUMSScheduler` rozhraní.  
@@ -59,7 +63,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Namespace:** souběžnosti  
   
-##  <a name="setcompletionlist"></a>Iumsscheduler::setcompletionlist – metoda  
+##  <a name="setcompletionlist"></a>  Iumsscheduler::setcompletionlist – metoda  
  Přiřadí `IUMSCompletionList` rozhraní pro přístup z více vláken plánovače UMS.  
   
 ```

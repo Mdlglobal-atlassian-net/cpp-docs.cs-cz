@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - DispatchState
 - CONCRTRM/concurrency::DispatchState
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
-dev_langs: C++
-helpviewer_keywords: DispatchState structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d58fc12aa31c9d6a72acac6287a425044d42777c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76deac0daa3a8bce2880b2cc9afda0faae263558
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dispatchstate-structure"></a>DispatchState – struktura
 `DispatchState` Struktura se používá k přenosu stavu, `IExecutionContext::Dispatch` metoda. Je popsaný v případech, ve kterém `Dispatch` metoda je volána `IExecutionContext` rozhraní.  
@@ -49,9 +53,9 @@ struct DispatchState;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Dispatchstate::m_dispatchstatesize –](#m_dispatchstatesize)|Velikost tato struktura, která se používá pro správu verzí.|  
-|[Dispatchstate::m_fispreviouscontextasynchronouslyblocked –](#m_fispreviouscontextasynchronouslyblocked)|Informuje, zda tento kontext přešla `Dispatch` metoda blokovanému předchozí kontext asynchronně. To se používá pouze v kontextu plánování UMS a je nastaven na hodnotu `0` pro všechny ostatní kontexty provádění.|  
-|[Dispatchstate::m_reserved –](#m_reserved)|Služba BITS vyhrazena pro budoucí informace předávání.|  
+|[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Velikost tato struktura, která se používá pro správu verzí.|  
+|[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Informuje, zda tento kontext přešla `Dispatch` metoda blokovanému předchozí kontext asynchronně. To se používá pouze v kontextu plánování UMS a je nastaven na hodnotu `0` pro všechny ostatní kontexty provádění.|  
+|[DispatchState::m_reserved](#m_reserved)|Služba BITS vyhrazena pro budoucí informace předávání.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `DispatchState`  
@@ -61,28 +65,28 @@ struct DispatchState;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a>Dispatchstate::dispatchstate – konstruktor  
+##  <a name="ctor"></a>  Dispatchstate::dispatchstate – konstruktor  
  Vytvoří nový `DispatchState` objektu.  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="m_dispatchstatesize"></a>Dispatchstate::m_dispatchstatesize – datový člen  
+##  <a name="m_dispatchstatesize"></a>  Dispatchstate::m_dispatchstatesize – datový člen  
  Velikost tato struktura, která se používá pro správu verzí.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Dispatchstate::m_fispreviouscontextasynchronouslyblocked – datový člen  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Dispatchstate::m_fispreviouscontextasynchronouslyblocked – datový člen  
  Informuje, zda tento kontext přešla `Dispatch` metoda blokovanému předchozí kontext asynchronně. To se používá pouze v kontextu plánování UMS a je nastaven na hodnotu `0` pro všechny ostatní kontexty provádění.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="m_reserved"></a>Dispatchstate::m_reserved – datový člen  
+##  <a name="m_reserved"></a>  Dispatchstate::m_reserved – datový člen  
  Služba BITS vyhrazena pro budoucí informace předávání.  
   
 ```

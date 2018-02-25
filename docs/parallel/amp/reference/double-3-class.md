@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
 - amp_short_vectors/Concurrency::graphics::double_3
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1779b92140fe9057a96ab8bd062b6540ed2d9c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13862855b0377efe481cde68c349f1ba3d11e45
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="double3-class"></a>double_3 – třída
 Představuje krátký vektor tři hodnoty Double.  
@@ -159,13 +162,13 @@ class double_3;
 |Název|Popis|  
 |----------|-----------------|  
 |double_3::Operator-||  
-|double_3::Operator--||  
-|double_3::Operator * =||  
+|double_3::operator--||  
+|double_3::operator*=||  
 |/ double_3::Operator = – operátor||  
-|double_3::Operator ++||  
-|double_3::Operator +=||  
-|double_3::Operator =||  
-|double_3::Operator-=||  
+|double_3::operator++||  
+|double_3::operator+=||  
+|double_3::operator=||  
+|double_3::operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -178,8 +181,8 @@ class double_3;
 |Název|Popis|  
 |----------|-----------------|  
 |double_3::b||  
-|double_3::BG||  
-|double_3::BGR||  
+|double_3::bg||  
+|double_3::bgr||  
 |double_3::br||  
 |double_3::brg||  
 |double_3::g||  
@@ -191,9 +194,9 @@ class double_3;
 |double_3::RB||  
 |double_3::rbg||  
 |double_3::rg||  
-|double_3::RGB||  
+|double_3::rgb||  
 |double_3::x||  
-|double_3::XY||  
+|double_3::xy||  
 |double_3::xyz||  
 |double_3::xz||  
 |double_3::xzy||  
@@ -203,10 +206,10 @@ class double_3;
 |double_3::YZ||  
 |double_3::yzx||  
 |double_3::z||  
-|double_3::ZX||  
+|double_3::zx||  
 |double_3::zxy||  
 |double_3::Zy||  
-|double_3::Zyx||  
+|double_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `double_3`  
@@ -216,7 +219,7 @@ class double_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>double_3 
+##  <a name="ctor"></a> double_3 
 
  Výchozí konstruktor, inicializuje všechny prvky s 0.  
   
@@ -283,7 +286,7 @@ explicit inline double_3(
  `_Other`  
  Objekt použitý k chybě při inicializaci.  
   
-##  <a name="double_3__size"></a>velikost 
+##  <a name="double_3__size"></a> Velikost 
 
 ```  
 static const int size = 3;  

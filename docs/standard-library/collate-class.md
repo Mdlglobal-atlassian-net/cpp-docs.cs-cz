@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - locale/std::collate
 - locale/std::collate::char_type
@@ -17,7 +18,8 @@ f1_keywords:
 - locale/std::collate::do_transform
 - locale/std::collate::hash
 - locale/std::collate::transform
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::collate [C++]
 - std::collate [C++], char_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9cce595095600769743a1320d75b00ec1109275c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 015bfd9a97299bc8fde0817aedb0b686e0dec72a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="collate-class"></a>collate – třída
 Třída šablony popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro ovládání řazení a seskupování znaků v rámci řetězce a k jejich porovnání s hodnotami hash řetězců.  
@@ -67,26 +70,26 @@ class collate : public locale::facet;
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který popisuje znak typu `CharType`.|  
-|[STRING_TYPE](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|  
+|[char_type](#char_type)|Typ, který popisuje znak typu `CharType`.|  
+|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[porovnání](#compare)|Porovná dvě znakové sekvence podle pravidel na základě jejich omezujících vlastností a zjistí rovnost či nerovnost.|  
-|[do_compare –](#do_compare)|Virtuální funkce volaná k porovnání dvou znakových sekvencí podle pravidel na základě jejich omezujících vlastností a zjištění rovnosti či nerovnosti.|  
-|[do_hash –](#do_hash)|Virtuální funkce volaná k určení hodnoty hash sekvencí podle pravidel na základě jejich omezujících vlastností.|  
-|[do_transform –](#do_transform)|Virtuální funkce volaná k převedení znakové sekvence z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|  
-|[Hodnota hash](#hash)|Určí hodnotu hash sekvence podle pravidel na základě její omezující vlastnosti.|  
-|[transformace](#transform)|Převede znakovou sekvenci z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|  
+|[compare](#compare)|Porovná dvě znakové sekvence podle pravidel na základě jejich omezujících vlastností a zjistí rovnost či nerovnost.|  
+|[do_compare](#do_compare)|Virtuální funkce volaná k porovnání dvou znakových sekvencí podle pravidel na základě jejich omezujících vlastností a zjištění rovnosti či nerovnosti.|  
+|[do_hash](#do_hash)|Virtuální funkce volaná k určení hodnoty hash sekvencí podle pravidel na základě jejich omezujících vlastností.|  
+|[do_transform](#do_transform)|Virtuální funkce volaná k převedení znakové sekvence z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|  
+|[hash](#hash)|Určí hodnotu hash sekvence podle pravidel na základě její omezující vlastnosti.|  
+|[transform](#transform)|Převede znakovou sekvenci z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>COLLATE::char_type  
+##  <a name="char_type"></a>  COLLATE::char_type  
  Typ, který popisuje znak typu **CharType**.  
   
 ```  
@@ -96,7 +99,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="collate"></a>COLLATE::COLLATE  
+##  <a name="collate"></a>  COLLATE::COLLATE  
  V konstruktoru pro objekty třídy collate, která slouží jako národní prostředí omezující vlastnost zpracovat řetězec řazení konvence.  
   
 ```  
@@ -124,11 +127,11 @@ protected:
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
-##  <a name="compare"></a>COLLATE::Compare  
+##  <a name="compare"></a>  COLLATE::Compare  
  Porovná dvě znakové sekvence podle pravidel na základě jejich omezujících vlastností a zjistí rovnost či nerovnost.  
   
 ```  
@@ -190,7 +193,7 @@ int main() {
 }  
 ```  
   
-##  <a name="do_compare"></a>COLLATE::do_compare  
+##  <a name="do_compare"></a>  COLLATE::do_compare  
  Virtuální funkce volaná k porovnání dvou znakových sekvencí podle pravidel na základě jejich omezujících vlastností a zjištění rovnosti či nerovnosti.  
   
 ```  
@@ -228,7 +231,7 @@ virtual int do_compare(const CharType* first1,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [collate::compare](#compare), který volá `do_compare`.  
   
-##  <a name="do_hash"></a>COLLATE::do_hash  
+##  <a name="do_hash"></a>  COLLATE::do_hash  
  Virtuální funkce volaná k určení hodnoty hash sekvencí podle pravidel na základě jejich omezujících vlastností.  
   
 ```  
@@ -251,7 +254,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [hash](#hash), který volá `do_hash`.  
   
-##  <a name="do_transform"></a>COLLATE::do_transform  
+##  <a name="do_transform"></a>  COLLATE::do_transform  
  Virtuální funkce volaná k převedení znakové sekvence z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.  
   
 ```  
@@ -274,7 +277,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [transformace](#transform), který volá `do_transform`.  
   
-##  <a name="hash"></a>COLLATE::hash  
+##  <a name="hash"></a>  COLLATE::hash  
  Určí hodnotu hash sekvence podle pravidel na základě její omezující vlastnosti.  
   
 ```  
@@ -324,7 +327,7 @@ int main( )
 541187293 551279837  
 ```  
   
-##  <a name="string_type"></a>COLLATE::STRING_TYPE  
+##  <a name="string_type"></a>  COLLATE::STRING_TYPE  
  Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu **CharType**.  
   
 ```  
@@ -337,7 +340,7 @@ typedef basic_string<CharType> string_type;
 ### <a name="example"></a>Příklad  
   Příklad toho, jak deklarace a používání `string_type`, najdete v části [transformace](#transform).  
   
-##  <a name="transform"></a>COLLATE::Transform  
+##  <a name="transform"></a>  COLLATE::Transform  
  Převede znakovou sekvenci z národního prostředí na řetězec, který lze použít v lexikografických porovnáních s ostatními znakovými sekvencemi podobně převedenými ze stejného národního prostředí.  
   
 ```  

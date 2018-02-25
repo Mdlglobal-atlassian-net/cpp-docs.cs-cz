@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock – třída
 Obálka RAII na zámek přístup D3D accelerator_view objektu.  
@@ -39,14 +42,14 @@ class scoped_d3d_access_lock;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock – konstruktor](#ctor)|Přetíženo. Vytvoří `scoped_d3d_access_lock` objektu. Zámek je vydala, když se tento objekt dostane mimo rozsah.|  
-|[~ scoped_d3d_access_lock – destruktor](#dtor)|Uvolní zámek D3D přístup přidruženého `accelerator_view` objektu.|  
+|[scoped_d3d_access_lock Constructor](#ctor)|Přetíženo. Vytvoří `scoped_d3d_access_lock` objektu. Zámek je vydala, když se tento objekt dostane mimo rozsah.|  
+|[~scoped_d3d_access_lock Destructor](#dtor)|Uvolní zámek D3D přístup přidruženého `accelerator_view` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Vlastníkem zámku z jiné `scoped_d3d_access_lock`.|  
+|[operator=](#operator_eq)|Vlastníkem zámku z jiné `scoped_d3d_access_lock`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `scoped_d3d_access_lock`  
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** Concurrency::Direct3D –  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  Vytvoří `scoped_d3d_access_lock` objektu. Zámek je vydala, když se tento objekt dostane mimo rozsah.  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  Přebírá přístup zámek existující D3D z jiné `scoped_d3d_access_lock` objektu. Konstrukce neblokuje.  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  Uvolní zámek D3D přístup přidruženého `accelerator_view` objektu.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>operátor = 
+## <a name="operator_eq"></a> operátor = 
 
 Vlastníkem zámek D3D přístup z jiné `scoped_d3d_access_lock` objekt, uvolnění předchozí uzamčení.  
  

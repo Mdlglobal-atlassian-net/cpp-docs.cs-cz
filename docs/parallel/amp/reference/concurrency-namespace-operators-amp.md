@@ -5,28 +5,30 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 308c09af9989aa998a7e1f7d748f52a2d8dca391
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operátory obor názvů souběžnosti (AMP)
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[% – operátor](#operator_mod)|[operátor *](#operator_star)|  
-|[operátor +](#operator_add)|[Operator –](#operator-)|[operátor nebo](#operator_div)|  
-|[Operator ==](#operator_eq_eq)|  
+|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operátor *](#operator_star)|  
+|[operator+](#operator_add)|[operator-](#operator-)|[operátor nebo](#operator_div)|  
+|[operator==](#operator_eq_eq)|  
   
-##  <a name="operator_eq_eq"></a>Operator ==   
+##  <a name="operator_eq_eq"></a>  Operator ==   
  Určuje, zda jsou zadané argumenty jsou stejné.  
   
 ```  
@@ -50,9 +52,9 @@ bool operator== (
  Jeden z řazené kolekce členů k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud jsou řazené kolekce členů stejné; v opačném `false`.  
+ `true` Pokud jsou řazené kolekce členů stejné; v opačném `false`.  
   
-##  <a name="operator_neq"></a>Operator! =   
+##  <a name="operator_neq"></a>  Operator! =   
  Určuje, zda jsou zadané argumenty nejsou stejné.  
   
 ```  
@@ -76,9 +78,9 @@ bool operator!= (
  Jeden z řazené kolekce členů k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud řazené kolekce členů nejsou stejné; v opačném `false`.  
+ `true` Pokud řazené kolekce členů nejsou stejné; v opačném `false`.  
   
-##  <a name="operator_add"></a>operátor +   
+##  <a name="operator_add"></a>  operátor +   
 
  Vypočítá component-wise součet jsou zadané argumenty.  
   
@@ -123,7 +125,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Návratová hodnota  
  Component-wise součet jsou zadané argumenty.  
   
-##  <a name="operator-"></a>Operator –   
+##  <a name="operator-"></a>  Operator –   
 
  Vypočítá component-wise rozdíl mezi zadanými argumenty.  
   
@@ -168,7 +170,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Návratová hodnota  
  Component-wise rozdíl mezi zadanými argumenty.  
   
-##  <a name="operator_star"></a>operátor *   
+##  <a name="operator_star">operátor *</a>   
 
  Vypočítá component-wise produkt jsou zadané argumenty.  
   
@@ -205,7 +207,7 @@ _Tuple_type<_Rank>   operator*(
  Component-wise produktu jsou zadané argumenty.  
   
 
-##  <a name="operator_div"></a>operátor nebo   
+##  <a name="operator_div">operátor nebo</a>   
  Vypočítá component-wise podíl jsou zadané argumenty.  
   
 ```  
@@ -240,7 +242,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Návratová hodnota  
  Component-wise podíl jsou zadané argumenty.  
   
-##  <a name="operator_mod"></a>% – operátor   
+##  <a name="operator_mod"></a>  % – operátor   
 
  Vypočítá zbytek z první argument zadaný ve druhém zadaného argumentu.  
   
@@ -277,4 +279,4 @@ _Tuple_type<_Rank>   operator%(
  Výsledek první numerického zbytku zadaného argumentu druhý zadaného argumentu.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace-cpp-amp.md)
+ [Namespace souběžnosti ](concurrency-namespace-cpp-amp.md)

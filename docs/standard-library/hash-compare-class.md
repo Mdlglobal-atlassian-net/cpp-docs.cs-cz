@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: hash_set/stdext::hash_compare
-dev_langs: C++
-helpviewer_keywords: hash_compare class
+ms.topic: reference
+f1_keywords:
+- hash_set/stdext::hash_compare
+dev_langs:
+- C++
+helpviewer_keywords:
+- hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 85450d9c41e4a0eedbf82a4b5113e3b8890998a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d2084dc9447786ad8e3aaafb46fc07d9890c499
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashcompare-class"></a>hash_compare – třída
 Šablony třídy popisuje objekt, který můžete použít žádné kontejnery asociativní hash – hash_map, hash_multimap, hash_set, nebo hash_multiset – ve výchozím nastavení **vlastnosti** parametr objekt pořadí a hodnoty hash elementy obsahují .  
@@ -44,7 +49,7 @@ hash_compare – třída {vlastnosti comp; veřejný: const bucket_size – size
  Obsahuje příklady [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set), a [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset), příklady, jak deklarace a používání hash_compare.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<hash_map >  
+ **Header:** \<hash_map>  
   
  **Namespace:** stdext –  
   

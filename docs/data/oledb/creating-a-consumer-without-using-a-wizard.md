@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a61de0a4621f6f9387da23093f9f450749129ac3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
 V následujícím příkladu se předpokládá, že přidáváte podporu příjemce technologie OLE DB do existujícího projektu knihovny ATL. Pokud chcete přidat do aplikace MFC podporu příjemce technologie OLE DB, byste měli spustit Průvodce aplikací MFC, který vytvoří nezbytné všechny podporu a vyvolá MFC rutiny, které jsou nezbytné ke spuštění aplikace.  

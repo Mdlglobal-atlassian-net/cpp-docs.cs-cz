@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 Standardní knihovna C++ podporuje více gramatika regulární výraz. Toto téma popisuje dostupné gramatika rozdíly při použití regulárních výrazů.  
   
-##  <a name="regexgrammar"></a>Gramatika regulární výraz  
+##  <a name="regexgrammar"></a> Gramatika regulární výraz  
 Regulární výraz gramatika používat je ve zadán pomocí jednoho z `std::regex_constants::syntax_option_type` hodnot výčtu. Tyto regulární výraz gramatika jsou definovány v std::regex_constants:
 
 -   `ECMAScript`: Toto je nejblíže k gramatika, používané jazyky rozhraní .NET a používání jazyka JavaScript.
@@ -174,7 +177,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 ### <a name="subexpression"></a>Dílčí výraz  
  V `basic` a `grep`, je sloučen dílčím výrazu. V ostatních gramatikách regulárního výrazu je dílčí výraz změnou.  
   
-##  <a name="grammarsummary"></a>Souhrn gramatiky  
+##  <a name="grammarsummary"></a> Souhrn gramatiky  
  Následující tabulka shrnuje funkce, které jsou k dispozici v různých gramatikách regulárního výrazu:  
   
 |Prvek|Základní|rozšířené|ECMAScript|grep|egrep|awk|  
@@ -206,7 +209,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 |zástupný znak|+|+|+|+|+|+|  
 |kontrolní výraz hranice slova|||+||||  
   
-##  <a name="semanticdetails"></a>Sémantické podrobnosti  
+##  <a name="semanticdetails"></a> Sémantické podrobnosti  
   
 ### <a name="anchor"></a>Ukotvení  
  Ukotvení odpovídá pozici v cílovém řetězci, nikoli znaku. „^“ odpovídá začátku cílového řetězce; „$“ odpovídá konci cílového řetězce.  
@@ -323,7 +326,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 |-------------|----------------------------------------|  
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|  
 |`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|  
-|`awk`|`extended`Plus {' "', '/'}|  
+|`awk`|`extended` Plus {' "', '/'}|  
 |`ECMAScript`|Všechny znaky kromě těch, které mohou být součástí identifikátoru. Obvykle obsahuje písmena, číslice, '$', '\_' a unicode řídicí sekvence. Další informace naleznete ve specifikacích jazyka ECMAScript.|  
   
 ### <a name="individual-character"></a>Jednotlivý znak  
@@ -423,7 +426,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 ### <a name="word-boundary"></a>Hranice slova  
  Hranice slova se vyskytuje v následujících situacích:  
   
--   Aktuální znak na začátek pořadí cíl a je mezi znaky aplikace word`A-Za-z0-9_.`  
+-   Aktuální znak na začátek pořadí cíl a je mezi znaky aplikace word `A-Za-z0-9_.`  
   
 -   Aktuální poloha znaku je za koncem cílové sekvence a poslední znak v cílové sekvenci je jedním ze znaků slova.  
   
@@ -434,7 +437,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
 ### <a name="word-boundary-assert"></a>Kontrolní výraz hranice slova  
  Odpovídá assert hranic word při aktuální pozici v cílový řetězec ihned po *hranice slova*.  
   
-##  <a name="matchingandsearching"></a>Porovnávání a vyhledávání  
+##  <a name="matchingandsearching"></a> Porovnávání a vyhledávání  
  Aby regulární výraz odpovídal cílové sekvenci, musí celý regulární výraz odpovídat celé cílové sekvenci. Například regulární výraz „bcd“ odpovídá cílové sekvenci „bcd“, ale nikoli cílové sekvenci „abcd“ ani cílové sekvenci „bcde“.  
   
  Aby hledání regulárního výrazu bylo úspěšné, někde v cílové sekvenci se musí nacházet dílčí sekvence, která odpovídá regulárnímu výrazu. Hledání obvykle najde odpovídající dílčí sekvenci nejvíce vlevo.  
@@ -449,7 +452,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
  Částečná shoda bude úspěšná, pokud shoda dosáhne konce cílové sekvence bez selhání, i když nedosáhla konce regulárního výrazu. Proto by po úspěchu částečné shody mohlo připojení znaků k cílové sekvenci způsobit pozdější selhání částečné shody. Po neúspěchu částečné shody však připojení znaků k cílové sekvenci nemůže způsobit pozdější úspěch částečné shody. Například v případě částečné shody odpovídá „ab“ cílové sekvenci „a“, ale nikoli „ac“.  
   
-##  <a name="formatflags"></a>Příznaky formátu  
+##  <a name="formatflags"></a> Příznaky formátu  
   
 |Pravidla formátu jazyka ECMAScript|Pravidla formátu SED|Náhradní text|  
 |-----------------------------|----------------------|----------------------|  

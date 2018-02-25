@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::piecewise_constant_distribution [C++]
 - std::piecewise_constant_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d6a0fd48843b097de0c6181eda49d6e3879084f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 923398932307845bffb95e8ef3fd7ef83e38530f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution – třída
 Generuje piecewise konstantní distribuce, který má různých šířka intervalech pomocí uniform pravděpodobnosti v každém intervalu.  
@@ -99,7 +102,7 @@ Následující tabulka odkazy na články o jednotlivé členy:
 ||||  
 |-|-|-|  
 |[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type –](#param_type)|  
+|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
 Funkce vlastnost `intervals()` vrátí `vector<result_type>` sadou uložené intervaly rozdělení.  
   
@@ -225,7 +228,7 @@ Distribution for 100 samples:
   
  **Namespace:** – std  
   
-##  <a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_constant_distribution  
+##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -309,7 +312,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```  
   
-Vytvoří objekt distribuční s `count` intervaly distribuované jednotně přes [ `xmin,xmax`], přiřazení v každém intervalu provede podle funkce `weightfunc`, a `weightfunc` musíte přijmout jeden parametr a vraťte se mají hodnoty, i jsou převést na `double`. **Předběžnou:**`xmin < xmax`  
+Vytvoří objekt distribuční s `count` intervaly distribuované jednotně přes [ `xmin,xmax`], přiřazení v každém intervalu provede podle funkce `weightfunc`, a `weightfunc` musíte přijmout jeden parametr a vraťte se mají hodnoty, i jsou převést na `double`. **Předběžnou podmínku:** `xmin < xmax`  
   
 Konstruktor definovaný jako  
 ```  
@@ -318,7 +321,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
   
 Vytvoří objekt distribuční pomocí `parm` jako strukturu uložený parametr.  
   
-##  <a name="param_type"></a>piecewise_constant_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
 Uloží všechny parametry rozdělení.  
   
 ```    
@@ -341,12 +344,12 @@ struct param_type {
 Najdete v části Parametry konstruktor [piecewise_constant_distribution](#piecewise_constant_distribution).  
   
 ### <a name="remarks"></a>Poznámky  
- **Předběžnou:**`xmin < xmax`  
+ **Předběžnou podmínku:** `xmin < xmax`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
-[\<náhodné >](../standard-library/random.md)   
+[\<random>](../standard-library/random.md)   
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
 
 

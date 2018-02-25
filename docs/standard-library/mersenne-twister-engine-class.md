@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: random/std::mersenne_twister_engine
-dev_langs: C++
-helpviewer_keywords: mersenne_twister_engine class
+ms.topic: reference
+f1_keywords:
+- random/std::mersenne_twister_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15294f0372a21c3ce8efe1626c30d1a3d6db23be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine – třída
 Generuje náhodné posloupnost celých čísel založený na algoritmu twister Mersenne, vysoké kvality.  
@@ -40,28 +45,28 @@ class mersenne_twister_engine;
  Výsledný typ celé číslo bez znaménka. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).  
   
  `W`  
- **Aplikace Word velikost**. Velikost jednotlivých slov v bitech, pořadí stavu. **Předběžnou**:`2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Aplikace Word velikost**. Velikost jednotlivých slov v bitech, pořadí stavu. **Předběžnou**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
  **Velikost stavu**. Počet elementů (hodnoty) v pořadí stavu.  
   
  `M`  
- **Posunutí velikost**. Počet elementů při každém Točitost přeskočit. **Předběžnou**:`0 < M ≤ N`  
+ **Posunutí velikost**. Počet elementů při každém Točitost přeskočit. **Předběžnou**: `0 < M ≤ N`  
   
  `R`  
- **Maskování bitů**. **Předběžnou**:`R ≤ W`  
+ **Maskování bitů**. **Předběžnou**: `R ≤ W`  
   
  `A`  
- **XOR maska**. **Předběžnou**:`A ≤ (1u<<W) - 1u`  
+ **XOR maska**. **Předběžnou**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **Popouštění shift parametry**. Použít jako hodnoty posunutí při kódování (popouštění). Předběžnou podmínku:`U,S,T,L ≤ W`  
+ **Popouštění shift parametry**. Použít jako hodnoty posunutí při kódování (popouštění). Předběžnou podmínku: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **Popouštění bit masky parametry**. Použít jako hodnoty bit masky při kódování (popouštění). Předběžnou podmínku:`D,B,C ≤ (1u<<W) - 1u`  
+ **Popouštění bit masky parametry**. Použít jako hodnoty bit masky při kódování (popouštění). Předběžnou podmínku: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **Inicializace násobitel**. Použít k s inicializací pořadí. Předběžnou podmínku:`F ≤ (1u<<W) - 1u`  
+ **Inicializace násobitel**. Použít k s inicializací pořadí. Předběžnou podmínku: `F ≤ (1u<<W) - 1u`  
   
 ## <a name="members"></a>Členové  
   
@@ -70,7 +75,7 @@ class mersenne_twister_engine;
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|  
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|  
   
- `default_seed`je členem konstantní, definované jako `5489u`, použít jako výchozí hodnota parametru pro `mersenne_twister_engine::seed` a konstruktor jednu hodnotu.  
+ `default_seed` je členem konstantní, definované jako `5489u`, použít jako výchozí hodnota parametru pro `mersenne_twister_engine::seed` a konstruktor jednu hodnotu.  
   
  Další informace o modulu členy najdete v tématu [ \<náhodných >](../standard-library/random.md).  
   
@@ -116,5 +121,5 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
  **Namespace:** – std  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,11 +21,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab099689af725c2b074f4caf4d2e9b13d16fbaf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 663b26d77138af60d13c3caf24960730a324131e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
 Při použití průvodce příjemcem knihovny ATL technologie OLE DB pro vytvoření příjemce, Průvodce vytvoří datový člen v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců. Každý člen dat je typu `DWORD` a obsahuje hodnotu stavu odpovídající její příslušné pole.  

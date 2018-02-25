@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - codecvt
 - <codecvt>
-dev_langs: C++
-helpviewer_keywords: codecvt header
+dev_langs:
+- C++
+helpviewer_keywords:
+- codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 75a8e720fa1a3add6dc8017df8b970dfa746f439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ea9bf0c81e66f875a3a94ab1e5783bcd4de91edd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltcodecvtgt"></a>&lt;codecvt –&gt;
+# <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 Definuje několik tříd šablon, které popisují objekty na základě šablony třídy [codecvt –](../standard-library/codecvt-class.md). Tyto objekty může sloužit jako [omezující vlastnosti národního prostředí](../standard-library/locale-class.md#facet_class) , řídit převody mezi pořadí hodnot typu `Elem` a pořadí hodnot typu `char`.  
   
 ## <a name="syntax"></a>Syntaxe  

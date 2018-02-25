@@ -1,12 +1,13 @@
 ---
-title: '#<a name="if-elif-else-and-endif-directives-cc--microsoft-docs"></a>Pokud, #elif, #else a #endif (C/C++) | Microsoft Docs'
+title: '#Pokud, #elif, #else a #endif (C/C++) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -14,7 +15,8 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direktivy #if, #elif, #else a #endif (C/C++)
 `#if` Direktivy s `#elif`, `#else`, a `#endif` direktivy, ovládací prvky kompilaci části zdrojového souboru. Pokud píšete výraz (po `#if`) má nenulovou hodnotu, skupině řádek hned za `#if` – direktiva se uchovávají v jednotce překlad.  
@@ -50,11 +53,11 @@ ms.lasthandoff: 12/21/2017
  *Pokud řádek textu*  
   
  *Pokud line* :  
- **#if***konstantní výraz*   
+ **#if***konstantní výraz*  
   
- **#ifdef***identifikátor*   
+ **#ifdef***identifikátor*  
   
- **#ifndef***identifikátor*   
+ **#ifndef***identifikátor*  
   
  *elif – částí* :  
  *elif – řádek textu*  
@@ -62,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  *elif – částí elif – řádek textu*  
   
  *elif-line* :  
- **#elif***konstantní výraz*   
+ **#elif***konstantní výraz*  
   
  *část else* :  
  *jiný řádek textu*  
@@ -108,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
  definované ( `identifier` )  
   
- definované`identifier`  
+ Definované `identifier`  
   
  Tento konstantní výraz se považuje za hodnotu true (nenulové hodnoty), pokud *identifikátor* je aktuálně definován; jinak, je podmínka vyhodnocena jako false (0). Identifikátor definován jako prázdný textový se považuje za definované. **Definované** – direktiva mohou být používány `#if` a `#elif` – direktiva, ale nikde jinde.  
   

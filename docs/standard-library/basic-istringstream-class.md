@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_istringstream
 - sstream/std::basic_istringstream::allocator_type
 - sstream/std::basic_istringstream::rdbuf
 - sstream/std::basic_istringstream::str
 - sstream/std::basic_istringstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_istringstream [C++]
 - std::basic_istringstream [C++], allocator_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6956b4708061c5eb18ec2adf1570920980dd17e1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream – třída
 Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
@@ -59,41 +62,41 @@ class basic_istringstream : public basic_istream<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_istringstream –](#basic_istringstream)|Vytvoří objekt typu `basic_istringstream`.|  
+|[basic_istringstream](#basic_istringstream)|Vytvoří objekt typu `basic_istringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|  
+|[allocator_type](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[rdbuf –](#rdbuf)|Vrátí adresu uložené datového proudu vyrovnávací paměti typu `pointer` k [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
-|[str –](#str)|Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.|  
+|[rdbuf](#rdbuf)|Vrátí adresu uložené datového proudu vyrovnávací paměti typu `pointer` k [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
+|[str](#str)|Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.|  
 |[swap](#swap)|Výměny hodnoty v tomto `basic_istringstream` objekt pro u zadaného objektu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Přiřadí hodnoty k tomuto `basic_istringstream` objekt z objektu parametru.|  
+|[operator=](#op_eq)|Přiřadí hodnoty k tomuto `basic_istringstream` objekt z objektu parametru.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<sstream – >  
   
  **Namespace:** – std  
   
-##  <a name="allocator_type"></a>basic_istringstream::allocator_type  
+##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
  Typ je synonymum pro parametr šablony `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_istringstream"></a>basic_istringstream::basic_istringstream  
+##  <a name="basic_istringstream"></a>  basic_istringstream::basic_istringstream  
  Vytvoří objekt typu `basic_istringstream`.  
   
 ```  
@@ -125,7 +128,7 @@ basic_istringstream(
   
  Třetí konstruktor inicializuje objekt s obsahem `right`, považován za deklarátor odkazu.  
   
-##  <a name="op_eq"></a>basic_istringstream::Operator =  
+##  <a name="op_eq"></a>  basic_istringstream::Operator =  
  Přiřadí hodnoty k tomuto `basic_istringstream` objekt z objektu parametru.  
   
 ```  
@@ -139,7 +142,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 ### <a name="remarks"></a>Poznámky  
  Operátor členů nahradí obsah objektu s obsahem `right`, ošetřených jako deklarátor odkazu přesunout přiřazení.  
   
-##  <a name="rdbuf"></a>basic_istringstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_istringstream::rdbuf  
  Vrátí adresu uložené datového proudu vyrovnávací paměti typu **ukazatel** k [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
 ```  
@@ -152,7 +155,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ### <a name="example"></a>Příklad  
   V tématu [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `rdbuf`.  
   
-##  <a name="str"></a>basic_istringstream::str  
+##  <a name="str"></a>  basic_istringstream::str  
  Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.  
   
 ```  
@@ -176,7 +179,7 @@ void str(
 ### <a name="example"></a>Příklad  
   V tématu [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) pro příklad, který používá **str**.  
   
-##  <a name="swap"></a>basic_istringstream::swap  
+##  <a name="swap"></a>  basic_istringstream::swap  
  Výměny hodnoty dva `basic_istringstream` objekty.  
   
 ```  

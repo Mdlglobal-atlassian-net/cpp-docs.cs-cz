@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype
 - xlocale/std::ctype::char_type
@@ -24,7 +25,8 @@ f1_keywords:
 - xlocale/std::ctype::tolower
 - xlocale/std::ctype::toupper
 - xlocale/std::ctype::widen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ctype [C++]
 - std::ctype [C++], char_type
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0403dd297d726f0d0ef1ab7794d37b05c46967b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctype-class"></a>ctype – třída
 Třída poskytující omezující vlastnost, která se používá ke klasifikaci znaků, převodu z velkých a malých písmen a převodu mezi nativní znakovou sadou a sadou používanou národním prostředím.  
@@ -95,33 +98,33 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který popisuje znak používaný národním prostředním.|  
+|[char_type](#char_type)|Typ, který popisuje znak používaný národním prostředním.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[do_is –](#do_is)|Virtuální funkce volaná k ověření, zda má jeden znak konkrétní atribut, nebo ke klasifikaci atributů v jednotlivých kontejnerech v rozsahu a jejich uložení v poli.|  
-|[do_narrow –](#do_narrow)|Virtuální funkce volána převést znak typu `CharType` používá národní prostředí odpovídající znaku typ `char` nativní znakem nastavit.|  
-|[do_scan_is –](#do_scan_is)|Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který odpovídá zadané masce.|  
-|[do_scan_not –](#do_scan_not)|Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který neodpovídá zadané masce.|  
-|[do_tolower –](#do_tolower)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na malá písmena.|  
-|[do_toupper –](#do_toupper)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na velká písmena.|  
-|[do_widen –](#do_widen)|Virtuální funkce volat za účelem převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.|  
+|[do_is](#do_is)|Virtuální funkce volaná k ověření, zda má jeden znak konkrétní atribut, nebo ke klasifikaci atributů v jednotlivých kontejnerech v rozsahu a jejich uložení v poli.|  
+|[do_narrow](#do_narrow)|Virtuální funkce volána převést znak typu `CharType` používá národní prostředí odpovídající znaku typ `char` nativní znakem nastavit.|  
+|[do_scan_is](#do_scan_is)|Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který odpovídá zadané masce.|  
+|[do_scan_not](#do_scan_not)|Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který neodpovídá zadané masce.|  
+|[do_tolower](#do_tolower)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na malá písmena.|  
+|[do_toupper](#do_toupper)|Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na velká písmena.|  
+|[do_widen](#do_widen)|Virtuální funkce volat za účelem převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.|  
 |[is](#is)|Ověřuje, zda má jeden znak konkrétní atribut, nebo klasifikuje atributy v jednotlivých kontejnerech v rozsahu a uloží je v poli.|  
-|[zúžit](#narrow)|Převádí znak typu `CharType` používá národní prostředí odpovídající znaku znakový typ nativní znakovou sadu.|  
-|[scan_is –](#scan_is)|Vyhledá první znak v rozsahu, který odpovídá zadané masce.|  
-|[scan_not –](#scan_not)|Vyhledá první znak v rozsahu, který neodpovídá zadané masce.|  
+|[narrow](#narrow)|Převádí znak typu `CharType` používá národní prostředí odpovídající znaku znakový typ nativní znakovou sadu.|  
+|[scan_is](#scan_is)|Vyhledá první znak v rozsahu, který odpovídá zadané masce.|  
+|[scan_not](#scan_not)|Vyhledá první znak v rozsahu, který neodpovídá zadané masce.|  
 |[ToLower](#tolower)|Převede znak nebo rozsah znaků na malá písmena.|  
 |[ToUpper](#toupper)|Převede znak nebo rozsah znaků na velká písmena.|  
-|[widen –](#widen)|Převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.|  
+|[widen](#widen)|Převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>ctype::char_type  
+##  <a name="char_type"></a>  ctype::char_type  
  Typ, který popisuje znak používaný národním prostředním.  
   
 ```  
@@ -134,7 +137,7 @@ typedef CharType char_type;
 ### <a name="example"></a>Příklad  
   V tématu – členská funkce [widen](#widen) pro příklad, který používá `char_type` jako návratová hodnota.  
   
-##  <a name="ctype"></a>ctype::ctype  
+##  <a name="ctype"></a>  ctype::ctype  
  Konstruktor pro objekty třídy ctype, které slouží jako národní prostředí omezující vlastnosti pro znaky.  
   
 ```  
@@ -152,13 +155,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   
  Konstruktor inicializuje jeho `locale::facet` základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="do_is"></a>ctype::do_is  
+##  <a name="do_is"></a>  ctype::do_is  
  Virtuální funkce volaná k ověření, zda má jeden znak konkrétní atribut, nebo ke klasifikaci atributů v jednotlivých kontejnerech v rozsahu a jejich uložení v poli.  
   
 ```  
@@ -200,7 +203,7 @@ virtual const CharType *do_is(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [je](#is), který volá `do_is`.  
   
-##  <a name="do_narrow"></a>ctype::do_narrow  
+##  <a name="do_narrow"></a>  ctype::do_narrow  
  Virtuální funkce volána převést znak typu `CharType` používá národní prostředí odpovídající znaku typ `char` nativní znakem nastavit.  
   
 ```  
@@ -243,7 +246,7 @@ virtual const CharType* do_narrow(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [zúžit](#narrow), který volá `do_narrow`.  
   
-##  <a name="do_scan_is"></a>ctype::do_scan_is  
+##  <a name="do_scan_is"></a>  ctype::do_scan_is  
  Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který odpovídá zadané masce.  
   
 ```  
@@ -264,7 +267,7 @@ virtual const CharType *do_scan_is(
  Ukazatel na znak hned za jeho poslední znak v rozsahu ke skenování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na první znak v rozsahu, který bude odpovídat zadaná maska. Pokud žádná taková hodnota existuje, vrátí funkce`last.`  
+ Ukazatel na první znak v rozsahu, který bude odpovídat zadaná maska. Pokud žádná taková hodnota existuje, vrátí funkce `last.`  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí nejmenší ukazatel funkce chráněného člena `ptr` v rozsahu [ `first`, `last`) pro kterou [do_is –](#do_is)( `maskVal`, * `ptr`) hodnotu true.  
@@ -272,7 +275,7 @@ virtual const CharType *do_scan_is(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [scan_is –](#scan_is), který volá `do_scan_is`.  
   
-##  <a name="do_scan_not"></a>ctype::do_scan_not  
+##  <a name="do_scan_not"></a>  ctype::do_scan_not  
  Virtuální funkce volaná k vyhledání prvního znaku v rozsahu, který neodpovídá zadané masce.  
   
 ```  
@@ -301,7 +304,7 @@ virtual const CharType *do_scan_not(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [scan_not –](#scan_not), který volá `do_scan_not`.  
   
-##  <a name="do_tolower"></a>ctype::do_tolower  
+##  <a name="do_tolower"></a>  ctype::do_tolower  
  Virtuální funkce volat za účelem převodu znak nebo rozsah znaků na malá písmena.  
   
 ```  
@@ -332,7 +335,7 @@ virtual const CharType *do_tolower(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [tolower](#tolower), který volá `do_tolower`.  
   
-##  <a name="do_toupper"></a>ctype::do_toupper  
+##  <a name="do_toupper"></a>  ctype::do_toupper  
  Virtuální funkce volaná k převedení znaku nebo rozsahu znaků na velká písmena.  
   
 ```  
@@ -363,7 +366,7 @@ virtual const CharType *do_toupper(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [toupper](#toupper), který volá `do_toupper`.  
   
-##  <a name="do_widen"></a>ctype::do_widen  
+##  <a name="do_widen"></a>  ctype::do_widen  
  Virtuální funkce volat za účelem převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.  
   
 ```  
@@ -400,7 +403,7 @@ virtual const char *do_widen(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [widen](#widen), který volá `do_widen`.  
   
-##  <a name="is"></a>ctype::is  
+##  <a name="is"></a>  ctype::is  
  Ověřuje, zda má konkrétní atribut nebo klasifikuje atributy každý znak v rozsahu a ukládá je do pole jednoho znaku.  
   
 ```  
@@ -476,7 +479,7 @@ int main() {
 }  
 ```  
   
-##  <a name="narrow"></a>ctype::Narrow  
+##  <a name="narrow"></a>  ctype::Narrow  
  Převede znaky typu `CharType` používá národní prostředí odpovídající znaky typu `char` nativní znakem nastavit.  
   
 ```  
@@ -540,7 +543,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="scan_is"></a>ctype::scan_is  
+##  <a name="scan_is"></a>  ctype::scan_is  
  Vyhledá první znak v rozsahu, který odpovídá zadané masce.  
   
 ```  
@@ -561,7 +564,7 @@ const CharType *scan_is(
  Ukazatel na znak hned za jeho poslední znak v rozsahu ke skenování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na první znak v rozsahu, který bude odpovídat zadaná maska. Pokud žádná taková hodnota existuje, vrátí funkce`last.`  
+ Ukazatel na první znak v rozsahu, který bude odpovídat zadaná maska. Pokud žádná taková hodnota existuje, vrátí funkce `last.`  
   
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu [do_scan_is –](#do_scan_is)( `maskVal`, `first`, `last`).  
@@ -592,7 +595,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="scan_not"></a>ctype::scan_not  
+##  <a name="scan_not"></a>  ctype::scan_not  
  Vyhledá první znak v rozsahu, který neodpovídá zadané masce.  
   
 ```  
@@ -644,7 +647,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="tolower"></a>ctype::ToLower  
+##  <a name="tolower"></a>  ctype::ToLower  
  Převede znak nebo rozsah znaků na malá písmena.  
   
 ```  
@@ -697,7 +700,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="toupper"></a>ctype::ToUpper  
+##  <a name="toupper"></a>  ctype::ToUpper  
  Převede znak nebo rozsah znaků na velká písmena.  
   
 ```  
@@ -748,7 +751,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="widen"></a>ctype::widen  
+##  <a name="widen"></a>  ctype::widen  
  Převádí znak typu `char` v nativní znakovou sadu odpovídající znaku typ `CharType` používané v národním prostředí.  
   
 ```  

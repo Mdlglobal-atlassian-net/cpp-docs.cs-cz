@@ -5,25 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ostream/std::swap
 - ostream/std::endl
 - ostream/std::ends
 - ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
-caps.latest.revision: "15"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::swap [C++]
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 9b9f64f67b1649c1c2f3d65f63636fd62601d06a
-ms.sourcegitcommit: a7e4956c1150273e8dd39fda8b41655a6cf2cb98
+ms.openlocfilehash: 4693e33563048807cdef1c81cb4d47d4fb455137
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream –&gt; funkce
 
@@ -31,7 +31,7 @@ Toto jsou globální šablona funkce definované v &lt;ostream –&gt;. Člensk�
 
 ||||
 |-|-|-|
-|[endl](#endl)|[ukončení](#ends)|[vyprázdnění](#flush)|
+|[endl](#endl)|[ukončení](#ends)|[Vyprázdnění](#flush)|
 |[swap](#swap)|
 
 ## <a name="endl"></a>endl
@@ -196,10 +196,10 @@ Typ elementu.
 *Tr*  
 Vlastnosti znak.
 
-*vlevo*  
+*left*  
 Odkaz na lvalue **basic_ostream** objektu.
 
-*vpravo*  
+Vpravo  
 Odkaz na lvalue **basic_ostream** objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -208,4 +208,4 @@ Funkce šablony **swap** provede `left.swap(right)`.
 
 ## <a name="see-also"></a>Viz také
 
-[\<ostream – >](../standard-library/ostream.md)  
+[\<ostream>](../standard-library/ostream.md)  

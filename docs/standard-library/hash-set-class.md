@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashset-class"></a>hash_set – třída
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  Datový typ elementu k uložení do hash_set.  
   
  `Traits`  
- Typ, který obsahuje dva objekty funkce, jeden třídy porovnat to znamená predikátu Binární možnost k porovnání dvou hodnot element jako klíči řazení určit jejich relativní pořadí a funkce hash klíče hodnoty unárních predikátem mapování elementů na nepodepsané celá čísla typu **size_t –**. Tento argument je volitelný a `hash_compare` *< klíč,* **menší***\<klíč >>* je výchozí hodnota.  
+ Typ, který obsahuje dva objekty funkce, jeden třídy porovnat to znamená predikátu Binární možnost k porovnání dvou hodnot element jako klíči řazení určit jejich relativní pořadí a funkce hash klíče hodnoty unárních predikátem mapování elementů na nepodepsané celá čísla typu **size_t –**. Tento argument je volitelný a `hash_compare` *< klíč,* **méně ***\<klíč >>* je výchozí hodnota.  
   
  `Allocator`  
- Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o přidělení a zrušení přidělení paměti hash_set. Tento argument je volitelný a výchozí hodnota je **allocator***\<klíč >.*  
+ Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o přidělení a zrušení přidělení paměti hash_set. Tento argument je volitelný a výchozí hodnota je **allocator ***\<klíč >.*  
   
 ## <a name="remarks"></a>Poznámky  
  Hash_set je:  
@@ -162,70 +165,70 @@ class hash_set
   
 |||  
 |-|-|  
-|[hash_set –](#hash_set)|Vytvoří `hash_set` který je prázdný nebo který je kopie všech nebo některých jiných součástí `hash_set`.|  
+|[hash_set](#hash_set)|Vytvoří `hash_set` který je prázdný nebo který je kopie všech nebo některých jiných součástí `hash_set`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type –](#allocator_type)|Typ, který reprezentuje `allocator` třídy pro `hash_set` objektu.|  
-|[const_iterator –](#const_iterator)|Typ, který poskytuje obousměrné iterator, který může číst `const` element v `hash_set`.|  
-|[const_pointer –](#const_pointer)|Typ, který poskytuje odkazy `const` element v `hash_set`.|  
-|[const_reference –](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v `hash_set` pro čtení a provádění `const` operace.|  
-|[const_reverse_iterator –](#const_reverse_iterator)|Typ, který poskytuje obousměrné iterator, který může číst všechny `const` element v `hash_set`.|  
-|[difference_type –](#difference_type)|Typ se znaménkem, který můžete použít k reprezentování počet prvků `hash_set` v rozsahu mezi elementy, na kterou iterátory odkazuje.|  
+|[allocator_type](#allocator_type)|Typ, který reprezentuje `allocator` třídy pro `hash_set` objektu.|  
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrné iterator, který může číst `const` element v `hash_set`.|  
+|[const_pointer](#const_pointer)|Typ, který poskytuje odkazy `const` element v `hash_set`.|  
+|[const_reference](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v `hash_set` pro čtení a provádění `const` operace.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrné iterator, který může číst všechny `const` element v `hash_set`.|  
+|[difference_type](#difference_type)|Typ se znaménkem, který můžete použít k reprezentování počet prvků `hash_set` v rozsahu mezi elementy, na kterou iterátory odkazuje.|  
 |[iterator](#iterator)|Typ, který poskytuje obousměrné iterator, který může číst nebo upravovat libovolný element v `hash_set`.|  
-|[key_compare –](#key_compare)|Typ, který poskytuje funkce objekt, který můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `hash_set`.|  
-|[key_type –](#key_type)|Typ, který popisuje objekt uložené jako element `hash_set` jako klíč řazení.|  
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_set`.|  
-|[referenční dokumentace](#reference)|Typ, který obsahuje odkaz na element uložené v `hash_set`.|  
-|[reverse_iterator –](#reverse_iterator)|Typ, který poskytuje obousměrné iterator, které můžou číst nebo upravte element v odstínech `hash_set`.|  
-|[size_type –](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `hash_set`.|  
-|[value_compare –](#value_compare)|Typ, který poskytuje dva objekty funkce, binární predikátu porovnání – třída, která můžete porovnat dvě hodnoty elementu `hash_set` určit jejich relativní pořadí a unární operátor predikátu, vytvoří hodnotu hash elementy.|  
+|[key_compare](#key_compare)|Typ, který poskytuje funkce objekt, který můžete porovnat dva klíče řazení k určení relativních pořadí dva elementy v `hash_set`.|  
+|[key_type](#key_type)|Typ, který popisuje objekt uložené jako element `hash_set` jako klíč řazení.|  
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_set`.|  
+|[reference](#reference)|Typ, který obsahuje odkaz na element uložené v `hash_set`.|  
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrné iterator, které můžou číst nebo upravte element v odstínech `hash_set`.|  
+|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `hash_set`.|  
+|[value_compare](#value_compare)|Typ, který poskytuje dva objekty funkce, binární predikátu porovnání – třída, která můžete porovnat dvě hodnoty elementu `hash_set` určit jejich relativní pořadí a unární operátor predikátu, vytvoří hodnotu hash elementy.|  
 |[value_type](#value_type)|Typ, který popisuje objekt uložené jako element `hash_set` jako hodnotu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[začít](#begin)|Vrátí iterátor, který řeší prvním elementem v `hash_set`.|  
-|[cbegin –](#cbegin)|Vrátí const iterator adresování prvním elementem v `hash_set`.|  
+|[Začátek](#begin)|Vrátí iterátor, který řeší prvním elementem v `hash_set`.|  
+|[cbegin](#cbegin)|Vrátí const iterator adresování prvním elementem v `hash_set`.|  
 |[cend –](#cend)|Vrátí const iterator, která řeší úspěšné posledním prvkem v umístění `hash_set`.|  
-|[Vymazat](#clear)|Vymaže všechny elementy `hash_set`.|  
-|[počet](#count)|Vrátí počet prvků v `hash_set` jejichž klíč odpovídá parametru zadaný klíč.|  
-|[crbegin –](#crbegin)|Vrátí const iterator adresování prvním elementem v odstínech `hash_set`.|  
+|[clear](#clear)|Vymaže všechny elementy `hash_set`.|  
+|[Počet](#count)|Vrátí počet prvků v `hash_set` jejichž klíč odpovídá parametru zadaný klíč.|  
+|[crbegin](#crbegin)|Vrátí const iterator adresování prvním elementem v odstínech `hash_set`.|  
 |[crend –](#crend)|Vrátí const iterator, která řeší umístění úspěšné posledním prvkem v odstínech `hash_set`.|  
 |[emplace –](#emplace)|Vloží element v místě do zkonstruovat `hash_set`.|  
 |[emplace_hint –](#emplace_hint)|Vloží element v místě do zkonstruovat `hash_set`, s pomocným parametrem umístění.|  
 |[prázdný](#empty)|Pokud testy `hash_set` je prázdný.|  
-|[end](#end)|Vrátí iterátor, který řeší úspěšné posledním prvkem v umístění `hash_set`.|  
-|[equal_range –](#equal_range)|Vrátí pár iterátory prvním elementem v v uvedeném pořadí `hash_set` s klíčem, který je větší, než je zadaný klíč a prvním elementem v `hash_set` s klíčem, který je rovna nebo větší než klíč.|  
+|[End](#end)|Vrátí iterátor, který řeší úspěšné posledním prvkem v umístění `hash_set`.|  
+|[equal_range](#equal_range)|Vrátí pár iterátory prvním elementem v v uvedeném pořadí `hash_set` s klíčem, který je větší, než je zadaný klíč a prvním elementem v `hash_set` s klíčem, který je rovna nebo větší než klíč.|  
 |[vymazání](#erase)|Odebere element nebo rozsah elementů v `hash_set` ze zadaných pozic nebo odebere elementy, které odpovídají zadaným klíčem.|  
 |[Najít](#find)|Vrátí iterovat adresování umístění elementu v `hash_set` který má klíč ekvivalentní k zadanému klíči.|  
-|[get_allocator –](#get_allocator)|Vrátí kopii `allocator` objekt použitý k vytvoření `hash_set`.|  
-|[Vložení](#insert)|Vloží elementu nebo rozsahu prvků do `hash_set`.|  
-|[key_comp –](#key_comp)|Načte kopii porovnání objekt použitý k pořadí klíčů v `hash_set`.|  
-|[lower_bound –](#lower_bound)|Vrátí iterovat prvním elementem v `hash_set` s klíčem, který je rovna nebo větší než je zadaný klíč.|  
-|[max_size –](#max_size)|Vrátí maximální délka `hash_set`.|  
-|[rbegin –](#rbegin)|Vrátí iterovat adresování prvním elementem v odstínech `hash_set`.|  
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objekt použitý k vytvoření `hash_set`.|  
+|[insert](#insert)|Vloží elementu nebo rozsahu prvků do `hash_set`.|  
+|[key_comp](#key_comp)|Načte kopii porovnání objekt použitý k pořadí klíčů v `hash_set`.|  
+|[lower_bound](#lower_bound)|Vrátí iterovat prvním elementem v `hash_set` s klíčem, který je rovna nebo větší než je zadaný klíč.|  
+|[max_size](#max_size)|Vrátí maximální délka `hash_set`.|  
+|[rbegin](#rbegin)|Vrátí iterovat adresování prvním elementem v odstínech `hash_set`.|  
 |[rend –](#rend)|Vrátí iterátor, který řeší umístění úspěšné posledním prvkem v odstínech `hash_set`.|  
-|[velikost](#size)|Vrátí počet prvků v `hash_set`.|  
+|[Velikost](#size)|Vrátí počet prvků v `hash_set`.|  
 |[swap](#swap)|Výměny dva elementy `hash_set`s.|  
-|[upper_bound –](#upper_bound)|Vrátí iterovat prvním elementem v `hash_set` , s klíčem, který je rovna nebo větší než je zadaný klíč.|  
-|[value_comp –](#value_comp)|Načte kopii objekt hash vlastnosti použít k hash a pořadí klíčové hodnoty v elementu `hash_set`.|  
+|[upper_bound](#upper_bound)|Vrátí iterovat prvním elementem v `hash_set` , s klíčem, který je rovna nebo větší než je zadaný klíč.|  
+|[value_comp](#value_comp)|Načte kopii objekt hash vlastnosti použít k hash a pořadí klíčové hodnoty v elementu `hash_set`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[hash_set::Operator =](#op_eq)|Nahradí elementy `hash_set` kopii jiného `hash_set`.|  
+|[hash_set::operator=](#op_eq)|Nahradí elementy `hash_set` kopii jiného `hash_set`.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<hash_set >  
+ **Header:** \<hash_set>  
   
  **Namespace:** stdext –  
   
-##  <a name="allocator_type"></a>hash_set::allocator_type  
+##  <a name="allocator_type"></a>  hash_set::allocator_type  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -246,7 +249,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ### <a name="example"></a>Příklad  
   Podívejte se příklad [get_allocator –](#get_allocator) pro příklad, který používá `allocator_type`.  
   
-##  <a name="begin"></a>hash_set::begin  
+##  <a name="begin"></a>  hash_set::begin  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -307,7 +310,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2  
 ```  
   
-##  <a name="cbegin"></a>hash_set::cbegin  
+##  <a name="cbegin"></a>  hash_set::cbegin  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -354,7 +357,7 @@ int main( )
 The first element of hs1 is 1  
 ```  
   
-##  <a name="cend"></a>hash_set::cend  
+##  <a name="cend"></a>  hash_set::cend  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -369,7 +372,7 @@ const_iterator cend() const;
  Const iterator obousměrného, která řeší úspěšné posledním prvkem v umístění [hash_set](../standard-library/hash-set-class.md). Pokud `hash_set` je prázdný, pak `hash_set::cend == hash_set::begin`.  
   
 ### <a name="remarks"></a>Poznámky  
- `cend`slouží k otestování, jestli iterovat byl dosažen konec jeho `hash_set`. Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
+ `cend` slouží k otestování, jestli iterovat byl dosažen konec jeho `hash_set`. Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.  
   
    
   
@@ -402,7 +405,7 @@ int main( )
 The last element of hs1 is 3  
 ```  
   
-##  <a name="clear"></a>hash_set::clear  
+##  <a name="clear"></a>  hash_set::clear  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -447,7 +450,7 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.  
 ```  
   
-##  <a name="const_iterator"></a>hash_set::const_iterator  
+##  <a name="const_iterator"></a>  hash_set::const_iterator  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -466,7 +469,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="example"></a>Příklad  
   Podívejte se příklad [začít](#begin) pro příklad, který používá `const_iterator`.  
   
-##  <a name="const_pointer"></a>hash_set::const_pointer  
+##  <a name="const_pointer"></a>  hash_set::const_pointer  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -484,7 +487,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
   
    
   
-##  <a name="const_reference"></a>hash_set::const_reference  
+##  <a name="const_reference"></a>  hash_set::const_reference  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -532,7 +535,7 @@ int main( )
 The first element in the hash_set is 10.  
 ```  
   
-##  <a name="const_reverse_iterator"></a>hash_set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  hash_set::const_reverse_iterator  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -549,9 +552,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
    
   
 ### <a name="example"></a>Příklad  
-  Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání`const_reverse_iterator`  
+  Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`  
   
-##  <a name="count"></a>hash_set::Count  
+##  <a name="count"></a>  hash_set::Count  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -613,7 +616,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="crbegin"></a>hash_set::crbegin  
+##  <a name="crbegin"></a>  hash_set::crbegin  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -628,11 +631,11 @@ const_reverse_iterator crbegin() const;
  Const reverse obousměrného iterator adresování prvním elementem v odstínech [hash_set](../standard-library/hash-set-class.md) nebo řešení, co je posledním prvkem v unreversed `hash_set`.  
   
 ### <a name="remarks"></a>Poznámky  
- `crbegin`se používá s odstínech hash_set stejně jako [hash_set::begin](#begin) se používá s hash_set.  
+ `crbegin` se používá s odstínech hash_set stejně jako [hash_set::begin](#begin) se používá s hash_set.  
   
  S návratovou hodnotou `crbegin`, `hash_set` objekt nelze změnit.  
   
- `crbegin`lze použít k iteraci v rámci `hash_set` zpětné.  
+ `crbegin` lze použít k iteraci v rámci `hash_set` zpětné.  
   
    
   
@@ -665,7 +668,7 @@ int main( )
 The first element in the reversed hash_set is 30.  
 ```  
   
-##  <a name="crend"></a>hash_set::crend  
+##  <a name="crend"></a>  hash_set::crend  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -680,11 +683,11 @@ const_reverse_iterator crend() const;
  Const reverse iterator obousměrného, která řeší umístění úspěšné posledním prvkem v odstínech [hash_set](../standard-library/hash-set-class.md) (umístění, které měl před prvním elementem v unreversed `hash_set`).  
   
 ### <a name="remarks"></a>Poznámky  
- `crend`se používá s odstínech `hash_set` stejně jako [hash_set::end](#end) se používá s `hash_set`.  
+ `crend` se používá s odstínech `hash_set` stejně jako [hash_set::end](#end) se používá s `hash_set`.  
   
  S návratovou hodnotou `crend`, `hash_set` objekt nelze změnit.  
   
- `crend`můžete použít k testování na tom, jestli má zpětné iterator dosáhla konce jeho `hash_set`.  
+ `crend` můžete použít k testování na tom, jestli má zpětné iterator dosáhla konce jeho `hash_set`.  
   
    
   
@@ -718,7 +721,7 @@ int main( )
 The last element in the reversed hash_set is 10.  
 ```  
   
-##  <a name="difference_type"></a>hash_set::difference_type  
+##  <a name="difference_type"></a>  hash_set::difference_type  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -796,7 +799,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.  
 ```  
   
-##  <a name="emplace"></a>hash_set::emplace  
+##  <a name="emplace"></a>  hash_set::emplace  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -849,7 +852,7 @@ int main( )
 After the emplace insertion, hs3 contains a.  
 ```  
   
-##  <a name="emplace_hint"></a>hash_set::emplace_hint  
+##  <a name="emplace_hint"></a>  hash_set::emplace_hint  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -905,7 +908,7 @@ int main( )
 After the emplace insertion, hs3 contains a.  
 ```  
   
-##  <a name="empty"></a>hash_set::Empty  
+##  <a name="empty"></a>  hash_set::Empty  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -954,7 +957,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.  
 ```  
   
-##  <a name="end"></a>hash_set::end  
+##  <a name="end"></a>  hash_set::end  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1017,7 +1020,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2  
 ```  
   
-##  <a name="equal_range"></a>hash_set::equal_range  
+##  <a name="equal_range"></a>  hash_set::equal_range  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1101,7 +1104,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.  
 ```  
   
-##  <a name="erase"></a>hash_set::Erase  
+##  <a name="erase"></a>  hash_set::Erase  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1219,7 +1222,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.  
 ```  
   
-##  <a name="find"></a>hash_set::Find  
+##  <a name="find"></a>  hash_set::Find  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1296,7 +1299,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="get_allocator"></a>hash_set::get_allocator  
+##  <a name="get_allocator"></a>  hash_set::get_allocator  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1372,7 +1375,7 @@ int main( )
 }  
 ```  
   
-##  <a name="hash_set"></a>hash_set::hash_set  
+##  <a name="hash_set"></a>  hash_set::hash_set  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1456,7 +1459,7 @@ hash_set(
   
  Skutečné pořadí prvků v `hash_set` kontejneru závisí na funkci hash, funkci řazení a aktuální velikost hash tabulky a nelze, předpovědět obecně platí, jako to bylo možné v kontejneru sady, kde bylo zjištěno nalezením řazení funkce samostatně.  
   
-##  <a name="insert"></a>hash_set::Insert  
+##  <a name="insert"></a>  hash_set::Insert  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1502,7 +1505,7 @@ void insert(
   
  Třetí členská funkce vloží pořadí hodnot element do `hash_set` odpovídající každý prvek řešené pomocí iterace v rozsahu [ `First`, `Last`) ze zadané `hash_set`.  
   
-##  <a name="iterator"></a>hash_set::iterator  
+##  <a name="iterator"></a>  hash_set::iterator  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1521,7 +1524,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání **iterator**.  
   
-##  <a name="key_comp"></a>hash_set::key_comp  
+##  <a name="key_comp"></a>  hash_set::key_comp  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1597,7 +1600,7 @@ int main( )
 }  
 ```  
   
-##  <a name="key_compare"></a>hash_set::key_compare  
+##  <a name="key_compare"></a>  hash_set::key_compare  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1609,7 +1612,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `key_compare`je synonymum pro parametr šablony `Traits`.  
+ `key_compare` je synonymum pro parametr šablony `Traits`.  
   
  Další informace o `Traits` najdete v článku [hash_set – třída](../standard-library/hash-set-class.md) tématu.  
   
@@ -1620,7 +1623,7 @@ typedef Traits key_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [key_comp –](#key_comp) příklad toho, jak deklarace a používání `key_compare`.  
   
-##  <a name="key_type"></a>hash_set::key_type  
+##  <a name="key_type"></a>  hash_set::key_type  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1643,7 +1646,7 @@ typedef Key key_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.  
   
-##  <a name="lower_bound"></a>hash_set::lower_bound  
+##  <a name="lower_bound"></a>  hash_set::lower_bound  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1716,7 +1719,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="max_size"></a>hash_set::max_size  
+##  <a name="max_size"></a>  hash_set::max_size  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1754,7 +1757,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>hash_set::Operator =  
+##  <a name="op_eq"></a>  hash_set::Operator =  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1815,7 +1818,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>hash_set::Pointer  
+##  <a name="pointer"></a>  hash_set::Pointer  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1833,7 +1836,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
   
    
   
-##  <a name="rbegin"></a>hash_set::rbegin  
+##  <a name="rbegin"></a>  hash_set::rbegin  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1850,11 +1853,11 @@ reverse_iterator rbegin();
  Iterator zpětné obousměrného adresování prvním elementem v invertovaných hash_set nebo řešení, co je posledním prvkem v unreversed hash_set.  
   
 ### <a name="remarks"></a>Poznámky  
- `rbegin`se používá s odstínech hash_set stejně jako [začít](#begin) se používá s hash_set.  
+ `rbegin` se používá s odstínech hash_set stejně jako [začít](#begin) se používá s hash_set.  
   
  Pokud vrátí hodnotu, která `rbegin` je přiřazena k `const_reverse_iterator`, pak hash_set objekt nelze změnit. Pokud vrátí hodnotu, která `rbegin` je přiřazena k `reverse_iterator`, pak je možné upravit objekt hash_set.  
   
- `rbegin`můžete použít k iteraci v rámci hash_set zpětné.  
+ `rbegin` můžete použít k iteraci v rámci hash_set zpětné.  
   
    
   
@@ -1916,7 +1919,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.  
 ```  
   
-##  <a name="reference"></a>hash_set::Reference  
+##  <a name="reference"></a>  hash_set::Reference  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1967,7 +1970,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.  
 ```  
   
-##  <a name="rend"></a>hash_set::rend  
+##  <a name="rend"></a>  hash_set::rend  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -1984,11 +1987,11 @@ reverse_iterator rend();
  Iterator zpětné obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných hash_set (umístění, které měl před prvním elementem v unreversed hash_set).  
   
 ### <a name="remarks"></a>Poznámky  
- `rend`se používá s odstínech hash_set stejně jako [end](#end) se používá s hash_set.  
+ `rend` se používá s odstínech hash_set stejně jako [end](#end) se používá s hash_set.  
   
  Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, pak hash_set objekt nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, pak je možné upravit objekt hash_set. Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.  
   
- `rend`slouží k testování, aby se jestli zpětné iterator dosáhne konce své hash_set.  
+ `rend` slouží k testování, aby se jestli zpětné iterator dosáhne konce své hash_set.  
   
    
   
@@ -2053,7 +2056,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.  
 ```  
   
-##  <a name="reverse_iterator"></a>hash_set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  hash_set::reverse_iterator  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2072,7 +2075,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [rbegin –](#rbegin) příklad toho, jak deklarace a používání `reverse_iterator`.  
   
-##  <a name="size"></a>hash_set::size  
+##  <a name="size"></a>  hash_set::size  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2119,7 +2122,7 @@ The hash_set length is 1.
 The hash_set length is now 2.  
 ```  
   
-##  <a name="size_type"></a>hash_set::size_type  
+##  <a name="size_type"></a>  hash_set::size_type  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2134,9 +2137,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
    
   
 ### <a name="example"></a>Příklad  
-  Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání`size_type`  
+  Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`  
   
-##  <a name="swap"></a>hash_set::swap  
+##  <a name="swap"></a>  hash_set::swap  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2210,7 +2213,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.  
 ```  
   
-##  <a name="upper_bound"></a>hash_set::upper_bound  
+##  <a name="upper_bound"></a>  hash_set::upper_bound  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2283,7 +2286,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.  
 ```  
   
-##  <a name="value_comp"></a>hash_set::value_comp  
+##  <a name="value_comp"></a>  hash_set::value_comp  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2359,7 +2362,7 @@ int main( )
 }  
 ```  
   
-##  <a name="value_compare"></a>hash_set::value_compare  
+##  <a name="value_compare"></a>  hash_set::value_compare  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  
@@ -2382,7 +2385,7 @@ typedef key_compare value_compare;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [value_comp –](#value_comp) příklad toho, jak deklarace a používání `value_compare`.  
   
-##  <a name="value_type"></a>hash_set::value_type  
+##  <a name="value_type"></a>  hash_set::value_type  
   
 > [!NOTE]
 >  Toto rozhraní API je zastaralé. Alternativou je [unordered_set – třída](../standard-library/unordered-set-class.md).  

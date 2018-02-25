@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06a9e668ecf2a16a933a9accd727284fa0f4bab6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41f5ae4381dd2505b2136e796c1b8832eaa75246
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Použití více přístupových objektů pro sadu řádků
 Existují tři základní scénáře, ve kterých budete muset použít několik přístupových objektů:  
@@ -38,7 +38,7 @@ Existují tři základní scénáře, ve kterých budete muset použít několik
   
     -   Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.  
   
--   Výkon. V tomto scénáři obsahovat jeden nebo více sloupců velké množství dat, například grafiky, zvuk nebo video soubory. Pokaždé, když přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkého množství dat, protože je to proto by zpomalit výkon aplikace.  
+-   **Výkon.** V tomto scénáři obsahovat jeden nebo více sloupců velké množství dat, například grafiky, zvuk nebo video soubory. Pokaždé, když přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkého množství dat, protože je to proto by zpomalit výkon aplikace.  
   
      Můžete nastavit samostatné přistupující objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkého množství dat a automaticky; načítá data z těchto sloupců Toto je automatický přistupující objekt. Druhý přistupující objekt načítá pouze se sloupcem obsahující velkého množství dat, ale nenačítá data z tohoto sloupce automaticky. Můžete mít další metody aktualizace nebo načítání velkých dat na vyžádání.  
   

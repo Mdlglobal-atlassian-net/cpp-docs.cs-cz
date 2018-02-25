@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc.templates.ole
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 037cb338db89e03b4e9457c5a0abc72c33c0ba57
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-templates"></a>Šablony OLE DB
 Šablony technologie OLE DB usnadnění přístupu k datům OLE DB. Visual C++ poskytuje šablony třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Můžete vytvořit šablony příjemce Visual C++ pro zápis aplikace klienta (příjemce) technologie OLE DB a šablony zprostředkovatele psát aplikace serveru (zprostředkovatel).  

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: functional/std::binary
-dev_langs: C++
-helpviewer_keywords: binary_function class
+ms.topic: reference
+f1_keywords:
+- functional/std::binary
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5ebaf90c090ed276914a02f2e459dd506ed1b95b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 422d26ade2358f862277299ae7da6fd003b4e5ab
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="binaryfunction-struct"></a>binary_function – struktura
 Prázdný základní struktura definující typy, které může být zděděn odvozené třídy poskytující binární funkce objektu.  
@@ -38,7 +43,7 @@ struct binary_function {
   
  **Operator() – result_type**( **constfirst_argument_type &**,  
   
- **Const second_argument_type &** ) **const**  
+ **const second_argument_type&** ) **const**  
   
  Všechny tyto binární funkce mohou odkazovat na jejich první typ argumentu jako **first_argument_type**, zadejte jejich druhý argument jako **second_argument_type**a jejich návratový typ jako ***result_type*** .  
   

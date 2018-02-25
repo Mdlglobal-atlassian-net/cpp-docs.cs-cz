@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionContext
 - CONCRTRM/concurrency::IExecutionContext
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
-dev_langs: C++
-helpviewer_keywords: IExecutionContext structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9e3edffb10aad7b5793907c8c95ad5028f4d1d23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext – struktura
 Rozhraní na kontext spuštění, který můžete spustit na danou virtuálních procesorů a být spolupráce při přepnout kontext.  
@@ -44,11 +48,11 @@ struct IExecutionContext;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Iexecutioncontext::Dispatch –](#dispatch)|Metoda, která je volána, když proxy vlákna spustí provádění kontextu konkrétní spuštění. To by měl být hlavní pracovní rutiny pro vašeho scheduleru.|  
-|[Iexecutioncontext::getid –](#getid)|Vrací jedinečný identifikátor pro kontext spuštění.|  
-|[Iexecutioncontext::getproxy –](#getproxy)|Vrátí rozhraní proxy přístup z více vláken, která provádí tohoto kontextu.|  
-|[Iexecutioncontext::getscheduler –](#getscheduler)|Vrátí rozhraní pro Plánovač patří tento kontext spuštění.|  
-|[Iexecutioncontext::setproxy –](#setproxy)|Přidruží tento kontext spuštění proxy přístup z více vláken. Proxy přidružené vlákno vyvolá tato metoda práva před spuštěním provádění podle kontextu `Dispatch` metoda.|  
+|[IExecutionContext::Dispatch](#dispatch)|Metoda, která je volána, když proxy vlákna spustí provádění kontextu konkrétní spuštění. To by měl být hlavní pracovní rutiny pro vašeho scheduleru.|  
+|[IExecutionContext::GetId](#getid)|Vrací jedinečný identifikátor pro kontext spuštění.|  
+|[IExecutionContext::GetProxy](#getproxy)|Vrátí rozhraní proxy přístup z více vláken, která provádí tohoto kontextu.|  
+|[IExecutionContext::GetScheduler](#getscheduler)|Vrátí rozhraní pro Plánovač patří tento kontext spuštění.|  
+|[IExecutionContext::SetProxy](#setproxy)|Přidruží tento kontext spuštění proxy přístup z více vláken. Proxy přidružené vlákno vyvolá tato metoda práva před spuštěním provádění podle kontextu `Dispatch` metoda.|  
   
 ## <a name="remarks"></a>Poznámky  
  Pokud implementujete vlastní plánovače, který rozhraní s Concurrency Runtime Resource Manager, je nutné implementovat `IExecutionContext` rozhraní. Vlákna vytvořili pomocí Správce prostředků práci jménem vašeho scheduleru spuštěním `IExecutionContext::Dispatch` metoda.  
@@ -61,7 +65,7 @@ struct IExecutionContext;
   
  **Namespace:** souběžnosti  
   
-##  <a name="dispatch"></a>Iexecutioncontext::Dispatch – metoda  
+##  <a name="dispatch"></a>  Iexecutioncontext::Dispatch – metoda  
  Metoda, která je volána, když proxy vlákna spustí provádění kontextu konkrétní spuštění. To by měl být hlavní pracovní rutiny pro vašeho scheduleru.  
   
 ```
@@ -72,7 +76,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Ukazatel na stav, pod kterým je odesílán tento kontext spuštění. Další informace o stavu odesílání najdete v tématu [dispatchstate –](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>Iexecutioncontext::getid – metoda  
+##  <a name="getid"></a>  Iexecutioncontext::getid – metoda  
  Vrací jedinečný identifikátor pro kontext spuštění.  
   
 ```
@@ -87,7 +91,7 @@ virtual unsigned int GetId() const = 0;
   
  Identifikátor získat z jiného zdroje může vést k nedefinované chování.  
   
-##  <a name="getproxy"></a>Iexecutioncontext::getproxy – metoda  
+##  <a name="getproxy"></a>  Iexecutioncontext::getproxy – metoda  
  Vrátí rozhraní proxy přístup z více vláken, která provádí tohoto kontextu.  
   
 ```
@@ -100,7 +104,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Poznámky  
  Správce prostředků bude vyvolán `SetProxy` metoda v kontextu spuštění s `IThreadProxy` rozhraní jako parametr, před zadáním `Dispatch` metodu pro daný kontext. Předpokládá se, že tento argument úložiště a vrátit se na volání `GetProxy()`.  
   
-##  <a name="getscheduler"></a>Iexecutioncontext::getscheduler – metoda  
+##  <a name="getscheduler"></a>  Iexecutioncontext::getscheduler – metoda  
  Vrátí rozhraní pro Plánovač patří tento kontext spuštění.  
   
 ```
@@ -113,7 +117,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Poznámky  
  Je nutné inicializovat kontext provádění platný `IScheduler` rozhraní dříve, než ho použijete jako parametr pro metody zadaný správcem prostředků.  
   
-##  <a name="setproxy"></a>Iexecutioncontext::setproxy – metoda  
+##  <a name="setproxy"></a>  Iexecutioncontext::setproxy – metoda  
  Přidruží tento kontext spuštění proxy přístup z více vláken. Proxy přidružené vlákno vyvolá tato metoda práva před spuštěním provádění podle kontextu `Dispatch` metoda.  
   
 ```

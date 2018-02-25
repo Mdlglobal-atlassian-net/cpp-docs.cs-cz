@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenční dokumentace k šablonám zprostředkovatelů OLE DB
 Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB, je možné seskupit do následujících kategorií. Referenční materiál také obsahuje informace o [makra pro šablony zprostředkovatele technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB, je možn
  Poskytuje standardní implementace sady řádků OLE DB bez nutnosti vícenásobná dědičnost mnoho implementaci rozhraní. Jedinou metodou, pro které je nutné zadat, je implementace **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Poskytuje výchozí implementaci pro popisovač řádku, který je používán `IRowsetImpl` třídy. Popisovač řádku je logicky jedinečný kód pro řádek, výsledek. `IRowsetImpl`Vytvoří novou `CSimpleRow` pro každý řádek požadované v `IRowsetImpl::GetNextRows`.  
+ Poskytuje výchozí implementaci pro popisovač řádku, který je používán `IRowsetImpl` třídy. Popisovač řádku je logicky jedinečný kód pro řádek, výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požadované v `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB vyžaduje poskytovatelům implementovat **HACCESSOR**, což je značka na pole **DBBINDING** struktury. Poskytuje **HACCESSOR**s, které jsou adresy **BindType** struktury. Povinné na příkazy a sady řádků.  
@@ -63,12 +67,12 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB, je možn
  Implementuje OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) rozhraní, která umožňuje aktualizaci hodnot sloupců v existujících řádků, odstranění řádků a vkládání nových řádků.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`provádí stejné funkce jako `IObjectWithSite` , ale taky umožňuje vlastnosti OLE DB **DBPROPCANSCROLLBACKWARDS** a **DBPROPCANFETCHBACKWARDS**.  
+ Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` , ale taky umožňuje vlastnosti OLE DB **DBPROPCANSCROLLBACKWARDS** a **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementuje **IRowsetIdentity** rozhraní, což vám umožní porovnat, zda jsou dva řádky dat identické nebo ne.  
   
- [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md)  
+ [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)  
  Představuje implementaci objektu `IRowset` rozhraní, což je rozhraní pro základní sady řádků.  
   
  [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)  
@@ -103,7 +107,7 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB, je možn
  Vytvoří nebo odstraní připojení k příjemce. Povinné rozhraní na objekty zdroje dat a volitelné rozhraní na výčty.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro výčty. Ale pokud enumerátor zpřístupní **IDBInitialize**, musí vystavit `IDBProperties` (Vlastnosti zdroje dat).  
+ `IDBProperties` je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro výčty. Ale pokud enumerátor zpřístupní **IDBInitialize**, musí vystavit `IDBProperties` (Vlastnosti zdroje dat).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Získá ukazatele rozhraní pro objekt zdroje dat. Povinné rozhraní v relaci.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator==
 - FILESYSTEM/std::experimental::filesystem::operator!=
@@ -17,18 +18,20 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator/
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 815ff0025372e8b085f7c6f6ea38299bb15c8305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2fea2837179018e703547a6a66d712404b19a28a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;FileSystem&gt; operátory
 Operátory, proveďte lexikální porovnání dvě cesty řetězce. Použití **ekvivalentní** funkce k určení, zda dvě cesty (například relativní cesty a absolutní cesta) odkazovat na stejný soubor nebo adresář na disku.  
@@ -81,7 +84,7 @@ bool operator>(const path& left, const path& right) noexcept;
   
  Funkce vrátí hodnotu právo \< levé.  
   
-## <a name="operator"></a>Operator > =  
+## <a name="operator"></a>operator>=  
   
 ```  
 bool operator>=(const path& left, const path& right) noexcept;  
@@ -131,5 +134,5 @@ return (is);
 ## <a name="see-also"></a>Viz také  
  [Path – třída (standardní knihovna C++)](../standard-library/path-class.md)   
  [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)   
- [\<FileSystem >](../standard-library/filesystem.md)
+ [\<filesystem>](../standard-library/filesystem.md)
 

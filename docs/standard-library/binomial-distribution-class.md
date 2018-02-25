@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::binomial_distribution
 - random/std::binomial_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0576050177fa7685f38265ba24f43dab01749b73
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution – třída
 Generuje binomické rozdělení.  
@@ -89,8 +92,8 @@ Výsledný typ celé číslo, výchozí nastavení je `int`. Možné typy, najde
   
 ||||  
 |-|-|-|  
-|[binomial_distribution –](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type –](#param_type)|  
+|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
+|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|  
   
 Vlastnost členy `t()` a `p()` návratové hodnoty parametru aktuálně uložené distribuce `t` a `p` v uvedeném pořadí.  
   
@@ -236,7 +239,7 @@ Histogram for 100 samples:
   
 **Namespace:** – std  
   
-##  <a name="binomial_distribution"></a>binomial_distribution::binomial_distribution  
+##  <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -251,17 +254,17 @@ explicit binomial_distribution(const param_type& parm);
 *p*  
 `p` Distribuční parametr.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0 ≤ t` a`0.0 ≤ p ≤ 1.0`  
+**Předběžnou:** `0 ≤ t` a `0.0 ≤ p ≤ 1.0`  
   
 První konstruktoru vytvoří objekt jehož uložené `p` hodnota obsahuje hodnotu *p* a jehož uložené `t` hodnota obsahuje hodnotu *t*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>binomial_distribution::param_type  
+##  <a name="param_type"></a>  binomial_distribution::param_type  
 Uloží všechny parametry rozdělení.  
   
 ```cpp  
@@ -283,16 +286,16 @@ struct param_type {
 *p*  
 `p` Distribuční parametr.  
   
-*vpravo*  
+Vpravo  
  `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:** `0 ≤ t` a`0.0 ≤ p ≤ 1.0`  
+**Předběžnou:** `0 ≤ t` a `0.0 ≤ p ≤ 1.0`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

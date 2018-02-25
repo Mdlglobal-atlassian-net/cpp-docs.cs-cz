@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
 - locale/std::num_get::do_get
 - locale/std::num_get::get
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_get [C++]
 - std::num_get [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 205bd19d1c051f00a90b45d42997a5d8a1d5eb0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numget-class"></a>num_get – třída
 Třídu šablony, která popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` do číselných hodnot.  
@@ -56,20 +59,20 @@ class num_get : public locale::facet;
   
 |||  
 |-|-|  
-|[num_get –](#num_get)|V konstruktoru pro objekty typu `num_get` , se používají k získání číselné hodnoty z pořadí.|  
+|[num_get](#num_get)|V konstruktoru pro objekty typu `num_get` , se používají k získání číselné hodnoty z pořadí.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
-|[iter_type –](#iter_type)|Typ, který popisuje vstupní iterátor.|  
+|[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
+|[iter_type](#iter_type)|Typ, který popisuje vstupní iterátor.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[do_get –](#do_get)|Virtuální funkce volaná k extrakci číselné hodnoty nebo logické hodnoty ze sekvence znaků.|  
+|[do_get](#do_get)|Virtuální funkce volaná k extrakci číselné hodnoty nebo logické hodnoty ze sekvence znaků.|  
 |[get](#get)|Extrahuje ze sekvence znaků číselnou nebo logickou hodnotu.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -77,7 +80,7 @@ class num_get : public locale::facet;
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>num_get::char_type  
+##  <a name="char_type"></a>  num_get::char_type  
  Typ, který se používá k popisu znaku používaného národním prostředním.  
   
 ```
@@ -87,7 +90,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="do_get"></a>num_get::do_get  
+##  <a name="do_get"></a>  num_get::do_get  
  Virtuální funkce volaná k extrakci číselné hodnoty nebo logické hodnoty ze sekvence znaků.  
   
 ```
@@ -214,9 +217,9 @@ virtual iter_type do_get(
   
  Formát vstupního pole celé číslo je dáno Další [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) `fac` volání vráceny [use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Konkrétně:  
   
- `fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` určuje způsob seskupení číslic nalevo od všech desetinné čárky  
+ `fac.` [numpunct::Grouping](../standard-library/numpunct-class.md#grouping) `()` určuje způsob seskupení číslic nalevo od všech desetinné čárky  
   
- `fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
   
  Pokud žádné instance `fac.thousands_sep()` ke kterým došlo v číselné vstupní pole, je nevyžaduje žádné omezení seskupení. Jinak, nevyžaduje žádná omezení seskupení `fac.grouping()` prosazují a oddělovačů jsou odebrány, než dojde k převodu kontroly.  
   
@@ -329,7 +332,7 @@ virtual iter_type do_get(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [získat](#get), kde je volána funkce člena virtuální `do_get`.  
   
-##  <a name="get"></a>num_get::Get  
+##  <a name="get"></a>  num_get::Get  
  Extrahuje ze sekvence znaků číselnou nebo logickou hodnotu.  
   
 ```
@@ -447,11 +450,11 @@ iter_type get(
   
  Formát vstupního pole celé číslo je dáno Další [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** volání vráceny [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:  
   
-- **FAC**. [seskupování](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky.  
+- **fac**. [seskupování](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky.  
   
-- **FAC**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
+- **fac**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.  
   
- Pokud žádné instance **fac**. `thousands_sep`ve číselné vstupní pole, je nevyžaduje žádné omezení seskupení. Jinak, nevyžaduje žádná omezení seskupení **fac**. **seskupování** je vynucená a oddělovačů jsou odebrány, než dojde k převodu kontroly.  
+ Pokud žádné instance **fac**. `thousands_sep` ve číselné vstupní pole, je nevyžaduje žádné omezení seskupení. Jinak, nevyžaduje žádná omezení seskupení **fac**. **seskupování** je vynucená a oddělovačů jsou odebrány, než dojde k převodu kontroly.  
   
  Druhý virtuální chráněného člena funkce:  
   
@@ -475,7 +478,7 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```  
   
- Kromě toho, že se pokouší vyhledat dokončení, neprázdná s plovoucí desetinnou čárkou vstupní pole se chová stejně jako první. **FAC**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikátor převod ekvivalentní kontroly je **lf**.  
+ Kromě toho, že se pokouší vyhledat dokončení, neprázdná s plovoucí desetinnou čárkou vstupní pole se chová stejně jako první. **fac**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikátor převod ekvivalentní kontroly je **lf**.  
   
  Čtvrtý chráněného člena virtuální funkce:  
   
@@ -513,7 +516,7 @@ virtual iter_type do_get(iter_type first,
   
  Kromě toho, že se pokouší vyhledat dokončení, neprázdná logické vstupní pole se chová stejně jako první. Pokud úspěšné převede ji logické vstupní pole na hodnotu typu `bool` a uloží tuto hodnotu v `val`.  
   
- Logická hodnota vstupní pole má dvě formy. Pokud **iosbase**. **příznaky** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, s tím rozdílem, že převedená hodnota musí být buď 0 je stejný jako celé číslo vstupní pole (pro  **false**) nebo 1 (pro **true**). Pořadí, jinak hodnota musí odpovídat buď **fac**. [falsename –](../standard-library/numpunct-class.md#falsename) (pro **false**), nebo **fac**. [truename –](../standard-library/numpunct-class.md#truename) (pro **true**).  
+ Logická hodnota vstupní pole má dvě formy. Pokud **iosbase**. **příznaky** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, s tím rozdílem, že převedená hodnota musí být buď 0 je stejný jako celé číslo vstupní pole (pro **false** ) nebo 1 (pro **true**). Pořadí, jinak hodnota musí odpovídat buď **fac**. [falsename –](../standard-library/numpunct-class.md#falsename) (pro **false**), nebo **fac**. [truename –](../standard-library/numpunct-class.md#truename) (pro **true**).  
   
 ### <a name="example"></a>Příklad  
   
@@ -547,7 +550,7 @@ int main( )
 }  
 ```  
   
-##  <a name="iter_type"></a>num_get::iter_type  
+##  <a name="iter_type"></a>  num_get::iter_type  
  Typ, který popisuje vstupní iterátor.  
   
 ```
@@ -557,7 +560,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **InputIterator**.  
   
-##  <a name="num_get"></a>num_get::num_get  
+##  <a name="num_get"></a>  num_get::num_get  
  V konstruktoru pro objekty typu `num_get` , se používají k získání číselné hodnoty z pořadí.  
   
 ```
@@ -575,7 +578,7 @@ explicit num_get(size_t _Refs = 0);
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   

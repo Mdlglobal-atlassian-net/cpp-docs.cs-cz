@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 194c71fda245663e648298af17a6ceb874aef4d5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
 Pokud použijete průvodce příjemcem knihovny ATL technologie OLE DB pro vygenerování příjemce, máte možnost použití šablony technologie OLE DB nebo OLE DB atributů. V obou případech vygeneruje průvodce příkaz třídy a třídy uživatelského záznamu. Příkaz třída obsahuje kód pro otevření zdroje dat a sady řádků, které zadáte v průvodci. Třída záznamu uživatele obsahuje mapu sloupce pro tabulku databáze, kterou jste vybrali. Generovaný kód se ale liší v každém případě:  

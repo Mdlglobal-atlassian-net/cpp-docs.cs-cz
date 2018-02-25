@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _rotr16
 - _rotr8
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a4205131ba5690f24216997fcfd8884077d0d9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 726cee6f898af306b8d0743344228e7d11d344f1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="rotr8-rotr16"></a>_rotr8 _rotr16
-**Konkrétní Microsoft**  
+# <a name="rotr8-rotr16"></a>_rotr8, _rotr16
+**Microsoft Specific**  
   
  Otočte vstupní hodnoty, které mají práva k nejméně významný bit (LSB) zadaný počet pozic bit.  
   
@@ -45,10 +48,10 @@ unsigned short _rotr16(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`value`  
+ [in] `value`  
  Hodnota k otočení.  
   
- [v]`shift`  
+ [in] `shift`  
  Počet bitů otočení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -58,8 +61,8 @@ unsigned short _rotr16(
   
 |Vnitřní funkce|Architektura|  
 |---------------|------------------|  
-|`_rotr8`|x86 ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotr16`|x86 ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr8`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr16`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Soubor hlaviček** \<intrin.h >  
   
@@ -109,5 +112,5 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 **Konkrétní Microsoft END**  
   
 ## <a name="see-also"></a>Viz také  
- [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)   
+ [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)   
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

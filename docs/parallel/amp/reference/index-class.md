@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
 - AMP/Concurrency::index::rank
-dev_langs: C++
-helpviewer_keywords: index structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04a10524a46fe7351b881e436d7aaf422b2a9acb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-class"></a>index – třída
 Definuje *N*-dimenzí index pographics-cpp-amp.md.  
@@ -51,15 +55,15 @@ class index;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[--– operátor](#operator--)|Snižuje každý element `index` objektu.|  
-|[Operator(MOD) =](#operator_mod_eq)|Vypočítá numerického zbytku (zbývající) každý prvek v `index` objektu při dělení čísla daný element.|  
-|[Operator * =](#operator_star_eq)|Vynásobí jednotlivé prvky `index` objekt číslem.|  
+|[operator--](#operator--)|Snižuje každý element `index` objektu.|  
+|[operator(mod)=](#operator_mod_eq)|Vypočítá numerického zbytku (zbývající) každý prvek v `index` objektu při dělení čísla daný element.|  
+|[operator*=](#operator_star_eq)|Vynásobí jednotlivé prvky `index` objekt číslem.|  
 |[/ = – operátor](#operator_div_eq)|Vydělí jednotlivé prvky `index` objekt číslem.|  
-|[index::Operator\[\]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
-|[Operator ++](#operator_add_add)|Zvýší jednotlivé prvky `index` objektu.|  
-|[+= – operátor](#operator_add_eq)|Přidá zadané číslo na jednotlivé prvky `index` objektu.|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` objekt s touto.|  
-|[-= – operátor](#operator_-_eq)|Odečítá od zadané číslo z každý element `index` objektu.|  
+|[index::operator\[\]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
+|[operator++](#operator_add_add)|Zvýší jednotlivé prvky `index` objektu.|  
+|[operator+=](#operator_add_eq)|Přidá zadané číslo na jednotlivé prvky `index` objektu.|  
+|[operator=](#operator_eq)|Zkopíruje obsah zadaného `index` objekt s touto.|  
+|[operator-=](#operator_-_eq)|Odečítá od zadané číslo z každý element `index` objektu.|  
 
   
 ### <a name="public-constants"></a>Veřejné konstanty  
@@ -80,7 +84,7 @@ class index;
  **Namespace:** souběžnosti  
 
 
-## <a name="index_ctor"></a>index – konstruktor
+## <a name="index_ctor">index – konstruktor</a>
 Inicializuje novou instanci třídy index.
 
 ```  
@@ -114,7 +118,7 @@ explicit index(
 
 _Array  
 Jednorozměrné pole s rank hodnotami.  
-POTVRZUJ_I  
+_I  
 Umístění indexu v jednorozměrné indexu.  
 _I0  
 Délka nejvýznamnějších dimenze.  
@@ -125,7 +129,7 @@ Délka nejméně významný dimenze.
 _Other  
 Objekt index, na kterých je založena na nový objekt index.  
 
-## <a name="operator--"></a>--– operátor
+## <a name="operator--"></a>  --– operátor
 Snižuje každý prvek objektu indexu.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -137,7 +141,7 @@ index operator--(
 ### <a name="return-values"></a>Vrácené hodnoty
 Pro operátor předpona objektu indexu (* to). Pro operátor příponu nový objekt v indexu.
 
-## <a name="operator_mod_eq"></a>Operator(MOD) =   
+## <a name="operator_mod_eq"></a>  Operator(MOD) =   
 Vypočítá numerického zbytku (zbývající) každý element v indexu objektu při dělení tohoto prvku zadané číslo.
 
 ```  
@@ -149,7 +153,7 @@ index<_Rank>& operator%=(
 _Rhs číslo rozdělit pomocí zjistit zbytek.
 Vrátí hodnotu objektu indexu.
 
-## <a name="operator_star_eq"></a>Operator * =   
+## <a name="operator_star_eq"></a>  Operator * =   
 Vynásobí každý element v indexu objektu podle zadaného čísla.
 ```
 index<_Rank>& operator*=(
@@ -160,7 +164,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parametry
 _Rhs číslo, které má násobení.
 
-## <a name="operator_div_eq"></a>/ = – operátor 
+## <a name="operator_div_eq">/ = – operátor</a> 
 Vydělí každý element v indexu objektu podle zadaného čísla.
 
 ```
@@ -171,7 +175,7 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Parametry
 _Rhs číslo, které má dělit.
 
-## <a name="operator_at"></a>operátor\[\]  
+## <a name="operator_at"></a>  Operátor\[\]  
 Vrátí komponentu indexu v zadaném umístění.
 
 ```
@@ -200,7 +204,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>Operator ++   
+## <a name="operator_add_add"></a>  Operator ++   
 Zvýší každý prvek objektu indexu.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -212,7 +216,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>Návratová hodnota
 Pro operátor předpona objektu indexu (* to). Pro operátor příponu nový objekt v indexu.
 
-## <a name="operator_add_eq"></a>+= – operátor   
+## <a name="operator_add_eq"></a>  += – operátor   
 Přidá zadané číslo na každý element objektu indexu.
 ```  
 index<_Rank>& operator+=(
@@ -229,7 +233,7 @@ _Rhs číslo, které chcete přidat.
 ### <a name="return-value"></a>Návratová hodnota
 Index objektu.
 
-## <a name="operator_eq"></a>operátor =   
+## <a name="operator_eq"></a>  operátor =   
 S touto zkopíruje obsah objektu zadaného indexu.
 ```  
 index<_Rank>& operator=(
@@ -242,7 +246,7 @@ _Other index objekt, který chcete zkopírovat z.
 ### <a name="return-value"></a>Návratová hodnota
 Odkaz na tento objekt v indexu.
 
-## <a name="operator_-_eq"></a>-= – operátor
+## <a name="operator_-_eq"></a>  -= – operátor
 Odečítá od zadané číslo z každého prvku objektu indexu.
 ```  
 index<_Rank>& operator-=(
@@ -259,7 +263,7 @@ _Rhs číslo, které má být odečtena.
 ### <a name="return-value"></a>Návratová hodnota
 Index objektu.   
 
-## <a name="rank"></a>Pořadí  
+## <a name="rank"></a>  Pořadí  
   Získá pořadí objektu indexu.
 ```
 static const int rank = _Rank;

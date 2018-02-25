@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets, getting OLE DB provider metadata
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1509bb4bd083331c36c3b699b4716945e4573d1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 V některých případech budete muset získat informace o zprostředkovateli, řádků, tabulky, sloupce nebo Další informace o databázi bez otevření sady řádků. Data o struktuře databáze se nazývá metadata a můžete si ho načíst několik různých metod. Jednou z možností je použití sad řádků schématu.  
@@ -52,7 +54,7 @@ V některých případech budete muset získat informace o zprostředkovateli, �
 SELECT * FROM authors where l_name = 'pivo'  
 ```  
   
- `l_name`je však omezení. To je velmi jednoduchý příklad s pouze jedním z omezení; třídy sady řádků schématu podporují několik omezení.  
+ `l_name` je však omezení. To je velmi jednoduchý příklad s pouze jedním z omezení; třídy sady řádků schématu podporují několik omezení.  
   
  [Typedef třídy sady řádků schématu](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) zapouzdřují všechny sady řádků schématu OLE DB, abyste vytváření instancí a otevřením dostanete sada řádků schématu stejně jako ostatní sady řádků. Například třída typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) je definován jako:  
   

@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - strstream/std::ostrstream::freeze
 - strstream/std::ostrstream::pcount
 - strstream/std::ostrstream::rdbuf
 - strstream/std::ostrstream::str
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ostrstream [C++], freeze
 - std::ostrstream [C++], pcount
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33dfff06bdc9cd9005cb2fe8e04a3f8447cf1edc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93407ae291956c53e4e105b1ffaf0d4eaf85f7b3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ostrstream-class"></a>ostrstream – třída
 Popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [strstreambuf](../standard-library/strstreambuf-class.md).  
@@ -49,23 +52,23 @@ class ostrstream : public ostream
   
 |||  
 |-|-|  
-|[ostrstream –](#ostrstream)|Vytvoří objekt typu `ostrstream`.|  
+|[ostrstream](#ostrstream)|Vytvoří objekt typu `ostrstream`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.|  
+|[Zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.|  
 |[pcount –](#pcount)|Vrátí počet prvků zapsána do řízené sekvenci.|  
-|[rdbuf –](#rdbuf)|Vrátí přidruženému ukazatel na datový proud `strstreambuf` objektu.|  
-|[str –](#str)|Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
+|[rdbuf](#rdbuf)|Vrátí přidruženému ukazatel na datový proud `strstreambuf` objektu.|  
+|[str](#str)|Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<strstream – >  
   
  **Namespace:** – std  
   
-##  <a name="freeze"></a>ostrstream::freeze  
+##  <a name="freeze"></a>  ostrstream::freeze  
  Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.  
   
 ```
@@ -82,7 +85,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="example"></a>Příklad  
   V tématu [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) pro příklad, který používá **freeze**.  
   
-##  <a name="ostrstream"></a>ostrstream::ostrstream  
+##  <a name="ostrstream"></a>  ostrstream::ostrstream  
  Vytvoří objekt typu `ostrstream`.  
   
 ```
@@ -110,7 +113,7 @@ ostrstream(char* ptr,
   
 -   V opačném `ptr` musí určit první prvek pole počet elementů obsahující řetězec C jejichž první prvek je určen podle `ptr`a volá konstruktor `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
   
-##  <a name="pcount"></a>ostrstream::pcount  
+##  <a name="pcount"></a>  ostrstream::pcount  
  Vrátí počet prvků zapsána do řízené sekvenci.  
   
 ```
@@ -126,7 +129,7 @@ streamsize pcount() const;
 ### <a name="example"></a>Příklad  
   V tématu [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) příklad, který používá `pcount`.  
   
-##  <a name="rdbuf"></a>ostrstream::rdbuf  
+##  <a name="rdbuf"></a>  ostrstream::rdbuf  
  Vrátí ukazatel datový proud přidružený strstreambuf objektu.  
   
 ```
@@ -142,7 +145,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Příklad  
   V tématu [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) příklad, který používá `rdbuf`.  
   
-##  <a name="str"></a>ostrstream::str  
+##  <a name="str"></a>  ostrstream::str  
  Volání [freeze](../standard-library/strstreambuf-class.md#freeze)a vrátí ukazatel na začátek řízené sekvenci.  
   
 ```

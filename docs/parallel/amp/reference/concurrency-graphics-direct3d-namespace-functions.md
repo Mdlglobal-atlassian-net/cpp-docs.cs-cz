@@ -5,32 +5,34 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funkce Concurrency::Graphics:: Direct3D – obor názvů
 ||||  
 |-|-|-|  
-|[get_sampler –](#get_sampler)|[get_texture –](#get_texture)|[make_sampler –](#make_sampler)|  
-|[make_texture –](#make_texture)|[msad4 –](#msad4)|  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler –  
+##  <a name="get_sampler"></a>  get_sampler –  
  Get rozhraní D3D sampler stavu na danou akcelerátoru zobrazit tento představuje sampler zadaný objekt.  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní IUnknown odpovídající stav sampler D3D, který představuje daný sampler.  
   
-##  <a name="get_texture"></a>get_texture –  
+##  <a name="get_texture"></a>  get_texture –  
  Získá rozhraní texture Direct3D – základní zadaný [texture](texture-class.md) objektu.  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní IUnknown odpovídající texture Direct3D – základní textury.  
   
-##  <a name="make_sampler"></a>make_sampler –  
+##  <a name="make_sampler"></a>  make_sampler –  
  Vytvoření sampler z ukazatel D3D sampler stavu rozhraní.  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Sampler představuje zadaný stav sampler D3D.  
   
-##  <a name="make_texture"></a>make_texture –  
+##  <a name="make_texture"></a>  make_texture –  
  Vytvoří [texture](texture-class.md) objektu s použitím zadaných parametrů.  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Návratová hodnota  
  Texture, pomocí zadané texture D3D.  
   
-##  <a name="msad4"></a>msad4 –  
+##  <a name="msad4"></a>  msad4  
  Porovná 4bajtový referenční hodnotu a hodnotu 8bajtový zdroje a shromažďuje vektor 4 součtů. Každý součet odpovídá maskované součet různých bajtů zarovnání absolutní rozdíly mezi hodnota odkazu a zdrojové hodnoty.  
   
 ```  

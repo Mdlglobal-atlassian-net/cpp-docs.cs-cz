@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource – struktura
 Abstrakci pro vlákno hardwaru.  
@@ -44,7 +48,7 @@ struct IExecutionResource;
 |Název|Popis|  
 |----------|-----------------|  
 |[Iexecutionresource::currentsubscriptionlevel –](#currentsubscriptionlevel)|Vrátí počet virtuálních procesorů aktivovaný kořeny a odběru externí vláken aktuálně přidružen základní hardware vlákno, které představuje tohoto provádění prostředku.|  
-|[Iexecutionresource::getexecutionresourceid –](#getexecutionresourceid)|Vrací jedinečný identifikátor podprocesu hardwaru, který představuje tuto provádění prostředku.|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Vrací jedinečný identifikátor podprocesu hardwaru, který představuje tuto provádění prostředku.|  
 |[Iexecutionresource::getnodeid –](#getnodeid)|Vrací jedinečný identifikátor procesoru uzlu, který patří tohoto provádění prostředku.|  
 |[Iexecutionresource::Remove –](#remove)|Vrátí tohoto provádění prostředku Resource Manager.|  
   
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **Namespace:** souběžnosti  
   
-##  <a name="currentsubscriptionlevel"></a>Iexecutionresource::currentsubscriptionlevel – metoda  
+##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource::currentsubscriptionlevel – metoda  
  Vrátí počet virtuálních procesorů aktivovaný kořeny a odběru externí vláken aktuálně přidružen základní hardware vlákno, které představuje tohoto provádění prostředku.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Správce prostředků používá jako jeden ze způsobů, jak ve kterém k určení, kdy chcete přesunout prostředky mezi plánovače úrovně informace o předplatném.  
   
-##  <a name="getexecutionresourceid"></a>Iexecutionresource::getexecutionresourceid – metoda  
+##  <a name="getexecutionresourceid"></a>  Iexecutionresource::getexecutionresourceid – metoda  
  Vrací jedinečný identifikátor podprocesu hardwaru, který představuje tuto provádění prostředku.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Poznámky  
  Každé vlákno hardwaru je přiřazena službou Concurrency Runtime jedinečný identifikátor. Pokud jsou více provádění prostředky související hardwarové přístup z více vláken, bude mít stejný identifikátor provádění prostředku.  
   
-##  <a name="getnodeid"></a>Iexecutionresource::getnodeid – metoda  
+##  <a name="getnodeid"></a>  Iexecutionresource::getnodeid – metoda  
  Vrací jedinečný identifikátor procesoru uzlu, který patří tohoto provádění prostředku.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Počet uzlů můžete získat z funkce [getprocessornodecount –](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>Iexecutionresource::Remove – metoda  
+##  <a name="remove"></a>  Iexecutionresource::Remove – metoda  
  Vrátí tohoto provádění prostředku Resource Manager.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  Kořeny virtuálních procesorů, mohou být vráceny Resource Manager vyvoláním `Remove` metoda, protože rozhraní `IVirtualProcessorRoot` dědí z `IExecutionResource` rozhraní. Budete muset vrátit kořenové virtuálních procesorů, buď v reakci na volání [ischeduler::removevirtualprocessors –](ischeduler-structure.md#removevirtualprocessors) metoda, nebo když jste hotovi s kořenem oversubscribed virtuálních procesorů jste získali z [ Ischedulerproxy::createoversubscriber –](ischedulerproxy-structure.md#createoversubscriber) metoda. Pro kořeny virtuálních procesorů, neexistují žádná omezení ve vlákně, které můžete vyvolat `Remove` metoda.  
   
- `invalid_argument`je vyvolána, pokud parametr `pScheduler` je nastaven na `NULL`.  
+ `invalid_argument` je vyvolána, pokud parametr `pScheduler` je nastaven na `NULL`.  
   
- `invalid_operation`je vyvolána, pokud parametr `pScheduler` se liší od Plánovač tohoto provádění prostředku byl vytvořený pro, nebo s samostatné provádění prostředku, pokud aktuální vlákno se liší od vlákno vytvořený odběr přístup z více vláken.  
+ `invalid_operation` je vyvolána, pokud parametr `pScheduler` se liší od Plánovač tohoto provádění prostředku byl vytvořený pro, nebo s samostatné provádění prostředku, pokud aktuální vlákno se liší od vlákno vytvořený odběr přístup z více vláken.  
   
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   

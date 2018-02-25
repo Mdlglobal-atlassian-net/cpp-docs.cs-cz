@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2b9fe0472654a0c7a04f523138418e8ef2c33dfd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="chrono-literals"></a>literály typu chrono
 (C ++ 14) \<Typu chrono > záhlaví definuje 12 [uživateli definované literály](../cpp/user-defined-literals-cpp.md) usnadňuje pomocí literály, které představují hodiny, minuty, sekundy, milisekundách, mikrosekundách a nanosekundách. Každé uživatelské literál má integrální hodnotu a s plovoucí desetinnou čárkou přetížení. Literály jsou definovány v oboru názvů vloženého literals::chrono_literals, která je uvedena do oboru automaticky po std::chrono v oboru.  
@@ -86,5 +89,5 @@ constexpr auto my_duration_unit = 108ms;
  **Namespace**: std::literals::chrono_literals  
   
 ## <a name="see-also"></a>Viz také  
- [\<typu chrono >](../standard-library/chrono.md)
+ [\<chrono>](../standard-library/chrono.md)
 

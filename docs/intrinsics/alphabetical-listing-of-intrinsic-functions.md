@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřní funkce
 Následující části popisují specifické pro společnost Microsoft vnitřní funkce dostupné na některé nebo všechny architektury. Jiné podporované – vnitřní prvky jsou zdokumentovat výrobci procesorů, buď v hlavičkových souborů nebo na svých webech. Najdete v článku [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md), [x86 vnitřní funkce](../intrinsics/x86-intrinsics-list.md), a [x64 – vnitřní prvky](../intrinsics/x64-amd64-intrinsics-list.md) oddíly pro odkazy na dokumentaci výrobce. Funkce C Runtime Library (CRT), které mají vnitřní funkce je implementována nejsou uvedeny zde; Tyto funkce jsou dokumentovány v článku [referenční dokumentace knihoven C Run-Time](../c-runtime-library/c-run-time-library-reference.md).  

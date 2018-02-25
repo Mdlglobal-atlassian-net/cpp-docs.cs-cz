@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - records, user
 - OLE DB providers, user record
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 587f10c14a360d2c5bbf447d13a161f985edf5b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbb073aceaff855de700eae6d8aede148f9b8bcc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-record"></a>Uživatelský záznam
 Záznamu uživatele obsahuje strukturu kód a data, která představuje data ve sloupci pro sadu řádků. Uživatelský záznam lze vytvořit v době kompilace nebo za běhu. Při vytváření zprostředkovatele pomocí Průvodce zprostředkovatele OLE DB ATL průvodce vytvoří výchozí záznam uživatele, který bude vypadat takto (za předpokladu, že jste zadali název zprostředkovatele [krátký název] "MyProvider"):  

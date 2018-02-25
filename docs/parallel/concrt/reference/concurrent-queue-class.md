@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_queue
 - CONCURRENT_QUEUE/concurrency::concurrent_queue
@@ -19,19 +20,22 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs: C++
-helpviewer_keywords: concurrent_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue – třída
 `concurrent_queue` Třída je pořadí kontejneru třídu, která umožňuje first in, první ven přístup k jeho elementy. Umožňuje omezenou sadu souběžnosti bezpečných operace, jako například `push` a `try_pop`.  
@@ -70,20 +74,20 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Název|Popis|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|Přetíženo. Vytvoří souběžných fronty.|  
-|[~ concurrent_queue – destruktor](#dtor)|Zničí souběžných fronty.|  
+|[~concurrent_queue Destructor](#dtor)|Zničí souběžných fronty.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Vymazat](#clear)|Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.|  
+|[clear](#clear)|Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.|  
 |[prázdný](#empty)|Testy, pokud v tuto chvíli je souběžných fronta prázdná tato metoda je volána. Tato metoda je bezpečné souběžnosti.|  
-|[get_allocator –](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných fronty. Tato metoda je bezpečné souběžnosti.|  
+|[get_allocator](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných fronty. Tato metoda je bezpečné souběžnosti.|  
 |[push](#push)|Přetíženo. Enqueues položku na konci tail souběžných fronty. Tato metoda je bezpečné souběžnosti.|  
-|[try_pop –](#try_pop)|Pokud je k dispozici, dequeues položky z fronty. Tato metoda je bezpečné souběžnosti.|  
-|[unsafe_begin –](#unsafe_begin)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
-|[unsafe_end –](#unsafe_end)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
-|[unsafe_size –](#unsafe_size)|Vrátí počet položek ve frontě. Tato metoda není bezpečná souběžnosti.|  
+|[try_pop](#try_pop)|Pokud je k dispozici, dequeues položky z fronty. Tato metoda je bezpečné souběžnosti.|  
+|[unsafe_begin](#unsafe_begin)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
+|[unsafe_end](#unsafe_end)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných fronty. Tato metoda není bezpečná souběžnosti.|  
+|[unsafe_size](#unsafe_size)|Vrátí počet položek ve frontě. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -96,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** souběžnosti  
   
-##  <a name="clear"></a>Vymazat 
+##  <a name="clear"></a> Zrušte zaškrtnutí 
 
  Vymaže souběžných fronty zničení všechny aktuálně zařazených do fronty elementy. Tato metoda není bezpečná souběžnosti.  
   
@@ -104,7 +108,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a> concurrent_queue 
 
  Vytvoří souběžných fronty.  
   
@@ -152,7 +156,7 @@ concurrent_queue(_InputIterator _Begin,
   
  Čtvrtý konstruktor určuje poskytl iterator rozsah hodnot [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_queue 
+##  <a name="dtor"></a> ~concurrent_queue 
 
  Zničí souběžných fronty.  
   
@@ -160,7 +164,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="empty"></a>prázdný 
+##  <a name="empty">prázdný</a> 
 
  Testy, pokud v tuto chvíli je souběžných fronta prázdná tato metoda je volána. Tato metoda je bezpečné souběžnosti.  
   
@@ -169,12 +173,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud v tuto chvíli jsme hledá, byla prázdná souběžných fronty `false` jinak.  
+ `true` Pokud v tuto chvíli jsme hledá, byla prázdná souběžných fronty `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Když tato metoda je souběžnosti bezpečných s ohledem na volání metod `push`, `try_pop`, a `empty`, hodnota vrácená můžou být nesprávné doby se prozkoumá volající vlákno.  
   
-##  <a name="get_allocator"></a>get_allocator – 
+##  <a name="get_allocator"></a> get_allocator – 
 
  Vrátí kopii allocator použitý k vytvoření souběžných fronty. Tato metoda je bezpečné souběžnosti.  
   
@@ -185,7 +189,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Kopie allocator použitý k vytvoření souběžných fronty.  
   
-##  <a name="push"></a>push 
+##  <a name="push"></a> Push 
 
  Enqueues položku na konci tail souběžných fronty. Tato metoda je bezpečné souběžnosti.  
   
@@ -200,9 +204,9 @@ void push(T&& _Src);
  Položka, která má být přidán do fronty.  
   
 ### <a name="remarks"></a>Poznámky  
- `push`je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
+ `push` je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
   
-##  <a name="try_pop"></a>try_pop – 
+##  <a name="try_pop"></a> try_pop – 
 
  Pokud je k dispozici, dequeues položky z fronty. Tato metoda je bezpečné souběžnosti.  
   
@@ -215,14 +219,14 @@ bool try_pop(T& _Dest);
  Odkaz na umístění pro uložení dequeued položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud byla položka úspěšně dequeued `false` jinak.  
+ `true` Pokud byla položka úspěšně dequeued `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud byla položka úspěšně dequeued parametr `_Dest` obdrží dequeued hodnota zničena původní hodnotu do fronty, a vrátí tato funkce `true`. Pokud se žádná položka vyřazení z fronty, funkce vrátí hodnotu `false` bez blokování a obsah `_Dest` parametr nejsou definovány.  
   
- `try_pop`je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
+ `try_pop` je bezpečné souběžnosti s ohledem na volání metod `push`, `try_pop`, a `empty`.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin – 
+##  <a name="unsafe_begin"></a> unsafe_begin – 
 
  Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných fronty. Tato metoda není bezpečná souběžnosti.  
   
@@ -238,7 +242,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Poznámky  
  Iterátory pro `concurrent_queue` třídy jsou primárně určený pro ladění, jako jsou pomalé a iterace není bezpečné souběžnosti s ohledem na jiné operace fronty.  
   
-##  <a name="unsafe_end"></a>unsafe_end – 
+##  <a name="unsafe_end"></a> unsafe_end – 
 
  Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných fronty. Tato metoda není bezpečná souběžnosti.  
   
@@ -254,7 +258,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Poznámky  
  Iterátory pro `concurrent_queue` třídy jsou primárně určený pro ladění, jako jsou pomalé a iterace není bezpečné souběžnosti s ohledem na jiné operace fronty.  
   
-##  <a name="unsafe_size"></a>unsafe_size – 
+##  <a name="unsafe_size"></a> unsafe_size – 
 
  Vrátí počet položek ve frontě. Tato metoda není bezpečná souběžnosti.  
   
@@ -266,7 +270,7 @@ size_type unsafe_size() const;
  Velikost souběžných fronty.  
   
 ### <a name="remarks"></a>Poznámky  
- `unsafe_size`není bezpečné souběžného zpracování a může způsobit nesprávné výsledky, pokud volána souběžně volání metod `push`, `try_pop`, a `empty`.  
+ `unsafe_size` není bezpečné souběžného zpracování a může způsobit nesprávné výsledky, pokud volána souběžně volání metod `push`, `try_pop`, a `empty`.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

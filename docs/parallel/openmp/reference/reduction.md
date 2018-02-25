@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: reduction
-dev_langs: C++
-helpviewer_keywords: reduction OpenMP clause
+ms.topic: reference
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reduction"></a>reduction
 Určuje, že jeden nebo více proměnných, které jsou soukromé pro každé vlákno jsou předmětem snížení operaci na konci paralelní oblast.  
@@ -41,13 +46,13 @@ reduction(operation:var)
  Jeden další proměnné, na které se má provést skalární snížení. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
   
 ## <a name="remarks"></a>Poznámky  
- `reduction`platí pro následující direktivy:  
+ `reduction` platí pro následující direktivy:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
   
  Další informace najdete v tématu [2.7.2.6 snížení](../../../parallel/openmp/2-7-2-6-reduction.md).  
   

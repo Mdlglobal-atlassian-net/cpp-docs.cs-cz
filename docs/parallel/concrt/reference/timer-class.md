@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - timer
 - AGENTS/concurrency::timer
@@ -21,19 +22,22 @@ f1_keywords:
 - AGENTS/concurrency::timer::release_message
 - AGENTS/concurrency::timer::reserve_message
 - AGENTS/concurrency::timer::resume_propagation
-dev_langs: C++
-helpviewer_keywords: timer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ffc58ce0354b4a3226db82a95d5c0b4cc7bc09f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timer-class"></a>Třída timer
 A `timer` zasílání zpráv blok je jeden cíl `source_block` může odeslat zprávu k cíli po uplynutí zadané časové období má nebo v určitých intervalech.  
@@ -55,28 +59,28 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |Název|Popis|  
 |----------|-----------------|  
-|[časovač](#ctor)|Přetíženo. Vytvoří `timer` zasílání zpráv blok, který bude platit danou zprávou po určité době.|  
-|[~ timer – destruktor](#dtor)|Zničí `timer` zasílání zpráv bloku.|  
+|[timer](#ctor)|Přetíženo. Vytvoří `timer` zasílání zpráv blok, který bude platit danou zprávou po určité době.|  
+|[~timer Destructor](#dtor)|Zničí `timer` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[pozastavení](#pause)|Zastaví `timer` zasílání zpráv bloku. Pokud je s opakováním `timer` zasílání zpráv na úrovni bloku, může být restartován následné `start()` volání. Pro bez opakování časovače, výsledkem je stejné jako `stop` volání.|  
-|[spuštění](#start)|Spustí `timer` zasílání zpráv bloku. Zadaný počet milisekund, po této je volána, se rozšíří zadanou hodnotu jako podřízené `message`.|  
-|[Stop](#stop)|Zastaví `timer` zasílání zpráv bloku.|  
+|[pause](#pause)|Zastaví `timer` zasílání zpráv bloku. Pokud je s opakováním `timer` zasílání zpráv na úrovni bloku, může být restartován následné `start()` volání. Pro bez opakování časovače, výsledkem je stejné jako `stop` volání.|  
+|[start](#start)|Spustí `timer` zasílání zpráv bloku. Zadaný počet milisekund, po této je volána, se rozšíří zadanou hodnotu jako podřízené `message`.|  
+|[stop](#stop)|Zastaví `timer` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept_message –](#accept_message)|Přijme zprávu, která byla nabízí to `timer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
-|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `timer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
-|[link_target_notification –](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `timer` zasílání zpráv bloku.|  
-|[propagate_to_any_targets –](#propagate_to_any_targets)|Pokusí se nabízejí zprávu, kterou zobrazí `timer` blok k všechny propojené cíle.|  
-|[release_message –](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
-|[reserve_message –](#reserve_message)|Rezervuje zprávu dříve nabízí to `timer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
-|[resume_propagation –](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `timer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
+|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `timer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
+|[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `timer` zasílání zpráv bloku.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Pokusí se nabízejí zprávu, kterou zobrazí `timer` blok k všechny propojené cíle.|  
+|[release_message](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `timer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -93,7 +97,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  **Namespace:** souběžnosti  
   
-##  <a name="accept_message"></a>accept_message – 
+##  <a name="accept_message"></a> accept_message – 
 
  Přijme zprávu, která byla nabízí to `timer` bloku zasílání zpráv, přenos vlastnictví volajícímu.  
   
@@ -108,7 +112,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `message` objektu volající má nyní vlastnictví.  
   
-##  <a name="consume_message"></a>consume_message – 
+##  <a name="consume_message"></a> consume_message – 
 
  Využívá dříve nabízené zprávy `timer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.  
   
@@ -126,7 +130,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Podobně jako `accept`, ale je vždy před voláním `reserve`.  
   
-##  <a name="link_target_notification"></a>link_target_notification – 
+##  <a name="link_target_notification"></a> link_target_notification – 
 
  Zpětné volání, které oznamuje, že nová cílová souvisel s to `timer` zasílání zpráv bloku.  
   
@@ -138,7 +142,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ukazatel na nově propojené cíl.  
   
-##  <a name="pause"></a>pozastavení 
+##  <a name="pause"></a> Pozastavení 
 
  Zastaví `timer` zasílání zpráv bloku. Pokud je s opakováním `timer` zasílání zpráv na úrovni bloku, může být restartován následné `start()` volání. Pro bez opakování časovače, výsledkem je stejné jako `stop` volání.  
   
@@ -146,7 +150,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets – 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets – 
 
  Pokusí se nabízejí zprávu, kterou zobrazí `timer` blok k všechny propojené cíle.  
   
@@ -154,7 +158,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```  
   
-##  <a name="release_message"></a>release_message – 
+##  <a name="release_message"></a> release_message – 
 
  Uvolní předchozí zpráva rezervace.  
   
@@ -166,7 +170,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` objektu vydán.  
   
-##  <a name="reserve_message"></a>reserve_message – 
+##  <a name="reserve_message"></a> reserve_message – 
 
  Rezervuje zprávu dříve nabízí to `timer` zasílání zpráv bloku.  
   
@@ -179,12 +183,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z `message` objektu je vyhrazena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a>resume_propagation – 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -192,7 +196,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="start"></a>spuštění 
+##  <a name="start"></a> Spuštění 
 
  Spustí `timer` zasílání zpráv bloku. Zadaný počet milisekund, po této je volána, se rozšíří zadanou hodnotu jako podřízené `message`.  
   
@@ -200,7 +204,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="stop"></a>Stop 
+##  <a name="stop"></a> Stop 
 
  Zastaví `timer` zasílání zpráv bloku.  
   
@@ -208,7 +212,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="ctor"></a>časovač 
+##  <a name="ctor"></a> Časovač 
 
  Vytvoří `timer` zasílání zpráv blok, který bude platit danou zprávou po určité době.  
   
@@ -256,7 +260,7 @@ timer(
 ### <a name="remarks"></a>Poznámky  
  Modul runtime používá výchozí plánovač, pokud není zadán `_Scheduler` nebo `_ScheduleGroup` parametry.  
   
-##  <a name="dtor"></a>~ timer 
+##  <a name="dtor"></a> ~ timer 
 
  Zničí `timer` zasílání zpráv bloku.  
   

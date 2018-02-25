@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29e82458f56c9b1f321f7a82afeb6f041be27854
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50911440acbc7514b091a439d42bf73ee60353f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="receiving-notifications"></a>Příjem oznámení
 OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k události. Tyto možnosti jsou popsány v [oznámení objektu technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) v *referenční příručka programátora technologie OLE DB*. Nastavení těchto událostí používá standardní mechanismus COM spojovacího bodu. Například ATL objekt, který chce načíst události prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` seznamu odvozených tříd a přes vystavení **COM_INTERFACE_ENTRY** makro.  

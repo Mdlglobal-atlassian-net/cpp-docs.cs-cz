@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator
 - memory/std::allocator::const_pointer
@@ -23,7 +24,8 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 05a0ac72a689c0f82db1bb4d18169542c0df4bc9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocator-class"></a>allocator – třída
 Šablony třídy popisuje objekt, který spravuje přidělení úložiště a uvolnění pro pole objektů typu **typu**. Třída objektu **allocator** je objekt allocator výchozí zadaný v konstruktorech pro několik tříd šablon kontejner ve standardní knihovně C++.  
@@ -63,7 +66,7 @@ class allocator
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Typ objektu, pro kterou se úložiště přidělené nebo navrácena.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -99,38 +102,38 @@ class allocator
   
 |||  
 |-|-|  
-|[const_pointer –](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|  
-|[const_reference –](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|  
-|[difference_type –](#difference_type)|Integrální typ se znaménkem představující rozdíl mezi hodnotami ukazatelé na typ objektu spravovaného pomocí přidělujícího modulu.|  
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|  
-|[referenční dokumentace](#reference)|Typ, který obsahuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|  
-|[size_type –](#size_type)|Typu bez znaménka integrální, představující Délka libovolného pořadí, které objekt třídy šablony `allocator` můžete přidělit.|  
+|[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|  
+|[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|  
+|[difference_type](#difference_type)|Integrální typ se znaménkem představující rozdíl mezi hodnotami ukazatelé na typ objektu spravovaného pomocí přidělujícího modulu.|  
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|  
+|[reference](#reference)|Typ, který obsahuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|  
+|[size_type](#size_type)|Typu bez znaménka integrální, představující Délka libovolného pořadí, které objekt třídy šablony `allocator` můžete přidělit.|  
 |[value_type](#value_type)|Typ, který je spravován pomocí přidělujícího modulu.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[Adresa](#address)|Vyhledá objekt, jehož hodnota je zadána adresa.|  
+|[address](#address)|Vyhledá objekt, jehož hodnota je zadána adresa.|  
 |[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|  
-|[konstrukce](#construct)|Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|  
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
+|[construct](#construct)|Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|  
+|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[Destroy –](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uloží objekt.|  
-|[max_size –](#max_size)|Vrátí počet prvků typu `Type` které by mohly být přiděleny v objektu třídy `allocator` před použitím volné paměti.|  
+|[max_size](#max_size)|Vrátí počet prvků typu `Type` které by mohly být přiděleny v objektu třídy `allocator` před použitím volné paměti.|  
 |[rebind](#rebind)|Struktura, která umožňuje přidělení pro objekty jednoho typu se přidělit úložiště pro objekty jiného typu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Přiřadí jeden `allocator` objektu na jiný `allocator` objektu.|  
+|[operator=](#op_eq)|Přiřadí jeden `allocator` objektu na jiný `allocator` objektu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<paměti >  
   
  **Namespace:** – std  
   
-##  <a name="address"></a>Allocator::Address  
+##  <a name="address"></a>  Allocator::Address  
  Vyhledá objekt, jehož hodnota je zadána adresa.  
   
 ```  
@@ -192,7 +195,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.  
 ```  
   
-##  <a name="allocate"></a>Allocator::allocate  
+##  <a name="allocate"></a>  Allocator::allocate  
  Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.  
   
 ```  
@@ -248,7 +251,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-##  <a name="allocator"></a>Allocator::Allocator  
+##  <a name="allocator"></a>  Allocator::Allocator  
  Konstruktory slouží k vytvoření přidělování objektů.  
   
 ```  
@@ -328,7 +331,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-##  <a name="const_pointer"></a>Allocator::const_pointer  
+##  <a name="const_pointer"></a>  Allocator::const_pointer  
  Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.  
   
 ```  
@@ -381,7 +384,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.  
 ```  
   
-##  <a name="const_reference"></a>Allocator::const_reference  
+##  <a name="const_reference"></a>  Allocator::const_reference  
  Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.  
   
 ```  
@@ -445,7 +448,7 @@ The value of the element referred to by vcref,
  after nofication through its nonconst iterator, is: 175.  
 ```  
   
-##  <a name="construct"></a>Allocator::Construct  
+##  <a name="construct"></a>  Allocator::Construct  
  Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.  
   
 ```  
@@ -514,7 +517,7 @@ The modified vector v1 is:
  ( 3 7 9 12 15 18 21 ).  
 ```  
   
-##  <a name="deallocate"></a>Allocator::deallocate  
+##  <a name="deallocate"></a>  Allocator::deallocate  
  Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.  
   
 ```  
@@ -529,12 +532,12 @@ void deallocate(pointer ptr, size_type count);
  Počet objektů, které chcete být navrácena z úložiště.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce uvolní úložiště pro pole počet objektů typu **typ** začínající na `ptr`, voláním `operator delete(ptr)`. Ukazatele `ptr` musí byly vráceny dříve voláním [přidělit](#allocate) allocator objektu, který porovnává rovna  **\*to**, přidělování objekt pole stejnou velikost a typ. `deallocate`nikdy vyvolá výjimku.  
+ Členská funkce uvolní úložiště pro pole počet objektů typu **typ** začínající na `ptr`, voláním `operator delete(ptr)`. Ukazatele `ptr` musí byly vráceny dříve voláním [přidělit](#allocate) allocator objektu, který porovnává rovna  **\*to**, přidělování objekt pole stejnou velikost a typ. `deallocate` nikdy vyvolá výjimku.  
   
 ### <a name="example"></a>Příklad  
   Příklad použití – členská funkce, naleznete v části [allocator::allocate](#allocate).  
   
-##  <a name="destroy"></a>Allocator::Destroy  
+##  <a name="destroy"></a>  Allocator::Destroy  
  Volá destruktor objekty bez rušení přidělení paměti uloží objekt.  
   
 ```  
@@ -597,7 +600,7 @@ The modified vector v1 is:
  ( 2 4 6 8 10 -99 14 ).  
 ```  
   
-##  <a name="difference_type"></a>Allocator::difference_type  
+##  <a name="difference_type"></a>  Allocator::difference_type  
  Integrální typ se znaménkem představující rozdíl mezi hodnotami ukazatelé na typ objektu spravovaného pomocí přidělujícího modulu.  
   
 ```  
@@ -656,7 +659,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.  
 ```  
   
-##  <a name="max_size"></a>Allocator::max_size  
+##  <a name="max_size"></a>  Allocator::max_size  
  Vrátí počet prvků typu **typ** které by mohly být přiděleny v objektu allocator – třída před použitím volné paměti.  
   
 ```  
@@ -723,7 +726,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>Allocator::Operator =  
+##  <a name="op_eq"></a>  Allocator::Operator =  
  Jeden objekt allocator přiřadí k jinému objektu přidělení.  
   
 ```  
@@ -782,7 +785,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>Allocator::Pointer  
+##  <a name="pointer"></a>  Allocator::Pointer  
  Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.  
   
 ```  
@@ -835,13 +838,13 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.  
 ```  
   
-##  <a name="rebind"></a>Allocator::rebind  
+##  <a name="rebind"></a>  Allocator::rebind  
  Struktura, která umožňuje přidělení pro objekty jednoho typu se přidělit úložiště pro objekty jiného typu.  
 ```  
 struct rebind {    typedef allocator<_Other> other ;    };  
 ```  
 ### <a name="parameters"></a>Parametry  
- *Další*  
+ *other*  
  Typ elementu, pro kterou se přidělí paměť.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -886,7 +889,7 @@ int main( )
 }  
 ```  
   
-##  <a name="reference"></a>Allocator::Reference  
+##  <a name="reference"></a>  Allocator::Reference  
  Typ, který obsahuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.  
   
 ```  
@@ -944,7 +947,7 @@ The value of the element referred to by vref is: 100,
 The element referred to by vref after being modified is: 150.  
 ```  
   
-##  <a name="size_type"></a>Allocator::size_type  
+##  <a name="size_type"></a>  Allocator::size_type  
  Nepodepsaných integrálních typ, který může představovat délka žádné pořadí, které můžete přidělit objekt allocator – třída šablony.  
   
 ```  
@@ -988,7 +991,7 @@ int main( )
 }  
 ```  
   
-##  <a name="value_type"></a>Allocator::value_type  
+##  <a name="value_type"></a>  Allocator::value_type  
  Typ, který je spravován pomocí přidělujícího modulu.  
   
 ```  

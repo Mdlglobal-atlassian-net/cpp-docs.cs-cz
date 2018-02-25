@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - strstream/std::strstreambuf::freeze
 - strstream/std::strstreambuf::overflow
@@ -16,7 +17,8 @@ f1_keywords:
 - strstream/std::strstreambuf::seekpos
 - strstream/std::strstreambuf::str
 - strstream/std::strstreambuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::strstreambuf [C++], freeze
 - std::strstreambuf [C++], overflow
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cb7d7c601ab2750e01202bba7dbefcb05673a025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 702d5bfa1b01f0207b0745cec030723b25fcfe6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="strstreambuf-class"></a>strstreambuf – třída
 Popisuje datový proud vyrovnávací paměť, která řídí přenos elementů do a z pořadí prvků, které jsou uložené v `char` objekt array.  
@@ -71,27 +74,27 @@ class strstreambuf : public streambuf
   
 |||  
 |-|-|  
-|[strstreambuf –](#strstreambuf)|Vytvoří objekt typu `strstreambuf`.|  
+|[strstreambuf](#strstreambuf)|Vytvoří objekt typu `strstreambuf`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.|  
-|[přetečení](#overflow)|Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|  
-|[pbackfail –](#pbackfail)|Chráněný člen virtuální funkci, která se pokusí umístit zpět element do vstupního datového proudu a proveďte aktuálního elementu (ukazuje další ukazatel).|  
+|[Zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.|  
+|[overflow](#overflow)|Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|  
+|[pbackfail](#pbackfail)|Chráněný člen virtuální funkci, která se pokusí umístit zpět element do vstupního datového proudu a proveďte aktuálního elementu (ukazuje další ukazatel).|  
 |[pcount –](#pcount)|Vrátí počet prvků zapsána do řízené sekvenci.|  
-|[seekoff –](#seekoff)|Chráněný člen virtuální funkce, která se pokusí změnit aktuální pozice pro řízené datové proudy.|  
+|[seekoff](#seekoff)|Chráněný člen virtuální funkce, která se pokusí změnit aktuální pozice pro řízené datové proudy.|  
 |[seekpos –](#seekpos)|Chráněný člen virtuální funkce, která se pokusí změnit aktuální pozice pro řízené datové proudy.|  
-|[str –](#str)|Volání [freeze](#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
-|[podtečení](#underflow)|Chráněné virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|  
+|[str](#str)|Volání [freeze](#freeze)a vrátí ukazatel na začátek řízené sekvenci.|  
+|[underflow](#underflow)|Chráněné virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<strstream – >  
   
  **Namespace:** – std  
   
-##  <a name="freeze"></a>strstreambuf::freeze  
+##  <a name="freeze"></a>  strstreambuf::freeze  
  Způsobí, že vyrovnávací paměť datového proudu být k dispozici prostřednictvím operace s datovými proudy vyrovnávací paměti.  
   
 ```  
@@ -176,7 +179,7 @@ after clearing stream: stream good
 test1test3  
 ```  
   
-##  <a name="overflow"></a>strstreambuf::Overflow  
+##  <a name="overflow"></a>  strstreambuf::Overflow  
  Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.  
   
 ```  
@@ -197,7 +200,7 @@ virtual int overflow(int _Meta = EOF);
   
 -   Pokud režimu uložené strstreambuf informacemi o tom, že je řízené sekvenci upravitelnými rozšiřitelná a není ukotvené, funkce zpřístupnit zápisu pozice přidělí nové pro výstupní vyrovnávací paměť. Rozšíření výstupní vyrovnávací paměť tímto způsobem taky ji rozšiřuje na všechny přidružené vstupní vyrovnávací paměť.  
   
-##  <a name="pbackfail"></a>strstreambuf::pbackfail  
+##  <a name="pbackfail"></a>  strstreambuf::pbackfail  
  Chráněný člen virtuální funkce, která se pokusí vrátit zpět element do vstupního datového proudu a pak jej aktuálního elementu (ukazuje další ukazatel).  
   
 ```  
@@ -220,7 +223,7 @@ virtual int pbackfail(int _Meta = EOF);
   
 -   Pokud pozice putback – je k dispozici, a pokud je režim strstreambuf zobrazeno řízené sekvenci lze upravovat, můžete ukládat funkce **ch** do pozice putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.  
   
-##  <a name="pcount"></a>strstreambuf::pcount  
+##  <a name="pcount"></a>  strstreambuf::pcount  
  Vrátí počet prvků zapsána do řízené sekvenci.  
   
 ```  
@@ -252,7 +255,7 @@ int main( )
 }  
 ```  
   
-##  <a name="seekoff"></a>strstreambuf::seekoff  
+##  <a name="seekoff"></a>  strstreambuf::seekoff  
  Chráněný člen virtuální funkce, která se pokusí změnit aktuální pozice pro řízené datové proudy.  
   
 ```  
@@ -289,7 +292,7 @@ virtual streampos seekoff(streamoff _Off,
   
  Jinak Pokud `_Which`  &  `ios_base::out` nenulový a existuje výstupní vyrovnávací paměť, funkce mění další pozice se zapisovat do výstupní vyrovnávací paměť. V opačném umísťovací operace se nezdaří. Umísťovací operace úspěšná výsledný datový proud pozice musí ležet v řízené sekvenci.  
   
-##  <a name="seekpos"></a>strstreambuf::seekpos  
+##  <a name="seekpos"></a>  strstreambuf::seekpos  
  Chráněný člen virtuální funkce, která se pokusí změnit aktuální pozice pro řízené datové proudy.  
   
 ```  
@@ -311,7 +314,7 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
   
  Pokud `_Which`  &  **ios_base::in** nenulový a existuje vstupní vyrovnávací paměť, funkce mění další pozice číst vstupní vyrovnávací paměti. Pokud `_Which`  &  `ios_base::out` nenulový a existuje výstupní vyrovnávací paměť, funkce také nastaví další pozici zapsat tak, aby odpovídaly další pozice ke čtení. Jinak Pokud `_Which`  &  `ios_base::out` nenulový a existuje výstupní vyrovnávací paměť, funkce mění další pozice se zapisovat do výstupní vyrovnávací paměť. V opačném umísťovací operace se nezdaří. Umísťovací operace úspěšná výsledný datový proud pozice musí ležet v řízené sekvenci.  
   
-##  <a name="str"></a>strstreambuf::str  
+##  <a name="str"></a>  strstreambuf::str  
  Volání [freeze](#freeze)a vrátí ukazatel na začátek řízené sekvenci.  
   
 ```  
@@ -327,7 +330,7 @@ char *str();
 ### <a name="example"></a>Příklad  
   V tématu [strstreambuf::freeze](#freeze) příklad, který používá **str**.  
   
-##  <a name="strstreambuf"></a>strstreambuf::strstreambuf  
+##  <a name="strstreambuf"></a>  strstreambuf::strstreambuf  
  Vytvoří objekt typu `strstreambuf`.  
   
 ```  
@@ -445,7 +448,7 @@ streambuf((char *)_Getptr, count);
   
  Kromě toho, že uložené režim umožňuje řízené sekvenci upravitelnými ani rozšiřitelná.  
   
-##  <a name="underflow"></a>strstreambuf::underflow  
+##  <a name="underflow"></a>  strstreambuf::underflow  
  Chráněné virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.  
   
 ```  
@@ -459,7 +462,7 @@ virtual int underflow();
  Chráněný člen virtuální funkce endeavors k extrakci aktuálního elementu **ch** ze vstupní vyrovnávací paměť, pak zálohy na aktuální pozici datového proudu a vrátí prvek jako (`int`) (`unsigned char`) **ch** . Je to lze provést pouze jedním způsobem: na pozici pro čtení je k dispozici, pak má **ch** jako element uložené ve čtení pozici a přejde na další ukazatele pro vstupní vyrovnávací paměť.  
   
 ## <a name="see-also"></a>Viz také  
- [streambuf –](../standard-library/streambuf-typedefs.md#streambuf)   
+ [streambuf](../standard-library/streambuf-typedefs.md#streambuf)   
  [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream – programování](../standard-library/iostream-programming.md)   
  [iostreams – konvence](../standard-library/iostreams-conventions.md)

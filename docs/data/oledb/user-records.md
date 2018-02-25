@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Uživatelské záznamy
 Použití statické přístupového objektu (tedy přistupující objekt odvozený z **CAccessor)**, váš příjemce musí mít uživatelský záznam. Záznamu uživatele je C++ třídu, která obsahuje elementy data pro zpracování vstupu nebo výstupu. Průvodce příjemcem knihovny ATL technologie OLE DB generuje záznamu uživatele pro vaše příjemce. Metody můžete přidat do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.  
   
- Následující kód ukazuje záznam ukázka, která zpracovává příkazy. V záznamu uživatele `BEGIN_COLUMN_MAP` představuje sadu řádků dat předaný příjemce od zprostředkovatele. `BEGIN_PARAM_MAP`představuje sadu parametrů příkazu. Tento příklad používá [CCommand](../../data/oledb/ccommand-class.md) třídy pro zpracování parametrů příkazu. Datové členy v položek mapování představují posun do jednoho souvislého bloku paměti pro každou instanci třídy. `COLUMN_ENTRY` Makra odpovídají `PROVIDER_COLUMN_ENTRY` makra na straně zprostředkovatele.  
+ Následující kód ukazuje záznam ukázka, která zpracovává příkazy. V záznamu uživatele `BEGIN_COLUMN_MAP` představuje sadu řádků dat předaný příjemce od zprostředkovatele. `BEGIN_PARAM_MAP` představuje sadu parametrů příkazu. Tento příklad používá [CCommand](../../data/oledb/ccommand-class.md) třídy pro zpracování parametrů příkazu. Datové členy v položek mapování představují posun do jednoho souvislého bloku paměti pro každou instanci třídy. `COLUMN_ENTRY` Makra odpovídají `PROVIDER_COLUMN_ENTRY` makra na straně zprostředkovatele.  
   
  Další informace o **COLUMN_MAP** a **PARAM_MAP** makra, najdete v části [makra pro šablony příjemce technologie OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

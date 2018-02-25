@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::operator!=
 - set/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - set/std::operator&lt;
 - set/std::operator&lt;=
 - set/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (set)
@@ -24,21 +25,21 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 5bae2e375833cae5d775085519e145a4dab69eab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d5058b75af8b26b6e7ddc9a8a7b487b0cd8b8e91
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsetgt-operators"></a>&lt;nastavit&gt; operátory
 ||||  
 |-|-|-|  
 |[Operator! = (set)](#op_neq)|[operátor&gt; (set)](#op_gt)|[operátor&gt;= (set)](#eq)|  
-|[operátor&lt; (set)](#op_lt)|[operátor&lt;= (set)](#eq)|[Operator == (set)](#op_eq_eq)|  
-|[Operator! = (multiset)](#op_neq_multiset)|[operátor&gt; (multiset)](#op_gt_multiset)|[operátor&gt;= (multiset)](#op_gt_eq_multiset)|  
-|[operátor&lt; (multiset)](#op_lt_multiset)|[operátor&lt;= (multiset)](#op_lt_eq_multiset)|[Operator == (multiset)](#op_eq_eq_multiset)|  
+|[operátor&lt; (set)](#op_lt)|[operátor&lt;= (set)](#eq)|[operator== (set)](#op_eq_eq)|  
+|[operator!= (multiset)](#op_neq_multiset)|[operator&gt; (multiset)](#op_gt_multiset)|[operator&gt;= (multiset)](#op_gt_eq_multiset)|  
+|[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|  
   
-##  <a name="op_neq"></a>Operator! = (set)  
+##  <a name="op_neq">Operator! = (set)</a>  
  Testy, pokud sada objekt na levé straně operátoru není stejný jako sada objekt na pravé straně.  
   
 ```
@@ -95,7 +96,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt; (set)  
+##  <a name="op_lt"></a>  operátor&lt; (set)  
  Testy, pokud je sada objekt na levé straně operátoru menší než sadu objekt na pravé straně.  
   
 ```
@@ -152,7 +153,7 @@ The set s1 is not less than the set s3.
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;= (set)  
+##  <a name="op_lt_eq"></a>  operátor&lt;= (set)  
  Testy, pokud sada objekt na levé straně operátoru je menší než nebo stejný jako sada objekt na pravé straně.  
   
 ```
@@ -216,7 +217,7 @@ Set s1 is less than or equal to the set s4.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator == (set)  
+##  <a name="op_eq_eq"></a>  Operator == (set)  
  Testy, pokud sada objekt na levé straně operátoru rovná sadu objekt na pravé straně.  
   
 ```
@@ -273,7 +274,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt; (set)  
+##  <a name="op_gt"></a>  operátor&gt; (set)  
  Testy, pokud je sada objekt na levé straně operátoru větší než sadu objekt na pravé straně.  
   
 ```
@@ -330,7 +331,7 @@ The set s1 is greater than the set s3.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;= (set)  
+##  <a name="op_gt_eq"></a>  operátor&gt;= (set)  
  Testy, pokud je sada objekt na levé straně operátoru větší než nebo rovna hodnotě sadu objekt na pravé straně.  
   
 ```
@@ -394,7 +395,7 @@ Set s1 is greater than or equal to set s4.
 *\  
 ```  
   
-##  <a name="op_neq_multiset"></a>Operator! = (multiset)  
+##  <a name="op_neq_multiset"></a>  Operator! = (multiset)  
  Testy, pokud multiset objekt na levé straně operátoru není stejný jako multiset objekt na pravé straně.  
   
 ```
@@ -451,7 +452,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt_multiset"></a>operátor&lt; (multiset)  
+##  <a name="op_lt_multiset"></a>  operátor&lt; (multiset)  
  Testy, pokud multiset objekt na levé straně operátor je menší než multiset objekt na pravé straně.  
   
 ```
@@ -512,7 +513,7 @@ The multiset s1 is not less than the multiset s3.
 *\  
 ```  
   
-##  <a name="op_lt_eq_multiset"></a>operátor&lt;= (multiset)  
+##  <a name="op_lt_eq_multiset"></a>  operátor&lt;= (multiset)  
  Pokud multiset objekt na levé straně operátoru testů je menší než nebo rovna hodnotě multiset objekt na pravé straně.  
   
 ```
@@ -582,7 +583,7 @@ The multiset s1 is less than or equal to the multiset s4.
 *\  
 ```  
   
-##  <a name="op_eq_eq_multiset"></a>Operator == (multiset)  
+##  <a name="op_eq_eq_multiset"></a>  Operator == (multiset)  
  Testy, pokud multiset objekt na levé straně operátoru rovná multiset objekt na pravé straně.  
   
 ```
@@ -639,7 +640,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt_multiset"></a>operátor&gt; (multiset)  
+##  <a name="op_gt_multiset"></a>  operátor&gt; (multiset)  
  Testy, pokud multiset objekt na levé straně operátoru je větší než multiset objekt na pravé straně.  
   
 ```
@@ -700,7 +701,7 @@ The multiset s1 is greater than the multiset s3.
 *\  
 ```  
   
-##  <a name="op_gt_eq_multiset"></a>operátor&gt;= (multiset)  
+##  <a name="op_gt_eq_multiset"></a>  operátor&gt;= (multiset)  
  Testy, pokud se multiset objekt na levé straně operátoru větší než nebo rovna hodnotě multiset objekt na pravé straně.  
   
 ```
@@ -771,7 +772,7 @@ The multiset s1 is greater than or equal to the multiset s4.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<Nastavení >](../standard-library/set.md)
+ [\<set>](../standard-library/set.md)
 
 
 

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - completion_future
 - AMPRT/completion_future
@@ -18,18 +19,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="completionfuture-class"></a>completion_future – třída
 Představuje budoucí odpovídající C++ AMP asynchronní operaci.  
@@ -47,17 +50,17 @@ class completion_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[completion_future – konstruktor](#ctor)|Inicializuje novou instanci třídy `completion_future` třídy.|  
-|[~ completion_future – destruktor](#dtor)|Zničí `completion_future` objektu.|  
+|[~completion_future Destructor](#dtor)|Zničí `completion_future` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[get](#get)|Čeká na dokončení přidružené asynchronní operace.|  
-|[potom](#then)|Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.|  
+|[then](#then)|Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.|  
 |[to_task](#to_task)|Vrátí `task` objekt odpovídající přidružené asynchronní operaci.|  
-|[platný](#valid)|Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.|  
-|[Počkej](#wait)|Bloky, dokud se nedokončí přidružené asynchronní operaci.|  
+|[Platný](#valid)|Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.|  
+|[wait](#wait)|Bloky, dokud se nedokončí přidružené asynchronní operaci.|  
 |[wait_for](#wait_for)|Bloky, dokud se nedokončí přidružené asynchronní operaci nebo za dobu určenou podle `_Rel_time` uplynul.|  
 |[wait_until](#wait_until)|Blokuje až do dokončení přidružené asynchronní operaci, nebo dokud aktuální čas překročí hodnotu zadanou pomocí `_Abs_time`.|  
   
@@ -66,7 +69,7 @@ class completion_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[operátor std::shared_future\<void >](#operator_shared_future)|Implicitně převede `completion_future` do objektu `std::shared_future` objektu.|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `completion_future` objekt s touto.|  
+|[operator=](#operator_eq)|Zkopíruje obsah zadaného `completion_future` objekt s touto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `completion_future`  
@@ -77,7 +80,7 @@ class completion_future;
  **Namespace:** souběžnosti  
 
 
-## <a name="ctor"></a>completion_future 
+## <a name="ctor"></a> completion_future 
 
 Inicializuje novou instanci třídy `completion_future` třídy.  
   
@@ -105,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Inicializuje novou instanci třídy `completion_future` zkopírováním konstruktor.|  
 |`completion_future(completion_future&& _Other);`|Inicializuje novou instanci třídy `completion_future` třída přesunutím konstruktor.|  
   
-## <a name="get"></a>GET 
+## <a name="get"></a> GET 
 
 Čeká na dokončení přidružené asynchronní operace. Vyvolá uložené výjimku, pokud jeden došlo během asynchronní operaci.  
   
@@ -115,7 +118,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a>std::shared_future – operátor<void> 
+## <a name="operator_shared_future"></a> std::shared_future – operátor<void> 
 
 Implicitně převede `completion_future` do objektu `std::shared_future` objektu.  
   
@@ -128,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Návratová hodnota  
  `std::shared_future` Objektu.  
   
-## <a name="operator_eq"></a>operátor = 
+## <a name="operator_eq"></a> operátor = 
 
 Zkopíruje obsah zadaného `completion_future` objekt s touto.  
   
@@ -153,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Zkopíruje obsah zadaného `completion_future` objektu do následujícímu pomocí hloubkové kopie.|  
 |`completion_future& operator=(completion_future&& _Other);`|Zkopíruje obsah zadaného `completion_future` objekt s touto, pomocí přiřazení move.|  
   
-## <a name="then"></a>potom 
+## <a name="then"></a> potom 
 
 Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.  
   
@@ -171,7 +174,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  Objekt funkce zpětného volání.  
   
-## <a name="to_task"></a>to_task 
+## <a name="to_task"></a> to_task 
 
 Vrátí `task` objekt odpovídající přidružené asynchronní operaci.  
   
@@ -184,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Návratová hodnota  
  A `task` objekt odpovídající přidružené asynchronní operaci.  
   
-## <a name="valid"></a>platný 
+## <a name="valid">Platný</a> 
 
 Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.  
   
@@ -195,9 +198,9 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je objekt přidružený asynchronní operace; v opačném `false`.  
+ `true` Pokud je objekt přidružený asynchronní operace; v opačném `false`.  
   
-## <a name="wait"></a>Počkej 
+## <a name="wait"></a> Počkej 
 
 Bloky, dokud se nedokončí přidružené asynchronní operaci.  
   
@@ -207,7 +210,7 @@ Bloky, dokud se nedokončí přidružené asynchronní operaci.
 void wait() const;  
 ```  
   
-## <a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a> wait_for 
 
 Bloky, dokud se nedokončí přidružené asynchronní operaci nebo čas, který je zadán `_Rel_time` uplynul.  
   
@@ -235,13 +238,13 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí:  
   
--   `std::future_status::deferred`Pokud není spuštěná přidružené asynchronní operaci.  
+-   `std::future_status::deferred` Pokud není spuštěná přidružené asynchronní operaci.  
   
--   `std::future_status::ready`Pokud je přidružené asynchronní operace dokončena.  
+-   `std::future_status::ready` Pokud je přidružené asynchronní operace dokončena.  
   
--   `std::future_status::timeout`Pokud zadané časové období uplynul.  
+-   `std::future_status::timeout` Pokud zadané časové období uplynul.  
   
-## <a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a> wait_until 
 
 Blokuje až do dokončení přidružené asynchronní operaci, nebo dokud aktuální čas překročí hodnotu zadanou pomocí `_Abs_time`.  
   
@@ -269,13 +272,13 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí:  
   
-1.  `std::future_status::deferred`Pokud není spuštěná přidružené asynchronní operaci.  
+1.  `std::future_status::deferred` Pokud není spuštěná přidružené asynchronní operaci.  
   
-2.  `std::future_status::ready`Pokud je přidružené asynchronní operace dokončena.  
+2.  `std::future_status::ready` Pokud je přidružené asynchronní operace dokončena.  
   
-3.  `std::future_status::timeout`Pokud zadané časové období uplynul.  
+3.  `std::future_status::timeout` Pokud zadané časové období uplynul.  
   
-## <a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a> ~ completion_future 
 
 Zničí `completion_future` objektu.  
   

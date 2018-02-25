@@ -1,14 +1,17 @@
 ---
-title: "#<a name=\"import-directive-c--microsoft-docs\"></a>Import – direktiva (C++) | Microsoft Docs"
+title: "#Import – direktiva (C++) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import – direktiva (C++)
 **Konkrétní C++**  
@@ -42,8 +46,8 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Název souboru*  
- Určuje typ knihovny pro import. `filename`může být jedna z následujících akcí:  
+ *filename*  
+ Určuje typ knihovny pro import. `filename` Může být jedna z následujících akcí:  
   
 -   Název souboru, který obsahuje knihovny typů, jako je například soubor .olb, .tlb nebo .dll. Klíčové slovo, **souboru:**, lze předcházet každý název souboru.  
   
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Poznámky  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Pořadí vyhledávání pro název souboru  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Pořadí vyhledávání pro název souboru  
  *Název souboru* volitelně předchází specifikaci adresáře. Název existující soubor musí být název souboru. Rozdíl mezi dvě různé formy je v pořadí, ve kterém preprocesor vyhledá soubory knihovny typu-li úplně zadána cesta.  
   
 |Syntaxe formuláře|Akce|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Uvozovkách formuláře|Dá pokyn preprocesor hledání souborů knihovny typ nejprve v adresáři souboru, který obsahuje `#import` příkaz a potom v adresáři jakékoli soubory, které zahrnují (`#include`) souboru. Preprocesor pak prohledá podél cesty vidíte níže.|  
 |Formulář ostré závorky|Dá pokyn preprocesor hledání souborů knihovny typu podél následující cesty:<br /><br /> 1.  **Cesta** seznamu cest proměnné prostředí<br />2.  **LIB** seznamu cest proměnné prostředí<br />3.  Cestu určenou položkou /I (Další adresáře souborů k zahrnutí) – možnost kompilátoru, s výjimkou ho kompilátor hledá knihovny typů, který se odkazuje z jiného typu knihovny se [no_registry –](../preprocessor/no-registry.md) atribut.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Lokalizace ID a číslo verze  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Lokalizace ID a číslo verze  
  Když zadáte progid, můžete také zadat lokalizace ID a verzi počet progid. Příklad:  
   
 ```  
@@ -113,8 +117,8 @@ ms.lasthandoff: 12/21/2017
   
 -   Pokud nezadáte číslo verze, použije se nejnovější verzi.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Soubory hlaviček vytvořené importu  
- `#import`vytvoří dvě hlavičky souborů, které rekonstrukci obsah knihovny typu ve zdrojovém kódu C++. Primární záhlaví souboru je podobná vytvořeného kompilátorem Microsoft rozhraní Definition Language (MIDL), ale s další generované kompilátorem kód a data. [Primární hlavičkový soubor](#_predir_the_primary_type_library_header_file) má stejný název základní jako knihovny typů, plus. TLH rozšíření. Sekundární hlavičkový soubor má stejný název základní jako knihovny typů s. TLI rozšíření. Obsahuje implementace pro generované kompilátorem členských funkcí a je součástí (`#include`) v primární záhlaví souboru.  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Soubory hlaviček vytvořené importu  
+ `#import` vytvoří dvě hlavičky souborů, které rekonstrukci obsah knihovny typu ve zdrojovém kódu C++. Primární záhlaví souboru je podobná vytvořeného kompilátorem Microsoft rozhraní Definition Language (MIDL), ale s další generované kompilátorem kód a data. [Primární hlavičkový soubor](#_predir_the_primary_type_library_header_file) má stejný název základní jako knihovny typů, plus. TLH rozšíření. Sekundární hlavičkový soubor má stejný název základní jako knihovny typů s. TLI rozšíření. Obsahuje implementace pro generované kompilátorem členských funkcí a je součástí (`#include`) v primární záhlaví souboru.  
   
  Importování dispinterface vlastnost, která používá byref parametry, #import nevygeneruje __declspec ([vlastnost](../cpp/property-cpp.md)) příkaz pro funkci.  
   
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  `#import` – Direktiva také účastní minimální opětovné sestavení a mohou být umístěny v předkompilovaný hlavičkový soubor. V tématu [vytváření předkompilovaných hlavičkových souborů](../build/reference/creating-precompiled-header-files.md) Další informace.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Hlavičkový soubor knihovny primární typů  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Hlavičkový soubor knihovny primární typů  
  Hlavičkový soubor knihovny primární typů se skládá ze sedmi částech:  
   
 -   Záhlaví standardní: se skládá z komentáře `#include` příkaz pro COMDEF. H (který definuje některé standardní makra použít v záhlaví) a dalších informací o ostatní nastavení.  
@@ -153,7 +157,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Volitelný GUID definice starého: obsahuje inicializacích pojmenované konstanty identifikátor GUID. Toto jsou názvy ve formátu **CLSID_CoClass** a **IID_Interface**, podobné těm, které jsou generované kompilátorem MIDL.  
   
--   `#include`příkaz pro hlavičku sekundární typ knihovny.  
+-   `#include` příkaz pro hlavičku sekundární typ knihovny.  
   
 -   Standardní zápatí: aktuálně zahrnuje `#pragma pack(pop)`.  
   
@@ -185,8 +189,8 @@ using namespace MyLib;
   
  Další informace najdete v článku znalostní báze Knowledge Base "#import obálku metod může způsobit narušení přístupu" (Q242527) nebo "chyby kompilátoru při použití #import se souborem XML" (Q269194). Můžete najít články znalostní báze Knowledge Base na médiu knihovny MSDN nebo v [Microsoft Support](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>#import – atributy  
- `#import`může volitelně obsahovat jeden nebo více atributů. Tyto atributy oznámení kompilátoru změnit obsah hlavičky knihovny typů. Zpětné lomítko (**\\**) symbol je možné zahrnout další řádky v jediném `#import` příkaz. Příklad:  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import – atributy  
+ `#import` může volitelně obsahovat jeden nebo více atributů. Tyto atributy oznámení kompilátoru změnit obsah hlavičky knihovny typů. Zpětné lomítko (**\\**) symbol je možné zahrnout další řádky v jediném `#import` příkaz. Příklad:  
   
 ```  
 #import "test.lib" no_namespace \  
@@ -195,7 +199,7 @@ using namespace MyLib;
   
  Další informace najdete v tématu [#import – atributy](../preprocessor/hash-import-attributes-cpp.md).  
   
- **Konkrétní END C++**  
+ Konkrétní END C++  
   
 ## <a name="see-also"></a>Viz také  
  [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)   

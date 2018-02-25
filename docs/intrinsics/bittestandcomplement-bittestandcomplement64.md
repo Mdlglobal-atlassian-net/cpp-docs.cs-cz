@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _bittestandcomplement64
 - _bittestandcomplement64_cpp
 - _bittestandcomplement_cpp
 - _bittestandcomplement
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - btc instruction
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cea4d495058f7ea49fa3a0912a241af92211a040
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7f113afbee0a8ea687b2ff5b73485164e82d8eeb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement _bittestandcomplement64
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Generovat instrukci, který zkoumá bit `b` adresy `a`, vrátí jeho aktuální hodnotu a nastaví bit k svému doplňku.  
   
@@ -48,10 +51,10 @@ unsigned char _bittestandcomplement64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out]`a`  
+ [ve out] `a`  
  Ukazatel na paměť pro zjištění.  
   
- [v]`b`  
+ [in] `b`  
  Bit pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -61,7 +64,7 @@ unsigned char _bittestandcomplement64(
   
 |Vnitřní funkce|Architektura|  
 |---------------|------------------|  
-|`_bittestandcomplement`|x86 ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandcomplement`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Soubor hlaviček** \<intrin.h >  

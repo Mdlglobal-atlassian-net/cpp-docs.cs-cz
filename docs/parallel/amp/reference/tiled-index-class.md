@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -22,19 +23,22 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs: C++
-helpviewer_keywords: tiled_index class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 Poskytuje index do [tiled_extent](tiled-extent-class.md) objektu. Tato třída obsahuje vlastnosti, které chcete přístup k elementům relativně ke zdroji místní dlaždice a relativně ke zdroji globální. Další informace o vedle sebe prostorech najdete v tématu [pomocí dlaždice](../../../parallel/amp/using-tiles.md).  
@@ -84,7 +88,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[get_tile_extent –](#tiled_index__get_tile_extent)|Vrátí [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
+|[get_tile_extent](#tiled_index__get_tile_extent)|Vrátí [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
 
 
   
@@ -98,17 +102,17 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[Local – konstanta](#tiled_index__local)|Úložiště `index` objekt pořadí 1, 2 nebo 3, která představuje relativní indexu v aktuální dlaždici [tiled_extent](tiled-extent-class.md) objektu.|  
 |[pořadí konstanta](#tiled_index__rank)|Ukládá pořadí `tiled_index` objektu.|  
 |[Tile – konstanta](#tiled_index__tile)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje souřadnice aktuální dlaždici `tiled_extent` objektu.|  
-|[tile_dim0 konstanta](#tiled_index__tile_dim0)|Ukládá délka nejvýznamnějších dimenze.|  
-|[tile_dim1 konstanta](#tiled_index__tile_dim1)|Ukládá délka další většinu významné dimenze.|  
+|[tile_dim0 Constant](#tiled_index__tile_dim0)|Ukládá délka nejvýznamnějších dimenze.|  
+|[tile_dim1 Constant](#tiled_index__tile_dim1)|Ukládá délka další většinu významné dimenze.|  
 |[tile_dim2 konstanta](#tiled_index__tile_dim2)|Ukládá délku nejméně významný dimenze.|  
-|[tile_origin konstanta](#tiled_index__tile_origin)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje na globální souřadnice počátečního aktuální dlaždice v `tiled_extent` objektu.|  
+|[tile_origin Constant](#tiled_index__tile_origin)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje na globální souřadnice počátečního aktuální dlaždice v `tiled_extent` objektu.|  
 
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[tile_extent –](#tile_extent)|Získá [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
+|[tile_extent](#tile_extent)|Získá [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -122,7 +126,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** souběžnosti  
 
 
-## <a name="tiled_index__ctor"></a>tiled_index – konstruktor  
+## <a name="tiled_index__ctor">tiled_index – konstruktor</a>  
 Inicializuje novou instanci třídy `tiled_index` třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -144,13 +148,13 @@ tiled_index(
  Na globální [index](index-class.md) z konstruovaný objekt `tiled_index`.  
   
  `_Local`  
- Místní [index](index-class.md) z konstruovaný objekt`tiled_index`  
+ Místní [index](index-class.md) z konstruovaný objekt `tiled_index`  
   
  `_Tile`  
- Na dlaždici [index](index-class.md) z konstruovaný objekt`tiled_index`  
+ Na dlaždici [index](index-class.md) z konstruovaný objekt `tiled_index`  
   
  `_Tile_origin`  
- Na dlaždici počátek [index](index-class.md) z konstruovaný objekt`tiled_index`  
+ Na dlaždici počátek [index](index-class.md) z konstruovaný objekt `tiled_index`  
   
  `_Barrier`  
  [Tile_barrier](tile-barrier-class.md) objekt konstruovaný objekt `tiled_index`.  
@@ -167,7 +171,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializuje novou instanci třídy `tile_index` zkopírováním zadané `tiled_index` objektu.|  
 
 
-## <a name="tiled_index__get_tile_extent"></a>get_tile_extent –
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent –
 Vrátí [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -179,7 +183,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Návratová hodnota  
  `extent` Objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>Barrier   
+## <a name="tiled_index__barrier"></a>  Barrier   
 Úložiště [tile_barrier](tile-barrier-class.md) objekt, který reprezentuje bariéry v dlaždici aktuální vláken.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -188,7 +192,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>globální   
+## <a name="tiled_index__global"></a>  Globální   
 Úložiště [index](index-class.md) objekt pořadí 1, 2 nebo 3, která představuje globální index objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -197,7 +201,7 @@ const tile_barrier barrier;
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>místní   
+## <a name="tiled_index__local"></a>  místní   
 Úložiště [index](index-class.md) objekt pořadí 1, 2 nebo 3, která představuje relativní indexu v aktuální dlaždici [tiled_extent](tiled-extent-class.md) objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -206,7 +210,7 @@ const index<rank> global;
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>pořadí   
+## <a name="tiled_index__rank"></a>  Pořadí   
 Ukládá pořadí `tiled_index` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -215,7 +219,7 @@ Ukládá pořadí `tiled_index` objektu.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>dlaždice   
+## <a name="tiled_index__tile"></a>  Dlaždice   
 Úložiště [index](index-class.md) objekt pořadí 1, 2 nebo 3, který představuje souřadnice aktuální dlaždici [tiled_extent](tiled-extent-class.md) objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -224,7 +228,7 @@ static const int rank = _Rank;
 const index<rank> tile;  
 ```  
   
-## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
 Ukládá délka nejvýznamnějších dimenze.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -233,7 +237,7 @@ Ukládá délka nejvýznamnějších dimenze.
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
 Ukládá délka další většinu významné dimenze.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -241,7 +245,7 @@ Ukládá délka další většinu významné dimenze.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
 Ukládá délku nejméně významný dimenze.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -249,7 +253,7 @@ Ukládá délku nejméně významný dimenze.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_index__tile_origin"></a>tile_origin   
+## <a name="tiled_index__tile_origin"></a>  tile_origin   
 Úložiště [index](index-class.md) objekt pořadí 1, 2 nebo 3, který představuje na globální souřadnice počátečního aktuální dlaždice v rámci [tiled_extent](tiled-extent-class.md) objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -257,7 +261,7 @@ static const int tile_dim2 = _Dim2;
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="tile_extent"></a>tile_extent –
+## <a name="tile_extent"></a>  tile_extent –
   Získá [rozsah](extent-class.md) objekt, který obsahuje hodnoty `tiled_index` šablony argumenty `tiled_index` šablony argumenty `_Dim0`, `_Dim1`, a `_Dim2`.  
   
 ## <a name="syntax"></a>Syntaxe  

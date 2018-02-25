@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture_view
 - AMP_GRAPHICS/texture_view
@@ -19,21 +20,23 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="textureview-class"></a>texture_view – třída
-Poskytuje přístup pro čtení a zápis do texturou. `texture_view`můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  
+Poskytuje přístup pro čtení a zápis do texturou. `texture_view` můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +75,7 @@ class texture_view<const value_type, _Rank>
 |Název|Popis|  
 |----------|-----------------|  
 |[texture_view – konstruktor](#ctor)|Přetíženo. Vytvoří `texture_view` instance.|  
-|[~ texture_view – destruktor](#ctor)|Zničí `texture_view` instance.|  
+|[~texture_view Destructor](#ctor)|Zničí `texture_view` instance.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -83,16 +86,16 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.|  
 |[gather_red](#gather_red)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).|  
 |[get](#get)|Přetíženo. Získá hodnotu elementu index.|  
-|[Ukázka](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
+|[sample](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
 |[set](#set)|Nastaví hodnotu elementu index.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator() –](#operator_call)|Přetíženo. Získá hodnotu elementu index.|  
-|[[] – operátor](#operator_at)|Přetíženo. Získá hodnotu elementu index.|  
-|[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení.|  
+|[operator()](#operator_call)|Přetíženo. Získá hodnotu elementu index.|  
+|[operator[]](#operator_at)|Přetíženo. Získá hodnotu elementu index.|  
+|[operator=](#operator_eq)|Přetíženo. Operátor přiřazení.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -110,7 +113,7 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** concurrency::graphics  
   
-##  <a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a> ~texture_view 
 
  Zničí `texture_view` instance.  
   
@@ -118,7 +121,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="ctor"></a>texture_view 
+##  <a name="ctor"></a> texture_view 
 
  Vytvoří `texture_view` instance.  
   
@@ -180,7 +183,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  Počet úrovní mipmap přístupné prostřednictvím `texture_view`.  
   
-##  <a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a> gather_red 
 
  Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).  
   
@@ -210,7 +213,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>Návratová hodnota  
  Pořadí 4 krátké vektor, který obsahuje komponentu červený (x) na 4 vzorkovat texel hodnoty.  
   
-##  <a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a> gather_green 
 
  Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.  
   
@@ -240,7 +243,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>Návratová hodnota  
  Pořadí 4 krátké vektor, který obsahuje komponentu zelený (y) na 4 vzorkovat texel hodnoty.  
   
-##  <a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a> gather_blue 
 
  Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí blue (z) součástí čtyři jen Vzorkovaná texels.  
   
@@ -270,7 +273,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>Návratová hodnota  
  Pořadí 4 krátké vektor, který obsahuje komponentu červený (x) na 4 vzorkovat texel hodnoty.  
   
-##  <a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a> gather_alpha 
 
  Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí alpha (w) součástí čtyři jen Vzorkovaná texels.  
   
@@ -300,7 +303,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>Návratová hodnota  
  Pořadí 4 krátké vector obsahující (w) součást na 4 vzorkovat texel hodnoty alfa.  
   
-##  <a name="get"></a>GET 
+##  <a name="get"></a> GET 
 
  Získá hodnotu elementu v zadaném indexu.  
   
@@ -324,7 +327,7 @@ value_type get(
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota elementu.  
   
-##  <a name="operator_eq"></a>operátor = 
+##  <a name="operator_eq"></a> operátor = 
 
  Přiřadí zobrazení stejné struktury jako zadaná `texture_view` k tomuto `texture_view` instance.  
   
@@ -352,7 +355,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na toto `texture_view` instance.  
   
-##  <a name="operator_at"></a>[] – operátor 
+##  <a name="operator_at"></a> [] – operátor 
 
  Vrátí hodnotu elementu index.  
   
@@ -379,7 +382,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota elementu indexovat pomocí `_Index`.  
   
-##  <a name="operator_call"></a>Operator() – 
+##  <a name="operator_call"></a> Operator() – 
 
  Vrátí hodnotu elementu index.  
   
@@ -437,7 +440,7 @@ value_type operator() (
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota elementu indexovat pomocí `_Index`.  
   
-##  <a name="sample"></a>Ukázka 
+##  <a name="sample"></a> Ukázka 
 
  Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.  
   
@@ -476,7 +479,7 @@ value_type sample(
 ### <a name="return-value"></a>Návratová hodnota  
  Interpolované ukázkové hodnoty.  
   
-##  <a name="set"></a>nastavení 
+##  <a name="set"></a> nastavení 
 
  Nastaví hodnotu elementu v zadaném indexu se zadanou hodnotou.  
   
@@ -493,7 +496,7 @@ void set(
  `value`  
  Hodnota k nastavení elementu.  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  Typ hodnoty elementů texture_view.  
   

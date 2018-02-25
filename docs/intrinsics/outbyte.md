@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __outbyte
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __outbyte
+dev_langs:
+- C++
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 76d162bd3052ddf1516af6650b45f33c6b348c02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af47f5e7904eea058c693c101c247c4748309c88
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="outbyte"></a>__outbyte
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Generuje `out` instrukce, který odesílá 1 bajtů určeného `Data` z portu vstupně-výstupních operací určeného `Port`.  
   
@@ -39,17 +43,17 @@ void __outbyte(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`Port`  
+ [in] `Port`  
  Port pro odesílání dat na.  
   
- [v]`Data`  
+ [in] `Data`  
  Bajtů, které mají být odeslány zadaný port.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Vnitřní funkce|Architektura|  
 |---------------|------------------|  
-|`__outbyte`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Soubor hlaviček** \<intrin.h >  
   

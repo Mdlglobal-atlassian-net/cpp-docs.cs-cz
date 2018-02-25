@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: efdd067376d8e1430ed8636c0a77afe950858e9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3669170bf888cc41fa7706aac6af3a9c3fb08bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fastfail"></a>__fastfail
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Okamžitě ukončí proces volání s minimální režie.  
   
@@ -32,7 +35,7 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`code`  
+ [in] `code`  
  A `FAST_FAIL_<description>` symbolický konstanta ze souboru winnt.h nebo wdm.h, která určuje důvod ukončení procesu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -46,7 +49,7 @@ void __fastfail(unsigned int code);
 |Architektura|Instrukce|Umístění argumentu kódu|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|RCX|  
+|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
 |ARM|Operační kód 0xDEFB|r0|  
   
  Žádost o rychlé selhání je samostatný a obvykle vyžaduje právě dva pokyny k provedení. Jakmile požadavek rychlé selhání byl proveden jádra pak provede příslušnou akci. V uživatelském režimu kódu neexistují žádné závislosti paměti nad rámec samotné ukazatel instrukce při rychlé selhání událost se vyvolá. To maximalizuje jeho spolehlivost i v případě, že se jedná o poškození závažné paměti.  
@@ -57,7 +60,7 @@ void __fastfail(unsigned int code);
   
  Podpora pro nativní rychlé selhání mechanismus začal ve Windows 8. Operační systémy Windows, které nativně nepodporují pokyn rychlé selhání bude obvykle považovat žádost rychlá selhání za porušení pravidel přístupu nebo `UNEXPECTED_KERNEL_MODE_TRAP` kontroly chyb. V těchto případech je program stále ukončenou, ale nemusí nutně prokázat jako rychle.  
   
- `__fastfail`je k dispozici pouze jako vnitřní.  
+ `__fastfail` je k dispozici pouze jako vnitřní.  
   
 ## <a name="requirements"></a>Požadavky  
   

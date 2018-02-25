@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message_processor
 - AGENTS/concurrency::message_processor
@@ -14,19 +15,22 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs: C++
-helpviewer_keywords: message_processor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messageprocessor-class"></a>message_processor – třída
 `message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka řazení zpráv v.  
@@ -54,15 +58,15 @@ class message_processor;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[async_send –](#async_send)|Při přepisu v odvozené třídě, umístí zprávy asynchronně do bloku.|  
-|[sync_send –](#sync_send)|Při přepisu v odvozené třídě, umístí zprávy synchronně do bloku.|  
-|[Počkej](#wait)|Při přepisu v odvozené třídě, čeká na dokončení všech asynchronních operací.|  
+|[async_send](#async_send)|Při přepisu v odvozené třídě, umístí zprávy asynchronně do bloku.|  
+|[sync_send](#sync_send)|Při přepisu v odvozené třídě, umístí zprávy synchronně do bloku.|  
+|[wait](#wait)|Při přepisu v odvozené třídě, čeká na dokončení všech asynchronních operací.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[process_incoming_message –](#process_incoming_message)|Při přepisu v odvozené třídě, provede dopředného zpracování zpráv do bloku. Volá se jednou pokaždé, když je přidána nové zprávy a fronty se zjistí, být prázdný.|  
+|[process_incoming_message](#process_incoming_message)|Při přepisu v odvozené třídě, provede dopředného zpracování zpráv do bloku. Volá se jednou pokaždé, když je přidána nové zprávy a fronty se zjistí, být prázdný.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `message_processor`  
@@ -72,7 +76,7 @@ class message_processor;
   
  **Namespace:** souběžnosti  
   
-##  <a name="async_send"></a>async_send – 
+##  <a name="async_send"></a> async_send – 
 
  Při přepisu v odvozené třídě, umístí zprávy asynchronně do bloku.  
   
@@ -87,7 +91,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Poznámky  
  Implementace zpracovatelů by měly přepsat tuto metodu.  
   
-##  <a name="process_incoming_message"></a>process_incoming_message – 
+##  <a name="process_incoming_message"></a> process_incoming_message – 
 
  Při přepisu v odvozené třídě, provede dopředného zpracování zpráv do bloku. Volá se jednou pokaždé, když je přidána nové zprávy a fronty se zjistí, být prázdný.  
   
@@ -98,7 +102,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Poznámky  
  Implementace bloku zpráv by měly přepsat tuto metodu.  
   
-##  <a name="sync_send"></a>sync_send – 
+##  <a name="sync_send"></a> sync_send – 
 
  Při přepisu v odvozené třídě, umístí zprávy synchronně do bloku.  
   
@@ -113,7 +117,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Poznámky  
  Implementace zpracovatelů by měly přepsat tuto metodu.  
   
-##  <a name="wait"></a>Počkej 
+##  <a name="wait"></a> Počkej 
 
  Při přepisu v odvozené třídě, čeká na dokončení všech asynchronních operací.  
   

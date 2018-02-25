@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: AMP/Concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+ms.topic: reference
+f1_keywords:
+- AMP/Concurrency
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Obor názvů souběžnosti (C++ AMP)
 Poskytuje třídy a funkce, které urychlit spuštění kódu C++ na data paralelní hardwaru. Další informace najdete v tématu [přehled produktu C++ AMP](../cpp-amp-overview.md)  
@@ -86,33 +91,33 @@ namespace Concurrency;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[all_memory_fence –](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloky provádění všechna vlákna v dlaždici dokud byly dokončeny všechny přístupy paměti.|  
-|[amp_uninitialize –](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes C++ AMP runtime.|  
-|[atomic_compare_exchange –](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Přetíženo. Pokud stejná jako první zadaná hodnota porovná s hodnotou uloženou v zadaném umístění, druhý zadaná hodnota je uložena ve stejném umístění jako atomickou operaci.|  
-|[atomic_exchange –](concurrency-namespace-functions-amp.md#atomic_exchange)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění jako atomickou operaci se zadanou hodnotou.|  
-|[atomic_fetch_add –](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění součtu tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_and –](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `and` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_dec –](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Přetíženo. Sníží hodnotu uloží do zadaného umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
-|[atomic_fetch_inc –](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Přetíženo. Zvýší s hodnotou uloženou v zadaném umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
-|[atomic_fetch_max –](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění se větší tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_min –](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění na menší tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_or –](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `or` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_sub –](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění rozdílu tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_xor –](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `xor` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[kopírování](concurrency-namespace-functions-amp.md#copy)|Zkopíruje C++ AMP objektu. Jsou splněny všechny požadavky na přenos synchronní údaje. Data nelze kopírovat, pokud kód je spuštění kódu na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.|  
-|[copy_async –](concurrency-namespace-functions-amp.md#copy_async)|Zkopíruje objekt C++ AMP a vrátí [completion_future](completion-future-class.md) , může být čekali. Data nelze kopírovat, pokud kód běží na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.|  
-|[direct3d_abort –](concurrency-namespace-functions-amp.md#direct3d_abort)|Zruší provádění funkci, která má `restrict(amp)` klauzule omezení.|  
-|[direct3d_errorf –](concurrency-namespace-functions-amp.md#direct3d_errorf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno a vyvolá [runtime_exception](runtime-exception-class.md) výjimka, která má stejné formátování řetězce.|  
-|[direct3d_printf –](concurrency-namespace-functions-amp.md#direct3d_printf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno. Je volána z funkce, která má `restrict(amp)` klauzule omezení.|  
-|[global_memory_fence –](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloky provádění všechna vlákna v dlaždici, dokud všechny globální paměť přistupuje byly dokončeny.|  
+|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloky provádění všechna vlákna v dlaždici dokud byly dokončeny všechny přístupy paměti.|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes C++ AMP runtime.|  
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Přetíženo. Pokud stejná jako první zadaná hodnota porovná s hodnotou uloženou v zadaném umístění, druhý zadaná hodnota je uložena ve stejném umístění jako atomickou operaci.|  
+|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění jako atomickou operaci se zadanou hodnotou.|  
+|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění součtu tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `and` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Přetíženo. Sníží hodnotu uloží do zadaného umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Přetíženo. Zvýší s hodnotou uloženou v zadaném umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění se větší tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění na menší tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `or` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění rozdílu tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `xor` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[Kopírování](concurrency-namespace-functions-amp.md#copy)|Zkopíruje C++ AMP objektu. Jsou splněny všechny požadavky na přenos synchronní údaje. Data nelze kopírovat, pokud kód je spuštění kódu na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Zkopíruje objekt C++ AMP a vrátí [completion_future](completion-future-class.md) , může být čekali. Data nelze kopírovat, pokud kód běží na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.|  
+|[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Zruší provádění funkci, která má `restrict(amp)` klauzule omezení.|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno a vyvolá [runtime_exception](runtime-exception-class.md) výjimka, která má stejné formátování řetězce.|  
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno. Je volána z funkce, která má `restrict(amp)` klauzule omezení.|  
+|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloky provádění všechna vlákna v dlaždici, dokud všechny globální paměť přistupuje byly dokončeny.|  
 |[parallel_for_each – funkce (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Spustí funkci napříč výpočetní doméně.|  
-|[tile_static_memory_fence –](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokování provádění všechna vlákna v dlaždici až `tile_static` dokončili paměti přístupů.|  
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokování provádění všechna vlákna v dlaždici až `tile_static` dokončili paměti přístupů.|  
   
 ## <a name="constants"></a>Konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Hlsl_max_num_buffers – konstanta](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Maximální počet povolený DirectX vyrovnávací paměti.|  
+|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Maximální počet povolený DirectX vyrovnávací paměti.|  
 |[Modulename_max_length – konstanta](concurrency-namespace-constants-amp.md#modulename_max_length)|Ukládá maximální délka názvu modulu. Tato hodnota musí být stejný v kompilátoru a modulu runtime.|  
   
 ## <a name="requirements"></a>Požadavky  

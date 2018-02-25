@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
 - amp_short_vectors/Concurrency::graphics::direct3d
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5d72b26167a51c6d25e2a9d569ab0424e097a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 420a022412d5f66855f834d574f627fdbf7273fd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d – obor názvů
 Poskytuje [get_texture –](concurrency-graphics-direct3d-namespace-functions.md#get_texture) a [make_texture –](concurrency-graphics-direct3d-namespace-functions.md#make_texture) metody.  
@@ -38,11 +41,11 @@ namespace direct3d;
   
 |Název<br /><br /> Popis|  
 |--------------------------|  
-|[get_sampler –](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get rozhraní Direct3D – sampler stavu na danou akcelerátoru zobrazit tento představuje sampler zadaný objekt.|  
-|[get_texture –](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Získá rozhraní texture Direct3D – základní zadaný [texture](texture-class.md) objektu.|  
-|[make_sampler –](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Vytvoření sampler z ukazatel Direct3D – sampler stavu rozhraní.|  
-|[make_texture –](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Vytvoří [texture](texture-class.md) objektu s použitím zadaných parametrů.|  
-|[msad4 –](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Porovná 4bajtový referenční hodnotu a hodnotu 8bajtový zdroje a shromažďuje vektor 4 součtů.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get rozhraní Direct3D – sampler stavu na danou akcelerátoru zobrazit tento představuje sampler zadaný objekt.|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Získá rozhraní texture Direct3D – základní zadaný [texture](texture-class.md) objektu.|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Vytvoření sampler z ukazatel Direct3D – sampler stavu rozhraní.|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Vytvoří [texture](texture-class.md) objektu s použitím zadaných parametrů.|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Porovná 4bajtový referenční hodnotu a hodnotu 8bajtový zdroje a shromažďuje vektor 4 součtů.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** amp_graphics.h  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITarget
 - AGENTS/concurrency::ITarget
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::ITarget::link_source
 - AGENTS/concurrency::ITarget::unlink_source
 - AGENTS/concurrency::ITarget::unlink_sources
-dev_langs: C++
-helpviewer_keywords: ITarget class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itarget-class"></a>ITarget – třída
 `ITarget` Třída je rozhraní pro všechny cílové bloky. Cíl bloky využívat zprávy jim podle nabízejí `ISource` bloky.  
@@ -63,17 +67,17 @@ class ITarget;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[rozšíření](#propagate)|Při přepisu v odvozené třídě, asynchronně předá zprávu z bloku zdroj tento cílový blok.|  
+|[propagate](#propagate)|Při přepisu v odvozené třídě, asynchronně předá zprávu z bloku zdroj tento cílový blok.|  
 |[Odeslat](#send)|Při přepisu v odvozené třídě, synchronně předá zprávu do cílový blok.|  
-|[supports_anonymous_source –](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, jestli bloku zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Pokud vrátí hodnotu přepsaného metoda `true`, cíl nemohou odložit zprávu nabízený jako spotřeba odložených zprávy později vyžaduje zdroji identifikaci v jeho sourse odkaz registru.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, jestli bloku zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Pokud vrátí hodnotu přepsaného metoda `true`, cíl nemohou odložit zprávu nabízený jako spotřeba odložených zprávy později vyžaduje zdroji identifikaci v jeho sourse odkaz registru.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[link_source –](#link_source)|Při přepisu v odvozené třídě, odkazuje na tato blok zadaný zdrojový `ITarget` bloku.|  
-|[unlink_source –](#unlink_source)|Při přepisu v odvozené třídě, zruší propojení blok zadaného zdroje. z tohoto `ITarget` bloku.|  
-|[unlink_sources –](#unlink_sources)|Při přepisu v odvozené třídě, zruší propojení všech bloků zdroje z tohoto `ITarget` bloku.|  
+|[link_source](#link_source)|Při přepisu v odvozené třídě, odkazuje na tato blok zadaný zdrojový `ITarget` bloku.|  
+|[unlink_source](#unlink_source)|Při přepisu v odvozené třídě, zruší propojení blok zadaného zdroje. z tohoto `ITarget` bloku.|  
+|[unlink_sources](#unlink_sources)|Při přepisu v odvozené třídě, zruší propojení všech bloků zdroje z tohoto `ITarget` bloku.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -86,7 +90,7 @@ class ITarget;
   
  **Namespace:** souběžnosti  
   
-##  <a name="dtor"></a>~ ITarget 
+##  <a name="dtor"></a> ~ ITarget 
 
  Zničí `ITarget` objektu.  
   
@@ -94,7 +98,7 @@ class ITarget;
 virtual ~ITarget();
 ```  
   
-##  <a name="link_source"></a>link_source – 
+##  <a name="link_source"></a> link_source – 
 
  Při přepisu v odvozené třídě, odkazuje na tato blok zadaný zdrojový `ITarget` bloku.  
   
@@ -109,7 +113,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci nelze volat přímo na `ITarget` bloku. Bloky by měly být připojené pomocí `link_target` metodu `ISource` bloků, které bude vyvolán `link_source` metoda na odpovídající cíli.  
   
-##  <a name="propagate"></a>rozšíření 
+##  <a name="propagate"></a> rozšíření 
 
  Při přepisu v odvozené třídě, asynchronně předá zprávu z bloku zdroj tento cílový blok.  
   
@@ -132,7 +136,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>Poznámky  
  Vyvolá metoda [invalid_argument](../../../standard-library/invalid-argument-class.md) Pokud buď `_PMessage` nebo `_PSource` parametr `NULL`.  
   
-##  <a name="send"></a>Odeslat 
+##  <a name="send">Odeslat</a> 
 
  Při přepisu v odvozené třídě, synchronně předá zprávu do cílový blok.  
   
@@ -159,7 +163,7 @@ virtual message_status send(
   
  Když `send` vrátí zprávu buď již byla přijata a přenést do cílový blok, nebo byla zamítnuta cíle.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source – 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source – 
 
  Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, jestli bloku zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Pokud vrátí hodnotu přepsaného metoda `true`, cíl nemohou odložit zprávu nabízený jako spotřeba odložených zprávy později vyžaduje zdroji identifikaci v jeho sourse odkaz registru.  
   
@@ -168,9 +172,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud bloku může přijmout zprávy ze zdroje, který není přidružený k němu `false` jinak.  
+ `true` Pokud bloku může přijmout zprávy ze zdroje, který není přidružený k němu `false` jinak.  
   
-##  <a name="unlink_source"></a>unlink_source – 
+##  <a name="unlink_source"></a> unlink_source – 
 
  Při přepisu v odvozené třídě, zruší propojení blok zadaného zdroje. z tohoto `ITarget` bloku.  
   
@@ -185,7 +189,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci nelze volat přímo na `ITarget` bloku. Bloky by měl být odpojeno pomocí `unlink_target` nebo `unlink_targets` metody na `ISource` bloků, které bude vyvolán `unlink_source` metoda na odpovídající cíli.  
   
-##  <a name="unlink_sources"></a>unlink_sources – 
+##  <a name="unlink_sources"></a> unlink_sources – 
 
  Při přepisu v odvozené třídě, zruší propojení všech bloků zdroje z tohoto `ITarget` bloku.  
   

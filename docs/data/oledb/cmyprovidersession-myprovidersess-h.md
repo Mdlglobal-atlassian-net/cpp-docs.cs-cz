@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cmyprovidersession
 - myprovidersess.h
@@ -24,14 +24,14 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ffb1a0ca8e9a2cd5b90d33c21423beb0969a4f4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c244d77a0e299f4a09de985e11c7537a9fb7e5ff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
-MyProviderSess.H obsahuje prohlášení a implementací objektu session OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi příjemcem a zprostředkovatelem. Několik souběžných relací může být otevřené pro jeden zdroj dat.. V seznamu dědičnosti `CMyProviderSession` následuje:  
+MyProviderSess.H obsahuje prohlášení a implementací objektu session OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi příjemcem a zprostředkovatelem. Několik souběžných relací může být otevřené pro jeden zdroj dat. V seznamu dědičnosti `CMyProviderSession` následuje:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMyProviderSession :
   
  Průvodce vytvoří také tři třídy relace: `CMyProviderSessionColSchema`, `CMyProviderSessionPTSchema`, a `CMyProviderSessionTRSchema`. Tyto relace se používají pro sady řádků schématu. Schéma sad řádků povolí zprostředkovateli vrátit metadata k příjemce, aniž by museli provést dotazu nebo načtení dat příjemce. Načítání metadat může být mnohem rychlejší než vyhledávání možností zprostředkovatelů.  
   
- Specifikace OLE DB vyžaduje, aby implementace zprostředkovatele **IDBSchemaRowset** typy sady řádků schématu podporu tři rozhraní: **DBSCHEMA_COLUMNS**, **DBSCHEMA_PROVIDER_TYPES **, a `DBSCHEMA_TABLES`. Průvodce generuje implementace pro každou sadu řádků schématu. Každá třída je vygenerovat průvodcem obsahuje `Execute` metoda. V tomto `Execute` metodu, můžete se vrátit data poskytovatele, o které tabulky, sloupce a typy dat, které podporujete. Tato data se obvykle označuje v době kompilace.  
+ Specifikace OLE DB vyžaduje, aby implementace zprostředkovatele **IDBSchemaRowset** typy sady řádků schématu podporu tři rozhraní: **DBSCHEMA_COLUMNS**, **DBSCHEMA_PROVIDER_TYPES** , a `DBSCHEMA_TABLES`. Průvodce generuje implementace pro každou sadu řádků schématu. Každá třída je vygenerovat průvodcem obsahuje `Execute` metoda. V tomto `Execute` metodu, můžete se vrátit data poskytovatele, o které tabulky, sloupce a typy dat, které podporujete. Tato data se obvykle označuje v době kompilace.  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

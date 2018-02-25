@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB – model objektů
 OLE DB objektový model obsahuje následující objekty nebo součásti. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupové objekty, se vztahují k práci s daty, jakmile se zobrazí.  
@@ -55,7 +57,7 @@ OLE DB objektový model obsahuje následující objekty nebo součásti. První 
 ## <a name="accessors"></a>Přístupové objekty  
  Pouze technologie OLE DB používá koncepci přístupových objektů. Přistupující objekt popisuje způsob uložení dat v příjemce. Obsahuje sadu vazby (nazývané mapa sloupce) mezi poli sady řádků (sloupce) a datových členů je deklarovat příjemce.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transakce  
+##  <a name="vcconoledbcomponents_transactions"></a> Transakce  
  Transakce objekty se používají při potvrzování nebo přerušování vnořených transakcí na než nejnižší úroveň. Transakce je nedělitelná jednotka práce definována ACID testem. Zkratka ACID:  
   
 -   Nedělitelnost: nelze rozdělit na menší jednotky práce.  

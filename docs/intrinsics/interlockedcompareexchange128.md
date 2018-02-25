@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
 - _InterlockedCompareExchange128
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0cbf4e29e02670b4532a4be82864cf3cf040df73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2850be4b93738c61e22c5ca841e07f1901ec01e2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
-**Konkrétní Microsoft**  
+**Microsoft Specific**  
   
  Provede porovnání interlocked 128-bit a serveru exchange.  
   
@@ -43,20 +46,20 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out]`Destination`  
+ [ve out] `Destination`  
  Ukazatel na cíl, který je pole dvě celá čísla 64-bit považuje za pole 128-bit. Cílový data musí být 16 bajtů v souladu předejdete obecnou chybu ochrany.  
   
- [v]`ExchangeHigh`  
+ [in] `ExchangeHigh`  
  64bitové celé číslo, které je možné poskytovat s horní část cílové.  
   
- [v]`ExchangeLow`  
+ [in] `ExchangeLow`  
  64bitové celé číslo, které je možné poskytovat s nízkou část cílového.  
   
- [ve out]`ComparandResult`  
+ [ve out] `ComparandResult`  
  Ukazatele na pole dvě celá čísla 64-bit (považuje za pole 128-bit) k porovnání s cílovým.  Na výstupu se přepíšou s původní hodnotou k cílové složce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- 1, pokud operand porovnávání 128-bit rovná původní hodnotu k cílové složce. `ExchangeHigh`a `ExchangeLow` přepsat cílový 128-bit.  
+ 1, pokud operand porovnávání 128-bit rovná původní hodnotu k cílové složce. `ExchangeHigh` a `ExchangeLow` přepsat cílový 128-bit.  
   
  0, pokud operand porovnávání se nerovná původní hodnotu k cílové složce. Hodnota cíl je beze změny a hodnota operand porovnávání se přepíše s hodnotou cílového.  
   

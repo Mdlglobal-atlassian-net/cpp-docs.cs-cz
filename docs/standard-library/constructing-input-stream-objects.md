@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: input stream objects
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d284452e7b6c9983a751117ad6c2290b267c6994
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a189fa948bc8c6be7acdac0dcc50e9585e82a082
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constructing-input-stream-objects"></a>Vytváření objektů vstupního datového proudu
 Pokud používáte pouze `cin` objektu, není potřeba vytvořit vstupního datového proudu. Pokud používáte, je nutné vytvořit vstupní datový proud:  
@@ -28,7 +32,7 @@ Pokud používáte pouze `cin` objektu, není potřeba vytvořit vstupního dato
   
 - [Vstupní řetězec datového proudu konstruktory](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="vclrfinputfilestreamconstructorsanchor8"></a>Vstupní soubor datového proudu konstruktory  
+##  <a name="vclrfinputfilestreamconstructorsanchor8">Vstupní soubor datového proudu konstruktory</a>  
  Existují dva způsoby vytvoření datového proudu vstupní soubor:  
   
 -   Použití `void` argument konstruktoru, potom zavolejte `open` – členská funkce:  
@@ -48,7 +52,7 @@ Pokud používáte pouze `cin` objektu, není potřeba vytvořit vstupního dato
     ifstream myFile("filename");
 ```  
   
-##  <a name="vclrfinputstringstreamconstructorsanchor9"></a>Vstupní řetězec datového proudu konstruktory  
+##  <a name="vclrfinputstringstreamconstructorsanchor9">Vstupní řetězec datového proudu konstruktory</a>  
  Vstupní řetězec datového proudu konstruktory vyžadovat adresu předběžně přidělené, preinitialized úložiště:  
   
 ```  

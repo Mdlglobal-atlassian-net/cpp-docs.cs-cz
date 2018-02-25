@@ -4,17 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
 - initializer_list/std::initializer_list::end
 - initializer_list/std::initializer_list::size
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +25,13 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.workload: cplusplus
-ms.openlocfilehash: df79acefbd5482238b2ce59885bdb06af128c9b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1370e547da520a51ccb593ef8c99d92c7bae40be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initializerlist-class"></a>initializer_list – třída
 Poskytuje přístup k pole elementy, ve kterých je každý člen zadaného typu.  
@@ -77,16 +80,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[začít](#begin)|Vrací ukazatel na prvním elementem v `initializer_list`.|  
-|[end](#end)|Vrací ukazatel na jednu po posledním prvkem v `initializer_list`.|  
-|[velikost](#size)|Vrátí počet prvků v `initializer_list`.|  
+|[Začátek](#begin)|Vrací ukazatel na prvním elementem v `initializer_list`.|  
+|[End](#end)|Vrací ukazatel na jednu po posledním prvkem v `initializer_list`.|  
+|[Velikost](#size)|Vrátí počet prvků v `initializer_list`.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<initializer_list >  
+ **Header:** \<initializer_list>  
   
  **Namespace:** – std  
   
-##  <a name="begin"></a>initializer_list::begin  
+##  <a name="begin"></a>  initializer_list::begin  
  Vrací ukazatel na prvním elementem v `initializer_list`.  
   
 ```  
@@ -98,7 +101,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="end"></a>initializer_list::end  
+##  <a name="end"></a>  initializer_list::end  
  Vrací ukazatel na jednu po posledním prvkem v `initializer list`.  
   
 ```  
@@ -108,7 +111,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na jednu po posledním prvkem v seznamu. Pokud je seznam prázdný, je to stejné jako má ukazatel na prvním elementem v seznamu.  
   
-##  <a name="initializer_list"></a>initializer_list::initializer_list  
+##  <a name="initializer_list"></a>  initializer_list::initializer_list  
  Vytvoří objekt typu `initializer_list`.  
   
 ```  
@@ -189,7 +192,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="size"></a>initializer_list::size  
+##  <a name="size"></a>  initializer_list::size  
  Vrátí počet prvků v seznamu.  
   
 ```  

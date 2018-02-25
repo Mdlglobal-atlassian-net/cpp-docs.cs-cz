@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <mutex>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <mutex>
+dev_langs:
+- C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 50fb9ab17a82703f34dab0744499e2afdbdd61eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recursive_mutex`, `timed_mutex`, a `recursive_timed_mutex`; šablony `lock_guard` a `unique_lock`; a podpůrné typy a funkce, které definují vzájemné vyloučení kód oblasti.  
@@ -71,7 +75,7 @@ Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recurs
   
 |Název|Popis|  
 |----------|-----------------|  
-|[call_once –](../standard-library/mutex-functions.md#call_once)|Poskytuje mechanismus pro volání právě jednou na zadaný objekt s během provádění.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|Poskytuje mechanismus pro volání právě jednou na zadaný objekt s během provádění.|  
 |[lock](../standard-library/mutex-functions.md#lock)|Pokusí se uzamknout všechny argumenty bez vzájemného zablokování.|  
   
 ### <a name="structs"></a>Struktury  
@@ -87,9 +91,9 @@ Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recurs
   
 |Název|Popis|  
 |----------|-----------------|  
-|[adopt_lock –](../standard-library/mutex-functions.md#adopt_lock)|Představuje objekt, který se dá předat do konstruktory pro `lock_guard` a `unique_lock` k označení, že objekt mutex, který je také se předaný konstruktoru je uzamčen.|  
-|[defer_lock –](../standard-library/mutex-functions.md#defer_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock`, k označení, že by neměl konstruktoru zamknout objekt mutex, který je také předávána k němu.|  
-|[try_to_lock –](../standard-library/mutex-functions.md#try_to_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock` k označení, že konstruktoru opakovat odemknutí `mutex` také se předá do něj bez blokování.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Představuje objekt, který se dá předat do konstruktory pro `lock_guard` a `unique_lock` k označení, že objekt mutex, který je také se předaný konstruktoru je uzamčen.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock`, k označení, že by neměl konstruktoru zamknout objekt mutex, který je také předávána k němu.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock` k označení, že konstruktoru opakovat odemknutí `mutex` také se předá do něj bez blokování.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)

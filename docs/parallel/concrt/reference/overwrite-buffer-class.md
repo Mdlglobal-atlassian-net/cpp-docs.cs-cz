@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - overwrite_buffer
 - AGENTS/concurrency::overwrite_buffer
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::overwrite_buffer::resume_propagation
 - AGENTS/concurrency::overwrite_buffer::send_message
 - AGENTS/concurrency::overwrite_buffer::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: overwrite_buffer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overwritebuffer-class"></a>Třída overwrite_buffer
 `overwrite_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání do jedné zprávy najednou. Nové zprávy přepsat dříve udržovaných ty.  
@@ -58,29 +62,29 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Název|Popis|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Přetíženo. Vytvoří `overwrite_buffer` zasílání zpráv bloku.|  
-|[~ overwrite_buffer – destruktor](#dtor)|Zničí `overwrite_buffer` zasílání zpráv bloku.|  
+|[~overwrite_buffer Destructor](#dtor)|Zničí `overwrite_buffer` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[has_value –](#has_value)|Kontroluje, zda tato `overwrite_buffer` zasílání zpráv bloku ještě má hodnotu.|  
+|[has_value](#has_value)|Kontroluje, zda tato `overwrite_buffer` zasílání zpráv bloku ještě má hodnotu.|  
 |[value](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `overwrite_buffer` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept_message –](#accept_message)|Přijme zprávu, která byla nabízí to `overwrite_buffer` zasílání zpráv bloku vrácením volající kopii zprávy.|  
-|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `overwrite_buffer` zasílání zpráv na úrovni bloku a rezervován cíl, vrácením volající kopii zprávy.|  
-|[link_target_notification –](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `overwrite_buffer` zasílání zpráv bloku.|  
-|[propagate_message –](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `overwrite_buffer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[propagate_to_any_targets –](#propagate_to_any_targets)|Míst `message _PMessage` v tomto `overwrite_buffer` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.|  
-|[release_message –](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
-|[reserve_message –](#reserve_message)|Rezervuje zprávu dříve nabízí to `overwrite_buffer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
-|[resume_propagation –](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `overwrite_buffer` zasílání zpráv bloku vrácením volající kopii zprávy.|  
+|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `overwrite_buffer` zasílání zpráv na úrovni bloku a rezervován cíl, vrácením volající kopii zprávy.|  
+|[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `overwrite_buffer` zasílání zpráv bloku.|  
+|[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `overwrite_buffer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Míst `message _PMessage` v tomto `overwrite_buffer` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.|  
+|[release_message](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `overwrite_buffer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `overwrite_buffer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Poznámky  
  `overwrite_buffer` Zasílání zpráv bloku šíří se kopie jeho uložené zprávy pro každý z jeho cíle.  
@@ -103,7 +107,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  **Namespace:** souběžnosti  
   
-##  <a name="accept_message"></a>accept_message – 
+##  <a name="accept_message"></a> accept_message – 
 
  Přijme zprávu, která byla nabízí to `overwrite_buffer` zasílání zpráv bloku vrácením volající kopii zprávy.  
   
@@ -121,7 +125,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  `overwrite_buffer` Zasílání zpráv na úrovni bloku kopie vrátí zprávu, která se jeho cíle, nikoli přenos vlastnictví aktuálně udržovaných zprávy.  
   
-##  <a name="consume_message"></a>consume_message – 
+##  <a name="consume_message"></a> consume_message – 
 
  Využívá dříve nabízené zprávy `overwrite_buffer` zasílání zpráv na úrovni bloku a rezervován cíl, vrácením volající kopii zprávy.  
   
@@ -139,7 +143,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Podobně jako `accept`, ale je vždy před voláním `reserve`.  
   
-##  <a name="has_value"></a>has_value – 
+##  <a name="has_value"></a> has_value – 
 
  Kontroluje, zda tato `overwrite_buffer` zasílání zpráv bloku ještě má hodnotu.  
   
@@ -148,9 +152,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud bloku byl přijat hodnotu, `false` jinak.  
+ `true` Pokud bloku byl přijat hodnotu, `false` jinak.  
   
-##  <a name="link_target_notification"></a>link_target_notification – 
+##  <a name="link_target_notification"></a> link_target_notification – 
 
  Zpětné volání, které oznamuje, že nová cílová souvisel s to `overwrite_buffer` zasílání zpráv bloku.  
   
@@ -162,7 +166,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ukazatel na nově propojené cíl.  
   
-##  <a name="dtor"></a>~ overwrite_buffer 
+##  <a name="dtor"></a> ~ overwrite_buffer 
 
  Zničí `overwrite_buffer` zasílání zpráv bloku.  
   
@@ -170,7 +174,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ~overwrite_buffer();
 ```  
   
-##  <a name="ctor"></a>overwrite_buffer 
+##  <a name="ctor"></a> overwrite_buffer 
 
  Vytvoří `overwrite_buffer` zasílání zpráv bloku.  
   
@@ -210,7 +214,7 @@ overwrite_buffer(
   
  Typ `filter_method` je functor podpisem `bool (T const &)` který lze vyvolat to `overwrite_buffer` zasílání zpráv blok k určení, zda by měl přijímat nabízený zprávy.  
   
-##  <a name="propagate_message"></a>propagate_message – 
+##  <a name="propagate_message"></a> propagate_message – 
 
  Asynchronně předá zprávu od `ISource` bloku k tomuto `overwrite_buffer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.  
   
@@ -230,7 +234,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets – 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets – 
 
  Míst `message _PMessage` v tomto `overwrite_buffer` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.  
   
@@ -245,7 +249,7 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepíše aktuální zprávu ve `overwrite_buffer` s nově přijaté zprávy `_PMessage`.  
   
-##  <a name="send_message"></a>send_message – 
+##  <a name="send_message">send_message –</a> 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `overwrite_buffer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   
@@ -265,7 +269,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source – 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source – 
 
  Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu.  
   
@@ -274,9 +278,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`protože blok není odložit nabízené zprávy.  
+ `true` protože blok není odložit nabízené zprávy.  
   
-##  <a name="release_message"></a>release_message – 
+##  <a name="release_message"></a> release_message – 
 
  Uvolní předchozí zpráva rezervace.  
   
@@ -288,7 +292,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` objektu vydán.  
   
-##  <a name="reserve_message"></a>reserve_message – 
+##  <a name="reserve_message"></a> reserve_message – 
 
  Rezervuje zprávu dříve nabízí to `overwrite_buffer` zasílání zpráv bloku.  
   
@@ -301,12 +305,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z `message` objektu je vyhrazena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a>resume_propagation – 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -314,7 +318,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="value"></a>Hodnota 
+##  <a name="value"></a> Hodnota 
 
  Získá odkaz na aktuální datovou část zprávy ukládají do `overwrite_buffer` zasílání zpráv bloku.  
   

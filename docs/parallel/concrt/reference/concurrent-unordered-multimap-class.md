@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multimap
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_multimap
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_multimap::key_eq
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_multimap::swap
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_multimap::unsafe_erase
-dev_langs: C++
-helpviewer_keywords: concurrent_unordered_multimap class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 41a9a5ade4f7fa704311982d57e47f15561431c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ceb958123ddae320b9cc3803a7b453d2ce10e433
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap – třída
 `concurrent_unordered_multimap` Třída je kontejner bezpečných souběžnosti, kterými se řídí různých délka posloupnost elementy typu `std::pair<const K, _Element_type>`. Pořadí je reprezentována způsobem, který umožňuje bezpečné souběžnosti připojit, iterator traversal operace, iterator přístup a přístup k elementu.  
@@ -103,17 +107,17 @@ template <typename K,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[hash_function –](#hash_function)|Vrátí objekt funkce uložené hodnoty hash.|  
-|[Vložení](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_multimap` objektu.|  
-|[key_eq –](#key_eq)|Vrátí objekt funkce porovnání rovnosti uložené.|  
+|[hash_function](#hash_function)|Vrátí objekt funkce uložené hodnoty hash.|  
+|[insert](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_multimap` objektu.|  
+|[key_eq](#key_eq)|Vrátí objekt funkce porovnání rovnosti uložené.|  
 |[swap](#swap)|Prohození obsahu dvou `concurrent_unordered_multimap` objekty. Tato metoda není bezpečná souběžnosti.|  
-|[unsafe_erase –](#unsafe_erase)|Přetíženo. Odebere elementy z `concurrent_unordered_multimap` v zadaných pozic. Tato metoda není bezpečná souběžnosti.|  
+|[unsafe_erase](#unsafe_erase)|Přetíženo. Odebere elementy z `concurrent_unordered_multimap` v zadaných pozic. Tato metoda není bezpečná souběžnosti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_multimap` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[operator=](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_multimap` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Podrobné informace o `concurrent_unordered_multimap` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -126,11 +130,11 @@ template <typename K,
  `concurrent_unordered_multimap`  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** concurrent_unordered_map.h  
+ **Header:** concurrent_unordered_map.h  
   
  **Namespace:** souběžnosti  
   
-##  <a name="begin"></a>začít 
+##  <a name="begin"></a> Začátek 
 
  Vrátí iterator odkazující na prvním elementem v souběžných kontejneru. Tato metoda je bezpečné souběžnosti.  
   
@@ -143,7 +147,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor na prvním elementem v souběžných kontejneru.  
   
-##  <a name="cbegin"></a>cbegin – 
+##  <a name="cbegin"></a> cbegin – 
 
  Vrátí const iterator odkazující na prvním elementem v souběžných kontejneru. Tato metoda je bezpečné souběžnosti.  
   
@@ -154,7 +158,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Const iterator na prvním elementem v souběžných kontejneru.  
   
-##  <a name="cend"></a>cend – 
+##  <a name="cend"></a> cend – 
 
  Vrátí const iterator odkazující na umístění posledním prvkem v kontejneru souběžných úspěšné. Tato metoda je bezpečné souběžnosti.  
   
@@ -165,7 +169,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Const iterator do umístění posledním prvkem v kontejneru souběžných úspěšné.  
   
-##  <a name="clear"></a>Vymazat 
+##  <a name="clear"></a> Zrušte zaškrtnutí 
 
  Vymaže všechny elementy v souběžných kontejneru. Tato funkce není bezpečné souběžnosti.  
   
@@ -173,7 +177,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_unordered_multimap 
+##  <a name="ctor"></a> concurrent_unordered_multimap 
 
  Vytvoří souběžných neuspořádaný multimap.  
   
@@ -244,7 +248,7 @@ concurrent_unordered_multimap(
   
  Poslední konstruktor určuje přesunu souběžných neuspořádaný multimap `_Umap`.  
   
-##  <a name="count"></a>počet 
+##  <a name="count"></a> Počet 
 
  Spočítá počet elementů odpovídající zadaného klíče. Tato funkce je bezpečné souběžnosti.  
   
@@ -259,7 +263,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet opakování, kolikrát se zobrazí klíč v kontejneru.  
   
-##  <a name="empty"></a>prázdný 
+##  <a name="empty"></a> prázdný 
 
  Zkouší, zda nejsou přítomny žádné prvky. Tato metoda je bezpečné souběžnosti.  
   
@@ -268,12 +272,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je prázdný, kontejneru souběžných `false` jinak.  
+ `true` Pokud je prázdný, kontejneru souběžných `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Případě souběžných vložení, jestli je prázdný souběžných kontejneru se může změnit ihned po volání této funkce, než je návratovou hodnotu i pro čtení.  
   
-##  <a name="end"></a>end 
+##  <a name="end"></a> End 
 
  Vrátí iterator odkazující na umístění posledním prvkem v kontejneru souběžných úspěšné. Tato metoda je bezpečné souběžnosti.  
   
@@ -286,7 +290,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor do umístění posledním prvkem v kontejneru souběžných úspěšné.  
   
-##  <a name="equal_range"></a>equal_range – 
+##  <a name="equal_range"></a> equal_range 
 
  Vyhledá rozsah, který odpovídá zadaným klíčem. Tato funkce je bezpečné souběžnosti.  
   
@@ -310,7 +314,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Poznámky  
  Je možné pro souběžných vloží způsobí další klíče má být vložen po begin iterator a před end iterator.  
   
-##  <a name="find"></a>Najít 
+##  <a name="find"></a> Najít 
 
  Vyhledá prvek, který odpovídá zadanému klíči. Tato funkce je bezpečné souběžnosti.  
   
@@ -327,7 +331,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor odkazující na umístění první prvek, který odpovídá klíči poskytovaném nebo iteraci `end()` Pokud neexistuje žádný takový prvek.  
   
-##  <a name="get_allocator"></a>get_allocator – 
+##  <a name="get_allocator"></a> get_allocator – 
 
  Vrací objekt allocator uložené pro tento souběžných kontejner. Tato metoda je bezpečné souběžnosti.  
   
@@ -338,7 +342,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Objekt allocator uložené pro tento souběžných kontejner.  
   
-##  <a name="hash_function"></a>hash_function – 
+##  <a name="hash_function"></a> hash_function – 
 
  Vrátí objekt funkce uložené hodnoty hash.  
   
@@ -349,7 +353,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Objekt funkce uložené hodnoty hash.  
   
-##  <a name="insert"></a>Vložení 
+##  <a name="insert"></a> Vložení 
 
  Přidá elementy na `concurrent_unordered_multimap` objektu.  
   
@@ -408,7 +412,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Poslední dva členské funkce chovají stejně jako první dvě, vyjma toho, že `value` se používá pro konstrukci zadaná hodnota.  
   
-##  <a name="key_eq"></a>key_eq – 
+##  <a name="key_eq"></a> key_eq 
 
  Vrátí objekt funkce porovnání rovnosti uložené.  
   
@@ -419,7 +423,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Objekt funkce porovnání rovnosti uložené.  
   
-##  <a name="load_factor"></a>load_factor – 
+##  <a name="load_factor"></a> load_factor – 
 
  Vypočítá a vrátí aktuální zatížení Multi-Factor kontejneru. Koeficient zatížení je počet elementů v kontejneru rozdělené podle počtu kbelíků.  
   
@@ -430,7 +434,7 @@ float load_factor() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Koeficient zatížení kontejneru.  
   
-##  <a name="max_load_factor"></a>max_load_factor – 
+##  <a name="max_load_factor"></a> max_load_factor – 
 
  Získá nebo nastaví maximální zatížení faktor kontejneru. Maximální zatížení faktor je největší počet prvků, než může být v žádné sady než kontejneru zvětšování jeho interní tabulku.  
   
@@ -446,7 +450,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Návratová hodnota  
  První člen funkce vrátí Multi-Factor uložené maximální zatížení. Druhý členská funkce nevrací hodnotu, ale vyvolá [out_of_range](../../../standard-library/out-of-range-class.md) výjimka, pokud zadaná zatížení faktor je neplatný...  
   
-##  <a name="max_size"></a>max_size – 
+##  <a name="max_size"></a> max_size 
 
  Vrátí maximální velikost souběžných kontejneru, určit pomocí přidělujícího modulu. Tato metoda je bezpečné souběžnosti.  
   
@@ -460,7 +464,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota horní mez může být ve skutečnosti vyšší, než co kontejneru ve skutečnosti pojme.  
   
-##  <a name="operator_eq"></a>operátor = 
+##  <a name="operator_eq"></a> operátor = 
 
  Přiřadí obsah jiného `concurrent_unordered_multimap` k tomuto objektu. Tato metoda není bezpečná souběžnosti.  
   
@@ -480,7 +484,7 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 ### <a name="remarks"></a>Poznámky  
  Po vymazání existující prvky v souběžných neuspořádaný multimap, `operator=` buď kopíruje nebo přesouvá obsah `_Umap` do souběžných neuspořádaný multimap.  
   
-##  <a name="rehash"></a>rehash – 
+##  <a name="rehash"></a> rehash – 
 
  Znovu vytvoří hashovací tabulku.  
   
@@ -497,7 +501,7 @@ void rehash(size_type _Buckets);
   
  Vyvolá [out_of_range](../../../standard-library/out-of-range-class.md) výjimka, pokud počet intervalů, je neplatný (0 nebo větší než maximální počet kbelíků).  
   
-##  <a name="size"></a>velikost 
+##  <a name="size"></a> Velikost 
 
  Vrátí počet prvků v tomto souběžných kontejneru. Tato metoda je bezpečné souběžnosti.  
   
@@ -511,7 +515,7 @@ size_type size() const;
 ### <a name="remarks"></a>Poznámky  
  Případě souběžných vložení může změnit počet elementů v kontejneru souběžných ihned po volání této funkce, než je návratovou hodnotu i pro čtení.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> Swap 
 
  Prohození obsahu dvou `concurrent_unordered_multimap` objekty. Tato metoda není bezpečná souběžnosti.  
   
@@ -523,7 +527,7 @@ void swap(concurrent_unordered_multimap& _Umap);
  `_Umap`  
  `concurrent_unordered_multimap` Objekt, který chcete Prohodit s.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin – 
+##  <a name="unsafe_begin"></a> unsafe_begin – 
 
  Vrátí první prvek v tomto kontejneru pro konkrétní sady iterace.  
   
@@ -540,7 +544,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace odkazující na začátku bloku.  
   
-##  <a name="unsafe_bucket"></a>unsafe_bucket – 
+##  <a name="unsafe_bucket"></a> unsafe_bucket – 
 
  Vrátí index sady, který konkrétního klíče mapy v tomto kontejneru.  
   
@@ -555,7 +559,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Index sady pro klíč v tomto kontejneru.  
   
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count – 
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count – 
 
  Vrátí aktuální počet intervalů, v tomto kontejneru.  
   
@@ -566,7 +570,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet intervalů, v tomto kontejneru.  
   
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size – 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
  Vrátí počet položek v konkrétní sady tohoto kontejneru.  
   
@@ -581,7 +585,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet intervalů, v tomto kontejneru.  
   
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin – 
+##  <a name="unsafe_cbegin"></a> unsafe_cbegin – 
 
  Vrátí první prvek v tomto kontejneru pro konkrétní sady iterace.  
   
@@ -596,7 +600,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace odkazující na začátku bloku.  
   
-##  <a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a> unsafe_cend 
 
  Vrátí iterator do umístění úspěšné posledním prvkem v konkrétní sady.  
   
@@ -611,7 +615,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace odkazující na začátku bloku.  
   
-##  <a name="unsafe_end"></a>unsafe_end – 
+##  <a name="unsafe_end"></a> unsafe_end – 
 
  Vrátí iterovat posledním prvkem v tomto kontejneru pro konkrétní sady.  
   
@@ -628,7 +632,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace odkazující na konci bloku.  
   
-##  <a name="unsafe_erase"></a>unsafe_erase – 
+##  <a name="unsafe_erase"></a> unsafe_erase – 
 
  Odebere elementy z `concurrent_unordered_multimap` v zadaných pozic. Tato metoda není bezpečná souběžnosti.  
   
@@ -662,7 +666,7 @@ iterator unsafe_erase(
   
  Třetí členská funkce odebere elementy v rozsahu oddělená `concurrent_unordered_multimap::equal_range`(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count – 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
  Vrátí maximální počet intervalů, v tomto kontejneru.  
   

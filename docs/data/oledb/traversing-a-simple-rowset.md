@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2dc0c58414587316a9a63d08bf2116d4159fca20
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Procházení jednoduché sady řádků
 Následující příklad ukazuje databáze rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu knihovny ATL načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access databáze pomocí zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě uživatelského záznamu `CArtists`. Otevře připojení, otevře se relace na připojení a otevře v tabulce v relaci.  

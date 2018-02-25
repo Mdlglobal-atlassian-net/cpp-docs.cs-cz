@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - writeonly_texture_view
 - AMP_GRAPHICS/writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3ab115301a6d7063ba443cf528b382ae955360f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view – třída
 Poskytuje přístup writeonly k texturou.  
@@ -65,8 +68,8 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Název|Popis|  
 |----------|-----------------|  
-|[writeonly_texture_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `writeonly_texture_view` třídy.|  
-|[~ writeonly_texture_view – destruktor](#ctor)|Zničí `writeonly_texture_view` objektu.|  
+|[writeonly_texture_view Constructor](#ctor)|Inicializuje novou instanci třídy `writeonly_texture_view` třídy.|  
+|[~writeonly_texture_view Destructor](#ctor)|Zničí `writeonly_texture_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -78,7 +81,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor =](#operator_eq)|Zkopíruje zadaný `writeonly_texture_view` k tomuto objektu.|  
+|[operator=](#operator_eq)|Zkopíruje zadaný `writeonly_texture_view` k tomuto objektu.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -96,7 +99,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="dtor"></a>~ writeonly_texture_view 
+##  <a name="dtor"></a> ~writeonly_texture_view 
 
  Zničí `writeonly_texture_view` objektu.  
   
@@ -104,7 +107,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="operator_eq"></a>operátor = 
+##  <a name="operator_eq"></a> operátor = 
 
  Zkopíruje zadaný `writeonly_texture_view` k tomuto objektu.  
   
@@ -115,12 +118,12 @@ writeonly_texture_view<value_type, _Rank>& operator= (
   
 ### <a name="parameters"></a>Parametry  
  `_Other`  
- `writeonly_texture_view`objekt, který chcete zkopírovat z.  
+ `writeonly_texture_view` objekt, který chcete zkopírovat z.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na toto `writeonly_texture_view` objektu.  
   
-##  <a name="rank"></a>pořadí 
+##  <a name="rank"></a> Pořadí 
 
  Získá pořadí `writeonly_texture_view` objektu.  
   
@@ -128,7 +131,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="set"></a>nastavení 
+##  <a name="set"></a> nastavení 
 
  Nastaví hodnotu elementu v zadaném indexu.  
   
@@ -145,7 +148,7 @@ void set(
  `value`  
  Nová hodnota elementu.  
   
-##  <a name="ctor"></a>writeonly_texture_view 
+##  <a name="ctor"></a> writeonly_texture_view 
 
  Inicializuje novou instanci třídy `writeonly_texture_view` třídy.  
   

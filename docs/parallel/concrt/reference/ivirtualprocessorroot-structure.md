@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
 - CONCRTRM/concurrency::IVirtualProcessorRoot
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
-dev_langs: C++
-helpviewer_keywords: IVirtualProcessorRoot structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1010517799b9878ff88ddbc68a76ff4a0ed6588f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot – struktura
 Abstrakci pro hardware vláken, ve kterém můžete spustit vlákno proxy.  
@@ -43,10 +47,10 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Ivirtualprocessorroot::Activate –](#activate)|Způsobí, že proxy vlákno přidružené k rozhraní kontext provádění `pContext` spustit provádění v této kořenové virtuálních procesorů.|  
-|[Ivirtualprocessorroot::Deactivate –](#deactivate)|Způsobí, že proxy vlákno aktuálně spuštěných v kořenovém adresáři tohoto virtuálního procesoru zastavit odesílání kontextu spuštění. Vlákno proxy bude pokračovat v provádění na volání `Activate` metoda.|  
-|[Ivirtualprocessorroot::ensurealltasksvisible –](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů se viditelné pro všechny procesory systému. Zajišťuje, že ochranná úplné paměti provedl na všechny procesory než metoda vrátí.|  
-|[Ivirtualprocessorroot::getid –](#getid)|Vrací jedinečný identifikátor pro kořenovou virtuální procesor.|  
+|[IVirtualProcessorRoot::Activate](#activate)|Způsobí, že proxy vlákno přidružené k rozhraní kontext provádění `pContext` spustit provádění v této kořenové virtuálních procesorů.|  
+|[IVirtualProcessorRoot::Deactivate](#deactivate)|Způsobí, že proxy vlákno aktuálně spuštěných v kořenovém adresáři tohoto virtuálního procesoru zastavit odesílání kontextu spuštění. Vlákno proxy bude pokračovat v provádění na volání `Activate` metoda.|  
+|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů se viditelné pro všechny procesory systému. Zajišťuje, že ochranná úplné paměti provedl na všechny procesory než metoda vrátí.|  
+|[IVirtualProcessorRoot::GetId](#getid)|Vrací jedinečný identifikátor pro kořenovou virtuální procesor.|  
   
 ## <a name="remarks"></a>Poznámky  
  Každý procesor virtuálního kořenového má k přidružené provádění prostředku. `IVirtualProcessorRoot` Rozhraní dědí z [iexecutionresource –](iexecutionresource-structure.md) rozhraní. Několik virtuálních procesorů kořeny nemusí odpovídat stejný základní hardware vlákno.  
@@ -63,7 +67,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Namespace:** souběžnosti  
   
-##  <a name="activate"></a>Ivirtualprocessorroot::Activate – metoda  
+##  <a name="activate"></a>  Ivirtualprocessorroot::Activate – metoda  
  Způsobí, že proxy vlákno přidružené k rozhraní kontext provádění `pContext` spustit provádění v této kořenové virtuálních procesorů.  
   
 ```
@@ -75,7 +79,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
  Rozhraní pro provádění kontext, který bude odeslán na této kořenové virtuálních procesorů.  
   
 ### <a name="remarks"></a>Poznámky  
- Správce prostředků bude zadat proxy přístup z více vláken, pokud není přidružené rozhraní kontext spuštění`pContext`  
+ Správce prostředků bude zadat proxy přístup z více vláken, pokud není přidružené rozhraní kontext spuštění `pContext`  
   
  `Activate` Metodu lze použít ke spuštění provádění pracovní na nový kořen virtuálních procesorů vrátil pomocí Správce prostředků, nebo obnovit proxy přístup z více vláken v kořenovém adresáři virtuálních procesorů, který má deaktivováno nebo je chcete deaktivovat. V tématu [ivirtualprocessorroot::Deactivate –](#deactivate) Další informace o deaktivaci. Pokud se obnovení kořenové deaktivované virtuálních procesorů, parametr `pContext` musí být stejný jako parametr používá deaktivace kořenu virtuálních procesorů.  
   
@@ -83,13 +87,13 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  Když aktivujete kořenové virtuálních procesorů, můžete signál Resource Manager, že tohoto kořenového adresáře virtuálních procesorů je momentálně zaneprázdněné. s pracovní. Pokud vaše scheduler nemůže najít veškerou práci, provést v této kořenové, očekává se má být vyvolán `Deactivate` metoda informuje o Resource Manager nečinný kořenu virtuálních procesorů. Správce prostředků používá tato data pro systém Vyrovnávání zatížení.  
   
- `invalid_argument`je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
+ `invalid_argument` je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
   
- `invalid_operation`je vyvolána, pokud argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
+ `invalid_operation` je vyvolána, pokud argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
   
  V rámci aktivace kořenové virtuálních procesorů zvyšuje úroveň předplatného základní hardware vlákno o jednu. Další informace o úrovních předplatné najdete v tématu [iexecutionresource::currentsubscriptionlevel –](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="deactivate"></a>Ivirtualprocessorroot::Deactivate – metoda  
+##  <a name="deactivate"></a>  Ivirtualprocessorroot::Deactivate – metoda  
  Způsobí, že proxy vlákno aktuálně spuštěných v kořenovém adresáři tohoto virtuálního procesoru zastavit odesílání kontextu spuštění. Vlákno proxy bude pokračovat v provádění na volání `Activate` metoda.  
   
 ```
@@ -110,13 +114,13 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  Pokud awakens kořenové virtuálních procesorů a návratovou hodnotou z `Deactivate` metoda je hodnota `false`, Plánovač má seznamu dokončení UMS pomocí dotazu `IUMSCompletionList::GetUnblockNotifications` metoda, fungují v těchto informací a následně volání `Deactivate`metoda znovu. To je třeba opakovat, dokud `Deactivate` vrátí metoda hodnotu `true`.  
   
- `invalid_argument`je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
+ `invalid_argument` je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
   
- `invalid_operation`je vyvolána, pokud kořenu virtuálních procesorů nikdy aktivován, nebo argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
+ `invalid_operation` je vyvolána, pokud kořenu virtuálních procesorů nikdy aktivován, nebo argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
   
  V rámci deaktivace kořenové virtuálních procesorů sníží úroveň předplatného základní hardware vlákno jeden. Další informace o úrovních předplatné najdete v tématu [iexecutionresource::currentsubscriptionlevel –](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="ensurealltasksvisible"></a>Ivirtualprocessorroot::ensurealltasksvisible – metoda  
+##  <a name="ensurealltasksvisible"></a>  Ivirtualprocessorroot::ensurealltasksvisible – metoda  
  Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů se viditelné pro všechny procesory systému. Zajišťuje, že ochranná úplné paměti provedl na všechny procesory než metoda vrátí.  
   
 ```
@@ -132,11 +136,11 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  Volání `EnsureAllTasksVisibleThe` metoda musí pocházet z uvnitř `Dispatch` metodu kontext provádění, která s poslední aktivace kořenu virtuálních procesorů. Jinými slovy, vlákno proxy vyvolání `EnsureAllTasksVisible` metoda musí být ten, který je aktuálně spuštěných v kořenovém adresáři virtuálních procesorů. Volání metody v kořenovém adresáři virtuálních procesorů, které nejsou provádění na může mít za následek nedefinované chování.  
   
- `invalid_argument`je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
+ `invalid_argument` je vyvolána, pokud argument `pContext` má hodnotu `NULL`.  
   
- `invalid_operation`je vyvolána, pokud kořenu virtuálních procesorů nikdy aktivován, nebo argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
+ `invalid_operation` je vyvolána, pokud kořenu virtuálních procesorů nikdy aktivován, nebo argument `pContext` nepředstavuje kontext spuštění, který byl naposledy odeslaných pomocí tohoto kořenového virtuálních procesorů.  
   
-##  <a name="getid"></a>Ivirtualprocessorroot::getid – metoda  
+##  <a name="getid"></a>  Ivirtualprocessorroot::getid – metoda  
  Vrací jedinečný identifikátor pro kořenovou virtuální procesor.  
   
 ```

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::yx
 - amp_short_vectors/Concurrency::graphics::float_2::operator-=
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::set_y
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3c963d55bd87dc84d48f8aafedbd6ba8cfa54d3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e45a4388b1dcdfd0409b09c0fa50a1d4353a441f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float2-class"></a>float_2 – třída
 Představuje krátký Vektor dvě obtékaných objektů.  
@@ -90,14 +93,14 @@ class float_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|float_2::Operator-||  
-|float_2::Operator--||  
-|float_2::Operator * =||  
+|float_2::operator-||  
+|float_2::operator--||  
+|float_2::operator*=||  
 |/ float_2::Operator = – operátor||  
-|float_2::Operator ++||  
-|float_2::Operator +=||  
-|float_2::Operator =||  
-|float_2::Operator-=||  
+|float_2::operator++||  
+|float_2::operator+=||  
+|float_2::operator=||  
+|float_2::operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -114,7 +117,7 @@ class float_2;
 |float_2::r||  
 |float_2::rg||  
 |float_2::x||  
-|float_2::XY||  
+|float_2::xy||  
 |float_2::y||  
 |float_2::yx||  
   
@@ -126,7 +129,7 @@ class float_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>float_2 
+##  <a name="ctor"></a> float_2 
 
  Výchozí konstruktor, inicializuje všechny prvky s 0.  
   
@@ -189,7 +192,7 @@ explicit inline float_2(
  `_Other`  
  Objekt použitý k chybě při inicializaci.  
   
-##  <a name="float_2__size"></a>velikost 
+##  <a name="float_2__size"></a> Velikost 
 
 ```  
 static const int size = 2;  

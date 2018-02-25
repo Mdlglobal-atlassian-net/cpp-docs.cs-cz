@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
 - amp_short_vectors/Concurrency::graphics::norm_2::set_xy
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm2-class"></a>norm_2 – třída
 Představuje krátký vektoru normální dvou čísel.  
@@ -90,14 +93,14 @@ class norm_2;
   
 |Název|Popis|  
 |----------|-----------------|  
-|norm_2::Operator-||  
-|norm_2::Operator--||  
-|norm_2::Operator * =||  
-|/ norm_2::Operator = – operátor||  
-|norm_2::Operator ++||  
-|norm_2::Operator +=||  
-|norm_2::Operator =||  
-|norm_2::Operator-=||  
+|norm_2::operator-||  
+|norm_2::operator--||  
+|norm_2::operator*=||  
+|norm_2::operator/=||  
+|norm_2::operator++||  
+|norm_2::operator+=||  
+|norm_2::operator=||  
+|norm_2::operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -114,7 +117,7 @@ class norm_2;
 |norm_2::r||  
 |norm_2::rg||  
 |norm_2::x||  
-|norm_2::XY||  
+|norm_2::xy||  
 |norm_2::y||  
 |norm_2::yx||  
   
@@ -126,7 +129,7 @@ class norm_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>norm_2 
+##  <a name="ctor"></a> norm_2 
 
  Výchozí konstruktor, inicializuje všechny prvky s 0.  
   
@@ -206,7 +209,7 @@ explicit inline norm_2(
  `_Other`  
  Objekt použitý k chybě při inicializaci.  
   
-##  <a name="norm_2__size"></a>velikost 
+##  <a name="norm_2__size"></a> Velikost 
 
 ```  
 static const int size = 2;  

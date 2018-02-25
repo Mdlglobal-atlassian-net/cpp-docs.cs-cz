@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs: C++
-helpviewer_keywords: IResourceManager structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
 Rozhraní pro správce prostředků Concurrency Runtime. Toto je rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků.  
@@ -53,10 +57,10 @@ struct IResourceManager;
 |Název|Popis|  
 |----------|-----------------|  
 |[Iresourcemanager::createnodetopology –](#createnodetopology)|Nachází pouze v ladění sestavení modulu runtime, tato metoda je test háku, navrženy k usnadnění testování služby Správce prostředků v různých topologiích hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní sestavení modulu runtime tato metoda vrátí bez provedení všech akcí.|  
-|[Iresourcemanager::getavailablenodecount –](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.|  
 |[Iresourcemanager::getfirstnode –](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovaným pomocí Správce prostředků.|  
 |[Iresourcemanager::Reference –](#reference)|Zvýší počet odkazů na instanci Resource Manager.|  
-|[Iresourcemanager::registerscheduler –](#registerscheduler)|Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.|  
 |[Iresourcemanager::Release –](#release)|Snižuje počet odkaz na instanci Resource Manager. Resource Manager zničen při jeho počet odkazů přejde na `0`.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -70,7 +74,7 @@ struct IResourceManager;
   
  **Namespace:** souběžnosti  
   
-##  <a name="createnodetopology"></a>Iresourcemanager::createnodetopology – metoda  
+##  <a name="createnodetopology"></a>  Iresourcemanager::createnodetopology – metoda  
  Nachází pouze v ladění sestavení modulu runtime, tato metoda je test háku, navrženy k usnadnění testování služby Správce prostředků v různých topologiích hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní sestavení modulu runtime tato metoda vrátí bez provedení všech akcí.  
   
 ```
@@ -99,7 +103,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) je vyvolána, pokud tato metoda je volána, když existují další plánovače v procesu.  
   
-##  <a name="getavailablenodecount"></a>Iresourcemanager::getavailablenodecount – metoda  
+##  <a name="getavailablenodecount"></a>  Iresourcemanager::getavailablenodecount – metoda  
  Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.  
   
 ```
@@ -109,7 +113,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet uzlů, které jsou k dispozici pro správce prostředků.  
   
-##  <a name="getfirstnode"></a>Iresourcemanager::getfirstnode – metoda  
+##  <a name="getfirstnode"></a>  Iresourcemanager::getfirstnode – metoda  
  Vrátí první uzel v pořadí výčtu definovaným pomocí Správce prostředků.  
   
 ```
@@ -119,14 +123,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Návratová hodnota  
  První uzel v pořadí výčtu definovaným pomocí Správce prostředků.  
   
-##  <a name="iresourcemanager__osversion"></a>IResourceManager::OSVersion – výčet  
+##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion – výčet  
  Výčtový typ, který představuje verzi operačního systému.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>Iresourcemanager::Reference – metoda  
+##  <a name="reference"></a>  Iresourcemanager::Reference – metoda  
  Zvýší počet odkazů na instanci Resource Manager.  
   
 ```
@@ -136,7 +140,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Návratová hodnota  
  Výsledný počet odkazů.  
   
-##  <a name="registerscheduler"></a>Iresourcemanager::registerscheduler – metoda  
+##  <a name="registerscheduler"></a>  Iresourcemanager::registerscheduler – metoda  
  Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.  
   
 ```
@@ -160,7 +164,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  Vyvolá metoda `invalid_argument` výjimka Pokud parametr `pScheduler` má hodnotu `NULL` nebo pokud parametr `version` není platnou verzi pro rozhraní komunikace.  
   
-##  <a name="release"></a>Iresourcemanager::Release – metoda  
+##  <a name="release"></a>  Iresourcemanager::Release – metoda  
  Snižuje počet odkaz na instanci Resource Manager. Resource Manager zničen při jeho počet odkazů přejde na `0`.  
   
 ```
@@ -172,5 +176,5 @@ virtual unsigned int Release() = 0;
   
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
- [Ischedulerproxy – struktura](ischedulerproxy-structure.md)   
+ [ISchedulerProxy Structure](ischedulerproxy-structure.md)   
  [IScheduler – struktura](ischeduler-structure.md)

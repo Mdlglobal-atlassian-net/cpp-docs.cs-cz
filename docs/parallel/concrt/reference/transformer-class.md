@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - transformer
 - AGENTS/concurrency::transformer
@@ -21,19 +22,22 @@ f1_keywords:
 - AGENTS/concurrency::transformer::resume_propagation
 - AGENTS/concurrency::transformer::send_message
 - AGENTS/concurrency::transformer::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: transformer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87f4dd90328a647502c50f973d402f7964eaf5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transformer-class"></a>Třída transformer
 A `transformer` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který může přijmout zprávy jednoho typu a je schopný ukládání bez vazby počet zpráv jiného typu.  
@@ -59,23 +63,23 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Transformer](#ctor)|Přetíženo. Vytvoří `transformer` zasílání zpráv bloku.|  
-|[~ transformer – destruktor](#dtor)|Zničí `transformer` zasílání zpráv bloku.|  
+|[transformer](#ctor)|Přetíženo. Vytvoří `transformer` zasílání zpráv bloku.|  
+|[~transformer Destructor](#dtor)|Zničí `transformer` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept_message –](#accept_message)|Přijme zprávu, která byla nabízí to `transformer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
-|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `transformer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
-|[link_target_notification –](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `transformer` zasílání zpráv bloku.|  
-|[propagate_message –](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[propagate_to_any_targets –](#propagate_to_any_targets)|Provede funkci transformer na vstupní zprávy.|  
-|[release_message –](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
-|[reserve_message –](#reserve_message)|Rezervuje zprávu dříve nabízí to `transformer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
-|[resume_propagation –](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `transformer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
+|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `transformer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
+|[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `transformer` zasílání zpráv bloku.|  
+|[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Provede funkci transformer na vstupní zprávy.|  
+|[release_message](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `transformer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -96,7 +100,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **Namespace:** souběžnosti  
   
-##  <a name="accept_message"></a>accept_message – 
+##  <a name="accept_message"></a> accept_message – 
 
  Přijme zprávu, která byla nabízí to `transformer` bloku zasílání zpráv, přenos vlastnictví volajícímu.  
   
@@ -111,7 +115,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `message` objektu volající má nyní vlastnictví.  
   
-##  <a name="consume_message"></a>consume_message – 
+##  <a name="consume_message"></a> consume_message – 
 
  Využívá dříve nabízené zprávy `transformer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.  
   
@@ -129,7 +133,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Podobně jako `accept`, ale je vždy před voláním `reserve`.  
   
-##  <a name="link_target_notification"></a>link_target_notification – 
+##  <a name="link_target_notification"></a> link_target_notification – 
 
  Zpětné volání, které oznamuje, že nová cílová souvisel s to `transformer` zasílání zpráv bloku.  
   
@@ -137,7 +141,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message – 
+##  <a name="propagate_message"></a> propagate_message – 
 
  Asynchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.  
   
@@ -157,7 +161,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets – 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets – 
 
  Provede funkci transformer na vstupní zprávy.  
   
@@ -165,7 +169,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="release_message"></a>release_message – 
+##  <a name="release_message"></a> release_message – 
 
  Uvolní předchozí zpráva rezervace.  
   
@@ -177,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` objektu vydán.  
   
-##  <a name="reserve_message"></a>reserve_message – 
+##  <a name="reserve_message"></a> reserve_message – 
 
  Rezervuje zprávu dříve nabízí to `transformer` zasílání zpráv bloku.  
   
@@ -190,12 +194,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z `message` objektu je vyhrazena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a>resume_propagation – 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -203,7 +207,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message – 
+##  <a name="send_message">send_message –</a> 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   
@@ -223,7 +227,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source – 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source – 
 
  Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu.  
   
@@ -232,9 +236,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`protože blok není odložit nabízené zprávy.  
+ `true` protože blok není odložit nabízené zprávy.  
   
-##  <a name="ctor"></a>Transformer 
+##  <a name="ctor"></a> Transformer 
 
  Vytvoří `transformer` zasílání zpráv bloku.  
   
@@ -294,7 +298,7 @@ transformer(
   
  Typ `filter_method` je functor podpisem `bool (_Input const &)` který lze vyvolat to `transformer` zasílání zpráv blok k určení, zda by měl přijímat nabízený zprávy.  
   
-##  <a name="dtor"></a>~ transformer 
+##  <a name="dtor"></a> ~ transformer 
 
  Zničí `transformer` zasílání zpráv bloku.  
   

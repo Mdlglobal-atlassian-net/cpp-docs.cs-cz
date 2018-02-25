@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::uniform_int_distribution
 - random/std::uniform_int_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::uniform_int_distribution [C++]
 - std::uniform_int_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 172686fbd7f6717bda8fe102745696031936dea1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f44926c91b0e0ee9d576d62870b5118d1f34e70
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution – třída
 Generuje uniform (každých hodnota je stejně pravděpodobných) distribuční celé číslo v rozsahu výstup, který je inkluzivně inkluzivní.  
@@ -87,7 +90,7 @@ Výsledný typ celé číslo, výchozí nastavení je `int`. Možné typy, najde
 ||||  
 |-|-|-|  
 |[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type –](#param_type)|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
 Vlastnost člena `a()` vrátí aktuálně uložené minimální vázaný distribuce, zatímco `b()` vrátí aktuálně uložené maximální hranice. Pro tuto třídu distribuční tyto minimální a maximální hodnoty jsou stejné jako vrácený běžné funkce vlastností `min()` a `max()`.  
   
@@ -184,7 +187,7 @@ Distribution for 200 samples:
   
  **Namespace:** – std  
   
-##  <a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution  
+##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
 Vytvoří rozdělení.  
   
 ```  
@@ -200,17 +203,17 @@ Dolní mez pro náhodných hodnot, včetně.
 *b*  
 Horní mez pro náhodných hodnot, včetně.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktura použitý k vytvoření distribuce.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`a ≤ b`  
+**Předběžnou podmínku:** `a ≤ b`  
   
 První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a* a jehož uložené `b` hodnota obsahuje hodnotu *b*.  
   
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
   
-##  <a name="param_type"></a>uniform_int_distribution::param_type  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
  Ukládá parametry rozdělení.  
 ```cpp  
 struct param_type {  
@@ -232,16 +235,16 @@ Dolní mez pro náhodných hodnot, včetně.
 *b*  
 Horní mez pro náhodných hodnot, včetně.  
   
-*vpravo*  
+Vpravo  
 `param_type` Objekt k porovnání s to.  
   
 ### <a name="remarks"></a>Poznámky  
-**Předběžnou:**`a ≤ b`  
+**Předběžnou podmínku:** `a ≤ b`  
   
 Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
   
 ## <a name="see-also"></a>Viz také  
- [\<náhodné >](../standard-library/random.md)
+ [\<random>](../standard-library/random.md)
 
 
 

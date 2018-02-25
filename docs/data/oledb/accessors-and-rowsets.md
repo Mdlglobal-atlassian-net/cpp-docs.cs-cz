@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 Nastavit a načíst data, používat šablony technologie OLE DB přistupující objekt a sadu řádků, prostřednictvím [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) třídy. Tato třída může zpracovávat několik přístupových objektů různých typů.  
   
 ## <a name="accessor-types"></a>Typy přistupujícího objektu  
- Všechny přístupové objekty jsou odvozeny od [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`poskytuje parametr a vazba sloupce.  
+ Všechny přístupové objekty jsou odvozeny od [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` poskytuje parametr a vazba sloupce.  
   
  Následující obrázek znázorňuje typy přistupujícího objektu.  
   
  ![Typy přistupujícího objektu](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Třídy přistupujícího objektu  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) použijte tento přistupující objekt, když víte struktura zdroje databáze v době návrhu. `CAccessor`staticky váže záznam v databázi, která obsahuje vyrovnávací paměti, ke zdroji dat.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) použijte tento přistupující objekt, když víte struktura zdroje databáze v době návrhu. `CAccessor` staticky váže záznam v databázi, která obsahuje vyrovnávací paměti, ke zdroji dat.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) použijte tento přistupující objekt, pokud si nejste jisti struktura databáze v době návrhu. `CDynamicAccessor`volání `IColumnsInfo::GetColumnInfo` získat informace o sloupci databáze. Vytváří a spravuje přistupující objekt a vyrovnávací paměť.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) použijte tento přistupující objekt, pokud si nejste jisti struktura databáze v době návrhu. `CDynamicAccessor` volání `IColumnsInfo::GetColumnInfo` získat informace o sloupci databáze. Vytváří a spravuje přistupující objekt a vyrovnávací paměť.  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) použijte tento přistupující objekt pro zpracování Neznámý příkaz typy. Při přípravě příkazy, `CDynamicParameterAccessor` můžete získat informace o parametrech z `ICommandWithParameters` rozhraní, pokud zprostředkovatel podporuje `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), a [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) použijte tyto třídy, když nemáte žádné informace o schématu databáze. `CDynamicStringAccessorA`načte data jako řetězce ANSI; `CDynamicStringAccessorW` načítá data jako řetězce Unicode.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), a [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) použijte tyto třídy, když nemáte žádné informace o schématu databáze. `CDynamicStringAccessorA` načte data jako řetězce ANSI; `CDynamicStringAccessorW` načítá data jako řetězce Unicode.  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) s touto třídou, můžete použít libovolnou datové typy, je-li zprostředkovatel můžete převést typ. Zpracovává výsledek sloupců a parametry příkazu.  
   

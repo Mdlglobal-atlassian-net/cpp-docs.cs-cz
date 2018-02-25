@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_assignment
 - AGENTS/concurrency::single_assignment
@@ -22,19 +23,22 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs: C++
-helpviewer_keywords: single_assignment class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singleassignment-class"></a>Třída single_assignment
 A `single_assignment` zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání jedinou zápisu-po `message`.  
@@ -57,27 +61,27 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Název|Popis|  
 |----------|-----------------|  
 |[single_assignment](#ctor)|Přetíženo. Vytvoří `single_assignment` zasílání zpráv bloku.|  
-|[~ single_assignment – destruktor](#dtor)|Zničí `single_assignment` zasílání zpráv bloku.|  
+|[~single_assignment Destructor](#dtor)|Zničí `single_assignment` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[has_value –](#has_value)|Kontroluje, zda tato `single_assignment` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
+|[has_value](#has_value)|Kontroluje, zda tato `single_assignment` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
 |[value](#value)|Získá odkaz na aktuální datovou část zprávy ukládají do `single_assignment` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept_message –](#accept_message)|Přijme zprávu, která byla nabízí to `single_assignment` zasílání zpráv bloku vrácením volající kopii zprávy.|  
-|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `single_assignment` a vyhrazený pro cíl, vrácením volající kopii zprávy.|  
-|[link_target_notification –](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `single_assignment` zasílání zpráv bloku.|  
-|[propagate_message –](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[propagate_to_any_targets –](#propagate_to_any_targets)|Míst `message _PMessage` v tomto `single_assignment` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.|  
-|[release_message –](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
-|[reserve_message –](#reserve_message)|Rezervuje zprávu dříve nabízí to `single_assignment` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
-|[resume_propagation –](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `single_assignment` zasílání zpráv bloku vrácením volající kopii zprávy.|  
+|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `single_assignment` a vyhrazený pro cíl, vrácením volající kopii zprávy.|  
+|[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `single_assignment` zasílání zpráv bloku.|  
+|[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Míst `message _PMessage` v tomto `single_assignment` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.|  
+|[release_message](#release_message)|Uvolní předchozí zpráva rezervace. (Přepisuje [source_block::release_message –](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `single_assignment` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -101,7 +105,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  **Namespace:** souběžnosti  
   
-##  <a name="accept_message"></a>accept_message – 
+##  <a name="accept_message"></a> accept_message – 
 
  Přijme zprávu, která byla nabízí to `single_assignment` zasílání zpráv bloku vrácením volající kopii zprávy.  
   
@@ -119,7 +123,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  `single_assignment` Zasílání zpráv na úrovni bloku kopie vrátí zprávu, která se jeho cíle, nikoli přenos vlastnictví aktuálně udržovaných zprávy.  
   
-##  <a name="consume_message"></a>consume_message – 
+##  <a name="consume_message"></a> consume_message – 
 
  Využívá dříve nabízené zprávy `single_assignment` a vyhrazený pro cíl, vrácením volající kopii zprávy.  
   
@@ -137,7 +141,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Podobně jako `accept`, ale je vždy před voláním `reserve`.  
   
-##  <a name="has_value"></a>has_value – 
+##  <a name="has_value"></a> has_value – 
 
  Kontroluje, zda tato `single_assignment` zasílání zpráv bloku byl inicializován s hodnotou ještě.  
   
@@ -146,9 +150,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud bloku byl přijat hodnotu, `false` jinak.  
+ `true` Pokud bloku byl přijat hodnotu, `false` jinak.  
   
-##  <a name="link_target_notification"></a>link_target_notification – 
+##  <a name="link_target_notification"></a> link_target_notification – 
 
  Zpětné volání, které oznamuje, že nová cílová souvisel s to `single_assignment` zasílání zpráv bloku.  
   
@@ -160,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ukazatel na nově propojené cíl.  
   
-##  <a name="propagate_message"></a>propagate_message – 
+##  <a name="propagate_message"></a> propagate_message – 
 
  Asynchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.  
   
@@ -180,7 +184,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets – 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets – 
 
  Míst `message` `_PMessage` v tomto `single_assignment` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.  
   
@@ -192,7 +196,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
  `_PMessage`  
  Ukazatel na `message` které tento `single_assignment` převzetí vlastnictví těchto zasílání zpráv bloku.  
   
-##  <a name="release_message"></a>release_message – 
+##  <a name="release_message"></a> release_message – 
 
  Uvolní předchozí zpráva rezervace.  
   
@@ -204,7 +208,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` objektu vydán.  
   
-##  <a name="reserve_message"></a>reserve_message – 
+##  <a name="reserve_message"></a> reserve_message – 
 
  Rezervuje zprávu dříve nabízí to `single_assignment` zasílání zpráv bloku.  
   
@@ -217,12 +221,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z `message` objektu je vyhrazena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a>resume_propagation – 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -230,7 +234,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message – 
+##  <a name="send_message">send_message –</a> 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   
@@ -250,7 +254,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="ctor"></a>single_assignment 
+##  <a name="ctor"></a> single_assignment 
 
  Vytvoří `single_assignment` zasílání zpráv bloku.  
   
@@ -290,7 +294,7 @@ single_assignment(
   
  Typ `filter_method` je functor podpisem `bool (T const &)` který lze vyvolat to `single_assignment` zasílání zpráv blok k určení, zda by měl přijímat nabízený zprávy.  
   
-##  <a name="dtor"></a>~ single_assignment 
+##  <a name="dtor"></a> ~ single_assignment 
 
  Zničí `single_assignment` zasílání zpráv bloku.  
   
@@ -298,7 +302,7 @@ single_assignment(
 ~single_assignment();
 ```  
   
-##  <a name="value"></a>Hodnota 
+##  <a name="value"></a> Hodnota 
 
  Získá odkaz na aktuální datovou část zprávy ukládají do `single_assignment` zasílání zpráv bloku.  
   

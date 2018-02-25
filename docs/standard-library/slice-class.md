@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::slice [C++]
 - std::slice [C++], size
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c49abb87a3a1b9c480c9267f21f6fc9d3de55b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e770372fa2c38f0f0e24104dd3313d227c1252af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="slice-class"></a>slice – třída
 Třída nástrojů k valarray –, který se používá k definování jednorozměrné podmnožiny valarray – nadřazené. Pokud valarray – považuje za dvourozměrná matice se všechny elementy ve pole, řez extrahuje vektoru v jednu dimenzi mimo dvourozměrná pole.  
@@ -50,14 +53,14 @@ Třída nástrojů k valarray –, který se používá k definování jednorozm
   
 |||  
 |-|-|  
-|[řez](#slice)|Definuje podmnožinu `valarray` který se skládá z řady elementy, které jsou do stejné vzdálenosti a která začínají zadaný element.|  
+|[slice](#slice)|Definuje podmnožinu `valarray` který se skládá z řady elementy, které jsou do stejné vzdálenosti a která začínají zadaný element.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[velikost](#size)|Nalezne počet elementů v řez z `valarray`.|  
-|[spuštění](#start)|Vyhledá počáteční index řezy `valarray`.|  
+|[Velikost](#size)|Nalezne počet elementů v řez z `valarray`.|  
+|[start](#start)|Vyhledá počáteční index řezy `valarray`.|  
 |[STRIDE](#stride)|Najde rozdíl mezi elementy v řez systému `valarray`.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -65,7 +68,7 @@ Třída nástrojů k valarray –, který se používá k definování jednorozm
   
  **Namespace:** – std  
   
-##  <a name="size"></a>Slice::size  
+##  <a name="size"></a>  Slice::size  
  Vyhledá v řez valarray – počet elementů.  
   
 ```  
@@ -127,7 +130,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.  
 ```  
   
-##  <a name="slice"></a>Slice::Slice  
+##  <a name="slice"></a>  Slice::Slice  
  Definuje podmnožinu valarray –, která se skládá z prvky, které jsou do stejné vzdálenosti a která začínají zadaný element.  
   
 ```  
@@ -196,7 +199,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).  
 ```  
   
-##  <a name="start"></a>Slice::Start  
+##  <a name="start"></a>  Slice::Start  
  Vyhledá počáteční index řez valarray –.  
   
 ```  
@@ -252,7 +255,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.  
 ```  
   
-##  <a name="stride"></a>Slice::STRIDE  
+##  <a name="stride"></a>  Slice::STRIDE  
  Najde rozdíl mezi elementy v řez valarray –.  
   
 ```  

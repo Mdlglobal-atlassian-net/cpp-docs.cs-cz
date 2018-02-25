@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - translation phases
 - preprocessor, translation
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="phases-of-translation"></a>Fáze posunutí
 Programy jazyků C a C++ se skládají z jednoho nebo více zdrojových souborů, z nichž každý obsahuje část textu programu. Zdrojový soubor spolu s jeho vloženými soubory (soubory, které jsou zahrnuty pomocí direktivy preprocesoru `#include`), s výjimkou částí kódu odebraných pomocí direktiv podmíněné kompilace, jako je `#if`, se nazývá „jednotka překladu“.  
@@ -64,7 +67,7 @@ Programy jazyků C a C++ se skládají z jednoho nebo více zdrojových souborů
  *Zřetězení řetězců*  
  Všechny sousední řetězce a literály širokých řetězců jsou zřetězeny. Například `"String " "concatenation"` stane `"String concatenation"`.  
   
- *Překlad*  
+ *Translation*  
  Všechny tokeny jsou analyzovány syntakticky a sémanticky. Tyto tokeny jsou převedeny na kód objektu.  
   
  *Propojení*  
