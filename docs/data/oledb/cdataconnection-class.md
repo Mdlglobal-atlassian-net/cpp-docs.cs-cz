@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
-dev_langs: C++
-helpviewer_keywords: CDataConnection class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 Připojení ke zdroji dat spravuje.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class CDataConnection  
 ```  
   
@@ -44,8 +47,8 @@ class CDataConnection
 |-|-|  
 |[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|  
 |[Kopírování](../../data/oledb/cdataconnection-copy.md)|Vytvoří kopii existující datové připojení.|  
-|[Otevřete](../../data/oledb/cdataconnection-open.md)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|  
-|[Opennewsession –](../../data/oledb/cdataconnection-opennewsession.md)|Otevře novou relaci pro aktuální připojení.|  
+|[Open](../../data/oledb/cdataconnection-open.md)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|  
+|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Otevře novou relaci pro aktuální připojení.|  
   
 ### <a name="operators"></a>Operátory  
   
@@ -59,7 +62,7 @@ class CDataConnection
 |[operátor CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|Vrací ukazatel na uzavřeného `CSession` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDataConnection`je užitečné třída pro vytvoření klienty, protože zapouzdřit nezbytných objektů (zdroj dat a relace) a některé úkoly, které musíte udělat při připojování ke zdroji dat  
+ `CDataConnection` je užitečné třída pro vytvoření klienty, protože zapouzdřit nezbytných objektů (zdroj dat a relace) a některé úkoly, které musíte udělat při připojování ke zdroji dat  
   
  Bez `CDataConnection`, je nutné vytvořit `CDataSource` objektu, volání jeho [OpenFromInitializationString –](../../data/oledb/cdatasource-openfrominitializationstring.md) metoda, pak vytvořit instanci [CSession](../../data/oledb/csession-class.md) objektu, volání jeho [ Otevřete](../../data/oledb/csession-open.md) metoda, pak vytvořte [CCommand](../../data/oledb/ccommand-class.md) objekt a volání jeho **otevřete*** metody.  
   
