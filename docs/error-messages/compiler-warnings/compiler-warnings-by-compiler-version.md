@@ -1,124 +1,150 @@
 ---
 title: "Upozornění kompilátoru kompilátoru verzí | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 01/31/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-cpp
+ms.technology:
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.assetid: 886c5a66-088c-4a4b-908b-aa3ec189e595
-caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru verzí kompilátoru  
-  
-Kompilátor můžete potlačit upozornění, které byly zavedeny po na verzi, můžete zadat pomocí [/Wv](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. To je užitečné pro správu vašeho procesu sestavení při zavádění nové verze sady nástrojů a chcete dočasně potlačení nové upozornění. Tato možnost není potlačit nové chybové zprávy. Nedoporučujeme potlačení všechny nové upozornění trvale! Doporučujeme vždy zkompilujete na nejvyšší úrovni regulární upozornění, __/W4__a odeberte __/Wv__ možnost v buildu co nejdříve.  
-  
+# <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru verzí kompilátoru
+
+Kompilátor můžete potlačit upozornění, které byly zavedeny po na verzi, můžete zadat pomocí [/Wv](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. To je užitečné pro správu vašeho procesu sestavení při zavádění nové verze sady nástrojů a chcete dočasně potlačení nové upozornění. Tato možnost není potlačit nové chybové zprávy. Nedoporučujeme potlačení všechny nové upozornění trvale! Doporučujeme vždy zkompilujete na nejvyšší úrovni regulární upozornění, __/W4__a odeberte __/Wv__ možnost v buildu co nejdříve. 
+
 Tyto verze kompilátoru zavedl nový upozornění:
 
-| Produkt | Číslo verze kompilátoru |  
-|-|-|  
-| Visual C++ 2002 | 13.00.9466 |  
-| Visual C++ 2003 | 13.10.3077 |  
-| Visual C++ 2005 | 14.00.50727.762 |  
-| Visual C++ 2008 | 15.00.21022.08 |  
-| Visual C++ 2010 | 16.00.40219.01 |  
-| Visual C++ 2012 | 17.00.51106.1 |  
-| Visual C++ 2013 | 18.00.21005.1 |  
-| Visual C++ 2015 RTM | 19.00.23026.0 |  
-| Visual C++ 2015 Update 1 | 19.00.23506.0 |  
-| Visual C++ 2015 Update 2 | 19.00.23918.0 |  
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |  
-| Visual C++ 2017 RTM | 19.10.24903.0 |  
-| Visual C++ 2017 Update 1 | 19.10.25017.0 |  
-  
-Můžete zadat pouze hlavní číslo, hlavní a podverze čísla nebo hlavní, vedlejší verzi a sestavení čísla, která __/Wv__ možnost, která potlačí všechny výstrahy pro větší než zadané číslo verze. Například k potlačení upozornění zavedená v Visual C++ 2015 Update 2 nebo novější, můžete použít __/Wv:19.00.23900__. Chcete-li potlačit všech upozornění v prostředí Visual C++ 2013 a novější, můžete použít __/Wv:18__.  
-  
+| Produkt | Číslo verze kompilátoru |
+|-|-|
+| Visual C++ 2002 | 13.00.9466 |
+| Visual C++ 2003 | 13.10.3077 |
+| Visual C++ 2005 | 14.00.50727.762 |
+| Visual C++ 2008 | 15.00.21022.08 |
+| Visual C++ 2010 | 16.00.40219.01 |
+| Visual C++ 2012 | 17.00.51106.1 |
+| Visual C++ 2013 | 18.00.21005.1 |
+| Visual C++ 2015 RTM | 19.00.23026.0 |
+| Visual C++ 2015 Update 1 | 19.00.23506.0 |
+| Visual C++ 2015 Update 2 | 19.00.23918.0 |
+| Visual C++ 2015 Update 3 | 19.00.24215.1 |
+| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual C++ 2017 verze 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 verze 15.3 | 19.11.25506.0 |
+| Visual C++ 2017 verze 15,5 | 19.12.25827.0 |
+
+Můžete zadat pouze hlavní číslo, hlavní a podverze čísla nebo hlavní, vedlejší verzi a sestavení čísla, která __/Wv__ možnost. Sestavy všech upozornění, které se shodují verzí, které začínají zadané číslo a potlačí všechny výstrahy pro větší než zadané číslo verze. Například __/Wv:17__ sestavy všech upozornění zavedená v nebo před všechny verze sady Visual Studio 2012 a potlačí všechny upozornění zaváděné žádné kompilátoru ze sady Visual Studio 2013 (verze 18) nebo novější. Potlačit upozornění byla zavedená v sadě Visual Studio 2015 update 2 a novější, můžete použít __/Wv:19.00.23506__. Použití __/Wv:19.11__ k hlášení všech upozornění byla zavedená v libovolné verzi sady Visual Studio před Visual Studio 2017 verze 15,5, ale potlačí upozornění byla zavedená v aplikaci Visual Studio 2017 verze 15,5 a novější.
+
 Následující části uvádějí upozornění zaváděné každou verzi Visual C++, který můžete potlačit tím, že pomocí __/Wv__ – možnost kompilátoru. __/Wv__ možnost nelze potlačení upozornění, které nejsou uvedené, které platila před zadaná verze kompilátoru.
-  
-## <a name="warnings-introduced-in-visual-c-2017-update-1"></a>Upozornění byla zavedená v Visual C++ 2017 Update 1
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.10.25000__.  
-  
-|||  
-|-|-|  
-C4597|není definována chování: *popis*  
-C4604|'*typ*': předání argumentů hodnotou mezi nativní a spravovaná hranic vyžaduje platný kopírovacího konstruktoru. Jinak není definován chování za běhu  
-C4749|podmíněná podporována: *popis*  
-C4768|atributy __declspec před specifikaci propojení se ignorují.  
-C4834|Hodnota vrácená funkcí s atributem 'nodiscard' zahození  
+
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Upozornění byla zavedená v 2017 Visual C++ verze 15,5 (verze 19.12.25827.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.11__.
+
+|||
+|-|-|
+C5044|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu, '*cesta*, který neexistuje
+
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Upozornění byla zavedená v 2017 Visual C++ verze 15.3 (verze 19.11.25506.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.10__.
+
+|||
+|-|-|
+C4843|'*type1*': Obslužná rutina výjimky z odkazu na typ pole nebo funkce nedostupný, použijte '*type2*' místo toho
+C4844|"export modulu *module_name*;' je nyní upřednostňované syntaxe deklarace rozhraní modulu
+C5039|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku.
+C5040|specifikace výjimek dynamické jsou platné pouze v C ++ 14 a starší; práce jako s noexcept(false)
+C5041|'*definice*':--line definice pro constexpr statických dat člena není potřebné a je zastaralý součástí C ++ 17
+C5042|'*deklarace*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odeberte specifikátor 'vložené.
+C5043|'*specifikace*': specifikace výjimek neodpovídá předchozí deklarace
+
+## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Upozornění byla zavedená v 2017 Visual C++ verze 15.1 (verze 19.10.25017.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.10.24903__.
+
+|||
+|-|-|
+C4597|není definována chování: *popis*
+C4604|'*typ*': předání argumentů hodnotou mezi nativní a spravovaná hranic vyžaduje platný kopírovacího konstruktoru. Jinak není definován chování za běhu
+C4749|podmíněná podporována: *popis*
+C4768|atributy __declspec před specifikaci propojení se ignorují.
+C4834|Hodnota vrácená funkcí s atributem 'nodiscard' zahození
 C4841|nestandardní rozšíření používané: *rozšíření*
-C4842|výsledek offsetof "–", které se použijí k typu pomocí vícenásobná dědičnost nemusí být konzistentní mezi verzemi kompilátoru  
-C4869|'nodiscard, může použít pouze pro třídy, výčty a funkce s návratový typ není void  
-C5033|'*třídy úložiště*' je již třída podporované úložiště  
-C5034|použití vnitřní '*vnitřní*' způsobí, že funkce *funkce* sestavují jako kód hosta  
-C5035|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta  
-C5036|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.  
-C5037|'*– členská funkce*': definici z přesahujících člena třídy šablony nemůže mít výchozí argumenty  
-  
-## <a name="warnings-introduced-in-visual-c-2017-rtm"></a>Upozornění byla zavedená v Visual C++ 2017 RTM  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.10__.  
-  
-|||  
-|-|-|  
+C4842|výsledek offsetof "–", které se použijí k typu pomocí vícenásobná dědičnost nemusí být konzistentní mezi verzemi kompilátoru
+C4869|'nodiscard, může použít pouze pro třídy, výčty a funkce s návratový typ není void
+C5033|'*třídy úložiště*' je již třída podporované úložiště
+C5034|použití vnitřní '*vnitřní*' způsobí, že funkce *funkce* sestavují jako kód hosta
+C5035|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta
+C5036|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.
+C5037|'*– členská funkce*': definici z přesahujících člena třídy šablony nemůže mít výchozí argumenty
+C5038|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.
+
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Upozornění byla zavedená v Visual C++ 2017 RTM (verze 19.10.24903 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00__.
+
+|||
+|-|-|
 C4468|'fallthrough': atribut musí být následováno případu štítek nebo výchozí štítek
 C4698|'*funkce*, je pro zkušební účely pouze a mohou podléhat změnám nebo odebrání v budoucích aktualizací.
 C4839|nestandardní použití třídy se*třída*' jako argument funkce variadická
 C4840|Použijte jiný přenositelností třídy se*– třída*' jako argument funkce variadická
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-3"></a>Upozornění byla zavedená v Visual C++ 2015 Update 3  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.24000__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Upozornění byla zavedená v Visual C++ 2015 Update 3 (verze 19.00.24215.1 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.23918__.
+
+|||
+|-|-|
 C4467|použití atributů ATL je zastaralý.
 C4596|'*název*': Neplatný kvalifikovaný název do deklarace členů
 C4598|' #include \< *záhlaví*\>': číslo záhlaví *číslo* v *zdroj* neodpovídá *zdroj* v daném okamžiku pozice
 C4599|'*argument*': *zdroj* číslo argumentu *číslo* neodpovídá *zdroje*
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-2"></a>Upozornění byla zavedená v Visual C++ 2015 Update 2  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.23900__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Upozornění byla zavedená v Visual C++ 2015 Update 2 (verze 19.00.23918.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.23506__.
+
+|||
+|-|-|
 C4466|Nelze provést elision coroutine haldy
 C4595|'*třída*': new – operátor třetí nebo funkce odstranění nemusí být deklarován vložené
 C4828|Soubor obsahuje znak, začínající na posunu 0 x*hodnotu* , je neplatný v aktuální sadě znaku zdroje (codepage *číslo*).
 C4868|Kompilátor nemusí vynutit pořadí vyhodnocení zleva doprava v seznamu braced inicializátoru
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-1"></a>Upozornění byla zavedená v Visual C++ 2015 Update 1  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.23500__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Upozornění byla zavedená v Visual C++ 2015 Update 1 (verze 19.00.23506.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19.00.23026__.
+
+|||
+|-|-|
 C4426|Optimalizace příznaky změněno poté, co včetně záhlaví, může být způsobeno #pragma optimize()
 C4654|Kód umístěna před patří předkompilovaných hlaviček řádek bude ignorován. Přidávání kódu do předkompilovaných hlaviček.
 C5031|#pragma warning(pop): pravděpodobně neshoda, odebrání nabídnutých v jiném souboru stavu upozornění
 C5032|zjištěna #pragma warning(push) se žádné odpovídající warning(pop) #pragma
-  
-## <a name="warnings-introduced-in-visual-c-2015-rtm"></a>Upozornění byla zavedená v Visual C++ 2015 RTM.  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:19__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Upozornění byla zavedená v Visual C++ 2015 RTM (verze 19.00.23026.0 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:18__.
+
+|||
+|-|-|
 C4427|'*chyba*': přetečení v konstantní dělení nedefinované chování
 C4438|'*typ*': nelze bezpečně volat / await: clrcompat režimu. Pokud se*typ*' volání do modulu CLR může vést k poškození head CLR
 C4455|' operátor *název*': identifikátory literálu přípon, které není začínat podtržítkem jsou vyhrazeny
@@ -128,12 +154,12 @@ C4458|prohlášení o '*název*' skryje třídy člena
 C4459|prohlášení o '*název*' skryje globální deklarace
 C4462|'*typ*': Nelze určit identifikátor GUID typu. Program může při běhu selhat.
 C4463|přetečení; přiřazení *hodnotu* bitová pole, které může obsahovat pouze hodnoty z *hodnotu* k *hodnota*
-C4473|'*popis*': předáno není dostatečný počet argumentů pro řetězec formátu
-C4474|'*popis*': předáno příliš mnoho argumentů pro řetězec formátu
-C4475|'*popis*': délka modifikátor '*modifikátor*"nelze použít s – znak typu pole"*znak*' ve formátu specifikátor
-C4476|'*popis*': Neznámý typ pole znak '*znak*' v specifikace formátu
-C4477|'*popis*': řetězec formátu,*řetězec*, vyžaduje argument typu'*typ*', ale argument variadická *číslo* má typ '*typu*.
-C4478|'*popis*': poziční a – poziční zástupné symboly nelze směšovat do jednoho řetězce formátu
+C4473|'*funkce*': předáno není dostatečný počet argumentů pro řetězec formátu
+C4474|'*funkce*': předáno příliš mnoho argumentů pro řetězec formátu
+C4475|'*funkce*': délka modifikátor '*modifikátor*"nelze použít s – znak typu pole"*znak*' ve formátu specifikátor
+C4476|'*funkce*': Neznámý typ pole znak '*znak*' v specifikace formátu
+C4477|'*funkce*': řetězec formátu,*řetězec*, vyžaduje argument typu'*typ*', ale argument variadická *číslo* má typ '*typu*.
+C4478|'*funkce*': poziční a – poziční zástupné symboly nelze směšovat do jednoho řetězce formátu
 C4494|'*typ*': ignorování __declspec(allocator), protože funkce návratový typ není ukazatel nebo odkaz
 C4495|nestandardní rozšíření '__super používané: nahraďte názvem explicitní základní třída
 C4496|nestandardní rozšíření 'pro každou' použito: nahraďte pohyboval pro příkaz
@@ -171,13 +197,13 @@ C5027|'*typ*': přesunout operátor přiřazení byl implicitně definován jako
 C5028|'*název*': zarovnání zadaný v deklaraci předchozích (*číslo*) nebyly zadány v definici
 C5029|nestandardní rozšíření používané: zarovnání atributy v jazyce C++ vztahuje na proměnné, datové členy a pouze typy značek
 C5030|atribut '*atribut*' nebyla rozpoznána
-  
-## <a name="warnings-introduced-in-visual-c-2013"></a>Upozornění zavedená v prostředí Visual C++ 2013  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:18__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Upozornění zavedená v prostředí Visual C++ 2013 (verze 18.00.21005.1 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:17__.
+
+|||
+|-|-|
 C4301|'*typ*': přepisování virtuální funkce pouze se liší od '*deklarace*' kvalifikátorem const nebo volatile
 C4316|'*typ*': objekt přidělené v haldě nemusí být zarovnána *číslo*
 C4380|'*typ*': výchozí konstruktor nemůže být zastaralé.
@@ -200,15 +226,15 @@ C4981|Warbird: funkce '*deklarace*' označen jako __forceinline není vložená 
 C4990|Warbird: *zpráv*
 C4991|Warbird: funkce '*deklarace*' označen jako __forceinline není vložená protože je větší než nadřazené úrovně ochrany inlinee
 C4992|Warbird: funkce '*deklarace*' označen jako __forceinline není vložená protože obsahuje vložené sestavení, které nelze chránit
-  
-## <a name="warnings-introduced-in-visual-c-2012"></a>Upozornění zavedená v sadě Visual C++ 2012  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:17__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Upozornění zavedená v sadě Visual C++ 2012 (verze 17.00.51106.1 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:16__.
+
+|||
+|-|-|
 C4330|atribut '*atribut*'pro oddíl'*části*' ignorovat
-C4415|duplicitní __declspec (code_seg ('*název*.))
+C4415|duplicate __declspec(code_seg('*name*'))
 C4416|__declspec(code_seg(...)) obsahuje prázdný řetězec: Ignorovat
 C4417|Vytvoření instance šablony explicitní nemůže mít __declspec(code_seg(...)): Ignorovat
 C4418|__declspec(code_seg(...)) u výčtu ignorovat
@@ -236,20 +262,20 @@ C4695|#pragma execution_character_set: '*argument*' není podporované argument:
 C4703|proměnné potenciálně Neinicializovaný místní ukazatele '*název*se používá
 C4728|/ Yi – možnost ignorován, protože se vyžaduje odkaz na PCH
 C4745|volatile přístup '*název*, nelze ji přijmout z důvodu jeho velikosti
-C4746|volatile přístup '*název*' podléhá/volatile:\<iso\|MS > Nastavení; Zvažte použití __iso_volatile_load/úložiště vnitřní funkce
+C4746|volatile přístup '*název*' podléhá/volatile:\<iso\|ms > nastavení; zvažte použití __iso_volatile_load/úložiště vnitřní funkce
 C4872|plovoucí bodu dělení nulou zjistil při kompilování graf volání pro concurrency::parallel_for_each v: '*popis*.
 C4880|přetypování z '*typ*'do'*typ*': přetypování rychle constness z ukazatel nebo odkaz může vést k nedefinované chování v amp omezený funkci
 C4881|v konstruktoru nebo destruktoru nebude možné volat pro proměnnou tile_static '*typu*.
 C4966|'*popis*' má anotaci __code_seg s názvem nepodporované segmentu, poznámky ignorovat
 C4988|'*typ*': proměnná deklarována mimo rozsah třídy nebo funkce
 C4989|'*popis*': typ má konfliktní definice.
-  
-## <a name="warnings-introduced-in-visual-c-2010"></a>Upozornění zavedená ve Visual C++ 2010  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:16__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Upozornění zavedená ve Visual C++ 2010 (verze 16.00.40219.01 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:15__.
+
+|||
+|-|-|
 C4352|'*název*': již definována – vnitřní funkce
 C4573|použití "*typu*se vyžaduje kompilátor k zachycení ', ale aktuální režim zachytávání výchozí neumožňuje
 C4574|'*název*'je definován jako ' 0': měli jste na mysli používat ' #if *název*'?
@@ -259,13 +285,13 @@ C4752|Najít Intel(R) Advanced vektoru rozšíření; Zvažte použití odpovíd
 C4837|trigraph zjistil: '?? *znak*"nahradit"*znak*.
 C4986|'*deklarace*': specifikace výjimek neodpovídá předchozí deklarace
 C4987|použito nestandardní rozšíření: 'throw (...)'
-  
-## <a name="warnings-introduced-in-visual-c-2008"></a>Upozornění zavedená ve Visual C++ 2008  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:15__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Upozornění zavedená ve Visual C++ 2008 (verze 15.00.21022.08 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:14__.
+
+|||
+|-|-|
 C4396|'*typ*': specifikátor vložené nelze použít, když deklaraci friend odkazuje specializace šablony funkcí
 C4413|'*deklarace*': referenční dokumentace je inicializován do dočasného, který není zachován po ukončení konstruktoru
 C4491|'*popis*': má neplatný formát verze IDL
@@ -274,13 +300,13 @@ C4627|'*popis*': při vyhledávání předkompilované hlavičky použití přes
 C4750|'*popis*': funkce s _alloca() vložená do smyčky
 C4910|'*typ*': '__declspec(dllexport)' a 'extern, jsou nekompatibilní na explicitní vytvoření instance
 C4985|'*deklarace*': atributy není k dispozici na předchozí deklarace.
-  
-## <a name="warnings-introduced-in-visual-c-2005"></a>Upozornění zavedena v systému Visual C++ 2005  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:14__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Upozornění zavedena v systému Visual C++ 2005 (verze 14.00.50727.762 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:13__.
+
+|||
+|-|-|
 C4000|Neznámý upozornění Zvolte prosím příkaz se na technickou podporu v nabídce Nápověda Visual C++, nebo otevřít soubor nápovědy se na technickou podporu pro další informace
 C4272|'*typ*': je označena deklarace __declspec(dllimport); musíte zadat nativní konvence volání, při importu funkce.
 C4333|'*výraz*': posunutí doprava o příliš velké množství, ztráty dat
@@ -363,7 +389,7 @@ C4678|Základní třída se*deklarace*je méně přístupný než*název*.
 C4679|'*popis*': nelze importovat člena
 C4687|'*typ*': zapečetěné abstraktní třídy nelze implementovat rozhraní '*typu*.
 C4688|'*název*': omezení seznam obsahuje privátní typ sestavení '*deklarace*.
-C4690|[ emitidl( pop ) ]: více bodů POP než nabízených oznámení
+C4690|[ emitidl – ( pop ) ]: více bodů POP než nabízených oznámení
 C4691|'*typ*': byl očekáván typ odkazovat ve které se neodkazuje *modulu* '*popis*', typem definovaným v místo toho použít aktuální překlad jednotky
 C4692|'*název*': podpis privátního člena obsahuje privátní nativní typ sestavení '*deklarace*.
 C4693|'*typ*': zapečetěné abstraktní třídy nemůže mít u členů instancí*název*.
@@ -417,13 +443,13 @@ C4965|implicitní pole celé číslo 0; použít nullptr nebo explicitní přety
 C4970|Delegovat konstruktor: cílový objekt ignorován, protože se*deklarace*' je statický
 C4971|Argument pořadí: \<cílový objekt >, \<cíle funkce > pro konstruktor delegáta je zastaralý, pomocí \<cíle funkce >, \<cílový objekt >
 C4972|Přímo změnou nebo práce výsledek operace unbox jako lvalue neověřitelný
-  
-## <a name="warnings-introduced-in-visual-c-2003"></a>Upozornění zavedené v roce 2003 Visual C++  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:13.10__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Upozornění zavedené v roce 2003 Visual C++ (verze 13.10.3077 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:13.00.9466__.
+
+|||
+|-|-|
 C4343|Optimalizace #pragma (*popis*, vypnutí) přepsání /Og – možnost
 C4344|Změna v chování: použijte explicitní šablony argumenty výsledků volání '*deklarace*.
 C4346|'*typ*': závislé název není typu
@@ -453,13 +479,13 @@ C4951|'*popis*' bylo upraveno od data nebyla shromážděna, profil nepoužívá
 C4952|'*popis*': v databázi programu nalezena žádná data profilu se*popis*.
 C4953|Inlinee '*popis*' bylo upraveno od data nebyla shromážděna, profil data profilu nepoužívá
 C4954|'*popis*': není profilovaným (obsahuje výraz přepínače __int64)
-  
-## <a name="warnings-introduced-in-visual-c-2002"></a>Upozornění byla zavedená v Visual C++ 2002  
-  
-Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:13__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Upozornění byla zavedená v 2002 Visual C++ (verze 13.00.9466 kompilátoru)
+
+Tato upozornění a všech upozornění v novějších verzích, které jsou potlačovány pomocí možnosti kompilátoru __/Wv:12__.
+
+|||
+|-|-|
 C4096|'*typ*': rozhraní není rozhraní modelu COM; nebude vygenerované k IDL
 C4097|Parametr – Direktiva pragma jako "obnovení" nebo "vypnuto"
 C4165|"HRESULT" je převáděn na 'bool'; jste si jistí, že je to, co chcete použít?
@@ -507,7 +533,7 @@ C4338|#pragma *popis*: standardní oddíl '*části*' se používá
 C4339|'*typ*': použití nedefinované typu zjistil v CLR nebo WinRT meta-data - použití tohoto typu může vést k výjimku modulu runtime
 C4353|nestandardní rozšíření používané: Konstanta 0 jako výraz funkce.  Místo toho použijte '__noop' – vnitřní funkce
 C4370|'*deklarace*': z předchozí verze kompilátoru kvůli lepší okolních došlo ke změně rozložení – třída
-C4371|'*deklarace*': mohlo dojít ke změně rozložení třídy z předchozí verze kompilátoru kvůli lepší okolních člena '*typu*.
+C4371|'*deklarace*': mohlo dojít ke změně rozložení třídy z předchozí verze kompilátoru kvůli lepší okolních člena '*člen*.
 C4373|'*typ*': virtuální funkce přepsání*deklarace*', předchozí verze kompilátoru přepsat při parametry pouze podle const nebo volatile kvalifikátory lišil.
 C4387|'*popis*': byla považována za
 C4389|'*výraz*': Neshoda podepsané nepodepsaných
@@ -523,7 +549,7 @@ C4531|Zpracování výjimek jazyka C++ není k dispozici na systém Windows CE. 
 C4532|'*popis*': přejít z *nakonec* bloku má undefined chování při ukončení zpracování
 C4533|Inicializace se*deklarace*' je vynecháno, goto *deklarace*.
 C4534|'*deklarace*, nebude pro výchozí konstruktor *– třída* '*typ*' z důvodu argument výchozí
-C4535|volání _set_se_translator() vyžaduje/EHa
+C4535|calling _set_se_translator() requires /EHa
 C4536|'*popis*': název typu překračuje limit meta-data "*číslo*' znaků
 C4537|'*deklarace*': '.' u jiných UDT typu
 C4542|Přeskočení generování sloučené vložený text souboru nelze zapisovat *typ* souboru: "*filename*': *chyba*
@@ -602,8 +628,8 @@ C4995|'*název*': název byl označen jako zastaralý #pragma
 C4996|'*problém*': *popis*
 C4997|'*typ*': Třída typu coclass neimplementuje rozhraní modelu COM nebo pseudorozhraní
 C4998|OČEKÁVÁ se nezdařilo: *popis*(*číslo*)
-  
-## <a name="see-also"></a>Viz také  
-[/WV – možnost kompilátoru](../../build/reference/compiler-option-warning-level.md)  
-[Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[warning](../../preprocessor/warning.md)  
+
+## <a name="see-also"></a>Viz také
+[– Možnost kompilátoru /WV](../../build/reference/compiler-option-warning-level.md)
+[upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+[upozornění](../../preprocessor/warning.md)
