@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::operator!=
 - map/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -24,21 +25,21 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d98e67ea5a65279a5bb618552bec4358bc48a445
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-operators"></a>&lt;Mapa&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[Operator ==](#op_eq_eq)|  
-|[Operator! = (multimap)](#op_neq_multimap)|[operátor&gt;](#op_gt_multimap)|[operátor&gt;=](#op_gt_eq_multimap)|  
-|[operátor&lt;](#op_lt_multimap)|[operátor&lt;=](#op_lt_eq_multimap)|[Operator ==](#op_eq_eq_multimap)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
+|[Operator! = (multimap)](#op_neq_multimap)|[Operátor&gt;](#op_gt_multimap)|[Operátor&gt;=](#op_gt_eq_multimap)|  
+|[Operátor&lt;](#op_lt_multimap)|[Operátor&lt;=](#op_lt_eq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testy, pokud objekt mapy na levé straně operátoru není stejný jako mapy objekt na pravé straně.  
   
 ```
@@ -98,7 +99,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Testy, pokud je objekt mapy na levé straně operátoru menší než mapy objekt na pravé straně.  
   
 ```
@@ -158,7 +159,7 @@ The map m1 is not less than the map m3.
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Pokud mapy objekt na levé straně operátoru testů je menší než nebo rovno mapy objekt na pravé straně.  
   
 ```
@@ -222,7 +223,7 @@ The map m1 is less than or equal to the map m4.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testy, pokud objekt mapy na levé straně operátoru rovná mapy objekt na pravé straně.  
   
 ```
@@ -282,7 +283,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Testy, pokud objekt mapy na levé straně operátoru je větší než mapy objekt na pravé straně.  
   
 ```
@@ -342,7 +343,7 @@ The map m1 is greater than the map m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Testy, pokud se mapování objekt na levé straně operátoru větší než nebo rovna hodnotě mapy objekt na pravé straně.  
   
 ```
@@ -406,7 +407,7 @@ Map m1 is greater than or equal to map m4.
 *\  
 ```  
   
-##  <a name="op_neq_multimap"></a>Operator! = (multimap)  
+##  <a name="op_neq_multimap"></a>  Operator! = (multimap)  
  Testy, pokud multimap objekt na levé straně operátoru není stejný jako multimap objekt na pravé straně.  
   
 ```
@@ -466,7 +467,7 @@ The multimaps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt_multimap"></a>operátor&lt;  
+##  <a name="op_lt_multimap"></a>  Operátor&lt;  
  Testy, pokud multimap objekt na levé straně operátor je menší než multimap objekt na pravé straně.  
   
 ```
@@ -526,7 +527,7 @@ The multimap m1 is not less than the multimap m3.
 *\  
 ```  
   
-##  <a name="eq_multimap"></a>operátor&lt;=  
+##  <a name="eq_multimap"></a>  Operátor&lt;=  
  Pokud multimap objekt na levé straně operátoru testů je menší než nebo rovna hodnotě multimap objekt na pravé straně.  
   
 ```
@@ -590,7 +591,7 @@ m1 is less than or equal to m4
 *\  
 ```  
   
-##  <a name="op_eq_eq_multimap"></a>Operator ==  
+##  <a name="op_eq_eq_multimap"></a>  Operator ==  
  Testy, pokud multimap objekt na levé straně operátoru rovná multimap objekt na pravé straně.  
   
 ```
@@ -650,7 +651,7 @@ m1 and m3 are equal
 *\  
 ```  
   
-##  <a name="op_gt_multimap"></a>operátor&gt;  
+##  <a name="op_gt_multimap"></a>  Operátor&gt;  
  Testy, pokud multimap objekt na levé straně operátoru je větší než multimap objekt na pravé straně.  
   
 ```
@@ -710,7 +711,7 @@ The multimap m1 is greater than the multimap m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq_multimap"></a>operátor&gt;=  
+##  <a name="op_gt_eq_multimap"></a>  Operátor&gt;=  
  Testy, pokud se multimap objekt na levé straně operátoru větší než nebo rovna hodnotě multimap objekt na pravé straně.  
   
 ```
@@ -775,7 +776,7 @@ The multimap m1 is greater than or equal to the multimap m4.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<Mapa >](../standard-library/map.md)
+ [\<map>](../standard-library/map.md)
 
 
 

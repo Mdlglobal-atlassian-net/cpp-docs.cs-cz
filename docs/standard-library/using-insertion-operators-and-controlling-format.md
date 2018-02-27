@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6049d92ab2ca1f7f724f3e27037c5df5c4304ea6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Používání operátorů insertion a řízení formátu
 Toto téma ukazuje, jak řídit formát a postup vytvoření operátorů insertion pro vaše vlastní třídy. Vložení (**<<**) operátor, který je naprogramovaných, pro všechny standardní datové typy C++, odešle do výstupního datového proudu objekt bajtů. Operátorů insertion pracovat předdefinované "manipulátory,", které jsou elementy, které Změna výchozího formátu argumentů celé číslo.  
@@ -34,11 +34,11 @@ Toto téma ukazuje, jak řídit formát a postup vytvoření operátorů inserti
   
 - [Zarovnání](#vclrfalignmentanchor4)  
   
-- [Přesnost](#vclrfprecisionanchor5)  
+- [přesnost](#vclrfprecisionanchor5)  
   
 - [Radix](#vclrfradixanchor6)  
   
-##  <a name="vclrfoutputwidthanchor3"></a>Šířka výstupu  
+##  <a name="vclrfoutputwidthanchor3"></a> Šířka výstupu  
  Chcete-li zarovnat výstup, zadejte šířku výstup pro každou položku tím, že `setw` manipulator v datovém proudu nebo voláním **šířka** – členská funkce. Tento příklad vpravo zarovná hodnoty ve sloupci minimálně 10 znaků, který je široké:  
   
 ```  
@@ -122,7 +122,7 @@ Jimmy     35.36
   
  Ani `setw` ani **šířka** zkrátí hodnoty. Pokud výstup ve formátu překračuje šířku celou hodnotu vytiskne, podstoupí nastavení přesnost datového proudu. Obě `setw` a **šířka** ovlivňují jenom následující pole. Šířka pole se vrátí do jeho výchozí chování (nezbytná šířka) po vytištění jedno pole. Ale jiné možnosti formátu datového proudu zůstávají platná, dokud změnit.  
   
-##  <a name="vclrfalignmentanchor4"></a>Zarovnání  
+##  <a name="vclrfalignmentanchor4">Zarovnání</a>  
  Výstupní datové proudy výchozí nastavení text zarovnaný doprava. Názvy v předchozím příkladu zarovnání doleva a doprava align čísla, nahraďte **pro** cykly následujícím způsobem:  
   
 ```  
@@ -144,7 +144,7 @@ Stan     4358.24
   
  Příznak left-align je nastaven pomocí [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulator s `left` enumerátor. Tento výčet je definován v [ios](../standard-library/basic-ios-class.md) třídy, takže musí obsahovat odkaz na jeho **ios::** předponu. [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulator Vypne příznak left-align. Na rozdíl od **šířka** a `setw`, účinek `setiosflags` a `resetiosflags` je trvalá.  
   
-##  <a name="vclrfprecisionanchor5"></a>Přesnost  
+##  <a name="vclrfprecisionanchor5">přesnost</a>  
  Výchozí hodnota s plovoucí desetinnou čárkou přesnost je šest. Například číslo 3466.9768 vytiskne jako 3466.98. Můžete změnit způsob, jakým vytiskne tato hodnota [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulator. Manipulator má dva příznaky: [pevné](../standard-library/ios-functions.md#fixed) a [scientific](../standard-library/ios-functions.md#scientific). Pokud [pevné](../standard-library/ios-functions.md#fixed) nastavena, číslo výtisků jako 3466.976800. Pokud **scientific** není nastaven, vytiskne jako 3.4669773 + 003.  
   
  Chcete-li zobrazit čísla s plovoucí desetinnou čárkou, která se zobrazují v [zarovnání](#vclrfalignmentanchor4) nahradil jednu číslici, **pro** cykly následujícím způsobem:  

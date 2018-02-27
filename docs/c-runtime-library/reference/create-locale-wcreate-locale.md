@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _create_locale
 - __create_locale
@@ -28,23 +29,25 @@ f1_keywords:
 - create_locale
 - _create_locale
 - __create_locale
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales, creating
 - _create_locale function
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 73e89121dda53300b276b76f49625ad274df4519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff6254ecd33dfc844108b76fc1644eff2a373aed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 Vytvoří objekt národního prostředí.  
@@ -75,7 +78,7 @@ _locale_t _wcreate_locale(
 ## <a name="remarks"></a>Poznámky  
  `_create_locale` Funkce vám umožní vytvořit objekt, který představuje určité oblasti specifické nastavení pro použití v konkrétní národní prostředí verze mnoho funkcí CRT (funguje s `_l` přípony). Toto chování je podobné pro `setlocale`kromě toho, že místo použití nastavení zadaný národní prostředí v aktuálním prostředí, nastavení se ukládají v `_locale_t` struktura, která je vrácena. `_locale_t` Struktura by měl být uvolněno pomocí [_free_locale –](../../c-runtime-library/reference/free-locale.md) Pokud se už nepotřebuje.  
   
- `_wcreate_locale`široká charakterová verze `_create_locale`; `locale` argument `_wcreate_locale` je široká charakterová řetězec. `_wcreate_locale`a `_create_locale` chovat jinak shodně.  
+ `_wcreate_locale` široká charakterová verze `_create_locale`; `locale` argument `_wcreate_locale` je široká charakterová řetězec. `_wcreate_locale` a `_create_locale` chovat jinak shodně.  
   
  `category` Argument určuje části chování specifická pro národní prostředí, které se vztahuje. Příznaky použité pro `category` a součástí programu, které mají vliv na jsou uvedeny v následující tabulce.  
   
@@ -182,19 +185,19 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
  [Názvy národních prostředí, jazyků a řetězce zemí/oblastí](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [Řetězce jazyků](../../c-runtime-library/language-strings.md)   
  [Řetězce zemí/oblastí](../../c-runtime-library/country-region-strings.md)   
- [_free_locale –](../../c-runtime-library/reference/free-locale.md)   
- [_configthreadlocale –](../../c-runtime-library/reference/configthreadlocale.md)   
+ [_free_locale](../../c-runtime-library/reference/free-locale.md)   
+ [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md)   
  [setlocale –](../../preprocessor/setlocale.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [strlen –, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)   
- [mbstowcs –, _mbstowcs_l –](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [_setmbcp –](../../c-runtime-library/reference/setmbcp.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [setlocale –, _wsetlocale –](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
  [STRFTIME –, wcsftime –, _strftime_l –, _wcsftime_l –](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm –, wcsxfrm –, _strxfrm_l –, _wcsxfrm_l –](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
- [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablony Library (ATL) slouží pro programování COM. Témata v této části popisuje podporu pro knihovny MFC pro COM.  
@@ -53,7 +57,7 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
   
 -   [Automatizace](../mfc/automation.md) (dříve označované jako automatizace OLE) umožňuje pro jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo "vystavit" objekty, budou se dá upravit.  
   
-     Automatizované objekt může být místní nebo [vzdáleného](../mfc/remote-automation.md) (na jiném počítači přístupné přes síť). Automatizace je k dispozici pro objekty OLE a COM.  
+     Automatizované objekt může být místní nebo vzdálené (na jiném počítači přístupné přes síť). Automatizace je k dispozici pro objekty OLE a COM.  
   
 -   Tato část také obsahuje informace o tom, jak psát komponenty modelu COM v MFC, například [spojovací body](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablon
  [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)  
   
  [Automatizace](../mfc/automation.md)  
-  
- [Vzdálená automatizace](../mfc/remote-automation.md)  
   
  [Body připojení](../mfc/connection-points.md)  
   

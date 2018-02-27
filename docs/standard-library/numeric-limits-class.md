@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - limits/std::numeric_limits
 - limits/std::numeric_limits::denorm_min
@@ -41,7 +42,8 @@ f1_keywords:
 - limits/std::numeric_limits::signaling_NaN
 - limits/std::numeric_limits::tinyness_before
 - limits/std::numeric_limits::traps
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::numeric_limits [C++]
 - std::numeric_limits [C++], denorm_min
@@ -77,16 +79,17 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ccd200c1ee710100bbf3390033ca97381b5dddf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2aa716b9c052611aceb0c4677457fbce91bb743d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numericlimits-class"></a>numeric_limits – třída
 Šablony třídy popisuje aritmetické vlastnosti vestavěné číselné typy.  
@@ -111,37 +114,37 @@ class numeric_limits
   
 |||  
 |-|-|  
-|[denorm_min –](#denorm_min)|Vrátí nejmenší nenulové nenormalizovanou hodnotu.|  
+|[denorm_min](#denorm_min)|Vrátí nejmenší nenulové nenormalizovanou hodnotu.|  
 |[číslice](#digits)|Vrátí počet číslic základ –, představující typ bez ztrátu přesnosti.|  
-|[digits10 –](#digits10)|Vrátí počet desetinných míst reprezentující typ bez ztrátu přesnosti.|  
+|[digits10](#digits10)|Vrátí počet desetinných míst reprezentující typ bez ztrátu přesnosti.|  
 |[Epsilon –](#epsilon)|Vrátí rozdíl mezi 1 a nejmenší hodnota větší než 1, která představuje datového typu.|  
-|[has_denorm –](#has_denorm)|Testy, jestli typ umožňuje nenormalizovanou hodnoty.|  
-|[has_denorm_loss –](#has_denorm_loss)|Ověřuje, zda je ztráta přesnosti zjištěna jako ztrátu denormalization a nikoli jako nepřesný výsledek.|  
-|[has_infinity –](#has_infinity)|Ověřuje, zda má typ reprezentaci pro kladné nekonečno.|  
-|[has_quiet_nan –](#has_quiet_nan)|Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.|  
-|[has_signaling_nan –](#has_signaling_nan)|Ověřuje, zda má typ reprezentaci pro signalizace nečíselné (NAN).|  
+|[has_denorm](#has_denorm)|Testy, jestli typ umožňuje nenormalizovanou hodnoty.|  
+|[has_denorm_loss](#has_denorm_loss)|Ověřuje, zda je ztráta přesnosti zjištěna jako ztrátu denormalization a nikoli jako nepřesný výsledek.|  
+|[has_infinity](#has_infinity)|Ověřuje, zda má typ reprezentaci pro kladné nekonečno.|  
+|[has_quiet_NaN](#has_quiet_nan)|Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.|  
+|[has_signaling_NaN](#has_signaling_nan)|Ověřuje, zda má typ reprezentaci pro signalizace nečíselné (NAN).|  
 |[Infinity](#infinity)|Reprezentace pro kladné nekonečno pro typ, pokud je k dispozici.|  
-|[is_bounded –](#is_bounded)|Testy, pokud sada hodnot, které může představovat typ je omezený.|  
-|[is_exact –](#is_exact)|Testy, pokud jsou výpočty provést na typ zaokrouhlení chyby.|  
-|[is_iec559 –](#is_iec559)|Testy, pokud typ vyhovuje standardům IEC 559.|  
-|[is_integer –](#is_integer)|Testy, pokud má typ reprezentaci celé číslo.|  
-|[is_modulo –](#is_modulo)|Testuje, pokud má typ modulo reprezentace.|  
+|[is_bounded](#is_bounded)|Testy, pokud sada hodnot, které může představovat typ je omezený.|  
+|[is_exact](#is_exact)|Testy, pokud jsou výpočty provést na typ zaokrouhlení chyby.|  
+|[is_iec559](#is_iec559)|Testy, pokud typ vyhovuje standardům IEC 559.|  
+|[is_integer](#is_integer)|Testy, pokud má typ reprezentaci celé číslo.|  
+|[is_modulo](#is_modulo)|Testuje, pokud má typ modulo reprezentace.|  
 |[is_signed](#is_signed)|Testy, pokud má typ znázornění podepsaný držitelem.|  
-|[is_specialized –](#is_specialized)|Testuje, pokud má explicitní specializace definovaný ve třídě šablony typu `numeric_limits`.|  
-|[nejnižší](#lowest)|Vrátí největší omezenou zápornou hodnotu.|  
-|[maximální počet](#max)|Vrátí typ na maximální hodnotu omezené.|  
-|[max_digits10 –](#max_digits10)|Vrátí počet desetinných míst, vyžaduje se pro zajištění, že dvě odlišné hodnoty typu mají odlišné decimal reprezentace.|  
-|[max_exponent –](#max_exponent)|Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.|  
-|[max_exponent10 –](#max_exponent10)|Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.|  
-|[min.](#min)|Vrátí minimální hodnotu normalizovaný typu.|  
-|[min_exponent –](#min_exponent)|Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.|  
-|[min_exponent10 –](#min_exponent10)|Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.|  
-|[quiet_nan –](#quiet_nan)|Vrátí reprezentaci tichý pro daný typ není číslo (NAN).|  
-|[základ –](#radix)|Vrátí integrální základ, označuje jako základ –, použít pro reprezentaci typu.|  
-|[round_error –](#round_error)|Vrátí maximální zaokrouhlení chyba typu.|  
+|[is_specialized](#is_specialized)|Testuje, pokud má explicitní specializace definovaný ve třídě šablony typu `numeric_limits`.|  
+|[Nejnižší](#lowest)|Vrátí největší omezenou zápornou hodnotu.|  
+|[max](#max)|Vrátí typ na maximální hodnotu omezené.|  
+|[max_digits10](#max_digits10)|Vrátí počet desetinných míst, vyžaduje se pro zajištění, že dvě odlišné hodnoty typu mají odlišné decimal reprezentace.|  
+|[max_exponent](#max_exponent)|Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.|  
+|[max_exponent10](#max_exponent10)|Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.|  
+|[min](#min)|Vrátí minimální hodnotu normalizovaný typu.|  
+|[min_exponent](#min_exponent)|Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.|  
+|[min_exponent10](#min_exponent10)|Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.|  
+|[quiet_NaN](#quiet_nan)|Vrátí reprezentaci tichý pro daný typ není číslo (NAN).|  
+|[radix](#radix)|Vrátí integrální základ, označuje jako základ –, použít pro reprezentaci typu.|  
+|[round_error](#round_error)|Vrátí maximální zaokrouhlení chyba typu.|  
 |[round_style –](#round_style)|Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace pro zaokrouhlení hodnotu s plovoucí desetinnou čárkou na celočíselnou hodnotu.|  
-|[signaling_nan –](#signaling_nan)|Vrátí reprezentaci signalizace nečíselné (NAN) pro typ.|  
-|[tinyness_before –](#tinyness_before)|Ověřuje, zda typu můžete určit, že je hodnota představující jako normalizovanou hodnotu před zaokrouhlení je příliš malá.|  
+|[signaling_NaN](#signaling_nan)|Vrátí reprezentaci signalizace nečíselné (NAN) pro typ.|  
+|[tinyness_before](#tinyness_before)|Ověřuje, zda typu můžete určit, že je hodnota představující jako normalizovanou hodnotu před zaokrouhlení je příliš malá.|  
 |[depeše](#traps)|Jestli soutisku, která hlásí aritmetické výjimky je implementovaný pro typ testy.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -149,7 +152,7 @@ class numeric_limits
   
  **Namespace:** – std  
   
-##  <a name="denorm_min"></a>numeric_limits::denorm_min  
+##  <a name="denorm_min"></a>  numeric_limits::denorm_min  
  Vrátí nejmenší nenulové nenormalizovanou hodnotu.  
   
 ```  
@@ -160,7 +163,7 @@ static Type denorm_min() throw();
  Nejmenší nenulové hodnoty nenormalizované hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- `long double`je stejný jako **dvojité** pro C++ compiler.  
+ `long double` je stejný jako **dvojité** pro C++ compiler.  
   
  Vrátí minimální hodnotu pro typ, který je stejný jako [min](#min) Pokud [has_denorm –](#has_denorm) se nerovná **denorm_present**.  
   
@@ -205,7 +208,7 @@ The smallest nonzero denormalized value
 0  
 ```  
   
-##  <a name="digits"></a>numeric_limits::digits  
+##  <a name="digits"></a>  numeric_limits::digits  
  Vrátí počet číslic základ –, představující typ bez ztrátu přesnosti.  
   
 ```  
@@ -246,7 +249,7 @@ int main( )
 63  
 ```  
   
-##  <a name="digits10"></a>numeric_limits::digits10  
+##  <a name="digits10"></a>  numeric_limits::digits10  
  Vrátí počet desetinných míst reprezentující typ bez ztrátu přesnosti.  
   
 ```  
@@ -288,7 +291,7 @@ int main( )
 The float is; 100000000  
 ```  
   
-##  <a name="epsilon"></a>numeric_limits::epsilon  
+##  <a name="epsilon"></a>  numeric_limits::epsilon  
  Funkce vrátí rozdíl mezi 1 a nejmenší hodnota větší než 1, který je pro datový typ reprezentovat.  
   
 ```  
@@ -299,7 +302,7 @@ static Type epsilon() throw();
  Rozdíl mezi 1 a nejmenší hodnota větší než 1, který je pro datový typ reprezentovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota je flt_epsilon – pro typ **float**. `epsilon`pro typ je nejmenší kladné číslo s plovoucí desetinnou čárkou *N* tak, aby *N* + `epsilon` + *N* je reprezentovat.  
+ Hodnota je flt_epsilon – pro typ **float**. `epsilon` pro typ je nejmenší kladné číslo s plovoucí desetinnou čárkou *N* tak, aby *N* + `epsilon` + *N* je reprezentovat.  
   
 ### <a name="example"></a>Příklad  
   
@@ -337,7 +340,7 @@ The difference between 1 and the smallest value greater than 1
  for long double objects is: 2.22045e-016  
 ```  
   
-##  <a name="has_denorm"></a>numeric_limits::has_denorm  
+##  <a name="has_denorm"></a>  numeric_limits::has_denorm  
  Testy, jestli typ umožňuje nenormalizovanou hodnoty.  
   
 ```  
@@ -380,7 +383,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0  
 ```  
   
-##  <a name="has_denorm_loss"></a>numeric_limits::has_denorm_loss  
+##  <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
  Ověřuje, zda je ztráta přesnosti zjištěna jako ztrátu denormalization a nikoli jako nepřesný výsledek.  
   
 ```  
@@ -423,7 +426,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0  
 ```  
   
-##  <a name="has_infinity"></a>numeric_limits::has_infinity  
+##  <a name="has_infinity"></a>  numeric_limits::has_infinity  
  Ověřuje, zda má typ reprezentaci pro kladné nekonečno.  
   
 ```  
@@ -466,7 +469,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0  
 ```  
   
-##  <a name="has_quiet_nan"></a>numeric_limits::has_quiet_NaN  
+##  <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
  Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.  
   
 ```  
@@ -509,7 +512,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0  
 ```  
   
-##  <a name="has_signaling_nan"></a>numeric_limits::has_signaling_NaN  
+##  <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
  Ověřuje, zda má typ reprezentaci pro signalizace nečíselné (NAN).  
   
 ```  
@@ -552,7 +555,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0  
 ```  
   
-##  <a name="infinity"></a>numeric_limits::Infinity  
+##  <a name="infinity"></a>  numeric_limits::Infinity  
  Reprezentace kladné nekonečno pro typ, pokud je k dispozici.  
   
 ```  
@@ -603,7 +606,7 @@ The representation of infinity for type double is: 1.#INF
 The representation of infinity for type long double is: 1.#INF  
 ```  
   
-##  <a name="is_bounded"></a>numeric_limits::is_bounded  
+##  <a name="is_bounded"></a>  numeric_limits::is_bounded  
  Testy, pokud sada hodnot, které může představovat typ je omezený.  
   
 ```  
@@ -654,7 +657,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1  
 ```  
   
-##  <a name="is_exact"></a>numeric_limits::is_exact  
+##  <a name="is_exact"></a>  numeric_limits::is_exact  
  Testy, pokud jsou výpočty provést na typ zaokrouhlení chyby.  
   
 ```  
@@ -705,7 +708,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1  
 ```  
   
-##  <a name="is_iec559"></a>numeric_limits::is_iec559  
+##  <a name="is_iec559"></a>  numeric_limits::is_iec559  
  Testy, pokud typ vyhovuje standardům IEC 559.  
   
 ```  
@@ -752,7 +755,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0  
 ```  
   
-##  <a name="is_integer"></a>numeric_limits::is_integer  
+##  <a name="is_integer"></a>  numeric_limits::is_integer  
  Testy, pokud má typ reprezentaci celé číslo.  
   
 ```  
@@ -799,7 +802,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1  
 ```  
   
-##  <a name="is_modulo"></a>numeric_limits::is_modulo  
+##  <a name="is_modulo"></a>  numeric_limits::is_modulo  
  Testuje, pokud **typ** má modulo reprezentace.  
   
 ```  
@@ -846,7 +849,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1  
 ```  
   
-##  <a name="is_signed"></a>numeric_limits::is_signed  
+##  <a name="is_signed"></a>  numeric_limits::is_signed  
  Testy, pokud má typ znázornění podepsaný držitelem.  
   
 ```  
@@ -893,7 +896,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0  
 ```  
   
-##  <a name="is_specialized"></a>numeric_limits::is_specialized  
+##  <a name="is_specialized"></a>  numeric_limits::is_specialized  
  Testuje, pokud má explicitní specializace definovaný ve třídě šablony typu `numeric_limits`.  
   
 ```  
@@ -944,7 +947,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0  
 ```  
   
-##  <a name="lowest"></a>numeric_limits::lowest  
+##  <a name="lowest"></a>  numeric_limits::lowest  
  Vrátí největší omezenou zápornou hodnotu.  
   
 ```  
@@ -957,7 +960,7 @@ static Type lowest() throw();
 ### <a name="remarks"></a>Poznámky  
  Vrátí konečný nejvíce zápornou hodnotu pro typ (což obvykle představuje `min()` pro typy celého čísla a `-max()` pro typy s plovoucí desetinnou čárkou). Návratová hodnota má smysl Pokud `is_bounded` je `true`.  
   
-##  <a name="max"></a>numeric_limits::max  
+##  <a name="max"></a>  numeric_limits::max  
  Vrátí typ na maximální hodnotu omezené.  
   
 ```  
@@ -996,7 +999,7 @@ int main() {
 }  
 ```  
   
-##  <a name="max_digits10"></a>numeric_limits::max_digits10  
+##  <a name="max_digits10"></a>  numeric_limits::max_digits10  
  Vrátí počet desetinných míst, které jsou potřebné k ověření, zda dva odlišné hodnoty typu distinct decimal reprezentace.  
   
 ```  
@@ -1009,7 +1012,7 @@ static int max_digits10 = 0;
 ### <a name="remarks"></a>Poznámky  
  Člen ukládá počet desetinných míst, které jsou potřebné k ověření, zda dva odlišné hodnoty typu distinct decimal reprezentace.  
   
-##  <a name="max_exponent"></a>numeric_limits::max_exponent  
+##  <a name="max_exponent"></a>  numeric_limits::max_exponent  
  Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.  
   
 ```  
@@ -1052,7 +1055,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024  
 ```  
   
-##  <a name="max_exponent10"></a>numeric_limits::max_exponent10  
+##  <a name="max_exponent10"></a>  numeric_limits::max_exponent10  
  Vrátí maximální kladné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.  
   
 ```  
@@ -1095,7 +1098,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308  
 ```  
   
-##  <a name="min"></a>numeric_limits::min  
+##  <a name="min"></a>  numeric_limits::min  
  Vrátí minimální hodnotu normalizovaný typu.  
   
 ```  
@@ -1142,7 +1145,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768  
 ```  
   
-##  <a name="min_exponent"></a>numeric_limits::min_exponent  
+##  <a name="min_exponent"></a>  numeric_limits::min_exponent  
  Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ základ – této možnosti.  
   
 ```  
@@ -1185,7 +1188,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021  
 ```  
   
-##  <a name="min_exponent10"></a>numeric_limits::min_exponent10  
+##  <a name="min_exponent10"></a>  numeric_limits::min_exponent10  
  Vrátí maximální záporné integrální exponent, která představuje typ s plovoucí desetinnou čárkou jako hodnotu konečné po vyvolání základ deset této možnosti.  
   
 ```  
@@ -1228,7 +1231,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307  
 ```  
   
-##  <a name="quiet_nan"></a>numeric_limits::quiet_NaN  
+##  <a name="quiet_nan"></a>  numeric_limits::quiet_NaN  
  Vrátí reprezentaci tichý pro daný typ není číslo (NAN).  
   
 ```  
@@ -1271,7 +1274,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN  
 ```  
   
-##  <a name="radix"></a>numeric_limits::radix  
+##  <a name="radix"></a>  numeric_limits::radix  
  Vrátí integrální základ, označuje jako základ –, použít pro reprezentaci typu.  
   
 ```  
@@ -1314,7 +1317,7 @@ The base for type int is:  2
 The base for type long double is:  2  
 ```  
   
-##  <a name="round_error"></a>numeric_limits::round_error  
+##  <a name="round_error"></a>  numeric_limits::round_error  
  Vrátí maximální zaokrouhlení chyba typu.  
   
 ```  
@@ -1354,7 +1357,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5  
 ```  
   
-##  <a name="round_style"></a>numeric_limits::round_style  
+##  <a name="round_style"></a>  numeric_limits::round_style  
  Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace pro zaokrouhlení hodnotu s plovoucí desetinnou čárkou na celočíselnou hodnotu.  
   
 ```  
@@ -1398,7 +1401,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0  
 ```  
   
-##  <a name="signaling_nan"></a>numeric_limits::signaling_NaN  
+##  <a name="signaling_nan"></a>  numeric_limits::signaling_NaN  
  Vrátí reprezentaci signalizace nečíselné (NAN) pro typ.  
   
 ```  
@@ -1435,7 +1438,7 @@ int main( )
 }  
 ```  
   
-##  <a name="tinyness_before"></a>numeric_limits::tinyness_before  
+##  <a name="tinyness_before"></a>  numeric_limits::tinyness_before  
  Ověřuje, zda typu můžete určit, že je hodnota představující jako normalizovanou hodnotu před zaokrouhlení je příliš malá.  
   
 ```  
@@ -1443,7 +1446,7 @@ static const bool tinyness_before = false;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud typ může zjistit jen nepatrnou hodnoty před zaokrouhlení; `false` pokud ji nelze.  
+ `true` Pokud typ může zjistit jen nepatrnou hodnoty před zaokrouhlení; `false` pokud ji nelze.  
   
 ### <a name="remarks"></a>Poznámky  
  Typy, které může zjistit tinyness byly zahrnuty i s IEC 559 reprezentace plovoucí desetinné čárky a jeho implementace může ovlivnit některé výsledky.  
@@ -1482,7 +1485,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0  
 ```  
   
-##  <a name="traps"></a>numeric_limits::traps  
+##  <a name="traps"></a>  numeric_limits::traps  
  Jestli soutisku, která hlásí aritmetické výjimky je implementovaný pro typ testy.  
   
 ```  

@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_none
 - allocators/stdext::sync_none::allocate
 - allocators/stdext::sync_none::deallocate
 - allocators/stdext::sync_none::equals
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::sync_none
 - stdext::sync_none [C++], allocate
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf0d71bc517e97a99db79dfc905935fba81faed0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb01cc0df6765b8aae994ba272dc12bcf25f9be9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="syncnone-class"></a>sync_none – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) poskytující žádná synchronizace.  
@@ -51,7 +54,7 @@ class sync_none
 |||  
 |-|-|  
 |[allocate](#allocate)|Přiděluje blok paměti.|  
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
+|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -59,7 +62,7 @@ class sync_none
   
  **Namespace:** stdext –  
   
-##  <a name="allocate"></a>sync_none::allocate  
+##  <a name="allocate"></a>  sync_none::allocate  
  Přiděluje blok paměti.  
   
 ```
@@ -75,7 +78,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Poznámky  
  Členské funkce vrátí hodnotu `cache.allocate(count)`, kde `cache` je objekt mezipaměti.  
   
-##  <a name="deallocate"></a>sync_none::deallocate  
+##  <a name="deallocate"></a>  sync_none::deallocate  
  Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.  
   
 ```
@@ -92,7 +95,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Poznámky  
  Volání členských funkcí `cache.deallocate(ptr, count)`, kde `cache` představuje objekt mezipaměti.  
   
-##  <a name="equals"></a>sync_none::Equals  
+##  <a name="equals"></a>  sync_none::Equals  
  Porovná dva mezipamětí rovnosti.  
   
 ```
@@ -112,7 +115,7 @@ bool equals(const sync<Cache>& Other) const;
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [\<alokátorů >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -25,9 +25,10 @@ f1_keywords:
 - valarray/std::operator^
 - valarray/std::operator|
 - valarray/std::operator||
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (valarray), std::operator&amp; (valarray)
@@ -38,23 +39,23 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 25b2ed8601e2b83adfec8eae3146ef986a2929a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[% – operátor](#op_mod)|[operátor&amp;](#op_amp)|  
-|[operátor&amp;&amp;](#op_amp_amp)|[operátor&gt;](#op_gt)|[operátor&gt;&gt;](#op_gt_gt)|  
-|[operátor&gt;=](#op_gt_eq)|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|  
-|[operátor&lt;=](#op_lt_eq)|[operátor *](#op_star)|[operátor +](#op_add)|  
-|[Operator –](#operator-)|[operátor nebo](#op_div)|[Operator ==](#op_eq_eq)|  
-|[Operator ^](#op_xor)|[– operátor|](#op_or)|[– operátor||](#op_lor)|  
+|[operator!=](#op_neq)|[operator%](#op_mod)|[Operátor&amp;](#op_amp)|  
+|[Operátor&amp;&amp;](#op_amp_amp)|[Operátor&gt;](#op_gt)|[Operátor&gt;&gt;](#op_gt_gt)|  
+|[Operátor&gt;=](#op_gt_eq)|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|  
+|[Operátor&lt;=](#op_lt_eq)|[operátor *](#op_star)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operátor nebo](#op_div)|[operator==](#op_eq_eq)|  
+|[operator^](#op_xor)|[– operátor|](#op_or)|[– operátor||](#op_lor)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testuje, jestli odpovídající elementy dva stejně velké valarray – třídy jsou různé nebo zda jsou všechny elementy valarray – nerovné zadanou hodnotou.  
   
 ```  
@@ -145,7 +146,7 @@ The element-by-element result of the not equal comparison test is the
 *\  
 ```  
   
-##  <a name="op_mod"></a>% – operátor  
+##  <a name="op_mod"></a>  % – operátor  
  Získá zbytek po dělení odpovídající elementy dva stejně velké valarray – třídy nebo dělení valarray – zadanou hodnotou nebo dělení valarray – zadanou hodnotou.  
   
 ```  
@@ -225,7 +226,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="op_amp"></a>operátor&amp;  
+##  <a name="op_amp"></a>  Operátor&amp;  
  Získá bitové hodnotě **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.  
   
 ```  
@@ -310,7 +311,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="op_amp_amp"></a>operátor&amp;&amp;  
+##  <a name="op_amp_amp"></a>  Operátor&amp;&amp;  
  Získá logické **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu valarray – element typu.  
   
 ```  
@@ -393,7 +394,7 @@ The element-by-element result of the logical AND operator&& is the
 *\  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Ověřuje, zda prvky jeden valarray – jsou větší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.  
   
 ```  
@@ -480,7 +481,7 @@ The element-by-element result of the greater than comparison test is the
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Ověřuje, zda prvky jeden valarray – jsou větší než nebo rovna hodnotě elementy stejně velké valarray – nebo jestli všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.  
   
 ```  
@@ -567,7 +568,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="op_gt_gt"></a>operátor&gt;&gt;  
+##  <a name="op_gt_gt"></a>  Operátor&gt;&gt;  
  Posuny vpravo bits pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.  
   
 ```  
@@ -650,7 +651,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Ověřuje, zda elementy jeden valarray – je nižší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.  
   
 ```  
@@ -737,7 +738,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Testuje, zda jsou elementy valarray – jeden, menší než nebo rovna hodnotě elementy stejně velké valarray – nebo zda všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.  
   
 ```  
@@ -824,7 +825,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="op_lt_lt"></a>operátor&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operátor&lt;&lt;  
  Levé posune bitů pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.  
   
 ```  
@@ -907,7 +908,7 @@ The element-by-element result of the left shift is the
 *\  
 ```  
   
-##  <a name="op_star"></a>operátor *  
+##  <a name="op_star"></a>  operátor *  
  Získá element-wise produktu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.  
   
 ```  
@@ -987,7 +988,7 @@ The element-by-element result of the multiplication is the
 *\  
 ```  
   
-##  <a name="op_add"></a>operátor +  
+##  <a name="op_add"></a>  operátor +  
  Získá element-wise součet mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.  
   
 ```  
@@ -1067,7 +1068,7 @@ The element-by-element result of the sum is the
 *\  
 ```  
   
-##  <a name="operator-"></a>Operator –  
+##  <a name="operator-"></a>  Operator –  
  Získá element-wise rozdíl mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.  
   
 ```  
@@ -1152,7 +1153,7 @@ The element-by-element result of the difference is the
 *\  
 ```  
   
-##  <a name="op_div"></a>operátor nebo  
+##  <a name="op_div"></a>  operátor nebo  
  Získá element-wise podílu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.  
   
 ```  
@@ -1237,7 +1238,7 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testy, jestli odpovídající elementy dva stejně velké valarray – třídy jsou stejné, nebo zda jsou všechny elementy valarray – rovnat zadanou hodnotou.  
   
 ```  
@@ -1324,7 +1325,7 @@ The element-by-element result of the equality comparison test is the
 *\  
 ```  
   
-##  <a name="op_xor"></a>Operator ^  
+##  <a name="op_xor"></a>  Operator ^  
  Získá bitový exkluzivní `OR` ( **XOR**) mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.  
   
 ```  
@@ -1413,7 +1414,7 @@ The element-by-element result of the bitwise XOR operator^ is the
 *\  
 ```  
   
-##  <a name="op_or"></a>operátor &#124;  
+##  <a name="op_or"></a>  operátor &#124;  
  Získá bitové hodnotě `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.  
   
 ```  
@@ -1502,7 +1503,7 @@ The element-by-element result of the bitwise OR operator| is the
 *\  
 ```  
   
-##  <a name="op_lor"></a>operátor &#124; &#124;  
+##  <a name="op_lor"></a>  operátor &#124; &#124;  
  Získá logické `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo mezi valarray – a zadanou hodnotu valarray – typ elementu.  
   
 ```  
@@ -1590,5 +1591,5 @@ The element-by-element result of the logical OR operator|| is the
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<valarray – >](../standard-library/valarray.md)
+ [\<valarray>](../standard-library/valarray.md)
 

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -29,24 +30,26 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 757571b9de1dbf86040ecd83ae86c4038207798e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="assert-macro-assert-wassert"></a>Assert – makro, _assert, _wassert
+# <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 Vyhodnocuje na výrazu a pokud je výsledek `false`, vytiskne hlášení diagnostiky a zruší program.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -101,7 +104,7 @@ void _wassert(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`assert`, `_wassert`|\<Assert.h >|  
+|`assert`, `_wassert`|\<assert.h>|  
   
  Podpis `_assert` funkce není k dispozici v záhlaví souboru. Podpis `_wassert` funkce je k dispozici pouze při `NDEBUG` makro není definován.  
   
@@ -158,8 +161,8 @@ A problem caused the program to stop working correctly. Windows will close the p
 ## <a name="see-also"></a>Viz také  
  [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)   
  [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [přerušení](../../c-runtime-library/reference/abort.md)   
- [vyvolat](../../c-runtime-library/reference/raise.md)   
- [signál](../../c-runtime-library/reference/signal.md)   
- [_ASSERT, _asserte –, _ASSERT_EXPR makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
+ [abort](../../c-runtime-library/reference/abort.md)   
+ [Vyvolat](../../c-runtime-library/reference/raise.md)   
+ [Signál](../../c-runtime-library/reference/signal.md)   
+ [_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
  [_DEBUG](../../c-runtime-library/debug.md)

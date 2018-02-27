@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector/std::operator!=
 - vector/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - vector/std::operator&lt;
 - vector/std::operator&lt;=
 - vector/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (vector)
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 310bf81e6dd20440c57ce5a0c73da7a6919f0015
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 297fb5bf602d8cc7d2f90e66fbb47dd433e90b86
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vektor&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testy, pokud objekt na levé straně operátoru není stejný jako objekt na pravé straně.  
   
 ```  
@@ -83,7 +84,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Testy, pokud je objekt na levé straně operátoru menší než objekt na pravé straně.  
   
 ```  
@@ -131,7 +132,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Testy, pokud je objekt na levé straně operátoru menší než nebo rovna hodnotě objekt na pravé straně.  
   
 ```  
@@ -179,7 +180,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testy, pokud je objekt na levé straně operátoru stejný objekt na pravé straně.  
   
 ```  
@@ -226,7 +227,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Testy, pokud je objekt na levé straně operátoru větší než objekt na pravé straně.  
   
 ```  
@@ -275,7 +276,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Testy, pokud je objekt na levé straně operátoru větší než nebo rovna hodnotě objekt na pravé straně.  
   
 ```  

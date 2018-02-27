@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Funkční paralelismus (Concurrency Runtime)
 V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní úlohu a obvykle běží paralelně s ostatními úkoly. Úlohy lze rozložit na další, podrobnějšího úlohy, které jsou uspořádány do *skupina úkolů*.  
@@ -81,7 +84,7 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
 - [Robustní programování](#robust)  
   
-##  <a name="lambdas"></a>Použití výrazů Lambda  
+##  <a name="lambdas"></a> Použití výrazů Lambda  
  Kvůli jejich stručného syntaxi výrazů lambda je běžný způsob, jak definovat pracovní, které se provádí pomocí úlohy a skupiny úloh. Zde jsou některé tipy využití:  
   
 -   Protože úlohy jsou obvykle běží na vlákna na pozadí, pamatujte na doba života objektu, když zaznamenáte proměnné v výrazy lambda. Pokud zaznamenáte hodnotou proměnné, kopie tuto proměnnou se provádí v těle lambda. Pokud zaznamenáte odkazem kopii jiného výrobce. Proto se ujistěte, že který platnosti proměnné, které zaznamenáte odkazem outlives úlohu, která jej používá.  
@@ -98,10 +101,10 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
  Další informace o výrazy lambda najdete v tématu [výrazy Lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
-##  <a name="task-class"></a>Úloha – třída  
+##  <a name="task-class"></a> Úloha – třída  
  Můžete použít [concurrency::task](../../parallel/concrt/reference/task-class.md) třídy tvoří úlohy do sady závislých operací. Tento model složení podporuje představu o *pokračování*. Kód umožňuje pokračování při spouštění předchozí, nebo *předchůdce*, dokončení úlohy. Jako vstup do jedné nebo více úloh pokračování je předán výsledek předchozí úlohou. Po dokončení předchozí úlohou všech úkolů pokračování, které čekají na něm je naplánováno spuštění. Každý úkol pokračování obdrží kopii výsledek předchozí úlohou. Tyto úlohy pokračování se pak může být předchozí úlohy pro ostatní pokračování, a vytvoří tak řetěz úlohy. Pokračování vám pomůže vytvořit řetězy libovolný délku úloh, které mají konkrétní závislosti mezi nimi. Kromě toho můžete úlohu zúčastnit, zrušení buď před úlohy spustí nebo spolupráci způsobem je spuštěna. Další informace o tomto modelu zrušení najdete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md).  
   
- `task`je třída šablony. Parametr typu `T` je typ výsledku, která je vytvořena úloha. Tento typ může být `void` Pokud úloha nevrací hodnotu. `T`nelze použít `const` modifikátor.  
+ `task` je třída šablony. Parametr typu `T` je typ výsledku, která je vytvořena úloha. Tento typ může být `void` Pokud úloha nevrací hodnotu. `T` nelze použít `const` modifikátor.  
   
  Když vytvoříte úlohu, zadejte *pracovní funkce* který provede těla úkolu. Tato funkce pracovní obsahuje ve formě funkce lambda, – ukazatel na funkci nebo funkce objektu. Počkat na dokončení bez získání výsledek úlohy, volání [concurrency::task::wait](reference/task-class.md#wait) metoda. `task::wait` Metoda vrátí [concurrency::task_status](reference/concurrency-namespace-enums.md#task_group_status) hodnotu, která popisuje, zda byl úlohu dokončit nebo zrušit. Chcete-li získat výsledek úlohy, zavolejte [concurrency::task::get](reference/task-class.md#get) metoda. Tato metoda volá `task::wait` počkal výsledek je k dispozici pro úlohu dokončit, a proto bloky provádění aktuální vlákno.  
   
@@ -124,9 +127,9 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
  Pro příklad, který používá `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), zrušení, najdete v části [návod: připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Třída je popsán dále v tomto dokumentu.)  
   
 > [!TIP]
->  Další podrobnosti, které jsou specifické pro úlohy v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace, najdete v části [asynchronní programování v jazyce C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) a [vytváření asynchronních operací v C++ pro aplikace Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Další podrobnosti, které jsou specifické pro úlohy v aplikacích pro UPW najdete v tématu [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) a [vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
-##  <a name="continuations"></a>Úloh pokračování  
+##  <a name="continuations"></a> Úloh pokračování  
  V asynchronní programování, je velmi běžné jeden asynchronní operaci na dokončení pro vyvolání druhá operace a předat data. Tradičně to se provádí pomocí metody zpětného volání. V Concurrency Runtime stejné funkce poskytované *úloh pokračování*. Úloha pokračování (známou taky stejně jako pokračování) je asynchronní úkol, který je vyvolán jiná úloha, která se označuje jako *předchůdce*, jakmile je předchůdce dokončen. Pomocí pokračování můžete:  
   
 -   Předejte data z předchůdce pokračování.  
@@ -135,7 +138,7 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
 -   Zrušení pokračování buď před spuštěním nebo spolupráce při jejím průběhu.  
   
--   Poskytnout nápovědu, jak má být naplánováno pokračování. (To se vztahuje na [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] pouze aplikace. Další informace najdete v tématu [vytváření asynchronních operací v C++ pro aplikace Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
+-   Poskytnout nápovědu, jak má být naplánováno pokračování. (To se týká pouze aplikací univerzální platformu Windows (UWP). Další informace najdete v tématu [vytváření asynchronních operací v jazyce C++ pro aplikace UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
   
 -   Vyvolání více pokračování ze stejného předchůdce.  
   
@@ -159,21 +162,21 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- Pokračování můžete se taky vrátit jiná úloha. Pokud není žádná zrušení, tento úkol provést před následné pokračování. Tento postup se označuje jako *asynchronní rozbalování*. Asynchronní rozbalování je užitečné, když chcete provést další práce na pozadí, ale nechcete, aby aktuální úlohy pro blokování aktuální vlákno. (To je běžné v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace, kde můžete spustit pokračování ve vlákně UI). Následující příklad ukazuje tři úlohy. První úlohou vrátí jiný úkol, který je spustit před spuštěním úkolů pokračování.  
+ Pokračování můžete se taky vrátit jiná úloha. Pokud není žádná zrušení, tento úkol provést před následné pokračování. Tento postup se označuje jako *asynchronní rozbalování*. Asynchronní rozbalování je užitečné, když chcete provést další práce na pozadí, ale nechcete, aby aktuální úlohy pro blokování aktuální vlákno. (To je běžné v aplikacích pro UPW, kde můžete spustit pokračování ve vlákně UI). Následující příklad ukazuje tři úlohy. První úlohou vrátí jiný úkol, který je spustit před spuštěním úkolů pokračování.  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  Při pokračování úlohy vrátí vnořené úlohy typu `N`, výsledná úloha má typ `N`, nikoli `task<N>`a dokončí při dokončení vnořené úlohy. Jinými slovy pokračování provádí rozbalování vnořené úlohy.  
   
-##  <a name="value-versus-task"></a>Na základě hodnoty Versus podle úloh pokračování  
+##  <a name="value-versus-task"></a> Na základě hodnoty Versus podle úloh pokračování  
  Zadané `task` objekt, jehož návratový typ `T`, můžete zadat hodnotu typu `T` nebo `task<T>` pro její úkoly pokračování. Pokračování, která přebírá typ `T` se označuje jako *na základě hodnoty pokračování*. Pokračování na základě hodnoty je naplánováno spuštění při předchozí úloha dokončí bez chyby a není zrušena. Pokračování, která přebírá typ `task<T>` jako jeho parametr se nazývá *založený na úlohách pokračování*. Po dokončení předchozí úlohou, i když je zrušená nebo vyvolá výjimku předchozí úloha je vždy pokračování založený na úlohách naplánovat provedení. Potom můžete volat `task::get` získat výsledek předchozí úlohou. Pokud předchozí úloha byla zrušena, `task::get` vyvolá [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Pokud předchozí úlohou došlo k výjimce `task::get` znovu vyvolá této výjimky. Pokračování založený na úlohách není označena jako zrušit, když je zrušeno jeho předchozí úlohou.  
   
-##  <a name="composing-tasks"></a>Skládání úlohy  
+##  <a name="composing-tasks"></a> Skládání úlohy  
  Tato část popisuje [concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) a [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkce, které vám můžou pomoct vytvořit více úloh k implementaci běžných vzorů.  
 
   
-###  <a name="when-all"></a>When_all – funkce  
+###  <a name="when-all"></a> When_all – funkce  
  `when_all` Funkce vytvoří úlohu, která je dokončena po dokončení sadu úloh. Tato funkce vrátí std::[vektoru](../../standard-library/vector-class.md) objekt obsahující výsledek každé úlohy v sadě. Následující příklad základní používá `when_all` k vytvoření úlohy, která představuje dokončení tři další úlohy.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- Vezměte v úvahu [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikaci, která používá C++ a XAML a zapíše sadu souborů na disk. Následující příklad ukazuje, jak používat `when_all` a `observe_all_exceptions` zajistit, že program zaznamenává všechny výjimky.  
+ Vezměte v úvahu aplikace pro UPW, která používá C++ a XAML a zapíše sadu souborů na disk. Následující příklad ukazuje, jak používat `when_all` a `observe_all_exceptions` zajistit, že program zaznamenává všechny výjimky.  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
 > [!TIP]
 
-> `when_all`je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](reference/task-class.md#wait), je bezpečné volat tuto funkci v [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace na vlákno ASTA (STA aplikace).  
+> `when_all` je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [Task::wait –](reference/task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (STA aplikace).  
 
   
-###  <a name="when-any"></a>When_any – funkce  
+###  <a name="when-any"></a> When_any – funkce  
  `when_any` Funkce vytvoří úlohu, která se dokončí po dokončení první úlohou sadu úloh. Funkce vrátí hodnotu [std::pair](../../standard-library/pair-structure.md) objekt obsahující výsledek dokončené úlohy a index této úlohy v sadě.  
   
  `when_any` Funkce je obzvláště užitečná v následujících scénářích:  
@@ -249,18 +252,18 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  Stejně jako u `when_all`, `when_any` neblokující a je bezpečné volat [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace na ASTA vlákno.  
+>  Stejně jako u `when_all`, `when_any` neblokující a je bezpečné volat v aplikaci UWP ve vlákně ASTA.  
   
-##  <a name="delayed-tasks"></a>Provedení zpožděné úlohy  
+##  <a name="delayed-tasks"></a> Provedení zpožděné úlohy  
  Někdy je nezbytné ke zpoždění spuštění úlohy, dokud je podmínka, nebo úlohu lze spustit v reakci na externí událost. Například v asynchronní programování, můžete chtít spustit úlohu v reakci na událost dokončení vstupně-výstupní operace.  
   
  Použití pokračování nebo ke spuštění úlohy a čekání na událost uvnitř úkolu pracovní funkce jsou dva způsoby, jak dosáhnout. Ale existují případy, kdy není možné použít jednu z těchto postupů. Například pokud chcete vytvořit pokračování, musí mít předchozí úlohou. Ale pokud nemáte předchozí úlohou, můžete vytvořit *událost dokončení úlohy* a později řetězu danou událost dokončení pro předchozí úlohou, až bude k dispozici. Navíc vzhledem k tomu, že úloha čekání blokuje taky vlákno, můžete použít událostí dokončení úlohy pro práci při dokončení asynchronní operace a tím volné vlákno.  
   
- [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) třída pomáhá zjednodušit takové složení úlohy. Podobně jako `task` třídy, parametr typu `T` je typ výsledku, která je vytvořena úloha. Tento typ může být `void` Pokud úloha nevrací hodnotu. `T`nelze použít `const` modifikátor. Obvykle `task_completion_event` objekt zajišťuje přístup z více vláken nebo úloha, která bude signalizován jeho hodnota je k dispozici. Ve stejnou dobu jeden nebo více úloh, jsou nastavené jako naslouchací procesy této události. Pokud je nastavená události, dokončete úlohy naslouchací proces a jejich pokračování mají naplánované spuštění.  
+ [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) třída pomáhá zjednodušit takové složení úlohy. Podobně jako `task` třídy, parametr typu `T` je typ výsledku, která je vytvořena úloha. Tento typ může být `void` Pokud úloha nevrací hodnotu. `T` nelze použít `const` modifikátor. Obvykle `task_completion_event` objekt zajišťuje přístup z více vláken nebo úloha, která bude signalizován jeho hodnota je k dispozici. Ve stejnou dobu jeden nebo více úloh, jsou nastavené jako naslouchací procesy této události. Pokud je nastavená události, dokončete úlohy naslouchací proces a jejich pokračování mají naplánované spuštění.  
   
  Pro příklad, který používá `task_completion_event` implementovat úlohu, která je dokončena po prodlevě, najdete v části [postupy: vytvoření úlohy, že dokončení po zpoždění](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).  
   
-##  <a name="task-groups"></a>Skupiny úloh  
+##  <a name="task-groups"></a> Skupiny úloh  
  A *skupina úkolů* organizuje kolekce úloh. Skupiny úloh push úlohy do fronty pracovní krádež. Plánovač úloh odebere z této fronty a je spouštěna v dostupných výpočetních prostředcích. Po přidání úloh pro skupinu úloh, můžete počkat pro všechny úkoly můžete dokončit nebo zrušit úlohy, které ještě nebyly spustili.  
   
  Používá knihovně PPL [concurrency::task_group](reference/task-group-class.md) a [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) třídy představující skupin úloh a [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) – třída představují úkoly spuštěné v těchto skupinách. `task_handle` Třída zapouzdří kód, který provede práci. Podobně jako `task` třídy, pracovní funkce obsahuje ve formě funkce lambda, – ukazatel na funkci nebo funkce objektu. Obvykle není nutné pro práci s `task_handle` objekty přímo. Místo toho předat pracovních funkcí pro skupinu úloh, a skupině úloh vytváří a spravuje `task_handle` objekty.  
@@ -277,7 +280,7 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
  Modul runtime také poskytuje model zpracování výjimek, která umožňuje vyvolat výjimku z úlohy a zpracování této výjimky, je-li čekat na skupině úloh přidružených k dokončení. Další informace o tento model zpracování výjimek najdete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-##  <a name="comparing-groups"></a>Porovnání task_group k structured_task_group  
+##  <a name="comparing-groups"></a> Porovnání task_group k structured_task_group  
  I když vám doporučujeme používat `task_group` nebo `parallel_invoke` místo `structured_task_group` třídy, ale existují případy, ve které chcete použít `structured_task_group`, například při psaní paralelní algoritmus, který provádí proměnný počet úloh nebo vyžaduje Podpora pro zrušení. Tato část vysvětluje rozdíly mezi `task_group` a `structured_task_group` třídy.  
   
  `task_group` Třída je bezpečné pro přístup z více vláken. Proto můžete přidat na úlohy `task_group` objektů z více vláken a počkejte nebo zrušit `task_group` objektů z více vláken. Vytváření a zničení `structured_task_group` objekt musí být stejné ve stejném lexikální oboru. Kromě toho, všechny operace v `structured_task_group` objekt musí být stejné ve stejném vlákně. Výjimka, která má toto pravidlo je [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) a [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) metody. Tyto metody a zrušení úloh nadřazené skupiny, nebo zaškrtněte pro zrušení kdykoli můžete volat podřízené úlohy.  
@@ -296,7 +299,7 @@ V Concurrency Runtime *úloh* je jednotka práce, která provádí konkrétní �
   
  Obě `task_group` a `structured_task_group` podporují zrušení. Další informace o zrušení najdete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md).  
   
-##  <a name="example"></a>Příklad  
+##  <a name="example"></a> Příklad  
  Základní následující příklad ukazuje, jak pracovat s skupiny úloh. Tento příklad používá `parallel_invoke` algoritmus provést dvě úlohy současně. Každý úkol přidá dílčí úkoly k `task_group` objektu. Všimněte si, že `task_group` třída umožňuje více úlohy přidat úkoly k němu současně.  
   
  [!code-cpp[concrt-using-task-groups#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_17.cpp)]  
@@ -313,7 +316,7 @@ Message from task: 42
   
  Pro dokončení příklady, které ukazují, jak používat `parallel_invoke` algoritmus, najdete v části [postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) a [postupy: použití algoritmu parallel_invoke k provádění paralelních operací](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Úplný příklad používající `task_group` třída implementace tříd Future asynchronní, najdete v článku [návod: implementace tříd Future](../../parallel/concrt/walkthrough-implementing-futures.md).  
   
-##  <a name="robust"></a>Robustní programování  
+##  <a name="robust"></a> Robustní programování  
  Ujistěte se, že rozumíte roli zrušení a zpracování výjimek při použití úlohy, skupin úloh a paralelní algoritmy. Například ve stromu paralelní pracovní úlohu, která se zruší, zabraňuje podřízené úlohy spuštění. To může způsobit problémy, pokud jeden z podřízené úlohy provádí operaci, která je důležité pro vaši aplikaci, třeba uvolnění prostředku. Kromě toho pokud podřízené úlohy vyvolá výjimku, této výjimky může rozšíří v rámci destruktoru objektu a způsobit nedefinované chování vaší aplikace. Příklad, který znázorňuje tyto body, najdete v článku [Rady pro pochopení jak zrušení a výjimky zpracování odstranění objektu ovlivnit](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) část v osvědčené postupy v dokumentu paralelní vzory knihovny. Další informace o zrušení a modely zpracování výjimek v knihovně PPL najdete v tématu [zrušení](../../parallel/concrt/cancellation-in-the-ppl.md) a [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
 ## <a name="related-topics"></a>Související témata  
@@ -337,6 +340,6 @@ Message from task: 42
   
  [task_group – třída](reference/task-group-class.md)  
   
- [parallel_invoke – funkce](reference/concurrency-namespace-functions.md#parallel_invoke)  
+ [parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)  
   
  [structured_task_group – třída](../../parallel/concrt/reference/structured-task-group-class.md)

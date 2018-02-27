@@ -1,12 +1,13 @@
 ---
-title: "weak_ptr – třída | Microsoft Docs"
+title: weak_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::weak_ptr
 - memory/std::weak_ptr::element_type
@@ -17,7 +18,8 @@ f1_keywords:
 - memory/std::weak_ptr::swap
 - memory/std::weak_ptr::use_count
 - memory/std::weak_ptr::operator=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::weak_ptr [C++]
 - std::weak_ptr [C++], element_type
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a4d7989038ecb83575a8c9c2137df8965db6dc3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="weakptr-class"></a>weak_ptr – třída
 Zalomí slabě propojený ukazatel.  
@@ -98,26 +101,26 @@ public:
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ elementu.|  
-|[platnost](#expired)|Testy, pokud vypršela platnost vlastnictví.|  
+|[element_type](#element_type)|Typ elementu.|  
+|[expired](#expired)|Testy, pokud vypršela platnost vlastnictví.|  
 |[lock](#lock)|Získá výhradní vlastnictví prostředku.|  
-|[owner_before –](#owner_before)|Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.|  
-|[resetování](#reset)|Verze vlastní prostředek.|  
+|[owner_before](#owner_before)|Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.|  
+|[reset](#reset)|Verze vlastní prostředek.|  
 |[swap](#swap)|Prohození dva `weak_ptr` objekty.|  
-|[use_count –](#use_count)|Určený počet počty `shared_ptr` objekty.|  
+|[use_count](#use_count)|Určený počet počty `shared_ptr` objekty.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Nahradí vlastní prostředek.|  
+|[operator=](#op_eq)|Nahradí vlastní prostředek.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<paměti >  
   
  **Namespace:** – std  
   
-##  <a name="element_type"></a>ELEMENT_TYPE  
+##  <a name="element_type"></a>  element_type  
  Typ elementu.  
   
 ```  
@@ -152,7 +155,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="expired"></a>platnost  
+##  <a name="expired"></a>  Platnost  
  Testy, pokud vypršela platnost vlastnictví.  
   
 ```  
@@ -208,7 +211,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="lock"></a>Zámek  
+##  <a name="lock"></a>  Zámek  
  Získá výhradní vlastnictví prostředku.  
   
 ```  
@@ -264,7 +267,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="op_eq"></a>operátor =  
+##  <a name="op_eq"></a>  operátor =  
  Nahradí vlastní prostředek.  
   
 ```  
@@ -323,7 +326,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="owner_before"></a>owner_before –  
+##  <a name="owner_before"></a>  owner_before –  
  Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.  
   
 ```  
@@ -341,7 +344,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Poznámky  
  Členské funkce šablony vrátí `true` Pokud `*this` je `ordered before` `ptr`.  
   
-##  <a name="reset"></a>resetování  
+##  <a name="reset"></a>  Resetování  
  Verze vlastní prostředek.  
   
 ```  
@@ -382,7 +385,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Prohození dva `weak_ptr` objekty.  
   
 ```  
@@ -450,7 +453,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="use_count"></a>use_count –  
+##  <a name="use_count"></a>  use_count –  
  Určený počet počty `shared_ptr` objekty.  
   
 ```  
@@ -489,7 +492,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr"></a>weak_ptr  
+##  <a name="weak_ptr"></a>  weak_ptr  
  Vytvoří `weak_ptr`.  
   
 ```  

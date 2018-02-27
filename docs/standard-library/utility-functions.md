@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -13,7 +13,7 @@ f1_keywords:
 - utility/std::move
 - utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::exchange [C++]
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: d2b444c2de41651ac74047717ed54a7059866f86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a442f3a4b03a62363d465107b7e2ae5f3e975249
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-functions"></a>&lt;Nástroj&gt; funkce
 ||||  
 |-|-|-|  
-|[Exchange](#exchange)|[předat dál](#forward)|[Get – funkce &lt;nástroj&gt;](#get)|  
-|[make_pair –](#make_pair)|[Přesunutí](#move)|[swap](#swap)|  
+|[exchange](#exchange)|[Předat dál](#forward)|[Get – funkce &lt;nástroj&gt;](#get)|  
+|[make_pair](#make_pair)|[Přesunutí](#move)|[swap](#swap)|  
   
-##  <a name="exchange"></a>Exchange  
+##  <a name="exchange"></a>  Exchange  
  **(C ++ 14)**  Přiřadí novou hodnotu do objektu a vrátí jeho původní hodnotu.  
   
 ```cpp  
@@ -82,7 +82,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="forward"></a>předat dál  
+##  <a name="forward"></a>  Předat dál  
  Podmíněně přetypuje svůj argument na odkaz rvalue, pokud je argument hodnota rvalue nebo odkaz rvalue. Tím se období hodnota rvalue argumentu na funkci předání za účelem maximální podpory předávání.  
   
 ```
@@ -106,11 +106,11 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ### <a name="remarks"></a>Poznámky  
  Musíte zadat argument explicitní šablony volat `forward`.  
   
- `forward`Nepředávat dál jeho argumentem. Místo toho pomocí podmíněně přetypování její argument deklarátor odkazu, pokud byl původně rvalue nebo deklarátor odkazu `forward` umožňuje kompilátoru k rozlišení přetížení s znalostmi původní typ přesměrovaná argumentu. Může být jiná než jeho původní typ zřejmá typ argumentu funkce předávání – například když se používá jako argument pro funkci a je vázána na název parametru; rvalue s názvem umožňuje lvalue, bez ohledu na to, jestli hodnota skutečně existuje jako rvalue – `forward` obnoví rvalue – obchodní argumentu.  
+ `forward` Nepředávat dál jeho argumentem. Místo toho pomocí podmíněně přetypování její argument deklarátor odkazu, pokud byl původně rvalue nebo deklarátor odkazu `forward` umožňuje kompilátoru k rozlišení přetížení s znalostmi původní typ přesměrovaná argumentu. Může být jiná než jeho původní typ zřejmá typ argumentu funkce předávání – například když se používá jako argument pro funkci a je vázána na název parametru; rvalue s názvem umožňuje lvalue, bez ohledu na to, jestli hodnota skutečně existuje jako rvalue – `forward` obnoví rvalue – obchodní argumentu.  
   
  Chcete-li provést rozlišení přetížení obnovení rvalue – obchodní argument na původní hodnoty se označuje jako *ideální předávání*. Dokonalé předávání umožňuje funkci šablony přijmout argument některého typu odkazu a obnovit jeho vlastnost rvalue, když je nezbytná pro správné řešení přetížení. Pomocí dokonalého předávání můžete zachovat sémantiku přesunu pro hodnoty rvalue. Nebude tak nutné poskytovat přetížení pro funkce, které se liší pouze typem odkazu svých argumentů.  
   
-##  <a name="get"></a>GET  
+##  <a name="get"></a>  GET  
  Získá element z `pair` objektu podle pozici indexu, nebo typu.  
   
 ```
@@ -205,7 +205,7 @@ int main()
 }
 ```  
   
-##  <a name="make_pair"></a>make_pair –  
+##  <a name="make_pair"></a>  make_pair –  
  Funkce šablony, který vám pomůže vytvořit objekty typu `pair`, kde typy součásti jsou automaticky vybrali, na základě typu dat, které se předávají jako parametry.  
   
 ```
@@ -233,7 +233,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
  Objekt dvojice, který je sestavený: `pair` <  `T`, `U`> ( `Val1`, `Val2`).  
   
 ### <a name="remarks"></a>Poznámky  
- `make_pair`převádí objekt typu [reference_wrapper – třída](../standard-library/reference-wrapper-class.md) odkazové typy a převede Slábnoucí pole a funkce na ukazatele.  
+ `make_pair` převádí objekt typu [reference_wrapper – třída](../standard-library/reference-wrapper-class.md) odkazové typy a převede Slábnoucí pole a funkce na ukazatele.  
   
  Ve vráceném `pair` objektu `T` je stanoven následujícím způsobem:  
   
@@ -243,14 +243,14 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
   
  Typ vrácený `U` Podobně se určí ze vstupní typ `U`.  
   
- Jednou z výhod `make_pair` je, že typy objektů, které ukládají automaticky určuje kompilátoru a není nutné explicitně určena. Nepoužívejte jako argumenty explicitní šablony `make_pair<int, int>(1, 2)` při použití `make_pair` protože je zbytečně podrobné a přidá komplexní deklarátor odkazu problémy, které může způsobit chyby kompilace. V tomto příkladu by být správná syntaxe`make_pair(1, 2)`  
+ Jednou z výhod `make_pair` je, že typy objektů, které ukládají automaticky určuje kompilátoru a není nutné explicitně určena. Nepoužívejte jako argumenty explicitní šablony `make_pair<int, int>(1, 2)` při použití `make_pair` protože je zbytečně podrobné a přidá komplexní deklarátor odkazu problémy, které může způsobit chyby kompilace. V tomto příkladu by být správná syntaxe `make_pair(1, 2)`  
   
  `make_pair` Pomocné funkce také umožňuje předat funkci, která vyžaduje pár jako vstupní parametr dvě hodnoty.  
   
 ### <a name="example"></a>Příklad  
   Příklad o tom, jak používat pomocné funkce `make_pair` deklarace a inicializace pár najdete v tématu [pair – struktura](../standard-library/pair-structure.md).  
   
-##  <a name="move"></a>Přesunutí  
+##  <a name="move"></a>  move  
  Bezpodmínečně přetypuje svůj argument na odkaz hodnoty rvalue a značí, že ji lze přesunout, pokud je pro její typ přesunutí povoleno.  
   
 ```
@@ -266,16 +266,16 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |`Arg`|Argument, který chcete přetypovat. I když typ `Arg` zdá být zadány jako deklarátor odkazu, `move` také přijímá argumenty lvalue, protože lvalue odkazy můžete vázat na odkazy rvalue.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `Arg`jako deklarátor odkazu zda jeho typ je odkazového typu.  
+ `Arg` jako deklarátor odkazu zda jeho typ je odkazového typu.  
   
 ### <a name="remarks"></a>Poznámky  
  Argument šablony `Type` neměla být explicitně uvedena, ale odvodit z typu předaná hodnota `Arg`. Typ `Type` další úpravě podle odkaz sbalení pravidla.  
   
- `move`nepřesouvá jeho argumentem. Místo toho pomocí bezpodmínečně přetypování její argument – což může být lvalue – k deklarátor odkazu, umožňuje kompilátoru následně přesunout, protože místo kopírování předaná hodnota `Arg` Pokud typ je povolen move. Pokud pro daný typ není povolen přesun, hodnota se zkopíruje.  
+ `move` nepřesouvá jeho argumentem. Místo toho pomocí bezpodmínečně přetypování její argument – což může být lvalue – k deklarátor odkazu, umožňuje kompilátoru následně přesunout, protože místo kopírování předaná hodnota `Arg` Pokud typ je povolen move. Pokud pro daný typ není povolen přesun, hodnota se zkopíruje.  
   
  Pokud je předaná hodnota `Arg` je lvalue –, má název, nebo můžete provést jeho adresy – je zrušena, když dojde k přesunutí. Neměly by konce odkazovat na hodnotu předaná `Arg` podle jeho názvu nebo adresy po byl přesunut.  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Výměny dva elementy [pair – struktura](../standard-library/pair-structure.md) objekty.  
   
 ```

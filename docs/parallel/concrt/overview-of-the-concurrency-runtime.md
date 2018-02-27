@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurrency Runtime, kdy ji použít, a způsob jejich součástí interakce mezi sebou a se operační systém a aplikace.  
@@ -31,7 +34,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
 > [!IMPORTANT]
 >  V sadě Visual Studio 2015 a novější je Plánovač úloh třídy a souvisejících typů v ppltasks.h už Plánovač úloh Concurrency Runtime. Tyto typy teď použít zachovalo Windows pro lepší výkon a vzájemná funkční spolupráce s Windows synchronizace primitiv. Paralelní algoritmy například parallel_for – nadále používat Plánovač úloh Concurrency Runtime.  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento dokument obsahuje následující části:  
   
 -   [Proč modul Runtime pro Concurrency je část důležité.](#runtime)  
@@ -42,7 +45,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
 -   [Požadavky](#requirements)  
   
-##  <a name="runtime"></a>Proč modul Runtime pro Concurrency je část důležité.  
+##  <a name="runtime"></a> Proč modul Runtime pro Concurrency je část důležité.  
  Modul runtime pro concurrency poskytuje jednotnost a předvídatelnost aplikací a součástí aplikace, které běžet současně. Jsou dva příklady výhod Concurrency Runtime *plánování úkolů spolupráci* a *spolupráci blokování*.  
   
  Concurrency Runtime používá plánovače úloh spolupráci, který implementuje krádež pracovní algoritmus pro efektivní distribuci pracovní mezi výpočetními prostředky. Představte si třeba aplikace, která má dva vláken, které jsou spravovány nástrojem stejné modulu runtime. Pokud jedno vlákno skončí její naplánované úlohy, je přesměrování zpracování pracovní z jiné vlákno. Tento mechanismus vyrovnává celkové zatížení aplikace.  
@@ -51,7 +54,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
  [[Horní](#top)]  
   
-##  <a name="architecture"></a>Architektura  
+##  <a name="architecture"></a> Architektura  
  Concurrency Runtime je rozdělené do čtyř součástí: paralelní vzory knihovny (PPL), knihovna asynchronních agentů, plánovače úloh a Resource Manager. Tyto součásti nacházet mezi operačního systému a aplikací. Následující obrázek znázorňuje interakci komponenty Concurrency Runtime v rámci operačního systému a aplikací:  
   
  **Architektura Concurrency Runtime**  
@@ -59,7 +62,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
  ![Architektura Concurrency Runtime](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Komponenty plánovače úloh a správce prostředků nejsou k dispozici prostřednictvím [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikace nebo při použití třídy úlohy nebo jiné typy v ppltasks.h.  
+>  Komponenty plánovače úloh a správce prostředků nejsou k dispozici z aplikace pro univerzální platformu Windows (UWP) nebo při použití třídy úlohy nebo jiné typy v ppltasks.h.  
   
  Concurrency Runtime je vysoce *bez možnosti složení*, tedy můžete kombinovat více stávající funkce. Concurrency Runtime vytvoří mnoha funkcí, jako je například paralelní algoritmy ze součástí nižší úrovně.  
   
@@ -95,7 +98,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
  [[Horní](#top)]  
   
-##  <a name="lambda"></a>Výrazy C++ Lambda  
+##  <a name="lambda"></a> C++ Lambda Expressions  
  Mnoho typů a algoritmy, které jsou definovány Concurrency Runtime jsou implementované jako šablony jazyka C++. Některé z těchto typů a algoritmy trvat jako parametr rutiny, která provede práci. Tento parametr může být lambda funkce, funkce objektu nebo ukazatel na funkci. Tyto entity jsou také označovány jako *pracovních funkcí* nebo *fungovat rutiny*.  
   
  Lambda – výrazy jsou důležitou součást nového jazyka Visual C++, protože poskytují stručného způsob, jak definovat pracovních funkcí pro paralelní zpracování. Objekty funkcí a ukazatelů na funkce umožňují použití Concurrency Runtime s váš stávající kód. Doporučujeme však při vytvoření nového kódu z důvodu zabezpečení a produktivitu výhody, které obsahují použití výrazů lambda.  
@@ -118,13 +121,13 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
  [[Horní](#top)]  
   
-##  <a name="requirements"></a>Požadavky  
+##  <a name="requirements"></a> Požadavky  
  Následující tabulka uvádí soubory hlaviček, které jsou přidruženy jednotlivé komponenty Concurrency Runtime:  
   
 |Součást|Soubory hlaviček|  
 |---------------|------------------|  
 |Knihovna PPL (Parallel Patterns Library)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Knihovna asynchronních agentů|Agents.h|  
+|Knihovna asynchronních agentů|agents.h|  
 |Plánovač úloh|concrt.h|  
 |Správce prostředků|concrtrm.h|  
   

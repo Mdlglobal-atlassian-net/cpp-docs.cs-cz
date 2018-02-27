@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 Představuje zobrazení jen pro čtení do *mapy*, což je kolekce párů klíč hodnota.  
@@ -41,7 +43,7 @@ ref class UnorderedMapView sealed;
  Typ hodnoty v páru klíč / hodnota.  
   
  `C`  
- Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty klíče rovnosti. Ve výchozím nastavení [std::equal_to\<kB >](../standard-library/equal-to-struct.md)  
+ Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty klíče rovnosti. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Poznámky  
  UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView\<tisíc, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, které je předán přes rozhraní binární aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Unorderedmapview::unorderedmapview –](#ctor)|Inicializuje novou instanci třídy UnorderedMapView.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|Inicializuje novou instanci třídy UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Unorderedmapview::First –](#first)|Vrátí první prvek v zobrazení mapy iterátor, který je inicializován.|  
-|[Unorderedmapview::haskey –](#haskey)|Určuje, zda aktuální UnorderedMapView obsahuje zadaný klíč.|  
-|[Unorderedmapview::Lookup –](#lookup)|Načte element v zadaný klíč v aktuálním objektu UnorderedMapView.|  
-|[Unorderedmapview::size –](#size)|Vrátí počet prvků v aktuálním objektu UnorderedMapView.|  
-|[Unorderedmapview::split –](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|  
+|[UnorderedMapView::First](#first)|Vrátí první prvek v zobrazení mapy iterátor, který je inicializován.|  
+|[UnorderedMapView::HasKey](#haskey)|Určuje, zda aktuální UnorderedMapView obsahuje zadaný klíč.|  
+|[UnorderedMapView::Lookup](#lookup)|Načte element v zadaný klíč v aktuálním objektu UnorderedMapView.|  
+|[UnorderedMapView::Size](#size)|Vrátí počet prvků v aktuálním objektu UnorderedMapView.|  
+|[UnorderedMapView::Split](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `UnorderedMapView`  
@@ -72,7 +74,7 @@ ref class UnorderedMapView sealed;
   
  **Namespace:** Platform::Collections  
 
-## <a name="first"></a>Unorderedmapview::First – metoda
+## <a name="first"></a>  Unorderedmapview::First – metoda
 Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<tisíc, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element v neuspořádaný mapy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -91,7 +93,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Unorderedmapview::haskey – metoda
+## <a name="haskey"></a>  Unorderedmapview::haskey – metoda
 Určuje, zda aktuální UnorderedMap obsahuje zadaný klíč.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -105,11 +107,11 @@ bool HasKey(K key);
  Klíč používaný k vyhledání prvku. Typ `key` je typename *tisíc*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je nalezen klíč; v opačném `false`.  
+ `true` Pokud je nalezen klíč; v opačném `false`.  
   
 
 
-## <a name="lookup"></a>Unorderedmapview::Lookup – metoda
+## <a name="lookup"></a>  Unorderedmapview::Lookup – metoda
 Načte hodnotu z typu V, který je přidružen k zadanému klíči typu K.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -127,7 +129,7 @@ V Lookup(K key);
   
 
 
-## <a name="size"></a>Unorderedmapview::size – metoda
+## <a name="size"></a>  Unorderedmapview::size – metoda
 Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<tisíc, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementů v UnorderedMapView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -141,7 +143,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="split"></a>Unorderedmapview::split – metoda
+## <a name="split"></a>  Unorderedmapview::split – metoda
 Aktuální objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView. Tato metoda je nefunkční.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -166,7 +168,7 @@ void Split(
   
 
 
-## <a name="ctor"></a>Unorderedmapview::unorderedmapview – konstruktor
+## <a name="ctor"></a>  Unorderedmapview::unorderedmapview – konstruktor
 Inicializuje novou instanci třídy UnorderedMapView.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>Pomocné funkce protokolu HTTP ATL
 
@@ -35,7 +36,7 @@ Tyto funkce podporují zpracování adresy URL.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Voláním této funkce převedete adresu URL na kanonický tvar, přičemž problematické znaky a mezery se převedou na řídicí sekvence.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  Příznaky ATL_URL řízení chování této funkce. 
 
-- `ATL_URL_BROWSER_MODE`Kódování nebo dekódování znaků za "#" nebo "?" a nedojde k odstranění prázdné znaky po "?". Pokud tato hodnota není zadaná, je zakódován úplnou adresu URL a bude odebrán prázdné znaky.
-- `ATL_URL_DECODE`Převede všechny % XX pořadí znaků, včetně řídicí sekvence, než je analyzovat adresu URL.
-- `ATL_URL_ENCODE_PERCENT`Kóduje všechny znaky procenta došlo. Ve výchozím nastavení nejsou znaky procenta kódování.
-- `ATL_URL_ENCODE_SPACES_ONLY`Kóduje pouze mezery.
-- `ATL_URL_ESCAPE`Převede všechny řídicí sekvence (% XX) na jejich odpovídající znaků.
-- `ATL_URL_NO_ENCODE`Nepřevádí řídicí sekvence nebezpečné znaky.
-- `ATL_URL_NO_META`Nedojde k odebrání meta pořadí (například "."a"...") z adresy URL. 
+- `ATL_URL_BROWSER_MODE` Kódování nebo dekódování znaků za "#" nebo "?" a nedojde k odstranění prázdné znaky po "?". Pokud tato hodnota není zadaná, je zakódován úplnou adresu URL a bude odebrán prázdné znaky.
+- `ATL_URL_DECODE` Převede všechny % XX pořadí znaků, včetně řídicí sekvence, než je analyzovat adresu URL.
+- `ATL_URL_ENCODE_PERCENT` Kóduje všechny znaky procenta došlo. Ve výchozím nastavení nejsou znaky procenta kódování.
+- `ATL_URL_ENCODE_SPACES_ONLY` Kóduje pouze mezery.
+- `ATL_URL_ESCAPE` Převede všechny řídicí sekvence (% XX) na jejich odpovídající znaků.
+- `ATL_URL_NO_ENCODE` Nepřevádí řídicí sekvence nebezpečné znaky.
+- `ATL_URL_NO_META` Nedojde k odebrání meta pořadí (například "."a"...") z adresy URL. 
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Viz také  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Voláním této funkce zkombinujete základní a relativní adresu URL do jedné kanonické adresy URL.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Poznámky  
  Chová se jako aktuální verze [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ale nevyžaduje WinInet nebo nainstalovaný Internet Explorer.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Voláním této funkce převedete všechny problematické znaky na řídicí sekvence.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port) přidružený k zadané schéma nebo ATL_URL_INVALID_PORT_NUMBER Pokud schéma nebyl rozpoznán.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Voláním této funkce zjistíte, zda lze znak bezpečně použít v adrese URL.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Poznámky  
  Znaky, které by neměly být použití v adresách URL lze otestovat pomocí této funkce a převést pomocí [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Voláním této funkce převedete řídicí znaky zpět na jejich původní hodnoty.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Poznámky  
  Obrátí proces převodu používaný službou [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající této hodnotě barev.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Poznámky  
  Hodnotu barvy HTML je znak křížku následuje 6 číslic šestnáctkové hodnoty pomocí 2 číslic pro všechny komponenty červené, zelené a modré barvy (například #FFFFFF je bílé).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.  
   
 ```  
@@ -254,7 +255,7 @@ inline void SystemTimeToHttpDate(
  `st`  
  Systémový čas na získat jako řetězec formátu protokolu HTTP.  
   
- *strtime –*  
+ *strTime*  
  Odkaz na proměnnou string přijímat HTTP datum a čas, jak jsou definovány v dokumentu RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) a RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Viz také  

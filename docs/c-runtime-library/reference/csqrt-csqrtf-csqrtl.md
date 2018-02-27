@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c8f28a0979c5942765c5292fb56af6e4ba25aab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 65c295031e2b7d4119c988e4253f34dd7897d30c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 Načte druhou odmocninu čísla komplexní s větev vyjmout záporné skutečné osy.  
@@ -80,10 +82,10 @@ _Lcomplex csqrtl(
 ## <a name="return-value"></a>Návratová hodnota  
  Druhou odmocninu čísla `z`. Výsledkem je v pravé polovině roviny.  
   
-|Vstup|Výjimka SEH|`_matherr`Výjimka|  
+|Vstup|Výjimka SEH|`_matherr` Výjimka|  
 |-----------|-------------------|--------------------------|  
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|  
-|- ∞|žádná|_DOMAIN –|  
+|ROZMEZÍ QNAN, IND|žádná|_DOMAIN|  
+|- ∞|žádná|_DOMAIN|  
   
 ## <a name="remarks"></a>Poznámky  
  Protože C++ umožňuje, aby přetížení, můžete volat přetížení `csqrt` , přijmout a vrátit `_Fcomplex` a `_Lcomplex` hodnoty. V programu C `csqrt` vždy provede a vrátí `_Dcomplex` hodnotu.  
@@ -92,7 +94,7 @@ _Lcomplex csqrtl(
   
 |Rutina|Hlavička C|Hlavička C++|  
 |-------------|--------------|------------------|  
-|`csqrt`,               `csqrtf`, `csqrtl`|\<COMPLEX.h >|\<ccomplex >|  
+|`csqrt`,               `csqrtf`, `csqrtl`|\<complex.h>|\<ccomplex>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

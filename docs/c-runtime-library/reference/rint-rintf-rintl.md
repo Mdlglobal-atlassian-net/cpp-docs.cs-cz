@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90dcff78d7062e8f5735cf8622629682e330147b
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6a67e17487486bd6a48c3a1829aeae342e0e56b2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 Zaokrouhlí na nejbližší celé číslo s plovoucí desetinnou čárkou formát hodnotu s plovoucí desetinnou čárkou.  
@@ -69,7 +69,7 @@ long double rintl( long double x );
 ## <a name="return-value"></a>Návratová hodnota  
  `rint` Funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo na `x`. Uprostřed hodnoty jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejně jako `nearbyint` funkce. Na rozdíl od `nearbyint` funkce, `rint` může vyvolat funkce `FE_INEXACT` výjimek plovoucí desetinné čárky, pokud výsledek se liší v hodnotě v argumentu. Neexistuje žádný návratový chyby.  
   
-|Vstup|Výjimka SEH|`_matherr`Výjimka|  
+|Vstup|Výjimka SEH|`_matherr` Výjimka|  
 |-----------|-------------------|--------------------------|  
 |ROZMEZÍ ∞, QNAN, IND|žádná|žádná|  
 |Denormals|EXCEPTION_FLT_UNDERFLOW|žádná|  

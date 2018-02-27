@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
@@ -17,7 +18,8 @@ f1_keywords:
 - functional/std::reference_wrapper::type
 - functional/std::reference_wrapper::get
 - functional/std::reference_wrapper::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reference_wrapper [C++]
 - std::reference_wrapper [C++]
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87608912712f201d4731deac53d7a59fdddf41d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0751f1fde7d49d11ecaab5628ac02f322628b5c8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper – třída
 Zabalí odkaz.  
@@ -72,7 +75,7 @@ Podpůrné funkce [std::ref](functional-functions.md#ref) a [std::cref](function
   
 |||  
 |-|-|  
-|[reference_wrapper –](#reference_wrapper)|Vytvoří `reference_wrapper`.|  
+|[reference_wrapper](#reference_wrapper)|Vytvoří `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -91,14 +94,14 @@ Podpůrné funkce [std::ref](functional-functions.md#ref) a [std::cref](function
   
 |||  
 |-|-|  
-|[reference_wrapper::Operator Ty&amp;](#op_ty_amp)|Získá ukazatel k zabalené odkazu.|  
-|[reference_wrapper::Operator()](#op_call)|Volá zabalené odkaz.|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Získá ukazatel k zabalené odkazu.|  
+|[reference_wrapper::operator()](#op_call)|Volá zabalené odkaz.|  
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<funkční >  
   
  **Namespace:** – std  
   
-##  <a name="get"></a>reference_wrapper::Get  
+##  <a name="get"></a>  reference_wrapper::Get  
  Získá odkaz na zabalená.  
   
 ```  
@@ -135,7 +138,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="op_ty_amp"></a>reference_wrapper::Operator Ty&amp;  
+##  <a name="op_ty_amp"></a>  reference_wrapper::Operator Ty&amp;  
  Získá zabalené odkaz.  
   
 ```  
@@ -169,7 +172,7 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="op_call"></a>reference_wrapper::Operator()  
+##  <a name="op_call"></a>  reference_wrapper::Operator()  
  Volá zabalené odkaz.  
   
 ```  
@@ -212,7 +215,7 @@ int main() {
 rwi(3) = -3  
 ```  
   
-##  <a name="reference_wrapper"></a>reference_wrapper::reference_wrapper  
+##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
  Vytvoří `reference_wrapper`.  
   
 ```  
@@ -260,7 +263,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="result_type"></a>reference_wrapper::result_type  
+##  <a name="result_type"></a>  reference_wrapper::result_type  
  Slabé výsledný typ zabalené odkaz.  
   
 ```  
@@ -297,7 +300,7 @@ int main() {
 val = -3  
 ```  
   
-##  <a name="type"></a>reference_wrapper::type  
+##  <a name="type"></a>  reference_wrapper::type  
  Typ zabalené odkaz.  
   
 ```  
@@ -338,6 +341,6 @@ rwi = 1
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [cref –](../standard-library/functional-functions.md#cref)   
+ [cref](../standard-library/functional-functions.md#cref)   
  [ref](../standard-library/functional-functions.md#ref)
 

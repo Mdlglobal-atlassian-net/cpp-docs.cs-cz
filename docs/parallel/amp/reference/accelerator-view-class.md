@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
@@ -24,19 +25,22 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator_view:is_debug
 - AMPRT/Concurrency::accelerator_view:queuing_mode
 - AMPRT/Concurrency::accelerator_view:version
-dev_langs: C++
-helpviewer_keywords: accelerator_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 Představuje virtuální zařízení abstrakce na akcelerátor C++ AMP paralelní data.  
@@ -54,38 +58,38 @@ class accelerator_view;
 |Název|Popis|  
 |----------|-----------------|  
 |[accelerator_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|  
-|[~ accelerator_view – destruktor](#dtor)|Zničí `accelerator_view` objektu.|  
+|[~accelerator_view Destructor](#dtor)|Zničí `accelerator_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[create_marker](#create_marker)|Vrátí budoucí sledování dokončení všech příkazů odeslání, pokud k tomuto `accelerator_view` objektu.|  
-|[vyprázdnění](#flush)|Odešle všechny čekající příkazy zařazených do fronty `accelerator_view` objekt, který chcete akcelerátor pro spuštění.|  
-|[get_accelerator –](#get_accelerator)|Vrátí `accelerator` objekt pro `accelerator_view` objektu.|  
+|[Vyprázdnění](#flush)|Odešle všechny čekající příkazy zařazených do fronty `accelerator_view` objekt, který chcete akcelerátor pro spuštění.|  
+|[get_accelerator](#get_accelerator)|Vrátí `accelerator` objekt pro `accelerator_view` objektu.|  
 |[get_is_auto_selection](#get_is_auto_selection)|Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru při `accelerator_view` předaný objekt [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[get_is_debug –](#get_is_debug)|Vrátí logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
-|[get_queuing_mode –](#get_queuing_mode)|Vrátí hodnotu režimu front zpráv pro `accelerator_view` objektu.|  
-|[get_version –](#get_version)|Vrátí verzi `accelerator_view`.|  
-|[Počkej](#wait)|Všechny příkazy odeslané na čeká `accelerator_view` objekt, který chcete dokončit.|  
+|[get_is_debug](#get_is_debug)|Vrátí logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
+|[get_queuing_mode](#get_queuing_mode)|Vrátí hodnotu režimu front zpráv pro `accelerator_view` objektu.|  
+|[get_version](#get_version)|Vrátí verzi `accelerator_view`.|  
+|[wait](#wait)|Všechny příkazy odeslané na čeká `accelerator_view` objekt, který chcete dokončit.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` objekt s touto.|  
-|[Operator ==](#operator_eq_eq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
+|[operator=](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` objekt s touto.|  
+|[operator==](#operator_eq_eq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[akcelerátoru](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|  
+|[accelerator](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|  
 |[is_auto_selection](#is_auto_selection)|Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru při `accelerator_view` předaný objekt [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[is_debug –](#is_debug)|Získá logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
+|[is_debug](#is_debug)|Získá logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
 |[queuing_mode](#queuing_mode)|Získá režim front zpráv pro `accelerator_view` objektu.|  
-|[verze](#version)|Získá verzi akcelerátor.|  
+|[Verze](#version)|Získá verzi akcelerátor.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `accelerator_view`  
@@ -102,7 +106,7 @@ class accelerator_view;
   
  **Namespace:** souběžnosti  
 
-## <a name="accelerator"></a>akcelerátoru 
+## <a name="accelerator"></a> akcelerátoru 
 
 Získá objekt akcelerátoru accelerator_view objektu.  
   
@@ -112,7 +116,7 @@ Získá objekt akcelerátoru accelerator_view objektu.
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-## <a name="ctor"></a>accelerator_view 
+## <a name="ctor"></a> accelerator_view 
 
 Inicializuje novou instanci třídy accelerator_view zkopírováním existující `accelerator_view` objektu.  
   
@@ -126,7 +130,7 @@ accelerator_view( const accelerator_view & _Other );
  `_Other`  
  `accelerator_view` Objekt, který chcete kopírovat.  
   
-## <a name="accelerator_view__create_marker"></a>create_marker 
+## <a name="accelerator_view__create_marker"></a> create_marker 
 
 Vrátí budoucí sledování dokončení všech příkazů odeslání, pokud k tomuto `accelerator_view` objektu.  
   
@@ -139,7 +143,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>Návratová hodnota  
  Budoucí sledování dokončení všech příkazů odeslání, pokud k tomuto `accelerator_view` objektu.  
   
-## <a name="flush"></a>vyprázdnění 
+## <a name="flush"></a> Vyprázdnění 
 
 Odešle, že všechny čekající příkazy zařazených do fronty pro accelerator_view objekt, který má akcelerátor pro spuštění.  
   
@@ -152,7 +156,7 @@ void flush();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `void`.  
 
-## <a name="accelerator_view__get_accelerator"></a>get_accelerator – 
+## <a name="accelerator_view__get_accelerator"></a> get_accelerator – 
 
 Vrací objekt akcelerátoru accelerator_view objektu.
 ### <a name="syntax"></a>Syntaxe
@@ -162,7 +166,7 @@ accelerator get_accelerator() const;
 ### <a name="return-value"></a>Návratová hodnota
 Objekt akcelerátoru accelerator_view objektu.
 
-## <a name="accelerator_view__get_is_auto_selection"></a>get_is_auto_selection 
+## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection 
 
 Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru když je předána accelerator_view [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
@@ -173,9 +177,9 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud modul runtime automaticky vybere odpovídající akcelerátoru; v opačném `false`.  
+ `true` Pokud modul runtime automaticky vybere odpovídající akcelerátoru; v opačném `false`.  
   
-## <a name="accelerator_view__get_is_debug"></a>get_is_debug – 
+## <a name="accelerator_view__get_is_debug"></a> get_is_debug – 
 
 Vrátí logickou hodnotu, která označuje, zda má objekt accelerator_view vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.  
   
@@ -188,7 +192,7 @@ bool get_is_debug() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Logická hodnota, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.  
 
-## <a name="accelerator_view__get_queuing_mode"></a>get_queuing_mode – 
+## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode – 
 
 Vrátí režim řazení do fronty pro objekt accelerator_view.  
   
@@ -201,7 +205,7 @@ queuing_mode get_queuing_mode() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Režim řazení do fronty pro `accelerator_view` objektu.  
   
-## <a name="accelerator_view__get_version"></a>get_version – 
+## <a name="accelerator_view__get_version"></a> get_version – 
 
 Vrátí verzi accelerator_view.  
   
@@ -214,7 +218,7 @@ unsigned int get_version() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Verze `accelerator_view`.  
   
-## <a name="accelerator_view__is_auto_selection"></a>is_auto_selection 
+## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection 
 
 Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru když je předána accelerator_view [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
@@ -224,7 +228,7 @@ Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere o
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
 ```  
   
-## <a name="accelerator_view__is_debug"></a>is_debug – 
+## <a name="accelerator_view__is_debug"></a> is_debug – 
 
 Získá logickou hodnotu, která označuje, zda má objekt accelerator_view vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.  
   
@@ -234,7 +238,7 @@ Získá logickou hodnotu, která označuje, zda má objekt accelerator_view vrst
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="accelerator_view__operator_neq"></a>Operator! = 
+## <a name="accelerator_view__operator_neq"></a> Operator! = 
 
 Porovná tento objekt accelerator_view s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.  
   
@@ -249,9 +253,9 @@ bool operator!= (    const accelerator_view & _Other ) const;
  `accelerator_view` Objekt k porovnání s touto.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `false`Pokud dva objekty jsou stejné. v opačném `true`.  
+ `false` Pokud dva objekty jsou stejné. v opačném `true`.  
   
-## <a name="accelerator_view__operator_eq"></a>operátor = 
+## <a name="accelerator_view__operator_eq"></a> operátor = 
 
 S touto zkopíruje obsah zadaného accelerator_view objektu.  
   
@@ -268,7 +272,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na upravenou `accelerator_view` objektu.  
   
-## <a name="accelerator_view__operator_eq_eq"></a>Operator == 
+## <a name="accelerator_view__operator_eq_eq"></a> Operator == 
 
 Porovná tento objekt accelerator_view s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.  
   
@@ -283,9 +287,9 @@ bool operator= = (    const accelerator_view & _Other ) const;
  `accelerator_view` Objekt k porovnání s touto.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud dva objekty jsou stejné. v opačném `false`.  
+ `true` Pokud dva objekty jsou stejné. v opačném `false`.  
   
-## <a name="accelerator_view__queuing_mode"></a>queuing_mode 
+## <a name="accelerator_view__queuing_mode"></a> queuing_mode 
 
 Získá řazení do fronty režim accelerator_view objektu.  
   
@@ -295,7 +299,7 @@ Získá řazení do fronty režim accelerator_view objektu.
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
 ```  
   
-## <a name="accelerator_view__version"></a>verze 
+## <a name="accelerator_view__version"></a> Verze 
 
 Získá verzi accelerator_view.  
   
@@ -305,7 +309,7 @@ Získá verzi accelerator_view.
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-## <a name="accelerator_view__wait"></a>Počkej 
+## <a name="accelerator_view__wait"></a> Počkej 
 
 Čeká se na všechny příkazy odeslané na objekt accelerator_view ukončíte.  
   
@@ -321,7 +325,7 @@ void wait();
 #### <a name="remarks"></a>Poznámky  
  Pokud [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) je `immediate`, tato metoda vrátí okamžitě bez blokování.  
   
-##  <a name="dtor"></a>~ accelerator_view 
+##  <a name="dtor"></a> ~ accelerator_view 
 
  Zničí accelerator_view objektu.  
   

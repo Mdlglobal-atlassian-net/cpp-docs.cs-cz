@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array/std::array::operator!=
 - array/std::array::operator<
@@ -13,25 +13,26 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 4a42ddf39044e97ca6297cfbc5a55810981f7778
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltarraygt-operators"></a>&lt;pole&gt; operátory
 \<Pole > Hlavička zahrnuje tyto `array` třetí porovnání šablony funkcí.  
   
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Pole porovnání, není rovno.  
   
 ```  
@@ -101,7 +102,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Pole porovnání, menší než.  
   
 ```  
@@ -172,7 +173,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Pole porovnání je menší než nebo rovno.  
   
 ```  
@@ -243,7 +244,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Pole porovnání, stejné.  
   
 ```  
@@ -314,7 +315,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Pole porovnání, větší než.  
   
 ```  
@@ -385,7 +386,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Porovnání pole, větší než nebo rovno.  
   
 ```  
@@ -457,5 +458,5 @@ false
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<pole >](../standard-library/array.md)
+ [\<array>](../standard-library/array.md)
 

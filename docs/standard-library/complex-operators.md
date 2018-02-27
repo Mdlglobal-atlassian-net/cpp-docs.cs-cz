@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::operator!=
 - xcomplex/std::operator&gt;&gt;
@@ -15,28 +15,29 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 130bd3bec74ec3ea31c9baca0dfef9fef4a57399
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;komplexní&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;&gt;](#op_gt_gt)|[operátor&lt;&lt;](#op_lt_lt)|  
-|[operátor *](#op_star)|[operátor +](#op_add)|[Operator –](#operator-)|  
-|[operátor nebo](#op_div)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;&gt;](#op_gt_gt)|[Operátor&lt;&lt;](#op_lt_lt)|  
+|[operátor *](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operátor nebo](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testy nerovnost mezi dvěma komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.  
   
 ```  
@@ -172,7 +173,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_star"></a>operátor *  
+##  <a name="op_star"></a>  operátor *  
  Vynásobí dvě komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.  
   
 ```  
@@ -266,7 +267,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add"></a>operátor +  
+##  <a name="op_add"></a>  operátor +  
  Přidá dvě komplexní čísla, jednu nebo obě dvě může patřit k podmnožině typ pro skutečné a pomyslná části.  
   
 ```  
@@ -403,7 +404,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="operator-"></a>Operator –  
+##  <a name="operator-"></a>  Operator –  
  Odečítá od dva komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.  
   
 ```   
@@ -541,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="op_div"></a>operátor nebo  
+##  <a name="op_div"></a>  operátor nebo  
  Vydělí dvě komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.  
   
 ```   
@@ -657,7 +658,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="op_lt_lt"></a>operátor&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operátor&lt;&lt;  
  Vloží komplexní číslo, zadané do výstupního datového proudu.  
   
 ```   
@@ -715,7 +716,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testování rovnosti mezi dvěma komplexní čísla, jednu nebo obě dvě může patřit k podskupině typu pro skutečné a pomyslná části.  
   
 ```  
@@ -851,7 +852,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_gt_gt"></a>operátor&gt;&gt;  
+##  <a name="op_gt_gt"></a>  Operátor&gt;&gt;  
  Extrahuje komplexní hodnoty ze vstupního datového proudu.  
   
 ```  
@@ -909,5 +910,5 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<komplexní >](../standard-library/complex.md)
+ [\<complex>](../standard-library/complex.md)
 

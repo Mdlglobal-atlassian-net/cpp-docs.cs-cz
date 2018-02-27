@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array_view
 - AMP/array_view
@@ -29,19 +30,22 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs: C++
-helpviewer_keywords: array_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arrayview-class"></a>array_view – třída
 Reprezentuje N-trojrozměrné zobrazení přes data ukládaná v jiném kontejneru.  
@@ -76,34 +80,34 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |Název|Popis|  
 |----------|-----------------|  
 |[array_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `array_view` třídy. Neexistuje žádný výchozí konstruktor `array<T,N>`. Všechny konstruktory jsou omezeny na procesoru pouze spouštět a se nedá spustit na Direct3D – cíl.|  
-|[~ array_view – destruktor](#ctor)|Zničí `array_view` objektu.|  
+|[~array_view Destructor](#ctor)|Zničí `array_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[copy_to –](#copy_to)|Zkopíruje obsah `array_view` objektu do určeného cíle voláním `copy(*this, dest)`.|  
+|[copy_to](#copy_to)|Zkopíruje obsah `array_view` objektu do určeného cíle voláním `copy(*this, dest)`.|  
 |[data](#data)|Vrací ukazatel na nezpracovaná data tohoto `array_view`.|  
 |[discard_data](#discard_data)|Zruší aktuální data základní toto zobrazení.|  
-|[get_extent –](#get_extent)|Vrací objekt rozsah array_view objektu.|  
+|[get_extent](#get_extent)|Vrací objekt rozsah array_view objektu.|  
 |[get_ref](#get_ref)|Vrátí odkaz na element indexovaný.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází.|  
-|[aktualizace](#refresh)|Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.|  
-|[reinterpret_as –](#reinterpret_as)|Vrací jednorozměrné pole, která obsahuje všechny elementy ve `array_view` objektu.|  
+|[refresh](#refresh)|Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.|  
+|[reinterpret_as](#reinterpret_as)|Vrací jednorozměrné pole, která obsahuje všechny elementy ve `array_view` objektu.|  
 |[section](#section)|Vrátí dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
 |[synchronize](#synchronize)|Synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
 |[synchronize_async](#synchronize_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
 |[synchronize_to](#synchronize_to)|Synchronizuje všechny změny provedené `array_view` objekt, který má zadaný [accelerator_view](accelerator-view-class.md).|  
 |[synchronize_to_async](#synchronize_to_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objekt, který má zadaný [accelerator_view](accelerator-view-class.md).|  
-|[view_as –](#view_as)|Vytvoří `array_view` objekt jiné pořadí pomocí této `array_view` dat objektu.|  
+|[view_as](#view_as)|Vytvoří `array_view` objekt jiné pořadí pomocí této `array_view` dat objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator() –](#operator_call)|Vrátí hodnotu elementu, který je zadán parametr nebo parametry.|  
-|[[] – operátor](#operator_at)|Vrátí element, který je zadanou parametry.|  
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array_view` objekt s touto.|  
+|[operator()](#operator_call)|Vrátí hodnotu elementu, který je zadán parametr nebo parametry.|  
+|[operator[]](#operator_at)|Vrátí element, který je zadanou parametry.|  
+|[operator=](#operator_eq)|Zkopíruje obsah zadaného `array_view` objekt s touto.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -115,7 +119,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[rozsah](#extent)|Získá `extent` objekt, který definuje tvar `array_view` objektu.|  
+|[extent](#extent)|Získá `extent` objekt, který definuje tvar `array_view` objektu.|  
 |[source_accelerator_view](#source_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází|  
 |[value_type](#value_type)|Typ hodnoty `array_view` a vázané pole.|  
   
@@ -158,7 +162,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **Namespace:** souběžnosti  
   
-##  <a name="dtor"></a>~ array_view 
+##  <a name="dtor"></a> ~ array_view 
 
  Zničí `array_view` objektu.  
   
@@ -166,7 +170,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="ctor"></a>array_view 
+##  <a name="ctor"></a> array_view 
 
  Inicializuje novou instanci třídy `array_view` třídy.  
   
@@ -386,7 +390,7 @@ array_view(
  `_Src`  
  Ukazatel na zdroj dat, která se zkopírují do nové pole.  
   
-##  <a name="copy_to"></a>copy_to – 
+##  <a name="copy_to"></a> copy_to – 
 
  Zkopíruje obsah `array_view` objekt, který má zadaný cílový objekt voláním `copy(*this, dest)`.  
   
@@ -406,7 +410,7 @@ void copy_to(
  `_Dest`  
  Objekt, který se má zkopírovat do.  
   
-##  <a name="data"></a>data 
+##  <a name="data"></a> data 
 
  Vrací ukazatel na nezpracovaná data tohoto `array_view`.  
   
@@ -422,7 +426,7 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nezpracovaná data tohoto `array_view`.  
   
-##  <a name="discard_data"></a>discard_data 
+##  <a name="discard_data"></a> discard_data 
 
  Zruší aktuální data základní toto zobrazení. Toto je optimalizačního pomocného parametru pro modul runtime umožňuje vyhnout kopírování aktuální obsah zobrazení na cíl `accelerator_view` který je přístupný v, a jeho použití se doporučuje, pokud není nutné existujícího obsahu. Tato metoda je no-op, pokud se používá v kontextu restrict(amp)  
   
@@ -430,7 +434,7 @@ const value_type* data() const restrict(amp,
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="extent"></a>rozsah 
+##  <a name="extent"></a> rozsah 
 
  Získá `extent` objekt, který definuje tvar `array_view` objektu.  
   
@@ -438,7 +442,7 @@ void discard_data() const restrict(cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_extent"></a>get_extent – 
+##  <a name="get_extent"></a> get_extent – 
 
  Vrátí [rozsah](extent-class.md) objekt `array_view` objektu.  
   
@@ -449,7 +453,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ### <a name="return-value"></a>Návratová hodnota  
  `extent` Objekt `array_view` objektu  
   
-##  <a name="get_ref"></a>get_ref 
+##  <a name="get_ref"></a> get_ref 
 
  Získáte odkaz na element indexovat pomocí _Index. Na rozdíl od jiných indexování operátory pro přístup k array_view na procesoru tato metoda nebude synchronizovat implicitně obsah této array_view k procesoru. Po přístup k array_view ve vzdáleném umístění nebo provádění operace kopírování zahrnující tuto array_view uživatelé zodpovídají explicitně synchronizace array_view k procesoru před voláním této metody. Tak neučiníte výsledkem nedefinované chování.  
   
@@ -465,7 +469,7 @@ value_type& get_ref(
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na element indexovat pomocí _Index  
   
-##  <a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+##  <a name="get_source_accelerator_view"></a> get_source_accelerator_view 
 
  Vrátí accelerator_view, kde se nachází zdroj dat array_view. Pokud array_view nemá zdroj dat, vyvolá toto rozhraní API runtime_exception  
   
@@ -477,7 +481,7 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="operator_call"></a>Operator() – 
+##  <a name="operator_call"></a> Operator() – 
 
  Vrátí hodnotu elementu, který je zadán parametr nebo parametry.  
   
@@ -524,7 +528,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota elementu, který je zadán parametr nebo parametry.  
   
-##  <a name="operator_at"></a>[] – operátor 
+##  <a name="operator_at"></a> [] – operátor 
 
  Vrátí element, který je zadanou parametry.  
   
@@ -547,7 +551,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota element v indexu, nebo `array_view` projekci většinu významné dimenze.  
   
-##  <a name="operator_eq"></a>operátor = 
+##  <a name="operator_eq"></a> operátor = 
 
  Zkopíruje obsah zadaného `array_view` k tomuto objektu.  
   
@@ -567,7 +571,7 @@ array_view& operator= (
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na toto `array_view` objektu.  
   
-##  <a name="rank"></a>pořadí 
+##  <a name="rank"></a> Pořadí 
 
  Ukládá pořadí `array_view` objektu.  
   
@@ -575,14 +579,14 @@ array_view& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="refresh"></a>aktualizace 
+##  <a name="refresh"></a> Aktualizace 
 
  Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as – 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 Reinterprets array_view prostřednictvím jednorozměrné array_view, který jako možnost může mít typ jinou hodnotu než array_view zdroje.  
   
@@ -623,7 +627,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);  
 ```  
     
-##  <a name="section"></a>část 
+##  <a name="section"></a> Část 
 
  Vrátí dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.  
   
@@ -699,7 +703,7 @@ array_view section(
 ### <a name="return-value"></a>Návratová hodnota  
  Dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah. Když pouze `index` je zadaný objekt, část obsahuje všechny elementy ve přidružené rozsah, které mají indexy, které jsou větší než indexy elementů v `index` objektu.  
   
-##  <a name="source_accelerator_view"></a>source_accelerator_view 
+##  <a name="source_accelerator_view"></a> source_accelerator_view 
 
  Získá accelerator_view – zdroj, který je přidružený tento array_view.  
   
@@ -707,7 +711,7 @@ array_view section(
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="synchronize"></a>Synchronizovat 
+##  <a name="synchronize"></a> Synchronizovat 
 
  Synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.  
   
@@ -722,7 +726,7 @@ void synchronize() const restrict(cpu);
  `_Access_type`  
  Požadovanou [access_type](concurrency-namespace-enums-amp.md#access_type) na cílovém [accelerator_view](accelerator-view-class.md). Tento parametr má výchozí hodnotu `access_type_read`.  
   
-##  <a name="synchronize_async"></a>synchronize_async 
+##  <a name="synchronize_async"></a> synchronize_async 
 
  Asynchronně synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.  
   
@@ -740,7 +744,7 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
 ### <a name="return-value"></a>Návratová hodnota  
  Budoucí němž čekat na dokončení operace.  
   
-##  <a name="synchronize_to"></a>synchronize_to 
+##  <a name="synchronize_to"></a> synchronize_to 
 
  Synchronizuje všechny změny provedené v této array_view k zadané accelerator_view.  
   
@@ -761,7 +765,7 @@ void synchronize_to(
  `_Access_type`  
  Požadované access_type na accelerator_view cíl. Tento parametr má výchozí hodnotu access_type_read.  
   
-##  <a name="synchronize_to_async"></a>synchronize_to_async 
+##  <a name="synchronize_to_async"></a> synchronize_to_async 
 
  Asynchronně synchronizuje všechny změny provedené v této array_view k zadané accelerator_view.  
   
@@ -785,7 +789,7 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>Návratová hodnota  
  Budoucí němž čekat na dokončení operace.  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  Typ hodnoty array_view a vázané pole.  
   
@@ -793,7 +797,7 @@ concurrency::completion_future synchronize_to_async(
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="view_as"></a>view_as – 
+##  <a name="view_as"></a> view_as 
 
  To reinterprets `array_view` jako `array_view` z jiné pořadí.  
   

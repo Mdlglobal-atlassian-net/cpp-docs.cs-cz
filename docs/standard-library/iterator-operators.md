@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::operator!=
 - xutility/std::operator&gt;
@@ -15,9 +15,10 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -25,20 +26,20 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8d045aa1f32d3613eb4ed11af63a29e80e37b738
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[operátor +](#op_add)|  
-|[Operator –](#operator-)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testuje, zda je objekt iterátoru na levé straně operátoru není roven objektu iterátoru na pravé straně.  
   
 ```  
@@ -127,7 +128,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testuje, zda je objekt iterátoru na levé straně operátoru roven objektu iterátoru na pravé straně.  
   
 ```  
@@ -160,7 +161,7 @@ bool operator==(
  Objekt typu iterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud jsou objekty iterator rovna; `false` Pokud iterator objekty nejsou stejné.  
+ `true` Pokud jsou objekty iterator rovna; `false` Pokud iterator objekty nejsou stejné.  
   
 ### <a name="remarks"></a>Poznámky  
  Jeden objekt iterator se rovná jiné, pokud se adresa stejné prvky v kontejneru. Pokud se dva iterátory bodu na různé elementy v kontejneru, pak nejsou stejné.  
@@ -229,7 +230,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Testuje, zda je objekt iterátoru na levé straně operátoru menší než objekt iterátoru na pravé straně.  
   
 ```  
@@ -316,7 +317,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Testuje, zda je objekt iterátoru na levé straně operátoru menší než nebo roven objektu iterátoru na pravé straně.  
   
 ```  
@@ -407,7 +408,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Testuje, zda je objekt iterátoru na levé straně operátoru větší než objekt iterátoru na pravé straně.  
   
 ```  
@@ -492,7 +493,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Testuje, zda je objekt iterátoru na levé straně operátoru větší než nebo roven objektu iterátoru na pravé straně.  
   
 ```  
@@ -583,7 +584,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_add"></a>operátor +  
+##  <a name="op_add"></a>  operátor +  
  Přidá posun do iterovat a vrátí `move_iterator` nebo `reverse_iterator` adresování vložené element na pozici posunutí nové.  
   
 ```  
@@ -659,7 +660,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="operator-"></a>Operator –  
+##  <a name="operator-"></a>  Operator –  
  Odečte jeden iterátor od druhého a vrátí rozdíl.  
   
 ```  
@@ -682,14 +683,14 @@ Tdiff operator-(
  Iterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Rozdíl mezi dvěma iterátory`.`  
+ Rozdíl mezi dvěma iterátory `.`  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí první operátor šablony `left.base() - right.base()`.  
   
  Vrátí druhou šablonu operátor `right.current - left.current`.  
   
- `Tdiff`je určen podle typ vrácený výrazu. Jinak je `RandomIterator1::difference_type`.  
+ `Tdiff` je určen podle typ vrácený výrazu. Jinak je `RandomIterator1::difference_type`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -749,5 +750,5 @@ The difference: rVPOS2 - rVPOS1= 4.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<iterator >](../standard-library/iterator.md)
+ [\<iterator>](../standard-library/iterator.md)
 

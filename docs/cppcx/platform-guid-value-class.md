@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Guid
-dev_langs: C++
-helpviewer_keywords: Platform::Guid Struct
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::Guid
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e65f4d046f35656cb91374c085ef2a6e4a507302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5323c934efb7d9416d1016f355390288885cb0c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
 Představuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu v prostředí Windows Runtime typ systému.  
@@ -37,9 +41,9 @@ public value struct Guid
 |Člen|Popis|  
 |------------|-----------------|  
 |[Identifikátor GUID](#ctor)|Inicializuje novou instanci třídy struktura identifikátor Guid.|  
-|[Operator ==](#operator-equality)|Operátor je rovno.|  
+|[operator==](#operator-equality)|Operátor je rovno.|  
 |[operator!=](#operator-not-equal)|Operátor není rovno.|  
-|[Operator() –](#operator-call)|Identifikátor Guid převede na identifikátor GUID.|  
+|[operator()](#operator-call)|Identifikátor Guid převede na identifikátor GUID.|  
   
 ### <a name="remarks"></a>Poznámky  
  Příklad toho, jak vygenerovat nový Platform::Guid pomocí funkce systému Windows [funkci CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), najdete v části [součást WinRT: jak vygenerovat identifikátor GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
@@ -54,7 +58,7 @@ public value struct Guid
  **Metadata:** platform.winmd  
 
  
-## <a name="ctor"></a>GUID::GUID konstruktory
+## <a name="ctor"></a> GUID::GUID konstruktory
 Inicializuje novou instanci struktury identifikátor Guid.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -124,7 +128,7 @@ Inicializuje novou instanci struktury identifikátor Guid.
  Zbývající 8 bajtů identifikátor GUID.  
   
 
-## <a name="operator-equality"></a>GUID::Operator == – operátor
+## <a name="operator-equality"></a> GUID::Operator == – operátor
 Porovná dva identifikátory GUID.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -136,7 +140,7 @@ Platform::Guid::operator==
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud jsou dva identifikátory GUID stejné.
 
-## <a name="operator-inequality"></a>GUID::Operator! = – operátor
+## <a name="operator-inequality"></a> GUID::Operator! = – operátor
 Porovná dva identifikátory GUID.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -150,7 +154,7 @@ Platform::Guid::operator!=
 
 
 
-## <a name="operator-call"></a>GUID::Operator() – operátor
+## <a name="operator-call"></a> GUID::Operator() – operátor
 Implicitně převede [GUID struktura](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID do Platform::Guid.  
   
 ### <a name="syntax"></a>Syntaxe  

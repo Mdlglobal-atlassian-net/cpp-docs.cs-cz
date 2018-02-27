@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
@@ -18,7 +19,8 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcfc9d5ca7b988be2dad0451aa2f58aacd15c789
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor – třída
 Představuje vnoření alokátorů.  
@@ -52,7 +55,7 @@ class scoped_allocator_adaptor;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Šablony třídy zapouzdří vnoření jeden nebo více alokátorů. Každá tato třída má nejkrajnější allocator typu `outer_allocator_type`, synonymum pro `Outer`, což je veřejný základ `scoped_allocator_adaptor` objektu. `Outer`slouží k přidělení paměti se použil kontejner. Můžete získat odkaz na tento objekt základní allocator voláním `outer_allocator`.  
+ Šablony třídy zapouzdří vnoření jeden nebo více alokátorů. Každá tato třída má nejkrajnější allocator typu `outer_allocator_type`, synonymum pro `Outer`, což je veřejný základ `scoped_allocator_adaptor` objektu. `Outer` slouží k přidělení paměti se použil kontejner. Můžete získat odkaz na tento objekt základní allocator voláním `outer_allocator`.  
   
  Zbývající část vnoření má typ `inner_allocator_type`. Vnitřní allocator se používá k přidělení paměti pro elementům v kontejneru. Můžete získat odkaz na uložený objekt tohoto typu voláním `inner_allocator`. Pokud `Inner...` není prázdná, `inner_allocator_type` má typ `scoped_allocator_adaptor<Inner...>`, a `inner_allocator` označí objekt člena. V opačném `inner_allocator_type` má typ `scoped_allocator_adaptor<Outer>`, a `inner_allocator` označí celý objekt.  
   
@@ -106,11 +109,11 @@ class scoped_allocator_adaptor;
 |Název|Popis|  
 |----------|-----------------|  
 |[allocate](#allocate)|Přidělí paměť pomocí `Outer` přidělení.|  
-|[konstrukce](#construct)|Vytvoří objekt.|  
-|[zrušit přidělení](#deallocate)|Zruší přidělení objektů pomocí přidělujícího modulu vnější.|  
+|[construct](#construct)|Vytvoří objekt.|  
+|[Zrušit přidělení](#deallocate)|Zruší přidělení objektů pomocí přidělujícího modulu vnější.|  
 |[Destroy –](#destroy)|Odstraní zadaný objekt.|  
 |[inner_allocator](#inner_allocator)|Získá odkaz na uložený objekt typu `inner_allocator_type`.|  
-|[max_size –](#max_size)|Určuje maximální počet objektů, které mohou být přiděleny pomocí přidělujícího modulu vnější.|  
+|[max_size](#max_size)|Určuje maximální počet objektů, které mohou být přiděleny pomocí přidělujícího modulu vnější.|  
 |[outer_allocator](#outer_allocator)|Získá odkaz na uložený objekt typu `outer_allocator_type`.|  
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Vytvoří novou `scoped_allocator_adaptor` objekt se každý objekt uložené allocator inicializuje pomocí volání `select_on_container_copy_construction` pro každý odpovídající přidělení.|  
   
@@ -119,7 +122,7 @@ class scoped_allocator_adaptor;
   
  **Namespace:** – std  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor::allocate –
+##  <a name="allocate"></a>  scoped_allocator_adaptor::allocate –
  Přidělí paměť pomocí `Outer` přidělení.  
   
 ```cpp  
@@ -136,7 +139,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první členská funkce `Outer_traits::allocate(outer_allocator(), count)`. Vrátí druhou členská funkce `Outer_traits::allocate(outer_allocator(), count, hint)`.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor::Construct –
+##  <a name="construct"></a>  scoped_allocator_adaptor::Construct –
  Vytvoří objekt.  
   
 ```cpp  
@@ -197,7 +200,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  Metodu šesté se chová stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor::deallocate –
+##  <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate –
  Zruší přidělení objektů pomocí přidělujícího modulu vnější.  
   
 ```cpp  
@@ -211,7 +214,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  Počet objektů se zrušit přidělení.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor::Destroy –
+##  <a name="destroy"></a>  scoped_allocator_adaptor::Destroy –
  Odstraní zadaný objekt.  
   
 ```cpp  
@@ -226,7 +229,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>Návratová hodnota  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator –
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator –
  Získá odkaz na uložený objekt typu `inner_allocator_type`.  
   
 ```cpp  
@@ -237,7 +240,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na uložený objekt typu `inner_allocator_type`.  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor::max_size –
+##  <a name="max_size"></a>  scoped_allocator_adaptor::max_size –
  Určuje maximální počet objektů, které mohou být přiděleny pomocí přidělujícího modulu vnější.  
   
 ```cpp  
@@ -247,7 +250,7 @@ size_type max_size();
 ### <a name="return-value"></a>Návratová hodnota  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator –
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator –
  Získá odkaz na uložený objekt typu `outer_allocator_type`.  
   
 ```cpp  
@@ -258,7 +261,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na uložený objekt typu `outer_allocator_type`.  
   
-##  <a name="rebind_struct"></a>scoped_allocator_adaptor::rebind – struktura  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind – struktura  
  Definuje typ `Outer::rebind\<Other>::other` jako synonymum pro `scoped_allocator_adaptor\<Other, Inner...>`.  
   
 {Struktura obnovení vazby  
@@ -267,7 +270,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
    scoped_allocator_adaptor – typedef\<Other_alloc, vnitřní... > jiných;  
    };  
   
-##  <a name="scoped_allocator_adaptor"></a>scoped_allocator_adaptor::scoped_allocator_adaptor – konstruktor  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor – konstruktor  
  Vytvoří `scoped_allocator_adaptor` objektu.  
   
 ```cpp  
@@ -298,7 +301,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>Poznámky  
  První výchozí konstruktor vytvoří jeho uložené přidělování objektů. Každý z následujících třech konstruktory vytvoří jeho uložené přidělování objektů z odpovídajících objektů v `right`. Poslední konstruktoru vytvoří jeho uložené přidělování objektů z odpovídající argumentů v seznamu argumentů.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction –
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction –
  Vytvoří novou `scoped_allocator_adaptor` objekt se každý objekt uložené allocator inicializuje pomocí volání `select_on_container_copy_construction` pro každý odpovídající přidělení.  
   
 ```cpp  

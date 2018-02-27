@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::operator!=
 - regex/std::operator>
@@ -14,24 +14,25 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 40dd9bb9a674542d216ced2bb53b65efeb5d34a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltregexgt-operators"></a>&lt;regulární výraz&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|[operátor&lt;=](#op_lt_eq)|  
-|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|[Operátor&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Není rovno porovnání pro různé objekty.  
   
 ```  
@@ -148,7 +149,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Menší než porovnání pro různé objekty.  
   
 ```  
@@ -256,7 +257,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>operátor&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operátor&lt;&lt;  
  Vloží sub_match v datovém proudu.  
   
 ```  
@@ -314,7 +315,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Menší než nebo roven hodnotě porovnání pro různé objekty.  
   
 ```  
@@ -422,7 +423,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Stejné porovnání pro různé objekty.  
   
 ```  
@@ -547,7 +548,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Větší než porovnání pro různé objekty.  
   
 ```  
@@ -655,7 +656,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Větší než nebo rovna porovnání pro různé objekty.  
   
 ```  
@@ -763,7 +764,7 @@ sub >= 'a' == true
 ```  
   
 ## <a name="see-also"></a>Viz také  
-[\<regulární výraz >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_constants – třída](../standard-library/regex-constants-class.md)  
 [regex_error – třída](../standard-library/regex-error-class.md)  
 [\<regulární výraz > funkce](../standard-library/regex-functions.md)  

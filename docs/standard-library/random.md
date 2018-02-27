@@ -4,25 +4,30 @@ ms.custom:
 ms.date: 08/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <random>
-dev_langs: C++
-helpviewer_keywords: random header
+ms.topic: reference
+f1_keywords:
+- <random>
+dev_langs:
+- C++
+helpviewer_keywords:
+- random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af48357ff276df90333d066cf6585a031b572914
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltrandomgt"></a>&lt;náhodné&gt;
+# <a name="ltrandomgt"></a>&lt;Náhodné&gt;
 Definuje zařízení pro náhodné generování čísel, umožňující vytvoření jednotně distribuované náhodných čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -57,7 +62,7 @@ Definuje zařízení pro náhodné generování čísel, umožňující vytvoře
   
  Celá řada možností zvolit v `<random>` záhlaví a kterýkoliv z nich je vhodnější zastaralé funkce C Runtime `rand()`. Informace o tom, co je problém se `rand()` a jak `<random>` řeší tyto nedostatky, najdete v části [toto video](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
-##  <a name="code"></a>Příklady  
+##  <a name="code"></a> Příklady  
  Následující příklad kódu ukazuje, jak vygenerovat některé náhodná čísla v tomto případě pět z nich pomocí generátor vytvořené pomocí Nedeterministický počáteční hodnoty.  
   
 ```cpp  
@@ -211,9 +216,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čísel a náhodně pole indexovaná data – s funkcí šablony testu. První volání funkce testovací používá URNG kryptografických zabezpečení, Nedeterministický, není seedable, opakovatelných `random_device`. Druhý test spusťte používá `mersenne_twister_engine` jako URNG, s deterministickou konstantní seed 32-bit, což znamená, jsou opakovatelných výsledky. Třetí test spusťte semen `mersenne_twister_engine` s tím výsledkem Nedeterministický 32-bit z `random_device`. Čtvrtý testovacím běhu rozšíří na tomto pomocí [počáteční hodnoty pořadí](../standard-library/seed-seq-class.md) vyplněnou `random_device` výsledky, které efektivně poskytuje více než 32-bit Nedeterministický náhodnost (ale stále není crypto-secure). Další informace najdete v tématu na.  
   
-##  <a name="listing"></a>Seznam seřazený podle kategorií  
+##  <a name="listing"></a> Seznam seřazený podle kategorií  
   
-###  <a name="urngs"></a>Uniform generátory náhodných čísel  
+###  <a name="urngs"></a> Uniform generátory náhodných čísel  
  Z hlediska tyto vlastnosti jsou často popsané URNGs:  
   
 1. **Délka období**: jak velký počet iterací trvá opakování pořadí čísel vygenerovat. Delší, tím lépe.  
@@ -224,46 +229,46 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
   
  Následující části uvádějí uniform náhodné číslo generátory (URNGs) součástí `<random>` záhlaví.  
   
-####  <a name="rd"></a>Nedeterministický generátor  
+####  <a name="rd"></a> Nedeterministický generátor  
   
 |||  
 |-|-|  
 |[random_device – třída](../standard-library/random-device-class.md)|Generuje náhodné pořadí není deterministický, kryptograficky zabezpečené pomocí externí zařízení. Obvykle používají pro počáteční hodnoty motoru. Nízký výkon, velmi vysoké kvality. Další informace najdete v tématu [poznámky](#comments).|  
   
-####  <a name="typedefs"></a>Definice TypeDef modul s předdefinované parametry  
+####  <a name="typedefs"></a> Definice TypeDef modul s předdefinované parametry  
  Pro konkretizujete moduly a modul adaptéry. Další informace najdete v tématu [moduly a distribuce](#engdist).  
   
-- `default_random_engine`Výchozí modul.   
+- `default_random_engine` Výchozí modul.   
  `typedef mt19937 default_random_engine;`  
   
-- `knuth_b`Modul Knuth.   
+- `knuth_b` Modul Knuth.   
  `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`  
   
-- `minstd_rand0`1988 minimální standardní modul (Lewis, Goodman a Lukeš, 1969).   
+- `minstd_rand0` 1988 minimální standardní modul (Lewis, Goodman a Lukeš, 1969).   
  `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`  
   
-- `minstd_rand`Aktualizovaný modul minimální standardní `minstd_rand0` (parku, Lukeš a Stockmeyer, 1993).   
+- `minstd_rand` Aktualizovaný modul minimální standardní `minstd_rand0` (parku, Lukeš a Stockmeyer, 1993).   
  `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`  
   
-- `mt19937`32-bit Mersenne twister modul (Matsumoto a Nishimura, 1998).   
+- `mt19937` 32-bit Mersenne twister modul (Matsumoto a Nishimura, 1998).   
  `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`  
   
-- `mt19937_64`64bitová verze Mersenne twister modul (Matsumoto a Nishimura 2000).   
+- `mt19937_64` 64bitová verze Mersenne twister modul (Matsumoto a Nishimura 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24`modul RANLUX 24bitový (Martin Lüscher a František James, 1994).   
+- `ranlux24` 24-bit RANLUX engine (Martin Lüscher and Fred James, 1994).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
-- `ranlux24_base`Použít jako základ pro `ranlux24`.   
+- `ranlux24_base` Použít jako základ pro `ranlux24`.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48`modul RANLUX 48bitové (Martin Lüscher a František James, 1994).   
+- `ranlux48` modul RANLUX 48bitové (Martin Lüscher a František James, 1994).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
-- `ranlux48_base`Použít jako základ pro `ranlux48`.   
+- `ranlux48_base` Použít jako základ pro `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="eng"></a>Modul šablony  
+####  <a name="eng"></a> Modul šablony  
  Modul šablon se používají jako samostatné URNGs nebo jako základní moduly předaný [modul adaptéry](#engadapt). Obvykle jsou vytvořena s [předdefinované modul typedef](#typedefs) a předaný [distribuční](#distributions). Další informace najdete v tématu [moduly a distribuce](#engdist) části.  
   
 |||  
@@ -272,7 +277,7 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
 |[mersenne_twister_engine – třída](../standard-library/mersenne-twister-engine-class.md)|Generuje náhodné pořadí pomocí algoritmu twister Mersenne. Většina komplexní, a je nejvyšší kvality s výjimkou random_device – třída. Velmi vysoký výkon.|  
 |[subtract_with_carry_engine – třída](../standard-library/subtract-with-carry-engine-class.md)|Generuje náhodné pořadí pomocí algoritmu subtract s carry. Zlepšení `linear_congruential_engine`, ale mnohem nižší kvality a výkonu než `mersenne_twister_engine`.|  
   
-####  <a name="engadapt"></a>Modul adaptéru šablony  
+####  <a name="engadapt"></a> Modul adaptéru šablony  
  Modul adaptéry jsou šablony, které přizpůsobit další moduly (základní). Obvykle jsou vytvořena s [předdefinované modul typedef](#typedefs) a předaný [distribuční](#distributions). Další informace najdete v tématu [moduly a distribuce](#engdist) části.  
   
 |||  
@@ -283,7 +288,7 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
   
  [[Modul šablony](#eng)]  
   
-###  <a name="distributions"></a>Náhodné číslo distribuce  
+###  <a name="distributions"></a> Náhodné číslo distribuce  
  Následující části uvádějí distribuce součástí `<random>` záhlaví. Distribuce jsou následného zpracování mechanismus, obvykle pomocí URNG výstup jako vstup a výstup distribuci funkcí definovaných statistické hustoty pravděpodobnosti. Další informace najdete v tématu [moduly a distribuce](#engdist) části.  
   
 #### <a name="uniform-distributions"></a>Uniform distribuce  
@@ -359,14 +364,14 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
 |`operator<<`|Zapíše informace o stavu do datového proudu.|  
 |`operator>>`|Extrahuje informace o stavu z datového proudu.|  
   
-##  <a name="engdist"></a>Moduly a distribuce  
+##  <a name="engdist"></a> Moduly a distribuce  
  Informace o každé z těchto kategorií třída šablony definovaný v následujících částech `<random>`. Jak z těchto kategorií šablonu – třída typu jako argument a používat názvy parametrů šablony sdílené k popisu vlastnosti typu, které jsou povoleny jako typ skutečné argument následujícím způsobem:  
   
-- `IntType`označuje `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long`, nebo `unsigned long long`.  
+- `IntType` označuje `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long`, nebo `unsigned long long`.  
   
-- `UIntType`označuje `unsigned short`, `unsigned int`, `unsigned long`, nebo `unsigned long long`.  
+- `UIntType` označuje `unsigned short`, `unsigned int`, `unsigned long`, nebo `unsigned long long`.  
   
-- `RealType`označuje `float`, `double`, nebo `long double`.  
+- `RealType` označuje `float`, `double`, nebo `long double`.  
   
 ### <a name="engines"></a>Moduly  
  [Modul šablony](#eng) a [modul adaptéru šablony](#engadapt) jsou šablony, jejíž parametry přizpůsobit generátor vytvořili.  
@@ -375,23 +380,23 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
   
  Každý modul a modul adaptéru má následující členy:  
   
-- `typedef``numeric-type` `result_type` je typ, který se vrátí po použití generátoru `operator()`. `numeric-type` Se předá jako parametr šablony při vytváření instance.  
+- `typedef` `numeric-type` `result_type` je typ, který se vrátí po použití generátoru `operator()`. `numeric-type` Se předá jako parametr šablony při vytváření instance.  
   
-- `result_type operator()`Vrátí hodnoty, které jsou rovnoměrně mezi `min()` a `max()`.  
+- `result_type operator()` Vrátí hodnoty, které jsou rovnoměrně mezi `min()` a `max()`.  
   
-- `result_type min()`Vrátí minimální hodnotu, která se vrátí po použití generátoru `operator()`. Modul adaptéry používají základní modul `min()` výsledek.  
+- `result_type min()` Vrátí minimální hodnotu, která se vrátí po použití generátoru `operator()`. Modul adaptéry používají základní modul `min()` výsledek.  
   
-- `result_type max()`Vrátí maximální hodnotu, která se vrátí po použití generátoru `operator()`. Když `result_type` integrální (celé číslo s hodnotou) typu, `max()` je maximální hodnota, která lze ve skutečnosti vrátit (včetně); při `result_type` s plovoucí desetinnou čárkou (vracející reálné) typu `max()` je nejmenší hodnota větší než všechny hodnoty která se může vracet (bez – včetně). Modul adaptéry používají základní modul `max()` výsledek.  
+- `result_type max()` Vrátí maximální hodnotu, která se vrátí po použití generátoru `operator()`. Když `result_type` integrální (celé číslo s hodnotou) typu, `max()` je maximální hodnota, která lze ve skutečnosti vrátit (včetně); při `result_type` s plovoucí desetinnou čárkou (vracející reálné) typu `max()` je nejmenší hodnota větší než všechny hodnoty která se může vracet (bez – včetně). Modul adaptéry používají základní modul `max()` výsledek.  
   
-- `void seed(result_type s)`doplňuje generátor s počáteční hodnotou `s`. Pro moduly, podpis je `void seed(result_type s = default_seed)` pro podpora výchozích parametrů (adaptéry modul definovat samostatné `void seed()`, najdete v části Další část).  
+- `void seed(result_type s)` doplňuje generátor s počáteční hodnotou `s`. Pro moduly, podpis je `void seed(result_type s = default_seed)` pro podpora výchozích parametrů (adaptéry modul definovat samostatné `void seed()`, najdete v části Další část).  
   
-- `template <class Seq> void seed(Seq& q)`doplňuje generátor pomocí [seed_seq](../standard-library/seed-seq-class.md)`Seq`.  
+- `template <class Seq> void seed(Seq& q)` doplňuje generátor pomocí [seed_seq](../standard-library/seed-seq-class.md)`Seq`.  
   
 -   Explicitní konstruktor s argumentem `result_type x` vytvářející generátor nasadí, jako kdyby pomocí volání metody `seed(x)`.  
   
 -   Explicitní konstruktor s argumentem `seed_seq& seq` vytvářející generátor nasadí, jako kdyby pomocí volání metody `seed(seq)`.  
   
-- `void discard(unsigned long long count)`efektivně volá `operator()` `count` krát a zahodí se všechny hodnoty.  
+- `void discard(unsigned long long count)` efektivně volá `operator()` `count` krát a zahodí se všechny hodnoty.  
   
  **Modul adaptéry** kromě podpory těchto členů (`Engine` je první parametr šablony adaptéru modul určení základní modul typu):  
   
@@ -401,38 +406,38 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
   
 -   Explicitní konstruktor s argumentem `Engine&& eng`. Toto je pro podporu vytváření přesunutí pomocí základní modul.  
   
-- `void seed()`který inicializuje generátor s základní modul výchozí počáteční hodnoty.  
+- `void seed()` který inicializuje generátor s základní modul výchozí počáteční hodnoty.  
   
-- `const Engine& base()`Vlastnost funkce, která vrátí základní modul, který byl použit k vytvoření generátor.  
+- `const Engine& base()` Vlastnost funkce, která vrátí základní modul, který byl použit k vytvoření generátor.  
   
  Každý motor udržuje *stavu* pořadí hodnot, které budou vytvořeny následující volání, která určují `operator()`. Stavy dvě generátory vytvořené z modulů stejného typu je možné porovnávat pomocí `operator==` a `operator!=`. Pokud se dva stavy porovnávat jako s rovnocennými, z nich vydá stejnou sekvenci hodnoty. Stav objektu lze uložit na datový proud jako posloupnost 32-bit nepodepsané hodnot pomocí `operator<<` generátoru. Stav není změnil uložením. Uložený stav může číst do generátor vytvořené z modul stejného typu pomocí `operator>>`.  
   
 ### <a name="distributions"></a>Distribuce  
  A [náhodné číslo distribuce](#distributions) je třídu nebo šablony třídy, jejichž instance transformace datového proudu jednotně distribuované náhodných čísel získané z modul do datového proudu náhodných čísel, které mají určitý distribuční. Každý distribuční má následující členy:  
   
-- `typedef``numeric-type` `result_type` je typ, který je vrácený distribuční `operator()`. `numeric-type` Se předá jako parametr šablony při vytváření instance.  
+- `typedef` `numeric-type` `result_type` je typ, který je vrácený distribuční `operator()`. `numeric-type` Se předá jako parametr šablony při vytváření instance.  
   
-- `template <class URNG> result_type operator()(URNG& gen)`Vrátí hodnoty, které jsou distribuovány podle definice distribuční pomocí `gen` jako zdroj jednotně distribuované náhodných hodnot a uložená *parametry rozdělení*.  
+- `template <class URNG> result_type operator()(URNG& gen)` Vrátí hodnoty, které jsou distribuovány podle definice distribuční pomocí `gen` jako zdroj jednotně distribuované náhodných hodnot a uložená *parametry rozdělení*.  
   
-- `template <class URNG> result_type operator()(URNG& gen, param_type p)`Vrátí hodnoty distribuován podle definice distribuční pomocí `gen` jako zdroj jednotně distribuované náhodných hodnot a struktura parametry `p`.  
+- `template <class URNG> result_type operator()(URNG& gen, param_type p)` Vrátí hodnoty distribuován podle definice distribuční pomocí `gen` jako zdroj jednotně distribuované náhodných hodnot a struktura parametry `p`.  
   
-- `typedef``unspecified-type` `param_type` balíček parametry volitelně předaný `operator()` a použijí se místo uložené parametry ke generování hodnoty.  
+- `typedef` `unspecified-type` `param_type` balíček parametry volitelně předaný `operator()` a použijí se místo uložené parametry ke generování hodnoty.  
   
 -   A `const param&` konstruktor inicializuje uložené parametry z jeho argumentem.  
   
-- `param_type param() const`Získá uložené parametry.  
+- `param_type param() const` Získá uložené parametry.  
   
-- `void param(const param_type&)`Nastaví uložené parametry z jeho argumentem.  
+- `void param(const param_type&)` Nastaví uložené parametry z jeho argumentem.  
   
-- `result_type min()`Vrátí minimální hodnotu, která je vrácený distribuční `operator()`.  
+- `result_type min()` Vrátí minimální hodnotu, která je vrácený distribuční `operator()`.  
   
-- `result_type max()`Vrátí maximální hodnotu, která je vrácený distribuční `operator()`. Když `result_type` integrální (celé číslo s hodnotou) typu, `max()` je maximální hodnota, která lze ve skutečnosti vrátit (včetně); při `result_type` s plovoucí desetinnou čárkou (vracející reálné) typu `max()` je nejmenší hodnota větší než všechny hodnoty která se může vracet (bez – včetně).  
+- `result_type max()` Vrátí maximální hodnotu, která je vrácený distribuční `operator()`. Když `result_type` integrální (celé číslo s hodnotou) typu, `max()` je maximální hodnota, která lze ve skutečnosti vrátit (včetně); při `result_type` s plovoucí desetinnou čárkou (vracející reálné) typu `max()` je nejmenší hodnota větší než všechny hodnoty která se může vracet (bez – včetně).  
   
-- `void reset()`zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.  
+- `void reset()` zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.  
   
  Struktura parametr je objekt, který ukládá veškeré potřebné pro distribuční parametry. Obsahuje:  
   
-- `typedef``distribution-type` `distribution_type`, což je typ jeho distribuci.  
+- `typedef` `distribution-type` `distribution_type`, což je typ jeho distribuci.  
   
 -   Jeden nebo více konstruktory, které provést stejný parametr vypíše proveďte konstruktory distribuce.  
   
@@ -442,10 +447,10 @@ Tento kód ukazuje dva různé randomizations – náhodné vektoru celých čí
   
  Další informace najdete v další části odkazu pod, propojený dříve v tomto článku.  
   
-##  <a name="comments"></a>Poznámky  
+##  <a name="comments"></a> Poznámky  
  Existují dvě velmi užitečné URNGs v sadě Visual Studio –`mt19937` a `random_device`– jak je znázorněno v této tabulce porovnání:  
   
-|URNG|Rychlý|Zabezpečené kódování|Seedable|Deterministické|  
+|URNG|Rychlý|Crypto-secure|Seedable|Deterministické|  
 |----------|-----------|---------------------|---------------|--------------------|  
 |`mt19937`|Ano|Ne|Ano|Ano<sup>*</sup>|  
 |`random_device`|Ne|Ano|Ne|Ne|  

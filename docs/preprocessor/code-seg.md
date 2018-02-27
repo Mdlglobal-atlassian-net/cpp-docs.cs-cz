@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - code_seg_CPP
 - vc-pragma.code_seg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35ead52e9e084eb1770e3532d15848e168d8af90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 57511efccff22a1f1d6e7dcd957d75066b072c55
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="codeseg"></a>code_seg
 Určuje textový segment, kde jsou funkce uloženy v souboru .obj.  
@@ -44,16 +47,16 @@ Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
   
  A `code_seg` – Direktiva pragma bez parametrů obnoví názvu text segmentu pro kód následné objektu na text.  
   
- **Push** (volitelné)  
+ **nabízená** (volitelné)  
  Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízené** může mít `identifier` a `segment-name`.  
   
  **POP** (volitelné)  
  Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
   
- `identifier`(volitelné)  
+ `identifier` (volitelné)  
  Při použití s **nabízené**, přiřadí název záznamu v zásobníku vnitřní kompilátoru. Při použití s **pop**, POP záznamy ze zásobníku vnitřní, dokud `identifier` odebrána; Pokud `identifier` nebyl nalezen v interní zásobníku, nic se odebrány.  
   
- `identifier`umožňuje více záznamů, chcete-li být odebrány s právě jedním **pop** příkaz.  
+ `identifier` umožňuje více záznamů, chcete-li být odebrány s právě jedním **pop** příkaz.  
   
  "`segment-name`" (volitelné)  
  Název segmentu Při použití s **pop**, je odebrány zásobníku a `segment-name` stane názvem active text segmentu.  

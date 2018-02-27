@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 32707847948c32f671e7ebd7def23165b59a63a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a5bd2224f65db9ac376d04beed52217c1a0c4ec1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnewgt-operators"></a>&lt;nové&gt; operátory
 ||||  
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/24/2017
 |[delete – operátor](#op_delete)|[delete [] – operátor](#op_delete_arr)|[new – operátor](#op_new)|  
 |[new [] – operátor](#op_new_arr)|  
   
-##  <a name="op_delete"></a>delete – operátor  
+##  <a name="op_delete"></a>  delete – operátor  
  Odstranění výrazem se zrušit přidělení úložiště pro jednotlivé objekty volaná funkce.  
   
 ```
@@ -53,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>Příklad  
   V tématu [new – operátor](../standard-library/new-operators.md#op_new) příklad použijte `operator delete`.  
   
-##  <a name="op_delete_arr"></a>delete [] – operátor  
+##  <a name="op_delete_arr"></a>  delete [] – operátor  
  Funkci nazvanou odstranění výrazem se zrušit přidělení úložiště pro pole objektů.  
   
 ```
@@ -80,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>Příklad  
   V tématu [new – operátor &#91; &#93;](../standard-library/new-operators.md#op_new_arr) příklady použití `operator delete[]`.  
   
-##  <a name="op_new"></a>new – operátor  
+##  <a name="op_new"></a>  new – operátor  
  Nový-výrazem se přidělit úložiště pro jednotlivé objekty volaná funkce.  
   
 ```
@@ -101,7 +101,7 @@ void* operator new(std::size_t count,
  Ukazatel má být vrácen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na adresu nejnižší bajtů nově přidělené úložiště. Nebo`ptr.`  
+ Ukazatel na adresu nejnižší bajtů nově přidělené úložiště. Nebo `ptr.`  
   
 ### <a name="remarks"></a>Poznámky  
  První funkce je volána nové výrazem přidělit `count` bajtů úložišť vhodně zarovnán představují libovolného objektu této velikosti. Program můžete definovat alternativní funkci podpisem této funkce, která nahradí výchozí verze definované ve standardní knihovně C++ a stejně tak replaceable.  
@@ -175,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_new_arr"></a>new [] – operátor  
+##  <a name="op_new_arr"></a>  new [] – operátor  
  Funkce přidělení volá nový výraz se přidělit úložiště pro pole objektů.  
   
 ```
@@ -196,7 +196,7 @@ void* operator new[](std::size_t count,
  Ukazatel má být vrácen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na adresu nejnižší bajtů nově přidělené úložiště. Nebo`ptr.`  
+ Ukazatel na adresu nejnižší bajtů nově přidělené úložiště. Nebo `ptr.`  
   
 ### <a name="remarks"></a>Poznámky  
  První funkce volá `new[]` výraz přidělit `count` bajtů úložišť vhodně zarovnaný představují libovolného pole objektu této velikosti nebo menší. Program můžete definovat funkce podpisem této funkce, která nahradí výchozí verze definované standardní knihovna C++. Požadované chování je stejné jako u [new – operátor](../standard-library/new-operators.md#op_new)( **size_t –**). Výchozí chování je vrátit `operator new`( `count`).  
@@ -251,7 +251,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<Nový >](../standard-library/new.md)
+ [\<new>](../standard-library/new.md)
 
 
 

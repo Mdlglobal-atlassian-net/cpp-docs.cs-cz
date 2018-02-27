@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -15,23 +16,25 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 255c70eeb29e8bedaeec43d9844ca41b42fb470a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltchronogt"></a>&lt;typu chrono&gt;
+# <a name="ltchronogt"></a>&lt;chrono&gt;
 Zahrnují standardní hlavičku \<typu chrono > Definovat třídy a funkce, které představují a zpracování dobách trvání a okamžiky čas.  
   
- Od verze Visual Studio 2015, provádění `steady_clock` došlo ke změně splnění C++ Standard pro steadiness a monotonicity. `steady_clock`Nyní je založena na QueryPerformanceCounter() a `high_resolution_clock` je nyní typedef pro `steady_clock`. V důsledku toho v jazyce Visual C++ `steady_clock::time_point` je nyní typedef pro `chrono::time_point<steady_clock>`; ale to není nezbytně případ jiné implementace.  
+ Od verze Visual Studio 2015, provádění `steady_clock` došlo ke změně splnění C++ Standard pro steadiness a monotonicity. `steady_clock` Nyní je založena na QueryPerformanceCounter() a `high_resolution_clock` je nyní typedef pro `steady_clock`. V důsledku toho v jazyce Visual C++ `steady_clock::time_point` je nyní typedef pro `chrono::time_point<steady_clock>`; ale to není nezbytně případ jiné implementace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,24 +63,24 @@ Zahrnují standardní hlavičku \<typu chrono > Definovat třídy a funkce, kter
   
 |Název|Popis|  
 |----------|-----------------|  
-|[duration_cast –](../standard-library/chrono-functions.md#duration_cast)|Přetypování `duration` objekt zadaného typu.|  
-|[time_point_cast –](../standard-library/chrono-functions.md#time_point_cast)|Přetypování `time_point` objekt zadaného typu.|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Přetypování `duration` objekt zadaného typu.|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Přetypování `time_point` objekt zadaného typu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Operator –](../standard-library/chrono-operators.md#operator-)|Operátor odčítání nebo negace `duration` a `time_point` objekty.|  
+|[operator-](../standard-library/chrono-operators.md#operator-)|Operátor odčítání nebo negace `duration` a `time_point` objekty.|  
 |[operator!=](../standard-library/chrono-operators.md#op_neq)|Operátor nerovnosti, která se používá s `duration` nebo `time_point` objekty.|  
 |[Operátor modulo](../standard-library/chrono-operators.md#op_modulo)|Operátor pro modulo operací na `duration` objekty.|  
 |[operátor *](../standard-library/chrono-operators.md#op_star)|Operátor násobení pro `duration` objekty.|  
 |[operátor nebo](../standard-library/chrono-operators.md#op_div)|Operátor dělení pro `duration` objekty.|  
-|[operátor +](../standard-library/chrono-operators.md#op_add)|Přidá `duration` a `time_point` objekty.|  
-|[operátor&lt;](../standard-library/chrono-operators.md#op_lt)|Určuje, zda jeden `duration` nebo `time_point` objektu je menší než jiná `duration` nebo `time_point` objektu.|  
-|[operátor&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Určuje, zda jeden `duration` nebo `time_point` objektu je menší než nebo rovna do jiného `duration` nebo `time_point` objektu.|  
-|[Operator ==](../standard-library/chrono-operators.md#op_eq_eq)|Určuje, zda dva `duration` představovat časové intervaly, které mají stejnou délku, nebo zda dvě `time_point` objekty představují stejného bodu v čase.|  
-|[operátor&gt;](../standard-library/chrono-operators.md#op_gt)|Určuje, zda jeden `duration` nebo `time_point` je větší než druhý objekt `duration` nebo `time_point` objektu.|  
-|[operátor&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Určuje, zda jeden `duration` nebo `time_point` objekt je větší než nebo rovna hodnotě jiného `duration` nebo `time_point` objektu.|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|Přidá `duration` a `time_point` objekty.|  
+|[Operátor&lt;](../standard-library/chrono-operators.md#op_lt)|Určuje, zda jeden `duration` nebo `time_point` objektu je menší než jiná `duration` nebo `time_point` objektu.|  
+|[Operátor&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Určuje, zda jeden `duration` nebo `time_point` objektu je menší než nebo rovna do jiného `duration` nebo `time_point` objektu.|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Určuje, zda dva `duration` představovat časové intervaly, které mají stejnou délku, nebo zda dvě `time_point` objekty představují stejného bodu v čase.|  
+|[Operátor&gt;](../standard-library/chrono-operators.md#op_gt)|Určuje, zda jeden `duration` nebo `time_point` je větší než druhý objekt `duration` nebo `time_point` objektu.|  
+|[Operátor&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Určuje, zda jeden `duration` nebo `time_point` objekt je větší než nebo rovna hodnotě jiného `duration` nebo `time_point` objektu.|  
   
 ### <a name="predefined-duration-types"></a>Doba trvání předdefinované typy  
  Další informace o typech poměr, které se používají v následující definice TypeDef najdete v tématu [ \<poměr >](../standard-library/ratio.md).  

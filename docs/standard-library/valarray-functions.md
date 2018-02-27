@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::abs
 - valarray/std::acos
@@ -25,7 +25,7 @@ f1_keywords:
 - valarray/std::tan
 - valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -45,23 +45,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: b15c90c9346ae490e51f6b28cc508164ead395b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 0c6734e0c776a27057ef9f3bbe8c5be1ae0c7990
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray –&gt; funkce
 ||||  
 |-|-|-|  
-|[Abs](#abs)|[ACOS](#acos)|[ASIN](#asin)|  
-|[Atan](#atan)|[ATAN2](#atan2)|[Cos](#cos)|  
-|[COSH](#cosh)|[Exp](#exp)|[protokolu](#log)|  
-|[LOG10](#log10)|[Pow](#pow)|[Sin](#sin)|  
-|[SINH](#sinh)|[Sqrt](#sqrt)|[swap](#swap)|  
-|[Tan](#tan)|[TANH](#tanh)|  
+|[Abs](#abs)|[ACOS](#acos)|[asin](#asin)|  
+|[atan](#atan)|[atan2](#atan2)|[Cos](#cos)|  
+|[cosh](#cosh)|[exp](#exp)|[log](#log)|  
+|[log10](#log10)|[pow](#pow)|[sin](#sin)|  
+|[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|  
+|[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="abs"></a>Abs  
+##  <a name="abs"></a>  abs  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejná jako absolutní hodnota elementů vstupní valarray –.  
   
 ```  
@@ -113,7 +113,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="acos"></a>ACOS  
+##  <a name="acos"></a>  ACOS  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna Arkus kosinus elementy vstupní valarray –.  
   
 ```  
@@ -182,7 +182,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees  
 ```  
   
-##  <a name="asin"></a>ASIN  
+##  <a name="asin"></a>  ASIN  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna Arkus sinus elementy vstupní valarray –.  
   
 ```  
@@ -251,7 +251,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees  
 ```  
   
-##  <a name="atan"></a>Atan  
+##  <a name="atan"></a>  Atan  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné pro hlavní hodnotu Arkus tangens elementy vstupní valarray –.  
   
 ```  
@@ -323,7 +323,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees  
 ```  
   
-##  <a name="atan2"></a>ATAN2  
+##  <a name="atan2"></a>  ATAN2  
  Vrátí valarray –, jehož elementy jsou rovna Arkus tangens kartézských součásti určeného kombinací konstanty a elementy valarray – třídy.  
   
 ```  
@@ -347,11 +347,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ### <a name="return-value"></a>Návratová hodnota  
  Valarray – jehož elementy `I` rovná Arkus tangens:  
   
-- `left`[ *I* ] / *_Righ*t [ *I* ] pro první funkce šablony.  
+- `left` [ *I* ] / *_Righ*t [ *I* ] pro první funkce šablony.  
   
-- `left`[ *I* ] / `right` pro druhý funkce šablony.  
+- `left` [ *I* ] / `right` pro druhý funkce šablony.  
   
-- `left` / `right`[ *I* ] třetí funkce šablony.  
+- `left` / `right` [ *I* ] třetí funkce šablony.  
   
 ### <a name="remarks"></a>Poznámky  
  Jednotky vrácené prvky jsou v radiánech.  
@@ -413,7 +413,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees  
 ```  
   
-##  <a name="cos"></a>Cos  
+##  <a name="cos"></a>  Cos  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou si rovny kosinu elementů vstupní valarray –.  
   
 ```  
@@ -487,7 +487,7 @@ The cosine of the initial valarray is:
 -1  
 ```  
   
-##  <a name="cosh"></a>COSH  
+##  <a name="cosh"></a>  COSH  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický kosinus elementů vstupní valarray –.  
   
 ```  
@@ -566,7 +566,7 @@ The hyperbolic cosine of the initial valarray is:
 11.592  
 ```  
   
-##  <a name="exp"></a>Exp  
+##  <a name="exp"></a>  Exp  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou si rovny exponenciální elementů vstupní valarray – fyzickým.  
   
 ```  
@@ -626,7 +626,7 @@ The natural exponential of the initial valarray is:
 22026.5  
 ```  
   
-##  <a name="log"></a>protokolu  
+##  <a name="log"></a>  Protokolu  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna přirozený logaritmus elementů vstupní valarray –.  
   
 ```  
@@ -686,7 +686,7 @@ The natural logarithm of the initial valarray is:
 4.38203  
 ```  
   
-##  <a name="log10"></a>LOG10  
+##  <a name="log10"></a>  LOG10  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné základní 10 nebo vypočítat dekadický logaritmus elementů vstupní valarray –.  
   
 ```  
@@ -748,7 +748,7 @@ The common logarithm of the initial valarray is:
 2  
 ```  
   
-##  <a name="pow"></a>Pow  
+##  <a name="pow"></a>  Pow  
  Funguje s prvky vstupní valarray – třídy a konstanty, vrácení valarray –, jehož elementy jsou si rovny na základní buď elementy vstupní valarray – nebo konstantní umocněné exponentem zadán buď elementy vstupní valarray – nebo konstanta.  
   
 ```  
@@ -781,11 +781,11 @@ pow(
 ### <a name="return-value"></a>Návratová hodnota  
  Valarray – jehož elementy `I` rovná:  
   
-- `left`[ *I* ] umocněné `right` [ *I* ] pro první funkce šablony.  
+- `left` [ *I* ] umocněné `right` [ *I* ] pro první funkce šablony.  
   
-- `left`[ *I* ] umocněné `right` pro druhý funkce šablony.  
+- `left` [ *I* ] umocněné `right` pro druhý funkce šablony.  
   
-- `left`umocněné `right` [ *I* ] třetí funkce šablony.  
+- `left` umocněné `right` [ *I* ] třetí funkce šablony.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud `left` a `right` mají jiný počet elementů, výsledkem nedefinovaný.  
@@ -841,7 +841,7 @@ n = 4   gives 256
 n = 5   gives 1024  
 ```  
   
-##  <a name="sin"></a>Sin  
+##  <a name="sin"></a>  Sin  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna sinus elementů vstupní valarray –.  
   
 ```  
@@ -915,7 +915,7 @@ The sine of the initial valarray is:
 -2.06823e-013  
 ```  
   
-##  <a name="sinh"></a>SINH  
+##  <a name="sinh"></a>  SINH  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický sinus elementů vstupní valarray –.  
   
 ```  
@@ -994,7 +994,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487  
 ```  
   
-##  <a name="sqrt"></a>Sqrt  
+##  <a name="sqrt"></a>  Sqrt  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné pro druhou odmocninu elementů vstupní valarray –.  
   
 ```  
@@ -1045,7 +1045,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Výměny elementy dva valarray – třídy.  
   
 ```  
@@ -1065,7 +1065,7 @@ void swap(
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony provede ` left.swap( right)`.  
   
-##  <a name="tan"></a>Tan  
+##  <a name="tan"></a>  Tan  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna tangens elementů vstupní valarray –.  
   
 ```  
@@ -1139,7 +1139,7 @@ The tangent of the initial valarray is:
 -9.6701e+012  
 ```  
   
-##  <a name="tanh"></a>TANH  
+##  <a name="tanh"></a>  TANH  
  Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický tangens elementy vstupní valarray –.  
   
 ```  
@@ -1219,5 +1219,5 @@ The hyperbolic tangent of the initial valarray is:
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<valarray – >](../standard-library/valarray.md)
+ [\<valarray>](../standard-library/valarray.md)
 

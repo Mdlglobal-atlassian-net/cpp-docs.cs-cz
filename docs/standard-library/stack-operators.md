@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - stack/std::operator!=
 - stack/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - stack/std::operator&lt;
 - stack/std::operator&lt;=
 - stack/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9c1fc282-2f61-4727-9e80-84ea5d4934a2
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (stack)
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: a64d5b127b0c6bc32c2f5649db93cc4d04ddaa99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 04bdcf5e9ecbc0b5dbbe59c680629d144720e174
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstackgt-operators"></a>&lt;zásobník&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testy, pokud zásobník objekt na levé straně operátor není rovno zásobníku objekt na pravé straně.  
   
 ```  
@@ -97,7 +98,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Testy, pokud zásobník objekt na levé straně operátor je menší než zásobníku objekt na pravé straně.  
   
 ```  
@@ -177,7 +178,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Pokud zásobníku objekt na levé straně operátoru testů je menší než nebo rovno zásobníku objekt na pravé straně.  
   
 ```  
@@ -240,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testy, pokud zásobník objekt na levé straně operátoru rovná zásobníku objekt na pravé straně.  
   
 ```  
@@ -301,7 +302,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Testy, pokud zásobník objekt na levé straně operátoru je větší než zásobníku objekt na pravé straně.  
   
 ```  
@@ -366,7 +367,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Testy, pokud je zásobník objekt na levé straně operátoru větší než nebo rovna hodnotě zásobníku objekt na pravé straně.  
   
 ```  
@@ -431,5 +432,5 @@ The stack s1 is greater than or equal to the stack s3.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<Zásobník >](../standard-library/stack.md)
+ [\<stack>](../standard-library/stack.md)
 

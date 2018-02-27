@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.const_seg
 - const_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 49d145bc80b524176b381b2b5938c9707e8c1b19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c4c87ee9f0e867223186868de0ef2b39203c3710
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constseg"></a>const_seg
 Určuje segment kde [const](../cpp/const-cpp.md) proměnné jsou uloženy v souboru .obj.  
@@ -42,15 +45,15 @@ Určuje segment kde [const](../cpp/const-cpp.md) proměnné jsou uloženy v soub
   
  Definování vyžadující dynamické inicializace v objektu `const_seg` výsledkem nedefinované chování.  
   
- `#pragma const_seg`bez parametrů obnoví segmentu na .rdata.  
+ `#pragma const_seg` bez parametrů obnoví segmentu na .rdata.  
   
- `push`(volitelné)  
+ `push` (volitelné)  
  Vloží záznam do zásobníku vnitřního kompilátoru. A `push` může mít `identifier` a `segment-name`.  
   
- `pop`(volitelné)  
+ `pop` (volitelné)  
  Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
   
- `identifier`(volitelné)  
+ `identifier` (volitelné)  
  Při použití s `push`, přiřadí název záznamu v zásobníku vnitřní kompilátoru. Při použití s `pop`, POP záznamy ze zásobníku vnitřní, dokud `identifier` odebrána; Pokud `identifier` nebyl nalezen v interní zásobníku, nic se odebrány.  
   
  Pomocí `identifier` umožňuje více záznamů, chcete-li být odebrány s jedním `pop` příkaz.  

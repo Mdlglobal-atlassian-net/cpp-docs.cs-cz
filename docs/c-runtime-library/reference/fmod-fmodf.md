@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fmod
 - fmodf
@@ -27,23 +28,25 @@ f1_keywords:
 - fmod
 - _fmodl
 - fmodf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - calculating floating-point remainders
 - fmodf function
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 53c191639222df29d8a1101d4ebfa7ea44377f48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 042bf7fec2d8e05628f09297f4af92011237fc5f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fmod-fmodf"></a>fmod, fmodf
 Vypočítá zbytek s plovoucí desetinnou čárkou.  
@@ -74,7 +77,7 @@ float fmodf(
  Hodnoty s plovoucí desetinnou čárkou.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `fmod`Vrátí s plovoucí desetinnou čárkou zbytek `x`  /  `y`. Pokud hodnota `y` je 0,0, `fmod` vrátí quiet NaN. Informace o reprezentace quiet NaN pomocí `printf` rodiny, viz [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ `fmod` Vrátí s plovoucí desetinnou čárkou zbytek `x`  /  `y`. Pokud hodnota `y` je 0,0, `fmod` vrátí quiet NaN. Informace o reprezentace quiet NaN pomocí `printf` rodiny, viz [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
 ## <a name="remarks"></a>Poznámky  
  `fmod` Funkce vypočítá s plovoucí desetinnou čárkou zbývající `f` z `x`  /  `y` tak, aby `x`  =  `i` `*` `y`  +  `f`, kde `i` je celé číslo, `f` má stejné znaménko jako `x`a absolutní hodnotu `f` je menší než absolutní hodnotu `y`.  
@@ -85,7 +88,7 @@ float fmodf(
   
 |Funkce|Požadovaný hlavičkový soubor|  
 |--------------|---------------------|  
-|`fmod`, `fmodf`|\<Math.h >|  
+|`fmod`, `fmodf`|\<math.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   

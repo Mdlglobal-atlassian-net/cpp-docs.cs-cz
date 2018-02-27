@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 Představuje kolekci sekvenční znaky Unicode, která se používá k reprezentování text. Další informace a příklady naleznete v tématu [řetězce](../cppcx/strings-c-cx.md).  
@@ -73,7 +76,7 @@ public ref class String sealed : Object,
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[String::begin](#begin)|Vrací ukazatel na začátku aktuálního řetězce.|  
+|[String::Begin](#begin)|Vrací ukazatel na začátku aktuálního řetězce.|  
 |[String::CompareOrdinal](#compareordinal)|Porovná dva `String` objekty vyhodnocením číselné hodnoty odpovídající znaků v dvě řetězcové hodnoty reprezentována objekty.|  
 |[String::concat](#concat)|Zřetězí hodnoty dvou řetězcových objektů.|  
 |[String::data](#data)|Vrací ukazatel na začátku aktuálního řetězce.|  
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **Záhlaví** vccorlib.h (zahrnuté ve výchozím nastavení)  
 
  
-## <a name="begin"></a>String::begin – metoda
+## <a name="begin"></a>  String::begin – metoda
 Vrací ukazatel na začátku aktuálního řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na začátku aktuálního řetězce.  
   
-## <a name="compareordinal"></a>String::CompareOrdinal – metoda
+## <a name="compareordinal"></a>  String::CompareOrdinal – metoda
 Porovná dva `String` objekty vyhodnocením číselné hodnoty odpovídající znaků v dvě řetězcové hodnoty reprezentována objekty.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -147,13 +150,13 @@ int CompareOrdinal(
   
 |Hodnota|Podmínka|  
 |-----------|---------------|  
-|-1|`str1`je menší než `str2`.|  
-|0|`str1`se rovná `str2`.|  
-|1|`str1`je větší než `str2`.|  
+|-1|`str1` je menší než `str2`.|  
+|0|`str1` se rovná `str2`.|  
+|1|`str1` je větší než `str2`.|  
   
 
 
-## <a name="concat"></a>String::concat – metoda
+## <a name="concat"></a>  String::concat – metoda
 Zřetězí hodnoty dvou řetězcových objektů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>String::data – metoda
+## <a name="data"></a>  String::data – metoda
 Vrátí ukazatel na začátek vyrovnávací paměť dat objektu jako stylu jazyka C pole `char16` (`wchar_t`) elementy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>String::Dispose – metoda
+## <a name="dispose"></a>  String::Dispose – metoda
 Uvolní nebo uvolní prostředky.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -203,7 +206,7 @@ Uvolní nebo uvolní prostředky.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>String::end – metoda
+## <a name="end"></a>  String::end – metoda
 Vrátí ukazatel za koncem aktuálního řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>String::Equals – metoda
+## <a name="equals"></a>  String::Equals – metoda
 Určuje, zda zadaný řetězec má stejnou hodnotu jako aktuální objekt.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -239,14 +242,14 @@ bool String::Equals(String^ str);
  Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `str` je stejný jako aktuální objekt, jinak hodnota `false`.  
+ `true` Pokud `str` je stejný jako aktuální objekt, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je ekvivalentní [String::CompareOrdinal](#compareordinal). V první přetížení se očekává `str` lze parametr převést na řetězec ^ objektu.  
   
 
 
-## <a name="gethashcode"></a>String::GetHashCode – metoda
+## <a name="gethashcode"></a>  String::GetHashCode – metoda
 Vrátí kód hash této instance.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>String::IsEmpty – metoda
+## <a name="isempty"></a>  String::IsEmpty – metoda
 Určuje, zda aktuální objekt řetězce je prázdný.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -271,11 +274,11 @@ bool IsEmpty()
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je aktuální objekt řetězec `null` nebo prázdný řetězec (L""), jinak hodnota `false`.  
+ `true` Pokud je aktuální objekt řetězec `null` nebo prázdný řetězec (L""), jinak hodnota `false`.  
   
 
 
-## <a name="isfastpass"></a>String::IsFastPass – metoda
+## <a name="isfastpass"></a>  String::IsFastPass – metoda
 Určuje, zda se účastní aktuálního řetězce je objekt *rychlé průchodu* operaci. V rychlého předat operace, počítání odkaz je pozastaveno.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -285,14 +288,14 @@ bool IsFastPass();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud se aktuální objekt řetězec fast minulosti; v opačném `false`.  
+ `true` Pokud se aktuální objekt řetězec fast minulosti; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve volání funkce, kde objekt počítá odkaz je parametr, a volaná funkce četl pouze tento objekt můžete kompilátor bezpečně pozastavit počítání odkazů a zlepšit výkon volání. Není co užitečné, že váš kód můžete provádět s touto vlastností. Systém zpracovává všechny podrobnosti.  
   
 
 
-## <a name="length"></a>String::length – metoda
+## <a name="length"></a>  String::length – metoda
 Načte počet znaků v aktuální objekt řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>String::Operator + – operátor
+## <a name="operator-plus"></a>  String::Operator + – operátor
 Zřetězí dvě [řetězec](../cppcx/platform-string-class.md) objektů do nové [řetězec](../cppcx/platform-string-class.md) objektu.
   
 ### <a name="syntax"></a>Syntaxe  
@@ -334,12 +337,12 @@ bool String::operator+( String^ str1, String^ str2)
  Druhý `String` objekt, jejichž obsah se připojí k `str1`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `str1` rovná `str2`, jinak hodnota `false`.  
+ `true` Pokud `str1` rovná `str2`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento operátor vytvoří `String^` objekt, který obsahuje data z dva operandy. Používejte pro usnadnění práce při extrémně výkon není důležité. Několik volání "`+`" ve funkci nejspíš bude patrné, ale pokud manipulaci rozsáhlé objekty nebo textová data ve smyčce úzkou, použijte standardní C++ mechanismy a typy.  
   
-##  <a name="operator-equality"></a>String::Operator == – operátor
+##  <a name="operator-equality"></a> String::Operator == – operátor
 Určuje, zda dva objekty zadaný řetězec mají stejnou hodnotu text.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -356,14 +359,14 @@ bool String::operator==( String^ str1, String^ str2)
  Druhý řetězec objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud obsah `str1` rovná `str2`, jinak hodnota `false`.  
+ `true` Pokud obsah `str1` rovná `str2`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je ekvivalentní [String::CompareOrdinal](#compareordinal).  
   
 
 
-##  <a name="operator-greater-than"></a>String::Operator&gt; 
+##  <a name="operator-greater-than"></a>  String::Operator&gt; 
 Určuje, zda je hodnota jeden řetězec objekt větší než hodnota druhý objekt řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -380,14 +383,14 @@ bool String::operator>( String^ str1, String^ str2)
  Druhý objekt řetězce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud hodnota `str1` je větší než hodnota `str2`, jinak hodnota `false`.  
+ `true` Pokud hodnota `str1` je větší než hodnota `str2`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento operátor je ekvivalentní volání explicitně [String::CompareOrdinal](#compareordinal) a získávání výsledku větší než nula.  
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String::Operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::Operator&gt;= 
 Určuje, zda je hodnota jeden řetězec objekt větší než nebo rovna hodnotě druhý objekt řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -404,11 +407,11 @@ bool String::operator>=( String^ str1, String^ str2)
  Druhý objekt řetězce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud hodnota `str1` je větší než nebo rovna hodnotě `str2`, jinak hodnota `false`.  
+ `true` Pokud hodnota `str1` je větší než nebo rovna hodnotě `str2`, jinak hodnota `false`.  
   
 
 
-## <a name="operator-inequality"></a>String::Operator! = 
+## <a name="operator-inequality"></a> String::Operator! = 
 Určuje, zda dva objekty zadaný řetězec mají různé hodnoty.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -425,10 +428,10 @@ bool String::operator!=( String^ str1, String^ str2)
  Druhý řetězec objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `str1` se nerovná `str2`, jinak hodnota `false`.   
+ `true` Pokud `str1` se nerovná `str2`, jinak hodnota `false`.   
 
 
-## <a name="operator-less-than"></a>String::Operator&lt; 
+## <a name="operator-less-than"></a> String::Operator&lt; 
 Určuje, zda hodnota jednoho objektu řetězce je menší než hodnota druhý objekt řetězce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -445,9 +448,9 @@ bool String::operator<( String^ str1, String^ str2)
  Druhý objekt řetězce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud hodnota `str1` je menší než hodnota `str2`, jinak hodnota `false`.  
+ `true` Pokud hodnota `str1` je menší než hodnota `str2`, jinak hodnota `false`.  
   
-## <a name="ctor"></a>String::String – konstruktor
+## <a name="ctor"></a> String::String – konstruktor
 Inicializuje novou instanci třídy String kopii dat vstupní řetězec.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String::ToString
+## <a name="tostring"></a> String::ToString
 Vrátí objekt řetězec, jehož hodnota je stejná jako aktuální řetězec.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::operator!=
 - string/std::operator&gt;
@@ -16,9 +16,10 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (string)
@@ -28,20 +29,20 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: caa6cad7f0801b5459bd2999ae38a3da52c00469
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: e3aa2d80c41ebf7efe1bab42219cdbbb281c0122
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt-operators"></a>&lt;řetězec&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;&gt;](#op_gt_gt)|  
-|[operátor&gt;=](#op_gt_eq)|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|  
-|[operátor&lt;=](#op_lt_eq)|[operátor +](#op_add)|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;&gt;](#op_gt_gt)|  
+|[Operátor&gt;=](#op_gt_eq)|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|  
+|[Operátor&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_add"></a>operátor +  
+##  <a name="op_add"></a>  operátor +  
  Zřetězí dva objekty řetězce.  
   
 ```  
@@ -171,7 +172,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!  
 ```  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Testy, pokud řetězec objekt na levé straně operátoru není stejný jako řetězec objekt na pravé straně.  
   
 ```  
@@ -258,7 +259,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Testy, pokud řetězec objekt na levé straně operátoru rovná řetězec objekt na pravé straně.  
   
 ```  
@@ -345,7 +346,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Testuje, pokud objekt na levé straně operátoru řetězce je menší než na objekt řetězce na pravé straně.  
   
 ```  
@@ -437,7 +438,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Pokud řetězec objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt řetězce na pravé straně.  
   
 ```  
@@ -536,7 +537,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_lt_lt"></a>operátor&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operátor&lt;&lt;  
  Funkce šablony, která zapisuje řetězec do výstupního datového proudu.  
   
 ```  
@@ -557,9 +558,9 @@ basic_ostream<CharType, Traits>& operator<<(
  Hodnota řetězce zadaná zapíše do výstupního datového proudu `_Ostr`.  
   
 ### <a name="remarks"></a>Poznámky  
- Přetížení funkce šablony **operátor <<** vložit pomocí objektu _ *Str* třídy šablony [basic_string](../standard-library/basic-string-class.md) do datového proudu \_  *Ostr.* Funkce efektivně vrátí \_ *Ostr*. **zápis**( \_ *Str*. [c_str –](../standard-library/basic-string-class.md#c_str), \_ *Str*. [velikost](../standard-library/basic-string-class.md#size)).  
+ Přetížení funkce šablony **operátor <<** vložit pomocí objektu _ *Str* třídy šablony [basic_string](../standard-library/basic-string-class.md) do datového proudu \_  *Ostr.* Funkce efektivně vrátí \_ *Ostr*. **zápis**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Testy, pokud je řetězec objekt na levé straně operátoru větší než na objekt řetězce na pravé straně.  
   
 ```  
@@ -658,7 +659,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Testy, pokud je řetězec objekt na levé straně operátoru větší než nebo rovna hodnotě řetězec objekt na pravé straně.  
   
 ```  
@@ -757,7 +758,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.  
 ```  
   
-##  <a name="op_gt_gt"></a>operátor&gt;&gt;  
+##  <a name="op_gt_gt"></a>  Operátor&gt;&gt;  
  Funkce šablony, který čte řetězec ze vstupního datového proudu.  
   
 ```  
@@ -788,7 +789,7 @@ basic_istream<CharType, Traits>& operator>>(
   
  Po extrahuje funkce `_Istr`. [max_size –](../standard-library/basic-string-class.md#max_size) elementy.  
   
--   Po funkce extrahuje element *ch* pro kterou [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **je**( **ctype** \< **CharType**>:: **místo**, *ch*) má hodnotu true, v takovém případě je uvést znak zpět.  
+-   Po funkce extrahuje element *ch* pro kterou [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **je**( **ctype** \< **CharType**>:: **místo**, *ch*) má hodnotu true, v takovém případě znak je vrátit zpět .  
   
  Pokud funkci extrahuje žádné elementy, zavolá [setstate –](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). V každém případě volá **istr**. **Šířka**(0) a vrátí \* **to**.  
   

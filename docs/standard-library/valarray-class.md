@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -20,7 +21,8 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="valarray-class"></a>valarray – třída
 Šablony třídy popisuje objekt, který určuje posloupnost elementy typu **typ** které jsou uloženy jako pole, určený pro provádění vysokorychlostní matematické operace a optimalizované pro výpočetní výkon.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[valarray –](#valarray)|Vytvoří `valarray` určité velikosti nebo u elementů na konkrétní hodnoty, nebo jako kopii jiného `valarray` nebo některé jiné `valarray`.|  
+|[valarray](#valarray)|Vytvoří `valarray` určité velikosti nebo u elementů na konkrétní hodnoty, nebo jako kopii jiného `valarray` nebo některé jiné `valarray`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -80,15 +83,15 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[použít](#apply)|Zadaná funkce se vztahuje na jednotlivé prvky `valarray`.|  
-|[cshift –](#cshift)|Cyklicky posune všechny elementy ve `valarray` o zadaný počet pozic.|  
+|[Použít](#apply)|Zadaná funkce se vztahuje na jednotlivé prvky `valarray`.|  
+|[cshift](#cshift)|Cyklicky posune všechny elementy ve `valarray` o zadaný počet pozic.|  
 |[free](#free)|Uvolní množství paměti používané `valarray`.|  
-|[maximální počet](#max)|Vyhledá nejvyšší element v `valarray`.|  
-|[min.](#min)|Vyhledá nejnižší element v `valarray`.|  
-|[Změna velikosti](#resize)|Změní počet elementů ve `valarray` na číslo, přidávání nebo odebírání elementů podle potřeby.|  
-|[Posunutí](#shift)|Posune všechny elementy ve `valarray` o zadaný počet pozic.|  
-|[velikost](#size)|Zjistí počet elementů ve `valarray`.|  
-|[Součet](#sum)|Určuje součet všech elementů v `valarray` délky nenulové hodnoty.|  
+|[max](#max)|Vyhledá nejvyšší element v `valarray`.|  
+|[min](#min)|Vyhledá nejnižší element v `valarray`.|  
+|[resize](#resize)|Změní počet elementů ve `valarray` na číslo, přidávání nebo odebírání elementů podle potřeby.|  
+|[shift](#shift)|Posune všechny elementy ve `valarray` o zadaný počet pozic.|  
+|[Velikost](#size)|Zjistí počet elementů ve `valarray`.|  
+|[sum](#sum)|Určuje součet všech elementů v `valarray` délky nenulové hodnoty.|  
 |[swap](#swap)||  
   
 ### <a name="operators"></a>Operátory  
@@ -96,28 +99,28 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[Operator – operátor!](#op_not)|Unární operátor, který získá logické `NOT` hodnoty každého prvku `valarray`.|  
-|[Operator % =](#op_mod_eq)|Získá zbytek po dělení prvků pole element-wise buď zadané `valarray` nebo pomocí hodnoty typu prvku.|  
-|[operátor & =](#op_amp_eq)|Získá bitové hodnotě `AND` elementů v matici buď pomocí odpovídající elementy v zadané `valarray` nebo s hodnotou typu prvku.|  
-|[operátor >> =](#op_gt_gt_eq)|Pravé posuny bits pro jednotlivé elementy z `valarray` po zadaný počet pozic nebo o element-wise částku určeného Druhý operand `valarray`.|  
+|[operator%=](#op_mod_eq)|Získá zbytek po dělení prvků pole element-wise buď zadané `valarray` nebo pomocí hodnoty typu prvku.|  
+|[operator&=](#op_amp_eq)|Získá bitové hodnotě `AND` elementů v matici buď pomocí odpovídající elementy v zadané `valarray` nebo s hodnotou typu prvku.|  
+|[operator>>=](#op_gt_gt_eq)|Pravé posuny bits pro jednotlivé elementy z `valarray` po zadaný počet pozic nebo o element-wise částku určeného Druhý operand `valarray`.|  
 |[operátor << =](#op_lt_lt_eq)|Levé posuny bits pro jednotlivé elementy z `valarray` po zadaný počet pozic nebo o element-wise částku určeného Druhý operand `valarray`.|  
-|[Operator * =](#op_star_eq)|Multiplies – elementy zadané `valarray` nebo hodnota typu prvku element-wise operand `valarray`.|  
-|[operátor +](#op_add)|Unární operátor, který se vztahuje plus každý prvek v `valarray`.|  
-|[+= – operátor](#op_add_eq)|Přidá elementy zadané `valarray` nebo hodnota typu prvku element-wise operand `valarray`.|  
-|[Operator –](#operator-)|Unární operátor, který se vztahuje minus každý prvek v `valarray`.|  
-|[-= – operátor](#operator-_eq)|Odečítá od elementy zadané `valarray` nebo hodnota typu prvku element-wise z operand `valarray`.|  
+|[operator*=](#op_star_eq)|Multiplies – elementy zadané `valarray` nebo hodnota typu prvku element-wise operand `valarray`.|  
+|[operator+](#op_add)|Unární operátor, který se vztahuje plus každý prvek v `valarray`.|  
+|[operator+=](#op_add_eq)|Přidá elementy zadané `valarray` nebo hodnota typu prvku element-wise operand `valarray`.|  
+|[operator-](#operator-)|Unární operátor, který se vztahuje minus každý prvek v `valarray`.|  
+|[operator-=](#operator-_eq)|Odečítá od elementy zadané `valarray` nebo hodnota typu prvku element-wise z operand `valarray`.|  
 |[/ = – operátor](#op_div_eq)|Rozdělí operand `valarray` element-wise podle elementy zadané `valarray` nebo hodnota typu prvku.|  
-|[operátor =](#op_eq)|Přiřadí elementů `valarray` jejichž hodnoty se zadávají, buď přímo, nebo jako součást jiného `valarray` , nebo `slice_array`, `gslice_array`, `mask_array`, nebo `indirect_array`.|  
-|[operátor &#91; &#93;](#op_at)|Vrátí odkaz na element nebo má hodnotu na zadaný index nebo podmnožinu zadaný.|  
-|[Operator ^ =](#op_xor_eq)|Získá element-wise exkluzivní logický operátor or ( `XOR`) z pole s zadaný valarray – nebo hodnota typu prvku.|  
-|[operátor &#124; =](#op_or_eq)|Získá bitové hodnotě `OR` elementů v matici buď pomocí odpovídající elementy v zadané `valarray` nebo s hodnotou typu prvku.|  
-|[operátor ~](#op_dtor)|Unární operátor, který získá bitové hodnotě `NOT` hodnoty každého prvku `valarray`.|  
+|[operator=](#op_eq)|Přiřadí elementů `valarray` jejichž hodnoty se zadávají, buď přímo, nebo jako součást jiného `valarray` , nebo `slice_array`, `gslice_array`, `mask_array`, nebo `indirect_array`.|  
+|[operator&#91;&#93;](#op_at)|Vrátí odkaz na element nebo má hodnotu na zadaný index nebo podmnožinu zadaný.|  
+|[operator^=](#op_xor_eq)|Získá element-wise exkluzivní logický operátor or ( `XOR`) z pole s zadaný valarray – nebo hodnota typu prvku.|  
+|[operator&#124;=](#op_or_eq)|Získá bitové hodnotě `OR` elementů v matici buď pomocí odpovídající elementy v zadané `valarray` nebo s hodnotou typu prvku.|  
+|[operator~](#op_dtor)|Unární operátor, který získá bitové hodnotě `NOT` hodnoty každého prvku `valarray`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<valarray – >  
   
  **Namespace:** – std  
   
-##  <a name="apply"></a>valarray::apply  
+##  <a name="apply"></a>  valarray::apply  
  Zadaná funkce se vztahuje na každý prvek valarray –.  
   
 ```  
@@ -188,7 +191,7 @@ valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 *\  
 ```  
   
-##  <a name="cshift"></a>valarray::cshift  
+##  <a name="cshift"></a>  valarray::cshift  
  Všechny elementy ve valarray – cyklicky posune zadaný počet pozic.  
   
 ```  
@@ -261,7 +264,7 @@ va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 *\  
 ```  
   
-##  <a name="free"></a>valarray::Free  
+##  <a name="free"></a>  valarray::Free  
  Uvolní množství paměti používané valarray –.  
   
 ```  
@@ -278,7 +281,7 @@ v = valarray<T>();
 // equivalent to v.free()  
 ```  
   
-##  <a name="max"></a>valarray::max  
+##  <a name="max"></a>  valarray::max  
  Vyhledá nejvyšší element v valarray –.  
   
 ```  
@@ -327,7 +330,7 @@ The largest element in the valarray is: 13.
 *\  
 ```  
   
-##  <a name="min"></a>valarray::min  
+##  <a name="min"></a>  valarray::min  
  Vyhledá nejnižší element v valarray –.  
   
 ```  
@@ -376,7 +379,7 @@ The smallest element in the valarray is: -9.
 *\  
 ```  
   
-##  <a name="op_not"></a>valarray::Operator!  
+##  <a name="op_not"></a>  valarray::Operator!  
  Unární operátor, který získá logické **není** hodnoty každého prvku valarray –.  
   
 ```  
@@ -430,7 +433,7 @@ The element-by-element result of the logical NOT operator! is the
 *\  
 ```  
   
-##  <a name="op_mod_eq"></a>valarray::Operator % =  
+##  <a name="op_mod_eq"></a>  valarray::Operator % =  
  Získá zbytek po dělení prvků pole element-wise zadaný valarray – nebo hodnotu typu prvku.  
   
 ```  
@@ -444,7 +447,7 @@ valarray<Type>& operator%=(const Type& right);
  Valarray – nebo hodnota stejná jako ve valarray – operand, který je rozdělit element-wise, valarray operand – element typu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Valarray –, jehož elementy jsou zbývající z divize element-wise valarray – operand podle`right`  
+ Valarray –, jehož elementy jsou zbývající z divize element-wise valarray – operand podle `right`  
   
 ### <a name="example"></a>Příklad  
   
@@ -492,7 +495,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="and_eq"></a>valarray::Operator&amp;=  
+##  <a name="and_eq"></a>  valarray::Operator&amp;=  
  Získá bitové hodnotě **a** elementů v pole s odpovídající elementů v zadané valarray – nebo s hodnotou typu prvku.  
   
 ```  
@@ -506,7 +509,7 @@ valarray<Type>& operator&=(const Type& right);
  Valarray – nebo hodnota typu element shodná s valarray – operand, který je možné kombinovat, element-wise podle logického **a** s valarray – operand.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Valarray –, jehož elementy jsou element-wise logické **a** z valarray – operand podle`right`  
+ Valarray –, jehož elementy jsou element-wise logické **a** z valarray – operand podle `right`  
   
 ### <a name="remarks"></a>Poznámky  
  Bitové operace lze použít pouze k manipulaci s bitů `char` a `int` datové typy a variantních proměnných a ne v **float**, **dvojité**, **longdouble**, `void`, `bool`, nebo jiných, komplexnější datové typy.  
@@ -559,7 +562,7 @@ The element-by-element result of the logical AND operator&= is the
 *\  
 ```  
   
-##  <a name="op_gt_gt_eq"></a>valarray::Operator&gt;&gt;=  
+##  <a name="op_gt_gt_eq"></a>  valarray::Operator&gt;&gt;=  
  Posuny vpravo bitů pro každý prvek operand valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.  
   
 ```  
@@ -624,7 +627,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt_lt_eq"></a>valarray::Operator&lt;&lt;=  
+##  <a name="op_lt_lt_eq"></a>  valarray::Operator&lt;&lt;=  
  Posuny vlevo bitů pro každý prvek operand valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.  
   
 ```  
@@ -690,7 +693,7 @@ The element-by-element result of the left shift
 *\  
 ```  
   
-##  <a name="op_star_eq"></a>valarray::Operator * =  
+##  <a name="op_star_eq"></a>  valarray::Operator * =  
  Vynásobí elementy zadaný valarray – nebo hodnota typu prvku element-wise, k valarray – operand.  
   
 ```  
@@ -752,7 +755,7 @@ The element-by-element result of the multiplication is the
 *\  
 ```  
   
-##  <a name="op_add"></a>valarray::Operator +  
+##  <a name="op_add"></a>  valarray::Operator +  
  Unární operátor, který se vztahuje plus každý prvek v valarray –.  
   
 ```  
@@ -801,7 +804,7 @@ The element-by-element result of the operator+ is the
 *\  
 ```  
   
-##  <a name="op_add_eq"></a>valarray::Operator +=  
+##  <a name="op_add_eq"></a>  valarray::Operator +=  
  Přidá elementy zadaný valarray – nebo hodnotu typu prvku element-wise, do valarray – operand.  
   
 ```  
@@ -863,7 +866,7 @@ The element-by-element result of the sum is the
 *\  
 ```  
   
-##  <a name="valarray__operator-"></a>valarray::Operator-  
+##  <a name="valarray__operator-"></a>  valarray::Operator-  
  Unární operátor, který se vztahuje minus každý prvek v valarray –.  
   
 ```  
@@ -912,7 +915,7 @@ The element-by-element result of the operator+ is the
 *\  
 ```  
   
-##  <a name="valarray__operator-_eq"></a>valarray::Operator-=  
+##  <a name="valarray__operator-_eq"></a>  valarray::Operator-=  
  Odečte elementy zadaný valarray – nebo hodnotu typu prvku element-wise, z valarray – operand.  
   
 ```  
@@ -974,7 +977,7 @@ The element-by-element result of the difference is the
 *\  
 ```  
   
-##  <a name="op_div_eq"></a>valarray::Operator / =  
+##  <a name="op_div_eq"></a>  valarray::Operator / =  
  Vydělí valarray – operand element-wise elementy zadaný valarray – nebo hodnotu typu prvku.  
   
 ```  
@@ -1036,7 +1039,7 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="op_eq"></a>valarray::Operator =  
+##  <a name="op_eq"></a>  valarray::Operator =  
  Přiřadí elementy valarray –, jejichž hodnoty se zadávají, buď přímo, nebo jako součást jiné valarray – nebo slice_array, gslice_array, mask_array nebo indirect_array.  
   
 ```  
@@ -1140,7 +1143,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 *\  
 ```  
   
-##  <a name="op_at"></a>valarray::Operator]  
+##  <a name="op_at"></a>  valarray::Operator]  
  Vrátí odkaz na element nebo má hodnotu na zadaný index nebo podmnožinu zadaný.  
   
 ```  
@@ -1189,14 +1192,14 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
  Odkaz na element nebo má hodnotu na zadaný index nebo podmnožinu zadaný.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor člen je přetížen zajistit několik způsobů, jak vybrat pořadí prvků z těch, které řídí  *\**  **to**. První skupinu pět operátory členy fungovat ve spojení s různými přetížení [operátor =](#op_eq) (a dalšími přiřazení operátory) umožňuje selektivní nahrazení (řezů) řízené sekvenci. Vybrané elementy musí existovat.  
+ Operátor člen je přetížen zajistit několik způsobů, jak vybrat pořadí prvků z těch, které řídí *\****to**. První skupinu pět operátory členy fungovat ve spojení s různými přetížení [operátor =](#op_eq) (a dalšími přiřazení operátory) umožňuje selektivní nahrazení (řezů) řízené sekvenci. Vybrané elementy musí existovat.  
   
  Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definován jako 1 nebo 2, Chyba za běhu dochází, pokud budete chtít přístup k elementu mimo hranice valarray –.  V tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md) Další informace.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklady pro [slice::slice](../standard-library/slice-class.md#slice) a [gslice::gslice](../standard-library/gslice-class.md#gslice) příklad toho, jak deklarace a používání operátor.  
   
-##  <a name="op_xor_eq"></a>valarray::Operator ^ =  
+##  <a name="op_xor_eq"></a>  valarray::Operator ^ =  
  Získá element-wise exkluzivní logický operátor or ( **XOR**) z pole s zadaný valarray – nebo hodnota typu prvku.  
   
 ```  
@@ -1265,7 +1268,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 *\  
 ```  
   
-##  <a name="op_or_eq"></a>valarray::Operator &#124; =  
+##  <a name="op_or_eq"></a>  valarray::Operator &#124; =  
  Získá bitové hodnotě `OR` elementů v pole s odpovídající elementů v zadané valarray – nebo s hodnotou typu prvku.  
   
 ```  
@@ -1339,7 +1342,7 @@ The element-by-element result of the logical OR
 *\  
 ```  
   
-##  <a name="op_dtor"></a>valarray::Operator ~  
+##  <a name="op_dtor"></a>  valarray::Operator ~  
  Unární operátor, který získá bitové hodnotě **není** hodnoty každého prvku valarray –.  
   
 ```  
@@ -1430,7 +1433,7 @@ The element-by-element result of adding one
 *\  
 ```  
   
-##  <a name="resize"></a>valarray::Resize  
+##  <a name="resize"></a>  valarray::Resize  
  Počet elementů ve valarray – změny určeného čísla.  
   
 ```  
@@ -1501,7 +1504,7 @@ The number of elements in the resized valarray is: 15.
 *\  
 ```  
   
-##  <a name="shift"></a>valarray::SHIFT  
+##  <a name="shift"></a>  valarray::SHIFT  
  Všechny elementy ve valarray – posune zadaný počet míst.  
   
 ```  
@@ -1571,7 +1574,7 @@ The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 *\  
 ```  
   
-##  <a name="size"></a>valarray::size  
+##  <a name="size"></a>  valarray::size  
  Vyhledá v valarray – počet elementů.  
   
 ```  
@@ -1644,7 +1647,7 @@ The number of elements in the valarray va2 is still: 12.
 *\  
 ```  
   
-##  <a name="sum"></a>valarray::Sum  
+##  <a name="sum"></a>  valarray::Sum  
  Určuje součet všech elementů v valarray – délky nenulové hodnoty.  
   
 ```  
@@ -1690,7 +1693,7 @@ The sum of elements in the valarray is: 45.
 *\  
 ```  
   
-##  <a name="swap"></a>valarray::swap  
+##  <a name="swap"></a>  valarray::swap  
  Výměny dva elementy `valarray`s.  
   
 ```  
@@ -1706,7 +1709,7 @@ void swap(valarray& right);
 ### <a name="remarks"></a>Poznámky  
  Členská funkce prohození řízené pořadí mezi `*this` a `right`. Dělá to tak konstantní včas, vyvolá nedocházelo k výjimkám a ho by způsobila neplatnost žádné odkazy, ukazatele nebo iterátory, které určit elementů ve dvou řízené pořadí.  
   
-##  <a name="valarray"></a>valarray::valarray  
+##  <a name="valarray"></a>  valarray::valarray  
  Valarray – určité velikosti nebo u elementů na konkrétní hodnoty, nebo jako kopii jiného valarray – nebo podmnožinu jiné valarray – vytvoří.  
   
 ```  
@@ -1836,7 +1839,7 @@ int main()
 The operand valarray va is:( 0 2 2 2 2 2 2 2 2 2 )The new valarray initialized from the slice is vaSlice =va[slice( 2, 4, 3)] = ( 0 0 0 )1 2 3 4  
 ```  
   
-##  <a name="value_type"></a>valarray::value_type  
+##  <a name="value_type"></a>  valarray::value_type  
  Typ, který představuje typ elementu uložené v valarray –.  
   
 ```  

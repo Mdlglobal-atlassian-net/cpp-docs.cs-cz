@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_per_thread
 - allocators/stdext::sync_per_thread::allocate
 - allocators/stdext::sync_per_thread::deallocate
 - allocators/stdext::sync_per_thread::equals
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::sync_per_thread
 - stdext::sync_per_thread [C++], allocate
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f0c3e4a2b35ee0d5581320aea7eff47c9bae3e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f5ddaee26ba4a28a50920a4b71f91e284356b40d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="syncperthread-class"></a>sync_per_thread – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) poskytuje objekt samostatné mezipaměti každé vlákno.  
@@ -54,7 +57,7 @@ class sync_per_thread
 |||  
 |-|-|  
 |[allocate](#allocate)|Přiděluje blok paměti.|  
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
+|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -62,7 +65,7 @@ class sync_per_thread
   
  **Namespace:** stdext –  
   
-##  <a name="allocate"></a>sync_per_thread::allocate  
+##  <a name="allocate"></a>  sync_per_thread::allocate  
  Přiděluje blok paměti.  
   
 ```
@@ -78,7 +81,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Poznámky  
  Členská funkce vrátí výsledek volání `cache::allocate(count)` na objekt mezipaměti, které patří do aktuální vlákno. Pokud byl přidělen žádný objekt mezipaměti pro aktuální vlákno, nejprve přiděluje jeden.  
   
-##  <a name="deallocate"></a>sync_per_thread::deallocate  
+##  <a name="deallocate"></a>  sync_per_thread::deallocate  
  Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.  
   
 ```
@@ -95,7 +98,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Poznámky  
  Volání členských funkcí `deallocate` na objekt mezipaměti, které patří do aktuální vlákno. Pokud byl přidělen žádný objekt mezipaměti pro aktuální vlákno, nejprve přiděluje jeden.  
   
-##  <a name="equals"></a>sync_per_thread::Equals  
+##  <a name="equals"></a>  sync_per_thread::Equals  
  Porovná dva mezipamětí rovnosti.  
   
 ```
@@ -110,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 |`Other`|Objekt mezipaměti pro porovnání rovnosti.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `false`Pokud byl přidělen žádný objekt mezipaměti pro tento objekt nebo pro `Other` v aktuální vlákno. V opačném případě vrátí výsledek použití `operator==` na dva objekty mezipaměti.  
+ `false` Pokud byl přidělen žádný objekt mezipaměti pro tento objekt nebo pro `Other` v aktuální vlákno. V opačném případě vrátí výsledek použití `operator==` na dva objekty mezipaměti.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [\<alokátorů >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

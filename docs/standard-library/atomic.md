@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -53,18 +54,20 @@ f1_keywords:
 - atomic/std::atomic_int8_t
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd543003e7edba4e1766efc11670fd6e505820bb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 Definuje třídy a třídy šablony sloužící k vytvoření typy, které podporují atomické operací.  
@@ -106,7 +109,7 @@ Definuje třídy a třídy šablony sloužící k vytvoření typy, které podpo
   
  Pro každou z celočíselných typů neexistuje odpovídající atomic typ s názvem, který spravuje objekt integrální typy. Každý `atomic_integral` typ má stejnou sadu členské funkce jako odpovídající instance `atomic<T>` a mohou být předána do žádné třetí atomic funkcí.  
   
-|`atomic_integral`Typ|Integrální typ.|`atomic_is_lock_free`– Makro|  
+|`atomic_integral` Typ|Integrální typ.|`atomic_is_lock_free` – Makro|  
 |----------------------------|-------------------|---------------------------------|  
 |`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|  
 |`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|  
@@ -169,42 +172,42 @@ Definuje třídy a třídy šablony sloužící k vytvoření typy, které podpo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[memory_order – výčet](../standard-library/atomic-enums.md#memory_order_enum)|Poskytuje symbolické názvy pro operace synchronizace v umístění v paměti. Tyto operace ovlivňují, jak budou zobrazeny v jiném přiřazení v jedno vlákno.|  
+|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Poskytuje symbolické názvy pro operace synchronizace v umístění v paměti. Tyto operace ovlivňují, jak budou zobrazeny v jiném přiřazení v jedno vlákno.|  
   
 ## <a name="functions"></a>Funkce  
  V následujícím seznamu funkcí, které nekončí v `_explicit` mít sémantika odpovídající `_explicit`kromě toho, že mají implicitní [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argumenty `memory_order_seq_cst`.  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong –](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Provede *atomic porovnání a exchange* operaci.|  
-|[atomic_compare_exchange_strong_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Provede *atomic porovnání a exchange* operaci.|  
-|[atomic_compare_exchange_weak –](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Provede *weak atomic porovnat a exchange* operaci.|  
-|[atomic_compare_exchange_weak_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Provede *weak atomic porovnat a exchange* operaci.|  
-|[atomic_exchange –](../standard-library/atomic-functions.md#atomic_exchange)|Nahradí hodnotu uložené.|  
-|[atomic_exchange_explicit –](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Nahradí hodnotu uložené.|  
-|[atomic_fetch_add –](../standard-library/atomic-functions.md#atomic_fetch_add)|Přidá zadanou hodnotu do existující uložené hodnoty.|  
-|[atomic_fetch_add_explicit –](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Přidá zadanou hodnotu do existující uložené hodnoty.|  
-|[atomic_fetch_and –](../standard-library/atomic-functions.md#atomic_fetch_and)|Provede bitové `and` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_fetch_and_explicit –](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Provede bitové `and` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_fetch_or –](../standard-library/atomic-functions.md#atomic_fetch_or)|Provede bitové `or` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_fetch_or_explicit –](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Provede bitové `or` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_fetch_sub –](../standard-library/atomic-functions.md#atomic_fetch_sub)|Odečte zadanou hodnotu z existující uložené hodnoty.|  
-|[atomic_fetch_sub_explicit –](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odečte zadanou hodnotu z existující uložené hodnoty.|  
-|[atomic_fetch_xor –](../standard-library/atomic-functions.md#atomic_fetch_xor)|Provede bitové `exclusive or` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_fetch_xor_explicit –](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Provede bitové `exclusive or` na zadanou hodnotu a existující uložené hodnoty.|  
-|[atomic_flag_clear –](../standard-library/atomic-functions.md#atomic_flag_clear)|Nastaví příznak `atomic_flag` do objektu `false`.|  
-|[atomic_flag_clear_explicit –](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Nastaví příznak `atomic_flag` do objektu `false`.|  
-|[atomic_flag_test_and_set –](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Nastaví příznak `atomic_flag` do objektu `true`.|  
-|[atomic_flag_test_and_set_explicit –](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Nastaví příznak `atomic_flag` do objektu `true`.|  
-|[atomic_init –](../standard-library/atomic-functions.md#atomic_init)|Nastaví hodnotu uloženou v `atomic` objektu.|  
-|[atomic_is_lock_free –](../standard-library/atomic-functions.md#atomic_is_lock_free)|Určuje, zda jsou atomické operací na zadaný objekt bez zámku.|  
-|[atomic_load –](../standard-library/atomic-functions.md#atomic_load)|Atomicky načte hodnotu.|  
-|[atomic_load_explicit –](../standard-library/atomic-functions.md#atomic_load_explicit)|Atomicky načte hodnotu.|  
-|[atomic_signal_fence –](../standard-library/atomic-functions.md#atomic_signal_fence)|Funguje jako *ochranná* , vytváří paměti řazení mezi ochranné v volání vláken, která má obslužné rutiny signál provést ve stejném vlákně.|  
-|[atomic_store –](../standard-library/atomic-functions.md#atomic_store)|Atomicky ukládá hodnotu.|  
-|[atomic_store_explicit –](../standard-library/atomic-functions.md#atomic_store_explicit)|Atomicky ukládá hodnotu.|  
-|[atomic_thread_fence –](../standard-library/atomic-functions.md#atomic_thread_fence)|Funguje jako *ochranná* , vytváří řazení požadavky s ohledem na ostatní ochranné paměti.|  
-|[kill_dependency –](../standard-library/atomic-functions.md#kill_dependency)|Dělí řetězec možných závislostí.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Provede *atomic porovnání a exchange* operaci.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Provede *atomic porovnání a exchange* operaci.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Provede *weak atomic porovnat a exchange* operaci.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Provede *weak atomic porovnat a exchange* operaci.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Nahradí hodnotu uložené.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Nahradí hodnotu uložené.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Přidá zadanou hodnotu do existující uložené hodnoty.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Přidá zadanou hodnotu do existující uložené hodnoty.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Provede bitové `and` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Provede bitové `and` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Provede bitové `or` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Provede bitové `or` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Odečte zadanou hodnotu z existující uložené hodnoty.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odečte zadanou hodnotu z existující uložené hodnoty.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Provede bitové `exclusive or` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Provede bitové `exclusive or` na zadanou hodnotu a existující uložené hodnoty.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Nastaví příznak `atomic_flag` do objektu `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Nastaví příznak `atomic_flag` do objektu `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Nastaví příznak `atomic_flag` do objektu `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Nastaví příznak `atomic_flag` do objektu `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Nastaví hodnotu uloženou v `atomic` objektu.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Určuje, zda jsou atomické operací na zadaný objekt bez zámku.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Atomicky načte hodnotu.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Atomicky načte hodnotu.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Funguje jako *ochranná* , vytváří paměti řazení mezi ochranné v volání vláken, která má obslužné rutiny signál provést ve stejném vlákně.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Atomicky ukládá hodnotu.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Atomicky ukládá hodnotu.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Funguje jako *ochranná* , vytváří řazení požadavky s ohledem na ostatní ochranné paměti.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Dělí řetězec možných závislostí.|  
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   

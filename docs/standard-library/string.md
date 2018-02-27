@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::<string>
 - <string>
-dev_langs: C++
-helpviewer_keywords: string header
+dev_langs:
+- C++
+helpviewer_keywords:
+- string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20447d439f0db2d49fe0d9c168a01ee1ca613c79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablony.  
@@ -55,30 +59,30 @@ Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablon
   
 |||  
 |-|-|  
-|[operátor +](../standard-library/string-operators.md#op_add)|Zřetězí dva objekty řetězce.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Zřetězí dva objekty řetězce.|  
 |[operator!=](../standard-library/string-operators.md#op_neq)|Testy, pokud řetězec objekt na levé straně operátoru není stejný jako řetězec objekt na pravé straně.|  
-|[Operator ==](../standard-library/string-operators.md#op_eq_eq)|Testy, pokud řetězec objekt na levé straně operátoru rovná řetězec objekt na pravé straně.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testy, pokud řetězec objekt na levé straně operátoru rovná řetězec objekt na pravé straně.|  
 |[operátor <](../standard-library/string-operators.md#op_lt)|Testuje, pokud objekt na levé straně operátoru řetězce je menší než na objekt řetězce na pravé straně.|  
-|[Operator < =](../standard-library/string-operators.md#op_lt_eq)|Pokud řetězec objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt řetězce na pravé straně.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Pokud řetězec objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt řetězce na pravé straně.|  
 |[operátor <\<](../standard-library/string-operators.md#op_lt_lt)|Funkce šablony, která vloží řetězec do výstupního datového proudu.|  
-|[operátor >](../standard-library/string-operators.md#op_gt)|Testy, pokud je řetězec objekt na levé straně operátoru větší než na objekt řetězce na pravé straně.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Testy, pokud je řetězec objekt na levé straně operátoru větší než na objekt řetězce na pravé straně.|  
 |[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testy, pokud je řetězec objekt na levé straně operátoru větší než nebo rovna hodnotě řetězec objekt na pravé straně.|  
-|[operátor >>](../standard-library/string-operators.md#op_gt_gt)|Funkce šablony, která extrahuje řetězec ze vstupního datového proudu.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Funkce šablony, která extrahuje řetězec ze vstupního datového proudu.|  
   
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon  
   
 |||  
 |-|-|  
 |[swap](../standard-library/string-functions.md#swap)|Výměny pole znaků dva řetězce.|  
-|[stod –](../standard-library/string-functions.md#stod)|Převede posloupnost znaků pro`double.`|  
-|[stof –](../standard-library/string-functions.md#stof)|Převede posloupnost znaků do `float`.|  
-|[stoi –](../standard-library/string-functions.md#stoi)|Převede posloupnost znaků na celé číslo.|  
+|[stod –](../standard-library/string-functions.md#stod)|Převede posloupnost znaků pro `double.`|  
+|[stof](../standard-library/string-functions.md#stof)|Převede posloupnost znaků do `float`.|  
+|[stoi](../standard-library/string-functions.md#stoi)|Převede posloupnost znaků na celé číslo.|  
 |[stold –](../standard-library/string-functions.md#stold)|Převede posloupnost znaků do `long double`.|  
 |[stoll –](../standard-library/string-functions.md#stoll)|Převede posloupnost znaků do `long long`.|  
 |[stoul –](../standard-library/string-functions.md#stoul)|Převede posloupnost znaků do `unsigned long`.|  
 |[stoull –](../standard-library/string-functions.md#stoull)|Převede posloupnost znaků do `unsigned long long`.|  
-|[to_string –](../standard-library/string-functions.md#to_string)|Převede hodnotu na `string`.|  
-|[to_wstring –](../standard-library/string-functions.md#to_wstring)|Převede hodnotu na široké `string`.|  
+|[to_string](../standard-library/string-functions.md#to_string)|Převede hodnotu na `string`.|  
+|[to_wstring](../standard-library/string-functions.md#to_wstring)|Převede hodnotu na široké `string`.|  
   
 ### <a name="functions"></a>Funkce  
   
@@ -97,7 +101,7 @@ Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablon
   
 |||  
 |-|-|  
-|[char_traits –\<char > – Struktura](../standard-library/char-traits-char-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char`.|  
+|[char_traits\<char> Struct](../standard-library/char-traits-char-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char`.|  
 |[char_traits<wchar_t> – struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `wchar_t`.|  
 |[char_traits<char16_t> – struktura](../standard-library/char-traits-char16-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char16_t`.|  
 |[char_traits<char32_t> – struktura](../standard-library/char-traits-char32-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char32_t`.|  

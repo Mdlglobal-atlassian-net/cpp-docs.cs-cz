@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k nejvyšší element některé základní typ kontejneru, který je vždycky na největší nebo nejvyšší prioritou. Nové prvky lze přidat do priority_queue a nejvyšší element priority_queue může být prověřovány nebo odebrat.  
@@ -55,8 +58,8 @@ class priority_queue
  `Container`  
  Typ základního kontejneru použít k implementaci priority_queue.  
   
- *Porovnání*  
- Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v priority_queue. Tento argument je volitelný a binární predikát **menší***\<***typename** *kontejneru***:: value_type**  *>*  je výchozí hodnota.  
+ *Compare*  
+ Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v priority_queue. Tento argument je volitelný a binární predikát **menší***\<***typename** *kontejneru***:: value_type*** >* je výchozí hodnota.  
   
 ## <a name="remarks"></a>Poznámky  
  Elementy třídy **typ** stanovené v šabloně první parametr objekt fronty jsou shodné s [value_type](#value_type) a musí shodovat s typem elementu v základní třídě kontejneru **Kontejneru** stanoveno druhý parametr šablony. **Typu** musí být přiřaditelný, takže je možné zkopírovat objekty daného typu a přiřadit hodnoty proměnné daného typu.  
@@ -85,8 +88,8 @@ class priority_queue
   
 |||  
 |-|-|  
-|[container_type –](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit podle `priority_queue`.|  
-|[size_type –](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `priority_queue`.|  
+|[container_type](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit podle `priority_queue`.|  
+|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `priority_queue`.|  
 |[value_type](#value_type)|Typ, který reprezentuje typ objektu uložené jako element v `priority_queue`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
@@ -94,17 +97,17 @@ class priority_queue
 |||  
 |-|-|  
 |[prázdný](#empty)|Pokud testy `priority_queue` je prázdný.|  
-|[POP](#pop)|Odebere největší elementu `priority_queue` z první pozici.|  
+|[pop](#pop)|Odebere největší elementu `priority_queue` z první pozici.|  
 |[push](#push)|Přidá element do fronty priority na základě priority element ze operátor <.|  
-|[velikost](#size)|Vrátí počet prvků v `priority_queue`.|  
-|[horní](#top)|Vrátí const odkaz na element největší v horní části `priority_queue`.|  
+|[Velikost](#size)|Vrátí počet prvků v `priority_queue`.|  
+|[Horní](#top)|Vrátí const odkaz na element největší v horní části `priority_queue`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<fronty >  
   
  **Namespace:** – std  
   
-##  <a name="container_type"></a>priority_queue::container_type  
+##  <a name="container_type"></a>  priority_queue::container_type  
  Typ, který poskytuje základní kontejner, aby se přizpůsobit.  
   
 ```  
@@ -119,7 +122,7 @@ typedef Container container_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [priority_queue](#priority_queue) příklad toho, jak deklarace a používání `container_type`.  
   
-##  <a name="empty"></a>priority_queue::Empty  
+##  <a name="empty"></a>  priority_queue::Empty  
  Testy, pokud priority_queue je prázdný.  
   
 ```  
@@ -163,7 +166,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="pop"></a>priority_queue::POP  
+##  <a name="pop"></a>  priority_queue::POP  
  Odebere první pozici největší elementu priority_queue.  
   
 ```  
@@ -217,7 +220,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="priority_queue"></a>priority_queue::priority_queue  
+##  <a name="priority_queue"></a>  priority_queue::priority_queue  
  Vytvoří priority_queue, který je prázdný nebo který je kopií rozsahu základní kontejnerového objektu nebo jiné priority_queue.  
   
 ```  
@@ -373,7 +376,7 @@ int main( )
 }  
 ```  
   
-##  <a name="push"></a>priority_queue::push  
+##  <a name="push"></a>  priority_queue::push  
  Přidá element do fronty priority na základě priority element ze operátor <.  
   
 ```  
@@ -419,7 +422,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="size"></a>priority_queue::size  
+##  <a name="size"></a>  priority_queue::size  
  Vrátí počet prvků priority_queue.  
   
 ```  
@@ -458,7 +461,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="size_type"></a>priority_queue::size_type  
+##  <a name="size_type"></a>  priority_queue::size_type  
  Typ celé číslo bez znaménka, která představuje počet elementů ve priority_queue.  
   
 ```  
@@ -471,7 +474,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`.  
   
-##  <a name="top"></a>priority_queue::TOP  
+##  <a name="top"></a>  priority_queue::TOP  
  Vrátí const odkaz na element největší v horní části priority_queue.  
   
 ```  
@@ -516,7 +519,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="value_type"></a>priority_queue::value_type  
+##  <a name="value_type"></a>  priority_queue::value_type  
  Typ, který představuje typ objektu uložené jako element v priority_queue.  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -14,19 +15,22 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], duration
-ms.workload: cplusplus
-ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], duration
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 742c6acf9f404275fbf9c74a55abd661224d5bc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="duration-class"></a>duration – třída
 Popisuje typ, který obsahuje *časový interval*, který je uplynulý čas mezi dvěma body čas.  
@@ -64,10 +68,10 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[počet](#count)|Vrátí počet počtu taktů v časovém intervalu.|  
-|[maximální počet](#max)|Statické. Vrátí maximální povolená hodnota parametru šablony `Ref`.|  
-|[min.](#min)|Statické. Vrátí nejnižší povolená hodnota parametru šablony `Ref`.|  
-|[nula.](#zero)|Statické. V důsledku toho vrátí `Rep`(0).|  
+|[Počet](#count)|Vrátí počet počtu taktů v časovém intervalu.|  
+|[max](#max)|Statické. Vrátí maximální povolená hodnota parametru šablony `Ref`.|  
+|[min](#min)|Statické. Vrátí nejnižší povolená hodnota parametru šablony `Ref`.|  
+|[Nula.](#zero)|Statické. V důsledku toho vrátí `Rep`(0).|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -76,11 +80,11 @@ class duration <duration<Rep, Period1>, Period2>;
 |[DURATION::Operator-](#operator-)|Vrátí kopii `duration` objekt společně s počet posunut značek.|  
 |[DURATION::Operator--](#operator--)|Snižuje počet uložených značek.|  
 |[DURATION::Operator =](#op_eq)|Snižuje počet uložených značek modulo zadanou hodnotou.|  
-|[DURATION::Operator * =](#op_star_eq)|Vynásobí počet uložených značek zadanou hodnotou.|  
+|[duration::operator*=](#op_star_eq)|Vynásobí počet uložených značek zadanou hodnotou.|  
 |[DURATION::Operator / =](#op_div_eq)|Rozdělí počet uložených značek podle značek počtu zadané `duration` objektu.|  
 |[DURATION::Operator +](#op_add)|Vrátí `*this`.|  
 |[DURATION::Operator ++](#op_add_add)|Zvýší počet uložených značek.|  
-|[DURATION::Operator +=](#op_add_eq)|Přidá značek počet zadané `duration` objekt, který má počet uložených značek.|  
+|[duration::operator+=](#op_add_eq)|Přidá značek počet zadané `duration` objekt, který má počet uložených značek.|  
 |[DURATION::Operator-=](#operator-_eq)|Odečítá od značek počet zadané `duration` objekt z počet uložených značek.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -88,7 +92,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
  **Namespace:** std::chrono  
   
-##  <a name="count"></a>DURATION::Count –  
+##  <a name="count"></a>  DURATION::Count –  
  Načte počet taktů v časovém intervalu.  
   
 ```  
@@ -98,7 +102,7 @@ constexpr Rep count() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet počtu taktů v časovém intervalu.  
   
-##  <a name="duration"></a>DURATION::Duration – konstruktor  
+##  <a name="duration"></a>  DURATION::Duration – konstruktor  
  Vytvoří `duration` objektu.  
   
 ```  
@@ -138,7 +142,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
   
  Pokud je vyvolané žádné přetečení při převodu a `treat_as_floating_point<rep>` *platí*, nebo obojí `ratio_divide<Period2, period>::den` rovná 1 a `treat_as_floating_point<Rep2>` *obsahuje false*, třetí konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).  
   
-##  <a name="max"></a>DURATION::max –  
+##  <a name="max"></a>  DURATION::max –  
  Statickou metodu, která vrací horní mez pro hodnoty typu parametru šablony `Ref`.  
   
 ```  
@@ -148,7 +152,7 @@ static constexpr duration max();
 ### <a name="return-value"></a>Návratová hodnota  
  V důsledku toho vrátí `duration(duration_values<rep>::max())`.  
   
-##  <a name="min"></a>DURATION::min –  
+##  <a name="min"></a>  DURATION::min –  
  Statickou metodu, která vrátí dolní mez pro hodnoty typu parametru šablony `Ref`.  
   
 ```  
@@ -158,14 +162,14 @@ static constexpr duration min();
 ### <a name="return-value"></a>Návratová hodnota  
  V důsledku toho vrátí `duration(duration_values<rep>::min())`.  
   
-##  <a name="duration__operator-"></a>DURATION::Operator-  
+##  <a name="duration__operator-"></a>  DURATION::Operator-  
  Vrátí kopii `duration` objekt společně s počet posunut značek.  
   
 ```  
 constexpr duration operator-() const;
 ```  
   
-##  <a name="duration__operator--"></a>DURATION::Operator--  
+##  <a name="duration__operator--"></a>  DURATION::Operator--  
  Snižuje počet uložených značek.  
   
 ```  
@@ -179,7 +183,7 @@ duration operator--(int);
   
  Druhá metoda vrátí kopii `*this` , se provádí před snížení.  
   
-##  <a name="op_eq"></a>DURATION::Operator =  
+##  <a name="op_eq"></a>  DURATION::Operator =  
  Snižuje počet uložených značek modulo zadanou hodnotou.  
   
 ```  
@@ -195,7 +199,7 @@ duration& operator%=(const duration& Div);
 ### <a name="return-value"></a>Návratová hodnota  
  `duration` Objektu po modulo operace provádí.  
   
-##  <a name="op_star_eq"></a>DURATION::Operator * =  
+##  <a name="op_star_eq"></a>  DURATION::Operator * =  
  Vynásobí počet uložených značek zadanou hodnotou.  
   
 ```  
@@ -209,7 +213,7 @@ duration& operator*=(const rep& Mult);
 ### <a name="return-value"></a>Návratová hodnota  
  `duration` Objektu po provedení násobení.  
   
-##  <a name="op_div_eq"></a>DURATION::Operator / =  
+##  <a name="op_div_eq"></a>  DURATION::Operator / =  
  Vydělí počet uložených značek zadanou hodnotou.  
   
 ```  
@@ -223,14 +227,14 @@ duration& operator/=(const rep& Div);
 ### <a name="return-value"></a>Návratová hodnota  
  `duration` Objektu po dělení.  
   
-##  <a name="op_add"></a>DURATION::Operator +  
+##  <a name="op_add"></a>  DURATION::Operator +  
  Vrátí `*this`.  
   
 ```  
 constexpr duration operator+() const;
 ```  
   
-##  <a name="op_add_add"></a>DURATION::Operator ++  
+##  <a name="op_add_add"></a>  DURATION::Operator ++  
  Zvýší počet uložených značek.  
   
 ```  
@@ -244,7 +248,7 @@ duration operator++(int);
   
  Druhá metoda vrátí kopii `*this` , se provádí před přírůstku.  
   
-##  <a name="op_add_eq"></a>DURATION::Operator +=  
+##  <a name="op_add_eq"></a>  DURATION::Operator +=  
  Přidá značek počet zadané `duration` objekt, který má počet uložených značek.  
   
 ```  
@@ -258,7 +262,7 @@ duration& operator+=(const duration& Dur);
 ### <a name="return-value"></a>Návratová hodnota  
  `duration` Objektu po přidání provádí.  
   
-##  <a name="duration__operator-_eq"></a>DURATION::Operator-=  
+##  <a name="duration__operator-_eq"></a>  DURATION::Operator-=  
  Odečítá od značek počet zadané `duration` objekt z počet uložených značek.  
   
 ```  
@@ -272,14 +276,14 @@ duration& operator-=(const duration& Dur);
 ### <a name="return-value"></a>Návratová hodnota  
  `duration` Objektu po provedení odčítání.  
   
-##  <a name="zero"></a>DURATION::Zero –  
+##  <a name="zero"></a>  DURATION::Zero –  
  Vrátí `duration(duration_values<rep>::zero())`.  
   
 ```  
 static constexpr duration zero();
 ```  
   
-##  <a name="op_mod_eq"></a>DURATION::Operator mod =  
+##  <a name="op_mod_eq"></a>  DURATION::Operator mod =  
  Snižuje počet uložených značek modulo Div nebo Div.count().  
   
 ```  
@@ -295,5 +299,5 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [\<typu chrono >](../standard-library/chrono.md)   
+ [\<chrono>](../standard-library/chrono.md)   
  [duration_values – struktura](../standard-library/duration-values-structure.md)

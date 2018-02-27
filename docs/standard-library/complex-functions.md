@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::abs
 - xcomplex/std::acos
@@ -28,7 +28,7 @@ f1_keywords:
 - xcomplex/std::tan
 - xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
-caps.latest.revision: "14"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -49,23 +49,23 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: aee4e410bae6ea3fc3726ac29c250e2339e0fcb0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;komplexní&gt; funkce
 ||||  
 |-|-|-|  
 |[Abs](#abs)|[arg](#arg)|[conj](#conj)|
-|[Cos](#cos)|[COSH](#cosh)|[Exp](#exp)|
-|[Imag](#imag)|[protokolu](#log)|[LOG10](#log10)|
-|[Norm](#norm)|[polar](#polar)|[Pow](#pow)|
-|[skutečné](#real)|[Sin](#sin)|[SINH](#sinh)|
-|[Sqrt](#sqrt)|[Tan](#tan)|[TANH](#tanh)|  
+|[Cos](#cos)|[cosh](#cosh)|[exp](#exp)|
+|[imag](#imag)|[log](#log)|[log10](#log10)|
+|[Norm](#norm)|[polar](#polar)|[pow](#pow)|
+|[real](#real)|[sin](#sin)|[sinh](#sinh)|
+|[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="abs"></a>Abs  
+##  <a name="abs"></a>  abs  
  Vypočítá numerického zbytku komplexního čísla.  
   
 ```  
@@ -148,7 +148,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="arg"></a>arg  
+##  <a name="arg"></a>  Arg  
  Extrahuje argument z komplexního čísla.  
   
 ```  
@@ -231,7 +231,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="conj"></a>conj  
+##  <a name="conj"></a>  conj  
  Vrátí sdružené komplexního čísla.  
   
 ```  
@@ -302,7 +302,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25  
 ```  
   
-##  <a name="cos"></a>Cos  
+##  <a name="cos"></a>  Cos  
  Vrací kosinus komplexního čísla.  
   
 ```  
@@ -389,7 +389,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)  
 ```  
   
-##  <a name="cosh"></a>COSH  
+##  <a name="cosh"></a>  COSH  
  Vrátí hyperbolický kosinus čísla komplexní.  
   
 ```  
@@ -476,7 +476,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)  
 ```  
   
-##  <a name="exp"></a>Exp  
+##  <a name="exp"></a>  Exp  
  Vrátí hodnotu exponenciálního komplexního čísla.  
   
 ```  
@@ -544,7 +544,7 @@ int main() {
 }  
 ```  
   
-##  <a name="imag"></a>Imag  
+##  <a name="imag"></a>  Imag  
  Extrahuje komponentu pomyslná komplexního čísla.  
   
 ```  
@@ -592,7 +592,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="log"></a>protokolu  
+##  <a name="log"></a>  Protokolu  
  Vrátí přirozený logaritmus čísla komplexní.  
   
 ```  
@@ -658,7 +658,7 @@ int main() {
 }  
 ```  
   
-##  <a name="log10"></a>LOG10  
+##  <a name="log10"></a>  LOG10  
  Vrátí logaritmus o základu 10 komplexního čísla.  
   
 ```  
@@ -724,7 +724,7 @@ int main() {
 }  
 ```  
   
-##  <a name="norm"></a>Norm  
+##  <a name="norm"></a>  Norm  
  Extrahuje norm komplexního čísla.  
   
 ```  
@@ -803,7 +803,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.  
 ```  
   
-##  <a name="polar"></a>polar  
+##  <a name="polar"></a>  Polar  
  Vrátí číslo komplexní, který odpovídá zadané numerického zbytku a argument, kartézských formuláře.  
   
 ```  
@@ -876,7 +876,7 @@ Argument of c2 is recovered from c2 using:
  arg ( c2 ) = 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="pow"></a>Pow  
+##  <a name="pow"></a>  Pow  
  Vyhodnotí komplexního čísla získala při vyvolání základ, který je komplexní číslo na mocninu vyjádřenou druhým číslem komplexní.  
   
 ```  
@@ -1017,7 +1017,7 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.  
 ```  
   
-##  <a name="real"></a>skutečné  
+##  <a name="real"></a>  skutečné  
  Extrahuje komponentu skutečné komplexního čísla.  
   
 ```  
@@ -1065,7 +1065,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="sin"></a>Sin  
+##  <a name="sin"></a>  Sin  
  Vrátí sinus komplexního čísla.  
   
 ```  
@@ -1152,7 +1152,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)  
 ```  
   
-##  <a name="sinh"></a>SINH  
+##  <a name="sinh"></a>  SINH  
  Vrátí hyperbolický sinus čísla komplexní.  
   
 ```  
@@ -1239,7 +1239,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)  
 ```  
   
-##  <a name="sqrt"></a>Sqrt  
+##  <a name="sqrt"></a>  Sqrt  
  Vypočítá druhou odmocninu komplexního čísla.  
   
 ```  
@@ -1312,7 +1312,7 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
  which is 45 degrees.  
 ```  
   
-##  <a name="tan"></a>Tan  
+##  <a name="tan"></a> Tan  
  Vrátí tangens čísla komplexní.  
   
 ```  
@@ -1397,7 +1397,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)  
 ```  
   
-##  <a name="tanh"></a>TANH  
+##  <a name="tanh"></a>  TANH  
  Vrátí hyperbolický tangens čísla komplexní.  
   
 ```  
@@ -1483,5 +1483,5 @@ The complex components tanh (vci), where abs (vci) = 1
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [\<komplexní >](../standard-library/complex.md)
+ [\<complex>](../standard-library/complex.md)
 

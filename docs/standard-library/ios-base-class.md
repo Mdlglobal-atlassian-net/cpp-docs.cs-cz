@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::ios_base
 - ios/std::ios_base::event_callback
@@ -60,7 +61,8 @@ f1_keywords:
 - xiosbase/std::ios_base::unsetf
 - xiosbase/std::ios_base::width
 - xiosbase/std::ios_base::xalloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ios_base [C++]
 - std::ios_base [C++], event_callback
@@ -115,16 +117,17 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d1182cdbaf33b2ab09ecbf133df52186246fbf5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iosbase-class"></a>ios_base – třída
 Třída popisuje úložiště a členské funkce společné pro vstupní a výstupní datové proudy, které jsou nezávislé na parametry šablony. (Šablony třídy [basic_ios](../standard-library/basic-ios-class.md) popisuje, co je běžné a závisí na parametry šablony.)  
@@ -149,13 +152,13 @@ Třída popisuje úložiště a členské funkce společné pro vstupní a výst
   
 |||  
 |-|-|  
-|[ios_base –](#ios_base)|Vytvoří `ios_base` objekty.|  
+|[ios_base](#ios_base)|Vytvoří `ios_base` objekty.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[event_callback –](#event_callback)|Popisuje funkce předaný [register_call](#register_callback).|  
+|[event_callback](#event_callback)|Popisuje funkce předaný [register_call](#register_callback).|  
 |[fmtflags –](#fmtflags)|Konstanty k určení vzhledu výstupu.|  
 |[iostate –](#iostate)|Definuje konstanty popisující stav datového proudu.|  
 |[openmode –](#openmode)|Popisuje, jak pracovat s datového proudu.|  
@@ -172,68 +175,68 @@ Třída popisuje úložiště a členské funkce společné pro vstupní a výst
 |||  
 |-|-|  
 |[adjustfield](#fmtflags)|Bitová maska definován jako `internal` &#124; `left` &#124; `right`.|  
-|[aplikace](#openmode)|Určuje, vyhledávání na konec datového proudu před každou vložení.|  
+|[app](#openmode)|Určuje, vyhledávání na konec datového proudu před každou vložení.|  
 |[uje](#openmode)|Určuje, při prvním vytvoření jeho ovládání objekt vyhledávání na konec datového proudu.|  
 |[badbit](#iostate)|Zaznamenává ke ztrátě integrity vyrovnávací paměti datového proudu.|  
 |[basefield](#fmtflags)|Bitová maska definován jako `dec` &#124; `hex` &#124; `oct`.|  
-|[transakce od](#seekdir)|Určuje, vzhledem k začátku pořadí.|  
-|[binární](#openmode)|Určuje, že soubor byste si měli přečíst jako binárního datového proudu, nikoli jako datový proud text.|  
+|[beg](#seekdir)|Určuje, vzhledem k začátku pořadí.|  
+|[Binární](#openmode)|Určuje, že soubor byste si měli přečíst jako binárního datového proudu, nikoli jako datový proud text.|  
 |[boolalpha](#fmtflags)|Určuje vložení nebo extrakce objekty typu `bool` jako názvy (například `true` a `false`) a nikoli jako číselné hodnoty.|  
-|[Měna](#seekdir)|Určuje, vzhledem k aktuální pozici v rámci posloupnosti.|  
+|[cur](#seekdir)|Určuje, vzhledem k aktuální pozici v rámci posloupnosti.|  
 |[DEC](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty ve formátu desetinného čísla.|  
-|[end](#seekdir)|Určuje, vzhledem k konec sekvenci.|  
+|[End](#seekdir)|Určuje, vzhledem k konec sekvenci.|  
 |[eofbit](#iostate)|Zaznamenává end souboru při extrahování z datového proudu.|  
 |[failbit](#iostate)|Zaznamenává selhání platné pole extrahovat z datového proudu.|  
 |[Pevná](#fmtflags)|Určuje vložení hodnot s plovoucí desetinnou čárkou ve formátu s pevnou desetinnou čárkou (s žádné exponentu pole).|  
-|[floatfield](#fmtflags)|Bitová maska definován jako `fixed` &#124;`scientific`|  
+|[floatfield](#fmtflags)|Bitová maska definován jako `fixed` &#124; `scientific`|  
 |[goodbit](#iostate)|Zrušte zaškrtnutí všech stavu bitů.|  
-|[Hex](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty v šestnáctkovém formátu.|  
+|[hex](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty v šestnáctkovém formátu.|  
 |[in](#openmode)|Určuje extrakci z datového proudu.|  
 |[internal](#fmtflags)|Dotyková zařízení šířky pole vložením výplně znaků na bod interní generovaného číselné pole.|  
-|[vlevo](#fmtflags)|Určuje zarovnání doleva.|  
+|[left](#fmtflags)|Určuje zarovnání doleva.|  
 |[OCT](#fmtflags)|Určuje vložení nebo extrakce celočíselné hodnoty ve formátu osmičková.|  
 |[out](#openmode)|Určuje vložení do datového proudu.|  
-|[vpravo](#fmtflags)|Určuje zarovnání doprava.|  
+|[Vpravo](#fmtflags)|Určuje zarovnání doprava.|  
 |[Scientific](#fmtflags)|Určuje vložení hodnot s plovoucí desetinnou čárkou v matematickém formátu (s exponentu pole).|  
 |[showbase](#fmtflags)|Určuje vkládání předponu, která zjistí základní pole generovaný celé číslo.|  
 |[showpoint](#fmtflags)|Určuje nepodmíněné vkládání desetinné čárky v generované pole s plovoucí desetinnou čárkou.|  
 |[showpos](#fmtflags)|Určuje vkládání znaménko plus v nezáporné generovaného číselné pole.|  
 |[skipws](#fmtflags)|Určuje, přeskočení úvodních mezer před určité extrakce.|  
-|[TRUNC](#openmode)|Určuje odstraňuje obsah existující soubor při jeho řízení objektu.|  
+|[trunc](#openmode)|Určuje odstraňuje obsah existující soubor při jeho řízení objektu.|  
 |[unitbuf](#fmtflags)|Příčiny výstupní zapsány po každém vložení.|  
-|[velká písmena](#fmtflags)|Určuje vkládání velkých ekvivalenty malých písmen v určitých vložení.|  
+|[uppercase](#fmtflags)|Určuje vkládání velkých ekvivalenty malých písmen v určitých vložení.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[selhání](#failure)|Třída členů slouží jako základní třída pro všechny výjimky vyvolané – členská funkce [vymazat](../standard-library/basic-ios-class.md#clear) ve třídě šablony [basic_ios](../standard-library/basic-ios-class.md).|  
-|[příznaky](#flags)|Nastaví nebo vrátí aktuální nastavení příznaku.|  
+|[Selhání](#failure)|Třída členů slouží jako základní třída pro všechny výjimky vyvolané – členská funkce [vymazat](../standard-library/basic-ios-class.md#clear) ve třídě šablony [basic_ios](../standard-library/basic-ios-class.md).|  
+|[Příznaky](#flags)|Nastaví nebo vrátí aktuální nastavení příznaku.|  
 |[getloc –](#getloc)|Vrací objekt uložené národního prostředí.|  
-|[imbue –](#imbue)|Změní národní prostředí.|  
+|[imbue](#imbue)|Změní národní prostředí.|  
 |[Init](#init)|Standardní iostream objekty, když se vytvoří.|  
 |[iword –](#iword)|Přiřadí hodnotu ukládaly jako `iword`.|  
 |[přesnost](#precision)|Určuje počet číslic, které chcete zobrazit v číslo s plovoucí desetinnou čárkou.|  
-|[pword –](#pword)|Přiřadí hodnotu ukládaly jako `pword`.|  
-|[register_callback –](#register_callback)|Určuje funkce zpětného volání.|  
-|[SETF](#setf)|Nastaví zadaný příznaků.|  
-|[sync_with_stdio –](#sync_with_stdio)|Zajišťuje, že operace běhové knihovny jazyka C a iostream vyskytnout v pořadí, ve kterém se zobrazují ve zdrojovém kódu.|  
-|[unsetf –](#unsetf)|Způsobí, že zadaný příznaky tak, aby být vypnutý.|  
-|[Šířka](#width)|Nastaví délku do výstupního datového proudu.|  
-|[xalloc –](#xalloc)|Určuje, že proměnná musí být součástí datového proudu.|  
+|[pword](#pword)|Přiřadí hodnotu ukládaly jako `pword`.|  
+|[register_callback](#register_callback)|Určuje funkce zpětného volání.|  
+|[setf](#setf)|Nastaví zadaný příznaků.|  
+|[sync_with_stdio](#sync_with_stdio)|Zajišťuje, že operace běhové knihovny jazyka C a iostream vyskytnout v pořadí, ve kterém se zobrazují ve zdrojovém kódu.|  
+|[unsetf](#unsetf)|Způsobí, že zadaný příznaky tak, aby být vypnutý.|  
+|[width](#width)|Nastaví délku do výstupního datového proudu.|  
+|[xalloc](#xalloc)|Určuje, že proměnná musí být součástí datového proudu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](#op_eq)|Operátor přiřazení pro `ios_base` objekty.|  
+|[operator=](#op_eq)|Operátor přiřazení pro `ios_base` objekty.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<ios >  
   
  **Namespace:** – std  
   
-##  <a name="event"></a>ios_base::Event  
+##  <a name="event"></a>  ios_base::Event  
  Určuje typy událostí.  
   
 ```  
@@ -256,7 +259,7 @@ enum event {
   
   V tématu [register_callback –](#register_callback) příklad.  
   
-##  <a name="event_callback"></a>ios_base::event_callback  
+##  <a name="event_callback"></a>  ios_base::event_callback  
 
  Popisuje funkce předaný [register_call](#register_callback).  
   
@@ -268,13 +271,13 @@ typedef void (__cdecl *event_callback)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *_STEJNÉ O*  
+ *_E*  
  [Událostí](#event).  
   
  `_Base`  
  Datový proud, ve kterém byla volána události.  
   
- *POTVRZUJ_I*  
+ *_I*  
  Uživatelem definované číslo.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -285,7 +288,7 @@ typedef void (__cdecl *event_callback)(
   
   V tématu [register_call](#register_callback) pro příklad, který používá `event_callback`.  
   
-##  <a name="failure"></a>ios_base::failure  
+##  <a name="failure"></a>  ios_base::failure  
   
  Třída `failure` definuje základní třídu pro typy jako výjimky, vyvolané funkce ve všech objektů `iostreams` knihovny, aby oznamovaly chyby zjistil během operace s datovými proudy vyrovnávací paměti.  
   
@@ -337,7 +340,7 @@ int main ( )
 Caught an exception: ios_base::failbit set  
 ```  
   
-##  <a name="flags"></a>ios_base::Flags  
+##  <a name="flags"></a>  ios_base::Flags  
   
  Nastaví nebo vrátí aktuální nastavení příznaku.  
   
@@ -382,7 +385,7 @@ int main ( )
 16896  
 ```  
   
-##  <a name="fmtflags"></a>ios_base::fmtflags  
+##  <a name="fmtflags"></a>  ios_base::fmtflags  
   
  Konstanty k určení vzhledu výstupu.  
   
@@ -450,15 +453,15 @@ public:
   
  Kromě toho několik užitečné hodnoty jsou:  
   
-- `adjustfield`, bitová maska definován jako `internal` &#124; `left` &#124;`right`  
+- `adjustfield`, bitová maska definován jako `internal` &#124; `left` &#124; `right`  
   
-- `basefield`, definován jako `dec` &#124; `hex` &#124;`oct`  
+- `basefield`, definován jako `dec` &#124; `hex` &#124; `oct`  
   
-- `floatfield`, definován jako `fixed` &#124;`scientific`  
+- `floatfield`, definován jako `fixed` &#124; `scientific`  
   
  Příklady funkcí, které upravují tyto formátu příznaky, najdete v části [ \<iomanip – >](../standard-library/iomanip.md).  
   
-##  <a name="getloc"></a>ios_base::getloc  
+##  <a name="getloc"></a>  ios_base::getloc  
   
  Vrací objekt uložené národního prostředí.  
   
@@ -488,7 +491,7 @@ int main( )
 C  
 ```  
   
-##  <a name="imbue"></a>ios_base::imbue  
+##  <a name="imbue"></a>  ios_base::imbue  
 
  Změní národní prostředí.  
   
@@ -512,7 +515,7 @@ locale imbue(const locale& _Loc);
   
   V tématu [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) pro ukázku.  
   
-##  <a name="init"></a>ios_base::init  
+##  <a name="init"></a>  ios_base::init  
   
  Standardní iostream objekty, když se vytvoří.  
   
@@ -524,7 +527,7 @@ class Init { };
   
  Vnořené třídy popisuje objekt, jehož konstrukce zajistí, že objekty standardní iostreams jsou správně strukturován, i před spuštěním konstruktoru pro libovolný objekt statické.  
   
-##  <a name="ios_base"></a>ios_base::ios_base  
+##  <a name="ios_base"></a>  ios_base::ios_base  
   
  Vytvoří ios_base objekty.  
   
@@ -536,7 +539,7 @@ ios_base();
   
  V konstruktoru (chráněné) neprovede žádnou akci. Novější volání **basic_ios::**[init](../standard-library/basic-ios-class.md#init) musí inicializovat objekt, než může být bezpečně zničena. Proto je pouze bezpečné používání ios_base – třída jako základní třída pro třídu šablony [basic_ios](../standard-library/basic-ios-class.md).  
   
-##  <a name="iostate"></a>ios_base::iostate  
+##  <a name="iostate"></a>  ios_base::iostate  
   
  Typ konstanty, které popisují stav datového proudu.  
   
@@ -564,7 +567,7 @@ public:
   
  Kromě toho je užitečné hodnota `goodbit`, kde jsou nastaveny žádné z výše uvedených bits ( `goodbit` představuje záruku nula).  
   
-##  <a name="iword"></a>ios_base::iword  
+##  <a name="iword"></a>  ios_base::iword  
   
  Přiřadí hodnotu ukládaly jako `iword`.  
   
@@ -588,7 +591,7 @@ long& iword(int idx);
   
   V tématu [xalloc –](#xalloc) pro ukázkové použití `iword`.  
   
-##  <a name="openmode"></a>ios_base::openmode  
+##  <a name="openmode"></a>  ios_base::openmode  
   
  Popisuje, jak pracovat s datového proudu.  
   
@@ -638,7 +641,7 @@ int main ( )
 }    
 ```  
   
-##  <a name="op_eq"></a>ios_base::Operator =  
+##  <a name="op_eq"></a>  ios_base::Operator =  
 
  Operátor přiřazení pro ios_base objekty.  
   
@@ -660,7 +663,7 @@ ios_base& operator=(const ios_base& right);
   
  Tento operátor. je používán pouze třídy odvozené od třídy `ios_base`.  
   
-##  <a name="precision"></a>ios_base::Precision  
+##  <a name="precision"></a>  ios_base::Precision  
   
  Určuje počet číslic, které chcete zobrazit v číslo s plovoucí desetinnou čárkou.  
   
@@ -705,7 +708,7 @@ int main( )
 31.312  
 ```  
   
-##  <a name="pword"></a>ios_base::pword  
+##  <a name="pword"></a>  ios_base::pword  
   
  Přiřadí hodnotu ukládaly jako `pword`.  
   
@@ -729,7 +732,7 @@ void *& pword(int _Idx);
   
   V tématu [xalloc –](#xalloc) příklad použití `pword`.  
   
-##  <a name="register_callback"></a>ios_base::register_callback  
+##  <a name="register_callback"></a>  ios_base::register_callback  
   
  Určuje funkce zpětného volání.  
   
@@ -836,7 +839,7 @@ in callback2
 an erase event  
 ```  
  
-##  <a name="seekdir"></a>ios_base::seekdir  
+##  <a name="seekdir"></a> ios_base::seekdir  
   
 Určuje počáteční bod pro posunutí operace.  
   
@@ -885,7 +888,7 @@ int main ( )
 }  
 ```  
   
-##  <a name="setf"></a>ios_base::SETF  
+##  <a name="setf"></a> ios_base::SETF  
   
 Nastaví zadaný příznaků.  
 
@@ -935,7 +938,7 @@ int main( )
 }  
 ```  
  
-##  <a name="sync_with_stdio"></a>ios_base::sync_with_stdio  
+##  <a name="sync_with_stdio"></a> ios_base::sync_with_stdio  
   
 Zajišťuje, že operace běhové knihovny jazyka C a iostream vyskytnout v pořadí, ve kterém se zobrazují ve zdrojovém kódu.  
   
@@ -955,7 +958,7 @@ static bool sync_with_stdio(
 ### <a name="remarks"></a>Poznámky  
     The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.  
  
-##  <a name="unsetf"></a>ios_base::unsetf  
+##  <a name="unsetf"></a> ios_base::unsetf  
   
 Způsobí, že zadaný příznaky tak, aby být vypnutý.  
   
@@ -975,7 +978,7 @@ void unsetf(
 ### <a name="example"></a>Příklad  
     See [ios_base::setf](#setf) for a sample of using `unsetf`.  
  
-##  <a name="width"></a>ios_base::Width  
+##  <a name="width"></a> ios_base::Width  
   
 Nastaví délku do výstupního datového proudu.  
   
@@ -1019,7 +1022,7 @@ int main( ) {
 0  
 ```  
  
-##  <a name="xalloc"></a>ios_base::xalloc  
+##  <a name="xalloc"></a> ios_base::xalloc  
   
     Specifies that a variable is part of the stream.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _eof
+ms.topic: reference
+apiname:
+- _eof
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _eof
-dev_langs: C++
+f1_keywords:
+- _eof
+dev_langs:
+- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d4e53bbed704b0acb1ad613bb05a0653ea305ba2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 106f673f5058043dfe0443970e9d946315c91d6d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="eof"></a>_eof
 Testy pro konec souboru (EOF).  
@@ -58,7 +63,7 @@ int _eof(
  Popisovače souborů na otevření souboru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_eof`Pokud aktuální pozice konce souboru, nebo 0, pokud není, vrátí hodnotu 1. Vrácená hodnota -1 označuje chybu; v takovém případě je volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EBADF`, což naznačuje popisovač souboru je neplatný.  
+ `_eof` Pokud aktuální pozice konce souboru, nebo 0, pokud není, vrátí hodnotu 1. Vrácená hodnota -1 označuje chybu; v takovém případě je volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění `errno` je nastaven na `EBADF`, což naznačuje popisovač souboru je neplatný.  
   
 ## <a name="remarks"></a>Poznámky  
  `_eof` Funkce určuje, zda konec souboru přidružené `fd` byl dosažen.  
@@ -67,7 +72,7 @@ int _eof(
   
 |Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |--------------|---------------------|---------------------|  
-|`_eof`|\<IO.h >|\<errno.h >|  
+|`_eof`|\<io.h>|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -126,7 +131,7 @@ Number of bytes read = 29
 ## <a name="see-also"></a>Viz také  
  [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)   
  [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
- [clearerr –](../../c-runtime-library/reference/clearerr.md)   
+ [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [feof –](../../c-runtime-library/reference/feof.md)   
  [ferror –](../../c-runtime-library/reference/ferror.md)   
  [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

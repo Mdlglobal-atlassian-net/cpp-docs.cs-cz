@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_shared
 - allocators/stdext::sync_shared::allocate
 - allocators/stdext::sync_shared::deallocate
 - allocators/stdext::sync_shared::equals
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::sync_shared
 - stdext::sync_shared [C++], allocate
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff7c75428fbe63a2ec9183c3d909d22e9f38703e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aea3f774ecfff03e3c9738cf948f95d76773f063
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="syncshared-class"></a>sync_shared – třída
 Popisuje [filtr synchronizace](../standard-library/allocators-header.md) používající mutex k řízení přístupu k mezipaměti objekt, který sdílí všechny alokátorů.  
@@ -51,7 +54,7 @@ class sync_shared
 |||  
 |-|-|  
 |[allocate](#allocate)|Přiděluje blok paměti.|  
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
+|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
 |[equals](#equals)|Porovná dva mezipamětí rovnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -59,7 +62,7 @@ class sync_shared
   
  **Namespace:** stdext –  
   
-##  <a name="allocate"></a>sync_shared::allocate  
+##  <a name="allocate"></a>  sync_shared::allocate  
  Přiděluje blok paměti.  
   
 ```
@@ -76,9 +79,9 @@ void *allocate(std::size_t count);
  Ukazatel na objekt přidělená.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce zamkne mutex, volání `cache.allocate(count)`, odemkne mutex a vrátí výsledek starší volání `cache.allocate(count)`. `cache`představuje aktuální objekt mezipaměti.  
+ Členská funkce zamkne mutex, volání `cache.allocate(count)`, odemkne mutex a vrátí výsledek starší volání `cache.allocate(count)`. `cache` představuje aktuální objekt mezipaměti.  
   
-##  <a name="deallocate"></a>sync_shared::deallocate  
+##  <a name="deallocate"></a>  sync_shared::deallocate  
  Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.  
   
 ```
@@ -95,7 +98,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen zamkne mutex, volání `cache.deallocate(ptr, count)`, kde `cache` představuje objekt mezipaměti a poté odemkne mutex.  
   
-##  <a name="equals"></a>sync_shared::Equals  
+##  <a name="equals"></a>  sync_shared::equals  
  Porovná dva mezipamětí rovnosti.  
   
 ```
@@ -110,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 |`Other`|Mezipaměť pro porovnání rovnosti.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud výsledek `cache.equals(Other.cache)`, kde `cache` představuje objekt mezipaměti, je `true`, jinak hodnota `false`.  
+ `true` Pokud výsledek `cache.equals(Other.cache)`, kde `cache` představuje objekt mezipaměti, je `true`, jinak hodnota `false`.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [\<alokátorů >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

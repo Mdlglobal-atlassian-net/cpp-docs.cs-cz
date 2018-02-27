@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - abs
 - _abs64
@@ -35,7 +36,8 @@ f1_keywords:
 - llabs
 - math/llabs
 - cmath/abs
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - absolute values
 - abs function
@@ -43,18 +45,19 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1dc1e7532c715a045c2b76c3be2ef915f82693a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="abs-labs-llabs-abs64"></a>Abs, labs, llabs –, _abs64 –
+# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 Vypočítá absolutní hodnota argumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -99,7 +102,7 @@ __int64 _abs64(
 ## <a name="remarks"></a>Poznámky  
  Protože C++ umožňuje, aby přetížení, můžete volat přetížení `abs` , přijmout a vrátit `long`, `long long`, `float`, `double`, a `long double` hodnoty. Tato přetížení, které jsou definovány v \<cmath – > záhlaví. V programu C `abs` vždy provede a vrátí typ int.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Protože rozsahu záporné celých čísel, které může být reprezentovaný pomocí libovolného integrální typu je větší než rozsahu kladných celých čísel, které může být reprezentovaný pomocí tohoto typu, je možné zadat argument na tyto funkce, které nelze převést. Pokud se absolutní hodnota argumentu nemůže být reprezentovaná návratový typ `abs` funkce vrátí hodnotu argumentu beze změny. Konkrétně `abs(INT_MIN)` vrátí `INT_MIN`, `labs(LONG_MIN)` vrátí `LONG_MIN`, `llabs(LLONG_MIN)` vrátí `LLONG_MIN`, a `_abs64(_I64_MIN)` vrátí `_I64_MIN`. To znamená, že `abs` funkce nelze používat zaručit kladnou hodnotu.  
   
@@ -110,7 +113,7 @@ __int64 _abs64(
 |Rutina|Požadovaná hlavička C|Požadovaná hlavička v C++|  
 |-------------|-----------------------|---------------------------|  
 |`abs`, `labs`, `llabs`|\<Math.h > nebo \<stdlib.h >|\<cmath – >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|  
-|`_abs64`|\<stdlib.h >|\<cstdlib – > nebo \<stdlib.h >|  
+|`_abs64`|\<stdlib.h>|\<cstdlib – > nebo \<stdlib.h >|  
   
  Používat přetížené verze `abs` v jazyce C++, musíte zahrnout \<cmath – > záhlaví.  
   
@@ -174,6 +177,6 @@ Microsoft implementation-specific results:
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../../c-runtime-library/data-conversion.md)   
  [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [_cabs –](../../c-runtime-library/reference/cabs.md)   
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
  [fabs, fabsf –, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [imaxabs](../../c-runtime-library/reference/imaxabs.md)

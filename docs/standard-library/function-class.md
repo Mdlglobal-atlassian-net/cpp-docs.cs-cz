@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::function
 - functional/std::function::result_type
@@ -16,7 +17,8 @@ f1_keywords:
 - functional/std::function::target_type
 - functional/std::function::operator unspecified
 - functional/std::function::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::function [C++]
 - std::function [C++], result_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4dfc5366adece188fa80786ddee2dfb926ae5e3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="function-class"></a>function – třída
 Obálka volatelná aplikacemi objektu.  
@@ -99,13 +102,13 @@ public:
   
  Některé funkce člen trvat operand názvy požadované cílový objekt. Můžete určit takový operand několika způsoby:  
   
- `fn`--objekt s `fn`; po volání `function` objektu obsahuje kopii`fn`  
+ `fn` --objekt s `fn`; po volání `function` objektu obsahuje kopii `fn`  
   
- `fnref`--s objekt s názvem podle `fnref.get()`; po volání `function` má odkaz na objekt`fnref.get()`  
+ `fnref` --s objekt s názvem podle `fnref.get()`; po volání `function` má odkaz na objekt `fnref.get()`  
   
- `right`--s objekt, pokud existuje, ukládaná společností `function` objektu`right`  
+ `right` --s objekt, pokud existuje, ukládaná společností `function` objektu `right`  
   
- `npc`– ukazatel s hodnotou null; Po volání `function` objekt je prázdný  
+ `npc` – ukazatel s hodnotou null; Po volání `function` objekt je prázdný  
   
  Ve všech případech `INVOKE(f, t1, t2, ..., tN)`, kde `f` je možné volat objekt a `t1, t2, ..., tN` jsou hodnoty lvalue typů `T1, T2, ..., TN` , musí být ve správném formátu a pokud `Ret` není void, převést na `Ret`.  
   
@@ -115,7 +118,7 @@ public:
   
 |||  
 |-|-|  
-|[funkce](#function)|Vytvoří obálku, který je prázdný nebo ukládá objekt s libovolného typu s pevnou podpis.|  
+|[Funkce](#function)|Vytvoří obálku, který je prázdný nebo ukládá objekt s libovolného typu s pevnou podpis.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -127,9 +130,9 @@ public:
   
 |||  
 |-|-|  
-|[přiřazení](#assign)|Objekt s přiřadí k tomuto objektu funkce.|  
+|[assign](#assign)|Objekt s přiřadí k tomuto objektu funkce.|  
 |[swap](#swap)|Prohodit s dva objekty.|  
-|[cíl](#target)|Testů, pokud je uložen s objektu je možné volat jako zadaný.|  
+|[target](#target)|Testů, pokud je uložen s objektu je možné volat jako zadaný.|  
 |[target_type](#target_type)|Získá typ informace s objektu.|  
   
 ### <a name="operators"></a>Operátory  
@@ -145,7 +148,7 @@ public:
   
  **Namespace:** – std  
   
-##  <a name="assign"></a>Function::Assign  
+##  <a name="assign"></a>  Function::Assign  
  Objekt s přiřadí k tomuto objektu funkce.  
   
 ```  
@@ -173,7 +176,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Poznámky  
  Členské funkce každý nahradit `callable object` držené `*this` s s objekt předaný jako `operand`. Obě přidělit úložiště s objektem přidělení `Ax`.  
   
-##  <a name="function"></a>Function::Function  
+##  <a name="function"></a>  Function::Function  
  Vytvoří obálku, který je prázdný nebo ukládá objekt s libovolného typu s pevnou podpis.  
   
 ```  
@@ -287,7 +290,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="op_unspecified"></a>Function::Operator neurčené  
+##  <a name="op_unspecified"></a>  Function::Operator neurčené  
  Testy, pokud je uložen s objekt existuje.  
   
 ```  
@@ -327,7 +330,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="op_call"></a>funkce:: Operator() –  
+##  <a name="op_call"></a>  funkce:: Operator() –  
  Volání s objektu.  
   
 ```  
@@ -375,7 +378,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="op_eq"></a>Function::Operator =  
+##  <a name="op_eq"></a>  Function::Operator =  
  Nahradí objekt uložené volatelná aplikacemi.  
   
 ```  
@@ -454,7 +457,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="result_type"></a>Function::result_type  
+##  <a name="result_type"></a>  Function::result_type  
  Návratový typ objektu uložené volatelná aplikacemi.  
   
 ```  
@@ -494,7 +497,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="swap"></a>Function::swap  
+##  <a name="swap"></a>  Function::swap  
  Prohodit s dva objekty.  
   
 ```  
@@ -550,7 +553,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="target"></a>Function::target  
+##  <a name="target"></a>  Function::target  
  Testů, pokud je uložen s objektu je možné volat jako zadaný.  
   
 ```  
@@ -609,7 +612,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="target_type"></a>Function::target_type  
+##  <a name="target_type"></a>  Function::target_type  
  Získá typ informace s objektu.  
   
 ```  
@@ -654,5 +657,5 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [mem_fn –](../standard-library/functional-functions.md#mem_fn)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper – třída](../standard-library/reference-wrapper-class.md)

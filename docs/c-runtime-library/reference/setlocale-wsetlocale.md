@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsetlocale
 - setlocale
@@ -27,7 +28,8 @@ f1_keywords:
 - _wsetlocale
 - _tsetlocale
 - setlocale
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wsetlocale function
 - setlocale function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0610dff5366f72010de965b7b9df0cd4e02c1e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04a391a99f673d02f01d35681b1d375f5db09384
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 Nastaví nebo načte národní prostředí runtime.  
@@ -85,9 +88,9 @@ wchar_t *_wsetlocale(
  Můžete zkopírovat řetězec vrácený `setlocale` obnovit část informací o národním prostředí programu. Globální nebo přístup z více vláken místní úložiště se používá pro řetězec vrácený `setlocale`. Novější volá, aby se `setlocale` přepsat řetězce, který by způsobila neplatnost ukazatele řetězec vrácený starší volání.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `setlocale` funkce nastavit, změnit nebo dotaz na některé nebo všechny informace aktuální národní prostředí programu určeného `locale` a `category`. `locale`odkazuje na polohu (země nebo oblast a jazyk), pro které můžete přizpůsobit některé aspekty vašeho programu. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty. Pokud nastavíte `locale` výchozí řetězec pro jazyk, který má více formulářů, které jsou podporovány ve vašem počítači, měli byste zkontrolovat `setlocale` vrátit hodnotu zobrazíte jazyk, který je v platnosti. Například pokud nastavíte `locale` "čínština" může být návratovou hodnotu "čínština (zjednodušená)" nebo "tradiční čínština".  
+ Použití `setlocale` funkce nastavit, změnit nebo dotaz na některé nebo všechny informace aktuální národní prostředí programu určeného `locale` a `category`. `locale` odkazuje na polohu (země nebo oblast a jazyk), pro které můžete přizpůsobit některé aspekty vašeho programu. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty. Pokud nastavíte `locale` výchozí řetězec pro jazyk, který má více formulářů, které jsou podporovány ve vašem počítači, měli byste zkontrolovat `setlocale` vrátit hodnotu zobrazíte jazyk, který je v platnosti. Například pokud nastavíte `locale` "čínština" může být návratovou hodnotu "čínština (zjednodušená)" nebo "tradiční čínština".  
   
- `_wsetlocale`široká charakterová verze `setlocale`; `locale` argument a vrátí hodnotu `_wsetlocale` jsou široká charakterová řetězce. `_wsetlocale`a `setlocale` chovat jinak shodně.  
+ `_wsetlocale` široká charakterová verze `setlocale`; `locale` argument a vrátí hodnotu `_wsetlocale` jsou široká charakterová řetězce. `_wsetlocale` a `setlocale` chovat jinak shodně.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
   
@@ -312,17 +315,17 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
   
 ## <a name="see-also"></a>Viz také  
  [Názvy národních prostředí, jazyků a řetězce zemí/oblastí](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [_configthreadlocale –](../../c-runtime-library/reference/configthreadlocale.md)   
- [_create_locale –, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+ [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md)   
+ [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
  [Národní prostředí](../../c-runtime-library/locale.md)   
  [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_mbclen – mblen –, _mblen_l –](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [strlen –, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)   
- [mbstowcs –, _mbstowcs_l –](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc –, _mbtowc_l –](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [_setmbcp –](../../c-runtime-library/reference/setmbcp.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
  [STRFTIME –, wcsftime –, _strftime_l –, _wcsftime_l –](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm –, wcsxfrm –, _strxfrm_l –, _wcsxfrm_l –](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
- [wcstombs –, _wcstombs_l –](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

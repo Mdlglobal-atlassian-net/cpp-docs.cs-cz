@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry – třída
 `network_link_registry` Abstraktní základní třída spravuje propojení mezi zdrojovými a cílovými bloky.  
@@ -59,9 +63,9 @@ class network_link_registry;
 |Název|Popis|  
 |----------|-----------------|  
 |[add](#add)|Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.|  
-|[začít](#begin)|Při přepsání v odvozené třídě vrátí iterovat na prvním elementem v `network_link_registry` objektu.|  
-|[obsahuje](#contains)|Při přepisu v odvozené třídě, vyhledá `network_link_registry` objekt pro zadaný blok.|  
-|[počet](#count)|Při přepsání v odvozené třídě vrátí počet položek v `network_link_registry` objektu.|  
+|[Začátek](#begin)|Při přepsání v odvozené třídě vrátí iterovat na prvním elementem v `network_link_registry` objektu.|  
+|[Obsahuje](#contains)|Při přepisu v odvozené třídě, vyhledá `network_link_registry` objekt pro zadaný blok.|  
+|[Počet](#count)|Při přepsání v odvozené třídě vrátí počet položek v `network_link_registry` objektu.|  
 |[remove](#remove)|Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Namespace:** souběžnosti  
   
-##  <a name="add"></a>Přidat 
+##  <a name="add"></a> Přidat 
 
  Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Ukazatel na blok, který se má přidat.  
   
-##  <a name="begin"></a>začít 
+##  <a name="begin"></a> Začátek 
 
  Při přepsání v odvozené třídě vrátí iterovat na prvním elementem v `network_link_registry` objektu.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Poznámky  
  Je indikován stav end iteraci `NULL` odkaz.  
   
-##  <a name="contains"></a>obsahuje 
+##  <a name="contains"></a> Obsahuje 
 
  Při přepisu v odvozené třídě, vyhledá `network_link_registry` objekt pro zadaný blok.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Ukazatel na blok, který má být vyhledán ve `network_link_registry` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud byla nalezena bloku, `false` jinak.  
+ `true` Pokud byla nalezena bloku, `false` jinak.  
   
-##  <a name="count"></a>počet 
+##  <a name="count"></a> Počet 
 
  Při přepsání v odvozené třídě vrátí počet položek v `network_link_registry` objektu.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek v `network_link_registry` objektu.  
   
-##  <a name="remove"></a>odebrat 
+##  <a name="remove"></a> Odebrat 
 
  Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  Ukazatel na blok odebrány, pokud nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud byl nalezen, odebrat, odkaz `false` jinak.  
+ `true` Pokud byl nalezen, odebrat, odkaz `false` jinak.  
   
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   

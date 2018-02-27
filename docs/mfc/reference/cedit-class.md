@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -54,7 +55,8 @@ f1_keywords:
 - AFXWIN/CEdit::SetTabStops
 - AFXWIN/CEdit::ShowBalloonTip
 - AFXWIN/CEdit::Undo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CEdit [MFC], CEdit
 - CEdit [MFC], CanUndo
@@ -101,16 +103,17 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4418f20b267218b761dd6637762df1b420e9ac6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cedit-class"></a>CEdit – třída
 Poskytuje funkce ovládacích prvků pro úpravy Windows.  
@@ -184,19 +187,19 @@ class CEdit : public CWnd
   
  Konstrukce může být jednoduchý proces v třídy odvozené od `CEdit`. Zápis konstruktoru odvozené třídy a volání **vytvořit** z v konstruktoru.  
   
- `CEdit`dědí důležité funkce z `CWnd`. Nastavit a načíst text ze `CEdit` objektu, použijte `CWnd` členské funkce [SetWindowText](cwnd-class.md#setwindowtext) a [getwindowtext –](cwnd-class.md#getwindowtext), které sada nebo get celý obsah upravíte řídit, i když ho je Víceřádkový ovládacího prvku. Řádky textu v ovládacím prvku Víceřádkový jsou odděleny sekvence znaků '\r\n'. Navíc pokud ovládací prvek upravit je Víceřádkový, získání a nastavení součástí ovládacího prvku textu voláním `CEdit` členské funkce [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel)a [ ReplaceSel](#replacesel).  
+ `CEdit` dědí důležité funkce z `CWnd`. Nastavit a načíst text ze `CEdit` objektu, použijte `CWnd` členské funkce [SetWindowText](cwnd-class.md#setwindowtext) a [getwindowtext –](cwnd-class.md#getwindowtext), které sada nebo get celý obsah upravíte řídit, i když ho je Víceřádkový ovládacího prvku. Řádky textu v ovládacím prvku Víceřádkový jsou odděleny sekvence znaků '\r\n'. Navíc pokud ovládací prvek upravit je Víceřádkový, získání a nastavení součástí ovládacího prvku textu voláním `CEdit` členské funkce [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel)a [ ReplaceSel](#replacesel).  
   
  Pokud chcete pro zpracování zpráv s oznámením Windows posílá nadřazený prvek úprav (obvykle třída odvozená z `CDialog`), přidejte map zpráv položku a obslužné rutiny zpráv členské funkce do nadřazené třídy pro každou zprávu.  
   
  Každá položka mapování zpráv má následující podobu:  
   
- **ON_**oznámení **(** *id, memberFxn***)**  
+ **ON_**oznámení **(** *id, memberFxn ***)**  
   
  kde `id` Určuje ID okno podřízených ovládacích prvků pro úpravy odesílání oznámení, a `memberFxn` je název nadřazeného člena funkce napsané pro zpracování oznámení.  
   
  Prototyp funkce nadřazeného objektu je následující:  
   
- **afx_msg** void memberFxn **();**  
+ **afx_msg** void memberFxn **( );**  
   
  Následuje seznam možných položkách map zpráv a popis v případech, ve kterých se mají být odeslány do nadřazené:  
   
@@ -242,7 +245,7 @@ class CEdit : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>  CEdit::CanUndo  
  Volání této funkce k určení, pokud poslední operaci úpravy mohou být vráceny zpět.  
   
 ```  
@@ -258,7 +261,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::Undo](#undo).  
   
-##  <a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>  CEdit::CEdit  
  Vytvoří `CEdit` objektu.  
   
 ```  
@@ -271,7 +274,7 @@ CEdit();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>  CEdit::CharFromPos  
  Volání této funkce k načtení řádků od nuly a znak indexy znaku nejbližší Zadaný bod v tomto `CEdit` ovládací prvek  
   
 ```  
@@ -295,7 +298,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>  CEdit::Clear  
  Volání této funkce pro odstranění (Vymazat) aktuální výběr (pokud existuje) v textové pole.  
   
 ```  
@@ -312,7 +315,7 @@ void Clear();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>  CEdit::Copy  
  Volání této funkce do coy aktuální výběr (pokud existuje) v ovládacím prvku upravit do schránky v **CF_TEXT** formátu.  
   
 ```  
@@ -325,7 +328,7 @@ void Copy();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="create"></a>CEdit::Create  
+##  <a name="create"></a>  CEdit::Create  
  Vytvoří ovládacího prvku úprav Windows a připojí jej k `CEdit` objektu.  
   
 ```  
@@ -338,7 +341,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  `dwStyle`  
- Určuje styl ovládací prvek upravit. Použít libovolnou kombinaci [styly pro úpravy](edit-styles.md) do ovládacího prvku.  
+ Určuje styl ovládací prvek upravit. Použít libovolnou kombinaci [styly pro úpravy](styles-used-by-mfc.md#edit-styles) do ovládacího prvku.  
   
  `rect`  
  Určuje velikost a umístění textové pole. Může být `CRect` objekt nebo `RECT` struktury.  
@@ -359,7 +362,7 @@ virtual BOOL Create(
   
  Tyto zprávy jsou zpracovávány ve výchozím nastavení [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), a [ongetminmaxinfo –](cwnd-class.md#ongetminmaxinfo) členské funkce v `CWnd` základní třídy. Rozšíření zpracování zpráv výchozí, odvození třídy z `CEdit`, přidejte mapy zpráv do nové třídy a přepsat výše členské funkce obslužné rutiny zpráv. Přepsání `OnCreate`, například k provedení potřebných inicializace pro novou třídu.  
   
- Použít následující [styly oken](window-styles.md) na ovládací prvek upravit.  
+ Použít následující [styly oken](styles-used-by-mfc.md#window-styles) na ovládací prvek upravit.  
   
 - **Ws_child –** vždy  
   
@@ -374,7 +377,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>  CEdit::Cut  
  Volání této funkce odstranit (vyjmutí) (pokud existuje) aktuální výběr v ovládacím prvku úpravy a zkopírujte odstraněný text do schránky v **CF_TEXT** formátu.  
   
 ```  
@@ -391,7 +394,7 @@ void Cut();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer  
  Volání této funkce resetování (Vymazat) příznak zpět ovládacích prvků pro úpravy.  
   
 ```  
@@ -408,7 +411,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>  CEdit::FmtLines  
  Volání této funkce můžete nastavit zahrnutí znaků logicky koncem řádku zapnout nebo vypnout v rámci více řádků textové pole.  
   
 ```  
@@ -427,14 +430,14 @@ BOOL FmtLines(BOOL bAddEOL);
   
  Systém Windows bude reagovat, jen pokud `CEdit` objektu je ovládací prvek upravit více řádků.  
   
- `FmtLines`ovlivňuje pouze vyrovnávací paměti vrácené [gethandle –](#gethandle) a text vrácený [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Nemá žádný vliv na zobrazení textu v rámci ovládací prvek upravit.  
+ `FmtLines` ovlivňuje pouze vyrovnávací paměti vrácené [gethandle –](#gethandle) a text vrácený [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Nemá žádný vliv na zobrazení textu v rámci ovládací prvek upravit.  
   
  Další informace najdete v tématu [EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>  CEdit::GetCueBanner  
  Načte text, který se zobrazí jako text cue nebo tip v ovládacím prvku upravit, pokud ovládací prvek je prázdný.  
   
 ```  
@@ -446,10 +449,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`lpszText`  
+ [out] `lpszText`  
  Ukazatel na řetězec, který obsahuje cue text.  
   
- [v]`cchText`  
+ [in] `cchText`  
  Počet znaků, které můžou přijímat. Tato hodnota zahrnuje ukončení `NULL` znak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -460,7 +463,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) zprávy, která je popsána v sadě Windows SDK. Další informace najdete v tématu [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) makro.  
   
-##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
  Volání této funkce určete nejhornější viditelné řádku v ovládacím prvku upravit.  
   
 ```  
@@ -476,7 +479,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>  CEdit::GetHandle  
  Volání této funkce pro načtení popisovače paměti aktuálně přidělené pro ovládací prvek upravit více řádků.  
   
 ```  
@@ -501,7 +504,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>  CEdit::GetHighlight  
  Získá indexy první a poslední znak v rozsahu textu, který je označený na aktuální ovládací prvek upravit.  
   
 ```  
@@ -514,16 +517,16 @@ BOOL GetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out]`pichStart`|Index prvního znaku v rozsahu text, který je označený nule.|  
-|[out]`pichEnd`|Poslední znak v rozsahu text, který je označený index počítaný od nuly.|  
+|[out] `pichStart`|Index prvního znaku v rozsahu text, který je označený nule.|  
+|[out] `pichEnd`|Poslední znak v rozsahu text, který je označený index počítaný od nuly.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Volání této funkce člen získat limit text pro tento `CEdit` objektu.  
   
 ```  
@@ -544,7 +547,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>  CEdit::GetLine  
  Volání této funkce pro načtení na řádku textu z ovládacího prvku úprav a umístí jej do `lpszBuffer`.  
   
 ```  
@@ -566,7 +569,7 @@ int GetLine(
  Body do vyrovnávací paměti, která obdrží kopii řádku. První slovo vyrovnávací paměti, musíte zadat maximální počet znaků, které je možné zkopírovat do vyrovnávací paměti.  
   
  `nMaxLength`  
- Určuje maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti. `GetLine`Tato hodnota umístí první slovo `lpszBuffer` před uskutečněním hovoru do systému Windows.  
+ Určuje maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti. `GetLine` Tato hodnota umístí první slovo `lpszBuffer` před uskutečněním hovoru do systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet bajtů ve skutečnosti zkopírovat. Vrácená hodnota je 0, pokud číslo řádku určuje `nIndex` je větší než počet řádků v ovládacím prvku upravit.  
@@ -579,7 +582,7 @@ int GetLine(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::GetLineCount](#getlinecount).  
   
-##  <a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>  CEdit::GetLineCount  
  Volání této funkce se načíst počet řádků v ovládacím prvku upravit více řádků.  
   
 ```  
@@ -590,14 +593,14 @@ int GetLineCount() const;
  Celé číslo obsahující počet řádků v řádku více ovládacích prvků pro úpravy. Pokud nebyl zadán žádný text do textového pole, je vrácenou hodnotu 1.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetLineCount`pouze zpracovává ovládacích prvcích pro úpravy více řádků.  
+ `GetLineCount` pouze zpracovává ovládacích prvcích pro úpravy více řádků.  
   
  Další informace najdete v tématu [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>  CEdit::GetMargins  
  Volání této funkce člen načíst levý a pravý okraj tento ovládací prvek upravit.  
   
 ```  
@@ -618,7 +621,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>  CEdit::GetModify  
  Volání této funkce určete, zda obsah ovládacích prvků pro úpravy byl změněn.  
   
 ```  
@@ -636,7 +639,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar  
  Volání této funkce se načíst heslo znak, který se zobrazí v ovládacím prvku upravit, pokud uživatel zadá text.  
   
 ```  
@@ -654,7 +657,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>  CEdit::GetRect  
  Volání této funkce můžete získat formátování rámeček ovládacích prvků pro úpravy.  
   
 ```  
@@ -675,7 +678,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::LimitText](#limittext).  
   
-##  <a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>  CEdit::GetSel  
  Volání této funkce můžete získat počáteční a koncovou umístění znaku aktuálního výběru (pokud existuje) v ovládacím prvku upravit pomocí návratovou hodnotu nebo parametry.  
   
 ```  
@@ -702,7 +705,7 @@ void GetSel(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip  
  Skryje všechny tipu s přidružené k aktuální ovládací prvek upravit.  
   
 ```  
@@ -710,12 +713,12 @@ BOOL HideBalloonTip();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce odesílá [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>  CEdit::LimitText  
  Volání této funkce můžete omezit délku textu, který může uživatel zadat do ovládací prvek upravit.  
   
 ```  
@@ -737,7 +740,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>  CEdit::LineFromChar  
  Volání této funkce načíst řádek číslo řádku, který obsahuje index zadaný znak.  
   
 ```  
@@ -761,7 +764,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>  CEdit::LineIndex  
  Volání ovládacích prvků pro úpravy této funkci můžete načíst znakový index řádku v rámci více řádků.  
   
 ```  
@@ -785,7 +788,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>  CEdit::LineLength  
  Načte délka řádku v ovládacím prvku upravit.  
   
 ```  
@@ -813,7 +816,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::LineIndex](#lineindex).  
   
-##  <a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>  CEdit::LineScroll  
  Volání ovládacích prvků pro úpravy této funkci můžete posuňte text více řádků.  
   
 ```  
@@ -834,14 +837,14 @@ void LineScroll(
   
  Ovládací prvek upravit neposouvá svisle za poslední řádek textu v textovém poli. Pokud aktuální řádek plus počet řádků určeného `nLines` větší než celkový počet řádků v ovládacím prvku úprav, hodnota se nastaví tak, aby poslední řádek ovládacích prvků pro úpravy je přechod na horní části okna textové pole.  
   
- `LineScroll`slouží k vodorovnému posouvání za jeho poslední znak kterýkoli řádek.  
+ `LineScroll` slouží k vodorovnému posouvání za jeho poslední znak kterýkoli řádek.  
   
  Další informace najdete v tématu [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>  CEdit::Paste  
  Volání této funkce můžete vložit data ze schránky do `CEdit` na pozici kurzoru.  
   
 ```  
@@ -856,7 +859,7 @@ void Paste();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>  CEdit::PosFromChar  
  Volání této funkce se získá pozice (levého horního rohu) daného znaku v rámci to `CEdit` objektu.  
   
 ```  
@@ -881,7 +884,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::LineFromChar](#linefromchar).  
   
-##  <a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>  CEdit::ReplaceSel  
  Volání této funkce nahradit aktuální výběr v ovládacím prvku upravit textem určeným parametrem `lpszNewText`.  
   
 ```  
@@ -905,7 +908,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::LineIndex](#lineindex).  
   
-##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>  CEdit::SetCueBanner  
  Nastaví text, který se zobrazí jako text cue, nebo tip, v upravíte řídit, kdy ovládací prvek je prázdný.  
   
 ```  
@@ -918,10 +921,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszText`  
+ [in] `lpszText`  
  Ukazatel na řetězec, který obsahuje cue k zobrazení v ovládacím prvku upravit.  
   
- [v]`fDrawWhenFocused`  
+ [in] `fDrawWhenFocused`  
  Pokud `false`, Banner informující o cue není vykreslován, když uživatel klikne v ovládacím prvku upravit a bude vybrán ovládacího prvku.  
   
  Pokud `true`, Banner informující o cue vykreslením i v případě, že má právě fokus, ovládacího prvku. Hlavička cue zmizí, když uživatel spustí na typ v ovládacím prvku.  
@@ -929,7 +932,7 @@ BOOL SetCueBanner(
  Výchozí hodnota je `false`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je metoda úspěšná. v opačném případě `false`.  
+ `true` Pokud je metoda úspěšná. v opačném případě `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) zprávy, která je popsána v sadě Windows SDK. Další informace najdete v tématu [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) makro.  
@@ -939,7 +942,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>  CEdit::SetHandle  
  Volání ovládacích prvků pro úpravy této funkce lze nastavit popisovač k místní paměti, který se použije více řádků.  
   
 ```  
@@ -957,7 +960,7 @@ void SetHandle(HLOCAL hBuffer);
   
  Předtím, než aplikaci nastaví nový popisovač paměti, měli používat [gethandle –](#gethandle) – členská funkce se získat popisovač aktuální vyrovnávací paměti a volné této paměti pomocí **LocalFree** funkce systému Windows.  
   
- `SetHandle`Vymaže vrácení zpět vyrovnávací paměti ( [CanUndo](#canundo) – členská funkce vrátí 0) a příznak interní úpravy ( [GetModify](#getmodify) – členská funkce vrátí 0). Bude překreslen okno textové pole.  
+ `SetHandle` Vymaže vrácení zpět vyrovnávací paměti ( [CanUndo](#canundo) – členská funkce vrátí 0) a příznak interní úpravy ( [GetModify](#getmodify) – členská funkce vrátí 0). Bude překreslen okno textové pole.  
   
  Můžete použít tuto funkci člen v ovládacím prvku upravit více řádků v dialogovém okně pouze v případě, že jste vytvořili dialogové okno s **DS_LOCALEDIT** styl nastaven příznak.  
   
@@ -969,7 +972,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>  CEdit::SetHighlight  
  Označuje a rozsah text, který se zobrazí v aktuální ovládacích prvků pro úpravy.  
   
 ```  
@@ -982,13 +985,13 @@ void SetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`ichStart`|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
-|[v]`ichEnd`|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
+|[in] `ichStart`|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
+|[in] `ichEnd`|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Volání této funkce člen se nastavit limit text pro tento `CEdit` objektu.  
   
 ```  
@@ -1011,7 +1014,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>  CEdit::SetMargins  
  Volejte tuto metodu a nastavit levý a pravý okraj tento ovládací prvek upravit.  
   
 ```  
@@ -1037,7 +1040,7 @@ void SetMargins(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>  CEdit::SetModify  
  Volání této funkce, nastavení nebo vymazání příznaku upravené pro ovládací prvek upravit.  
   
 ```  
@@ -1056,7 +1059,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::GetModify](#getmodify).  
   
-##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar  
  Volání této funkce, nastavení nebo odebrání heslo znak zobrazí v ovládacím prvku upravit, pokud uživatel zadá text.  
   
 ```  
@@ -1074,14 +1077,14 @@ void SetPasswordChar(TCHAR ch);
   
  Když `SetPasswordChar` – členská funkce je volána, `CEdit` překreslí všechny viditelné znaky pomocí určeného znaku *ch*.  
   
- Pokud se vytvoří textové pole s [es_password –](edit-styles.md) styl, výchozí znak hesla je nastaven na znak hvězdičky (  **\*** ). Tento styl se odebere, když `SetPasswordChar` je volán s *ch* nastaven na hodnotu 0.  
+ Pokud se vytvoří textové pole s [es_password –](styles-used-by-mfc.md#edit-styles) styl, výchozí znak hesla je nastaven na znak hvězdičky (  **\*** ). Tento styl se odebere, když `SetPasswordChar` je volán s *ch* nastaven na hodnotu 0.  
   
  Další informace najdete v tématu [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>  CEdit::SetReadOnly  
  Volání této funkce lze nastavit jen pro čtení stav ovládacích prvků pro úpravy.  
   
 ```  
@@ -1096,14 +1099,14 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
  Nenulové hodnoty, pokud je operace úspěšná, nebo dojde k 0, pokud se chyba.  
   
 ### <a name="remarks"></a>Poznámky  
- Aktuální nastavení naleznete otestováním [es_readonly –](edit-styles.md) příznak v návratové hodnotě [CWnd::GetStyle](cwnd-class.md#getstyle).  
+ Aktuální nastavení naleznete otestováním [es_readonly –](styles-used-by-mfc.md#edit-styles) příznak v návratové hodnotě [CWnd::GetStyle](cwnd-class.md#getstyle).  
   
  Další informace najdete v tématu [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>  CEdit::SetRect  
  Volejte tuto funkci nastavit dimenze obdélníku pomocí zadaných souřadnic.  
   
 ```  
@@ -1128,7 +1131,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>  CEdit::SetRectNP  
  Volání ovládacích prvků pro úpravy této funkce můžete nastavit formátování obdélník více řádků.  
   
 ```  
@@ -1142,7 +1145,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="remarks"></a>Poznámky  
  Formátování rámeček je limitující rámeček textu, která je nezávislá na velikosti okna textové pole.  
   
- `SetRectNP`je stejný jako `SetRect` člen fungovat s tím rozdílem, že není překreslen okno textové pole.  
+ `SetRectNP` je stejný jako `SetRect` člen fungovat s tím rozdílem, že není překreslen okno textové pole.  
   
  Při prvním vytvoření ovládacího prvku úprav formátování rámeček je stejný jako klientské oblasti okna textové pole. Při volání `SetRectNP` – členská funkce aplikace můžete nastavit formátování obdélníku, větší nebo menší než okno textové pole.  
   
@@ -1155,7 +1158,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::SetRect](#setrect).  
   
-##  <a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>  CEdit::SetSel  
  Volání této funkce můžete vybrat rozsah znaků v ovládacím prvku upravit.  
   
 ```  
@@ -1189,7 +1192,7 @@ void SetSel(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEdit::GetSel](#getsel).  
   
-##  <a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>  CEdit::SetTabStops  
  Volání ovládacích prvků pro úpravy této funkce můžete nastavit zarážky ve více řádků.  
   
 ```  
@@ -1222,14 +1225,14 @@ BOOL SetTabStops(
   
  Tato funkce člen pouze zpracovává ovládacích prvcích pro úpravy více řádků.  
   
- `SetTabStops`není ho překreslit automaticky okna upravit. Pokud změníte tabulátorů pro text již v ovládacím prvku úprav, volání [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) k ho překreslit okna upravit.  
+ `SetTabStops` není ho překreslit automaticky okna upravit. Pokud změníte tabulátorů pro text již v ovládacím prvku úprav, volání [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) k ho překreslit okna upravit.  
   
  Další informace najdete v tématu [EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663) a [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CEditView::SetTabStops](ceditview-class.md#settabstops).  
   
-##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip  
  Zobrazí bublinách tip, který je přidružen aktuální ovládací prvek upravit.  
   
 ```  
@@ -1246,13 +1249,13 @@ BOOL ShowBalloonTip(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pEditBalloonTip`|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
-|[v]`lpszTitle`|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
-|[v]`lpszText`|Ukazatel na řetězec obsahující text tip bubliny.|  
-|[v]`ttiIcon`|`INT` Určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
+|[in] `pEditBalloonTip`|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
+|[in] `lpszTitle`|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
+|[in] `lpszText`|Ukazatel na řetězec obsahující text tip bubliny.|  
+|[in] `ttiIcon`|`INT` Určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce odesílá [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) zprávy, která je popsána v sadě Windows SDK. Další informace najdete v tématu [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) makro.  
@@ -1267,7 +1270,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>  CEdit::Undo  
  Volání této funkce můžete vrátit zpět poslední akci textové pole.  
   
 ```  

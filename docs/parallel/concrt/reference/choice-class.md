@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - choice
 - AGENTS/concurrency::choice
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::choice::unlink_target
 - AGENTS/concurrency::choice::unlink_targets
 - AGENTS/concurrency::choice::value
-dev_langs: C++
-helpviewer_keywords: choice class
+dev_langs:
+- C++
+helpviewer_keywords:
+- choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="choice-class"></a>Třída choice
 A `choice` zasílání zpráv blok je více zdroje, jeden cílový blok, který představuje tok řízení interakci s sadu zdrojů. Výběr bloku bude čekat na některém z více zdrojů pro vytvoření zprávy a rozšíří index zdroje, který vytváří zprávu.  
@@ -65,24 +69,24 @@ class choice: public ISource<size_t>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Volba](#ctor)|Přetíženo. Vytvoří `choice` zasílání zpráv bloku.|  
-|[~ choice – destruktor](#dtor)|Zničí `choice` zasílání zpráv bloku.|  
+|[choice](#ctor)|Přetíženo. Vytvoří `choice` zasílání zpráv bloku.|  
+|[~choice Destructor](#dtor)|Zničí `choice` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[přijmout](#accept)|Přijme zprávu, která byla nabízí to `choice` bloku, přenos vlastnictví volajícímu.|  
-|[acquire_ref –](#acquire_ref)|Získá počet odkazů v tomto `choice` zasílání zpráv bloku, aby se zabránilo odstranění.|  
-|[využívat](#consume)|Využívá zprávu dříve nabízí to `choice` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
-|[has_value –](#has_value)|Kontroluje, zda tato `choice` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
+|[accept](#accept)|Přijme zprávu, která byla nabízí to `choice` bloku, přenos vlastnictví volajícímu.|  
+|[acquire_ref](#acquire_ref)|Získá počet odkazů v tomto `choice` zasílání zpráv bloku, aby se zabránilo odstranění.|  
+|[Využívat](#consume)|Využívá zprávu dříve nabízí to `choice` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
+|[has_value](#has_value)|Kontroluje, zda tato `choice` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
 |[index](#index)|Vrátí index do `tuple` představující prvek ve vybrané `choice` zasílání zpráv bloku.|  
-|[link_target –](#link_target)|Cílový blok odkazuje na tato `choice` zasílání zpráv bloku.|  
-|[verze](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
-|[release_ref –](#release_ref)|Uvolní počet odkazů v tomto `choice` zasílání zpráv bloku.|  
-|[Rezervovat](#reserve)|Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.|  
-|[unlink_target –](#unlink_target)|Zruší propojení cílový blok z tohoto `choice` zasílání zpráv bloku.|  
-|[unlink_targets –](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` zasílání zpráv bloku. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
+|[link_target](#link_target)|Cílový blok odkazuje na tato `choice` zasílání zpráv bloku.|  
+|[release](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
+|[release_ref](#release_ref)|Uvolní počet odkazů v tomto `choice` zasílání zpráv bloku.|  
+|[reserve](#reserve)|Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.|  
+|[unlink_target](#unlink_target)|Zruší propojení cílový blok z tohoto `choice` zasílání zpráv bloku.|  
+|[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` zasílání zpráv bloku. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
 |[value](#value)|Získá zprávu, jejíž index nebyla vybrána pomocí `choice` zasílání zpráv bloku.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -100,7 +104,7 @@ class choice: public ISource<size_t>;
   
  **Namespace:** souběžnosti  
   
-##  <a name="accept"></a>přijmout 
+##  <a name="accept"></a> Přijmout 
 
  Přijme zprávu, která byla nabízí to `choice` bloku, přenos vlastnictví volajícímu.  
   
@@ -120,7 +124,7 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na zprávu, která má volající teď vlastnictví.  
   
-##  <a name="acquire_ref"></a>acquire_ref – 
+##  <a name="acquire_ref"></a> acquire_ref – 
 
  Získá počet odkazů v tomto `choice` zasílání zpráv bloku, aby se zabránilo odstranění.  
   
@@ -135,7 +139,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána `ITarget` objekt, který je propojena k tomuto zdroji během `link_target` metoda.  
   
-##  <a name="ctor"></a>Volba 
+##  <a name="ctor"></a> Volba 
 
  Vytvoří `choice` zasílání zpráv bloku.  
   
@@ -176,7 +180,7 @@ choice(
   
  Přesunutí konstrukce však není provedena v rámci zámku, což znamená, zda je uživatel a ujistěte se, že nejsou žádné úkoly šedé – pohybující se při přesunutí. Jinak hodnota množství RAS situace může nastat, což výjimky nebo nekonzistentním stavu.  
   
-##  <a name="dtor"></a>~ výběru 
+##  <a name="dtor"></a> ~ výběru 
 
  Zničí `choice` zasílání zpráv bloku.  
   
@@ -184,7 +188,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="consume"></a>využívat 
+##  <a name="consume"></a> Využívat 
 
  Využívá zprávu dříve nabízí to `choice` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.  
   
@@ -207,7 +211,7 @@ virtual message<size_t>* consume(
 ### <a name="remarks"></a>Poznámky  
  `consume` Metoda je podobná `accept`, ale musí být vždy uvedeny volání `reserve` vrácená `true`.  
   
-##  <a name="has_value"></a>has_value – 
+##  <a name="has_value"></a> has_value – 
 
  Kontroluje, zda tato `choice` zasílání zpráv bloku byl inicializován s hodnotou ještě.  
   
@@ -218,9 +222,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud bloku byl přijat hodnotu, `false` jinak.  
+ `true` Pokud bloku byl přijat hodnotu, `false` jinak.  
   
-##  <a name="index"></a>index 
+##  <a name="index"></a> Index 
 
  Vrátí index do `tuple` představující prvek ve vybrané `choice` zasílání zpráv bloku.  
   
@@ -234,7 +238,7 @@ size_t index();
 ### <a name="remarks"></a>Poznámky  
  Datovou část zprávy lze extrahovat pomocí `get` metoda.  
   
-##  <a name="link_target"></a>link_target – 
+##  <a name="link_target"></a> link_target – 
 
  Cílový blok odkazuje na tato `choice` zasílání zpráv bloku.  
   
@@ -246,7 +250,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Ukazatel na `ITarget` bloku propojit k tomuto `choice` zasílání zpráv bloku.  
   
-##  <a name="release"></a>verze 
+##  <a name="release"></a> Verze 
 
  Uvolní předchozí rezervace úspěšné zprávy.  
   
@@ -263,7 +267,7 @@ virtual void release(
  `_PTarget`  
  Ukazatel na cílový blok, který volá `release` metoda.  
   
-##  <a name="release_ref"></a>release_ref – 
+##  <a name="release_ref"></a> release_ref 
 
  Uvolní počet odkazů v tomto `choice` zasílání zpráv bloku.  
   
@@ -278,7 +282,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána `ITarget` objekt, který je právě odpojení z tohoto zdroje. Chcete-li uvolnit všechny prostředky, které jsou vyhrazené pro cílový blok je povoleno zdrojového bloku.  
   
-##  <a name="reserve"></a>Rezervovat 
+##  <a name="reserve"></a> Rezervovat 
 
  Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.  
   
@@ -296,12 +300,12 @@ virtual bool reserve(
  Ukazatel na cílový blok, který volá `reserve` metoda.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů, včetně: zpráva již byla vyhrazena nebo přijali jiný cíl, zdroj může odepřít rezervace a tak dále.  
+ `true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů, včetně: zpráva již byla vyhrazena nebo přijali jiný cíl, zdroj může odepřít rezervace a tak dále.  
   
 ### <a name="remarks"></a>Poznámky  
  Po zavolání metody `reserve`, pokud se aktivace podaří, musíte buď zavolat `consume` nebo `release` za účelem trvat nebo uvolňovat u sebe zprávy, v uvedeném pořadí.  
   
-##  <a name="unlink_target"></a>unlink_target – 
+##  <a name="unlink_target"></a> unlink_target – 
 
  Zruší propojení cílový blok z tohoto `choice` zasílání zpráv bloku.  
   
@@ -313,7 +317,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Ukazatel na `ITarget` zrušení propojení z tohoto bloku `choice` zasílání zpráv bloku.  
   
-##  <a name="unlink_targets"></a>unlink_targets – 
+##  <a name="unlink_targets"></a> unlink_targets – 
 
  Zruší všechny cíle z tohoto propojení `choice` zasílání zpráv bloku.  
   
@@ -324,7 +328,7 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda není nutné volat z destruktoru, protože destruktor pro interní `single_assignment` bloku se zrušit propojení správně.  
   
-##  <a name="value"></a>Hodnota 
+##  <a name="value"></a> Hodnota 
 
  Získá zprávu, jejíž index nebyla vybrána pomocí `choice` zasílání zpráv bloku.  
   

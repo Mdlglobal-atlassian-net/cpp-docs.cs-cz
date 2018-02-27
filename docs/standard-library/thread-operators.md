@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::operator!=
 - thread/std::operator&gt;
@@ -14,9 +14,10 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -26,20 +27,20 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: f1a004cca5d43c22b5315c50b61cb0fcafb2cf10
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt-operators"></a>&lt;vlákno&gt; operátory
 ||||  
 |-|-|-|  
-|[Operator! =](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|  
-|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|[operátor&lt;=](#op_lt_eq)|  
-|[Operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|  
+|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|[Operátor&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>operátor&gt;=  
+##  <a name="op_gt_eq"></a>  Operátor&gt;=  
  Určuje, zda jeden `thread::id` je větší než nebo rovna hodnotě jiný objekt.  
   
 ```cpp  
@@ -61,7 +62,7 @@ bool operator>= (
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_gt"></a>operátor&gt;  
+##  <a name="op_gt"></a>  Operátor&gt;  
  Určuje, zda jeden `thread::id` je větší než druhý objekt.  
   
 ```cpp  
@@ -83,7 +84,7 @@ bool operator> (
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_lt_eq"></a>operátor&lt;=  
+##  <a name="op_lt_eq"></a>  Operátor&lt;=  
  Určuje, zda jeden `thread::id` objektu je menší než nebo rovna do jiného.  
   
 ```cpp  
@@ -105,7 +106,7 @@ bool operator<= (
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_lt"></a>operátor&lt;  
+##  <a name="op_lt"></a>  Operátor&lt;  
  Určuje, zda jeden `thread::id` objektu je menší než jiné.  
   
 ```cpp  
@@ -122,14 +123,14 @@ bool operator<(
  Právo `thread::id` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `Left` předchází `Right` v celkový řazení; v opačném `false`.  
+ `true` Pokud `Left` předchází `Right` v celkový řazení; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Operátor definuje celkový řazení na všech `thread::id` objekty. Tyto objekty lze jako klíče v asociativní kontejnery.  
   
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_neq"></a>Operator! =  
+##  <a name="op_neq"></a>  Operator! =  
  Porovná dva `thread::id` objekty nerovnost.  
   
 ```cpp  
@@ -151,7 +152,7 @@ bool operator!= (
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_eq_eq"></a>Operator ==  
+##  <a name="op_eq_eq"></a>  Operator ==  
  Porovná dva `thread::id` objekty rovnosti.  
   
 ```cpp  
@@ -168,12 +169,12 @@ bool operator== (
  Právo `thread::id` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud dva objekty představují stejném vlákně, v provádění nebo pokud ani objekt představuje podproces provádění; v opačném `false`.  
+ `true` Pokud dva objekty představují stejném vlákně, v provádění nebo pokud ani objekt představuje podproces provádění; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nevyvolá výjimku jakékoli výjimky.  
   
-##  <a name="op_lt_lt"></a>operátor&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operátor&lt;&lt;  
  Vloží text reprezentace `thread::id` objektu do datového proudu.  
   
 ```cpp  

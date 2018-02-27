@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::cache_freelist
 - allocators/stdext::cache_freelist::allocate
 - allocators/stdext::cache_freelist::deallocate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::cache_freelist
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 429b1f60fae11e8ed3fd91fd33ff2e5b9ab131bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cachefreelist-class"></a>cache_freelist – třída
 Definuje [blokovat allocator](../standard-library/allocators-header.md) , přiděluje a zruší přidělení bloků paměti jedné velikosti.  
@@ -54,21 +57,21 @@ class cache_freelist
   
 |||  
 |-|-|  
-|[cache_freelist –](#cache_freelist)|Vytvoří objekt typu `cache_freelist`.|  
+|[cache_freelist](#cache_freelist)|Vytvoří objekt typu `cache_freelist`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
 |[allocate](#allocate)|Přiděluje blok paměti.|  
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
+|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<alokátorů >  
   
  **Namespace:** stdext –  
   
-##  <a name="allocate"></a>cache_freelist::allocate  
+##  <a name="allocate"></a>  cache_freelist::allocate  
  Přiděluje blok paměti.  
   
 ```
@@ -86,7 +89,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="cache_freelist"></a>cache_freelist::cache_freelist  
+##  <a name="cache_freelist"></a>  cache_freelist::cache_freelist  
  Vytvoří objekt typu `cache_freelist`.  
   
 ```
@@ -95,7 +98,7 @@ cache_freelist();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="deallocate"></a>cache_freelist::deallocate  
+##  <a name="deallocate"></a>  cache_freelist::deallocate  
  Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.  
   
 ```
@@ -112,7 +115,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [\<alokátorů >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

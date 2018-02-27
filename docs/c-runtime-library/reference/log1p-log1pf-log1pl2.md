@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -38,16 +38,17 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3f99c09efd055cc60162e88e52e938df690929a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p – log1pf –, log1pl
 Vypočítá přirozený logaritmus 1 plus zadanou hodnotu.  
@@ -86,7 +87,7 @@ long double log1pl(
   
  Jinak může vrátit jednu z následujících hodnot:  
   
-|Vstup|Výsledek|Výjimka SEH|Kód chyby|  
+|Vstup|Výsledek|Výjimka SEH|errno|  
 |-----------|------------|-------------------|-----------|  
 |+ inf|+ inf|||  
 |Denormals|Stejné jako vstup|PODTEČENÍ||  
@@ -110,7 +111,7 @@ long double log1pl(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`log1p`,                `log1pf`,  `log1pl`|\<Math.h >|\<cmath – >|  
+|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

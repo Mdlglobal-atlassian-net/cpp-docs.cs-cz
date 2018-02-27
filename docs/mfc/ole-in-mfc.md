@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13baf7960b329e56cfce24011f4c15599cdda8b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ole-in-mfc"></a>OLE ve MFC
 Tyto články vysvětlují základní informace o použití prostředí MFC programování OLE. MFC poskytuje nejjednodušší způsob, jak psát programy, které používají OLE:  
@@ -41,7 +44,7 @@ Tyto články vysvětlují základní informace o použití prostředí MFC prog
   
 -   Správa dat stavu MFC moduly, včetně exportovat vstupní body funkce DLL rozhraní OLE/COM – vstupní body a body vstupu procedury oken.  
   
- Můžete také použít [automatizace](../mfc/automation.md) nebo [vzdálené automatizace](../mfc/remote-automation.md) provoz jiný program z vaší aplikace.  
+ Můžete také použít [automatizace](../mfc/automation.md).  
   
 > [!NOTE]
 >  Termín, který označuje OLE technologie související s propojování a vkládání, včetně kontejnery OLE, serverů OLE, OLE – položky, aktivace na místě (nebo úpravy s náhledem), snímačů, přetažení a slučování nabídek. Termín Active se vztahuje na modelu COM (Component Object) a objektů na základě modelu COM, jako je ovládací prvky ActiveX. OLE – automatizace nyní nazývá automatizace.  

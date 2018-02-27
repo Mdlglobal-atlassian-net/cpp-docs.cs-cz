@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - stack/std::stack::container_type
 - stack/std::stack::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - stack/std::stack::push
 - stack/std::stack::size
 - stack/std::stack::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::stack [C++], container_type
 - std::stack [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 876b4614438e92b3f90482a91f13f33b78e8266a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="stack-class"></a>stack – třída
 Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k prvek naposledy přidaný do některé základní typ kontejneru. Stack – třída se používá v případě, že je důležité mít pouze zásobníku operace, se provádí na kontejneru.  
@@ -72,14 +75,14 @@ class stack
   
 |||  
 |-|-|  
-|[zásobníku](#stack)|Vytvoří `stack` který je prázdný nebo je kopie základní kontejnerového objektu.|  
+|[stack](#stack)|Vytvoří `stack` který je prázdný nebo je kopie základní kontejnerového objektu.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type –](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit podle `stack`.|  
-|[size_type –](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `stack`.|  
+|[container_type](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit podle `stack`.|  
+|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `stack`.|  
 |[value_type](#value_type)|Typ, který reprezentuje typ objektu uložené jako element v `stack`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
@@ -87,17 +90,17 @@ class stack
 |||  
 |-|-|  
 |[prázdný](#empty)|Pokud testy `stack` je prázdný.|  
-|[POP](#pop)|Odebere element z horní části `stack`.|  
+|[pop](#pop)|Odebere element z horní části `stack`.|  
 |[push](#push)|Přidá prvek na začátek `stack`.|  
-|[velikost](#size)|Vrátí počet prvků v `stack`.|  
-|[horní](#top)|Vrátí odkaz na element v horní části `stack`.|  
+|[Velikost](#size)|Vrátí počet prvků v `stack`.|  
+|[Horní](#top)|Vrátí odkaz na element v horní části `stack`.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<zásobníku >  
   
  **Namespace:** – std  
   
-##  <a name="container_type"></a>Stack::container_type  
+##  <a name="container_type"></a>  Stack::container_type  
  Typ, který poskytuje základní kontejner, aby se přizpůsobit.  
   
 ```  
@@ -112,7 +115,7 @@ typedef Container container_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [stack::stack](#stack) příklad toho, jak deklarace a používání `container_type`.  
   
-##  <a name="empty"></a>Stack::Empty  
+##  <a name="empty"></a>  Stack::Empty  
  Testy, pokud zásobník je prázdný.  
   
 ```  
@@ -155,7 +158,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="pop"></a>Stack::POP  
+##  <a name="pop"></a>  Stack::POP  
  Odebere element z horní části zásobníku.  
   
 ```  
@@ -209,7 +212,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="push"></a>Stack::push  
+##  <a name="push"></a>  Stack::push  
  Přidá prvek na začátek konec zásobníku.  
   
 ```  
@@ -255,7 +258,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="size"></a>Stack::size  
+##  <a name="size"></a>  Stack::size  
  Vrátí počet prvků v zásobníku.  
   
 ```  
@@ -294,7 +297,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="size_type"></a>Stack::size_type  
+##  <a name="size_type"></a>  Stack::size_type  
  Typ celé číslo bez znaménka, která představuje počet elementů v sadě.  
   
 ```  
@@ -307,7 +310,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`.  
   
-##  <a name="stack"></a>Stack::Stack  
+##  <a name="stack"></a>  Stack::Stack  
  Vytvoří zásobníku, která je prázdný nebo který je kopií kontejner základní třídy.  
   
 ```  
@@ -359,7 +362,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="top"></a>Stack::TOP  
+##  <a name="top"></a>  Stack::TOP  
  Vrátí odkaz na element v horní části zásobníku.  
   
 ```  
@@ -407,7 +410,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="value_type"></a>Stack::value_type  
+##  <a name="value_type"></a>  Stack::value_type  
  Typ, který představuje typ objektu uložené jako element v zásobníku.  
   
 ```  

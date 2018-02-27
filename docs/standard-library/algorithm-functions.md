@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - algorithm/std::adjacent_find
 - algorithm/std::all_of
@@ -105,9 +105,10 @@ f1_keywords:
 - algorithm/std::count_if
 - algorithm/std::partition_copy
 - algorithm/std::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -210,47 +211,48 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 ||||  
 |-|-|-|  
-|[Přesunutí](#alg_move)|[adjacent_find –](#adjacent_find)|[all_of](#all_of)|  
-|[any_of](#any_of)|[binary_search –](#binary_search)|[kopírování](#copy)|  
-|[copy_backward –](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|  
-|[počet](#count)|[count_if –](#count_if)|[stejné](#equal)|  
-|[equal_range –](#equal_range)|[výplně](#fill)|[fill_n](#fill_n)|  
-|[Najít](#find)|[find_end –](#find_end)|[find_first_of –](#find_first_of)|  
-|[find_if –](#find_if)|[find_if_not –](#find_if_not)|[for_each –](#for_each)|  
-|[Generovat](#generate)|[generate_n –](#generate_n)|[zahrnuje](#includes)|  
-|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until –](#is_heap_until)|  
+|[Přesunutí](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
+|[any_of](#any_of)|[binary_search](#binary_search)|[Kopírování](#copy)|  
+|[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|  
+|[Počet](#count)|[count_if](#count_if)|[equal](#equal)|  
+|[equal_range](#equal_range)|[výplně](#fill)|[fill_n](#fill_n)|  
+|[Najít](#find)|[find_end –](#find_end)|[find_first_of](#find_first_of)|  
+|[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|  
+|[Generovat](#generate)|[generate_n](#generate_n)|[Zahrnuje](#includes)|  
+|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|  
 |[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|  
-|[is_sorted_until –](#is_sorted_until)|[iter_swap –](#iter_swap)|[lexicographical_compare –](#lexicographical_compare)|  
-|[lower_bound –](#lower_bound)|[make_heap –](#make_heap)|[maximální počet](#max)|  
-|[max_element –](#max_element)|[sloučení](#merge)|[min.](#min)|  
-|[min_element –](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|  
-|[Neshoda](#mismatch)|[move_backward](#move_backward)|[next_permutation –](#next_permutation)|  
-|[none_of](#none_of)|[nth_element –](#nth_element)|[partial_sort –](#partial_sort)|  
-|[partial_sort_copy –](#partial_sort_copy)|[oddíl](#partition)|[partition_copy –](#partition_copy)|  
-|[partition_point](#partition_point)|[pop_heap –](#pop_heap)|[prev_permutation –](#prev_permutation)|  
-|[push_heap –](#push_heap)|[random_shuffle –](#random_shuffle)|[remove](#remove)|  
-|[remove_copy –](#remove_copy)|[remove_copy_if –](#remove_copy_if)|[remove_if –](#remove_if)|  
-|[nahradit](#replace)|[replace_copy –](#replace_copy)|[replace_copy_if –](#replace_copy_if)|  
-|[replace_if –](#replace_if)|[zpětné](#reverse)|[reverse_copy –](#reverse_copy)|  
-|[Otočit](#rotate)|[rotate_copy –](#rotate_copy)|[hledání](#search)|  
-|[search_n –](#search_n)|[set_difference –](#set_difference)|[set_intersection –](#set_intersection)|  
-|[set_symmetric_difference –](#set_symmetric_difference)|[set_union –](#set_union)|[řazení](#sort)|  
-|[sort_heap –](#sort_heap)|[stable_partition –](#stable_partition)|[stable_sort –](#stable_sort)|  
-|[náhodný výběr](#shuffle)|[swap](#swap)|[swap_ranges –](#swap_ranges)|  
-|[transformace](#transform)|[jedinečné](#unique)|[unique_copy –](#unique_copy)|  
-|[upper_bound –](#upper_bound)|  
+|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|  
+|[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|  
+|[max_element](#max_element)|[Sloučení](#merge)|[min](#min)|  
+|[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|  
+|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|  
+|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|  
+|[partial_sort_copy](#partial_sort_copy)|[Oddíl](#partition)|[partition_copy](#partition_copy)|  
+|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|  
+|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|  
+|[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|  
+|[Nahradit](#replace)|[replace_copy –](#replace_copy)|[replace_copy_if](#replace_copy_if)|  
+|[replace_if](#replace_if)|[Reverse](#reverse)|[reverse_copy](#reverse_copy)|  
+|[Otočit](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|  
+|[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
+|[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
+|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
+|[náhodný výběr](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
+|[upper_bound](#upper_bound)|  
   
-##  <a name="adjacent_find"></a>adjacent_find –  
+##  <a name="adjacent_find"></a>  adjacent_find –  
  Vyhledá dva sousedící prvky, které jsou buď rovny, nebo splňují zadanou podmínku.  
   
 ```  
@@ -346,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="all_of"></a>all_of  
+##  <a name="all_of"></a>  all_of  
  Vrátí `true` při podmínku nachází na každý prvek v daném rozsahu.  
   
 ```  
@@ -373,7 +375,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vrátí `true` pouze tehdy, pokud pro každou `N` v rozsahu `[0,Last - first)`, predikát `comp(*(_First + N))` je `true`.  
   
-##  <a name="any_of"></a>any_of  
+##  <a name="any_of"></a>  any_of  
  Vrátí `true` Pokud je přítomen alespoň jednou v určeném rozsahu elementů podmínku.  
   
 ```  
@@ -402,7 +404,7 @@ template<class InputIterator, class UnaryPredicate>
   
  `[0, last - first)`, predikát `comp(*(first + N))` hodnotu true.  
   
-##  <a name="binary_search"></a>binary_search –  
+##  <a name="binary_search"></a>  binary_search –  
  Ověřuje, zda v seřazeném rozsahu existuje prvek, který je roven zadané hodnotě nebo je jí ekvivalentní ve smyslu určeném binárním predikátem.  
   
 ```  
@@ -435,7 +437,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
  Uživatelem definované funkce predikátu objekt, který definuje smysl, ve kterém jeden element je menší než jiné. Binární predikát má dva argumenty a vrátí `true` při a `false` při není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je nalezen element v rozsahu, která je rovna nebo ekvivalentní se zadanou hodnotou; v opačném `false`.  
+ `true` Pokud je nalezen element v rozsahu, která je rovna nebo ekvivalentní se zadanou hodnotou; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Seřazené zdrojový rozsah odkazuje musí být platná; musí být všechny ukazatele dereferenceable a v pořadí, poslední pozice musí být dosažitelný z první podle Inkrementace.  
@@ -530,7 +532,7 @@ int main( )
 }   
 ```  
   
-##  <a name="copy"></a>kopírování  
+##  <a name="copy"></a>  Kopírování  
  Přiřadí hodnoty prvků ze zdrojového rozsahu do cílového rozsahu a provede iterace přes zdrojové sekvence prvků a přiřadí je novým pozicím směrem dopředu.  
   
 ```  
@@ -619,7 +621,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="copy_backward"></a>copy_backward –  
+##  <a name="copy_backward"></a>  copy_backward –  
  Přiřadí hodnoty prvků ze zdrojového rozsahu do cílového rozsahu a provede iterace přes zdrojové sekvence prvků a přiřadí je novým pozicím směrem dozadu.  
   
 ```  
@@ -650,7 +652,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
  `copy_backward` a [move_backward](../standard-library/algorithm-functions.md#move_backward) algoritmy jsou pouze standardní knihovna C++ algoritmy určení rozsahu výstup s iterovat odkazující na konci cílový rozsah.  
   
- Vzhledem k tomu, že algoritmus kopie zdrojové elementy v pořadí od posledním elementem, cílový rozsah může dojít k překrytí s zdrojový rozsah zadaný `first` pozici rozsah zdrojových není obsažen v cílové oblasti. `copy_backward`slouží k posunutí prvky vpravo, ale ne levé straně, pokud neexistuje žádné překryv mezi zdrojové a cílové oblasti. Chcete-li posunutí doleva libovolný počet pozic, použijte [kopie](../standard-library/algorithm-functions.md#copy) algoritmus.  
+ Vzhledem k tomu, že algoritmus kopie zdrojové elementy v pořadí od posledním elementem, cílový rozsah může dojít k překrytí s zdrojový rozsah zadaný `first` pozici rozsah zdrojových není obsažen v cílové oblasti. `copy_backward` slouží k posunutí prvky vpravo, ale ne levé straně, pokud neexistuje žádné překryv mezi zdrojové a cílové oblasti. Chcete-li posunutí doleva libovolný počet pozic, použijte [kopie](../standard-library/algorithm-functions.md#copy) algoritmus.  
   
  `copy_backward` Algoritmus pouze změní hodnoty ukazuje iterátory, přiřazení nové hodnoty na elementy v cílové oblasti. Nelze ho použít k vytvoření nových prvků a nelze vložit prvky do prázdného zásobníku přímo.  
   
@@ -705,7 +707,7 @@ int main() {
 }  
 ```  
   
-##  <a name="copy_if"></a>copy_if  
+##  <a name="copy_if"></a>  copy_if  
  V rozsahu prvků, zkopíruje prvky, které jsou `true` pro zadanou podmínku.  
   
 ```  
@@ -740,7 +742,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  jednou pro každou `N` v rozsahu `[0, last - first)`, pro výhradně zvýšení hodnoty `N` od nejnižší možná hodnota. Pokud `dest` a `first` určit oblasti úložiště, `dest` nesmí být v rozsahu `[ first, last )`.  
   
-##  <a name="copy_n"></a>copy_n  
+##  <a name="copy_n"></a>  copy_n  
  Zkopíruje zadaný počet prvků.  
   
 ```  
@@ -767,7 +769,7 @@ template<class InputIterator, class Size, class OutputIterator>
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vyhodnotí `*(dest + N) = *(first + N))` jednou pro každou `N` v rozsahu `[0, count)`, pro výhradně zvýšení hodnoty `N` od nejnižší možná hodnota. Pak vrátí `dest + N`. Pokud `dest` a `first` určit oblasti úložiště, `dest` nesmí být v rozsahu `[first, last)`.  
   
-##  <a name="count"></a>počet  
+##  <a name="count"></a>  Počet  
  Vrátí počet prvků v rozsahu, jejichž hodnoty odpovídají zadané hodnotě.  
   
 ```  
@@ -833,7 +835,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="count_if"></a>count_if –  
+##  <a name="count_if"></a>  count_if –  
  Vrátí počet prvků v rozsahu, jejichž hodnoty splňují zadanou podmínku.  
   
 ```  
@@ -903,7 +905,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="equal"></a>stejné  
+##  <a name="equal"></a>  Rovná  
  Porovná dva rozsahy rovnosti nebo ekvivalenční v smyslu uvedená v binární predikátu elementu elementu.  
   
  Použití `std::equal` při porovnání prvků v kontejneru různé typy (například `vector` a `list`) nebo při porovnávání typů různých elementů, nebo když potřebujete porovnat dílčí rozsahy kontejnerů. Jinak při porovnání prvků stejného typu v stejného typu kontejneru, použijte jiný člen `operator==` poskytované pro každý kontejner.  
@@ -1000,7 +1002,7 @@ int main()
   
 ```  
   
-##  <a name="equal_range"></a>equal_range –  
+##  <a name="equal_range"></a>  equal_range  
  Zadaný rozsah seřazený vyhledá Podoblast sady, ve kterém jsou všechny elementy ekvivalentní zadanou hodnotu.  
   
 ```  
@@ -1163,7 +1165,7 @@ int main()
   
 ```  
   
-##  <a name="fill"></a>výplně  
+##  <a name="fill"></a>  výplně  
  Každému prvku v zadaném rozsahu přiřadí stejnou novou hodnotu.  
   
 ```  
@@ -1228,7 +1230,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="fill_n"></a>fill_n  
+##  <a name="fill_n"></a>  fill_n  
  Přiřadí novou hodnotu na zadaný počet elementů v rozsahu od jazyka.  
   
 ```  
@@ -1304,7 +1306,7 @@ int main()
   
 ```  
   
-##  <a name="find"></a>Najít  
+##  <a name="find"></a>  Najít  
  Vyhledá pozici prvního výskytu prvku v rozsahu, který má zadanou hodnotu.  
   
 ```  
@@ -1333,7 +1335,7 @@ InputIterator find(
   
  Pro příklad kódu pomocí `find()`, najdete v části [find_if –](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="find_end"></a>find_end –  
+##  <a name="find_end"></a>  find_end –  
  Vyhledá v rozsahu poslední dílčí sekvenci, která je shodná se zadanou sekvencí nebo která je ekvivalentní ve smyslu určeném binárním predikátem.  
   
 ```  
@@ -1473,7 +1475,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="find_first_of"></a>find_first_of –  
+##  <a name="find_first_of"></a>  find_first_of –  
  Vyhledá první výskyt jedné z několika hodnot v cílovém rozsahu nebo první výskyt jednoho z několika prvků, které jsou ekvivalentní ve smyslu určeném binárním predikátem zadané sadě prvků.  
   
 ```  
@@ -1616,7 +1618,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="find_if"></a>find_if –  
+##  <a name="find_if"></a>  find_if –  
  Vyhledá pozici prvního výskytu prvku v rozsahu, který splňuje zadanou podmínku.  
   
 ```  
@@ -1729,7 +1731,7 @@ int main()
   
 ```  
   
-##  <a name="find_if_not"></a>find_if_not –  
+##  <a name="find_if_not"></a>  find_if_not –  
  Vrátí první prvek v zadaném rozsahu, který nesplňuje podmínku.  
   
 ```  
@@ -1758,7 +1760,7 @@ InputIterator find_if_not(
   
  Příklad kódu snadno přizpůsobitelné k `find_if_not()`, najdete v části [find_if –](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="for_each"></a>for_each –  
+##  <a name="for_each"></a>  for_each –  
  Na každý prvek v pořadí dopředu v rozsahu použije zadaný objekt funkce a vrátí objekt funkce.  
   
 ```  
@@ -1902,7 +1904,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="generate"></a>Generovat  
+##  <a name="generate"></a>  Generovat  
  Přiřadí hodnoty generované objektem funkce každému prvku v rozsahu.  
   
 ```  
@@ -1973,7 +1975,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="generate_n"></a>generate_n –  
+##  <a name="generate_n"></a>  generate_n –  
  Přiřadí hodnoty generované funkce objektu na zadaný počet elementů v rozsahu a vrátí do pozice, jeden za poslední přiřazenou hodnotu.  
   
 ```  
@@ -2045,7 +2047,7 @@ int main()
   
 ```  
   
-##  <a name="includes"></a>zahrnuje  
+##  <a name="includes"></a>  Zahrnuje  
  Ověřuje, zda jeden seřazený rozsah obsahuje všechny prvky obsažené ve druhém seřazeném rozsahu, kde kritérium pořadí nebo ekvivalence mezi prvky může být určeno binárním predikátem.  
   
 ```  
@@ -2246,7 +2248,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="inplace_merge"></a>inplace_merge  
+##  <a name="inplace_merge"></a>  inplace_merge  
  Kombinuje prvky ze dvou po sobě následujících seřazených rozsahů do jednoho seřazeného rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -2395,7 +2397,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="is_heap"></a>is_heap  
+##  <a name="is_heap"></a>  is_heap  
  Vrátí `true` Pokud haldy formuláři elementů v zadaném rozsahu.  
   
 ```  
@@ -2431,7 +2433,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="is_heap_until"></a>is_heap_until –  
+##  <a name="is_heap_until"></a>  is_heap_until –  
  Vrátí iterovat umístěný na prvním elementem v rozsahu [ `begin`, `end`) nevyhovuje haldě řazení podmínku, nebo `end` Pokud rozsahu forms haldy.  
   
 ```  
@@ -2465,7 +2467,7 @@ RandomAccessIterator is_heap_until(
   
  Druhá šablona funkce se chová stejně jako první, s tím rozdílem, že používá predikát `compare` místo `std::less<>` jako haldě řazení podmínku.  
   
-##  <a name="is_partitioned"></a>is_partitioned  
+##  <a name="is_partitioned"></a>  is_partitioned  
  Vrátí `true` Pokud všechny elementy v daném rozsahu, který testovací `true` pro podmínku dřívější než žádné elementy, které testovací `false`.  
   
 ```  
@@ -2492,7 +2494,7 @@ bool is_partitioned(
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vrátí `true` pouze v případě všechny elementy ve `[` `first ,` `last )` jsou rozděleny do oddílů pomocí `comp`; to znamená, že všechny elementy `X` v `[` `first ,` `last )` pro které `comp (X)` je nastavena hodnota true předcházet všechny elementy `Y` pro kterou `comp (Y)` je `false`.  
   
-##  <a name="is_permutation"></a>is_permutation  
+##  <a name="is_permutation"></a>  is_permutation  
  Vrátí hodnotu true, pokud obě rozsahy obsahují stejné prvky, zda jsou elementy ve stejném pořadí. Použijte přetížení duální rozsahy v C ++ 14 kódu, protože přetížení, která trvat jenom jeden iterator pro druhého rozsahu nerozpozná rozdíly, pokud je delší, než je první rozsah druhého rozsahu a způsobí nedefinované chování, pokud je kratší druhého rozsahu než první rozsah.  
   
 ```  
@@ -2543,10 +2545,10 @@ bool is_permutation(
  Predikát, který testů pro ekvivalenční a vrátí `bool`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud lze vyjádřit rozsahy tak, aby byly identické podle komparátoru predikát; v opačném `false`.  
+ `true` Pokud lze vyjádřit rozsahy tak, aby byly identické podle komparátoru predikát; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- `is_permutation`v nejhorším případě má kvadratické složitost.  
+ `is_permutation` v nejhorším případě má kvadratické složitost.  
   
  První funkce šablony předpokládá, že jsou v rozsahu počínaje tolik elementy `First2` , protože v rozsahu určený hodnotou [ `First1`, `Last1`). Pokud jsou v druhého rozsahu další elementy, jsou ignorovány; Pokud je menší, nedefinované chování. Třetí šablony funkce (C ++ 14 a novější) neprovede tento předpokladů.  Obě vrací `true` pouze tehdy, pokud pro každý prvek X v rozsahu určený hodnotou [ `First1`, `Last1`) existuje tolik prvků Y ve stejném rozsahu, pro které X == Y, protože jsou v rozsahu počínaje `First2` nebo [ `First2, Last2).` tady, `operator==` pairwise porovnání mezí jejími operandy, musíte provést.  
   
@@ -2608,7 +2610,7 @@ int main()
   
 ```  
   
-##  <a name="is_sorted"></a>is_sorted  
+##  <a name="is_sorted"></a>  is_sorted  
  Vrátí `true` Pokud elementů v zadaném rozsahu seřazená.  
   
 ```  
@@ -2639,7 +2641,7 @@ bool is_sorted(
   
  Vrátí druhou funkce šablony `is_sorted_until( first, last , comp ) == last`. `comp` Funkce predikátu provede porovnání pořadí.  
   
-##  <a name="is_sorted_until"></a>is_sorted_until –  
+##  <a name="is_sorted_until"></a>  is_sorted_until –  
  Vrátí `ForwardIterator` , která je nastavena na poslední element, který je seřazená ze zadaného rozsahu.  
   
  Druhá verze vám umožňuje zadat `BinaryPredicate` funkci, která vrací `true` při dané dva elementy jsou seřazené podle a `false` jinak.  
@@ -2676,7 +2678,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Druhá šablona funkce se chová stejně, s tím rozdílem, že se nahradí `operator<(X, Y)` s `comp (X, Y)`.  
   
-##  <a name="iter_swap"></a>iter_swap –  
+##  <a name="iter_swap"></a>  iter_swap –  
  Vymění dvě hodnoty odkazované dvojicí zadaných iterátorů.  
   
 ```  
@@ -2693,7 +2695,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
  Druhý dopředného iterátory, jehož hodnota je k výměně.  
   
 ### <a name="remarks"></a>Poznámky  
- `swap`má být použit v preference k i **ter_swap**, který je zahrnutý ve verzi Standard C++ pro zpětnou kompatibilitu. Pokud `Fit1` a `Fit2` dopředného iterátory, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` (* `Fit1`, \* `Fit2` ).  
+ `swap` má být použit v preference k i **ter_swap**, který je zahrnutý ve verzi Standard C++ pro zpětnou kompatibilitu. Pokud `Fit1` a `Fit2` dopředného iterátory, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` (* `Fit1`, \* `Fit2` ).  
   
  Hodnota typy vstupní dopředného iterátory musí mít stejnou hodnotu.  
   
@@ -2830,7 +2832,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="lexicographical_compare"></a>lexicographical_compare –  
+##  <a name="lexicographical_compare"></a>  lexicographical_compare –  
  Porovná prvek po prvku mezi dvěma sekvencemi k určení, která z nich je menší.  
   
 ```  
@@ -2974,7 +2976,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="lower_bound"></a>lower_bound –  
+##  <a name="lower_bound"></a>  lower_bound –  
  Najde pozici prvního prvku v seřazeném rozsahu, jehož hodnota je větší nebo rovna zadané hodnotě, kde kritérium pořadí může být určeno primárním predikátem.  
   
 ```  
@@ -3111,7 +3113,7 @@ int main( )
   
 ```  
   
-##  <a name="make_heap"></a>make_heap –  
+##  <a name="make_heap"></a>  make_heap –  
  Převede prvky ze zadaného rozsahu do haldy, ve které je první prvek největší a pro kterou může být kritérium řazení určeno binárním predikátem.  
   
 ```  
@@ -3191,7 +3193,7 @@ int main() {
 }  
 ```  
   
-##  <a name="max"></a>maximální počet  
+##  <a name="max"></a>  max  
  Porovná dva objekty a vrátí větší z nich, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -3404,7 +3406,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="max_element"></a>max_element –  
+##  <a name="max_element"></a>  max_element –  
  Vyhledá první výskyt největšího prvku v zadaném rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -3534,7 +3536,7 @@ int main( )
 }  
 ```  
   
-##  <a name="merge"></a>sloučení  
+##  <a name="merge"></a>  Sloučení  
  Spojuje všechny elementy ze dvou seřazené zdrojových oblastí do jednoho, seřazené cílové oblasti, kde toto kritérium řazení může být určena binárního predikátu.  
   
 ```  
@@ -3704,7 +3706,7 @@ int main() {
 }  
 ```  
   
-##  <a name="min"></a>min.  
+##  <a name="min"></a>  min  
  Porovná dva objekty a vrátí menší z nich, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -3915,7 +3917,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="min_element"></a>min_element –  
+##  <a name="min_element"></a>  min_element –  
  Vyhledá první výskyt nejmenšího prvku v zadaném rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -4055,7 +4057,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="minmax_element"></a>minmax_element  
+##  <a name="minmax_element"></a>  minmax_element  
  Provede práci provádí `min_element` a `max_element` jedno volání.  
   
 ```  
@@ -4089,7 +4091,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(`[min_element –](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element –](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí první funkce šablony  
@@ -4102,7 +4104,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Pokud je pořadí je prázdný, funkce provede maximálně `3 * (last - first - 1) / 2` porovnání.  
   
-##  <a name="minmax"></a>minmax  
+##  <a name="minmax"></a>  minmax  
  Porovná dva vstupní parametry a vrací je jako pár, v pořadí podle menší na hodnotu větší.  
   
 ```  
@@ -4152,7 +4154,7 @@ template<class Type, class BinaryPredicate>
   
  Funkce provádí přesně jeden porovnání.  
   
-##  <a name="mismatch"></a>Neshoda  
+##  <a name="mismatch"></a>  Neshoda  
  Porovná dva rozsahy elementu pomocí elementu a vyhledá první pozici, kde dochází k rozdíl.  
   
  Použijte přetížení duální rozsahy v C ++ 14 kódu, protože přetížení, která trvat jenom jeden iterator pro druhého rozsahu nerozpozná rozdíly, pokud je delší, než je první rozsah druhého rozsahu a způsobí nedefinované chování, pokud je kratší druhého rozsahu než první rozsah.  
@@ -4337,7 +4339,7 @@ template<class InputIterator, class OutputIterator>
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vyhodnotí `*(dest + N) = move(*(first + N))` jednou pro každou `N` v rozsahu `[0, last - first)`, pro výhradně zvýšení hodnoty `N` od nejnižší možná hodnota. Pak vrátí `dest + N`. Pokud `dest` a `first` určit oblasti úložiště, `dest` nesmí být v rozsahu `[first, last)`.  
   
-##  <a name="move_backward"></a>move_backward  
+##  <a name="move_backward"></a>  move_backward  
  Přesune prvky jednoho iterátoru do druhého. Pohyb začíná posledním prvkem v daném rozsahu a končí prvním prvkem v daném rozsahu.  
   
 ```  
@@ -4362,9 +4364,9 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vyhodnotí `*(destEnd - N - 1) = move(*(last - N - 1))` jednou pro každou `N` v rozsahu `[0, last - first)`, pro výhradně zvýšení hodnoty `N` od nejnižší možná hodnota. Pak vrátí `destEnd - (last - first)`. Pokud `destEnd` a `first` určit oblasti úložiště, `destEnd` nesmí být v rozsahu `[first, last)`.  
   
- `move`a `move_backward` jsou funkčně rovnocenné pomocí `copy` a `copy_backward` s move iterator.  
+ `move` a `move_backward` jsou funkčně rovnocenné pomocí `copy` a `copy_backward` s move iterator.  
   
-##  <a name="next_permutation"></a>next_permutation –  
+##  <a name="next_permutation"></a>  next_permutation –  
  Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky následující větší permutací, pokud existuje, kde význam následujícího může být určen binárním predikátem.  
   
 ```  
@@ -4535,7 +4537,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="nth_element"></a>nth_element –  
+##  <a name="nth_element"></a>  nth_element –  
  Oddíly rozsahu prvků, správně hledání  *n* element TD pořadí v rozsahu, aby všechny elementy úrovních před ním jsou menší než nebo rovna hodnotě ho a všechny elementy, které následují v pořadí Opětovná větší než nebo rovna hodnotě ho.  
   
 ```  
@@ -4635,7 +4637,7 @@ int main() {
 }  
 ```  
   
-##  <a name="none_of"></a>none_of  
+##  <a name="none_of"></a>  none_of  
  Vrátí `true` při podmínku nachází nikdy mezi elementy v daném rozsahu.  
   
 ```  
@@ -4659,7 +4661,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vrátí `true` pouze tehdy, pokud pro některé `N` v rozsahu `[0, last - first)`, predikát `comp(*(first + N))` je vždy `false`.  
   
-##  <a name="partial_sort"></a>partial_sort –  
+##  <a name="partial_sort"></a>  partial_sort –  
  Uspořádá zadaný počet menších prvků v rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem.  
   
 ```  
@@ -4771,7 +4773,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="partial_sort_copy"></a>partial_sort_copy –  
+##  <a name="partial_sort_copy"></a>  partial_sort_copy –  
  Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu, kde zdrojové prvky jsou seřazeny buď podle binárního predikátu „menší než“ nebo jiného určeného binárního predikátu.  
   
 ```  
@@ -4892,7 +4894,7 @@ int main() {
 }  
 ```  
   
-##  <a name="partition"></a>oddíl  
+##  <a name="partition"></a>  Oddíl  
  Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují.  
   
 ```  
@@ -4963,7 +4965,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="partition_copy"></a>partition_copy –  
+##  <a name="partition_copy"></a>  partition_copy –  
  Zkopíruje elementy, pro které je podmínku `true` do cílové a pro které podmínku `false` do jiného. Prvky musí pocházet ze zadaného rozsahu.  
   
 ```  
@@ -4997,7 +4999,7 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony zkopíruje každý prvek `X` v `[first,last)` k `*dest1++` Pokud `_Pred(X)` má hodnotu true, nebo `*dest2++` není-li. Vrátí `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
-##  <a name="partition_point"></a>partition_point  
+##  <a name="partition_point"></a>  partition_point  
  Vrátí první prvek v zadaném rozsahu, který nesplňuje podmínku. Prvky jsou seřazeny tak, aby ty, které splňují podmínku, předcházely těm, které ji nesplňují.  
   
 ```  
@@ -5025,7 +5027,7 @@ template<class ForwardIterator, class Predicate>
 ### <a name="remarks"></a>Poznámky  
  Funkce šablony vyhledá první iterator `it` v `[first, last)` pro kterou `comp(*it)` je `false`. Pořadí musí provést řazení podle `comp`.  
   
-##  <a name="pop_heap"></a>pop_heap –  
+##  <a name="pop_heap"></a>  pop_heap –  
  Odstraní největší prvek z přední části haldy až do předposlední pozice v rozsahu a ze zbývajících prvků vytvoří novou haldu.  
   
 ```  
@@ -5126,7 +5128,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="prev_permutation"></a>prev_permutation –  
+##  <a name="prev_permutation"></a>  prev_permutation –  
  Změní elementy v rozsahu, takže původní řazení lexicographically předchozí větší Permutace nahrazuje, pokud existuje, kde může být smysl předchozího zadaným predikátu binární.  
   
 ```  
@@ -5154,7 +5156,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
  Uživatelem definované funkce predikátu objekt, který definuje kritéria porovnání měly splňovat po sobě následujících elementů v řazení. Binární predikát má dva argumenty a vrátí `true` při a `false` při není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud lexicographically předchozí Permutace existuje a má nahradit původní řazení o rozsahu. v opačném případě `false`, v takovém případě řazení transformována do lexicographically největší Permutace.  
+ `true` Pokud lexicographically předchozí Permutace existuje a má nahradit původní řazení o rozsahu. v opačném případě `false`, v takovém případě řazení transformována do lexicographically největší Permutace.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozsah odkazuje musí být platná. musí být všechny ukazatele dereferenceable a v rámci pořadí se poslední pozice dosažitelný z první podle Inkrementace.  
@@ -5297,7 +5299,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="push_heap"></a>push_heap –  
+##  <a name="push_heap"></a>  push_heap –  
  Přidá prvek, který je na konci rozsahu, do stávající haldy, která zahrnuje předchozí prvky daného rozsahu.  
   
 ```  
@@ -5403,10 +5405,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="random_shuffle"></a>random_shuffle –  
+##  <a name="random_shuffle"></a>  random_shuffle –  
  Zastaralé funkce std::random_shuffle() nahrazuje [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Příklad kódu a další informace najdete v tématu [ \<náhodných >](../standard-library/random.md) a zveřejňování Stackoverflow [proč std::random_shuffle metody se nepoužívají v C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).  
   
-##  <a name="remove"></a>odebrat  
+##  <a name="remove"></a>  Odebrat  
  Odstraní zadanou hodnotu z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.  
   
 ```  
@@ -5485,7 +5487,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="remove_copy"></a>remove_copy –  
+##  <a name="remove_copy"></a>  remove_copy –  
  Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky zadané hodnoty zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.  
   
 ```  
@@ -5564,7 +5566,7 @@ int main() {
 }  
 ```  
   
-##  <a name="remove_copy_if"></a>remove_copy_if –  
+##  <a name="remove_copy_if"></a>  remove_copy_if –  
  Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky splňující predikát zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.  
   
 ```  
@@ -5652,7 +5654,7 @@ int main() {
 }  
 ```  
   
-##  <a name="remove_if"></a>remove_if –  
+##  <a name="remove_if"></a>  remove_if –  
  Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.  
   
 ```  
@@ -5735,7 +5737,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="replace"></a>nahradit  
+##  <a name="replace"></a>  Nahradit  
  Zkontroluje každý prvek v rozsahu a nahradí jej, pokud odpovídá zadané hodnotě.  
   
 ```  
@@ -5803,7 +5805,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="replace_copy"></a>replace_copy –  
+##  <a name="replace_copy"></a>  replace_copy –  
  Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu odpovídá zadané hodnotě.  
   
 ```  
@@ -5902,7 +5904,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="replace_copy_if"></a>replace_copy_if –  
+##  <a name="replace_copy_if"></a>  replace_copy_if –  
  Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu splňuje zadaný predikát.  
   
 ```  
@@ -6008,7 +6010,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="replace_if"></a>replace_if –  
+##  <a name="replace_if"></a>  replace_if –  
  Zkontroluje každý prvek v rozsahu a nahradí jej, pokud splňuje zadaný predikát.  
   
 ```  
@@ -6085,7 +6087,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="reverse"></a>zpětné  
+##  <a name="reverse"></a>  Reverse  
  Obrátí pořadí prvků v rozsahu.  
   
 ```  
@@ -6146,7 +6148,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="reverse_copy"></a>reverse_copy –  
+##  <a name="reverse_copy"></a>  reverse_copy –  
  Obrátí pořadí prvků ve zdrojovém rozsahu při kopírování do cílového rozsahu.  
   
 ```  
@@ -6214,7 +6216,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="rotate"></a>Otočit  
+##  <a name="rotate"></a>  Otočit  
  Vymění prvky ve dvou sousedních rozsazích.  
   
 ```  
@@ -6313,7 +6315,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="rotate_copy"></a>rotate_copy –  
+##  <a name="rotate_copy"></a>  rotate_copy –  
  Vymění prvky ve dvou sousedních rozsazích v rámci zdrojového rozsahu a zkopíruje výsledek do cílového rozsahu.  
   
 ```  
@@ -6406,7 +6408,7 @@ int main() {
 }  
 ```  
   
-##  <a name="search"></a>hledání  
+##  <a name="search"></a>  hledání  
  Vyhledá první výskyt sekvence v cílovém rozsahu, jejíž prvky jsou rovné prvkům v dané sekvenci prvků nebo jejíž prvky jsou ekvivalentní ve smyslu určeném binárním predikátem prvkům v dané sekvenci.  
   
 ```  
@@ -6551,7 +6553,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="search_n"></a>search_n –  
+##  <a name="search_n"></a>  search_n –  
  Vyhledá první dílčí sekvenci v rozsahu zadaného počtu prvků s konkrétní hodnotou nebo vztahem k dané hodnotě podle binárního predikátu.  
   
 ```  
@@ -6681,7 +6683,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="set_difference"></a>set_difference –  
+##  <a name="set_difference"></a>  set_difference –  
  Sjednotí všechny prvky, které patří do jednoho seřazeného zdrojového rozsahu, ale nikoli do druhého seřazeného zdrojového rozsahu, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -6858,7 +6860,7 @@ int main( )
 }  
 ```  
   
-##  <a name="set_intersection"></a>set_intersection –  
+##  <a name="set_intersection"></a>  set_intersection –  
  Sjednotí všechny prvky, které náleží do obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -7029,7 +7031,7 @@ int main() {
 }  
 ```  
   
-##  <a name="set_symmetric_difference"></a>set_symmetric_difference –  
+##  <a name="set_symmetric_difference"></a>  set_symmetric_difference –  
  Sjednotí všechny prvky, které náleží do jednoho, ale nikoli obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -7206,7 +7208,7 @@ int main( )
 }  
 ```  
   
-##  <a name="set_union"></a>set_union –  
+##  <a name="set_union"></a>  set_union –  
  Sjednotí všechny prvky, které náleží alespoň do jednoho ze dvou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  
@@ -7382,7 +7384,7 @@ int main( )
 }  
 ```  
   
-##  <a name="shuffle"></a>std::Shuffle  
+##  <a name="shuffle"></a>  std::Shuffle  
  Prvky podle okolí posouvá (změní uspořádání) pro zadaný rozsah pomocí generování náhodných čísel.  
   
 ```  
@@ -7405,7 +7407,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>Poznámky  
  Další informace a ukázku kódu, který používá `shuffle()`, najdete v části [ \<náhodných >](../standard-library/random.md).  
   
-##  <a name="sort"></a>řazení  
+##  <a name="sort"></a>  Řazení  
  Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem.  
   
 ```  
@@ -7507,7 +7509,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="sort_heap"></a>sort_heap –  
+##  <a name="sort_heap"></a>  sort_heap –  
  Převede haldu na seřazený rozsah.  
   
 ```  
@@ -7600,7 +7602,7 @@ int main() {
 }  
 ```  
   
-##  <a name="stable_partition"></a>stable_partition –  
+##  <a name="stable_partition"></a>  stable_partition –  
  Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují. Relativní pořadí ekvivalentních prvků je zachováno.  
   
 ```  
@@ -7675,7 +7677,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="stable_sort"></a>stable_sort –  
+##  <a name="stable_sort"></a>  stable_sort –  
  Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem a zachová relativní pořadí ekvivalentních prvků.  
   
 ```  
@@ -7774,7 +7776,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  První přepsání výměny hodnoty dva objekty. Druhý přepsání výměny hodnoty mezi dvěma poli objektů.  
   
 ```  
@@ -7855,7 +7857,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="swap_ranges"></a>swap_ranges –  
+##  <a name="swap_ranges"></a>  swap_ranges –  
  Vymění prvky z jednoho rozsahu za prvky druhého rozsahu o stejné velikosti.  
   
 ```  
@@ -7946,7 +7948,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="transform"></a>transformace  
+##  <a name="transform"></a>  Transformace  
  Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a zkopíruje vrácené hodnoty objektu funkce do cílového rozsahu.  
   
 ```  
@@ -8080,7 +8082,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="unique"></a>jedinečné  
+##  <a name="unique"></a>  Jedinečné  
  Odstraní duplicitní prvky, které v zadaném rozsahu sousedí.  
   
 ```  
@@ -8210,7 +8212,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="unique_copy"></a>unique_copy –  
+##  <a name="unique_copy"></a>  unique_copy –  
  Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu s výjimkou sousedících duplicitních prvků.  
   
 ```  
@@ -8324,7 +8326,7 @@ int main() {
 }  
 ```  
   
-##  <a name="upper_bound"></a>upper_bound –  
+##  <a name="upper_bound"></a>  upper_bound –  
  Najde pozici prvního prvku v seřazeném rozsahu, který má hodnotu větší než zadaná hodnota, kde kritérium pořadí může být určeno binárním predikátem.  
   
 ```  

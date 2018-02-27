@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - acoshf
 - acosh
@@ -31,22 +32,24 @@ f1_keywords:
 - math/acosh
 - math/acoshf
 - math/acoshl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - acoshf function
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44872bc2ad2ef2be8e9a91403852574c9047a051
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 460b6540a724cd7a67d1de22b67238800e5fd5ca
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 Vypočítá inverzní hyperbolický kosinus.  
@@ -78,7 +81,7 @@ long double acoshl(
 ## <a name="return-value"></a>Návratová hodnota  
  `acosh` Funkce vrátí hyberbolic inverzní kosinus (oblouk hyperbolický kosinus) `x`. Tyto funkce jsou platné po domény `x` ≥ 1. Pokud `x` je menší než 1 `errno` je nastaven na `EDOM` a výsledkem je quiet NaN. Pokud `x` quiet NaN, neomezené, nebo infinity, je vrácena stejnou hodnotu.  
   
-|Vstup|Výjimka SEH|`_matherr`Výjimka|  
+|Vstup|Výjimka SEH|`_matherr` Výjimka|  
 |-----------|-------------------|--------------------------|  
 |INF QNAN, IND PŘESNOSTÍ|žádná|žádná|  
 |x < 1|žádná|žádná|  
@@ -90,7 +93,7 @@ long double acoshl(
   
 |Funkce|Hlavička C|Hlavička C++|  
 |--------------|--------------|------------------|  
-|`acosh`, `acoshf`, `acoshl`|\<Math.h >|\<cmath – >|  
+|`acosh`, `acoshf`, `acoshl`|\<math.h>|\<cmath>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
 - concrt/concurrency::DisableTracing
@@ -46,11 +46,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8dd57c912c62dab895d613c5d7bbe0d5c3cd9a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funkce obor názvů souběžnosti
 ||||  
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/14/2018
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc">Alokační</a>  
+##  <a name="alloc"></a>  Alokační  
  Přiděluje blok paměti zadaná velikost z Suballocator ukládání do mezipaměti Concurrency Runtime.  
   
 ```
@@ -88,7 +88,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="remarks"></a>Poznámky  
  Další informace o tom, které scénáře v aplikaci může využívat Suballocator ukládání do mezipaměti najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="asend">asend –</a>  
+##  <a name="asend"></a>  asend –  
  Operace asynchronní odesílání, která plánuje úlohy rozšíření dat na cílový blok.  
   
 ```
@@ -172,7 +172,7 @@ __declspec(noinline) auto create_async(const _Function& _Func)
   
  Tato funkce je pouze k dispozici pro aplikace Windows Runtime.  
   
-##  <a name="createresourcemanager">Createresourcemanager –</a>  
+##  <a name="createresourcemanager"></a>  Createresourcemanager –  
  Vrátí rozhraní, které představuje instanci typu singleton z Concurrency Runtime Resource Manager. Resource Manager zodpovídá za přiřazení zdrojů k plánovače, které chcete vzájemně spolupracovat.  
   
 ```
@@ -222,7 +222,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  V aplikaci pro UPW Pokud `_Param` je typu Windows::Foundation::IAsyncOperation\<T > ^ nebo Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, nebo functor, která vrátí jednu z těchto typů, bude mít vytvořená úloha typ `task<T>`. Pokud `_Param` je typu Windows::Foundation::IAsyncAction ^ nebo Windows::Foundation::IAsyncActionWithProgress\<P > ^, nebo functor, která vrátí jednu z těchto typů, bude mít typ vytvořená úloha `task<void>`.  
   
-##  <a name="disabletracing">Disabletracing –</a>  
+##  <a name="disabletracing"></a>  Disabletracing –  
  Zakáže trasování v Concurrency Runtime. Tato funkce je zastaralý, protože je ve výchozím nastavení neregistrovaná trasování událostí pro Windows.  
   
 ```
@@ -1330,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Poznámky  
  Budou všechny body přerušení v objektu, funkce při aktivaci `cancellation_token` je zrušená. Explicitní token `_Ct` to bude izolovat `_Func` z nadřazené zrušení, pokud má nadřazený token jiné nebo žádné token.  
   
-##  <a name="send">Odeslat</a>  
+##  <a name="send"></a>  Odeslat  
  Operaci synchronní odesílání, která čeká na cíl buď přijme nebo odmítne zprávy.  
   
 ```
