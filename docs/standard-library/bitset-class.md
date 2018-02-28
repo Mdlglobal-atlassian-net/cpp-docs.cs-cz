@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>bitset – třída
 Popisuje typ objektu, který ukládá pořadí, který se skládá z pevný počet bitů, které poskytují compact kvůli udržení příznaky pro sadu položek nebo podmínky. Bitset – třída podporuje operace s objekty typu bitset, které obsahují kolekci bitů a poskytují konstanta běhu je přístup k každý bit.  
@@ -75,59 +78,59 @@ class bitset
   
 |||  
 |-|-|  
-|[bitset –](#bitset)|Vytvoří objekt třídy `bitset\<N>` a inicializuje bits na nulu, některé zadanou hodnotu nebo hodnoty získané z znaky v řetězci.|  
+|[bitset](#bitset)|Vytvoří objekt třídy `bitset\<N>` a inicializuje bits na nulu, některé zadanou hodnotu nebo hodnoty získané z znaky v řetězci.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ, který je pro datový typ synonymum `bool` a může sloužit k odkazování element bitů `bitset`.|  
+|[element_type](#element_type)|Typ, který je pro datový typ synonymum `bool` a může sloužit k odkazování element bitů `bitset`.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[všechny](#all)|Testy všechny bity v tomto `bitset` zjistěte, zda jsou všechny nastaven na `true`.|  
+|[Všechny](#all)|Testy všechny bity v tomto `bitset` zjistěte, zda jsou všechny nastaven na `true`.|  
 |[všechny](#any)|Členská funkce ověřuje, zda všechny bit v pořadí hodnotu 1.|  
-|[počet](#count)|Členská funkce vrátí počet bitů, nastavte v pořadí bit.|  
+|[Počet](#count)|Členská funkce vrátí počet bitů, nastavte v pořadí bit.|  
 |[Překlopit](#flip)|Invertuje výběr všechny bity v hodnotě `bitset` nebo Invertuje výběr jeden bit na zadané pozici.|  
 |[None](#none)|Testuje, pokud byl nastaven na hodnotu 1 v žádné bit `bitset` objektu.|  
-|[resetování](#reset)|Obnoví všechny bity v `bitset` na hodnotu 0 nebo resetování trochu na zadané pozici 0.|  
+|[reset](#reset)|Obnoví všechny bity v `bitset` na hodnotu 0 nebo resetování trochu na zadané pozici 0.|  
 |[set](#set)|Nastaví službu bits `bitset` na 1 nebo nastaví trochu na zadané pozici 1.|  
-|[velikost](#size)|Vrátí počet bitů `bitset` objektu.|  
-|[Test](#test)|Testy zda bit na zadané pozici v `bitset` je nastaven na hodnotu 1.|  
-|[to_string –](#to_string)|Převede `bitset` řetězcovou reprezentaci objektu.|  
-|[to_ullong –](#to_ullong)|Vrátí součet bitových hodnot v `bitset` jako `unsigned long long`.|  
-|[to_ulong –](#to_ulong)|Převede `bitset` do objektu `unsigned long` , vytvoří posloupnost bitů obsažené Pokud použitý k inicializaci `bitset`.|  
+|[Velikost](#size)|Vrátí počet bitů `bitset` objektu.|  
+|[test](#test)|Testy zda bit na zadané pozici v `bitset` je nastaven na hodnotu 1.|  
+|[to_string](#to_string)|Převede `bitset` řetězcovou reprezentaci objektu.|  
+|[to_ullong](#to_ullong)|Vrátí součet bitových hodnot v `bitset` jako `unsigned long long`.|  
+|[to_ulong](#to_ulong)|Převede `bitset` do objektu `unsigned long` , vytvoří posloupnost bitů obsažené Pokud použitý k inicializaci `bitset`.|  
   
 ### <a name="member-classes"></a>Člen třídy  
   
 |||  
 |-|-|  
-|[referenční dokumentace](#reference)|Třídu proxy, který odkazuje na bits obsažené v `bitset` používané pro přístup k a jako pomocná třída pro manipulaci s jednotlivých bitů `operator[]` třídy `bitset`.|  
+|[reference](#reference)|Třídu proxy, který odkazuje na bits obsažené v `bitset` používané pro přístup k a jako pomocná třída pro manipulaci s jednotlivých bitů `operator[]` třídy `bitset`.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
 |[operator!=](#op_neq)|Testy cíl `bitset` nerovnost se zadaným `bitset`.|  
-|[operátor & =](#op_and_eq)|Provede bitovou kombinaci bitové sady s logické `AND` operaci.|  
+|[operator&=](#op_and_eq)|Provede bitovou kombinaci bitové sady s logické `AND` operaci.|  
 |[operátor <<](#op_lshift)|Posune bitů v `bitset` doleva o zadaný počet pozic a vrátí výsledek na nový `bitset`.|  
 |[operátor << =](#op_lshift_eq)|Posune bitů v `bitset` doleva o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|  
-|[Operator ==](#op_eq_eq)|Testy cíl `bitset` rovnosti se zadaným `bitset`.|  
-|[operátor >>](#op_rshift)|Posune bitů v `bitset` doprava o zadaný počet pozic a vrátí výsledek na nový `bitset`.|  
-|[operátor >> =](#op_rshift_eq)|Posune bitů v `bitset` doprava o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|  
-|[operátor &#91; &#93;](#op_at)|Vrátí odkaz na bit na zadané pozici v `bitset` Pokud `bitset` je upravitelnými, jinak vrátí hodnotu verze na této pozici.|  
-|[Operator ^ =](#op_xor_eq)|Provede bitovou kombinaci bitové sady s exkluzivní `OR` operaci.|  
-|[operátor &#124; =](#op_or_eq')|Provede bitovou kombinaci bitové sady s včetně `OR` operaci.|  
-|[operátor ~](#op_dtor)|Invertuje výběr všechny bity v cíl `bitset` a vrátí výsledek.|  
+|[operator==](#op_eq_eq)|Testy cíl `bitset` rovnosti se zadaným `bitset`.|  
+|[operator>>](#op_rshift)|Posune bitů v `bitset` doprava o zadaný počet pozic a vrátí výsledek na nový `bitset`.|  
+|[operator>>=](#op_rshift_eq)|Posune bitů v `bitset` doprava o zadaný počet pozic a vrátí výsledek na cílovou `bitset`.|  
+|[operator&#91;&#93;](#op_at)|Vrátí odkaz na bit na zadané pozici v `bitset` Pokud `bitset` je upravitelnými, jinak vrátí hodnotu verze na této pozici.|  
+|[operator^=](#op_xor_eq)|Provede bitovou kombinaci bitové sady s exkluzivní `OR` operaci.|  
+|[operator&#124;=](#op_or_eq')|Provede bitovou kombinaci bitové sady s včetně `OR` operaci.|  
+|[operator~](#op_dtor)|Invertuje výběr všechny bity v cíl `bitset` a vrátí výsledek.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<bitset >  
   
  **Namespace:** – std  
   
-##  <a name="all"></a>bitset::all  
+##  <a name="all"></a>  bitset::all  
  Všechny bity testů v této bitset – zjistěte, pokud jsou všechny nastaven na hodnotu true.  
   
 ```  
@@ -137,7 +140,7 @@ bool all() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true, pokud všechny bity v této sadě mají hodnotu true. Vrátí **false** Pokud jeden nebo více bitů hodnotu false.  
   
-##  <a name="any"></a>bitset::Any  
+##  <a name="any"></a>  bitset::Any  
  Ověřuje, zda všechny bit v pořadí hodnotu 1.  
   
 ```  
@@ -198,7 +201,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset"></a>bitset::bitset  
+##  <a name="bitset"></a>  bitset::bitset  
  Vytvoří objekt třídy `bitset\<N>` a inicializuje bitů na hodnotu nula, nebo některé zadanou hodnotu nebo hodnoty získané z znaky v řetězci.  
   
 ```  
@@ -257,7 +260,7 @@ explicit bitset(
   
 -   Druhý konstruktor vytvoří objekt třídy `bitset\<N>` a inicializuje bity pomocí jedné `unsigned long long` parametr.  
   
--   Třetí konstruktoru vytvoří objekt třídy `bitset\<N>`, inicializace z N bits hodnoty, které odpovídají znaky řetězec znaků stylu jazyka c nulami a ty, které jsou součástí. Volat konstruktor bez přetypování řetězec do typu string:`bitset<5> b5("01011");`  
+-   Třetí konstruktoru vytvoří objekt třídy `bitset\<N>`, inicializace z N bits hodnoty, které odpovídají znaky řetězec znaků stylu jazyka c nulami a ty, které jsou součástí. Volat konstruktor bez přetypování řetězec do typu string: `bitset<5> b5("01011");`  
   
  Existují dvě šablony konstruktor poskytuje:  
   
@@ -340,7 +343,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
 ```  
   
-##  <a name="count"></a>bitset::Count  
+##  <a name="count"></a>  bitset::Count  
  Vrátí počet bitů, nastavte v pořadí bit.  
   
 ```  
@@ -395,7 +398,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.  
 ```  
   
-##  <a name="element_type"></a>bitset::ELEMENT_TYPE  
+##  <a name="element_type"></a>  bitset::ELEMENT_TYPE  
  Typ, který je pro datový typ synonymum `bool` a slouží k odkazování element bitů bitset.  
   
 ```  
@@ -450,7 +453,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.  
 ```  
   
-##  <a name="flip"></a>bitset::Flip  
+##  <a name="flip"></a>  bitset::Flip  
  Invertuje výběr hodnotu službu bits bitset nebo Invertuje výběr jeden bit na zadané pozici.  
   
 ```  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  Kopie upravené bitset, pro kterou byl vyvolán – členská funkce.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkci druhý člen, vyvolá [out_of_range](../standard-library/out-of-range-class.md) Pokud pozice zadána jako parametr je větší než velikost *N* z **bitset\<**  *N*  **>**  jejichž bit byl obrácený.  
+ Funkci druhý člen, vyvolá [out_of_range](../standard-library/out-of-range-class.md) Pokud pozice zadána jako parametr je větší než velikost *N* z **bitset\<***N***  >**  jejichž bit byl obrácený.  
   
 ### <a name="example"></a>Příklad  
   
@@ -519,7 +522,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.  
 ```  
   
-##  <a name="none"></a>bitset::none  
+##  <a name="none"></a>  bitset::none  
  Testy, pokud žádný bit byla nastavena na 1 v bitset objektu.  
   
 ```  
@@ -574,7 +577,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="op_neq"></a>bitset::Operator! =  
+##  <a name="op_neq"></a>  bitset::Operator! =  
  Testuje cílový bitset nerovnost s zadaný bitset.  
   
 ```  
@@ -632,7 +635,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="op_and_eq"></a>bitset::Operator&amp;=  
+##  <a name="op_and_eq"></a>  bitset::Operator&amp;=  
  Provede bitovou kombinaci bitové sady s logické **a** operaci.  
   
 ```  
@@ -695,7 +698,7 @@ After bitwise AND combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
 
-##  <a name="op_lshift"></a>bitset::Operator\<\<    
+##  <a name="op_lshift"></a> bitset::Operator\<\<    
   
 Posune bitů v bitset doleva o zadaný počet pozic a vrátí výsledek do nové bitset.  
   
@@ -744,7 +747,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_lshift_eq"></a>bitset::Operator&lt;&lt;=  
+##  <a name="op_lshift_eq"></a> bitset::Operator&lt;&lt;=  
  Posune bitů v bitset doleva o zadaný počet pozic a vrátí výsledek do cílové bitset.  
   
 ```  
@@ -787,7 +790,7 @@ After shifting the bits 2 positions to the left,
  the target bitset b1 becomes: ( 11100 ).  
 ```  
   
-##  <a name="op_eq_eq"></a>bitset::Operator ==  
+##  <a name="op_eq_eq"></a>  bitset::Operator ==  
  Testuje cílový bitset rovnosti s zadaný bitset.  
   
 ```  
@@ -844,7 +847,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="op_rshift"></a>bitset::Operator&gt;&gt;  
+##  <a name="op_rshift"></a>  bitset::Operator&gt;&gt;  
  Posune bitů v bitset doprava o zadaný počet pozic a vrátí výsledek do nové bitset.  
   
 ```  
@@ -894,7 +897,7 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).  
 ```  
   
-##  <a name="op_rshift_eq"></a>bitset::Operator&gt;&gt;=  
+##  <a name="op_rshift_eq"></a> bitset::Operator&gt;&gt;=  
  Posune bitů v bitset doprava o zadaný počet pozic a vrátí výsledek do cílové bitset.  
   
 ```  
@@ -938,7 +941,7 @@ After shifting the bits 2 positions to the right,
  the target bitset b1 becomes: ( 00111 ).  
 ```  
   
-##  <a name="op_at"></a>bitset::Operator]  
+##  <a name="op_at"></a>  bitset::Operator]  
  Vrátí odkaz na bit na zadané pozici v bitset – Pokud je bitset upravitelnými; jinak vrátí hodnotu verze na této pozici.  
   
 ```  
@@ -979,7 +982,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_xor_eq"></a>bitset::Operator ^ =  
+##  <a name="op_xor_eq"></a>  bitset::Operator ^ =  
  Provede bitovou kombinaci bitové sady s exkluzivní `OR` operaci.  
   
 ```  
@@ -1041,7 +1044,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="op_or_eq"></a>bitset::Operator &#124; =  
+##  <a name="op_or_eq"></a>  bitset::Operator &#124; =  
  Provede bitovou kombinaci bitové sady s včetně `OR` operaci.  
   
 ```  
@@ -1104,7 +1107,7 @@ After bitwise inclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="op_dtor"></a>bitset::Operator ~  
+##  <a name="op_dtor"></a>  bitset::Operator ~  
  Invertuje výběr všechny bity v cílové bitset a vrátí výsledek.  
   
 ```  
@@ -1147,7 +1150,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).  
 ```  
   
-##  <a name="reference"></a>bitset::Reference  
+##  <a name="reference"></a>  bitset::Reference  
  Třídu proxy, který odkazuje na bits obsažené v bitset, který se používá pro přístup k a jako pomocná třída pro manipulaci s jednotlivých bitů `operator[]` z bitset – třída.  
   
 ```  
@@ -1173,7 +1176,7 @@ public:
  Odkaz na bit v bitset určeného pozici argument pro první, druhý a páté členské funkce tříd, a **true** nebo **false**, tak, aby odrážela hodnotu upravené bitové v bitset – pro třetí a čtvrtý členské funkce odkazu na třídu.  
   
 ### <a name="remarks"></a>Poznámky  
- Třída `reference` existuje jenom jako pomocná třída pro bitset `operator[]`. Třída členů popisuje objekt, který následuje jednotlivých bit v rámci bitset přístup. Umožní *b* se objekt typu `bool`, *x* a *y* objekty typu **bitset\<***N*  **>** , a *i* a *j* platný pozice v rámci takového objektu. Notace *x [i]* odkazuje bit na pozici *i* v bitset *x*. Funkce člena třídy `reference` zadejte postupně následující operace:  
+ Třída `reference` existuje jenom jako pomocná třída pro bitset `operator[]`. Třída členů popisuje objekt, který následuje jednotlivých bit v rámci bitset přístup. Umožní *b* se objekt typu `bool`, *x* a *y* objekty typu **bitset\<***N*** >** , a *i* a *j* platný pozice v rámci takového objektu. Notace *x [i]* odkazuje bit na pozici *i* v bitset *x*. Funkce člena třídy `reference` zadejte postupně následující operace:  
   
 |Operace|Definice|  
 |---------------|----------------|  
@@ -1265,7 +1268,7 @@ After flipping the value of the bit at position 4 in bitset b2,
 After a second flip, the value of the position 4 bit in b2 is now: 1.  
 ```  
   
-##  <a name="reset"></a>bitset::Reset  
+##  <a name="reset"></a>  bitset::Reset  
  Obnoví službu bits bitset na 0 nebo obnoví trochu na zadané pozici 0.  
   
 ```  
@@ -1321,7 +1324,7 @@ The collecion of bits obtained from resetting all
  the elements of the bitset b1 is: ( 00000 )  
 ```  
   
-##  <a name="set"></a>bitset::set  
+##  <a name="set"></a>  bitset::set  
  Nastaví všechny bity v bitset na 1 nebo nastaví trochu na zadané pozici 1.  
   
 ```   
@@ -1383,7 +1386,7 @@ The collecion of bits obtained from setting all the
  elements of the bitset b1 is: ( 11111 )  
 ```  
   
-##  <a name="size"></a>bitset::size  
+##  <a name="size"></a>  bitset::size  
  Vrátí počet bitů v bitset objektu.  
   
 ```  
@@ -1424,7 +1427,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.  
 ```  
   
-##  <a name="test"></a>bitset::test  
+##  <a name="test"></a>  bitset::test  
  Ověřuje, zda je bit na zadané pozici v bitset nastaven na hodnotu 1.  
   
 ```  

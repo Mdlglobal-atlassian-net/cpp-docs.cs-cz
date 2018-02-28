@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_put
 - locale/std::num_put::char_type
 - locale/std::num_put::iter_type
 - locale/std::num_put::do_put
 - locale/std::num_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_put [C++]
 - std::num_put [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f25ebb3cc763947ca0ee88d95d0b7a1d284d157f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numput-class"></a>num_put – třída
 Třídu šablony, která popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody číselných hodnot pořadí typu `CharType`.  
@@ -57,28 +60,28 @@ class num_put : public locale::facet;
   
 |||  
 |-|-|  
-|[num_put –](#num_put)|V konstruktoru pro objekty typu `num_put`.|  
+|[num_put](#num_put)|V konstruktoru pro objekty typu `num_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type –](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
-|[iter_type –](#iter_type)|Typ, který popisuje výstupní iterátor.|  
+|[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|  
+|[iter_type](#iter_type)|Typ, který popisuje výstupní iterátor.|  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |||  
 |-|-|  
-|[do_put –](#do_put)|Virtuální funkce, která je volána k převodu čísla do posloupnost `CharType`s, který představuje číslo formátu pro dané národní prostředí.|  
-|[PUT](#put)|Převádí číslo na posloupnost `CharType`s, který představuje číslo formátu pro dané národní prostředí.|  
+|[do_put](#do_put)|Virtuální funkce, která je volána k převodu čísla do posloupnost `CharType`s, který představuje číslo formátu pro dané národní prostředí.|  
+|[put](#put)|Převádí číslo na posloupnost `CharType`s, který představuje číslo formátu pro dané národní prostředí.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<národní prostředí >  
   
  **Namespace:** – std  
   
-##  <a name="char_type"></a>num_put::char_type  
+##  <a name="char_type"></a>  num_put::char_type  
  Typ, který se používá k popisu znaku používaného národním prostředním.  
   
 ```  
@@ -88,7 +91,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **CharType**.  
   
-##  <a name="do_put"></a>num_put::do_put  
+##  <a name="do_put"></a>  num_put::do_put  
  Virtuální funkce, která je volána k převodu čísla do posloupnost **CharType**s, který představuje číslo formátu pro dané národní prostředí.  
   
 ```  
@@ -192,11 +195,11 @@ virtual iter_type do_put(
   
  Výstupní formát celé pole je dáno Další [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** volání vráceny [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:  
   
-- **FAC**. [seskupování](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky  
+- **fac**. [seskupování](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky  
   
-- **FAC**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky  
+- **fac**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky  
   
- Pokud se nevyžaduje žádná omezení seskupení **fac**. **seskupování** (jeho první prvek má hodnotu char_max –), pak žádné instance **fac**. `thousands_sep`jsou generovány, v poli výstup. Jinak jsou vloženy oddělovače potom, co dojde tiskové převod.  
+ Pokud se nevyžaduje žádná omezení seskupení **fac**. **seskupování** (jeho první prvek má hodnotu char_max –), pak žádné instance **fac**. `thousands_sep` jsou generovány, v poli výstup. Jinak jsou vloženy oddělovače potom, co dojde tiskové převod.  
   
  Druhý virtuální chráněného člena funkce:  
   
@@ -218,7 +221,7 @@ virtual iter_type do_put(iter_type next,
     double val) const;
 ```  
   
- se chová stejně jako první, s tím rozdílem, že vytváří pole od hodnoty s plovoucí desetinnou čárkou výstup **val**. **FAC**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikace ekvivalentní tiskové převod je stanoven následujícím způsobem:  
+ se chová stejně jako první, s tím rozdílem, že vytváří pole od hodnoty s plovoucí desetinnou čárkou výstup **val**. **fac**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikace ekvivalentní tiskové převod je stanoven následujícím způsobem:  
   
 -   Pokud **iosbase**. **příznaky** & `ios_base::floatfield` == `ios_base::`[pevné](../standard-library/ios-functions.md#fixed), je specifikace převod **lf**.  
   
@@ -276,7 +279,7 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```  
   
- se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci **ld** s **stanovená v čl.**.  
+ se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci **ld** s **stanovená v čl**.  
   
  Funkci osmého virtuální chráněného člena:  
   
@@ -292,7 +295,7 @@ virtual iter_type do_put(iter_type next,
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [put](#put), který volá `do_put`.  
   
-##  <a name="iter_type"></a>num_put::iter_type  
+##  <a name="iter_type"></a>  num_put::iter_type  
  Typ, který popisuje výstupní iterátor.  
   
 ```  
@@ -302,7 +305,7 @@ typedef OutputIterator iter_type;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro parametr šablony **OutputIterator.**  
   
-##  <a name="num_put"></a>num_put::num_put  
+##  <a name="num_put"></a>  num_put::num_put  
  V konstruktoru pro objekty typu `num_put`.  
   
 ```  
@@ -320,13 +323,13 @@ explicit num_put(size_t _Refs = 0);
   
 -   1: doba života objektu, se musí ručně spravovat.  
   
--   \>1: tyto hodnoty nejsou definovány.  
+-   \> 1: tyto hodnoty nejsou definovány.  
   
  Žádné přímé příklady je možné, protože je chráněn destruktoru.  
   
  Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(_ *odolný systém souborů*).  
   
-##  <a name="put"></a>num_put::Put  
+##  <a name="put"></a>  num_put::Put  
  Převádí číslo na posloupnost **CharType**s, který představuje číslo formátu pro dané národní prostředí.  
   
 ```  

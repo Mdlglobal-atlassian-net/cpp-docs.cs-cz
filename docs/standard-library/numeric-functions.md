@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
@@ -13,7 +13,7 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 9b1c992930fb6b35498f04357e783d01db3a229c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 ||||  
 |-|-|-|  
-|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product –](#inner_product)|  
-|[iota](#iota)|[partial_sum –](#partial_sum)|  
+|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
+|[iota](#iota)|[partial_sum](#partial_sum)|  
   
-##  <a name="accumulate"></a>accumulate  
+##  <a name="accumulate"></a>  accumulate  
  Vypočítá součet všech elementů v zadaném rozsahu včetně některé počáteční hodnoty tak, že vypočítá následných částečné součtů nebo vypočítá výsledek podobně získané z pomocí zadané operace binární než součet následných částečné výsledky.  
   
 ```  
@@ -166,7 +166,7 @@ The vector of partial products is:
  ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).  
 ```  
   
-##  <a name="adjacent_difference"></a>adjacent_difference  
+##  <a name="adjacent_difference"></a>  adjacent_difference  
  Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.  
   
 ```  
@@ -270,7 +270,7 @@ int main( )
 }  
 ```  
   
-##  <a name="inner_product"></a>inner_product –  
+##  <a name="inner_product"></a>  inner_product –  
  Vypočítá součet element-wise součin dvou rozsahy a přidává ji k zadaná počáteční hodnota nebo vypočítá výsledek obecný postup kde binárních operací sum a produktu jsou nahrazovány jiné zadaný binární operace.  
   
 ```  
@@ -416,7 +416,7 @@ int main()
 }  
 ```  
   
-##  <a name="iota"></a>iota  
+##  <a name="iota"></a>  iota  
  Ukládá počáteční hodnotu, počínaje prvním elementem a vyplnění pomocí následných krocích, zda hodnota ( ` value++`) v jednotlivých prvků v intervalu `[ first,  last)`.  
   
 ```  
@@ -477,7 +477,7 @@ int main(void)
 }  
 ```  
   
-##  <a name="partial_sum"></a>partial_sum –  
+##  <a name="partial_sum"></a>  partial_sum –  
  Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím *i*element TD a ukládá výsledek každé součet v *i*element TD cílového rozsahu nebo vypočítá výsledek Obecný postup, kde je součet operaci nahrazena jinou zadaný binární operace.  
   
 ```  
