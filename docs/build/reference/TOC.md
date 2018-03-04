@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew (předpoklad, že operátor new vyvolá výjimku)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (náhrada spřežky tří znaků)](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t (wchar_t je nativní typ)](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf (rychlejší generování souborů PDB)](zf.md)
 #### [/Zg (generování prototypů funkcí)](zg-generate-function-prototypes.md)
 #### [/Zl (vynechání názvu výchozí knihovny)](zl-omit-default-library-name.md)
 #### [/Zm (určení limitu přidělení paměti pro předkompilované hlavičky)](zm-specify-precompiled-header-memory-allocation-limit.md)
