@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: Visual C++ dokumentace | Microsoft Docs
 description: "Další informace o použití C++ pro vývoj aplikací, služeb a nástrojů pro vaše platformy a zařízení."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -325,7 +326,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Portování a upgrade</h3>
+                                                    <h3>Portování a upgradování</h3>
                                                     <p>Proveďte upgrade na nejnovější verzi sady Visual Studio a migrovat starší verze aplikace pro moderní platformy.</p>
                                                 </div>
                                             </div>

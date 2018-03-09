@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [vsprintf_s –, _vsprintf_s_l –, vswprintf_s –, _vswprintf_s_l –](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.  
   
 > [!IMPORTANT]
->  Pomocí `vsprintf`, zde je způsob, jak omezit počet znaků zapsána, což znamená, že kódu pomocí této funkce je ohrožena útoky založenými na přetečení vyrovnávací paměti. Použití [_vsnprintf –](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) místo, nebo volejte [_vscprintf –](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) k určení, jak velké vyrovnávací paměť je potřeba. Také zajistěte, aby `format` není řetězec definovaný uživatelem. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Pomocí `vsprintf`, že se žádný způsob, jak omezit počet znaků, zapíše, což znamená, že kódu pomocí této funkce je ohrožena útoky založenými na přetečení vyrovnávací paměti. Použití [_vsnprintf –](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) místo, nebo volejte [_vscprintf –](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) k určení, jak velké vyrovnávací paměť je potřeba. Také zajistěte, aby `format` není řetězec definovaný uživatelem. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
  `vswprintf` vyhovuje C standardu ISO, který vyžaduje parametr druhého, `count`, typu `size_t`. Chcete-li vynutit staré nestandardní chování, definovat `_CRT_NON_CONFORMING_SWPRINTFS.` staré chování nemusí být v budoucí verzi, takže kódu by mělo být změněno používat nové chování vyhovující.  
   

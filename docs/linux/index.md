@@ -2,13 +2,14 @@
 layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
+ms.topic: landing-page
 title: "Vývoj Linux s dokumentaci jazyka C++"
 description: "Vytváření a ladění aplikací spuštěných v systému Linux."
-ms.openlocfilehash: 80dea4d1a963bd9c2f6f49dda3347529d51e8ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="linux-development-with-c-documentation"></a>Vývoj Linux s dokumentaci jazyka C++
 
@@ -66,7 +67,7 @@ Vytváření a ladění aplikací spuštěných v systému Linux.
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">IDE a nástrojů pro vývoj Visual C++</a></p>
+                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">Integrované vývojové prostředí a nástroje pro vývoj v jazyce Visual C++</a></p>
                     </div>
                 </div>
             </div>

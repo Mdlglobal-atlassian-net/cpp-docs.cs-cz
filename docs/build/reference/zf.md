@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (vytváření rychlejší PDB)
 
@@ -32,7 +32,7 @@ Minimalizace volání RPC mspdbsrv.exe povolte rychlejší vytváření PDB v pa
 
 **/Zf** možnost umožňuje podpora kompilátoru pro rychlejší generování soubory PDB při použití [/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md) možnost, nebo pokud systém sestavení (například [nástroje MSBuild ](/visualstudio/msbuild/msbuild-reference) nebo [CMake](../../ide/cmake-tools-for-visual-cpp.md)) může spustit víc cl.exe kompilátoru procesy ve stejnou dobu. Tato možnost způsobí, že kompilátoru front-end zpoždění generování indexy typu pro každý typ záznam v souboru PDB až do konce kompilace a potom požadavky je vše v jednom volání protokolu RPC do mspdbsrv.exe, místo provedení žádost RPC pro každý záznam. Podstatně tím lze vylepšit sestavení propustnost méně zatěžuje proces mspdbsrv.exe v prostředí, kde se současně spustit více procesů kompilátoru cl.exe RPC.
 
-Protože **/Zf** možnost se vztahuje pouze na generování PDF, vyžaduje [/Zi](z7-zi-zi-debug-information-format.md) nebo [/ZI](z7-zi-zi-debug-information-format.md) možnost.
+Protože **/Zf** možnost se vztahuje pouze na generování PDB, vyžaduje [/Zi](z7-zi-zi-debug-information-format.md) nebo [/ZI](z7-zi-zi-debug-information-format.md) možnost.
 
 **/Zf** možnost je k dispozici od verze Visual Studio 2017 verze 15.1 a ve výchozím nastavení.
 

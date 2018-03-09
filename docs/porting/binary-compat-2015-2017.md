@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>C++ binární kompatibilitu mezi Visual Studio 2015 a Visual Studio 2017
 
@@ -34,7 +34,8 @@ Existují dvě výjimky pro toto pravidlo. Binární kompatibilita není zaruče
 
 1) Když jsou statické knihovny nebo soubory objektů kompilovat s přepínače kompilátoru /GL.  
 
-2) Pokud aplikace využívá redistributable knihovny, jejichž číslo verze je menší než sady nástrojů, který se používá ke kompilaci aplikace. Jinými slovy pokud zkompilujete program s v141 sada nástrojů platformy, všechny redistributable knihovny, které využívá aplikace musí být kompilované s v141 nebo vyšší.  
+2) Při využívání knihovny sestaven pomocí nástrojů, jehož verze je vyšší než sady nástrojů, které používají ke kompilaci a odkaz aplikaci. Například program, který je zkompilovat a propojit s nástrojů 19.12 spotřebovat knihovny, které jsou kompilovat s 19.0 až prostřednictvím 19.12. Propojování 19.x programy s knihovnami vyprodukované Visual Studio 2013 nebo starší není podporována.
+
 
 ## <a name="see-also"></a>Viz také  
 
