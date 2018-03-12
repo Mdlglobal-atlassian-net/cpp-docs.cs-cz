@@ -1,7 +1,7 @@
 ---
 title: "Stránka vlastností adresářů VC ++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>Stránka adresářů VC ++ vlastnost (Windows)
 
@@ -42,23 +42,25 @@ Linux verzi této stránce, naleznete v části [adresáře VC ++ (Linux C++)](.
 
 Abyste měli přístup **adresáře VC ++** stránky vlastností:
 
-1. z hlavní nabídky zvolte **zobrazení | Průzkumník řešení**
-1. Klikněte pravým tlačítkem na uzel projektu (není nejvyšší úrovně řešení) a zvolte **vlastnosti**
-1. v levém podokně **stránky vlastností** dialogové okno, rozbalte seznam **vlastnosti konfigurace** a vyberte **adresáře VC ++**.  
+1. Pokud **Průzkumníku řešení** okno není viditelný, pak v hlavní nabídce zvolte **zobrazení** > **Průzkumníku řešení**.
+1. Klikněte pravým tlačítkem na uzel projektu (není nejvyšší úrovně řešení) a zvolte **vlastnosti**.
+1. V levém podokně **stránky vlastností** dialogové okno, vyberte **vlastnosti konfigurace** > **adresáře VC ++**.  
 
-Vlastnosti adresáře VC ++ se vztahují na projekt, ne uzlu nejvyšší úrovně řešení:
+Vlastnosti adresáře VC ++ se vztahují na projekt, ne uzlu nejvyšší úrovně řešení. Pokud se nezobrazí **adresáře VC ++** pod **vlastnosti konfigurace**, vyberte uzel projektu C++ v **Průzkumníku řešení** okno: 
 
 ![Vyberte uzel projektu](media/vcppdir.png "vyberte uzel projektu zobrazíte vlastnosti adresáře VC ++")
 
-Pokud se nezobrazí stránka vlastností, ujistěte se, máte uzlu projekt vybraný v **Průzkumníku řešení**. Všimněte si, že **adresáře VC ++** stránka vlastností pro různé platformy projekty vypadá jinak. Projekty jiný systém než Windows, najdete v části [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md) nebo. 
+Všimněte si, že **adresáře VC ++** stránka vlastností pro různé platformy projekty vypadá jinak. Informace specifické pro projekty Linux C++ najdete v tématu [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md). 
  
 Pokud nejste obeznámeni s *projektu vlastnosti* v sadě Visual Studio, může pro vás užitečné první čtení [práce s vlastnostmi projektu](working-with-project-properties.md). 
  
-Výchozí nastavení pro adresáře VC ++ závisí na typu projektu. Pro stolní projekty obsahují nástroje VC ++ umístění pro konkrétní sada nástrojů platformy a umístění sady Windows SDK. Můžete změnit **sada nástrojů platformy** a **verze sady Windows SDK** na **vlastnosti konfigurace – Obecné** stránky. Chcete-li zobrazit hodnoty pro všechny adresáře:
+Výchozí nastavení pro **adresáře VC ++** vlastnosti závisí na typu projektu. Pro stolní projekty obsahují umístění nástroje C++ pro konkrétní sada nástrojů platformy a umístění sady Windows SDK. Můžete změnit **sada nástrojů platformy** a **verze sady Windows SDK** na **vlastnosti konfigurace** > **Obecné** stránka. 
 
-1. v pravém podokně **adresáře VC ++** vyberte řádek. Například **adresáře knihovny**
-1. Zvolte tlačítko šipky dolů vpravo
-1. Zvolte **upravit**.
+Chcete-li zobrazit hodnoty pro všechny adresáře:
+
+1. Vyberte jednu z vlastností v **adresáře VC ++** stránky. Například vyberte **adresáře knihovny**.
+1. Klikněte na tlačítko šipky dolů na konci tohoto pole hodnotu vlastnosti.
+1. V rozevírací nabídce vyberte **upravit**.
 
 ![Upravit adresáře knihovny](media/vcppdir_libdir_edit.png "dialogové okno Upravit cesty knihoven")
 
@@ -74,7 +76,7 @@ Můžete hledat částečné nebo úplný odpovídá v textové pole. Následuj�
 
 ![Zobrazit hodnoty makro](media/vcppdir_libdir_macros.png "dialogové okno Upravit makra")
 
-Poznámka: V seznamu naplní během psaní. Nemáte stiskněte **Enter**.
+Poznámka: Naplnění seznamu během psaní. Nemáte stiskněte **Enter**.
 
 Další informace o makra a proč byste měli používat místo pevně cest, kdykoli je to možné, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
@@ -90,22 +92,25 @@ Další informace najdete v tématu tyto příspěvky blogu: [adresáře VC ++](
 
 Můžete zadat také další adresáře, a to následujícím způsobem.  
   
-**Spustitelný soubor adresáře**  
+**Spustitelný soubor adresáře**<br/>
 Adresáře, ve kterých se mají vyhledávat spustitelné soubory. Odpovídá **cesta** proměnné prostředí.
 
-**Zahrnout adresáře**  
+**Zahrnout adresáře**<br/>
 Adresáře, ve kterých se mají vyhledávat vkládané soubory, na něž je odkazováno ze zdrojového kódu. Odpovídá **zahrnout** proměnné prostředí.
 
-**Referenční dokumentace adresáře**  
+**Referenční dokumentace adresáře**<br/>
  Adresáře, ve kterém se má hledat sestavení a soubory modulu (metadata), které jsou odkazované ve zdrojovém kódu pomocí [#using](../preprocessor/hash-using-directive-cpp.md) – direktiva. Odpovídá **LIBPATH** proměnné prostředí.
 
-**Adresáře knihovny**  
-Adresáře, ve kterých se mají vyhledávat soubory knihoven (.lib), včetně knihoven prostředí runtime. Odpovídá **LIB** proměnné prostředí. Toto nastavení se nevztahuje na soubory .obj; pro odkaz na soubor .obj na [Linkeru](../ide/linker-property-pages.md)**Obecné** stránka vlastností, vyberte **Další závislosti knihovny** a pak zadejte relativní cesta k souboru.
+**Adresáře knihovny**<br/>
+Adresáře, ve kterých se mají vyhledávat soubory knihoven (.lib), včetně knihoven prostředí runtime. Odpovídá **LIB** proměnné prostředí. Toto nastavení se nevztahuje na soubory .obj; Chcete-li vytvořit odkaz na soubor .obj na **vlastnosti konfigurace** > **Linkeru** > **Obecné** stránka vlastností, vyberte  **Další závislosti knihovny** a pak zadejte relativní cesta k souboru. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
 
-**Zdrojové adresáře**  
+**Knihovna WinRT adresáře**<br/>
+Adresáře k vyhledání WinRT soubory knihovny pro použití v aplikacích pro univerzální platformu Windows (UWP). 
+
+**Zdrojové adresáře**<br/>
 Adresáře, ve kterých se mají vyhledávat zdrojové soubory pro IntelliSense.
 
-**Vyloučit adresáře**  
+**Vyloučit adresáře**<br/>
 Adresáře, ve kterých se během vytváření závislostí nemá vyhledávat.
 
 ## <a name="sharing-the-settings"></a>Sdílení nastavení
