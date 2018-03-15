@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ projektovou-(standardy shoda)
 
@@ -37,7 +37,7 @@ Zadejte režim standardů shoda kompilátoru. Pomocí této možnosti vám pomoh
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít **/ projektovou-** – možnost kompilátoru k určení chování kompilátoru podle standardů. Tato možnost zakáže projektovou chování a nastaví [/Zc](../../build/reference/zc-conformance.md) pro striktní shoda – možnosti kompilátoru. V prostředí IDE tato možnost umožňuje také podtržení nonkonformní kódu technologie IntelliSense modul. 
+Můžete použít **/ projektovou-** – možnost kompilátoru k určení chování kompilátoru podle standardů. Tato možnost zakáže projektovou chování a nastaví [/Zc](../../build/reference/zc-conformance.md) pro striktní shoda – možnosti kompilátoru. V prostředí IDE tato možnost umožňuje také podtržení nonkonformní kódu technologie IntelliSense modul.
 
 Ve výchozím nastavení **/ projektovou-** je možnost nastavena v nové projekty vytvořené verzi Visual Studio 2017 15,5 a novější verze. Ve výchozím nastavení v dřívějších verzích není nastavena. Když je nastaven možnost, kompilátor generuje diagnostiky chyby nebo upozornění, když vytvoří nestandardní jazyk zjištění v kódu, včetně některé běžné chyby v pre-C ++ 11 kódu.
 
@@ -416,7 +416,7 @@ Ve verzi před Visual Studio 2017 verze 15,5 použijte tento postup:
 
 1. Otevřete váš projekt **stránky vlastností** dialogové okno.
 
-1. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **příkazového řádku** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
 1. Zadejte **/ projektovou-** – možnost kompilátoru v **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.
 

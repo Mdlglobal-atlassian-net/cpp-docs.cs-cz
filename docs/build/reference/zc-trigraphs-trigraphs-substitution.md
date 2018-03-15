@@ -1,12 +1,9 @@
 ---
-title: "-Zc: trigraphs (náhrada trigraph) | Microsoft Docs"
+title: "/ Zc: trigraphs (náhrada trigraph) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /Zc
@@ -18,32 +15,42 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5fdc5fc6432335e964a05185b7647b152a57d8f4
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Náhrada trigraph)
-Když **/Zc: trigraphs** není zadaný, kompilátor nahradí znak posloupnost trigraph pomocí odpovídající interpunkční znaménko. Chcete-li vypnout trigraph nahrazení, zadejte **/Zc:trigraphs-**. Ve výchozím nastavení **/Zc: trigraphs** je vypnutý.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Zc:trigraphs[-]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Trigraph se skládá ze dvou po sobě jdoucích otazníky ("??") následuje jedinečný třetí znak. Například kompilátor nahradí "?? = "trigraph pomocí znaku '#'. Použití trigraphs ve zdrojových souborech C, které používají znaková sada, která neobsahuje vhodné grafické reprezentace pro některé znaky interpunkce.  
-  
- Seznam trigraph C/C++ a příklad, který ukazuje způsob použití trigraph najdete v tématu [trigraph](../../c-language/trigraphs.md).  
-  
-## <a name="see-also"></a>Viz také  
- [/Zc (shoda)](../../build/reference/zc-conformance.md)   
- [Spřežky tří znaků](../../c-language/trigraphs.md)
+
+Když **/Zc: trigraphs** není zadaný, kompilátor nahradí znak posloupnost trigraph pomocí odpovídající interpunkční znaménko.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/Zc:trigraphs**[**-**]  
+
+## <a name="remarks"></a>Poznámky
+
+A *trigraph* se skládá ze dvou po sobě jdoucích otazníky ("??") následuje jedinečný třetí znak. Jazyk C standardní podporuje trigraph pro zdrojové soubory, které používají znaková sada, která neobsahuje vhodné grafické reprezentace pro některé znaky interpunkce. Například pokud jsou povolené trigraph, kompilátor nahradí "?? = "trigraph pomocí znaku '#'. Prostřednictvím C ++ 14 jsou podporovány trigraph jako C. C ++ 17 standardní odebere trigraph z jazyka C++. V kódu C++ **/Zc: trigraphs** – možnost kompilátoru umožňuje náhrada trigraph pořadí podle odpovídající interpunkční znaménko. **/Zc:trigraphs-** zakáže trigraph nahrazení.
+
+**/Zc: trigraphs** možnost je ve výchozím nastavení vypnuta a tato možnost není při vliv [/ projektovou-](permissive-standards-conformance.md) je zadána možnost.
+
+Seznam trigraph C/C++ a příklad, který ukazuje způsob použití trigraph najdete v tématu [trigraph](../../c-language/trigraphs.md).
+
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+
+1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc: trigraphs** nebo **/Zc:trigraphs-** a potom zvolte **OK**.
+
+## <a name="see-also"></a>Viz také
+
+[/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
+[Spřežky tří znaků](../../c-language/trigraphs.md)<br/>

@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c ++ 17 noexcept pravidla)
 
@@ -34,7 +34,7 @@ Díky C ++ 17 standardní `throw()` jako alias pro `noexcept`, odebere `throw(<t
 
 ## <a name="remarks"></a>Poznámky
 
-Když **/Zc:noexceptTypes** je zadána možnost, kompilátor C ++ 17 standardní vyhovuje a považuje [throw()](../../cpp/exception-specifications-throw-cpp.md) jako alias pro [noexcept](../../cpp/noexcept-cpp.md), odebere `throw(<type list>)`a `throw(...)`a umožňuje určité typy zahrnout `noexcept`. **/Zc:noexceptTypes** možnost je dostupná jenom při [/std: c ++ 17](std-specify-language-standard-version.md) nebo [/std:latest](std-specify-language-standard-version.md) je povoleno. **/Zc:noexceptTypes** je ve výchozím nastavení povolené tak, aby odpovídala ISO standardu C ++ 17. Tuto možnost vypnout tak, že zadáte **/Zc:noexceptTypes-** se vrátit k C ++ 14 chování `noexcept` při **/std::C ++ 17** nebo **/std::latest** je zadán.
+Když **/Zc:noexceptTypes** je zadána možnost, kompilátor C ++ 17 standardní vyhovuje a považuje [throw()](../../cpp/exception-specifications-throw-cpp.md) jako alias pro [noexcept](../../cpp/noexcept-cpp.md), odebere `throw(<type list>)`a `throw(...)`a umožňuje určité typy zahrnout `noexcept`. **/Zc:noexceptTypes** možnost je dostupná jenom při [/std: c ++ 17](std-specify-language-standard-version.md) nebo [/std:latest](std-specify-language-standard-version.md) je povoleno. **/Zc:noexceptTypes** je ve výchozím nastavení povolené tak, aby odpovídala ISO standardu C ++ 17. [/ Projektovou-](permissive-standards-conformance.md) možnost nemá vliv na **/Zc:noexceptTypes**. Tuto možnost vypnout tak, že zadáte **/Zc:noexceptTypes-** se vrátit k C ++ 14 chování `noexcept` při **/std::C ++ 17** nebo **/std::latest** je zadán.
 
 Od verze Visual Studio 2017 verze 15,5, C++ compiler diagnostikuje další specifikace neodpovídající výjimek v deklaracích v C ++ 17 režimu nebo když [/ projektovou-](permissive-standards-conformance.md) je zadána možnost.
 
@@ -84,7 +84,7 @@ Další informace o problémech shoda v jazyce Visual C++, najdete v části [ne
 
 1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Vyberte **příkazového řádku** stránka vlastností v **C/C++** složky.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
 1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc:noexceptTypes** nebo **/Zc:noexceptTypes-** a potom zvolte **OK**.
 

@@ -1,6 +1,6 @@
 ---
 title: "/Zc:ternary (vynucení pravidel podmíněný operátor) | Microsoft Docs"
-ms.date: 1/12/2018
+ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (vynucení pravidel podmíněný operátor)
 
@@ -33,7 +33,7 @@ Povolte vynucení pravidel C++ Standard pro typy a const nebo volatile (odchylka
 
 Visual Studio verze 15.3 umožňuje podporu kompilátoru C++ standardní podmíněného (nebo Ternární) operátor (**?:**) chování. Standardní C++ vyžaduje buď operandy být stejného typu a odchylka nákladů kvalifikaci, nebo jenom jeden operand být jednoznačně převoditelná na stejného typu a kvalifikace odchylka nákladů jako druhý nebo jeden nebo oba operandy být výraz throw. Ve verzi před Visual Studio verze 15,5 povoleno kompilátor převody, které jsou považovány nejednoznačný standardní. Když **/Zc:ternary** je zadána možnost, kompilátor vyhovuje standardní a kód, který nesplňuje pravidla pro odpovídající typy a odchylka nákladů kvalifikace operandů druhý a třetí odmítne.
 
-**/Zc:ternary** možnost je ve výchozím nastavení vypnuta. Použití **/Zc:ternary** vyhovující chování, povolit nebo **/Zc:ternary-** explicitně zadat předchozí chování kompilátoru nonkonformní. [/ Projektovou-](permissive-standards-conformance.md) možnost umožňuje **/Zc:ternary**. 
+**/Zc:ternary** možnost je ve výchozím nastavení vypnuta. Použití **/Zc:ternary** vyhovující chování, povolit nebo **/Zc:ternary-** explicitně zadat předchozí chování kompilátoru nonkonformní. [/ Projektovou-](permissive-standards-conformance.md) možnost implicitně umožňuje tuto možnost, ale můžete přepsat pomocí **/Zc:ternary-**.
 
 ### <a name="examples"></a>Příklady
 

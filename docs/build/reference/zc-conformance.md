@@ -1,12 +1,9 @@
 ---
-title: -Zc (shoda) | Microsoft Docs
+title: /Zc (shoda) | Microsoft Docs
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc (shoda)
 
@@ -36,18 +32,18 @@ Můžete použít **/Zc** – možnosti kompilátoru k určení chování kompil
 
 ## <a name="syntax"></a>Syntaxe
 
-> / Zc:_možnost_{,_možnost_}
+> **/ Zc:**_možnost_{,_možnost_}
 
 ## <a name="remarks"></a>Poznámky
 
-Po implementaci rozšíření do C nebo C++, který není kompatibilní se standardem Visual Studio můžete použít `/Zc` shody můžete určit chování standard vyhovující nebo specifické pro společnost Microsoft. Chování specifické pro společnost Microsoft pro některé možnosti, je výchozí nastavení, aby se zabránilo ve velkém měřítku nejnovější změny existujícího kódu. Výchozí hodnota je v ostatních případech standardní chování, kde vylepšení zabezpečení, výkonu a kompatibility převáží nad nákladů na nejnovější změny. V novějších verzích sady Visual Studio může změnit výchozí nastavení pro jednotlivé možnosti shoda. Další informace o jednotlivých možnostech shoda naleznete v tématu pro konkrétní možnosti.
+Po implementaci rozšíření do C nebo C++, který není kompatibilní se standardem Visual Studio můžete použít `/Zc` shody můžete určit chování standard vyhovující nebo specifické pro společnost Microsoft. Chování specifické pro společnost Microsoft pro některé možnosti, je výchozí nastavení, aby se zabránilo ve velkém měřítku nejnovější změny existujícího kódu. Výchozí hodnota je v ostatních případech standardní chování, kde vylepšení zabezpečení, výkonu a kompatibility převáží nad nákladů na nejnovější změny. V novějších verzích sady Visual Studio může změnit výchozí nastavení pro jednotlivé možnosti shoda. Další informace o jednotlivých možnostech shoda naleznete v tématu pro konkrétní možnosti. [/ Projektovou-](permissive-standards-conformance.md) – možnost kompilátoru implicitně nastaví shoda možnosti, které nejsou ve výchozím nastavení jejich vyhovující nastavení.
 
 Jedná se o `/Zc` – možnosti kompilátoru:
 
 |Možnost|Chování|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Povolit C ++ 17 přepsání zarovnaný dynamické přidělování (zapnuto ve výchozím nastavení v C ++ 17).|
-|[automaticky\[-\]](zc-auto-deduce-variable-type.md)|Vynutit nové standardní C++ význam pro `auto` (na ve výchozím nastavení).|
+|[Automaticky\[-\]](zc-auto-deduce-variable-type.md)|Vynutit nové standardní C++ význam pro `auto` (na ve výchozím nastavení).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Externí propojení pro povolení `constexpr` proměnné (ve výchozím nastavení vypnuté).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Vynutit standardní C++ `for` rozsahu pravidla (na ve výchozím nastavení).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Povolit implicitní `noexcept` na požadované funkce (na ve výchozím nastavení).|
@@ -61,7 +57,8 @@ Jedná se o `/Zc` – možnosti kompilátoru:
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Povolit místní statické inicializace vláken (na ve výchozím nastavení).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Předpokládejme `operator new` vyvolá při selhání (ve výchozím nastavení vypnuté).|
 |[trigraph\[-\]](zc-trigraphs-trigraphs-substitution.md)|Povolte trigraphs (zastaralé, vypněte ve výchozím nastavení).|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`je nativní typ, není typedef (na ve výchozím nastavení).|
+|[twoPhase-](zc-twophase.md)|Šablona nonkonformní analýzy chování (který odpovídá ve výchozím nastavení).|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` je nativní typ, není typedef (na ve výchozím nastavení).|
 
 Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
 

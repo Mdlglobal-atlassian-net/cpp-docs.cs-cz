@@ -1,6 +1,6 @@
 ---
 title: "/Zc:alignedNew (c ++ 17 přepsání zarovnaný přidělení) | Microsoft Docs"
-ms.date: 12/14/2017
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a4d6e801b258697154a4b11c7b5e468c090cc94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 přepsání zarovnaný přidělení)
 
@@ -33,7 +33,7 @@ Povolení podpory pro C ++ 17 přepsání zarovnán **nové**, dynamické přid�
 
 Visual Studio verze 15,5 umožňuje kompilátoru a podpora knihovny pro C ++ 17 standardní přepsání zarovnaný dynamické přidělování paměti. Když **/Zc:alignedNew** je zadána možnost, dynamické přidělování jako `new Example;` respektuje zarovnání *příklad* i když je větší než `max_align_t`, největší zarovnání vyžaduje se pro libovolného základní typu. Pokud je již více než zaručit původní operátorem zarovnání přidělené typu **nové**, k dispozici jako hodnotu předdefinovaná makra  **\_ \_STDCPP\_výchozí \_Nový\_zarovnání\_\_**, příkaz `new Example;` výsledkem volání `::operator new(size_t)` stejně jako ve C ++ 14. Pokud je větší než zarovnání  **\_ \_STDCPP\_výchozí\_nový\_zarovnání\_\_**, místo toho získává implementace paměť pomocí `::operator new(size_t, align_val_t)`. Podobně odstranění přepsání zarovnaný typů vyvolá `::operator delete(void*, align_val_t)` nebo velikosti odstranit podpis `::operator delete(void*, size_t, align_val_t)`.
 
-**/Zc:alignedNew** možnost je dostupná jenom při [/std: c ++ 17](std-specify-language-standard-version.md) nebo [/std: c ++ nejnovější](std-specify-language-standard-version.md) je povoleno. V části **/std: c ++ 17** nebo **/std: c ++ nejnovější**, **/Zc:alignedNew** je ve výchozím nastavení povolené tak, aby odpovídala ISO standardu C ++ 17. Pokud jediný důvodu implementovat operátor **nové** a **odstranit** je podpora přepsání zarovnaný přidělení, může tento kód v C ++ 17 režimu už nepotřebujete. Chcete-li tuto možnost vypnout a vrátit se k C ++ 14 chování **nové** a **odstranit** při **/std::c ++ 17** nebo **/std: c ++ nejnovější** není zadaný, Zadejte **/Zc:alignedNew-**. Pokud implementujete operátor **nové** a **odstranit** , ale nejste připravení implementovat přepsání zarovnaný operátor **nové** a **odstranit** přetížení, které mají `align_val_t` parametr, použijte **/Zc:alignedNew-** možnost zabránit generování standardní knihovna a kompilátor volá přepsání zarovnaný přetížení.
+**/Zc:alignedNew** možnost je dostupná jenom při [/std: c ++ 17](std-specify-language-standard-version.md) nebo [/std: c ++ nejnovější](std-specify-language-standard-version.md) je povoleno. V části **/std: c ++ 17** nebo **/std: c ++ nejnovější**, **/Zc:alignedNew** je ve výchozím nastavení povolené tak, aby odpovídala ISO standardu C ++ 17. Pokud jediný důvodu implementovat operátor **nové** a **odstranit** je podpora přepsání zarovnaný přidělení, může tento kód v C ++ 17 režimu už nepotřebujete. Chcete-li tuto možnost vypnout a vrátit se k C ++ 14 chování **nové** a **odstranit** při **/std::c ++ 17** nebo **/std: c ++ nejnovější** není zadaný, Zadejte **/Zc:alignedNew-**. Pokud implementujete operátor **nové** a **odstranit** , ale nejste připravení implementovat přepsání zarovnaný operátor **nové** a **odstranit** přetížení, které mají `align_val_t` parametr, použijte **/Zc:alignedNew-** možnost zabránit generování standardní knihovna a kompilátor volá přepsání zarovnaný přetížení. [/ Projektovou-](permissive-standards-conformance.md) možnost nezmění výchozí nastavení **/Zc:alignedNew**.
 
 ## <a name="example"></a>Příklad
 
@@ -106,7 +106,7 @@ Informace o problémech shoda v jazyce Visual C++ najdete v tématu [nestandardn
 
 1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Vyberte **příkazového řádku** stránka vlastností v **C/C++** složky.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
 1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc:alignedNew** nebo **/Zc:alignedNew-** a potom zvolte **OK**.
 

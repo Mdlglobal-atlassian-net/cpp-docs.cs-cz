@@ -1,12 +1,9 @@
 ---
 title: "/Zc:externConstexpr (Povolit extern constexpr proměnné) | Microsoft Docs"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /Zc:externConstexpr
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84037e5e8a942d51175d97957d0c05bd6f4aa29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6597bc96609ab051df56886ccc580516986f97ed
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Povolit extern constexpr proměnné)
 
@@ -34,11 +30,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>Syntaxe
 
-> /Zc:externConstexpr [-]
+> **/Zc:externConstexpr**[**-**]
 
 ## <a name="remarks"></a>Poznámky
 
-**/Zc:externConstexpr** – možnost kompilátoru způsobí, že kompilátor použít externí propojení proměnných deklarovaných pomocí `extern constexpr`. **/Zc:externConstexpr** možnost je k dispozici od verze Visual Studio 2017 aktualizace 15,5. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadaný, Visual Studio použije vnitřní propojení na `constexpr` i když proměnné `extern` – klíčové slovo se používá.
+**/Zc:externConstexpr** – možnost kompilátoru způsobí, že kompilátor použít externí propojení proměnných deklarovaných pomocí `extern constexpr`. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadaný, Visual Studio použije vnitřní propojení na `constexpr` i když proměnné `extern` – klíčové slovo se používá. **/Zc:externConstexpr** možnost je k dispozici od 15,6 operací aktualizace 2017 Visual Studio. a ve výchozím nastavení. [/ Projektovou-](permissive-standards-conformance.md) možnost neumožňuje **/Zc:externConstexpr**.
 
 Pokud soubor hlaviček obsahuje proměnná definovaná `extern constexpr`, musí být označen [__declspec(selectany)](../../cpp/selectany.md) Chcete-li sloučit duplicitní deklarace do jediné instance v propojených binárního souboru. V opačném případě se mohou zobrazit chyby linkeru, například LNK2005 pro porušení jedna definice pravidla.
 
@@ -46,7 +42,7 @@ Pokud soubor hlaviček obsahuje proměnná definovaná `extern constexpr`, musí
 
 1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. V části **vlastnosti konfigurace**, rozbalte položku **C/C++** a potom zvolte **příkazového řádku**.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
 1. Přidat **/Zc:externConstexpr** nebo **/Zc:externConstexpr-** k **další možnosti:** podokně.
 
