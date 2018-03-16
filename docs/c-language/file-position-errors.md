@@ -19,16 +19,16 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc55622f724a903c94fe49a935b906d2826297ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bcb4db45f17c9e2d697ee63912e63efe6e8176c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="file-position-errors"></a>Chyby pozice souboru
 **ANSI 4.9.9.1, 4.9.9.4** hodnotu, do které makro `errno` se nastavuje pomocí `fgetpos` nebo `ftell` funkce při selhání  
   
- Při selhání funkce `fgetpos` nebo `ftell` je makro `errno` nastaveno na hodnotu konstanty manifestu `EINVAL`, je-li pozice neplatná, nebo na hodnotu EBADF, je-li číslo souboru chybné. Konstanty jsou definovány v ERRNO.H.  
+ Když `fgetpos` nebo `ftell` selže, `errno` je nastaven na konstantu manifestu `EINVAL` Pokud pozici je neplatný nebo `EBADF` Pokud číslo soubor je chybný. Konstanty jsou definovány v ERRNO.H.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce knihovny](../c-language/library-functions.md)

@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
 
@@ -177,7 +175,7 @@ ms.lasthandoff: 02/21/2018
 |[Upozornění kompilátoru (úroveň 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*identifikátor*': identifikátor je vyhrazené slovo|
 |[Upozornění kompilátoru (úroveň 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|operand na Ignorovat – direktiva|
 |[Upozornění kompilátoru (úroveň 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|CAST. mezi různé ukazatel na člena reprezentace kompilátoru generovat nesprávný kód|
-|[Upozornění kompilátoru (úroveň 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonymní 'struktura &#124; sjednocení' nedeklaruje žádné datové členy|
+|[Upozornění kompilátoru (úroveň 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonymní, struktura&#124;sjednocení ' nedeklaruje žádné datové členy|
 |[Upozornění kompilátoru (úroveň 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|Neplatná instrukce velikost|
 |[Upozornění kompilátoru (úroveň 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|Neplatná velikost operand|
 |[Upozornění kompilátoru (úroveň 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*identifikátor*': symbol přeloží na přestavění registrace|
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/21/2018
 |Upozornění kompilátoru (úroveň 1) C4442|vložený null ukončovací __annotation argument.  Hodnota bude zkrácen.|
 |Upozornění kompilátoru (úroveň 1) C4443|Parametr očekávané – Direktiva pragma '0', '1' nebo '2.|
 |Upozornění kompilátoru (úroveň 3) C4444|'*identifikátor*': '__unaligned' nejvyšší úrovně není implementována v tomto kontextu|
-|[Upozornění kompilátoru (úroveň 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*funkce*': v ' WinRT &#124; spravované ' typ virtuální metoda nemůže být privátní|
+|[Upozornění kompilátoru (úroveň 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*funkce*': v ' WinRT&#124;spravované ' typ virtuální metoda nemůže být privátní|
 |Upozornění kompilátoru (úroveň 1) C4446|'*typ*': nelze mapovat člen '*name1*se do tohoto typu, z důvodu konfliktu s názvem typu. Metoda byla přejmenována na '*name2*.|
 |Upozornění kompilátoru (úroveň 1) C4447|"hlavní" podpis nalezen bez model vláken. Zvažte použití, int hlavní (Platform::Array\<Platform::String ^ > ^ argumentů)'.|
 |Upozornění C4448 kompilátoru|'*typ*1 nemá výchozí rozhraní zadaný v metadatech. Výdej: '*type2*', který může selhat v době běhu.|
@@ -225,14 +223,14 @@ ms.lasthandoff: 02/21/2018
 |[Upozornění kompilátoru (úroveň 4) C4457](compiler-warning-level-4-c4457.md)|prohlášení o '*identifikátor*' skryje funkce parametr|
 |[Upozornění kompilátoru (úroveň 4) C4458](compiler-warning-level-4-c4458.md)|prohlášení o '*identifikátor*' skryje třídy člena|
 |[Upozornění kompilátoru (úroveň 4) C4459](compiler-warning-level-4-c4459.md)|prohlášení o '*identifikátor*' skryje globální deklarace|
-|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; spravované ' operátor '*operátor*', byl předán parametr odkazem. ' WinRT &#124; spravované ' operátor '*operátor*, má jinou sémantiku z C++ operátor'*cpp_operator*', máte v úmyslu předat hodnotu?|
+|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;spravované ' operátor '*operátor*', byl předán parametr odkazem. ' WinRT&#124;spravované ' operátor '*operátor*, má jinou sémantiku z C++ operátor'*cpp_operator*', máte v úmyslu předat hodnotu?|
 |[Upozornění kompilátoru (úroveň 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': Tato třída má finalizační metody '! *finalizační metodu*', ale žádné destruktor ' ~*dtor*.|
 |[Kompilátoru upozornění (úroveň 1, chyba) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*typ*': Nelze určit identifikátor GUID typu. Program může při běhu selhat.|
 |[Upozornění kompilátoru (úroveň 4) C4463](compiler-warning-level-4-c4463.md)|přetečení; přiřazení '*hodnotu*'to bit pole, které může obsahovat pouze hodnoty z'*MIN_VALUE –*'do'*MAX_VALUE –*.|
-|Upozornění kompilátoru (úroveň 4) C4464|zahrnují relativní cesta obsahuje '..'|
+|[Upozornění kompilátoru (úroveň 4) C4464](../../error-messages/compiler-warnings/c4464.md)|zahrnují relativní cesta obsahuje '..'|
 |[Upozornění kompilátoru (úroveň 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|direktivy s plovoucí desetinnou čárkou řízení ignorovat v/CLR|
 |[Upozornění kompilátoru (úroveň 4) C4471](compiler-warning-level-4-c4471.md)|'*výčtu*': deklaraci předat dál bez ohledu na obor výčtu musí mít základní typ (int předpokládá, že)|
-|Upozornění kompilátoru (úroveň 1) C4472|'*identifikátor*' je nativní výčet: přidejte specifikátor přístupu (soukromého a veřejného) deklarovat ' WinRT &#124; spravované ' výčtu|
+|Upozornění kompilátoru (úroveň 1) C4472|'*identifikátor*' je nativní výčet: přidejte specifikátor přístupu (soukromého a veřejného) deklarovat ' WinRT&#124;spravované ' výčtu|
 |[Upozornění kompilátoru (úroveň 1) C4473](c4473.md)|'*funkce*': předáno není dostatečný počet argumentů pro řetězec formátu|
 |Upozornění kompilátoru (úroveň 3) C4474|'*funkce*': předáno příliš mnoho argumentů pro řetězec formátu|
 |Upozornění kompilátoru (úroveň 3) C4475|'*funkce*': délka modifikátor '*modifikátor*"nelze použít s – znak typu pole"*znak*' ve formátu specifikátor|

@@ -19,16 +19,16 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd1190d09ea75073eb199f766dd1fd87291975be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d40cbac5e9320ee335fa4c8090aa11d5157ae3
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-subtraction"></a>Odečtení ukazatele
 **ANSI 3.3.6, 4.1.1** typ celé číslo, které jsou požadované pro uchovávání rozdíl mezi dvěma ukazatele k prvkům ve stejném poli **ptrdiff_t –**  
   
- A **ptrdiff_t –** je **podepsané int**.  
+ `ptrdiff_t` Typedef je `int` na x86 32bitovou platformu. Na 64bitových platformách `ptrdiff_t` typedef je `__int64`.
   
 ## <a name="see-also"></a>Viz také  
  [Pole a ukazatelé](../c-language/arrays-and-pointers.md)

@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté
 
@@ -37,7 +37,7 @@ Tato upozornění můžete povolit pomocí jedné z následujících možností:
    **/ Horní** umožňuje všech upozornění, které jsou ve výchozím nastavení vypnuté. Pokud použijete tuto možnost, můžete vypnout jednotlivé upozornění pomocí [/wd](../build/reference/compiler-option-warning-level.md) možnost.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   To umožňuje upozornění  *nnnn*  na úrovni *l*.
+   To umožňuje upozornění *nnnn* na úrovni *l*.
 
 Následující upozornění jsou ve výchozím stavu vypnuta.
 
@@ -69,7 +69,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (úroveň 4)|'*class1*': objekt rozložení pod /vd2 se změní z důvodu virtuální základní '*class2*.|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (úroveň 4)|dynamic_cast z virtuální základní '*class1*'do'*class2*' by mohlo selhat v některých kontextech|
 |C4444 (úroveň 3)|v tomto kontextu není implementována nejvyšší úroveň '__unaligned'|
-|C4464 (úroveň 4)|zahrnují relativní cesta obsahuje '..'|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (úroveň 4)|zahrnují relativní cesta obsahuje '..'|
 |C4472 (úroveň 1)|'*identifikátor*' je nativní výčet: přidejte specifikátor přístupu (soukromého a veřejného) deklarovat spravované výčtu|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (level 4)|'*funkce*': byl odebrán neregistrované vložené funkce|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (level 4)|"název typu": název typu překračuje limit meta-data "*limit*' znaků|
@@ -103,7 +103,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (úroveň 1)|'*funkce*': podpis privátního člena obsahuje privátní nativní typ sestavení '*native_type*.|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (level 4)|'*funkce*': není vložená funkce|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (level 3)|ukládání 32bitového plovoucího výsledku do paměti, možná ztráta|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile přístup '*výraz*' podléhá/volatile:\<iso &#124; ms > nastavení; zvažte použití __iso_volatile_load/úložiště vnitřní funkce|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile přístup '*výraz*' podléhá/volatile:\<iso&#124;ms > nastavení; zvažte použití __iso_volatile_load/úložiště vnitřní funkce|
 |C4749 (level 4)|podmíněná podporována: offsetof – použít u typu standard non-rozložení '*typ*.|
 |C4767 (level 4)|název sekce '*symbol*' je delší než 8 znaků a bude zkrácen podle linkeru|
 |C4768 (úroveň 3)|atributy __declspec před specifikaci propojení se ignorují.|

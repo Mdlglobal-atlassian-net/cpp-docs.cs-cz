@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled upgradu potenciální problémy (Visual C++)
 
@@ -37,9 +37,11 @@ Formáty souboru .obj a .lib jsou dobře definovaný a zřídka změnu. V někte
 
 C++ nemá binární stabilní aplikační rozhraní (ABI). Visual Studio udržuje stabilní ABI C++ pro všechny podverze verze. Například Visual Studio 2017 a všechny její aktualizace jsou binární kompatibilní. Ale ABI není nutně kompatibilní mezi hlavní verze sady Visual Studio (s výjimkou 2015 a 2017, který _jsou_ binární kompatibilní). To znamená můžeme provést zásadní změny typu rozložení C++, dekorování názvů, výjimek a dalšími částmi C++ ABI. Proto pokud budete mít soubor objekt, který má externí symboly C++ propojení, tento objekt soubor nemusí propojení správně objekt soubory vytvořené na jiný hlavní verzi sady nástrojů. Všimněte si, že zde "nemusí fungovat" má mnoho možných výsledků: odkaz může selhat zcela (například změnu dekorování názvů), odkaz může být úspěšné, a věcí, nemusí fungovat v době běhu (například změnu typu rozložení), nebo pro práci v mnoha případech může dojít věcí a nic přejde wro NG. Také Upozorňujeme, že při C++ ABI není ustájení C ABI a C++ ABI do něj podmnožinu vyžadované pro COM jsou stabilní.
 
+Pokud jste odkaz na knihovnu importu, může být použit novější verze sady Visual Studio redistributable knihoven, které zachování kompatibility ABI za běhu. Například pokud vaše aplikace kompiluje a propojené pomocí nástrojů Visual Studio 2015 Update 3, můžete použít všechny Visual Studio 2017 redistributable, protože knihovny 2015 a 2017 mít zachovají zpětné kompatibility binární. Naopak není true; nelze použít redistributable pro dřívější verzi sady nástrojů než jste použili k vytvoření kódu, i v případě, že mají kompatibilní ABI.
+
 ### <a name="libraries"></a>Knihovny
 
-Pokud při kompilaci zdrojového souboru pomocí konkrétní verzi soubory hlaviček knihoven Visual Studio C++ (podle #including hlavičky), bude výsledný soubor objekt musí být propojena se stejnou verzí knihoven. Ano, například pokud je váš zdrojový soubor kompilovat s Visual Studio 2017 \<immintrin.h >, je nutné propojit s knihovnou vcruntime Visual Studio 2017. Podobně pokud je váš zdrojový soubor kompilovat s Visual Studio 2017 \<iostream >, je nutné propojit s knihovnou Visual Studio 2017 standardní C++ msvcprt. Kombinování a odpovídající není podporována.
+Pokud při kompilaci zdrojového souboru pomocí konkrétní verzi soubory hlaviček knihoven Visual Studio C++ (podle #including hlavičky), bude výsledný soubor objekt musí být propojena se stejnou verzí knihoven. Ano, například pokud je váš zdrojový soubor kompilovat s Visual Studio 2015 Update 3 \<immintrin.h >, je nutné propojit s knihovnou vcruntime Visual Studio 2015 Update 3. Podobně pokud je váš zdrojový soubor kompilovat s Visual Studio 2017 verze 15,5 \<iostream >, je nutné propojit s knihovnou standardní C++ Visual Studio 2017 verze 15,5, msvcprt. Kombinování a odpovídající není podporována.
 
 Standardní knihovny C++, kombinování a odpovídající byla explicitně zakázal prostřednictvím použití `#pragma detect_mismatch` v hlavičkách standardní od sady Visual Studio 2010. Pokud se pokusíte propojit soubory nekompatibilní objektů nebo pokud se pokusíte propojit s knihovnou nesprávný standardní, propojení se nezdaří.
 

@@ -1,12 +1,9 @@
 ---
 title: "Nasazení v jazyce Visual C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Nasazení ve Visual C++
 
@@ -49,6 +45,8 @@ Vzhledem k tomu centrální nasazení s použitím redistribuovatelného balíč
 ## <a name="local-deployment"></a>Místní nasazení
 
 V místním nasazení jsou nainstalovány knihovny soubory ve složce aplikace společně s spustitelný soubor. Různé verze knihoven Visual C++ redistributable lze nainstalovat ve stejné složce, protože název souboru jednotlivých verzí zahrnuje jeho číslo verze. Například verze 12 běhové knihovny jazyka c je msvcp120.dll a verze 14 je msvcp140.dll.
+
+Knihovny může možné rozdělit do několika další knihovny DLL, označuje jako *dot knihovny*. Například některé funkce standardní knihovny vydané v Visual Studio 2017 verze 15,6 operací byl přidán do msvcp140_1.dll, k preverve ABI kompatibilitu msvcp140.dll. Pokud používáte verzi Visual Studio 2017 15,6 operací (sada nástrojů 14.13) nebo novější sady nástrojů ze Visual Studio 2017, musíte nasadit místně tyto knihovny tečku, jakož i hlavní knihovny. Tyto knihovny samostatné tečkou jsou následně zahrnuty do další hlavní verzi základní knihovna při změně ABI.
 
 Vzhledem k tomu, že Microsoft nelze automaticky místně aktualizace nasazena knihovny jazyka Visual C++, nedoporučujeme místní nasazení tyto knihovny. Pokud se rozhodnete použít místní nasazení distribuovatelných knihoven, doporučujeme implementovat vlastní metodu automatických aktualizací místně nasazených knihoven.
 
