@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string – třída
 Pořadí řízené objekt třídy šablony `basic_string` se třída řetězec standardní C++ a jsou obvykle označují jako řetězce, ale nesmí být plést se používají v rámci standardní knihovna C++ C-style řetězce ukončené hodnotou null. Řetězec standardní C++ je kontejner, který umožňuje použití řetězce jako normální typy, jako jsou operace porovnání a zřetězení, iterátory, algoritmy standardní knihovna C++ a kopírování a přiřazení s allocator – třída spravované paměti. Pokud potřebujete převést řetězec standardní C++ C-style řetězce ukončené hodnotou null, použijte [basic_string::c_str](#c_str) člen.  
@@ -607,9 +607,9 @@ reference at(size_type _Off);
  Odkaz na znak řetězce na pozici určeného indexu parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- První prvek řetězce, který má index 0 a tyto prvky jsou indexované postupně podle kladná celá čísla, tak, aby řetězec o délce  *n*  má  *n* tý Element indexované podle čísla *n -* 1.  
+ První prvek řetězce, který má index 0 a tyto prvky jsou indexované postupně podle kladná celá čísla, tak, aby řetězec o délce *n* má *n*element TD indexované podle čísla *n -* 1.  
   
- Člen [operátor &#91; &#93;](#op_at) je rychlejší než – členská funkce **v** pro poskytnutí oprávnění ke čtení a zápisu pro elementy řetězce.  
+ Člen [operátor&#91; &#93; ](#op_at) je rychlejší než – členská funkce **v** pro poskytnutí oprávnění ke čtení a zápisu pro elementy řetězce.  
   
  Člen `operator[]` nekontroluje, jestli je index předán jako parametr platný, ale – členská funkce **v** nepodporuje a tak by měl použít, pokud platnost není určité. Neplatný index, který je index, méně který nula nebo větší než nebo rovna hodnotě velikost řetězce předaný funkci člen **v** vyvolá [out_of_range – třída](../standard-library/out-of-range-class.md) výjimka. Neplatný index předaný `operator[]` má za následek undefined chování, ale index rovna délka řetězce je platný index pro const řetězce a operátor vrátí znak hodnoty null, když uplyne tento index.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Odkaz na znak řetězce na pozici určeného indexu parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- První prvek řetězce, který má index 0, a tyto prvky jsou indexované postupně podle kladná celá čísla, tak, aby řetězec o délce  *n*  má  *n*  element TD indexované podle čísla  *n*  - 1.  
+ První prvek řetězce, který má index 0, a tyto prvky jsou indexované postupně podle kladná celá čísla, tak, aby řetězec o délce *n* má *n*element TD indexované podle čísla *n* - 1.  
   
  `operator[]` je rychlejší než – členská funkce [v](#at) pro poskytnutí oprávnění ke čtení a zápisu pro elementy řetězce.  
   

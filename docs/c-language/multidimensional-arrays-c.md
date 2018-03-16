@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Vícerozměrná pole (C)
 Výraz dolního indexu může mít také více dolních indexů následovně:  
@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1***[***Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota adresy konečné ukazatele na pole zadejte (viz následující příklady).  
+ Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu * expression1***[***Výraz2 ***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota adresy konečné ukazatele na pole zadejte (viz následující příklady).  
   
  Výrazy s více dolními indexy odkazují na prvky „vícerozměrných polí“. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole.  
   

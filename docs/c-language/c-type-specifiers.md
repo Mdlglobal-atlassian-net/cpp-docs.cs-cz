@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
@@ -33,15 +33,15 @@ Specifikátory typu v deklaracích definování typu deklarace proměnné nebo f
 ## <a name="syntax"></a>Syntaxe
 
 *Specifikátor typu*:  
-&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;**Void**  
 &nbsp;&nbsp;**char**  
 &nbsp;&nbsp;**krátký**  
 &nbsp;&nbsp;**celá čísla**  
 &nbsp;&nbsp;**dlouhá**  
 &nbsp;&nbsp;**float**  
 &nbsp;&nbsp;**Double**  
-&nbsp;&nbsp;**podepsané**  
-&nbsp;&nbsp;**bez znaménka**  
+&nbsp;&nbsp;**Podepsané**  
+&nbsp;&nbsp;**Bez znaménka**  
 &nbsp;&nbsp;*struct-or-union-specifier*  
 &nbsp;&nbsp;*enum – specifikátor*  
 &nbsp;&nbsp;*typedef-name*  

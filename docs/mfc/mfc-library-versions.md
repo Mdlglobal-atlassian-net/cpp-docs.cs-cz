@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -98,7 +98,7 @@ Projekty knihovny MFC použít symbol preprocesoru  **\_UNICODE** udávajících
 
 Statické knihovny MFC použijte následující zásady vytváření názvů. Názvy knihoven mají tvar
 
-> *u*afx –*c ** d*. LIB
+> *u*AFX*c**d*.LIB
 
 zobrazených kurzívou malá písmena, kde jsou zástupné symboly specifikátory jejichž významy jsou uvedeny v následující tabulce:
 
@@ -114,10 +114,10 @@ Všechny knihovny uvedené v následující tabulce jsou zahrnuty v adresáři \
 |-------------|-----------------|
 |NAFXCW.LIB|Staticky propojené knihovny MFC, prodejní verze|
 |NAFXCWD.LIB|Staticky propojené knihovny MFC, ladicí verze|
-|UAFXCW. LIB|Staticky propojené knihovny MFC s podporou Unicode, prodejní verze|
-|UAFXCWD. LIB|Staticky propojené knihovny MFC s podporou Unicode ladicí verze|
-|AFXNMCD. LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, prodejní verze|
-|AFXNMCDD. LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, ladicí verze|
+|UAFXCW.LIB|Staticky propojené knihovny MFC s podporou Unicode, prodejní verze|
+|UAFXCWD.LIB|Staticky propojené knihovny MFC s podporou Unicode ladicí verze|
+|AFXNMCD.LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, prodejní verze|
+|AFXNMCDD.LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, ladicí verze|
 
 Ladicí program soubory, které mají stejné základním názvem a příponou PDB jsou také k dispozici pro každou z statických knihoven.
 
@@ -129,14 +129,14 @@ Knihovny MFC DLL mají *verze* čísla označující binární kompatibilitu. Po
 
 |DLL|Popis|
 |---------|-----------------|
-|MFC*verze*. KNIHOVNY DLL|MFC DLL, ANSI nebo MBCS vydání verze|
-|MFC*verze*U.DLL|MFC DLL, Unicode prodejní verzi|
-|MFC*verze*D.DLL|Verze knihovny MFC DLL, ANSI nebo ladění MBCS|
-|MFC*verze*UD. KNIHOVNY DLL|MFC DLL, Unicode ladicí verze|
-|MFCM*verze*. KNIHOVNY DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo MBCS vydání verze|
-|MFCM*verze*U.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode prodejní verzi|
-|MFCM*verze*D.DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo ladění MBCS verze|
-|MFCM*verze*UD. KNIHOVNY DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode ladicí verze|
+|MFC*version*.DLL|MFC DLL, ANSI nebo MBCS vydání verze|
+|MFC*version*U.DLL|MFC DLL, Unicode prodejní verzi|
+|MFC*version*D.DLL|Verze knihovny MFC DLL, ANSI nebo ladění MBCS|
+|MFC*version*UD.DLL|MFC DLL, Unicode ladicí verze|
+|MFCM*version*.DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo MBCS vydání verze|
+|MFCM*version*U.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode prodejní verzi|
+|MFCM*version*D.DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo ladění MBCS verze|
+|MFCM*version*UD.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode ladicí verze|
 
 Importované knihovny potřebné k vytváření aplikací nebo MFC – rozšiřující knihovny DLL, které používají tyto sdílené knihovny DLL mají stejné základní název jako knihovny DLL ale mít příponu názvu souboru LIB. Při použití sdílené knihovny DLL musí být malé statické knihovny stále propojena s kódu; Tato knihovna je s názvem MFCS*verze*.lib {U} {D}.
 

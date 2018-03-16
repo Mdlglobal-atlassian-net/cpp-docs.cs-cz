@@ -23,36 +23,36 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-declarations"></a>Deklarace ukazatelů
 "Ukazatel prohlášení" názvy proměnné ukazatele a určuje typ objektu, na kterou odkazuje proměnná. Proměnná definovaná jako ukazatel obsahuje adresu paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
  *deklarátor*:  
- &nbsp;&nbsp;*ukazatel*<sub>opt</sub> *přímo deklarátor*  
+ &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
   
- *deklarátor přímo*:  
- &nbsp;&nbsp;*identifikátor*  
+ *direct-declarator*:  
+ &nbsp;&nbsp;*Identifikátor*  
   
  &nbsp;&nbsp;**(** *deklarátor* **)**  
   
- &nbsp;&nbsp;*deklarátor přímo* **[** *konstantní výraz*<sub>opt</sub> **]**  
+ &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
   
- &nbsp;&nbsp;*deklarátor přímo* **(** *seznam parametrů typu* **)**  
+ &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
   
- &nbsp;&nbsp;*deklarátor přímo* **(** *seznam identifikátorů*<sub>opt</sub> **)**  
+ &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
   
  *ukazatel*:  
- &nbsp;&nbsp;**\****seznam typů kvalifikátor*<sub>opt</sub>  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
   
- &nbsp;&nbsp;**\****seznam typů kvalifikátor*<sub>opt</sub> *ukazatele*  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
   
- *seznam typů kvalifikátor*:  
- &nbsp;&nbsp;*Kvalifikátor typu*  
+ *type-qualifier-list*:  
+ &nbsp;&nbsp;*type-qualifier*  
   
  &nbsp;&nbsp;*seznam typů kvalifikátor* *kvalifikátor typu*  
   

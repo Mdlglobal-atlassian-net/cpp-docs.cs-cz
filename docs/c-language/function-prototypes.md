@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-prototypes"></a>Prototypy funkcí
 Deklarace funkce předchází v definici funkce a určuje název, návratový typ, třídy úložiště a dalších atributů funkce. Jako prototyp, třeba deklarace funkce vytvořit také typy a identifikátory pro argumenty funkce.  
@@ -36,7 +36,7 @@ Deklarace funkce předchází v definici funkce a určuje název, návratový ty
  `declaration`:  
  *specifikátory deklarace atribut seq* opt*init. deklarátor seznamu* opt**;**  
   
- /\**atribut seq* opt je specifické pro Microsoft * /  
+ /\* *atribut seq* opt je specifické pro Microsoft * /  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace* opt  
@@ -45,12 +45,12 @@ Deklarace funkce předchází v definici funkce a určuje název, návratový ty
   
  *Kvalifikátor typu deklarace – specifikátory* opt  
   
- *Init – deklarátor seznamu*:  
- *Init – deklarátor*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *Init – deklarátor seznamu***,***init deklarátor*   
+ *init-declarator-list*  **,**  *init-declarator*  
   
- *Init – deklarátor*:  
+ *init-declarator*:  
  *deklarátor*  
   
  *deklarátor = inicializátoru*  
@@ -58,10 +58,10 @@ Deklarace funkce předchází v definici funkce a určuje název, návratový ty
  `declarator`:  
  *ukazatel* opt*přímo deklarátor*  
   
- *deklarátor přímo*: /\* deklarátor – funkce\*/  
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl      \*/  
+ *deklarátor přímo*: /\* deklarátor – funkce \*/  
+ *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl       \*/  
   
- *deklarátor přímo***(***seznam identifikátorů* opt**)** / * deklarátor zastaralé stylu    \*/  
+ *deklarátor přímo***(***seznam identifikátorů* opt**)** / * deklarátor zastaralé stylu     \*/  
   
  Prototyp má stejné formuláře jako definice této funkce, s výjimkou toho, aby je ukončen středníkem hned za uzavírací kulatá závorka a proto nemá žádné body. V obou případech návratový typ, musíte souhlasit s návratovým typem zadaný v definici funkce.  
   

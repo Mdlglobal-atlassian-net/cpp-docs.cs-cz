@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 Definuje segment program volá *název* s atributy segmentu  
@@ -50,14 +50,14 @@ name ENDS
 |**DWORD**|Další adresa k dispozici double aplikace word (4 bajty na dvojitou hodnotu word).|  
 |**PARA**|Další adresa k dispozici odstavce (16 bajtů za odstavce).|  
 |**PAGE**|Další adresa k dispozici stránky (256 bajtů na stránce).|  
-|**ALIGN**(*n*)|Další dostupný  *n* tý bajtů adresu. Další informace jsou uvedeny v části poznámky.|  
+|**ALIGN**(*n*)|Další dostupný *n*tý bajtů adresu. Další informace jsou uvedeny v části poznámky.|  
   
  Pokud není tento parametr zadán, **ODSTAVEC** se používá ve výchozím nastavení.  
   
  *kombinování*  
  **VEŘEJNÉ**, **zásobníku**, **běžné**, **paměti**, **v *** adresu*, **PRIVÁTNÍ**  
   
- Použití  
+ *Použití*  
  **USE16**, **USE32**, **PLOCHÉ**  
   
  `characteristics`  

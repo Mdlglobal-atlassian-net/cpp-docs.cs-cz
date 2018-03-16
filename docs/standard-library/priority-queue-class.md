@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k nejvyšší element některé základní typ kontejneru, který je vždycky na největší nebo nejvyšší prioritou. Nové prvky lze přidat do priority_queue a nejvyšší element priority_queue může být prověřovány nebo odebrat.  

@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock – třída
 Tato třída implementuje **IUnknown** neagregovaná objektu, ale nemá není přírůstek zámek modulu počet v konstruktoru.  
@@ -53,7 +53,7 @@ class CComObjectNoLock : public Base
 |Název|Popis|  
 |----------|-----------------|  
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Konstruktor|  
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|Destruktor.|  
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -64,7 +64,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Snižuje počet odkaz na objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectNoLock`je podobná [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro objekt neagregovaná; však `CComObjectNoLock` nemá přírůstek zámek modulu počet v konstruktoru.  
+ `CComObjectNoLock` je podobná [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro objekt neagregovaná; však `CComObjectNoLock` nemá přírůstek zámek modulu počet v konstruktoru.  
   
  ATL používá `CComObjectNoLock` interně pro vytváření tříd. Obecně platí nebude tato třída používat přímo.  
   
@@ -76,7 +76,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>  CComObjectNoLock::AddRef  
  Zvýší počet odkaz na objekt.  
   
 ```
@@ -86,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která může být užitečné pro diagnostiku nebo testování.  
   
-##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
  Konstruktor Na rozdíl od [CComObject](../../atl/reference/ccomobject-class.md), nezvyšuje počet modulů zámku.  
   
 ```
@@ -94,10 +94,10 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **void\***  
- [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom***XXX*`Object`*XXX* konstruktory.  
+ **Void\***  
+ [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom *** XXX*`Object`*XXX* konstruktory.  
   
-##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock  
  Destruktor.  
   
 ```
@@ -108,7 +108,7 @@ CComObjectNoLock(void* = NULL);
  Uvolní všechny přidělené prostředky a volání [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
-##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
  Načte ukazatel na požadované rozhraní.  
   
 ```
@@ -125,7 +125,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>  CComObjectNoLock::Release  
  Snižuje počet odkaz na objekt.  
   
 ```

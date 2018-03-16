@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro typy proměnných souhrnu v tomto seznamu. Konkrétně zbývající části popisují, jak deklarovat následující:  
@@ -41,7 +41,7 @@ Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro 
   
  Deklarátor je součástí deklaraci, která určuje název, který je potřeba zavést do programu. Modifikátory může zahrnovat například  **\***  (ukazatel-k) a všechny klíčová slova konvence volání Microsoft.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  V deklarátor  
   
@@ -49,7 +49,7 @@ Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro 
 __declspec(thread) char *var;  
 ```  
   
- `char`je specifikátor typu `__declspec(thread)` a `*` jsou modifikátory, a `var` je název identifikátoru.  
+ `char` je specifikátor typu `__declspec(thread)` a `*` jsou modifikátory, a `var` je název identifikátoru.  
   
  **Konkrétní Microsoft END**  
   
@@ -57,21 +57,21 @@ __declspec(thread) char *var;
   
 ## <a name="syntax"></a>Syntaxe  
  *deklarátor*:  
- &nbsp;&nbsp;*ukazatel*<sub>opt</sub> *přímo deklarátor*  
+ &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
   
- *deklarátor přímo*:  
- &nbsp;&nbsp;*identifikátor*  
+ *direct-declarator*:  
+ &nbsp;&nbsp;*Identifikátor*  
  &nbsp;&nbsp;**(***deklarátor***)**   
- &nbsp;&nbsp;*deklarátor přímo***[***konstantní výraz*<sub>opt</sub> **]**   
- &nbsp;&nbsp;*deklarátor přímo***(***seznam parametrů typu***)**   
- &nbsp;&nbsp;*deklarátor přímo***(***seznam identifikátorů*<sub>opt</sub> **)**   
+ &nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**  
+ &nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  
+ &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *ukazatel*:  
- &nbsp;&nbsp;**\****seznam typů kvalifikátor*<sub>opt</sub>  
- &nbsp;&nbsp;**\****seznam typů kvalifikátor*<sub>opt</sub> *ukazatele*  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
   
- *seznam typů kvalifikátor*:  
- &nbsp;&nbsp;*Kvalifikátor typu*  
+ *type-qualifier-list*:  
+ &nbsp;&nbsp;*type-qualifier*  
  &nbsp;&nbsp;*seznam typů kvalifikátor kvalifikátor typu*  
   
 > [!NOTE]
@@ -91,7 +91,7 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers  
 ```  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Kompilátor Microsoft C neomezuje počet deklarátory, které můžete upravit aritmetické, struktura nebo typu union. Číslo je omezena pouze dostupné paměti.  
   

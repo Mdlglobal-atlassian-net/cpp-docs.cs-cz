@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyku Visual C++
 > [!NOTE]
@@ -115,7 +115,7 @@ RESOURCE.H     AFXRES.H
 #include "resource.h"  
 ```  
   
- RES\MYAPP. RC2  
+ RES\MYAPP.RC2  
  Obsahuje prostředky, které nebudou upraveny ve Visual C++, ale budou zahrnuty do konečné zkompilovat. Soubor EXE. Objekty AppWizard žádné tyto prostředky vytvoří ve výchozím nastavení, protože Visual C++ můžete upravit všechny standardní prostředky, včetně verze prostředků (nová funkce v této verzi). Prázdný soubor je generován objekty AppWizard v případě, že chcete přidat vlastní vlastní formátovaný prostředky do tohoto souboru.  
   
  Pokud používáte vlastní formátovaný prostředky, můžete je přidat k RES\MYAPP. RC2 a upravovat pomocí textového editoru Visual C++.  
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES. H definuje standardní symboly, například `ID_FILE_NEW`, používají rozhraní a konkrétně používat v AFXRES. RC. AFXRES. H také #include na WINRES. H, který obsahuje podmnožinu systému WINDOWS. H, která jsou potřeba Visual C++ vygenerovat. RC – soubory a také AFXRES. RC. Symboly definované v AFXRES. H jsou k dispozici při úpravách souboru prostředků aplikace (Moje aplikace. RC). Například `ID_FILE_NEW` se používá pro položku nabídky nový soubor Moje aplikace. Prostředek nabídky na RC. Nelze změnit ani odstranit tyto symboly definované framework.  
   
-## <a name="_mfcnotes_tn035_including"></a>Včetně další hlavičkové soubory  
+## <a name="_mfcnotes_tn035_including"></a> Včetně další hlavičkové soubory  
   
  Aplikace vytvořené objekty AppWizard obsahuje pouze dva soubory hlaviček: prostředků. H a AFXRES. H. Pouze prostředek. H je specifické pro aplikaci. Musíte zahrnout další jen pro čtení hlavičkových souborů v následujících případech:  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ vždy přidá //{{NO_DEPENDENCIES}} komentář řádku. RC soubor, když se uloží soubor. V některých případech obcházení sestavení závislosti na prostředku. H může vést ke běhové chyby nebyla rozpoznána v době spojení. Například pokud používáte prohlížeč Symbol změnit číselnou hodnotu přiřazenou symbol pro prostředek, prostředek nebude správně najít a načíst v případě spuštění aplikace. Není překompilovat souboru CPP odkazující na prostředek. V takových případech můžete musí explicitně znovu zkompiluje žádné. Symbol změny v prostředku se týká CPP souborů, které znáte. H nebo vyberte **znovu vytvořit všechny**. Pokud je potřeba často mění symbol hodnoty pro určité skupiny prostředků, pravděpodobně naleznete ji pohodlnější a bezpečnější pro přerušení těchto symbolů do samostatné jen pro čtení hlavičky souboru, jak je popsáno v části výše [včetně Soubory hlaviček Další](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Jak Visual C++ spravuje sada obsahuje informace o **  
+## <a name="_mfcnotes_tn035_set_includes"></a> Jak Visual C++ spravuje sada obsahuje informace o **  
   
  Jak je popsáno výše, v nabídce Soubor nastavit obsahuje příkaz umožňuje určit tři typy informací:  
   

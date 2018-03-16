@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Výjimky: Změny maker pro výjimky ve verzi 3.0
 To je rozšířená.  
@@ -39,7 +39,7 @@ To je rozšířená.
   
 -   [Znovu vyvolání výjimek](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Typy výjimek a CATCH – makro  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Typy výjimek a CATCH – makro  
  V dřívějších verzích MFC **CATCH** makro použije k určení k výjimce typu MFC informace běhového typu; v výjimky typ je určen, jinými slovy, v lokalitě catch. S výjimky jazyka C++, ale v výjimky typ je vždy určen v lokalitě throw podle typu objektu výjimka, která je vyvolána výjimka. V případě výjimečných, kde typ má ukazatel na objekt výjimce dojde se liší od typ objektu výjimce dojde způsobí problémům s kompatibilitou.  
   
  Následující příklad ilustruje důsledků tento rozdíl mezi MFC verze 3.0 a starší verze:  
@@ -60,7 +60,7 @@ To je rozšířená.
   
  Chcete-li tento problém obejít, přesuňte výraz throw z funkce volání kódu a způsobí výjimku skutečný typ známé kompilátoru v době, kdy se vygeneruje výjimka.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Znovu vyvolání výjimek  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Znovu vyvolání výjimek  
  Blok catch nelze vyvolat stejné výjimky ukazatele, který ho zachycena.  
   
  Například tento kód platné v předchozích verzích, ale bude mít neočekávané výsledky s verze 3.0:  

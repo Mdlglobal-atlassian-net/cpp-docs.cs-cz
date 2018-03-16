@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
@@ -47,14 +47,14 @@ Jeden z redukční proměnné zadané v `list`.
 *Proměnná seznamu*  
 Seznam oddělený čárkami skalární redukční proměnné.
 
-*Expr*  
+*expr*  
 Výraz s skalární typ, který neobsahuje odkaz *x*.
 
 *OP*  
-Není přetížené operátor ale jeden z +, &#42; -, &amp;, ^, &#124; &amp; &amp;, nebo &#124; &#124;.
+Není přetížené operátor ale jeden z +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, nebo &#124; &#124;.
 
 *binop*  
-Není přetížené operátor ale jeden z +, &#42; -, &amp;, ^, nebo &#124;.
+Není přetížené operátor ale jeden z +, &#42;, -, &amp;, ^, nebo &#124;.
 
 Tady je příklad `reduction` klauzule:  
   
@@ -69,7 +69,7 @@ for (i=0; i<n; i++) {
   
 Jak je znázorněno v příkladu, může být operátor skrytý uvnitř volání funkce. Uživatel by měl dávejte pozor, aby operátor zadaný v `reduction` klauzule odpovídá snížení operaci.
 
-I když pravý operand &#124; &#124; operátor má žádné vedlejší účinky v tomto příkladu, jsou povolené, ale by měla být používána opatrně. V tomto kontextu vedlejším účinkem, který zaručeně není dojít během sekvenční provádění smyčky může dojít během paralelní provádění. Tento rozdíl může dojít, protože neurčitém pořadí provádění iterace.
+I když pravý operand &#124; &#124; operátor má v tomto příkladu žádné vedlejší účinky, jsou povolené, ale by měla být používána opatrně. V tomto kontextu vedlejším účinkem, který zaručeně není dojít během sekvenční provádění smyčky může dojít během paralelní provádění. Tento rozdíl může dojít, protože neurčitém pořadí provádění iterace.
 
 Operátor slouží k určení počáteční hodnota všechny soukromé proměnné používané kompilátor za účelem snížení a určení finalizace operátor. Příkaz snížení mimo lexikální rozsah konstruktu zadání operátor explicitně umožňuje. Libovolný počet `reduction` klauzule může být určen na direktiva, ale proměnné se mohou objevit v maximálně jeden `reduction` klauzuli pro tento – direktiva.
 

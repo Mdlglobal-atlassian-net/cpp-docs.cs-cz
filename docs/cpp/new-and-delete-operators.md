@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -38,7 +38,7 @@ C++ nepodporuje dynamické přidělování a zrušení přidělení objektů pom
   
  Seznam soubory knihovny, které tvoří běhové knihovny jazyka C a standardní knihovny C++, naleznete v části [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> Operátor new  
+##  <a id="new_operator"> </a> Operátor new  
  Je-li příkaz obdobný následujícímu příkazu nalezen v programu, je přeložen jako volání funkce `operator new`:  
   
 ```cpp  
@@ -144,7 +144,7 @@ int main() {
   
  Existuje jiné způsoby pro zpracování požadavků na přidělení paměti se nezdařilo: zápis vlastní obnovení rutiny pro zpracování takové selhání a pak zaregistrovat funkce voláním [_set_new_handler –](../c-runtime-library/reference/set-new-handler.md) běhové funkce.  
   
-##  <a id="delete_operator"></a> Operátor delete  
+##  <a id="delete_operator"> </a> Operátor delete  
  Paměti, která se přidělí dynamicky pomocí **nové** operátor může být uvolněno pomocí **odstranit** operátor. Operátor volání odstranění **delete – operátor** funkci, což uvolní paměť zpět do fondu k dispozici. Pomocí **odstranit** operátor také způsobí, že destruktoru třídy (pokud existuje) má být volána.  
   
  Existují globální a s rozsahem třídy **delete – operátor** funkce. Pouze jeden **delete – operátor** funkce lze definovat pro danou třídu; Pokud definované, skryje na globální **delete – operátor** funkce. Na globální **delete – operátor** funkce je volána vždy pro pole libovolného typu.  

@@ -13,10 +13,10 @@ ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 
 manager: ghogen
 ms.openlocfilehash: a5bd2224f65db9ac376d04beed52217c1a0c4ec1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnewgt-operators"></a>&lt;nové&gt; operátory
 ||||  
@@ -71,14 +71,14 @@ void operator delete[](void* ptr,
  Ukazatel, jehož hodnota je k odstranění vykreslení neplatný.  
   
 ### <a name="remarks"></a>Poznámky  
- První funkce je volána `delete[]` výraz k vykreslení hodnotu `ptr` neplatný. Funkce je replaceable, protože program můžete definovat funkce podpisem této funkce, která nahradí výchozí verze definované standardní knihovna C++. Požadované chování je tak, aby přijímal hodnotu `ptr` tedy vrátila hodnotu null nebo který starší voláním [new – operátor &#91; &#93;](../standard-library/new-operators.md#op_new_arr) ( **size_t –**). Výchozí chování pro hodnotu null `ptr` je se nic nestane. Jakákoli jiná hodnota `ptr` musí být hodnota vrácený volání výše popsané výše. Výchozí chování pro nenulový hodnotu z `ptr` má uvolnit úložiště přidělené starší voláním. Je tento parametr, za jakých podmínek část nebo všechny tyto regenerovaný úložiště je přidělena následných volání [new – operátor](../standard-library/new-operators.md#op_new)( **size_t –**), nebo k některým `calloc`( **size_t –**), `malloc`( **size_t –**), nebo `realloc`( **void\***, **size_t –**).  
+ První funkce je volána `delete[]` výraz k vykreslení hodnotu `ptr` neplatný. Funkce je replaceable, protože program můžete definovat funkce podpisem této funkce, která nahradí výchozí verze definované standardní knihovna C++. Požadované chování je tak, aby přijímal hodnotu `ptr` tedy vrátila hodnotu null nebo který starší voláním [new – operátor&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t –**). Výchozí chování pro hodnotu null `ptr` je se nic nestane. Jakákoli jiná hodnota `ptr` musí být hodnota vrácený volání výše popsané výše. Výchozí chování pro nenulový hodnotu z `ptr` má uvolnit úložiště přidělené starší voláním. Je tento parametr, za jakých podmínek část nebo všechny tyto regenerovaný úložiště je přidělena následných volání [new – operátor](../standard-library/new-operators.md#op_new)( **size_t –**), nebo k některým `calloc`( **size_t –**), `malloc`( **size_t –**), nebo `realloc`( **void\***, **size_t –**).  
   
  Umístění je volána funkce second `delete[]` odpovídající výraz `new[]` výrazu ve formátu `new[]`( **std::size_t**). Neprovede žádnou akci.  
   
  Třetí funkce je volána umístění odstranit výraz odpovídající `new[]` výrazu ve formátu `new[]`( **std::size_t**, **const std::nothrow_t &**). Program můžete definovat funkce podpisem této funkce, která nahradí výchozí verze definované standardní knihovna C++. Požadované chování je tak, aby přijímal hodnotu `ptr` tedy vrátila hodnotu null nebo který starší voláním operátor `new[]`( **size_t –**). Výchozí chování je vyhodnotit `delete[]`( `ptr`).  
   
 ### <a name="example"></a>Příklad  
-  V tématu [new – operátor &#91; &#93;](../standard-library/new-operators.md#op_new_arr) příklady použití `operator delete[]`.  
+  V tématu [new – operátor&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) příklady použití `operator delete[]`.  
   
 ##  <a name="op_new"></a>  new – operátor  
  Nový-výrazem se přidělit úložiště pro jednotlivé objekty volaná funkce.  
@@ -205,7 +205,7 @@ void* operator new[](std::size_t count,
   
  Volá funkci třetí umístění `new[]` výrazu ve formátu **nové** ( *argumentů*) **T**[ **N**]. Zde *argumentů* se skládá z jednoho objektu ukazatel. Funkce vrátí hodnotu `ptr`.  
   
- Chcete-li uvolnit úložiště přidělené `operator new[]`, volání [delete – operátor &#91; &#93;](../standard-library/new-operators.md#op_delete_arr).  
+ Chcete-li uvolnit úložiště přidělené `operator new[]`, volání [delete – operátor&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
  Informace o vyvolání nebo nonthrowing chování nové, viz [nové a odstraňte operátory](../cpp/new-and-delete-operators.md).  
   

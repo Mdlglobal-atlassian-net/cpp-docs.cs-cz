@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
 Toto téma vysvětluje, jak můžete nakonfigurovat připojení ODBC (Open Database) názvy zdrojů dat prostřednictvím kódu programu. To vám dává možnost pro přístup k datům bez vynucení uživateli explicitně zadat názvy zdrojů dat pomocí Správce rozhraní ODBC nebo jiné programy.  
@@ -40,7 +40,7 @@ Toto téma vysvětluje, jak můžete nakonfigurovat připojení ODBC (Open Datab
   
  Mnoho SŘBD však umožňuje programové vytvoření zdroje dat. Některé zdroje dat udržovat specifikaci adresáře pro databáze. To znamená, adresář je zdroj dat a každá tabulka v rámci zdroj dat je uložen v samostatném souboru (v případě dBASE, každá tabulka je soubor .dbf). Ovladače jiných ODBC databází, jako je například Microsoft Access a SQL Server, vyžadují, že některé určitá kritéria splnit před navázáním zdroj dat. Například pokud používáte ovladač ODBC systému SQL Server, budete muset mít navázat počítače serveru SQL Server.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>Příklad SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_example"></a> Příklad SQLConfigDataSource  
  Následující příklad používá **:: SQLConfigDataSource** funkce rozhraní API ODBC vytvořit nový zdroj dat aplikace Excel volána nový zdroj dat aplikace Excel:  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  I když tyto informace může zapisovat přímo do registru bez použití **:: SQLConfigDataSource**, jakékoli aplikace, která nemá, tak se spoléhat na aktuální postup, který používá správce ovladačů spravovat jeho data. Pokud pozdější revize pro zachování zdroje dat jiným způsobem záznamů implementuje správce ovladačů ODBC se přeruší všechny aplikace, která používá tento postup. Je většinou vhodné používat funkci rozhraní API, pokud je k dispozici. Váš kód je například přenosný z 16bitové na 32bitové, pokud použijete **:: SQLConfigDataSource** fungovat, protože funkce správně zapisuje do souboru Odbc.ini nebo do registru.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource parametry  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource parametry  
  Následující příklad popisuje parametry **:: SQLConfigDataSource** funkce. Velká část informace jsou převzaty z rozhraní API ODBC *referenční informace pro programátory* dodává s Visual C++ verze 1.5 a novější.  
   
-###  <a name="_core_function_prototype"></a>Prototype – funkce  
+###  <a name="_core_function_prototype"></a> Prototype – funkce  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Poznámky  
   
-####  <a name="_core_parameters_and_usage"></a>Parametry a použití  
+####  <a name="_core_parameters_and_usage"></a> Parametry a použití  
  *hwndParent*  
  Zadané okno jako vlastník všechna dialogová okna Správce ovladačů ODBC nebo konkrétní ovladač ODBC vytvoří od uživatele o nový zdroj dat získat další informace. Pokud `lpszAttributes` parametr neposkytuje dostatek informací, zobrazí se dialogové okno. *HwndParent* může být parametr **NULL**.  
   

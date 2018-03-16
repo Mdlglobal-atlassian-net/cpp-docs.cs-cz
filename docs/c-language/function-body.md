@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-body"></a>Tělo funkce
 "Tělo funkce" je složené příkazu, který obsahuje příkazy, které určují, jaké funkce.  
@@ -35,9 +35,9 @@ ms.lasthandoff: 12/21/2017
  *definice funkce*:  
  *specifikátory deklarace* vyjádřit výslovný*atribut seq* opt*deklarátor deklarace list* opt*složené – příkaz*  
   
- /\**atribut seq* je specifické pro Microsoft * /  
+ /\* *atribut seq* je specifické pro Microsoft * /  
   
- *příkaz složené*: /\* tělo funkce\*/  
+ *příkaz složené*: /\* tělo funkce \*/  
  **{***seznam prohlášení* opt*seznam příkazů* opt**}**   
   
  Mít proměnných deklarovaných v těle funkce na "místní proměnné," **automaticky** třídy úložiště, pokud není uvedeno jinak. Při volání funkce úložiště se vytvoří pro místní proměnné a jsou prováděny místní inicializacích. Řízení provádění předá první příkaz v *složené příkaz* a pokračuje v až `return` spustit příkaz nebo je nalezen konec tělo funkce. Ovládací prvek pak vrátí do bodu, kdy byla zavolána funkce.  

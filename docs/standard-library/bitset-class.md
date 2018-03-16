@@ -50,10 +50,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset – třída
 Popisuje typ objektu, který ukládá pořadí, který se skládá z pevný počet bitů, které poskytují compact kvůli udržení příznaky pro sadu položek nebo podmínky. Bitset – třída podporuje operace s objekty typu bitset, které obsahují kolekci bitů a poskytují konstanta běhu je přístup k každý bit.  
@@ -1044,7 +1044,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="op_or_eq"></a>  bitset::Operator &#124; =  
+##  <a name="op_or_eq"></a>  bitset::Operator&#124;=  
  Provede bitovou kombinaci bitové sady s včetně `OR` operaci.  
   
 ```  

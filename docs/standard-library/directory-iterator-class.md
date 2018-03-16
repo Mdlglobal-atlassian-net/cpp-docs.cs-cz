@@ -41,10 +41,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27152fc2ebc7944e4b96dce75937ac3c3b04616d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="directoryiterator-class"></a>directory_iterator – třída
 Popisuje vstupní iterator, který pořadí prostřednictvím názvy souborů v adresáři. Pro iterovat X, výraz * X vyhodnocen jako objekt directory_entry – třída, která zabalí název souboru a nic známé o jeho stav.  

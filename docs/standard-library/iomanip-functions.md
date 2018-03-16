@@ -34,10 +34,10 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 6d36261e237d2a9c4ee7afddd0cb57d60cb5e12c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip –&gt; funkce
 ||||  
@@ -126,7 +126,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>Poznámky  
  Manipulator vrátí objekt, který, když vložíte do datového proudu `str`, chová jako `formatted output function`. Výstup funkce volá funkci člen `put` pro národní prostředí omezující vlastnost `time_put` přidružené `str`. Používá funkci výstup `_Tptr` k označení struktury čas a `_Fmt` k označení začátku řetězce ukončené NUL formátu. V případě úspěšného volání vloží literálu text z formátovacího řetězce a převedené hodnoty z struktura časové. Vrátí manipulator `str`.  
   
-##  <a name="quoted">v uvozovkách</a>  
+##  <a name="quoted"></a>  v uvozovkách  
  **(Nové v C ++ 14)**  Iostream manipulator, která umožňuje pohodlný odezvy řetězců do a z datové proudy pomocí >> a << operátory.  
   
 ```  
@@ -289,7 +289,7 @@ Press Enter to exit
   
 ```  
   
-##  <a name="resetiosflags">resetiosflags</a>  
+##  <a name="resetiosflags"></a>  resetiosflags  
  Vymaže zadané příznaky.  
   
 ```  
@@ -331,7 +331,7 @@ T3 setbase(int _Base);
 ### <a name="example"></a>Příklad  
   V tématu [setw](../standard-library/iomanip-functions.md#setw) příklad použití `setbase`.  
   
-##  <a name="setfill">setfill</a>  
+##  <a name="setfill"></a>  setfill  
  Nastaví znak, který se použije k vyplnění mezer v zobrazení se zarovnané vpravo.  
   
 ```  

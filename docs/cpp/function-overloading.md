@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Toto nastavení se nazývá *přetížený* funkce. Přetížené funkce umožňují zadat jiný sémantiku pro funkci, v závislosti na typy a počet argumentů. 
@@ -44,7 +44,7 @@ Můžete použít přetížení členských funkcí a třetí funkce. Následuj�
 |Přítomnost nebo absence tří teček|Ano|  
 |Použití názvů `typedef`|Ne|  
 |Nespecifikované hranice pole|Ne|  
-|**Const** nebo`volatile`|Ano, při použití celý – funkce|
+|**Const** nebo `volatile`|Ano, při použití celý – funkce|
 |[ref-qualifier](#ref-qualifier)|Ano|  
   
 ## <a name="example"></a>Příklad  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Všimněte si, že nastaví průnik mezi tyto dva je prázdný. Proto kompilátor generuje chybovou zprávu.  
   
- Argument funkce s porovnávání  *n*  výchozí argumentů je považován za  *n* funkce samostatné + 1, každý s různým počtem argumentů.  
+ Argument funkce s porovnávání *n* výchozí argumentů je považován za *n*funkce samostatné + 1, každý s různým počtem argumentů.  
   
  Jednání třemi tečkami (...) jako zástupný znak; odpovídá některý skutečné argument. To může vést k mnoha nejednoznačný sad, pokud není návrh vaší sady přetížené funkce s mimořádně pečlivě.  
   
@@ -261,14 +261,14 @@ volatile Over&
   
 |Převod z typu|Převést na typ|  
 |-----------------------|---------------------|  
-|*type-name*|*Název typu***&**|  
-|*Název typu***&**|*type-name*|  
+|*type-name*|*Název typu* **&**|  
+|*Název typu* **&**|*type-name*|  
 |*Název typu* **]**|*type-name\**|  
 |*Název typu* **(** *seznam argumentů* **)**|**(**  *\*název typu* **) (** *seznam argumentů* **)**|  
 |*type-name*|**Const** *název typu*|  
-|*type-name*|`volatile`*název typu*|  
+|*type-name*|`volatile` *Název typu*|  
 |*type-name\**|**Const** *název typu\**|  
-|*type-name\**|`volatile`*název typu\**|  
+|*type-name\**|`volatile` *Název typu\**|  
   
  Pořadí, ve které jsou aplikovány převody vypadá takto:  
   
@@ -301,7 +301,7 @@ Graf ilustrující upřednostňované převody
   
  Předchozí pravidlo se vztahuje pouze podél dané cestě odvození. Vezměte v úvahu graf znázorňuje následující obrázek.  
   
- ![Více & č. 45; dědičnosti, který ukazuje upřednostňované převody](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Více&#45;dědičnosti, který ukazuje upřednostňované převody](../cpp/media/vc391t2.gif "vc391T2")  
 Vícenásobné dědičnosti grafu ilustrující upřednostňované převody  
   
  Převod z typu `C*` na typ `B*` je vhodnější pro převod z typu `C*` na typ `A*`. Důvodem je, že jsou na stejnou cestu, a `B*` blíže. Ale převod z typu `C*` na typ `D*` není vhodnější převod na typ `A*`; neexistuje žádná priorita, protože převody podle různé cesty.  
@@ -407,7 +407,7 @@ obj.name
   
  Levý operand `->*` a `.*` operátory (ukazatel na člena) jsou zpracovány stejným způsobem jako `.` a `->` operátory (výběru členů) s ohledem na porovnávání argumentů.  
 
-## <a name="ref-qualifiers"></a>REF – kvalifikátory na členské funkce  
+## <a name="ref-qualifiers"></a> REF – kvalifikátory na členské funkce  
 REF kvalifikátory umožňují přetížení členské funkce na základě objekt propojená tímto `this` rvalue nebo lvalue.  Tuto funkci lze použít předejdete operace nepotřebné kopírování ve scénářích, kde rozhodnete poskytovat ukazatel přístup k datům. Předpokládejme například, třída **C** některá data v jeho konstruktor inicializuje a vrátí kopii dat – členská funkce **get_data()**. Pokud objekt typu **C** je rvalue, který má být zničený, pak bude vyberte kompilátor **get_data() & &** přetížení, které se přesouvají data než ho zkopírovat. 
 
 ```cpp
@@ -461,7 +461,7 @@ int main()
   
 -   Členské funkce nemohou být přetíženy na základě jeden se statické a dalších nonstatic.  
   
--   `typedef`deklarace nedefinují nové typy; jejich zavést synonyma pro existující typy. Neovlivňují overloading mechanismus. Vezměte v úvahu následující kód:  
+-   `typedef` deklarace nedefinují nové typy; jejich zavést synonyma pro existující typy. Neovlivňují overloading mechanismus. Vezměte v úvahu následující kód:  
   
     ```  
     typedef char * PSTR;  
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Předchozí dvě funkce mít identické argument seznamy. `PSTR`je synonymum pro typ **char \*** . Tento kód v oboru člen, vygeneruje chybu.  
+     Předchozí dvě funkce mít identické argument seznamy. `PSTR` je synonymum pro typ **char \*** . Tento kód v oboru člen, vygeneruje chybu.  
   
 -   Výčtové typy jsou odlišné typy a může sloužit k rozlišení mezi přetížených funkcí.  
   

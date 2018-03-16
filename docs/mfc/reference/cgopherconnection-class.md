@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection – třída
 Spravuje vaše připojení k serveru Internet gopher.  
@@ -82,7 +82,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  Tato funkce člen je volána k sestavení `CGopherConnection` objektu.  
   
 ```  
@@ -113,7 +113,7 @@ CGopherConnection(
  Ukazatel na řetězec obsahující název serveru FTP.  
   
  `dwContext`  
- Identifikátor kontextu pro danou operaci. `dwContext`identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
+ Identifikátor kontextu pro danou operaci. `dwContext` identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
   
  `pstrUserName`  
  Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.  
@@ -125,7 +125,7 @@ CGopherConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL** nebo ""|**NULL** nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
 |Není- **NULL** řetězec|**NULL** nebo ""|`pstrUserName`|" "|  
-|**NULL** jinou hodnotu než **NULL** řetězec|**CHYBA**|**CHYBA**||  
+|**NULL** jinou hodnotu než **NULL** řetězec|**ERROR**|**ERROR**||  
 |Není- **NULL** řetězec|Není- **NULL** řetězec|`pstrUserName`|`pstrPassword`|  
   
  `nPort`  
@@ -134,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>Poznámky  
  Nikdy vytvoříte `CGopherConnection` přímo. Místo toho volat [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objektu a vrátí ukazatel na ni.  
   
-##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
  Volání této funkce člen vytvořit lokátor gopher najít nebo soubor na serveru gopher identifikovat.  
   
 ```  
@@ -159,7 +159,7 @@ static CGopherLocator CreateLocator(
  Ukazatel na řetězec, který obsahuje název dokumentu gopher nebo adresáře, které mají být načteny. Pokud `pstrDisplayString` parametr **NULL**, je vrácen výchozí adresář pro gopher server.  
   
  `pstrSelectorString`  
- Ukazatel na řetězec selektor k odeslání na server gopher za účelem načtení položku. `pstrSelectorString`může být **NULL**.  
+ Ukazatel na řetězec selektor k odeslání na server gopher za účelem načtení položku. `pstrSelectorString` může být **NULL**.  
   
  *dwGopherType*  
  Tato hodnota určuje, zda `pstrSelectorString` odkazuje na adresář nebo dokumentu, a zda je žádost gopher nebo gopher +. Najdete v části atributy pro strukturu [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) ve Windows SDK.  
@@ -181,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  K načtení informací ze serveru gopher, musíte aplikaci nejprve získat lokátoru gopher. Aplikace musí pak považovat za Lokátor neprůhledného token (to znamená, aplikace můžete použít Lokátor, ale ne přímo pracovat s nebo jejímu porovnání). Za normálních okolností aplikace používá Lokátor pro volání [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) – členská funkce načíst konkrétní informace.  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  Volání této funkce člen načíst ze serveru gopher konkrétní atribut informace o položce.  
   
 ```  
@@ -203,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
-##  <a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Volání této funkce člen otevřít soubor na serveru gopher.  
   
 ```  

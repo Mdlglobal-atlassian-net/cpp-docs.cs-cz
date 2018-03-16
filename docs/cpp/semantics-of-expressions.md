@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Operátorů a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikální pravidla](../cpp/lexical-conventions.md), znázorňuje vztahy C++ operátory kladou na výrazy.)  
@@ -80,10 +80,10 @@ Pořadí vyhodnocení výrazu se závorkami
   
 |Očekávaný typ|Povolené typy|  
 |-------------------|-------------------|  
-|*Typ*|`const`*typu*<br /> `volatile`*typu*<br /> *Typ*&<br /> `const`*typu*&<br /> `volatile`*typu*&<br /> `volatile const`*typu*<br /> `volatile const`*typu*&|  
-|*Typ*\*|*Typ*\*<br /> `const`*typu*\*<br /> `volatile`*typu*\*<br /> `volatile const`*typu*\*|  
-|`const`*typu*|*Typ*<br /> `const`*typu*<br />`const`*typu*&|  
-|`volatile`*typu*|*Typ*<br /> `volatile`*typu*<br /> `volatile`*typu*&|  
+|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|  
+|*Typ*\*|*Typ*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|  
+|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|  
+|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|  
   
  Protože předchozí pravidla lze vždy použít v kombinaci, můžete je nutné zadat const ukazatel na objekt volatile, kde je očekávána ukazatel.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Levý operand logického operátoru AND (&&). Levý operand logického operátoru AND je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru AND vyhodnocen.  
   
--   Levý operand logický operátor OR (&#124; &#124;). Levý operand logického operátoru OR je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru OR vyhodnocen.  
+-   Levý operand logický operátor OR (&#124;&#124;). Levý operand logického operátoru OR je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru OR vyhodnocen.  
   
 -   Levý operand operátoru čárky. Levý operand logického operátoru čárky je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Oba operandy operátoru čárky jsou vždy vyhodnoceny.  
   

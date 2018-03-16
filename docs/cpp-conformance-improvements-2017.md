@@ -15,10 +15,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45f22597944084ecd2d30fe29bf4e8ab3ef80201
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153) a [15,5](#improvements_155)
 
@@ -48,7 +48,7 @@ Součástí C ++ 17 je volitelný parametr zpráva pro static_assert. Další in
 **Zobecněn na základě rozsahu smyčky for** (žádný kompilátoru přepínač požadované)  
 Na základě rozsahu pro smyčky už nevyžadují, aby begin() a end() vrátí objekty stejného typu. To umožňuje end() vrátit sentinel jako použít podle rozsahů v [rozsah v3](https://github.com/ericniebler/range-v3) a dokončit, ale není – konce publikován technických specifikací rozsahy. Další informace najdete v tématu [generalizací založený na rozsahu pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
 
-## <a name="improvements_153"></a>Vylepšení v nástroji Visual Studio 2017 verze 15.3
+## <a name="improvements_153"></a> Vylepšení v nástroji Visual Studio 2017 verze 15.3
 
 **constexpr lambdas**  
 Lambda – výrazy lze nyní v konstantní výrazy. Další informace najdete v tématu [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
@@ -75,14 +75,14 @@ Nyní převod implicitní nebo jiných zužující z podkladovým typem výčtu 
 `*this` Objekt ve výrazu lambda mohou být zachyceny teď hodnotou. To umožňuje scénáře, ve kterých je volána argument lambda v paralelní a asynchronní operace, zejména u novější architektury počítačů. Další informace najdete v tématu [Lambda zaznamenat z \*to podle hodnoty jako [=,\*to]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
 **Odebrání operator ++ pro bool**  
-`operator++`již není podporována na `bool` typy. Další informace najdete v tématu [odebrat zastaralé operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+`operator++` již není podporována na `bool` typy. Další informace najdete v tématu [odebrat zastaralé operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
 **Odebrání zastaralé "register" – klíčové slovo**  
 `register` – Klíčové slovo, dříve zastaralé (a ignoruje kompilátorem), je teď odebrané od jazyka. Další informace najdete v tématu [odebrat zastaralé použití register – klíčové slovo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
 Úplný seznam vylepšení shoda se prostřednictvím Visual Studio 2015 Update 3 najdete v tématu [Visual C++ Co je nového 2003 až 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
 
-## <a name="improvements_155"></a>Vylepšení v nástroji Visual Studio 2017 verze 15,5
+## <a name="improvements_155"></a>  Vylepšení v nástroji Visual Studio 2017 verze 15,5
 
 Funkce, které jsou označené jako [14] jsou k dispozici bezpodmínečně i v/std: c ++ 14 režimu.
 
@@ -448,7 +448,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a>Opravy chyb v aplikaci Visual Studio 2017 verze 15.3
+## <a name="update_153"></a> Opravy chyb v aplikaci Visual Studio 2017 verze 15.3
 
 ### <a name="calls-to-deleted-member-templates"></a>Volání odstraněného člena šablon
 
@@ -642,7 +642,7 @@ constexpr auto off2 = offsetof(A, bar);
 
 Tento kód má chybný formát a může dojít k chybě za běhu. Opravte chybu, změňte kód, který už vyvolání nedefinované chování. Toto je jiný přenositelností kód, který je zakázány na úrovni C++ standard.
 
-### <a name="declspec"></a>Nové upozornění na declspec atributy
+### <a name="declspec"></a> Nové upozornění na declspec atributy
 
 Ve Visual Studio 2017 verze 15.3, kompilátor už ignoruje atributy Pokud `__declspec(...)` je použit před `extern "C"` specifikaci propojení. Kompilátor by dříve, ignorovat atribut, který může mít dopad modulu runtime. Když **/horní** a **wdn** jsou nastavené možnosti, následující kód vytvoří "upozornění C4768: atributy __declspec před specifikaci propojení se ignorují":
 
@@ -725,7 +725,7 @@ static_assert(std::is_convertible<Array&, Array>::value, "");
 static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
-`std::is_convertible<From, To>`je vypočítána zjišťujeme, pokud definici pomyslná funkce je ve správném formátu:
+`std::is_convertible<From, To>` je vypočítána zjišťujeme, pokud definici pomyslná funkce je ve správném formátu:
 
 ```cpp 
    To test() { return std::declval<From>(); }
@@ -748,7 +748,7 @@ private:
 static_assert(std::is_constructible<PrivateDtor, int>::value);
 ```
 
-Privátní destruktory způsobit typu být není zkonstruovatelný. `std::is_constructible<T, Args...>`se počítá jako kdyby byly napsány následující prohlášení:
+Privátní destruktory způsobit typu být není zkonstruovatelný. `std::is_constructible<T, Args...>` se počítá jako kdyby byly napsány následující prohlášení:
 
 ```cpp
    T obj(std::declval<Args>()...)
@@ -820,7 +820,7 @@ Chcete-li problém vyřešit, uspořádejte seznamu intializer má stejné pořa
 
 Upozorňujeme, že toto upozornění je vypnuto výchozím a ovlivňuje pouze zkompilování kódu s **/horní**.
 
-## <a name="update_155"></a>Opravy chyb a jiné změny chování ve Visual Studio 2017 verze 15,5
+## <a name="update_155"></a> Opravy chyb a jiné změny chování ve Visual Studio 2017 verze 15,5
 
 ### <a name="partial-ordering-change"></a>Částečné řazení změn
 
@@ -1098,7 +1098,7 @@ error C2027: use of undefined type 'S'
 
 ### <a name="stdisconvertible-target-type"></a>std::is_convertible cílový typ.
 
-`std::is_convertible`vyžaduje typ cíle jako platný návratový typ. V dřívějších verzích sady Visual Studio kompilátor nesprávně povolená abstraktní typy, které může vést k nesprávné přetížení řešení a neúmyslné modul runtime chování.  Následující kód nyní správně vyvolá C2338:
+`std::is_convertible` vyžaduje typ cíle jako platný návratový typ. V dřívějších verzích sady Visual Studio kompilátor nesprávně povolená abstraktní typy, které může vést k nesprávné přetížení řešení a neúmyslné modul runtime chování.  Následující kód nyní správně vyvolá C2338:
 
 ```cpp
 #include <type_traits>
@@ -1120,7 +1120,7 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a>Odebrání specifikace dynamické výjimky a noexcept
+### <a name="noexcept_removal"></a> Odebrání specifikace dynamické výjimky a noexcept
 
 Součástí C ++ 17 `throw()` je alias `noexcept`, `throw(<type list>)` a `throw(...)` se odeberou, a můžou obsahovat určité typy `noexcept`. To může způsobit problémy s kompatibilitou zdroje s kódem, který vyhovuje C ++ 14 nebo dřívější. **/Zc:noexceptTypes-** se vrátit k C ++ 14 verze lze použít přepínač `noexcept` při použití C ++ 17 režim obecně. To vám umožní aktualizovat vašeho zdrojového kódu tak, aby odpovídala C ++ 17 bez přepsání všechny vaše `throw()` kódu ve stejnou dobu.
 

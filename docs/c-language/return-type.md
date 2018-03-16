@@ -26,10 +26,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9768baa53e39f1b3243aba24385d592010c3d81a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="return-type"></a>Návratový typ
 Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odpovídá specifikátor typu níže uvedené syntaxe:  
@@ -38,7 +38,7 @@ Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odp
  *definice funkce*:  
  *specifikátory deklarace* vyjádřit výslovný*atribut seq* opt*deklarátor deklarace list* opt*složené – příkaz*  
   
- /\**atribut seq* je specifické pro Microsoft * /  
+ /\* *atribut seq* je specifické pro Microsoft * /  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace* opt  
@@ -62,15 +62,15 @@ Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odp
   
  **double**  
   
- **podepsané**  
+ **Podepsané**  
   
- **bez znaménka**  
+ **Bez znaménka**  
   
- *Struktura nebo sjednocení – specifikátor*  
+ *struct-or-union-specifier*  
   
- *enum – specifikátor*  
+ *enum-specifier*  
   
- *Název definice TypeDef*  
+ *typedef-name*  
   
  *Specifikátor typu* můžete zadat všechny základní struktura nebo typu union. Pokud neuvedete *specifikátor typu*, návratový typ `int` se předpokládá.  
   

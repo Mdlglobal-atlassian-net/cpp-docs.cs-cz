@@ -26,10 +26,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a4385515becbb32b256b2bf6562af941371ef47e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="storage-class"></a>Třída úložiště
 Specifikátor třídy úložiště v definici funkce nabízí funkce buď `extern` nebo **statické** třídy úložiště.  
@@ -38,7 +38,7 @@ Specifikátor třídy úložiště v definici funkce nabízí funkce buď `exter
  *definice funkce*:  
  *specifikátory deklarace* vyjádřit výslovný*atribut seq* opt*deklarátor deklarace list* opt*složené – příkaz*  
   
- /\**atribut seq* je specifické pro Microsoft * /  
+ /\* *atribut seq* je specifické pro Microsoft * /  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace* opt  
@@ -47,7 +47,7 @@ Specifikátor třídy úložiště v definici funkce nabízí funkce buď `exter
   
  *Kvalifikátor typu deklarace – specifikátory* opt  
   
- *specifikátor třídy úložiště*: /\* pro definice funkcí\*/  
+ *specifikátor třídy úložiště*: /\* pro definice funkcí \*/  
  **extern**  
   
  **static**  
@@ -60,7 +60,7 @@ Specifikátor třídy úložiště v definici funkce nabízí funkce buď `exter
   
  Funkce s **statické** třídy úložiště je viditelná pouze v zdrojový soubor, ve kterém je definovaný. Všechny ostatní funkce s třídou úložiště `extern` zadanou explicitně či implicitně jsou viditelné ve všech zdrojových souborech programu. Pokud **statické** třídy úložiště se požaduje, se musí být deklarován v prvním výskytem deklarace (pokud existuje), funkce a v definici funkce.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Pokud jsou povolené rozšíření Microsoft, funkce původně deklarovány bez třídy úložiště (nebo s `extern` třídy úložiště) je zadána **statické** úložiště třídy, pokud definice této funkce je ve stejném souboru zdroje a pokud definice explicitně určuje **statické** třídy úložiště.  
   

@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory, popsané v [deklarace a definice](declarations-and-definitions-cpp.md), nesou vlastnosti, například třída typ a úložiště. Modifikátory, popsané v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravte deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
@@ -31,7 +31,7 @@ Deklarátory jsou ty součásti deklarace, které určují názvy objektů a fun
  ![Modifikátory specifikátory a deklarátory](../cpp/media/vc38qy1.gif "vc38QY1")  
 Specifikátory, modifikátory a deklarátory  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Většinu klíčových slov rozšířených společností Microsoft lze použít jako modifikátory a vytvořit tak odvozené typy. Nejsou to specifikátory ani deklarátory. (Viz [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   

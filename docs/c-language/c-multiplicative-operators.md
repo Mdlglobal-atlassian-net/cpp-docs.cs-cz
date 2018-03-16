@@ -27,24 +27,24 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>Multiplikativní operátory jazyka C
 Multiplikativní operátory provést násobení (**\***), dělení (**/**) a zbytek (`%`) operace.  
   
  **Syntaxe**  
   
- *multiplikativní výraz*:  
- *výraz CAST*  
+ *multiplicative-expression*:  
+ *cast-expression*  
   
- *multiplikativní výraz***\****výraz cast*   
+ *multiplicative-expression*  **\***  *cast-expression*  
   
- *multiplikativní výraz***/***výraz cast*   
+ *multiplicative-expression*  **/**  *cast-expression*  
   
- *multiplikativní výraz***%***výraz cast*   
+ *multiplicative-expression*  **%**  *cast-expression*  
   
  Operandy operátoru zbývající (`%`) musí být celočíselné. Násobení (**\***) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
   
@@ -67,7 +67,7 @@ Multiplikativní operátory provést násobení (**\***), dělení (**/**) a zby
 ||– Pokud jsou oba operandy kladná nebo bez znaménka, výsledkem je kladná.|  
 ||– Pokud je záporná. buď operand a výsledkem je nepřesný, výsledkem je implementace definované. (Viz část Microsoft specifické níže.)|  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  V oblasti, kde je buď operand záporná je směr zkrácení směrem k 0.  
   
@@ -103,7 +103,7 @@ n = i % j;
   
  Tento příkaz přiřadí `n` zbývající celé číslo, 1, při dělení 10 3.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Znaménko zbývající je stejný jako znaménko dělenec. Příklad:  
   

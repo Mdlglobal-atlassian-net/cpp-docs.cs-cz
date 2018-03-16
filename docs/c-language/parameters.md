@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="parameters"></a>Parametry
 Argumenty jsou názvy hodnot předaná funkci volání funkce. Parametry jsou hodnoty, které funkce očekává přijímat. Prototyp funkce závorek název funkce obsahovat úplný seznam parametrů funkce a jejich typy. Deklarace parametru zadejte typy, velikosti a identifikátory hodnot uložených v parametrech.  
@@ -40,25 +40,25 @@ Argumenty jsou názvy hodnot předaná funkci volání funkce. Parametry jsou ho
  *definice funkce*:  
  *specifikátory deklarace* vyjádřit výslovný*atribut seq* opt*deklarátor deklarace list* opt*složené – příkaz*  
   
- /\**atribut seq* je specifické pro Microsoft * /  
+ /\* *atribut seq* je specifické pro Microsoft * /  
   
  *deklarátor* :  
  *ukazatel* opt*přímo deklarátor*  
   
- *deklarátor přímo*:/\* deklarátor – funkce\*/  
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl      \*/  
+ *deklarátor přímo*:/\* deklarátor – funkce \*/  
+ *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl       \*/  
   
- *Seznam parametrů typu*: /\* seznam parametrů\*/  
- *Seznam parametrů*  
+ *Seznam parametrů typu*: /\* seznam parametrů \*/  
+ *parameter-list*  
   
  *Seznam parametrů***,...**   
   
- *Seznam parametrů*:  
- *deklarace parametru*  
+ *parameter-list*:  
+ *parameter-declaration*  
   
  *Seznam parametrů***,***deklarace parametru*   
   
- *deklarace parametru*:  
+ *parameter-declaration*:  
  *deklarátor specifikátory deklarace*  
   
  *specifikátory deklarace abstraktní – deklarátor* opt  

@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězce a znak a poskytuje způsoby, jak express literálových hodnot každé z těchto typů. Ve zdrojovém kódu express obsah vaší znak a řetězec literály pomocí znakovou sadu. Univerzální názvy znaků a řídicí znaky umožňují express libovolného řetězce základní zdrojové znakové sadě. Nezpracovaná řetězcový literál umožňuje vyhnout řídicí znaky a slouží k express všechny typy textových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět navíc konstrukce nebo převod kroky.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Znakové literály  
  A *znakový literál* se skládá z konstantní znak. Je zobrazena ve znaku v jednoduchých uvozovkách. Existují pět druhy znakové literály:  
   
--   Obyčejnou znakové literály typu `char`, například`'a'`  
+-   Obyčejnou znakové literály typu `char`, například `'a'`  
   
--   Znakové sady UTF-8 znakové literály typu `char`, například`u8'a'`  
+-   Znakové sady UTF-8 znakové literály typu `char`, například `u8'a'`  
   
--   Celou znakové literály typu `wchar_t`, například`L'a'`  
+-   Celou znakové literály typu `wchar_t`, například `L'a'`  
   
--   Znakové sady UTF-16 znakové literály typu `char16_t`, například`u'a'`  
+-   Znakové sady UTF-16 znakové literály typu `char16_t`, například `u'a'`  
   
--   Znakové sady UTF-32 znakové literály typu `char32_t`, například`U'a'`  
+-   Znakové sady UTF-32 znakové literály typu `char32_t`, například `U'a'`  
   
  Znak použitý pro literálu znak může být libovolný znak, s výjimkou vyhrazené znaky zpětné lomítko ('\\'), jednoduché uvozovky ('), nebo nový řádek. Vyhrazené znaky lze zadat pomocí řídicí sekvence. Znaků můžete zadat pomocí univerzální názvy znaků, tak dlouho, dokud typ je dostatečně velký pro uložení znak.  
   
@@ -113,15 +113,15 @@ int main()
   
 -   Znakový literál, který začíná předponu U je literál znakové sady UTF-32 znaků. Hodnota literálu znakové sady UTF-32 znak obsahující jeden znak, řídicí sekvenci nebo universal znak name má hodnotu rovna hodnotě bodu kódu jeho ISO 10646. Znakové sady UTF-8 znak literálu obsahující více než jeden znak, – řídicí sekvence nebo název universal znak je nesprávně vytvořen.  
   
-###  <a name="bkmk_Escape"></a>Řídicí sekvence  
+###  <a name="bkmk_Escape"></a> Řídicí sekvence  
  Existují tři druhy řídicí sekvence: jednoduchý, osmičkových a šestnáctkových. Řídicí sekvence může být jedno z následujících:  
   
 |Hodnota|Řídicí sekvence|Hodnota|Řídicí sekvence|  
 |-----------|---------------------|-----------|---------------------|  
-|newline|\n|zpětné lomítko|\\\|  
+|newline|\n|backslash|\\\|  
 |Vodorovné karty|\t|otazník|? nebo \\?|  
 |vertikální tabulátor|\v|jednoduché uvozovky|\\'|  
-|BACKSPACE|\b|dvojité uvozovky|\\"|  
+|backspace|\b|dvojité uvozovky|\\"|  
 |návrat na začátek řádku|\r|znak hodnoty null|\0|  
 |řídicí znak|\f|osmičkové|\ooo|  
 |Výstraha (zvonku)|\a|hexadecimální|\xhhh|  
@@ -148,7 +148,7 @@ int main() {
 }  
 ```  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Pokud chcete vytvořit hodnotu z znakem obyčejnou literálu (těch bez předpony), převede kompilátor znak nebo posloupnost znaků mezi jednoduchých uvozovek a být do 8bitové hodnoty v 32bitové celé číslo. Více znaků v literálové vyplní odpovídající bajtů potřeby z horní nejnižší. Chcete-li vytvořit `char` hodnota, kompilátor má nejnižší bajtů. Chcete-li vytvořit `wchar_t` nebo `char16_t` hodnota, kompilátor má nejnižší word. Kompilátor varovat, pokud jsou výše přiřazené bajtů nebo slovo všechny služby bits se zkrátí výsledek.  
   
@@ -195,7 +195,7 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
   
  Znak zpětného lomítka (\\) je znak pokračování řádku, pokud je umístěn na konci řádku. Pokud chcete znak zpětného lomítka se objeví jako znak literálu, je nutné zadat dvě zpětná řádek (`\\`). Další informace o znak pro pokračování řádku najdete v tématu [fáze překladu](../preprocessor/phases-of-translation.md).  
   
-###  <a name="bkmk_UCN"></a>Univerzální názvy znaků  
+###  <a name="bkmk_UCN"></a> Univerzální názvy znaků  
  V znakové literály a nativní (bez – hrubá, nezpracovaná) textové literály může představovat libovolný znak název universal znak.  Univerzální názvy znaků jsou tvořeny předpony, které následují \U bodem kódu Unicode v řádu osm, nebo předponu \u následuje bod kódování Unicode čtyři číslice. Všechny osm nebo čtyři číslice, v uvedeném pořadí, musí být přítomen, aby název ve správném formátu universal znak.  
   
 ```cpp  
@@ -321,7 +321,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ### <a name="modifying-string-literals"></a>Úprava textové literály  
  Protože textové literály (včetně není std:string literály) jsou konstanty, pokusu o změnu je – například str [2] = "A" – způsobí chybu kompilátoru.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  V jazyce Visual C++ můžete řetězcový literál k chybě při inicializaci ukazatel na jiný const `char` nebo `wchar_t`. Toto je povolena v C99 kód, ale je zastaralé v C ++ 98 a odebrat C ++ 11. Pokus upravit řetězec způsobí, že porušení přístupu, jako v následujícím příkladu:  
   

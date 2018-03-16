@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Aktivní dokumenty na Internetu
 Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktivní dokumenty může být vícestránkové a jsou zobrazeny v celého klienta. Proveďte vyjednávání tradiční nabídky a můžete upravit na místě a také v otevřeném okně v serverové aplikace. Místo zobrazení jako malé šrafované ohraničení obdélníku, jsou aktivní dokumenty úplné rámce a aktivní vždy na místě.  
@@ -59,7 +59,7 @@ Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktiv
 |-------------------------|---------------------------------|  
 |Používá složené soubory jako mechanismus jeho úložiště.|`IPersistStorage`.|  
 |Podporuje základní funkce vnoření aktivní dokumenty, včetně vytvoření ze souboru.|`IPersistFile`, `IOleObject`, a `IDataObject`.|  
-|Podporuje aktivace na místě.|`IOleInPlaceObject`a `IOleInPlaceActiveObject` (pomocí kontejneru `IOleInPlaceSite` a **IOleInPlaceFrame** rozhraní).|  
+|Podporuje aktivace na místě.|`IOleInPlaceObject` a `IOleInPlaceActiveObject` (pomocí kontejneru `IOleInPlaceSite` a **IOleInPlaceFrame** rozhraní).|  
 |Podporuje aktivní dokument rozšíření, které zahrnují tyto nové rozhraní. Některé rozhraní jsou volitelné.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.|  
   
  MFC poskytuje podporu pro rozšíření stávající podpora embedded serveru pro aktivní dokumenty.  
@@ -67,7 +67,7 @@ Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktiv
 ## <a name="add-active-document-support-to-a-new-application"></a>Přidání podpory pro aktivní dokument do nové aplikace  
  Chcete-li vytvořit novou aplikaci s podporou aktivní dokument: V the Průvodce aplikací knihovny MFC na **podporu složeného dokumentu** v části "podpora vyberte složeného dokumentu" vyberte **úplný server** nebo  **Kontejner/úplný server**a v části "Vyberte další možnosti" zaškrtněte políčko u **server pro aktivní dokument**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>Převést existující Server v rámci procesu MFC na Server pro aktivní dokument  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Převést existující Server v rámci procesu MFC na Server pro aktivní dokument  
  Pokud vaše aplikace byla vytvořena s verzí aplikace Visual C++ starší než verze 4.2 a je již jako server v procesu, můžete přidat podporu pro aktivní dokument změnou následující třídy:  
   
 |Typ třídy|Dříve odvozené od|Změna k odvozování z|  

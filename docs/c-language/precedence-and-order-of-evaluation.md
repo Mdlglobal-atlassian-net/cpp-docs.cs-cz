@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Přednost a pořadí vyhodnocení
 Priorita a asociativita operátorů jazyka C ovlivní seskupování a vyhodnocování operandů ve výrazech. Priorita operátoru má smysl pouze v případě, že jsou přítomny operátory s nižší nebo vyšší prioritou. Výrazy s operátory s vyšší prioritou jsou vyhodnoceny jako první. Prioritu lze popsat také slovem „vazba“. O operátorech s vyšší prioritou se říká, že mají silnější vazbu.  
@@ -37,8 +37,8 @@ Priorita a asociativita operátorů jazyka C ovlivní seskupování a vyhodnocov
   
 |Symbol <sup>1</sup>|Typ operace|Asociativita|  
 |-------------|-----------------------|-------------------|  
-|**\[ ] ( ) . ->**<br /><br />**++** **--**  (přípony)|Výraz|Zleva doprava|  
-**sizeof – & \* + - ~!**<br /><br />**++ –** (předpona)|Unární|Zleva doprava.|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (přípony)|Výraz|Zleva doprava|  
+**sizeof – & \* + - ~!**<br /><br />**++ --** (prefix)|Unární|Zleva doprava.|  
 |*přiřadí typ ukazatel*|Unární|Zleva doprava.|  
 |**\* / %**|Multiplikativní|Zleva doprava|  
 |**+ -**|Doplňkové|Zleva doprava|  
@@ -74,9 +74,9 @@ Priorita a asociativita operátorů jazyka C ovlivní seskupování a vyhodnocov
 
 |Výraz|Automatické vázání|  
 |----------------|-----------------------|  
-|a & b &#124; &#124; c|(a & b) &#124; &#124; c|  
-|= b &#124; &#124; c|= (b &#124; &#124; c)|  
-|q & & r &#124; &#124; s –|(q & & r) &#124; &#124; s –|  
+|a & b &#124; &#124; c|(a & b). &#124; &#124; c|  
+|a = b &#124;&#124; c|a = (b &#124;&#124; c)|  
+|q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|  
 
  V prvním výrazu bitový operátor AND (`&`) má vyšší prioritu než logický operátor OR (`||`), proto výraz `a & b` tvoří první operand operace logického operátoru OR.  
   

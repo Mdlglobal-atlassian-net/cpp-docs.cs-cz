@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Specializace šablony (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Příklad
 
- Pokud máte třídu kolekce šablony, která přijímá jakéhokoli typu **T**, můžete vytvořit částečná specializace, který přebírá všechny ukazatel typu **T***. Následující kód ukazuje šablonu třída kolekce `Bag` a částečná specializace pro typy ukazatelů, ve kterých kolekce dereferences typy ukazatelů před jejich zkopírováním do pole. Kolekce pak uloží hodnoty, které jsou na odkazuje. S původní šablonou pouze ukazatele sami by byly uloženy v kolekci, a bude zranitelný vůči odstranění nebo změna data. V této verzi speciální ukazatel kolekce, chcete-li zkontrolovat nulový ukazatel kód `add` se přidá metoda.  
+ Pokud máte třídu kolekce šablony, která přijímá jakéhokoli typu **T**, můžete vytvořit částečná specializace, který přebírá všechny ukazatel typu ** T ***. Následující kód ukazuje šablonu třída kolekce `Bag` a částečná specializace pro typy ukazatelů, ve kterých kolekce dereferences typy ukazatelů před jejich zkopírováním do pole. Kolekce pak uloží hodnoty, které jsou na odkazuje. S původní šablonou pouze ukazatele sami by byly uloženy v kolekci, a bude zranitelný vůči odstranění nebo změna data. V této verzi speciální ukazatel kolekce, chcete-li zkontrolovat nulový ukazatel kód `add` se přidá metoda.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

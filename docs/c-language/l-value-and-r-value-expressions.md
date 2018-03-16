@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>Výrazy hodnot L-Value a R-Value
 Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. Hodnotu l reprezentuje hodnotu "Lokátor" v oblasti úložiště, nebo hodnotu "left" zdání, může se objevit na levé straně znaménkem rovnosti (**=**). L-hodnoty jsou často identifikátory.  
@@ -51,7 +51,7 @@ Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-h
   
  Pojem „r-hodnota“ se někdy používá k popisu hodnoty výrazu a pro jeho odlišení od l-hodnoty. Všechny l-hodnoty jsou r-hodnotami, ale ne všechny r-hodnoty jsou l-hodnotami.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace.) Tuto funkci znázorňuje následující příklad:  
   

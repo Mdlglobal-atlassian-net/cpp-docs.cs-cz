@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c432cde8a4c565e6195658ab27ce5f2cb1838f6a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator – třída
 Popisuje vstupní iterátor, který pořadí prostřednictvím názvy souborů v adresáři, pravděpodobně sestupném do podadresáře rekurzivně. Pro iterovat X, výraz * X vyhodnocen jako objekt directory_entry – třída, která zabalí název souboru a nic známé o jeho stav.  

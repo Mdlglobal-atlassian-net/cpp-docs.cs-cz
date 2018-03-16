@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>CComObject – třída
 Tato třída implementuje **IUnknown** neagregovaná objektu.  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |Název|Popis|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Konstruktor|  
-|[CComObject:: ~ CComObject](#dtor)|Destruktor.|  
+|[CComObject::~CComObject](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Snižuje počet odkaz na objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObject`implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) neagregovaná objektu. Ale volání `QueryInterface`, `AddRef`, a **verze** jsou přeneseny na `CComObjectRootEx`.  
+ `CComObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) neagregovaná objektu. Ale volání `QueryInterface`, `AddRef`, a **verze** jsou přeneseny na `CComObjectRootEx`.  
   
  Další informace o používání `CComObject`, najdete v článku [základy objektů COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  Zvýší počet odkaz na objekt.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Návratová hodnota  
  Tato funkce vrátí počet nových zvýšena odkaz na objekt. Tato hodnota může být užitečná pro diagnostiku a testování.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  Konstruktor zvýší počet modulů zámku.  
   
 ```
@@ -96,15 +96,15 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **void\***  
- [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom***XXX*`Object`*XXX* konstruktory.  
+ **Void\***  
+ [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom *** XXX*`Object`*XXX* konstruktory.  
   
 ### <a name="remarks"></a>Poznámky  
  Snižuje destruktor ho.  
   
  Pokud `CComObject`-odvozené objektu je úspěšně vytvořená pomocí **nové** operátor, počet počáteční odkaz na hodnotu 0. Nastavit počet odkazů na správnou hodnotu (1), ujistěte se, volání [addref –](#addref) funkce.  
   
-##  <a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>  CComObject:: ~ CComObject  
  Destruktor.  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  Uvolní všechny přidělené prostředky, volání [FinalRelease](ccomobjectrootex-class.md#finalrelease), a snižuje počet zámek modulu.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  Tato statická funkce vám umožní vytvořit nový **CComObject <** `Base`  **>**  objekt, bez nutnosti [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  Načte ukazatel na požadované rozhraní.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  Snižuje počet odkaz na objekt.  
   
 ```

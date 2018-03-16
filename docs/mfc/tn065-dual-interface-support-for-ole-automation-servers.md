@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní u automatizačních serverů OLE
 > [!NOTE]
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>Předávání ukazatele duální rozhraní  
- Předávání ukazatel duálního rozhraní není jasné, zvlášť pokud je třeba volat `CCmdTarget::FromIDispatch`. `FromIDispatch`funguje pouze na knihovny MFC `IDispatch` ukazatele. Jeden ze způsobů, jak tento problém obejít je k dotazování pro původní `IDispatch` ukazatel sady až v prostředí MFC a předat tuto ukazatele na funkce, které je třeba ji. Příklad:  
+ Předávání ukazatel duálního rozhraní není jasné, zvlášť pokud je třeba volat `CCmdTarget::FromIDispatch`. `FromIDispatch` funguje pouze na knihovny MFC `IDispatch` ukazatele. Jeden ze způsobů, jak tento problém obejít je k dotazování pro původní `IDispatch` ukazatel sady až v prostředí MFC a předat tuto ukazatele na funkce, které je třeba ji. Příklad:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,7 +306,7 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   Ve vaší aplikaci `InitInstance` fungovat, vyhledejte volání `COleObjectFactory::UpdateRegistryAll`. Následující toto volání, že přidáte volání `AfxOleRegisterTypeLib`, zadání **ID KNIHOVNY** odpovídající vaší knihovny typů, společně s názvem vaší knihovny typů:  
   
  "' * / Při spuštění aplikace server samostatné je vhodné * / / k aktualizaci systémového registru v případě, že byl poškozen.  
-    m_server. UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll(); * / Nebo DUAL_SUPPORT_START * / / zajistěte, aby se zaregistrovat knihovnu typů nebo duální rozhraní nebude fungovat.  
 AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); * / NEBO DUAL_SUPPORT_END  
@@ -352,10 +352,10 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 {  
     Method_prologue – (CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC automaticky převede z BSTR Unicode do * / nebo Ansi CString, v případě potřeby...  
-    pThis -> m_str = newText;  
+    pThis->m_str = newText;  
     Vrátí NOERROR;  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e -> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -390,25 +390,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     Návratový pThis -> ExternalAddRef();
 
 }   
 STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     Návratový pThis -> ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID * ppvObj)   
 {   
-    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
-    Návratový pThis -> ExternalQueryInterface (& iid, ppvObj);
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalQueryInterface(&iid, ppvObj);
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
 {   
-    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     Vrátí (iid == IID_IDualAClick) S_OK: S_FALSE;   
 }  
 ```  

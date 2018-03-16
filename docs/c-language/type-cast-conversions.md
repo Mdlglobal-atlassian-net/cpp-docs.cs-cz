@@ -25,22 +25,22 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="type-cast-conversions"></a>Převody přetypování
 Přetypování typu můžete explicitně převést typy.  
   
  **Syntaxe**  
   
- *výraz CAST*:  
+ *cast-expression*:  
  *Unární výraz*  
   
  **(***název typu***)***výraz cast*   
   
- *Název typu*:  
+ *type-name*:  
  *specifikátor. kvalifikátor seznamu abstraktní – deklarátor* opt  
   
  *Název typu* typu a *výraz cast* je hodnota má být převeden na typu. Výraz s přetypování není l hodnota. *Výraz cast* je převést, jako by měl přiřazený k proměnné typu *název typu*. Převod pravidel pro přiřazení (uvedených v [převody přiřazení](../c-language/assignment-conversions.md)) použít na typ přetypování také. Následující tabulka uvádí typy, které lze převést do daného typu.  
@@ -60,7 +60,7 @@ Přetypování typu můžete explicitně převést typy.
   
  Všimněte si, že **void \***  výraz má ukazatel typu `void`, ne typ `void`. Pokud je objekt přetypovat `void` typu, výsledný výraz nelze přiřadit k žádné položky. Podobně objekt přetypování není přijatelná l hodnota, proto nelze realizovat žádná přiřazení na objekt přetypování.  
   
- **Konkrétní Microsoft**  
+ **Microsoft Specific**  
   
  Přetypování může být výraz l-value tak dlouho, dokud velikost identifikátor se nemění. Informace na výrazy hodnot l najdete v tématu [L-Value a R-Value výrazy](../c-language/l-value-and-r-value-expressions.md).  
   

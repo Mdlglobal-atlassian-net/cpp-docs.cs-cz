@@ -56,10 +56,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf – třída
 Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v souboru externích.  
@@ -419,11 +419,11 @@ basic_filebuf<Elem, Tr> *open(
   
 - **ios_base::Out &#124; aplikace** stane **"a"** (otevřít existující soubor pro připojování všech zápisů).  
   
-- **ios_base::in &#124; ios_base::Out** stane **"r +"** (otevřít existující soubor pro čtení a zápis).  
+- **ios_base::in &#124; ios_base::out** stane **"r +"** (otevřít existující soubor pro čtení a zápis).  
   
-- **ios_base::in &#124; ios_base::Out &#124; ios_base::TRUNC** stane **"w +"** (zkrátit existující soubor nebo vytvořit pro čtení a zápis).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** stane **"w +"** (zkrátit existující soubor nebo vytvořit pro čtení a zápis).  
   
-- **ios_base::in &#124; ios_base::Out &#124; ios_base::App** stane **"+"** (otevřít existující soubor pro čtení a pro připojování všech zápisů).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** stane **"+"** (otevřít existující soubor pro čtení a pro připojování všech zápisů).  
   
  Pokud **režimu & ios_base::binary** je nenulové hodnoty, připojí funkce **b** k **strmode** otevřete binární datový proud místo textu datového proudu. Poté uloží hodnoty vrácené `fopen` v ukazatele souboru **fp**. Pokud **režimu & ios_base::ate** nenulový a ukazatele souboru není ukazatele null volání funkce `fseek`( **fp**, 0, `SEEK_END`) na pozici datový proud na konci souboru. Pokud tento umísťovací operace selže, volání funkce [zavřete](#close)( **fp**) a ukládá ukazatele null v ukazatele souboru.  
   

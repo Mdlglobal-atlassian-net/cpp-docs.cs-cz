@@ -44,10 +44,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="valarray-class"></a>valarray – třída
 Šablony třídy popisuje objekt, který určuje posloupnost elementy typu **typ** které jsou uloženy jako pole, určený pro provádění vysokorychlostní matematické operace a optimalizované pro výpočetní výkon.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/23/2018
   
 -   Definuje množství aritmetické operace mezi odpovídající elementy **valarray –\<typ >** objekty stejného typu a délky, například *xarr* = cos ( *Yarr v jazyce*) + sin ( *zarr*).  
   
--   Definuje škálu zajímavé způsoby dolní index **valarray –\<typ >** objektu podle přetížení [operátor &#91; &#93;](#op_at).  
+-   Definuje škálu zajímavé způsoby dolní index **valarray –\<typ >** objektu podle přetížení [operátor&#91;&#93;](#op_at).  
   
  Třída objektu **typ**:  
   
@@ -1084,7 +1084,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
   
  Třetí operátor členů nahradí každý prvek řízené sekvenci kopii `val`.  
   
- Operátory zbývající členy nahradit tyto prvky řízené sekvenci vybraná jejich argumenty, které jsou generovány pouze systémem [operátor &#91; &#93;](#op_at).  
+ Operátory zbývající členy nahradit tyto prvky řízené sekvenci vybraná jejich argumenty, které jsou generovány pouze systémem [operátor&#91;&#93;](#op_at).  
   
  Pokud hodnota člena v pořadí nahrazení řídí závisí na člena v řízené sekvenci počáteční, výsledkem nedefinovaný.  
   
@@ -1268,7 +1268,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 *\  
 ```  
   
-##  <a name="op_or_eq"></a>  valarray::Operator &#124; =  
+##  <a name="op_or_eq"></a>  valarray::Operator&#124;=  
  Získá bitové hodnotě `OR` elementů v pole s odpovídající elementů v zadané valarray – nebo s hodnotou typu prvku.  
   
 ```  

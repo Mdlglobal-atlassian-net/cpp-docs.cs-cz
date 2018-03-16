@@ -21,19 +21,19 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>Přehled deklarací
 "Prohlášení" Určuje interpretace a atributy sadu identifikátory. Deklaraci, která taky Určuje, že úložiště, které budou rezervovány pro objekt nebo funkce s názvem identifikátorem se nazývá "definition". C deklarace proměnné, funkce a typy mají tuto syntaxi:  
   
 ## <a name="syntax"></a>Syntaxe  
  `declaration`:  
- *specifikátory deklarace* *atribut seq*opt*init. deklarátor seznamu*opt**;**  
+ *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
   
- /\**atribut seq*opt je Microsoft konkrétní * /  
+ /\* *atribut seq*opt je Microsoft konkrétní * /  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace*opt  
@@ -42,12 +42,12 @@ ms.lasthandoff: 12/21/2017
   
  *Kvalifikátor typu deklarace – specifikátory*opt  
   
- *Init – deklarátor seznamu*:  
- *Init – deklarátor*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *Init – deklarátor seznamu* , *init deklarátor*  
+ *init-declarator-list* , *init-declarator*  
   
- *Init – deklarátor*:  
+ *init-declarator*:  
  *deklarátor*  
   
  *deklarátor***=***inicializátoru*   

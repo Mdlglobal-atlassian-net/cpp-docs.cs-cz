@@ -122,12 +122,12 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80541bc777d2c77209812cbee621045b7d6c6507
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="colecontrolsite-class"></a>COleControlSite – třída
+# <a name="colecontrolsite-class"></a>COleControlSite Class
 Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -209,7 +209,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Dimenze ovládacího prvku lokality.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato podpora je hlavním prostředkem, podle kterého embedded ovládací prvek ActiveX získává informace o umístění a rozsah jeho zobrazení lokality, její přezdívka, jeho uživatelské rozhraní, jeho vedlejším vlastnostem a dalším prostředkům poskytované jejímu kontejneru. `COleControlSite`plně implementuje [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho se implementuje rozhraní IDispatch (poskytování podpory vedlejším vlastnostem a jímky událostí).  
+ Tato podpora je hlavním prostředkem, podle kterého embedded ovládací prvek ActiveX získává informace o umístění a rozsah jeho zobrazení lokality, její přezdívka, jeho uživatelské rozhraní, jeho vedlejším vlastnostem a dalším prostředkům poskytované jejímu kontejneru. `COleControlSite` plně implementuje [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),  **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho se implementuje rozhraní IDispatch (poskytování podpory vedlejším vlastnostem a jímky událostí).  
   
  Chcete-li vytvořit k ActiveX řízení lokality pomocí `COleControlSite`, odvození třídy z `COleControlSite`. Ve vašem `CWnd`-přepsání v odvozené třídě pro kontejner (například vašem dialogovém okně) **CWnd::CreateControlSite** funkce.  
   
@@ -223,7 +223,7 @@ class COleControlSite : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxocc.h  
   
-##  <a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
  Sváže volání objektu výchozí jednoduché vázané vlastnost, jako v knihovně typ označen jako základní kurzor, který je definován vlastností zdroje dat, uživatelské jméno, heslo a SQL zdroj dat ovládacího prvku.  
   
 ```  
@@ -250,7 +250,7 @@ virtual void BindDefaultProperty(
 ### <a name="remarks"></a>Poznámky  
  `CWnd` Objekt, na kterém volání této funkce musí být ovládacího prvku vázané na data.  
   
-##  <a name="bindproperty"></a>COleControlSite::BindProperty  
+##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
  Sváže vlastnost jednoduché vázané volání objektu jako označený v knihovně typů základní kurzor, který je definován vlastností zdroje dat, uživatelské jméno, heslo a SQL zdroj dat ovládacího prvku.  
   
 ```  
@@ -269,7 +269,7 @@ virtual void BindProperty(
 ### <a name="remarks"></a>Poznámky  
  `CWnd` Objekt, na kterém volání této funkce musí být ovládacího prvku vázané na data.  
   
-##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
+##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
  Vytvoří nový `COleControlSite` objektu.  
   
 ```  
@@ -283,7 +283,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) funkce. Další informace o přizpůsobení vytvoření kontejnerů najdete v tématu [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
   
-##  <a name="createcontrol"></a>COleControlSite::CreateControl  
+##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
  Vytvoří ovládacího prvku ActiveX hostované `COleControlSite` objektu.  
   
 ```  
@@ -356,7 +356,7 @@ virtual HRESULT CreateControl(
   
 - **Ws_disabled –** vytvoří okno, které je původně zakázána. Okno zakázané nemůže přijímat vstup od uživatele. Můžete nastavit, pokud má vlastnost povoleno ovládacího prvku.  
   
-- `WS_BORDER`Vytvoří okno se dynamicky čáry ohraničení. Můžete nastavit, pokud má vlastnost styl okraje na ovládací prvek.  
+- `WS_BORDER` Vytvoří okno se dynamicky čáry ohraničení. Můžete nastavit, pokud má vlastnost styl okraje na ovládací prvek.  
   
 - **Ws_group –** Určuje první prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí klíčů směr. Všechny ovládací prvky, které jsou definované pomocí **ws_group –** styl po první prvek patří do stejné skupiny. Na další ovládací prvek s **ws_group –** styl končí skupině a spustí na další skupinu.  
   
@@ -364,7 +364,7 @@ virtual HRESULT CreateControl(
   
  Chcete-li vytvořit výchozí velikosti ovládacích prvků, použijte druhý přetížení.  
   
-##  <a name="destroycontrol"></a>COleControlSite::DestroyControl  
+##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl  
  Zničí `COleControlSite` objektu.  
   
 ```  
@@ -377,7 +377,7 @@ virtual BOOL DestroyControl();
 ### <a name="remarks"></a>Poznámky  
  Po dokončení objekt je uvolněn z paměti a všechny ukazatele na objekt již nejsou platné.  
   
-##  <a name="doverb"></a>COleControlSite::DoVerb  
+##  <a name="doverb"></a>  COleControlSite::DoVerb  
  Provede zadaný příkaz.  
   
 ```  
@@ -412,7 +412,7 @@ virtual HRESULT DoVerb(
   
  Další informace najdete v tématu [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) ve Windows SDK.  
   
-##  <a name="enabledsc"></a>COleControlSite::EnableDSC  
+##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Umožňuje data sourcing ovládacího prvku lokality.  
   
 ```  
@@ -422,7 +422,7 @@ virtual void EnableDSC();
 ### <a name="remarks"></a>Poznámky  
  Voláno rámcem povolit a inicializace dat sourcing ovládacího prvku lokality. Funkci a poskytují přizpůsobené chování přepište.  
   
-##  <a name="enablewindow"></a>COleControlSite::EnableWindow  
+##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
  Povolí nebo zakáže myši a klávesnice vstup do ovládacího prvku lokality.  
   
 ```  
@@ -436,7 +436,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud byla předtím zakázaná okna, jinak hodnota 0.  
   
-##  <a name="freezeevents"></a>COleControlSite::FreezeEvents  
+##  <a name="freezeevents"></a>  COleControlSite::FreezeEvents  
  Určuje, zda bude ovládací prvek webu zpracování nebo ignorovat události aktivována z ovládacího prvku.  
   
 ```  
@@ -453,7 +453,7 @@ void FreezeEvents(BOOL bFreeze);
 > [!NOTE]
 >  Ovládací prvek není potřeba zastavit aktivaci událostí, pokud požadoval ovládacího prvku lokality. Pálení může pokračovat, ale všechny následné události budou ignorovány lokalita ovládacího prvku.  
   
-##  <a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo  
  Načte informace o chování klávesnice a klávesové zkratky klávesnice ovládacího prvku.  
   
 ```  
@@ -463,7 +463,7 @@ void GetControlInfo();
 ### <a name="remarks"></a>Poznámky  
  Informace jsou uloženy v [COleControlSite::m_ctlInfo](#m_ctlinfo).  
   
-##  <a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
  Určuje, zda je ovládací prvek výchozí tlačítko.  
   
 ```  
@@ -479,7 +479,7 @@ DWORD GetDefBtnCode();
   
 - **0** ovládací prvek není tlačítko.  
   
-##  <a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID  
  Načte identifikátor ovládacího prvku.  
   
 ```  
@@ -489,7 +489,7 @@ virtual int GetDlgCtrlID() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor položky dialogové okno ovládacího prvku.  
   
-##  <a name="geteventiid"></a>COleControlSite::GetEventIID  
+##  <a name="geteventiid"></a>  COleControlSite::GetEventIID  
  Načte ukazatel na rozhraní event výchozí ovládacího prvku.  
   
 ```  
@@ -503,7 +503,7 @@ BOOL GetEventIID(IID* piid);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud bylo úspěšné, jinak hodnota 0. V případě úspěšného `piid` obsahuje ID rozhraní pro rozhraní událostí výchozí ovládacího prvku.  
   
-##  <a name="getexstyle"></a>COleControlSite::GetExStyle  
+##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Načte rozšířené styly oken na.  
   
 ```  
@@ -516,7 +516,7 @@ virtual DWORD GetExStyle() const;
 ### <a name="remarks"></a>Poznámky  
  Chcete-li načíst regulární stylů, volejte [COleControlSite::GetStyle](#getstyle).  
   
-##  <a name="getproperty"></a>COleControlSite::GetProperty  
+##  <a name="getproperty"></a>  COleControlSite::GetProperty  
  Získá vlastnost ovládacího prvku určeného `dwDispID`.  
   
 ```  
@@ -539,7 +539,7 @@ virtual void GetProperty(
 ### <a name="remarks"></a>Poznámky  
  Prostřednictvím je vrácena hodnota `pvProp`.  
   
-##  <a name="getstyle"></a>COleControlSite::GetStyle  
+##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Načte styly ovládacího prvku lokality.  
   
 ```  
@@ -552,7 +552,7 @@ virtual DWORD GetStyle() const;
 ### <a name="remarks"></a>Poznámky  
  Seznam možných hodnot najdete v tématu [Windows styly](../../mfc/reference/styles-used-by-mfc.md#window-styles). Chcete-li načíst rozšířené styly ovládacího prvku lokality, volejte [COleControlSite::GetExStyle](#getexstyle).  
   
-##  <a name="getwindowtext"></a>COleControlSite::GetWindowText  
+##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
  Načte aktuální text ovládacího prvku.  
   
 ```  
@@ -566,7 +566,7 @@ virtual void GetWindowText(CString& str) const;
 ### <a name="remarks"></a>Poznámky  
  Pokud ovládací prvek podporuje uložených vlastností titulku, tato hodnota se vrátí. Pokud uložených vlastností popisek není podporován, je vrácena hodnota pro vlastnost Text.  
   
-##  <a name="invokehelper"></a>COleControlSite::InvokeHelper  
+##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
  Vyvolá metody nebo vlastnosti určeného `dwDispID`, v rámci určeného `wFlags`.  
   
 ```  
@@ -602,7 +602,7 @@ virtual void AFX_CDECL InvokeHelper(
   
  Tato funkce převede parametry, které chcete **VARIANTARG** hodnoty a potom volá **volání metody IDispatch::Invoke** metoda na ovládací prvek. Pokud volání **volání metody IDispatch::Invoke** selže, tato funkce vyvolá výjimku. Pokud vrácený kód stavu **volání metody IDispatch::Invoke** je `DISP_E_EXCEPTION`, funkce vyvolá **COleDispatchException** objektu, jinak hodnota vyhodí `COleException`.  
   
-##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
+##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
  Vyvolá metody nebo vlastnosti určeného `dwDispID`, v rámci určeného `wFlags`.  
   
 ```  
@@ -639,7 +639,7 @@ virtual void InvokeHelperV(
   
  Obvykle se tato funkce je volána `COleControlSite::InvokeHelper`.  
   
-##  <a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
+##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton  
  Určuje, zda je ovládací prvek výchozí tlačítko.  
   
 ```  
@@ -649,7 +649,7 @@ BOOL IsDefaultButton();
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je ovládací prvek výchozího tlačítka v okně, jinak hodnota nula.  
   
-##  <a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled  
  Určuje, zda je povoleno ovládacího prvku lokality.  
   
 ```  
@@ -662,7 +662,7 @@ virtual BOOL IsWindowEnabled() const;
 ### <a name="remarks"></a>Poznámky  
  Hodnota je načten z uložených vlastností ovládacího prvku povoleno.  
   
-##  <a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
+##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
  Určuje, zda je objekt ovládacího prvku bez oken.  
   
 ```  
@@ -672,7 +672,7 @@ BOOL m_bIsWindowless;
 ### <a name="remarks"></a>Poznámky  
  Nenulové hodnoty, pokud ovládací prvek nemá žádný časový interval, v opačném případě hodnotu.  
   
-##  <a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
+##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
  Informace o zpracování vstupu klávesnice pomocí ovládacího prvku.  
   
 ```  
@@ -682,14 +682,14 @@ CONTROLINFO m_ctlInfo;
 ### <a name="remarks"></a>Poznámky  
  Tyto informace jsou uloženy v [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) struktury.  
   
-##  <a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
+##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Obsahuje spojovací bod soubor cookie z jímek událostí ovládacího prvku.  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
-##  <a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
+##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus  
  Obsahuje různé informace o řízení.  
   
 ```  
@@ -699,91 +699,91 @@ DWORD m_dwMiscStatus;
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)ve Windows SDK.  
   
-##  <a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
+##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
  Obsahuje [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) souboru cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
-##  <a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
+##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle  
  Obsahuje styly oken ovládacího prvku.  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
-##  <a name="m_hwnd"></a>COleControlSite::m_hWnd  
+##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd  
  Obsahuje `HWND` ovládacího prvku, nebo **NULL** Pokud ovládací prvek je bez oken.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-##  <a name="m_iidevents"></a>COleControlSite::m_iidEvents  
+##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents  
  Obsahuje ID rozhraní rozhraní jímky událostí výchozí ovládacího prvku.  
   
 ```  
 IID m_iidEvents;  
 ```  
   
-##  <a name="m_nid"></a>COleControlSite::m_nID  
+##  <a name="m_nid"></a>  COleControlSite::m_nID  
  Obsahuje ID ovládacího prvku dialogové okno položky.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
+##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
  Obsahuje [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) rozhraní ovládacího prvku.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
 ```  
   
-##  <a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
+##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont  
  Obsahuje kontejneru ovládacího prvku (představující formuláře).  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
 ```  
   
-##  <a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
+##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
  Obsahuje `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) rozhraní ovládacího prvku.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
 ```  
   
-##  <a name="m_pobject"></a>COleControlSite::m_pObject  
+##  <a name="m_pobject"></a>  COleControlSite::m_pObject  
  Obsahuje **IOleObjectInterface** rozhraní ovládacího prvku.  
   
 ```  
 LPOLEOBJECT m_pObject;  
 ```  
   
-##  <a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
+##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
  Obsahuje `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) rozhraní ovládacího prvku.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
 ```  
   
-##  <a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
+##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl  
  Obsahuje odkazy `CWnd` objekt, který reprezentuje samotném ovládacím prvku.  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
-##  <a name="m_rect"></a>COleControlSite::m_rect  
+##  <a name="m_rect"></a>  COleControlSite::m_rect  
  Obsahuje hranice ovládacího prvku, relativně k okno kontejneru.  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="modifystyle"></a>COleControlSite::ModifyStyle  
+##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle  
  Upravit styly ovládacího prvku.  
   
 ```  
@@ -809,21 +809,21 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Poznámky  
  Stock ovládacího prvku vlastnost povoleno budou upraveny tak, aby odpovídaly nastavení **ws_disabled –**. Uložených vlastností styl ohraničení ovládacího prvku budou upraveny tak, aby odpovídaly nastavení požadovaná pro `WS_BORDER`. Všechny ostatní styly použité přímo popisovač okna ovládacího prvku, pokud je k dispozici.  
   
- Upravit styly oken ovládacího prvku. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR (&#124;) operátor. Najdete v článku [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
+ Upravit styly oken ovládacího prvku. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
   
  Pokud `nFlags` nenulový, `ModifyStyle` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
   
-- `SWP_NOSIZE`Zachová aktuální velikost.  
+- `SWP_NOSIZE` Zachová aktuální velikost.  
   
-- `SWP_NOMOVE`Zachová aktuální pozici.  
+- `SWP_NOMOVE` Zachová aktuální pozici.  
   
-- `SWP_NOZORDER`Zachová aktuální pořadí vykreslování.  
+- `SWP_NOZORDER` Zachová aktuální pořadí vykreslování.  
   
-- `SWP_NOACTIVATE`Neaktivuje okna.  
+- `SWP_NOACTIVATE` Neaktivuje okna.  
   
  K úpravě časového období je rozšířené styly, volejte [ModifyStyleEx](#modifystyleex).  
   
-##  <a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
+##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx  
  Změní rozšířené styly ovládacího prvku.  
   
 ```  
@@ -849,21 +849,21 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Poznámky  
  Uložených vlastností vzhledu ovládacího prvku budou upraveny tak, aby odpovídaly nastavení **WS_EX_CLIENTEDGE –**. Všechny ostatní rozšířené styly oken přímo do ovládacího prvku popisovač okna, se použijí, pokud je k dispozici.  
   
- Upravuje okno Rozšířené styly objekt ovládacího prvku lokality. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR (&#124;) operátor. Najdete v článku [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
+ Upravuje okno Rozšířené styly objekt ovládacího prvku lokality. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
   
  Pokud `nFlags` nenulový, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
   
-- `SWP_NOSIZE`Zachová aktuální velikost.  
+- `SWP_NOSIZE` Zachová aktuální velikost.  
   
-- `SWP_NOMOVE`Zachová aktuální pozici.  
+- `SWP_NOMOVE` Zachová aktuální pozici.  
   
-- `SWP_NOZORDER`Zachová aktuální pořadí vykreslování.  
+- `SWP_NOZORDER` Zachová aktuální pořadí vykreslování.  
   
-- `SWP_NOACTIVATE`Neaktivuje okna.  
+- `SWP_NOACTIVATE` Neaktivuje okna.  
   
  K úpravě časového období je rozšířené styly, volejte [ModifyStyle](#modifystyle).  
   
-##  <a name="movewindow"></a>COleControlSite::MoveWindow  
+##  <a name="movewindow"></a>  COleControlSite::MoveWindow  
  Změní umístění ovládacího prvku.  
   
 ```  
@@ -887,7 +887,7 @@ virtual void MoveWindow(
  `nHeight`  
  Nové výšku okna.  
   
-##  <a name="quickactivate"></a>COleControlSite::QuickActivate  
+##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
  Rychlé aktivuje obsažené ovládacího prvku.  
   
 ```  
@@ -902,7 +902,7 @@ virtual BOOL QuickActivate();
   
  `IPersist*::Load` a `IPersist*::InitNew` metody by měla být volána po dokončení rychlé aktivace. Ovládací prvek zavede jeho připojení k kontejneru jímky během rychlé aktivace. Tato připojení však nejsou za provozu, dokud `IPersist*::Load` nebo `IPersist*::InitNew` byla volána.  
   
-##  <a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
+##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
  Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
   
 ```  
@@ -929,7 +929,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 > [!NOTE]
 >  Na rozdíl od `SetProperty` a `SetPropertyV`, pokud dojde k chybě (například došlo k pokusu o nastavení neexistující vlastnost), je vyvolána žádná výjimka.  
   
-##  <a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton  
  Nastaví ovládací prvek jako výchozího tlačítka.  
   
 ```  
@@ -945,7 +945,7 @@ void SetDefaultButton(BOOL bDefault);
 > [!NOTE]
 >  Ovládací prvek musí mít **OLEMISC_ACTSLIKEBUTTON** stav nastaven bit.  
   
-##  <a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID  
  Změní hodnotu identifikátor položky dialogové okno ovládacího prvku.  
   
 ```  
@@ -961,7 +961,7 @@ virtual int SetDlgCtrlID(int nID);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setfocus"></a>COleControlSite::SetFocus  
+##  <a name="setfocus"></a>  COleControlSite::SetFocus  
  Nastaví zaměření na ovládací prvek.  
   
 ```  
@@ -976,7 +976,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na okno, která dřív měla fokus.  
   
-##  <a name="setproperty"></a>COleControlSite::SetProperty  
+##  <a name="setproperty"></a>  COleControlSite::SetProperty  
  Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
   
 ```  
@@ -1000,7 +1000,7 @@ virtual void AFX_CDECL SetProperty(
   
  Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, **COleDispatchExcpetion** výjimce dojde; jinak hodnota `COleException`.  
   
-##  <a name="setpropertyv"></a>COleControlSite::SetPropertyV  
+##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
  Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
   
 ```  
@@ -1025,7 +1025,7 @@ virtual void SetPropertyV(
   
  Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, **COleDispatchExcpetion** výjimce dojde; jinak hodnota `COleException`.  
   
-##  <a name="setwindowpos"></a>COleControlSite::SetWindowPos  
+##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  Nastaví velikost, umístění a pořadí vykreslování ovládacího prvku lokality.  
   
 ```  
@@ -1060,7 +1060,7 @@ virtual BOOL SetWindowPos(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu, jinak hodnota nula.  
   
-##  <a name="setwindowtext"></a>COleControlSite::SetWindowText  
+##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText  
  Nastaví text pro řízení lokality.  
   
 ```  
@@ -1074,7 +1074,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce se nejprve pokusí se nastavit uložených vlastností titulek. Pokud uložených vlastností popisek není podporován, je místo toho nastavit vlastnosti textu.  
   
-##  <a name="showwindow"></a>COleControlSite::ShowWindow  
+##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
  Nastaví okna zobrazení stavu.  
   
 ```  
