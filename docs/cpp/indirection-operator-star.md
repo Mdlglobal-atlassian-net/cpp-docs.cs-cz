@@ -37,7 +37,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Deferenční operátor unární (**\***) dereferences ukazatel; to znamená, převede hodnotu ukazatel na hodnotu l. Operand operátoru indirection musí být ukazatel typu. Výsledkem výrazu indirection je typ, ze kterého je odvozený typ ukazatele. Použití  **\***  operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
+ Deferenční operátor unární (**\***) dereferences ukazatel; to znamená, převede hodnotu ukazatel na hodnotu l. Operand operátoru indirection musí být ukazatel typu. Výsledkem výrazu indirection je typ, ze kterého je odvozený typ ukazatele. Použití **\*** operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
   
  Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li na umístění úložiště, je výsledkem l-hodnota označující umístění úložiště.  
   

@@ -50,7 +50,7 @@ postfix-expression -> name
   
 1.  Ve formuláři první *operátory výraz* reprezentuje hodnotu struktura, třídy nebo typu union a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota operace je u *název* a pokud je hodnotou l *operátory výraz* je l hodnota.  
   
-2.  Ve formuláři druhý *operátory výraz* představuje ukazatel struktury, sjednocení nebo třída, a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnota.  **->**  Operátor dereferences ukazatele. Proto výrazy * e * **->**  `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory  **->**  nebo  **\***  jsou přetížené).  
+2.  Ve formuláři druhý *operátory výraz* představuje ukazatel struktury, sjednocení nebo třída, a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnota.  **->**  Operátor dereferences ukazatele. Proto výrazy *e***->**`member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory **->** nebo **\*** jsou přetížené).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje obě formy operátoru pro přístup k členu.  

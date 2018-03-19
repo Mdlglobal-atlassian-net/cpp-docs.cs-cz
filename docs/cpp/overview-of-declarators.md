@@ -57,7 +57,7 @@ const char *pch, ch;
   
  **Deklarátory pro ukazatele, odkazy a pole**  
   
- Operátory ukazatelů vložené před název zajistí, že objekt bude ukazatel nebo reference.   **\***  Operátor deklaruje název jako ukazatel;  **&**  operátor ji deklaruje jako odkaz.  
+ Operátory ukazatelů vložené před název zajistí, že objekt bude ukazatel nebo reference.  **\*** Operátor deklaruje název jako ukazatel; **&** operátor ji deklaruje jako odkaz.  
   
 ```  
 int *i; // declarator is *i  

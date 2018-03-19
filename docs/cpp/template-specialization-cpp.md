@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Příklad
 
- Pokud máte třídu kolekce šablony, která přijímá jakéhokoli typu **T**, můžete vytvořit částečná specializace, který přebírá všechny ukazatel typu ** T ***. Následující kód ukazuje šablonu třída kolekce `Bag` a částečná specializace pro typy ukazatelů, ve kterých kolekce dereferences typy ukazatelů před jejich zkopírováním do pole. Kolekce pak uloží hodnoty, které jsou na odkazuje. S původní šablonou pouze ukazatele sami by byly uloženy v kolekci, a bude zranitelný vůči odstranění nebo změna data. V této verzi speciální ukazatel kolekce, chcete-li zkontrolovat nulový ukazatel kód `add` se přidá metoda.  
+ Pokud máte třídu kolekce šablony, která přijímá jakéhokoli typu **T**, můžete vytvořit částečná specializace, který přebírá všechny ukazatel typu **T***. Následující kód ukazuje šablonu třída kolekce `Bag` a částečná specializace pro typy ukazatelů, ve kterých kolekce dereferences typy ukazatelů před jejich zkopírováním do pole. Kolekce pak uloží hodnoty, které jsou na odkazuje. S původní šablonou pouze ukazatele sami by byly uloženy v kolekci, a bude zranitelný vůči odstranění nebo změna data. V této verzi speciální ukazatel kolekce, chcete-li zkontrolovat nulový ukazatel kód `add` se přidá metoda.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
