@@ -91,7 +91,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 2.  Klikněte na tlačítko **přidat**.  
   
- To vám dává seznam nainstalovaných ovladačů a jejich popisy. Použít tento popis jako `lpszDriver` parametr. Všimněte si, že používáte celý popis, jako je například "Souborů aplikace Excel (XLS)", včetně příponu názvu souboru a kulaté závorky, pokud existují v popisu.  
+ To vám dává seznam nainstalovaných ovladačů a jejich popisy. Použít tento popis jako `lpszDriver` parametr. Všimněte si, že používáte celý popis, jako je například "Souborů aplikace Excel (*.XLS)", včetně příponu názvu souboru a kulaté závorky, pokud existují v popisu.  
   
  Jako alternativu můžete zkontrolovat registru (nebo u 16 bitů, soubor Odbcinst.ini), který obsahuje seznam všech ovladačů položek a popisy v klíči registru "Ovladače ODBC" (nebo v části [ODBC – ovladače] v souboru Odbcinst.ini).  
   

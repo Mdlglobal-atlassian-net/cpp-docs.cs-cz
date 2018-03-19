@@ -33,7 +33,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>Multiplikativní operátory jazyka C
-Multiplikativní operátory provést násobení (**\***), dělení (**/**) a zbytek (`%`) operace.  
+Multiplikativní operátory provést násobení (**\****), dělení (**/**) a zbytek (`%`) operace.  
   
  **Syntaxe**  
   
@@ -46,7 +46,7 @@ Multiplikativní operátory provést násobení (**\***), dělení (**/**) a zby
   
  *multiplicative-expression*  **%**  *cast-expression*  
   
- Operandy operátoru zbývající (`%`) musí být celočíselné. Násobení (**\***) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
+ Operandy operátoru zbývající (`%`) musí být celočíselné. Násobení (**\****) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
   
  Multiplikativní operátory provést obvyklé aritmetické převody operandy. Typ výsledku je typ operandy po převodu.  
   
