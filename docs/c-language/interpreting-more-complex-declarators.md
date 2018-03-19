@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Výklad složitějších deklarací
 Je-li uzavřít všechny deklarátor v závorkách zadat konkrétní výklad "komplexní deklarátor". Komplexní deklarátor je identifikátor kvalifikovaný více než jeden pole, ukazatel nebo modifikační funkce. Můžete použít různé kombinace pole, ukazatelů a funkce modifikátory na jediný identifikátor. Obecně `typedef` lze zjednodušit deklarace. V tématu [Typedef – deklarace](../c-language/typedef-declarations.md).  
@@ -47,7 +47,7 @@ Je-li uzavřít všechny deklarátor v závorkách zadat konkrétní výklad "ko
      7   6  4 2 1   3    5  
     ```  
   
- Kroky v tomto příkladu jsou číslované v pořadí a jde interpretovat následujícím způsobem:  
+Kroky v tomto příkladu jsou číslované v pořadí a jde interpretovat následujícím způsobem:  
   
 1.  Identifikátor `var` je deklarován jako  
   
@@ -61,7 +61,7 @@ Je-li uzavřít všechny deklarátor v závorkách zadat konkrétní výklad "ko
   
 6.  ukazatele na  
   
-7.  `char`hodnoty.  
+7.  `char` hodnoty.  
   
 ## <a name="examples"></a>Příklady  
  Následující příklady ilustrují jiné komplexní deklarace a zobrazit vliv význam deklaraci závorek.  
