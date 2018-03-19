@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element –  
- Oddíly rozsahu prvků, správně hledání  *n* element TD pořadí v rozsahu, aby všechny elementy úrovních před ním jsou menší než nebo rovna hodnotě ho a všechny elementy, které následují v pořadí Opětovná větší než nebo rovna hodnotě ho.  
+ Oddíly rozsahu prvků, správně hledání *n*element TD pořadí v rozsahu, aby všechny elementy úrovních před ním jsou menší než nebo rovna hodnotě ho a všechny elementy, které následují v pořadí jsou větší tý nebo rovna hodnotě ho.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Poznámky  
  Rozsah odkazuje musí být platná. musí být všechny ukazatele dereferenceable a v rámci pořadí se poslední pozice dosažitelný z první podle Inkrementace.  
   
- `nth_element` Algoritmus není zaručeno, že buď straně elementů v dílčí rozsahy z  *n* element TD jsou seřazeny. Proto umožňuje záruky méně než `partial_sort`, který řadí elementy v rozsahu níže některé vybraný element a může být použita jako rychlejší alternativní k `partial_sort` při řazení nižší rozsah se nevyžaduje.  
+ `nth_element` Algoritmus není zaručeno, že buď straně elementů v dílčí rozsahy z *n*element TD jsou seřazeny. Proto umožňuje záruky méně než `partial_sort`, který řadí elementy v rozsahu níže některé vybraný element a může být použita jako rychlejší alternativní k `partial_sort` při řazení nižší rozsah se nevyžaduje.  
   
  Elementy jsou ekvivalentní, ale nemusí nutně jít rovná, pokud je menší než druhý.  
   
@@ -4922,7 +4922,7 @@ template<class BidirectionalIterator, class Predicate>
 ### <a name="remarks"></a>Poznámky  
  Rozsah odkazuje musí být platná. musí být všechny ukazatele dereferenceable a v rámci pořadí se poslední pozice dosažitelný z první podle Inkrementace.  
   
- Elementy *a* a *b* jsou ekvivalentní, ale stejně nemusí nutně prokázat, pokud obě *Pr* ( *a*, *b*) je hodnota false a *Pr* ( *b*, *a*) Pokud je hodnota false, kde *Pr* je zadán parametr predikátu. **Oddílu** algoritmus není stabilní a není zaručeno, že relativní řazení ekvivalentní elementy se zachovají. Algoritmus **stable_ oddílu** zachovat původní řazení.  
+ Elementy *a* *b* jsou ekvivalentní, ale stejně nemusí nutně prokázat, pokud obě *Pr* ( *a*, *b*) je hodnota false a *Pr* ( *b*, *a*) Pokud je hodnota false, kde *Pr* je zadán parametr predikátu. **Oddílu** algoritmus není stabilní a není zaručeno, že relativní řazení ekvivalentní elementy se zachovají. Algoritmus **stable_ oddílu** zachovat původní řazení.  
   
  Složitost je lineární: existují ( `last`  -   `first`) aplikace `comp` a maximálně ( `last`  -   `first`) / 2 prohození.  
   
