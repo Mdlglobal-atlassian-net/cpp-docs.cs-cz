@@ -233,7 +233,7 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** vytvoří `_variant_t` objektu typu `VT_BSTR` z `_bstr_t` objektu.     Nový `BSTR` je přidělen.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** vytvoří `_variant_t` objektu typu `VT_BSTR` z řetězec znaků Unicode.   Nový `BSTR` je přidělen.  
+-   **_variant_t (wchar_t \*** *wstrSrc*  **)** vytvoří `_variant_t` objektu typu `VT_BSTR` z řetězec znaků Unicode.   Nový `BSTR` je přidělen.  
   
 -   **_variant_t (char\***`strSrc`**)** vytvoří `_variant_t` objektu typu `VT_BSTR` z řetězce.     Nový `BSTR` je přidělen.  
   

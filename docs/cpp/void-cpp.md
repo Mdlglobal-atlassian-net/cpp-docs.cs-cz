@@ -32,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="void-c"></a>void (C++)
 Při použití jako návratový typ funkce určuje klíčové slovo `void`, že funkce nevrací hodnotu. Při použití pro seznam parametrů funkce určuje void, že funkce nepřebírá žádné parametry. Při použití v deklaraci ukazatele určuje void, že je ukazatel „univerzální“.  
   
- Pokud je typ ukazatele **void \*** , ukazatele může ukazovat na všechny proměnné, která není deklarovaný s **const** nebo `volatile` – klíčové slovo. Ukazatel void nelze přímo odkázat, pokud není přetypován na jiný typ. Ukazatel void lze převést na libovolný typ datového ukazatele.  
+ Pokud je typ ukazatele **void \***, ukazatele může ukazovat na všechny proměnné, která není deklarovaný s **const** nebo `volatile` – klíčové slovo. Ukazatel void nelze přímo odkázat, pokud není přetypován na jiný typ. Ukazatel void lze převést na libovolný typ datového ukazatele.  
   
  Ukazatel void může v jazyce C++ odkazovat na funkci, ale nikoli na člen třídy.  
   

@@ -59,7 +59,7 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
   
 -   Binární operátory, které jsou deklarovány jako členské funkce, přebírají jeden argument. Jsou-li deklarovány jako globální funkce, přebírají dva argumenty.  
   
--   Pokud operátor lze použít jako unární operátor nebo binární operátor (**&**,  **\*** ,  **+** , a  **-** ), můžete použít přetížení každém použití samostatně.  
+-   Pokud operátor lze použít jako unární operátor nebo binární operátor (**&**, **\***, **+**, a **-**), můžete použít přetížení každém použití samostatně.  
   
 -   Přetížené operátory nemohou mít výchozí argumenty.  
   

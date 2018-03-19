@@ -97,7 +97,7 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parametry  
  **Void\***  
- [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom *** XXX*`Object`*XXX* konstruktory.  
+ [v] Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými **CCom***XXX*`Object`*XXX* konstruktory.  
   
 ### <a name="remarks"></a>Poznámky  
  Snižuje destruktor ho.  

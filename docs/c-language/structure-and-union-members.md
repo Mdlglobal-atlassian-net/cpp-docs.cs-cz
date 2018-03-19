@@ -54,7 +54,7 @@ identifier
   
  Oba typy výrazů výběru členů mají podobné funkce.  
   
- Ve skutečnosti výraz zahrnující operátor výběru členů (**->**) je verze sdruženou výraz používající období (**.**) Pokud výraz před doby se skládá z indirection – operátor (**\***) projeví na hodnotě ukazatele. Proto  
+ Ve skutečnosti výraz zahrnující operátor výběru členů (**->**) je verze sdruženou výraz používající období (**.**) Pokud výraz před doby se skládá z indirection – operátor (**\****) projeví na hodnotě ukazatele. Proto  
   
 ```  
   
@@ -78,7 +78,7 @@ identifier
  Když *výraz* je hodnota ukazatele.  
   
 ## <a name="examples"></a>Příklady  
- Následující příklady odkazují na tuto deklaraci struktury. Informace o deferenční operátor (**\***) používané v těchto příkladech, najdete v části [Deferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md).  
+ Následující příklady odkazují na tuto deklaraci struktury. Informace o deferenční operátor (**\****) používané v těchto příkladech, najdete v části [Deferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   

@@ -51,7 +51,7 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- V předchozím příkladu výraz `nArray[2]` je stejný jako `2[nArray]`. Důvodem je, že výsledek výraz dolního indexu *e1 *** [** *e2* **]** je dán:  
+ V předchozím příkladu výraz `nArray[2]` je stejný jako `2[nArray]`. Důvodem je, že výsledek výraz dolního indexu *e1***[** *e2* **]** je dán:  
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *Expression1* **[***Výraz2***] [***expression3***]**...  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu * expression1***[***Výraz2 ***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota konečné ukazatele adresy typu pole.  
+ Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1***[***Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota konečné ukazatele adresy typu pole.  
   
  Výrazy s více dolní indexy odkazovat na elementy vícerozměrná pole. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole. Následující příklad deklaruje a inicializuje jednoduché dvourozměrná pole znaků:  
   

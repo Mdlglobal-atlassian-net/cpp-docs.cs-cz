@@ -263,12 +263,12 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*Název typu* **&**|  
 |*Název typu* **&**|*type-name*|  
-|*Název typu* **]**|*type-name\**|  
+|*Název typu* **]**|*type-name\***|  
 |*Název typu* **(** *seznam argumentů* **)**|**(**  *\*název typu* **) (** *seznam argumentů* **)**|  
 |*type-name*|**Const** *název typu*|  
 |*type-name*|`volatile` *Název typu*|  
-|*type-name\**|**Const** *název typu\**|  
-|*type-name\**|`volatile` *Název typu\**|  
+|*type-name\***|**Const** *název typu\***|  
+|*type-name\***|`volatile` *Název typu\**|  
   
  Pořadí, ve které jsou aplikovány převody vypadá takto:  
   

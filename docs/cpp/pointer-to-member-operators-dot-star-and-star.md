@@ -1,5 +1,5 @@
 ---
-title: "Operátory ukazatelů na členy:. * a -&gt;* | Microsoft Docs"
+title: "Operátory ukazatelů na členy: .* a -&gt;* | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/16/2018
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatelů na členy:. * a -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatelů na členy: .* a -&gt;*
 ## <a name="syntax"></a>Syntaxe  
   
 ```  

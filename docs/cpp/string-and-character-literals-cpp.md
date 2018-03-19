@@ -314,7 +314,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Všimněte si, že `strlen()` a `wcslen()` nezahrnují velikost ukončující prázdný znak, jehož velikost odpovídá velikost elementu na řetězcový typ.: jeden bajtů na řetězec char *, dva bajty na wchar_t\* nebo char16_t\* řetězce, a čtyři bajtů na char32_t\* řetězce.  
+ Všimněte si, že `strlen()` a `wcslen()` nezahrnují velikost ukončující prázdný znak, jehož velikost odpovídá velikost elementu na řetězcový typ.: jeden bajtů na řetězec char*, dva bajty na wchar_t\* nebo char16_t\* řetězce, a čtyři bajtů na char32_t\* řetězce.  
   
  Maximální délka řetězcový literál je 65535 bajtů. Toto omezení se vztahuje k úzké textové literály a široké textové literály.  
   

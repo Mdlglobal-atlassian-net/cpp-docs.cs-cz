@@ -60,7 +60,7 @@ Pořadí vyhodnocení výrazu
   
  Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se stanoví pomocí přednosti a asociativity operátorů:  
   
-1.  Násobení (*) má v tomto výrazu nejvyšší prioritu, proto je podvýraz `b * c` vyhodnocen jako první.  
+1.  Násobení (\*) má v tomto výrazu nejvyšší prioritu, proto je podvýraz `b * c` vyhodnocen jako první.  
   
 2.  Sčítání (+) má další nejvyšší prioritu, takže hodnota proměnné `a` je přičtena k výsledku operace s proměnnými `b` a `c`.  
   

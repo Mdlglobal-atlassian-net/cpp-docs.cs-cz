@@ -1,5 +1,5 @@
 ---
-title: "Postupy: převod typu System::String na wchar_t * nebo char * | Microsoft Docs"
+title: "Postupy: převod typu System::String na wchar_t* nebo char* | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

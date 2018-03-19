@@ -48,7 +48,7 @@ expression % expression
 ## <a name="remarks"></a>Poznámky  
  Operátory násobení jsou:  
   
--   Násobení (**\***)  
+-   Násobení (**\****)  
   
 -   Dělení (**/**)  
   

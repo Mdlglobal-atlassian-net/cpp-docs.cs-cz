@@ -43,7 +43,7 @@ Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-h
   
 -   Výraz výběru členů ( **->**  nebo **.**)  
   
--   Unární indirection (**\***) výraz, který není odkaz na pole  
+-   Unární indirection (**\****) výraz, který není odkaz na pole  
   
 -   Výraz l-hodnoty v závorkách  
   

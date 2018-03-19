@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu * expression1***[***Výraz2 ***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota adresy konečné ukazatele na pole zadejte (viz následující příklady).  
+ Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1***[***Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota adresy konečné ukazatele na pole zadejte (viz následující příklady).  
   
  Výrazy s více dolními indexy odkazují na prvky „vícerozměrných polí“. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole.  
   
