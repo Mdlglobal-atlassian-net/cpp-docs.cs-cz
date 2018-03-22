@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f40dad6feff9e49deeb495e8acbf2584dea3e41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="pogosafemode"></a>PogoSafeMode
 Určete, zda chcete použít rychlého režimu nebo v nouzovém režimu pro profilace aplikací.  
@@ -37,7 +37,7 @@ PogoSafeMode
 ## <a name="remarks"></a>Poznámky  
  Optimalizace na základě profilu (PGO) má dva možné režimy profilování fázi: rychlý režimu a v nouzovém režimu. Při vytváření profilu je v rychlého režimu, použije **INC** instrukce ke zvýšení dat čítače. **INC** instrukce je rychlejší, ale není bezpečné pro přístup z více vláken. Při vytváření profilu je v nouzovém režimu, použije **ZÁMKU INC** instrukce ke zvýšení dat čítače. **INC ZÁMKU** instrukce má stejné funkce jako **INC** instrukce a bezpečné pro přístup z více vláken, ale je nižší než **INC** instrukcí.  
   
- Ve výchozím nastavení vytváření profilů PGO funguje v rychlého režimu. `PogoSafeMode`je požadován, pouze pokud budete chtít použít nouzový režim.  
+ Ve výchozím nastavení vytváření profilů PGO funguje v rychlého režimu. `PogoSafeMode` je požadován, pouze pokud budete chtít použít nouzový režim.  
   
  Pokud chcete spustit PGO profilace v nouzovém režimu, je nutné použít proměnné prostředí `PogoSafeMode` nebo přepínač linkeru **- PogoSafeMode**, v závislosti na systému. Pokud provádíte profilace na x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilace na x86 počítače, je nutné zadat proměnné prostředí na jakoukoli hodnotu před zahájením procesu optimalizace.  
   
