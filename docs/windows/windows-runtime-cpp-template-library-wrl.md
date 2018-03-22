@@ -1,31 +1,36 @@
 ---
-title: "Knihovna šablon C++ prostředí Windows Runtime (WRL) | Microsoft Docs"
-ms.custom: 
+title: Knihovna šablon C++ prostředí Windows Runtime (WRL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
-Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.  
+Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.
+
+> [!NOTE]
+> Knihovny WRL je nyní nahrazena C + +/ WinRT, standardní C ++ 17 jazyk projekci pro rozhraní API systému Windows Runtime. C + +/ WinRT je k dispozici ve Windows 10 SDK z verze 1803 dále. C + +/ WinRT je implementována zcela v soubory hlaviček a navržená tak, aby poskytují prvotřídní přístup k moderní rozhraní API systému Windows.
+
+> S C + +/ WinRT, můžete využívat i vytváření rozhraní API systému Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C + +/ WinRT obvykle provádí lépe a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka pro prostředí Windows Runtime. Budeme dál podporovat C + +/ CX a knihovny WRL, ale důrazně doporučujeme, aby nové aplikace používat C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Výhody  
  Knihovna šablon C++ Runtime Windows umožňuje snadno implementovat a využívat komponenty modelu COM (Component Object). Poskytuje housekeeping techniky jako referenční počítání dobu trvání objektů a testování `HRESULT` hodnoty určující, zda operace byla úspěšná nebo neúspěšná. Úspěšně používat knihovna šablon C++ Runtime Windows, musíte pečlivě postupujte podle těchto pravidel a techniky.  
@@ -58,10 +63,7 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
  [Postupy: zpracování událostí](../windows/how-to-handle-events-using-wrl.md)  
  Ukazuje, jak používat k přihlášení k odběru a zpracování událostí objektu prostředí Windows Runtime knihovna šablon C++ Runtime systému Windows.  
   
- [Návod: Vytvoření komponenty základní služby Windows Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Ukazuje, jak vytvořit základní komponenty prostředí Windows Runtime, která sečte dvě čísla pomocí knihovny šablon jazyka C++ Runtime systému Windows. Také ukazuje, jak aktivovat události a používání komponent z aplikace pro UPW, která používá jazyk JavaScript.  
-  
- [Návod: Vytvoření aplikace pro UPW pomocí knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Naučte se vytvářet aplikace pro UPW, který používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
@@ -144,7 +146,6 @@ Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuj
   
 |||  
 |-|-|  
-|[Šablona projektu knihovny tříd](../windows/wrl-class-library-project-template.md)|Popisuje, jak pro přístup k šabloně projektu knihovny tříd WRL. Tato šablona pomáhá zjednodušit pomocí sady Visual Studio k vytvoření komponentů prostředí Windows Runtime.|  
 |[Klíč rozhraní API podle kategorie](../windows/key-wrl-apis-by-category.md)|Označuje primární typy knihovna šablon C++ prostředí Windows Runtime, funkcemi a makry.|  
 |[Referenční informace](../windows/wrl-reference.md)|Obsahuje referenční informace pro knihovny šablon jazyka C++ Runtime systému Windows.|  
 |[Stručná referenční dokumentace (prostředí Windows Runtime a Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Stručně popisuje C + +/ CX funkce, které podporují prostředí Windows Runtime.|  

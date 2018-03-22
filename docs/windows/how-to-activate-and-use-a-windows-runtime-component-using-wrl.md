@@ -1,34 +1,31 @@
 ---
-title: "Postupy: Aktivace a používání komponent prostředí Windows Runtime použitím knihovny WRL | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: Aktivace a používání komponent prostředí Windows Runtime použitím knihovny WRL | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Postupy: Aktivace a používání komponent prostředí Windows Runtime s použitím knihovny WRL
 Tento dokument ukazuje, jak používat Windows Runtime C++ šablony knihovny (WRL) k inicializaci prostředí Windows Runtime a jak aktivace a používání komponent prostředí Windows Runtime.  
-  
-> [!NOTE]
->  Tento příklad aktivuje komponentu integrované prostředí Windows Runtime. Naučte se vytvářet vlastní komponenty, která můžete aktivovat podobným způsobem, najdete v tématu [návod: vytvoření základní komponenty prostředí Windows Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Pokud chcete používat komponenty, musíte získat ukazatele rozhraní pro typ, který je implementováno modulem komponentu. A protože základní technologii prostředí Windows Runtime modelu COM (Component Object), je třeba postupovat podle pravidla COM Udržovat instance typu. Například musíte udržovat *odkazovat počet* který určuje, když je typ odstraněn z paměti.  
   

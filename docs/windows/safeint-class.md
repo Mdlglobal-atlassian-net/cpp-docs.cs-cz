@@ -1,12 +1,12 @@
 ---
-title: "SafeInt – třída | Microsoft Docs"
-ms.custom: 
+title: SafeInt – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 Rozšiřuje primitiv celé číslo, aby se zabránilo přetečení celé číslo a umožňují porovnat různé typy celých čísel.  
@@ -178,9 +178,9 @@ class SafeInt;
   
  Operátory tabulky v tomto tématu jsou uvedeny porovnání a matematické operátory nepodporuje `SafeInt` třídy. Vrátí nejvíce matematické operátory `SafeInt` objektu typu `T`.  
   
- Operace porovnání mezi serverem `SafeInt` a typ integrální lze provést v obou směrech. Například pro obě `SafeInt<int>(x) < y` a `y > SafeInt<int>(x)` jsou platné a vrátí stejné výsledky.  
+ Operace porovnání mezi serverem `SafeInt` a typ integrální lze provést v obou směrech. Například pro obě `SafeInt<int>(x) < y` a `y> SafeInt<int>(x)` jsou platné a vrátí stejné výsledky.  
   
- Binární operátory mnoho nepodporují pomocí dvou různých `SafeInt` typy. Příkladem toho je `&` operátor. `SafeInt<T, E> & int`je podporováno, ale `SafeInt<T, E> & SafeInt<U, E>` není. V druhém příkladu kompilátoru neví, jaký typ parametru vrátit. Jedno řešení tohoto problému je druhý parametr zpět na základní typ přetypování. Pomocí stejné parametry lze to provést pomocí `SafeInt<T, E> & (U)SafeInt<U, E>`.  
+ Binární operátory mnoho nepodporují pomocí dvou různých `SafeInt` typy. Příkladem toho je `&` operátor. `SafeInt<T, E> & int` je podporováno, ale `SafeInt<T, E> & SafeInt<U, E>` není. V druhém příkladu kompilátoru neví, jaký typ parametru vrátit. Jedno řešení tohoto problému je druhý parametr zpět na základní typ přetypování. Pomocí stejné parametry lze to provést pomocí `SafeInt<T, E> & (U)SafeInt<U, E>`.  
   
 > [!NOTE]
 >  Pro všechny bitové operace dva různé parametry musí mít stejnou velikost. Pokud se liší velikosti, vyvolá výjimku kompilátor [ASSERT](../mfc/reference/diagnostic-services.md#assert) výjimka. Výsledky této operace nemůže zaručit být přesná. Chcete-li vyřešit tento problém, přetypujte parametr menší, dokud nebude stejnou velikost jako parametr větší.  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`a `U` lze přiřadit typem logická hodnota, znak typ nebo typ integer. Celé číslo typům podepsané a nepodepsané a jakékoli velikosti z 8 bitů na 64 bitů.  
+ `T` a `U` lze přiřadit typem logická hodnota, znak typ nebo typ integer. Celé číslo typům podepsané a nepodepsané a jakékoli velikosti z 8 bitů na 64 bitů.  
   
 > [!NOTE]
 >  I když `SafeInt` třída přijímá jakýkoli druh celé číslo, provede efektivněji s typy bez znaménka.  
   
- `E`Chyba je uvedena mechanismu pro zpracování, `SafeInt` používá. Dvou mechanismů zpracování chyb jsou k dispozici s SafeInt knihovny. Výchozí zásada je `SafeIntErrorPolicy_SafeIntException`, která vyvolává [SafeIntException – třída](../windows/safeintexception-class.md) výjimky, když dojde k chybě. Jiné zásady je `SafeIntErrorPolicy_InvalidParameter`, která zastaví program, pokud dojde k chybě.  
+ `E` Chyba je uvedena mechanismu pro zpracování, `SafeInt` používá. Dvou mechanismů zpracování chyb jsou k dispozici s SafeInt knihovny. Výchozí zásada je `SafeIntErrorPolicy_SafeIntException`, která vyvolává [SafeIntException – třída](../windows/safeintexception-class.md) výjimky, když dojde k chybě. Jiné zásady je `SafeIntErrorPolicy_InvalidParameter`, která zastaví program, pokud dojde k chybě.  
   
  Existují dvě možnosti pro úpravy zásad chyby. První možností je nastavit parametr `E` při vytváření `SafeInt`. Tuto možnost použijte, pokud chcete změnit chyba zpracování zásad pro právě jeden `SafeInt`. Další možností je zadat `_SAFEINT_DEFAULT_ERROR_POLICY` před zahrnete třídě vlastní zpracování chyb `SafeInt` knihovny. Tuto možnost použijte, pokud chcete změnit výchozí chyba zpracování zásad pro všechny instance `SafeInt` – třída v kódu.  
   
