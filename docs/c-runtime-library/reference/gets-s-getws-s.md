@@ -1,12 +1,12 @@
 ---
-title: "gets_s –, _getws_s – | Microsoft Docs"
-ms.custom: 
+title: gets_s –, _getws_s – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getws_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1cc1437d826584b89c7c4d9bb513f99af122ca0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Získá řádek z `stdin` datového proudu. Tyto verze nástroje [získá _getws –](../../c-runtime-library/gets-getws.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,7 +91,7 @@ wchar_t *_getws_s(
   
  Pokud je první přečtený znak znakem konce souboru, je na začátek parametru `buffer` uložen znak null a je vrácena hodnota `NULL`.  
   
- `_getws` široká charakterová verze `gets_s`; její argument a návratové hodnoty jsou široká charakterová řetězce.  
+ `_getws_s` široká charakterová verze `gets_s`; její argument a návratové hodnoty jsou široká charakterová řetězce.  
   
  Pokud `buffer` je `NULL` nebo `sizeInCharacters` je menší než nebo rovna nule, nebo pokud vyrovnávací paměť je příliš malá, aby obsahovat vstupní řádku a null ukončovací znak, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `NULL` a nastavte errno na `ERANGE`.  
   
@@ -101,14 +101,14 @@ wchar_t *_getws_s(
   
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts`|`gets_s`|`gets_s`|`_getws`|  
+|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
 |`gets_s`|\<stdio.h>|  
-|`_getws`|\<stdio.h > nebo \<wchar.h >|  
+|`_getws_s`|\<stdio.h > nebo \<wchar.h >|  
   
 Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
   
