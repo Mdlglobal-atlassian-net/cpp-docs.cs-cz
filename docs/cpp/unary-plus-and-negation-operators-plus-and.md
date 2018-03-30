@@ -1,12 +1,12 @@
 ---
-title: "Operátory unární Plus a Negation: + a - | Microsoft Docs"
-ms.custom: 
+title: 'Operátory unární Plus a Negation: + a - | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8211cf9ebef808ad428e4c94ba97c6bcd22897ea
+ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Unární operátory Plus a Negation: + a -
 ## <a name="syntax"></a>Syntaxe  
@@ -55,8 +55,8 @@ ms.lasthandoff: 12/21/2017
   
  Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. V tématu [standardní převody](standard-conversions.md) Další informace o tom, jak se provádí povýšení.  
   
-## <a name="microsoft-specific"></a>Microsoft konkrétní  
- Unární negace nepodepsané počty se provádí odečtením hodnoty operand z 2 ^ n, kde n je počet bitů v objektu daného typu bez znaménka. (Microsoft C++ běží u procesorů, které využívají aritmetické doplňkem. U dalších procesorů algoritmus negace se může lišit.)  
+## <a name="microsoft-specific"></a>Microsoft specific  
+ Unární negace nepodepsané počty se provádí odečtením hodnoty operand z 2 ^ n, kde n je počet bitů v objektu daného typu bez znaménka.
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
