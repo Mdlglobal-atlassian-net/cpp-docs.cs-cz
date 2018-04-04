@@ -1,28 +1,28 @@
 ---
-title: "Aplikací klasické pracovní plochy (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Aplikací klasické pracovní plochy (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikací klasické pracovní plochy (Visual C++)
 A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úplnou sadu rozhraní API systému Windows a buď běží v okně nebo v systémové konzoly. Aplikací klasické pracovní plochy v jazyce C++ můžete spustit v systému Windows XP do systému Windows 10 (i když je už oficiálně podporované systémem Windows XP a existuje mnoho rozhraní API systému Windows, které byly zavedeny od té doby).   Aplikace se liší od aplikace univerzální platformu Windows (UWP), který můžete spustit na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hub a dalších zařízení. Další informace o plochy vs. Aplikace UWP, najdete v části [zvolte technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úp
 |Název|Popis|  
 |-----------|-----------------|  
 |[Vývoj pro Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Obsahuje informace o rozhraní API a modelu COM systému Windows. (Některá rozhraní API systému Windows a knihovny DLL třetích stran jsou implementovány jako objekty modelu COM.)|  
-|[Hilo: Vývoj aplikací C++ pro systém Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Popisuje, jak vytvořit aplikaci plochy plně funkčního klienta systému Windows, která používá Windows animace a Direct2D vytvořit na základě karuselu uživatelské rozhraní.  V tomto kurzu nebyl aktualizován od Windows 7, ale stále poskytuje throough Úvod do Win32 programování.|  
+|[Hilo: Vývoj aplikací C++ pro systém Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Popisuje, jak vytvořit aplikaci plochy plně funkčního klienta systému Windows, která používá Windows animace a Direct2D vytvořit na základě karuselu uživatelské rozhraní.  V tomto kurzu nebyl aktualizován od Windows 7, ale stále poskytuje důkladné Úvod do Win32 programování.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|  
   
 ## <a name="see-also"></a>Viz také  

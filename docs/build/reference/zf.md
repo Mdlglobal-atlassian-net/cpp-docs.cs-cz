@@ -1,6 +1,6 @@
 ---
-title: "/ZF (vytváření rychlejší PDB) | Microsoft Docs"
-ms.date: 02/22/2018
+title: /ZF (vytváření rychlejší PDB) | Microsoft Docs
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (vytváření rychlejší PDB)
 
@@ -34,7 +34,7 @@ Minimalizace volání RPC mspdbsrv.exe povolte rychlejší vytváření PDB v pa
 
 Protože **/Zf** možnost se vztahuje pouze na generování PDB, vyžaduje [/Zi](z7-zi-zi-debug-information-format.md) nebo [/ZI](z7-zi-zi-debug-information-format.md) možnost.
 
-**/Zf** možnost je k dispozici od verze Visual Studio 2017 verze 15.1 a ve výchozím nastavení.
+**/Zf** možnost je k dispozici od verze Visual Studio 2017 verze 15.1, kde je vypnuto ve výchozím nastavení. Od verze Visual Studio 2017 verze 15.7 Preview 3, tato možnost je na ve výchozím nastavení při **/Zi** nebo **/ZI** možnost je povolená.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
@@ -46,5 +46,5 @@ Protože **/Zf** možnost se vztahuje pouze na generování PDB, vyžaduje [/Zi]
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru (abecední pořadí)](compiler-options-listed-alphabetically.md)  
-[/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md)  
+[Možnosti kompilátoru (abecední pořadí)](compiler-options-listed-alphabetically.md)<br/>
+[/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md)<br/>
