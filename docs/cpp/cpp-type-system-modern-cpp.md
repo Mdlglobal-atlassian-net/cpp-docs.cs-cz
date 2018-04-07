@@ -1,27 +1,27 @@
 ---
-title: "C++ – systém typů (moderní verze jazyka C++) | Microsoft Docs"
-ms.custom: 
+title: C++ – systém typů (moderní verze jazyka C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 Koncept *typu* je velmi důležité v jazyce C++. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Některé příklady typů `int` k uložení celočíselné hodnoty, `double` pro uložení hodnot s plovoucí desetinnou čárkou (také označované jako *skalární* datových typů), nebo třída standardní knihovna [std::basic_string](../standard-library/basic-string-class.md) k ukládání textu. Můžete vytvořit vlastní typ definováním `class` nebo `struct`. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  
@@ -44,7 +44,7 @@ Koncept *typu* je velmi důležité v jazyce C++. Všechny proměnné, argumenty
   
  Následující příklad ukazuje některé jednoduché deklarace proměnných s popisem každé z nich. Příklad také ukazuje, jak kompilátor používá informace o typu k tomu, aby povolil nebo zakázal určité následné operace s proměnnou.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  Následující ilustrace znázorňuje relativní velikosti předdefinovaných typů:  
   
- ![Velikost v bajtech vytvořené & č. 45; v typech](../cpp/media/built-intypesizes.png "předdefinované inTYpeSizes")  
+ ![Velikost v bajtech vytvořené&#45;v typech](../cpp/media/built-intypesizes.png "předdefinované inTYpeSizes")  
   
  V následující tabulce jsou uvedeny nejčastěji používané základní typy:  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>Kvalifikátor typu const  
  Jakýkoli vestavěný nebo uživatelem definovaný typ může být kvalifikován pomocí klíčového slova const. Kromě toho může být členské funkce `const`-kvalifikovaný a to i v `const`-přetížený. Hodnota `const` typ nelze změnit, jakmile je inicializován.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  Základní princip, který byste měli znát, je, že deklarací proměnné nezpracovaného ukazatele se přidělí pouze paměť potřebná k uložení adresy umístění v paměti, na které bude ukazatel odkazovat při zrušení reference. Přidělení paměti pro vlastní hodnota dat (také nazývané *záložnímu úložišti*) ještě není přidělena. Jinými slovy, deklarováním proměnné nezpracovaného ukazatele vytváříte proměnnou adresy v paměti, nikoli skutečnou datovou proměnnou. Zrušení reference na proměnnou ukazatele, aniž byste se ujistili, že proměnná obsahuje platnou adresu záložního úložiště, způsobí v programu nedefinované chování (obvykle závažnou chybu). Následující příklad ukazuje tento druh chyby:  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  V příkladu dochází ke zrušení reference na typ ukazatele bez přidělení paměti, kde by byla uložena skutečná celočíselná data, a bez přidělení platné adresy v paměti. Následující kód tyto chyby opravuje:  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -149,9 +149,9 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Opravené kód příklad používá místní zásobníku paměti k vytvoření základní úložiště, který `pNumber` odkazuje na. Pro jednoduchost používáme základní typ. V praxi, úložiště zálohování pro ukazatele se většina často uživatelem definované typy, které jsou dynamicky přidělené v oblast paměti volat *haldy* (nebo *volné úložiště*) pomocí `new` – klíčové slovo výraz (ve stylu jazyka C programování starší `malloc()` použila funkce knihoven C runtime). Jakmile přiděleno, tyto proměnné se obvykle označují jako objekty, zejména v případě, že jsou založené na definici třídy. Paměť, která je přidělena s `new` musí být odstraněn odpovídající `delete` – příkaz (nebo, pokud jste použili `malloc()` funkce přidělit ji funkci C runtime `free()`).  
   
- Je však snadno zapomněli odstranit dynamicky přidělené objekt-zejména v složitý kód, což způsobí, že chyby prostředků názvem *nevrácená paměť systému*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Je téměř vždy lepší zabalit nezpracovaná ukazatel v [chytré ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky vydá paměť při vyvolání jeho – destruktor (Pokud je kód ocitne mimo rozsah pro inteligentní ukazatele); pomocí chytré ukazatele je prakticky Odstraňte celou třídu chyby v C++ programy. V následujícím příkladu se předpokládá `MyClass` je uživatelem definovaný typ, který má veřejná metoda`DoSomeWork();`  
+ Je však snadno zapomněli odstranit dynamicky přidělené objekt-zejména v složitý kód, což způsobí, že chyby prostředků názvem *nevrácená paměť systému*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Je téměř vždy lepší zabalit nezpracovaná ukazatel v [chytré ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky vydá paměť při vyvolání jeho – destruktor (Pokud je kód ocitne mimo rozsah pro inteligentní ukazatele); pomocí chytré ukazatele je prakticky Odstraňte celou třídu chyby v C++ programy. V následujícím příkladu se předpokládá `MyClass` je uživatelem definovaný typ, který má veřejná metoda `DoSomeWork();`  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  

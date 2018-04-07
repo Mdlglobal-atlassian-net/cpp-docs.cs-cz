@@ -1,12 +1,12 @@
 ---
-title: "Adresa operátoru: &amp; | Microsoft Docs"
-ms.custom: 
+title: 'Adresa operátoru: &amp; | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="address-of-operator-amp"></a>Adresa operátoru:&amp;
+# <a name="address-of-operator-amp"></a>Adresa operátoru: &amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátor unární adresy (**&**) přebírá adresu jeho operandu. Operand operátoru adresa může být označení funkce nebo je l hodnota, který určuje objekt, který není pole bit a není deklarovaný s **zaregistrovat** – specifikátor třídy úložiště.  
+ Operátor unární adresy (**&**) přebírá adresu jeho operandu. Operand operátoru adresa může být označení funkce nebo je l hodnota, který určuje objekt, který není pole verze.  
   
  Operátor adresy lze použít pouze na proměnné s základní, struktura, třídy, nebo union typy, které jsou deklarovány na úrovni oboru souboru, nebo na nich odkazuje na pole. V těchto výrazech můžete přidat do konstantní výraz, který nezahrnuje operátor adresy nebo odečten od výrazu adresy.  
   
- Při použití funkce nebo hodnoty l, výsledkem výrazu je ukazatel typu (r-value) odvozený od typu operandu. Například, pokud je operand typu `char`, výsledkem výrazu je ukazatel typu `char`. Adresa operátor u **const** nebo `volatile` objekty, jehož výsledkem **const** `type`  **\***  nebo `volatile` `type`  **\*** , kde `type` je typ původní objekt.  
+ Při použití funkce nebo hodnoty l, výsledkem výrazu je ukazatel typu (r-value) odvozený od typu operandu. Například, pokud je operand typu `char`, výsledkem výrazu je ukazatel typu `char`. Adresa operátor u **const** nebo `volatile` objekty, jehož výsledkem **const** `type` **\*** nebo `volatile` `type` **\***, kde `type` je typ původní objekt.  
   
  Když je použit operátor adresy [kvalifikovaný název](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), výsledek bude záviset na tom, zda *kvalifikovaný název* určuje je statický člen. Pokud ano, výsledkem je ukazatel na typ zadaný v deklaraci člena. Pokud není statický člen, výsledkem je ukazatel na člena *název* třídy indikován *kvalifikovaný název třídy*. (Viz [primární výrazy](../cpp/primary-expressions.md) Další informace o *kvalifikovaný název třídy*.) Následující fragment kódu ukazuje, jak výsledek liší v závislosti na tom, zda je statický člen:  
   

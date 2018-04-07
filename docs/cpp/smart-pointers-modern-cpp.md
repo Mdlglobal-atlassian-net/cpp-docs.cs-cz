@@ -1,33 +1,33 @@
 ---
-title: "Chytré ukazatele (moderní verze jazyka C++) | Microsoft Docs"
-ms.custom: 
+title: Chytré ukazatele (moderní verze jazyka C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 Při programování pro moderní C++, obsahuje standardní knihovna *inteligentní ukazatele*, které se používají k zajištění programy, které jsou volné paměti a prostředek nevracení a jsou bezpečné pro výjimky.  
   
 ## <a name="uses-for-smart-pointers"></a>Použití inteligentních ukazatelů  
- Chytré ukazatele jsou definovány v `std` oboru názvů v [ \<paměti >](../standard-library/memory.md) soubor hlaviček. Jsou zásadní význam pro [RAII](../cpp/objects-own-resources-raii.md) nebo *Initialialization je získávání prostředků* programovací stylu. Hlavním cílem tohoto idiomu je zajistit, aby k pořízení prostředků docházelo v okamžiku inicializace objektu tak, aby všechny prostředky pro objekt byly vytvořeny a připraveny v jednom řádku kódu. Z praktického pohledu je hlavní zásadou idiomu RAII přiřadit vlastnictví libovolného prostředku přiděleného haldou – například dynamicky přidělené paměti nebo obslužným rutinám systémového objektu – objektu přidělenému zásobníkem, jehož destruktor obsahuje kód pro odstranění nebo uvolnění prostředku a také případný související čisticí kód.  
+ Chytré ukazatele jsou definovány v `std` oboru názvů v [ \<paměti >](../standard-library/memory.md) soubor hlaviček. Jsou zásadní význam pro [RAII](../cpp/objects-own-resources-raii.md) nebo *prostředků pořízení je inicializace* programovací stylu. Hlavním cílem tohoto idiomu je zajistit, aby k pořízení prostředků docházelo v okamžiku inicializace objektu tak, aby všechny prostředky pro objekt byly vytvořeny a připraveny v jednom řádku kódu. Z praktického pohledu je hlavní zásadou idiomu RAII přiřadit vlastnictví libovolného prostředku přiděleného haldou – například dynamicky přidělené paměti nebo obslužným rutinám systémového objektu – objektu přidělenému zásobníkem, jehož destruktor obsahuje kód pro odstranění nebo uvolnění prostředku a také případný související čisticí kód.  
   
  Ve většině případů platí, že když inicializujete nezpracovaný ukazatel nebo obslužnou rutinu prostředku ukazující na skutečný prostředek, je třeba předat ukazatel inteligentnímu ukazateli okamžitě. V moderním jazyce C++ se nezpracované ukazatele používají pouze v malých blocích kódu s omezeným rozsahem, smyčkách nebo pomocných funkcích, kde je výkon velmi důležitý a neexistuje možnost záměny vlastnictví.  
   
@@ -77,7 +77,7 @@ Při programování pro moderní C++, obsahuje standardní knihovna *inteligentn
  Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazatelů do objektů POCO.  
   
 -   `unique_ptr`   
-     Povolují právě jednoho vlastníka podkladového ukazatele. Použít jako výchozí volba pro objektů POCO, pokud nejste jisti, že potřebujete `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnání `boost::scoped_ptr`. `unique_ptr`malé a efektivní; velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vložení a načtení ze standardní knihovny C++ kolekcí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).  
+     Povolují právě jednoho vlastníka podkladového ukazatele. Použít jako výchozí volba pro objektů POCO, pokud nejste jisti, že potřebujete `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnání `boost::scoped_ptr`. `unique_ptr` malé a efektivní; velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vložení a načtení ze standardní knihovny C++ kolekcí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Inteligentní ukazatel s počítáním referencí Tento typ je vhodný, když chcete přiřadit jeden nezpracovaný ukazatel více vlastníkům, například, když vrátíte kopii ukazatele z kontejneru, ale chcete zachovat originál. Nezpracovaná ukazatele neodstraní dokud všechny `shared_ptr` vlastníky se nachází mimo obor nebo jinak udělili až vlastnictví. Má velikost dva ukazatele; jeden pro objekt a jeden pro sdílený kontrolní blok, který obsahuje počet odkazů. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) a [shared_ptr – třída](../standard-library/shared-ptr-class.md).  

@@ -1,12 +1,12 @@
 ---
-title: "Nasazení, spustit a spusťte ladění svého projektu Linux | Microsoft Docs"
-ms.custom: 
+title: Nasazení, spustit a spusťte ladění svého projektu Linux | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spustit a spusťte ladění svého projektu Linux
 
@@ -29,9 +29,6 @@ Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 
 * Ladění pomocí tradičních funkcích nástroje Visual Studio, například zarážky, sledovat windows a ukazatele myši na proměnnou. Těmito metodami může ladění jako za normálních okolností byste pro jiné typy projektů.
 * Zobrazit výstup z cílový počítač ve speciální okna konzoly Linux. Můžete také použít konzolu k odeslání vstupní k cílovému počítači.
-
-> [!NOTE]
-> ARM ladění pro systémy Linux, najdete v části tohoto příspěvku blogu: [ladění vložené zařízení ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="debug-your-linux-project"></a>Spusťte ladění svého projektu Linux
 
@@ -89,6 +86,12 @@ Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 * Ladicí program konkrétní možnosti se dá předat do GDB pomocí **další příkazy ladicí program** položka.  Například můžete chtít ignorovat sigill – signály (Neplatná instrukce).  Můžete použít **zpracování** příkaz dosáhnout.  přidáním následujícího **další příkazy ladicí program** položku jako v příkladu nahoře:
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>Další kroky
+
+* Chcete-li ladit ARM zařízení v systému Linux, najdete v části tohoto příspěvku blogu: [ladění vložené zařízení ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+
+* K ladění pomocí **připojit k procesu** příkazů najdete v tématu tohoto příspěvku blogu: [Linux C++ zatížení vylepšení systému projektu okna konzoly Linux, rsync a připojit k procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Viz také
 [C++ – ladění vlastnosti (Linux C++)](../linux/prop-pages/debugging-linux.md).
