@@ -1,13 +1,10 @@
 ---
 title: creal, crealf, creall | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/30/2018
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - creal
@@ -40,64 +37,62 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75e3ebc7a5f93084e925eece49adedf1b41df8ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc43c72c4fcbaf9d24c1a2c4cc7b7923d0c67878
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
-Načte skutečné součástí komplexního čísla.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double creal(   
-   _Dcomplex z   
-);  
-float creal(   
-   _Fcomplex z   
-);  // C++ only  
-long double creal(   
-   _Lcomplex z   
-);  // C++ only  
-float crealf(   
-   _Fcomplex z   
-);  
-long double creall(   
-  _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `z`  
- Komplexní čísla.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Skutečné součástí `z`.  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `creal` trvají `_Fcomplex` nebo `_Lcomplex` hodnoty a vrátí `float` nebo `long double` hodnoty. V programu C `creal` má vždy `_Dcomplex` hodnotu a vrátí `double` hodnotu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Hlavička C|Hlavička C++|  
-|-------------|--------------|------------------|  
-|`creal`,               `crealf`, `creall`|\<complex.h>|\<ccomplex>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Načte skutečné součástí komplexního čísla.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double creal( _Dcomplex z );
+float crealf( _Fcomplex z );
+long double creall( _Lcomplex z );
+```
+
+```cpp
+float creal( _Fcomplex z );  // C++ only
+long double creal( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+Komplexní čísla.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Skutečné součástí *z*.
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení `creal` trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **dlouho dvojité** hodnoty. V programu C `creal` má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Hlavička C|Hlavička C++|
+|-------------|--------------|------------------|
+|`creal`, `crealf`, `creall`|\<complex.h>|\<ccomplex>|
+
+**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementované nativní typy C99 **float _complex –** , **dvojité _complex –**, a **_complex long double –**, v uvedeném pořadí. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_Cbuild, _FCbuild, _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
+[Norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>

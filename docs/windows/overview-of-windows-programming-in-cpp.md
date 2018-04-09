@@ -1,40 +1,45 @@
 ---
-title: "Přehled programování v jazyce C++ v systému Windows | Microsoft Docs"
-ms.custom: 
-ms.date: 11/27/2017
-ms.reviewer: 
-ms.suite: 
+title: Přehled programování v jazyce C++ v systému Windows | Microsoft Docs
+ms.custom: ''
+ms.date: 04/06/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e00159c828a87eba58920f90b6cd73d1b216232
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
-Jazyk Visual C++ lze použít pro vytvoření širokého spektra programů, které lze spustit na počítačích s operačním systémem Windows (x86, x64 nebo ARM), serveru Windows, v cloudu nebo na konzole Xbox. Kvalitně napsané C++ programy jsou rychlé, efektivní, ekonomické ve spotřebě energie a schopné plně využít výhod vícejádrových nebo mnohojádrových zařízení, běžných výpočtů na grafických kartách (GPGPU) a dalších nově vzniklých hardwarových řešeních.
+Visual C++ můžete použít k zápisu různé druhy programy, které běží na počítači s Windows (x 86, x64 nebo ARM) v systému Windows server v cloudu nebo na Xbox. Kvalitně C++ – programy mít tyto vlastnosti:
+- efektivní v požadavky na paměť
+- ekonomické spotřeby energie 
+- moci plně využít výhod vícejádrovými a mnoho základní zařízení
+- vykonat obecné computing na grafický procesor (úloh GPGPU)   
+- dokáže využívat jiné poslední zálohy v hardwaru.
 
-Existuje několik široký kategorií aplikací pro Windows, které můžete vyvíjet pomocí Visual C++. Tyto kategorie mají různé programovací modely nebo modely aplikace, což znamená, že používají různé knihovny a rozhraní API, které poskytují přístup na platformu a zadejte uživatelské rozhraní.
+Existuje několik široký kategorií aplikací pro Windows, které můžete vyvíjet pomocí Visual C++. Tyto kategorie mají různé programovací modely nebo modely aplikace, které byly zavedeny průběhu let. Každý model používá jiný knihovny a rozhraní API k poskytování přístupu k platformě a vytvoření uživatelského rozhraní, například windows a dialogová okna. Standardní knihovna C++, jakož i jiných výrobců knihovny můžete použít v některém z těchto kategorií, několik omezení pro UPW.
 
 - [Univerzální aplikace Windows](#BK_WindowsUniversal). Třetí kategorii aplikací systému Windows byla zavedena v systému Windows 8 a podpora pro tuto kategorii aplikace pokračuje v systému Windows 10. Tyto aplikace jsou často označovány jako "Windows aplikací" a patří mezi ně desktop a mobile aplikací, které se zaměřují na široké škále zařízení. Můžete napsat tyto aplikace v jazyce C + +/ CX dialekt c++, která zahrnuje podporu pro vývoj pro prostředí Windows Runtime nebo ve standardní C++ v modelu COM pomocí knihovny Windows Runtime (WRL). Tyto aplikace byly původně navrženy pro spuštění celou obrazovku, i když v systému Windows 10 uživatelé mají možnost jejich spouštění v okně plochy. Tyto aplikace jsou dotykovým ovládáním, ale je snadno použitelné myši provoz preferujete uživatelé, nebo pokud není k dispozici dotykovou obrazovku. Tyto aplikace se distribuují z Microsoft Store, faktu, která vedla k nim volané aplikace "Úložiště".
 
-- [Plocha, Server a cloudové aplikace a hry](#BK_Native). Tato kategorie zahrnuje aplikace Windows Desktop, někdy označuje jako aplikace Win32, protože tyto aplikace byly pomocí rozhraní API Win32 na před Windows 8, všechny aplikace systému Windows byly v této kategorii. Aplikace v této kategorii můžete použít pro uživatelské rozhraní MFC a knihovna ATL pro interakci s součásti systému Windows, které jsou obvykle COM – objekty.
+Aplikace UWP je možné spouštět ve všech zařízeních Windows 10, jako jsou tablety a mobilní telefon, a také na ploše. Na ploše, budou moci spouštět jako plochy okno místo vždy spuštěn přes celou obrazovku. Tyto aplikace můžete také spouštět v zařízení Xbox a v budoucích zařízeních.  Aplikace UWP spustit v prostředí Windows Runtime, která poskytuje prvky uživatelského rozhraní, služeb a rozhraní pro různé hardwarová zařízení, které jsou podporovány v systému Windows.  
 
-   Aplikace, komponenty nebo knihovny napsané pomocí standardní C++ také nevejde se do této kategorie patří.
+Můžete napsat aplikace UWP v jazyce C + +/ CX dialekt c++, můžete použít [C + +/ WinRT knihovna](https://moderncpp.com/)pro některé scénáře. Aplikace UWP kompilace nativního kódu a mít uživatelské rozhraní jazyka XAML nebo pomocí rozhraní DirectX. Prostředí Windows Runtime komponenty, které jsou zapsány v nativním kódu, můžete využívat UWP aplikací napsaných v dalších jazycích. Další informace najdete v tématu [vytvoření aplikace pro univerzální platformu Windows v jazyce C++](http://go.microsoft.com/fwlink/?LinkID=534976), [vytvoření vaší první UWP hry s použitím rozhraní DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), a [vytváření prostředí Windows Runtime komponent v jazyce C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Tato kategorie zahrnuje také pomocí C++ pro základní komponenty a výpočetní kódu v rámci serveru a programování cloudu. Někdy kód náročných na výkon jádro serveru nebo cloudové aplikace je napsán v C++ pro zvýšení výkonu. Můžete takový kód kompilována knihovny DLL a použití z jazyka C# nebo Visual Basic.
 
@@ -51,33 +56,23 @@ Ukázky univerzální platformu Windows naleznete v části [Windows Universal u
 
 Pokud máte stávající projekt Windows 8.1 a chcete portu na Windows 10, najdete v části [přenos aplikací do univerzální platformy Windows](../porting/porting-to-the-universal-windows-platform-cpp.md). Pokud máte existující klasické ploše knihovny Win32 a kód, který chcete integrovat do aplikace pro UPW, najdete v části [postupy: použití existujícího kódu C++ v aplikaci pro univerzální platformu Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-Můžete také psát aplikace, hry a součásti Universal Windows bez použití C + +/ CX; Místo toho můžete knihovna šablon C++ Windows Runtime (knihovna šablon C++ Runtime Windows). Další informace najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
-
-S [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], můžete vyvíjet univerzální aplikace pro Windows 10 desktop a mobilní zařízení se systémem Windows. Můžete také vývoj aplikací pro Windows 8.1 a Windows Phone 8.1 aplikace v [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], ale to pokud chcete udělat, musíte nejdřív nainstalovat Visual Studio 2013 ve stejném počítači a pak nakonfigurujte projektu pro použití **Visual Studio 2013 (v120)** sada nástrojů . Chcete-li nakonfigurovat toto nastavení ve vašem projektu, otevřete vlastnosti projektu a v **Obecné** nastavte **sada nástrojů platformy** k **Visual Studio 2013 (v120)**.
-
-Pokud nainstalujete nástroje Phone 8.0 v instalačním programu sady Visual Studio, můžete také vybrat Windows Phone 8.0.
-
-Nová koncepce zavedená v systému Windows 10 volat rozhraní API kontrakty nahradí původní praxi cílení na konkrétní verze Windows. Místo toho můžete které rozhraní API smlouvy aplikace potřebám a pak spustí na jakémkoli zařízení systému Windows, který podporuje tyto smlouvy. Kontrakt rozhraní API je sada stabilní rozhraní API, které poskytují přístup k prostředkům platformu nebo zařízení. Kontrakty rozhraní API může být v systému projektu zahrnuty jako odkazy. V projektu sady Visual Studio Pokud přidáte odkaz na konkrétní sadu SDK rozšíření, pak Visual Studio přidá odpovídající kontrakty rozhraní API.
+Další informace o UWP obecně platí, najdete v části [co je aplikace univerzální platformu Windows (UWP)?](/windows/uwp/get-started/whats-a-uwp).
 
 Další informace o všech těchto pojmech najdete v tématu [Průvodce univerzálních aplikací pro Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
-##  <a name="BK_Native"></a> Plocha, Server a cloudové aplikace a hry
-
-V cloudu můžete napsat sestavení Azure nativního kódu v jazyce C++ a volání do nich z webové role, které jsou vytvořené v C#. Další informace najdete v tématu [Azure SDK](http://go.microsoft.com/fwlink/p/?LinkId=256416).
+##  <a name="BK_Native"></a> Počítače a serverové aplikace
 
 Základní informace o zápisu klienta aplikace systému Windows pro plochu naleznete v tématu [vývoj aplikací systému Windows v jazyce C++](http://msdn.microsoft.com/vstudio//hh304489) a [Úvod do Windows programování v C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
-Ve Windows 10 můžete vytvořit různé druhy programy Visual C++:
+Ve Windows 10 můžete vytvořit různé druhy desktopové programy Visual C++:
 
 - Aplikace a nástroje příkazového řádku. Další informace najdete v tématu [konzolové aplikace](../windows/console-applications-in-visual-cpp.md).
 
-- Hry rozhraní DirectX, které lze spustit na PC nebo konzolách Xbox. Další informace najdete v tématu [středisku pro vývojáře DirectX](http://go.microsoft.com/fwlink/p/?LinkId=256418).
-
 - Zákaznické aplikace, které mají propracovanou podobu grafického uživatelského rozhraní. Další informace najdete v tématu [Hilo: vývoj aplikací C++ pro Windows](http://go.microsoft.com/fwlink/p/?LinkId=256417)
 
-- Enterprise a byznys aplikace, které používají rámec .NET Framework, nebo slouží jako most mezi aplikacemi rámce .NET Framework a aplikacemi a komponentami, které byly napsány v nativním kódu. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- Enterprise a obchodní aplikace, které běží na rozhraní .NET Framework. Většina aplikací rozhraní .NET Framework jsou napsané v C# nebo Visual Basic. Můžete použít C + +/ CLI k vytvoření spolupráce vrstvy, které umožňují kód .NET využívat nativní knihovny jazyka C++. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-- Klienti SQL databáze, kteří běží v nativním kódu. Další informace najdete v tématu [SQL Server Native Client](http://go.microsoft.com/fwlink/p/?LinkId=256419).
+- Klienti SQL databáze, kteří běží v nativním kódu. Další informace najdete v tématu [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc).
 
 - Doplňky aplikací sady Microsoft Office. Další informace najdete v tématu [vytváření Add-in C++ pro Outlook 2010](http://go.microsoft.com/fwlink/p/?LinkId=256420)
 
@@ -87,9 +82,17 @@ Ve Windows 10 můžete vytvořit různé druhy programy Visual C++:
 
 Jazyk Visual C++ umožňuje zabalit téměř jakoukoli vlastní vysoce výkonnou funkcionalitu do Win32 DLL knihoven nebo do knihoven DLL modelu COM, které mohou být zpracovány C++ aplikacemi nebo aplikacemi, které byly napsány v jiných jazycích, například v jazyce C# nebo Visual Basic. Další informace o rozhraní DLLs WIn32 najdete v tématu [knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md). Další informace o COM vývoj najdete v tématu [modelu COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).
 
-## <a name="sdks-and-header-files"></a>SDK a soubory hlaviček
+## <a name="games"></a>hry
 
-Visual C++ zahrnuje C Runtime Library (CRT), standardní knihovna C++ a další knihovny specifické pro společnost Microsoft. Zahrnout složky, které obsahují soubory hlaviček pro tyto knihovny jsou že buď nachází v instalačním adresáři sady Visual Studio ve složce \VC\ nebo v případě CRT, instalační složky sady Windows SDK, například Windows Kits\10 v souborech programu Složka pro Windows 10 SDK.  Knihovny Microsoft patří:
+Rozhraní DirectX hry můžete spustit na počítači nebo Xbox. Další informace najdete v tématu [středisku pro vývojáře DirectX](http://go.microsoft.com/fwlink/p/?LinkId=256418).
+
+## <a name="sdks-libraries-and-header-files"></a>Sady SDK, knihovny a soubory hlaviček
+
+Visual C++ zahrnuje C Runtime Library (CRT), standardní knihovna C++ a další knihovny specifické pro společnost Microsoft. Zahrnout složky, které obsahují soubory hlaviček pro tyto knihovny se nachází buď v sadě Visual Studio Instalační adresář ve složce \VC\ nebo v případě CRT v instalační složce Nástroje sady Windows SDK.   
+
+Můžete použít [Správce balíčků Vcpkg](../vcpkg.md) pohodlně nainstalovat stovky knihovny open-source třetích stran pro Windows.
+
+Knihovny Microsoft patří:
 
 - Třídy knihovny MFC (Microsoft Foundation Classes): Objektově orientovaný rámec pro vytváření tradičních programů operačního systému Windows (zejména podnikových aplikací), které mají bohatá uživatelská rozhraní obsahující tlačítka, seznamy, stromová zobrazení a další ovládací prvky. Další informace najdete v tématu [aplikace MFC plochy](../mfc/mfc-desktop-applications.md).
 
@@ -99,7 +102,9 @@ Visual C++ zahrnuje C Runtime Library (CRT), standardní knihovna C++ a další 
 
 - Modul Concurrency Runtime: Knihovna, která zjednodušuje práci paralelního a asynchronního programování pro vícejádrová a mnohojádrová zařízení. Další informace najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio SDK Windows, která umožňuje vývoj univerzální aplikace pro Windows. K vývoji univerzální aplikace pro Windows pro Windows 10, musíte na Windows 10 verzi sady Windows SDK. Informace o sadě Windows 10 SDK najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK pro starší verze systému Windows najdete v tématu [Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)).
+Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio Windows SDK jako součást úlohy C++ plochy, umožňující vývoj univerzální aplikace pro Windows. Vývoj aplikací UWP, musíte na Windows 10 verzi sady Windows SDK. Informace najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK pro starší verze systému Windows najdete v tématu [Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+
+**Programové soubory (x86) \Windows sadách** je výchozím umístěním pro všechny verze sady Windows SDK, který jste nainstalovali.
 
 Jiné platformy, jako je například konzola Xbox a Azure mají své vlastní sady SDK, které budete pravděpodobně muset nainstalovat. Další informace naleznete ve středisku pro vývojáře DirectX a ve středisku pro vývojáře Azure.
 

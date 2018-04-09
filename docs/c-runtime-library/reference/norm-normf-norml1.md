@@ -1,13 +1,10 @@
 ---
-title: Norm, normf, norml1 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Norm, normf, norml | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - norm
@@ -40,64 +37,61 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a694d2a8660a591265e0270ada5c3b87c07f308
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 28c8e05dfc2cc9e42584324a78ba14f37a9b951d
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="norm-normf-norml"></a>Norm, normf, norml
-Načte kvadratických odhad komplexního čísla.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double norm(   
-   _Dcomplex z   
-);  
-float norm(   
-   _Fcomplex z   
-);  // C++ only  
-long double norm(   
-  _Lcomplex z   
-);  // C++ only  
-float normf(   
-   _Fcomplex z   
-);  
-long double norml(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `z`  
- Komplexní čísla.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Kvadratických odhad `z`.  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `norm` trvají `_Fcomplex` nebo `_Lcomplex` hodnoty a vrátí `float` nebo `long double` hodnoty. V programu C `norm` má vždy `_Dcomplex` hodnotu a vrátí `double` hodnotu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Hlavička C|Hlavička C++|  
-|-------------|--------------|------------------|  
-|`norm`,               `normf`, `norml`|\<complex.h>|\<ccomplex>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Načte kvadratických odhad komplexního čísla.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double norm( _Dcomplex z );
+float normf( _Fcomplex z );
+long double norml( _Lcomplex z );
+```
+
+```cpp
+float norm( _Fcomplex z );  // C++ only
+long double norm( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+Komplexní čísla.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Kvadratických odhad *z*.
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení `norm` trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **dlouho dvojité** hodnoty. V programu C `norm` má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Hlavička C|Hlavička C++|
+|-------------|--------------|------------------|
+|`norm`, `normf`, `norml`|\<complex.h>|\<ccomplex>|
+
+**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementované nativní typy C99 **float _complex –** , **dvojité _complex –**, a **_complex long double –**, v uvedeném pořadí.  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>

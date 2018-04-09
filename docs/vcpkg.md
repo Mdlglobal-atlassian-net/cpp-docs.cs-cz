@@ -1,10 +1,10 @@
 ---
-title: "vcpkg – Správce balíčků C++ pro Windows | Microsoft Docs"
-description: "vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalaci knihovny open-source C++ v systému Windows."
+title: vcpkg – Správce balíčků C++ pro Windows | Microsoft Docs
+description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalaci knihovny open-source C++ v systému Windows.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 02/01/2018
+ms.date: 04/06/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Správce balíčků C++ pro Windows
 
@@ -53,7 +53,7 @@ Tento příkaz vytvoří výčet řídicích souborů v podsložkách vcpkg nebo
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
-anax      2.1.0-1 An open source C++ entity system. <https://github...
+anax      2.1.0-1 An open source C++ entity system. \<https://github...
 antlr4    4.6-1   ANother Tool for Language Recognition
 apr       1.5.2   The Apache Portable Runtime (APR) is a C library ...
 asio      1.10.8  Asio is a cross-platform C++ library for network ...
@@ -86,7 +86,6 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Vypisuje seznam knihoven již nainstalována
-
 Po instalaci některé knihovny, můžete použít **vcpkg seznamu** co máte:
 
 ```cmd
@@ -106,9 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Spustit **vcpkg integrovat instalace** konfigurace Visual Studio najít všechny soubory hlaviček vcpkg a binární soubory v jednotlivých uživatelů bez nutnosti ruční úpravy cesty adresáře VC ++. Pokud máte více klonech, klonování, ze které spouštíte tento příkaz změní výchozí umístění.
 
-Teď můžete #include hlavičky jednoduše zadáním složky/záhlaví a automatické dokončování pomáhá. Žádné další kroky jsou vyžadovány pro propojení do knihovny nebo přidání odkazů projektu. Následující obrázek znázorňuje, jak Visual Studio vyhledá azure-storage-cpp hlavičky. vcpkg umístí jeho hlavičky v podsložce \installed rozdělena na oddíly podle cílové platformy. Následující diagram znázorňuje zahrnout soubory v seznamu `/was` podsložce knihovny:
-
-Teď můžete #include hlavičky jednoduše zadáním složky/záhlaví a bude automaticky dokončit vám pomůže. Žádné další kroky jsou vyžadovány pro propojení do knihovny nebo přidání odkazů projektu. Následující obrázek znázorňuje, jak Visual Studio vyhledá azure-storage-cpp hlavičky. vcpkg umístí jeho hlavičky v podsložce \installed rozdělena na oddíly podle cílové platformy. Následující diagram znázorňuje seznam zahrnout soubory v podsložce \was knihovny:
+Teď můžete #include hlavičky jednoduše zadáním složky/záhlaví a automatické dokončování pomáhá. Žádné další kroky jsou vyžadovány pro propojení do knihovny nebo přidání odkazů projektu. Následující obrázek znázorňuje, jak Visual Studio vyhledá azure-storage-cpp hlavičky. vcpkg umístí jeho hlavičky v **/ nainstalováno** podsložku, oddíly podle cílové platformy. Následující diagram znázorňuje zahrnout soubory v seznamu **/ byl** podsložce knihovny:
 
 ![vcpkg Intellisense integrace](media/vcpkg-intellisense.png "vcpkg a Intellisense")
 
@@ -144,6 +141,36 @@ Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, kter
 
 ### <a name="upgrade-example"></a>Příklad upgradu
 
+### <a name="per-project"></a>Každý projekt
+Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od verze v instanci active vcpkg, postupujte takto:
+
+1. Ujistěte se, nový klon vcpkg 
+1. Upravit portfile pro knihovnu verzi, které potřebujete
+1. Spustit **vcpkg nainstalovat \<Knihovna >**.
+1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
+
+
+## <a name="export-compiled-binaries-and-headers"></a>Export kompilovány binární soubory a hlavičky
+Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu. 
+
+## <a name="updateupgrade-installed-libraries"></a>Aktualizovat nebo upgradovat nainstalované knihovny
+Veřejné katalogu je pořád aktuální a mají nejnovější verze knihoven. Chcete-li zjistit, které z vaší místní knihovny jsou zastaralé, použijte **vcpkg aktualizace**. Až budete připraveni k aktualizaci vaší kolekce porty na nejnovější verzi veřejné katalogu, spusťte **vcpkg upgrade** příkaz, který automaticky stáhnout a znovu sestavte některého nebo všech vaší nainstalované knihovny, které jsou zastaralé.
+
+Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost. 
+
+```cmd
+  vcpkg upgrade --no-dry-run 
+```
+
+### <a name="upgrade-options"></a>Možnosti upgradu
+
+- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky. 
+- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže. 
+- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků. 
+- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář. 
+
+### <a name="upgrade-example"></a>Příklad upgradu
+
 Následující příklad ukazuje, jak upgradovat pouze zadané knihovny. Všimněte si, že vcpgk se automaticky vrátí v závislosti podle potřeby.
 
 ```cmd
@@ -160,27 +187,21 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Přispívat nové knihovny
-
 Můžete zahrnout všechny knihovny, které chcete v kolekci privátní porty. Navrhovat nová knihovna pro veřejné katalogu, otevřete na problém [GitHub vcpkg problém stránce](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Odebrání knihovny
-
 Typ **vcpkg odebrat** k odebrání nainstalované knihovny. Pokud jsou na ní závislé další knihovny, jste vyzváni k spusťte znovu příkaz s **--recurse**, což způsobí, že všechny podřízené knihovny odebrat.
 
 ## <a name="customize-vcpkg"></a>Přizpůsobení vcpkg
-
 Vaše klon vcpkg žádným způsobem, který chcete, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každé z nich pro získání konkrétních verzí knihovny, nebo zadejte parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může pracovat na softwaru, který má jednu sadu závislosti a jiné skupiny může mít jinou sadu. Můžete nastavit dva klony vcpkg a upravit každé z nich ke stažení verze knihovny a kompilace přepínače a podobně, podle svých potřeb. 
 
 ## <a name="uninstall-vcpkg"></a>Odinstalace vcpkg
-
 Odstraňte adresář. 
 
 ## <a name="send-feedback-about-vcpkg"></a>Pošlete svůj názor vcpkg
-
 Použití **– průzkum** příkaz k odeslání zpětné vazby společnosti Microsoft o vcpkg, včetně sestav chyb a návrhy na funkce.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchie složky vcpkg
-
 Všechna data a funkce vcpkg je samostatný v hierarchii, jeden adresář, nazývá "instance". Neexistují žádné nastavení registru nebo proměnné prostředí. Může mít libovolný počet instancí vcpkg na počítači, a tedy nekolidují mezi sebou. 
 
 Obsah instance vcpkg jsou: 

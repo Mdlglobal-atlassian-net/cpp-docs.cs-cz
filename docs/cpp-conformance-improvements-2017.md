@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6799b1b53366d342dc2dacec7bff756c7396d7cb
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), a [15.7](#improvements_157)
 
@@ -1711,6 +1711,32 @@ int main() {
 }
 
 ```
+
+### <a name="variadic-template-constructor-base-class-initialization-list"></a>Variadické šablony konstruktor základní třída Inicializace seznamu
+
+V předchozích vydáních sady Visual Studio variadické šablony konstruktor základní třída Inicializace seznamu, který chyběl šablony argumenty povolilo chybnou informací bez chyby. V aplikaci Visual Studio 2017 verze 15.7 je vyvolána chyba kompilátoru.
+
+Následující příklad kódu ve Visual Studio 2017 verze 15.7 vyvolá *chyba C2614: D\<int >: Neplatný člen inicializace: "B" není základní nebo člen*
+
+```cpp
+template<typename T>
+struct B {};
+
+template<typename T>
+struct D : B<T>
+{
+
+    template<typename ...C>
+    D() : B() {} // C2614. Missing template arguments to B.
+};
+
+D<int> d;
+
+```
+
+Postup řešení chyby, změňte výraz B() b\<T > ().
+
+
 
 ## <a name="see-also"></a>Viz také
 
