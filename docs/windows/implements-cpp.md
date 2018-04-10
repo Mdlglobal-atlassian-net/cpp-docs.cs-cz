@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -23,10 +23,10 @@ ms.workload:
 - cplusplus
 - uwp
 ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.  
@@ -42,10 +42,10 @@ Určuje odesílání rozhraní, které mají být členy třída typu coclass ID
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **Rozhraní**  
+ **interfaces**  
  Čárkami oddělený seznam rozhraní, které budou členem třída typu coclass IDL. Je metoda sdružená vlastnost pro zadání jednoho rozhraní **implementuje (***Název_rozhraní***)**.  
   
- **odesílající rozhraní**  
+ **dispinterfaces**  
  Čárkami oddělený seznam dispinterface, který bude členem třída typu coclass IDL. Je metoda sdružená vlastnost pro zadání jednoho dispinterface **implementuje (odesílající rozhraní** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Poznámky  

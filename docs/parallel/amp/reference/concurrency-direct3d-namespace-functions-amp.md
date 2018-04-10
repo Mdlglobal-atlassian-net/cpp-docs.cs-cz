@@ -34,10 +34,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce Concurrency::Direct3D – obor názvů (AMP)
 ||||  
@@ -45,17 +45,17 @@ ms.lasthandoff: 02/23/2018
 |[Abs](#abs)|[clamp](#clamp)|[countbits –](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh –](#firstbithigh)|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[šumu](#noise)|  
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
 |[radiánech](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|  
-|[saturate –](#saturate)|[Přihlášení](#sign)|[smoothstep](#smoothstep)|  
-|[Krok](#step)|[umax](#umax)|[umin](#umin)|  
+|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
+|[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** amp.h **Namespace:** souběžnosti
   
-##  <a name="abs"></a>  abs  
+##  <a name="abs"></a>  Abs  
  Vrátí absolutní hodnotu argumentu  
   
 ```  
@@ -216,7 +216,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první nastavit chvíli umístění  
   
-##  <a name="get_buffer"></a>  get_buffer –  
+##  <a name="get_buffer"></a>  get_buffer  
  Získáte rozhraní vyrovnávací paměti Direct3D – základní zadané pole.  
   
 ```  
@@ -260,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="imin"></a>  imin –  
+##  <a name="imin"></a>  imin  
  Určení minimální číselná hodnota z argumentů  
   
 ```  
@@ -496,7 +496,7 @@ inline float step(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu 1, pokud _X je větší než nebo rovno _Y; 0, jinak hodnota  
   
-##  <a name="umax"></a>  umax  
+##  <a name="umax"></a>  UMAX –  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -515,7 +515,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="umin"></a>  umin –  
+##  <a name="umin"></a>  umin  
  Určení minimální číselná hodnota z argumentů  
   
 ```  

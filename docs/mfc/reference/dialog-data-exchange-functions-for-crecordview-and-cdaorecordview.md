@@ -1,12 +1,12 @@
 ---
-title: "Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView | Microsoft Docs"
-ms.custom: 
+title: Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
@@ -29,17 +29,17 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 Toto téma obsahuje seznam DDX_Field – funkce, které slouží pro výměnu dat mezi [CRecordset](../../mfc/reference/crecordset-class.md) a [CRecordView](../../mfc/reference/crecordview-class.md) formuláře nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) a [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formuláře.  
@@ -51,19 +51,19 @@ Toto téma obsahuje seznam DDX_Field – funkce, které slouží pro výměnu da
   
 |||  
 |-|-|  
-|[Ddx_fieldcbindex –](#ddx_fieldcbindex)|Přenosy dat celé číslo mezi členem sady záznamů pole data a index aktuální výběr v poli se seznamem v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
-|[Ddx_fieldcbstring –](#ddx_fieldcbstring)|Přenosy `CString` dat mezi pole datových členů sady záznamů a upravit ovládacího prvku pole se seznamem pole `CRecordView` nebo `CDaoRecordView`. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položku do pole se seznamem, který začíná znaky v zadaném řetězci.|  
-|[Ddx_fieldcbstringexact –](#ddx_fieldcbstringexact)|Přenosy `CString` dat mezi pole datových členů sady záznamů a upravit ovládacího prvku pole se seznamem pole `CRecordView` nebo `CDaoRecordView`. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položku do pole se seznamem, který přesně odpovídá zadaný řetězec.|  
-|[Ddx_fieldcheck –](#ddx_fieldcheck)|Boolean – datový přenos mezi členem sady záznamů pole data a zaškrtněte políčko v `CRecordView` nebo `CDaoRecordView`.|  
-|[Ddx_fieldlbindex –](#ddx_fieldlbindex)|Přenosy dat celé číslo mezi členem sady záznamů pole data a index aktuální výběr v seznamu v `CRecordView` nebo `CDaoRecordView`.|  
-|[Ddx_fieldlbstring –](#ddx_fieldlbstring)|Spravuje přenos [CString](../../atl-mfc-shared/reference/cstringt-class.md) dat mezi ovládacího prvku pole se seznamem a pole datových členů sady záznamů. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položka v seznamu, který začíná znaky v zadaném řetězci.|  
-|[Ddx_fieldlbstringexact –](#ddx_fieldlbstringexact)|Spravuje přenos `CString` dat mezi ovládacího prvku pole se seznamem a pole datových členů sady záznamů. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere první položka, který přesně odpovídá zadaný řetězec.|  
-|[Ddx_fieldradio –](#ddx_fieldradio)|Přenosy dat celé číslo mezi pole datových členů sady záznamů a skupinu přepínačů v `CRecordView` nebo `CDaoRecordView`.|  
-|[Ddx_fieldscroll –](#ddx_fieldscroll)|Nastaví nebo získá pozici posunutí ovládací prvek posuvníku v `CRecordView` nebo `CDaoRecordView`. Volání z vaší [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funkce.|  
-|[Ddx_fieldslider –](#ddx_fieldslider)|Synchronizuje jezdec pozice ovládací prvek typu jezdec v zobrazení záznamů a `int` pole datových členů sady záznamů. |
-|[DDX_FieldText –](#ddx_fieldtext)|Přetížené verze jsou k dispozici pro přenos `int`, **Celé_číslo**, **dlouho**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **dvojité**, **krátké**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), a [COleCurrency](../../mfc/reference/colecurrency-class.md) dat mezi pole datových členů sady záznamů a upravíte pole `CRecordView` nebo `CDaoRecordView`.|  
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Přenosy dat celé číslo mezi členem sady záznamů pole data a index aktuální výběr v poli se seznamem v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Přenosy `CString` dat mezi pole datových členů sady záznamů a upravit ovládacího prvku pole se seznamem pole `CRecordView` nebo `CDaoRecordView`. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položku do pole se seznamem, který začíná znaky v zadaném řetězci.|  
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Přenosy `CString` dat mezi pole datových členů sady záznamů a upravit ovládacího prvku pole se seznamem pole `CRecordView` nebo `CDaoRecordView`. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položku do pole se seznamem, který přesně odpovídá zadaný řetězec.|  
+|[DDX_FieldCheck](#ddx_fieldcheck)|Boolean – datový přenos mezi členem sady záznamů pole data a zaškrtněte políčko v `CRecordView` nebo `CDaoRecordView`.|  
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Přenosy dat celé číslo mezi členem sady záznamů pole data a index aktuální výběr v seznamu v `CRecordView` nebo `CDaoRecordView`.|  
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Spravuje přenos [CString](../../atl-mfc-shared/reference/cstringt-class.md) dat mezi ovládacího prvku pole se seznamem a pole datových členů sady záznamů. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere položka v seznamu, který začíná znaky v zadaném řetězci.|  
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Spravuje přenos `CString` dat mezi ovládacího prvku pole se seznamem a pole datových členů sady záznamů. Při přesouvání dat ze sady záznamů do ovládacího prvku, tato funkce vybere první položka, který přesně odpovídá zadaný řetězec.|  
+|[DDX_FieldRadio](#ddx_fieldradio)|Přenosy dat celé číslo mezi pole datových členů sady záznamů a skupinu přepínačů v `CRecordView` nebo `CDaoRecordView`.|  
+|[DDX_FieldScroll](#ddx_fieldscroll)|Nastaví nebo získá pozici posunutí ovládací prvek posuvníku v `CRecordView` nebo `CDaoRecordView`. Volání z vaší [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funkce.|  
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizuje jezdec pozice ovládací prvek typu jezdec v zobrazení záznamů a `int` pole datových členů sady záznamů. |
+|[DDX_FieldText](#ddx_fieldtext)|Přetížené verze jsou k dispozici pro přenos `int`, **Celé_číslo**, **dlouho**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **dvojité**, **krátké**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), a [COleCurrency](../../mfc/reference/colecurrency-class.md) dat mezi pole datových členů sady záznamů a upravíte pole `CRecordView` nebo `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>Ddx_fieldcbindex –  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
  `DDX_FieldCBIndex` Funkce synchronizuje index vybrané položky v ovládacím prvku seznamu pole ovládacího prvku pole se seznamem v zobrazení záznamu a `int` pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -106,7 +106,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>Ddx_fieldcbstring –  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
  `DDX_FieldCBString` Funkce spravuje přenos [CString](../../atl-mfc-shared/reference/cstringt-class.md) dat mezi ovládacího prvku úprav ovládacího prvku pole se seznamem v zobrazení záznamu a `CString` pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -149,7 +149,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>Ddx_fieldcbstringexact –  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact` Funkce spravuje přenos [CString](../../atl-mfc-shared/reference/cstringt-class.md) dat mezi ovládacího prvku úprav ovládacího prvku pole se seznamem v zobrazení záznamu a `CString` pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -192,7 +192,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>Ddx_fieldcheck –  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
  `DDX_FieldCheck` Funkce spravuje přenos `int` formuláři dat mezi ovládací prvek zaškrtávací políčko v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -230,7 +230,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>Ddx_fieldlbindex –  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
  `DDX_FieldLBIndex` Funkce synchronizuje index vybrané položky v ovládacím prvku seznamu pole v zobrazení záznamu a `int` pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -273,7 +273,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>Ddx_fieldlbstring –  
+##  <a name="ddx_fieldlbstring"></a>  Ddx_fieldlbstring –  
  `DDX_FieldLBString` Zkopíruje v zobrazení záznamu pro aktuální výběr ovládacího prvku seznam [CString](../../atl-mfc-shared/reference/cstringt-class.md) pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -316,7 +316,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>Ddx_fieldlbstringexact –  
+##  <a name="ddx_fieldlbstringexact"></a>  Ddx_fieldlbstringexact –  
  `DDX_FieldLBStringExact` Funkce zkopíruje v zobrazení záznamu pro aktuální výběr ovládacího prvku seznam [CString](../../atl-mfc-shared/reference/cstringt-class.md) pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
@@ -359,7 +359,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>Ddx_fieldradio –  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
  `DDX_FieldRadio` Funkce přidruží nulovým základem `int` členské proměnné sady záznamů zobrazení záznamu s aktuálně vybraného přepínače ve skupině přepínacích tlačítek v zobrazení záznamu.  
   
 ```  
@@ -402,7 +402,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>Ddx_fieldscroll –  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
  `DDX_FieldScroll` Funkce synchronizuje pozici posunutí ovládací prvek posuvníku v zobrazení záznamu a `int` pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na).  
   
 ```  
@@ -445,7 +445,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>název = "ddx_fieldslider –" ></a> ddx_fieldslider –
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider` Funkce synchronizuje jezdec pozice ovládací prvek typu jezdec v zobrazení záznamů a `int` pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na).  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -478,7 +478,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="remarks"></a>Poznámky  
  Při přesunu dat ze sady záznamů na posuvníku, tato funkce nastavuje pozici jezdec na hodnotu zadanou v *hodnotu*. Přenos ze sady záznamů do ovládacího prvku Pokud je sada záznamů pole hodnotu Null, umístění v ovládacím prvku posuvník nastavena na hodnotu 0. Na přenos z ovládacího prvku do sady záznamů Pokud ovládací prvek je prázdné, hodnota pole Sada záznamů je 0.  
   
- `DDX_FieldSlider`není výměna informací o rozsahu s podporou nastavení rozsahu než jednoduše pozice ovládací prvky posuvníku.  
+ `DDX_FieldSlider` není výměna informací o rozsahu s podporou nastavení rozsahu než jednoduše pozice ovládací prvky posuvníku.  
   
  Pokud pracujete s třídy založené na rozhraní ODBC, použijte první přepsání funkce. Pomocí třídy založené na rozhraní DAO druhý přepsání.  
   
@@ -493,7 +493,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText –  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
  `DDX_FieldText` Funkce spravuje přenos `int`, **krátké**, **dlouho**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **dvojité**, **BOOL**, nebo **BAJTŮ** dat mezi prvek upravit a pole datových členů sady záznamů.  
   
 ```  

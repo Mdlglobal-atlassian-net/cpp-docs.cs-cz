@@ -1,12 +1,12 @@
 ---
-title: "Referenční dokumentace k operátorům MASM | Microsoft Docs"
-ms.custom: 
+title: Referenční dokumentace k operátorům MASM | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 67659cd17d95135e2697cd8707142ce1b5c94ef1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="masm-operators-reference"></a>Referenční dokumentace k operátorům MASM
 
@@ -49,10 +49,10 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[A](../../assembler/masm/operator-and.md)|[NOT](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
+|[A](../../assembler/masm/operator-and.md)|[NENÍ](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
 |[SHL](../../assembler/masm/operator-shl.md)|[SHR](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
   
-## <a name="macro"></a>Macro  
+## <a name="macro"></a>– Makro  
   
 ||||  
 |-|-|-|  

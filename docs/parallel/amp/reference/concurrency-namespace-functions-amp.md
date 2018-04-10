@@ -1,10 +1,10 @@
 ---
-title: "Funkce obor názvů souběžnosti (AMP) | Microsoft Docs"
-ms.custom: 
+title: Funkce obor názvů souběžnosti (AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +20,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkce obor názvů souběžnosti (AMP)
 ||||  
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|  
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each – funkce (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
-##  <a name="all_memory_fence"></a>  all_memory_fence –  
+##  <a name="all_memory_fence"></a>  all_memory_fence  
  Bloky provádění všechna vlákna v dlaždici dokud byly dokončeny všechny přístupy paměti. To zajistí, že všechny přístupy paměti jsou viditelné pro jiná vlákna v dlaždici přístup z více vláken a jsou spouštěny v pořadí programu.  
   
 ```  
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
  `true` Pokud byla operace úspěšná. v opačném `false`.  
   
 
-##  <a name="atomic_exchange">atomic_exchange – funkce (C++ AMP)</a>  
+##  <a name="atomic_exchange"></a>  atomic_exchange – funkce (C++ AMP)  
  Nastaví hodnotu cílové umístění jako atomickou operaci.  
   
 ```  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  Původní hodnotu cílové umístění.  
   
 
-##  <a name="atomic_fetch_add">atomic_fetch_add – funkce (C++ AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add – funkce (C++ AMP)  
  Atomicky přidejte hodnotu na hodnotu umístění v paměti.  
   
 ```  
@@ -152,7 +152,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnotu umístění v paměti.  
   
-##  <a name="atomic_fetch_and">atomic_fetch_and – funkce (C++ AMP)</a>  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and – funkce (C++ AMP)  
  Provede atomicky bitové operace AND hodnotu a hodnotu umístění v paměti.  
   
 ```  
@@ -196,7 +196,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnota uložena v umístění v paměti.  
   
-##  <a name="atomic_fetch_inc"></a>  atomic_fetch_inc –  
+##  <a name="atomic_fetch_inc"></a>  atomic_fetch_inc  
  Hodnota uložená v umístění zadaná paměťová atomicky zvýší.  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnota uložena v umístění zadaném umístění.  
   
-##  <a name="atomic_fetch_or">atomic_fetch_or – funkce (C++ AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or – funkce (C++ AMP)  
  Provede atomicky bitové operace OR s hodnota a hodnota umístění v paměti.  
   
 ```  
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnotu umístění v paměti.  
   
-##  <a name="atomic_fetch_sub">atomic_fetch_sub – funkce (C++ AMP)</a>  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub – funkce (C++ AMP)  
  Atomicky odečte hodnotu z oblasti paměti.  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnotu umístění v paměti.  
   
-##  <a name="atomic_fetch_xor">atomic_fetch_xor – funkce (C++ AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor – funkce (C++ AMP)  
  Atomicky peforms bitové operace XOR hodnota a umístění v paměti.  
   
 ```  
@@ -343,7 +343,7 @@ inline unsigned int atomic_fetch_xor(
 ### <a name="return-value"></a>Návratová hodnota  
  Původní hodnotu umístění v paměti.  
   
-##  <a name="copy">Kopírování</a>  
+##  <a name="copy"></a>  Kopírování  
  Zkopíruje C++ AMP objektu. Jsou splněny všechny požadavky na přenos synchronní údaje. Při spuštění kódu na akcelerátor, nejde zkopírovat data. Obecná forma tato funkce je `copy(src, dest)`.  
   
 ```  
@@ -449,7 +449,7 @@ void copy(
  `value_type`  
  Datový typ elementů, které jste zkopírovali.  
   
-##  <a name="copy_async"></a>  copy_async  
+##  <a name="copy_async"></a>  copy_async –  
  Zkopíruje objekt C++ AMP a vrátí [completion_future](completion-future-class.md) objekt, který může být čekali na. Při spuštění kódu na akcelerátor, nejde zkopírovat data.  Obecná forma tato funkce je `copy(src, dest)`.  
   
 ```  
@@ -550,14 +550,14 @@ concurrency::completion_future copy_async(
 ### <a name="return-value"></a>Návratová hodnota  
  A `future<void>` , může být čekali.  
   
-##  <a name="direct3d_abort"></a>  direct3d_abort –  
+##  <a name="direct3d_abort"></a>  direct3d_abort  
  Zruší spuštění funkce s `restrict(amp)` klauzule omezení. Zjistí-li modul runtime AMP volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimku s chybovou zprávou "umožňuje odkaz: shaderu abort podle instrukcí".  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
-##  <a name="direct3d_errorf"></a>  direct3d_errorf –  
+##  <a name="direct3d_errorf"></a>  direct3d_errorf  
  Vytiskne formátovaný řetězec do okna výstupu sady Visual Studio. Je volána z funkce s `restrict(amp)` klauzule omezení. Zjistí-li modul runtime AMP volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimka se stejným formátování řetězce.  
   
 ```  
@@ -566,7 +566,7 @@ void direct3d_errorf(
  ...) restrict(amp);
 ```  
   
-##  <a name="direct3d_printf"></a>  direct3d_printf –  
+##  <a name="direct3d_printf"></a>  direct3d_printf  
  Vytiskne formátovaný řetězec do okna výstupu sady Visual Studio. Je volána z funkce s `restrict(amp)` klauzule omezení.  
   
 ```  
@@ -575,7 +575,7 @@ void direct3d_printf(
  ...) restrict(amp);
 ```  
   
-##  <a name="global_memory_fence"></a>  global_memory_fence –  
+##  <a name="global_memory_fence"></a>  global_memory_fence  
  Bloky provádění všechna vlákna v dlaždici, dokud všechny globální paměť přistupuje byly dokončeny. To zajistí, že globální paměť přístupů jsou viditelné pro jiná vlákna v dlaždici přístup z více vláken a jsou spouštěny v pořadí programu.  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Objekt tile_barrier  
   
-##  <a name="parallel_for_each">parallel_for_each – funkce (C++ AMP)</a>  
+##  <a name="parallel_for_each"></a>  parallel_for_each – funkce (C++ AMP)  
  Spustí funkci napříč výpočetní doméně. Další informace najdete v tématu [přehled produktu C++ AMP](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  

@@ -1,12 +1,12 @@
 ---
-title: "Vstupní členské funkce datového proudu | Microsoft Docs"
-ms.custom: 
+title: Vstupní členské funkce datového proudu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="input-stream-member-functions"></a>Členské funkce vstupního datového proudu
 Členské funkce vstupního datového proudu se používají pro vstup disku. Členské funkce patří:  
@@ -41,10 +41,10 @@ ms.lasthandoff: 02/23/2018
   
 - [Zavřít funkce pro vstupní datové proudy](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11">Otevřete funkce pro vstupní datové proudy</a>  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Otevřete funkce pro vstupní datové proudy  
  Pokud používáte vstupní soubor datového proudu (ifstream), je třeba přidružit k souboru na konkrétní disku tohoto datového proudu. To provedete v konstruktoru, nebo můžete použít **otevřete** funkce. V obou případech argumenty, které jsou stejné.  
   
- Obecně zadáte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) příznak při otevření souboru přidružené vstupního datového proudu (je výchozí režim **ios::in**). Seznam **open_mode** příznaky, viz [open](#vclrftheopenfunctionforinputstreamsanchor11). Příznaků je možné kombinovat s bitová hodnota OR (&#124;) operátor.  
+ Obecně zadáte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) příznak při otevření souboru přidružené vstupního datového proudu (je výchozí režim **ios::in**). Seznam **open_mode** příznaky, viz [open](#vclrftheopenfunctionforinputstreamsanchor11). Příznaků je možné kombinovat s bitová hodnota OR ( &#124; ) operátor.  
   
  Ke čtení souboru, nejprve použijte **nezdaří** – členská funkce k určení, zda existuje:  
   
@@ -55,8 +55,8 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12">Zjištění</a>
- Neformátovaný **získat** – členská funkce pracuje stejně jako  **>>**  operátor s dvě výjimky. Nejdřív **získat** funkce obsahuje prázdné znaky, zatímco Extraktor vyloučí mezer při **skipws** je příznak nastaven (výchozí). Druhý, **získat** funkce je méně pravděpodobné, že způsobit vázanou výstupního datového proudu (`cout`, například) zapsány.  
+##  <a name="vclrfthegetfunctionanchor12"></a> Zjištění
+ Neformátovaný **získat** – členská funkce pracuje stejně jako **>>** operátor s dvě výjimky. Nejdřív **získat** funkce obsahuje prázdné znaky, zatímco Extraktor vyloučí mezer při **skipws** je příznak nastaven (výchozí). Druhý, **získat** funkce je méně pravděpodobné, že způsobit vázanou výstupního datového proudu (`cout`, například) zapsány.  
   
  Varianta **získat** funkce určuje adresu vyrovnávací paměti a maximální počet znaků ke čtení. To je užitečné pro omezení počtu znaků odesílané konkrétní proměnné, jak ukazuje tento příklad:  
   
@@ -89,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13">Getline</a>
+##  <a name="vclrfthegetlinefunctionanchor13"></a> Getline
  **Getline** – členská funkce je podobná **získat** funkce. Obě funkce povolit třetí argument, který určuje ukončující znak pro vstup. Výchozí hodnota je znak nového řádku. Obě funkce rezervovat jeden znak pro požadované ukončující znak. Ale **získat** opustí ukončující znak v datovém proudu a **getline** odebere ukončující znak.  
   
  Následující příklad určuje ukončující znak pro vstupní datový proud:  
@@ -115,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14">Čtení</a>
+##  <a name="vclrfthereadfunctionanchor14"></a> Čtení
  **Číst** – členská funkce načte bajtů ze souboru do zadané oblasti paměti. Délka argumentu určuje počet přečtených bajtů. Pokud nepoužijete tento argument, čtení zastaví, když je dosaženo fyzického konce souboru nebo v případě souboru textovém režimu, když embedded `EOF` znak je pro čtení.  
   
  Tento příklad čte binární záznam ze souboru mzdy do struktury:  
@@ -146,7 +146,7 @@ int main()
   
  Program předpokládá, že jsou formátovány datových záznamů přesně jak je stanoveno struktura s ukončující znaky CR nebo konce řádku.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7">Seekg – a tellg – funkce</a>  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Seekg – a tellg – funkce  
  Datové proudy vstupní soubor zachovat interní ukazatel na pozici v souboru, kde dat je další čtení. Nastavit tento ukazatel s `seekg` fungovat, jak je vidět tady:  
   
 ```  
@@ -200,7 +200,7 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15">Zavřít funkce pro vstupní datové proudy</a>  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Zavřít funkce pro vstupní datové proudy  
  **Zavřete** – členská funkce zavře souboru na disku, který je přidružený vstupní soubor datového proudu a uvolní popisovač souboru operačního systému. [Ifstream](../standard-library/basic-ifstream-class.md) destruktor zavře soubor pro vás, ale můžete použít **zavřete** fungovat, pokud je třeba otevřít jiný soubor pro stejný objekt datového proudu.  
   
 ## <a name="see-also"></a>Viz také  

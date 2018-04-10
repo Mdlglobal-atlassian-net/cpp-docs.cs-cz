@@ -1,12 +1,12 @@
 ---
-title: "Používání operátorů v blocích __asm | Microsoft Docs"
-ms.custom: 
+title: Používání operátorů v blocích __asm | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ca8ac739793c81ef18f8657cbf53c9cb018b3e38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-operators-in-asm-blocks"></a>Používání operátorů v blocích __asm
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- `__asm` Bloku nelze použít konkrétní operátory jazyka C nebo C++, jako  **<<**  operátor. Ale operátory sdílí C a MASM, například \* operátor, se interpretují jako operátory jazyka sestavení. Například mimo `__asm` blok hranaté závorky (**[]**) se interpretují jako uzavření dolní indexy pole, které C automaticky přizpůsobí velikost element v poli. Uvnitř `__asm` bloku, jsou považovány za MASM operátoru indexu, která dává posun bez měřítka bajtů v jakémkoli datový objekt nebo popisek (nikoli pouze pole). Následující kód ukazuje rozdíl:  
+ `__asm` Bloku nelze použít konkrétní operátory jazyka C nebo C++, jako **<<** operátor. Ale operátory sdílí C a MASM, například \* operátor, se interpretují jako operátory jazyka sestavení. Například mimo `__asm` blok hranaté závorky (**[]**) se interpretují jako uzavření dolní indexy pole, které C automaticky přizpůsobí velikost element v poli. Uvnitř `__asm` bloku, jsou považovány za MASM operátoru indexu, která dává posun bez měřítka bajtů v jakémkoli datový objekt nebo popisek (nikoli pouze pole). Následující kód ukazuje rozdíl:  
   
 ```  
 int array[10];  

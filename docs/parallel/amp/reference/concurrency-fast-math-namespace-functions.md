@@ -1,10 +1,10 @@
 ---
-title: "Concurrency::fast_math – obor názvů funkce | Microsoft Docs"
-ms.custom: 
+title: Concurrency::fast_math – obor názvů funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,45 +53,45 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funkce Concurrency::fast_math – obor názvů
 ||||  
 |-|-|-|  
-|[ACOS](#acos)|[acosf](#acosf)|[asin](#asin)|  
-|[asinf –](#asinf)|[atan](#atan)|[atan2](#atan2)|  
-|[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|  
-|[ceilf](#ceilf)|[Cos](#cos)|[cosf](#cosf)|  
+|[acos](#acos)|[acosf](#acosf)|[ASIN](#asin)|  
+|[asinf](#asinf)|[atan](#atan)|[atan2](#atan2)|  
+|[atan2f](#atan2f)|[atanf –](#atanf)|[ceil](#ceil)|  
+|[ceilf](#ceilf)|[cos](#cos)|[cosf](#cosf)|  
 |[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|  
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|  
-|[fabs](#fabs)|[fabsf](#fabsf)|[Floor](#floor)|  
+|[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|  
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
-|[Fmin](#fmin)|[fminf –](#fminf)|[fmod](#fmod)|  
-|[fmodf –](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
-|[isfinite](#isfinite)|[isinf –](#isinf)|[isnan](#isnan)|  
+|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
+|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
+|[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
-|[log2f](#log2f)|[logf](#logf)|[modf –](#modf)|  
-|[modff](#modff)|[pow](#pow)|[powf](#powf)|  
-|[Zaokrouhlit](#round)|[roundf –](#roundf)|[rsqrt](#rsqrt)|  
+|[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
+|[modff](#modff)|[Pow](#pow)|[powf](#powf)|  
+|[Zaokrouhlit](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|  
 |[rsqrtf](#rsqrtf)|[signbit –](#signbit)|[signbitf](#signbitf)|  
 |[sin](#sin)|[sincos –](#sincos)|[sincosf](#sincosf)|  
-|[sinf –](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|  
-|[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|  
-|[tanf –](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|  
+|[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|  
+|[sqrt](#sqrt)|[sqrtf](#sqrtf)|[Tan](#tan)|  
+|[tanf –](#tanf)|[TANH](#tanh)|[tanhf](#tanhf)|  
 |[trunc](#trunc)|[truncf](#truncf)|  
   
-##  <a name="acos"></a>  ACOS  
+##  <a name="acos"></a>  acos  
  Vypočítá Arkus kosinus argument  
   
 ```  
@@ -105,7 +105,7 @@ inline float acos(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí Arkus kosinus hodnotu argumentu  
   
-##  <a name="acosf"></a>  acosf –  
+##  <a name="acosf"></a>  acosf  
  Vypočítá Arkus kosinus argument  
   
 ```  
@@ -161,7 +161,7 @@ inline float atan(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí Arkus hodnotu argumentu  
   
-##  <a name="atan2"></a>  ATAN2  
+##  <a name="atan2"></a>  atan2  
  Vypočítá Arkus tangens _Y/_X  
   
 ```  
@@ -180,7 +180,7 @@ inline float atan2(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu Arkus _Y/_X  
   
-##  <a name="atan2f"></a>  atan2f –  
+##  <a name="atan2f"></a>  atan2f  
  Vypočítá Arkus tangens _Y/_X  
   
 ```  
@@ -241,7 +241,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí se mezní hodnota argumentu  
   
-##  <a name="cosf"></a>  cosf –  
+##  <a name="cosf"></a>  cosf  
  Výpočet kosinu argument  
   
 ```  
@@ -255,7 +255,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí kosinus hodnotu argumentu  
   
-##  <a name="coshf"></a>  coshf –  
+##  <a name="coshf"></a>  coshf  
  Vypočítá hodnotu hyperbolický kosinus argumentu  
   
 ```  
@@ -297,7 +297,7 @@ inline float cosh(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hyperbolický kosinus hodnotu argumentu  
   
-##  <a name="exp"></a>  Exp  
+##  <a name="exp"></a>  exp  
  Vypočítá exponenciální argumentu základní e  
   
 ```  
@@ -325,7 +325,7 @@ inline float exp2(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu exponenciálního argumentu 2 základní  
   
-##  <a name="exp2f"></a>  exp2f –  
+##  <a name="exp2f"></a>  exp2f  
  Vypočítá exponenciální argumentu základní-2  
   
 ```  
@@ -339,7 +339,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu exponenciálního argumentu 2 základní  
   
-##  <a name="expf"></a>  expf –  
+##  <a name="expf"></a>  expf  
  Vypočítá exponenciální argumentu základní e  
   
 ```  
@@ -395,7 +395,7 @@ inline float floor(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí podlaží argumentu  
   
-##  <a name="floorf"></a>  floorf –  
+##  <a name="floorf"></a>  floorf  
  Vypočítá podlaží argumentu  
   
 ```  
@@ -409,7 +409,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí podlaží argumentu  
   
-##  <a name="fmax"></a>  fmax  
+##  <a name="fmax"></a>  Fmax  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -428,7 +428,7 @@ inline float max(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="fmaxf"></a>  fmaxf  
+##  <a name="fmaxf"></a>  fmaxf –  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -447,7 +447,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="fmin"></a>  Fmin  
+##  <a name="fmin"></a>  fmin  
  Určení minimální číselná hodnota z argumentů  
   
 ```  
@@ -617,7 +617,7 @@ inline float ldexp(
  Hodnota s plovoucí desetinnou čárkou, mentissa  
   
  `_Exp`  
- Exponent celé číslo  
+ Integer exponent  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Returns _X * 2^_Exp  
@@ -636,7 +636,7 @@ inline float ldexpf(
  Hodnota s plovoucí desetinnou čárkou, mentissa  
   
  `_Exp`  
- Exponent celé číslo  
+ Integer exponent  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Returns _X * 2^_Exp  
@@ -655,7 +655,7 @@ inline float log(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí logaritmus základem e argumentu  
   
-##  <a name="log10"></a>  LOG10  
+##  <a name="log10"></a>  log10  
  Vypočítá logaritmus o základu 10 argument  
   
 ```  
@@ -669,7 +669,7 @@ inline float log10(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí logaritmus o základu 10 argument  
   
-##  <a name="log10f"></a>  log10f –  
+##  <a name="log10f"></a>  log10f  
  Vypočítá logaritmus o základu 10 argument  
   
 ```  
@@ -697,7 +697,7 @@ inline float log2(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí logaritmus o základu 2 argumentu  
   
-##  <a name="log2f"></a>  log2f –  
+##  <a name="log2f"></a>  log2f  
  Vypočítá logaritmus o základu 2 argumentu  
   
 ```  
@@ -780,7 +780,7 @@ inline float pow(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu _X mocninu _Y  
   
-##  <a name="powf"></a>  powf –  
+##  <a name="powf"></a>  powf  
  Vypočítá _X mocninu _Y  
   
 ```  
@@ -964,7 +964,7 @@ inline float sinh(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hyperbolický sinus hodnotu argumentu  
   
-##  <a name="sinhf"></a>  sinhf –  
+##  <a name="sinhf"></a>  sinhf  
  Vypočítá hodnotu hyperbolický sinus argumentu  
   
 ```  
@@ -1006,7 +1006,7 @@ inline float sqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí kořenu squre argumentu  
   
-##  <a name="tan"></a>  Tan  
+##  <a name="tan"></a>  tan  
  Vypočítá tečný hodnotu argumentu  
   
 ```  
@@ -1048,7 +1048,7 @@ inline float tanh(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hyperbolický tangens hodnotu argumentu  
   
-##  <a name="tanhf"></a>  tanhf –  
+##  <a name="tanhf"></a>  tanhf  
  Vypočítá hyperbolický tangens hodnotu argumentu  
   
 ```  

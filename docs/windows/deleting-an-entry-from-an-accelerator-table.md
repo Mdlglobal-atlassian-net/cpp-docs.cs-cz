@@ -1,12 +1,12 @@
 ---
-title: "Odstranění záznamu z tabulky akcelerátorů | Microsoft Docs"
-ms.custom: 
+title: Odstranění záznamu z tabulky akcelerátorů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - accelerator tables [C++], deleting entries
 - keyboard shortcuts [C++], deleting entry from accelerator table
 ms.assetid: cc9cd499-dc04-4fe6-9393-a3e471e115a6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -22,10 +22,10 @@ ms.workload:
 - cplusplus
 - uwp
 ms.openlocfilehash: f001250e8607497754411586ebe82d0f64d863f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>Odstranění záznamu z tabulky akcelerátorů
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Chcete-li odstranit položku z tabulky akcelerátorů  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  Klikněte pravým tlačítkem a zvolte **odstranit** z místní nabídky (nebo vyberte **odstranit** z **upravit** nabídky).  
   
- \-nebo –  
+ \- nebo –  
   
 -   Stiskněte klávesu Delete.  
   

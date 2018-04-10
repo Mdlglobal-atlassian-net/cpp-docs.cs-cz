@@ -1,12 +1,12 @@
 ---
-title: "completion_future – třída | Microsoft Docs"
-ms.custom: 
+title: completion_future – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>completion_future – třída
 Představuje budoucí odpovídající C++ AMP asynchronní operaci.  
@@ -57,10 +57,10 @@ class completion_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[get](#get)|Čeká na dokončení přidružené asynchronní operace.|  
-|[then](#then)|Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.|  
+|[potom](#then)|Řetězí do objekt funkce zpětného volání `completion_future` objekt, který chcete provést po dokončení provádění přidružené asynchronní operaci.|  
 |[to_task](#to_task)|Vrátí `task` objekt odpovídající přidružené asynchronní operaci.|  
 |[Platný](#valid)|Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.|  
-|[wait](#wait)|Bloky, dokud se nedokončí přidružené asynchronní operaci.|  
+|[Počkej](#wait)|Bloky, dokud se nedokončí přidružené asynchronní operaci.|  
 |[wait_for](#wait_for)|Bloky, dokud se nedokončí přidružené asynchronní operaci nebo za dobu určenou podle `_Rel_time` uplynul.|  
 |[wait_until](#wait_until)|Blokuje až do dokončení přidružené asynchronní operaci, nebo dokud aktuální čas překročí hodnotu zadanou pomocí `_Abs_time`.|  
   
@@ -187,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Návratová hodnota  
  A `task` objekt odpovídající přidružené asynchronní operaci.  
   
-## <a name="valid">Platný</a> 
+## <a name="valid"></a> Platný 
 
 Získá logickou hodnotu, která určuje, zda je objekt přidružený asynchronní operace.  
   

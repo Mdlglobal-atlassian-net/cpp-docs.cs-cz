@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a starších verzích, ale byl použit VCBuild systému. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou v aktuálním systému zobrazovat jinak. Tento dokument popisuje rozdíly v aktuální systém sestavení.  
@@ -59,16 +59,16 @@ MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual
   
  V aktuální verzi je podporována dědičnost zadáním hodnoty vlastnosti jako zřetězení jednu nebo více literálových hodnot a makra vlastností. **$(Inherit)** a **$(NoInherit)** makra nejsou podporovány.  
   
- V následujícím příkladu je seznam oddělený středníkem přiřadit k vlastnosti na stránce vlastností. V seznamu se skládá z zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnosti, které je přístupné pomocí notace makro, **$(**  *MyProperty***)**.  
+ V následujícím příkladu je seznam oddělený středníkem přiřadit k vlastnosti na stránce vlastností. V seznamu se skládá z zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnosti, které je přístupné pomocí notace makro, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>. vcxproj.user soubory  
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
  Soubor uživatele (. vcxproj.user) ukládá vlastnosti specifické pro uživatele, pro příklad, ladění a nasazení nastavení. Soubor vcxproj.user se vztahují na všechny projekty pro určitého uživatele.  
   
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters souboru  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  Když **Průzkumníku řešení** se používá k přidání souboru do projektu, soubor filtry (. vcxproj.filters) definuje where v **Průzkumníku řešení** stromové zobrazení, se přidá soubor, na základě jeho přípony názvu souboru.  
   
 ## <a name="vc-directories-settings"></a>Nastavení adresáře VC ++  

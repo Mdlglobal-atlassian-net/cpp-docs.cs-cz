@@ -1,27 +1,27 @@
 ---
-title: "2.3 parallel – konstrukce | Microsoft Docs"
-ms.custom: 
+title: 2.3 parallel – konstrukce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel – konstrukce
 Následující direktiva definuje paralelní oblasti, která je oblasti program, který se má provádět více podprocesů paralelně. Toto je základní koncept, která se spouští paralelní provádění.  
@@ -46,7 +46,7 @@ Následující direktiva definuje paralelní oblasti, která je oblasti program,
   
  **snížení (** *operátor* **:***seznamu proměnné* **)**   
   
- **num_threads (** *celočíselný výraz* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Když vlákno dojde paralelní konstrukce, tým vláken je vytvořen, pokud platí jedna z následujících případech:  
   

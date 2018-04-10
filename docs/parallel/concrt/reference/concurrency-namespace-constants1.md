@@ -1,10 +1,10 @@
 ---
-title: "konstanty obor názvů souběžnosti | Microsoft Docs"
-ms.custom: 
+title: konstanty obor názvů souběžnosti | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::AgentEventGuid
@@ -22,36 +22,36 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 83c9629feed07cee5bd13138f3def89251c081cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-constants"></a>konstanty obor názvů souběžnosti
 ||||  
 |-|-|-|  
 |[Agenteventguid –](#agenteventguid)|[CONCRT_RM_VERSION_1](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE](#cooperative_timeout_infinite)|  
-|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[ChoreEventGuid](#choreeventguid)|[Concrteventguid –](#concrteventguid)|  
-|[ConcRT_ProviderGuid](#concrt_providerguid)|[Contexteventguid –](#contexteventguid)|[INHERIT_THREAD_PRIORITY](#inherit_thread_priority)|  
-|[Lockeventguid –](#lockeventguid)|[Maxexecutionresources –](#maxexecutionresources)|[PPLParallelForEventGuid](#pplparallelforeventguid)|  
-|[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[Resourcemanagereventguid –](#resourcemanagereventguid)|  
+|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[ChoreEventGuid](#choreeventguid)|[ConcRTEventGuid](#concrteventguid)|  
+|[ConcRT_ProviderGuid](#concrt_providerguid)|[ContextEventGuid](#contexteventguid)|[INHERIT_THREAD_PRIORITY](#inherit_thread_priority)|  
+|[LockEventGuid](#lockeventguid)|[Maxexecutionresources –](#maxexecutionresources)|[PPLParallelForEventGuid](#pplparallelforeventguid)|  
+|[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[ResourceManagerEventGuid](#resourcemanagereventguid)|  
 |[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|  
   
-##  <a name="agenteventguid">Agenteventguid –</a>  
+##  <a name="agenteventguid"></a>  Agenteventguid –  
  Kategorie události trasování událostí popisující spuštěná knihovna agentů v Concurrency Runtime identifikátor GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}).  
   
 ```
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```  
   
-##  <a name="choreeventguid"></a>  Choreeventguid –  
+##  <a name="choreeventguid"></a>  ChoreEventGuid  
  Kategorie GUID popisující události trasování událostí aktivována podle Concurrency Runtime, který přímo souvisí s chores nebo úlohy.  
   
 ```
@@ -62,7 +62,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ### <a name="remarks"></a>Poznámky  
  Tuto kategorii událostí není aktuálně spuštěná Concurrency Runtime.  
   
-##  <a name="concrt_providerguid"></a>  Concrt_providerguid –  
+##  <a name="concrt_providerguid"></a>  ConcRT_ProviderGuid  
  Zprostředkovatel trasování událostí pro Windows identifikátor GUID pro Concurrency Runtime.  
   
 ```
@@ -77,7 +77,7 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
 ```  
   
-##  <a name="concrteventguid">Concrteventguid –</a>  
+##  <a name="concrteventguid"></a>  Concrteventguid –  
  Kategorie GUID popisující události trasování událostí aktivována podle Concurrency Runtime, které nejsou konkrétně popsány v jiné kategorii.  
   
 ```
@@ -95,14 +95,14 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
-##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT  
+##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT –  
  Hodnota označující, že vypršel časový limit čekání.  
   
 ```
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```  
   
-##  <a name="contexteventguid">Contexteventguid –</a>  
+##  <a name="contexteventguid"></a>  Contexteventguid –  
  Kategorie GUID popisující události trasování událostí aktivována podle Concurrency Runtime, který přímo souvisí s kontexty.  
   
 ```
@@ -110,14 +110,14 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```  
   
-##  <a name="inherit_thread_priority"></a>  INHERIT_THREAD_PRIORITY –  
+##  <a name="inherit_thread_priority"></a>  INHERIT_THREAD_PRIORITY  
  Speciální hodnotu pro klíč zásad `ContextPriority` indikující, že vlákno prioritu všech kontextů v Plánovači musí být stejná jako u vláken, který vytvoří plánovač.  
   
 ```
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```  
   
-##  <a name="lockeventguid">Lockeventguid –</a>  
+##  <a name="lockeventguid"></a>  LockEventGuid  
  Kategorie GUID popisující události trasování událostí aktivována podle Concurrency Runtime, který přímo souvisí s zámky.  
   
 ```
@@ -128,14 +128,14 @@ const __declspec(selectany) GUID LockEventGuid =
 ### <a name="remarks"></a>Poznámky  
  Tuto kategorii událostí není aktuálně spuštěná Concurrency Runtime.  
   
-##  <a name="maxexecutionresources">Maxexecutionresources –</a>  
+##  <a name="maxexecutionresources"></a>  Maxexecutionresources –  
  Speciální hodnoty pro klíče zásad `MinConcurrency` a `MaxConcurrency`. Výchozí hodnota je počet vláken hardwaru v počítači neexistuje jiná omezení.  
   
 ```
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```  
   
-##  <a name="pplparallelforeventguid"></a>  Pplparallelforeventguid –  
+##  <a name="pplparallelforeventguid"></a>  PPLParallelForEventGuid  
  Kategorie GUID popisující události trasování událostí spuštěná Concurrency Runtime, který přímo souvisí s využití `parallel_for` funkce.  
   
 ```
@@ -143,7 +143,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
     { 0x31c8da6b, 0x6165, 0x4042, { 0x8b, 0x92, 0x94, 0x9e, 0x31, 0x5f, 0x4d, 0x84 } };
 ```  
   
-##  <a name="pplparallelforeacheventguid"></a>  Pplparallelforeacheventguid –  
+##  <a name="pplparallelforeacheventguid"></a>  PPLParallelForeachEventGuid  
  Kategorie GUID popisující události trasování událostí spuštěná Concurrency Runtime, který přímo souvisí s využití `parallel_for_each` funkce.  
   
 ```
@@ -151,7 +151,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
     { 0x5cb7d785, 0x9d66, 0x465d, { 0xba, 0xe1, 0x46, 0x11, 0x6, 0x1b, 0x54, 0x34 } };
 ```  
   
-##  <a name="pplparallelinvokeeventguid"></a>  Pplparallelinvokeeventguid –  
+##  <a name="pplparallelinvokeeventguid"></a>  PPLParallelInvokeEventGuid  
  Kategorie GUID popisující události trasování událostí spuštěná Concurrency Runtime, který přímo souvisí s využití `parallel_invoke` funkce.  
   
 ```
@@ -159,7 +159,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```  
   
-##  <a name="resourcemanagereventguid">Resourcemanagereventguid –</a>  
+##  <a name="resourcemanagereventguid"></a>  Resourcemanagereventguid –  
  Kategorie GUID popisující události trasování událostí aktivována podle Concurrency Runtime, který přímo souvisí s správce prostředků.  
   
 ```
