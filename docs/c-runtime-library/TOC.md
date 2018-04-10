@@ -29,6 +29,7 @@
 ## [Zacházení s vyrovnávací pamětí](buffer-manipulation.md)
 ## [Klasifikace bajtů](byte-classification.md)
 ## [Klasifikace znaků](character-classification.md)
+## [Podpora komplexní matematiky](complex-math-support.md)
 ## [Zarovnání dat](data-alignment.md)
 ## [Převod dat](data-conversion.md)
 ## [Rutiny ladění](debug-routines.md)
