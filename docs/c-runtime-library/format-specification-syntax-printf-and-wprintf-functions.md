@@ -1,12 +1,12 @@
 ---
-title: "Syntaxe specifikace formátu: funkce printf a wprintf | Microsoft Docs"
-ms.custom: 
+title: 'Syntaxe specifikace formátu: funkce printf a wprintf | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
@@ -59,10 +59,10 @@ Specifikace základní převod obsahuje pouze znak procenta a *typ* znak. Např�
 
 Argumenty, které následují řetězec formátu se interpretují podle příslušné *typ* znak a volitelné [velikost](#size) předponu. Převody pro znakové typy `char` a `wchar_t` zadávají pomocí **c** nebo **C**, a zadávají se jednobajtové a vícebajtové nebo celý znak řetězců pomocí **s** nebo **S**, v závislosti na formátování funkci, která se používá. Znak a řetězec argumenty, které jsou určené pomocí **c** a **s** se interpretují jako `char` a `char*` podle `printf` rodiny funkce, nebo jako `wchar_t` a `wchar_t*` podle `wprintf` rodiny funkce. Znak a řetězec argumenty, které jsou určené pomocí **C** a **S** se interpretují jako `wchar_t` a `wchar_t*` podle `printf` rodiny funkce, nebo jako `char` a `char*` podle `wprintf` rodiny funkce. Toto chování se konkrétní společnosti Microsoft.
 
-Celočíselné typy, jako `short`, `int`, `long`, `long long`a jejich `unsigned` variant, jsou určené pomocí **d**, **i**, **o**, **u**, **x**, a **X**. Typy s plovoucí desetinnou čárkou, jako `float`, `double`, a `long double`, jsou určené pomocí **a**, **A**, **e**, **E**, **f**, **F**, **g**, a **G**. Ve výchozím nastavení pokud jsou upraveném *velikost* předpona, celé číslo argumenty jsou sloučen s `int` typ a argumenty s plovoucí desetinnou čárkou jsou sloučen s `double`. V 64bitových systémech `int` je hodnota 32-bit; proto budou celých čísel 64-bit zkráceny, když jsou formátovány pro výstup, pokud *velikost* předpona **udou** nebo **I64**se používá. Typy ukazatelů, které jsou určené **p** použít výchozí velikost ukazatele pro platformu.
+Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned` variant, jsou určené pomocí **d**, **i**, **o**, **u**, **x**, a **X**. Typy s plovoucí desetinnou čárkou, jako `float`, `double`, a `long double`, jsou určené pomocí **a**, **A**, **e**, **E**, **f**, **F**, **g**, a **G**. Ve výchozím nastavení pokud jsou upraveném *velikost* předpona, celé číslo argumenty jsou sloučen s `int` typ a argumenty s plovoucí desetinnou čárkou jsou sloučen s `double`. V 64bitových systémech `int` je hodnota 32-bit; proto budou celých čísel 64-bit zkráceny, když jsou formátovány pro výstup, pokud *velikost* předpona **udou** nebo **I64**se používá. Typy ukazatelů, které jsou určené **p** použít výchozí velikost ukazatele pro platformu.
 
 > [!NOTE]
-> **Konkrétní Microsoft**  
+> **Microsoft Specific**  
 > **Z** zadejte znak a chování **c**, **C**, **s**, a **S** typ znaků, kdy se používají se `printf` a `wprintf` funkce, jsou rozšíření Microsoft. Používá standardní ISO C **c** a **s** konzistentně pro úzké znaky a řetězce, a **C** a **S** pro široké znaky a řetězce, v všechny funkce formátování.
 
 ### <a name="type-field-characters"></a>Znaky pole typu
@@ -77,19 +77,19 @@ Celočíselné typy, jako `short`, `int`, `long`, `long long`a jejich `unsigned`
 |**u**|Integer|Decimal celé číslo bez znaménka.|
 |**x**|Integer|Hexadecimální celé číslo bez znaménka; používá "abcdef".|
 |**X**|Integer|Hexadecimální celé číslo bez znaménka; používá "ABCDEF".|
-|**e**|S plovoucí desetinnou čárkou|Podepsané hodnotu, která má tvar [-]*d.dddd*__e±__*dd*[*d*] kde *d* je jednu číslici desítkové soustavy, *dddd* je jeden nebo více desetinných míst v závislosti na Zadaná přesnost nebo šest ve výchozím nastavení, a *dd*[*d*] je dva nebo tři desetinných míst v závislosti na [výstupní formát](../c-runtime-library/set-output-format.md) a velikost exponent.|
-|**E**|S plovoucí desetinnou čárkou|Stejný jako **e** formátu vyjma toho, že **E** místo **e** zavádí exponent.|
-|**f**|S plovoucí desetinnou čárkou|Podepsané hodnotu, která má tvar [-]*dddd*__.__ *dddd*, kde *dddd* je jeden nebo více desetinných míst. Počet číslic od desetinné čárky závisí na velikosti číslo a počet číslic po desetinné čárky závisí na požadovanou přesnost nebo šest ve výchozím nastavení.|
-|**F**|S plovoucí desetinnou čárkou|Stejný jako **f** formátu s tím rozdílem, že je aktivované výstup infinity a nan.|
-|**g**|S plovoucí desetinnou čárkou|Podepsaný hodnoty jsou zobrazeny ve **f** nebo **e** formátu, podle toho, co je kompaktnější pro danou hodnotu a přesnosti. **e** formát se používá jenom v případě, že exponent hodnota je menší než -4 nebo větší než nebo rovna hodnotě *přesnost* argument. Koncové nuly se zkrátí a desetinné čárky se zobrazí pouze v případě, že je jeden nebo více číslic podle něj.|
-|**G**|S plovoucí desetinnou čárkou|Stejný jako **g** formátu, vyjma toho, že **E**, místo **e**, představuje exponent (kde je to vhodné).|
-|**a**|S plovoucí desetinnou čárkou|Podepsané šestnáctkové hodnoty s plovoucí desetinnou čárkou s dvojitou přesností, která má tvar [-] 0 x*h.hhhh*__p±__*dd*, kde *h.hhhh* jsou se hex číslice (použití malých písmen) mantisa, a *dd* pro exponent jsou jeden nebo více číslic. Přesnost určuje počet číslic za bodem.|
-|**A**|S plovoucí desetinnou čárkou|Podepsané šestnáctkové hodnoty s plovoucí desetinnou čárkou s dvojitou přesností, která má tvar [-] 0 X*h.hhhh*__P±__*dd*, kde *h.hhhh* jsou se hex číslice (použití velkých písmen) mantisa, a *dd* pro exponent jsou jeden nebo více číslic. Přesnost určuje počet číslic za bodem.|
-|**n**|Ukazatel na celé číslo|Počet znaků, které jsou úspěšně zapsána dosavadní do datového proudu nebo vyrovnávací paměti. Tato hodnota je uložena v celé číslo, jehož adresa je uvedena jako argument. Velikost odkazoval na celé číslo se dá nastavit podle specifikace předponu argument velikost. **n**  Specifikátor ve výchozím nastavení vypnutá, podrobnosti viz poznámka důležité zabezpečení.|
+|**e**|Floating-point|Podepsané hodnotu, která má tvar [-]*d.dddd*__e±__*dd*[*d*] kde *d* je jednu číslici desítkové soustavy, *dddd* je jeden nebo více desetinných míst v závislosti na Zadaná přesnost nebo šest ve výchozím nastavení, a *dd*[*d*] je dva nebo tři desetinných míst v závislosti na [výstupní formát](../c-runtime-library/set-output-format.md) a velikost exponent.|
+|**E**|Floating-point|Stejný jako **e** formátu vyjma toho, že **E** místo **e** zavádí exponent.|
+|**f**|Floating-point|Podepsané hodnotu, která má tvar [-]*dddd*__.__ *dddd*, kde *dddd* je jeden nebo více desetinných míst. Počet číslic od desetinné čárky závisí na velikosti číslo a počet číslic po desetinné čárky závisí na požadovanou přesnost nebo šest ve výchozím nastavení.|
+|**F**|Floating-point|Stejný jako **f** formátu s tím rozdílem, že je aktivované výstup infinity a nan.|
+|**g**|Floating-point|Podepsaný hodnoty jsou zobrazeny ve **f** nebo **e** formátu, podle toho, co je kompaktnější pro danou hodnotu a přesnosti. **e** formát se používá jenom v případě, že exponent hodnota je menší než -4 nebo větší než nebo rovna hodnotě *přesnost* argument. Koncové nuly se zkrátí a desetinné čárky se zobrazí pouze v případě, že je jeden nebo více číslic podle něj.|
+|**G**|Floating-point|Stejný jako **g** formátu, vyjma toho, že **E**, místo **e**, představuje exponent (kde je to vhodné).|
+|**a**|Floating-point|Podepsané šestnáctkové hodnoty s plovoucí desetinnou čárkou s dvojitou přesností, která má tvar [-] 0 x*h.hhhh*__p±__*dd*, kde *h.hhhh* jsou se hex číslice (použití malých písmen) mantisa, a *dd* pro exponent jsou jeden nebo více číslic. Přesnost určuje počet číslic za bodem.|
+|**A**|Floating-point|Podepsané šestnáctkové hodnoty s plovoucí desetinnou čárkou s dvojitou přesností, která má tvar [-] 0 X*h.hhhh*__P±__*dd*, kde *h.hhhh* jsou se hex číslice (použití velkých písmen) mantisa, a *dd* pro exponent jsou jeden nebo více číslic. Přesnost určuje počet číslic za bodem.|
+|**n**|Ukazatel na celé číslo|Počet znaků, které jsou úspěšně zapsána dosavadní do datového proudu nebo vyrovnávací paměti. Tato hodnota je uložena v celé číslo, jehož adresa je uvedena jako argument. Velikost odkazoval na celé číslo se dá nastavit podle specifikace předponu argument velikost. **n** specifikátor ve výchozím nastavení vypnutá, podrobnosti viz poznámka důležité zabezpečení.|
 |**p**|Typ ukazatele|Zobrazí argument jako adresu v šestnáctkové číslice.|
 |**s**|String|Při použití s `printf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce; při použití s `wprintf` funkce, určuje široká charakterová řetězec. Znaky se zobrazí až po prvním znaku hodnotu null, nebo dokud se *přesnost* nebude dosaženo hodnoty.|
 |**S**|String|Při použití s `printf` funkce, určuje široká charakterová řetězec; při použití s `wprintf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce. Znaky se zobrazí až po prvním znaku hodnotu null, nebo dokud se *přesnost* nebude dosaženo hodnoty.|
-|**Z**|`ANSI_STRING`nebo `UNICODE_STRING` struktura|Pokud adresu [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) nebo [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktura je předán jako argument, zobrazí řetězec obsažené ve vyrovnávací paměti, na kterou odkazuje `Buffer` pole struktury. Použití *velikost* modifikátor předpona **w** k určení `UNICODE_STRING` argument – například `%wZ`. `Length` Pole struktury musí být nastavené na délka řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délka vyrovnávací paměti v bajtech.<br /><br /> Obvykle **Z** – znak typu se používá pouze v ovladači ladění funkcí, které používají specifikaci převodu, jako `dbgPrint` a `kdPrint`.|
+|**Z**|`ANSI_STRING` nebo `UNICODE_STRING` struktura|Pokud adresu [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) nebo [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktura je předán jako argument, zobrazí řetězec obsažené ve vyrovnávací paměti, na kterou odkazuje `Buffer` pole struktury. Použití *velikost* modifikátor předpona **w** k určení `UNICODE_STRING` argument – například `%wZ`. `Length` Pole struktury musí být nastavené na délka řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délka vyrovnávací paměti v bajtech.<br /><br /> Obvykle **Z** – znak typu se používá pouze v ovladači ladění funkcí, které používají specifikaci převodu, jako `dbgPrint` a `kdPrint`.|
 
 Od verze sady Visual Studio 2015, pokud argument, který odpovídá specifikátor převody plovoucí desetinné čárky (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) je nekonečné neomezené, nebo NaN, formátovaný výstup vyhovuje C99 standard. Tato tabulka uvádí formátovaný výstup:
 
@@ -106,8 +106,8 @@ Před Visual Studio 2015 CRT použít jiný, nestandardní formát pro výstup n
 
 |Hodnota|Výstup|
 |-----------|------------|
-|+ infinity|`1.#INF`*náhodná čísla*|
-|-infinity|`-1.#INF`*náhodná čísla*|
+|+ infinity|`1.#INF` *náhodná čísla*|
+|-infinity|`-1.#INF` *náhodná čísla*|
 |Nekonečný (stejný jako quiet NaN)|*číslice* `.#IND` *náhodná čísla*|
 |NaN|*číslice* `.#NAN` *náhodná čísla*|
 
@@ -120,7 +120,7 @@ Některý z těchto může mít předponu znakem a může mít naformátován tr
 > V všechny exponenciální formáty minimální počet číslic exponent k zobrazení je dva týdny, pomocí tří pouze v případě potřeby. Pomocí [_set_output_format –](../c-runtime-library/set-output-format.md) funkce, můžete nastavit počet číslic, na které se zobrazí na tři pro zpětnou kompatibilitu s kódu napsaného pro Visual Studio 2013 a před.
 
 > [!IMPORTANT]
-> Protože `%n` formát je ze své podstaty nezabezpečené, je ve výchozím nastavení zakázaná. Pokud `%n` je došlo ve formátovacím řetězci, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Chcete-li povolit `%n` podpory naleznete v tématu [_set_printf_count_output –](../c-runtime-library/reference/set-printf-count-output.md).
+> Protože `%n` formát je ze své podstaty nezabezpečené, je ve výchozím nastavení zakázaná. Pokud `%n` je došlo ve formátovacím řetězci, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). To enable `%n` support, see [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md).
 
 <a name="flags"></a>
 
@@ -136,9 +136,9 @@ První volitelné pole ve specifikaci převod obsahuje *příznak direktivy*, nu
 |**+**|Symbol (+ nebo -) jako předpona výstupní hodnotu, pokud je typ se znaménkem.|Přihlášení se zobrazí pouze pro podepsané záporné hodnoty (-).|
 |**0**|Pokud *šířka* je předponu **0**, úvodní nuly se přidají, dokud nebude dosaženo minimální šířku. Pokud oba **0** a **-** se zobrazí, **0** je ignorována. Pokud **0** je zadán pro formátu celé číslo (**i**, **u**, **x**, **X**, **o**, **d**) a specifikace přesnosti je také k dispozici – například `%04.d`– **0** je ignorována. Pokud **0** pro je zadána **a** nebo **A** s plovoucí desetinnou čárkou formátu úvodní nuly se přidá jako předpona k mantisa, po `0x` nebo `0X` předponu.|Odsazení.|
 |**prázdné** ("")|Pomocí prázdné předpony výstupní hodnotu, pokud je podepsaná a kladná. Prázdné je ignorována, pokud obě prázdné a + příznaky zobrazí.|Zobrazí se žádné prázdné.|
-|**#**|Když se používá s **o**, **x**, nebo **X** formát,  **#**  příznak používá 0, 0 x, nebo 0 X, k předponě všechny nenulové hodnoty hodnota výstupu.|Zobrazí se žádné prázdné.|
+|**#**|Když se používá s **o**, **x**, nebo **X** formát, **#** příznak používá 0, 0 x, nebo 0 X, k předponě všechny nenulové hodnoty hodnota výstupu.|Zobrazí se žádné prázdné.|
 ||Pokud se používá s **e**, **E**, **f**, **F**, **a** nebo **A** formát, **#** příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky.|Desetinné čárky se zobrazí jenom v případě, že číslic podle něj.|
-||Pokud se používá s **g** nebo **G** formát,  **#**  příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky a brání zkrácení koncové nuly.<br /><br /> Ignorovat při použití s **c**, **d**, **i**, **u**, nebo **s**.|Desetinné čárky se zobrazí jenom v případě, že číslic podle něj. Koncové nuly se zkrátí.|
+||Pokud se používá s **g** nebo **G** formát, **#** příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky a brání zkrácení koncové nuly.<br /><br /> Ignorovat při použití s **c**, **d**, **i**, **u**, nebo **s**.|Desetinné čárky se zobrazí jenom v případě, že číslic podle něj. Koncové nuly se zkrátí.|
 
 <a name="width"></a>
 
@@ -174,7 +174,7 @@ Pokud je specifikace přesnosti hvězdičku (\*), `int` argument ze seznamu argu
 
 |Typ|Význam|Výchozí|
 |----------|-------------|-------------|
-|**a**, **A**|Přesnost určuje počet číslic za bodem.|Výchozí přesnost je 13. Pokud přesnost je 0, pokud je vytištěno žádné desetinné čárky  **#**  příznak se používá.|
+|**a**, **A**|Přesnost určuje počet číslic za bodem.|Výchozí přesnost je 13. Pokud přesnost je 0, pokud je vytištěno žádné desetinné čárky **#** příznak se používá.|
 |**c**, **C**|Přesnost nemá žádný vliv.|Znak je vytisknout.|
 |**d**, **i**, **o**, **u**, **x**, **X**|Přesnost určuje minimální počet číslic pro tisk. Pokud je počet číslic v argumentu menší než *přesnost*, je výstupní hodnotu odsazenou na levé straně nul. Hodnota není zkrácen, pokud počet číslic překročí *přesnost*.|Přesnost výchozí je 1.|
 |**e**, **E**|Přesnost určuje počet číslic pro tisk za desetinnou čárkou. Se zaokrouhlí tištěných poslední číslice.|Výchozí přesnost je 6. Pokud *přesnost* je 0 nebo tečku (.) se zobrazí bez čísla následující ho, je vytištěna bez desetinné čárky.|
@@ -216,7 +216,7 @@ V jazyce Visual C++ i když `long double` je typu distinct má stejné interníh
 **Hc** nebo **hC** specifikátor typu je totožná s **c** v `printf` funkce a s **C** v `wprintf` funkce. **Lc**, **lC**, **RC** nebo **RC** specifikátor typu je totožná s **C** v `printf` Funkce a s **c** v `wprintf` funkce. **Hs** nebo **hS** specifikátor typu je totožná s **s** v `printf` funkce a s **S** v `wprintf` funkce. **Ls**, **lS**, **ws** nebo **wS** specifikátor typu je totožná s **S** v `printf` Funkce a s **s** v `wprintf` funkce.
 
 > [!NOTE]
-> **Konkrétní Microsoft**  
+> **Microsoft Specific**  
 > **I** (velká písmena i), **I32**, **I64**, a **w** argument předpony modifikátor velikost jsou rozšíření Microsoft a nejsou kompatibilní s ISO C. **h** předpony při použití s daty typu `char` a **l** (malá písmena L) předpony při použití s daty typu `double` jsou rozšíření Microsoft.
 
 ## <a name="see-also"></a>Viz také
