@@ -1,12 +1,12 @@
 ---
-title: "Zastaralé (C++) | Microsoft Docs"
-ms.custom: 
+title: Zastaralé (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Toto téma se věnuje specifické pro společnost Microsoft nepoužívá declspec deklarace. Informace o C ++ 14 `[[deprecated]]` atribut a pokyny k kdy použít tento atribut oproti declspec specifické pro společnost Microsoft nebo – Direktiva pragma, najdete v části [standardní atributy C++](attributes2.md).
+Toto téma se věnuje specifické pro společnost Microsoft nepoužívá declspec deklarace. Informace o C ++ 14 `[[deprecated]]` atribut a pokyny k kdy použít tento atribut oproti declspec specifické pro společnost Microsoft nebo – Direktiva pragma, najdete v části [standardní atributy C++](attributes.md).
 
  S výjimky uvedené níže **zastaralé** deklarace nabízí stejné funkce jako [zastaralé](../preprocessor/deprecated-c-cpp.md) – Direktiva pragma:  
   
@@ -39,7 +39,7 @@ Toto téma se věnuje specifické pro společnost Microsoft nepoužívá declspe
   
 -   Makra může být označen pouze jako zastaralé s **zastaralé** – Direktiva pragma.  
   
- Pokud kompilátor narazí použití standard nebo identifikátor nepoužívané [ `[[deprecated]]` ](attributes2.md) atribut [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) upozornění je vyvolána výjimka.  
+ Pokud kompilátor narazí použití standard nebo identifikátor nepoužívané [ `[[deprecated]]` ](attributes.md) atribut [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) upozornění je vyvolána výjimka.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak označit funkce jako zastaralé a jak určit zprávu, která se zobrazí v době kompilace při použití zastaralé funkce.  
