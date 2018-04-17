@@ -1,35 +1,35 @@
 ---
-title: "C++ – referenční dokumentace atributů | Microsoft Docs"
-ms.custom: 
+title: C++ – referenční dokumentace atributů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1da85da1c7e56f16ec98dd78bb0af58c242a99d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-attributes-reference"></a>Referenční dokumentace k atributům C++
 Microsoft definuje sadu atributů, které zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele knihoven DLL pro vložení kódu nebo změňte kód v soubory generované objektů.  
   
- **Poznámka:** Pokud hledáte standardní atributy C++, přečtěte si téma [atributy](../cpp/attributes2.md).  
+ **Poznámka:** Pokud hledáte standardní atributy C++, přečtěte si téma [atributy](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Koncepty](../windows/attributed-programming-concepts.md)  

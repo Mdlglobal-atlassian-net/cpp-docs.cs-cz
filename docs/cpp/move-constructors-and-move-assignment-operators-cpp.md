@@ -1,32 +1,32 @@
 ---
-title: "Konstruktory a operátory přiřazení pro přesunutí (C++) | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Postupy: definování přesunutí konstruktory a operátory přiřazení pro přesunutí (C++) | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- move constructor
+- move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
-Toto téma popisuje, jak napsat *přesunout konstruktor* a operátor move přiřazení pro třídu C++. Konstruktor move umožňuje implementovat sémantiku přesunu, která může výrazně zlepšit výkon aplikací. Další informace o přesunutí sémantiku najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+Toto téma popisuje, jak napsat *přesunout konstruktor* a operátor move přiřazení pro třídu C++. Konstruktor move umožňuje prostředků, které vlastní objekt rvalue se přesune do lvalue bez kopírování. Další informace o přesunutí sémantiku najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Toto téma staví na následující třídy C++ `MemoryBlock`, který spravuje vyrovnávací paměti.  
   
@@ -135,7 +135,7 @@ private:
     ```  
   
 ### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Chcete-li vytvořit operátor přiřazení přesunutí pro třídu C++  
-  
+
 1.  Operátor přiřazení prázdný, který přebírá rvalue odkaz na typ třídy jako jeho parametr a vrátí odkaz na typ třídy definujte, jak je ukázáno v následujícím příkladu:  
   
     ```cpp  
@@ -230,7 +230,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak přesunout sémantiku může zlepšit výkon aplikací. V příkladu přidá dva elementy do objektu vector a vloží nového elementu mezi dvěma stávající elementy. Ve Visual C++ 2010 `vector` používá třída přesunout sémantiku k provedení operace vložení efektivně přesunutím elementy vektoru namísto kopírování je.  
+ Následující příklad ukazuje, jak přesunout sémantiku může zlepšit výkon aplikací. V příkladu přidá dva elementy do objektu vector a vloží nového elementu mezi dvěma stávající elementy. `vector` Používá třída přesunout sémantiku k provedení operace vložení efektivně přesunutím elementy vektoru namísto kopírování je.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Před Visual C++ 2010 tento příklad vytvoří následující výstup:  
+ Tento příklad před Visual Studio 2010, vytváří následující výstup:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

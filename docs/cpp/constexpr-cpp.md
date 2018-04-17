@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Jeden nebo více parametrů, které musí být typu literálu a sám sebe musí 
 
 ## <a name="return-value"></a>Návratová hodnota
 
+
  Constexpr proměnné nebo funkce musí vracet [typu literálu](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>constexpr proměnné
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>Funkce constexpr
+## <a name="constexpr_functions"></a> Funkce constexpr
 
 A **constexpr** funkce je taková, jejíž návratovou hodnotu můžete vypočítat v kompilaci při použití kódu vyžaduje.  Při jeho argumenty jsou **constexpr** hodnoty a využívání kódu vyžaduje návratovou hodnotu při kompilaci, např. k chybě při inicializaci **constexpr** proměnné nebo zadejte jiný typ šablony argument, je Vytvoří kompilaci konstanta. Při volání s jinou hodnotu než**constexpr** argumenty, nebo když její hodnota není požadovaná při kompilaci, vytvoří hodnotu v době běhu jako normální funkce.  (Toto chování duální odběratelské zápis **constexpr** a jiných-**constexpr** verze stejné funkce.)
 

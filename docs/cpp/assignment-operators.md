@@ -1,37 +1,35 @@
 ---
-title: "Operátory přiřazení | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Operátory přiřazení | Microsoft Docs
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Operátory přiřazení
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem. Existují dva typy operací přiřazení: jednoduché přiřazení, ve kterém je hodnota druhého operandu uložena v objektu určeném prvním operandem, a složené přiřazení, ve kterém se aritmetická operace, operace posunu nebo bitová operace provádí před uložením výsledku. Všechny operátory přiřazení v následující tabulce, s výjimkou operátoru =, jsou operátory složeného přiřazení.  
+ Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem. Existují tři typy operací přiřazení: 
+
+1. jednoduché přiřazení, ve kterém je hodnota Druhý operand uložené v objektu určeného první operand. 1. složené přiřazení, ve kterém se provádí aritmetické, shift nebo bitové operace před ukládání výsledek.
+1. Přesuňte přiřazení (pro typy třídy) v prostředky, ke kterým se přenáší bez kopírování.
+
+
+Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = operátory jsou složené operátory přiřazení.  
   
 ### <a name="assignment-operators"></a>Operátory přiřazení  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Posune hodnotu prvního operandu vpravo o počet bitů určený hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**&=**|Získá bitový AND prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |`^=`|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`&#124;=`|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
+|`&#124;=`|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
+|**&&=**| Operátor Move assignment (třída pouze pro typy). Je-li druhý operand rvalue, přesuňte její prostředky první operand (bez kopírování). V tématu [přesunutí konstruktory a operátory přiřazení](move-constructors-and-move-assignment-operators-cpp.md) Další informace.|
   
  **Klíčová slova operátorů**  
   

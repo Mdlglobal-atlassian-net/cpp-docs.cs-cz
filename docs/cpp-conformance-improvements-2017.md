@@ -14,17 +14,17 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ce15db75d4d08ef128e561fa9671b643946c71c3
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), a [15.7](#improvements_157)
 
 Podpora pro zobecněný constexpr a NSDMI pro agregace Microsoft Visual C++ compiler je u konce pro funkce přidané do C ++ 14 Standard. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. V tématu [přizpůsobení jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
-## <a name="c11"></a>C++11
+## <a name="c11"></a>C ++ 11
 ### <a name="expression-sfinae-support-in-more-libraries"></a>Podpora sfinae u výrazů výrazu v dalších knihoven
 
 Kompilátor dál vylepšit jeho podporu pro výraz sfinae u výrazů, což je vyžadováno pro odvození argumentu šablony a nahrazení, kde může výrazy decltype a constexpr se zobrazí jako parametry šablony. Další informace najdete v tématu [vylepšení výraz sfinae u výrazů v sadě Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3).
@@ -72,7 +72,7 @@ Nové atributy ticho upozornění, když se nepoužívá entity, nebo vytvořte 
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Použití oboru názvů atribut bez opakování
 
-Nové syntaxe Povolit jenom identifikátor jeden obor názvů v seznamu atributů. Další informace najdete v tématu [atributy v jazyce C++](cpp/attributes2.md).
+Nové syntaxe Povolit jenom identifikátor jeden obor názvů v seznamu atributů. Další informace najdete v tématu [atributy v jazyce C++](cpp/attributes.md).
 
 ### <a name="structured-bindings"></a>Strukturované vazby
 
@@ -132,7 +132,7 @@ V dřívějších verzích sady Visual Studio, kompilátor vždy Dal `constexpr`
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) nové znění `std::not_fn` poskytuje podporu šíření kategorie hodnota v případě vyvolání obálku.
 
-### <a name="sharedptrt-sharedptrtn"></a>shared_ptr\<T[]>, shared_ptr\<T[N]>
+### <a name="sharedptrt-sharedptrtn"></a>shared_ptr\<[] – T >, shared_ptr\<T [N] >
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) sloučení `shared_ptr` změny z knihovny Základy C ++ 17. [14]
 

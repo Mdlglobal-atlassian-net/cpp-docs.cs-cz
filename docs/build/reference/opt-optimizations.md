@@ -1,12 +1,12 @@
 ---
 title: -OPT (optimalizace) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (optimalizace)
 Řídí optimalizace, které program LINK provádí během sestavování.  
@@ -50,10 +50,10 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **REF** &#124; **NOREF**  
+ **REF** &AMP;#124; **NOREF**  
  **/OPT:REF** eliminuje funkce a data, která se nikdy odkazuje; **/OPT:NOREF** zajišťuje funkce a data, která se nikdy odkazuje.  
   
- Při zapnutí parametru /OFT:REF odebere program LINK neodkazované zabalené funkce a data. Objekt obsahuje zabalené funkce a data (COMDATs), pokud byl kompilován s použitím [/Gy](../../build/reference/gy-enable-function-level-linking.md) možnost. Tato optimalizace se označuje jako přechodné odstranění sekvence COMDAT. Ve výchozím nastavení **/OPT:REF** je povolena v sestavení bez ladění. Chcete-li přepsat toto výchozí nastavení a zachovat neregistrované COMDATs v programu, zadejte **/OPT:NOREF**. Můžete použít [/INCLUDE](../../build/reference/include-force-symbol-references.md) možnost přepsání odebrání konkrétní symbolu.  
+ Pokud je povoleno /OPT:REF, odebere odkaz neregistrované zabalené funkce a data. Objekt obsahuje zabalené funkce a data (COMDATs), pokud byl kompilován s použitím [/Gy](../../build/reference/gy-enable-function-level-linking.md) možnost. Tato optimalizace se označuje jako přechodné odstranění sekvence COMDAT. Ve výchozím nastavení **/OPT:REF** je povolena v sestavení bez ladění. Chcete-li přepsat toto výchozí nastavení a zachovat neregistrované COMDATs v programu, zadejte **/OPT:NOREF**. Můžete použít [/INCLUDE](../../build/reference/include-force-symbol-references.md) možnost přepsání odebrání konkrétní symbolu.  
   
  Při **/OPT:REF** je povolené, explicitně nebo ve výchozím nastavení jsou omezené **/OPT:ICF** je povolen, pouze složení stejné funkce. Chcete-li **/OPT:REF** ale ne **/OPT:ICF**, je nutné zadat buď **/OPT:REF, NOICF** nebo **/OPT:NOICF**.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  Určení **/OPT:ICF** není povolen **/OPT:REF** možnost.  
   
- **BRÁNOU FIREWALL [=** `iterations` **] &#124; NOICF**   
+ **BRÁNOU FIREWALL [=** `iterations` **] &AMP;#124; NOICF**   
  Použití **/OPT:ICF [=**`iterations`**]** k provedení identické sekvence COMDAT skládání. Redundantní sekvence COMDAT lze odebrat z výstupu linkeru. Volitelné `iterations` parametr určuje počet pokusů procházení symboly pro duplicitní položky. Výchozí počet iterací jsou dvě. Při dalších iteracích se mohou najít další duplicity, které se odhalí skládáním při předchozí iteraci.  
   
  Linkeru chová odlišně při **/OPT:REF** je zadán – a **bránou Firewall** ve výchozím nastavení je v platnosti – než kdy **/OPT:REF, bránou Firewall** explicitně nastaven. Formu **bránou Firewall** , je povolená s **/OPT:REF** samostatně není fold jen pro čtení dat – to zahrnuje .rdata, .pdata a .xdata. Proto jsou méně funkcí přeloženy, když vytváří bitové kopie pro [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] protože funkcí v tyto moduly jsou více závislé na jen pro čtení dat – například .pdata a .xdata. Chcete-li získat úplné **bránou Firewall** skládání chování, explicitně zadáte **/OPT:ICF**.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Protože **/OPT:ICF** může způsobit stejnou adresu pro přiřazení k různým funkcím nebo jen pro čtení datové členy (`const` proměnné zkompilovat pomocí **/Gy**), je možné přerušit programu, který závisí na jedinečné adresy pro funkce nebo jen pro čtení datových členů. Další informace najdete v tématu [/Gy (povolení propojení na úrovni funkcí)](../../build/reference/gy-enable-function-level-linking.md).  
   
- **LBR** &#124; **NOLBR**  
+ **LBR** &AMP;#124; **NOLBR**  
  **/OPT:LBR** a **/OPT:NOLBR** možnosti platí pouze pro binární soubory ARM. Protože některé větvicí instrukce procesoru ARM mají omezený rozsah, pokud linker zjistí skok na adresu mimo rozsah, nahradí cílovou adresu této větvicí instrukce adresou „ostrůvku“ kódu, jenž obsahuje větvicí instrukci, která míří na skutečné místo určení. Můžete použít **/OPT:LBR** k optimalizaci detekce dlouho větve pokyny a umístění zprostředkující kód ostrovy minimalizovat celkové velikosti kódu. **/OPT:NOLBR** dá pokyn linkeru ke generování kódu ostrovy dlouho větve pokyny, jak se vyskytují, bez optimalizace.  
   
  Ve výchozím nastavení **/OPT:LBR** je možnost nastavena, když přírůstkové propojování není povoleno. Pokud chcete nepřírůstkové odkaz, ale není optimalizace dlouho větve, zadejte **/OPT:NOLBR**. **/OPT:LBR** možnost zakáže přírůstkové propojování.  

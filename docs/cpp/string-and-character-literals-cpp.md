@@ -1,12 +1,12 @@
 ---
-title: "Řetězcové a znakové literály (C++) | Microsoft Docs"
-ms.custom: 
+title: Řetězcové a znakové literály (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězce a znak a poskytuje způsoby, jak express literálových hodnot každé z těchto typů. Ve zdrojovém kódu express obsah vaší znak a řetězec literály pomocí znakovou sadu. Univerzální názvy znaků a řídicí znaky umožňují express libovolného řetězce základní zdrojové znakové sadě. Nezpracovaná řetězcový literál umožňuje vyhnout řídicí znaky a slouží k express všechny typy textových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět navíc konstrukce nebo převod kroky.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- Textové literály může mít žádná předpona nebo `u8`, `L`, `u`, a `U` předpony k označení zúžit znak (jednobajtové nebo vícebajtové), ve formátu UTF-8, široké znak (UCS-2 nebo UTF-16), UTF-16 a kódování UTF-32 v uvedeném pořadí. Nezpracovaná řetězcový literál může mít `R`, `u8R`, `LR`, `uR` a `UR` předpon pro ekvivalenty nezpracovaná verze těchto kódování.  Pokud chcete vytvořit std::string dočasné nebo statické hodnoty, můžete použít textové literály nebo nezpracovaná textové literály s `s` příponu. Další informace najdete v části literály řetězce níže. Další informace o znak základní zdroje nastavit univerzální názvy znaků a pomocí znaky z rozšířené kódové stránky ve zdrojovém kódu, najdete v tématu [znakových sad](../cpp/character-sets2.md).  
+ Textové literály může mít žádná předpona nebo `u8`, `L`, `u`, a `U` předpony k označení zúžit znak (jednobajtové nebo vícebajtové), ve formátu UTF-8, široké znak (UCS-2 nebo UTF-16), UTF-16 a kódování UTF-32 v uvedeném pořadí. Nezpracovaná řetězcový literál může mít `R`, `u8R`, `LR`, `uR` a `UR` předpon pro ekvivalenty nezpracovaná verze těchto kódování.  Pokud chcete vytvořit std::string dočasné nebo statické hodnoty, můžete použít textové literály nebo nezpracovaná textové literály s `s` příponu. Další informace najdete v části literály řetězce níže. Další informace o znak základní zdroje nastavit univerzální názvy znaků a pomocí znaky z rozšířené kódové stránky ve zdrojovém kódu, najdete v tématu [znakových sad](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Znakové literály  
  A *znakový literál* se skládá z konstantní znak. Je zobrazena ve znaku v jednoduchých uvozovkách. Existují pět druhy znakové literály:  
@@ -118,10 +118,10 @@ int main()
   
 |Hodnota|Řídicí sekvence|Hodnota|Řídicí sekvence|  
 |-----------|---------------------|-----------|---------------------|  
-|newline|\n|backslash|\\\|  
+|newline|\n|zpětné lomítko|\\\|  
 |Vodorovné karty|\t|otazník|? nebo \\?|  
 |vertikální tabulátor|\v|jednoduché uvozovky|\\'|  
-|backspace|\b|dvojité uvozovky|\\"|  
+|BACKSPACE|\b|dvojité uvozovky|\\"|  
 |návrat na začátek řádku|\r|znak hodnoty null|\0|  
 |řídicí znak|\f|osmičkové|\ooo|  
 |Výstraha (zvonku)|\a|hexadecimální|\xhhh|  
@@ -148,7 +148,7 @@ int main() {
 }  
 ```  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Pokud chcete vytvořit hodnotu z znakem obyčejnou literálu (těch bez předpony), převede kompilátor znak nebo posloupnost znaků mezi jednoduchých uvozovek a být do 8bitové hodnoty v 32bitové celé číslo. Více znaků v literálové vyplní odpovídající bajtů potřeby z horní nejnižší. Chcete-li vytvořit `char` hodnota, kompilátor má nejnižší bajtů. Chcete-li vytvořit `wchar_t` nebo `char16_t` hodnota, kompilátor má nejnižší word. Kompilátor varovat, pokud jsou výše přiřazené bajtů nebo slovo všechny služby bits se zkrátí výsledek.  
   
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Univerzální názvy znaků nelze dekódovat z hodnoty v rozsahu bodu kódu náhradní D800 DFFF. Pro dvojice náhradní znakové sady Unicode, zadejte název universal znak pomocí `\UNNNNNNNN`, kde je NNNNNNNN bodem kódem znaku. Kompilátor generuje náhradní pár v případě potřeby.  
   
- V C ++ 03 jazyk pouze povolené podmnožinu znaků, který má být reprezentovaná jejich univerzální názvy znaků a povolené některé názvy universal znaků, které ve skutečnosti nepředstavovala platnou znaky Unicode. To byla opravena v C ++ 11 standardní. V C ++ 11 můžete použít řetězec a znakové literály a identifikátory univerzální názvy znaků.  Další informace o univerzální názvy znaků, najdete v části [znakových sad](../cpp/character-sets2.md). Další informace o Unicode najdete v tématu [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Další informace o náhradní dvojice najdete v tématu [náhradní dvojice a doplňkové znaky](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ V C ++ 03 jazyk pouze povolené podmnožinu znaků, který má být reprezentovaná jejich univerzální názvy znaků a povolené některé názvy universal znaků, které ve skutečnosti nepředstavovala platnou znaky Unicode. To byla opravena v C ++ 11 standardní. V C ++ 11 můžete použít řetězec a znakové literály a identifikátory univerzální názvy znaků.  Další informace o univerzální názvy znaků, najdete v části [znakových sad](../cpp/character-sets.md). Další informace o Unicode najdete v tématu [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Další informace o náhradní dvojice najdete v tématu [náhradní dvojice a doplňkové znaky](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Textové literály  
  Řetězcový literál představuje posloupnosti znaků, které společně tvoří řetězce ukončené hodnotou null. Znaky musí být uzavřena mezi znaky uvozovek. Existují následující typy textových literálů:  
@@ -321,7 +321,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ### <a name="modifying-string-literals"></a>Úprava textové literály  
  Protože textové literály (včetně není std:string literály) jsou konstanty, pokusu o změnu je – například str [2] = "A" – způsobí chybu kompilátoru.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  V jazyce Visual C++ můžete řetězcový literál k chybě při inicializaci ukazatel na jiný const `char` nebo `wchar_t`. Toto je povolena v C99 kód, ale je zastaralé v C ++ 98 a odebrat C ++ 11. Pokus upravit řetězec způsobí, že porušení přístupu, jako v následujícím příkladu:  
   
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Znakové sady](../cpp/character-sets2.md)   
+ [Znakové sady](../cpp/character-sets.md)   
  [Číselné literály, logické a literály typu ukazatele](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Uživateli definované literály](../cpp/user-defined-literals-cpp.md)

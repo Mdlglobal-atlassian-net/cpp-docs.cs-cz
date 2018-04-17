@@ -1,12 +1,12 @@
 ---
-title: "Regulární výrazy (C++) | Microsoft Docs"
-ms.custom: 
+title: Regulární výrazy (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 Standardní knihovna C++ podporuje více gramatika regulární výraz. Toto téma popisuje dostupné gramatika rozdíly při použití regulárních výrazů.  
@@ -93,7 +93,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
  V `ECMAScript`, element může být také jeden z následujících akcí:  
   
--   A *skupiny bez zachycení* ve tvaru "(: *dílčím výrazu* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači.  
+-   A *skupiny bez zachycení* ve tvaru "(?: *dílčím výrazu* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači.  
   
 -   Omezené *souboru formátu řídicí* formuláře "\f", "\n", "\r", "\t" nebo "\v". Tyto odpovídají znaku posunu strany, novému řádku, návratovému znaku, horizontálnímu, resp. vertikálnímu tabulátoru v cílové sekvenci.  
   
@@ -115,7 +115,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
  Příklady:  
   
--   "(:a)" odpovídá pořadí cíl "a", ale "(:a) \1" je neplatný, protože neexistuje žádná zachycení skupina 1.  
+-   „(?:a)“ odpovídá cílové sekvenci „a“, ale „(?:a) \1“ je neplatné, protože není k dispozici žádná skupina zachycení 1.  
   
 -   "(=a)" odpovídá pořadí cíl "a". Kladný kontrolní výraz odpovídá počáteční sekvenci „a“ v cílové sekvenci a závěrečné „a“ v regulárním výrazu odpovídá počáteční sekvenci „a“ v cílové sekvenci.  
   
@@ -162,15 +162,15 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
 -   „a+“ odpovídá cílové sekvenci „a“, cílové sekvenci „aa“ atd., ale nikoli cílové sekvenci „“.  
   
- V `ECMAScript`, všech formulářů počtu opakování může následovat znak ", který označuje *typu non-greedy opakování*.  
+ V `ECMAScript`, všech formulářů počtu opakování může následovat znak '?', který označuje *typu non-greedy opakování*.  
   
 ### <a name="concatenation"></a>Zřetězení  
  Regulární výraz elementů s nebo bez *počtu opakování*, může být zřetězen do formuláře delší regulární výrazy. Výsledný výraz odpovídá cílové sekvenci, která je zřetězením sekvencí odpovídajících jednotlivým prvkům. Například „a{2,3}b“ odpovídá cílové sekvenci „aab“ a cílové sekvenci „aaab“, ale nikoli cílové sekvenci „ab“ nebo cílové sekvenci „aaaab“.  
   
 ### <a name="alternation"></a>Alternace  
- Ve všech gramatika regulární výraz s výjimkou `basic` a `grep`, zřetězených regulárního výrazu může následovat znak "&#124; a jiné zřetězených regulární výraz. Tímto způsobem lze spojit libovolný počet zřetězených regulárních výrazů. Výsledný výraz odpovídá jakékoli cílové sekvenci, která odpovídá jednomu nebo více zřetězeným regulárním výrazům.  
+ Ve všech gramatika regulární výraz s výjimkou `basic` a `grep`, zřetězených regulárního výrazu může následovat znak '&#124;' a jiné zřetězených regulární výraz. Tímto způsobem lze spojit libovolný počet zřetězených regulárních výrazů. Výsledný výraz odpovídá jakékoli cílové sekvenci, která odpovídá jednomu nebo více zřetězeným regulárním výrazům.  
   
- Když více než jeden z zřetězených regulární výrazy odpovídá cílové sekvence `ECMAScript` vybere první zřetězených regulární výrazy, který odpovídá pořadí jako shody (*nejprve odpovídat*); dalších regulární výraz gramatika vybrat tu, která dosáhne *nejdelší shody*. Například "ab &#124; cd" odpovídá pořadí cíl "ab" a cíl pořadí "cd", ale nemá neshodují pořadí cíl "abd" nebo cílové sekvence "acd".  
+ Když více než jeden z zřetězených regulární výrazy odpovídá cílové sekvence `ECMAScript` vybere první zřetězených regulární výrazy, který odpovídá pořadí jako shody (*nejprve odpovídat*); dalších regulární výraz gramatika vybrat tu, která dosáhne *nejdelší shody*. Například "ab&#124;cd" odpovídá pořadí cíl "ab" a cíl pořadí "cd", ale neodpovídá pořadí cíl "abd" nebo cílové sekvence "acd".  
   
  V `grep` a `egrep`, znak nového řádku (\n) lze použít k oddělení změny.  
   
@@ -182,7 +182,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
 |Prvek|Základní|rozšířené|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
-|alternace pomocí ' &#124;.||+|+||+|+|  
+|alternace pomocí '&#124;.||+|+||+|+|  
 |alternace pomocí „\n“||||+|+||  
 |ukotvení|+|+|+|+|+|+|  
 |zpětný odkaz|+||+|+|||  
@@ -365,7 +365,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
  Assert hranic záporná word odpovídá, pokud aktuální pozici v cílový řetězec není ihned po *hranice slova*.  
   
 ### <a name="non-capture-group"></a>Skupina bez zachycení  
- Skupina bez zachycení označuje svůj obsah jako jednu jednotku v gramatice regulárního výrazu, ale neoznačuje popiskem cílový text. Například "(a)(:b)\*(c)" odpovídá cílové textu "abbc" a přidruží zachycení skupina 1 dalším ""a zachycení skupiny 2 s dalším "c".  
+ Skupina bez zachycení označuje svůj obsah jako jednu jednotku v gramatice regulárního výrazu, ale neoznačuje popiskem cílový text. Například "(a)(?:b)\*(c)" odpovídá cílové textu "abbc" a přidruží zachycení skupina 1 dalším ""a zachycení skupiny 2 s dalším "c".  
   
 ### <a name="non-greedy-repetition"></a>Opakování bez metody Greedy  
  Opakování bez metody Greedy spotřebovává nejkratší dílčí sekvenci cílové sekvence, která odpovídá vzoru. Opakování s metodou Greedy spotřebovává nejdelší sekvenci. Například "(a+) (\*b)" odpovídá pořadí cíl "aaab". Je-li použito opakování bez metody Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „a“ na začátku cílové sekvence a skupinu zachycení 2 k dílčí sekvenci „aab“ na konci cílové sekvence. Je-li použita shoda s metodou Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „aaa“ a skupinu zachycení 2 k dílčí sekvenci „b“.  
@@ -415,7 +415,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
 -   "(aa) (\*)" odpovídá pořadí cíl "aaaa" a přidruží zachycení skupina 1 s dalším "aa" na začátku cílové pořadí a zachycení skupiny 2 s dalším "aa" na konci pořadí cíl.  
   
--   "(=aa)(a) &#124;(a)" odpovídá pořadí cíl "a" a partnerů zachycení skupina 1 prázdnou sekvencí (protože se nezdařilo kladné assert) a zachycení skupiny 2 se dalším "a". Také odpovídá cílové sekvenci „aa“ a přiřadí skupinu zachycení 1 k dílčí sekvenci „aa“ a skupinu zachycení 2 k prázdné sekvenci.  
+-   "(=aa)(a)&#124;(a)" odpovídá pořadí cíl "a" a partnerů zachycení skupina 1 prázdnou sekvencí (protože se nezdařilo kladné assert) a zachycení skupiny 2 se dalším "a". Také odpovídá cílové sekvenci „aa“ a přiřadí skupinu zachycení 1 k dílčí sekvenci „aa“ a skupinu zachycení 2 k prázdné sekvenci.  
   
 ### <a name="unicode-escape-sequence"></a>Řídicí sekvence Unicode  
  Řídicí sekvence Unicode je zpětné lomítko následované písmenem „u“ a čtyřmi šestnáctkovými číslicemi (0-9a-fA-F). Odpovídá znaku v cílové sekvenci, který má hodnotu určenou pomocí čtyř číslic. Například „\u0041“ odpovídá cílové sekvenci „A“, pokud se používá kódování znaků ASCII.  
@@ -448,7 +448,7 @@ Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob ch
   
 -   Hledání regulárního výrazu "bcd" v cílové sekvenci "bcdbcd" je úspěšné a odpovídá prvním třem znakům.  
   
- Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém umístění cílové sekvence, můžete odpovídající vzor vybrat dvěma způsoby. *Nejprve odpovídat* zvolí dalším, která byla nalezena první, pokud je nalezena shoda s regulárním výrazem. *Nejdéle odpovídat* zvolí nejdelší dalším od těch, které odpovídají v tomto umístění. Pokud existuje více než jedna dílčí sekvence, která má maximální délku, nejdelší shoda zvolí tu, která byla nalezena jako první. Například když se použije první shodu, vyhledejte regulární výraz "b &#124; bc" v cílové pořadí "abcd" odpovídá dalším "b", protože levé období alternace odpovídá této dalším; první shodu proto, zkuste není pravé období alternace. Při použití nejdelší shody stejné vyhledávání odpovídá „bc“, protože „bc“ je delší než „b“.  
+ Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém umístění cílové sekvence, můžete odpovídající vzor vybrat dvěma způsoby. *Nejprve odpovídat* zvolí dalším, která byla nalezena první, pokud je nalezena shoda s regulárním výrazem. *Nejdéle odpovídat* zvolí nejdelší dalším od těch, které odpovídají v tomto umístění. Pokud existuje více než jedna dílčí sekvence, která má maximální délku, nejdelší shoda zvolí tu, která byla nalezena jako první. Například když se použije první shodu, vyhledejte regulární výraz "b&#124;bc" v cílové pořadí "abcd" odpovídá dalším "b", protože levé období alternace odpovídá této dalším; první shodu proto, zkuste není pravé období alternace. Při použití nejdelší shody stejné vyhledávání odpovídá „bc“, protože „bc“ je delší než „b“.  
   
  Částečná shoda bude úspěšná, pokud shoda dosáhne konce cílové sekvence bez selhání, i když nedosáhla konce regulárního výrazu. Proto by po úspěchu částečné shody mohlo připojení znaků k cílové sekvenci způsobit pozdější selhání částečné shody. Po neúspěchu částečné shody však připojení znaků k cílové sekvenci nemůže způsobit pozdější úspěch částečné shody. Například v případě částečné shody odpovídá „ab“ cílové sekvenci „a“, ale nikoli „ac“.  
   

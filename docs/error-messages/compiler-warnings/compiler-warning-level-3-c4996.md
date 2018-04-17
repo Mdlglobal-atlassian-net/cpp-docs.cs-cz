@@ -1,12 +1,12 @@
 ---
-title: "Kompilátoru (úroveň 3) upozornění C4996 | Microsoft Docs"
-ms.custom: 
+title: Kompilátoru (úroveň 3) upozornění C4996 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>C4996 kompilátoru upozornění (úroveň 3)
 
@@ -37,13 +37,13 @@ Toto jsou některé běžné C4996 zprávy generované běhové knihovny jazyka 
 
 - [Tato funkce nebo proměnná může nebezpečný. Zvažte použití *safe_version* místo. Chcete-li zakázat vyřazení, použijte \_CRT\_zabezpečeného\_ne\_upozornění.  V nápovědě online podrobnosti.](#unsafe-crt-library-functions)
 
-- [' – std::*Název_funkce*::\_Unchecked\_iterátory::\_Deprecate' volat na – std::*Název_funkce*s parametry, které může nebezpečné – volání spoléhá na volajícího, aby zkontrolujte správnost předané hodnoty. Tato upozornění zakážete pomocí parametru -D_SCL_SECURE_NO_WARNINGS. Najdete v dokumentaci o tom, jak používat Visual C++, iterátory zaškrtnutí.](#unsafe-standard-library-functions)
+- [' – std::*Název_funkce*::\_Unchecked\_iterátory::\_Deprecate' volat na – std::*Název_funkce*s parametry, které může nebezpečné - toto volání spoléhá na volající zkontrolujte správnost předané hodnoty. Tato upozornění zakážete pomocí parametru -D_SCL_SECURE_NO_WARNINGS. Najdete v dokumentaci o tom, jak používat Visual C++, iterátory zaškrtnutí.](#unsafe-standard-library-functions)
 
 - [Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití *new_item* místo. V nápovědě online podrobnosti.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>příčina
 
-C4996 nastane, když kompilátor narazí funkce nebo proměnná, která je označena jako [zastaralé](../../cpp/deprecated-cpp.md) pomocí `__declspec(deprecated)` modifikátor, nebo při pokusu o přístup k funkci, člen třídy nebo typedef, který má C ++ 14 [ \[ \[zastaralé\] \] ](../../cpp/attributes2.md) atribut. Můžete použít `__declspec(deprecated)` modifikátor nebo `[[deprecated]]` atribut sami knihovny nebo hlavičkových souborů k upozornění klientů o zastaralé funkce, proměnné, definice TypeDef nebo členy.
+C4996 nastane, když kompilátor narazí funkce nebo proměnná, která je označena jako [zastaralé](../../cpp/deprecated-cpp.md) pomocí `__declspec(deprecated)` modifikátor, nebo při pokusu o přístup k funkci, člen třídy nebo typedef, který má C ++ 14 [ \[ \[zastaralé\] \] ](../../cpp/attributes.md) atribut. Můžete použít `__declspec(deprecated)` modifikátor nebo `[[deprecated]]` atribut sami knihovny nebo hlavičkových souborů k upozornění klientů o zastaralé funkce, proměnné, definice TypeDef nebo členy.
 
 ## <a name="remarks"></a>Poznámky
 

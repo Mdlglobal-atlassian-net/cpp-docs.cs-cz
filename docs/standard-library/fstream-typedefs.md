@@ -1,10 +1,10 @@
 ---
-title: "&lt;fstream&gt; – definice TypeDef | Microsoft Docs"
-ms.custom: 
+title: '&lt;fstream&gt; – definice TypeDef | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - fstream/std::filebuf
@@ -16,13 +16,13 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-caps.latest.revision: 
+caps.latest.revision: 11
 manager: ghogen
-ms.openlocfilehash: 5e0c09cdef9a20d7614f26189f34a5302b46a3ff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 613a96cb4d6ca174c7cf2d1bcfcf024dacf75980
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; – definice TypeDef
 ||||  
@@ -41,7 +41,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 ### <a name="remarks"></a>Poznámky  
  Typ je synonymum pro třídu šablony [basic_filebuf](../standard-library/basic-filebuf-class.md), specializované pro elementy typu `char` s vlastnostmi výchozí znak.  
   
-##  <a name="fstream">fstream</a>  
+##  <a name="fstream"></a>  fstream  
  Typ `basic_fstream` specializované na `char` parametry šablony.  
   
 ```
@@ -61,7 +61,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro třídu šablony `basic_ifstream`, specializované pro elementy znakový typ s vlastnostmi výchozí znak. Příkladem je  
+ Typ je synonymum pro třídu šablony [basic_ifstream](../standard-library/basic-ifstream-class.md), specializované pro elementy znakový typ s vlastnostmi výchozí znak. Příkladem je  
   
  `using namespace std;`  
   
@@ -130,7 +130,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
  Typ je synonymum pro třídu šablony [basic_filebuf](../standard-library/basic-filebuf-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.  
   
 ## <a name="see-also"></a>Viz také  
- [\<fstream>](../standard-library/fstream.md)
+ [\<fstream >](../standard-library/fstream.md)
 
 
 

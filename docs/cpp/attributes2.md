@@ -1,19 +1,19 @@
 ---
 title: Atributy C++ Standard | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="attributes-in-c"></a>Atributy v jazyce C++
 
@@ -39,17 +39,17 @@ Atributy v C ++ 11, zajištění standardizovaného způsobu umožňuje anotaci 
 void Foo(int);
 ```
 
-Atributy představují standardizované alternativa k rozšíření specifické pro dodavatele, jako je například direktivy jazyka #pragma, __declspec() (Visual C++), nebo &#95; &#95; atribut &#95; &#95; (GNU). Ale bude stále potřebujete použít konstrukce specifické pro dodavatele pro většinu účelů. Standardní aktuálně určuje následující atributy, které by měl rozpoznat vyhovující kompilátoru:
+Atributy představují standardizované alternativa k rozšíření specifické pro dodavatele, jako je například direktivy jazyka #pragma, __declspec() (Visual C++), nebo &#95; &#95;atribut&#95; &#95; (GNU). Ale bude stále potřebujete použít konstrukce specifické pro dodavatele pro většinu účelů. Standardní aktuálně určuje následující atributy, které by měl rozpoznat vyhovující kompilátoru:
 
-- `[[noreturn]]`Určuje, že funkce nikdy vrátí; jinými slovy vždy vyvolá výjimku. Kompilátor můžete upravit jeho kompilace pravidla pro `[[noreturn]]` entity.
+- `[[noreturn]]` Určuje, že funkce nikdy vrátí; jinými slovy vždy vyvolá výjimku. Kompilátor můžete upravit jeho kompilace pravidla pro `[[noreturn]]` entity.
 
-- `[[carries_dependency]]`Určuje, že funkce rozšíří data závislostí řazení s ohledem na synchronizace vláken. Atribut je použít pro jeden nebo více parametrů, chcete-li určit, že argument předaný představuje závislost do tělo funkce. Atribut je použít pro funkci samostatně, chcete-li určit, že návratová hodnota představuje závislost mimo funkci. Kompilátor můžete použít tyto informace pro generování kódu efektivnější.
+- `[[carries_dependency]]` Určuje, že funkce rozšíří data závislostí řazení s ohledem na synchronizace vláken. Atribut je použít pro jeden nebo více parametrů, chcete-li určit, že argument předaný představuje závislost do tělo funkce. Atribut je použít pro funkci samostatně, chcete-li určit, že návratová hodnota představuje závislost mimo funkci. Kompilátor můžete použít tyto informace pro generování kódu efektivnější.
 
-- `[[deprecated]]`**Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor můžete použít ke generování informační zpráva, když se pokusí kód klienta pro volání funkce. Můžete použít k prohlášení o třídu, název typedef, proměnné, nestatické datový člen, funkce, obor názvů, výčet, enumerátor nebo specializace šablony.  
+- `[[deprecated]]` **Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor můžete použít ke generování informační zpráva, když se pokusí kód klienta pro volání funkce. Můžete použít k prohlášení o třídu, název typedef, proměnné, nestatické datový člen, funkce, obor názvů, výčet, enumerátor nebo specializace šablony.  
 
-- `[[fallthrough]]`**Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepínač](switch-statement-cpp.md) jako nápovědu pro příkazy Kompilátor (nebo každý, kdo čtení kódu), jehož chování fallthrough je. – Kompilátor Visual C++ aktuálně neupozorňuje na fallthrough chování, takže tento atribut má chování kompilátoru žádný vliv.
+- `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepínač](switch-statement-cpp.md) příkazy jako nápovědu pro kompilátor (nebo každý, kdo čtení kód) určený fallthrough chování. – Kompilátor Visual C++ aktuálně neupozorňuje na fallthrough chování, takže tento atribut má chování kompilátoru žádný vliv.
 
-- `[[nodiscard]]`**Visual Studio 2017 verze 15.3 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že není určen návratovou hodnotu funkce budou zahozeny. Vyvolá upozornění C4834, jak je uvedeno v následujícím příkladu:
+- `[[nodiscard]]` **Visual Studio 2017 verze 15.3 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že není určen návratovou hodnotu funkce budou zahozeny. Vyvolá upozornění C4834, jak je uvedeno v následujícím příkladu:
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ Atributy představují standardizované alternativa k rozšíření specifické 
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 verze 15.3 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že do proměnné, funkce, třídy, typedef, data nestatické členské, výčet nebo šablony specializace může použít záměrně není. Kompilátor neupozorňuje, když je označený entity `[[maybe_unused]]` nepoužívá. Entita, která je deklarovaná bez atribut lze deklarovat později s atributem a naopak. Entita je považován za označeny po jeho první deklaraci, která je označena se analyzují a zbytek překlad aktuální jednotky překladu.
+- `[[maybe_unused]]` **Visual Studio 2017 verze 15.3 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že proměnné, funkce, třídu, typedef, nestatické datový člen, výčet nebo specializace šablony záměrně nelze použít. Kompilátor neupozorňuje, když je označený entity `[[maybe_unused]]` nepoužívá. Entita, která je deklarovaná bez atribut lze deklarovat později s atributem a naopak. Entita je považován za označeny po jeho první deklaraci, která je označena se analyzují a zbytek překlad aktuální jednotky překladu.
 
 ## <a name="microsoft-specific-attributes"></a>Atributy specifické pro společnost Microsoft
 
-- `[[gsl::suppress(rules)]]`Tento atribut specifické pro společnost Microsoft se používá pro potlačení upozornění z programů, které vynucují [pokyny podpory knihovny (GSL)](https://github.com/Microsoft/GSL) pravidla v kódu. Představte si třeba tento fragment kódu:
+- `[[gsl::suppress(rules)]]` Tento atribut specifické pro společnost Microsoft se používá pro potlačení upozornění z programů, které vynucují [pokyny podpory knihovny (GSL)](https://github.com/Microsoft/GSL) pravidla v kódu. Představte si třeba tento fragment kódu:
 
     ```cpp
     void main()
