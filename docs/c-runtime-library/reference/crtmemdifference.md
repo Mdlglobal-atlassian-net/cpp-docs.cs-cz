@@ -1,12 +1,12 @@
 ---
-title: "_Crtmemdifference – | Microsoft Docs"
-ms.custom: 
+title: _Crtmemdifference – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtMemDifference
@@ -31,65 +31,70 @@ helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d0aa43167e9c4641851927bd56819e384fed4d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 27fb436c438daac7415ba3c0e7581611414c9c4a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
-Porovná dva paměti stavy a vrátí rozdíly mezi nimi (pouze ladicí verze).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _CrtMemDifference(   
-   _CrtMemState *stateDiff,  
-   const _CrtMemState *oldState,  
-   const _CrtMemState *newState   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stateDiff`  
- Ukazatel na `_CrtMemState` struktura, která se používá k ukládání rozdíly mezi stavy dvě paměti (nevrátil).  
-  
- `oldState`  
- Ukazatel předchozího stavu paměti (`_CrtMemState` struktura).  
-  
- `newState`  
- Ukazatel na novější stav paměti (`_CrtMemState` struktura).  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud stavy paměť se výrazně liší, `_CrtMemDifference` vrátí hodnotu TRUE. Funkce, jinak vrátí hodnotu FALSE.  
-  
-## <a name="remarks"></a>Poznámky  
- `_CrtMemDifference` Funkce porovná `oldState` a `newState` a ukládá jejich rozdíly v `stateDiff`, který pak lze aplikací ke zjišťování nevracení paměti a jiných problémů paměti. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání `_CrtMemDifference` jsou odebrány při předběžném zpracování.  
-  
- `newState` a `oldState` musí být platný ukazatel `_CrtMemState` struktuře, definované v Crtdbg.h, který má byla vyplněna objektem [_crtmemcheckpoint –](../../c-runtime-library/reference/crtmemcheckpoint.md) před voláním `_CrtMemDifference`. `stateDiff` musí být ukazatel na dříve přidělené instanci `_CrtMemState` struktura. Pokud `stateDiff`, `newState`, nebo `oldState` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaven na `EINVAL` , funkce vrátí hodnotu FALSE.  
-  
- `_CrtMemDifference` Porovná `_CrtMemState` pole hodnoty bloků v `oldState` na hodnoty v `newState` a ukládá výsledky v `stateDiff`. Počet přidělené bloku typů nebo mezi dvěma paměti stavy liší celkový počet přidělených bloků pro každý typ, jsou stavy označeny jako výrazně lišit. Rozdíl mezi největší velikost někdy přidělené najednou dva stavy a rozdíl mezi celkový přidělení pro dva stavy jsou také uloženy v `stateDiff`.  
-  
- Ve výchozím nastavení, interní bloky C Runtime (`_CRT_BLOCK`) nejsou zahrnuty v operacích stavu paměti. [_Crtsetdbgflag –](../../c-runtime-library/reference/crtsetdbgflag.md) funkce slouží k zapnutí `_CRTDBG_CHECK_CRT_DF` bit z `_crtDbgFlag` zjištění paměti a dalších operací stavu paměti zahrnout tyto bloky. Vydání bloky paměti (`_FREE_BLOCK`) nezpůsobí `_CrtMemDifference` vrátí hodnotu TRUE.  
-  
- Další informace o stavu funkce hald a `_CrtMemState` struktury najdete v tématu [funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
-|-------------|---------------------|---------------------|  
-|`_CrtMemDifference`|\<crtdbg.h>|\<errno.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
- **Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.  
-  
-## <a name="see-also"></a>Viz také  
- [Rutiny ladění](../../c-runtime-library/debug-routines.md)   
- [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)
+
+Porovná dva paměti stavy a vrátí rozdíly mezi nimi (pouze ladicí verze).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _CrtMemDifference(
+   _CrtMemState *stateDiff,
+   const _CrtMemState *oldState,
+   const _CrtMemState *newState
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*stateDiff*<br/>
+Ukazatel na **_crtmemstate –** struktura, která se používá k ukládání rozdíly mezi stavy dvě paměti (nevrátil).
+
+*oldState*<br/>
+Ukazatel předchozího stavu paměti (**_crtmemstate –** struktura).
+
+*Nový stav*<br/>
+Ukazatel na novější stav paměti (**_crtmemstate –** struktura).
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud stavy paměť se výrazně liší, **_crtmemdifference –** vrátí hodnotu TRUE. Funkce, jinak vrátí hodnotu FALSE.
+
+## <a name="remarks"></a>Poznámky
+
+**_Crtmemdifference –** funkce porovná *oldState* a *nový stav* a ukládá jejich rozdíly v *stateDiff*, což může potom se používá aplikace ke zjišťování nevracení paměti a jiných problémů paměti. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtmemdifference –** jsou odebrány při předběžném zpracování.
+
+*Nový stav* a *oldState* musí být platný ukazatel **_crtmemstate –** struktuře, definované v Crtdbg.h, který má byla vyplněna objektem [_crtmemcheckpoint –](crtmemcheckpoint.md)před voláním **_crtmemdifference –**. *stateDiff* musí být ukazatel na dříve přidělené instanci **_crtmemstate –** struktura. Pokud *stateDiff*, *nový stav*, nebo *oldState* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaven na **einval –** , funkce vrátí hodnotu FALSE.
+
+**_Crtmemdifference –** porovná **_crtmemstate –** pole hodnoty bloků v *oldState* na hodnoty v *nový stav* a ukládá výsledky v *stateDiff*. Počet přidělené bloku typů nebo mezi dvěma paměti stavy liší celkový počet přidělených bloků pro každý typ, jsou stavy označeny jako výrazně lišit. Rozdíl mezi největší velikost někdy přidělené najednou dva stavy a rozdíl mezi celkový přidělení pro dva stavy jsou také uloženy v *stateDiff*.
+
+Ve výchozím nastavení, interní bloky C Runtime (**_crt_block –**) nejsou zahrnuty v operacích stavu paměti. [_Crtsetdbgflag –](crtsetdbgflag.md) funkce slouží k zapnutí **_crtdbg_check_crt_df –** bit z **_crtdbgflag –** zahrnout tyto bloky v úniku zjišťování a další stav paměti operace. Vydání bloky paměti (**_free_block –**) nezpůsobí **_crtmemdifference –** vrátí hodnotu TRUE.
+
+Další informace o stavu funkce hald a **_crtmemstate –** struktury najdete v tématu [funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|-------------|---------------------|---------------------|
+|**_CrtMemDifference**|\<crtdbg.h>|\<errno.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+**Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
+
+## <a name="see-also"></a>Viz také
+
+[Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
+[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>

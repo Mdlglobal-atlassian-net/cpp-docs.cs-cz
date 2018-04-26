@@ -1,12 +1,12 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft Docs
-ms.custom: 
+title: _ismbcalnum –, _ismbcalnum_l –, _ismbcalpha –, _ismbcalpha_l –, _ismbcdigit –, _ismbcdigit_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbcalpha
@@ -55,89 +55,94 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02214850013233c616d2bd23970b8921f0ff5e86
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9ad7235ecfce6b9345764c6a8804f2981c0555cc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
-Zkontroluje, jestli je alfanumerické vícebajtových znaků, alpha nebo znak číslice.  
-  
+
+Zkontroluje, jestli je alfanumerické vícebajtových znaků, alpha nebo znak číslice.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbcalnum  
-(  
-   unsigned int c   
-);  
-int _ismbcalnum_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcalpha  
-(  
-   unsigned int c   
-);  
-int _ismbcalpha_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcdigit  
-(  
-   unsigned int c   
-);  
-int _ismbcdigit_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který má být testována.  
-  
- `locale`  
- Národní prostředí použít.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Všechny tyto rutiny vrátí nenulovou hodnotu, pokud znak splňuje podmínky testu nebo 0, pokud neexistuje. Pokud `c`< = 255 a existuje odpovídající `_ismbb` rutiny (například `_ismbcalnum` odpovídá `_ismbbalnum`), výsledkem je vrácenou hodnotu odpovídající `_ismbb` rutiny.  
-  
-## <a name="remarks"></a>Poznámky  
- Každý z těchto rutin testy dané vícebajtových znaků pro danou podmínku.  
-  
- Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají národní prostředí předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
-  
-|Rutina|Test stavu|Příklad kódu stránka 932|  
-|-------------|--------------------|---------------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|Alfanumerické|Vrátí nenulové hodnoty v případě a pouze v případě `c` je reprezentace jednobajtové k písmenu anglické ASCII: obsahuje příklady `_ismbcdigit` a `_ismbcalpha`.|  
-|`_ismbcalpha,_ismbcalpha_l`|Abecedy|Vrátí nenulové hodnoty v případě a pouze v případě `c` je reprezentace jednobajtové k písmenu anglické ASCII: 0x41 < =`c`< = 0x5A nebo 0x61 < =`c`< = 0x7A; nebo katakana písmeno: 0xA6 < =`c`< = 0xDF.|  
-|`_ismbcdigit,_ismbcdigit`|Číslice|Vrátí nenulové hodnoty v případě a pouze v případě `c` je reprezentace jednobajtové číslic ASCII: 0x30 < =`c`< = 0x39.|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|\<Mbstring.h >|  
-|`_ismbcalpha,_ismbcalpha_l`|\<Mbstring.h >|  
-|`_ismbcdigit,_ismbcdigit_l`|\<Mbstring.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Klasifikace znaků](../../c-runtime-library/character-classification.md)   
- [_ismbc Routines](../../c-runtime-library/ismbc-routines.md)   
- [je, isw – rutiny](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbcalnum
+(
+   unsigned int c
+);
+int _ismbcalnum_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcalpha
+(
+   unsigned int c
+);
+int _ismbcalpha_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcdigit
+(
+   unsigned int c
+);
+int _ismbcdigit_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který má být testována.
+
+*Národní prostředí*<br/>
+Národní prostředí použít.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Všechny tyto rutiny vrátí nenulovou hodnotu, pokud znak splňuje podmínky testu nebo 0, pokud neexistuje. Pokud *c*< = 255 a existuje odpovídající **_ismbb –** rutiny (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je vrácenou hodnotu odpovídající **_ismbb –** rutiny.
+
+## <a name="remarks"></a>Poznámky
+
+Každý z těchto rutin testy dané vícebajtových znaků pro danou podmínku.
+
+Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají národní prostředí předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+
+|Rutina|Test stavu|Příklad kódu stránka 932|
+|-------------|--------------------|---------------------------|
+|**_ismbcalnum –**, **_ismbcalnum_l –**|Alfanumerické|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové k písmenu anglické ASCII: obsahuje příklady **_ismbcdigit –** a **_ismbcalpha –**.|
+|**_ismbcalpha –**, **_ismbcalpha_l –**|Abecedy|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové k písmenu anglické ASCII: 0x41 < =*c*< = 0x5A nebo 0x61 < =*c*< = 0x7A; nebo katakana písmeno: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit –**, **_ismbcdigit –**|Číslice|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové číslic ASCII: 0x30 < =*c*< = 0x39.|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_ismbcalnum –**, **_ismbcalnum_l –**|\<Mbstring.h >|
+|**_ismbcalpha –**, **_ismbcalpha_l –**|\<Mbstring.h >|
+|**_ismbcdigit –**, **_ismbcdigit_l –**|\<Mbstring.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
+[_ismbc – rutiny](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>

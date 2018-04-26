@@ -1,13 +1,13 @@
 ---
 title: ccosh, ccoshf, ccoshl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ccosh
@@ -40,70 +40,75 @@ helpviewer_keywords:
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e15a8d6dbc065bb88b630e201093ba256521371
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b78287c719e7da2e0e5a314a2e5bca77f3bdc9ff
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
-Načte hyperbolický kosinus čísla komplexní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_Dcomplex ccosh(   
-   _Dcomplex z   
-);  
-_Fcomplex ccosh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex ccosh(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex ccoshf(   
-   _Fcomplex z   
-);  
-_Lcomplex ccoshl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `z`  
- Komplexní číslo, které představuje úhel v radiánech.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Hyperbolický kosinus `z`, v radiánech.  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `ccosh` , přijmout a vrátit `_Fcomplex` a `_Lcomplex` hodnoty. V programu C `ccosh` vždy provede a vrátí `_Dcomplex` hodnotu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Hlavička C|Hlavička C++|  
-|-------------|--------------|------------------|  
-|`ccosh`,               `ccoshf`, `ccoshl`|\<complex.h>|\<ccomplex>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Načte hyperbolický kosinus čísla komplexní.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_Dcomplex ccosh(
+   _Dcomplex z
+);
+_Fcomplex ccosh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex ccosh(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex ccoshf(
+   _Fcomplex z
+);
+_Lcomplex ccoshl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+Komplexní číslo, které představuje úhel v radiánech.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Hyperbolický kosinus *z*, v radiánech.
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ccosh** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **ccosh** vždy provede a vrátí **_Dcomplex** hodnotu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Hlavička C|Hlavička C++|
+|-------------|--------------|------------------|
+|**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

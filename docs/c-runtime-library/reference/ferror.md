@@ -1,12 +1,12 @@
 ---
-title: "ferror – | Microsoft Docs"
-ms.custom: 
+title: ferror – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ferror
@@ -32,57 +32,63 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db390539df0761aacdb11de5eace58b2c9c87f8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3baec1f3f8775b422aa9e0e5da3a6eb3e738e74b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ferror"></a>ferror
-Testy pro chybu na datový proud.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int ferror(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Ukazatel na `FILE` struktura.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud nedošlo k žádné chybě na `stream`, `ferror` vrátí hodnotu 0. Jinak vrátí nenulovou hodnotu. Pokud datový proud je `NULL`, `ferror` volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí hodnotu 0.  
-  
- V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
-  
-## <a name="remarks"></a>Poznámky  
- `ferror` Rutiny (implementována jako funkce i jako makra) testů pro čtení nebo zápis chyby v souboru přidružené `stream`. Pokud došlo k chybě, označení chyb pro datový proud zůstane nastavený, dokud datový proud je uzavřen nebo převinuta, nebo dokud `clearerr` je volána před ním.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Požadovaný hlavičkový soubor|  
-|--------------|---------------------|  
-|`ferror`|\<stdio.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [feof –](../../c-runtime-library/reference/feof.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)   
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof –](../../c-runtime-library/reference/feof.md)   
- [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Testy pro chybu na datový proud.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int ferror(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Datový proud*<br/>
+Ukazatel na **souboru** struktura.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud nedošlo k žádné chybě na *datového proudu*, **ferror –** vrátí hodnotu 0. Jinak vrátí nenulovou hodnotu. Pokud datový proud je **NULL**, **ferror –** volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí hodnotu 0.
+
+V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+
+## <a name="remarks"></a>Poznámky
+
+**Ferror –** rutiny (implementována jako funkce i jako makra) testů pro čtení nebo zápis chyby v souboru přidružené *datového proudu*. Pokud došlo k chybě, označení chyb pro datový proud zůstane nastavený, dokud datový proud je uzavřen nebo převinuta, nebo dokud **clearerr –** je volána před ním.
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Požadovaný hlavičkový soubor|
+|--------------|---------------------|
+|**ferror**|\<stdio.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [feof –](feof.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

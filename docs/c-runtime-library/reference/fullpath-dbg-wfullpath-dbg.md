@@ -1,12 +1,12 @@
 ---
-title: "_fullpath_dbg –, _wfullpath_dbg – | Microsoft Docs"
-ms.custom: 
+title: _fullpath_dbg –, _wfullpath_dbg – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfullpath_dbg
@@ -38,85 +38,90 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ba8f7d9784bd4f6361159feaef3d855ebee1e3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c94001008cbe10fa9dcc3ceaca8c5b48cea0c2d0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
-Verze [_fullpath –, _wfullpath –](../../c-runtime-library/reference/fullpath-wfullpath.md) , použijte ladicí verzi `malloc` přidělit paměť.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char *_fullpath_dbg(   
-   char *absPath,  
-   const char *relPath,  
-   size_t maxLength,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wfullpath_dbg(   
-   wchar_t *absPath,  
-   const wchar_t *relPath,  
-   size_t maxLength,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `absPath`  
- Ukazatel na vyrovnávací paměť obsahující název absolutní nebo úplné cesty, nebo `NULL`.  
-  
- `relPath`  
- Relativní cesta.  
-  
- `maxLength`  
- Maximální délka vyrovnávací paměť názvu absolutní cestu (`absPath`). Se délka v bajtech pro `_fullpath` , ale v široké znaky (`wchar_t`) pro `_wfullpath`.  
-  
- `blockType`  
- Požadovaný typ bloku paměti: `_CLIENT_BLOCK` nebo `_NORMAL_BLOCK`.  
-  
- `filename`  
- Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo `NULL`.  
-  
- `linenumber`  
- Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo `NULL`.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Jednotlivé funkce vrátí ukazatel do vyrovnávací paměti obsahující absolutní cesta (`absPath`). Pokud dojde k chybě (například pokud je předaná hodnota `relPath` zahrnuje písmeno jednotky, které není platná nebo nebyla nalezena, nebo pokud délka názvu vytvořený absolutní cestu (`absPath`) je větší než `maxLength`) funkce vrátí hodnotu `NULL`.  
-  
-## <a name="remarks"></a>Poznámky  
- `_fullpath_dbg` a `_wfullpath_dbg` funkce jsou stejné jako `_fullpath` a `_wfullpath` s tím rozdílem, že když `_DEBUG` je definované, tyto funkce používají verzi ladění `malloc`, `_malloc_dbg`, přidělit paměť, pokud je hodnota NULL předat jako první parametr. Informace o ladění funkce `_malloc_dbg`, najdete v části [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat `_CRTDBG_MAP_ALLOC` příznak. Když `_CRTDBG_MAP_ALLOC` je definován, volání `_fullpath` a `_wfullpath` jsou mapovány na `_fullpath_dbg` a `_wfullpath_dbg`, s `blockType` nastavena na `_NORMAL_BLOCK`. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako `_CLIENT_BLOCK`. Další informace najdete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tfullpath_dbg`|`_fullpath_dbg`|`_fullpath_dbg`|`_wfullpath_dbg`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Požadovaný hlavičkový soubor|  
-|--------------|---------------------|  
-|`_fullpath_dbg`|\<crtdbg.h>|  
-|`_wfullpath_dbg`|\<crtdbg.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [Ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+
+Verze [_fullpath –, _wfullpath –](fullpath-wfullpath.md) , použijte ladicí verzi **malloc** přidělit paměť.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+char *_fullpath_dbg(
+   char *absPath,
+   const char *relPath,
+   size_t maxLength,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wfullpath_dbg(
+   wchar_t *absPath,
+   const wchar_t *relPath,
+   size_t maxLength,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*absPath*<br/>
+Ukazatel na vyrovnávací paměť obsahující název absolutní nebo úplné cesty, nebo **NULL**.
+
+*relPath*<br/>
+Relativní cesta.
+
+*Hodnota maxLength*<br/>
+Maximální délka vyrovnávací paměť názvu absolutní cestu (*absPath*). Se délka v bajtech pro **_fullpath –** , ale v široké znaky (**wchar_t**) pro **_wfullpath –**.
+
+*blockType*<br/>
+Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
+
+*Název souboru*<br/>
+Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
+
+*lineNumber*<br/>
+Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo **NULL**.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Jednotlivé funkce vrátí ukazatel do vyrovnávací paměti obsahující absolutní cesta (*absPath*). Pokud dojde k chybě (například pokud je předaná hodnota *relPath* zahrnuje písmeno jednotky, které není platná nebo nebyla nalezena, nebo pokud délka názvu vytvořený absolutní cestu (*absPath*) je větší než *maxLength*) funkce vrátí hodnotu **NULL**.
+
+## <a name="remarks"></a>Poznámky
+
+**_Fullpath_dbg –** a **_wfullpath_dbg –** funkce jsou stejné jako **_fullpath –** a **_wfullpath –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění **malloc –**, **_malloc_dbg –**, přidělit paměť, pokud je jako první parametr předána hodnota NULL. Informace o ladění funkce **_malloc_dbg –**, najdete v části [_malloc_dbg –](malloc-dbg.md).
+
+Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat **_crtdbg_map_alloc –** příznak. Když **_crtdbg_map_alloc –** je definován, volání **_fullpath –** a **_wfullpath –** jsou mapovány na **_fullpath_dbg –** a **_wfullpath_dbg –**, s *blockType* nastavena na **_normal_block –**. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako **_client_block –**. Další informace najdete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tfullpath_dbg**|**_fullpath_dbg**|**_fullpath_dbg**|**_wfullpath_dbg**|
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Požadovaný hlavičkový soubor|
+|--------------|---------------------|
+|**_fullpath_dbg**|\<crtdbg.h>|
+|**_wfullpath_dbg**|\<crtdbg.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[Ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

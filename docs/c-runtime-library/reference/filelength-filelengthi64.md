@@ -1,12 +1,12 @@
 ---
-title: "_filelength –, _filelengthi64 – | Microsoft Docs"
-ms.custom: 
+title: _filelength –, _filelengthi64 – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _filelengthi64
@@ -38,56 +38,61 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf35d33958157a424bf78950c3b4cf23f33708e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2cba9688bbcd3b6e6a373a8929d933eaa3da5171
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
-Získá délku souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-long _filelength(   
-   int fd   
-);  
-__int64 _filelengthi64(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fd`  
- Cíl popisovače souborů.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Obě `_filelength` a `_filelengthi64` vrátí délku souboru v bajtech cílový soubor přidružené `fd`. Pokud `fd` je popisovač souboru je neplatný. Tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, obě funkce vrátí L-1 označuje chybu a nastavit `errno` k `EBADF`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Požadovaný hlavičkový soubor|  
-|--------------|---------------------|  
-|`_filelength`|\<io.h>|  
-|`_filelengthi64`|\<io.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [_chsize –](../../c-runtime-library/reference/chsize.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_stat, _wstat – funkce](../../c-runtime-library/reference/stat-functions.md)   
- [_stat, _wstat – funkce](../../c-runtime-library/reference/stat-functions.md)
+
+Získá délku souboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+long _filelength(
+   int fd
+);
+__int64 _filelengthi64(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*FD*<br/>
+Cíl popisovače souborů.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Obě **_filelength –** a **_filelengthi64 –** vrátí délku souboru v bajtech cílový soubor přidružené *fd*. Pokud *fd* je popisovač souboru je neplatný. Tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, obě funkce vrátí L-1 označuje chybu a nastavit **errno** k **ebadf –**.
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Požadovaný hlavičkový soubor|
+|--------------|---------------------|
+|**_filelength –**|\<IO.h >|
+|**_filelengthi64 –**|\<IO.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [_chsize –](chsize.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
+[_chsize](chsize.md)<br/>
+[_fileno](fileno.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_stat, _wstat – funkce](stat-functions.md)<br/>
+[_stat, _wstat – funkce](stat-functions.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Běhové rutiny podle kategorie | Microsoft Docs
+title: Univerzální C runtime rutiny podle kategorie | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,23 +20,25 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>Běhové rutiny podle kategorie
+# <a name="universal-c-runtime-routines-by-category"></a>Univerzální C runtime rutiny podle kategorie
 
-Tato část uvádí a popisuje rutiny běhové knihovny Microsoft podle kategorie. Pro usnadnění práce odkaz jsou uvedeny některé rutiny ve více než jednu kategorii. Rutiny vícebajtových znaků a široká charakterová rutiny jsou seskupené se svými protějšky znakovou, pokud existují.
+Tato část uvádí a popisuje Universal C runtime (UCRT) knihovny rutiny podle kategorie. Pro usnadnění práce odkaz jsou uvedeny některé rutiny ve více než jednu kategorii. Rutiny vícebajtových znaků a široká charakterová rutiny jsou seskupené se svými protějšky znakovou, pokud existují.
 
-## <a name="routine-categories"></a>Rutiny kategorií
+## <a name="ucrt-library-routine-categories"></a>UCRT knihovny běžných kategorií
+
+Hlavní kategorie rutiny knihovny UCRT jsou:
 
 |||
 |-|-|
 |[Přístup k argumentu](../c-runtime-library/argument-access.md)|[Zacházení s vyrovnávací pamětí](../c-runtime-library/buffer-manipulation.md)|
 |[Klasifikace bajtů](../c-runtime-library/byte-classification.md)|[Klasifikace znaků](../c-runtime-library/character-classification.md)|
-|[Komplexní matematické podpory](../c-runtime-library/complex-math-support.md)||
+|[Podpora komplexní matematiky](../c-runtime-library/complex-math-support.md)||
 |[Zarovnání dat](../c-runtime-library/data-alignment.md)|[Převod dat](../c-runtime-library/data-conversion.md)|
 |[Rutiny ladění](../c-runtime-library/debug-routines.md)|[Ovládací prvek adresáře](../c-runtime-library/directory-control.md)|
 |[Zpracování chyb](../c-runtime-library/error-handling-crt.md)|[Rutiny zpracování výjimek](../c-runtime-library/exception-handling-routines.md)|

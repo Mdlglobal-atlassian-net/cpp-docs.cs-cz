@@ -1,13 +1,13 @@
 ---
-title: "lgamma – lgammaf –, lgammal | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: lgamma – lgammaf –, lgammal | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - lgamma
@@ -40,77 +40,70 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7ef4a64252342484a1c6aa68722013f1e6bffdf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6e718e2d387f8bf8f9e092e7530807e06557ef7c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
-Určuje přirozený logaritmus absolutní hodnotu funkce gamma zadané hodnoty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double lgamma(  
-   double x  
-);  
-  
-float lgamma(  
-   float x  
-); //C++ only  
-  
-long double lgamma(  
-   long double x  
-); //C++ only  
-  
-float lgammaf(  
-   float x  
-);  
-  
-long double lgammal(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `x`  
- Hodnota k výpočtu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí přirozený logaritmus absolutní hodnotu gama funkce `x.`  
-  
-|Problém|Vrátí|  
-|-----------|------------|  
-|`x` = NaN.|NaN|  
-|`x` = ±0|+ INFINITY|  
-|`x`= záporné celé číslo|+ INFINITY|  
-|±INFINITY|+ INFINITY|  
-|Chyba pólu|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|  
-|Rozsah chybu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|  
-  
- Vznikly chyby uvedené v [_matherr –](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `lgamma` , přijmout a vrátit float a typy long double. V programu C `lgamma` vždy provede a vrátí hodnotu typu double.  
-  
- Pokud x je racionální číslo, vrátí funkce logaritmus faktoriál (`x`-1).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Hlavička C|Hlavička C++|  
-|--------------|--------------|------------------|  
-|`lgamma`,                `lgammaf`,  `lgammal`|\<math.h>|\<cmath>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [tgamma, tgammaf, tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)
+
+Určuje přirozený logaritmus absolutní hodnotu funkce gamma zadané hodnoty.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double lgamma( double x );
+float lgammaf( float x );
+long double lgammal( long double x );
+```
+
+```cpp
+float lgamma( float x ); //C++ only
+long double lgamma( long double x ); //C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Hodnota k výpočtu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V případě úspěchu vrátí přirozený logaritmus absolutní hodnotu gama funkce *x*.
+
+|Problém|Vrátí|
+|-----------|------------|
+|*x* = NaN.|NaN|
+|*x* = ±0|+ INFINITY|
+|*x*= záporné celé číslo|+ INFINITY|
+|±INFINITY|+ INFINITY|
+|Chyba pólu|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|
+|Rozsah chybu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
+
+Vznikly chyby uvedené v [_matherr –](matherr.md).
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **lgamma –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **lgamma –** vždy provede a vrátí **dvojité**.
+
+Pokud x je racionální číslo, vrátí tato funkce logaritmus faktoriál (x - 1).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Hlavička C|Hlavička C++|
+|--------------|--------------|------------------|
+|**lgamma –**, **lgammaf –**, **lgammal**|\<Math.h >|\<cmath – >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

@@ -1,13 +1,13 @@
 ---
 title: c16rtomb c32rtomb1 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - c16rtomb
@@ -36,68 +36,73 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2deca697a3dcb338ae9e9ea9e071c73979695ad8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e051fe8fdb0bfaad4d34ce50e91bf7611a47ee81
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb c32rtomb
-Převeďte UTF-16 nebo UTF-32 široká znaková vícebajtových znaků v aktuální národní prostředí.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-size_t c16rtomb(  
-    char *mbchar,   
-    char16_t wchar,  
-    mbstate_t *state  
-);  
-size_t c32rtomb(  
-    char *mbchar,   
-    char32_t wchar,  
-    mbstate_t *state  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [out] `mbchar`  
- Ukazatel na pole k uložení vícebajtových znaků převeden.  
-  
- [in] `wchar`  
- Široká znaková převést.  
-  
- [ve out] `state`  
- Ukazatel na `mbstate_t` objektu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Počet bajtů, které jsou uložené v objektu pole `mbchar`, včetně jakýchkoli pořadí shift. Pokud `wchar` není platný znak široké, hodnota (`size_t`)(-1) se vrátí, `errno` je nastaven na `EILSEQ`a hodnota `state` není zadáno.  
-  
-## <a name="remarks"></a>Poznámky  
- `c16rtomb` Slouží k převodu znakové sady UTF-16 znaků `wchar` ekvivalentní vícebajtových znaků úzké pořadí v aktuální národní prostředí. Pokud `mbchar` není ukazatele null, funkce úložiště převedený pořadí v poli objektu, na kterou odkazuje `mbchar`. Až `MB_CUR_MAX` bajtů, které jsou uložené v `mbchar`, a `state` nastavena na výsledný stav vícebajtové shift.    Pokud `wchar` je null široká znaková potřeba posloupnost obnovení je uložený stav počáteční shift, v případě potřeby následuje znak hodnoty null a `state` je nastavena do stavu počáteční převod. `c32rtomb` Je stejný jako funkce, ale převádí znak znakové sady UTF-32.  
-  
- Pokud `mbchar` je ukazatel s hodnotou null, chování je ekvivalentní volání funkce, která nahradí vnitřní vyrovnávací paměť pro `mbchar` a široké znak hodnoty null pro `wchar`.  
-  
- `state` Objekt převod stavu lze provést následující volání této funkce a dalších funkcí s možností restartování, které Udržovat stav shift výstup vícebajtové znaky. Výsledky nejsou definovány, když kombinovat používání funkcí s možností restartování a bez nabízet možnost restartování, nebo pokud volání `setlocale` se mezi volání funkcí s možností restartování.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`c16rtomb`, `c32rtomb`|C, C++: \<uchar.h >|  
-  
- Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Převod dat](../../c-runtime-library/data-conversion.md)   
- [Národní prostředí](../../c-runtime-library/locale.md)   
- [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtoc16, mbrtoc32](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)   
- [wcrtomb –](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)
+
+Převeďte UTF-16 nebo UTF-32 široká znaková vícebajtových znaků v aktuální národní prostředí.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+size_t c16rtomb(
+    char *mbchar,
+    char16_t wchar,
+    mbstate_t *state
+);
+size_t c32rtomb(
+    char *mbchar,
+    char32_t wchar,
+    mbstate_t *state
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*mbchar*<br/>
+Ukazatel na pole k uložení vícebajtových znaků převeden.
+
+*wchar*<br/>
+Široká znaková převést.
+
+*Stav*<br/>
+Ukazatel na **mbstate_t** objektu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Počet bajtů, které jsou uložené v objektu pole *mbchar*, včetně jakýchkoli pořadí shift. Pokud *wchar* není platný znak široké, hodnota (**size_t –**)(-1) se vrátí, **errno** je nastaven na **eilseq –**a hodnota *stavu* není zadáno.
+
+## <a name="remarks"></a>Poznámky
+
+**C16rtomb** slouží k převodu znakové sady UTF-16 znaků *wchar* ekvivalentní vícebajtových znaků úzké pořadí v aktuální národní prostředí. Pokud *mbchar* není ukazatele null, funkce úložiště převedený pořadí v poli objektu, na kterou odkazuje *mbchar*. Až **mb_cur_max –** bajtů, které jsou uložené v *mbchar*, a *stavu* nastavena na výsledný stav vícebajtové shift.    Pokud *wchar* je null široká znaková potřeba posloupnost obnovení je uložený stav počáteční shift, v případě potřeby následuje znak hodnoty null a *stavu* nastavena do stavu počáteční převod. **C32rtomb** je stejný jako funkce, ale převádí znak znakové sady UTF-32.
+
+Pokud *mbchar* je ukazatel s hodnotou null, chování je ekvivalentní volání funkce, která nahradí vnitřní vyrovnávací paměť pro *mbchar* a široké znak hodnoty null pro *wchar*.
+
+*Stavu* objekt převod stavu lze provést následující volání této funkce a dalších funkcí s možností restartování, které Udržovat stav shift výstup vícebajtové znaky. Výsledky nejsou definovány, když kombinovat používání funkcí s možností restartování a bez nabízet možnost restartování, nebo pokud volání **setlocale** se mezi volání funkcí s možností restartování.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h >|
+
+Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Převod dat](../../c-runtime-library/data-conversion.md)<br/>
+[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)<br/>
+[wcrtomb](wcrtomb.md)<br/>
+[wcrtomb_s](wcrtomb-s.md)<br/>

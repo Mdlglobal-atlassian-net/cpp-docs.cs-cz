@@ -1,12 +1,12 @@
 ---
-title: "ACOS, acosf –, acosl – | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: ACOS, acosf –, acosl – | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - acosf
@@ -40,119 +40,118 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cccaa6369f6d858a63991c561e0c0984eba1aba
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2acce9216d113616cfb053e6e9cd6fe74705e806
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
-Vypočítá Arkus.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double acos(   
-   double x   
-);  
-float acos(  
-   float x   
-);   // C++ only  
-long double acos(  
-   long double x  
-);   // C++ only  
-float acosf(  
-   float x   
-);  
-long double acosl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Hodnoty rozsahu -1 a 1, pro které chcete vypočítat Arkus kosinus (inverzní kosinus).  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `acos` Funkce vrátí Arkus kosinus `x` v rozsahu od 0 do pí radiánech.  
-  
- Ve výchozím nastavení pokud `x` je menší než -1 nebo větší než 1, `acos` vrátí neomezené.  
-  
-|Vstup|Výjimka SEH|Matherr – výjimka|  
-|-----------|-------------------|-----------------------|  
-|± ∞|`INVALID`|`_DOMAIN`|  
-|ROZMEZÍ QNAN, IND|žádná|`_DOMAIN`|  
-|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `acos` , přijmout a vrátit `float` a `long double` typy. V programu C `acos` vždy provede a vrátí `double`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|  
-|-------------|---------------------|----------------------|  
-|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
-  
-## <a name="example"></a>Příklad  
- Tento program vyzve k zadání hodnotu v rozsahu -1 do 1. Vytvoření vstupní hodnoty mimo tento rozsah `_DOMAIN` chybové zprávy. Pokud je zadána platná hodnota, program vytiskne Arkus sinus a Arkus kosinus tuto hodnotu.  
-  
-```  
-// crt_asincos.c  
-// arguments: 0  
-  
-#include <math.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main( int ac, char* av[] )  
-{  
-    double  x,  
-            y;  
-    errno_t err;   
-  
-    // argument checking  
-    if (ac != 2)  
-    {  
-        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",  
-                   av[0]);  
-        return 1;  
-    }  
-  
-    // Convert argument into a double value  
-    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)  
-    {  
-        fprintf_s( stderr, "Error converting argument into ",  
-                   "double value.\n");  
-        return 1;  
-    }  
-  
-    // Arcsine of X  
-    y = asin( x );  
-    printf_s( "Arcsine of %f = %f\n", x, y );  
-  
-    // Arccosine of X  
-    y = acos( x );  
-    printf_s( "Arccosine of %f = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-Arcsine of 0.000000 = 0.000000  
-Arccosine of 0.000000 = 1.570796  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [ASIN, asinf –, asinl –](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [Atan, atanf –, atanl –, atan2, atan2f –, atan2l –](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [Cos, cosf –, cosl –, cosh, coshf –, coshl –](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [Sin, sinf –, sinl –, sinh, sinhf –, sinhl –](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Vypočítá Arkus.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double acos( double x );
+float acosf( float x );
+long double acosl( long double x );
+```
+
+```cpp
+float acos( float x );   // C++ only
+long double acos( long double x );   // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Hodnoty rozsahu -1 a 1, pro které chcete vypočítat Arkus kosinus (inverzní kosinus).
+
+## <a name="return-value"></a>Návratová hodnota
+
+**Acos** funkce vrátí Arkus kosinus *x* v rozsahu od 0 do pí radiánech.
+
+Ve výchozím nastavení pokud *x* je menší než -1 nebo větší než 1, **acos** vrátí neomezené.
+
+|Vstup|Výjimka SEH|Matherr – výjimka|
+|-----------|-------------------|-----------------------|
+|± ∞|**NEPLATNÝ**|**_DOMAIN –**|
+|ROZMEZÍ QNAN, IND|žádná|**_DOMAIN –**|
+|&#124;x&#124;>1|**NEPLATNÝ**|**_DOMAIN –**|
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **acos** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **acos** vždy provede a vrátí **dvojité**.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|-------------|---------------------|----------------------|
+|**ACOS**, **acosf –**, **acosl –**|\<Math.h >|\<errno.h>|
+
+## <a name="example"></a>Příklad
+
+Tento program vyzve k zadání hodnotu v rozsahu -1 do 1. Vytvoření vstupní hodnoty mimo tento rozsah **_domain –** chybové zprávy. Pokud je zadána platná hodnota, program vytiskne Arkus sinus a Arkus kosinus tuto hodnotu.
+
+```C
+// crt_asincos.c
+// arguments: 0
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main( int ac, char* av[] )
+{
+    double  x,
+            y;
+    errno_t err;
+
+    // argument checking
+    if (ac != 2)
+    {
+        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",
+                   av[0]);
+        return 1;
+    }
+
+    // Convert argument into a double value
+    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)
+    {
+        fprintf_s( stderr, "Error converting argument into ",
+                   "double value.\n");
+        return 1;
+    }
+
+    // Arcsine of X
+    y = asin( x );
+    printf_s( "Arcsine of %f = %f\n", x, y );
+
+    // Arccosine of X
+    y = acos( x );
+    printf_s( "Arccosine of %f = %f\n", x, y );
+}
+```
+
+```Output
+Arcsine of 0.000000 = 0.000000
+Arccosine of 0.000000 = 1.570796
+```
+
+## <a name="see-also"></a>Viz také
+
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
+[Cos, cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[Sin, sinf –, sinl –](sin-sinf-sinl.md)<br/>
+[Tan, tanf –, tanl –](tan-tanf-tanl.md)<br/>

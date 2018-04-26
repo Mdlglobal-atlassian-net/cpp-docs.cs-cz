@@ -1,12 +1,12 @@
 ---
-title: "rand_s – | Microsoft Docs"
-ms.custom: 
+title: rand_s – | Microsoft Docs
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand_s
@@ -41,15 +41,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2438b2ced054667a658f8f31a37c9a62112debc6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a0e548a4225a457f846d334768d981c924d41953
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rands"></a>rand_s
 
-Generuje pseudonáhodná čísla. Toto je bezpečnější verze funkce [rand –](../../c-runtime-library/reference/rand.md), vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md). 
+Generuje pseudonáhodná čísla. Toto je bezpečnější verze funkce [rand –](rand.md), vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,31 +59,31 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>Parametry
 
-*randomValue*  
+*randomValue*<br/>
 Ukazatel na celočíselnou hodnotu pro uložení generované hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, jinak hodnota chybový kód. Pokud je vstupní ukazatel _randomValue_ je ukazatel s hodnotou null, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `EINVAL` a nastaví `errno` k `EINVAL`. Pokud funkce selže z jiného důvodu, *_randomValue_ je nastaven na hodnotu 0.
+Nula v případě úspěchu, jinak hodnota chybový kód. Pokud je vstupní ukazatel _randomValue_ je ukazatel s hodnotou null, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **einval –** a nastaví **errno** k **einval –**. Pokud funkce selže z jiného důvodu, *_randomValue_ je nastaven na hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-`rand_s` Funkce zápisů pseudonáhodných celé číslo v rozsahu od 0 do `UINT_MAX` pro vstupní ukazatele. `rand_s` Funkce operačního systému používá ke generování kryptograficky zabezpečené náhodných čísel. Nepoužívá počáteční hodnoty generované [srand –](../../c-runtime-library/reference/srand.md) funkce, ani neovlivní sekvenci náhodné číslo používané `rand`.
+**Rand_s –** funkce zápisů pseudonáhodných celé číslo v rozsahu od 0 do **uint_max –** do vstupní ukazatele. **Rand_s –** funkce operačního systému používá ke generování kryptograficky zabezpečené náhodných čísel. Nepoužívá počáteční hodnoty generované [srand –](srand.md) funkce, ani neovlivní sekvenci náhodné číslo používané [rand –](rand.md).
 
-`rand_s` Funkce vyžaduje, že konstanta `_CRT_RAND_S` definovat před příkaz zahrnutí pro funkci deklarovat, jako v následujícím příkladu:
+**Rand_s –** funkce vyžaduje, že konstanta **_CRT_RAND_S** definovat před příkaz zahrnutí pro funkci deklarovat, jako v následujícím příkladu:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-`rand_s` závisí na [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) rozhraní API, které je pouze k dispozici v systému Windows XP nebo novější.
+**rand_s –** závisí na [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) rozhraní API, které je pouze k dispozici v systému Windows XP nebo novější.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`rand_s`|\<stdlib.h>|
+|**rand_s**|\<stdlib.h>|
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -131,7 +131,7 @@ int main( void )
         {
             printf_s("The rand_s function failed!\n");
         }
-        printf_s( "  %g\n", (double) number / 
+        printf_s( "  %g\n", (double) number /
                           ((double) UINT_MAX + 1) * max );
     }
 }
@@ -165,6 +165,6 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>
+[srand](srand.md)<br/>

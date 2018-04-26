@@ -1,12 +1,9 @@
 ---
-title: "_lrotl –, _lrotr – | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _lrotl –, _lrotr – | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _lrotl
@@ -40,86 +37,77 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e6bec7340cf26f98d5843693a24ba6c7673c55d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 502007add5b0c7cb0d2e10cd64803c7c52f34afd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
-Otočí bitů doleva (`_lrotl`) nebo doprava (`_lrotr`).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      unsigned long _lrotl(  
-   unsigned long value,  
-   int shift   
-);  
-unsigned long _lrotr(  
-   unsigned long value,  
-   int shift   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *value*  
- Hodnota k otočen.  
-  
- `shift`  
- Počet bitů se posunou *hodnotu*.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Obě funkce vrátí otočený hodnotu. Neexistuje žádný návratový chyby.  
-  
-## <a name="remarks"></a>Poznámky  
- `_lrotl` a `_lrotr` funkce otočit *hodnotu* podle `shift` bits. `_lrotl` Otočí hodnota vlevo. `_lrotr` Otočí právo hodnotu. Obě funkce zabalení bits otáčet vypnout jeden atribut end objektu *hodnotu* na druhém konci.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_lrotl`|\<stdlib.h>|  
-|`_lrotr`|\<stdlib.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_lrot.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   unsigned long val = 0x0fac35791;  
-  
-   printf( "0x%8.8lx rotated left eight times is 0x%8.8lx\n",   
-            val, _lrotl( val, 8 ) );  
-   printf( "0x%8.8lx rotated right four times is 0x%8.8lx\n",   
-            val, _lrotr( val, 4 ) );  
-}  
-```  
-  
-## <a name="output"></a>Výstup  
-  
-```  
-0xfac35791 rotated left eight times is 0xc35791fa  
-0xfac35791 rotated right four times is 0x1fac3579  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [_rotl, _rotl64, _rotr, _rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)
+
+Otočí bitů doleva (**_lrotl –**) nebo doprava (**_lrotr –**).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+unsigned long _lrotl( unsigned long value, int shift );
+unsigned long _lrotr( unsigned long value, int shift );
+```
+
+### <a name="parameters"></a>Parametry
+
+*value*<br/>
+Hodnota k otočen.
+
+*Posunutí*<br/>
+Počet bitů se posunou *hodnotu*.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Obě funkce vrátí otočený hodnotu. Neexistuje žádný návratový chyby.
+
+## <a name="remarks"></a>Poznámky
+
+**_Lrotl –** a **_lrotr –** funkce otočit *hodnotu* podle *shift* bits. **_lrotl –** otočí hodnota zbývajících směrem k více významných bitů. **_lrotr –** otočí právo hodnota směrem k méně významných bitů. Obě funkce zabalení bits otáčet vypnout jeden atribut end objektu *hodnotu* na druhém konci.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_lrotl –**, **_lrotr –**|\<stdlib.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_lrot.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   unsigned long val = 0x0fac35791;
+
+   printf( "0x%8.8lx rotated left eight bits is 0x%8.8lx\n",
+            val, _lrotl( val, 8 ) );
+   printf( "0x%8.8lx rotated right four bits is 0x%8.8lx\n",
+            val, _lrotr( val, 4 ) );
+}
+```
+
+```Output
+0xfac35791 rotated left eight bits is 0xc35791fa
+0xfac35791 rotated right four bits is 0x1fac3579
+```
+
+## <a name="see-also"></a>Viz také
+
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[_rotl, _rotl64, _rotr, _rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

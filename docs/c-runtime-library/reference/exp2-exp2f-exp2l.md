@@ -1,13 +1,13 @@
 ---
-title: "exp2 – exp2f –, exp2l | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: exp2 – exp2f –, exp2l | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - exp2
@@ -40,75 +40,80 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf1eca51bbe7d5db5044e0c863f30a5af63f77d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 69b7deb8e6e43ded0a3545bc1b33961d977eeb1f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
-Vypočítá 2, vyvolá se zadanou hodnotou.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double exp2(  
-   double x  
-);  
-  
-float exp2(  
-   float x  
-);  // C++ only  
-  
-long double exp2(  
-   long double x  
-); // C++ only  
-  
-float exp2f(  
-   float x  
-);  
-  
-long double exp2l(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `x`  
- Hodnota exponent.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí exponent základu 2 `x`, který je 2<sup>x</sup>. Jinak vrátí jednu z následujících hodnot:  
-  
-|Problém|Vrátí|  
-|-----------|------------|  
-|`x` = ±0|1|  
-|`x` = – INFINITY|+0|  
-|`x` = + INFINITY|+ INFINITY|  
-|`x` = NaN.|NaN|  
-|Rozsah chybu přetečení|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|  
-|Podtečení rozsah chyby|Správný výsledek po zaokrouhlení|  
-  
- Vznikly chyby uvedené v [_matherr –](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `exp2` , přijmout a vrátit **float** a **long double** typy. V programu C `exp2` vždy provede a vrátí **dvojité**.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Hlavička C|Hlavička C++|  
-|-------------|--------------|------------------|  
-|`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Exp, expf –, expl](../../c-runtime-library/reference/exp-expf.md)   
- [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)
+
+Vypočítá 2, vyvolá se zadanou hodnotou.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double exp2(
+   double x
+);
+
+float exp2(
+   float x
+);  // C++ only
+
+long double exp2(
+   long double x
+); // C++ only
+
+float exp2f(
+   float x
+);
+
+long double exp2l(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Hodnota exponent.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V případě úspěchu vrátí exponent základu 2 *x*, který je 2<sup>x</sup>. Jinak vrátí jednu z následujících hodnot:
+
+|Problém|Vrátí|
+|-----------|------------|
+|*x* = ±0|1|
+|*x* = - INFINITY|+0|
+|*x* = + INFINITY|+ INFINITY|
+|*x* = NaN.|NaN|
+|Rozsah chybu přetečení|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|
+|Podtečení rozsah chyby|Správný výsledek po zaokrouhlení|
+
+Vznikly chyby uvedené v [_matherr –](matherr.md).
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **exp2 –** , přijmout a vrátit **float** a **long double** typy. V programu C **exp2 –** vždy provede a vrátí **dvojité**.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Hlavička C|Hlavička C++|
+|-------------|--------------|------------------|
+|**Exp**, **expf –**, **expl**|\<Math.h >|\<cmath – >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[exp, expf, expl](exp-expf.md)<br/>
+[log2, log2f, log2l](log2-log2f-log2l.md)<br/>

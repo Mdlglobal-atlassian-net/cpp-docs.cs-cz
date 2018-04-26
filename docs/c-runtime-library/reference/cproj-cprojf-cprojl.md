@@ -1,13 +1,13 @@
 ---
 title: cproj, cprojf, cprojl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cproj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6afc69e136f6b84b5c6c60681e7670584e32f2d8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cb631eb7f5ce18b8ca824fc8a15e9dd5d6b584f1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
-Načte projekce komplexního čísla v oblasti jsou při výpočtu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_Dcomplex cproj(   
-   _Dcomplex z   
-);  
-_Fcomplex cproj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex cproj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex cprojf(   
-   _Fcomplex z   
-);  
-_Lcomplex cprojl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `z`  
- Komplexní čísla.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Projekci `z` v oblasti jsou při výpočtu.  
-  
-## <a name="remarks"></a>Poznámky  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `cproj` , přijmout a vrátit `_Fcomplex` a `_Lcomplex` hodnoty. V programu C `cproj` vždy provede a vrátí `_Dcomplex` hodnotu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Hlavička C|Hlavička C++|  
-|-------------|--------------|------------------|  
-|`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Načte projekce komplexního čísla v oblasti jsou při výpočtu.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_Dcomplex cproj(
+   _Dcomplex z
+);
+_Fcomplex cproj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex cproj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex cprojf(
+   _Fcomplex z
+);
+_Lcomplex cprojl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+Komplexní čísla.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Projekci *z* v oblasti jsou při výpočtu.
+
+## <a name="remarks"></a>Poznámky
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cproj** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **cproj** vždy provede a vrátí **_Dcomplex** hodnotu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Hlavička C|Hlavička C++|
+|-------------|--------------|------------------|
+|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[Norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

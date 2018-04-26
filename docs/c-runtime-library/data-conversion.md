@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12574f9a8a2da2072d1196cbd769ac87cf31c2f7
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: f06153b4c4f037172e96e3ce1222311a82c71772
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="data-conversion"></a>Převod dat
 
@@ -33,17 +33,17 @@ Tyto rutiny převodu dat z jednoho formátu do druhého. Obecně tyto rutiny spo
 |Rutina|Použití|
 |-------------|---------|
 |[Abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Najít absolutní hodnota celé číslo|
-|[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převést řetězec na **float**|
+|[atof –, _atof_l –](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převést řetězec na **float**|
 |[atoi, _atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Převést řetězec na **int**|
 |[_atoi64, _atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Převést řetězec na **__int64** nebo **dlouho dlouho**|
-|[atol, _atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Převést řetězec na **dlouho**|
-|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Převést UTF-16 nebo UTF-32 znaků na ekvivalentní vícebajtových znaků|
+|[Atol –, _atol_l –](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Převést řetězec na **dlouho**|
+|[c16rtomb c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Převést UTF-16 nebo UTF-32 znaků na ekvivalentní vícebajtových znaků|
 |[_ecvt](../c-runtime-library/reference/ecvt.md), [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Převést **dvojité** řetězec o zadané délce|
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Převést **dvojité** na řetězec s zadaný počet číslic za desetinnou bodu|
 |[_gcvt](../c-runtime-library/reference/gcvt.md), [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Převést **dvojité** čísla na řetězec; řetězec uložit ve vyrovnávací paměti|
 |[_itoa, _ltoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, ultow, _i64tow, _ui64tow](../c-runtime-library/reference/itoa-itow.md), [_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s](../c-runtime-library/reference/itoa-s-itow-s.md)|Převést typy celých čísel na řetězec|
-|[labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Najít absolutní hodnotu **dlouho** celé číslo|
-|[llabs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Najít absolutní hodnotu **dlouho dlouho** celé číslo|
+|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Najít absolutní hodnotu **dlouho** celé číslo|
+|[llabs –](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Najít absolutní hodnotu **dlouho dlouho** celé číslo|
 |[_mbbtombc, _mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)|Převod vícebajtových znaků 1bajtový na odpovídající 2bajtová vícebajtových znaků|
 |[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)|Převést Japonsko oborový Standard (JIS) znak znak Japonsko Microsoft (JMS)|
 |[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)|Převést JMS znaků JIS znak|
@@ -51,18 +51,18 @@ Tyto rutiny převodu dat z jednoho formátu do druhého. Obecně tyto rutiny spo
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|Převod vícebajtových znaků katakana 1bajtový kódu|
 |[_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)|Převod vícebajtových znaků 2bajtová na odpovídající 1bajtový vícebajtových znaků|
 |[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Převod vícebajtových znaků na ekvivalentní UTF-16 nebo UTF-32 znaků|
-|[mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Převést pořadí více-bajtové znaky na odpovídající pořadí široké znaky|
+|[mbstowcs –, _mbstowcs_l –](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s –, _mbstowcs_s_l –](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Převést pořadí více-bajtové znaky na odpovídající pořadí široké znaky|
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Převést na odpovídající široká znaková vícebajtových znaků|
 |[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Převést řetězec na **double**|
 |[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Převést řetězec na **dlouho** celé číslo|
 |[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|Převést řetězec na **nepodepsané dlouho** celé číslo|
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Transformace řetězců do řazená formulář založený na informace specifické pro národní prostředí|
 |[toascii, __toascii](../c-runtime-library/reference/toascii-toascii.md)|Převod znaků ASCII kódu||
-|[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md), [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testování znaků a převeden na malá písmena, pokud je aktuálně velká písmena|
+|[ToLower, _tolower –, towlower –, _tolower_l –, _towlower_l –](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md), [_mbctolower –, _mbctolower_l –, _mbctoupper –, _mbctoupper_l –](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testování znaků a převeden na malá písmena, pokud je aktuálně velká písmena|
 |[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|Převést znak, který má bezpodmínečně malá písmena|[System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)|
 |[ToUpper, _toupper –, towupper –, _toupper_l –, _towupper_l –](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md), [_mbctolower –, _mbctolower_l –, _mbctoupper –, _mbctoupper_l –](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testování znaků a převeden na velká písmena, pokud je aktuálně malá písmena|
 |[toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|Převést znak na velká písmena bezpodmínečně|
-|[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Převést na odpovídající pořadí více-bajtové znaky pořadí široké znaky|
+|[wcstombs –, _wcstombs_l –](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s –, _wcstombs_s_l –](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Převést na odpovídající pořadí více-bajtové znaky pořadí široké znaky|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Převést široká znaková na odpovídající vícebajtových znaků|
 |[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převést řetězec široká charakterová **double**|
 |[_wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Převést řetězec široká charakterová **int**|
@@ -71,4 +71,4 @@ Tyto rutiny převodu dat z jednoho formátu do druhého. Obecně tyto rutiny spo
 
 ## <a name="see-also"></a>Viz také
 
-[Běhové rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Univerzální C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

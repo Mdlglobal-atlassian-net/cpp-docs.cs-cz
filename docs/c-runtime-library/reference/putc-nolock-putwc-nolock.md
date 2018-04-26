@@ -1,12 +1,12 @@
 ---
-title: "_putc_nolock –, _putwc_nolock – | Microsoft Docs"
-ms.custom: 
+title: _putc_nolock –, _putwc_nolock – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putc_nolock
@@ -43,100 +43,105 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348141f4d096e22efc80ada84c31a7e10b96287a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c52dcb390fac781018782f727fbc360d949770c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
-Zapíše znak na datový proud, bez blokování vlákno.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _putc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _putwc_nolock(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který má být zapsána.  
-  
- `stream`  
- Ukazatel **souboru** struktura.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V tématu **putc –, putwc –**.  
-  
-## <a name="remarks"></a>Poznámky  
- `_putc_nolock` a `_putwc_nolock` jsou shodné s verzí bez **jazyka _nolock** přípona s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
-  
- `_putwc_nolock` je verze široká charakterová `_putc_nolock`; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `_putc_nolock` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_putc_nolock`|\<stdio.h>|  
-|`_putwc_nolock`|\<stdio.h > nebo \<wchar.h >|  
-  
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_putc_nolock.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-   /* Make standard out the stream and write to it. */  
-   stream = stdout;  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putc_nolock( *p, stream );  
-}  
-```  
-  
-## <a name="output"></a>Výstup  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [fputc –, fputwc –](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Zapíše znak na datový proud, bez blokování vlákno.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _putc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _putwc_nolock(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který má být zapsána.
+
+*Datový proud*<br/>
+Ukazatel **souboru** struktura.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V tématu **putc –, putwc –**.
+
+## <a name="remarks"></a>Poznámky
+
+**_putc_nolock –** a **_putwc_nolock –** jsou shodné s verzí bez **jazyka _nolock** přípona s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+
+**_putwc_nolock –** je verze široká charakterová **_putc_nolock –**; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **_putc_nolock –** nepodporuje aktuálně výstup do proudu kódování UNICODE.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttc_nolock –**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_putc_nolock**|\<stdio.h>|
+|**_putwc_nolock**|\<stdio.h > nebo \<wchar.h >|
+
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_putc_nolock.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+   /* Make standard out the stream and write to it. */
+   stream = stdout;
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putc_nolock( *p, stream );
+}
+```
+
+### <a name="output"></a>Výstup
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Viz také
+
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

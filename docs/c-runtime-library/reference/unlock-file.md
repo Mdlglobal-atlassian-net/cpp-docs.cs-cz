@@ -1,12 +1,12 @@
 ---
-title: "_unlock_file – | Microsoft Docs"
-ms.custom: 
+title: _unlock_file – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-Odemkne soubor, což jiných procesů pro přístup k souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `file`  
- Popisovač souboru.  
-  
-## <a name="remarks"></a>Poznámky  
- `_unlock_file` Funkce odemkne soubor určený touto `file`. Odemknutí souboru umožňuje přístup k souboru s jinými procesy. Tuto funkci nelze volat, pokud `_lock_file` volala dřív na `file` ukazatel. Volání metody `_unlock_file` na soubor, který není uzamčený může vést k zablokování. Příklad, naleznete v části [_lock_file –](../../c-runtime-library/reference/lock-file.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+Odemkne soubor, což jiných procesů pro přístup k souboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*soubor* popisovač souboru.
+
+## <a name="remarks"></a>Poznámky
+
+**_Unlock_file –** funkce odemkne soubor určený touto *soubor*. Odemknutí souboru umožňuje přístup k souboru s jinými procesy. Tuto funkci nelze volat, pokud **_lock_file –** volala dřív na *souboru* ukazatel. Volání metody **_unlock_file –** na soubor, který není uzamčený může vést k zablokování. Příklad, naleznete v části [_lock_file –](lock-file.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

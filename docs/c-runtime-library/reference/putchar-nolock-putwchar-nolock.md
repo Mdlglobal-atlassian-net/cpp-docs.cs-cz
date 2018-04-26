@@ -1,12 +1,12 @@
 ---
-title: "_putchar_nolock –, _putwchar_nolock – | Microsoft Docs"
-ms.custom: 
+title: _putchar_nolock –, _putwchar_nolock – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putchar_nolock
@@ -41,93 +41,98 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0442c17464fc83e5f74a9a4683d00e89d743011e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0b0ed5cd086fef106a2625c096e34459579653bd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
-Zapíše znak pro **stdout** bez blokování vlákno.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _putchar_nolock(  
-   int c   
-);  
-wint_t _putwchar_nolock(  
-   wchar_t c   
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který má být zapsána.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V tématu **putchar –, putwchar –**.  
-  
-## <a name="remarks"></a>Poznámky  
- **putchar_nolock –** a `_putwchar_nolock` jsou shodné s verzí bez **jazyka _nolock** přípona s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttchar_nolock`|`_putchar_nolock`|`_putchar_nolock`|`_putwchar_nolock`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_putchar_nolock`|\<stdio.h>|  
-|`_putwchar_nolock`|\<stdio.h > nebo \<wchar.h >|  
-  
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, `stdin`, `stdout`, a `stderr`, C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_putchar_nolock.c  
-/* This program uses putchar to write buffer  
- * to stdout. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putchar_nolock( *p );  
-}  
-```  
-  
-## <a name="output"></a>Výstup  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [fputc –, fputwc –](../../c-runtime-library/reference/fputc-fputwc.md)   
- [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)
+
+Zapíše znak pro **stdout** bez blokování vlákno.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _putchar_nolock(
+   int c
+);
+wint_t _putwchar_nolock(
+   wchar_t c
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který má být zapsána.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V tématu **putchar –, putwchar –**.
+
+## <a name="remarks"></a>Poznámky
+
+**putchar_nolock –** a **_putwchar_nolock –** jsou shodné s verzí bez **jazyka _nolock** přípona s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttchar_nolock –**|**_putchar_nolock**|**_putchar_nolock**|**_putwchar_nolock**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_putchar_nolock**|\<stdio.h>|
+|**_putwchar_nolock**|\<stdio.h > nebo \<wchar.h >|
+
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_putchar_nolock.c
+/* This program uses putchar to write buffer
+* to stdout. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putchar_nolock( *p );
+}
+```
+
+### <a name="output"></a>Výstup
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Viz také
+
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>

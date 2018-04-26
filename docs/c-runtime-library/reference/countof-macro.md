@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof – makro
 
@@ -49,7 +49,7 @@ Vypočítá počet prvků v poli se staticky přidělené.
 
 ### <a name="parameters"></a>Parametry
 
-*array*<br/>
+*Pole*<br/>
 Název pole.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -58,15 +58,15 @@ Počet prvků v poli, vyjádřené jako **size_t –**.
 
 ## <a name="remarks"></a>Poznámky
 
-`_countof` je implementovaný jako makro preprocesoru jako funkce. Verze C++ má navíc šablony strojů detekuje v době kompilace, pokud je předán ukazatel místo staticky deklarované pole.
+**_countof –** je implementovaný jako makro preprocesoru jako funkce. Verze C++ má navíc šablony strojů detekuje v době kompilace, pokud je předán ukazatel místo staticky deklarované pole.
 
-Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C `_countof` vytváří chybné výsledky, pokud *pole* ukazatel. V jazyce C++ `_countof` nepodaří kompilovat *pole* ukazatel.  Pole, jako parametr předaný funkci *decays na ukazatel*, což znamená, že v rámci funkce, nemůžete použít `_countof` zjistěte rozsah pole.
+Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof –** vytváří chybné výsledky, pokud *pole* ukazatel. V jazyce C++ **_countof –** nepodaří kompilovat *pole* ukazatel.  Pole, jako parametr předaný funkci *decays na ukazatel*, což znamená, že v rámci funkce, nemůžete použít **_countof –** zjistěte rozsah pole.
 
 ## <a name="requirements"></a>Požadavky
 
-|Macro|Požadovaný hlavičkový soubor|
+|– Makro|Požadovaný hlavičkový soubor|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof –**|\<stdlib.h>|
 
 ## <a name="example"></a>Příklad
 

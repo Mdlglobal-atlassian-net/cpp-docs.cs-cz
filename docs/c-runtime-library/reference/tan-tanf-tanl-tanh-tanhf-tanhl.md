@@ -1,12 +1,12 @@
 ---
-title: "Tan, tanf –, tanl –, tanh, tanhf –, tanhl – | Microsoft Docs"
-ms.custom: 
+title: Tan, tanf –, tanl –, tanh, tanhf –, tanhl – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tanhf
@@ -53,17 +53,17 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c3391d07e78ba177a3ce31abb26bd5b6ef0449c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>Tan, tanf –, tanl –, tanh, tanhf –, tanhl –
 Vypočítá tangens (`tan`, `tanf`, nebo `tanl`), nebo hyperbolický tangens (`tanh`, `tanhf`, nebo `tanhl`).  
@@ -114,8 +114,8 @@ long double tanhl(
   
 |Vstup|Výjimka SEH|`Matherr` Výjimka|  
 |-----------|-------------------|-------------------------|  
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN|  
-|± ∞  (`tan`, `tanf`)|`INVALID`|_DOMAIN|  
+|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|  
+|± ∞  (`tan`, `tanf`)|`INVALID`|_DOMAIN –|  
   
 ## <a name="remarks"></a>Poznámky  
  Protože C++ umožňuje, aby přetížení, můžete volat přetížení `tan` a `tanh` , přijmout a vrátit `float` nebo `long double` hodnoty. V programu C `tan` a `tanh` vždy přijmout a vrátit `double`.  
@@ -124,7 +124,7 @@ long double tanhl(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
+|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<Math.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

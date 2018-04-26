@@ -1,12 +1,12 @@
 ---
 title: __uncaught_exception | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __uncaught_exception
@@ -29,38 +29,41 @@ dev_langs:
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-caps.latest.revision: 
+caps.latest.revision: 2
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496947e60ab3a2b32a12b52700610aa4878ad2d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f39e83aee5ee8c8652c32f72b6923c6c0c38a4ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
-Označuje, zda byla vyvolána výjimka jednu nebo více výjimek, ale ještě nebyly zpracovány v odpovídajícím `catch` blokovat z [try-catch –](../../cpp/try-throw-and-catch-statements-cpp.md) příkaz.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool __uncaught_exception(  
-   );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `true` od času je vyvolána výjimka `try` bloku dokud shody `catch` blok je inicializovaného; v opačném `false`.  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|__uncaught_exception|eh.h|  
-  
-## <a name="see-also"></a>Viz také  
- [try, throw a catch – příkazy (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)
+
+Označuje, zda byla vyvolána výjimka jednu nebo více výjimek, ale ještě nebyly zpracovány v odpovídajícím **catch** blokovat z [try-catch –](../../cpp/try-throw-and-catch-statements-cpp.md) příkaz.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool __uncaught_exception(
+   );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+**Hodnota TRUE,** od okamžiku je vyvolána výjimka **zkuste** bloku dokud shody **catch** blok je inicializovaného; v opačném **false**.
+
+## <a name="remarks"></a>Poznámky
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|__uncaught_exception|EH.h|
+
+## <a name="see-also"></a>Viz také
+
+[try, throw a catch – příkazy (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)<br/>

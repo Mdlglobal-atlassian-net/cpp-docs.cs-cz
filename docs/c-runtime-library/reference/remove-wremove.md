@@ -1,12 +1,12 @@
 ---
-title: "odebrat, _wremove – | Microsoft Docs"
-ms.custom: 
+title: odebrat, _wremove – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wremove
@@ -39,92 +39,97 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bfccec10c08563f647b10fd9ad9dff70930668b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 97c258d79af8247af993732405d2c792a0822075
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="remove-wremove"></a>remove, _wremove
-Odstranění souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int remove(  
-   const char *path   
-);  
-int _wremove(  
-   const wchar_t *path   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *path*  
- Cestu k souboru odeberou.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Každá z těchto funkcí vrátí 0, pokud je soubor úspěšně odstraněn. Jinak vrátí hodnotu -1 a nastaví `errno` buď `EACCES` označíte, že cesta Určuje soubor jen pro čtení nebo je soubor otevřený, nebo **enoent –** indikující, že nebyl nalezen název souboru nebo cestu nebo cestu Určuje adresář.  
-  
- V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.  
-  
-## <a name="remarks"></a>Poznámky  
- **Odebrat** funkce odstraní soubor určený touto *cesta.* `_wremove` široká charakterová verze **_Odebrat**; *cesta* argument `_wremove` je široká charakterová řetězec. `_wremove` a **_Odebrat** chovat jinak shodně. Všechny popisovače souboru musí být uzavřen, než mohl být odstraněn.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tremove`|**remove**|**remove**|`_wremove`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|**remove**|\<stdio.h > nebo \<io.h >|  
-|`_wremove`|\<stdio.h > nebo \<wchar.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_remove.c  
-/* This program uses remove to delete crt_remove.txt */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   if( remove( "crt_remove.txt" ) == -1 )  
-      perror( "Could not delete 'CRT_REMOVE.TXT'" );  
-   else  
-      printf( "Deleted 'CRT_REMOVE.TXT'\n" );  
-}  
-```  
-  
-## <a name="input-crtremovetxt"></a>Vstup: crt_remove.txt  
-  
-```  
-This file will be deleted.  
-```  
-  
-## <a name="sample-output"></a>Vzorový výstup  
-  
-```  
-Deleted 'CRT_REMOVE.TXT'  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování souborů](../../c-runtime-library/file-handling.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Odstranění souboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int remove(
+   const char *path
+);
+int _wremove(
+   const wchar_t *path
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Cesta*<br/>
+Cestu k souboru odeberou.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Každá z těchto funkcí vrátí 0, pokud je soubor úspěšně odstraněn. Jinak vrátí hodnotu -1 a nastaví **errno** buď **eacces –** označíte, že cesta Určuje soubor jen pro čtení nebo je soubor otevřený, nebo **enoent –** k označení, že Název souboru nebo cesta nebyla nalezena nebo že Určuje cestu adresáře.
+
+V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
+
+## <a name="remarks"></a>Poznámky
+
+**Odebrat** funkce odstraní soubor určený touto *cesta.* **_wremove –** je verze široká charakterová **_Odebrat**; *cesta* argument **_wremove –** je široká charakterová řetězec. **_wremove –** a **_Odebrat** chovat jinak shodně. Všechny popisovače souboru musí být uzavřen, než mohl být odstraněn.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tremove –**|**remove**|**remove**|**_wremove**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**remove**|\<stdio.h > nebo \<io.h >|
+|**_wremove**|\<stdio.h > nebo \<wchar.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_remove.c
+/* This program uses remove to delete crt_remove.txt */
+
+#include <stdio.h>
+
+int main( void )
+{
+   if( remove( "crt_remove.txt" ) == -1 )
+      perror( "Could not delete 'CRT_REMOVE.TXT'" );
+   else
+      printf( "Deleted 'CRT_REMOVE.TXT'\n" );
+}
+```
+
+### <a name="input-crtremovetxt"></a>Vstup: crt_remove.txt
+
+```Input
+This file will be deleted.
+```
+
+### <a name="sample-output"></a>Vzorový výstup
+
+```Output
+Deleted 'CRT_REMOVE.TXT'
+```
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

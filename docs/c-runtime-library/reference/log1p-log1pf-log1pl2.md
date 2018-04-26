@@ -1,13 +1,13 @@
 ---
-title: "log1p – log1pf –, log1pl2 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: log1p – log1pf –, log1pl2 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - log1p
@@ -38,84 +38,89 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f99c09efd055cc60162e88e52e938df690929a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cf512bcf898a202eee771318afb022642d432b4f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p – log1pf –, log1pl
-Vypočítá přirozený logaritmus 1 plus zadanou hodnotu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double log1p(  
-   double x  
-);  
-  
-float log1p(  
-   float x  
-); //C++ only  
-  
-long double log1p(  
-   long double x  
-); //C++ only  
-  
-float log1pf(  
-   float x  
-);  
-  
-long double log1pl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Argumentem s plovoucí desetinnou čárkou.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí přirozené protokol (základem e) (`x`+ 1).  
-  
- Jinak může vrátit jednu z následujících hodnot:  
-  
-|Vstup|Výsledek|Výjimka SEH|errno|  
-|-----------|------------|-------------------|-----------|  
-|+ inf|+ inf|||  
-|Denormals|Stejné jako vstup|PODTEČENÍ||  
-|±0|Stejné jako vstup|||  
-|-1|-inf|DIVBYZERO|ERANGE –|  
-|< -1|NaN.|NEPLATNÝ|EDOM –|  
-|-inf|NaN.|NEPLATNÝ|EDOM –|  
-|±SNaN|Stejné jako vstup|NEPLATNÝ||  
-|±QNaN neomezené|Stejné jako vstup|||  
-  
- `errno` Hodnota nastavena na erange – Pokud `x` = -1. `errno` Hodnota nastavena na edom – Pokud `x` < -1.  
-  
-## <a name="remarks"></a>Poznámky  
- `log1p` Funkce může být přesnější, než pomocí protokolu (`x`+ 1) Pokud x je téměř 0.  
-  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `log1p` , přijmout a vrátit float a typy long double. V programu C `log1p` vždy provede a vrátí hodnotu typu double.  
-  
- Pokud `x` přirozený číslo, vrátí tato funkce logaritmus faktoriál (`x`-1).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Hlavička C|Hlavička C++|  
-|--------------|--------------|------------------|  
-|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log2, log2f –, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
- [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Vypočítá přirozený logaritmus 1 plus zadanou hodnotu.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double log1p(
+   double x
+);
+
+float log1p(
+   float x
+); //C++ only
+
+long double log1p(
+   long double x
+); //C++ only
+
+float log1pf(
+   float x
+);
+
+long double log1pl(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Argumentem s plovoucí desetinnou čárkou.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V případě úspěchu vrátí přirozený (základní -*e*) protokolu systému (*x* + 1).
+
+Jinak může vrátit jednu z následujících hodnot:
+
+|Vstup|Výsledek|Výjimka SEH|Kód chyby|
+|-----------|------------|-------------------|-----------|
+|+ inf|+ inf|||
+|Denormals|Stejné jako vstup|PODTEČENÍ||
+|±0|Stejné jako vstup|||
+|-1|-inf|DIVBYZERO|ERANGE –|
+|< -1|NaN.|NEPLATNÝ|EDOM –|
+|-inf|NaN.|NEPLATNÝ|EDOM –|
+|±SNaN|Stejné jako vstup|NEPLATNÝ||
+|±QNaN neomezené|Stejné jako vstup|||
+
+**Errno** hodnota nastavena na erange – Pokud *x* = -1. **Errno** nastavena na hodnotu **edom –** Pokud *x* < -1.
+
+## <a name="remarks"></a>Poznámky
+
+**Log1p –** funkce může být přesnější, než pomocí `log(x + 1)` při *x* blíží 0.
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **log1p –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **log1p –** vždy provede a vrátí **dvojité**.
+
+Pokud *x* přirozený číslo, vrátí tato funkce logaritmus faktoriál (*x* - 1).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Hlavička C|Hlavička C++|
+|--------------|--------------|------------------|
+|**log1p –**, **log1pf –**, **log1pl**|\<Math.h >|\<cmath – >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[log2, log2f, log2l](log2-log2f-log2l.md)<br/>
+[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

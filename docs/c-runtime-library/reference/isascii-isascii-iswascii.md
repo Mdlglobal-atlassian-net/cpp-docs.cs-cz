@@ -1,12 +1,12 @@
 ---
-title: "isascii – __isascii –, iswascii – | Microsoft Docs"
-ms.custom: 
+title: isascii – __isascii –, iswascii – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswascii
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76d91aef22c3a01d4ee9321baf1165f3ae97412
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4876ad6e206894fb55c3f4279e80bd55886d415d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
+# <a name="isascii-isascii-iswascii"></a>isascii – __isascii –, iswascii –
 
 Určuje, zda určitý znak je znak ASCII.
 
@@ -74,36 +74,36 @@ int iswascii(
 
 ### <a name="parameters"></a>Parametry
 
-*c*  
+*c*<br/>
 Celé číslo pro testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud `c` je konkrétní reprezentace znaku ASCII. `__isascii` vrátí nenulovou hodnotu, pokud `c` je znak ASCII (v rozsahu 0x00 – 0x7F). `iswascii` vrátí nenulovou hodnotu, pokud `c` je široká charakterová reprezentace znaku ASCII. Všechny tyto rutiny vrátí hodnotu 0, pokud `c` nesplňuje podmínky testu.
+Všechny tyto rutiny vrátí nenulové hodnoty, pokud **c** je konkrétní reprezentace znaku ASCII. **__isascii –** vrátí nenulovou hodnotu, pokud **c** je znak ASCII (v rozsahu 0x00 – 0x7F). **iswascii –** vrátí nenulovou hodnotu, pokud **c** je široká charakterová reprezentace znaku ASCII. Všechny tyto rutiny vrátí hodnotu 0, pokud **c** nesplňuje podmínky testu.
 
 ## <a name="remarks"></a>Poznámky
 
-Obě `__isascii` a `iswascii` jsou implementované jako makra, pokud je definována _CTYPE_DISABLE_MACROS makro preprocesoru.
+Obě **__isascii –** a **iswascii –** jsou implementované jako makra, pokud je definována _CTYPE_DISABLE_MACROS makro preprocesoru.
 
-Z důvodu zpětné kompatibility `isascii` je implementovaný jako makro pouze v případě [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definován jako 0; jinak není definován.
+Z důvodu zpětné kompatibility **isascii –** je implementovaný jako makro pouze v případě [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definován jako 0; jinak není definován.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_istascii`|`__isascii`|`__isascii`|`iswascii`|
+|**_istascii –**|**__isascii**|**__isascii**|**iswascii**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`isascii`, `__isascii`|C: \<ctype.h ><br /><br /> C++: \<cctype – > nebo \<ctype.h >|
-|`iswascii`|C: \<wctype.h >, \<ctype.h >, nebo \<wchar.h ><br /><br /> C++: \<cwctype – >, \<cctype – >, \<wctype.h >, \<ctype.h >, nebo \<wchar.h >|
+|**isascii –**, **__isascii –**|C: \<ctype.h ><br /><br /> C++: \<cctype – > nebo \<ctype.h >|
+|**iswascii**|C: \<wctype.h >, \<ctype.h >, nebo \<wchar.h ><br /><br /> C++: \<cwctype – >, \<cctype – >, \<wctype.h >, \<ctype.h >, nebo \<wchar.h >|
 
-`isascii`, `__isascii` a `iswascii` funkce se konkrétní společnosti Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.
+**Isascii –**, **__isascii –** a **iswascii –** funkce se konkrétní společnosti Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Klasifikace znaků](../../c-runtime-library/character-classification.md)   
-[Národní prostředí](../../c-runtime-library/locale.md)   
-[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)
+[Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
+[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)<br/>

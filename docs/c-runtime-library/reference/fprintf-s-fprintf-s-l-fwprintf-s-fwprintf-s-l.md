@@ -1,12 +1,12 @@
 ---
-title: "fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l – | Microsoft Docs"
-ms.custom: 
+title: fprintf_s –, _fprintf_s_l –, fwprintf_s –, _fwprintf_s_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fprintf_s_l
@@ -44,132 +44,137 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85877d6bbab237c4c852ef7babce38b936e598fc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70f960302ee5b3a5e0c702e158396ab329aa5121
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
-Tisk formátovaných dat do datového proudu. Toto jsou verze [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fprintf_s(   
-   FILE *stream,  
-   const char *format [,  
-   argument_list ]  
-);  
-int _fprintf_s_l(   
-   FILE *stream,  
-   const char *format,  
-   locale_t locale [,  
-   argument_list ]  
-);  
-int fwprintf_s(   
-   FILE *stream,  
-   const wchar_t *format [,  
-   argument_list ]  
-);  
-int _fwprintf_s_l(   
-   FILE *stream,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument_list ]  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Ukazatel na `FILE` struktura.  
-  
- `format`  
- Řetězec řízení formátu  
-  
- `argument_list`  
- Nepovinné argumenty řetězce formátu.  
-  
- `locale`  
- Národní prostředí, které se má použít  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `fprintf_s` Vrátí počet zapsaných bajtů. `fwprintf_s` Vrátí počet široké znaky zapsána. Každá z těchto funkcí vrátí zápornou hodnotu. místo toho při výskytu chyby výstupu.  
-  
-## <a name="remarks"></a>Poznámky  
- `fprintf_s` Naformátuje a vytiskne řady znaků a hodnot pro výstup `stream`. Každý argument v `argument_list` (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v `format`. `format` Používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
- `fwprintf_s` široká charakterová verze `fprintf_s`; v `fwprintf_s`, `format` je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fprintf_s` nepodporuje aktuálně výstup do proudu kódování UNICODE.  
-  
- Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.  
-  
+
+Tisk formátovaných dat do datového proudu. Toto jsou verze [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](fprintf-fprintf-l-fwprintf-fwprintf-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fprintf_s(
+   FILE *stream,
+   const char *format [,
+   argument_list ]
+);
+int _fprintf_s_l(
+   FILE *stream,
+   const char *format,
+   locale_t locale [,
+   argument_list ]
+);
+int fwprintf_s(
+   FILE *stream,
+   const wchar_t *format [,
+   argument_list ]
+);
+int _fwprintf_s_l(
+   FILE *stream,
+   const wchar_t *format,
+   locale_t locale [,
+   argument_list ]
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Datový proud*<br/>
+Ukazatel na **souboru** struktura.
+
+*Formát*<br/>
+Řetězec řízení formátu
+
+*argument_list*<br/>
+Nepovinné argumenty řetězce formátu.
+
+*Národní prostředí*<br/>
+Národní prostředí, které se má použít
+
+## <a name="return-value"></a>Návratová hodnota
+
+**fprintf_s –** vrátí počet zapsaných bajtů. **fwprintf_s –** vrátí počet široké znaky zapsána. Každá z těchto funkcí vrátí zápornou hodnotu. místo toho při výskytu chyby výstupu.
+
+## <a name="remarks"></a>Poznámky
+
+**fprintf_s –** naformátuje a vytiskne řady znaků a hodnot pro výstup *datového proudu*. Každý argument v *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+**fwprintf_s –** je verze široká charakterová **fprintf_s –**; v **fwprintf_s –**, *formát* je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **fprintf_s –** nepodporuje aktuálně výstup do proudu kódování UNICODE.
+
+Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.
+
 > [!IMPORTANT]
->  Ujistěte se, že `format` není řetězec definovaný uživatelem.  
-  
- Jako verze nezabezpečeného (najdete v části [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), tyto funkce ověřit jejich parametrů a vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud má jedna `stream` nebo `format` je ukazatel s hodnotou null. Formátovací řetězec se také byl ověřen. Pokud neexistují žádné neznámá nebo chybně vytvořen. formátování specifikátory, tyto funkce generování výjimek neplatný parametr. Ve všech případech, pokud chcete pokračovat, je povoleno spuštění funkce vrátí hodnotu -1 a nastavte `errno` k `EINVAL`. V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ftprintf_s`|`fprintf_s`|`fprintf_s`|`fwprintf_s`|  
-|`_ftprintf_s_l`|`_fprintf_s_l`|`_fprintf_s_l`|`_fwprintf_s_l`|  
-  
- Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Požadovaný hlavičkový soubor|  
-|--------------|---------------------|  
-|`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
-|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h > nebo \<wchar.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="example"></a>Příklad  
-  
-```C  
-// crt_fprintf_s.c  
-// This program uses fprintf_s to format various  
-// data and print it to the file named FPRINTF_S.OUT. It  
-// then displays FPRINTF_S.OUT on the screen using the system  
-// function to invoke the operating-system TYPE command.  
-  
-#include <stdio.h>  
-#include <process.h>  
-  
-FILE *stream;  
-  
-int main( void )  
-{  
-   int    i = 10;  
-   double fp = 1.5;  
-   char   s[] = "this is a string";  
-   char   c = '\n';  
-  
-   fopen_s( &stream, "fprintf_s.out", "w" );  
-   fprintf_s( stream, "%s%c", s, c );  
-   fprintf_s( stream, "%d\n", i );  
-   fprintf_s( stream, "%f\n", fp );  
-   fclose( stream );  
-   system( "type fprintf_s.out" );  
-}  
-```  
-  
-```Output  
-this is a string  
-10  
-1.500000  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
+> Ujistěte se, že *formát* není řetězec definovaný uživatelem.
+
+Jako verze nezabezpečeného (najdete v části [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), tyto funkce ověřit jejich parametrů a vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud má jedna *datového proudu* nebo *formát* je ukazatel s hodnotou null. Formátovací řetězec se také byl ověřen. Pokud neexistují žádné neznámá nebo chybně vytvořen. formátování specifikátory, tyto funkce generování výjimek neplatný parametr. Ve všech případech, pokud chcete pokračovat, je povoleno spuštění funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**. V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ftprintf_s –**|**fprintf_s –**|**fprintf_s –**|**fwprintf_s –**|
+|**_ftprintf_s_l –**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
+
+Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Požadovaný hlavičkový soubor|
+|--------------|---------------------|
+|**fprintf_s –**, **_fprintf_s_l –**|\<stdio.h>|
+|**fwprintf_s –**, **_fwprintf_s_l –**|\<stdio.h > nebo \<wchar.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_fprintf_s.c
+// This program uses fprintf_s to format various
+// data and print it to the file named FPRINTF_S.OUT. It
+// then displays FPRINTF_S.OUT on the screen using the system
+// function to invoke the operating-system TYPE command.
+
+#include <stdio.h>
+#include <process.h>
+
+FILE *stream;
+
+int main( void )
+{
+   int    i = 10;
+   double fp = 1.5;
+   char   s[] = "this is a string";
+   char   c = '\n';
+
+   fopen_s( &stream, "fprintf_s.out", "w" );
+   fprintf_s( stream, "%s%c", s, c );
+   fprintf_s( stream, "%d\n", i );
+   fprintf_s( stream, "%f\n", fp );
+   fclose( stream );
+   system( "type fprintf_s.out" );
+}
+```
+
+```Output
+this is a string
+10
+1.500000
+```
+
+## <a name="see-also"></a>Viz také
+
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
+[sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

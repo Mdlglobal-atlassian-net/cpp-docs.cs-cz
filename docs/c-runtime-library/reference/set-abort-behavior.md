@@ -1,12 +1,12 @@
 ---
-title: "_set_abort_behavior – | Microsoft Docs"
-ms.custom: 
+title: _set_abort_behavior – | Microsoft Docs
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Určuje akci, která mají být provedeny, když program je ukončen neobvyklým způsobem.
 
 > [!NOTE]
-> Nepoužívejte `abort` funkce vypnout aplikaci pomocí Microsoft Store, s výjimkou testování nebo ladění scénáře. Zavřete aplikaci ve Store způsoby programový nebo uživatelského rozhraní nejsou povolené podle požadavků [Microsoft Store zásady](http://go.microsoft.com/fwlink/?LinkId=865936). Další informace najdete v tématu [životní cyklus aplikace UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Nepoužívejte [abort](abort.md) funkce vypnout aplikaci pomocí Microsoft Store, s výjimkou testování nebo ladění scénáře. Zavřete aplikaci ve Store způsoby programový nebo uživatelského rozhraní nejsou povolené podle požadavků [Microsoft Store zásady](http://go.microsoft.com/fwlink/?LinkId=865936). Další informace najdete v tématu [životní cyklus aplikace UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parametry
 
-[v] _příznaky_  
-Nová hodnota `abort` příznaky.
+*Příznaky*<br/>
+Nová hodnota [abort](abort.md) příznaky.
 
-[v] _maska_  
-Maskování pro `abort` flags bits k nastavení.
+*Maska*<br/>
+Maskování pro [abort](abort.md) flags bits k nastavení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -73,13 +73,13 @@ Původní hodnota příznaků.
 
 ## <a name="remarks"></a>Poznámky
 
-Existují dva `abort` příznaky: `_WRITE_ABORT_MSG` a `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` Určuje, zda je vytištěna užitečné textovou zprávu, když program je ukončen neobvyklým způsobem. Zpráva, že aplikace volal `abort` funkce. Výchozí chování je tisknout zprávy. `_CALL_REPORTFAULT`, pokud nastavení, určuje, že stav systému Watson se generuje a kdy hlášené `abort` je volána. Ve výchozím nastavení je hlášení chyb výpisu povolené v sestavení bez ladění.
+Existují dva [abort](abort.md) příznaky: **_WRITE_ABORT_MSG** a **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** Určuje, zda je vytištěna užitečné textovou zprávu, když program je ukončen neobvyklým způsobem. Zpráva, že aplikace volal [abort](abort.md) funkce. Výchozí chování je tisknout zprávy. **_CALL_REPORTFAULT**, pokud nastavení, určuje, že stav systému Watson se generuje a kdy hlášené [abort](abort.md) je volána. Ve výchozím nastavení je hlášení chyb výpisu povolené v sestavení bez ladění.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Viz také
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

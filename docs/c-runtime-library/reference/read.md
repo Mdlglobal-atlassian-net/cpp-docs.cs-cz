@@ -1,12 +1,12 @@
 ---
 title: _Zobrazit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _read
@@ -35,128 +35,128 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c95bb13bc95b0c395e0af859e31e851e31a5527
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="read"></a>_read
 
-Čte data ze souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _read(  
-   int fd,  
-   void *buffer,  
-   unsigned int count   
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
+Čte data ze souboru.
 
-*fd*  
-Popisovače souborů na otevření souboru.  
-  
-Vyrovnávací paměti  
-Umístění úložiště pro data.  
-  
-*Počet*  
-Maximální počet bajtů.  
-  
-## <a name="return-value"></a>Návratová hodnota  
+## <a name="syntax"></a>Syntaxe
 
-`_read` Vrátí počet bajtů přečtených, což může být menší než *počet* Pokud méně než *počet* left bajtů v souboru nebo pokud byl soubor otevřít v textovém režimu, v takovém případě každý vrátí řádek znaků CR kanálu pár `\r\n` se nahradí znak jednoho konce řádku `\n`. Pouze jeden konce řádku znak se počítá v návratovou hodnotu. Pokud chcete nahrazení neovlivňuje ukazatele souboru.  
-  
-Pokud funkce se pokusí přečíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčený, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu -1 a nastaví je povoleno spuštění `errno` k `EBADF`.  
-  
-Pokud *vyrovnávací paměti* je **NULL**, je volána obslužná rutina neplatný parametr. Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a `errno` je nastaven na `EINVAL`.  
-  
-Další informace o tomto a ostatní návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Poznámky  
+```C
+int _read(
+   int fd,
+   void *buffer,
+   unsigned int count
+);
+```
 
-`_read` Funkce přečte maximálně *počet* bajtů do *vyrovnávací paměti* ze souboru přidružené *fd*. Operace čtení začíná na aktuální pozici přidruženou k dané soubor ukazatele souboru. Po operaci čtení ukazatele souboru odkazuje na Další nepřečtená znak.  
-  
-Pokud byl soubor otevřít v textovém režimu, čtení ukončí při `_read` zaznamená CTRL + Z znaku, který je považován za indikátor end souboru. Použití [_lseek –](../../c-runtime-library/reference/lseek-lseeki64.md) zrušte end souborového indikátoru.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_read`|\<io.h>|  
-  
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
+### <a name="parameters"></a>Parametry
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```C  
-// crt_read.c  
-/* This program opens a file named crt_read.txt  
- * and tries to read 60,000 bytes from  
- * that file using _read. It then displays the  
- * actual number of bytes read.  
- */  
-  
-#include <fcntl.h>      /* Needed only for _O_RDWR definition */  
-#include <io.h>  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <share.h>  
-  
-char buffer[60000];  
-  
-int main( void )  
-{  
-   int fh;  
-   unsigned int nbytes = 60000, bytesread;  
-  
-   /* Open file for input: */  
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )  
-   {  
-      perror( "open failed on input file" );  
-      exit( 1 );  
-   }  
-  
-   /* Read in input: */  
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )  
-      perror( "Problem reading file" );  
-   else  
-      printf( "Read %u bytes from file\n", bytesread );  
-  
-   _close( fh );  
-}  
-```  
-  
-### <a name="input-crtreadtxt"></a>Vstup: crt_read.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Výstup  
-  
-```  
-Read 19 bytes from file  
-```  
-  
-## <a name="see-also"></a>Viz také  
+*FD*<br/>
+Popisovače souborů na otevření souboru.
 
-[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)   
-[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
-[fread –](../../c-runtime-library/reference/fread.md)   
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
-[_write](../../c-runtime-library/reference/write.md)
+*Vyrovnávací paměti*<br/>
+Umístění úložiště pro data.
+
+*Počet*<br/>
+Maximální počet bajtů.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_Zobrazit** vrátí počet bajtů přečtených, což může být menší než *počet* Pokud méně než *počet* left bajtů v souboru nebo pokud byl soubor otevřít v textovém režimu, v takovém případě každý znaků CR Vrátí line kanálu pár '\r\n' se nahradí znak jednoho konce řádku, \n'. Pouze jeden konce řádku znak se počítá v návratovou hodnotu. Pokud chcete nahrazení neovlivňuje ukazatele souboru.
+
+Pokud funkce se pokusí přečíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčený, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu -1 a nastaví je povoleno spuštění **errno** k **ebadf –**.
+
+Pokud *vyrovnávací paměti* je **NULL**, je volána obslužná rutina neplatný parametr. Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a **errno** je nastaven na **einval –**.
+
+Další informace o tomto a ostatní návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Poznámky
+
+**_Získat** funkce přečte maximálně *počet* bajtů do *vyrovnávací paměti* ze souboru přidružené *fd*. Operace čtení začíná na aktuální pozici přidruženou k dané soubor ukazatele souboru. Po operaci čtení ukazatele souboru odkazuje na Další nepřečtená znak.
+
+Pokud byl soubor otevřít v textovém režimu, čtení ukončí při **_Zobrazit** zaznamená CTRL + Z znaku, který je považován za indikátor end souboru. Použití [_lseek –](lseek-lseeki64.md) zrušte end souborového indikátoru.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_read**|\<IO.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_read.c
+/* This program opens a file named crt_read.txt
+* and tries to read 60,000 bytes from
+* that file using _read. It then displays the
+* actual number of bytes read.
+*/
+
+#include <fcntl.h>      /* Needed only for _O_RDWR definition */
+#include <io.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <share.h>
+
+char buffer[60000];
+
+int main( void )
+{
+   int fh;
+   unsigned int nbytes = 60000, bytesread;
+
+   /* Open file for input: */
+   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   {
+      perror( "open failed on input file" );
+      exit( 1 );
+   }
+
+   /* Read in input: */
+   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+      perror( "Problem reading file" );
+   else
+      printf( "Read %u bytes from file\n", bytesread );
+
+   _close( fh );
+}
+```
+
+### <a name="input-crtreadtxt"></a>Vstup: crt_read.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Výstup
+
+```Output
+Read 19 bytes from file
+```
+
+## <a name="see-also"></a>Viz také
+
+[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[fread](fread.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_write](write.md)<br/>

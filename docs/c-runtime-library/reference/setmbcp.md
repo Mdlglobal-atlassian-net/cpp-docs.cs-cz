@@ -1,12 +1,12 @@
 ---
 title: _setmbcp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _setmbcp
@@ -33,69 +33,74 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42d2d43726ea533ab689a61c5211317c8dc033c4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2e879d4cf6ebc7cb7f61199b3bb52f1a5e3f5389
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setmbcp"></a>_setmbcp
-Nastaví nové vícebajtové znakové stránky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _setmbcp(  
-   int codepage   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `codepage`  
- Nové nastavení stránky kód pro vícebajtové rutiny nezávislé na národním prostředí.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu 0, pokud je úspěšně nastavená znaková stránka. Pokud je zadaný hodnotou stránky neplatný kód pro `codepage`, vrátí hodnotu -1 a znakové stránky se nemění. Nastaví `errno` k `EINVAL` Pokud dojde k chybě přidělení paměti.  
-  
-## <a name="remarks"></a>Poznámky  
- `_setmbcp` Funkce určuje nové vícebajtové znakové stránky. Ve výchozím nastavení spuštění systému automaticky nastaví vícebajtové znakové stránky na ANSI výchozí systémová znaková stránka. Vícebajtové znakové stránky ovlivňuje všechny vícebajtové rutin, které nejsou závislé národního prostředí. Je však možné dáte pokyn, aby `_setmbcp` používat znaková stránka definovaný pro aktuální národní prostředí (najdete v následujícím seznamu manifestu konstanty a související chování výsledky). Seznam vícebajtové rutiny, které jsou závislé na znaková stránka národního prostředí, nikoli vícebajtové znakové stránky, naleznete v části [výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).  
-  
- Vícebajtové znakové stránky taky ovlivňuje zpracování vícebajtových znaků pomocí následující rutiny běhové knihovny:  
-  
-||||  
-|-|-|-|  
-|[_exec – funkce](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat](../../c-runtime-library/reference/stat-functions.md)|  
-|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-  
- Kromě toho všechny rutiny běhové knihovny, které přijímají vícebajtových znaků `argv` nebo `envp` programu argumenty jako parametry (například `_exec` a `_spawn` rodiny) zpracovat tyto řetězce podle vícebajtové znakové stránky . Proto tyto rutiny jsou také ovlivněné volání `_setmbcp` , změní vícebajtové znakové stránky.  
-  
- `codepage` Argument může být nastaven na žádný z následujících hodnot:  
-  
--   `_MB_CP_ANSI` Znaková stránka ANSI použití získané z operačního systému při spuštění programu.  
-  
--   `_MB_CP_LOCALE` Použití aktuální národní prostředí znaková stránka získané z předchozího volání [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
-  
--   `_MB_CP_OEM` Znaková stránka použití OEM získané z operačního systému při spuštění programu.  
-  
--   `_MB_CP_SBCS` Na stránce jednobajtové kódu. Pokud se nastaví znaková stránka `_MB_CP_SBCS`, rutiny jako [_ismbblead –](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) vždy vrátí hodnotu false.  
-  
--   Žádné jiné platné hodnotu znakové stránky, bez ohledu na to, zda je hodnota ANSI, OEM nebo jiné operační systém – podporované znakové stránky (s výjimkou znakové sady UTF-7 a UTF-8, které nejsou podporovány).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_setmbcp`|\<mbctype.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Nastaví nové vícebajtové znakové stránky.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _setmbcp(
+   int codepage
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*znakové stránky*<br/>
+Nové nastavení stránky kód pro vícebajtové rutiny nezávislé na národním prostředí.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu 0, pokud je úspěšně nastavená znaková stránka. Pokud je zadaný hodnotou stránky neplatný kód pro *codepage*, vrátí hodnotu -1 a znakové stránky se nemění. Nastaví **errno** k **einval –** Pokud dojde k chybě přidělení paměti.
+
+## <a name="remarks"></a>Poznámky
+
+**_Setmbcp** funkce určuje nové vícebajtové znakové stránky. Ve výchozím nastavení spuštění systému automaticky nastaví vícebajtové znakové stránky na ANSI výchozí systémová znaková stránka. Vícebajtové znakové stránky ovlivňuje všechny vícebajtové rutin, které nejsou závislé národního prostředí. Je však možné dáte pokyn, aby **_setmbcp** používat znaková stránka definovaný pro aktuální národní prostředí (najdete v následujícím seznamu manifestu konstanty a související chování výsledky). Seznam vícebajtové rutiny, které jsou závislé na znaková stránka národního prostředí, nikoli vícebajtové znakové stránky, naleznete v části [výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+
+Vícebajtové znakové stránky taky ovlivňuje zpracování vícebajtových znaků pomocí následující rutiny běhové knihovny:
+
+||||
+|-|-|-|
+|[_exec – funkce](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
+|[_fullpath –](fullpath-wfullpath.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+
+Kromě toho všechny rutiny běhové knihovny, které přijímají vícebajtových znaků *argv –* nebo *envp –* programu argumenty jako parametry (například **_exec** a **_spawn** rodiny) zpracovat tyto řetězce podle vícebajtové znakové stránky. Proto tyto rutiny jsou také ovlivněné volání **_setmbcp** , změní vícebajtové znakové stránky.
+
+*Codepage* argument může být nastaven na žádný z následujících hodnot:
+
+- **_MB_CP_ANSI** znaková stránka ANSI použití získané z operačního systému při spuštění programu.
+
+- **_MB_CP_LOCALE** použití aktuální národní prostředí znaková stránka získané z předchozího volání [setlocale](setlocale-wsetlocale.md).
+
+- **_MB_CP_OEM** znaková stránka OEM použití získané z operačního systému při spuštění programu.
+
+- **_MB_CP_SBCS** použití jednobajtová znaková stránka. Pokud se nastaví znaková stránka **_MB_CP_SBCS**, rutiny jako [_ismbblead –](ismbblead-ismbblead-l.md) vždy vrátí hodnotu false.
+
+- Žádné jiné platné hodnotu znakové stránky, bez ohledu na to, zda je hodnota ANSI, OEM nebo jiné operační systém – podporované znakové stránky (s výjimkou znakové sady UTF-7 a UTF-8, které nejsou podporovány).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_setmbcp**|\<Mbctype.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[_getmbcp](getmbcp.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

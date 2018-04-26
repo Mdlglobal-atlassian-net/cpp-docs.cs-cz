@@ -1,13 +1,13 @@
 ---
-title: fetestexcept1 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fetestexcept | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fetestexcept
@@ -32,62 +32,67 @@ dev_langs:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f70e78e515e50b00992a22eb01988e09a5ccd42
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 599c60134f9c509fd14087bafba79cd9b73ccaa6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fetestexcept"></a>fetestexcept
-Určuje, které příznaky stavu s plovoucí desetinnou čárkou výjimce momentálně nastaven.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fetestexcept(  
-   int excepts  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `excepts`  
- Bitový operátor OR příznaků s plovoucí desetinnou čárkou stav pro testování.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí bitová maska obsahující bitové operace OR makra výjimek plovoucí desetinné čárky, které odpovídají příznaky stavu výjimka aktuálně nastavit. Vrátí hodnotu 0, pokud žádná z výjimky jsou nastavené.  
-  
-## <a name="remarks"></a>Poznámky  
- Pomocí funkce fetestexcept k určení výjimek, které byly vydané plovoucí bodu operaci. Použití `excepts` parametr k určení stavu příznacích výjimky k testování. `fetestexcept` Funkce používá tyto makra výjimek definované v \<fenv.h > v `excepts` a návratovou hodnotu:  
-  
-|Výjimka – makro|Popis|  
-|---------------------|-----------------|  
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pólu byl vytvořen nekonečnou hodnotu.|  
-|FE_INEXACT|Funkce musela být zaokrouhleno uložený výsledek dříve operace s plovoucí desetinnou čárkou.|  
-|FE_INVALID|Došlo k chybě domény v dříve operaci s plovoucí desetinnou čárkou.|  
-|FE_OVERFLOW|Rozsah došlo k chybě; výsledek operace s plovoucí desetinnou čárkou starší byl příliš velký a nelze je.|  
-|FE_UNDERFLOW|Výsledek operace s plovoucí desetinnou čárkou starší byla příliš malé a nelze na úplné přesnost; Hodnota denormal byla vytvořena.|  
-|FE_ALLEXCEPT|Bitová hodnota OR všech podporována s plovoucí desetinnou čárkou výjimky.|  
-  
- Zadaný `excepts` argument může mít hodnotu 0, jednoho z podporovaných výjimek plovoucí desetinné čárky makra nebo bitové hodnotě nebo dva nebo víc makra. Účinek jakékoliv `excepts` hodnota argumentu není definován.  
-  
- Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Hlavička C|Hlavička C++|  
-|--------------|--------------|------------------|  
-|`fetestexcept`|\<fenv.h>|\<cfenv>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)
+
+Určuje, které příznaky stavu s plovoucí desetinnou čárkou výjimce momentálně nastaven.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fetestexcept(
+   int excepts
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*s výjimkou*<br/>
+Bitový operátor OR příznaků s plovoucí desetinnou čárkou stav pro testování.
+
+## <a name="return-value"></a>Návratová hodnota
+
+V případě úspěchu vrátí bitová maska obsahující bitové operace OR makra výjimek plovoucí desetinné čárky, které odpovídají příznaky stavu výjimka aktuálně nastavit. Vrátí hodnotu 0, pokud žádná z výjimky jsou nastavené.
+
+## <a name="remarks"></a>Poznámky
+
+Pomocí funkce fetestexcept k určení výjimek, které byly vydané plovoucí bodu operaci. Použití *, s výjimkou* parametr k určení stavu příznacích výjimky k testování. **Fetestexcept** funkce používá tyto makra výjimek definované v \<fenv.h > v *, s výjimkou* a návratovou hodnotu:
+
+|Výjimka – makro|Popis|
+|---------------------|-----------------|
+|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pólu byl vytvořen nekonečnou hodnotu.|
+|FE_INEXACT|Funkce musela být zaokrouhleno uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|Došlo k chybě domény v dříve operaci s plovoucí desetinnou čárkou.|
+|FE_OVERFLOW|Rozsah došlo k chybě; výsledek operace s plovoucí desetinnou čárkou starší byl příliš velký a nelze je.|
+|FE_UNDERFLOW|Výsledek operace s plovoucí desetinnou čárkou starší byla příliš malé a nelze na úplné přesnost; Hodnota denormal byla vytvořena.|
+|FE_ALLEXCEPT|Bitová hodnota OR všech podporována s plovoucí desetinnou čárkou výjimky.|
+
+Zadaný *, s výjimkou* argument může mít hodnotu 0, jednoho z podporovaných výjimek plovoucí desetinné čárky makra nebo bitové hodnotě nebo dva nebo víc makra. Účinek jakékoliv *, s výjimkou* hodnota argumentu není definován.
+
+Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Hlavička C|Hlavička C++|
+|--------------|--------------|------------------|
+|**fetestexcept**|\<fenv.h >|\<cfenv>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[feraiseexcept](feraiseexcept.md)<br/>

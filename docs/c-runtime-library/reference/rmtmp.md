@@ -1,12 +1,12 @@
 ---
-title: "_rmtmp – | Microsoft Docs"
-ms.custom: 
+title: _rmtmp – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _rmtmp
@@ -36,50 +36,56 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689c501743702ae208024fcf6126a02719a33bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 01585e2767806533ffaf99f2ca7795d26264958f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmtmp"></a>_rmtmp
-Odebere dočasné soubory.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-int _rmtmp( void );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `_rmtmp` Vrátí počet dočasné soubory, které se zavře a odstranit.  
-  
-## <a name="remarks"></a>Poznámky  
- `_rmtmp` Funkce vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odebere pouze ty soubory, které jsou vytvořené `tmpfile`; použít pouze ve stejném adresáři, ve kterém byly vytvořeny dočasné soubory.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_rmtmp`|\<stdio.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [tmpfile –](../../c-runtime-library/reference/tmpfile.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_flushall –](../../c-runtime-library/reference/flushall.md)   
- [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+
+Odebere dočasné soubory.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+
+int _rmtmp( void );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_rmtmp –** vrátí počet dočasné soubory, které se zavře a odstranit.
+
+## <a name="remarks"></a>Poznámky
+
+**_Rmtmp –** funkce vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odebere pouze ty soubory, které jsou vytvořené **tmpfile –**; použít pouze ve stejném adresáři, ve kterém byly vytvořeny dočasné soubory.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_rmtmp**|\<stdio.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [tmpfile –](tmpfile.md).
+
+## <a name="see-also"></a>Viz také
+
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[_flushall](flushall.md)<br/>
+[tmpfile](tmpfile.md)<br/>
+[_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "_Cisin – | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _Cisin – | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
 - _CIsin
@@ -28,35 +25,38 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e87589421c5a1e24c490a0f03928281bc7fb92b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b06cd381bd93befd8fade4816ca4ead6b3ef9d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cisin"></a>_CIsin
-Vypočítá sinus nejvyšší hodnotu v zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIsin();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato verze `sin` funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.  
-  
- Výsledná hodnota se posune do horní části zásobníku.  
-  
-## <a name="requirements"></a>Požadavky  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)
+
+Vypočítá sinus nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void __cdecl _CIsin();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato verze vnitřní [sin](../c-runtime-library/reference/sin-sinf-sinl.md) funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.
+
+Výsledná hodnota se posune do horní části zásobníku s plovoucí desetinnou čárkou.
+
+## <a name="requirements"></a>Požadavky
+
+**Platforma:** x86
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Sin, sinf –, sinl –](../c-runtime-library/reference/sin-sinf-sinl.md)<br/>

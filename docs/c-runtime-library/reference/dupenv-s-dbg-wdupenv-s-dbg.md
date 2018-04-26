@@ -1,12 +1,12 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: 
+title: _dupenv_s_dbg –, _wdupenv_s_dbg – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _dupenv_s_dbg
@@ -38,121 +38,124 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f9f35fba63fd5b0866a8f2fe13164855d722588
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dc6aa566770bd8b2e12cefac22c414fd4c43a118
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
-Získání hodnoty z aktuální prostředí.  Verze [_dupenv_s –, _wdupenv_s –](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) , přidělit paměť s [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md) poskytnout další informace o ladění.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-errno_t _dupenv_s_dbg(  
-   char **buffer,  
-   size_t *numberOfElements,  
-   const char *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-errno_t _wdupenv_s_dbg(  
-   wchar_t **buffer,  
-   size_t * numberOfElements,  
-   const wchar_t *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `buffer`  
- Vyrovnávací paměť pro uložení hodnota proměnné.  
-  
- `numberOfElements`  
- Velikost `buffer`.  
-  
- `varname`  
- Název proměnné prostředí.  
-  
- `blockType`  
- Požadovaný typ bloku paměti: `_CLIENT_BLOCK` nebo `_NORMAL_BLOCK`.  
-  
- `filename`  
- Ukazatel na název zdrojového souboru nebo `NULL`.  
-  
- `linenumber`  
- Číslo řádku na zdrojový soubor nebo `NULL`.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Nula v případě úspěchu, kód chyby při selhání.  
-  
- Tyto funkce ověřit jejich parametrů; Pokud `buffer` nebo `varname` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, nastavte funkce `errno` k `EINVAL` a vrátí `EINVAL`.  
-  
- Pokud tyto funkce nemůže přidělit dostatek paměti, nastavují `buffer` k `NULL` a `numberOfElements` 0, a vrátí `ENOMEM`.  
-  
-## <a name="remarks"></a>Poznámky  
- `_dupenv_s_dbg` a `_wdupenv_s_dbg` funkce jsou stejné jako `_dupenv_s` a `_wdupenv_s` s tím rozdílem, že když `_DEBUG` je definovaný, tyto funkce používají verzi ladění [malloc –](../../c-runtime-library/reference/malloc.md), [_ malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md), přidělit paměť pro hodnotu proměnné prostředí. Informace o ladění funkce `_malloc_dbg`, najdete v části [_malloc_dbg –](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat příznak `_CRTDBG_MAP_ALLOC`. Když `_CRTDBG_MAP_ALLOC` je definován, volání `_dupenv_s` a `_wdupenv_s` jsou mapovány na `_dupenv_s_dbg` a `_wdupenv_s_dbg`, s `blockType` nastavena na `_NORMAL_BLOCK`. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako `_CLIENT_BLOCK`. Další informace o typech bloku, najdete v části [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_dupenv_s_dbg`|\<crtdbg.h>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_dupenv_s_dbg.c  
-#include  <stdlib.h>  
-#include <crtdbg.h>  
-  
-int main( void )  
-{  
-   char *pValue;  
-   size_t len;  
-   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "pathext = %s\n", pValue );  
-   free( pValue );  
-   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "nonexistentvariable = %s\n", pValue );  
-   free( pValue ); // It's OK to call free with NULL  
-}  
-```  
-  
-## <a name="sample-output"></a>Vzorový výstup  
-  
-```  
-pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
-nonexistentvariable = (null)  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)   
- [Konstanty prostředí](../../c-runtime-library/environmental-constants.md)   
- [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+
+Získání hodnoty z aktuální prostředí.  Verze [_dupenv_s –, _wdupenv_s –](dupenv-s-wdupenv-s.md) , přidělit paměť s [_malloc_dbg –](malloc-dbg.md) poskytnout další informace o ladění.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+errno_t _dupenv_s_dbg(
+   char **buffer,
+   size_t *numberOfElements,
+   const char *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+errno_t _wdupenv_s_dbg(
+   wchar_t **buffer,
+   size_t * numberOfElements,
+   const wchar_t *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Vyrovnávací paměti*<br/>
+Vyrovnávací paměť pro uložení hodnota proměnné.
+
+*numberOfElements*<br/>
+Velikost *vyrovnávací paměti*.
+
+*název_proměnné*<br/>
+Název proměnné prostředí.
+
+*blockType*<br/>
+Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
+
+*Název souboru*<br/>
+Ukazatel na název zdrojového souboru nebo **NULL**.
+
+*lineNumber*<br/>
+Číslo řádku na zdrojový soubor nebo **NULL**.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Nula v případě úspěchu, kód chyby při selhání.
+
+Tyto funkce ověřit jejich parametrů; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, nastavte funkce **errno** k **einval –** a vrátit **einval –**.
+
+Pokud tyto funkce nemůže přidělit dostatek paměti, nastavují *vyrovnávací paměti* k **NULL** a *numberOfElements* 0, a vrátí **enomem –**.
+
+## <a name="remarks"></a>Poznámky
+
+**_Dupenv_s_dbg –** a **_wdupenv_s_dbg –** funkce jsou stejné jako **_dupenv_s –** a **_wdupenv_s –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění [malloc –](malloc.md), [_malloc_dbg –](malloc-dbg.md), přidělit paměť pro hodnotu proměnné prostředí. Informace o ladění funkce **_malloc_dbg –**, najdete v části [_malloc_dbg –](malloc-dbg.md).
+
+Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat příznak **_crtdbg_map_alloc –**. Když **_crtdbg_map_alloc –** je definován, volání **_dupenv_s –** a **_wdupenv_s –** jsou mapovány na **_dupenv_s_dbg –** a **_wdupenv_s_dbg –**, s *blockType* nastavena na **_normal_block –**. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako **_client_block –**. Další informace o typech bloku, najdete v části [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tdupenv_s_dbg –**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_dupenv_s_dbg**|\<crtdbg.h>|
+|**_wdupenv_s_dbg**|\<crtdbg.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_dupenv_s_dbg.c
+#include  <stdlib.h>
+#include <crtdbg.h>
+
+int main( void )
+{
+   char *pValue;
+   size_t len;
+   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "pathext = %s\n", pValue );
+   free( pValue );
+   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "nonexistentvariable = %s\n", pValue );
+   free( pValue ); // It's OK to call free with NULL
+}
+```
+
+```Output
+pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
+nonexistentvariable = (null)
+```
+
+## <a name="see-also"></a>Viz také
+
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Konstanty prostředí](../../c-runtime-library/environmental-constants.md)<br/>
+[getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
+[_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

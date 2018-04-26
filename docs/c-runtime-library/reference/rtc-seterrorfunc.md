@@ -1,12 +1,12 @@
 ---
-title: _RTC_SetErrorFunc | Microsoft Docs
-ms.custom: 
+title: _Rtc_seterrorfunc – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
@@ -31,51 +31,56 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1ddf7b95b44c005d2e55f3813796fa21f716b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c3d83690ceed2fec75da266d409e8323bc057028
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
-Funkce označí jako obslužná rutina pro vytváření sestav Kontrola chyb za běhu (RTCs). Tato funkce je zastaralé; použít `_RTC_SetErrorFuncW` místo.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      _RTC_error_fn _RTC_SetErrorFunc(  
-   _RTC_error_fn function   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *Funkce*  
- Adresa funkce, která bude zpracovávat Kontrola chyb za běhu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Chyba dříve definované funkce. Pokud není žádná dříve definované funkce, vrátí hodnotu NULL.  
-  
-## <a name="remarks"></a>Poznámky  
- Nepoužívejte tuto funkci; Místo toho použijte `_RTC_SetErrorFuncW`. Ho je uchována pouze z důvodů zpětné kompatibility.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_RTC_SetErrorFunc`|\<rtcapi.h>|  
-  
- Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Viz také  
- [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   
- [Kontrola chyb za běhu](../../c-runtime-library/run-time-error-checking.md)
+
+Funkce označí jako obslužná rutina pro vytváření sestav Kontrola chyb za běhu (RTCs). Tato funkce je zastaralé; použít **_rtc_seterrorfuncw –** místo.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_RTC_error_fn _RTC_SetErrorFunc(
+   _RTC_error_fn function
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Funkce*<br/>
+Adresa funkce, která bude zpracovávat Kontrola chyb za běhu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Chyba dříve definované funkce. Pokud není žádná dříve definované funkce, vrátí hodnotu NULL.
+
+## <a name="remarks"></a>Poznámky
+
+Nepoužívejte tuto funkci; Místo toho použijte **_rtc_seterrorfuncw –**. Ho je uchována pouze z důvodů zpětné kompatibility.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_RTC_SetErrorFunc**|\<rtcapi.h >|
+
+Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Viz také
+
+[_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
+[Kontrola chyb za běhu](../../c-runtime-library/run-time-error-checking.md)<br/>

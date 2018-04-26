@@ -1,12 +1,12 @@
 ---
-title: "iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l – | Microsoft Docs"
-ms.custom: 
+title: iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswcsym_l
@@ -71,17 +71,17 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 225a5ab6dd00619b825be5b7e5220de70aafc3ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –
 
@@ -124,32 +124,32 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*  
+*c*<br/>
 Celé číslo pro testování. *c* by měla být v rozsahu 0 až 255 úzké znak verze funkce.
 
-*Národní prostředí*  
+*Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě `__iscsym` a `__iswcsym` vrátí nenulovou hodnotu, pokud *c* je písmeno, podtržítko nebo číslice. Obě `__iscsymf` a `__iswcsymf` vrátí nenulovou hodnotu, pokud *c* je písmenem nebo podtržítkem. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu. Verze tyto funkce s `_l` příponu jsou shodné s tím rozdílem, že se používají *národního prostředí* předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Obě **__iscsym –** a **__iswcsym –** vrátí nenulovou hodnotu, pokud *c* je písmeno, podtržítko nebo číslice. Obě **__iscsymf –** a **__iswcsymf –** vrátí nenulovou hodnotu, pokud *c* je písmenem nebo podtržítkem. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu. Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že se používají *národního prostředí* předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
 Tyto rutiny jsou definovány jako makra, pokud je definována _CTYPE_DISABLE_MACROS makro preprocesoru. Při použití makro verzích tyto rutiny argumenty, které lze vyhodnotit více než jednou. Buďte opatrní při použití výrazy, které mají vedlejší účinky v rámci seznamu argumentů.
 
-Z důvodu zpětné kompatibility `iscsym` a `iscsymf` jsou definovány jako makra pouze tehdy, když [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definován jako 0; v opačném případě nejsou definovány.
+Z důvodu zpětné kompatibility **iscsym –** a **iscsymf –** jsou definovány jako makra pouze tehdy, když [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definován jako 0; v opačném případě nejsou definovány.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C: \<ctype.h ><br /><br /> C++: \<cctype – > nebo \<ctype.h >|
+|**iscsym –**, **iscsymf –**, **__iscsym –**, **__iswcsym –**, **__iscsymf –**, **__iswcsymf –**, **_iscsym_l –**, **_iswcsym_l –**, **_iscsymf_l –**, **_iswcsymf_l –**|C: \<ctype.h ><br /><br /> C++: \<cctype – > nebo \<ctype.h >|
 
-`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, A `_iswcsymf_l` rutiny se konkrétní společnosti Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**Iscsym –**, **iscsymf –**, **__iscsym –**, **__iswcsym –**, **__iscsymf –**, **__ iswcsymf**, **_iscsym_l –**, **_iswcsym_l –**, **_iscsymf_l –**, a **_iswcsymf_l –** jsou rutiny Microsoft konkrétní. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Klasifikace znaků](../../c-runtime-library/character-classification.md)   
-[Národní prostředí](../../c-runtime-library/locale.md)   
-[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)
+[Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
+[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)<br/>

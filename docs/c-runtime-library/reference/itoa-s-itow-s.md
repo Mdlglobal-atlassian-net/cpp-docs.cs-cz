@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Převede na řetězec, celé číslo. Toto jsou verze [_itoa –, _itow – funkce](../../c-runtime-library/reference/itoa-itow.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede na řetězec, celé číslo. Toto jsou verze [_itoa –, _itow – funkce](itoa-itow.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -159,24 +159,24 @@ Nula v případě úspěšného; Kód chyby při selhání. Pokud platí někter
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|value|Vyrovnávací paměti|velikost|radix|Vrátí|
+|value|Vyrovnávací paměti|velikost|základ –|Vrátí|
 |-----------|------------|----------------------|-----------|------------|
-|všechny|`NULL`|všechny|všechny|`EINVAL`|
-|všechny|všechny|<=0|všechny|`EINVAL`|
-|všechny|všechny|< = délka řetězce výsledek požadované|všechny|`EINVAL`|
-|všechny|všechny|všechny|*základ –* < 2 nebo *základ –* > 36|`EINVAL`|
+|všechny|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|
+|všechny|všechny|<=0|všechny|**EINVAL –**|
+|všechny|všechny|< = délka řetězce výsledek požadované|všechny|**EINVAL –**|
+|všechny|všechny|všechny|*základ –* < 2 nebo *základ –* > 36|**EINVAL –**|
 
 ### <a name="security-issues"></a>Problémy se zabezpečením
 
-Tato funkce může vygenerovat porušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není `NULL`, nebo pokud délka vyrovnávací paměti není dostatečně dlouhé, aby udržení výsledný řetězec.
+Tato funkce může vygenerovat porušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**, nebo pokud délka vyrovnávací paměti není dostatečně dlouhé, aby udržení výsledný řetězec.
 
 ## <a name="remarks"></a>Poznámky
 
-S výjimkou parametry a návratové hodnoty `_itoa_s` a `_itow_s` rodiny funkce mají stejné chování jako odpovídající méně bezpečné `_itoa` a `_itow` verze.
+S výjimkou parametry a návratové hodnoty **_itoa_s –** a **_itow_s –** rodiny funkce mají stejné chování jako odpovídající méně bezpečné **_itoa –** a **_itow –** verze.
 
 V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 CRT zahrnuje pohodlný makra definovat velikost vyrovnávací paměti vyžadované k převodu Nejdelší možná hodnota každého typu integer, včetně null ukončení a podepsat znak, pro několik běžných základny. Informace najdete v tématu [maximální převod počet makra](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ CRT zahrnuje pohodlný makra definovat velikost vyrovnávací paměti vyžadovan
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s –**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s –**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s –**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h > nebo \<wchar.h >|
+|**_itoa_s –**, **_ltoa_s –**, **_ultoa_s –**, **_i64toa_s –**, **_ui64toa_s –**|\<stdlib.h>|
+|**_itow_s –**, **_ltow_s –**, **_ultow_s –**, **_i64tow_s –**, **_ui64tow_s –**|\<stdlib.h > nebo \<wchar.h >|
 
 Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa –, _itow – funkce](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa –, _itow – funkce](itoa-itow.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_Cxxthrowexception – | Microsoft Docs"
-ms.custom: 
+title: _Cxxthrowexception – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CxxThrowException
@@ -31,42 +31,45 @@ helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb59e3e81a9e92d3a692e91c9c25a92fd09603cd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70746446ec2b943913604d5940d468373c018aa4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
-Vytvoří záznam výjimky a volá běhové prostředí na zahájení zpracování výjimky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-extern "C" void __stdcall _CxxThrowException(  
-   void* pExceptionObject  
-   _ThrowInfo* pThrowInfo  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `pExceptionObject`  
- Objekt, který vygeneruje výjimku.  
-  
- [in] `pThrowInfo`  
- Informace, které se vyžaduje ke zpracování výjimky.  
-  
-## <a name="remarks"></a>Poznámky  
- Tato metoda je součástí pouze kompilátoru soubor, který kompilátor používá ke zpracování výjimek. Nevolejte metodu přímo z vašeho kódu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Zdroj:** Throw.cpp  
-  
-## <a name="see-also"></a>Viz také  
- [Abecední seznam odkazů na funkce](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Vytvoří záznam výjimky a volá běhové prostředí na zahájení zpracování výjimky.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+extern "C" void __stdcall _CxxThrowException(
+   void* pExceptionObject
+   _ThrowInfo* pThrowInfo
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*pExceptionObject* objekt, který vygeneruje výjimku.
+
+*pThrowInfo* informace, které je nutné ke zpracování výjimky.
+
+## <a name="remarks"></a>Poznámky
+
+Tato metoda je součástí pouze kompilátoru soubor, který kompilátor používá ke zpracování výjimek. Nevolejte metodu přímo z vašeho kódu.
+
+## <a name="requirements"></a>Požadavky
+
+**Zdroj:** Throw.cpp
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>

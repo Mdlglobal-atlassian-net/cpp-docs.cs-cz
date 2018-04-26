@@ -1,12 +1,12 @@
 ---
-title: "rand – | Microsoft Docs"
-ms.custom: 
+title: rand – | Microsoft Docs
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand
@@ -39,15 +39,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b5d60cdedf69d03871be4c408241660ea726b5c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rand"></a>rand
 
-Pomocí algoritmu dobře známé a plně reprodukovatelné generuje pseudonáhodná čísla. Více prostřednictvím kódu programu zabezpečené verze této funkce je k dispozici. v tématu [rand_s –](../../c-runtime-library/reference/rand-s.md). Generované čísla `rand` nejsou kryptograficky zabezpečené. Pro bezpečnější kryptograficky náhodné generování čísel, pomocí `rand_s` nebo funkce deklarované v standardní knihovna C++ v [ \<náhodných >](../../standard-library/random.md).
+Pomocí algoritmu dobře známé a plně reprodukovatelné generuje pseudonáhodná čísla. Více prostřednictvím kódu programu zabezpečené verze této funkce je k dispozici. v tématu [rand_s –](rand-s.md). Generované čísla **rand –** nejsou kryptograficky zabezpečené. Pro bezpečnější kryptograficky náhodné generování čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v standardní knihovna C++ v [ \<náhodných >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,21 +57,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`rand` Vrátí pseudonáhodná čísla, jak je popsáno výše. Neexistuje žádný návratový chyby.
+**rand –** vrátí pseudonáhodná čísla, jak je popsáno výše. Neexistuje žádný návratový chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-`rand` Funkce vrátí pseudonáhodných celé číslo v rozsahu od 0 do `RAND_MAX` (32767). Použití [srand –](../../c-runtime-library/reference/srand.md) funkce pro generátor pseudonáhodných čísel před voláním `rand`.
+**Rand –** funkce vrátí pseudonáhodných celé číslo v rozsahu od 0 do **rand_max –** (32767). Použití [srand –](srand.md) funkce pro generátor pseudonáhodných čísel před voláním **rand –**.
 
-`rand` Funkce generuje dobře známé pořadí a není vhodná pro použití jako Kryptografická funkce. Pro bezpečnější kryptograficky náhodné generování čísel, pomocí `rand_s` nebo funkce deklarované v standardní knihovna C++ v [ \<náhodných >](../../standard-library/random.md). Informace o tom, co je problém se `rand()` a jak `<random>` řeší tyto nedostatky, najdete v části [toto video](http://go.microsoft.com/fwlink/?LinkId=397615).
+**Rand –** funkce generuje dobře známé pořadí a není vhodná pro použití jako Kryptografická funkce. Pro bezpečnější kryptograficky náhodné generování čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v standardní knihovna C++ v [ \<náhodných >](../../standard-library/random.md). Informace o tom, co je problém se **rand –** a jak \<náhodných > řeší tyto nedostatky, najdete v části [toto video](http://go.microsoft.com/fwlink/?LinkId=397615).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`rand`|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,7 +125,7 @@ int main( void )
 11651
 27464
 18093
- 3284
+3284
 11785
 14686
 11447
@@ -145,6 +145,6 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
-[rand_s](../../c-runtime-library/reference/rand-s.md)  
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[srand](srand.md)<br/>
+[rand_s](rand-s.md)<br/>

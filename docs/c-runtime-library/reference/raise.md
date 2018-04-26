@@ -1,12 +1,12 @@
 ---
 title: vyvolat | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Parametry
 
-*sig*  
+*SIG*<br/>
 Signál má být aktivována.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -73,14 +73,14 @@ V případě úspěšného **vyvolat** vrátí hodnotu 0. Jinak vrátí nenulovo
 
 |Signál|Význam|Výchozí|
 |------------|-------------|-------------|
-|`SIGABRT`|Abnormální ukončení|Ukončí volací program s ukončovacím kódem 3|
-|`SIGFPE`|Chyba s plovoucí desetinnou čárkou|Ukončí volací program|
-|`SIGILL`|Neplatná instrukce|Ukončí volací program|
-|`SIGINT`|CTRL + C přerušení|Ukončí volací program|
-|`SIGSEGV`|Přístup k úložišti neplatný|Ukončí volací program|
-|`SIGTERM`|Ukončení požadavek odeslaný programu|Ignoruje signál|
+|**SIGABRT –**|Abnormální ukončení|Ukončí volací program s ukončovacím kódem 3|
+|**SIGFPE –**|Chyba s plovoucí desetinnou čárkou|Ukončí volací program|
+|**SIGILL –**|Neplatná instrukce|Ukončí volací program|
+|**SIGINT –**|CTRL + C přerušení|Ukončí volací program|
+|**SIGSEGV –**|Přístup k úložišti neplatný|Ukončí volací program|
+|**SIGTERM –**|Ukončení požadavek odeslaný programu|Ignoruje signál|
 
-Pokud argument není platný signál, jak je uvedeno výše, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud nebyla zpracována, nastaví funkci `errno` k `EINVAL` a vrátí nenulovou hodnotu.
+Pokud argument není platný signál, jak je uvedeno výše, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud nebyla zpracována, nastaví funkci **errno** k **einval –** a vrátí nenulovou hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -92,6 +92,6 @@ Další informace o kompatibilitě, najdete v části [kompatibility](../../c-ru
 
 ## <a name="see-also"></a>Viz také
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

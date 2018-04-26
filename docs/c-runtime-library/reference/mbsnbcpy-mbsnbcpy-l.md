@@ -1,12 +1,12 @@
 ---
-title: "_mbsnbcpy –, _mbsnbcpy_l – | Microsoft Docs"
-ms.custom: 
+title: _mbsnbcpy –, _mbsnbcpy_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcpy
@@ -42,101 +42,106 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-caps.latest.revision: 
+caps.latest.revision: 30
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d146faf02bbc37e84f9a386f526eeb449108bcc9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5091407a11c153040d977c4de709f0af6b875b7d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
-Kopie `n` bajtů řetězec tak, aby cílový řetězec. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [_mbsnbcpy_s –, _mbsnbcpy_s_l –](../../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md).  
-  
+
+Kopie **n** bajtů řetězec tak, aby cílový řetězec. Bezpečnější verze tyto funkce jsou k dispozici, najdete v části [_mbsnbcpy_s –, _mbsnbcpy_s_l –](mbsnbcpy-s-mbsnbcpy-s-l.md).
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned char * _mbsnbcpy(  
-   unsigned char * strDest,  
-   const unsigned char * strSource,  
-   size_t count  
-);  
-unsigned char * _mbsnbcpy_l(  
-   unsigned char * strDest,  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-unsigned char * _mbsnbcpy(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count  
-); // C++ only  
-template <size_t size>  
-unsigned char * _mbsnbcpy_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `strDest`  
- Cíl pro řetězec znaků, které se mají zkopírovat.  
-  
- `strSource`  
- Řetězec znaků, které se mají zkopírovat.  
-  
- `count`  
- Počet bajtů, které mají být zkopírovány.  
-  
- `locale`  
- Národní prostředí použít.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `_mbsnbcpy` vrací ukazatel na cílovém řetězcem znaků. Žádnou návratovou hodnotu je vyhrazena indikující chybu.  
-  
-## <a name="remarks"></a>Poznámky  
- `_mbsnbcpy` Funkce kopie `count` bajtů z `strSource` k `strDest`. Pokud `count` překračuje velikost `strDest` nebo zdrojové a cílové řetězce překrývají, chování `_mbsnbcpy` není definován.  
-  
- Pokud `strSource` nebo `strDest` ukazatel s hodnotou null, je tato funkce volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `NULL` a nastaví `errno` k `EINVAL`.  
-  
- Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s výjimkou, že ty, které nemají `_l` příponu použít aktuální národní prostředí a verze, které mají `_l` příponu, použijte parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
-  
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+unsigned char * _mbsnbcpy(
+   unsigned char * strDest,
+   const unsigned char * strSource,
+   size_t count
+);
+unsigned char * _mbsnbcpy_l(
+   unsigned char * strDest,
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+unsigned char * _mbsnbcpy(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char * _mbsnbcpy_l(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*strDest*<br/>
+Cíl pro řetězec znaků, které se mají zkopírovat.
+
+*strSource*<br/>
+Řetězec znaků, které se mají zkopírovat.
+
+*Počet*<br/>
+Počet bajtů, které mají být zkopírovány.
+
+*Národní prostředí*<br/>
+Národní prostředí použít.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_mbsnbcpy –** vrací ukazatel na cílovém řetězcem znaků. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+
+## <a name="remarks"></a>Poznámky
+
+**_Mbsnbcpy –** funkce kopie *počet* bajtů z *strSource* k *strDest*. Pokud *počet* překračuje velikost *strDest* nebo zdrojové a cílové řetězce překrývají, chování **_mbsnbcpy –** není definován.
+
+Pokud *strSource* nebo *strDest* ukazatel s hodnotou null, je tato funkce volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **NULL** a nastaví **errno** k **einval –**.
+
+Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s výjimkou, že ty, které nemají **_l** příponu použít aktuální národní prostředí a verze, které mají **_l** příponu, použijte parametr národního prostředí to je Předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+
 > [!IMPORTANT]
->  Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít ke spuštění libovolného útočník kód, který může způsobit, že bude vyplacena neoprávněně zvýšení úrovně oprávnění a ohrozit zabezpečení systému. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější, bezpečnější svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy`|[strncpy](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|`_mbsnbcpy`|[wcsncpy](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|  
-|`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcp_l`|`_wcsncpy_l`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_mbsnbcpy`|\<Mbstring.h >|  
-|`_mbsnbcpy_l`|\<Mbstring.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
- [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+> Tato funkce může být zranitelný vůči hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti můžete použít ke spuštění libovolného útočník kód, který může způsobit, že bude vyplacena neoprávněně zvýšení úrovně oprávnění a ohrozit zabezpečení systému. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější, bezpečnější svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsncpy –**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy –](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
+|**_tcsncpy_l –**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_mbsnbcpy**|\<Mbstring.h >|
+|**_mbsnbcpy_l**|\<Mbstring.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
+[_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

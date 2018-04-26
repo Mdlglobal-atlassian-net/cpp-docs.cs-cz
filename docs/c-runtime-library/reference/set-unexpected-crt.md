@@ -1,12 +1,12 @@
 ---
-title: "set_unexpected – (CRT) | Microsoft Docs"
-ms.custom: 
+title: set_unexpected – (CRT) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - set_unexpected
@@ -31,65 +31,68 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc1d3b96ee5b52d349b30434932d2c9770267b4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c740f74dc13ea22819d0f792bfc1e3dbcc9f425e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
-Nainstaluje ukončení funkce má být volána `unexpected`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unexpected_function set_unexpected(  
-   unexpected_function unexpFunction   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `unexpFunction`  
- Ukazatel na funkci, která můžete psát nahradit `unexpected` funkce.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí ukazatel na funkci předchozí ukončení registrovaných `_set_unexpected` , aby předchozí funkce můžete později obnovit. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu může použít k obnovení výchozího chování; Tato hodnota může mít hodnotu NULL.  
-  
-## <a name="remarks"></a>Poznámky  
- `set_unexpected` Funkce nainstaluje `unexpFunction` jako funkce volá `unexpected`. `unexpected` nepoužívá se v aktuální implementace zpracování výjimek C++. `unexpected_function` Typ je definována v EH. H jako ukazatel na uživatelem definované neočekávaná funkce `unexpFunction` , který vrací `void`. Vaše vlastní `unexpFunction` funkce by neměla vrátit do jeho volajícího.  
-  
-```  
-typedef void ( *unexpected_function )( );  
-```  
-  
- Ve výchozím nastavení `unexpected` volání `terminate`. Toto výchozí chování můžete změnit tak, že zápis ukončení funkce a volání `set_unexpected` s názvem funkce jako její argument. `unexpected` volá funkci naposledy zadaný jako argument pro `set_unexpected`.  
-  
- Na rozdíl od nainstalované ve volání funkce vlastní ukončení `set_terminate`, můžete v rámci vyvolána výjimka `unexpFunction`.  
-  
- V prostředí s více vlákny neočekávané funkce jsou pro každé vlákno udržovány odděleně. Každé vlákno je potřeba nainstalovat vlastní neočekávaná funkce. Proto každé vlákno má na starosti vlastní neočekávané zpracování.  
-  
- Zpracovávání výjimek v jazyce C++, aktuální implementace Microsoft `unexpected` volání `terminate` ve výchozím nastavení a nikdy volá knihovna RTL – zpracování výjimek. Neexistuje žádné konkrétní výhody volání `unexpected` místo `terminate`.  
-  
- Na jeden `set_unexpected` obslužné rutiny pro všechny dynamicky propojené knihovny DLL nebo exe soubory; i v případě, že zavoláte `set_unexpected` vaší obslužné rutiny, může být nahrazen jiným nebo nahrazujete obslužnou rutinu DLL nebo EXE nastavit jiný.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`set_unexpected`|\<eh.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Rutiny zpracování výjimek](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [Ukončení](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+
+Nainstaluje ukončení funkce má být volána **neočekávané**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+unexpected_function set_unexpected( unexpected_function unexpFunction );
+```
+
+### <a name="parameters"></a>Parametry
+
+*unexpFunction*<br/>
+Ukazatel na funkci, která můžete psát nahradit **neočekávané** funkce.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí ukazatel na funkci předchozí ukončení registrovaných **_set_unexpected** , aby předchozí funkce můžete později obnovit. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu může použít k obnovení výchozího chování; Tato hodnota může mít hodnotu NULL.
+
+## <a name="remarks"></a>Poznámky
+
+**Set_unexpected –** funkce nainstaluje *unexpFunction* jako funkce volá **neočekávané**. **neočekávané** není používán aktuální implementace zpracování výjimek C++. **Unexpected_function – definice** typ je definována v EH. H jako ukazatel na uživatelem definované neočekávaná funkce *unexpFunction* , který vrací **void**. Vaše vlastní *unexpFunction* funkce by neměla vrátit do jeho volajícího.
+
+```cpp
+typedef void ( *unexpected_function )( );
+```
+
+Ve výchozím nastavení **neočekávané** volání **ukončit**. Toto výchozí chování můžete změnit tak, že zápis ukončení funkce a volání **set_unexpected –** s názvem funkce jako její argument. **neočekávané** volá funkci naposledy zadaný jako argument pro **set_unexpected –**.
+
+Na rozdíl od nainstalované ve volání funkce vlastní ukončení **set_terminate –**, můžete v rámci vyvolána výjimka *unexpFunction*.
+
+V prostředí s více vlákny neočekávané funkce jsou pro každé vlákno udržovány odděleně. Každé vlákno je potřeba nainstalovat vlastní neočekávaná funkce. Proto každé vlákno má na starosti vlastní neočekávané zpracování.
+
+Zpracovávání výjimek v jazyce C++, aktuální implementace Microsoft **neočekávané** volání **ukončit** ve výchozím nastavení a nikdy volá knihovna RTL – zpracování výjimek. Neexistuje žádné konkrétní výhody volání **neočekávané** místo **ukončit**.
+
+Na jeden **set_unexpected –** obslužné rutiny pro všechny dynamicky propojené knihovny DLL nebo exe soubory; i v případě, že zavoláte **set_unexpected –** vaší obslužné rutiny, může být nahrazen jiným nebo který chcete nahradit obslužnou rutinu, která nastavuje jiné knihovny DLL nebo EXE.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**set_unexpected**|\<eh.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Rutiny zpracování výjimek](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_get_unexpected](get-unexpected.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[Ukončení](terminate-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

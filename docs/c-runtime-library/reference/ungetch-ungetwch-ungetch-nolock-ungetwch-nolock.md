@@ -1,12 +1,12 @@
 ---
-title: "_ungetch –, _ungetwch –, _ungetch_nolock –, _ungetwch_nolock – | Microsoft Docs"
-ms.custom: 
+title: _ungetch –, _ungetwch –, _ungetch_nolock –, _ungetwch_nolock – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ungetch_nolock
@@ -53,112 +53,117 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e47415af123b592e55b0f01f5556bc19bcfb3a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3478f451ee4c1200074bf066a9de6bcb026c5036
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-Vynutí zpět poslední znak, který je pro čtení z konzoly.  
-  
+
+Vynutí zpět poslední znak, který je pro čtení z konzoly.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ungetch(  
-   int c   
-);  
-wint_t _ungetwch(  
-   wint_t c   
-);  
-int _ungetch_nolock(  
-   int c   
-);  
-wint_t _ungetwch_nolock(  
-   wint_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který má poslat.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Obě funkce vrátí znak `c` v případě úspěchu. Pokud dojde k chybě `_ungetch` vrací hodnotu `EOF` a `_ungetwch` vrátí `WEOF`.  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto funkce nabízené znak `c` zpět do konzoly nástroje způsobuje `c` jako další znak číst `_getch` nebo `_getche` (nebo `_getwch` nebo `_getwche`). `_ungetch` a `_ungetwch` nezdaří, pokud jsou volaná víc než jednou před další čtení. `c` Argument nesmí být `EOF` (nebo `WEOF`).  
-  
- Verzi pomocí `_nolock` příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ungettch`|`_ungetch`|`_ungetch`|`_ungetwch`|  
-|`_ungettch_nolock`|`_ungetch_nolock`|`_ungetch_nolock`|`_ungetwch_nolock`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
-|`_ungetwch`, `_ungetwch_nolock`|\<conio.h > nebo \<wchar.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_ungetch.c  
-// compile with: /c  
-// In this program, a white-space delimited   
-// token is read from the keyboard. When the program   
-// encounters a delimiter, it uses _ungetch to replace   
-// the character in the keyboard buffer.  
-//  
-  
-#include <conio.h>  
-#include <ctype.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buffer[100];  
-   int count = 0;  
-   int ch;  
-  
-   ch = _getche();  
-   while( isspace( ch ) )      // Skip preceding white space.  
-      ch = _getche();  
-   while( count < 99 )         // Gather token.  
-   {  
-      if( isspace( ch ) )      // End of token.  
-         break;  
-      buffer[count++] = (char)ch;  
-      ch = _getche();  
-   }  
-   _ungetch( ch );            // Put back delimiter.  
-   buffer[count] = '\0';      // Null terminate the token.  
-   printf( "\ntoken = %s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-Whitetoken = White  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ungetch(
+   int c
+);
+wint_t _ungetwch(
+   wint_t c
+);
+int _ungetch_nolock(
+   int c
+);
+wint_t _ungetwch_nolock(
+   wint_t c
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který má poslat.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě **_ungetch –** vrací hodnotu **EOF** a **_ungetwch –** vrátí **weof –**.
+
+## <a name="remarks"></a>Poznámky
+
+Tyto funkce nabízené znak *c* zpět do konzoly nástroje způsobuje *c* jako další znak číst **_getch –** nebo **_getche –** (nebo **_getwch –** nebo **_getwche –**). **_ungetch –** a **_ungetwch –** nezdaří, pokud jsou volaná víc než jednou před další čtení. *c* argument nesmí být **EOF** (nebo **weof –**).
+
+Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ungettch –**|**_ungetch**|**_ungetch**|**_ungetwch**|
+|**_ungettch_nolock –**|**_ungetch_nolock –**|**_ungetch_nolock –**|**_ungetwch_nolock –**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_ungetch –**, **_ungetch_nolock –**|\<conio.h >|
+|**_ungetwch –**, **_ungetwch_nolock –**|\<conio.h > nebo \<wchar.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_ungetch.c
+// compile with: /c
+// In this program, a white-space delimited
+// token is read from the keyboard. When the program
+// encounters a delimiter, it uses _ungetch to replace
+// the character in the keyboard buffer.
+//
+
+#include <conio.h>
+#include <ctype.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char buffer[100];
+   int count = 0;
+   int ch;
+
+   ch = _getche();
+   while( isspace( ch ) )      // Skip preceding white space.
+      ch = _getche();
+   while( count < 99 )         // Gather token.
+   {
+      if( isspace( ch ) )      // End of token.
+         break;
+      buffer[count++] = (char)ch;
+      ch = _getche();
+   }
+   _ungetch( ch );            // Put back delimiter.
+   buffer[count] = '\0';      // Null terminate the token.
+   printf( "\ntoken = %s\n", buffer );
+}
+```
+
+```Output
+
+Whitetoken = White
+```
+
+## <a name="see-also"></a>Viz také
+
+[I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
+[_getch, _getwch](getch-getwch.md)<br/>

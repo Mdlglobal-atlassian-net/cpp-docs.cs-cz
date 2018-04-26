@@ -1,12 +1,12 @@
 ---
-title: "clearerr – | Microsoft Docs"
-ms.custom: 
+title: clearerr – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - clearerr
@@ -32,99 +32,102 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8763c3b02451478035d4857919bbe453b29999a3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8fbca4b6e6083cb22bc559b7bad7e75b00b8885c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clearerr"></a>clearerr
-Obnoví označení chyb pro datový proud. Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](../../c-runtime-library/reference/clearerr-s.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void clearerr(  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Ukazatel na `FILE` struktura.  
-  
-## <a name="remarks"></a>Poznámky  
- `clearerr` Funkce resetuje označení chyb a end souborového indikátor pro `stream`. Chyba indikátory nejsou vymazána automaticky; Po nastavení označení chyb pro zadaného datového proudu nadále vrátí hodnotu chyby, dokud operace u tohoto datového proudu `clearerr`, `fseek`, `fsetpos`, nebo `rewind` je volána.  
-  
- Pokud `stream` je `NULL`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí. Další informace o `errno` a kódy chyb, najdete v části [errno – konstanty](../../c-runtime-library/errno-constants.md).  
-  
- Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](../../c-runtime-library/reference/clearerr-s.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`clearerr`|\<stdio.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_clearerr.c  
-// This program creates an error  
-// on the standard input stream, then clears  
-// it so that future reads won't fail.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int c;  
-   // Create an error by writing to standard input.  
-   putc( 'c', stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Write error" );  
-      clearerr( stdin );  
-   }  
-  
-   // See if read causes an error.  
-   printf( "Will input cause an error? " );  
-   c = getc( stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Read error" );  
-      clearerr( stdin );  
-   }  
-   else  
-      printf( "No read error\n" );  
-}  
-```  
-  
-```Output  
-  
-n  
-  
-```  
-  
-```Output  
-  
-      nWrite error: No error  
-Will input cause an error? n  
-No read error  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)   
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof –](../../c-runtime-library/reference/feof.md)   
- [ferror –](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Obnoví označení chyb pro datový proud. Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](clearerr-s.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void clearerr(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*datový proud* ukazatel na **souboru** struktura.
+
+## <a name="remarks"></a>Poznámky
+
+**Clearerr –** funkce resetuje označení chyb a end souborového indikátor pro *datového proudu*. Chyba indikátory nejsou vymazána automaticky; Po nastavení označení chyb pro zadaného datového proudu nadále vrátí hodnotu chyby, dokud operace u tohoto datového proudu **clearerr –**, [fseek](fseek-fseeki64.md), **fsetpos –**, nebo [rewind](rewind.md) je volána.
+
+Pokud *datového proudu* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí. Další informace o **errno** a kódy chyb, najdete v části [errno – konstanty](../../c-runtime-library/errno-constants.md).
+
+Bezpečnější verze této funkce je k dispozici. v tématu [clearerr_s –](clearerr-s.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**clearerr**|\<stdio.h>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_clearerr.c
+// This program creates an error
+// on the standard input stream, then clears
+// it so that future reads won't fail.
+
+#include <stdio.h>
+
+int main( void )
+{
+   int c;
+   // Create an error by writing to standard input.
+   putc( 'c', stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Write error" );
+      clearerr( stdin );
+   }
+
+   // See if read causes an error.
+   printf( "Will input cause an error? " );
+   c = getc( stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Read error" );
+      clearerr( stdin );
+   }
+   else
+      printf( "No read error\n" );
+}
+```
+
+```Output
+
+n
+
+```
+
+```Output
+
+      nWrite error: No error
+Will input cause an error? n
+No read error
+```
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[ferror](ferror.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

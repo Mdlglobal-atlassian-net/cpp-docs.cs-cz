@@ -1,13 +1,13 @@
 ---
 title: feupdateenv | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - feupdateenv
@@ -31,51 +31,56 @@ dev_langs:
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd4a74515b2b3ab29b30fb07d80121e35d950ee
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1f731b5a24d952c6e58341662914e185efbac1ab
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="feupdateenv"></a>feupdateenv
-Uloží aktuálně vyvolané výjimky s plovoucí desetinnou čárkou, obnoví stav zadaného prostředí s plovoucí desetinnou čárkou a poté vyvolá uložené výjimky s plovoucí desetinnou čárkou.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int feupdateenv(  
-   const fenv_t* penv  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- `penv`  
- Ukazatel na `fenv_t` objekt, který obsahuje prostředí s plovoucí desetinnou čárkou jako sada voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Použití makra FE_DFL_ENV, můžete také zadat výchozí spouštěcí prostředí s plovoucí desetinnou čárkou.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu 0, pokud se všechny akce úspěšně dokončit. Jinak vrátí nenulovou hodnotu.  
-  
-## <a name="remarks"></a>Poznámky  
- `feupdateenv` Funkce provádí různé akce. Nejprve ukládá aktuální stav příznaky výjimky vyvolané s plovoucí desetinnou čárkou v automatické úložiště. Potom nastaví z s hodnotou uloženou v aktuálním prostředí s plovoucí desetinnou čárkou `fenv_t` objektu na kterou odkazuje `penv`. Pokud `penv` není FE_DFL_ENV nebo neodkazuje na platný `fenv_t` objektu následné chování není definován. Nakonec `feupdateenv` vyvolá místně uložené výjimky s plovoucí desetinnou čárkou.  
-  
- Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Hlavička C|Hlavička C++|  
-|--------------|--------------|------------------|  
-|`feupdateenv`|\<fenv.h>|\<cfenv>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
- [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)
+
+Uloží aktuálně vyvolané výjimky s plovoucí desetinnou čárkou, obnoví stav zadaného prostředí s plovoucí desetinnou čárkou a poté vyvolá uložené výjimky s plovoucí desetinnou čárkou.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int feupdateenv(
+   const fenv_t* penv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*penv*<br/>
+Ukazatel na **fenv_t** objekt, který obsahuje prostředí s plovoucí desetinnou čárkou jako sada voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Použití makra FE_DFL_ENV, můžete také zadat výchozí spouštěcí prostředí s plovoucí desetinnou čárkou.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu 0, pokud se všechny akce úspěšně dokončit. Jinak vrátí nenulovou hodnotu.
+
+## <a name="remarks"></a>Poznámky
+
+**Feupdateenv** funkce provádí různé akce. Nejprve ukládá aktuální stav příznaky výjimky vyvolané s plovoucí desetinnou čárkou v automatické úložiště. Potom nastaví z s hodnotou uloženou v aktuálním prostředí s plovoucí desetinnou čárkou **fenv_t** objektu na kterou odkazuje *penv*. Pokud *penv* není **FE_DFL_ENV** nebo neodkazuje na platný **fenv_t** objektu následné chování není definován. Nakonec **feupdateenv** vyvolá místně uložené výjimky s plovoucí desetinnou čárkou.
+
+Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Hlavička C|Hlavička C++|
+|--------------|--------------|------------------|
+|**feupdateenv**|\<fenv.h >|\<cfenv>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[fegetenv](fegetenv1.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[feholdexcept](feholdexcept2.md)<br/>
+[fesetexceptflag](fesetexceptflag2.md)<br/>

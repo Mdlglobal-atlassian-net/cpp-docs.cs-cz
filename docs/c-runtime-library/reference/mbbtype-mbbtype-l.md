@@ -1,12 +1,12 @@
 ---
-title: "_mbbtype –, _mbbtype_l – | Microsoft Docs"
-ms.custom: 
+title: _mbbtype –, _mbbtype_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbbtype
@@ -37,76 +37,81 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beaa8e11b8593205dd192547097e6f7228625410
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc67c09d1196308df89d70a02cf2cea4c713b0d2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
-Vrátí typ bajtů podle předchozích bajtů.  
-  
+
+Vrátí typ bajtů podle předchozích bajtů.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _mbbtype(  
-   unsigned char c,  
-   int type   
-);  
-int _mbbtype_l(  
-   unsigned char c,  
-   int type,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který se má testovat.  
-  
- `type`  
- Typ bajtů, které chcete otestovat.  
-  
- `locale`  
- Národní prostředí, které se má použít  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `_mbbtype` Vrátí typ bajtů v řetězci. Toto rozhodnutí je kontextová jako zadanou hodnotou `type`, který poskytuje testovací podmínky řízení. `type` je typ předchozí bajtů v řetězci. Manifestu konstanty v následující tabulce jsou definovány v Mbctype.h.  
-  
-|Hodnota `type`|`_mbbtype` testování pro|Návratová hodnota|`c`|  
-|---------------------|--------------------------|------------------|---------|  
-|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|`_MBC_SINGLE` (0)|Jeden bajt (0x20 - 0x7E, 0xA1 - 0xDF)|  
-|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|`_MBC_LEAD` (1)|Vést bajt vícebajtových znaků (0x81 - 0x9F, 0xE0 - 0xFC)|  
-|Libovolná hodnota s výjimkou 1|Platnou bajtovou jednobajtové nebo nepovedou|`_MBC_ILLEGAL`<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
-|1|Platný bajt|`_MBC_TRAIL` (2)|Koncové bajt vícebajtových znaků (0x40 - 0x7E, 0x80 - 0xFC)|  
-|1|Platný bajt|`_MBC_ILLEGAL`<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
-  
-## <a name="remarks"></a>Poznámky  
- `_mbbtype` Funkce určuje typ bajtů v vícebajtových znaků. Pokud hodnota `type` je jakákoli hodnota s výjimkou 1, `_mbbtype` testů pro platný jednobajtové nebo nepovedou bajt vícebajtových znaků. Pokud hodnota `type` je 1, `_mbbtype` testů pro platný bajt vícebajtových znaků.  
-  
- Výstupní hodnota je ovlivňován nastavením `LC_CTYPE` kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. `_mbbtype` Verze této funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí; `_mbbtype_l` verze je stejná s tím rozdílem, že ji, použijte parametr národního prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
-  
- V dřívějších verzích `_mbbtype` nazýval `chkctype`. Nový kód, použijte `_mbbtype` místo.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
-|-------------|---------------------|---------------------|  
-|`_mbbtype`|\<Mbstring.h >|\<mbctype.h>*|  
-|`_mbbtype_l`|\<Mbstring.h >|\<mbctype.h>*|  
-  
- \* Definice manifestu konstanty, které se používají jako návratové hodnoty.  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _mbbtype(
+   unsigned char c,
+   int type
+);
+int _mbbtype_l(
+   unsigned char c,
+   int type,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který se má testovat.
+
+*Typ*<br/>
+Typ bajtů, které chcete otestovat.
+
+*Národní prostředí*<br/>
+Národní prostředí, které se má použít
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_mbbtype –** vrátí typ bajtů v řetězci. Toto rozhodnutí je kontextová jako zadanou hodnotou *typu*, který poskytuje testovací podmínky řízení. *typ* je typ předchozí bajtů v řetězci. Manifestu konstanty v následující tabulce jsou definovány v Mbctype.h.
+
+|Hodnota *typu*|**_mbbtype –** testů pro|Návratová hodnota|*c*|
+|---------------------|--------------------------|------------------|---------|
+|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|**_MBC_SINGLE** (0)|Jeden bajt (0x20 - 0x7E, 0xA1 - 0xDF)|
+|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|**_MBC_LEAD** (1)|Vést bajt vícebajtových znaků (0x81 - 0x9F, 0xE0 - 0xFC)|
+|Libovolná hodnota s výjimkou 1|Platnou bajtovou jednobajtové nebo nepovedou|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|1|Platný bajt|**_MBC_TRAIL** (2)|Koncové bajt vícebajtových znaků (0x40 - 0x7E, 0x80 - 0xFC)|
+|1|Platný bajt|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+
+## <a name="remarks"></a>Poznámky
+
+**_Mbbtype –** funkce určuje typ bajtů v vícebajtových znaků. Pokud hodnota *typ* je jakákoli hodnota s výjimkou 1, **_mbbtype –** testů pro platný jednobajtové nebo nepovedou bajt vícebajtových znaků. Pokud hodnota *typ* je 1, **_mbbtype –** testů pro platný bajt vícebajtových znaků.
+
+Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. **_Mbbtype –** verze této funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí; **_mbbtype_l –** verze je stejná s tím rozdílem, že ji, použijte parametr národního prostředí, je předaná místo . Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+
+V dřívějších verzích **_mbbtype –** nazýval **chkctype**. Nový kód, použijte **_mbbtype –** místo.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|-------------|---------------------|---------------------|
+|**_mbbtype –**|\<Mbstring.h >|\<Mbctype.h > *|
+|**_mbbtype_l**|\<Mbstring.h >|\<Mbctype.h > *|
+
+\* Definice manifestu konstanty, které se používají jako návratové hodnoty.
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>

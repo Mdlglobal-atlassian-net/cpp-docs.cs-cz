@@ -1,7 +1,7 @@
 ---
 title: Norm, normf, norml | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 04/05/2018
 ms.technology:
 - cpp
 - devlang-cpp
@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28c8e05dfc2cc9e42584324a78ba14f37a9b951d
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: e485c609054021fbdb8563ded539aa8f19cc868e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="norm-normf-norml"></a>Norm, normf, norml
 
@@ -76,22 +76,22 @@ Kvadratických odhad *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení `norm` trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **dlouho dvojité** hodnoty. V programu C `norm` má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **norm** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **long double** hodnoty. V programu C **norm** má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Hlavička C|Hlavička C++|
 |-------------|--------------|------------------|
-|`norm`, `normf`, `norml`|\<complex.h>|\<ccomplex>|
+|**Norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
 **_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementované nativní typy C99 **float _complex –** , **dvojité _complex –**, a **_complex long double –**, v uvedeném pořadí.  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Abecední seznam odkazů na funkce](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

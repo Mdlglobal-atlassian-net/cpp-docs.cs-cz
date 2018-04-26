@@ -1,12 +1,12 @@
 ---
-title: _kbhit | Microsoft Docs
-ms.custom: 
+title: _kbhit – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _kbhit
@@ -39,79 +39,84 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643a02b8c3617689900eb4114d19fad6f46ad280
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3440227be02fbfda2d4431d91b1286d965e8bc79
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="kbhit"></a>_kbhit
-Zkontroluje konzolu na vstup z klávesnice.  
-  
+
+Zkontroluje konzolu na vstup z klávesnice.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-int _kbhit( void );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud byla klávesa stisknuta, vrací funkce `_kbhit` nenulovou hodnotu. Jinak vrací 0.  
-  
-## <a name="remarks"></a>Poznámky  
- Funkce `_kbhit` zkontroluje konzolu na poslední stisk klávesy. Pokud tato funkce vrátí nenulovou hodnotu, stisk klávesy čeká ve vyrovnávací paměti. Chcete-li tento stisk klávesy získat, může poté program zavolat funkci `_getch` nebo `_getche`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_kbhit`|\<conio.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_kbhit.c  
-// compile with: /c  
-/* This program loops until the user  
- * presses a key. If _kbhit returns nonzero, a  
- * keystroke is waiting in the buffer. The program  
- * can call _getch or _getche to get the keystroke.  
- */  
-  
-#include <conio.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   /* Display message until key is pressed. */  
-   while( !_kbhit() )  
-      _cputs( "Hit me!! " );  
-  
-   /* Use _getch to throw key away. */  
-   printf( "\nKey struck was '%c'\n", _getch() );  
-}  
-```  
-  
-## <a name="sample-output"></a>Vzorový výstup  
-  
-```  
-Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!  
-Key struck was 'q'   
-```  
-  
-## <a name="see-also"></a>Viz také  
- [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+
+int _kbhit( void );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_kbhit –** vrátí nenulovou hodnotu, pokud byla stisknutí klávesy. Jinak vrací 0.
+
+## <a name="remarks"></a>Poznámky
+
+**_Kbhit –** funkce ověří v konzole poslední klávesu. Pokud tato funkce vrátí nenulovou hodnotu, stisk klávesy čeká ve vyrovnávací paměti. Potom můžete volat program **_getch –** nebo **_getche –** získat klávesu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_kbhit**|\<conio.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_kbhit.c
+// compile with: /c
+/* This program loops until the user
+* presses a key. If _kbhit returns nonzero, a
+* keystroke is waiting in the buffer. The program
+* can call _getch or _getche to get the keystroke.
+*/
+
+#include <conio.h>
+#include <stdio.h>
+
+int main( void )
+{
+   /* Display message until key is pressed. */
+   while( !_kbhit() )
+      _cputs( "Hit me!! " );
+
+   /* Use _getch to throw key away. */
+   printf( "\nKey struck was '%c'\n", _getch() );
+}
+```
+
+### <a name="sample-output"></a>Vzorový výstup
+
+```Output
+Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
+Key struck was 'q'
+```
+
+## <a name="see-also"></a>Viz také
+
+[I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>

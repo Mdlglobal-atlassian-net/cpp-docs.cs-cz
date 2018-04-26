@@ -1,12 +1,12 @@
 ---
-title: "logb –, logbf –, logbl –, _logb –, _logbf – | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: logb –, logbf –, logbl –, _logb –, _logbf – | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - logb
@@ -47,76 +47,82 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2c1ad71f5f81b7e21e788e8cdbeb9edce60944
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f279d2b31ba9a40dd3d5c0e5d3c50e5a9a4b170
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
-Extrahuje exponentu hodnoty s plovoucí desetinnou čárkou argumentu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double logb(  
-   double x   
-);  
-float logb(  
-   float x   
-); // C++ only  
-long double logb(  
-   long double x   
-); // C++ only   
-float logbf(  
-   float x   
-);  
-long double logbl(  
-   long double x   
-);  
-double _logb(  
-   double x   
-);  
-float _logbf(  
-   float x   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- x  
- Hodnota s plovoucí desetinnou čárkou.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `logb` Vrátí hodnotu neposunutého exponentu `x` jako znaménkem reprezentován jako hodnotu s plovoucí desetinnou čárkou.  
-  
-## <a name="remarks"></a>Poznámky  
- `logb` Funkce extrahovat exponenciální hodnoty s plovoucí desetinnou čárkou argumentu `x`, jako kdyby `x` byly podobě s neomezenou rozsahu. Pokud argument `x` je nenormalizovanou, je zpracováván, jako by byly normalized.  
-  
- Protože C++ umožňuje, aby přetížení, můžete volat přetížení `logb` , přijmout a vrátit `float` nebo `long double` hodnoty. V programu C `logb` vždy provede a vrátí `double`.  
-  
-|Vstup|Výjimka SEH|Matherr – výjimka|  
-|-----------|-------------------|-----------------------|  
-|ROZMEZÍ QNAN, IND|Žádné|_DOMAIN|  
-|± 0|ZERODIVIDE|–|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_logb`|\<float.h – >|  
-|`logb`, `logbf`, `logbl`, `_logbf`|\<math.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)   
- [frexp](../../c-runtime-library/reference/frexp.md)
+
+Extrahuje exponentu hodnoty s plovoucí desetinnou čárkou argumentu.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double logb(
+   double x
+);
+float logb(
+   float x
+); // C++ only
+long double logb(
+   long double x
+); // C++ only
+float logbf(
+   float x
+);
+long double logbl(
+   long double x
+);
+double _logb(
+   double x
+);
+float _logbf(
+   float x
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Hodnota s plovoucí desetinnou čárkou.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**logb –** vrátí neposunutého exponentu hodnotu *x* jako znaménkem reprezentován jako hodnotu s plovoucí desetinnou čárkou.
+
+## <a name="remarks"></a>Poznámky
+
+**Logb –** funkce extrahovat exponenciální hodnoty s plovoucí desetinnou čárkou argumentu *x*, jako kdyby *x* byly podobě s neomezenou rozsahu. Pokud argument *x* je nenormalizovanou, je zpracováván, jako by byly normalized.
+
+Protože C++ umožňuje, aby přetížení, můžete volat přetížení **logb –** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **logb –** vždy provede a vrátí **dvojité**.
+
+|Vstup|Výjimka SEH|Matherr – výjimka|
+|-----------|-------------------|-----------------------|
+|ROZMEZÍ QNAN, IND|Žádné|_DOMAIN –|
+|± 0|ZERODIVIDE|–|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_logb**|\<float.h – >|
+|**logb –**, **logbf –**, **logbl –**, **_logbf –**|\<Math.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Viz také
+
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[frexp](frexp.md)<br/>

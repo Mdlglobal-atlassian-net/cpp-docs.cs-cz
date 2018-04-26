@@ -1,12 +1,12 @@
 ---
-title: "btowc – | Microsoft Docs"
-ms.custom: 
+title: btowc – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - btowc
@@ -30,43 +30,47 @@ dev_langs:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec89bd89edb8fa178ec83d6a2e57fe1ba86da5d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f6605184408b3a1548eeb8af469fc7df1a6407c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="btowc"></a>btowc
-Určení, zda celé reprezentuje platný znak jednobajtové ve stavu počáteční shift.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-wint_t btowc(  
-   int c  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Celé číslo pro testování.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí reprezentaci široká charakterová znaku, pokud na celé číslo představuje platný znak jednobajtové ve stavu počáteční shift. Vrátí weof – Pokud je hodnota EOF na celé číslo nebo není platný znak jednobajtové ve stavu počáteční shift. Výstup této funkce je ovlivňován aktuální `LC_TYPE` národního prostředí.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`btowc`|\<stdio.h > nebo \<wchar.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
-## <a name="see-also"></a>Viz také  
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)
+
+Určení, zda celé reprezentuje platný znak jednobajtové ve stavu počáteční shift.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+wint_t btowc(
+   int character
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Znak*<br/>
+Celé číslo pro testování.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí reprezentaci široká charakterová znaku, pokud na celé číslo představuje platný znak jednobajtové ve stavu počáteční shift. Vrátí weof – Pokud je hodnota EOF na celé číslo nebo není platný znak jednobajtové ve stavu počáteční shift. Výstup této funkce je ovlivňován aktuální **LC_TYPE** národního prostředí.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**btowc**|\<stdio.h > nebo \<wchar.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

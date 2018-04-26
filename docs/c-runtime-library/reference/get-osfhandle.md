@@ -1,12 +1,12 @@
 ---
-title: "_get_osfhandle – | Microsoft Docs"
-ms.custom: 
+title: _get_osfhandle – | Microsoft Docs
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_osfhandle
@@ -34,55 +34,55 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffc65e12c4a9023d0ef649bbf2cb5e8f7e76808
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ef9481cb0ad962de96b710b31ac1460b9703ae6e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
-Načte popisovač souboru operačního systému, který je přidružen popisovač zadaný soubor.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-intptr_t _get_osfhandle(   
-   int fd   
-);  
-```  
-  
+Načte popisovač souboru operačního systému, který je přidružen popisovač zadaný soubor.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+intptr_t _get_osfhandle(
+   int fd
+);
+```
+
 ### <a name="parameters"></a>Parametry
 
-*fd*  
-Existující popisovače souborů.  
-  
+*FD*<br/>
+Existující popisovače souborů.
+
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu `INVALID_HANDLE_VALUE` (-1) a nastaví `errno` k `EBADF`, označující neplatný popisovač souboru.  
-  
+Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **ebadf –**, označující neplatný popisovač souboru.
+
 ## <a name="remarks"></a>Poznámky
 
-Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získávají pomocí `_get_osfhandle`, volání [ \_zavřete](../../c-runtime-library/reference/close.md) na popisovače souborů *fd*. Nevolejte `CloseHandle` na návratovou hodnotu této funkce. Je vlastníkem základní popisovač souboru *fd* popisovače souborů a při zavření `_close` se volá na *fd*. Pokud je vlastníkem popisovače souborů `FILE *` datového proudu, pak volání [fclose –](../../c-runtime-library/reference/fclose-fcloseall.md) na který `FILE *` datový proud se zavře popisovače souborů a základní popisovač souboru. V takovém případě Nevolejte `_close` na popisovače souborů.
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_get_osfhandle`|\<io.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md) v úvodu.  
-  
+Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získávají pomocí **_get_osfhandle –**, volání [_close –](close.md) na popisovače souborů *fd*. Nevolejte **funkce CloseHandle** na návratovou hodnotu této funkce. Je vlastníkem základní popisovač souboru *fd* popisovače souborů a při zavření [_close –](close.md) se volá na *fd*. Pokud je vlastníkem popisovače souborů **souboru \***  datového proudu, pak volání [fclose –](fclose-fcloseall.md) na který **soubor \***  datový proud se zavře popisovač souboru a základní popisovač souboru operačního systému. V takovém případě Nevolejte [_close –](close.md) na popisovače souborů.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_get_osfhandle**|\<IO.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
 ## <a name="see-also"></a>Viz také
 
-[Zpracování souborů](../../c-runtime-library/file-handling.md)   
-[_close –](../../c-runtime-library/reference/close.md)   
-[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
-[_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
+[_close](close.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

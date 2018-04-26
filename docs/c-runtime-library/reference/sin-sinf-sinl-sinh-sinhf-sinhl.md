@@ -1,12 +1,12 @@
 ---
-title: "Sin, sinf –, sinl –, sinh, sinhf –, sinhl – | Microsoft Docs"
-ms.custom: 
+title: Sin, sinf –, sinl –, sinh, sinhf –, sinhl – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - sinl
@@ -51,17 +51,17 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 54718553d71a498463dbc881da8ceb3401ff5b5b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
 Výpočet sinů a hyperbolický sinů.  
@@ -101,9 +101,9 @@ long double sinhl(long double x);
   
 |Vstup|Výjimka SEH|Matherr – výjimka|  
 |-----------|-------------------|-----------------------|  
-|ROZMEZÍ QNAN, IND|Žádné|_DOMAIN|  
-|∞ rozmezí (sin, sinf – sinl –.)|NEPLATNÝ|_DOMAIN|  
-|&#124; x &#124; ≥ 7.104760e + 002 (sinh, sinhf – sinhl –.)|PŘETEČENÍ + NEPŘESNÝ|PŘETEČENÍ|  
+|ROZMEZÍ QNAN, IND|Žádné|_DOMAIN –|  
+|∞ rozmezí (sin, sinf – sinl –.)|NEPLATNÝ|_DOMAIN –|  
+|&#124;x&#124; ≥ 7.104760e + 002 (sinh, sinhf – sinhl –.)|PŘETEČENÍ + NEPŘESNÝ|PŘETEČENÍ|  
   
  Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -114,7 +114,7 @@ long double sinhl(long double x);
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
+|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<Math.h >|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
   

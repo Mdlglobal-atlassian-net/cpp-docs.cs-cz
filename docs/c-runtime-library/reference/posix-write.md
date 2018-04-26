@@ -1,12 +1,12 @@
 ---
-title: "zápis | Microsoft Docs"
-ms.custom: 
+title: zápis | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - write
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6d147aff67aa02afee85a396798d4d1803d0ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b6119652dc7f82d63022a06e2e79d83fa7013c31
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="write"></a>write
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_Write –](../../c-runtime-library/reference/write.md) místo.
+
+Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_Write –](write.md) místo.

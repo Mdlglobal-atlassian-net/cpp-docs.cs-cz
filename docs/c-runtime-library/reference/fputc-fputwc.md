@@ -1,12 +1,12 @@
 ---
-title: "fputc –, fputwc – | Microsoft Docs"
-ms.custom: 
+title: fputc –, fputwc – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fputc
@@ -37,101 +37,106 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af95e4b11048ebda50ac4d73fc87b6b67903494b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 707c6d7fa2e45a4fb0c841015f59ef786e539168
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
-Znak se zapíše do datového proudu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fputc(  
-   int c,  
-   FILE *stream   
-);  
-wint_t fputwc(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, který má být zapsána.  
-  
- `stream`  
- Ukazatel na `FILE` struktura.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Každá z těchto funkcí vrátí znak zapsána. Pro `fputc`, návratová hodnota `EOF` označuje chybu. Pro `fputwc`, návratová hodnota `WEOF` označuje chybu. Pokud `stream` je `NULL`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet `EOF` a nastavte `errno` k `EINVAL`.  
-  
- V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.  
-  
-## <a name="remarks"></a>Poznámky  
- Každá z těchto funkcí zapíše jednoho znaku `c` do souboru na pozici indikován označení pozice přidružený soubor (je-li definována) a přejde na indikátor podle potřeby. U `fputc` a `fputwc`, soubor je přidružen `stream`. Pokud je soubor nemůže podporovat umísťovací požadavky nebo byl otevřen v režimu připojení, znak, který je připojen na konec datového proudu.  
-  
- Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. `fputc` aktuálně nepodporuje výstup do proudu kódování UNICODE.  
-  
- Verzi pomocí `_nolock` příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Další informace najdete v tématu[_fputc_nolock –, _fputwc_nolock –](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
-  
- Postupujte podle konkrétní rutiny poznámky.  
-  
-|Rutina|Poznámky|  
-|-------------|-------------|  
-|`fputc`|Ekvivalentní `putc`, ale implementována pouze jako funkci, nikoli jako funkce a makra.|  
-|`fputwc`|Široká charakterová verzi `fputc`. Zapíše `c` jako vícebajtových znaků nebo široká znaková podle jestli `stream` je otevřen v režimu textových nebo binárního režimu.|  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fputtc`|`fputc`|`fputc`|`fputwc`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Požadovaný hlavičkový soubor|  
-|--------------|---------------------|  
-|`fputc`|\<stdio.h>|  
-|`fputwc`|\<stdio.h > nebo \<wchar.h >|  
-  
- Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –`stdin`, `stdout`, a `stderr`– C běhové funkce mohli používat v aplikacích pro UPW, musí být přesměrována. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_fputc.c  
-// This program uses fputc  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char strptr1[] = "This is a test of fputc!!\n";  
-   char *p;  
-  
-   // Print line to stream using fputc.   
-   p = strptr1;  
-   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;  
-  
-}  
-```  
-  
-```Output  
-This is a test of fputc!!  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)   
- [fgetc –, fgetwc –](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Znak se zapíše do datového proudu.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fputc(
+   int c,
+   FILE *stream
+);
+wint_t fputwc(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, který má být zapsána.
+
+*Datový proud*<br/>
+Ukazatel na **souboru** struktura.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Každá z těchto funkcí vrátí znak zapsána. Pro **fputc –**, návratová hodnota **EOF** označuje chybu. Pro **fputwc –**, návratová hodnota **weof –** označuje chybu. Pokud *datového proudu* je **NULL**, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet **EOF** a nastavte **errno** k **einval –**.
+
+V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+
+## <a name="remarks"></a>Poznámky
+
+Každá z těchto funkcí zapíše jednoho znaku *c* do souboru na pozici indikován označení pozice přidružený soubor (je-li definována) a přejde na indikátor podle potřeby. U **fputc –** a **fputwc –**, soubor je přidružen *datového proudu*. Pokud je soubor nemůže podporovat umísťovací požadavky nebo byl otevřen v režimu připojení, znak, který je připojen na konec datového proudu.
+
+Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **fputc –** výstup aktuálně nepodporuje do proudu kódování UNICODE.
+
+Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Další informace najdete v tématu[_fputc_nolock –, _fputwc_nolock –](fputc-nolock-fputwc-nolock.md).
+
+Postupujte podle konkrétní rutiny poznámky.
+
+|Rutina|Poznámky|
+|-------------|-------------|
+|**fputc –**|Ekvivalentní **putc –**, ale implementována pouze jako funkci, nikoli jako funkce a makra.|
+|**fputwc –**|Široká charakterová verzi **fputc –**. Zapíše *c* jako vícebajtových znaků nebo široká znaková podle jestli *datového proudu* je otevřen v režimu textových nebo binárního režimu.|
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fputtc –**|**fputc –**|**fputc –**|**fputwc –**|
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Požadovaný hlavičkový soubor|
+|--------------|---------------------|
+|**fputc –**|\<stdio.h>|
+|**fputwc –**|\<stdio.h > nebo \<wchar.h >|
+
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –**stdin –**, **stdout**, a **stderr**– musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_fputc.c
+// This program uses fputc
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char strptr1[] = "This is a test of fputc!!\n";
+   char *p;
+
+   // Print line to stream using fputc.
+   p = strptr1;
+   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;
+
+}
+```
+
+```Output
+This is a test of fputc!!
+```
+
+## <a name="see-also"></a>Viz také
+
+[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

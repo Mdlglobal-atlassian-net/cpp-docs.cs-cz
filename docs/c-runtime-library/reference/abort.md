@@ -1,12 +1,12 @@
 ---
-title: "Abort – | Microsoft Docs"
-ms.custom: 
+title: Abort – | Microsoft Docs
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - abort
@@ -36,11 +36,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f66c1fc650582dba99ad314d8202b3c2d2516e26
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="abort"></a>abort
 
@@ -57,13 +57,13 @@ void abort( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`abort` nevrátí volající proces řízení. Ve výchozím nastavení, vyhledává signál obslužné rutiny přerušení a vyvolá `SIGABRT` je-li nastavena. Potom `abort` ukončí aktuální proces a vrátí ukončovací kód nadřazeného procesu.
+**Abort** nevrací řízení procesu volání. Ve výchozím nastavení, vyhledává signál obslužné rutiny přerušení a vyvolá **sigabrt –** je-li nastavena. Potom **abort** ukončí aktuální proces a vrátí ukončovací kód nadřazeného procesu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
-Ve výchozím nastavení, pokud je aplikace vytvořené s nástroji knihovně spuštění ladění `abort` rutiny zobrazí chybovou zprávu před `SIGABRT` je vyvolána. Pro aplikace konzoly, spuštěna v režimu konzoly, je zpráva odeslána na `STDERR`. Desktopové aplikace systému Windows a konzole aplikace běžící v režimu zobrazení v okně zobrazení zprávy v okně se zprávou. K potlačení zprávy, použijte [_set_abort_behavior –](../../c-runtime-library/reference/set-abort-behavior.md) zrušte `_WRITE_ABORT_MSG` příznak. Zpráva zobrazí závisí na verzi modulu runtime prostředí použít. Pro aplikace vytvořené pomocí nejnovější verze aplikace Visual C++ zpráva vypadá takto:
+Ve výchozím nastavení, pokud je aplikace vytvořené s nástroji knihovně spuštění ladění **abort** rutiny zobrazí chybovou zprávu před **sigabrt –** je vyvolána. Pro aplikace konzoly, spuštěna v režimu konzoly, je zpráva odeslána na **STDERR**. Desktopové aplikace systému Windows a konzole aplikace běžící v režimu zobrazení v okně zobrazení zprávy v okně se zprávou. K potlačení zprávy, použijte [_set_abort_behavior –](set-abort-behavior.md) zrušte **_WRITE_ABORT_MSG** příznak. Zpráva zobrazí závisí na verzi modulu runtime prostředí použít. Pro aplikace vytvořené pomocí nejnovější verze aplikace Visual C++ zpráva vypadá takto:
 
 > Byla volána R6010 - abort()
 
@@ -71,13 +71,13 @@ Tato zpráva zobrazila v předchozích verzích běhové knihovny jazyka C:
 
 > Tato aplikace vyžaduje modul Runtime ukončen neobvyklým způsobem. Další informace získáte tým podpory aplikace.
 
-Když program kompiluje v režimu ladění, zobrazí se v možnosti **Abort**, **opakujte**, nebo **Ignorovat**. Pokud se uživatel rozhodne **Abort**, program okamžitě ukončí a vrátí ukončovací kód 3. Pokud se uživatel rozhodne **opakujte**, ladicí program je volána pro ladění za běhu, pokud je k dispozici. Pokud se uživatel rozhodne **Ignorovat**, `abort` pokračuje normálním zpracování.
+Když program kompiluje v režimu ladění, zobrazí se v možnosti **Abort**, **opakujte**, nebo **Ignorovat**. Pokud se uživatel rozhodne **Abort**, program okamžitě ukončí a vrátí ukončovací kód 3. Pokud se uživatel rozhodne **opakujte**, ladicí program je volána pro ladění za běhu, pokud je k dispozici. Pokud se uživatel rozhodne **Ignorovat**, **abort** pokračuje normálním zpracování.
 
-V sestavení pro ladění a prodejní `abort` zkontroluje, zda je nastaven obslužné rutiny přerušení signál. Pokud obslužná rutina signál jiné než výchozí nastavená, `abort` volání `raise(SIGABRT)`. Použití [signál](../../c-runtime-library/reference/signal.md) funkce pro přidružení přerušení signál obslužné rutiny funkce s `SIGABRT` signál. Můžete provést vlastní akce – například vyčištění prostředků nebo protokolování informací – a ukončete aplikaci pomocí vlastní kód chyby v obslužné rutiny. Pokud je definována žádná obslužná rutina vlastní signál, `abort` nevyvolá `SIGABRT` signál.
+V sestavení pro ladění a prodejní **abort** zkontroluje, zda je nastaven obslužné rutiny přerušení signál. Pokud obslužná rutina signál jiné než výchozí nastavená, **abort** volání `raise(SIGABRT)`. Použití [signál](signal.md) funkce pro přidružení přerušení signál obslužné rutiny funkce s **sigabrt –** signál. Můžete provést vlastní akce – například vyčištění prostředků nebo protokolování informací – a ukončete aplikaci pomocí vlastní kód chyby v obslužné rutiny. Pokud je definována žádná obslužná rutina vlastní signál, **abort** nevyvolá **sigabrt –** signál.
 
-Ve výchozím nastavení v sestavení bez ladění aplikací, plocha nebo konzoly `abort` poté vyvolá mechanismus Windows Error Reporting Service (dříve označované jako zotavení po havárii. Watson) do sestav chyb společnosti Microsoft. Toto chování můžete povolit nebo zakázat voláním `_set_abort_behavior` a nastavení nebo maskování `_CALL_REPORTFAULT` příznak. Když je nastavený příznak, systém Windows zobrazí okno se zprávou, která má text něco jako "Problém způsobil, že program přestane fungovat správně." Uživatel může vybrat, má být vyvolán ladicí program s **ladění** tlačítko, nebo zvolte **ukončení programu** tlačítko Ukončit aplikaci s kódem chyby, která je definována v operačním systému.
+Ve výchozím nastavení v sestavení bez ladění aplikací, plocha nebo konzoly **abort** poté vyvolá mechanismus Windows Error Reporting Service (dříve označované jako zotavení po havárii. Watson) do sestav chyb společnosti Microsoft. Toto chování můžete povolit nebo zakázat voláním **_set_abort_behavior –** a nastavení nebo maskování **_CALL_REPORTFAULT** příznak. Když je nastavený příznak, systém Windows zobrazí okno se zprávou, která má text něco jako "Problém způsobil, že program přestane fungovat správně." Uživatel může vybrat, má být vyvolán ladicí program s **ladění** tlačítko, nebo zvolte **ukončení programu** tlačítko Ukončit aplikaci s kódem chyby, která je definována v operačním systému.
 
-Pokud není vyvolána o chybách systému Windows obslužná rutina, pak `abort` volání [_exit –](../../c-runtime-library/reference/exit-exit-exit.md) ukončit proces řízení 3 a vrátí kód ukončení nadřazeného procesu nebo operačního systému. `_exit` Vyprázdní vyrovnávací paměti datového proudu nebo provést `atexit` / `_onexit` zpracování.
+Pokud není vyvolána o chybách systému Windows obslužná rutina, pak **abort** volání [_exit –](exit-exit-exit.md) ukončit proces řízení 3 a vrátí kód ukončení nadřazeného procesu nebo operačního systému. **_exit –** vyprázdní vyrovnávací paměti datového proudu nebo provést **atexit**/**_onexit –** zpracování.
 
 Další informace o ladění CRT najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -87,7 +87,7 @@ Další informace o ladění CRT najdete v tématu [techniky ladění CRT](/visu
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`abort`|\<Process.h > nebo \<stdlib.h >|
+|**abort**|\<Process.h > nebo \<stdlib.h >|
 
 ## <a name="example"></a>Příklad
 
@@ -127,14 +127,13 @@ File could not be opened: No such file or directory
 
 ## <a name="see-also"></a>Viz také
 
-[Použití funkce abort](../../cpp/using-abort.md)  
-[abort – funkce](../../c-language/abort-function-c.md)  
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)  
-[_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)  
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)  
-[raise](../../c-runtime-library/reference/raise.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
-[_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)  
-[_DEBUG](../../c-runtime-library/debug.md)  
-[_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
-
+[Použití funkce abort](../../cpp/using-abort.md)<br/>
+[abort – funkce](../../c-language/abort-function-c.md)<br/>
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[raise](raise.md)<br/>
+[signal](signal.md)<br/>
+[_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_DEBUG](../../c-runtime-library/debug.md)<br/>
+[_set_abort_behavior](set-abort-behavior.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "execl – | Microsoft Docs"
-ms.custom: 
+title: execl – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - execl
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - execl function
 ms.assetid: 10f24c52-7ff5-4a61-abcb-fce6d9553f23
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae8dc28bb1bd3e3eea5944c8e47384e153f7009e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ca7b776f9ee23512a4d7fa3630cbed5518d2523e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execl"></a>execl
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_execl –](../../c-runtime-library/reference/execl-wexecl.md) místo.  
-  
+
+Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_execl –](execl-wexecl.md) místo.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

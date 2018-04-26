@@ -1,12 +1,12 @@
 ---
-title: "_isatty – | Microsoft Docs"
-ms.custom: 
+title: _isatty – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isatty
@@ -33,78 +33,81 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea907f22496c3c1abe86462357ba14514a4aca7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3946ea4751b9ee654bcf24967fc5b109e14ac9b4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isatty"></a>_isatty
-Určuje, zda je spojené s zařízením znak popisovače souborů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _isatty(  
-int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fd`  
- Popisovače souborů, který odkazuje na zařízení, která má být testována.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `_isatty` vrátí nenulovou hodnotu, pokud popisovač souvisí s znak zařízení. V opačném `_isatty` vrátí hodnotu 0.  
-  
-## <a name="remarks"></a>Poznámky  
- `_isatty` Funkce určuje, zda `fd` souvisí s znak zařízení (terminálu, konzoly, tiskárny nebo sériového portu).  
-  
- Ověří, tato funkce `fd` parametr. Pokud `fd` ukazatel chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu 0 a nastaví je povoleno spuštění `errno` k `EBADF`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_isatty`|\<io.h>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// crt_isatty.c  
-/* This program checks to see whether  
- * stdout has been redirected to a file.  
- */  
-  
-#include <stdio.h>  
-#include <io.h>  
-  
-int main( void )  
-{  
-   if( _isatty( _fileno( stdout ) ) )  
-      printf( "stdout has not been redirected to a file\n" );  
-   else  
-      printf( "stdout has been redirected to a file\n");  
-}  
-```  
-  
-## <a name="sample-output"></a>Vzorový výstup  
-  
-```  
-stdout has not been redirected to a file  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování souborů](../../c-runtime-library/file-handling.md)
+
+Určuje, zda je spojené s zařízením znak popisovače souborů.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _isatty( int fd );
+```
+
+### <a name="parameters"></a>Parametry
+
+*FD*<br/>
+Popisovače souborů, který odkazuje na zařízení, která má být testována.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**_isatty –** vrátí nenulovou hodnotu, pokud je přidružen zařízení znak popisovač. V opačném **_isatty –** vrátí hodnotu 0.
+
+## <a name="remarks"></a>Poznámky
+
+**_Isatty –** funkce určuje, zda *fd* souvisí s znak zařízení (terminálu, konzoly, tiskárny nebo sériového portu).
+
+Ověří, tato funkce *fd* parametr. Pokud *fd* ukazatel chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu 0 a nastaví je povoleno spuštění **errno** k **ebadf –**.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_isatty**|\<IO.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_isatty.c
+/* This program checks to see whether
+* stdout has been redirected to a file.
+*/
+
+#include <stdio.h>
+#include <io.h>
+
+int main( void )
+{
+   if( _isatty( _fileno( stdout ) ) )
+      printf( "stdout has not been redirected to a file\n" );
+   else
+      printf( "stdout has been redirected to a file\n");
+}
+```
+
+### <a name="sample-output"></a>Vzorový výstup
+
+```Output
+stdout has not been redirected to a file
+```
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>

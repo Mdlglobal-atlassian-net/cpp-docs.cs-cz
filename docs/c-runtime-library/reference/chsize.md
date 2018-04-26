@@ -37,15 +37,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2d058b356cbb7624ee6dd0bbecdfb55c64813
-ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
+ms.openlocfilehash: 818051fba093c83d695afcad103865b4114673d0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chsize"></a>_chsize
 
-Změní velikost souboru. Bezpečnější verze je k dispozici. v tématu [_chsize_s –](../../c-runtime-library/reference/chsize-s.md).
+Změní velikost souboru. Bezpečnější verze je k dispozici. v tématu [_chsize_s –](chsize-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,7 +57,8 @@ int _chsize(
 ```
 
 ### <a name="parameters"></a>Parametry
-*fd*<br/>
+
+*FD*<br/>
 Odkaz na soubor otevřený popisovač souboru.
 
 *Velikost*<br/>
@@ -65,21 +66,21 @@ Nové délka souboru v bajtech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-_chsize –` returns the value 0 if the file size is successfully changed. A return value of -1 indicates an error: `errno` is set to `eacces –` if the specified file is read-only or the specified file is locked against access, to `ebadf –` if the descriptor is invalid, `enospc –` if no space is left on the device, or `einval –` if `velikost "je menší než nula.
+**_chsize –** vrátí hodnotu 0, pokud velikost souboru je úspěšně změnit. Vrácená hodnota -1 označuje chybu: **errno** je nastaven na **eacces –** Pokud zadaný soubor je jen pro čtení nebo je zadaný soubor uzamčen před přístupem, na **ebadf –** Pokud Popisovač je neplatná, **enospc –** Pokud žádné místa v zařízení, nebo **einval –** Pokud *velikost* je menší než nula.
 
 V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
 
 ## <a name="remarks"></a>Poznámky
 
-`_chsize` Funkce rozšiřuje nebo zkrátí soubor přidružený k `fd` na délku určeného `size`. Soubor musí být otevřený v režimu, která umožňuje zápis. Znaky Null (\0) jsou připojeny, pokud je soubor rozšířeno. Soubor se zkrátí, dojde ke ztrátě všech dat od konce souboru zkrácená na původní délku souboru.
+**_Chsize –** funkce rozšiřuje nebo zkrátí soubor přidružený k *fd* na délku určeného *velikost*. Soubor musí být otevřený v režimu, která umožňuje zápis. Znaky Null (\0) jsou připojeny, pokud je soubor rozšířeno. Soubor se zkrátí, dojde ke ztrátě všech dat od konce souboru zkrácená na původní délku souboru.
 
-Tato funkce ověří jeho parametry. Pokud `size` je menší než nula nebo `fd` popisovač chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Tato funkce ověří jeho parametry. Pokud *velikost* je menší než nula nebo *fd* popisovač chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
 |-------------|---------------------|---------------------|
-|`_chsize`|\<io.h>|\<errno.h>|
+|**_chsize**|\<IO.h >|\<errno.h>|
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -126,6 +127,6 @@ File length after:  329678
 ## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
-[_close](../../c-runtime-library/reference/close.md)<br/>
-[_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)<br/>
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)<br/>
+[_close](close.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

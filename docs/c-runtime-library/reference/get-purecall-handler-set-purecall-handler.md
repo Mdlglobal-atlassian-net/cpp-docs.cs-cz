@@ -1,12 +1,12 @@
 ---
-title: _get_purecall_handler, _set_purecall_handler | Microsoft Docs
-ms.custom: 
+title: _get_purecall_handler, _set_purecall_handler – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_purecall_handler
@@ -43,106 +43,109 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918fbe6c27333c705dbb2768ccd903c64e0fd687
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a184041e77ef6ddb97cb60a0e925ed677e2d47ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
-Získá nebo nastaví obslužnou rutinu chyby pro volání čistý virtuální funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-typedef void (__cdecl* _purecall_handler)(void);  
-  
-_purecall_handler __cdecl _get_purecall_handler(void);  
-  
-_purecall_handler __cdecl _set_purecall_handler(   
-   _purecall_handler function  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `function`  
- Funkce, která se má volat při volání čistou virtuální funkci. A `_purecall_handler` funkce musí mít typ vrácené hodnoty void.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Předchozí `_purecall_handler`. Vrátí `nullptr` Pokud se žádná předchozí obslužná rutina.  
-  
-## <a name="remarks"></a>Poznámky  
- `_get_purecall_handler` a `_set_purecall_handler` funkce jsou specifické pro společnost Microsoft a platí pouze pro C++ – kód.  
-  
- Volání čistou virtuální funkci se o chybu, protože nemá žádné implementace. Ve výchozím nastavení kompilátor generuje kód pro vyvolání funkce obslužné rutiny k chybě při volání čistou virtuální funkci, která ukončí program. Můžete nainstalovat funkci obslužné rutiny vlastní chyby pro volání čistou virtuální funkci, je pro ladění nebo účely vytváření sestav zachytit. Pokud chcete používat vlastní obslužnou rutinu chyby, vytvořte funkci, která má `_purecall_handler` podpis, pak použít `_set_purecall_handler` Chcete-li obslužná rutina aktuální.  
-  
- Protože je pouze jedna `_purecall_handler` pro každý proces, při volání `_set_purecall_handler` ji okamžitě ovlivňuje všechna vlákna. Poslední volající na jakékoli vlákno nastaví obslužnou rutinu.  
-  
- Chcete-li obnovit výchozí chování, volejte `_set_purecall_handler` pomocí `nullptr` argument.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_get_purecall_handler`, `_set_purecall_handler`|\<cstdlib – > nebo \<stdlib.h >|  
-  
- Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// _set_purecall_handler.cpp  
-// compile with: /W1  
-#include <tchar.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-class CDerived;  
-class CBase  
-{  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function(void) = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase  
-{  
-public:  
-   CDerived() : CBase(this) {};   // C4355  
-   virtual void function(void) {};  
-};  
-  
-CBase::~CBase()  
-{  
-   m_pDerived -> function();  
-}  
-  
-void myPurecallHandler(void)  
-{  
-   printf("In _purecall_handler.");  
-   exit(0);  
-}  
-  
-int _tmain(int argc, _TCHAR* argv[])  
-{  
-   _set_purecall_handler(myPurecallHandler);  
-   CDerived myDerived;  
-}  
-```  
-  
-```Output  
-In _purecall_handler.  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)   
- [_purecall](../../c-runtime-library/reference/purecall.md)
+
+Získá nebo nastaví obslužnou rutinu chyby pro volání čistý virtuální funkce.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+typedef void (__cdecl* _purecall_handler)(void);
+_purecall_handler __cdecl _get_purecall_handler(void);
+_purecall_handler __cdecl _set_purecall_handler(
+   _purecall_handler function
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Funkce*<br/>
+Funkce, která se má volat při volání čistou virtuální funkci. A **_purecall_handler** funkce musí mít typ vrácené hodnoty void.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Předchozí **_purecall_handler**. Vrátí **nullptr** Pokud se žádná předchozí obslužná rutina.
+
+## <a name="remarks"></a>Poznámky
+
+**_Get_purecall_handler** a **_set_purecall_handler –** funkce jsou specifické pro společnost Microsoft a platí pouze pro C++ – kód.
+
+Volání čistou virtuální funkci se o chybu, protože nemá žádné implementace. Ve výchozím nastavení kompilátor generuje kód pro vyvolání funkce obslužné rutiny k chybě při volání čistou virtuální funkci, která ukončí program. Můžete nainstalovat funkci obslužné rutiny vlastní chyby pro volání čistou virtuální funkci, je pro ladění nebo účely vytváření sestav zachytit. Pokud chcete používat vlastní obslužnou rutinu chyby, vytvořte funkci, která má **_purecall_handler** podpis, pak použít **_set_purecall_handler –** Chcete-li obslužná rutina aktuální.
+
+Protože je pouze jedna **_purecall_handler** pro každý proces, při volání **_set_purecall_handler –** ji okamžitě ovlivňuje všechna vlákna. Poslední volající na jakékoli vlákno nastaví obslužnou rutinu.
+
+Chcete-li obnovit výchozí chování, volejte **_set_purecall_handler –** pomocí **nullptr** argument.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_get_purecall_handler**, **_set_purecall_handler –**|\<cstdlib – > nebo \<stdlib.h >|
+
+Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```cpp
+// _set_purecall_handler.cpp
+// compile with: /W1
+#include <tchar.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+class CDerived;
+class CBase
+{
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function(void) = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase
+{
+public:
+   CDerived() : CBase(this) {};   // C4355
+   virtual void function(void) {};
+};
+
+CBase::~CBase()
+{
+   m_pDerived -> function();
+}
+
+void myPurecallHandler(void)
+{
+   printf("In _purecall_handler.");
+   exit(0);
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+   _set_purecall_handler(myPurecallHandler);
+   CDerived myDerived;
+}
+```
+
+```Output
+In _purecall_handler.
+```
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
+[_purecall](purecall.md)<br/>

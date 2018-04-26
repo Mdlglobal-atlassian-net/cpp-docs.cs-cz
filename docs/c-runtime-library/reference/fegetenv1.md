@@ -1,13 +1,13 @@
 ---
-title: fegetenv1 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fegetenv | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fetegenv
@@ -32,50 +32,54 @@ dev_langs:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025b934ec6a2d9bc98d46cabbd13b93e263cd777
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3569b015784f41fae4a4a91b6a32fe08dd57284
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fegetenv"></a>fegetenv
-Uloží aktuální prostředí s plovoucí desetinnou čárkou v zadaný objekt.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fegetenv(  
-   fenv_t *penv  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `penv`  
- Ukazatel na `fenv_t` objektu tak, aby obsahovala aktuální hodnoty s plovoucí desetinnou čárkou prostředí.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu 0, pokud je s plovoucí desetinnou čárkou prostředí byl úspěšně uložen v `penv`. Jinak vrátí hodnotu nula.  
-  
-## <a name="remarks"></a>Poznámky  
- `fegetenv` Funkce uloží aktuální prostředí s plovoucí desetinnou čárkou v objektu, na kterou odkazuje `penv`. Procedura bodu prostředí je sada příznaky stavu a řízení režimy, které ovlivňují výpočty s plovoucí desetinnou čárkou. To zahrnuje režim směr zaokrouhlení a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud `penv` neodkazuje na platný `fenv_t` objektu následné chování není definován.  
-  
- Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Funkce|Hlavička C|Hlavička C++|  
-|--------------|--------------|------------------|  
-|`fegetenv`|\<fenv.h>|\<cfenv>|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fesetenv](../../c-runtime-library/reference/fesetenv1.md)
+
+Uloží aktuální prostředí s plovoucí desetinnou čárkou v zadaný objekt.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fegetenv(
+   fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*penv*<br/>
+Ukazatel na **fenv_t** objekt, který chcete obsahují aktuální hodnoty s plovoucí desetinnou čárkou prostředí.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrátí hodnotu 0, pokud je s plovoucí desetinnou čárkou prostředí byl úspěšně uložen v *penv*. Jinak vrátí hodnotu nula.
+
+## <a name="remarks"></a>Poznámky
+
+**Fegetenv** funkce uloží aktuální prostředí s plovoucí desetinnou čárkou v objektu, na kterou odkazuje *penv*. Procedura bodu prostředí je sada příznaky stavu a řízení režimy, které ovlivňují výpočty s plovoucí desetinnou čárkou. To zahrnuje režim směr zaokrouhlení a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud *penv* neodkazuje na platný **fenv_t** objektu následné chování není definován.
+
+Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Požadavky
+
+|Funkce|Hlavička C|Hlavička C++|
+|--------------|--------------|------------------|
+|**fegetenv**|\<fenv.h >|\<cfenv>|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[fesetenv](fesetenv1.md)<br/>

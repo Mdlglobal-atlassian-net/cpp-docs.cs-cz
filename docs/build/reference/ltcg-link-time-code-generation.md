@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (vytváření kódu v době propojování)
 
@@ -40,7 +40,7 @@ Použití **/ltgc** k provedení optimalizace celého programu, nebo k vytvořen
 
 Tyto možnosti jsou zastaralé od verze sady Visual Studio 2015:
 
-> **/LTCG:**{**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/ LTCG:**{**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
 
 ### <a name="arguments"></a>Arguments
 
@@ -51,7 +51,7 @@ Určuje, že linkeru do sady souborů, které jsou ovlivněné upravíte, nikoli
 Určuje, zda linkeru zobrazuje indikátor průběhu, který ukazuje, jaké procento odkaz je kompletní. Ve výchozím nastavení není tato informace o stavu zobrazí.
 
 **VYPNOUT** (volitelné)<br/>
-Znemožňuje generování kódu v době propojování. Toto chování je stejné jako při/ltgc není zadán v příkazovém řádku.
+Znemožňuje generování kódu v době propojování. Toto chování je stejný jako při **/ltgc** není zadán v příkazovém řádku.
 
 **PGINSTRUMENT** (volitelné)<br/>
 Tato možnost je zastaralý, spouštění v sadě Visual Studio 2015. Místo toho použijte **/ltgc** a [/GENPROFILE nebo /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) ke generování instrumentovaného sestavení pro optimalizace na základě profilu. Data, která se shromažďují ze instrumentovaného spustí slouží k vytvoření image optimalizované. Další informace najdete v tématu [optimalizace na základě profilu](profile-guided-optimizations.md). Je zkratka pro tuto možnost **/LTCG:PGI**.
@@ -68,7 +68,7 @@ Tato možnost je zastaralý, spouštění v sadě Visual Studio 2015. Místo toh
 
 S následujícími výjimkami, nemůžete přidat možnosti linkeru kombinace PGO **/ltgc** a **/USEPROFILE** , nebyly zadány v předchozí PGO inicializace kombinace  **/ LTCG** a **/GENPROFILE** možnosti:
 
-- [/BASE](../../build/reference/base-base-address.md)
+- [/ BASE](../../build/reference/base-base-address.md)
 
 - [/ FIXED](../../build/reference/fixed-fixed-base-address.md)
 
@@ -80,17 +80,17 @@ S následujícími výjimkami, nemůžete přidat možnosti linkeru kombinace PG
 
 - [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](../../build/reference/out-output-file-name.md)
+- [/ OUT](../../build/reference/out-output-file-name.md)
 
 - [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
 
 - [/PDB](../../build/reference/pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
+- [/ PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
 
 - [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)
+- [/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)
 
 Všechny možnosti linkeru, které jsou určené společně s **/ltgc** a **/GENPROFILE** není nutné je třeba zadat při vytváření s použitím možnosti k chybě při inicializaci PGO **/ltgc** a **/USEPROFILE**; jejich implicitní.
 
@@ -156,7 +156,7 @@ Moduly, které jsou kompilovaná pomocí [/GL](../../build/reference/gl-whole-pr
 
 Můžete taky použít **/ltgc** na konkrétní sestavení tak, že zvolíte **sestavení** > **optimalizace na základě profilu** v řádku nabídek nebo výběrem jedné z profilu Na základě možnosti optimalizace v místní nabídce pro projekt.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
 - V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

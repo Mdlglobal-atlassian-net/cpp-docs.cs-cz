@@ -1,12 +1,12 @@
 ---
-title: _STATIC_ASSERT Macro | Microsoft Docs
-ms.custom: 
+title: _Static_assert – makro | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -27,63 +27,67 @@ dev_langs:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62f2f2f5a0d78a0b77cb21d869be209d9293bd0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3076e2e2a27c4f13222ce5dba8bf66cc46ce20c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT – makro
-Vyhodnocení výrazu v době kompilace a generuje chybu, pokud je výsledek `FALSE`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_STATIC_ASSERT(  
-    booleanExpression  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `booleanExpression`  
- Výraz (včetně ukazatele), který se vyhodnotí na nenulové hodnoty (`TRUE`) nebo 0 (`FALSE`).  
-  
-## <a name="remarks"></a>Poznámky  
- Toto makro vypadá takto: [_ASSERT a _asserte – makra](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)kromě toho, že `booleanExpression` je vyhodnocován v době kompilace místo v době běhu. Pokud `booleanExpression` vyhodnotí jako `FALSE` (0), [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) se vygeneruje.  
-  
-## <a name="example"></a>Příklad  
- V tomto příkladu jsme zkontrolujte, zda `sizeof` `int` je větší než nebo rovna 2 bajtů a jestli `sizeof` `long` je 1 bajtů. Program nebude zkompilování a vygeneruje [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) protože `long` je větší než 1 bajtů.  
-  
-```  
-// crt__static_assert.c  
-  
-#include <crtdbg.h>  
-#include <stdio.h>  
-  
-_STATIC_ASSERT(sizeof(int) >= 2);  
-_STATIC_ASSERT(sizeof(long) == 1);  // C2466  
-  
-int main()  
-{  
-    printf("I am sure that sizeof(int) will be >= 2: %d\n",  
-        sizeof(int));  
-    printf("I am not so sure that sizeof(long) == 1: %d\n",  
-        sizeof(long));  
-}  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Macro|Požadovaný hlavičkový soubor|  
-|-----------|---------------------|  
-|`_STATIC_ASSERT`|\<crtdbg.h>|  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)
+
+Vyhodnocení výrazu v době kompilace a generuje chybu, pokud je výsledek **FALSE**.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_STATIC_ASSERT(
+    booleanExpression
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*booleanExpression* výraz (včetně ukazatele), který se vyhodnotí na nenulové hodnoty (**TRUE**) nebo 0 (**FALSE**).
+
+## <a name="remarks"></a>Poznámky
+
+Toto makro vypadá takto: [_ASSERT a _asserte – makra](assert-asserte-assert-expr-macros.md)kromě toho, že *booleanExpression* je vyhodnocován v době kompilace místo v době běhu. Pokud *booleanExpression* vyhodnotí jako **FALSE** (0), [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) se vygeneruje.
+
+## <a name="example"></a>Příklad
+
+V tomto příkladu jsme zkontrolujte zda [sizeof](../../c-language/sizeof-operator-c.md) **int** je větší než nebo rovna 2 bajtů a jestli [sizeof](../../c-language/sizeof-operator-c.md) **dlouho** je 1 bajtů. Program nebude zkompilování a vygeneruje [C2466 Chyba kompilátoru](../../error-messages/compiler-errors-1/compiler-error-c2466.md) protože **dlouho** je větší než 1 bajtů.
+
+```C
+// crt__static_assert.c
+
+#include <crtdbg.h>
+#include <stdio.h>
+
+_STATIC_ASSERT(sizeof(int) >= 2);
+_STATIC_ASSERT(sizeof(long) == 1);  // C2466
+
+int main()
+{
+    printf("I am sure that sizeof(int) will be >= 2: %d\n",
+        sizeof(int));
+    printf("I am not so sure that sizeof(long) == 1: %d\n",
+        sizeof(long));
+}
+```
+
+## <a name="requirements"></a>Požadavky
+
+|– Makro|Požadovaný hlavičkový soubor|
+|-----------|---------------------|
+|**_STATIC_ASSERT**|\<crtdbg.h>|
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](assert-asserte-assert-expr-macros.md)<br/>
