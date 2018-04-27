@@ -1,12 +1,12 @@
 ---
-title: "iterator – struktura | Microsoft Docs"
-ms.custom: 
+title: iterator – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xutility/std::iterator
@@ -16,23 +16,25 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274d472e3f3768a67a49ed6ca074f3a126bfd0fd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6bf766bdcb63ae4d50006f4a2d7722238663c610
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="iterator-struct"></a>iterator – struktura
-Prázdný základní struktura, která používá k zajištění, že třídu uživatelem definované iterator správně funguje s **iterator_trait**s.  
-  
-## <a name="syntax"></a>Syntaxe  
-```    
+
+Prázdný základní struktura, která používá k zajištění, že třídu uživatelem definované iterator správně funguje s **iterator_trait**s.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 struct iterator {
    typedef Category iterator_category;
    typedef Type value_type;
@@ -40,37 +42,39 @@ struct iterator {
    typedef Distance distance_type;
    typedef Pointer pointer;
    typedef Reference reference;
-   };  
-```    
-## <a name="remarks"></a>Poznámky  
- Šablona struktura slouží jako základní typ pro všechny iterátory. Definuje typy členů  
-  
-- `iterator_category` (synonymum pro parametr šablony `Category`).  
-  
-- `value_type` (synonymum pro parametr šablony **typu**).  
-  
-- `difference_type` (synonymum pro parametr šablony `Distance`).  
-  
-- `distance_type` (synonymum pro parametr šablony `Distance`)  
-  
-- `pointer` (synonymum pro parametr šablony `Pointer`).  
-  
-- `reference` (synonymum pro parametr šablony `Reference`).  
-  
- Všimněte si, že `value_type` nesmí být typu konstanty. i když **ukazatel** bodů v objektu const **typ** a označí odkaz na objekt const **typu**.  
-  
-## <a name="example"></a>Příklad  
- V tématu [iterator_traits –](../standard-library/iterator-traits-struct.md) příklad toho, jak deklarování a použití typů v základní třídě iterator.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<iterator >  
-  
- **Namespace:** – std  
-  
-## <a name="see-also"></a>Viz také  
- [\<iterator>](../standard-library/iterator.md)   
- [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+   };
+```
 
+## <a name="remarks"></a>Poznámky
 
+Šablona struktura slouží jako základní typ pro všechny iterátory. Definuje typy členů
 
+- `iterator_category` (synonymum pro parametr šablony `Category`).
+
+- `value_type` (synonymum pro parametr šablony **typu**).
+
+- `difference_type` (synonymum pro parametr šablony `Distance`).
+
+- `distance_type` (synonymum pro parametr šablony `Distance`)
+
+- `pointer` (synonymum pro parametr šablony `Pointer`).
+
+- `reference` (synonymum pro parametr šablony `Reference`).
+
+Všimněte si, že `value_type` nesmí být typu konstanty. i když **ukazatel** bodů v objektu const **typ** a označí odkaz na objekt const **typu**.
+
+## <a name="example"></a>Příklad
+
+V tématu [iterator_traits –](../standard-library/iterator-traits-struct.md) příklad toho, jak deklarování a použití typů v základní třídě iterator.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<iterator >
+
+**Namespace:** – std
+
+## <a name="see-also"></a>Viz také
+
+[\<iterator >](../standard-library/iterator.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

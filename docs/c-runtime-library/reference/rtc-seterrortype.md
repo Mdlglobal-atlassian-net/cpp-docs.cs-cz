@@ -1,12 +1,12 @@
 ---
-title: "_Rtc_seterrortype – | Microsoft Docs"
-ms.custom: 
+title: _Rtc_seterrortype – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _RTC_SetErrorType
@@ -32,59 +32,64 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6aaeaabe07f84a10167057ff94b45f91af0c93
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f9fcca983247f0f5e0c09899e7ebec2774ca92e6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
-Přidruží k chybě, která se zjišťují pomocí Kontrola chyb za běhu (RTCs) s typem. Popisovače chyb zpracuje postup výstupní chyby zadaného typu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _RTC_SetErrorType(  
-   _RTC_ErrorNumber errnum,  
-   int ErrType   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *errnum*  
- Číslo v rozsahu od 0 do 1 menší než hodnota vrácený [_rtc_numerrors –](../../c-runtime-library/reference/rtc-numerrors.md).  
-  
- *ErrType*  
- Hodnota pro přiřazení k tomuto *errnum*. Například můžete použít **_CRT_ERROR**. Pokud používáte `_CrtDbgReport` jako popisovače chyb, *ErrType* může mít jenom jednu symbolů definované v [_crtsetreportmode –](../../c-runtime-library/reference/crtsetreportmode.md). Pokud máte vlastní obslužnou rutinu chyby ([_rtc_seterrorfunc –](../../c-runtime-library/reference/rtc-seterrorfunc.md)), může mít jako mnoho *ErrType*se označují jako zde *errnum*s.  
-  
- *ErrType* _RTC_ERRTYPE_IGNORE mají zvláštní význam `_CrtSetReportMode`; chyba je ignorována.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Předchozí hodnotu pro typ chyby `type`.  
-  
-## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení jsou všechny chyby nastavení *ErrType* = 1, který odpovídá **_CRT_ERROR**. Další informace o této chybě výchozí typy, jako **_CRT_ERROR**, najdete v části [_crtdbgreport –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
-  
- Než bude možné volat tuto funkci, nejprve je třeba volat některou z funkcí inicializace chyba spuštění kontroly; v tématu [pomocí kontrol běhu bez běhové knihovny jazyka C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_RTC_SetErrorType`|\<rtcapi.h>|  
-  
- Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Viz také  
- [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Kontrola chyb za běhu](../../c-runtime-library/run-time-error-checking.md)
+
+Přidruží k chybě, která se zjišťují pomocí Kontrola chyb za běhu (RTCs) s typem. Popisovače chyb zpracuje postup výstupní chyby zadaného typu.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _RTC_SetErrorType(
+   _RTC_ErrorNumber errnum,
+   int ErrType
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*errnum*<br/>
+Číslo v rozsahu od 0 do 1 menší než hodnota vrácený [_rtc_numerrors –](rtc-numerrors.md).
+
+*ErrType*<br/>
+Hodnota pro přiřazení k tomuto *errnum*. Například můžete použít **_CRT_ERROR**. Pokud používáte **_crtdbgreport –** jako popisovače chyb, *ErrType* může mít jenom jednu symbolů definované v [_crtsetreportmode –](crtsetreportmode.md). Pokud máte vlastní obslužnou rutinu chyby ([_rtc_seterrorfunc –](rtc-seterrorfunc.md)), může mít jako mnoho *ErrType*se označují jako zde *errnum*s.
+
+*ErrType* _RTC_ERRTYPE_IGNORE mají zvláštní význam **_crtsetreportmode –**; chyba je ignorována.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Předchozí hodnotu pro typ chyby *typu*.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení jsou všechny chyby nastavení *ErrType* = 1, který odpovídá **_CRT_ERROR**. Další informace o této chybě výchozí typy, jako **_CRT_ERROR**, najdete v části [_crtdbgreport –](crtdbgreport-crtdbgreportw.md).
+
+Než bude možné volat tuto funkci, nejprve je třeba volat některou z funkcí inicializace chyba spuštění kontroly; v tématu [pomocí kontrol běhu bez běhové knihovny jazyka C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_RTC_SetErrorType**|\<rtcapi.h >|
+
+Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Viz také
+
+[_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
+[Kontrola chyb za běhu](../../c-runtime-library/run-time-error-checking.md)<br/>

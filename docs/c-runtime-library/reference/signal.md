@@ -1,12 +1,12 @@
 ---
-title: "signál | Microsoft Docs"
-ms.custom: 
-ms.date: 02/12/2018
-ms.reviewer: 
-ms.suite: 
+title: signál | Microsoft Docs
+ms.custom: ''
+ms.date: 04/12/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - signal
@@ -34,11 +34,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc6ed4c1af9e746a4e4b20c72d69f0700597b665
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="signal"></a>signal
 
@@ -54,79 +54,82 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Parametry
-_sig_  
+
+*SIG*<br/>
 Hodnota signál.
 
-_Func_  
+*Func*<br/>
 Druhý parametr je ukazatel na funkci spouštění. První parametr je hodnota signál a druhý parametr je dílčí kód, který lze použít při první parametr je sigfpe –.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`signal` Vrátí předchozí hodnotu func, který je spojen s danou signál. Například pokud předchozí hodnotu _func_ byla `SIG_IGN`, vrácená hodnota je také `SIG_IGN`. Vrácená hodnota `SIG_ERR` označuje chybu; v takovém případě `errno` je nastaven na `EINVAL`.
+**signál** vrátí předchozí hodnotu func, který je spojen s danou signál. Například pokud předchozí hodnotu *func* byla **sig_ign –**, vrácená hodnota je také **sig_ign –**. Vrácená hodnota **SIG_ERR** označuje chybu; v takovém případě **errno** je nastaven na **einval –**.
 
 V tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o návratové kódy.
 
 ## <a name="remarks"></a>Poznámky
 
-`signal` Funkce umožňuje proces vyberte jednu z několik způsobů, jak zpracovat signál přerušení z operačního systému. _Sig_ argument je přerušení, ke kterému `signal` reaguje; musí mít jednu z následujících manifestu konstant, které jsou definovány v SIGNÁL. H.
+**Signál** funkce umožňuje proces vyberte jednu z několik způsobů, jak zpracovat signál přerušení z operačního systému. *Sig* argument je přerušení, ke kterému **signál** reaguje; musí mít jednu z následujících manifestu konstant, které jsou definovány v SIGNÁL. H.
 
-|_SIG_ hodnota|Popis|
+|*SIG* hodnota|Popis|
 |-----------------|-----------------|
-|`SIGABRT`|Abnormální ukončení|
-|`SIGFPE`|Chyba s plovoucí desetinnou čárkou|
-|`SIGILL`|Neplatná instrukce|
-|`SIGINT`|CTRL + C signál|
-|`SIGSEGV`|Přístup k úložišti neplatný|
-|`SIGTERM`|Žádost o ukončení|
+|**SIGABRT –**|Abnormální ukončení|
+|**SIGFPE –**|Chyba s plovoucí desetinnou čárkou|
+|**SIGILL –**|Neplatná instrukce|
+|**SIGINT –**|CTRL + C signál|
+|**SIGSEGV –**|Přístup k úložišti neplatný|
+|**SIGTERM –**|Žádost o ukončení|
 
-Pokud _sig_ není jedním z výše uvedené hodnoty, je vyvolána obslužná rutina neplatný parametr, jak jsou definovány v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, tato funkce nastaví `errno` k `EINVAL` a vrátí `SIG_ERR`.
+Pokud *sig* není jedním z výše uvedené hodnoty, je vyvolána obslužná rutina neplatný parametr, jak jsou definovány v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **SIG_ERR**.
 
-Ve výchozím nastavení `signal` ukončí volací program s ukončovacím kódem 3, bez ohledu na hodnotu _sig_.
+Ve výchozím nastavení **signál** ukončí volací program s ukončovacím kódem 3, bez ohledu na hodnotu *sig*.
 
 > [!NOTE]
-> `SIGINT` není podporován pro všechny aplikace typu Win32. Když dojde k přerušení CTRL + C, operační systémy Win32 generovat nové vlákno konkrétně zpracování této přerušení. To může způsobit jedním vláknem aplikaci, například ten, který v systému UNIX se stane s více vlákny a způsobit neočekávané chování.
+> **Sigint –** není podporován pro všechny aplikace typu Win32. Když dojde k přerušení CTRL + C, operační systémy Win32 generovat nové vlákno konkrétně zpracování této přerušení. To může způsobit jedním vláknem aplikaci, například ten, který v systému UNIX se stane s více vlákny a způsobit neočekávané chování.
 
-_Func_ argument je adresu na signál obslužnou rutinu, která můžete psát, nebo na jednu z předdefinovaných konstanty `SIG_DFL` nebo `SIG_IGN`, která je definována v SIGNÁL. H. Pokud _func_ je funkce, je nainstalován jako obslužná rutina signál pro danou signál. Obslužná rutina signál prototypu vyžaduje jeden argument formální, _sig_, typu `int`. Operační systém poskytuje skutečné argument prostřednictvím _sig_ když dojde k přerušení; argument je signál, která generuje přerušení. Proto můžete šesti manifestu konstanty (uvedené v předchozí tabulce) ve vaší obslužné rutiny signál k určení které přerušení došlo k chybě a proveďte příslušnou akci. Například můžete volat `signal` na dvou různých signály přiřadit stejné obslužné rutiny a otestujte dvakrát _sig_ argument v rutině k provádění různých akcí podle signál přijata.
+*Func* argument je adresu na signál obslužnou rutinu, která můžete psát, nebo na jednu z předdefinovaných konstanty **sig_dfl –** nebo **sig_ign –**, která je definována v SIGNÁL. H. Pokud *func* je funkce, je nainstalován jako obslužná rutina signál pro danou signál. Obslužná rutina signál prototypu vyžaduje jeden argument formální, *sig*, typu **int**. Operační systém poskytuje skutečné argument prostřednictvím *sig* když dojde k přerušení; argument je signál, která generuje přerušení. Proto můžete šesti manifestu konstanty (uvedené v předchozí tabulce) ve vaší obslužné rutiny signál k určení které přerušení došlo k chybě a proveďte příslušnou akci. Například můžete volat **signál** na dvou různých signály přiřadit stejné obslužné rutiny a otestujte dvakrát *sig* argument v rutině k provádění různých akcí podle signál přijata.
 
-Pokud testujete výjimky s plovoucí desetinnou čárkou (`SIGFPE`), _func_ odkazuje na funkci, která přebírá volitelné druhý argument, který je jedním z několika manifestu konstanty – definované v FLOAT. H – formuláře `FPE_xxx`. Když `SIGFPE` signál dojde, můžete otestovat hodnotu druhý argument, abyste zjistili druh výjimek plovoucí desetinné čárky a proveďte příslušnou akci. Tento argument a jeho možné hodnoty jsou rozšíření Microsoft.
+Pokud testujete výjimky s plovoucí desetinnou čárkou (**sigfpe –**), *func* odkazuje na funkci, která přebírá volitelné druhý argument, který je jedním z několika manifestu konstanty definované v FLOAT. H formuláře **FPE_xxx**. Když **sigfpe –** signál dojde, můžete otestovat hodnotu druhý argument, abyste zjistili druh výjimek plovoucí desetinné čárky a proveďte příslušnou akci. Tento argument a jeho možné hodnoty jsou rozšíření Microsoft.
 
-S plovoucí desetinnou čárkou výjimky, hodnota _func_ není resetovat, když je obdržena signál. Obnovit z s plovoucí desetinnou čárkou výjimky, zkuste použít / s výjimkou bodu klauzule k obklopit procedura operace. Je také možné obnovit pomocí [setjmp](../../c-runtime-library/reference/setjmp.md) s [longjmp](../../c-runtime-library/reference/longjmp.md). V obou případech volající proces obnoví spuštění a opustí s plovoucí desetinnou čárkou stav procesu není definovaná.
+S plovoucí desetinnou čárkou výjimky, hodnota *func* není resetovat, když je obdržena signál. Obnovit z s plovoucí desetinnou čárkou výjimky, zkuste použít / s výjimkou bodu klauzule k obklopit procedura operace. Je také možné obnovit pomocí [setjmp](setjmp.md) s [longjmp](longjmp.md). V obou případech volající proces obnoví spuštění a opustí s plovoucí desetinnou čárkou stav procesu není definovaná.
 
 Pokud obslužná rutina signál vrátí, volající proces obnoví spuštění hned za bod, ve kterém přijala signál přerušení. To platí bez ohledu na druh signál nebo provozním režimu.
 
-Před provedením zadaná funkce hodnotu _func_ je nastaven na `SIG_DFL`. Další signál přerušení považuje, jak je popsáno pro `SIG_DFL`, pokud uplynulého volat na `signal` neurčí jinak. Tato funkce slouží k resetování signály v volaná funkce.
+Před provedením zadaná funkce hodnotu *func* je nastaven na **sig_dfl –**. Další signál přerušení považuje, jak je popsáno pro **sig_dfl –**, pokud uplynulého volat na **signál** neurčí jinak. Tato funkce slouží k resetování signály v volaná funkce.
 
 Protože rutiny signál – obslužná rutina se obvykle říká asynchronně, když dojde přerušení, může funkce obslužných rutin signál k řízení při spuštění operace nekompletní a v neznámém stavu. Následující seznam shrnuje omezení, které určují, funkcích, které můžete použít v signál rutiny ovladače.
 
-- To není problém nižší úrovně nebo STDIO. H vstupní a výstupní rutiny (například `printf` nebo `fread`).
+- To není problém nižší úrovně nebo STDIO. H vstupní a výstupní rutiny (například **printf** nebo **fread –**).
 
-- Nevolejte haldy rutiny nebo všechny rutiny, která používá rutiny haldy (například `malloc`, `_strdup`, nebo `_putenv`). V tématu [malloc –](../../c-runtime-library/reference/malloc.md) Další informace.
+- Nevolejte haldy rutiny nebo všechny rutiny, která používá rutiny haldy (například **malloc –**, **_strdup –**, nebo **_putenv –**). V tématu [malloc –](malloc.md) Další informace.
 
-- Nepoužívejte všechny funkce, která generuje volání systému (například `_getcwd` nebo `time`).
+- Nepoužívejte všechny funkce, která generuje volání systému (například **_getcwd –** nebo **čas**).
 
-- Nepoužívejte `longjmp` Pokud přerušení je způsobena výjimek plovoucí desetinné čárky (tedy _sig_ je `SIGFPE`). V takovém případě nejprve inicializovat balíček s plovoucí desetinnou čárkou s použitím volání `_fpreset`.
+- Nepoužívejte **longjmp** Pokud přerušení je způsobena výjimek plovoucí desetinné čárky (tedy *sig* je **sigfpe –**). V takovém případě nejprve inicializovat balíček s plovoucí desetinnou čárkou s použitím volání **_fpreset –**.
 
 - Nepoužívejte všechny rutiny překrytí.
 
-Program musí obsahovat s plovoucí desetinnou čárkou kódu, pokud je na depeše `SIGFPE` výjimky pomocí funkce. Pokud program nemá s plovoucí desetinnou čárkou kód a kód pro zpracování signál běhové knihovny vyžaduje, jenom deklarovat volatile dvojitou a provést jeho inicializaci na nulu:
+Program musí obsahovat s plovoucí desetinnou čárkou kódu, pokud je na depeše **sigfpe –** výjimky pomocí funkce. Pokud program nemá s plovoucí desetinnou čárkou kód a kód pro zpracování signál běhové knihovny vyžaduje, jenom deklarovat volatile dvojitou a provést jeho inicializaci na nulu:
 
-`volatile double d = 0.0f;`
+```C
+volatile double d = 0.0f;
+```
 
-`SIGILL` a `SIGTERM` signály, které nejsou generované v rámci systému Windows. Jsou zahrnuté pro kompatibilitu ANSI. Proto můžete nastavit signál obslužné rutiny pro tyto signály pomocí `signal`, a také explicitně vygenerovat tyto signály voláním [vyvolat](../../c-runtime-library/reference/raise.md).
+**Sigill –** a **SIGTERM –** signály, které nejsou generované v rámci systému Windows. Jsou zahrnuté pro kompatibilitu ANSI. Proto můžete nastavit signál obslužné rutiny pro tyto signály pomocí **signál**, a také explicitně vygenerovat tyto signály voláním [vyvolat](raise.md).
 
-V vytvářený procesy, které jsou vytvořené pomocí volání nejsou zachována nastavení signál `_exec` nebo `_spawn` funkce. Signál nastavení se obnoví na výchozí hodnoty v nový proces.
+V vytvářený procesy, které jsou vytvořené pomocí volání nejsou zachována nastavení signál [_exec](../../c-runtime-library/exec-wexec-functions.md) nebo [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkce. Signál nastavení se obnoví na výchozí hodnoty v nový proces.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`signal`|\<signal.h>|
+|**signal**|\<signal.h>|
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak používat `signal` přidat některé vlastní chování `SIGABRT` signál. Další informace o chování přerušení najdete v tématu [_set_abort_behavior –](../../c-runtime-library/reference/set-abort-behavior.md).
+Následující příklad ukazuje, jak používat **signál** přidat některé vlastní chování **sigabrt –** signál. Další informace o chování přerušení najdete v tématu [_set_abort_behavior –](set-abort-behavior.md).
 
 ```C
 // crt_signal.c
@@ -163,9 +166,9 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Viz také
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)  
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)  
-[_fpreset](../../c-runtime-library/reference/fpreset.md)  
-[_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)  
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_fpreset](fpreset.md)<br/>
+[_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

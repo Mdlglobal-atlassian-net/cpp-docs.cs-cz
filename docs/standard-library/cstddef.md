@@ -1,12 +1,12 @@
 ---
-title: "&lt;cstddef –&gt; | Microsoft Docs"
-ms.custom: 
+title: '&lt;cstddef –&gt; | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <cstddef>
@@ -15,35 +15,35 @@ dev_langs:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09e7b0de62d168820b90eff8df613edee85ebf7e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c3d1e7833c24c3248f416d85681b377e31facda0
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
-Obsahuje hlavičku knihovny standardní C \<stddef.h > a přidá přidružené jména `std` oboru názvů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <cstddef>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.  
-  
-## <a name="see-also"></a>Viz také  
- [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)   
- [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Obsahuje hlavičku knihovny standardní C \<stddef.h > a přidá přidružené jména `std` oboru názvů.
 
+## <a name="syntax"></a>Syntaxe
 
+```cpp
+#include <cstddef>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+
+## <a name="see-also"></a>Viz také
+
+[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

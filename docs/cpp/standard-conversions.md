@@ -1,12 +1,12 @@
 ---
-title: "Standardní převody | Microsoft Docs"
-ms.custom: 
+title: Standardní převody | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Standardní převody
 Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody jsou označovány jako „standardní převody“. (Další informace o odvozené typy, typy a standardní typy najdete v tématu [typy](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Povýšení typu zachovávající hodnotu a povýšení typu, která normálně zachovávají znaménko, vrátí stejné výsledky. Mohou však vrátit různé výsledky, pokud je povýšený typ objektu jedním z následujících:  
   
--   Operand z  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , nebo **>=**  
+-   Operand z **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, nebo **>=**  
   
      Tyto operátory spoléhají pro stanovení výsledku na znaménko. Proto povýšení typu zachovávající hodnotu a povýšení typu zachovávající znaménko vrátí při použití s těmito operandy různé výsledky.  
   
--   Levý operand  **>>**  nebo **>>=**  
+-   Levý operand **>>** nebo **>>=**  
   
      Tyto operátory zacházejí při provádění operací posunu s hodnotami se znaménkem nebo bez znaménka odlišně. U hodnot se znaménkem posunutí hodnoty vpravo způsobí, že je bit znaménka posunut na pozici uvolněného bitu. U hodnot bez znaménka jsou pozice uvolněných bitů vyplněny nulami.  
   
@@ -120,8 +120,7 @@ int main()
   
  Objekty celočíselných typů bez znaménka lze převést na odpovídající typy se znaménkem. Avšak takový převod může způsobit špatné vyhodnocení dat, je-li hodnota objektu bez znaménka mimo rozsah reprezentovatelný typem se znaménkem, jak je uvedeno v následujícím příkladu:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Objekt typu s plovoucí desetinnou čárkou lze převést na méně přesný typ, pokud je v rozsahu vyjádřitelném tímto typem. (Viz [plovoucí omezení](../cpp/floating-limits.md) pro rozsahy typů s plovoucí čárkou.) Pokud nelze původní hodnotu přesně vyjádřit, může být převedena buď na další vyšší, nebo na další nižší vyjádřitelnou hodnotu. Pokud žádná taková hodnota neexistuje, výsledek není definován. Podívejte se na následující příklad:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- Maximální hodnota reprezentovat podle typu **float** je 3.402823466E38 – mnohem nižší hodnotu než 1E300. Proto je číslo převedeno na nekonečno a výsledek je 1.#INF.  
+ Maximální hodnota reprezentovat podle typu **float** je 3.402823466E38 – mnohem nižší hodnotu než 1E300. Proto číslo je převedeno do nekonečna a výsledkem je "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Převody mezi bodu plovoucí a integrální typy  
  Určité výrazy mohou způsobit převod objektů typu s plovoucí desetinnou čárkou na celočíselné typy nebo naopak. Jakmile je objekt celočíselného typu převeden na typ s plovoucí desetinnou čárkou a původní hodnotu nelze převést zcela přesně, výsledkem je nejbližší vyšší nebo nejbližší nižší reprezentovatelná hodnota.  

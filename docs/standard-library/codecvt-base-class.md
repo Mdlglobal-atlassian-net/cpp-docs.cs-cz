@@ -1,12 +1,12 @@
 ---
-title: "codecvt_base – třída | Microsoft Docs"
-ms.custom: 
+title: codecvt_base – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xlocale/std::codecvt_base
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3d1ae1c2bae5c4ce0ab4c7cb6ecadec194f5f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe4d0c6789ada5979359d0498b95350c5ba0c3
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="codecvtbase-class"></a>codecvt_base – třída
-Základní třída pro codecvt – třída, která se používá k definování typu výčtu označuje jako **výsledek**, použít jako návratový typ pro členské funkce omezující vlastnost udávajících výsledek převodu z.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```
+
+Základní třída pro codecvt – třída, která se používá k definování typu výčtu označuje jako **výsledek**, použít jako návratový typ pro členské funkce omezující vlastnost udávajících výsledek převodu z.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class codecvt_base : public locale::facet {
 public:
     enum result {ok, partial, error, noconv};
@@ -47,26 +48,26 @@ protected:
     virtual int do_max_length() const;
     virtual int do_encoding() const;
 };
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Třída popisuje výčet společné pro všechny specializací třídy šablony [codecvt –](../standard-library/codecvt-class.md). Výsledek výčtu popisuje možné vrácené hodnoty z [do_in –](../standard-library/codecvt-class.md#do_in) nebo [do_out –](../standard-library/codecvt-class.md#do_out):  
-  
-- **OK** Pokud převod mezi kódování znaků interních a externích úspěšné.  
-  
-- **částečné** Pokud cíl není dostatečně velký pro převod úspěšný.  
-  
-- **Chyba** vytvořen. Pokud zdrojové sekvence je chybný.  
-  
-- **noconv** Pokud funkce provádí žádný převod.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<národní prostředí >  
-  
- **Namespace:** – std  
-  
-## <a name="see-also"></a>Viz také  
- [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+## <a name="remarks"></a>Poznámky
 
+Třída popisuje výčet společné pro všechny specializací třídy šablony [codecvt –](../standard-library/codecvt-class.md). Výsledek výčtu popisuje možné vrácené hodnoty z [do_in –](../standard-library/codecvt-class.md#do_in) nebo [do_out –](../standard-library/codecvt-class.md#do_out):
 
+- **OK** Pokud převod mezi kódování znaků interních a externích úspěšné.
+
+- **částečné** Pokud cíl není dostatečně velký pro převod úspěšný.
+
+- **Chyba** vytvořen. Pokud zdrojové sekvence je chybný.
+
+- **noconv** Pokud funkce provádí žádný převod.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<národní prostředí >
+
+**Namespace:** – std
+
+## <a name="see-also"></a>Viz také
+
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

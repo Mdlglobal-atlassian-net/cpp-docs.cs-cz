@@ -1,12 +1,12 @@
 ---
-title: "time_put_byname – třída | Microsoft Docs"
-ms.custom: 
+title: time_put_byname – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719df3a10b7c4b72cc90b0a5f8aad247cf915f4d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34ac10a6456c2bc1b69d3076e5b3ba351507c3ee
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="timeputbyname-class"></a>time_put_byname – třída
-Třída odvozená šablony popisuje objekt, který může sloužit jako národní prostředí omezující vlastnost typu `time_put` \< CharType, OutputIterator >.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```
+
+Třída odvozená šablony popisuje objekt, který může sloužit jako národní prostředí omezující vlastnost typu `time_put` \< CharType, OutputIterator >.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
 class time_put_byname : public time_put<CharType, OutputIterator>
 {
@@ -49,25 +50,24 @@ protected:
     virtual ~time_put_byname();
 
 };
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `_Locname`  
- Název národního prostředí.  
-  
- `_Refs`  
- Počet počáteční odkazů.  
-  
-## <a name="remarks"></a>Poznámky  
- Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > ( `_Refs`).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<národní prostředí >  
-  
- **Namespace:** – std  
-  
-## <a name="see-also"></a>Viz také  
- [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+### <a name="parameters"></a>Parametry
 
+`_Locname` Název národního prostředí.
 
+`_Refs` Počet počáteční odkazů.
+
+## <a name="remarks"></a>Poznámky
+
+Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > ( `_Refs`).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<národní prostředí >
+
+**Namespace:** – std
+
+## <a name="see-also"></a>Viz také
+
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

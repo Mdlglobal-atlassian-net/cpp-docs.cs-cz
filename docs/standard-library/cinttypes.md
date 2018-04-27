@@ -1,46 +1,46 @@
 ---
 title: '&lt;cinttypes&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 18eb738c-aa74-4ed3-9cdd-049ef4c64b80
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d36d6b2390f10762ed9804b7a6aaafff5098482d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 758ac8f2d6faf7632adac5cddd837a2da12b03aa
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
-Obsahuje hlavičku knihovny standardní C \<inttypes.h >. Tuto hlavičku včetně také zahrnuje \<cstdint >.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <cinttypes>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Včetně tuto hlavičku zajistí, že jsou názvy deklarovat pomocí externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.  
-  
-## <a name="see-also"></a>Viz také  
- [\<cstdint>](../standard-library/cstdint.md)   
- [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)   
- [Přehled knihovny C++ Standard](../standard-library/cpp-standard-library-overview.md)   
- [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Obsahuje hlavičku knihovny standardní C \<inttypes.h >. Tuto hlavičku včetně také zahrnuje \<cstdint >.
 
+## <a name="syntax"></a>Syntaxe
 
+```cpp
+#include <cinttypes>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Včetně tuto hlavičku zajistí, že jsou názvy deklarovat pomocí externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+
+## <a name="see-also"></a>Viz také
+
+[\<cstdint >](../standard-library/cstdint.md)<br/>
+[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

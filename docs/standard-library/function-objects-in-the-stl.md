@@ -1,12 +1,12 @@
 ---
-title: "Funkce objekty ve standardní knihovně C++ | Microsoft Docs"
-ms.custom: 
+title: Funkce objekty ve standardní knihovně C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,64 +16,68 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f426145418dab9c393e3e587939fa3e0fb5488d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5a36a9b75062aacc72ef6a1428bb630537597b76
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objekty funkcí ve standardní knihovně C++
-A *objekt funkce*, nebo *functor*, je žádný typ, který implementuje Operator() –. Tento operátor odkazuje jako *operátor volání* nebo někdy *operátor aplikací*. Standardní knihovna C++ pomocí funkce objektů především jako kritéria pro kontejnery a algoritmy řazení.  
-  
- Objekty funkcí poskytují dvě hlavní výhody přes volání přímých funkce. První je, že objekt funkce může obsahovat stavu. Druhý je, že je typu objekt funkce a proto je lze použít jako parametr šablony.  
-  
-## <a name="creating-a-function-object"></a>Vytvoření objektu – funkce  
- Pokud chcete vytvořit objekt funkce, vytvoření typu a implementovat Operator() –, jako například:  
-  
-```
-class Functor  
-{  
-public:  
-    int operator()(int a, int b)  
-    {  
-        return a < b;  
-    }  
-};  
+
+A *objekt funkce*, nebo *functor*, je žádný typ, který implementuje Operator() –. Tento operátor odkazuje jako *operátor volání* nebo někdy *operátor aplikací*. Standardní knihovna C++ pomocí funkce objektů především jako kritéria pro kontejnery a algoritmy řazení.
+
+Objekty funkcí poskytují dvě hlavní výhody přes volání přímých funkce. První je, že objekt funkce může obsahovat stavu. Druhý je, že je typu objekt funkce a proto je lze použít jako parametr šablony.
+
+## <a name="creating-a-function-object"></a>Vytvoření objektu – funkce
+
+Pokud chcete vytvořit objekt funkce, vytvoření typu a implementovat Operator() –, jako například:
+
+```cpp
+class Functor
+{
+public:
+    int operator()(int a, int b)
+    {
+        return a < b;
+    }
+};
 ```
 
- Poslední řádek `main` funkce ukazuje, jak volat objekt funkce. Toto volání vypadá volání funkce, ale ve skutečnosti volá Operator() – Functor typu. Tato podobnosti mezi volání objekt funkce a funkce je, jak objekt funkce termín pocházejí.  
-  
-## <a name="function-objects-and-containers"></a>Funkce objektů a kontejnerů  
- Standardní knihovna C++ obsahuje několik objektů funkce v [ \<funkční >](../standard-library/functional.md) soubor hlaviček. Jedno použití těchto objektů funkce je jako kritérium řazení pro kontejnery. Například `set` kontejneru je deklarovaná následujícím způsobem:  
-  
-```  
-template <class Key,  
-    class Traits=less<Key>,  
-    class Allocator=allocator<Key>>  
-class set  
-```  
-  
- Druhý argument šablony je objekt funkce `less`. Tento objekt funkce vrátí `true` Pokud první parametr předaný je menší než druhý parametr předaný. Vzhledem k tomu, že některé kontejnery seřadit jejich elementů, potřebuje způsob porovnání dva elementy kontejneru a toho dosahuje pomocí funkce objekt. Můžete definovat vlastní řazení kritéria pro kontejnery vytvořením objekt funkce a zadáte v seznamu šablon pro příslušný kontejner.  
-  
-## <a name="function-objects-and-algorithms"></a>Objekty funkcí a algoritmy  
- Další používání funkční objekty se v algoritmy. Například `remove_if` algoritmus je deklarovaná následujícím způsobem:  
-  
-```  
-template <class ForwardIterator, class Predicate>  
+Poslední řádek `main` funkce ukazuje, jak volat objekt funkce. Toto volání vypadá volání funkce, ale ve skutečnosti volá Operator() – Functor typu. Tato podobnosti mezi volání objekt funkce a funkce je, jak objekt funkce termín pocházejí.
+
+## <a name="function-objects-and-containers"></a>Funkce objektů a kontejnerů
+
+Standardní knihovna C++ obsahuje několik objektů funkce v [ \<funkční >](../standard-library/functional.md) soubor hlaviček. Jedno použití těchto objektů funkce je jako kritérium řazení pro kontejnery. Například `set` kontejneru je deklarovaná následujícím způsobem:
+
+```cpp
+template <class Key,
+    class Traits=less<Key>,
+    class Allocator=allocator<Key>>
+class set
+```
+
+Druhý argument šablony je objekt funkce `less`. Tento objekt funkce vrátí `true` Pokud první parametr předaný je menší než druhý parametr předaný. Vzhledem k tomu, že některé kontejnery seřadit jejich elementů, potřebuje způsob porovnání dva elementy kontejneru a toho dosahuje pomocí funkce objekt. Můžete definovat vlastní řazení kritéria pro kontejnery vytvořením objekt funkce a zadáte v seznamu šablon pro příslušný kontejner.
+
+## <a name="function-objects-and-algorithms"></a>Objekty funkcí a algoritmy
+
+Další používání funkční objekty se v algoritmy. Například `remove_if` algoritmus je deklarovaná následujícím způsobem:
+
+```cpp
+template <class ForwardIterator, class Predicate>
 ForwardIterator remove_if(
-    ForwardIterator first,  
-    ForwardIterator last,  
+    ForwardIterator first,
+    ForwardIterator last,
     Predicate pred);
-```  
-  
- Poslední argument `remove_if` je objekt funkce, který vrací logickou hodnotu ( *predikát*). Pokud je výsledek objektu funkce `true`, pak se odebere element z kontejneru přistupuje iterátory `first` a `last`. Můžete použít libovolnou funkce objektů v deklarována [ \<funkční >](../standard-library/functional.md) záhlaví pro argument `pred` nebo můžete vytvořit vlastní.  
-  
-## <a name="see-also"></a>Viz také  
- [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+```
 
+Poslední argument `remove_if` je objekt funkce, který vrací logickou hodnotu ( *predikát*). Pokud je výsledek objektu funkce `true`, pak se odebere element z kontejneru přistupuje iterátory `first` a `last`. Můžete použít libovolnou funkce objektů v deklarována [ \<funkční >](../standard-library/functional.md) záhlaví pro argument `pred` nebo můžete vytvořit vlastní.
+
+## <a name="see-also"></a>Viz také
+
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

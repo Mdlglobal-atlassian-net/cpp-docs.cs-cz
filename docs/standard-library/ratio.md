@@ -1,12 +1,12 @@
 ---
-title: "&lt;poměr&gt; | Microsoft Docs"
-ms.custom: 
+title: '&lt;poměr&gt; | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ratio/std::mega
@@ -40,29 +40,29 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415c91f79102103fe71e21384b16d691779e6a2d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f91c3914a935c1882500ba8462b16dd6b08f5f13
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltratiogt"></a>&lt;Poměr&gt;
 
-Zahrnují standardní hlavičku \<poměr > Chcete-li definovat konstanty a šablony, které se používají k uložení a zpracování racionální čísla v době kompilace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-#include <ratio>  
-```  
-  
-### <a name="ratio-template"></a>poměr šablony  
+Zahrnují standardní hlavičku \<poměr > Chcete-li definovat konstanty a šablony, které se používají k uložení a zpracování racionální čísla v době kompilace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+#include <ratio>
+```
+
+### <a name="ratio-template"></a>poměr šablony
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -72,35 +72,35 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
    static constexpr std::intmax_t den;
    typedef ratio<num, den> type;
 }
-```  
+```
 
-Šablona `ratio` definuje statické konstanty `num` a `den` tak, aby `num`  /  `den` == čítači / jmenovatel a `num` a `den` mít žádné běžných faktorů. `num` / `den` je hodnota, která je reprezentována šablony třídy. Proto `type` označí instance `ratio<num, den>`.  
-  
+Šablona `ratio` definuje statické konstanty `num` a `den` tak, aby `num`  /  `den` == čítači / jmenovatel a `num` a `den` mít žádné běžných faktorů. `num` / `den` je hodnota, která je reprezentována šablony třídy. Proto `type` označí instance `ratio<num, den>`.
+
 ### <a name="specializations"></a>Specializace
 
-\<poměr > také definuje specializací `ratio` mají následující formulář.  
-  
-`template <class R1, class R2> struct ratio_specialization`  
-  
-Každý specializace přebírá dva parametry šablony, které musí být také specializací `ratio`. Hodnota `type` je dáno přidružený logický provoz.  
-  
-|Název|`type` Hodnota|  
-|----------|------------------|  
-|`ratio_add`|`R1 + R2`|  
-|`ratio_divide`|`R1 / R2`|  
-|`ratio_equal`|`R1 == R2`|  
-|`ratio_greater`|`R1 > R2`|  
-|`ratio_greater_equal`|`R1 >= R2`|  
-|`ratio_less`|`R1 < R2`|  
-|`ratio_less_equal`|`R1 <= R2`|  
-|`ratio_multiply`|`R1 * R2`|  
-|`ratio_not_equal`|`!(R1 == R2)`|  
-|`ratio_subtract`|`R1 - R2`|  
-  
-### <a name="typedefs"></a>definice Typedef  
+\<poměr > také definuje specializací `ratio` mají následující formulář.
+
+`template <class R1, class R2> struct ratio_specialization`
+
+Každý specializace přebírá dva parametry šablony, které musí být také specializací `ratio`. Hodnota `type` je dáno přidružený logický provoz.
+
+|Název|`type` Hodnota|
+|----------|------------------|
+|`ratio_add`|`R1 + R2`|
+|`ratio_divide`|`R1 / R2`|
+|`ratio_equal`|`R1 == R2`|
+|`ratio_greater`|`R1 > R2`|
+|`ratio_greater_equal`|`R1 >= R2`|
+|`ratio_less`|`R1 < R2`|
+|`ratio_less_equal`|`R1 <= R2`|
+|`ratio_multiply`|`R1 * R2`|
+|`ratio_not_equal`|`!(R1 == R2)`|
+|`ratio_subtract`|`R1 - R2`|
+
+### <a name="typedefs"></a>definice Typedef
 
 Pro usnadnění práce definuje hlavičku poměr pro standardní předpony serveru:
-  
+
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
 typedef ratio<1, 1000000000000000> femto;
@@ -118,10 +118,8 @@ typedef ratio<1000000000, 1> giga;
 typedef ratio<1000000000000, 1> tera;
 typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)
+```
 
+## <a name="see-also"></a>Viz také
 
-
+[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_strupr –, _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr – | Microsoft Docs"
-ms.custom: 
+title: _strupr –, _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsupr_l
@@ -69,117 +69,123 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 904f897a36c3db24ce78983e3c02cc0f019bf16e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1b9300abfc68e1d6044e1eec290bdb0625c1b80
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
-Převede řetězec na velká písmena. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strupr_s –, _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l –](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
-  
+
+Převede řetězec na velká písmena. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strupr_s –, _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l –](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsupr` a `_mbsupr_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char *_strupr(  
-   char *str   
-);  
-wchar_t *_wcsupr(  
-   wchar_t *str   
-);  
-unsigned char *_mbsupr(  
-   unsigned char *str   
-);  
-char *_strupr_l(  
-   char *str,  
-   _locale_t locale  
-);  
-wchar_t *_wcsupr_l(  
-   wchar_t *str,  
-   _locale_t locale  
-);  
-unsigned char *_mbsupr_l(  
-   unsigned char *str,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *_strupr(  
-   char (&str)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsupr(  
-   wchar_t (&str)[size]  
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsupr(  
-   unsigned char (&str)[size]  
-); // C++ only  
-template <size_t size>  
-char *_strupr_l(  
-   char (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsupr_l(  
-   wchar_t (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsupr_l(  
-   unsigned char (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `str`  
- Řetězec k převedení na velká písmena.  
-  
- `locale`  
- Národní prostředí, které se má použít  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na změněna řetězec. Protože úpravy se provádí na místě, ukazatele vrátil, je stejná jako ukazatele předán jako vstupní argument. Žádnou návratovou hodnotu je vyhrazena indikující chybu.  
-  
-## <a name="remarks"></a>Poznámky  
- `_strupr` Funkce převede na místě, každý malé písmeno v `str` na velká písmena. Převod je dáno `LC_CTYPE` kategorie nastavení národního prostředí. Ovlivněné nejsou jiné znaky. Další informace o `LC_CTYPE`, najdete v části [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Verze tyto funkce bez `_l` přípona použití aktuální národní prostředí; verze s `_l` příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
-  
- `_wcsupr` a `_mbsupr` jsou široká charakterová a vícebajtových znaků verze `_strupr`. Hodnota argumentu a vraťte se `_wcsupr` jsou široká charakterová řetězce; u `_mbsupr` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.  
-  
- Pokud `str` je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, tyto funkce vrátí původní řetězec a sadu `errno` k `EINVAL`.  
-  
- V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsupr`|`_strupr`|`_mbsupr`|`_wcsupr`|  
-|`_tcsupr_l`|`_strupr_l`|`_mbsupr_l`|`_wcsupr_l`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_strupr`, `_strupr_l`|\<String.h >|  
-|`_wcsupr`, `_wcsupr_l`|\<String.h > nebo \<wchar.h >|  
-|`_mbsupr`, `_mbsupr_l`|\<Mbstring.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [_strlwr –](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Národní prostředí](../../c-runtime-library/locale.md)   
- [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
+> **_mbsupr –** a **_mbsupr_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+char *_strupr(
+   char *str
+);
+wchar_t *_wcsupr(
+   wchar_t *str
+);
+unsigned char *_mbsupr(
+   unsigned char *str
+);
+char *_strupr_l(
+   char *str,
+   _locale_t locale
+);
+wchar_t *_wcsupr_l(
+   wchar_t *str,
+   _locale_t locale
+);
+unsigned char *_mbsupr_l(
+   unsigned char *str,
+   _locale_t locale
+);
+template <size_t size>
+char *_strupr(
+   char (&str)[size]
+); // C++ only
+template <size_t size>
+wchar_t *_wcsupr(
+   wchar_t (&str)[size]
+); // C++ only
+template <size_t size>
+unsigned char *_mbsupr(
+   unsigned char (&str)[size]
+); // C++ only
+template <size_t size>
+char *_strupr_l(
+   char (&str)[size],
+   _locale_t locale
+); // C++ only
+template <size_t size>
+wchar_t *_wcsupr_l(
+   wchar_t (&str)[size],
+   _locale_t locale
+); // C++ only
+template <size_t size>
+unsigned char *_mbsupr_l(
+   unsigned char (&str)[size],
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*str –*<br/>
+Řetězec k převedení na velká písmena.
+
+*Národní prostředí*<br/>
+Národní prostředí, které se má použít
+
+## <a name="return-value"></a>Návratová hodnota
+
+Vrací ukazatel na změněna řetězec. Protože úpravy se provádí na místě, ukazatele vrátil, je stejná jako ukazatele předán jako vstupní argument. Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+
+## <a name="remarks"></a>Poznámky
+
+**_Strupr –** funkce převede na místě, každý malé písmeno v *str* na velká písmena. Převod je dáno **LC_CTYPE –** kategorie nastavení národního prostředí. Ovlivněné nejsou jiné znaky. Další informace o **LC_CTYPE –**, najdete v části [setlocale](setlocale-wsetlocale.md). Verze tyto funkce bez **_l** přípona použití aktuální národní prostředí; verze s **_l** příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+
+**_wcsupr –** a **_mbsupr –** jsou široká charakterová a vícebajtových znaků verze **_strupr –**. Hodnota argumentu a vraťte se **_wcsupr –** jsou široká charakterová řetězce; u **_mbsupr –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+
+Pokud *str* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, tyto funkce vrátí původní řetězec a sadu **errno** k **einval –**.
+
+V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsupr –**|**_strupr**|**_mbsupr –**|**_wcsupr**|
+|**_tcsupr_l –**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_strupr –**, **_strupr_l –**|\<String.h >|
+|**_wcsupr –**, **_wcsupr_l –**|\<String.h > nebo \<wchar.h >|
+|**_mbsupr –**, **_mbsupr_l –**|\<Mbstring.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+Podívejte se na příklad pro [_strlwr –](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).
+
+## <a name="see-also"></a>Viz také
+
+[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

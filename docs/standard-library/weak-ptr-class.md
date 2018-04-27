@@ -1,12 +1,12 @@
 ---
-title: weak_ptr Class | Microsoft Docs
-ms.custom: 
+title: weak_ptr – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::weak_ptr
@@ -37,141 +37,150 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a4d7989038ecb83575a8c9c2137df8965db6dc3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c8169d8958d99de545ed03c50393bc22478b425f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weakptr-class"></a>weak_ptr – třída
-Zalomí slabě propojený ukazatel.  
-  
-## <a name="syntax"></a>Syntaxe  
-```    
+
+Zalomí slabě propojený ukazatel.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template<class _Ty>
-   class weak_ptr {  
-public:  
-   typedef Ty element_type;  
+   class weak_ptr {
+public:
+   typedef Ty element_type;
    weak_ptr();
    weak_ptr(const weak_ptr&);
-   template <class Other>  
+   template <class Other>
       weak_ptr(const weak_ptr<Other>&);
-   template <class Other>  
+   template <class Other>
       weak_ptr(const shared_ptr<Other>&);
    weak_ptr& operator=(const weak_ptr&);
-   template <class Other>  
+   template <class Other>
       weak_ptr& operator=(const weak_ptr<Other>&);
-   template <class Other>  
+   template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };  
-```    
-#### <a name="parameters"></a>Parametry  
- `Ty`  
- Typ řízené slabé ukazatele.  
-  
-## <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje objekt, který odkazuje na prostředek, který je spravovaný nástrojem jeden nebo více [shared_ptr – třída](../standard-library/shared-ptr-class.md) objekty. `weak_ptr` Objekty, které odkazují na prostředek, neovlivní počet odkazů prostředku. Proto když poslední `shared_ptr` zničena objekt, který spravuje prostředku prostředek bude uvolněno, i když jsou `weak_ptr` objekty odkazující na tento prostředek. To je nezbytné pro vyloučení cykly v datové struktury.  
-  
- A `weak_ptr` objekt odkazuje na prostředek, pokud byl zkonstruován z `shared_ptr` objektu, který vlastní tento prostředek, pokud byl zkonstruován z `weak_ptr` objekt, který odkazuje na prostředek, nebo pokud tento prostředek byl přiřazen k němu s [ operátor =](#op_eq). A `weak_ptr` objekt neposkytuje přímý přístup k prostředku, který odkazuje. Kód, který potřebuje používat prostředek se tak prostřednictvím `shared_ptr` objektu, který vlastní tento prostředek, vytvořit voláním členské funkce [zámku](#lock). A `weak_ptr` objekt vypršela platnost, pokud prostředek, který odkazuje na bylo uvolněno, protože všechny `shared_ptr` objekty, které vlastní prostředek zničena. Volání metody `lock` na `weak_ptr` objektu s vypršenou platností vytvoří objekt shared_ptr prázdný.  
-  
- Weak_ptr prázdný objekt neodkazuje na žádné prostředky a nemá žádné řídicí blok. Jeho – členská funkce `lock` vrátí prázdný shared_ptr objekt.  
-  
- Cyklus nastane, když dva nebo více zdrojů řízené `shared_ptr` objekty uložení vzájemně odkazující na `shared_ptr` objekty. Například seznam cyklické propojené s tři prvky má hlavního uzlu `N0`; obsahuje tento uzel `shared_ptr` objektu, který vlastní další uzel `N1`; obsahuje tento uzel `shared_ptr` objektu, který vlastní další uzel `N2`; tento uzel v vypnout, blokování `shared_ptr` objektu, který vlastní hlavního uzlu `N0`, zavření cyklu. V takovém případě žádné počty odkazů se někdy stane nula a uzly v cyklu neuvolní. K vyloučení cyklus, poslední uzel `N2` by měl obsahovat `weak_ptr` odkazující na objekt `N0` místo `shared_ptr` objektu. Vzhledem k tomu `weak_ptr` není vlastníkem objektu `N0` nemá vliv `N0`na referenční počet a když program poslední odkaz k hlavnímu uzlu zničen uzly v seznamu budou také zničena.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="constructors"></a>Konstruktory  
-  
-|||  
-|-|-|  
-|[weak_ptr](#weak_ptr)|Vytvoří `weak_ptr`.|  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[element_type](#element_type)|Typ elementu.|  
-|[expired](#expired)|Testy, pokud vypršela platnost vlastnictví.|  
-|[lock](#lock)|Získá výhradní vlastnictví prostředku.|  
-|[owner_before](#owner_before)|Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.|  
-|[reset](#reset)|Verze vlastní prostředek.|  
-|[swap](#swap)|Prohození dva `weak_ptr` objekty.|  
-|[use_count](#use_count)|Určený počet počty `shared_ptr` objekty.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[operator=](#op_eq)|Nahradí vlastní prostředek.|  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<paměti >  
-  
- **Namespace:** – std  
-  
-##  <a name="element_type"></a>  element_type  
- Typ elementu.  
-  
-```  
-typedef Ty element_type;  
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Ty`.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_element_type.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
-int main()   
-    {   
-    std::shared_ptr<int> sp0(new int(5));   
-    std::weak_ptr<int> wp0(sp0);   
-    std::weak_ptr<int>::element_type val = *wp0.lock();   
-  
-    std::cout << "*wp0.lock() == " << val << std::endl;   
-  
-    return (0);   
-    }  
-  
-```  
-  
-```Output  
-*wp0.lock() == 5  
-```  
-  
-##  <a name="expired"></a>  Platnost  
- Testy, pokud vypršela platnost vlastnictví.  
-  
-```  
+   };
+```
+
+### <a name="parameters"></a>Parametry
+
+`Ty` Typ řízené slabé ukazatele.
+
+## <a name="remarks"></a>Poznámky
+
+Šablony třídy popisuje objekt, který odkazuje na prostředek, který je spravovaný nástrojem jeden nebo více [shared_ptr – třída](../standard-library/shared-ptr-class.md) objekty. `weak_ptr` Objekty, které odkazují na prostředek, neovlivní počet odkazů prostředku. Proto když poslední `shared_ptr` zničena objekt, který spravuje prostředku prostředek bude uvolněno, i když jsou `weak_ptr` objekty odkazující na tento prostředek. To je nezbytné pro vyloučení cykly v datové struktury.
+
+A `weak_ptr` objekt odkazuje na prostředek, pokud byl zkonstruován z `shared_ptr` objektu, který vlastní tento prostředek, pokud byl zkonstruován z `weak_ptr` objekt, který odkazuje na prostředek, nebo pokud tento prostředek byl přiřazen k němu s [ operátor =](#op_eq). A `weak_ptr` objekt neposkytuje přímý přístup k prostředku, který odkazuje. Kód, který potřebuje používat prostředek se tak prostřednictvím `shared_ptr` objektu, který vlastní tento prostředek, vytvořit voláním členské funkce [zámku](#lock). A `weak_ptr` objekt vypršela platnost, pokud prostředek, který odkazuje na bylo uvolněno, protože všechny `shared_ptr` objekty, které vlastní prostředek zničena. Volání metody `lock` na `weak_ptr` objektu s vypršenou platností vytvoří objekt shared_ptr prázdný.
+
+Weak_ptr prázdný objekt neodkazuje na žádné prostředky a nemá žádné řídicí blok. Jeho – členská funkce `lock` vrátí prázdný shared_ptr objekt.
+
+Cyklus nastane, když dva nebo více zdrojů řízené `shared_ptr` objekty uložení vzájemně odkazující na `shared_ptr` objekty. Například seznam cyklické propojené s tři prvky má hlavního uzlu `N0`; obsahuje tento uzel `shared_ptr` objektu, který vlastní další uzel `N1`; obsahuje tento uzel `shared_ptr` objektu, který vlastní další uzel `N2`; tento uzel v vypnout, blokování `shared_ptr` objektu, který vlastní hlavního uzlu `N0`, zavření cyklu. V takovém případě žádné počty odkazů se někdy stane nula a uzly v cyklu neuvolní. K vyloučení cyklus, poslední uzel `N2` by měl obsahovat `weak_ptr` odkazující na objekt `N0` místo `shared_ptr` objektu. Vzhledem k tomu `weak_ptr` není vlastníkem objektu `N0` nemá vliv `N0`na referenční počet a když program poslední odkaz k hlavnímu uzlu zničen uzly v seznamu budou také zničena.
+
+## <a name="members"></a>Členové
+
+### <a name="constructors"></a>Konstruktory
+
+|Konstruktor|Popis|
+|-|-|
+|[weak_ptr](#weak_ptr)|Vytvoří `weak_ptr`.|
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[element_type](#element_type)|Typ elementu.|
+|[Platnost](#expired)|Testy, pokud vypršela platnost vlastnictví.|
+|[lock](#lock)|Získá výhradní vlastnictví prostředku.|
+|[owner_before –](#owner_before)|Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.|
+|[Resetování](#reset)|Verze vlastní prostředek.|
+|[Swap](#swap)|Prohození dva `weak_ptr` objekty.|
+|[use_count –](#use_count)|Určený počet počty `shared_ptr` objekty.|
+
+### <a name="operators"></a>Operátory
+
+|Operátor|Popis|
+|-|-|
+|[operátor =](#op_eq)|Nahradí vlastní prostředek.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<paměti >
+
+**Namespace:** – std
+
+## <a name="element_type"></a>  ELEMENT_TYPE
+
+Typ elementu.
+
+```cpp
+typedef Ty element_type;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Typ je synonymum pro parametr šablony `Ty`.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_element_type.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
+int main()
+    {
+    std::shared_ptr<int> sp0(new int(5));
+    std::weak_ptr<int> wp0(sp0);
+    std::weak_ptr<int>::element_type val = *wp0.lock();
+
+    std::cout << "*wp0.lock() == " << val << std::endl;
+
+    return (0);
+    }
+
+```
+
+```Output
+*wp0.lock() == 5
+```
+
+## <a name="expired"></a>  Platnost
+
+Testy, pokud vypršela platnost vlastnictví.
+
+```cpp
 bool expired() const;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí hodnotu `true` Pokud `*this` vypršela platnost, jinak `false`.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_expired.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>Poznámky
+
+Členské funkce vrátí hodnotu `true` Pokud `*this` vypršela platnost, jinak `false`.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_expired.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 struct deleter
 {
@@ -193,7 +202,7 @@ int main()
         std::cout << "*wp.lock() == " << *wp.lock() << std::endl;
     }
 
-    // check expired after sp is destroyed   
+    // check expired after sp is destroyed
     std::cout << "wp.expired() == " << std::boolalpha
         << wp.expired() << std::endl;
     std::cout << "(bool)wp.lock() == " << std::boolalpha
@@ -201,33 +210,35 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp.expired() == false  
-*wp.lock() == 10  
-wp.expired() == true  
-(bool)wp.lock() == false  
-```  
-  
-##  <a name="lock"></a>  Zámek  
- Získá výhradní vlastnictví prostředku.  
-  
-```  
+
+```
+
+```Output
+wp.expired() == false
+*wp.lock() == 10
+wp.expired() == true
+(bool)wp.lock() == false
+```
+
+## <a name="lock"></a>  Zámek
+
+Získá výhradní vlastnictví prostředku.
+
+```cpp
 shared_ptr<Ty> lock() const;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí objekt shared_ptr prázdný, pokud `*this` vypršela platnost; v opačném případě vrátí [shared_ptr – třída](../standard-library/shared-ptr-class.md) `<Ty>` objekt, který je vlastníkem prostředku, který `*this` odkazuje na.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_lock.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>Poznámky
+
+Členská funkce vrátí objekt shared_ptr prázdný, pokud `*this` vypršela platnost; v opačném případě vrátí [shared_ptr – třída](../standard-library/shared-ptr-class.md)\<Ty > objekt, který je vlastníkem prostředku, který `*this` odkazuje na.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_lock.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 struct deleter
 {
@@ -249,7 +260,7 @@ int main()
         std::cout << "*wp.lock() == " << *wp.lock() << std::endl;
     }
 
-    // check expired after sp is destroyed   
+    // check expired after sp is destroyed
     std::cout << "wp.expired() == " << std::boolalpha
         << wp.expired() << std::endl;
     std::cout << "(bool)wp.lock() == " << std::boolalpha
@@ -257,50 +268,49 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp.expired() == false  
-*wp.lock() == 10  
-wp.expired() == true  
-(bool)wp.lock() == false  
-```  
-  
-##  <a name="op_eq"></a>  operátor =  
- Nahradí vlastní prostředek.  
-  
-```  
+```
+
+```Output
+wp.expired() == false
+*wp.lock() == 10
+wp.expired() == true
+(bool)wp.lock() == false
+```
+
+## <a name="op_eq"></a>  operátor =
+
+Nahradí vlastní prostředek.
+
+```cpp
 weak_ptr& operator=(const weak_ptr& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr& operator=(const weak_ptr<Other>& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr& operator=(const shared_ptr<Other>& sp);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `Other`  
- Typ řízené ukazatele sdílené nebo weak argument.  
-  
- `wp`  
- Slabé ukazatel ke kopírování.  
-  
- `sp`  
- Sdílené ukazatel ke kopírování.  
-  
-### <a name="remarks"></a>Poznámky  
- Operátory všechny verze prostředku, na kterou aktuálně odkazuje `*this` a přiřaďte vlastnictví prostředek s názvem pořadím operand k `*this`. Pokud operátor selže nechá `*this` beze změny.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_operator_as.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+`Other` Typ řízené ukazatele sdílené nebo weak argument.
+
+`wp` Slabé ukazatel ke kopírování.
+
+`sp` Sdílené ukazatel ke kopírování.
+
+### <a name="remarks"></a>Poznámky
+
+Operátory všechny verze prostředku, na kterou aktuálně odkazuje `*this` a přiřaďte vlastnictví prostředek s názvem pořadím operand k `*this`. Pokud operátor selže nechá `*this` beze změny.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_operator_as.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::shared_ptr<int> sp0(new int(5));
@@ -317,51 +327,54 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-*wp0.lock() == 5  
-*wp0.lock() == 10  
-*wp1.lock() == 10  
-```  
-  
-##  <a name="owner_before"></a>  owner_before –  
- Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.  
-  
-```  
-template <class Other>  
+```
+
+```Output
+*wp0.lock() == 5
+*wp0.lock() == 10
+*wp1.lock() == 10
+```
+
+## <a name="owner_before"></a>  owner_before –
+
+Vrátí `true` Pokud `weak_ptr` je seřadí před (nebo menší než) zadané ukazatele.
+
+```cpp
+template <class Other>
 bool owner_before(const shared_ptr<Other>& ptr);
 
-template <class Other>  
+template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `ptr`  
- `lvalue` Odkaz na buď `shared_ptr` nebo `weak_ptr`.  
-  
-### <a name="remarks"></a>Poznámky  
- Členské funkce šablony vrátí `true` Pokud `*this` je `ordered before` `ptr`.  
-  
-##  <a name="reset"></a>  Resetování  
- Verze vlastní prostředek.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+`ptr` `lvalue` Odkaz na buď `shared_ptr` nebo `weak_ptr`.
+
+### <a name="remarks"></a>Poznámky
+
+Členské funkce šablony vrátí `true` Pokud `*this` je `ordered before` `ptr`.
+
+## <a name="reset"></a>  Resetování
+
+Verze vlastní prostředek.
+
+```cpp
 void reset();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Členská funkce uvolní prostředků, na kterou odkazuje `*this` a převede `*this` do objektu weak_ptr prázdný.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_reset.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Členská funkce uvolní prostředků, na kterou odkazuje `*this` a převede `*this` do objektu weak_ptr prázdný.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_reset.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::shared_ptr<int> sp(new int(5));
@@ -377,36 +390,38 @@ int main()
     return (0);
 }
 
-```  
-  
-```Output  
-*wp.lock() == 5  
-wp.expired() == false  
-wp.expired() == true  
-```  
-  
-##  <a name="swap"></a>  Swap  
- Prohození dva `weak_ptr` objekty.  
-  
-```  
+```
+
+```Output
+*wp.lock() == 5
+wp.expired() == false
+wp.expired() == true
+```
+
+## <a name="swap"></a>  Swap
+
+Prohození dva `weak_ptr` objekty.
+
+```cpp
 void swap(weak_ptr& wp);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `wp`  
- Slabé ukazatel na prohození s.  
-  
-### <a name="remarks"></a>Poznámky  
- Členská funkce opustí prostředků, na kterou původně odkazuje `*this` následně ukazuje `wp`a prostředků, na kterou původně odkazuje `wp` následně ukazuje `*this`. Funkce nezmění počty odkazů pro tyto dva prostředky a nevyvolá jakékoli výjimky.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_swap.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
- 
+```
+
+### <a name="parameters"></a>Parametry
+
+`wp` Slabé ukazatel na prohození s.
+
+### <a name="remarks"></a>Poznámky
+
+Členská funkce opustí prostředků, na kterou původně odkazuje `*this` následně ukazuje `wp`a prostředků, na kterou původně odkazuje `wp` následně ukazuje `*this`. Funkce nezmění počty odkazů pro tyto dva prostředky a nevyvolá jakékoli výjimky.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_swap.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 struct deleter
 {
     void operator()(int *p)
@@ -441,35 +456,37 @@ int main()
     return (0);
 }
 
-```  
-  
-```Output  
-*sp1 == 5  
-*sp1 == 10  
-*sp1 == 5  
-  
-*wp1 == 5  
-*wp1 == 10  
-*wp1 == 5  
-```  
-  
-##  <a name="use_count"></a>  use_count –  
- Určený počet počty `shared_ptr` objekty.  
-  
-```  
+```
+
+```Output
+*sp1 == 5
+*sp1 == 10
+*sp1 == 5
+
+*wp1 == 5
+*wp1 == 10
+*wp1 == 5
+```
+
+## <a name="use_count"></a>  use_count –
+
+Určený počet počty `shared_ptr` objekty.
+
+```cpp
 long use_count() const;
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí počet `shared_ptr` objekty, které vlastní prostředek ukazující na `*this`.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_use_count.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>Poznámky
+
+Členská funkce vrátí počet `shared_ptr` objekty, které vlastní prostředek ukazující na `*this`.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_use_count.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 int main()
 {
@@ -483,51 +500,51 @@ int main()
         << wp.use_count() << std::endl;
 
     return (0);
-} 
-  
-```  
-  
-```Output  
-wp.use_count() == 1  
-wp.use_count() == 2  
-```  
-  
-##  <a name="weak_ptr"></a>  weak_ptr  
- Vytvoří `weak_ptr`.  
-  
-```  
+}
+
+```
+
+```Output
+wp.use_count() == 1
+wp.use_count() == 2
+```
+
+## <a name="weak_ptr"></a>  weak_ptr
+
+Vytvoří `weak_ptr`.
+
+```cpp
 weak_ptr();
 
 weak_ptr(const weak_ptr& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr(const weak_ptr<Other>& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr(const shared_ptr<Other>& sp);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `Other`  
- Typ řízené ukazatele sdílené nebo weak argument.  
-  
- `wp`  
- Slabé ukazatel ke kopírování.  
-  
- `sp`  
- Sdílené ukazatel ke kopírování.  
-  
-### <a name="remarks"></a>Poznámky  
- Konstruktory každý vytvořit objekt, který odkazuje na prostředek s názvem operand pořadí.  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// std__memory__weak_ptr_construct.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+`Other` Typ řízené ukazatele sdílené nebo weak argument.
+
+`wp` Slabé ukazatel ke kopírování.
+
+`sp` Sdílené ukazatel ke kopírování.
+
+### <a name="remarks"></a>Poznámky
+
+Konstruktory každý vytvořit objekt, který odkazuje na prostředek s názvem operand pořadí.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// std__memory__weak_ptr_construct.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::weak_ptr<int> wp0;
@@ -545,15 +562,15 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp0.expired() == true  
-*wp1.lock() == 5  
-*wp2.lock() == 5  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [shared_ptr – třída](../standard-library/shared-ptr-class.md)
 
+```
+
+```Output
+wp0.expired() == true
+*wp1.lock() == 5
+*wp2.lock() == 5
+```
+
+## <a name="see-also"></a>Viz také
+
+[shared_ptr – třída](../standard-library/shared-ptr-class.md)<br/>

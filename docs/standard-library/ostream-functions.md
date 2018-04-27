@@ -1,10 +1,10 @@
 ---
-title: "&lt;ostream –&gt; funkce | Microsoft Docs"
-ms.custom: 
+title: '&lt;ostream –&gt; funkce | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ostream/std::swap
@@ -12,18 +12,18 @@ f1_keywords:
 - ostream/std::ends
 - ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
-caps.latest.revision: 
+caps.latest.revision: 15
 manager: ghogen
 helpviewer_keywords:
 - std::swap [C++]
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 4693e33563048807cdef1c81cb4d47d4fb455137
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 41463d912b3ab33812a1f7c0a0ea5f8172036e57
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream –&gt; funkce
 
@@ -32,28 +32,25 @@ Toto jsou globální šablona funkce definované v &lt;ostream –&gt;. Člensk�
 ||||
 |-|-|-|
 |[endl](#endl)|[ukončení](#ends)|[Vyprázdnění](#flush)|
-|[swap](#swap)|
+|[Swap](#swap)|
 
 ## <a name="endl"></a>endl
 
 Ukončí řádku a vyprázdní vyrovnávací paměť.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& endl(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*  
-Typ elementu.
+*Elem* typ elementu.
 
-*Ostr*  
-Objekt typu **basic_ostream**.
+*Ostr* objekt typu **basic_ostream**.
 
-*Tr*  
-Vlastnosti znak.
+*Tr* znak vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -86,21 +83,18 @@ testing
 Ukončí řetězec.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& ends(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*  
-Typ elementu.
+*Elem* typ elementu.
 
-*Ostr*  
-Objekt typu **basic_ostream**.
+*Ostr* objekt typu **basic_ostream**.
 
-*Tr*  
-Vlastnosti znak.
+*Tr* znak vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -142,14 +136,11 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*  
-Typ elementu.
+*Elem* typ elementu.
 
-*Ostr*  
-Objekt typu **basic_ostream**.
+*Ostr* objekt typu **basic_ostream**.
 
-*Tr*  
-Vlastnosti znak.
+*Tr* znak vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -190,17 +181,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*  
-Typ elementu.
+*Elem* typ elementu.
 
-*Tr*  
-Vlastnosti znak.
+*Tr* znak vlastnosti.
 
-*left*  
-Odkaz na lvalue **basic_ostream** objektu.
+*levé* lvalue odkaz na **basic_ostream** objektu.
 
-Vpravo  
-Odkaz na lvalue **basic_ostream** objektu.
+*pravé* lvalue odkaz na **basic_ostream** objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -208,4 +195,4 @@ Funkce šablony **swap** provede `left.swap(right)`.
 
 ## <a name="see-also"></a>Viz také
 
-[\<ostream>](../standard-library/ostream.md)  
+[\<ostream – >](../standard-library/ostream.md)

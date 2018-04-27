@@ -1,12 +1,12 @@
 ---
-title: "_searchenv –, _wsearchenv – | Microsoft Docs"
-ms.custom: 
+title: _searchenv –, _wsearchenv – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _searchenv
@@ -43,127 +43,128 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: 
+caps.latest.revision: 33
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6968d77e118b78b4b61f990e37047b9be7ee03c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8ebcb694e347becd27eb4e128f9ff96bf19eaab
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
-Cesty prostředí se používá k vyhledání souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_searchenv_s –, _wsearchenv_s –](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
-  
+
+Cesty prostředí se používá k vyhledání souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_searchenv_s –, _wsearchenv_s –](searchenv-s-wsearchenv-s.md).
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void _searchenv(  
-   const char *filename,  
-   const char *varname,  
-   char *pathname   
-);  
-void _wsearchenv(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t *pathname   
-);  
-template <size_t size>  
-void _searchenv(  
-   const char *filename,  
-   const char *varname,  
-   char (&pathname)[size]  
-); // C++ only  
-template <size_t size>  
-void _wsearchenv(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t (&pathname)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `filename`  
- Název souboru pro vyhledávání.  
-  
- `varname`  
- Prostředí pro vyhledávání.  
-  
- `pathname`  
- Vyrovnávací paměť pro uložení úplnou cestu.  
-  
-## <a name="remarks"></a>Poznámky  
- `_searchenv` Rutiny hledá cílový soubor v zadané doméně. `varname` Proměnná může být jakýkoli prostředí nebo uživatelem definované proměnné – například `PATH`, `LIB`, nebo `INCLUDE`– určující seznam cesty adresářů. Protože `_searchenv` je malá a velká písmena, `varname` by měl malá a velká písmena proměnné prostředí.  
-  
- Rutiny nejprve hledá soubor v aktuálním pracovním adresáři. Pokud nenajde soubor, vypadá prostřednictvím adresáře, které jsou určené proměnnou prostředí. Pokud cílový soubor je v některém z těchto adresářů, cesta k nově vytvořený zkopírován do `pathname`. Pokud `filename` soubor nebyl nalezen, `pathname` obsahuje prázdný řetězec ukončené hodnotou null.  
-  
- `pathname` Vyrovnávací paměti by měla být minimálně `_MAX_PATH` znaků dlouhé zohlednit úplné délka sestavené cesta. V opačném `_searchenv` může přetečení `pathname` vyrovnávací paměti a způsobit neočekávané chování.  
-  
- `_wsearchenv` široká charakterová verze `_searchenv`a argumenty, které mají `_wsearchenv` jsou široká charakterová řetězce. `_wsearchenv` a `_searchenv` chovat jinak shodně.  
-  
- Pokud `filename` je řetězec prázdný, vrátí tyto funkce `ENOENT`.  
-  
- Pokud `filename` nebo `pathname` je `NULL` ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte `errno` k `EINVAL`.  
-  
- Další informace o `errno` a kódy chyb, najdete v části [errno – konstanty](../../c-runtime-library/errno-constants.md).  
-  
- V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější, bezpečnější svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tsearchenv`|`_searchenv`|`_searchenv`|`_wsearchenv`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_searchenv`|\<stdlib.h>|  
-|`_wsearchenv`|\<stdlib.h > nebo \<wchar.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```C  
-// crt_searchenv.c  
-// compile with: /W3  
-// This program searches for a file in  
-// a directory that's specified by an environment variable.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char pathbuffer[_MAX_PATH];  
-   char searchfile[] = "CL.EXE";  
-   char envvar[] = "PATH";  
-  
-   // Search for file in PATH environment variable:  
-   _searchenv( searchfile, envvar, pathbuffer ); // C4996  
-   // Note: _searchenv is deprecated; consider using _searchenv_s  
-   if( *pathbuffer != '\0' )  
-      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );  
-   else  
-      printf( "%s not found\n", searchfile );  
-}  
-```  
-  
-```Output  
-Path for CL.EXE:  
-C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)   
- [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
- [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)
+> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void _searchenv(
+   const char *filename,
+   const char *varname,
+   char *pathname
+);
+void _wsearchenv(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t *pathname
+);
+template <size_t size>
+void _searchenv(
+   const char *filename,
+   const char *varname,
+   char (&pathname)[size]
+); // C++ only
+template <size_t size>
+void _wsearchenv(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t (&pathname)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*Název souboru* název souboru pro vyhledávání.
+
+*název_proměnné* prostředí pro vyhledávání.
+
+*název cesty* vyrovnávací paměti k uložení úplnou cestu.
+
+## <a name="remarks"></a>Poznámky
+
+**_Searchenv –** rutiny hledá cílový soubor v zadané doméně. *Název_proměnné* proměnná může být jakýkoli prostředí nebo uživatelem definované proměnné – například **cesta**, **LIB**, nebo **zahrnout**– určující seznam cesty adresářů. Protože **_searchenv –** je malá a velká písmena, *název_proměnné* by měl malá a velká písmena proměnné prostředí.
+
+Rutiny nejprve hledá soubor v aktuálním pracovním adresáři. Pokud nenajde soubor, vypadá prostřednictvím adresáře, které jsou určené proměnnou prostředí. Pokud cílový soubor je v některém z těchto adresářů, cesta k nově vytvořený zkopírován do *pathname*. Pokud *filename* soubor nebyl nalezen, *pathname* obsahuje prázdný řetězec ukončené hodnotou null.
+
+*Pathname* vyrovnávací paměti by měla být minimálně **_max_path –** znaků dlouhé zohlednit úplné délka sestavené cesta. V opačném **_searchenv –** může přetečení *pathname* vyrovnávací paměti a způsobit neočekávané chování.
+
+**_wsearchenv –** je verze široká charakterová **_searchenv –**a argumenty, které mají **_wsearchenv –** jsou široká charakterová řetězce. **_wsearchenv –** a **_searchenv –** chovat jinak shodně.
+
+Pokud *filename* je řetězec prázdný, vrátí tyto funkce **enoent –**.
+
+Pokud *filename* nebo *pathname* je **NULL** ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+
+Další informace o **errno** a kódy chyb, najdete v části [errno – konstanty](../../c-runtime-library/errno-constants.md).
+
+V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější, bezpečnější svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tsearchenv –**|**_searchenv**|**_searchenv**|**_wsearchenv**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_searchenv**|\<stdlib.h>|
+|**_wsearchenv**|\<stdlib.h > nebo \<wchar.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Příklad
+
+```C
+// crt_searchenv.c
+// compile with: /W3
+// This program searches for a file in
+// a directory that's specified by an environment variable.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char pathbuffer[_MAX_PATH];
+   char searchfile[] = "CL.EXE";
+   char envvar[] = "PATH";
+
+   // Search for file in PATH environment variable:
+   _searchenv( searchfile, envvar, pathbuffer ); // C4996
+   // Note: _searchenv is deprecated; consider using _searchenv_s
+   if( *pathbuffer != '\0' )
+      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );
+   else
+      printf( "%s not found\n", searchfile );
+}
+```
+
+```Output
+Path for CL.EXE:
+C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
+```
+
+## <a name="see-also"></a>Viz také
+
+[Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
+[getenv, _wgetenv](getenv-wgetenv.md)<br/>
+[_putenv, _wputenv](putenv-wputenv.md)<br/>
+[_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

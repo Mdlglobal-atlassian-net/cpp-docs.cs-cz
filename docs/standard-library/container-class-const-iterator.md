@@ -1,45 +1,48 @@
 ---
-title: "Třída kontejneru::const_iterator | Microsoft Docs"
-ms.custom: 
+title: Třída kontejneru::const_iterator | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - const_iterator method
 ms.assetid: e68c9e30-fc4c-4c2e-8724-06d1fe8b8ccb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6892d1cf9578a43bc4c1e1f43c4e19a6ae16f2b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 26821d7c67df281fc32a1a1f54f93793011c4253
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="container-classconstiterator"></a>Třída kontejneru::const_iterator
+
 > [!NOTE]
->  Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).  
-  
- Popisuje objekt, který může sloužit jako konstantní iterator pro řízené sekvenci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
- 
-typedef T6 const_iterator;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Je popsán sem jako synonymum pro neurčeného typu **T6**.  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)
+> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+
+Popisuje objekt, který může sloužit jako konstantní iterator pro řízené sekvenci.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+typedef T6 const_iterator;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Je popsán sem jako synonymum pro neurčeného typu **T6**.
+
+## <a name="see-also"></a>Viz také
+
+[Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

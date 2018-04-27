@@ -1,12 +1,12 @@
 ---
-title: "_strncoll –, _wcsncoll –, _mbsncoll –, _strncoll_l –, _wcsncoll_l –, _mbsncoll_l – | Microsoft Docs"
-ms.custom: 
+title: _strncoll –, _wcsncoll –, _mbsncoll –, _strncoll_l –, _wcsncoll_l –, _mbsncoll_l – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strncoll
@@ -69,114 +69,119 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9feab13206ea39379ff41ead2bca4bcaab5d71f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab49ecde97cd7cf4bfba68ac886e12e411206f83
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
-Porovnání řetězců pomocí informace specifické pro národní prostředí.  
-  
+
+Porovnání řetězců pomocí informace specifické pro národní prostředí.
+
 > [!IMPORTANT]
->  `_mbsncoll` a `_mbsncoll_l` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _strncoll(  
-   const char *string1,  
-   const char *string2,  
-   size_t count   
-);  
-int _wcsncoll(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   size_t count   
-);  
-int _mbsncoll(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-int _strncoll_l(  
-   const char *string1,  
-   const char *string2,  
-   size_t count,  
-   _locale_t locale  
-);  
-int _wcsncoll_l(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   size_t count,  
-   _locale_t locale  
-);  
-int _mbsncoll_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `string1, string2`  
- Řetězce ukončené hodnotou Null pro porovnání.  
-  
- `count`  
- Počet znaků k porovnání.  
-  
- `locale`  
- Národní prostředí, které se má použít  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Každá z těchto funkcí vrátí hodnotu, která určuje vztah podřetězce `string1` a `string2`, a to takto.  
-  
-|Návratová hodnota|Relace řetězec1 k řetězec2|  
-|------------------|----------------------------------------|  
-|< 0|`string1` je menší než `string2`.|  
-|0|Funkce `string1` je shodná s funkcí `string2`.|  
-|> 0|`string1` je větší než `string2`.|  
-  
- Každá z těchto funkcí vrátí `_NLSCMPERROR`. Chcete-li použít `_NLSCMPERROR`, zahrnout STRING.h nebo MBSTRING.h. `_wcsncoll` může selhat, pokud buď `string1` nebo `string2` obsahuje široká charakterová kódy, které jsou mimo doménu pořadí řazení. Když dojde k chybě, `_wcsncoll` může nastavit `errno` k `EINVAL`. Zkontrolujte chybu na volání `_wcsncoll`, nastavte `errno` na hodnotu 0 a poté zkontrolujte `errno` po zavolání metody `_wcsncoll`.  
-  
-## <a name="remarks"></a>Poznámky  
- Každá z těchto funkcí provede malá a velká písmena porovnání první `count` znaky v `string1` a `string2`, podle znakové stránky, která je aktuálně používán. Pomocí těchto funkcí jenom v případě, že je rozdíl mezi pořadí sady znaků a pořadí lexicographic znaků v znakové stránky, a pokud tento rozdíl je určen pro porovnání řetězců. Znakové sady pořadí je závislých na národním prostředí. Verze tyto funkce, které nemají `_l` použijte příponu aktuální národní prostředí, ale verze, které mají `_l` národní prostředí, je předaná používat příponu. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).  
-  
- Všechny tyto funkce ověřit jejich parametrů. Pokud má jedna `string1` nebo `string2` je ukazatel s hodnotou null, nebo `count` je větší než `INT_MAX`, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `_NLSCMPERROR` a nastavte `errno` k `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsnccoll`|`_strncoll`|`_mbsncoll`|`_wcsncoll`|  
-|`_tcsncoll`|`_strncoll`|[_mbsnbcoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsncoll`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_strncoll`, `_strncoll_l`|\<String.h >|  
-|`_wcsncoll`, `_wcsncoll_l`|\<wchar.h > nebo \<string.h >|  
-|`_mbsncoll`, `_mbsncoll_l`|\<Mbstring.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Národní prostředí](../../c-runtime-library/locale.md)   
- [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)   
- [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)   
- [localeconv –](../../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale –, _wsetlocale –](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp – wcscmp –, _mbscmp –](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+> **_mbsncoll –** a **_mbsncoll_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _strncoll(
+   const char *string1,
+   const char *string2,
+   size_t count
+);
+int _wcsncoll(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   size_t count
+);
+int _mbsncoll(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+int _strncoll_l(
+   const char *string1,
+   const char *string2,
+   size_t count,
+   _locale_t locale
+);
+int _wcsncoll_l(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   size_t count,
+   _locale_t locale
+);
+int _mbsncoll_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*řetězec1*, *řetězec2*<br/>
+Řetězce ukončené hodnotou Null pro porovnání.
+
+*Počet*<br/>
+Počet znaků k porovnání.
+
+*Národní prostředí*<br/>
+Národní prostředí, které se má použít
+
+## <a name="return-value"></a>Návratová hodnota
+
+Každá z těchto funkcí vrátí hodnotu, která určuje vztah podřetězce *řetězec1* a *řetězec2*, a to takto.
+
+|Návratová hodnota|Relace řetězec1 k řetězec2|
+|------------------|----------------------------------------|
+|< 0|*řetězec1* je menší než *řetězec2*.|
+|0|*řetězec1* je stejný jako *řetězec2*.|
+|> 0|*řetězec1* je větší než *řetězec2*.|
+
+Každá z těchto funkcí vrátí **_NLSCMPERROR**. Chcete-li použít **_NLSCMPERROR**, zahrnout STRING.h nebo MBSTRING.h. **_wcsncoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* obsahuje široká charakterová kódy, které jsou mimo doménu pořadí řazení. Když dojde k chybě, **_wcsncoll –** může nastavit **errno** k **einval –**. Zkontrolujte chybu na volání **_wcsncoll –**, nastavte **errno** na hodnotu 0 a poté zkontrolujte **errno** po zavolání metody **_wcsncoll –**.
+
+## <a name="remarks"></a>Poznámky
+
+Každá z těchto funkcí provede malá a velká písmena porovnání první *počet* znaky v *řetězec1* a *řetězec2*, podle znakové stránky, který je aktuálně v použití. Pomocí těchto funkcí jenom v případě, že je rozdíl mezi pořadí sady znaků a pořadí lexicographic znaků v znakové stránky, a pokud tento rozdíl je určen pro porovnání řetězců. Znakové sady pořadí je závislých na národním prostředí. Verze tyto funkce, které nemají **_l** použijte příponu aktuální národní prostředí, ale verze, které mají **_l** národní prostředí, je předaná používat příponu. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+
+Všechny tyto funkce ověřit jejich parametrů. Pokud má jedna *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, nebo *počet* je větší než **INT_MAX**, vyvolání obslužná rutina neplatný parametr jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **_NLSCMPERROR** a nastavte **errno** k **einval –**.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsnccoll –**|**_strncoll**|**_mbsncoll –**|**_wcsncoll**|
+|**_tcsncoll –**|**_strncoll**|[_mbsnbcoll –](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|**_strncoll –**, **_strncoll_l –**|\<String.h >|
+|**_wcsncoll –**, **_wcsncoll_l –**|\<wchar.h > nebo \<string.h >|
+|**_mbsncoll –**, **_mbsncoll_l –**|\<Mbstring.h >|
+
+Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll – funkce](../../c-runtime-library/strcoll-functions.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

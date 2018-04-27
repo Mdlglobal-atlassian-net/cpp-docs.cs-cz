@@ -1,12 +1,12 @@
 ---
-title: "&lt;hash_map –&gt; | Microsoft Docs"
-ms.custom: 
+title: '&lt;hash_map –&gt; | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -35,14 +35,14 @@ Definuje hash_map – kontejner šablony třídy a hash_multimap a jejich podpů
 
 ## <a name="syntax"></a>Syntaxe
 
-> #<a name="include-hashmap"></a>include <hash_map>
+> #<a name="include-hashmap"></a>Zahrnout < hash_map >
 
 ### <a name="operators"></a>Operátory
 
 |Hash_map – verze|Hash_multimap – verze|Popis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátor není rovno hash_map nebo hash_multimap objekt na pravé straně.|
-|[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátoru rovná hash_map nebo hash_multimap objekt na pravé straně.|
+|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátor není rovno hash_map nebo hash_multimap objekt na pravé straně.|
+|[Operator == (hash_map)](hash-map-operators.md#op_eq_eq)|[Operator == (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátoru rovná hash_map nebo hash_multimap objekt na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
@@ -52,7 +52,7 @@ Definuje hash_map – kontejner šablony třídy a hash_multimap a jejich podpů
 
 ### <a name="classes"></a>Třídy
 
-|||
+|Třída|Popis|
 |-|-|
 |[hash_compare – třída](hash-compare-class.md)|Popisuje objekt, který můžete použít žádné kontejnery asociativní hash – hash_map, hash_multimap, hash_set, nebo hash_multiset – ve výchozím nastavení **vlastnosti** parametr objekt pořadí a hodnoty hash elementy obsahují.|
 |[value_compare – třída](value-compare-class.md)|Poskytuje objekt funkce, který můžete porovnat elementy hash_map srovnáním jejich klíčů určit jejich relativní pořadí v hash_map.|
@@ -67,6 +67,6 @@ Definuje hash_map – kontejner šablony třídy a hash_multimap a jejich podpů
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na soubory hlaviček](cpp-standard-library-header-files.md)  
-[Bezpečný přístup z více vláken ve standardní knihovně C++](thread-safety-in-the-cpp-standard-library.md)  
-[Standardní knihovna C++ – referenční dokumentace](cpp-standard-library-reference.md)  
+[Hlavičkové soubory odkaz](cpp-standard-library-header-files.md)
+[bezpečnost vlákna v standardní knihovně C++](thread-safety-in-the-cpp-standard-library.md)
+[C++ Standard – referenční dokumentace knihoven](cpp-standard-library-reference.md)

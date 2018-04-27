@@ -44,18 +44,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8820dbda16d95a201d666a0f25b4e06a6b79c941
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 16dfe0f560097ab7a5a423f7730c215c2d05530f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
-Zkopíruje řetězec. Tyto verze nástroje [strcpy – wcscpy –, _mbscpy –](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopíruje řetězec. Tyto verze nástroje [strcpy – wcscpy –, _mbscpy –](strcpy-wcscpy-mbscpy.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> `_mbscpy_s` nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -115,15 +115,15 @@ Nula v případě úspěšného; jinak k chybě.
 
 |*Cíle*|*dest_size*|*src*|Návratová hodnota|Obsah *cíle*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL**|nedojde ke změně|
-|všechny|všechny|**HODNOTU NULL**|**EINVAL**|*cíle*[0] nastaven na 0|
+|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|nedojde ke změně|
+|všechny|všechny|**HODNOTU NULL**|**EINVAL –**|*cíle*[0] nastaven na 0|
 |všechny|0, nebo příliš malá|všechny|**ERANGE –**|*cíle*[0] nastaven na 0|
 
 ## <a name="remarks"></a>Poznámky
 
-`strcpy_s` Funkce zkopíruje obsah v adresu *src*, včetně ukončující znak hodnoty null do umístění, která je zadána *cíle*. Cílový řetězec musí být dostatečně velký pro uložení zdrojový řetězec a jeho ukončovací znak hodnoty null. Chování `strcpy_s` není definován, pokud se překrývají zdrojové a cílové řetězce.
+**Strcpy_s –** funkce zkopíruje obsah v adresu *src*, včetně ukončující znak hodnoty null do umístění, která je zadána *cíle*. Cílový řetězec musí být dostatečně velký pro uložení zdrojový řetězec a jeho ukončovací znak hodnoty null. Chování **strcpy_s –** není definován, pokud se překrývají zdrojové a cílové řetězce.
 
-`wcscpy_s` je verze široká charakterová `strcpy_s`, a `_mbscpy_s` je verze vícebajtových znaků. Argumenty `wcscpy_s` jsou široká charakterová řetězce; u `_mbscpy_s` jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+**wcscpy_s –** je verze široká charakterová **strcpy_s –**, a **_mbscpy_s –** je verze vícebajtových znaků. Argumenty **wcscpy_s –** jsou široká charakterová řetězce; u **_mbscpy_s –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
 
 Pokud *cíle* nebo *src* je ukazatel s hodnotou null, nebo pokud cíl řetězec velikost *dest_size* je příliš malá, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **einval –** a nastavte **errno** k **einval –** při *cíle* nebo  *src* je ukazatel s hodnotou null, a že budou vracet **erange –** a nastavte **errno** k **erange –** při cílový řetězec je příliš malá.
 
@@ -131,21 +131,21 @@ Po úspěšné provedení cílový řetězec je vždy ukončené hodnotou null.
 
 V jazyce C++ těchto funkcí se zjednodušilo díky šabloně přetížení, které lze odvodit délka vyrovnávací paměti automaticky tak, že nemusíte určit velikost argument a starší, méně bezpečné funkce můžou automaticky nahradit s jejich novější bezpečnější svými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s Bugcheck 0xFE. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s Bugcheck 0xFE. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|
+|**_tcscpy_s –**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strcpy_s`|\<String.h >|
-|`wcscpy_s`|\<String.h > nebo \<wchar.h >|
-|`_mbscpy_s`|\<Mbstring.h >|
+|**strcpy_s**|\<String.h >|
+|**wcscpy_s**|\<String.h > nebo \<wchar.h >|
+|**_mbscpy_s**|\<Mbstring.h >|
 
 Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -215,11 +215,11 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>Viz také
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) <br/>
-[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
-[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
-[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
-[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
-[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
-[strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

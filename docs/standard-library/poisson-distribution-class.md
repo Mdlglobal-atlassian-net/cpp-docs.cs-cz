@@ -1,12 +1,12 @@
 ---
-title: "poisson_distribution – třída | Microsoft Docs"
-ms.custom: 
+title: poisson_distribution – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::poisson_distribution
@@ -32,135 +32,137 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75f25652ff71b6466dfc259318c20bdc3352ec1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6e4af4337db41ae46c5e80b89138343a880681d8
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution – třída
-Generuje hodnotu Poissonovo rozdělení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+Generuje hodnotu Poissonovo rozdělení.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template<class IntType = int>
-class poisson_distribution  
-   {  
-public:  
-   // types  
-   typedef IntType result_type;  
-   struct param_type;  
-   
-   // constructors and reset functions  
+class poisson_distribution
+   {
+public:
+   // types
+   typedef IntType result_type;
+   struct param_type;
+
+   // constructors and reset functions
    explicit poisson_distribution(double mean = 1.0);
    explicit poisson_distribution(const param_type& parm);
    void reset();
-   
-   // generating functions  
-   template <class URNG>  
+
+   // generating functions
+   template <class URNG>
    result_type operator()(URNG& gen);
-   template <class URNG>  
+   template <class URNG>
    result_type operator()(URNG& gen, const param_type& parm);
-   
-   // property functions  
+
+   // property functions
    double mean() const;
    param_type param() const;
    void param(const param_type& parm);
    result_type min() const;
    result_type max() const;
-   };  
-``` 
-  
-#### <a name="parameters"></a>Parametry  
-*IntType*  
-Výsledný typ celé číslo, výchozí nastavení je `int`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).  
-  
-## <a name="remarks"></a>Poznámky  
-Šablony třídy popisuje distribuce, která vytváří hodnoty definované uživatelem integrální typu s hodnotu Poissonovo rozdělení. Následující tabulka odkazy na články o jednotlivé členy.  
-  
-||||  
-|-|-|-|  
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
-|`poisson_distribution::operator()`||[param_type](#param_type)|  
-  
-Funkce vlastnost `mean()` vrací hodnotu pro parametr uložené distribuční *znamenat*.  
-  
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.  
+   };
+```
 
-`min()` a `max()` členské funkce vrátí nejmenší možný výsledek a největší možné výsledek, v uvedeném pořadí.  
-  
-`reset()` – Členská funkce zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.  
-  
+### <a name="parameters"></a>Parametry
+
+*IntType* výsledný typ celé číslo, výchozí nastavení je `int`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+
+## <a name="remarks"></a>Poznámky
+
+Šablony třídy popisuje distribuce, která vytváří hodnoty definované uživatelem integrální typu s hodnotu Poissonovo rozdělení. Následující tabulka odkazy na články o jednotlivé členy.
+
+||||
+|-|-|-|
+|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
+|`poisson_distribution::operator()`||[param_type](#param_type)|
+
+Funkce vlastnost `mean()` vrací hodnotu pro parametr uložené distribuční *znamenat*.
+
+Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.
+
+`min()` a `max()` členské funkce vrátí nejmenší možný výsledek a největší možné výsledek, v uvedeném pořadí.
+
+`reset()` – Členská funkce zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+
 `operator()` Členské funkce vrátí další generované hodnoty, které jsou založené na modulu URNG buď z aktuální parametr balíček nebo balíček zadaný parametr.
-  
-Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).  
-  
-Podrobné informace o hodnotu Poissonovo rozdělení, najdete v článku Wolfram MathWorld [hodnotu Poissonovo rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401112).  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// compile with: /EHsc /W4  
-#include <random>   
-#include <iostream>  
-#include <iomanip>  
-#include <string>  
-#include <map>  
-  
-void test(const double p, const int s) {  
-  
-    // uncomment to use a non-deterministic generator  
-    //    std::random_device gen;  
-    std::mt19937 gen(1701);  
-  
-    std::poisson_distribution<> distr(p);  
-  
-    std::cout << std::endl;  
-    std::cout << "min() == " << distr.min() << std::endl;  
-    std::cout << "max() == " << distr.max() << std::endl;  
-    std::cout << "p() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.mean() << std::endl;  
-  
-    // generate the distribution as a histogram  
-    std::map<int, int> histogram;  
-    for (int i = 0; i < s; ++i) {  
-        ++histogram[distr(gen)];  
-    }  
-  
-    // print results  
-    std::cout << "Distribution for " << s << " samples:" << std::endl;  
-    for (const auto& elem : histogram) {  
-        std::cout << std::setw(5) << elem.first << ' ' << std::string(elem.second, ':') << std::endl;  
-    }  
-    std::cout << std::endl;  
-}  
-  
-int main()  
-{  
-    double p_dist = 1.0;  
-  
-    int samples = 100;  
-  
-    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;  
-    std::cout << "Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): ";  
-    std::cin >> p_dist;  
-    std::cout << "Enter an integer value for the sample count: ";  
-    std::cin >> samples;  
-  
-    test(p_dist, samples);  
-}  
-  
-```  
-  
-První test:  
-  
-```Output  
+
+Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).
+
+Podrobné informace o hodnotu Poissonovo rozdělení, najdete v článku Wolfram MathWorld [hodnotu Poissonovo rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401112).
+
+## <a name="example"></a>Příklad
+
+```cpp
+// compile with: /EHsc /W4
+#include <random>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <map>
+
+void test(const double p, const int s) {
+
+    // uncomment to use a non-deterministic generator
+    //    std::random_device gen;
+    std::mt19937 gen(1701);
+
+    std::poisson_distribution<> distr(p);
+
+    std::cout << std::endl;
+    std::cout << "min() == " << distr.min() << std::endl;
+    std::cout << "max() == " << distr.max() << std::endl;
+    std::cout << "p() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.mean() << std::endl;
+
+    // generate the distribution as a histogram
+    std::map<int, int> histogram;
+    for (int i = 0; i < s; ++i) {
+        ++histogram[distr(gen)];
+    }
+
+    // print results
+    std::cout << "Distribution for " << s << " samples:" << std::endl;
+    for (const auto& elem : histogram) {
+        std::cout << std::setw(5) << elem.first << ' ' << std::string(elem.second, ':') << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+int main()
+{
+    double p_dist = 1.0;
+
+    int samples = 100;
+
+    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;
+    std::cout << "Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): ";
+    std::cin >> p_dist;
+    std::cout << "Enter an integer value for the sample count: ";
+    std::cin >> samples;
+
+    test(p_dist, samples);
+}
+
+```
+
+První test:
+
+```Output
 Use CTRL-Z to bypass data entry and run using default values.
 Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): 1
 Enter an integer value for the sample count: 100
@@ -172,12 +174,12 @@ Distribution for 100 samples:
     1 ::::::::::::::::::::::::::::::::::::::
     2 :::::::::::::::::::::::
     3 ::::::::
-    5 :  
-```  
-  
-Druhý test:  
-  
-```Output  
+    5 :
+```
+
+Druhý test:
+
+```Output
 Use CTRL-Z to bypass data entry and run using default values.
 Enter a floating point value for the 'mean' distribution parameter (must be greater than zero): 10
 Enter an integer value for the sample count: 100
@@ -199,58 +201,63 @@ Distribution for 100 samples:
    14 ::::::
    15 :
    16 ::
-   17 :  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<náhodných >  
-  
- **Namespace:** – std  
-  
-##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
-Vytvoří rozdělení.  
-  
-```  
+   17 :
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** \<náhodných >
+
+**Namespace:** – std
+
+## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
+
+Vytvoří rozdělení.
+
+```cpp
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*střední*  
-`mean` Distribuční parametr.  
-  
-*parm*  
-Struktura parametr použitý k vytvoření distribuce.  
-  
-### <a name="remarks"></a>Poznámky  
- **Předběžnou podmínku:** `0.0 < mean`  
-  
-První konstruktoru vytvoří objekt jehož uložené `mean` hodnota obsahuje hodnotu *znamenat*.  
-  
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.  
-  
-##  <a name="param_type"></a>  poisson_distribution::param_type  
-Ukládá parametry rozdělení.  
-  
-```    
-struct param_type {  
-   typedef poisson_distribution<IntType> distribution_type;  
+```
+
+### <a name="parameters"></a>Parametry
+
+*znamenat* `mean` distribuční parametr.
+
+*Parametr* strukturu parametr použitý k vytvoření distribuce.
+
+### <a name="remarks"></a>Poznámky
+
+**Předběžnou podmínku:** `0.0 < mean`
+
+První konstruktoru vytvoří objekt jehož uložené `mean` hodnota obsahuje hodnotu *znamenat*.
+
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.
+
+## <a name="param_type"></a>  poisson_distribution::param_type
+
+Ukládá parametry rozdělení.
+
+```cpp
+struct param_type {
+   typedef poisson_distribution<IntType> distribution_type;
    param_type(double mean = 1.0);
    double mean() const;
-     
+
    bool operator==(const param_type& right) const;
    bool operator!=(const param_type& right) const;
-   };  
-```  
-  
-### <a name="parameters"></a>Parametry  
-Naleznete na stránce parametry konstruktor pro [poisson_distribution –](#poisson_distribution).  
-  
-### <a name="remarks"></a>Poznámky  
- **Předběžnou podmínku:** `0.0 < mean`  
-  
-Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.  
-  
-## <a name="see-also"></a>Viz také  
- [\<random>](../standard-library/random.md)
+   };
+```
 
+### <a name="parameters"></a>Parametry
+
+Naleznete na stránce parametry konstruktor pro [poisson_distribution –](#poisson_distribution).
+
+### <a name="remarks"></a>Poznámky
+
+**Předběžnou podmínku:** `0.0 < mean`
+
+Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.
+
+## <a name="see-also"></a>Viz také
+
+[\<náhodné >](../standard-library/random.md)<br/>
