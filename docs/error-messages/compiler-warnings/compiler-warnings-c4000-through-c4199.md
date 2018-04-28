@@ -1,12 +1,12 @@
 ---
-title: "C4000 upozornění kompilátoru prostřednictvím C4199 | Microsoft Docs"
-ms.custom: 
+title: C4000 upozornění kompilátoru prostřednictvím C4199 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 upozornění kompilátoru prostřednictvím C4199
 
@@ -159,6 +159,7 @@ ms.lasthandoff: 03/16/2018
 |Upozornění kompilátoru (úroveň 1) C4051|převod typů; možné ztrátě dat.|
 |Upozornění kompilátoru (úroveň 4) C4052|deklarace funkcí různých; jeden obsahuje proměnné argumenty|
 |Upozornění kompilátoru (úroveň 4) C4053|pro jeden void operand '?:.|
+|[Upozornění kompilátoru (úroveň 1) C4055](compiler-warning-level-1-c4055.md)|'Převod': z dat ukazatel '*type1*'to ukazatel na funkci'*type2*.|
 |[Upozornění kompilátoru (úroveň 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|konstanty s plovoucí desetinnou čárkou aritmetické přetečení|
 |Upozornění kompilátoru (úroveň 4) C4057|'operátor': "identifier1" se liší v indirection mírně odlišné základních typů od 'identifier2.|
 |Upozornění C4060 kompilátoru|příkaz Switch obsahuje žádné popisky 'case' nebo 'výchozí.|

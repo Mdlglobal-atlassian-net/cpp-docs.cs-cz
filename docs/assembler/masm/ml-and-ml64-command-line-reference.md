@@ -1,12 +1,9 @@
 ---
-title: "Referenční dokumentace ML a ml64 v příkazovém řádku | Microsoft Docs"
-ms.custom: 
+title: Referenční dokumentace ML a ml64 v příkazovém řádku | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 Sestaví a odkazuje jeden nebo více zdrojových souborů jazyka sestavení. Možnosti příkazového řádku jsou velká a malá písmena.  
@@ -104,7 +99,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Cx**|Veřejné a extern symboly v takovém případě se zachovají.|  
 |**/D** `symbol`[[=`value`]]|Definuje text makro s daným názvem. Pokud `value` je chybí, je prázdný. Více tokeny oddělené mezerami musí být uzavřena v uvozovkách.|  
 |**/EP**|Generuje seznam předběžně zpracované zdroje (Odeslat do STDOUT). V tématu **/Sf**.|  
-|**/ ERRORREPORT** [ **NONE** &#124; **VÝZVA** &#124; **FRONTY** &#124; **ODESLAT** ]|Pokud ml.exe nebo ml64.exe selže za běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto interní chyby.<br /><br /> Další informace o **/errorreport**, najdete v části [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
+|**/ ERRORREPORT** [ **NONE** &AMP;#124; **VÝZVA** &AMP;#124; **FRONTY** &AMP;#124; **ODESLAT** ]|Pokud ml.exe nebo ml64.exe selže za běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto interní chyby.<br /><br /> Další informace o **/errorreport**, najdete v části [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
 |**/F** `hexnum`|Velikost zásobníku sady `hexnum` bajtů (je to stejné nastavení jako **/odkaz/zásobníku**:`number`). Hodnota musí být vyjádřena v šestnáctkové soustavě. Musí být mezery mezi **/F** a `hexnum`.|  
 |**/FE** `filename`|Názvy spustitelný soubor.|  
 |**/Fl**[[`filename`]]|Generuje výpisu sestavený kódu. V tématu **/Sf**.|  
@@ -117,10 +112,10 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Gd**|Určuje použití funkce C-style volání a konvence vytváření názvů. Stejné jako **možnost jazyk: C**.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/GZ**|Určuje použití funkce __stdcall volání a konvence vytváření názvů.  Stejné jako **možnost jazyk: STCALL**.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/H** `number`|Externí názvy omezuje na číslo důležité znaky. Výchozí nastavení je 31 znaků.<br /><br /> Není k dispozici v ml64.exe.|  
-|**/help**|Nápovědu k ML volá QuickHelp.|  
+|**/ Help**|Nápovědu k ML volá QuickHelp.|  
 |**/I** `pathname`|Nastaví cesta k souboru zahrnout. Maximálně 10 **/I** povoleny možnosti.|  
 |**/nologo**|Potlačí zprávy pro úspěšné sestavení.|  
-|**/omf**|Generuje objektu modulu soubor formátu (OMF) typu objektu modulu.  **/ omf** znamená **/c**; ML.exe nepodporuje propojení OMF objektů.<br /><br /> Není k dispozici v ml64.exe.|  
+|**/ omf**|Generuje objektu modulu soubor formátu (OMF) typu objektu modulu.  **/ omf** znamená **/c**; ML.exe nepodporuje propojení OMF objektů.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/Sa**|Zapne seznam všechny dostupné informace.|  
 |**/safeseh**|Označí objekt jako obsahující žádné obslužné rutiny výjimek nebo obsahující obslužné rutiny výjimek, které jsou deklarovány s [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Není k dispozici v ml64.exe.|  
 |**/Sf**|Přidá soubor první průchodu výpis do seznamu.|  
@@ -140,7 +135,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Zi**|Generuje CodeView informace do souboru objektu.|  
 |**/Zm**|Umožňuje**M510** možnost pro maximální kompatibility s MASM 5.1.<br /><br /> Není k dispozici v ml64.exe.|  
 |**/Zp**[[`alignment`]]|Struktury balíčky v zadané bajtové hranic. `alignment` Může být 1, 2 nebo 4.|  
-|**/Zs**|Provede pouze kontrola syntaxe.|  
+|**/ZS**|Provede pouze kontrola syntaxe.|  
 |**/?**|Zobrazí souhrn ML syntaxe příkazového řádku.|  
   
  `filename`  

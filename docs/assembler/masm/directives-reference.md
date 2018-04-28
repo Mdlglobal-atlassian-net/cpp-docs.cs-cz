@@ -1,12 +1,9 @@
 ---
-title: "Referenční dokumentace k direktivám | Microsoft Docs"
-ms.custom: 
+title: Referenční dokumentace k direktivám | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - Directives Reference
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba0d13a4dab5668f1ee125c79275b93a7f5f7f04
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 06077d5da6b34e41a710058900d61569e3c06939
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="directives-reference"></a>Referenční dokumentace k direktivám
 **x64**  
@@ -40,15 +35,15 @@ ms.lasthandoff: 02/14/2018
   
 |||  
 |-|-|  
-|[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|  
+|[ZAROVNAT](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|  
 |[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|  
   
 ### <a name="conditional-assembly"></a>Podmíněné sestavení  
   
 ||||  
 |-|-|-|  
-|[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|  
-|[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|  
+|[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF –](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|  
+|[POKUD](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB –](../../assembler/masm/ifb.md)/[IFNB –](../../assembler/masm/ifnb.md)|  
 |[IFDEF –](../../assembler/masm/ifdef.md)/[IFNDEF –](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|  
 |[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||  
   
@@ -74,11 +69,11 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[ALIGN](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD –](../../assembler/masm/sdword.md)|  
+|[ZAROVNAT](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD –](../../assembler/masm/sdword.md)|  
 |[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|  
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|  
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|  
-|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||  
+|[WORD](../../assembler/masm/word.md)/[SWORD –](../../assembler/masm/sword.md)|||  
   
 ### <a name="equates"></a>Znamená zároveň  
   
@@ -111,7 +106,7 @@ ms.lasthandoff: 02/14/2018
 |-|-|-|  
 |[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[KOMENTÁŘ](../../assembler/masm/comment-masm.md)|  
 |[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|  
-|[ZAHRNOUT](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|  
+|[ZAHRNOUT](../../assembler/masm/include-masm.md)|[INCLUDELIB –](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|  
 |[MOŽNOST](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|  
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|  
 |[YMMWORD](../../assembler/masm/ymmword.md)|||  
@@ -136,15 +131,15 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|  
-|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|  
+|[ENDM](../../assembler/masm/endm.md)|[PRO](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|  
+|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[CHVÍLI](../../assembler/masm/while-masm.md)|  
   
 ### <a name="scope"></a>Rozsah  
   
 ||||  
 |-|-|-|  
 |[COMM](../../assembler/masm/comm.md)|[EXTERN](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|  
-|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[VEŘEJNÉ](../../assembler/masm/public-masm.md)||  
+|[INCLUDELIB –](../../assembler/masm/includelib-masm.md)|[VEŘEJNÉ](../../assembler/masm/public-masm.md)||  
   
 ### <a name="segment"></a>Segment  
   
@@ -174,7 +169,7 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[UKONČENÍ](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUKTURA](../../assembler/masm/struct-masm.md)|  
+|[UKONČENÍ](../../assembler/masm/ends-masm.md)|[ZÁZNAM](../../assembler/masm/record-masm.md)|[STRUKTURA](../../assembler/masm/struct-masm.md)|  
 |[DEFINICE TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||  
   
 ## <a name="see-also"></a>Viz také  

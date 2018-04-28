@@ -1,12 +1,9 @@
 ---
-title: "Microsoft Macro Assembler – referenční dokumentace | Microsoft Docs"
-ms.custom: 
+title: Microsoft Macro Assembler – referenční dokumentace | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého sestavení. MASM obsahuje makro jazyk, který obsahuje funkce, jako je zpracování řetězec opakování ve smyčce, aritmetické a text. MASM také vám dává větší kontrolu nad hardware, protože umožňuje sady instrukce 386, 486 a Pentium procesory. Pomocí MASM také můžete snížit režijní náklady na čas a paměti.  
