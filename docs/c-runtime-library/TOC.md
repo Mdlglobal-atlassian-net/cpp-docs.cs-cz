@@ -24,7 +24,7 @@
 ## [Možnosti odkazů](link-options.md)
 ## [Možné chyby při předávání objektů CRT přes hranice knihovny DLL](potential-errors-passing-crt-objects-across-dll-boundaries.md)
 ## [Inicializace CRT](crt-initialization.md)
-# [Běhové rutiny podle kategorie](run-time-routines-by-category.md)
+# [Rutiny UCRT (Universal C runtime) podle kategorie](run-time-routines-by-category.md)
 ## [Přístup k argumentu](argument-access.md)
 ## [Zacházení s vyrovnávací pamětí](buffer-manipulation.md)
 ## [Klasifikace bajtů](byte-classification.md)
