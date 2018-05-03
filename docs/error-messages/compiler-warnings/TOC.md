@@ -37,6 +37,7 @@
 ## [Upozornění kompilátoru (úroveň 2) C4051](compiler-warning-level-2-c4051.md)
 ## [Upozornění kompilátoru (úroveň 1) C4052](compiler-warning-level-1-c4052.md)
 ## [Upozornění kompilátoru (úroveň 4) C4053](compiler-warning-level-4-c4053.md)
+## [Upozornění kompilátoru (úroveň 1) C4055](compiler-warning-level-1-c4055.md)
 ## [Upozornění kompilátoru (úroveň 2) C4056](compiler-warning-level-2-c4056.md)
 ## [Upozornění kompilátoru (úroveň 4) C4057](compiler-warning-level-4-c4057.md)
 ## [Upozornění kompilátoru (úroveň 4) C4061](compiler-warning-level-4-c4061.md)
