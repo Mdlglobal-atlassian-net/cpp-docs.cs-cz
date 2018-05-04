@@ -1,12 +1,9 @@
 ---
-title: "CImage – třída | Microsoft Docs"
-ms.custom: 
+title: CImage – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage – třída
-`CImage`poskytuje podporu rozšířené rastrového obrázku, včetně možnosti spouštění a ukládání bitových kopií ve formátech JPEG, GIF, BMP a Portable Network Graphics (PNG).  
+`CImage` Poskytuje podporu rozšířené rastrového obrázku, včetně možnosti spouštění a ukládání bitových kopií ve formátech JPEG, GIF, BMP a Portable Network Graphics (PNG).  
   
 > [!IMPORTANT]
 >  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
@@ -146,7 +141,7 @@ class CImage
 |[CImage::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CImage` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CImage`přebírá rastrové obrázky, které jsou buď části device independent bitmap (DIB) nebo ne; Můžete však použít [vytvořit](#create) nebo [CImage::Load](#load) s jenom DIB oddíly. Bez DIB bitmapa část, aby se můžete připojit `CImage` pomocí [připojit](#attach), ale nemůžete použít následující `CImage` metody, které podporují pouze rastrové obrázky DIB části:  
+ `CImage` přebírá rastrové obrázky, které jsou buď části device independent bitmap (DIB) nebo ne; Můžete však použít [vytvořit](#create) nebo [CImage::Load](#load) s jenom DIB oddíly. Bez DIB bitmapa část, aby se můžete připojit `CImage` pomocí [připojit](#attach), ale nemůžete použít následující `CImage` metody, které podporují pouze rastrové obrázky DIB části:  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  Pomocí globální `CImage` objektů v knihovně DLL se nedoporučuje. Pokud budete muset použít globální konfiguraci `CImage` objektu v knihovně DLL, volání [CImage::ReleaseGDIPlus](#releasegdiplus) explicitně uvolnit prostředky využívané třídou GDI +.  
   
- `CImage`Nelze vybrat, do nového [CDC](../../mfc/reference/cdc-class.md). `CImage`Vytvoří vlastní **HDC** pro bitovou kopii. Protože `HBITMAP` lze vybrat pouze do jedné **HDC** současně, `HBITMAP` přidružené `CImage` nelze vybrat do jiné **HDC**. Pokud potřebujete `CDC`, načíst **HDC** z `CImage` a pojmenujte ho [CDC::FromHandle] (.. /.. /MFC/reference/CDC-Class.MD#cdc__fromhandle.  
+ `CImage` Nelze vybrat, do nového [CDC](../../mfc/reference/cdc-class.md). `CImage` Vytvoří vlastní **HDC** pro bitovou kopii. Protože `HBITMAP` lze vybrat pouze do jedné **HDC** současně, `HBITMAP` přidružené `CImage` nelze vybrat do jiné **HDC**. Pokud potřebujete `CDC`, načíst **HDC** z `CImage` a pojmenujte ho [CDC::FromHandle] (.. /.. /MFC/reference/CDC-Class.MD#cdc__fromhandle.  
   
 ## <a name="example"></a>Příklad  
 ```cpp  
@@ -212,7 +207,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlimage.h  
   
-##  <a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>  CImage::AlphaBlend  
  Zobrazí rastrové obrázky, které mají průhledných nebo poloprůhledných pixelů.  
   
 ```
@@ -301,7 +296,7 @@ BOOL AlphaBlend(
   
  Když `bBlendOp` je nastaven na výchozí **AC_SRC_OVER**, přes cílové rastrový obrázek, na základě alfa hodnot pixelů zdroje je umístěn zdroj bitové mapy.  
 
-##  <a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>  CImage::Attach  
  Připojí `hBitmap` k `CImage` objektu.  
   
 ```
@@ -324,7 +319,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>Poznámky  
  Bitmapy může být rastrový obrázek části bez DIB nebo rastrový obrázek DIB části. V tématu [IsDIBSection](#isdibsection) seznam metod, které lze použít pouze s DIB části rastrové obrázky.  
   
-##  <a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>  CImage::BitBlt  
  Kopíruje rastrový obrázek z kontextu zařízení zdroj pro tuto aktuální kontext zařízení.  
   
 ```
@@ -396,7 +391,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [přenos bitových bloků](http://msdn.microsoft.com/library/windows/desktop/dd183370) ve Windows SDK.  
   
-##  <a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>  CImage::CImage  
  Vytvoří `CImage` objektu.  
   
 ```
@@ -410,7 +405,7 @@ CImage() throw();
   
  Pomocí globální `CImage` objektů v knihovně DLL se nedoporučuje. Pokud budete muset použít globální konfiguraci `CImage` objektu v knihovně DLL, volání [CImage::ReleaseGDIPlus](#releasegdiplus) explicitně uvolnit prostředky využívané třídou GDI +.  
   
-##  <a name="create"></a>CImage::Create  
+##  <a name="create"></a>  CImage::Create  
  Vytvoří `CImage` bitmap a připojte ji k dříve vytvořený `CImage` objektu.  
   
 ```
@@ -442,7 +437,7 @@ BOOL Create(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
-##  <a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>  CImage::CreateEx  
  Vytvoří `CImage` bitmap a připojte ji k dříve vytvořený `CImage` objektu.  
   
 ```
@@ -495,14 +490,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>  CImage::Destroy  
  Umožňuje odpojit bitovou mapu z `CImage` objektu a zničí bitové mapy.  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>  CImage::Detach  
  Umožňuje odpojit rastrového obrázku z `CImage` objektu.  
   
 ```
@@ -512,7 +507,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro bitovou mapu odpojit, nebo **NULL** Pokud je připojen žádný rastrového obrázku.  
   
-##  <a name="draw"></a>CImage::Draw  
+##  <a name="draw"></a>  CImage::Draw  
  Kopíruje rastrový obrázek z kontextu zařízení zdroj pro aktuální kontext zařízení.  
   
 ```
@@ -598,7 +593,7 @@ BOOL Draw(
   
  Verze **kreslení** nezadávejte obdélníku zdroje, celý zdrojový je výchozí. Pro verzi **kreslení** neurčuje velikost cílového obdélníku, velikost zdrojové bitové kopie je výchozí a žádné roztažení nebo zmenšení dojde.  
   
-##  <a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>  CImage::GetBits  
  Načte ukazatel bit skutečné hodnoty dané pixelů v rastrový obrázek.  
   
 ```
@@ -614,7 +609,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  Tato metoda podporuje pouze DIB části bitmap; v důsledku toho přístup pixelů z `CImage` objekt stejným způsobem, jako by pixelů DIB oddílu. Vrácený ukazatel odkazuje na pixel v umístění (0, 0).  
   
-##  <a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>  CImage::GetBPP  
  Načte hodnotu bitů na pixel.  
   
 ```
@@ -629,7 +624,7 @@ int GetBPP() const throw();
   
  Bitů na pixel je obvykle 1, 4, 8, 16, 24 nebo 32. Najdete v článku **biBitCount** členem [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) ve Windows SDK pro další informace o této hodnotě.  
   
-##  <a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Načte red, zelená, blue – hodnoty barev (RGB) z rozsahu položek v palety DIB oddílu.  
   
 ```
@@ -648,7 +643,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  Ukazatel na pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury načíst barvu tabulky položky.  
   
-##  <a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>  CImage::GetDC  
  Načte kontext zařízení, který má aktuálně bitovou kopii vybrané do ní.  
   
 ```
@@ -661,7 +656,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pro každé volání `GetDC`, musíte mít následující volání [ReleaseDC](#releasedc).  
   
-##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>  CImage::GetExporterFilterString  
  Vyhledá formáty bitové kopie k dispozici pro uložení bitové kopie.  
   
 ```
@@ -732,15 +727,15 @@ CImage::GetExporterFilterString(
   
  Parametr *strExporter* má formát:  
   
- soubor description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... popis souboru  *n* &#124;\*. ext  *n* &#124; &#124;  
+ soubor description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file popis *n*&#124;\*.ext *n*&#124;&#124;  
   
- kde se &#124;' je oddělovací znak zadána `chSeparator`. Příklad:  
+ kde se&#124;' je oddělovací znak zadána `chSeparator`. Příklad:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Použít výchozí oddělovač ' &#124;' Pokud předáte tento řetězec do knihovny MFC `CFileDialog` objektu. Pokud předáte tento řetězec do běžné uložit soubor dialogového okna, použijte hodnotu null oddělovač '\0'.  
+ Použít výchozí oddělovač '&#124;' Pokud tento řetězec předáte do knihovny MFC `CFileDialog` objektu. Pokud předáte tento řetězec do běžné uložit soubor dialogového okna, použijte hodnotu null oddělovač '\0'.  
   
-##  <a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>  CImage::GetHeight  
  Načte výška v pixelech, bitové kopie.  
   
 ```
@@ -750,7 +745,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Výška v pixelech, bitové kopie.  
   
-##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>  CImage::GetImporterFilterString  
  Vyhledá formáty bitové kopie k dispozici pro načítání obrázků.  
   
 ```
@@ -818,15 +813,15 @@ CImage::GetImporterFilterString(
   
  Parametr *strImporter* má formát:  
   
- soubor description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... popis souboru  *n* &#124;\*. ext  *n* &#124; &#124;  
+ soubor description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file popis *n*&#124;\*.ext *n*&#124;&#124;  
   
- kde se &#124;' je oddělovací znak zadána `chSeparator`. Příklad:  
+ kde se&#124;' je oddělovací znak zadána `chSeparator`. Příklad:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Použít výchozí oddělovač ' &#124;' Pokud předáte tento řetězec do knihovny MFC `CFileDialog` objektu. Použijte null oddělovač '\0', pokud je tento řetězec předat do společného **otevřít soubor** dialogové okno.  
+ Použít výchozí oddělovač '&#124;' Pokud tento řetězec předáte do knihovny MFC `CFileDialog` objektu. Použijte null oddělovač '\0', pokud je tento řetězec předat do společného **otevřít soubor** dialogové okno.  
   
-##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Načte maximální počet položek v tabulce barev.  
   
 ```
@@ -839,7 +834,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda podporuje pouze DIB části bitmapy.  
   
-##  <a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>  CImage::GetPitch  
  Získá výšku obrázku.  
   
 ```
@@ -857,7 +852,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  Tato metoda podporuje pouze DIB části bitmapy.  
   
-##  <a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>  CImage::GetPixel  
  Načte barva pixelů na umístění, které *x* a *y*.  
   
 ```
@@ -874,7 +869,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Červené, zelené, modré (RGB) hodnota pixelech. Pokud pixel mimo oblast ořezu aktuální, je vrácenou hodnotu **CLR_INVALID**.  
   
-##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>  CImage::GetPixelAddress  
  Načte přesnou adresu jeden bod.  
   
 ```
@@ -896,7 +891,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  Tato metoda podporuje pouze DIB části bitmapy.  
   
-##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor  
  Načte indexované umístění průhledná barva palety barev.  
   
 ```
@@ -906,7 +901,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Průhledná barva index.  
   
-##  <a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>  CImage::GetWidth  
  Načte šířku v pixelech, bitové kopie.  
   
 ```
@@ -916,7 +911,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Šířka rastrového obrázku, v pixelech.  
   
-##  <a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>  CImage::IsDIBSection  
  Určuje, zda připojené rastrový obrázek DIB oddíl.  
   
 ```
@@ -943,7 +938,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>  CImage::IsIndexed  
  Určuje, zda pixelů rastrového obrázku jsou namapované na paletu barev.  
   
 ```
@@ -959,7 +954,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  Tato metoda podporuje pouze DIB části bitmapy.  
   
-##  <a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>  CImage::IsNull  
  Určuje, pokud je momentálně načtených rastrový obrázek.  
   
 ```
@@ -969,7 +964,7 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrátí hodnotu **True** Pokud rastrový obrázek není aktuálně načíst; jinak hodnota **False**.  
   
-##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported  
  Určuje, jestli aplikace podporuje transparentní bitmapy.  
   
 ```
@@ -983,7 +978,7 @@ static BOOL IsTransparencySupported() throw();
  Pokud je vrácená hodnota nenulové hodnoty a průhlednost je podporováno, volání [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), nebo [kreslení](#draw) zpracuje transparentní barvy.  
   
 
-##  <a name="load"></a>CImage::Load  
+##  <a name="load"></a>  CImage::Load  
  Načte obrázek.  
   
 ```
@@ -1006,7 +1001,7 @@ HRESULT Load(IStream* pStream) throw();
   
  Typy platnou bitovou kopií jsou BMP, GIF, JPEG, PNG a TIFF.  
   
-##  <a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>  CImage::LoadFromResource  
  Načte bitovou kopii `BITMAP` prostředků.  
   
 ```
@@ -1032,7 +1027,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>Poznámky  
  Prostředek musí být typu `BITMAP`.  
   
-##  <a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>  CImage::MaskBlt  
  Kombinuje data barvu pro zdrojové a cílové rastrové obrázky, pomocí zadané maska a rastrové operace.  
   
 ```
@@ -1123,10 +1118,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda se vztahuje na systému Windows NT verze 4.0 a vyšší.  
   
-##  <a name="operator_hbitmap"></a>CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
  Tento operátor. použijte k získání připojené popisovač GDI systému Windows `CImage` objektu. Operátor je operátor přetypování, který podporuje přímý použití `HBITMAP` objektu.  
   
-##  <a name="plgblt"></a>CImage::PlgBlt  
+##  <a name="plgblt"></a>  CImage::PlgBlt  
  Provede přenos bitového bloku z obdélníku v kontextu zařízení zdroje do rovnoběžník v kontextu cílové zařízení.  
   
 ```
@@ -1196,7 +1191,7 @@ BOOL PlgBlt(
   
  Tato metoda se vztahuje na systému Windows NT verze 4.0 a vyšší. V tématu [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) ve Windows SDK pro podrobnější informace.  
   
-##  <a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Uvolní kontextu zařízení.  
   
 ```
@@ -1216,7 +1211,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda musí být volána kvůli uvolnění prostředků, které jsou přidělené jako globální `CImage` objektu. V tématu [CImage::CImage](#cimage).  
   
-##  <a name="save"></a>CImage::Save  
+##  <a name="save"></a>  CImage::Save  
  Obrázek uloží do zadaného datového proudu nebo soubor na disku.  
   
 ```
@@ -1254,7 +1249,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce, které chcete uložit obrázek pomocí zadaného názvu a typu. Pokud `guidFileType` parametr neuvedete, příponu názvu souboru se použije k určení formátu obrázku. Pokud je k dispozici žádné rozšíření, bitovou kopii se uloží ve formátu BMP.  
   
-##  <a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>  CImage::SetColorTable  
  Nastaví hodnoty barev red, zelené, modré (RGB) pro řadu položky v palety DIB oddílu.  
   
 ```
@@ -1277,7 +1272,7 @@ void SetColorTable(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda podporuje pouze DIB části bitmapy.  
   
-##  <a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>  CImage::SetPixel  
  Nastaví barvu jeden bod v daném umístění v souboru bitové mapy.  
   
 ```
@@ -1345,7 +1340,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>Poznámky  
  Každý červené, zelené a modré parametry jsou reprezentované pomocí číslo mezi 0 a 255. Pokud nastavíte všechny tři parametry na nulu, kombinované výsledná barva je černé. Pokud nastavíte na 255 všechny tři parametry, je bílé kombinované výsledné barvu.  
   
-##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CImage::SetTransparentColor  
  Nastaví barvu, která v daném indexované umístění jako transparentní.  
   
 ```
@@ -1359,7 +1354,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Index barvu dříve nastavené jako průhledná.  
   
-##  <a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>  CImage::StretchBlt  
  Kopíruje rastrový obrázek z kontextu zařízení zdroj pro tuto aktuální kontext zařízení.  
   
 ```
@@ -1438,7 +1433,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) ve Windows SDK.  
   
-##  <a name="transparentblt"></a>CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Kopíruje rastrový obrázek z kontextu zařízení zdroj pro tuto aktuální kontext zařízení.  
   
 ```
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **Hodnota TRUE,** Pokud bylo úspěšné, jinak **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- `TransparentBlt`je podporován pro zdroj bitmap 4 bitů na pixel a 8 bitů na pixel. Použití [CImage::AlphaBlend](#alphablend) a zadejte 32 bitů na pixel bitmap s průhlednost.  
+ `TransparentBlt` je podporován pro zdroj bitmap 4 bitů na pixel a 8 bitů na pixel. Použití [CImage::AlphaBlend](#alphablend) a zadejte 32 bitů na pixel bitmap s průhlednost.  
   
   
 ### <a name="example"></a>Příklad  

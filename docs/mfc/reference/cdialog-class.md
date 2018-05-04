@@ -1,12 +1,12 @@
 ---
-title: "CDialog – třída | Microsoft Docs"
-ms.custom: 
+title: CDialog – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CDialog
@@ -49,17 +49,17 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 0de2c308372758e96919fbaa9bf247fb424de945
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 Základní třída používaná pro zobrazování dialogových oken na obrazovce.  
@@ -125,7 +125,7 @@ class CDialog : public CWnd
   
  Programátorů a volání framework `DoDataExchange` nepřímo prostřednictvím volání [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
   
- Volání framework `UpdateData` když uživatel klikne na tlačítko OK a modální dialogové okno zavřete. (Není načtena data po kliknutí na tlačítko Storno.) Výchozí implementaci [OnInitDialog](#oninitdialog) také voláním `UpdateData` nastavit počáteční hodnoty ovládacích prvků. Obvykle přepsat `OnInitDialog` další inicializovat ovládací prvky. `OnInitDialog`je volána po vytvoření všech ovládacích prvků dialogové okno a těsně před dialogové okno se zobrazí pole.  
+ Volání framework `UpdateData` když uživatel klikne na tlačítko OK a modální dialogové okno zavřete. (Není načtena data po kliknutí na tlačítko Storno.) Výchozí implementaci [OnInitDialog](#oninitdialog) také voláním `UpdateData` nastavit počáteční hodnoty ovládacích prvků. Obvykle přepsat `OnInitDialog` další inicializovat ovládací prvky. `OnInitDialog` je volána po vytvoření všech ovládacích prvků dialogové okno a těsně před dialogové okno se zobrazí pole.  
   
  Můžete volat `CWnd::UpdateData` kdykoli během provádění modální nebo nemodální dialogového okna.  
   
@@ -153,7 +153,7 @@ class CDialog : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cdialog"></a>CDialog::CDialog  
+##  <a name="cdialog"></a>  CDialog::CDialog  
  Můžete vytvořit na základě prostředků modální dialogové okno, volání buď veřejné formu konstruktoru.  
   
 ```  
@@ -188,7 +188,7 @@ CDialog();
   
  Vytvoření nemodálního dialogové okno, používat chráněný formu `CDialog` konstruktor. Konstruktor je chráněna, protože musí být odvozeny vlastní dialogového třídu pro implementaci dialogového okna bez režimu. Vytváření nemodálních dialogového okna je dvoustupňový proces. První volání konstruktoru; potom zavolejte **vytvořit** členskou funkci pro vytvoření založené na prostředcích dialogového okna, nebo volejte `CreateIndirect` dialogové okno Vytvořit ze šablony v paměti.  
   
-##  <a name="create"></a>CDialog::Create  
+##  <a name="create"></a>  CDialog::Create  
  Volání **vytvořit** k vytvoření nemodálního okna pole použití šablony dialogového z prostředku.  
   
 ```  
@@ -231,7 +231,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="createindirect"></a>CDialog::CreateIndirect  
+##  <a name="createindirect"></a>  CDialog::CreateIndirect  
  Volání této funkce člen k nemodální dialogové okno Vytvořit ze šablony dialogového v paměti.  
   
 ```  
@@ -269,9 +269,9 @@ virtual BOOL CreateIndirect(
   
  Použití `CWnd::DestroyWindow` funkce zrušení dialogové okno vytvořené `CreateIndirect` funkce.  
   
- Dialogová okna, které obsahují ovládací prvky ActiveX vyžadovat další informace, které jsou součástí **DLGINIT** prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialogová okna, které obsahují ovládací prvky ActiveX vyžadovat další informace, které jsou součástí **DLGINIT** prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="domodal"></a>CDialog::DoModal  
+##  <a name="domodal"></a>  CDialog::DoModal  
  Volání této funkce člen k vyvolání modálních dialogových oken a vrátí výsledek – dialogové okno po dokončení.  
   
 ```  
@@ -287,12 +287,12 @@ virtual INT_PTR DoModal();
  Pokud uživatel kliknutím na jednu z tlačítek v dialogovém okně, například OK nebo zrušit, členské funkce popisovač zpráv, jako například [onok –](#onok) nebo [oncancel –](#oncancel), nazývá se pokusit o dialogové okno zavřete. Výchozí hodnota `OnOK` – členská funkce budou ověření a aktualizovat data – dialogové okno a zavřete dialogové okno s tímto výsledkem **IDOK**a ve výchozím nastavení `OnCancel` – členská funkce se zavře dialogové okno s výsledek  **IDCANCEL** bez ověřování a aktualizace dat – dialogové okno. Tyto funkce obslužné rutiny zpráv změnit jejich chování můžete přepsat.  
   
 > [!NOTE]
-> `PreTranslateMessage`Nyní je volána pro zpracování zprávy modální dialogové okno pole.  
+> `PreTranslateMessage` Nyní je volána pro zpracování zprávy modální dialogové okno pole.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="enddialog"></a>CDialog::EndDialog  
+##  <a name="enddialog"></a>  CDialog::EndDialog  
  Volání této funkce člen ukončit modální dialogové okno.  
   
 ```  
@@ -308,14 +308,14 @@ void EndDialog(int nResult);
   
  Můžete volat `EndDialog` kdykoli, dokonce i v [OnInitDialog](#oninitdialog), v takovém případě by měl zavřete dialogové okno dříve, než se zobrazí nebo před nastavením zaměření pro vstup.  
   
- `EndDialog`okamžitě nezavře dialogové okno. Místo toho nastaví příznak, který přesměruje dialogové okno zavřete, jakmile vrátí aktuální popisovač zpráv.  
+ `EndDialog` okamžitě nezavře dialogové okno. Místo toho nastaví příznak, který přesměruje dialogové okno zavřete, jakmile vrátí aktuální popisovač zpráv.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="getdefid"></a>CDialog::GetDefID  
+##  <a name="getdefid"></a>  CDialog::GetDefID  
  Volání `GetDefID` – členská funkce získat ID ovládacího prvku výchozí uzavření tlačítkem pro dialogové okno.  
   
 ```  
@@ -328,7 +328,7 @@ DWORD GetDefID() const;
 ### <a name="remarks"></a>Poznámky  
  Je to obvykle tlačítko OK.  
   
-##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
  Přejdete k daný ovládací prvek v dialogovém okně.  
   
 ```  
@@ -345,7 +345,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
   
-##  <a name="initmodalindirect"></a>CDialog::InitModalIndirect  
+##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect  
  Volání této funkce člen inicializovat objekt modálních dialogových pomocí šablony – dialogové okno, které vytvoříte v paměti.  
   
 ```  
@@ -379,9 +379,9 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li modální dialogové okno Vytvořit nepřímo, nejprve přidělit blok globální paměti a vyplnit pole šablony dialogového okna. Potom zavolejte prázdné `CDialog` konstruktor k vytvoření objektu – dialogové okno. Pak zavolejte `InitModalIndirect` k uložení vaší popisovač šablony v paměti – dialogové okno. Dialogové okno se vytvoří a zobrazí novější, pokud [DoModal](#domodal) členské funkce je volána.  
   
- Dialogová okna, které obsahují ovládací prvky ActiveX vyžadovat další informace, které jsou součástí **DLGINIT** prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialogová okna, které obsahují ovládací prvky ActiveX vyžadovat další informace, které jsou součástí **DLGINIT** prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect  
  Chcete-li převést – dialogové okno jednotky obdélníku na obrazovce jednotky volání.  
   
 ```  
@@ -399,7 +399,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect` – Členská funkce nahrazuje dialogového jednotky v `lpRect` s obrazovky jednotek (v pixelech) tak, aby rámeček umožňuje vytvoření dialogového nebo umístit ovládacího prvku v rámci pole.  
   
-##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  Přejdete na další ovládací prvek v dialogovém okně.  
   
 ```  
@@ -409,7 +409,7 @@ void NextDlgCtrl() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud je zaměření na poslední ovládacího prvku v dialogovém okně, přesune ho do ovládacího prvku první.  
   
-##  <a name="oncancel"></a>CDialog::OnCancel  
+##  <a name="oncancel"></a>  CDialog::OnCancel  
  Rozhraní framework volá tuto metodu, když uživatel klikne **zrušit** nebo stisknutí klávesy ESC v modální nebo nemodálním dialogovém okně.  
   
 ```  
@@ -427,7 +427,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="oninitdialog"></a>CDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog  
  Tato metoda je volána v reakci `WM_INITDIALOG` zprávy.  
   
 ```  
@@ -445,12 +445,12 @@ virtual BOOL OnInitDialog();
  Volání Windows `OnInitDialog` funkce pomocí běžných standardní globální – dialogové okno postupu do všech Microsoft Foundation Class Library dialogových oken. Nevyvolá tuto funkci prostřednictvím vaší mapy zpráv, a proto není nutné položku mapy zpráv pro tuto metodu.  
   
 > [!NOTE]
->  Nelze přepsat tuto metodu použijete `CFileDialog` objekt v programu, který je přeložen v [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Další informace o změnách `CFileDialog` pod [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] najdete v části [CFileDialog třída](../../mfc/reference/cfiledialog-class.md).  
+> Nelze přepsat tuto metodu použijete `CFileDialog` objektu v programu, který je přeložen v systému Windows Vista nebo novější operační systémy. Další informace o změnách `CFileDialog` v systému Windows Vista a novější, najdete v části [CFileDialog třída](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="onok"></a>CDialog::OnOK  
+##  <a name="onok"></a>  CDialog::OnOK  
  Volá se, když uživatel klikne **OK** (tlačítko s ID IDOK).  
   
 ```  
@@ -468,7 +468,7 @@ virtual void OnOK();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="onsetfont"></a>CDialog::OnSetFont  
+##  <a name="onsetfont"></a>  CDialog::OnSetFont  
  Určuje písmo, které ovládacího prvku – dialogové okno bude používat při kreslení textu.  
   
 ```  
@@ -476,7 +476,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pFont`  
+ [v] `pFont`  
  Určuje ukazatel na písma, který se použije jako výchozí pro všechny ovládací prvky v tomto seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -485,9 +485,9 @@ Virtual void OnSetFont(CFont* pFont);
  Písmo – dialogové okno editoru dialogových oken obvykle nastaví jako součást prostředek – dialogové okno šablony.  
   
 > [!NOTE]
->  Nelze přepsat tuto metodu použijete `CFileDialog` objekt v programu, který je přeložen v [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Další informace o změnách `CFileDialog` pod [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] najdete v části [CFileDialog třída](../../mfc/reference/cfiledialog-class.md).  
+> Nelze přepsat tuto metodu použijete `CFileDialog` objektu v programu, který je přeložen v systému Windows Vista nebo novější operační systémy. Další informace o změnách `CFileDialog` v systému Windows Vista a novější, najdete v části [CFileDialog třída](../../mfc/reference/cfiledialog-class.md).  
   
-##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>  CDialog::PrevDlgCtrl  
  Nastaví fokus na předchozí ovládacího prvku v dialogovém okně.  
   
 ```  
@@ -497,7 +497,7 @@ void PrevDlgCtrl() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud je zaměření na první prvek v dialogovém okně, jeho přejde na poslední ovládací prvek v poli.  
   
-##  <a name="setdefid"></a>CDialog::SetDefID  
+##  <a name="setdefid"></a>  CDialog::SetDefID  
  Změní výchozí uzavření tlačítkem ovládací prvek pro dialogové okno.  
   
 ```  
@@ -508,7 +508,7 @@ void SetDefID(UINT nID);
  `nID`  
  Určuje ID uzavření tlačítkem ovládací prvek, který se stane výchozí.  
   
-##  <a name="sethelpid"></a>CDialog::SetHelpID  
+##  <a name="sethelpid"></a>  CDialog::SetHelpID  
  Nastaví ID Kontextová nápověda pro dialogové okno.  
   
 ```  

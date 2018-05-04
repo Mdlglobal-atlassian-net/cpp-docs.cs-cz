@@ -1,12 +1,9 @@
 ---
-title: "Třída CComControl | Microsoft Docs"
-ms.custom: 
+title: Třída CComControl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>CComControl – třída
 Tato třída poskytuje metody pro vytváření a správu ATL ovládací prvky.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|Voláním této metody lze vytvořit, zobrazit a pracovat se zprávou.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComControl`je sada užitečné řízení pomocných funkcí a základní data členů pro ovládací prvky knihovny ATL. Když vytvoříte standardního ovládacího prvku nebo ovládací prvek DHTML pomocí Průvodce ovládacím prvkem ATL, průvodce automaticky odvodí třídě z `CComControl`. `CComControl`Odvozená většinu její metody z [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` je sada užitečné řízení pomocných funkcí a základní data členů pro ovládací prvky knihovny ATL. Když vytvoříte standardního ovládacího prvku nebo ovládací prvek DHTML pomocí Průvodce ovládacím prvkem ATL, průvodce automaticky odvodí třídě z `CComControl`. `CComControl` Odvozená většinu její metody z [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
  Další informace o vytvoření ovládacího prvku, najdete v článku [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodci projektu knihovny ATL, najdete v článku [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md).  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  Konstruktor  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>Poznámky  
  Volání [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) konstruktoru, předávání `m_hWnd` – datový člen zděděná prostřednictvím [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  Načte ukazatel na požadované rozhraní.  
   
 ```
@@ -126,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  Ve výchozím nastavení, vytvoří okna pro ovládací prvek voláním `CWindowImpl::Create`.  
   
 ```
@@ -146,7 +141,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  Upozorní kontejneru podřízený, které se změnily vlastnosti ovládacího prvku.  
   
 ```
@@ -168,7 +163,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  Kontejneru podřízený upozorní, že vlastnost ovládacího prvku se má změnit a že objekt je s dotazem, jímky postup pokračovat.  
   
 ```
@@ -191,7 +186,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  Voláním této metody lze vytvořit, zobrazit a pracovat se zprávou.  
   
 ```
@@ -215,7 +210,7 @@ int MessageBox(
  Vrací celočíselnou hodnotu zadáním jednoho z položky nabídky hodnoty uvedené v [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) v dokumentaci k Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- `MessageBox`je užitečné při vývoji a jako snadný způsob, jak zobrazit chyba nebo upozornění uživateli.  
+ `MessageBox` je užitečné při vývoji a jako snadný způsob, jak zobrazit chyba nebo upozornění uživateli.  
   
 ## <a name="see-also"></a>Viz také  
  [CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)   

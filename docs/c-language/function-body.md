@@ -1,13 +1,10 @@
 ---
 title: Funkce text | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d6a566c1120f0a89a985895393fae5a79690bfa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-body"></a>Tělo funkce
 "Tělo funkce" je složené příkazu, který obsahuje příkazy, které určují, jaké funkce.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 03/16/2018
  /\* *atribut seq* je specifické pro Microsoft * /  
   
  *příkaz složené*: /\* tělo funkce \*/  
- **{***seznam prohlášení* opt*seznam příkazů* opt**}**   
+ **{***seznam prohlášení* opt*seznam příkazů* opt **}**  
   
  Mít proměnných deklarovaných v těle funkce na "místní proměnné," **automaticky** třídy úložiště, pokud není uvedeno jinak. Při volání funkce úložiště se vytvoří pro místní proměnné a jsou prováděny místní inicializacích. Řízení provádění předá první příkaz v *složené příkaz* a pokračuje v až `return` spustit příkaz nebo je nalezen konec tělo funkce. Ovládací prvek pak vrátí do bodu, kdy byla zavolána funkce.  
   

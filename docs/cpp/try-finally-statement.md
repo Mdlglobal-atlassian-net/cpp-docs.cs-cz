@@ -2,11 +2,8 @@
 title: try-finally – příkaz | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 **Konkrétní Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Gramatika  
  *try-finally – příkaz*:  
- `__try`*složené – příkaz*  
+ `__try` *složené – příkaz*  
   
- `__finally`*složené – příkaz*  
+ `__finally` *složené – příkaz*  
   
  `try-finally` Příkaz je rozšíření Microsoft pro jazyky C a C++, která umožňuje aplikacím cíl zaručit spuštění kódu čištění, když dojde k přerušení spuštění bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovače souborů. `try-finally` Příkaz je zvláště užitečná pro rutiny, které mají několika místech, kde je provedena kontrola pro chybu, která by mohla způsobovat předčasné vrátit z rutiny.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Předpokládejme například, řadu volání funkce odkazy funkce A funkci D, jak je znázorněno na následujícím obrázku. Jednotlivé funkce má jeden obslužné rutiny ukončení. Pokud místo vyvolání funkce D a zpracovány ve A výjimka obslužné rutiny ukončení se říká v tomto pořadí systému unwinds zásobníku: D, C, B.  
   
- ![Pořadí ukončení & č. 45; obslužná rutina provádění](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Pořadí ukončení&#45;obslužná rutina provádění](../cpp/media/vc38cx1.gif "vc38CX1")  
 Pořadí provádění obslužné rutiny ukončení  
   
 > [!NOTE]

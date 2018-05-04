@@ -1,12 +1,9 @@
 ---
-title: "Rozdíly ve zpracování výjimek | Microsoft Docs"
-ms.custom: 
+title: Rozdíly ve zpracování výjimek | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4577739c7ef141576361e6db630eafbe432e913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-handling-differences"></a>Rozdíly ve zpracování výjimek
 Hlavní rozdíl mezi strukturovaným zpracováním výjimek a zpracováním výjimek v jazyce C++ je, že v modelu zpracování výjimek v jazyce C++ se model zabývá typy, zatímco model zpracování strukturovaných výjimek jazyka C se zabývá výjimkami jednoho typu – konkrétně `unsigned int`. Výjimky jazyka C jsou označeny hodnotou unsigned integer, na rozdíl od výjimek jazyka C++, které jsou určeny typem dat. Jakmile je v jazyce C vyvolána výjimka, vykoná každý popisovač filtr, který prověří kontext výjimek jazyka C a určí, zda výjimku přijmout, předat ji jiné obslužné rutině, nebo ji ignorovat. Jakmile je vyvolána výjimka v jazyce C++, může být libovolného typu.  
@@ -71,7 +66,7 @@ In finally.
 Caught a C exception.  
 ```  
   
-##  <a name="_core_c_exception_wrapper_class"></a>Obálková třída výjimky jazyka C  
+##  <a name="_core_c_exception_wrapper_class"></a> Obálková třída výjimky jazyka C  
  V jednoduchém příkladu jako výše, může být C výjimka zachycena pouze pomocí třemi tečkami (**...** ) **catch** obslužné rutiny. Obslužné rutině není dodána žádná informace o typu nebo povaze výjimky. Zatímco tato metoda funguje, v některých případech je zapotřebí definovat transformaci mezi dvěma modely zpracování výjimek tak, aby byly jednotlivé výjimky jazyka C spojeny s konkrétní třídou. To lze provést definováním třídy „zabalení“ výjimky jazyka C, kterou lze použít nebo odvodit pro vytvoření atributu pro určitý typ třídy na výjimku jazyka C. Tímto způsobem může ošetřit jednotlivých výjimkách C jazyka C++ **catch** obslužná rutina samostatně než v předchozím příkladu.  
   
  Třída zabalení může obsahovat rozhraní skládající se z některých členských funkcí, které určují hodnotu výjimky a které přistupují k rozšířeným kontextovým informacím poskytnutým modelem zpracování výjimek jazyka C. Je také možné definovat výchozí konstruktor a konstruktor, který přijímá argument `unsigned int` (pro poskytnutí zastoupení základní výjimky jazyka C) a konstruktor bitové kopie. Následuje možná implementace třídy zabalení výjimky jazyka C:  

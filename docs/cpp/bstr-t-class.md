@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t – třída | Microsoft Docs"
-ms.custom: 
+title: _bstr_t – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  A `_bstr_t` zapouzdřují [BSTR datový typ](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Třída spravuje přidělení prostředků a navrácení prostřednictvím volání funkce **SysAllocString** a **SysFreeString** a dalších `BSTR` rozhraní API v případě nutnosti. `_bstr_t` Třída používá, aby se zabránilo nadměrnému zatížení při počítání referencí.  
   
@@ -44,12 +39,12 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[Přiřazení](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` zabalené službou `_bstr_t`.|  
+|[přiřazení](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` zabalené službou `_bstr_t`.|  
 |[Attach](../cpp/bstr-t-attach.md)|Odkazy `_bstr_t` obálka pro `BSTR`.|  
-|[kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřené `BSTR`.|  
+|[Kopírování](../cpp/bstr-t-copy.md)|Vytvoří kopii zapouzdřené `BSTR`.|  
 |[Detach](../cpp/bstr-t-detach.md)|Vrátí `BSTR` zabalené službou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.|  
-|[GetAddress](../cpp/bstr-t-getaddress.md)|Odkazuje na `BSTR` zabalené službou `_bstr_t`.|  
-|[GetBSTR](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.|  
+|[Getaddress –](../cpp/bstr-t-getaddress.md)|Odkazuje na `BSTR` zabalené službou `_bstr_t`.|  
+|[Getbstr –](../cpp/bstr-t-getbstr.md)|Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.|  
 |[Délka](../cpp/bstr-t-length.md)|Vrátí počet znaků `_bstr_t`.|  
   
 ### <a name="operators"></a>Operátory  
@@ -61,7 +56,7 @@ ms.lasthandoff: 01/25/2018
 |[+ – operátor](../cpp/bstr-t-operator-add-equal-plus.md)|Zřetězí dva řetězce.|  
 |[! – operátor](../cpp/bstr-t-operator-logical-not.md)|Ověří, zda obsah zapouzdřeného `BSTR` je **NULL** řetězec.|  
 |[Operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porovná dva `_bstr_t` objekty.|  
-|[operátor wchar_t * & #124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahování ukazatele na zapouzdřené Unicode nebo vícebajtových `BSTR` objektu.|  
+|[operátor wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahování ukazatele na zapouzdřené Unicode nebo vícebajtových `BSTR` objektu.|  
   
 **Konkrétní Microsoft END**  
   

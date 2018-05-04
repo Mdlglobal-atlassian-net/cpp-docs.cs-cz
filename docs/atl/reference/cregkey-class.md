@@ -1,12 +1,9 @@
 ---
-title: "Třída CRegKey | Microsoft Docs"
-ms.custom: 
+title: Třída CRegKey | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRegKey
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cregkey-class"></a>CRegKey – třída
 Tato třída poskytuje metody pro práci s položky systémového registru.  
@@ -132,9 +127,9 @@ class CRegKey
 |[CRegKey::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objektu|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRegKey`poskytuje metody pro vytvoření nebo odstranění klíče a hodnoty v registru systému. Registr obsahuje sadu specifické pro instalaci definic pro součásti systému, jako jsou například čísla verzí softwaru, logického fyzického mapování nainstalovaný hardware a objektů COM.  
+ `CRegKey` poskytuje metody pro vytvoření nebo odstranění klíče a hodnoty v registru systému. Registr obsahuje sadu specifické pro instalaci definic pro součásti systému, jako jsou například čísla verzí softwaru, logického fyzického mapování nainstalovaný hardware a objektů COM.  
   
- `CRegKey`poskytuje programovací rozhraní do registru systému pro daný počítač. Například otevřít klíč registru konkrétní, volání `CRegKey::Open`. Chcete-li načíst nebo upravit datové hodnoty, volejte `CRegKey::QueryValue` nebo `CRegKey::SetValue`, v uvedeném pořadí. Zavřete klíč, volání `CRegKey::Close`.  
+ `CRegKey` poskytuje programovací rozhraní do registru systému pro daný počítač. Například otevřít klíč registru konkrétní, volání `CRegKey::Open`. Chcete-li načíst nebo upravit datové hodnoty, volejte `CRegKey::QueryValue` nebo `CRegKey::SetValue`, v uvedeném pořadí. Zavřete klíč, volání `CRegKey::Close`.  
   
  Při zavření klíč registru data je zápis na pevný disk. Tento proces může trvat několik sekund. Pokud vaše aplikace musí explicitně zápisu dat registru na pevný disk, můžete zavolat [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 funkce. Ale **RegFlushKey** používá mnoho systémových prostředků a by měla být volána pouze v nezbytně nutných případech.  
   
@@ -144,7 +139,7 @@ class CRegKey
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>  CRegKey::Attach  
  Voláním této metody lze připojit nastavení HKEY k `CRegKey` objekt nastavením [m_hKey](#m_hkey) člen popisovač `hKey`.  
   
 ```
@@ -158,7 +153,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>Poznámky  
  **Připojit** bude assert Pokud `m_hKey` hodnotu Null.  
   
-##  <a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>  CRegKey::Close  
  Volat tuto metodu za účelem uvolnění [m_hKey](#m_hkey) člen zpracování a nastavte ji na hodnotu NULL.  
   
 ```
@@ -168,7 +163,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě vrátí chybovou hodnotu.  
   
-##  <a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>  CRegKey::Create  
  Volat tuto metodu za účelem vytvoření k zadanému klíči, pokud neexistuje jako podklíč `hKeyParent`.  
   
 ```
@@ -210,7 +205,7 @@ LONG Create(
 ### <a name="remarks"></a>Poznámky  
  **Vytvoření** nastaví [m_hKey](#m_hkey) člen k popisovači tohoto klíče.  
   
-##  <a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>  CRegKey::CRegKey  
  Konstruktor  
   
 ```
@@ -233,7 +228,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Poznámky  
  Vytvoří nový `CRegKey` objektu. Objekt můžete vytvořit z existující `CRegKey` objekt, nebo z popisovač pro klíč registru.  
   
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey  
+##  <a name="dtor"></a>  CRegKey:: ~ CRegKey  
  Destruktor.  
   
 ```
@@ -243,7 +238,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Poznámky  
  Verze destruktor `m_hKey`.  
   
-##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  Voláním této metody lze odebrat z registru se zadaným klíčem.  
   
 ```
@@ -258,9 +253,9 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
  V případě úspěchu vrátí ERROR_SUCCESS. Pokud metoda selže, návratová hodnota je kód nenulové hodnoty chyby definované v nezdařila. H.  
   
 ### <a name="remarks"></a>Poznámky  
- `DeleteSubKey`Odstranit lze pouze klíč, který obsahuje žádné podklíče. Pokud klíč obsahuje podklíče, zavolejte [RecurseDeleteKey](#recursedeletekey) místo.  
+ `DeleteSubKey` Odstranit lze pouze klíč, který obsahuje žádné podklíče. Pokud klíč obsahuje podklíče, zavolejte [RecurseDeleteKey](#recursedeletekey) místo.  
   
-##  <a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
  Voláním této metody lze odebrat hodnotu pole z [m_hKey](#m_hkey).  
   
 ```
@@ -274,7 +269,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěchu vrátí ERROR_SUCCESS. Pokud metoda selže, návratová hodnota je kód nenulové hodnoty chyby definované v nezdařila. H.  
   
-##  <a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>  CRegKey::Detach  
  Volat tuto metodu za účelem odpojení [m_hKey](#m_hkey) popisovač člena z `CRegKey` objektu a nastavte `m_hKey` na hodnotu NULL.  
   
 ```
@@ -284,7 +279,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Nastavení HKEY přidružené `CRegKey` objektu.  
   
-##  <a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>  CRegKey::EnumKey  
  Voláním této metody lze vytvořit výčet podklíčů klíče registru otevřete.  
   
 ```
@@ -314,7 +309,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li vytvořit výčet podklíčů, volejte `CRegKey::EnumKey` s indexem 0. Zvýší hodnotu indexu a opakujte, dokud ERROR_NO_MORE_ITEMS vrátí metoda. Další informace najdete v tématu [Funkce RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) ve Windows SDK.  
   
-##  <a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>  CRegKey::Flush  
  Voláním této metody lze zapisovat všechny atributy otevřít klíč registru do registru.  
   
 ```
@@ -327,7 +322,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) ve Windows SDK.  
   
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Volejte tuto metodu za účelem načtení kopie popisovač zabezpečení, ochraně otevřít klíč registru.  
   
 ```
@@ -353,14 +348,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
   
-##  <a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Obsahuje popisovač klíče registru přidružené `CRegKey` objektu.  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>  CRegKey::m_pTM  
  Ukazatel na `CAtlTransactionManager` objektu.  
   
 ```
@@ -369,7 +364,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
  Tato metoda upozorní volající o změnách atributy nebo obsah otevřít klíč registru.  
   
 ```
@@ -410,7 +405,7 @@ LONG NotifyChangeKeyValue(
   
  Ukázka programu a další podrobnosti najdete v tématu [funkce RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
   
-##  <a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>  CRegKey::Open  
  Volání této metody se zadaným klíčem a nastavit [m_hKey](#m_hkey) k popisovači tohoto klíče.  
   
 ```
@@ -438,14 +433,14 @@ LONG Open(
   
  Na rozdíl od [CRegKey::Create](#create), **otevřete** nevytvoří se zadaným klíčem, pokud neexistuje.  
   
-##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  Převede `CRegKey` objekt, který má nastavení HKEY.  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>  CRegKey::operator =  
  Operátor přiřazení.  
   
 ```
@@ -462,7 +457,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor umožňuje odpojit `key` z jeho aktuálního objektu a přiřadí ji k `CRegKey` místo toho objekt.  
   
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  Volejte tuto metodu za účelem načtení binární data pro název zadanou hodnotu.  
   
 ```
@@ -491,7 +486,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkci používanou touto metodou. nezpracovává explicitně řetězce, které jsou NULL byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Voláním této metody lze načíst data DWORD s hodnotou pro název zadanou hodnotu.  
   
 ```
@@ -516,7 +511,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkci používanou touto metodou. nezpracovává explicitně řetězce, které jsou NULL byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Volejte tuto metodu za účelem načtení dat identifikátor GUID pro název zadanou hodnotu.  
   
 ```
@@ -541,7 +536,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat.  
   
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  Volejte tuto metodu za účelem načtení nahrazován data pro název zadanou hodnotu.  
   
 ```
@@ -570,7 +565,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkci používanou touto metodou. nezpracovává explicitně řetězce, které jsou NULL byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Volejte tuto metodu za účelem načtení dat Qword – zadaná hodnota názvu.  
   
 ```
@@ -595,7 +590,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkci používanou touto metodou. nezpracovává explicitně řetězce, které jsou NULL byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Volejte tuto metodu za účelem načtení dat řetězce pro název zadanou hodnotu.  
   
 ```
@@ -624,7 +619,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkci používanou touto metodou. nezpracovává explicitně řetězce, které jsou NULL byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Voláním této metody lze načíst data pro zadanou hodnotu pole [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako **ATL_DEPRECATED**.  
   
 ```
@@ -680,7 +675,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu zadat jakékoli umístění registru, potenciálně čtení dat, který nelze důvěřovat. Navíc RegQueryValueEx funkci používanou touto metodou. nezpracovává řetězce, které jsou explicitně `NULL` byla ukončena. Obě podmínky zkontrolovat pro volací kód.  
   
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
  Volejte tuto metodu za účelem odeberte zadaný klíč z registru a explicitně odeberte všechny podklíče.  
   
 ```
@@ -697,7 +692,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud klíč má podklíče, musí volat tuto metodu za účelem odstranění klíče.  
   
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
  Volejte tuto metodu a nastavit binární hodnotu klíče registru.  
   
 ```
@@ -723,7 +718,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pro zápis hodnoty registru.  
   
-##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Volejte tuto metodu a nastavit hodnotu DWORD klíče registru.  
   
 ```
@@ -743,7 +738,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pro zápis hodnoty registru.  
   
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Volejte tuto metodu a nastavit hodnotu GUID klíče registru.  
   
 ```
@@ -763,7 +758,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda využívá `CRegKey::SetStringValue` a převede identifikátor GUID na řetězec pomocí [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
   
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Volejte tuto metodu pro ukládání dat v poli zadanou hodnotu zadaného klíče.  
   
 ```
@@ -789,7 +784,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze vytvořit nebo otevřít `lpszKeyName` klíč a uložit `lpszValue` data v `lpszValueName` pole value.  
   
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
  Volejte tuto metodu a nastavit zabezpečení klíče registru.  
   
 ```
@@ -816,7 +811,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>Poznámky  
  Nastaví atributy zabezpečení klíče. V tématu [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) další podrobnosti.  
   
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Volejte tuto metodu za účelem nahrazován hodnotu klíče registru.  
   
 ```
@@ -836,7 +831,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pro zápis hodnoty registru.  
   
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Voláním této metody lze nastavit QWORD hodnotu klíče registru.  
   
 ```
@@ -856,7 +851,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pro zápis hodnoty registru.  
   
-##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Volejte tuto metodu a nastavit řetězcovou hodnotu klíče registru.  
   
 ```
@@ -882,7 +877,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) pro zápis hodnoty registru.  
   
-##  <a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>  CRegKey::SetValue  
  Volat tuto metodu pro ukládání dat v poli zadanou hodnotu [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako **ATL_DEPRECATED**.  
   
 ```

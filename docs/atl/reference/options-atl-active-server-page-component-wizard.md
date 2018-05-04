@@ -1,12 +1,9 @@
 ---
-title: "Možnosti, Průvodce komponentou stránky ASP ATL | Microsoft Docs"
-ms.custom: 
+title: Možnosti, Průvodce komponentou stránky ASP ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 31549c812b4f523cb8026a0d0b15ae60e31cd1f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Možnosti Průvodce komponentou stránky ASP knihovny ATL
 Na této stránce Průvodce komponentou ATL Active Server stránky můžete navrhnout poskytují zvýšenou efektivitu a podpory chyb pro objekt.  
@@ -40,7 +35,7 @@ Na této stránce Průvodce komponentou ATL Active Server stránky můžete navr
 |Možnost|Popis|  
 |------------|-----------------|  
 |`Single`|Určuje, že objekt používá jeden model vláken. V jednom modelu vláken objektu vždy běží v primární COM vlákno. V tématu [jedno vláknové objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112) a [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) Další informace.|  
-|**Apartment**|Určuje, že objekt používá dělení objektu apartment. Ekvivalentní k jedné vláken typu apartment. Každý objekt komponentu apartment-threaded je přiřazen izolovaný prostor pro jeho vlákno dobu životnosti objektu; více vláken však lze použít pro více objektů. Každý apartment je vázaný na konkrétní vlákno a má Windows message pump (výchozí).<br /><br /> V tématu [jedno vláknové objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112) Další informace.|  
+|**Objektu Apartment**|Určuje, že objekt používá dělení objektu apartment. Ekvivalentní k jedné vláken typu apartment. Každý objekt komponentu apartment-threaded je přiřazen izolovaný prostor pro jeho vlákno dobu životnosti objektu; více vláken však lze použít pro více objektů. Každý apartment je vázaný na konkrétní vlákno a má Windows message pump (výchozí).<br /><br /> V tématu [jedno vláknové objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112) Další informace.|  
 |**Obě**|Určuje, že objekt můžete použít buď objektu apartment nebo volných vláken, z které druh vlákno je vytvořen v závislosti.|  
 |**Volné**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní k modelu objektu apartment s více vlákny. V tématu [vícevláknové izolované prostory](http://msdn.microsoft.com/library/windows/desktop/ms693421) Další informace.|  
 |**Neutrální**|Určuje, že objekt postupuje podle pokynů pro vícevláknové izolované prostory, ale můžete spustit na jakýkoli druh přístup z více vláken.|  
@@ -52,7 +47,7 @@ Na této stránce Průvodce komponentou ATL Active Server stránky můžete navr
 |------------|-----------------|  
 |**Ano**|Určuje, že se dají agregovat objektu. Výchozí nastavení|  
 |**Ne**|Určuje, že není agregovaný objekt.|  
-|**Only**|Určuje, že objekt musí být agregován.|  
+|**Pouze**|Určuje, že objekt musí být agregován.|  
   
  **Podpora**  
  (Popis prvku přidávaného)  

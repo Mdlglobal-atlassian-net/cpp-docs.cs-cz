@@ -1,12 +1,9 @@
 ---
 title: _bstr_t::Operator += + | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t::operator+
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ceeec1461b05b25d4bb0b42321cb9b3988ce4b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Konkrétní Microsoft**  
@@ -58,7 +53,7 @@ friend _bstr_t operator+(
  *S1*  
  A `_bstr_t` objektu.  
   
- *s2*  
+ *S2*  
  Více-bajtové řetězec.  
   
  `s3`  
@@ -67,13 +62,13 @@ friend _bstr_t operator+(
 ## <a name="remarks"></a>Poznámky  
  Proveďte tyto operátory zřetězení řetězců:  
   
--   **+= – operátor (***s1***)** připojí znakům zapouzdřené `BSTR` z *s1* na konec tohoto objektu zapouzdřené `BSTR`.  
+-   **+= – operátor (***s1***)** připojí znakům zapouzdřené `BSTR` z *s1* na konec tohoto objektu zapouzdřené `BSTR`.      
   
--   **operátor + (***s1***)** vrátí nové `_bstr_t` která je tvořena zřetězením tento objekt `BSTR` s třídou *s1*.  
+-   **operátor + (***s1***)** vrátí nové `_bstr_t` která je tvořena zřetězením tento objekt `BSTR` s třídou *s1*.      
   
--   **operátor + (***s2***&#124;** *s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením vícebajtové řetězec *s2*, převést na kódování Unicode s `BSTR` zapouzdřené v *s1*.  
+-   **operátor + (***s2***&#124;***s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením více-bajtové řetězec *s2*, převést na kódování Unicode s `BSTR` zapouzdřené v *s1*.          
   
--   **operátor + (** `s3` **,***s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením řetězec znaků Unicode `s3` pomocí `BSTR` zapouzdřené v *s1*.  
+-   **operátor + (** `s3` **,***s1***)** vrátí novou `_bstr_t` která je tvořena zřetězením řetězec znaků Unicode `s3` s `BSTR` zapouzdřené v *s1*.        
   
  **Konkrétní Microsoft END**  
   

@@ -1,27 +1,22 @@
 ---
-title: "Chyby a výjimky zpracování (moderní verze jazyka C++) | Microsoft Docs"
-ms.custom: 
+title: Chyby a výjimky zpracování (moderní verze jazyka C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 V moderní verze jazyka C++, ve většině scénářů je upřednostňovaný způsob, jak sestav a zpracování logiky chyby a chyby za běhu použít výjimky. To platí hlavně při zásobníku může obsahovat několik volání funkce mezi funkce, která zjistí chybu a funkce, která má kontext, který má vědět, jak se nezdařilo. Výjimky poskytují způsob formální, dobře definované pro kód, který zjistí chyby k předání informací o zásobníkem volání.  

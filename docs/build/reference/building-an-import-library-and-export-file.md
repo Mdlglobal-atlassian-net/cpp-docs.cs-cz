@@ -1,13 +1,10 @@
 ---
-title: "Sestavení knihovny importu a souboru exportu | Microsoft Docs"
-ms.custom: 
+title: Sestavení knihovny importu a souboru exportu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Sestavení knihovny importu a souboru exportu
 Sestavení knihovny importu a exportu souboru, použijte následující syntaxi:  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Specifikaci/export:*název* na příkazovém řádku LIB  
   
-3.  Definice v **EXPORTUJE** příkaz v`deffile`  
+3.  Definice v **EXPORTUJE** příkaz v `deffile`  
   
  Jedná se o stejné metody, které se používá k určení exportů při propojování export programu. Program můžete použít více než jednu metodu. Můžete zadat části příkazu LIB (například více *objfiles* nebo/export specifikace) v soubor příkazů v příkazu LIB tak, jak jste můžete v příkazu odkaz.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  *Název_položky* je název položky funkce nebo data, jako je které volací program používat. Volitelně můžete zadat *internalname* jako funkce známé v programu definující; ve výchozím nastavení, *internalname* je stejný jako *Název_položky*. `ordinal` Určuje index do tabulky exportu v rozsahu od 1 do 65 535; Pokud nezadáte `ordinal`, LIB přiřadí jeden. **NONAME** – klíčové slovo exportuje funkce pouze jako pořadí, bez *Název_položky*. **DATA** – klíčové slovo slouží k exportu objekty jen data.  
   
- / PATŘÍ:`symbol`  
+ / PATŘÍ: `symbol`  
  Přidá zadaný symbol do tabulky symbolů. Tato možnost je užitečná pro vynucení použití objekt knihovny, který jinak by být zahrnut.  
   
  Všimněte si, že když vytvoříte své knihovny importu v předběžný krok před vytvořením vaší .dll, je nutné předat stejnou sadu soubory objektů při sestavování .dll, jako předaný při sestavení knihovny importu.  

@@ -1,12 +1,9 @@
 ---
-title: "Logický operátor negace: ! | Microsoft Docs"
-ms.custom: 
+title: 'Logický operátor negace: ! | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '!'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f63d36fc5974241fb624dd3a2afc863142516e9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-negation-operator-"></a>Logický operátor negace: !
 ## <a name="syntax"></a>Syntaxe  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Poznámky  
  Logický operátor negace (**!**) obrátí význam jeho operand. Operand musí být aritmetického typu nebo typu ukazatele (nebo výraz, jehož výsledkem je aritmetický typ nebo typ ukazatele). Operand je implicitně převeden na typ `bool`. Výsledkem je **true** pokud převedený operand **false**; výsledkem je **false** pokud převedený operand **true**. Výsledek je typu `bool`.  
   
- Pro výraz *e*, unární výraz **!** *e* je ekvivalentní výrazu **(***e* `==` 0), s výjimkou případů, které se účastní přetížené operátory.  
+ Pro výraz *e*, unární výraz **! *** e* je ekvivalentní výrazu **(*** e* `==` 0), s výjimkou případů, které se účastní přetížené operátory.  
   
 ## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor !  
  **Není** operátor je ekvivalentem text **!**. Existují dva způsoby pro přístup **není** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  

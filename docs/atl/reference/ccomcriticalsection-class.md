@@ -1,12 +1,9 @@
 ---
-title: "Třída CComCriticalSection | Microsoft Docs"
-ms.custom: 
+title: Třída CComCriticalSection | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCriticalSection
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 827ba99a141799af42fab65c36df1f22d212260a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25376aba3cfbade202d1cf95c2218e88713ac22a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection – třída
 Tato třída poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
@@ -67,7 +62,7 @@ class CComCriticalSection
 |[CComCriticalSection::m_sec](#m_sec)|A **CRITICAL_SECTION** objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComCriticalSection`je podobná třída [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)kromě toho, že je nutné explicitně inicializaci a verze kritická sekce.  
+ `CComCriticalSection` je podobná třída [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)kromě toho, že je nutné explicitně inicializaci a verze kritická sekce.  
   
  Obvykle použijete, `CComCriticalSection` prostřednictvím `typedef` název [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Tento název odkazuje `CComCriticalSection` při [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) je používán.  
 
@@ -77,7 +72,7 @@ class CComCriticalSection
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcore.h  
   
-##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
+##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection  
  Konstruktor  
   
 ```
@@ -87,7 +82,7 @@ CComCriticalSection() throw();
 ### <a name="remarks"></a>Poznámky  
  Nastaví [m_sec](#m_sec) – datový člen na hodnotu NULL **.**  
   
-##  <a name="init"></a>CComCriticalSection::Init  
+##  <a name="init"></a>  CComCriticalSection::Init  
  Volá funkci Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), který inicializuje objekt kritická sekce součástí [m_sec](#m_sec) – datový člen.  
   
 ```
@@ -97,7 +92,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `S_OK` v případě úspěchu **E_OUTOFMEMORY** nebo **E_FAIL** při selhání.  
   
-##  <a name="lock"></a>CComCriticalSection::Lock  
+##  <a name="lock"></a>  CComCriticalSection::Lock  
  Volá funkci Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), které počká na vlákno může převzít vlastnictví obsažené v objektu kritická sekce [m_sec](#m_sec) – datový člen.  
   
 ```
@@ -110,14 +105,14 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Poznámky  
  Objekt kritická sekce se musí nejprve inicializovat pomocí volání [Init](#init) metoda. Po dokončení provádění kód chráněné musí volat vlákno [odemčení](#unlock) k uvolnění vlastnictví kritická sekce.  
   
-##  <a name="m_sec"></a>CComCriticalSection::m_sec  
+##  <a name="m_sec"></a>  CComCriticalSection::m_sec  
  Obsahuje kritická sekce objekt, který je používán všechny `CComCriticalSection` metody.  
   
 ```
 CRITICAL_SECTION m_sec;
 ```  
   
-##  <a name="term"></a>CComCriticalSection::Term  
+##  <a name="term"></a>  CComCriticalSection::Term  
  Volá funkci Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), což uvolní všechny prostředky používané objektem kritická sekce součástí [m_sec](#m_sec) – datový člen.  
   
 ```
@@ -130,7 +125,7 @@ HRESULT Term() throw();
 ### <a name="remarks"></a>Poznámky  
  Jednou `Term` byla volána, důležité části můžete již nebude používán k synchronizaci.  
   
-##  <a name="unlock"></a>CComCriticalSection::Unlock  
+##  <a name="unlock"></a>  CComCriticalSection::Unlock  
  Volá funkci Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), což uvolní vlastnictví obsažené v objektu kritická sekce [m_sec](#m_sec) – datový člen.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "vlákno | Microsoft Docs"
-ms.custom: 
+title: vlákno | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - thread_cpp
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread"></a>vlákno
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 **Vlákno** modifikátor rozšířené třídy úložiště se používá k deklaraci vlákna místní proměnné. Přenosných ekvivalentní v C ++ 11 a novější, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosné kód. V systému Windows **thread_local** je implementováno s **__declspec(thread)**.
 

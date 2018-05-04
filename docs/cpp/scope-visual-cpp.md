@@ -1,12 +1,9 @@
 ---
 title: Rozsah (Visual C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Rozsah (Visual C++)
 Názvy v jazyce C++ lze použít pouze v určité oblasti programu. Tato oblast se nazývá "obor" název. Obor určuje "životnost" název, který neoznačuje objekt statický rozsah. Obor rovněž určuje, zda název, pokud se označují jako třída konstruktory a destruktory a pokud jsou inicializovány proměnné místní do oboru. (Další informace najdete v tématu [konstruktory](../cpp/constructors-cpp.md) a [destruktory](../cpp/destructors-cpp.md).) Jsou k dispozici pět typy oboru:  
@@ -50,7 +45,7 @@ Názvy v jazyce C++ lze použít pouze v určité oblasti programu. Tato oblast 
   
      V jazyce C++ rozsah souboru se také označuje jako obor názvů.  
   
--   **Třída oboru** názvy členů třídy mají rozsah třídy. Členské funkce třídy je přístupná jenom pomocí operátory výběru členů (**.** nebo  **->** ) nebo operátory ukazatelů na členy (**.\***  nebo  **-> \*** ) k objektu nebo ukazatele na objekt třídy; nestatické třída člen data považována za místní k objektu této třídy. Vezměte v úvahu následující deklaraci třídy:  
+-   **Třída oboru** názvy členů třídy mají rozsah třídy. Členské funkce třídy je přístupná jenom pomocí operátory výběru členů (**.** nebo **->**) nebo operátory ukazatelů na členy (**.\***  nebo **-> \***) k objektu nebo ukazatele na objekt třídy; nestatické třída člen data považována za místní k objektu této třídy. Vezměte v úvahu následující deklaraci třídy:  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ Názvy v jazyce C++ lze použít pouze v určité oblasti programu. Tato oblast 
 ## <a name="hiding-names"></a>Skrytí názvů  
  Název lze skrýt jeho deklarací v uzavřeném bloku. Na následujícím obrázku je `i` deklarováno v rámci vnitřního bloku, a tím dojde ke skrytí proměnné přidružené k `i` v rozsahu vnějšího bloku.  
   
- ![Blok & č. 45; skrytí název oboru](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Blok&#45;obor název skrytí](../cpp/media/vc38sf1.png "vc38SF1")  
 Rozsah bloku a skrytí názvu  
   
  Výstup z programu zobrazeného na obrázku je:  

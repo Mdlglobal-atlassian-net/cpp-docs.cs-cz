@@ -2,12 +2,9 @@
 title: Kontrola chyb za běhu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1927f34a8616b5b4e4cd812554d01b818c5858
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-time-error-checking"></a>Kontrola chyb za běhu
 
@@ -45,7 +40,7 @@ Běhové knihovny jazyka C obsahuje funkce, které podporují Kontrola chyb za b
 
 ## <a name="see-also"></a>Viz také
 
-[Univerzální C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
  [/RTC (kontrola chyb za běhu)](../build/reference/rtc-run-time-error-checks.md)<br/>
  [runtime_checks](../preprocessor/runtime-checks.md)<br/>
  [Rutiny ladění](../c-runtime-library/debug-routines.md)<br/>

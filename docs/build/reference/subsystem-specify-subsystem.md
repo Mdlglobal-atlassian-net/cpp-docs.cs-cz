@@ -1,13 +1,10 @@
 ---
-title: "-SUBSYSTEM (zadat subsystém) | Microsoft Docs"
-ms.custom: 
+title: -SUBSYSTEM (zadat subsystém) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 ```  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  WINDOWS  
  Aplikace nevyžaduje konzoly, pravděpodobně, protože se tím vytvoří vlastní windows pro interakci s uživatelem. Pokud `WinMain` nebo `wWinMain` je definována pro nativní kód, nebo `WinMain(HISTANCE *, HINSTANCE *, char *, int)` nebo `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` je definována pro spravovaný kód, WINDOWS, je výchozí.  
   
- `Major`a `minor` (volitelné)  
+ `Major` a `minor` (volitelné)  
  Zadejte minimální požadovaná verze subsystému. Argumenty jsou desítková číslice v rozsahu 0 až 65 535. V části poznámky Další informace. Neexistují žádné horní rozsah čísel verzí.  
   
 ## <a name="remarks"></a>Poznámky  

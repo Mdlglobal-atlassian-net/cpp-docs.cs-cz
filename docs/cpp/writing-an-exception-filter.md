@@ -1,29 +1,24 @@
 ---
-title: "Zápis filtru výjimek | Microsoft Docs"
-ms.custom: 
+title: Zápis filtru výjimek | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Zápis filtru výjimek
 Výjimku lze zpracovat skokem do úrovně obslužné rutiny výjimky nebo pokračováním provádění. Místo použití kód obslužné rutiny výjimek pro zpracování výjimky a návratem, můžete použít *filtru* vyčištění problém a pak vrácením -1 obnovení normálního toku bez vymazání zásobníku.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  Je vhodné použít ve volání funkce *filtru* výraz vždy, když *filtru* je potřeba udělat nic komplexní. Vyhodnocení výrazu způsobí spuštění funkce, v tomto případě `Eval_Exception`.  
   
- Všimněte si použití [GetExceptionCode –](http://msdn.microsoft.com/library/windows/desktop/ms679356) lze zjistit výjimka. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception`nelze volat **GetExceptionCode –**, ale musí mít kód výjimky do ní předán.  
+ Všimněte si použití [GetExceptionCode –](http://msdn.microsoft.com/library/windows/desktop/ms679356) lze zjistit výjimka. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception` nelze volat **GetExceptionCode –**, ale musí mít kód výjimky do ní předán.  
   
  Tato obslužná rutina předá řízení jiné obslužné rutině, pokud se jedná o výjimku přetečení celého čísla nebo přetečení čísla s plovoucí desetinnou čárkou. Pokud je tomu tak, obslužná rutina zavolá funkci (funkce `ResetVars` je pouze příklad, nejedná se o funkci rozhraní API) pro obnovení některých globálních proměnných. *Příkaz bloku-2*, v tomto příkladu je prázdný, můžete nikdy nelze provést, protože `Eval_Exception` nikdy vrátí exception_execute_handler – (1).  
   

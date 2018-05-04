@@ -1,13 +1,10 @@
 ---
-title: "Použití příkazu VERIFY místo ASSERT | Microsoft Docs"
-ms.custom: 
+title: Použití příkazu VERIFY místo ASSERT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - assert
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 712c22bec1d6ce2d67208de9a139dff7621ad4cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-verify-instead-of-assert"></a>Použití příkazu VERIFY místo ASSERT
 Předpokládejme, že při spuštění ladicí verzi vaší aplikace knihovny MFC neexistují žádné problémy. Prodejní verze stejné aplikace však dojde k chybě, vrátí nesprávné výsledky nebo vykazuje některé neobvyklé chování.  
@@ -57,9 +52,9 @@ free( buf );
   
 -   volání `calloc( )` nikdy neprovádí, ponechat `buf` neinicializovaný, nebo  
   
--   `strcpy_s( )`kopie "`Hello, World`" do náhodných část paměti, může být selhání aplikace nebo způsobuje systém přestane reagovat, nebo  
+-   `strcpy_s( )` kopie "`Hello, World`" do náhodných část paměti, může být selhání aplikace nebo způsobuje systém přestane reagovat, nebo  
   
--   `free()`pokusí se volné paměti, který se nikdy přidělen.  
+-   `free()` pokusí se volné paměti, který se nikdy přidělen.  
   
  Pokud chcete používat ASSERT správně, by mělo být změněno ukázka kódu takto:  
   

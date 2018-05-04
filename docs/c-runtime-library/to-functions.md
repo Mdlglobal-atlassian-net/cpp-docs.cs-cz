@@ -1,13 +1,10 @@
 ---
-title: "k funkcím | Microsoft Docs"
-ms.custom: 
+title: k funkcím | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr90.dll
@@ -29,24 +26,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c852f65e603f11bfaf5812a9cb688dbf0eb36904
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="to-functions"></a>to – funkce
 Každý z **k** funkce a jeho přidružené makro, pokud existuje, převede jeden znak na další znak.  
   
 |||  
 |-|-|  
-|[__toascii –](../c-runtime-library/reference/toascii-toascii.md)|[ToUpper, _toupper –, towupper –](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[ToUpper, _toupper –, towupper –](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
 |[ToLower, _tolower –, towlower –](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||  
   
 ## <a name="remarks"></a>Poznámky  
@@ -82,7 +77,7 @@ Každý z **k** funkce a jeho přidružené makro, pokud existuje, převede jede
   
  `towlower` a `towupper` funkce vrátí převedený kopie `c` pokud obě z následujících podmínek jsou nenulové hodnoty. V opačném `c` se nemění.  
   
--   `c`je široká znaková odpovídající případu (to znamená, pro kterou `iswupper` nebo **iswlower –,** , je nenulové hodnoty).  
+-   `c` je široká znaková odpovídající případu (to znamená, pro kterou `iswupper` nebo **iswlower –,** , je nenulové hodnoty).  
   
 -   Neexistuje odpovídající široká znaková případu cíl (to znamená, pro kterou `iswlower` nebo **iswupper –,** , je nenulové hodnoty).  
   

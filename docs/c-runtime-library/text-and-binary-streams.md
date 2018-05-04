@@ -1,30 +1,25 @@
 ---
-title: "Textové a binární proudy | Microsoft Docs"
-ms.custom: 
+title: Textové a binární proudy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-binary-streams"></a>Textové a binární proudy
 Datový proud s text se skládá z jednoho nebo více řádků textu, které je možné zapsat do zobrazení se text orientované tak, aby mohly být čteny. Při čtení z datového proudu textu, program přečte `NL` (každý na jednom řádku) na konci každého řádku. Při zápisu do proudu textu, zapíše program `NL` signál konec řádku. Tak, aby odpovídaly odlišné konvence mezi cílové prostředí pro představující text v souborech, můžete změnit funkce knihovny počet a reprezentace znaků přenesené mezi program a text datového proudu.  

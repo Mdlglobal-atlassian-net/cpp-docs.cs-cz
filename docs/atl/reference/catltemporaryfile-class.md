@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlTemporaryFile | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlTemporaryFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTemporaryFile
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5911de856d13d9d66e8c950d446083a36811f535
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49adcb572e355c62e6f21081eb033496e60e2369
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile – třída
 Tato třída poskytuje metody pro vytváření a používání dočasný soubor.  
@@ -90,7 +85,7 @@ class CAtlTemporaryFile
 |[CAtlTemporaryFile::operator POPISOVAČ](#operator_handle)|Vrátí popisovač do dočasného souboru.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CAtlTemporaryFile`umožňuje snadno vytvořit a použít dočasný soubor. Soubor je automaticky s názvem, otevřít, uzavřený a odstranit. Pokud obsah souboru zavření souboru, mohou být uloženy do nového souboru se zadaným názvem.  
+ `CAtlTemporaryFile` umožňuje snadno vytvořit a použít dočasný soubor. Soubor je automaticky s názvem, otevřít, uzavřený a odstranit. Pokud obsah souboru zavření souboru, mohou být uloženy do nového souboru se zadaným názvem.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlfile.h  
@@ -98,7 +93,7 @@ class CAtlTemporaryFile
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="catltemporaryfile"></a>CAtlTemporaryFile::CAtlTemporaryFile  
+##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile  
  Konstruktor  
   
 ```
@@ -111,7 +106,7 @@ CAtlTemporaryFile() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile  
+##  <a name="dtor"></a>  CAtlTemporaryFile:: ~ CAtlTemporaryFile  
  Destruktor.  
   
 ```
@@ -121,7 +116,7 @@ CAtlTemporaryFile() throw();
 ### <a name="remarks"></a>Poznámky  
  Volání destruktoru [CAtlTemporaryFile::Close](#close).  
   
-##  <a name="close"></a>CAtlTemporaryFile::Close  
+##  <a name="close"></a>  CAtlTemporaryFile::Close  
  Voláním této metody lze dočasný soubor zavřete, a buď odstranit její obsah, nebo je uložit pod názvem zadaného souboru.  
   
 ```
@@ -138,7 +133,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="create"></a>CAtlTemporaryFile::Create  
+##  <a name="create"></a>  CAtlTemporaryFile::Create  
  Voláním této metody lze vytvořit dočasný soubor.  
   
 ```
@@ -158,7 +153,7 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="flush"></a>CAtlTemporaryFile::Flush  
+##  <a name="flush"></a>  CAtlTemporaryFile::Flush  
  Voláním této metody lze vynutit veškerá data ve vyrovnávací paměti souboru má být zapsán do dočasného souboru.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT Flush() throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="getposition"></a>CAtlTemporaryFile::GetPosition  
+##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition  
  Volejte tuto metodu za účelem získání aktuálního umístění ukazatele souboru.  
   
 ```
@@ -191,7 +186,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Poznámky  
  Můžete změnit umístění souboru ukazatele [CAtlTemporaryFile::Seek](#seek).  
   
-##  <a name="getsize"></a>CAtlTemporaryFile::GetSize  
+##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize  
  Volejte tuto metodu za účelem získání velikost v bajtech dočasný soubor.  
   
 ```
@@ -205,7 +200,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
   
-##  <a name="handsoff"></a>CAtlTemporaryFile::HandsOff  
+##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff  
  Volat tuto metodu za účelem zrušte přidružení souboru `CAtlTemporaryFile` objektu.  
   
 ```
@@ -216,9 +211,9 @@ HRESULT HandsOff() throw();
  Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `HandsOff`a [CAtlTemporaryFile::HandsOn](#handson) se používají k zrušte přidružení souboru z objektu a připojte ho v případě potřeby. `HandsOff`bude vynutit veškerá data ve vyrovnávací paměti souboru má být zapsán do dočasného souboru a poté zavřete soubor. Pokud chcete zavřít a trvale odstranit soubor, nebo pokud chcete zavřít a zachovat obsah souboru se zadaným názvem, použijte [CAtlTemporaryFile::Close](#close).  
+ `HandsOff` a [CAtlTemporaryFile::HandsOn](#handson) se používají k zrušte přidružení souboru z objektu a připojte ho v případě potřeby. `HandsOff` bude vynutit veškerá data ve vyrovnávací paměti souboru má být zapsán do dočasného souboru a poté zavřete soubor. Pokud chcete zavřít a trvale odstranit soubor, nebo pokud chcete zavřít a zachovat obsah souboru se zadaným názvem, použijte [CAtlTemporaryFile::Close](#close).  
   
-##  <a name="handson"></a>CAtlTemporaryFile::HandsOn  
+##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn  
  Volejte tuto metodu za účelem otevře existující soubor dočasné a umístěte ukazatel na konec souboru.  
   
 ```
@@ -231,7 +226,7 @@ HRESULT HandsOn() throw();
 ### <a name="remarks"></a>Poznámky  
  [CAtlTemporaryFile::HandsOff](#handsoff) a `HandsOn` se používají k zrušte přidružení souboru z objektu a připojte ho v případě potřeby.  
   
-##  <a name="lockrange"></a>CAtlTemporaryFile::LockRange  
+##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange  
  Volejte tuto metodu za účelem uzamčení oblasti, v dočasný soubor na jiné procesy zabránit v přístupu k jeho.  
   
 ```
@@ -249,16 +244,16 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Zamknete více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Chcete-li úspěšně odemknout oblasti, použijte [CAtlTemporaryFile::UnlockRange](#unlockrange), zajištění rozsah bajtů přesně odpovídá oblasti, která byla dříve uzamčena. `LockRange`nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, je třeba každý odemknout samostatně.  
+ Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Zamknete více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Chcete-li úspěšně odemknout oblasti, použijte [CAtlTemporaryFile::UnlockRange](#unlockrange), zajištění rozsah bajtů přesně odpovídá oblasti, která byla dříve uzamčena. `LockRange` nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, je třeba každý odemknout samostatně.  
   
-##  <a name="operator_handle"></a>CAtlTemporaryFile::operator POPISOVAČ  
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator POPISOVAČ  
  Vrátí popisovač do dočasného souboru.  
   
 ```  
 operator HANDLE() throw();
 ```  
   
-##  <a name="read"></a>CAtlTemporaryFile::Read  
+##  <a name="read"></a>  CAtlTemporaryFile::Read  
  Volejte tuto metodu za účelem čtení dat z dočasný soubor začínající na pozici ukazatele souboru.  
   
 ```
@@ -287,7 +282,7 @@ HRESULT Read(
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="seek"></a>CAtlTemporaryFile::Seek  
+##  <a name="seek"></a>  CAtlTemporaryFile::Seek  
  Voláním této metody lze přesunout soubor ukazatel dočasný soubor.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
-##  <a name="setsize"></a>CAtlTemporaryFile::SetSize  
+##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize  
  Volejte tuto metodu a nastavit velikost dočasný soubor.  
   
 ```
@@ -327,7 +322,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). Při návratu ukazatele souboru je nastavený na konci souboru.  
   
-##  <a name="tempfilename"></a>CAtlTemporaryFile::TempFileName  
+##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName  
  Volejte tuto metodu vrátit název dočasného souboru.  
   
 ```
@@ -340,7 +335,7 @@ LPCTSTR TempFileName() throw();
 ### <a name="remarks"></a>Poznámky  
  Název souboru je vytvořen v [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) pomocí volání [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)funkce Windows SDK. Přípona souboru bude vždy "TFR" pro dočasný soubor.  
   
-##  <a name="unlockrange"></a>CAtlTemporaryFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  Volejte tuto metodu k odemknutí oblasti dočasný soubor.  
   
 ```
@@ -360,7 +355,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange).  
   
-##  <a name="write"></a>CAtlTemporaryFile::Write  
+##  <a name="write"></a>  CAtlTemporaryFile::Write  
  Volejte tuto metodu za účelem zápisu dat do dočasného souboru začínající na pozici ukazatele souboru.  
   
 ```

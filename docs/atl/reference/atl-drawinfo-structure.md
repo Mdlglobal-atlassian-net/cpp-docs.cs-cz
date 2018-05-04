@@ -1,12 +1,9 @@
 ---
 title: Struktura ATL_DRAWINFO | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -17,19 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="atldrawinfo-structure"></a>ATL_DRAWINFO Structure
+# <a name="atldrawinfo-structure"></a>Struktura ATL_DRAWINFO
 Obsahuje informace, které slouží pro vykreslení na různé cíle, jako jsou tiskárny, metafile nebo ovládací prvek ActiveX.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -59,7 +54,7 @@ struct ATL_DRAWINFO {
  **dwDrawAspect**  
  Určuje, jak má být reprezentován cíl. Reprezentace může zahrnovat obsah, ikonu, miniaturu nebo tištěných dokumentu. Seznam možných hodnot najdete v tématu [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) a [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
   
- **lindex**  
+ **index**  
  Část cíl, který je určen pro kreslení operaci. Jeho interpretace se liší v závislosti na hodnotě v **dwDrawAspect** člen.  
   
  **ptd**  

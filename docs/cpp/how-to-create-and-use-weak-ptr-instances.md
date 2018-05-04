@@ -1,27 +1,22 @@
 ---
 title: 'Postupy: vytváření a používání instancí ukazatelů weak_ptr | Microsoft Docs'
-ms.custom: ''
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e51e523540e14905bef17edd52205c4d2102afa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů weak_ptr
 V některých případech musí objekt uložení přístup k základní objekt `shared_ptr` aniž by to způsobilo počet odkazů na se zvýší. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instance.  

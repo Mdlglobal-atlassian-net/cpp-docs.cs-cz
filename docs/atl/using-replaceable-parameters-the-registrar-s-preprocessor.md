@@ -1,13 +1,10 @@
 ---
-title: "Pomocí nahraditelné parametry (Registrátor ATL) | Microsoft Docs"
-ms.custom: 
+title: Pomocí nahraditelné parametry (Registrátor ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Pomocí nahraditelné parametry (registrátora & č. 39; s Preprocessor)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Pomocí nahraditelné parametry (registrátora&#39;s Preprocessor)
 Nahraditelné parametry Povolit klientům doménového registrátora zadejte data pro spuštění. K tomuto účelu udržuje registrátora nahrazení mapy, do kterého přejde hodnoty přidružené k nahraditelné parametry ve vašem skriptu. Registrátora umožňuje tyto položky v době běhu.  
   
-##  <a name="_atl_using_.25.module.25"></a>Pomocí modulu %  
+##  <a name="_atl_using_.25.module.25"></a> Pomocí modulu %  
  [Průvodce ovládacím prvkem ATL](../atl/reference/atl-control-wizard.md) automaticky vytvoří skript, který používá `%MODULE%`. ATL používá tento replaceable parametr pro skutečné umístění vašeho serveru knihovny DLL nebo EXE.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Zřetězení Run-Time dat s daty skriptu  

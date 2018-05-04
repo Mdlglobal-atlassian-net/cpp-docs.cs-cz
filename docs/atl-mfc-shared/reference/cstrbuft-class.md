@@ -2,11 +2,8 @@
 title: Třída CStrBufT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStrBufT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df7f6c1dbd9987a9f83ed5b33a4c97fd90fec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstrbuft-class"></a>CStrBufT – třída
 Tato třída poskytuje vyčištění automatické prostředků pro `GetBuffer` a `ReleaseBuffer` volání na existující `CStringT` objektu.  
@@ -48,9 +43,9 @@ class CStrBufT
  *TCharType*  
  Typ znak `CStrBufT` třídy. Může být jedna z následujících akcí:  
   
-- `char`(pro znakových řetězců v kódu ANSI)  
+- `char` (pro znakových řetězců v kódu ANSI)  
   
-- `wchar_t`(na řetězec znaků Unicode)  
+- `wchar_t` (na řetězec znaků Unicode)  
   
 - **Tchar –** (pro ANSI a Unicode řetězce znaků)  
   
@@ -98,7 +93,7 @@ class CStrBufT
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpstr.h  
   
-##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
  Automaticky zjistit nový délky řetězce na verzi.  
   
 ```
@@ -108,7 +103,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>Poznámky  
  Automaticky zjistit nový délky řetězce na verzi. Řetězec musí být ukončené hodnotou null.  
   
-##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
  Vytvoří objekt vyrovnávací paměti.  
   
 ```
@@ -135,7 +130,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  Všimněte si, že je konstruktor copy `private`.  
   
-##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
  Přímý přístup k znaky, které jsou uloženy v přidružených řetězec objekt jako řetězec stylu jazyka C.  
   
 ```  
@@ -148,7 +143,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se vraťte do vyrovnávací paměti znak objektu string ukazatel. Obsah řetězce objektu nelze změnit pomocí tento ukazatel.  
   
-##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
  Přímý přístup k znaky, které jsou uloženy v přidružených řetězec objekt jako řetězec stylu jazyka C.  
   
 ```
@@ -161,21 +156,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se vraťte do vyrovnávací paměti znak objektu string ukazatel. Vývojář může změnit obsah objektu řetězec tento ukazatel.  
   
-##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
  Ukazatel na konstantní řetězec.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>  CStrBufT::PXSTR  
  Ukazatel na řetězec.  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
  Nastavte délku řetězce objekt v `GetBuffer` čas.  
   
 ```
@@ -187,7 +182,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  Určuje, zda [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) a [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) jsou volány při sestavený objekt řetězce vyrovnávací paměti.  
   
-##  <a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>  CStrBufT::SetLength  
  Nastaví délka vyrovnávací paměti znak.  
   
 ```
@@ -204,7 +199,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce lze nastavit délku řetězce reprezentovaný objektem vyrovnávací paměti.  
   
-##  <a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>  CStrBufT::StringType  
  Typ řetězec, jehož vyrovnávací paměti je uživatel manipulovat specializací této třídy šablony.  
   
 ```

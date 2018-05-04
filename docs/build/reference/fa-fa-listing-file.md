@@ -1,13 +1,10 @@
 ---
 title: / FA, /Fa (soubor seznamu) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (soubor seznamu)
 Vytvoří seznam obsahující assembleru kódu.  
@@ -60,7 +55,7 @@ Volitelné. Zahrnuje zkompilovaný kód v ukázce.
 `s`  
 Volitelné. Obsahuje zdrojový kód v ukázce.  
   
-`u`Volitelný parametr. Kóduje soubor seznamu ve formátu UTF-8 a zahrnuje značku pořadí bajtů. Ve výchozím nastavení je soubor kódovaný jako ANSI. Použití `u` vytvořit soubor seznamu, který se zobrazí správně v libovolný systém, nebo pokud používáte Unicode zdrojové soubory kódu jako vstup pro kompilátor.  
+`u` Volitelný parametr. Kóduje soubor seznamu ve formátu UTF-8 a zahrnuje značku pořadí bajtů. Ve výchozím nastavení je soubor kódovaný jako ANSI. Použití `u` vytvořit soubor seznamu, který se zobrazí správně v libovolný systém, nebo pokud používáte Unicode zdrojové soubory kódu jako vstup pro kompilátor.  
   
 Pokud oba `s` a `u` jsou zadané a pokud zdroj kódu soubor používá kódování Unicode jiného, než UTF-8, pak řádků kódu v souboru .asm nemusí být zobrazeny správně.  
   
@@ -73,7 +68,7 @@ Jeden *zdroj*.asm soubor se vytvoří pro každou souboru zdrojového kódu v ko
 *filename.Extension*  
 Výpis soubor s názvem *filename.extension* je umístěn v aktuálním adresáři. To je platná pouze při kompilaci souboru jednoho zdrojového kódu.  
   
-*adresář*\  
+*Adresář*\  
 Jeden *source_file*.asm soubor je vytvořen a umístěny v zadané *directory* pro každého souboru zdrojového kódu v kompilace. Všimněte si požadované koncové zpětné lomítko. Jsou povolené jenom cesty na aktuálním disku.  
   
 *adresář*\\*filename* výpis soubor s názvem *filename*.asm je umístěn v zadané *directory*. To je platná pouze při kompilaci souboru jednoho zdrojového kódu.  

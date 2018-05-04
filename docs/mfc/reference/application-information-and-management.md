@@ -1,12 +1,12 @@
 ---
-title: "Informace o aplikaci a správu | Microsoft Docs"
-ms.custom: 
+title: Informace o aplikaci a správu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vc.mfc.macros
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3007e2fbae5bb0cee4472b6488be8ceb614bc1f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 54265814b4b60b08bed780a39ecadcace3242202
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 Když píšete aplikaci, můžete vytvořit jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-odvozené objektu. V některých případech můžete chtít získat informace o tomto objektu z mimo `CWinApp`-odvozené objektu. Nebo může potřebovat přístup k ostatním objektům globální "Manager".
@@ -67,7 +67,7 @@ Když píšete aplikaci, můžete vytvořit jeden [CWinApp](../../mfc/reference/
   
 
   
-##  <a name="afxbeginthread"></a>AfxBeginThread –  
+##  <a name="afxbeginthread"></a>  AfxBeginThread –  
  Volání této funkce vytvořit nové vlákno.  
   
 ```   
@@ -121,7 +121,7 @@ CWinThread* AfxBeginThread(
 ### <a name="remarks"></a>Poznámky  
  První formu `AfxBeginThread` vytvoří pracovní vlákno. Druhý formulář vytvoří vlákno, které může sloužit jako vlákna uživatelského rozhraní nebo jako pracovní vlákno.  
   
- `AfxBeginThread`Vytvoří novou `CWinThread` objektu, volání jeho [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funkci, aby se spustí provádění vlákna a vrací ukazatel na vlákno. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat. Chcete-li ukončit vlákno, volejte [AfxEndThread –](#afxendthread) z v rámci přístup z více vláken, nebo return z řídící funkce pracovní vlákno.  
+ `AfxBeginThread` Vytvoří novou `CWinThread` objektu, volání jeho [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funkci, aby se spustí provádění vlákna a vrací ukazatel na vlákno. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat. Chcete-li ukončit vlákno, volejte [AfxEndThread –](#afxendthread) z v rámci přístup z více vláken, nebo return z řídící funkce pracovní vlákno.  
   
  Multithreading musí být povolen v aplikaci; Tuto funkci, jinak nebude úspěšná. Další informace o povolení více vláken, najdete v části [/MD, / MT, /LD (použít běhovou knihovnu)](../../build/reference/md-mt-ld-use-run-time-library.md) pod *Visual C++ – možnosti kompilátoru*.  
   
@@ -133,7 +133,7 @@ CWinThread* AfxBeginThread(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
 
-## <a name="afxcontextmenumanager"></a>Afxcontextmenumanager –
+## <a name="afxcontextmenumanager"></a> Afxcontextmenumanager –
 Ukazatel na globální [kontextové nabídky manager](ccontextmenumanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -147,7 +147,7 @@ CContextMenuManager* afxContextMenuManager;
  [CContextMenuManager – třída](ccontextmenumanager-class.md)
 
   
-##  <a name="afxendthread"></a>AfxEndThread –  
+##  <a name="afxendthread"></a>  AfxEndThread –  
  Volání této funkce na ukončení aktuálně spuštěných vláken.  
   
 ```   
@@ -188,7 +188,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  Popisovač pro modul, který obsahuje prostředek.  
    
 ### <a name="remarks"></a>Poznámky  
- `AfxFindResourceHandle`Vyhledá konkrétní prostředek a vrátí popisovač modul, který obsahuje prostředek. Prostředek může být v rozšíření MFC DLL načtený. `AfxFindResourceHandle`informuje, která má prostředku.  
+ `AfxFindResourceHandle` Vyhledá konkrétní prostředek a vrátí popisovač modul, který obsahuje prostředek. Prostředek může být v rozšíření MFC DLL načtený. `AfxFindResourceHandle` informuje, která má prostředku.  
   
  Moduly jsou prohledávány v tomto pořadí:  
   
@@ -208,7 +208,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
   
-##  <a name="afxfreelibrary"></a>AfxFreeLibrary  
+##  <a name="afxfreelibrary"></a>  AfxFreeLibrary  
  Obě `AfxFreeLibrary` a `AfxLoadLibrary` udržovat počet odkazů pro každý modul načíst knihovny.  
   
 ```   
@@ -223,7 +223,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
  **Hodnota TRUE,** Pokud funkce proběhne úspěšně, jinak hodnota **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- `AfxFreeLibrary`snižuje počet odkaz na modul načíst dynamická knihovna (DLL). Když počet odkazů hodnota nula, modul nenamapovaný z adresního prostoru volajícího procesu a popisovač již není platný. Tento počet odkazů se zvýší pokaždé, když `AfxLoadLibrary` je volána.  
+ `AfxFreeLibrary` snižuje počet odkaz na modul načíst dynamická knihovna (DLL). Když počet odkazů hodnota nula, modul nenamapovaný z adresního prostoru volajícího procesu a popisovač již není platný. Tento počet odkazů se zvýší pokaždé, když `AfxLoadLibrary` je volána.  
   
  Před zrušení mapování modulu knihovny, umožňuje systém knihovnu DLL k odpojení od procesy použití. Díky tomu dává příležitost k vyčištění prostředků přidělené jménem aktuální proces knihovnu DLL. Po vstupní bod funkce vrátí hodnotu, modul knihovny odebrán z adresního prostoru aktuálního procesu.  
   
@@ -237,7 +237,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdll_.h  
   
-##  <a name="afxgetapp"></a>AfxGetApp –  
+##  <a name="afxgetapp"></a>  AfxGetApp –  
  Ukazatele, vrátí tato funkce slouží pro přístup k aplikaci informace, jako je hlavní odeslání zpráv kód nebo okně nejhornější.  
   
 ```   
@@ -256,7 +256,7 @@ CWinApp* AFXAPI AfxGetApp();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxgetappname"></a>Afxgetappname –  
+##  <a name="afxgetappname"></a>  Afxgetappname –  
  Řetězec vrácený pomocí této funkce lze pro diagnostické zprávy nebo jako kořenové pro dočasné řetězec názvy.  
   
 ```   
@@ -272,7 +272,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxgetinstancehandle"></a>Afxgetinstancehandle –  
+##  <a name="afxgetinstancehandle"></a>  Afxgetinstancehandle –  
  Tato funkce umožňuje načíst popisovač instance aktuální aplikace.  
   
 ```   
@@ -283,7 +283,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
  `HINSTANCE` Na aktuální instanci aplikace. Pokud je volána v rámci knihovny DLL propojené s USRDLL verze knihovny MFC, `HINSTANCE` na knihovnu DLL je vrácen.  
   
 ### <a name="remarks"></a>Poznámky  
- `AfxGetInstanceHandle`vždy vrátí hodnotu `HINSTANCE` spustitelného souboru (. Soubor EXE) Pokud je volána v rámci s verzí USRDLL MFC propojené knihovny DLL. V takovém případě se vrátí `HINSTANCE` na knihovnu DLL.  
+ `AfxGetInstanceHandle` vždy vrátí hodnotu `HINSTANCE` spustitelného souboru (. Soubor EXE) Pokud je volána v rámci s verzí USRDLL MFC propojené knihovny DLL. V takovém případě se vrátí `HINSTANCE` na knihovnu DLL.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]  
@@ -291,7 +291,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxgetmainwnd"></a>Afxgetmainwnd –  
+##  <a name="afxgetmainwnd"></a>  Afxgetmainwnd –  
  Pokud je aplikace serveru OLE, volejte tuto funkci k získání ukazatele na aktivní hlavní okno aplikace místo přímo odkazující na [m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd) členem objektu application.  
   
 ```   
@@ -314,7 +314,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxgetperuserregistration"></a>Afxgetperuserregistration –  
+##  <a name="afxgetperuserregistration"></a>  Afxgetperuserregistration –  
  Tato funkce slouží k určení, zda aplikace přesměruje registru přístup k **HKEY_CURRENT_USER** ( **HKCU**) uzlu.  
   
 ```  
@@ -322,7 +322,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
+ `TRUE` Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud povolíte registru přesměrování, rozhraní přesměruje přístup z **HKCR** k **HKEY_CURRENT_USER\Software\Classes**. Přesměrování se týká pouze rozhraní MFC a knihovna ATL.  
@@ -332,7 +332,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxstat_.h    
   
-##  <a name="afxgetresourcehandle"></a>AfxGetResourceHandle –  
+##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle –  
  Použití `HINSTANCE` popisovač vrácený pomocí této funkce pro přístup k prostředkům aplikace přímo, například ve volání funkce systému Windows **FindResource**.  
   
 ```   
@@ -348,7 +348,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxgetthread"></a>Afxgetthread –  
+##  <a name="afxgetthread"></a>  Afxgetthread –  
  Volání této funkce můžete získat ukazatel [CWinThread](../../mfc/reference/cwinthread-class.md) objekt reprezentující aktuálně prováděné vlákno.  
   
 ```   
@@ -370,7 +370,7 @@ CWinThread* AfxGetThread();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxinitrichedit"></a>Afxinitrichedit –  
+##  <a name="afxinitrichedit"></a>  Afxinitrichedit –  
  Volání této funkce se inicializovat ovládací prvek RichEdit (verze 1.0) pro aplikaci.  
   
 ```   
@@ -380,7 +380,7 @@ BOOL AFXAPI AfxInitRichEdit();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je poskytována z důvodu zpětné kompatibility. Nové aplikace by měly používat [afxinitrichedit2 –](#afxinitrichedit2).  
   
- `AfxInitRichEdit`načte RICHED32. Knihovny DLL k chybě při inicializaci verzi ovládacího prvku RichEdit 1.0. Použití verze 2.0 a 3.0 bohatých ovládacích prvků pro úpravy, RICHED20. Knihovna DLL je třeba načíst. Toho dosahuje pomocí volání [afxinitrichedit2 –](#afxinitrichedit2).  
+ `AfxInitRichEdit` načte RICHED32. Knihovny DLL k chybě při inicializaci verzi ovládacího prvku RichEdit 1.0. Použití verze 2.0 a 3.0 bohatých ovládacích prvků pro úpravy, RICHED20. Knihovna DLL je třeba načíst. Toho dosahuje pomocí volání [afxinitrichedit2 –](#afxinitrichedit2).  
   
  Chcete-li aktualizovat ovládacích prvcích pro úpravy bohaté v existujících aplikací Visual C++ na verzi 2.0, otevřete. RC soubor jako text, změnit název třídy každý bohatých ovládacích prvků pro úpravy z "RICHEDIT" na "RichEdit20a". Potom můžete nahradit volání `AfxInitRichEdit` s `AfxInitRichEdit2`.  
   
@@ -389,7 +389,7 @@ BOOL AFXAPI AfxInitRichEdit();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxinitrichedit2"></a>Afxinitrichedit2 –  
+##  <a name="afxinitrichedit2"></a>  Afxinitrichedit2 –  
  Volání této funkce se inicializovat ovládací prvek RichEdit (verze 2.0 a novější) pro aplikaci.  
   
 ```   
@@ -402,7 +402,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
 
-  ## <a name="afxisextendedframeclass"></a>Afxisextendedframeclass –
+  ## <a name="afxisextendedframeclass"></a>  Afxisextendedframeclass –
 Určuje, zda je daný okna objekt rozšířeného rámce.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -410,11 +410,11 @@ Určuje, zda je daný okna objekt rozšířeného rámce.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na objekt, který je odvozený od `CWnd`.  
    
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je okno zadaný objekt rozšířeného rámce; v opačném případě `FALSE`.  
+ `TRUE` Pokud je okno zadaný objekt rozšířeného rámce; v opačném případě `FALSE`.  
    
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrátí hodnotu `TRUE` Pokud `pWnd` je odvozena z jednoho z následujících tříd:  
@@ -438,7 +438,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
  [Třída CWnd](cwnd-class.md)   
  [CFrameWndEx – třída](cframewndex-class.md)   
 
-## <a name="afxismfctoolbar"></a>Afxismfctoolbar –
+## <a name="afxismfctoolbar"></a> Afxismfctoolbar –
 Určuje, zda je daný okna objekt panelu nástrojů.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -446,11 +446,11 @@ Určuje, zda je daný okna objekt panelu nástrojů.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na objekt, který je odvozený od `CWnd`.  
    
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je okno zadaný objekt na panelu nástrojů v opačném případě `FALSE`.  
+ `TRUE` Pokud je okno zadaný objekt na panelu nástrojů v opačném případě `FALSE`.  
    
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrátí hodnotu `TRUE` Pokud `pWnd` je odvozena z `CMFCToolBar`. Tato metoda je užitečná, když budete muset ověřit, jestli je parametr funkce nebo metoda `CMFCToolBar` objektu.  
@@ -463,7 +463,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
  [CMFCToolBar – třída](cmfctoolbar-class.md)
 
  
-## <a name="afxkeyboardmanager"></a>Afxkeyboardmanager –
+## <a name="afxkeyboardmanager"></a> Afxkeyboardmanager –
 Ukazatel na globální [klávesnice manager](ckeyboardmanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -479,7 +479,7 @@ CKeyboardManager* afxKeyboardManager;
  [CKeyboardManager – třída](ckeyboardmanager-class.md)
 
 
-##  <a name="afxloadlibrary"></a>AfxLoadLibrary  
+##  <a name="afxloadlibrary"></a>  AfxLoadLibrary  
  Použití `AfxLoadLibrary` pro mapování modulu DLL.  
   
 ```   
@@ -510,7 +510,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Pokud funkci úspěšné, je vrácenou hodnotu popisovač pro modul. Pokud se funkce nezdaří, je vrácenou hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrátí popisovač, který lze použít v [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu funkce knihovny DLL. `AfxLoadLibrary`Můžete také použít k mapování z ostatních modulů spustitelný soubor.  
+ Vrátí popisovač, který lze použít v [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu funkce knihovny DLL. `AfxLoadLibrary` Můžete také použít k mapování z ostatních modulů spustitelný soubor.  
   
  Každý proces udržuje počet odkazů pro každý modul načíst knihovny. Tento počet odkazů se zvýší pokaždé, když `AfxLoadLibrary` se nazývá a se odečte pokaždé, když `AfxFreeLibrary` je volána. Když počet odkazů hodnota nula, modul nenamapovaný z adresního prostoru volajícího procesu a popisovač již není platný.  
   
@@ -526,7 +526,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdll_.h  
    
-## <a name="afxmenutearoffmanager"></a>Afxmenutearoffmanager –
+## <a name="afxmenutearoffmanager"></a> Afxmenutearoffmanager –
 Ukazatel na globální [manager nabídky odtržení](cmenutearoffmanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -539,7 +539,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ### <a name="see-also"></a>Viz také     
  [CMenuTearOffManager – třída](cmenutearoffmanager-class.md)
  
-## <a name="afxmousemanager"></a>Afxmousemanager –
+## <a name="afxmousemanager"></a>  Afxmousemanager –
 Ukazatel na globální [manager myši](cmousemanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -554,7 +554,7 @@ CMouseManager* afxMouseManager;
  
 
   
-##  <a name="afxregisterclass"></a>Afxregisterclass –  
+##  <a name="afxregisterclass"></a>  Afxregisterclass –  
  Pomocí této funkce můžete zaregistrovat třídy oken v knihovně DLL, která používá MFC.  
   
 ```   
@@ -579,7 +579,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxregisterwndclass"></a>Afxregisterwndclass –  
+##  <a name="afxregisterwndclass"></a>  Afxregisterwndclass –  
  Umožňuje registrovat vlastní třídy oken.  
   
 ```  
@@ -612,7 +612,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Určuje popisovač pro prostředek ikonu být nainstalovaný v každé okna vytvořeného z okna třídy. Pokud použijete výchozí **0**, zobrazí se ikona standardní, s připravenými příznak logo systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukončené hodnotou null řetězec obsahující název třídy. Můžete předat tento název třídy a **vytvořit** – členská funkce v `CWnd` či jiné **CWnd -**odvozených tříd se vytvořit okno. Název je vytvořen pomocí knihovny Microsoft Foundation Class.  
+ Ukončené hodnotou null řetězec obsahující název třídy. Můžete předat tento název třídy a **vytvořit** – členská funkce v `CWnd` či jiné **CWnd -** odvozených tříd se vytvořit okno. Název je vytvořen pomocí knihovny Microsoft Foundation Class.  
   
 > [!NOTE]
 >  Vrácená hodnota je ukazatel na statické vyrovnávací paměti. Pokud chcete uložit tento řetězec, je přiřadit `CString` proměnné.  
@@ -632,7 +632,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxsetperuserregistration"></a>Afxsetperuserregistration –  
+##  <a name="afxsetperuserregistration"></a>  Afxsetperuserregistration –  
  Nastaví, zda aplikace přesměruje registru přístup k **HKEY_CURRENT_USER** ( **HKCU**) uzlu.  
   
 ```  
@@ -640,11 +640,12 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
+ [v] `bEnable`  
+ `TRUE` Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Poznámky  
- Před [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], aplikace, které obvykle přístup do registru používat **HKEY_CLASSES_ROOT** uzlu. Nicméně s [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], aplikace musíte spustit v režimu zvýšených oprávnění k zápisu do **HKCR**.  
+
+Před Windows Vista, aplikace, které získat přístup k registru obvykle používají **HKEY_CLASSES_ROOT** uzlu. S Windows Vista nebo novější operační systémy, musí však spuštění aplikace, v režimu zvýšených oprávnění k zápisu do **HKCR**.  
   
  Tato metoda umožňuje aplikaci číst a zapisovat do registru bez spuštění v režimu se zvýšenou přesměrováním registru přístup z **HKCR** k **HKCU**. Další informace najdete v tématu [stránky vlastností Linkeru](../../ide/linker-property-pages.md).  
   
@@ -655,7 +656,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxstat_.h    
   
-##  <a name="afxsetresourcehandle"></a>Afxsetresourcehandle –  
+##  <a name="afxsetresourcehandle"></a>  Afxsetresourcehandle –  
  Pomocí této funkce můžete nastavit `HINSTANCE` obslužná rutina, která určuje, kde jsou načteny výchozí prostředky aplikace.  
   
 ```  
@@ -672,7 +673,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
 
-## <a name="afxshellmanager"></a>Afxshellmanager –
+## <a name="afxshellmanager"></a>  Afxshellmanager –
 Ukazatel na globální [shell manager](cshellmanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -686,7 +687,7 @@ CShellManager* afxShellManager;
 ### <a name="see-also"></a>Viz také  
  [CShellManager – třída](cshellmanager-class.md)
   
-##  <a name="afxsocketinit"></a>Afxsocketinit –  
+##  <a name="afxsocketinit"></a>  Afxsocketinit –  
  Volání této funkce vašem `CWinApp::InitInstance` přepsání inicializovat sokety systému Windows.  
   
 ```  
@@ -706,7 +707,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxsock.h  
 
-## <a name="afxusertoolsmanager"></a>Afxusertoolsmanager –
+## <a name="afxusertoolsmanager"></a>  Afxusertoolsmanager –
 Ukazatel na globální [nástroje Správce uživatelů](cusertoolsmanager-class.md).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -721,7 +722,7 @@ CUserToolsManager* afxUserToolsManager;
  [CUserToolsManager – třída](cusertoolsmanager-class.md)
  
   
-##  <a name="afxwininit"></a>Afxwininit –  
+##  <a name="afxwininit"></a>  Afxwininit –  
  Tato funkce je volána pomocí zadané MFC `WinMain` funkce, jako součást [CWinApp](../../mfc/reference/cwinapp-class.md) inicializace aplikace využívající grafické rozhraní, k chybě při inicializaci MFC.  
   
 ```  

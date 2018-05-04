@@ -1,12 +1,9 @@
 ---
-title: "if-else – příkaz (C++) | Microsoft Docs"
-ms.custom: 
+title: if-else – příkaz (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
 Ovládá podmíněné větvení. Příkazy v *bloku v případě* jsou vykonány pouze v případě *výraz if* jehož výsledkem je hodnota nulová (nebo `true`). Pokud hodnota *výraz* nenulový, *statement1* jsou vykonány jiné příkazy v bloku a else bloku, pokud existuje, bude přeskočena. Pokud hodnota *výraz* rovná nule, pak pokud bloku se přeskočí a else bloku, pokud existuje, je proveden. Výrazy, které vyhodnotí jako nulová
@@ -176,7 +171,7 @@ int main()
  **Else** klauzuli `if...else` příkazu je přidružen na nejbližší předchozí **Pokud** příkaz ve stejném oboru, který nemá odpovídající **else** příkaz.   
 
 ## <a name="constexpr-if-statements"></a>constexpr Pokud příkazy
-**Visual Studio 2017 verze 15.3 a novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V šablonách funkce, můžete použít **constexpr Pokud** příkaz větvení rozhodnout kompilace bez nutnosti uchýlit k více přetížení funkce. Můžete například napsat jedné funkce této obslužné rutiny parametr rozbalování, (je vyžadována žádné přetížení nula parametr): 
+**Visual Studio 2017 verze 15.3 a novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V šablonách funkce, můžete použít **constexpr Pokud** příkaz kompilaci větvení rozhodnout bez s uchýlit k více přetížení funkce. Můžete například napsat jedné funkce této obslužné rutiny parametr rozbalování, (je vyžadována žádné přetížení nula parametr): 
 
 ```cpp
 template <class T, class... Rest>

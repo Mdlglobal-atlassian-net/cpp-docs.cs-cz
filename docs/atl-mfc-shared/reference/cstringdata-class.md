@@ -1,12 +1,9 @@
 ---
-title: "Třída CStringData | Microsoft Docs"
-ms.custom: 
+title: Třída CStringData | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>CStringData – třída
 Tato třída reprezentuje data objektu řetězce.  
@@ -61,7 +56,7 @@ struct CStringData
 |[IsShared](#isshared)|Určuje, pokud je aktuálně sdílené vyrovnávací paměti objektu přidružené řetězec.|  
 |[Zámek](#lock)|Zamkne vyrovnávací paměť objekt přidružený řetězce.|  
 |[Vydaná verze](#release)|Uvolní objekt zadaného řetězce.|  
-|[Odemknutí](#unlock)|Odemkne vyrovnávací paměť objekt přidružený řetězce.|  
+|[odemknutí](#unlock)|Odemkne vyrovnávací paměť objekt přidružený řetězce.|  
   
 ### <a name="data-members"></a>Datové členy  
   
@@ -98,7 +93,7 @@ struct CStringData
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  Zvýší počet odkaz na objekt řetězce.  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Tato metoda není volána na řetězec s počtem záporné odkaz, protože záporný počet označuje, že řetězec vyrovnávací paměť je uzamčen.  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  Vrátí ukazatel do vyrovnávací paměti znak objektu string.  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  Této vyrovnávací paměti není přidělena `CStringData` objektu, ale správcem řetězec v případě potřeby. Při přidělení, připojí se k datový objekt řetězec vyrovnávací paměti.  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  Určuje, jestli není uzamčen znak vyrovnávací paměti.  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce k určení, pokud vyrovnávací paměť znak objektu string je aktuálně uzamčena.  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  Určuje, zda je sdílená znak vyrovnávací paměti.  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce k určení, pokud znak vyrovnávací paměť dat objektu řetězec aktuálně sdílen více objektů řetězec.  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  Zamkne znak vyrovnávací paměti objektu přidružené řetězec.  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  Vyrovnávací paměť znak lze uzamknout, pouze pokud vyrovnávací paměť není sdílen vyšší řetězcových objektů.  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  Délka vyrovnávací paměti přidělené znak.  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Poznámky  
  Ukládá délka vyrovnávací paměti přidělené data v `XCHAR`s (bez zahrnutí ukončující null).  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  Aktuální délka objektu typu string.  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>Poznámky  
  Ukládá délku aktuálně používané dat v `XCHAR`s (bez zahrnutí ukončující null).  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  Odkaz na počet datový objekt řetězec.  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>Poznámky  
  Ukládá počet odkazů datový objekt řetězec. Tento počet označuje počet vyšší řetězec objekty, které jsou spojeny s datový objekt řetězec. Záporná označuje, že datový objekt řetězec je aktuálně uzamčen.  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  Správce paměti objektu přidružené řetězec.  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Poznámky  
  Ukládá správce paměti pro objekt přidružený řetězce. Další informace o řetězce a správce paměti naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  Snižuje počet odkaz na objekt řetězce data.  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  Odemkne znak vyrovnávací paměti objektu přidružené řetězec.  
   
 ```

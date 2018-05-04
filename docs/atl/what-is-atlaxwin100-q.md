@@ -1,13 +1,10 @@
 ---
 title: Co je AtlAxWin100? | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AtlAxWin
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - AtlAxWin method
 ms.assetid: 8efb6e14-df2a-40f1-a129-61b83965b5bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a686dc2c8d2a8d73ed8b8a65cf6a8777fe3f6b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83e823ef6e676151ddd398f3f8f50a9a65038ed7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-atlaxwin100"></a>Co je AtlAxWin100?
-`AtlAxWin100`je název třídy oken, který pomáhá zajistit na ATL – hostování ovládacího prvku funkce. Při vytváření instance této třídy procedury okna automaticky používat rozhraní API hostování ovládacího prvku a vytvořit objekt hostitele přidružený okno zatížení s ovládacím prvkem, který určíte v záhlaví okna.  
+`AtlAxWin100` je název třídy oken, který pomáhá zajistit na ATL – hostování ovládacího prvku funkce. Při vytváření instance této třídy procedury okna automaticky používat rozhraní API hostování ovládacího prvku a vytvořit objekt hostitele přidružený okno zatížení s ovládacím prvkem, který určíte v záhlaví okna.  
   
 ## <a name="see-also"></a>Viz také  
  [Uzavření ovládacího prvku – nejčastější dotazy](../atl/atl-control-containment-faq.md)

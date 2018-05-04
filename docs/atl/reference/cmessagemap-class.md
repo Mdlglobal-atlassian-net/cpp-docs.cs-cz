@@ -1,12 +1,9 @@
 ---
-title: "Třída CMessageMap | Microsoft Docs"
-ms.custom: 
+title: Třída CMessageMap | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>CMessageMap – třída
 Tato třída umožňuje že mapy zpráv objektu být přístup k jinému objektu.  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Mapy zpráv v přistupuje `CMessageMap`-odvozené třídy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMessageMap`je abstraktní základní třída, která umožňuje objektu zpráva mapuje přístup k jinému objektu. Aby objekt vystavit jeho mapy zpráv, její třída musí být odvozeny od `CMessageMap`.  
+ `CMessageMap` je abstraktní základní třída, která umožňuje objektu zpráva mapuje přístup k jinému objektu. Aby objekt vystavit jeho mapy zpráv, její třída musí být odvozeny od `CMessageMap`.  
   
  ATL používá `CMessageMap` podporu obsažené windows a dynamické zpráva řetězení mapy. Například všechny třída obsahující [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objekt musí být odvozeny od `CMessageMap`. Následující kód je převzat ze [SUBEDIT](../../visual-cpp-samples.md) ukázka. Prostřednictvím [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` třída automaticky odvozena z `CMessageMap`.  
   
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  Mapy zpráv identifikovaný přistupuje k `dwMsgMapID` v `CMessageMap`-odvozené třídy.  
   
 ```

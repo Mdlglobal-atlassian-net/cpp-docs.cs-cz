@@ -1,6 +1,6 @@
 ---
-title: "/MP (sestavení pomocí několika procesů) | Microsoft Docs"
-ms.custom: 
+title: /MP (sestavení pomocí několika procesů) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 
@@ -62,7 +61,7 @@ Následující tabulka uvádí možnosti kompilátoru a jazyk funkce, které jso
 |[#import](../../preprocessor/hash-import-directive-cpp.md) direktivy preprocesoru|Převede typy v knihovně typu třídy jazyka C++ a pak tyto třídy zapisuje do souboru záhlaví.|
 |[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Výstup preprocesoru zkopíruje do standardního výstupního (**stdout**).|
 |[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Umožňuje přírůstkové opětovné sestavení.|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Zapíše seznam zahrnout soubory do standardního chybového (**stderr**).|
+|[/ showincludes vložených](../../build/reference/showincludes-list-include-files.md)|Zapíše seznam zahrnout soubory do standardního chybového (**stderr**).|
 |[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Zapíše předkompilovaný hlavičkový soubor.|
 
 ## <a name="diagnostic-messages"></a>Diagnostické zprávy
@@ -119,7 +118,7 @@ Kompilátor nepodporuje použití [#import](../../preprocessor/hash-import-direc
 
 - Ve vašem zbývající zdrojové soubory, vložte [#include](../../preprocessor/hash-include-directive-c-cpp.md) direktivy, které zadejte vygenerované hlavičky a pak zkompilovat váš zbývající zdrojové soubory pomocí **/MP** možnost.
 
-### <a name="visual-studio-project-settings"></a>Visual Studio Project Settings
+### <a name="visual-studio-project-settings"></a>Nastavení projektu sady Visual Studio
 
 #### <a name="the-msbuildexe-tool"></a>Nástroje MSBUILD.exe
 
@@ -143,4 +142,4 @@ Ve výchozím nastavení, sestavení projektu umožňuje **/Gm** – možnost ko
 
 [#import – direktiva](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Referenční dokumentace k příkazovému řádku](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (vytváření rychlejší PDB)](zf.md)<br/>
+[/Zf (rychlejší generování souborů PDB)](zf.md)<br/>

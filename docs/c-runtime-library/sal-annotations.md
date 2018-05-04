@@ -1,13 +1,10 @@
 ---
-title: "SAL – poznámky | Microsoft Docs"
-ms.custom: 
+title: SAL – poznámky | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e10e9b93beb811f42e15574014df6a464aadb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sal-annotations"></a>Poznámky SAL
 Pokud si projdete soubory hlaviček knihovny, můžete si povšimnout některé neobvyklou poznámky, například `_In_z` a `_Out_z_cap_(_Size)`. Toto jsou příklady jazyka Microsoft zdrojového kódu poznámky (SAL), která poskytuje sada poznámky popisují, jak funkce používá jeho parametry, například předpoklady, které provádí o nich a záruky, které provádí na dokončení. Soubor hlaviček \<sal.h > definuje poznámky.  

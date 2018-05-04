@@ -1,12 +1,9 @@
 ---
-title: "Třída CGlobalHeap | Microsoft Docs"
-ms.custom: 
+title: Třída CGlobalHeap | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CGlobalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap – třída
 Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí globální haldy Win32.  
@@ -56,7 +51,7 @@ class CGlobalHeap : public IAtlMemMgr
 |[CGlobalHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CGlobalHeap`implementuje pomocí funkcí globální haldy Win32 funkce přidělení paměti.  
+ `CGlobalHeap` implementuje pomocí funkcí globální haldy Win32 funkce přidělení paměti.  
   
 > [!NOTE]
 >  Funkce globální haldy jsou nižší než jiné funkce správy paměti a neposkytuje jako řadu funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou k dispozici v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy. Globální funkce jsou nadále používány DDE a funkce schránky.  
@@ -72,7 +67,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlmem.h  
   
-##  <a name="allocate"></a>CGlobalHeap::Allocate  
+##  <a name="allocate"></a>  CGlobalHeap::Allocate  
  Voláním této metody lze přidělit blok paměti.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementovaná pomocí [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) s parametrem příznak **GMEM_FIXED**.  
   
-##  <a name="free"></a>CGlobalHeap::Free  
+##  <a name="free"></a>  CGlobalHeap::Free  
  Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
-##  <a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
-##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
+##  <a name="reallocate"></a>  CGlobalHeap::Reallocate  
  Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
   
 ```

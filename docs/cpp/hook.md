@@ -1,12 +1,9 @@
 ---
 title: __hook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 Přidruží metoda obslužná rutina události.  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Ukazatel na metodu události, ke kterému napojit obslužná rutina události:  
   
 -   Nativní C++ události: *SourceClass* je třída zdroje událostí a *EventMethod* je událost.  
@@ -60,7 +55,7 @@ long __hook(
  `interface`  
  Název rozhraní se připojili k `receiver`, jenom pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver –](../windows/event-receiver.md) atribut je **true**.  
   
- *zdroj*  
+ *Zdroj*  
  Ukazatel na instanci zdroj události. V závislosti na kód `type` zadaný v **event_receiver –**, *zdroj* může být jedna z následujících akcí:  
   
 -   Nativní událostí zdrojového objektu ukazatel.  
@@ -69,7 +64,7 @@ long __hook(
   
 -   Ukazatel spravovaného objektu (pro spravované událostí).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Ukazatel na metodu obslužné rutiny události pro jazyka pro událost. Obslužná rutina je zadán jako metodu, třídu nebo odkaz na stejnou; Pokud nezadáte název třídy `__hook` předpokládá třídy, která má být, ve kterém se označuje jako.  
   
 -   Nativní C++ události: *ReceiverClass* je třída příjemce událostí a `HandlerMethod` je obslužná rutina.  
@@ -89,9 +84,9 @@ long __hook(
   
  Existují dvě formy `__hook`. První formulář (čtyři argumentů), ve většině případů můžete konkrétně použít pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver –](../windows/event-receiver.md) atribut je **false** .  
   
- V takových případech není nutné napojit všechny metody v rozhraní, než se aktivuje událost na jednu z metod; pouze metodu zpracování události je potřeba jazyka. Můžete použít druhý formulář (dva argumentů) z `__hook` pouze pro příjemce událostí COM ve kterém *layout_dependent***= true**.  
+ V takových případech není nutné napojit všechny metody v rozhraní, než se aktivuje událost na jednu z metod; pouze metodu zpracování události je potřeba jazyka. Můžete použít druhý formulář (dva argumentů) z `__hook` pouze pro příjemce událostí COM ve kterém * layout_dependent ***= true**.  
   
- `__hook`vrací dlouhou hodnotu. Vrácená nenulová hodnota určuje, že došlo k chybě (spravované události throw výjimku).  
+ `__hook` Vrací dlouhou hodnotu. Vrácená nenulová hodnota určuje, že došlo k chybě (spravované události throw výjimku).  
   
  Kompilátor zkontroluje existenci událost a že podpisu události souhlasí s podpisem delegáta.  
   

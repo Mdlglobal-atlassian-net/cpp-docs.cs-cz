@@ -1,13 +1,10 @@
 ---
 title: Druhy knihoven DLL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>Druhy knihoven DLL
 Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro sestavení.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Různé druhy knihoven DLL, které jsou k dispozici  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Různé druhy knihoven DLL, které jsou k dispozici  
  Pomocí Visual C++, můžete vytvořit Win32 knihovny DLL v jazyka C nebo C++, která nepoužívají knihovna Microsoft Foundation Class (MFC). Můžete vytvořit projekt knihovny MFC DLL pomocí Průvodce aplikací Win32.  
   
  Samotné knihovny MFC je k dispozici, buď statických knihoven nebo v počtu knihovny DLL pomocí Průvodce MFC DLL. Pokud vaše knihovna DLL je použití prostředí MFC, Visual C++ podporuje tři různé scénáře vývoje knihovny DLL:  
@@ -53,7 +48,7 @@ Toto téma obsahuje informace, které vám pomohou určit druh knihovny DLL pro 
   
 -   [Jaký druh knihovny DLL používat](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>Rozhodování, jaký druh knihovny DLL pro použití  
+##  <a name="_core_which_kind_of_dll_to_use"></a> Rozhodování, jaký druh knihovny DLL pro použití  
  Pokud vaše knihovna DLL nepoužívá MFC, použijte k vytvoření non - MFC Win32 DLL Visual C++. Propojování vaší knihovny DLL do MFC (staticky nebo dynamicky) zabere podstatné místo na disku a paměť. Pokud vaše knihovna DLL aktuálně používá MFC, by neměl MFC propojit.  
   
  Pokud vaše knihovna DLL použijete MFC a použije MFC nebo mimo MFC aplikací, musíte sestavit běžné knihovny DLL MFC, který dynamicky odkazuje na knihovny MFC nebo běžné knihovny DLL MFC, který staticky odkazuje na knihovny MFC. Ve většině případů budete chtít pravděpodobně používat běžné knihovny DLL MFC, který dynamicky odkazuje na knihovny MFC, protože budou mnohem menší velikost souboru knihovny DLL a úspory v paměti pomocí sdílené verze knihovny MFC může být důležité. Pokud se staticky propojíte s knihovnou MFC, velikost souboru vaší knihovny DLL bude větší a potenciálně trvat až paměť navíc, protože je načten jeho vlastní privátní kopii kódu knihovny MFC.  

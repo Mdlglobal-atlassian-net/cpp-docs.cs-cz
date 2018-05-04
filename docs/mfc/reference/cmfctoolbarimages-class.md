@@ -1,12 +1,12 @@
 ---
-title: "Třída CMFCToolBarImages | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCToolBarImages | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarImages
@@ -149,17 +149,17 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-caps.latest.revision: 
+caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 1e2e46c4716627a4e1310dc7b1adb0ddb93aa178
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages – třída
 Bitové kopie na panelu nástrojů. `CMFCToolBarImages` Třída spravuje nástrojů obrázky načtené z prostředky aplikace nebo soubory.  
@@ -257,7 +257,7 @@ class CMFCToolBarImages : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`Pokud je zakázána truecolor alfa míchání (32bitová verze barvu).|  
+|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` Pokud je zakázána truecolor alfa míchání (32bitová verze barvu).|  
   
 ## <a name="remarks"></a>Poznámky  
  Úplné rastrového obrázku panelu nástrojů obrázků spravuje `CMFCToolbarImages` se skládá z jedné nebo více obrázky malý panel nástrojů (tlačítka) s pevnou velikostí.  
@@ -276,7 +276,7 @@ class CMFCToolBarImages : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarimages.h  
   
-##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
+##  <a name="adaptcolors"></a>  CMFCToolBarImages::AdaptColors  
 
   
 ```  
@@ -286,12 +286,12 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrBase`  
- [v]`clrTone`  
+ [v] `clrBase`  
+ [v] `clrTone`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addicon"></a>CMFCToolBarImages::AddIcon  
+##  <a name="addicon"></a>  CMFCToolBarImages::AddIcon  
  Ikona přidá do seznamu obrázků panelu nástrojů.  
   
 ```  
@@ -301,16 +301,16 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hIcon`  
+ [v] `hIcon`  
  Popisovač pro ikonu, která má být přidán.  
   
- [v]`bAlphaBlend`  
- `TRUE`Pokud tato ikona je použita s alfa míchání; v opačném případě `FALSE`.  
+ [v] `bAlphaBlend`  
+ `TRUE` Pokud tato ikona je použita s alfa míchání; v opačném případě `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule obrázku panelu nástrojů, který byl přidán, pokud je metoda úspěšná. jinak-1.  
   
-##  <a name="addimage"></a>CMFCToolBarImages::AddImage  
+##  <a name="addimage"></a>  CMFCToolBarImages::AddImage  
  Přidá rastrový obrázek obrázků panelu nástrojů.  
   
 ```  
@@ -324,22 +324,22 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hbmp`  
+ [v] `hbmp`  
  Popisovač rastrového obrázku, který chcete přidat.  
   
- [v]`bSetBitPerPixel`  
- `TRUE`Pokud `CMFCToolBarImages` objektu používá hloubku barvy (bitů na pixel) novou bitovou kopii; `FALSE` Pokud `CMFCToolbarImages` objekt udržuje barevné hloubky.  
+ [v] `bSetBitPerPixel`  
+ `TRUE` Pokud `CMFCToolBarImages` objektu používá hloubku barvy (bitů na pixel) novou bitovou kopii; `FALSE` Pokud `CMFCToolbarImages` objekt udržuje barevné hloubky.  
   
- [v]`imageList`  
+ [v] `imageList`  
  Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.  
   
- [v]`nIndex`  
+ [v] `nIndex`  
  Index ve zdroji `CMFCToolbarImages` objekt bitovou kopii přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet nástrojů bitové kopie, který `CMFCToolBarImages` objekt udržuje po byl úspěšně; přidán nový rastrový obrázek -1, pokud operace se nezdařila.  
   
-##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
+##  <a name="cleanup"></a>  CMFCToolBarImages::CleanUp  
 
   
 ```  
@@ -348,14 +348,14 @@ static void __stdcall CleanUp();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="clear"></a>CMFCToolBarImages::Clear  
+##  <a name="clear"></a>  CMFCToolBarImages::Clear  
  Uvolní prostředky systému, [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) přidělené objektu.  
   
 ```  
 void Clear();
 ```  
   
-##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages  
+##  <a name="cmfctoolbarimages"></a>  CMFCToolBarImages::CMFCToolBarImages  
  Vytvoří `CMFCToolBarImages` objektu.  
   
 ```  
@@ -365,7 +365,7 @@ CMFCToolBarImages();
 ### <a name="remarks"></a>Poznámky  
  Vytvoří `CMFCToolBarImages` objektu, inicializuje jeho modul vykreslování a nastaví velikost bitové kopie na výchozí hodnotu 16 x 15 pixelů. Použití [CMFCToolBarImages::SetImageSize](#setimagesize) Chcete-li změnit velikost bitové kopie, před přidáním bitové kopie.  
   
-##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
+##  <a name="copyimagetoclipboard"></a>  CMFCToolBarImages::CopyImageToClipboard  
 
   
 ```  
@@ -373,13 +373,13 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iImage`  
+ [v] `iImage`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
+##  <a name="copyto"></a>  CMFCToolBarImages::CopyTo  
 
   
 ```  
@@ -387,13 +387,13 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`imageList`  
+ [v] `imageList`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList  
+##  <a name="createfromimagelist"></a>  CMFCToolBarImages::CreateFromImageList  
  Inicializuje obrázků panelu nástrojů z [CImageList – třída](../../mfc/reference/cimagelist-class.md) objektu.  
   
 ```  
@@ -401,7 +401,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`imageList`  
+ [v] `imageList`  
  Seznam obrázků má být použit jako zdroj pro obrázků panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -410,7 +410,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete rychle Inicializace seznamu obrázků panelu nástrojů ze seznamu externích obrázků.  
   
-##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
+##  <a name="createregionfromimage"></a>  CMFCToolBarImages::CreateRegionFromImage  
 
   
 ```  
@@ -420,14 +420,14 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bmp`  
- [v]`clrTransparent`  
+ [v] `bmp`  
+ [v] `clrTransparent`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="deleteimage"></a>CMFCToolBarImages::DeleteImage  
+##  <a name="deleteimage"></a>  CMFCToolBarImages::DeleteImage  
  Odstraní uživatelské image, který má zadaný index z obrázků panelu nástrojů.  
   
 ```  
@@ -435,13 +435,13 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iImage`  
+ [v] `iImage`  
  Určuje index založený na nule bitové kopie odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně; odstraněn bitovou kopii `FALSE` Pokud index bitové kopie je neplatný, `CMFCToolbarImages` objektu je dočasný, `CMFCToolbarImages` objekt neobsahuje uživatelská Image, nebo pokud některé jiné došlo k chybě.  
+ `TRUE` Pokud byl úspěšně; odstraněn bitovou kopii `FALSE` Pokud index bitové kopie je neplatný, `CMFCToolbarImages` objektu je dočasný, `CMFCToolbarImages` objekt neobsahuje uživatelská Image, nebo pokud některé jiné došlo k chybě.  
   
-##  <a name="draw"></a>CMFCToolBarImages::Draw  
+##  <a name="draw"></a>  CMFCToolBarImages::Draw  
  Nakreslí obrázek jednoho panelu nástrojů.  
   
 ```  
@@ -459,40 +459,40 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`x`  
+ [v] `x`  
  Souřadnice X levé straně obdélníku, kde má být vykreslen bitová kopie.  
   
- [v]`y`  
+ [v] `y`  
  Souřadnice Y horní části obdélníku, kde má být vykreslen bitová kopie.  
   
- [v]`iImageIndex`  
+ [v] `iImageIndex`  
  Index založený na nule bitové kopie, který se má zobrazit.  
   
- [v]`bHilite`  
- `TRUE`Pokud má bitová kopie se zvýrazněnou; v opačném případě `FALSE`.  
+ [v] `bHilite`  
+ `TRUE` Pokud má bitová kopie se zvýrazněnou; v opačném případě `FALSE`.  
   
- [v]`bDisabled`  
- `TRUE`Pokud má být vykreslen v zakázaném styl; bitová kopie v opačném případě `FALSE`.  
+ [v] `bDisabled`  
+ `TRUE` Pokud má být vykreslen v zakázaném styl; bitová kopie v opačném případě `FALSE`.  
   
- [v]`bIndeterminate`  
- `TRUE`Pokud má obrázek se vykresluje v neurčitém stavu styl; v opačném případě `FALSE`.  
+ [v] `bIndeterminate`  
+ `TRUE` Pokud má obrázek se vykresluje v neurčitém stavu styl; v opačném případě `FALSE`.  
   
- [v]`bShadow`  
- `TRUE`Pokud je bitovou kopii, které se mají vykreslovat s stín; v opačném případě `FALSE`.  
+ [v] `bShadow`  
+ `TRUE` Pokud je bitovou kopii, které se mají vykreslovat s stín; v opačném případě `FALSE`.  
   
- [v]`bInactive`  
- `TRUE`Pokud má obrázek se vykresluje v neaktivním stavu styl; v opačném případě `FALSE`.  
+ [v] `bInactive`  
+ `TRUE` Pokud má obrázek se vykresluje v neaktivním stavu styl; v opačném případě `FALSE`.  
   
- [v]`alphaSrc`  
+ [v] `alphaSrc`  
  Hodnotu alfa kanálu (krytí). Hodnota 255 znamená bitovou kopii je vykresleného neprůhledné. Hodnota 0 znamená obrázek se vykresluje transparentní. Tato hodnota se používá pouze pro 32bitové barev obrázků a bitové kopie, které zobrazují přehledné styl Windows Vista.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se zadanou bitovou kopii zobrazila úspěšně; `FALSE` Pokud index bitové kopie je neplatný nebo došlo k jiné chybě.  
+ `TRUE` Pokud se zadanou bitovou kopii zobrazila úspěšně; `FALSE` Pokud index bitové kopie je neplatný nebo došlo k jiné chybě.  
   
-##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
+##  <a name="drawex"></a>  CMFCToolBarImages::DrawEx  
 
   
 ```  
@@ -510,21 +510,21 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
- [v]`rect`  
- [v]`iImageIndex`  
- [v]`horzAlign`  
- [v]`vertAlign`  
- [v]`rectSrc`  
- [v]`0`  
- [v]`0)`  
- [v]`alphaSrc`  
+ [v] `pDC`  
+ [v] `rect`  
+ [v] `iImageIndex`  
+ [v] `horzAlign`  
+ [v] `vertAlign`  
+ [v] `rectSrc`  
+ [v] `0`  
+ [v] `0)`  
+ [v] `alphaSrc`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
+##  <a name="enablertl"></a>  CMFCToolBarImages::EnableRTL  
 
   
 ```  
@@ -532,11 +532,11 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bIsRTL`  
+ [v] `bIsRTL`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage  
+##  <a name="enddrawimage"></a>  CMFCToolBarImages::EndDrawImage  
  Uvolní prostředky systému, [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) po kreslení obrázku panelu nástrojů voláním přidělená [CMFCToolBarImages::Draw](#draw).  
   
 ```  
@@ -544,10 +544,10 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ds`  
+ [v] `ds`  
  Odkaz na `CAfxDrawState` objekt, který byl předán `PrepareDrawImage` metoda.  
   
-##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
+##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  Vrátí ikonu, která má index zadanou bitovou kopii z obrázků panelu nástrojů.  
   
 ```  
@@ -555,13 +555,13 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Index založený na nule v seznamu obrázků, na kterém je obrázek, který má být extrahovat jako ikony nachází.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro ikonu extrahované nebo `NULL` Pokud `nIndex` je mimo rozsah.  
   
-##  <a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect  
+##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  Vyplní obdélníku barvy pozadí panelu nástrojů.  
   
 ```  
@@ -571,16 +571,16 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Souřadnice obdélníku k vyplnění.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k vyplnění obdélníku s barvu, která je průměr barvy systému COLOR_BTNFACE a COLOR_BTNHIGHLIGHT. Pokud systém používá 256 nebo méně barev, rámeček bude vyplněn tónovaná vzor tyto dvě barvy místo.  
   
-##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
+##  <a name="getalwayslight"></a>  CMFCToolBarImages::GetAlwaysLight  
 
   
 ```  
@@ -591,7 +591,7 @@ BOOL GetAlwaysLight() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcount"></a>CMFCToolBarImages::GetCount  
+##  <a name="getcount"></a>  CMFCToolBarImages::GetCount  
  Vrátí počet bitových kopií v seznamu obrázků panelu nástrojů.  
   
 ```  
@@ -601,7 +601,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet obrázků v `CMFCToolBarImages` objektu.  
   
-##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha  
+##  <a name="getdisabledimagealpha"></a>  CMFCToolBarImages::GetDisabledImageAlpha  
  Vrátí hodnotu alfa kanálu (krytí), která se používá pro zakázané obrázky.  
   
 ```  
@@ -614,7 +614,7 @@ static BYTE GetDisabledImageAlpha();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) Chcete-li změnit hodnotu alfa kanálu.  
   
-##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
+##  <a name="getfadedimagealpha"></a>  CMFCToolBarImages::GetFadedImageAlpha  
 
   
 ```  
@@ -625,7 +625,7 @@ static BYTE __stdcall GetFadedImageAlpha();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getimagesize"></a>CMFCToolBarImages::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCToolBarImages::GetImageSize  
  Načte velikost obrázků panelu nástrojů, které jsou uložené v paměti (velikost zdroje) nebo velikost obrázků na panelu nástrojů, které jsou vykreslovány na obrazovce (velikost cílového).  
   
 ```  
@@ -633,8 +633,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bDest`  
- `TRUE`načtení velikost cílového; `FALSE` načíst zdroj velikost bitové kopie.  
+ [v] `bDest`  
+ `TRUE` načtení velikost cílového; `FALSE` načíst zdroj velikost bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `SIZE` strukturu, která určuje velikost obrázku v pixelech.  
@@ -644,7 +644,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
   
  Ve výchozím nastavení je velikost obrázku cílové 0x0. Zadejte velikost cílového při volání [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage). [CMFCToolBarImages::EndDrawImage](#enddrawimage) metoda velikost cílového obnoví na výchozí hodnotu.  
   
-##  <a name="getimagewell"></a>CMFCToolBarImages::GetImageWell  
+##  <a name="getimagewell"></a>  CMFCToolBarImages::GetImageWell  
  Vrátí popisovač rastrového obrázku, který obsahuje všechny bitové kopie panelu nástrojů.  
   
 ```  
@@ -657,7 +657,7 @@ HBITMAP GetImageWell() const;
 ### <a name="remarks"></a>Poznámky  
  Panel nástrojů Image jsou uložené v řádku v jednom rastrový obrázek, který se označuje jako *image dobře*. Chcete-li vyhledat obrázku panelu nástrojů na také bitové kopie, vynásobte index bitové kopie šířku obrázků na panelu nástrojů (v tématu [CMFCToolBarImages::GetImageSize](#getimagesize)) a získat vodorovný posun obrázku uvnitř bitovou kopii.  
   
-##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
+##  <a name="getimagewelllight"></a>  CMFCToolBarImages::GetImageWellLight  
 
   
 ```  
@@ -668,7 +668,7 @@ HBITMAP GetImageWellLight() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
+##  <a name="getlastimagerect"></a>  CMFCToolBarImages::GetLastImageRect  
 
   
 ```  
@@ -679,7 +679,7 @@ CRect GetLastImageRect() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
+##  <a name="getlightpercentage"></a>  CMFCToolBarImages::GetLightPercentage  
 
   
 ```  
@@ -690,7 +690,7 @@ int GetLightPercentage() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
+##  <a name="getmapto3dcolors"></a>  CMFCToolBarImages::GetMapTo3DColors  
 
   
 ```  
@@ -701,7 +701,7 @@ BOOL GetMapTo3DColors() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
+##  <a name="getmask"></a>  CMFCToolBarImages::GetMask  
 
   
 ```  
@@ -709,13 +709,13 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iImage`  
+ [v] `iImage`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset  
+##  <a name="getresourceoffset"></a>  CMFCToolBarImages::GetResourceOffset  
  Vrátí index obrázku pro ID zadaný prostředek.  
   
 ```  
@@ -723,13 +723,13 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiResId`  
+ [v] `uiResId`  
  Identifikátor prostředku bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index bitové kopie, pokud metoda byla úspěšná. -1, pokud bitovou kopii s ID zadaný prostředek neexistuje.  
   
-##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CMFCToolBarImages::GetTransparentColor  
 
   
 ```  
@@ -740,7 +740,7 @@ COLORREF GetTransparentColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="grayimages"></a>CMFCToolBarImages::GrayImages  
+##  <a name="grayimages"></a>  CMFCToolBarImages::GrayImages  
  Šedě obrázků panelu nástrojů Vzhled zakázané.  
   
 ```  
@@ -748,11 +748,11 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGrayImageLuminancePercentage`  
+ [v] `nGrayImageLuminancePercentage`  
  Procento světelnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byly úspěšně; šedý bitové kopie v kolekci v opačném případě `FALSE`.  
+ `TRUE` Pokud byly úspěšně; šedý bitové kopie v kolekci v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda upraví jeho obrázků průměrování červené, zelené a modré součástí každého pixelů a vynásobením výsledku podle `nGrayImageLuminancePercentage` dělený 100. Pokud `nGrayImageLuminancePercentage` je nula nebo záporná, použita výchozí hodnota 130 je místo.  
@@ -760,7 +760,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 > [!NOTE]
 >  Pokud chcete vrátit zpět změny, musíte znovu načtete bitové kopie ze zdroje. To provedete pomocí volání [CMFCToolBarImages::Load](#load) nebo [CMFCToolBarImages::UpdateImage](#updateimage) (pouze pro uživatelské Image), nebo voláním [CMFCToolBarImages::Clear](#clear)a přidání bitové kopie znovu voláním [CMFCToolBarImages::AddIcon](#addicon) nebo [CMFCToolBarImages::AddImage](#addimage).  
   
-##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported  
+##  <a name="is32bittransparencysupported"></a>  CMFCToolBarImages::Is32BitTransparencySupported  
  Určuje, zda operační systém podporuje prolnutí alfa 32-bit.  
   
 ```  
@@ -768,12 +768,12 @@ static BOOL Is32BitTransparencySupported();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je podporováno prolnutí alfa 32-bit; v opačném případě `FALSE`.  
+ `TRUE` Pokud je podporováno prolnutí alfa 32-bit; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto statickou metodu použijte k určení za běhu, zda operační systém podporuje prolnutí alfa 32-bit. Tato funkce je podporovaná v [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] a novějších verzích.  
+ Tuto statickou metodu použijte k určení za běhu, zda operační systém podporuje prolnutí alfa 32-bit. Tato funkce je podporovaná ve Windows 2000 a novějších verzích.  
   
-##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
+##  <a name="ispremultiplyautocheck"></a>  CMFCToolBarImages::IsPreMultiplyAutoCheck  
 
   
 ```  
@@ -784,7 +784,7 @@ BOOL IsPreMultiplyAutoCheck() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly  
+##  <a name="isreadonly"></a>  CMFCToolBarImages::IsReadOnly  
  Určuje, zda jeho obrázků jsou jen pro čtení.  
   
 ```  
@@ -792,12 +792,12 @@ BOOL IsReadOnly() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud obrázky panelu nástrojů nejsou jen pro čtení, jinak `FALSE`.  
+ `TRUE` Pokud obrázky panelu nástrojů nejsou jen pro čtení, jinak `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMFCToolbarImages` Objekt je jen pro čtení, když rastrového obrázku panelu nástrojů obrázky byla načtena ze souboru jen pro čtení, nebo když bitmapy jste zkopírovali v pomocí `CMFCToolBarImages::CopyTemp` metoda.  
   
-##  <a name="isrtl"></a>CMFCToolBarImages::IsRTL  
+##  <a name="isrtl"></a>  CMFCToolBarImages::IsRTL  
  Určuje, jestli je zapnutá podpora zprava doleva (RTL).  
   
 ```  
@@ -805,12 +805,12 @@ static BOOL IsRTL();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povolena podpora RTL; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povolena podpora RTL; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Podpora RTL se používá při aplikace je lokalizovaný pro jazyk, který je pro čtení zprava doleva, např. arabština, hebrejština, perština nebo urdština.  
   
-##  <a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList  
+##  <a name="isuserimageslist"></a>  CMFCToolBarImages::IsUserImagesList  
  Určuje, zda tato sada nástrojů Image obsahuje uživatelská Image.  
   
 ```  
@@ -818,9 +818,9 @@ BOOL IsUserImagesList() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud `CMFCToolBarImages` objekt obsahuje Image uživatelem definované nástrojů jinak `FALSE`.  
+ `TRUE` Pokud `CMFCToolBarImages` objekt obsahuje Image uživatelem definované nástrojů jinak `FALSE`.  
   
-##  <a name="isvalid"></a>CMFCToolBarImages::IsValid  
+##  <a name="isvalid"></a>  CMFCToolBarImages::IsValid  
  Určuje, jestli tato sada nástrojů Image obsahuje bitovou kopii platný panelu nástrojů.  
   
 ```  
@@ -828,12 +828,12 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud `CMFCToolBarImages` objektu je platná; jinak `FALSE`.  
+ `TRUE` Pokud `CMFCToolBarImages` objektu je platná; jinak `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMFCToolBarImages` Objektu není platný, pokud je jeho popisovač rastrového obrázku panelu nástrojů obrázky `NULL`.  
   
-##  <a name="load"></a>CMFCToolBarImages::Load  
+##  <a name="load"></a>  CMFCToolBarImages::Load  
  Načte obrázků panelu nástrojů z systémových prostředků nebo ze souboru.  
   
 ```  
@@ -848,28 +848,28 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiResID`  
+ [v] `uiResID`  
  ID prostředku bitové mapy.  
   
- [v]`hinstRes`  
+ [v] `hinstRes`  
  Instance prostředků knihovny DLL.  
   
- [v]`bAdd`  
- `TRUE`Přidání načíst rastrového obrázku do existujícího rastrového obrázku nebo `FALSE` k nahrazení existujícího rastrového obrázku.  
+ [v] `bAdd`  
+ `TRUE` Přidání načíst rastrového obrázku do existujícího rastrového obrázku nebo `FALSE` k nahrazení existujícího rastrového obrázku.  
   
- [v]`lpszBmpFileName`  
+ [v] `lpszBmpFileName`  
  Cesta k souboru na disku pro načtení bitové mapy.  
   
- [v]`nMaxFileSize`  
+ [v] `nMaxFileSize`  
  Maximální počet bajtů v souboru bitové mapy. nebo 0 pro načtení rastrového obrázku bez ohledu na velikost souboru. Pokud velikost souboru překročí této maximální velikosti, vrátí metoda `FALSE` a nenačte bitové mapy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně; načten bitové mapy v opačném případě `FALSE`.  
+ `TRUE` Pokud byl úspěšně; načten bitové mapy v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud má soubor atribut jen pro čtení, seznamu obrázků je označena jako jen pro čtení.  
   
-##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
+##  <a name="loadstr"></a>  CMFCToolBarImages::LoadStr  
 
   
 ```  
@@ -880,15 +880,15 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszResourceName`  
- [v]`hinstRes`  
- [v]`bAdd`  
+ [v] `lpszResourceName`  
+ [v] `hinstRes`  
+ [v] `bAdd`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
+##  <a name="mapfromsyscolor"></a>  CMFCToolBarImages::MapFromSysColor  
 
   
 ```  
@@ -898,14 +898,14 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
- [v]`bUseRGBQUAD`  
+ [v] `color`  
+ [v] `bUseRGBQUAD`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
+##  <a name="mapto3dcolors"></a>  CMFCToolBarImages::MapTo3dColors  
 
   
 ```  
@@ -916,15 +916,15 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bUseRGBQUAD`  
- [v]`clrSrc`  
- [v]`clrDest`  
+ [v] `bUseRGBQUAD`  
+ [v] `clrSrc`  
+ [v] `clrDest`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
+##  <a name="maptosyscolor"></a>  CMFCToolBarImages::MapToSysColor  
 
   
 ```  
@@ -934,14 +934,14 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
- [v]`bUseRGBQUAD`  
+ [v] `color`  
+ [v] `bUseRGBQUAD`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
+##  <a name="maptosyscoloralpha"></a>  CMFCToolBarImages::MapToSysColorAlpha  
 
   
 ```  
@@ -949,13 +949,13 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="mirror"></a>CMFCToolBarImages::Mirror  
+##  <a name="mirror"></a>  CMFCToolBarImages::Mirror  
  Nahradí jeho obrázků jejich vodorovné zrcadlený obraz.  
   
 ```  
@@ -963,12 +963,12 @@ BOOL Mirror();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud bitové kopie byly úspěšně zrcadleny; v opačném případě `FALSE`.  
+ `TRUE` Pokud bitové kopie byly úspěšně zrcadleny; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda se používá k podpoře systémů zápisu zprava doleva.  
   
-##  <a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap  
+##  <a name="mirrorbitmap"></a>  CMFCToolBarImages::MirrorBitmap  
  Rastrový obrázek nahradí jeho vodorovné zrcadlený obraz.  
   
 ```  
@@ -978,19 +978,19 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out]`hbmp`  
+ [ve out] `hbmp`  
  Popisovač pro rastrový obrázek pro zrcadlení.  
   
- [v]`cxImage`  
+ [v] `cxImage`  
  Šířka obrázku v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud image byla úspěšně zrcadlena; v opačném případě `FALSE`.  
+ `TRUE` Pokud image byla úspěšně zrcadlena; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce slouží k podpoře systémů zápis zprava doleva.  
   
-##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
+##  <a name="mirrorbitmapvert"></a>  CMFCToolBarImages::MirrorBitmapVert  
 
   
 ```  
@@ -1000,14 +1000,14 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hbmp`  
- [v]`cyImage`  
+ [v] `hbmp`  
+ [v] `cyImage`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
+##  <a name="mirrorvert"></a>  CMFCToolBarImages::MirrorVert  
 
   
 ```  
@@ -1018,7 +1018,7 @@ BOOL MirrorVert();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>  CMFCToolBarImages::OnSysColorChange  
 
   
 ```  
@@ -1027,7 +1027,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
+##  <a name="premultiplyalpha"></a>  CMFCToolBarImages::PreMultiplyAlpha  
 
   
 ```  
@@ -1039,15 +1039,15 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hbmp`  
- [v]`bAutoCheckPremlt`  
+ [v] `hbmp`  
+ [v] `bAutoCheckPremlt`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha  
- `TRUE`Pokud je zakázána truecolor alfa míchání (32bitová verze barvu).  
+##  <a name="m_bdisabletruecoloralpha"></a>  CMFCToolBarImages::m_bDisableTrueColorAlpha  
+ `TRUE` Pokud je zakázána truecolor alfa míchání (32bitová verze barvu).  
   
 ```  
 static BOOL m_bDisableTrueColorAlpha;  
@@ -1058,7 +1058,7 @@ static BOOL m_bDisableTrueColorAlpha;
   
  Výchozí hodnota je `TRUE` z důvodu zpětné kompatibility.  
   
-##  <a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage  
+##  <a name="preparedrawimage"></a>  CMFCToolBarImages::PrepareDrawImage  
  Přiděluje prostředky, které jsou potřebné k vykreslení obrázku panelu nástrojů na zadanou velikost.  
   
 ```  
@@ -1070,22 +1070,22 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ds`  
+ [v] `ds`  
  Odkaz na `CAfxDrawState` struktura, která ukládá přidělené prostředky mezi fázích vykreslování obrázku.  
   
- [v]`sizeImageDest`  
+ [v] `sizeImageDest`  
  Určuje velikost bitové kopie cílový.  
   
- [v]`bFadeInactive`  
- `TRUE`Pokud chcete neaktivní bitové kopie, které se mají vykreslovat barevně.  
+ [v] `bFadeInactive`  
+ `TRUE` Pokud chcete neaktivní bitové kopie, které se mají vykreslovat barevně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se prostředků nutných ke kreslení obrázku panelu nástrojů byly přiděleny úspěšně, jinak `FALSE`.  
+ `TRUE` Pokud se prostředků nutných ke kreslení obrázku panelu nástrojů byly přiděleny úspěšně, jinak `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Po volání této metody můžete volat [CMFCToolBarImages::Draw](#draw) žádné stanovený počet. Po dokončení kreslení musí volat [CMFCToolBarImages::EndDrawImage](#enddrawimage) uvolnit prostředky přidělené `PrepareDrawImage`.  
   
-##  <a name="save"></a>CMFCToolBarImages::Save  
+##  <a name="save"></a>  CMFCToolBarImages::Save  
  Ukládá obrázků panelu nástrojů v souboru, pokud je tato sada nástrojů Image obsahuje uživatelem definované bitových kopií.  
   
 ```  
@@ -1097,12 +1097,12 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
  Cesta k souboru na disku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se úspěšně; uložily obrázků panelu nástrojů v opačném případě `FALSE`.  
+ `TRUE` Pokud se úspěšně; uložily obrázků panelu nástrojů v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem ukládání bitových kopií uživatelem definované do souboru na disku. Pokud `lpszBmpFileName` je `NULL`, metoda ukládá do souboru, ze které byla načtena bitmapy podle bitmapy [CMFCToolBarImages::Load](#load) metoda.  
   
-##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
+##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
   
 ```  
@@ -1110,11 +1110,11 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bAlwaysLight`  
+ [v] `bAlwaysLight`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha  
+##  <a name="setdisabledimagealpha"></a>  CMFCToolBarImages::SetDisabledImageAlpha  
  Nastaví hodnotu alfa kanálu (krytí), která se používá pro zakázané obrázky.  
   
 ```  
@@ -1122,13 +1122,13 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nValue`  
+ [v] `nValue`  
  Novou hodnotu alfa kanálu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k nastavení vlastní alfa hodnotu pro zakázané bitové kopie. Výchozí hodnota je 127 znaků, což způsobí, že obrázky zakázané tlačítka být poloprůhledných. Pokud nastavíte hodnotu 0, bude zakázáno obrázky zcela transparentní. Pokud nastavíte hodnotu 255, bude zakázáno obrázky zcela neprůhledný.  
   
-##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
+##  <a name="setfadedimagealpha"></a>  CMFCToolBarImages::SetFadedImageAlpha  
 
   
 ```  
@@ -1136,11 +1136,11 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nValue`  
+ [v] `nValue`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setimagesize"></a>CMFCToolBarImages::SetImageSize  
+##  <a name="setimagesize"></a>  CMFCToolBarImages::SetImageSize  
  Nastaví velikost bitové kopie každého panelu nástrojů (velikost zdroje).  
   
 ```  
@@ -1150,13 +1150,13 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`sizeImage`  
+ [v] `sizeImage`  
  Nová velikost obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení na velikost obrázku panelu nástrojů je 16 x 15 pixelů. Volejte tuto metodu, pokud chcete použít obrázky různou velikost panelu nástrojů.  
   
-##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
+##  <a name="setlightpercentage"></a>  CMFCToolBarImages::SetLightPercentage  
 
   
 ```  
@@ -1164,11 +1164,11 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nValue`  
+ [v] `nValue`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
+##  <a name="setmapto3dcolors"></a>  CMFCToolBarImages::SetMapTo3DColors  
 
   
 ```  
@@ -1176,11 +1176,11 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bMapTo3DColors`  
+ [v] `bMapTo3DColors`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
+##  <a name="setpremultiplyautocheck"></a>  CMFCToolBarImages::SetPreMultiplyAutoCheck  
 
   
 ```  
@@ -1188,11 +1188,11 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bAuto`  
+ [v] `bAuto`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
+##  <a name="setsingleimage"></a>  CMFCToolBarImages::SetSingleImage  
 
   
 ```  
@@ -1201,7 +1201,7 @@ void SetSingleImage();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CMFCToolBarImages::SetTransparentColor  
  Nastaví průhledná barva obrázků na panelu nástrojů.  
   
 ```  
@@ -1209,7 +1209,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrTransparent`  
+ [v] `clrTransparent`  
  Hodnotu RGB.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1218,7 +1218,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ### <a name="remarks"></a>Poznámky  
  Pokud jste nebo rozhraní volání [CMFCToolBarImages::Draw](#draw), metoda není kreslení žádné pixelů, který odpovídá barvu určeného `clrTransparent`.  
   
-##  <a name="updateimage"></a>CMFCToolBarImages::UpdateImage  
+##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  Aktualizuje uživatelské nástrojů image z rastrového obrázku.  
   
 ```  
@@ -1228,16 +1228,16 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iImage`  
+ [v] `iImage`  
  Index založený na nule bitové kopie k aktualizaci.  
   
- [v]`hbmp`  
+ [v] `hbmp`  
  Popisovač pro bitovou mapu ze kterého chcete aktualizovat image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud image bylo úspěšně aktualizováno; `FALSE` Pokud seznamu obrázků není definovaný uživatelem nebo dočasné.  
+ `TRUE` Pokud image bylo úspěšně aktualizováno; `FALSE` Pokud seznamu obrázků není definovaný uživatelem nebo dočasné.  
   
-##  <a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits  
+##  <a name="convertto32bits"></a>  CMFCToolBarImages::ConvertTo32Bits  
  Převede podtržené bitmap na 32 bitů na pixel Image.  
   
 ```  
@@ -1250,7 +1250,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel  
+##  <a name="getbitsperpixel"></a>  CMFCToolBarImages::GetBitsPerPixel  
  Vrátí aktuální rozlišení podtržené obrázků.  
   
 ```  
@@ -1262,7 +1262,7 @@ int GetBitsPerPixel() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getscale"></a>CMFCToolBarImages::GetScale  
+##  <a name="getscale"></a>  CMFCToolBarImages::GetScale  
  Vrátí aktuální měřítko zvětšení podtržené bitových kopií.  
   
 ```  
@@ -1274,7 +1274,7 @@ double GetScale() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isscaled"></a>CMFCToolBarImages::IsScaled  
+##  <a name="isscaled"></a>  CMFCToolBarImages::IsScaled  
  Určuje, zda jsou škálovat podtržené bitové kopie, nebo ne.  
   
 ```  
@@ -1282,11 +1282,11 @@ BOOL IsScaled () const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou podtržené Image škálovat; v opačném případě `FALSE`.  
+ `TRUE` Pokud jsou podtržené Image škálovat; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="smoothresize"></a>CMFCToolBarImages::SmoothResize  
+##  <a name="smoothresize"></a>  CMFCToolBarImages::SmoothResize  
  Změní plynule podtržené bitové kopie.  
   
 ```  
@@ -1298,7 +1298,7 @@ BOOL SmoothResize(double dblImageScale);
  Měřítko zvětšení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se podaří změny velikosti; v opačném případě `FALSE`.  
+ `TRUE` Pokud se podaří změny velikosti; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   

@@ -1,12 +1,9 @@
 ---
-title: "Ukazatelé na členy | Microsoft Docs"
-ms.custom: 
+title: Ukazatelé na členy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
@@ -53,7 +48,7 @@ Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  J
   
     -   :: Operátor.  
   
-    -    **\***  Operátor.  
+    -   **\*** Operátor.  
   
     -   Volitelné **const** nebo `volatile` specifikátory.  
   
@@ -61,9 +56,9 @@ Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  J
   
     -   Inicializátoru volitelné:  
   
-  **=**  Operátor.  
+ **=** Operátor.  
   
-  **&**  Operátor.  
+ **&** Operátor.  
   
  Kvalifikovaný název třídy.  
   
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Rozdíl mezi **.\***  a  **-> \***  operátory (operátory ukazatelů na členy) je, že **.\***  operátor vybere členy zadaný objekt, nebo odkaz na objekt, při  **-> \***  operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorů najdete v tématu [výrazy s operátory ukazatelů na členy](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Rozdíl mezi **.\***  a **-> \*** operátory (operátory ukazatelů na členy) je, že **.\***  operátor vybere členy zadaný objekt, nebo odkaz na objekt, při **-> \*** operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorů najdete v tématu [výrazy s operátory ukazatelů na členy](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Typ člena je výsledek operátory ukazatelů na členy – v takovém případě **char \*** .  
   

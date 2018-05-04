@@ -1,12 +1,9 @@
 ---
-title: "Pomocí CString | Microsoft Docs"
-ms.custom: 
+title: Pomocí CString | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cstring"></a>Pomocí CString
 Témata v této části popisují, jak programovat s `CString`. Pro referenční dokumentaci o `CString` třídy, najdete v dokumentaci k [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -36,11 +31,11 @@ Témata v této části popisují, jak programovat s `CString`. Pro referenční
   
  A `CStringW` objekt obsahuje `wchar_t` zadejte a podporuje řetězců v kódu Unicode. A `CStringA` objekt obsahuje `char` typu a řetězce podporuje jednobajtové a vícebajtové (znakové sady MBCS). A `CString` objekt podporuje buď `char` typu nebo `wchar_t` typu, v závislosti na tom, jestli `MBCS` symbol nebo `UNICODE` symbol je definována v době kompilace.  
   
- A `CString` objekt uchová textová data `CStringData` objektu. `CString`přijímá `null`-ukončenou stylu jazyka C řetězce, ale není zachována `null` znak v datech uložených znak. Místo toho `CString` sleduje řetězec délky. `CString`poskytnout zakončením hodnotu null, když exportuje řetězec stylu jazyka C. Můžete vložit `null` v `CString`, ale jeho může vést k neočekávaným výsledkům.  
+ A `CString` objekt uchová textová data `CStringData` objektu. `CString` přijímá `null`-ukončenou stylu jazyka C řetězce, ale není zachována `null` znak v datech uložených znak. Místo toho `CString` sleduje řetězec délky. `CString` poskytnout zakončením hodnotu null, když exportuje řetězec stylu jazyka C. Můžete vložit `null` v `CString`, ale jeho může vést k neočekávaným výsledkům.  
   
  Následující sadu řetězec třídy lze použít bez propojení knihovny MFC, s nebo bez CRT – podpora: `CAtlString`, `CAtlStringA`, a `CAtlStringW`.  
   
- `CString`se používá v nativní projekty. Pro spravovaný kód (C + +/ CLI) projektů, použití `System::String`.  
+ `CString` se používá v nativní projekty. Pro spravovaný kód (C + +/ CLI) projektů, použití `System::String`.  
   
  Chcete-li přidat další možnosti než `CString`, `CStringA`, nebo `CStringW` nyní nenabízejí, měli byste vytvořit podtřídou třídy `CStringT` obsahující další funkce.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Přetížení operátoru | Microsoft Docs"
-ms.custom: 
+title: Přetížení operátoru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>Přetížení operátoru
 `operator` – Klíčové slovo deklaruje funkci zadání co `operator-symbol` znamená při použití instance třídy. To dává operátor více než jeden význam, nebo "přetížení" jej. Kompilátor rozlišuje mezi různé významy operátoru prověřením typy operandů.  
@@ -108,7 +103,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Přiřazení](../cpp/assignment.md)  
   
--   [Volání funkce](../cpp/function-call-cpp.md)  
+-   [Volání funkcí](../cpp/function-call-cpp.md)  
   
 -   [Podskripty](../cpp/subscripting.md)  
   
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Přírůstek a snížení](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Převody uživatelsky definovaný typ.](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Převody typů definovaných uživatelem](../cpp/user-defined-type-conversions-cpp.md)  
   
  Operátory uvedené v následující tabulce nemohou být přetíženy. V tabulce jsou zahrnuty preprocesoru symboly `#` a `##`.  
   
@@ -187,7 +182,7 @@ int main() {
   
 4.  [Přiřazení](../cpp/assignment.md)  
   
-5.  [Volání funkce](../cpp/function-call-cpp.md)  
+5.  [Volání funkcí](../cpp/function-call-cpp.md)  
   
 6.  [Podskripty](../cpp/subscripting.md)  
   

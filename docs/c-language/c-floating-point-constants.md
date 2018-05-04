@@ -1,13 +1,10 @@
 ---
-title: "Konstanty jazyka C s plovoucí desetinnou čárkou | Microsoft Docs"
-ms.custom: 
+title: Konstanty jazyka C s plovoucí desetinnou čárkou | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,43 +15,41 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67883acbb2a6d5c0df075c47b7eda0d40a568f38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-floating-point-constants"></a>Konstanty jazyka C s plovoucí desetinnou čárkou
 "S plovoucí desetinnou čárkou konstanta" je desetinné číslo představující podepsaný reálné číslo. Reprezentace podepsaný reálné číslo zahrnuje celočíselnou část, zlomkové části a exponentem. Konstanty s plovoucí desetinnou čárkou znázornit s plovoucí desetinnou čárkou, které nelze změnit.  
   
 ## <a name="syntax"></a>Syntaxe  
  *Konstanta floating point*:  
- &nbsp;&nbsp;*zlomkové konstanta exponent – část*<sub>opt</sub> *plovoucí příponu*<sub>opt</sub>  
- &nbsp;&nbsp;*plovoucí exponent část číslice pořadí přípona*<sub>opt</sub>  
+ &nbsp;&nbsp; *exponent částí zlomkové konstanta*<sub>výslovný</sub> *plovoucí příponu*<sub>opt</sub>  
+ &nbsp;&nbsp; *plovoucí exponent část číslice pořadí přípona*<sub>opt</sub>  
   
  *desetinná konstanta*:  
- &nbsp;&nbsp;*číslice pořadí*<sub>opt</sub> **.** *pořadí číslice*  
- &nbsp;&nbsp;*číslice pořadí***.**   
+ &nbsp;&nbsp; *pořadí číslice*<sub>opt</sub> **.** *pořadí číslice*  
+ &nbsp;&nbsp; *pořadí číslice***.**   
   
  *exponent část*:  
- &nbsp;&nbsp;**e***přihlašovací*<sub>opt</sub> *pořadí číslice*   
- &nbsp;&nbsp;**E***přihlašovací*<sub>opt</sub> *pořadí číslice*   
+ &nbsp;&nbsp; **e***přihlašovací*<sub>opt</sub> *pořadí číslice*   
+ &nbsp;&nbsp; **E***přihlašovací*<sub>opt</sub> *pořadí číslice*   
   
  *přihlašovací* : jeden z  
  &nbsp;&nbsp; **+ -**  
   
  *pořadí číslice*:  
- &nbsp;&nbsp;*číslice*  
- &nbsp;&nbsp;*číslice pořadí číslice*  
+ &nbsp;&nbsp; *Číslice*  
+ &nbsp;&nbsp; *pořadí číslice číslice*  
   
  *plovoucí příponu* : jeden z  
- &nbsp;&nbsp;**L l F f**  
+ &nbsp;&nbsp; **f l F L**  
   
  Je možné vynechat buď číslic od desetinné čárky (celočíselnou část hodnoty) nebo číslice za desetinnou čárkou (část), ale ne pomocí obou. Můžete ponechat si desetinné čárky pouze v případě, že zahrnují exponentem. Bez prázdných znaků můžete oddělit číslic nebo znaků, konstanty.  
   

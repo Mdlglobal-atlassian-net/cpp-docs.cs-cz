@@ -1,12 +1,9 @@
 ---
-title: "Třída CComEnumImpl | Microsoft Docs"
-ms.custom: 
+title: Třída CComEnumImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl – třída
 Tato třída poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v matici.  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|**IUnknown** ukazatele objektu poskytuje kolekci ve výčtu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComEnumImpl`poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v matici. Tato třída je obdobou `IEnumOnSTLImpl` třídy, která představuje implementaci objektu enumerátor rozhraní založené na kontejner standardní knihovna C++.  
+ `CComEnumImpl` poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v matici. Tato třída je obdobou `IEnumOnSTLImpl` třídy, která představuje implementaci objektu enumerátor rozhraní založené na kontejner standardní knihovna C++.  
   
 > [!NOTE]
 >  Podrobnosti o další rozdíly mezi `CComEnumImpl` a `IEnumOnSTLImpl`, najdete v části [CComEnumImpl::Init](#init).  
@@ -112,21 +107,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  Konstruktor  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl  
  Destruktor.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  Tato metoda musí volat před předáním ukazatele rozhraní enumerátor zpět na všechny klienty.  
   
 ```
@@ -138,7 +133,7 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *začít*  
+ *Začátek*  
  Ukazatel na první prvek pole obsahující položky, které chcete vytvořit její výčet.  
   
  `end`  
@@ -158,7 +153,7 @@ HRESULT Init(
   
  Pokud předáte ukazatele položky v poli uchovávat v jiném objektu (a neptat enumerátor ke zkopírování dat), můžete použít *pUnk* parametr zajistit, že jsou k dispozici pro stejně dlouho jako enumerátor objekt a pole drží je potřebuje. Enumerátor jednoduše obsahuje COM odkaz na objekt pro zachování připojení. Odkaz na COM automaticky vydání při enumerátor zničena.  
   
- `flags` Parametr umožňuje určit, jak by měly enumerátor zpracovávat elementy pole do ní předán. `flags`můžete provést jednu z hodnot z **CComEnumFlags** výčtu vidíte níže:  
+ `flags` Parametr umožňuje určit, jak by měly enumerátor zpracovávat elementy pole do ní předán. `flags` můžete provést jednu z hodnot z **CComEnumFlags** výčtu vidíte níže:  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  Prototyp tato metoda určuje, že je typu prvků pole **T**, kde **T** byl definován jako parametr šablony k třídě. Toto je stejný typ, který je zveřejněný prostřednictvím metody rozhraní COM [CComEnumImpl::Next](#next). Vyplývá tohoto předpokládají, že na rozdíl od [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), tato třída nepodporuje jiného úložiště a datové typy viditelné. Datový typ elementů v poli musí být stejný jako datový typ, který je zveřejněný prostřednictvím rozhraní modelu COM.  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  Tato metoda poskytuje implementace [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metoda tak, že vytvoříte objekt typu `CComEnum`, inicializace stejným pole a iterator používá aktuální objekt nebo vrátit rozhraní na nově vytvořený objekt.  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Poznámky  
  Klonovaný výčty nikdy provádět vlastní kopii (nebo převzít vlastnictví) dat používá původní enumerátor. V případě potřeby klonovaný výčty ponechá původní enumerátor zachování připojení (pomocí odkazu COM) k zajištění, že data nejsou k dispozici pro tak dlouho, dokud je potřebují.  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  Ukazatel this inteligentní udržuje odkaz na objekt předaný [CComEnumImpl::Init](#init), zajistíte, aby zůstala aktivní po dobu životnosti enumerátor.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  Ukazatel na umístění bezprostředně za posledním elementem pole obsahující položky, které chcete vytvořit její výčet.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  Ukazatel na první prvek pole obsahující položky, které chcete vytvořit její výčet.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  Ukazatel na aktuálního elementu pole obsahující položky, které chcete vytvořit její výčet.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  V příznacích předaný [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  Tato metoda poskytuje implementace [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metoda.  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  Tato metoda poskytuje implementace [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metoda.  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>  CComEnumImpl::Skip  
  Tato metoda poskytuje implementace [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metoda.  
   
 ```

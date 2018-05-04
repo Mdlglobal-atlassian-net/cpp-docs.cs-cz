@@ -1,13 +1,10 @@
 ---
-title: "Analýza argumentů příkazového řádku jazyka C | Microsoft Docs"
-ms.custom: 
+title: Analýza argumentů příkazového řádku jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3db47ca48e52babc03923dfba7b1dcb8173cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b61bae046e73c4e49bbcaeb095b7bf230e95dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C
 **Konkrétní Microsoft**  
@@ -42,9 +37,9 @@ ms.lasthandoff: 12/21/2017
   
 -   Zpětná lomítka se interpretují oznámena, pokud se okamžitě předcházet uvozovky.  
   
--   Pokud sudý počet zpětná lomítka následuje uvozovky, pak jeden zpětné lomítko (**\\**) je umístěn v `argv` pole pro každý pár zpětná lomítka ( **\\ \\** ) a dvojité uvozovky (**"**) interpretována jako oddělovač řetězec.  
+-   Pokud sudý počet zpětná lomítka následuje uvozovky, pak jeden zpětné lomítko (**\\**) je umístěn v `argv` pole pro každý pár zpětná lomítka (**\\ \\**) a dvojité uvozovky (**"**) interpretována jako oddělovač řetězec.  
   
--   Pokud lichý počet zpětná lomítka následuje uvozovky, pak jeden zpětné lomítko (**\\**) je umístěn v `argv` pole pro každý pár zpětná lomítka ( **\\ \\** ) a dvojité uvozovky se interpretuje jako řídicí sekvence ve zbývajících zpětné lomítko, způsobuje literálu uvozovky (**"**) umístit do `argv`.  
+-   Pokud lichý počet zpětná lomítka následuje uvozovky, pak jeden zpětné lomítko (**\\**) je umístěn v `argv` pole pro každý pár zpětná lomítka (**\\ \\**) a dvojité uvozovky se interpretuje jako řídicí sekvence ve zbývajících zpětné lomítko, způsobuje literálu uvozovky (**"**) umístit do `argv`.  
   
  Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výsledku předaného do `argv` pro několik příkladů argumentů příkazového řádku. Výstup uvedený v druhém, třetím a čtvrtém sloupci je z aplikace ARGS.C, která následuje seznam.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlArray | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlArray
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffebf8289b7c1eb5ccaae5a6b6a5f2a3f939cbb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ceeaf5250cc9dc5cb4cb25c47b3fe179c7c5295
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlarray-class"></a>CAtlArray – třída
 Tato třída implementuje objekt array.  
@@ -92,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[operátor &#91; &#93;](#operator_at)|Volání tento operátor vrací odkaz na element v poli.|  
+|[operátor&#91;&#93;](#operator_at)|Volání tento operátor vrací odkaz na element v poli.|  
 
   
 ### <a name="typedefs"></a>Typedefs  
@@ -114,7 +109,7 @@ class CAtlArray
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcoll.h  
   
-##  <a name="add"></a>CAtlArray::Add  
+##  <a name="add"></a>  CAtlArray::Add  
  Voláním této metody lze přidat element do objekt array.  
   
 ```
@@ -135,7 +130,7 @@ size_t Add();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
-##  <a name="append"></a>CAtlArray::Append  
+##  <a name="append"></a>  CAtlArray::Append  
  Voláním této metody lze přidat na konec jiné obsah jedno pole.  
   
 ```
@@ -159,7 +154,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
-##  <a name="assertvalid"></a>CAtlArray::AssertValid  
+##  <a name="assertvalid"></a>  CAtlArray::AssertValid  
  Volejte tuto metodu za účelem potvrzení, že je platný objekt array.  
   
 ```
@@ -172,7 +167,7 @@ void AssertValid() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
-##  <a name="catlarray"></a>CAtlArray::CAtlArray  
+##  <a name="catlarray"></a>  CAtlArray::CAtlArray  
  Konstruktor  
   
 ```
@@ -185,7 +180,7 @@ CAtlArray() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
-##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
+##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray  
  Destruktor.  
   
 ```
@@ -195,7 +190,7 @@ CAtlArray() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny prostředky využívané objektem pole.  
   
-##  <a name="copy"></a>CAtlArray::Copy  
+##  <a name="copy"></a>  CAtlArray::Copy  
  Volejte tuto metodu pro kopírování prvků jedno pole do jiného.  
   
 ```
@@ -214,12 +209,12 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
  V sestavení pro ladění, bude vyvolána ATLASSERT, pokud existující `CAtlArray` objekt není platný, nebo pokud `aSrc` odkazuje na stejný objekt. V sestavení pro vydání neplatné argumenty může způsobit nepředvídatelné chování.  
   
 > [!NOTE]
-> `CAtlArray::Copy`nepodporuje pole skládající se z prvků vytvořených pomocí [CAutoPtr](../../atl/reference/cautoptr-class.md) třídy.  
+> `CAtlArray::Copy` nepodporuje pole skládající se z prvků vytvořených pomocí [CAutoPtr](../../atl/reference/cautoptr-class.md) třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
-##  <a name="freeextra"></a>CAtlArray::FreeExtra  
+##  <a name="freeextra"></a>  CAtlArray::FreeExtra  
  Voláním této metody lze odebrat všechny prázdné prvky z pole.  
   
 ```
@@ -231,7 +226,7 @@ void FreeExtra() throw();
   
  V sestavení pro ladění ATLASSERT, bude vyvolána pokud CAtlArray objekt není platný, nebo pokud pole by překročila maximální velikosti.  
   
-##  <a name="getat"></a>CAtlArray::GetAt  
+##  <a name="getat"></a>  CAtlArray::GetAt  
  Volání, že tuto metodu za účelem načte jeden element z objektu pole.  
   
 ```
@@ -252,7 +247,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
-##  <a name="getcount"></a>CAtlArray::GetCount  
+##  <a name="getcount"></a>  CAtlArray::GetCount  
  Volejte tuto metodu za účelem vrátí počet prvků, které jsou uložené v poli.  
   
 ```
@@ -268,7 +263,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlArray::GetAt](#getat).  
   
-##  <a name="getdata"></a>CAtlArray::GetData  
+##  <a name="getdata"></a>  CAtlArray::GetData  
  Volejte tuto metodu vrátit ukazatel na první prvek v poli.  
   
 ```
@@ -282,14 +277,14 @@ const E* GetData() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
-##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
+##  <a name="inargtype"></a>  CAtlArray::INARGTYPE  
  Datový typ pro použití při přidávání elementů do pole.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
+##  <a name="insertarrayat"></a>  CAtlArray::InsertArrayAt  
  Volejte tuto metodu za účelem vložení do jiné jedno pole.  
   
 ```
@@ -309,12 +304,12 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
  V sestavení pro ladění, bude vyvolána ATLASSERT, pokud `CAtlArray` objekt není platný, nebo pokud `paNew` ukazatel má hodnotu NULL nebo neplatná.  
   
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`nepodporuje pole skládající se z prvků vytvořených pomocí [CAutoPtr](../../atl/reference/cautoptr-class.md) třídy.  
+> `CAtlArray::InsertArrayAt` nepodporuje pole skládající se z prvků vytvořených pomocí [CAutoPtr](../../atl/reference/cautoptr-class.md) třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
-##  <a name="insertat"></a>CAtlArray::InsertAt  
+##  <a name="insertat"></a>  CAtlArray::InsertAt  
  Volejte tuto metodu za účelem vložení nového elementu (nebo více kopií elementu) do pole objektu.  
   
 ```
@@ -339,7 +334,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CAtlArray::IsEmpty  
+##  <a name="isempty"></a>  CAtlArray::IsEmpty  
  Volejte tuto metodu za účelem testování, je-li pole prázdné.  
   
 ```
@@ -355,7 +350,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="operator_at"></a>[CAtlArray::operator]  
+##  <a name="operator_at"></a>  [CAtlArray::operator]  
  Volání tento operátor vrací odkaz na element v poli.  
   
 ```
@@ -375,14 +370,14 @@ const E& operator[](size_t ielement) const throw();
   
  V sestavení pro ladění, bude-li vyvolána ATLASSERT `iElement` překračuje celkový počet prvků v poli. V sestavení pro maloobchodní neplatný parametr může způsobit nepředvídatelné výsledky.  
   
-##  <a name="outargtype"></a>CAtlArray::OUTARGTYPE  
+##  <a name="outargtype"></a>  CAtlArray::OUTARGTYPE  
  Datový typ pro načítání elementy z pole.  
   
 ```
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```  
   
-##  <a name="removeall"></a>CAtlArray::RemoveAll  
+##  <a name="removeall"></a>  CAtlArray::RemoveAll  
  Voláním této metody lze odebrat všechny elementy z objektu pole.  
   
 ```
@@ -397,7 +392,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlArray::IsEmpty](#isempty).  
   
-##  <a name="removeat"></a>CAtlArray::RemoveAt  
+##  <a name="removeat"></a>  CAtlArray::RemoveAt  
  Volejte tuto metodu za účelem odeberte jeden či více elementů z pole.  
   
 ```
@@ -419,7 +414,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
-##  <a name="setat"></a>CAtlArray::SetAt  
+##  <a name="setat"></a>  CAtlArray::SetAt  
  Volejte tuto metodu a nastavit hodnotu elementu v objektu pole.  
   
 ```
@@ -439,7 +434,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlArray::GetAt](#getat).  
   
-##  <a name="setcount"></a>CAtlArray::SetCount  
+##  <a name="setcount"></a>  CAtlArray::SetCount  
  Volejte tuto metodu a nastavit velikost pole objektu.  
   
 ```
@@ -464,7 +459,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlArray::GetData](#getdata).  
   
-##  <a name="setatgrow"></a>CAtlArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CAtlArray::SetAtGrow  
  Volejte tuto metodu a nastavit hodnotu elementu v objektu pole, rozšíření pole podle potřeby.  
   
 ```

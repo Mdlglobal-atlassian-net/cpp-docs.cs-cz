@@ -1,12 +1,9 @@
 ---
-title: "Třída CDebugReportHook | Microsoft Docs"
-ms.custom: 
+title: Třída CDebugReportHook | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDebugReportHook
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook – třída
 Tato třída slouží k ladění sestavy poslat pojmenovaný kanál.  
@@ -72,7 +67,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
   
-##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  
  Volání [SetPipeName](#setpipename), [SetTimeout](#settimeout), a [SetHook](#sethook).  
   
 ```
@@ -92,14 +87,14 @@ CDebugReportHook(
  `dwTimeout`  
  Doba v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.  
   
-##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
  Volání [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
  Vlastní funkce vytváření sestav, která je byl zapojen do běhu C ladění procesu generování sestav.  
   
 ```
@@ -116,7 +111,7 @@ static int __cdecl CDebugReportHookProc(
  `message`  
  Řetězec zprávy.  
   
- *returnValue*  
+ *ReturnValue*  
  Hodnota, která má být vrácen podle [_crtdbgreport –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -127,7 +122,7 @@ static int __cdecl CDebugReportHookProc(
   
  Kód v této funkci se spustí v kontextu zabezpečení základní volající vlákno, to znamená, že je zakázána zosobnění dobu trvání této funkce.  
   
-##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  Voláním této metody lze zastavit odesílání sestav ladění k pojmenovanému kanálu a obnovit předchozí háku sestavy.  
   
 ```
@@ -137,7 +132,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [_crtsetreporthook2 –](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) obnovit předchozí háku sestavy.  
   
-##  <a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>  CDebugReportHook::SetHook  
  Voláním této metody lze zahájit odesílání sestav ladění k pojmenovanému kanálu.  
   
 ```
@@ -147,7 +142,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [_crtsetreporthook2 –](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) tak, aby měl ladění sestavy směrován přes [CDebugReportHookProc](#cdebugreporthookproc) k pojmenovanému kanálu. Tato třída uchovává informace o předchozích háku sestavy tak, aby je bylo možné obnovit při [RemoveHook](#removehook) je volána.  
   
-##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
  Volejte tuto metodu a nastavit počítač a název kanálu, na které se budou odesílat sestavy ladění.  
   
 ```
@@ -166,7 +161,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, v případě úspěchu FALSE při selhání.  
   
-##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
  Volejte tuto metodu a nastavit čas v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.  
   
 ```

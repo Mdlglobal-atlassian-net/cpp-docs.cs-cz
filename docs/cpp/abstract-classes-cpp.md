@@ -1,12 +1,9 @@
 ---
-title: "Abstraktní třídy (C++) | Microsoft Docs"
-ms.custom: 
+title: Abstraktní třídy (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60f46ccdae3b92f60708354078fafb244d29bbe3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="abstract-classes-c"></a>Abstraktní třídy (C++)
 Abstraktní třídy fungují jako výrazy obecné koncepty, ze kterých lze odvodit více určité třídy. Nelze vytvořit objekt typu abstraktní třídy; Můžete však použít ukazatelů a odkazy na abstraktní typy tříd.  
@@ -66,7 +61,7 @@ private:
   
  Čistě virtuální funkce mohou být definovány pro abstraktní třídy, ale mohou být volány pouze pomocí této syntaxe:  
   
- *Název třídy abstraktní* `::` *název funkce***)**  
+ *Název třídy abstraktní* `::` *funkce – název ***)**  
   
  Tato vlastnost je výhodná při návrhu hierarchií tříd, jejichž základní třídy zahrnují čistě virtuální destruktory, protože destruktory základních tříd jsou vždy volány během procesu ničení objektu. Podívejte se na následující příklad:  
   

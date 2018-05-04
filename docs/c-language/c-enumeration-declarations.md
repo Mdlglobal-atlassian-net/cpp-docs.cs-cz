@@ -1,13 +1,10 @@
 ---
-title: "Deklarace výčtů C | Microsoft Docs"
-ms.custom: 
+title: Deklarace výčtů C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>Deklarace výčtů v jazyce C
 Výčet obsahuje sadu s názvem celočíselné konstanty. Deklarace typu výčtu poskytuje název značky – výčet (volitelné) a definuje sadu identifikátorů pojmenované celé číslo (nazývá "– výčet sady," "enumerátor konstanty," "výčty" nebo "členové"). Proměnné s typem výčtu ukládá jednu z hodnot – výčet sady definované typu.  
@@ -39,9 +34,9 @@ Výčet obsahuje sadu s názvem celočíselné konstanty. Deklarace typu výčtu
   
 ## <a name="syntax"></a>Syntaxe  
  *enum – specifikátor*:  
- **výčet***identifikátor* opt**{** *enumerátor seznamu* **}**   
+ **výčet***identifikátor* opt **{** *enumerátor seznamu* **}**   
   
- **výčet***identifikátor*   
+ **výčet***identifikátor*  
   
  Volitelné *identifikátor* názvy typ výčtu definované *enumerátor seznamu*. Tento identifikátor se často nazývá "značky" výčtu určeného v seznamu. Specifikátor typu formuláře  
   
@@ -68,10 +63,10 @@ enumerator-list
  `enumerator`:  
  *Konstanta výčtu*  
   
- *Konstanta výčtu***=***konstantní výraz*   
+ *Konstanta výčtu***=***konstantní výraz*  
   
  *Konstanta výčtu*:  
- *identifikátor*  
+ *Identifikátor*  
   
  Každý *konstanta výčtu* v *seznamu výčtu* názvy hodnotu – výčet sady. Ve výchozím nastavení první *konstanta výčtu* souvisí s hodnotou 0. Další *konstanta výčtu* v seznamu souvisí s hodnotou ( *konstantní výraz* + 1), pokud ji explicitně spojit s jinou hodnotou. Název *konstanta výčtu* je ekvivalentní na jeho hodnotu.  
   

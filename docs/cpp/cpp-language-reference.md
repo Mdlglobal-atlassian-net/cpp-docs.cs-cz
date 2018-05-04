@@ -1,13 +1,10 @@
 ---
 title: Referenční příručka jazyka C++ | Microsoft Docs
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na *The poznámkou ruční C++ odkaz* Margaret Ellis a Bjarnem Stroustrupem a ANSI/ISO C++ mezinárodní standardní (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.  
@@ -84,7 +79,7 @@ Přehled programování postupy moderní verze jazyka C++, najdete v části [V�
  Zpracování výjimek v jazyce C++, strukturované zpracování výjimek (SEH), klíčová slova používaná při psaní příkazů pro zpracování výjimek.  
   
  [Kontrolní výraz a uživatelem zadané zprávy](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error`Direktiva, `static_assert` – klíčové slovo, `assert` makro.  
+ `#error` Direktiva, `static_assert` – klíčové slovo, `assert` makro.  
   
  [Šablony](../cpp/templates-cpp.md)  
  Specifikace šablony, šablony funkce, šablony třídy, klíčové slovo pro název typu, šablony vs. makra, šablony a inteligentní ukazatele.  

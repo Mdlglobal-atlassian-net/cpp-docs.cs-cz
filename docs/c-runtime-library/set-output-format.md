@@ -1,13 +1,10 @@
 ---
-title: "_set_output_format – | Microsoft Docs"
-ms.custom: 
+title: _set_output_format – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _set_output_format
 apilocation:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d61b17bb597028bec55edb148897929f178392d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Přizpůsobí výstupní formáty používané funkce formátovaný vstupně-výstupní operace.  
@@ -58,16 +53,16 @@ unsigned int _set_output_format(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`format`  
+ [v] `format`  
  Hodnotu představující formát, který se použije.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Výstupní formát.  
   
 ## <a name="remarks"></a>Poznámky  
- `_set_output_format`slouží ke konfiguraci výstup naformátovaný funkce vstupně-výstupních operací, jako [printf_s –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době pouze formátování konvence, která lze změnit pomocí této funkce je počet číslic, na které se zobrazí v exponenty ve výstupu plovoucí desetinnou čárkou.  
+ `_set_output_format` slouží ke konfiguraci výstup naformátovaný funkce vstupně-výstupních operací, jako [printf_s –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době pouze formátování konvence, která lze změnit pomocí této funkce je počet číslic, na které se zobrazí v exponenty ve výstupu plovoucí desetinnou čárkou.  
   
- Ve výchozím nastavení, výstup plovoucí bodu čísla pomocí funkce, jako `printf_s`, `wprintf_s`, a související funkce v knihovně Visual C++ standardní C vytiskne tří číslic pro exponent, i v případě tří číslic nemusejí představují hodnota exponent. Nul se používají k vyplnění hodnota, která má tři znaky. `_set_output_format`umožňuje toto chování změnit tak, aby pouze dvě číslice jsou vytištěn v exponent, pokud je velikost exponent nevyžaduje třetí číslice.  
+ Ve výchozím nastavení, výstup plovoucí bodu čísla pomocí funkce, jako `printf_s`, `wprintf_s`, a související funkce v knihovně Visual C++ standardní C vytiskne tří číslic pro exponent, i v případě tří číslic nemusejí představují hodnota exponent. Nul se používají k vyplnění hodnota, která má tři znaky. `_set_output_format` umožňuje toto chování změnit tak, aby pouze dvě číslice jsou vytištěn v exponent, pokud je velikost exponent nevyžaduje třetí číslice.  
   
  Povolit letopočty exponenty, volání této funkce s parametrem `_TWO_DIGIT_EXPONENT`, jak je znázorněno v příkladu. Zakázat dvě číslice exponenty, volejte tuto funkci s argumentem 0.  
   
@@ -75,7 +70,7 @@ unsigned int _set_output_format(
   
 |Rutina|Požadovaný hlavičkový soubor|  
 |-------------|---------------------|  
-|`_set_output_format`|\<stdio.h >|  
+|`_set_output_format`|\<stdio.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../c-runtime-library/compatibility.md) v úvodu.  
   

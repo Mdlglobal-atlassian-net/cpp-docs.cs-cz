@@ -1,12 +1,9 @@
 ---
-title: "Třída CRBMultiMap | Microsoft Docs"
-ms.custom: 
+title: Třída CRBMultiMap | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap – třída
 Tato třída reprezentuje strukturu mapování, která umožňuje že každý klíč může být přidružen více než jednu hodnotu, pomocí binárního stromu Red černé.  
@@ -80,7 +75,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMultiMap::RemoveKey](#removekey)|Voláním této metody lze odebrat všechny elementy klíč/hodnota pro zadaný klíč.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRBMultiMap`poskytuje podporu pro mapování pole daného typu, Správa uspořádaného pole klíčové prvky a hodnot. Na rozdíl od [CRBMap](../../atl/reference/crbmap-class.md) třída, každý klíč může být přidružen více než jednu hodnotu.  
+ `CRBMultiMap` poskytuje podporu pro mapování pole daného typu, Správa uspořádaného pole klíčové prvky a hodnot. Na rozdíl od [CRBMap](../../atl/reference/crbmap-class.md) třída, každý klíč může být přidružen více než jednu hodnotu.  
   
  Elementy (tvořený klíč a hodnotu) se ukládají do binárního stromu struktury, pomocí [CRBMultiMap::Insert](#insert) metoda. Elementy se dá odebrat pomocí [CRBMultiMap::RemoveKey](#removekey) metoda, která odstraňuje všechny elementy, které odpovídají danému klíči.  
   
@@ -88,7 +83,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `KTraits` a `VTraits` parametry jsou třídy vlastností, které obsahují žádný doplňkový kód potřebné k zkopírovat nebo přesunout elementy.  
   
- `CRBMultiMap`je odvozený od [CRBTree](../../atl/reference/crbtree-class.md), který implementuje pomocí algoritmu Red černé binárního stromu. Alternativu k `CRBMultiMap` a `CRBMap` nabízí [CAtlMap](../../atl/reference/catlmap-class.md) třídy. Když pouze malý počet elementů musí být uložen, zvažte použití [CSimpleMap](../../atl/reference/csimplemap-class.md) třídy místo.  
+ `CRBMultiMap` je odvozený od [CRBTree](../../atl/reference/crbtree-class.md), který implementuje pomocí algoritmu Red černé binárního stromu. Alternativu k `CRBMultiMap` a `CRBMap` nabízí [CAtlMap](../../atl/reference/catlmap-class.md) třídy. Když pouze malý počet elementů musí být uložen, zvažte použití [CSimpleMap](../../atl/reference/csimplemap-class.md) třídy místo.  
   
  Podrobnější informace o různých třídy kolekce a jejich funkce a vlastnosti výkonu, najdete v části [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
@@ -100,7 +95,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcoll.h  
   
-##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap  
  Konstruktor  
   
 ```
@@ -119,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap  
  Destruktor.  
   
 ```
@@ -131,7 +126,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
-##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
  Voláním této metody lze najít pozici první prvek s daným klíčem.  
   
 ```
@@ -153,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
  Voláním této metody lze získat hodnotu přidružené k danému klíči a aktualizujte hodnotu pozici.  
   
 ```
@@ -183,7 +178,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
  Voláním této metody lze získat element přidružené k danému klíči a aktualizujte hodnotu pozici.  
   
 ```
@@ -210,7 +205,7 @@ CPair* GetNextWithKey(
   
  Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
-##  <a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>  CRBMultiMap::Insert  
  Volejte tuto metodu za účelem vložení dvojici element do mapy.  
   
 ```
@@ -233,7 +228,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
  Voláním této metody lze odebrat všechny elementy klíč/hodnota pro zadaný klíč.  
   
 ```
@@ -248,7 +243,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
  Vrátí počet hodnot, které jsou přidružené k danému klíči.  
   
 ### <a name="remarks"></a>Poznámky  
- `RemoveKey`Odstraní všechny prvky klíč/hodnota, které mají klíč, který odpovídá `key`.  
+ `RemoveKey` Odstraní všechny prvky klíč/hodnota, které mají klíč, který odpovídá `key`.  
   
  Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   

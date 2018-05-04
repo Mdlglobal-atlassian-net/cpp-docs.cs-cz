@@ -1,12 +1,9 @@
 ---
-title: "Třída CComClassFactory2 | Microsoft Docs"
-ms.custom: 
+title: Třída CComClassFactory2 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 – třída
 Tato třída implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní.  
@@ -46,7 +41,7 @@ class CComClassFactory2 : public IClassFactory2,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *licence*  
+ *Licence*  
  Třídu, která implementuje statické následující funkce:  
   
 - **verifylicensekey – statické BOOL (BSTR** `bstr` **);**  
@@ -68,7 +63,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Vytvoří a vrátí licenční klíč.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComClassFactory2`implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, což je rozšíření z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** ovládací prvky objektu vytváření licence. Spuštění licenční klíč můžete zadat třídu objektu pro vytváření, provádění na licencovanou počítači. Tento licenční klíč umožňuje aplikaci k vytváření instancí objektů při úplné počítač licence neexistuje.  
+ `CComClassFactory2` implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, což je rozšíření z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** ovládací prvky objektu vytváření licence. Spuštění licenční klíč můžete zadat třídu objektu pro vytváření, provádění na licencovanou počítači. Tento licenční klíč umožňuje aplikaci k vytváření instancí objektů při úplné počítač licence neexistuje.  
   
  Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactory2`, zadejte [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makra v definici třídy objektu. Příklad:  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`je odvozena z obou **CComClassFactory2Base** a *licence*. **CComClassFactory2Base**, pak je odvozena z **IClassFactory2** a **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` je odvozena z obou **CComClassFactory2Base** a *licence*. **CComClassFactory2Base**, pak je odvozena z **IClassFactory2** a **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CComObjectRootBase`  
@@ -94,7 +89,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  Vytvoří objekt zadaného CLSID a načte ukazatele rozhraní k tomuto objektu.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>Poznámky  
  Vyžaduje, aby počítač plně licenci. Pokud licence úplná počítači neexistuje, zavolejte [CreateInstanceLic](#createinstancelic).  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  Podobně jako [CreateInstance](#createinstance)kromě toho, že `CreateInstanceLic` vyžaduje licenční klíč.  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>Poznámky  
  Můžete získat licenční klíč pomocí [RequestLicKey](#requestlickey). Chcete-li vytvořit objekt na počítači bez licence, musí volat `CreateInstanceLic`.  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  Vyplní celé [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) struktura s informacemi, které popisují objektu pro vytváření tříd je licencování možností.  
   
 ```
@@ -169,7 +164,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>Poznámky  
  `fRuntimeKeyAvail` Členem tato struktura Určuje, zda, zadána licenční klíč objektu pro vytváření tříd umožňuje vytvořit na počítači bez licence objekty. *FLicVerified* člen označuje, zda existuje licenci úplné počítače.  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
  Zvýší a sníží počet zámek modulu voláním **_Module::Lock** a **_Module::Unlock**, v uvedeném pořadí.  
   
 ```
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  Volání metody `LockServer` umožňuje klienta tak, aby udržení na objekt pro vytváření tříd, aby více objektů můžete rychle vytvořit.  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  Vytvoří a vrátí licenční klíč, za předpokladu, že `fRuntimeKeyAvail` členem [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) struktura je **TRUE**.  
   
 ```

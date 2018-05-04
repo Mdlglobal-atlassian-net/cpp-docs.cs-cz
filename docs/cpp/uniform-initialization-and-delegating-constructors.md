@@ -1,27 +1,22 @@
 ---
-title: "Uniform inicializace a delegování konstruktorů | Microsoft Docs"
-ms.custom: 
+title: Uniform inicializace a delegování konstruktorů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d8f9724ba7f26ac9df9b81c1e4c3f6213f76a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednotná inicializace a delegování konstruktorů
 V moderní verze jazyka C++, můžete použít *složených závorek inicializace* pro jakýkoli typ bez symbolem rovná se. Navíc můžete delegování konstruktorů zjednodušit kód, když máte více konstruktory, které provádějí podobné práci.  

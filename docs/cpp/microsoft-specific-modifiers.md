@@ -1,27 +1,22 @@
 ---
-title: "Modifikátory specifické pro společnost Microsoft | Microsoft Docs"
-ms.custom: 
+title: Modifikátory specifické pro společnost Microsoft | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9533ffc2d21c3e8ee006fc97f7c61f4cb41115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8490a50f30d366a53a9e3288417a8d83032c556d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
 Tato část popisuje specifické pro společnost Microsoft rozšíření pro C++ v těchto oblastech:  
@@ -40,7 +35,7 @@ Tato část popisuje specifické pro společnost Microsoft rozšíření pro C++
   
 |– Klíčové slovo|Význam|Použít k vytvoření odvozené typy?|  
 |-------------|-------------|---------------------------------|  
-|[__based –](../cpp/based-grammar.md)|Název, který následuje deklaruje 32-bit posun základní 32-bit obsažené v deklaraci.|Ano|  
+|[__based](../cpp/based-grammar.md)|Název, který následuje deklaruje 32-bit posun základní 32-bit obsažené v deklaraci.|Ano|  
 |[__cdecl](../cpp/cdecl.md)|Název, který následuje používá C pojmenování a konvence volání.|Ano|  
 |[__declspec](../cpp/declspec.md)|Název, který následuje Určuje atribut třídy úložiště specifické pro společnost Microsoft.|Ne|  
 |[__fastcall](../cpp/fastcall.md)|Název, který následuje deklaruje funkci, která používá registrů, pokud je k dispozici, místo zásobníku pro předávání argumentů.|Ano|  

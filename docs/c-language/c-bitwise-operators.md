@@ -1,13 +1,10 @@
 ---
-title: "Bitové operátory jazyka C | Microsoft Docs"
-ms.custom: 
+title: Bitové operátory jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81498cfcc2dc93c407bfde5e9d832a9abdeab970
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bitwise-operators"></a>Bitové operátory jazyka C
 
@@ -40,15 +35,15 @@ Bitové operátory provést bitový- a (**&**), bitový exkluzivní OR (**^**) a
 ## <a name="syntax"></a>Syntaxe
 
 *A výraz*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*Výraz a*  **&**  *rovnosti – výraz*
+&nbsp;&nbsp;*rovnost – výraz*  
+&nbsp;&nbsp;*Výraz a* **&** *rovnosti – výraz*
 
-*exclusive-OR-expression*:  
+*výraz exkluzivní OR*:  
 &nbsp;&nbsp;*AND – výraz*  
-&nbsp;&nbsp;*výraz exkluzivní OR*  **^**  *a výraz*
+&nbsp;&nbsp;*výraz exkluzivní OR* **^** *a výraz*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
+*včetně výraz OR*:  
+&nbsp;&nbsp;*výraz exkluzivní OR*  
 &nbsp;&nbsp;*včetně výraz OR* &#124; *výraz exkluzivní OR*
 
 Operandy bitové operátory musí mít integrální typy, ale jejich typy mohou být různé. Obvyklé aritmetické převody; provést tyto operátory Typ výsledku je typ operandy po převodu.
@@ -83,7 +78,7 @@ n = i ^ j;
 
 Bitový inkluzivní nebo v druhém příkladu výsledkem hodnota 0xABCD (hexadecimální), zatímco bitový exkluzivní OR v třetím příkladu vytvoří 0xCD (hexadecimální).
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 Výsledky bitové operace na podepsaná celá čísla je definován implementace podle standardní ANSI C. Pro kompilátor Microsoft C bitové operace na podepsaná celá čísla fungovat stejně jako bitové operace na celá čísla bez znaménka. Například `-16 & 99` může být vyjádřený v binární soubor jako
 
@@ -102,4 +97,4 @@ Výsledek bitové operace AND je 96 decimal.
 
 [Bitový operátor AND: &](../cpp/bitwise-and-operator-amp.md)  
 [Bitový exkluzivní operátor OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Bitový inkluzivní operátor OR: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Bitový inkluzivní operátor OR:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  

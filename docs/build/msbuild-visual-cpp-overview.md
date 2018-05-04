@@ -2,28 +2,23 @@
 title: Přehled nástroje MSBuild (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Přehled nástroje MSBuild (Visual C++)  
   
@@ -84,9 +79,9 @@ Ve výchozím nastavení jsou primární soubory podpory Visual C++ nachází v 
   
 |Adresář|Popis|  
 |---------------|-----------------|  
-|*jednotka*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*jednotka*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*verze*\ |Obsahuje soubory primární cíl (.targets) a vlastnost soubory (props), které jsou používány cíle. Ve výchozím nastavení makro $(VCTargetsPath) odkazuje tento adresář.|  
-|*jednotka*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\ <br /><br />*jednotka*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ |Obsahuje soubory specifické pro platformu cíle a vlastnosti, které přepsání cíle a vlastnosti v jeho nadřazeném adresáři. Tento adresář také obsahuje knihovnu DLL, kterou definuje úlohy, které jsou používány cíle v tomto adresáři.<br /><br /> *Platformy* zástupný symbol představuje ARM, Win32 nebo x64 podadresáři.|  
-|*jednotka*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\PlatformToolsets\\*sada nástrojů*\ <br /><br />*jednotka*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ PlatformToolsets\\*sada nástrojů*\ <br /><br />*jednotka*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platformy*\PlatformToolsets\\*sada nástrojů*\ |Obsahuje adresáře, které umožňují sestavení ke generování aplikací Visual C++ pomocí zadaného *nástrojů*.<br /><br /> *Roku* a *edice* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro sadu Visual Studio 2012, V120 pro Visual Studio 2013 nebo V140 pro Visual Studio 2015. *Platformy* zástupný symbol představuje ARM, Win32 nebo x64 podadresáři. *Nástrojů* zastupuje podadresáři sada nástrojů, například v140 pro vytváření aplikací pro Windows pomocí sady nástrojů Visual Studio 2015, v120_xp k sestavení pro systém Windows XP pomocí nástrojů Visual Studio 2013 nebo v110_wp80 na zástupný symbol vývoj aplikací pro Windows Phone 8.0 pomocí nástrojů Visual Studio 2012.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení ke generování aplikace Visual C++ 2008 nebo Visual C++ 2010 *verze*a *platformy* představuje zástupný symbol Itanium, Win32 nebo x64 podadresáři. *Nástrojů* nástrojů podadresáři v90 nebo v100 zastupuje zástupný symbol.|  
+|*jednotka*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*jednotka*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*verze*\ |Obsahuje soubory primární cíl (.targets) a vlastnost soubory (props), které jsou používány cíle. Ve výchozím nastavení makro $(VCTargetsPath) odkazuje tento adresář.|  
+|*jednotka*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\ <br /><br />*jednotka*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ |Obsahuje soubory specifické pro platformu cíle a vlastnosti, které přepsání cíle a vlastnosti v jeho nadřazeném adresáři. Tento adresář také obsahuje knihovnu DLL, kterou definuje úlohy, které jsou používány cíle v tomto adresáři.<br /><br /> *Platformy* zástupný symbol představuje ARM, Win32 nebo x64 podadresáři.|  
+|*jednotka*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*edition*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\PlatformToolsets\\*sada nástrojů*\ <br /><br />*jednotka*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*verze*\Platforms\\*platformy*\ PlatformToolsets\\*sada nástrojů*\ <br /><br />*jednotka*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platformy*\PlatformToolsets\\*sada nástrojů*\ |Obsahuje adresáře, které umožňují sestavení ke generování aplikací Visual C++ pomocí zadaného *nástrojů*.<br /><br /> *Roku* a *edice* zástupné symboly používají Visual Studio 2017 a novější verze. *Verze* zástupný symbol je V110 pro sadu Visual Studio 2012, V120 pro Visual Studio 2013 nebo V140 pro Visual Studio 2015. *Platformy* zástupný symbol představuje ARM, Win32 nebo x64 podadresáři. *Nástrojů* zastupuje podadresáři sada nástrojů, například v140 pro vytváření aplikací pro Windows pomocí sady nástrojů Visual Studio 2015, v120_xp k sestavení pro systém Windows XP pomocí nástrojů Visual Studio 2013 nebo v110_wp80 na zástupný symbol vývoj aplikací pro Windows Phone 8.0 pomocí nástrojů Visual Studio 2012.<br /><br />Neobsahuje cestu, která obsahuje adresáře, které umožňují sestavení ke generování aplikace Visual C++ 2008 nebo Visual C++ 2010 *verze*a *platformy* představuje zástupný symbol Itanium, Win32 nebo x64 podadresáři. *Nástrojů* nástrojů podadresáři v90 nebo v100 zastupuje zástupný symbol.|  
   
 ### <a name="support-files"></a>Soubory podpory aplikace  
   
@@ -96,7 +91,7 @@ Souborové adresáře podporu obsahovat soubory s těmito příponami:
 |---------------|-----------------|  
 |.TARGETS|Obsahuje `Target` elementů XML určující úlohy, které jsou spouštěny cíl. Může také obsahovat `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`a uživatelem definovanými `Item` elementy, které slouží k přiřazení soubory a možnosti příkazového řádku pro parametry úlohy.<br /><br /> Další informace najdete v tématu [Target – Element (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|  
 |props|Obsahuje `Property Group` a uživatelem definovanými `Property` elementů XML, které zadejte soubor a parametr nastavení, které se používají při sestavení.<br /><br /> Může také obsahovat `ItemDefinitionGroup` a uživatelem definovanými `Item` elementů XML, které zadejte další nastavení. Položky definované ve skupině Definice podobají vlastnosti, ale není přístupný z příkazového řádku. Soubory projektu Visual C++ často používá položky místo vlastnosti k reprezentaci nastavení.<br /><br /> Další informace najdete v tématu [ItemGroup – Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup – Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), a [Item – Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|  
-|.XML|Obsahuje elementy XML, které deklarace a inicializace prvky uživatelského rozhraní IDE například seznam vlastností a stránky vlastností a ovládací prvky formátovaného textu a v seznamu.<br /><br /> Soubory XML přímo podporují IDE, nejsou MSBuild. Hodnoty vlastností IDE však přiřazené k vytvoření vlastností a položek.<br /><br /> Většina souborů .xml jsou v podadresáři specifická pro národní prostředí. Například soubory pro oblast USA angličtina jsou v \1033 $(VCTargetsPath)\\.|  
+|.xml|Obsahuje elementy XML, které deklarace a inicializace prvky uživatelského rozhraní IDE například seznam vlastností a stránky vlastností a ovládací prvky formátovaného textu a v seznamu.<br /><br /> Soubory XML přímo podporují IDE, nejsou MSBuild. Hodnoty vlastností IDE však přiřazené k vytvoření vlastností a položek.<br /><br /> Většina souborů .xml jsou v podadresáři specifická pro národní prostředí. Například soubory pro oblast USA angličtina jsou v \1033 $(VCTargetsPath)\\.|  
   
 ## <a name="user-targets-and-properties"></a>Cíle uživatele a vlastnosti  
   

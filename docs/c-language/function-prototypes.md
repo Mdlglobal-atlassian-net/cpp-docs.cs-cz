@@ -1,13 +1,10 @@
 ---
 title: Funkce prototypy | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Prototypy funkcí
 Deklarace funkce předchází v definici funkce a určuje název, návratový typ, třídy úložiště a dalších atributů funkce. Jako prototyp, třeba deklarace funkce vytvořit také typy a identifikátory pro argumenty funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
  `declaration`:  
- *specifikátory deklarace atribut seq* opt*init. deklarátor seznamu* opt**;**  
+ *specifikátory deklarace atribut seq* opt*init. deklarátor seznamu* opt **;**  
   
  /\* *atribut seq* opt je specifické pro Microsoft * /  
   
@@ -48,9 +43,9 @@ Deklarace funkce předchází v definici funkce a určuje název, návratový ty
  *init-declarator-list*:  
  *init-declarator*  
   
- *init-declarator-list*  **,**  *init-declarator*  
+ *Init – deklarátor seznamu***,***init deklarátor*   
   
- *init-declarator*:  
+ *Init – deklarátor*:  
  *deklarátor*  
   
  *deklarátor = inicializátoru*  
@@ -59,9 +54,9 @@ Deklarace funkce předchází v definici funkce a určuje název, návratový ty
  *ukazatel* opt*přímo deklarátor*  
   
  *deklarátor přímo*: /\* deklarátor – funkce \*/  
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl       \*/  
+ *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl \*/  
   
- *deklarátor přímo***(***seznam identifikátorů* opt**)** / * deklarátor zastaralé stylu     \*/  
+ *deklarátor přímo***(***seznam identifikátorů* opt **)** / * deklarátor zastaralé stylu \*/  
   
  Prototyp má stejné formuláře jako definice této funkce, s výjimkou toho, aby je ukončen středníkem hned za uzavírací kulatá závorka a proto nemá žádné body. V obou případech návratový typ, musíte souhlasit s návratovým typem zadaný v definici funkce.  
   

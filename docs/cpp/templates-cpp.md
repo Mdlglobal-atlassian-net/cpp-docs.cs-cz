@@ -1,12 +1,9 @@
 ---
-title: "Šablony (C++) | Microsoft Docs"
-ms.custom: 
+title: Šablony (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Šablony (C++)
 Šablony jsou základem pro obecné programování v jazyce C++. Jako jazyk silného typu vyžaduje C++ všechny proměnné tak, aby měl konkrétního typu buď explicitně deklarovaná programátorů nebo odvodit kompilátorem. Ale mnoha datové struktury a algoritmy vypadají stejně bez ohledu na to, jaký typ jsou provozu na. Povolit šablony vám umožňuje definovat operace třídy nebo funkce a umožňují určit, jaké konkrétní typy tyto operace by měla spolupracovat na.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Výše uvedený kód Popisuje šablonu pro obecné funkce s jediný parametr typu `T`, jehož vrátit hodnotu a volání parametry (lhs a rhs) jsou všechny tohoto typu. Parametr typu můžete pojmenovat nic, co je třeba, ale podle konvence jeden velká písmena se běžně používají. `T`je parametr šablony; `typename` – klíčové slovo říká, že tento parametr je zástupný symbol pro typu. Při volání funkce kompilátoru nahradí všechny instance řetězce `T` s argumentem konkrétní typ, který je buď specifikovaných uživatelem nebo odvodit kompilátorem. Proces, ve kterém kompilátor vygeneruje třídu nebo funkce z šablony se označuje jako *vytváření instancí šablon*;   `minimum<int>` je vytvoření instance šablony `minimum<T>`.  
+ Výše uvedený kód Popisuje šablonu pro obecné funkce s jediný parametr typu `T`, jehož vrátit hodnotu a volání parametry (lhs a rhs) jsou všechny tohoto typu. Parametr typu můžete pojmenovat nic, co je třeba, ale podle konvence jeden velká písmena se běžně používají. `T` je parametr šablony; `typename` – klíčové slovo říká, že tento parametr je zástupný symbol pro typu. Při volání funkce kompilátoru nahradí všechny instance řetězce `T` s argumentem konkrétní typ, který je buď specifikovaných uživatelem nebo odvodit kompilátorem. Proces, ve kterém kompilátor vygeneruje třídu nebo funkce z šablony se označuje jako *vytváření instancí šablon*;   `minimum<int>` je vytvoření instance šablony `minimum<T>`.  
   
  Jinam uživatel může deklarovat instance šablony, která se specializuje na int. Předpokládejme, že get_a() a get_b() jsou funkce, které vrací typ int:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Pravidla pro jak kompilátor provede odvození typu v šablonách funkce jsou na základě pravidel pro běžné funkce. Další informace najdete v tématu [přetížení řešení z volání šablony funkce](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Parametry typu  
+## <a id="type_parameters"></a> Parametry typu  
  V `minimum` šablony výše, Všimněte si, že parametr typu `T` není kvalifikován žádným způsobem, dokud se v parametrech volání funkce používá, kde jsou přidány const a kvalifikátory odkaz.  
   
  Neexistuje žádné praktické omezení počtu parametrů typu. Několik parametrů oddělte čárkami:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Ostatní typy hodnot, včetně ukazatelů a odkazů na lze předat ve jako parametry bez typu. Můžete například předat v ukazatel do funkce nebo funkce objekt, který chcete přizpůsobit některé operace uvnitř kód šablony.  
   
-## <a id="template_parameters"></a>Šablony jako parametry šablony  
+## <a id="template_parameters"></a> Šablony jako parametry šablony  
  Šablony může být parametr šablony. V tomto příkladu MyClass2 má dva parametry šablony: Parametr typename `T` a parametr šablony `Arr`:  
   
 ```cpp  

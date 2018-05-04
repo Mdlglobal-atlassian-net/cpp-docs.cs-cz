@@ -1,30 +1,25 @@
 ---
-title: "Převody z typů s plovoucí desetinnou čárkou | Microsoft Docs"
-ms.custom: 
+title: Převody z typů s plovoucí desetinnou čárkou | Microsoft Docs
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e84ba9a78f78fd93d7bd7fedbcbfaf168a7ec2
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ce86a9ceffaa5d9dacfe56e6b89b677b3abb1517
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversions-from-floating-point-types"></a>Převody z typů s plovoucí desetinnou čárkou
 
@@ -32,7 +27,7 @@ A **float** převést na hodnotu **dvojité** nebo **long double**, nebo **dvoji
 
 Je převést hodnotu plovoucí celočíselné hodnoty podle první převod na **dlouho**, pak z **dlouho** hodnotu s konkrétní hodnotou integrální. Za desetinnou hodnotu s plovoucí se zahodí v převod na **dlouho**. Pokud je stále výsledek příliš velký pro uložení do **dlouho**, výsledek převodu není definován.
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 Při převodu **dvojité** nebo **long double** číslo s plovoucí desetinnou čárkou menší na dvě desetinná čísla, hodnota proměnné s plovoucí desetinnou čárkou se zkrátí směrem k nule, když dojde podtečení. Přetečení způsobí, že chyba spuštění. Všimněte si, že mapuje kompilátoru Microsoft C **long double** na typ **dvojité**.
 

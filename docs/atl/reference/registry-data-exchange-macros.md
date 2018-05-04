@@ -2,11 +2,8 @@
 title: Výměna dat registru makra | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlplus/ATL::BEGIN_RDX_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bc12c48ef628a42c309c44ce0fc37abda9b6690
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-data-exchange-macros"></a>Makra Exchange dat registru
 Tyto makra provádět operace výměny dat registru.  
@@ -47,7 +42,7 @@ Tyto makra provádět operace výměny dat registru.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlplus.h  
    
-##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
  Označuje začátek mapy výměny dat registru.  
   
 ```
@@ -66,14 +61,14 @@ BEGIN_RDX_MAP
   
  Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se použije vždy, když je váš kód pro výměnu dat mezi systémového registru a proměnné určené v mapě RDX.  
   
-##  <a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>  END_RDX_MAP  
  Označuje konec mapy výměny dat registru.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>  RDX_BINARY  
  Zadaná položka registru přidruží zadané členské proměnné typu BAJTŮ.  
   
 ```
@@ -104,7 +99,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>Poznámky  
  Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
   
-##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
  Zadaná položka registru přidruží proměnné typu CString zadaného člena.  
   
 ```
@@ -135,7 +130,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>Poznámky  
  Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
   
-##  <a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>  RDX_DWORD  
  Přidruží zadaná položka registru typu DWORD s hodnotou proměnné zadaného člena.  
   
 ```
@@ -166,7 +161,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>Poznámky  
  Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
   
-##  <a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>  RDX_TEXT  
  Zadaná položka registru přidruží proměnné typu TCHAR – zadaného člena.  
   
 ```

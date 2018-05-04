@@ -1,12 +1,9 @@
 ---
-title: "Operátory přírůstku a snížení přípony: ++ a--| Microsoft Docs"
-ms.custom: 
+title: 'Operátory přírůstku a snížení přípony: ++ a--| Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení přípony: ++ a --
 ## <a name="syntax"></a>Syntaxe  
@@ -56,7 +51,7 @@ i++;
   
  Je-li příponový operátor použit v argumentu funkce, není zaručeno, že hodnota argumentu bude zvýšena nebo snížena před jeho předáním funkci.  Další informace naleznete v oddílu 1.9.17 standardu jazyka C++.  
   
- Použití operátor přírůstku operátory na ukazatel na pole objektů typu **dlouho** ve skutečnosti přidá čtyři do interního vyjádření ukazatele. To způsobí, že ukazatele, který dříve uvedené  *n* element TD pole, který bude odkazovat na (*n*+ 1) element TD.  
+ Použití operátor přírůstku operátory na ukazatel na pole objektů typu **dlouho** ve skutečnosti přidá čtyři do interního vyjádření ukazatele. To způsobí, že ukazatele, který dříve uvedené *n*element TD pole, který bude odkazovat na (*n*+ 1) element TD.  
   
  Operandy přípony přírůstek a snížení přípony musí být upravitelnými (ne **const**) hodnoty l aritmetické nebo ukazatel typu. Typ výsledku je stejný jako u *operátory výraz*, ale je už l hodnota.  
   

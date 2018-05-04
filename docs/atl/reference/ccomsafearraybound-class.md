@@ -1,12 +1,9 @@
 ---
-title: "Třída CComSafeArrayBound | Microsoft Docs"
-ms.custom: 
+title: Třída CComSafeArrayBound | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeArrayBound
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4de823b4cdb2d7926b2a9d640b2e8f7352e389fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 455e71cd0ee323df8cfe43001f87179c649eefe5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound – třída
 Tato třída je obálka pro [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) struktury.  
@@ -69,7 +64,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsafe.h  
   
-##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
+##  <a name="ccomsafearraybound"></a>  CComSafeArrayBound::CComSafeArrayBound  
  Konstruktor  
   
 ```
@@ -86,7 +81,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud pole je přístupná z programu Visual C++, doporučujeme, aby dolní hranice být definován jako 0. To může být vhodnější použít jiné dolní meze hodnotu, pokud pole se použije s jinými jazyky, jako je například jazyka Visual Basic.  
   
-##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
+##  <a name="getcount"></a>  CComSafeArrayBound::GetCount  
  Volejte tuto metodu vrátit počet elementů.  
   
 ```
@@ -99,7 +94,7 @@ ULONG GetCount() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud přidruženého `CComSafeArray` objekt představuje multidimenzionálního pole, tato metoda vrátí jenom celkový počet elementů v dimenzi úplně vpravo. Použití [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) získat celkový počet elementů.  
   
-##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
+##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound  
  Volejte tuto metodu vrátit dolní hranice.  
   
 ```
@@ -109,7 +104,7 @@ LONG GetLowerBound() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí dolní mez `CComSafeArrayBound` objektu.  
   
-##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
+##  <a name="getupperbound"></a>  CComSafeArrayBound::GetUpperBound  
  Voláním této metody vrátit horní mez.  
   
 ```
@@ -122,7 +117,7 @@ LONG GetUpperBound() const throw();
 ### <a name="remarks"></a>Poznámky  
  Horní mez závisí na počtu elementy a hodnoty dolní mez. Například pokud dolní hranice je 0 a 10 je počet elementů, horní mez bude automaticky nastavit do 9.  
   
-##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
+##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =  
  Nastaví `CComSafeArrayBound` na novou hodnotu.  
   
 ```
@@ -143,7 +138,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="remarks"></a>Poznámky  
  `CComSafeArrayBound` Objekt lze přiřadit pomocí stávající `CComSafeArrayBound`, nebo zadáním počet elementů, ve kterých případ dolní hranice ve výchozím nastavení nastavena na hodnotu 0.  
   
-##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
+##  <a name="setcount"></a>  CComSafeArrayBound::SetCount  
  Volejte tuto metodu a nastavit počet elementů.  
   
 ```
@@ -157,7 +152,7 @@ ULONG SetCount(ULONG ulCount) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet prvků v `CComSafeArrayBound` objektu.  
   
-##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
+##  <a name="setlowerbound"></a>  CComSafeArrayBound::SetLowerBound  
  Voláním této metody lze nastavit dolní mez.  
   
 ```

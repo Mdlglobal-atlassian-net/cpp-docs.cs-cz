@@ -1,12 +1,9 @@
 ---
-title: "Třída CRect | Microsoft Docs"
-ms.custom: 
+title: Třída CRect | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRect
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crect-class"></a>CRect – třída
 Podobně jako Windows [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
@@ -84,7 +79,7 @@ class CRect : public tagRECT
 |[CRect::Height](#height)|Vypočítá výšku `CRect`.|  
 |[CRect::InflateRect](#inflaterect)|Zvyšuje šířka a Výška `CRect`.|  
 |[CRect::IntersectRect](#intersectrect)|Nastaví `CRect` rovna průnik dvou tvaru.|  
-|[CRect::IsRectEmpty](#isrectempty)|Určuje, zda `CRect` je prázdný. `CRect`je prázdný, pokud je šířka nebo výška mají hodnotu 0.|  
+|[CRect::IsRectEmpty](#isrectempty)|Určuje, zda `CRect` je prázdný. `CRect` je prázdný, pokud je šířka nebo výška mají hodnotu 0.|  
 |[CRect::IsRectNull](#isrectnull)|Určuje, zda **horní**, **dolní**, **levém**, a **správné** členské proměnné jsou všechny rovna 0.|  
 |[CRect::MoveToX](#movetox)|Přesune `CRect` k zadané souřadnice x.|  
 |[CRect::MoveToXY](#movetoxy)|Přesune `CRect` do zadaných x a y souřadnic.|  
@@ -107,8 +102,8 @@ class CRect : public tagRECT
 |[Lpcrect – CRect::operator](#operator_lpcrect)|Převede `CRect` k **lpcrect –**.|  
 |[CRect::operator lprect –](#operator_lprect)|Převede `CRect` k `LPRECT`.|  
 |[CRect::operator! =](#operator_neq)|Určuje, zda `CRect` není roven obdélníku.|  
-|[CRect::operator&amp;](#operator_amp)|Vytvoří průnik `CRect` a obdélníku a vrátí výsledný `CRect`.|  
-|[CRect::operator&amp;=](#operator_amp_eq)|Nastaví `CRect` rovna průnik `CRect` a obdélníku.|  
+|[CRect::operator &amp;](#operator_amp)|Vytvoří průnik `CRect` a obdélníku a vrátí výsledný `CRect`.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|Nastaví `CRect` rovna průnik `CRect` a obdélníku.|  
 |[CRect::operator |](#operator_or)|Vytvoří sjednocení `CRect` a obdélníku a vrátí výsledný `CRect`.|  
 |[CRect::operator |=](#operator_or_eq)|Nastaví `CRect` rovna sjednocení `CRect` a obdélníku.|  
 |[CRect::operator +](#operator_add)|Přidá daný posuny k `CRect` nebo zvýšení kapacity `CRect` a vrátí výsledný `CRect`.|  
@@ -118,7 +113,7 @@ class CRect : public tagRECT
 |[CRect::operator ==](#operator_eq_eq)|Určuje, zda `CRect` rovná obdélníku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRect`také obsahuje členské funkce k manipulaci s `CRect` objekty a Windows `RECT` struktury.  
+ `CRect` také obsahuje členské funkce k manipulaci s `CRect` objekty a Windows `RECT` struktury.  
   
  A `CRect` objekt můžete předat jako parametr funkce bez ohledu `RECT` struktura, **lpcrect –**, nebo `LPRECT` lze předat.  
   
@@ -142,7 +137,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atltypes.h  
   
-##  <a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>  CRect::BottomRight  
  Souřadnice se vrátí jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
   
 ```  
@@ -181,7 +176,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>  CRect::CenterPoint 
  Vypočítá centerpoint z `CRect` přidání levé a pravé hodnoty a dělení dva týdny a přidáním hodnoty horní a dolní a dělení dvou.  
   
 ```  
@@ -242,7 +237,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>  CRect::CopyRect  
  Kopie `lpSrcRect` obdélníku do `CRect`.  
   
 ```  
@@ -275,7 +270,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>  CRect::CRect  
  Vytvoří `CRect` objektu.  
   
 ```  
@@ -312,10 +307,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  `size`  
  Určuje posunutí v levém horním rohu na pravém dolním rohu obdélníku, aby zkonstruovat.  
   
- *topLeft*  
+ *TopLeft*  
  Určuje umístění levého horního `CRect`.  
   
- *bottomRight*  
+ *BottomRight*  
  Určuje pozici vpravo dole `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -361,8 +356,8 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="deflaterect"></a>CRect::DeflateRect  
- `DeflateRect`snížení kapacity `CRect` přesunutím jeho stranách směrem k jeho středu.  
+##  <a name="deflaterect"></a>  CRect::DeflateRect  
+ `DeflateRect` snížení kapacity `CRect` přesunutím jeho stranách směrem k jeho středu.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -415,7 +410,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>  CRect::EqualRect  
  Určuje, zda `CRect` rovná dané rámeček.  
   
 ```  
@@ -450,7 +445,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="height"></a>CRect::Height  
+##  <a name="height"></a>  CRect::Height  
  Vypočítá výšku `CRect` odečtením nejvyšší hodnotu než dolní.  
   
 ```  
@@ -480,8 +475,8 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="inflaterect"></a>CRect::InflateRect  
- `InflateRect`zvýšení kapacity `CRect` přesunutím jeho stranách od jeho center.  
+##  <a name="inflaterect"></a>  CRect::InflateRect  
+ `InflateRect` zvýšení kapacity `CRect` přesunutím jeho stranách od jeho center.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -529,7 +524,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>  CRect::IntersectRect  
  Díky `CRect` rovna průnik dvou existující tvaru.  
   
 ```  
@@ -572,7 +567,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>  CRect::IsRectEmpty  
  Určuje, zda `CRect` je prázdný.  
   
 ```  
@@ -603,7 +598,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>  CRect::IsRectNull  
  Určuje, zda nahoře vlevo, dolů a pravým hodnoty `CRect` jsou na stejné úrovni na hodnotu 0.  
   
 ```  
@@ -632,7 +627,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>  CRect::MoveToX  
  Volání této funkce pro přesun rámeček do absolutní souřadnice x určeného *x*.  
   
 ```  
@@ -656,7 +651,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>  CRect::MoveToXY  
  Volání této funkce můžete přesunout k absolutní souřadnic x a y-zadaný rámeček.  
   
 ```  
@@ -687,7 +682,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>  CRect::MoveToY  
  Volání této funkce pro přesun rámeček do absolutní souřadnice y určeného *y*.  
   
 ```  
@@ -711,7 +706,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="normalizerect"></a>CRect::NormalizeRect  
+##  <a name="normalizerect"></a>  CRect::NormalizeRect  
  Normalizuje `CRect` tak, aby výška a šířka jsou pozitivní.  
   
 ```  
@@ -719,10 +714,10 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rámeček normalizována pro čtvrtý kvadrantu umístění, které Windows se obvykle používá pro souřadnice. `NormalizeRect`Porovná hodnoty horní a dolní a prohození je, pokud je větší než dolní horní. Podobně prohození levé a pravé hodnoty, pokud je větší než právo levé straně. Tato funkce je užitečná při plánování práce s mapování různé režimy a obdélníky obrácený.  
+ Rámeček normalizována pro čtvrtý kvadrantu umístění, které Windows se obvykle používá pro souřadnice. `NormalizeRect` Porovná hodnoty horní a dolní a prohození je, pokud je větší než dolní horní. Podobně prohození levé a pravé hodnoty, pokud je větší než právo levé straně. Tato funkce je užitečná při plánování práce s mapování různé režimy a obdélníky obrácený.  
   
 > [!NOTE]
->  Následující `CRect` členské funkce vyžadují normalizovaný obdélníků správné fungování: [výška](#height), [šířka](#width), [velikost](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operátor ==](#operator_eq_eq), [operátor! =](#operator_neq), [operátor &#124;](#operator_or), [operátor &#124; =](#operator_or_eq), [operátor &](#operator_amp), a [operátor & =](#operator_amp_eq).  
+>  Následující `CRect` členské funkce vyžadují normalizovaný obdélníků správné fungování: [výška](#height), [šířka](#width), [velikost](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operátor ==](#operator_eq_eq), [operátor! =](#operator_neq), [operátor &#124; ](#operator_or), [operátor &#124;=](#operator_or_eq), [operátor &](#operator_amp), a [operátor & =](#operator_amp_eq).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -737,7 +732,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>  CRect::OffsetRect  
  Přesune `CRect` podle zadaných odsazení.  
   
 ```  
@@ -776,7 +771,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>Lpcrect – převede CRect::operator `CRect` k [lpcrect –](../../mfc/reference/data-types-mfc.md).  
+##  <a name="operator_lpcrect"></a>  Lpcrect – převede CRect::operator `CRect` k [lpcrect –](../../mfc/reference/data-types-mfc.md).  
 
   
 ```  
@@ -787,7 +782,7 @@ operator LPCRECT() const throw();
  Použijete-li tuto funkci, není nutné adresu z (**&**) operátor. Tento operátor se automaticky použije při předání `CRect` objekt, který má funkci, která očekává **lpcrect –**.  
   
 
-##  <a name="operator_lprect"></a>CRect::operator lprect –  
+##  <a name="operator_lprect"></a>  CRect::operator lprect –  
  Převede `CRect` k [lprect –](../../mfc/reference/data-types-mfc.md).  
 
   
@@ -801,7 +796,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [lpcrect – CRect::operator](#operator_lpcrect).  
   
-##  <a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>  CRect::operator =  
  Přiřadí *srcRect* k `CRect`.  
   
 ```  
@@ -826,7 +821,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="operator_eq_eq"></a>CRect::operator ==  
+##  <a name="operator_eq_eq"></a>  CRect::operator ==  
  Určuje, zda `rect` rovná `CRect` tak, že porovnáte souřadnice jejich levém horním a pravém dolním rozích.  
   
 ```  
@@ -868,7 +863,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>  CRect::operator! =  
  Určuje, zda `rect` se nerovná `CRect` tak, že porovnáte souřadnice jejich levém horním a pravém dolním rozích.  
   
 ```  
@@ -909,7 +904,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="operator_add_eq"></a>CRect::operator +=  
+##  <a name="operator_add_eq"></a>  CRect::operator +=  
  První dva přetížení přesunout `CRect` podle zadaných odsazení.  
   
 ```  
@@ -948,7 +943,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="operator_-_eq"></a>CRect::operator-=  
+##  <a name="operator_-_eq"></a>  CRect::operator-=  
  První dva přetížení přesunout `CRect` podle zadaných odsazení.  
   
 ```  
@@ -987,7 +982,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
  Nastaví `CRect` rovna průnik `CRect` a `rect`.  
   
 ```  
@@ -1007,7 +1002,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRect::IntersectRect](#intersectrect).  
   
-##  <a name="operator_or_eq"></a>CRect::operator &#124; =  
+##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
  Nastaví `CRect` rovna sjednocení `CRect` a `rect`.  
   
 ```  
@@ -1040,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>  CRect::operator +  
  Vrátí první dva přetížení `CRect` objekt, který se rovná `CRect` po přidání zadaných odsazení.  
   
 ```  
@@ -1079,7 +1074,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>  CRect::operator-  
  Vrátí první dva přetížení `CRect` objekt, který se rovná `CRect` po přidání zadaných odsazení.  
   
 ```  
@@ -1118,7 +1113,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>  CRect::operator &amp;  
  Vrátí `CRect` tedy průnik `CRect` a *rect2*.  
   
 ```  
@@ -1150,7 +1145,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="operator_or"></a>CRect::operator &#124;  
+##  <a name="operator_or"></a>  CRect::operator&#124;  
  Vrátí `CRect` tedy sjednocení `CRect` a *rect2*.  
   
 ```   
@@ -1188,7 +1183,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>  CRect::PtInRect  
  Určuje, zda se zadaný bod je v rámci `CRect`.  
   
 ```   
@@ -1235,7 +1230,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>  CRect::SetRect  
  Nastaví rozměry `CRect` k zadané souřadnice.  
   
 ```   
@@ -1267,7 +1262,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
  Díky `CRect` null obdélníku nastavením všechny souřadnice na nulu.  
   
 ```  
@@ -1283,7 +1278,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>  CRect::SIZE 
  `cx` a `cy` návratovou hodnotu obsahují výška a šířka `CRect`.  
   
 ```  
@@ -1306,7 +1301,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>  CRect::SubtractRect  
  Díky rozměry **CRect** rovna odčítání z `lpRectSrc2` z `lpRectSrc1`.  
   
 ```  
@@ -1330,7 +1325,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
   
  Například pokud `lpRectSrc1` byly (10,10, 100,100) a `lpRectSrc2` byly (50,50, 150,150), rámeček na kterou odkazuje `lpRectSrc1` by beze změny, když funkce vrátila. Pokud `lpRectSrc1` byly (10,10, 100,100) a `lpRectSrc2` byly (50,10, 150,150), ale rámeček na kterou odkazuje `lpRectSrc1` by obsahovat souřadnice (10,10, 50,100) při funkce vrátila.  
   
- `SubtractRect`není stejný jako [operátor -](#operator_-) ani [operátor-=](#operator_-_eq). Ani jeden z těchto operátorů někdy volá `SubtractRect`.  
+ `SubtractRect` není stejný jako [operátor -](#operator_-) ani [operátor-=](#operator_-_eq). Ani jeden z těchto operátorů někdy volá `SubtractRect`.  
   
 > [!NOTE]
 >  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
@@ -1368,7 +1363,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>  CRect::TopLeft  
  Souřadnice se vrátí jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
   
 ```  
@@ -1385,7 +1380,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRect::CenterPoint](#centerpoint).  
   
-##  <a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>  CRect::UnionRect  
  Díky rozměry `CRect` rovna sjednocení obdélníky dva zdroje.  
   
 ```  
@@ -1421,7 +1416,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="width"></a>CRect::Width  
+##  <a name="width"></a>  CRect::Width  
  Vypočítá šířku `CRect` odečtením levé hodnoty z pravé hodnoty.  
   
 ```  

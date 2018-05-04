@@ -3,7 +3,7 @@ title: -projektovou - (standardy shoda) | Microsoft Docs
 ms.date: 11/11/2016
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ projektovou-(standardy shoda)
 
@@ -33,7 +31,7 @@ Zadejte režim standardů shoda kompilátoru. Pomocí této možnosti vám pomoh
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/permissive-**
+> **/ projektovou-**
 
 ## <a name="remarks"></a>Poznámky
 
@@ -275,7 +273,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-Je důležité výjimkou z tohoto vzoru běžné při T představuje jeden z typů řetězce ukončené hodnotou null (například `const char *`, `const char16_t *`a tak dále) a argument skutečné `?:` je řetězec odpovídající typu literálu. C ++ 17 změnil sémantiku z C ++ 14. V důsledku toho je kód v příkladu 2 přijímán pod **/std: c ++ 14** a odmítnuté pod **/std: c ++ 17** při **/Zc:ternary** nebo **/permissive-**se používá.
+Je důležité výjimkou z tohoto vzoru běžné při T představuje jeden z typů řetězce ukončené hodnotou null (například `const char *`, `const char16_t *`a tak dále) a argument skutečné `?:` je řetězec odpovídající typu literálu. C ++ 17 změnil sémantiku z C ++ 14. V důsledku toho je kód v příkladu 2 přijímán pod **/std: c ++ 14** a odmítnuté pod **/std: c ++ 17** při **/Zc:ternary** nebo **/permissive-** se používá.
 
 ```cpp
 // Example 2: exception from the above
@@ -379,7 +377,7 @@ struct tagRESTRICTION
 
 Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují Query.h bez **/ projektovou-** možnost.
 
-#### <a name="issue-in-umcellularapioemh"></a>Issue in um\cellularapi_oem.h
+#### <a name="issue-in-umcellularapioemh"></a>Problém um\cellularapi_oem.h
 
 Při použití **/ projektovou-** přepínače kompilátoru, předat dál deklaraci `enum UICCDATASTOREACCESSMODE` způsobí, že upozornění:
 

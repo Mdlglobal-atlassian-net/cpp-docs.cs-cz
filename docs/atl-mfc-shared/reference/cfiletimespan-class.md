@@ -1,12 +1,9 @@
 ---
-title: "Třída CFileTimeSpan | Microsoft Docs"
-ms.custom: 
+title: Třída CFileTimeSpan | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFileTimeSpan
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47f0113ec2e36f6df4afa32f6aff84d5ee6dfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: facf4abc01ed55ec7c6d84755530a776c68e166d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan – třída
 Tato třída poskytuje metody pro správu relativní datum a čas hodnoty přidružené k souboru.  
@@ -64,13 +59,13 @@ class CFileTimeSpan
 |[CFileTimeSpan::operator! =](#operator_neq)|Porovná dva `CFileTimeSpan` objekty nerovnost.|  
 |[CFileTimeSpan::operator +](#operator_add)|Provede přidání `CFileTimeSpan` objektu.|  
 |[CFileTimeSpan::operator +=](#operator_add_eq)|Provede přidání `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.|  
-|[CFileTimeSpan::operator&lt;](#operator_lt)|Porovná dva `CFileTimeSpan` objekty, které chcete určit menší.|  
-|[CFileTimeSpan::operator&lt;=](#operator_lt_eq)|Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo menší.|  
+|[CFileTimeSpan::operator &lt;](#operator_lt)|Porovná dva `CFileTimeSpan` objekty, které chcete určit menší.|  
+|[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo menší.|  
 |[CFileTimeSpan::operator =](#operator_eq)|Operátor přiřazení.|  
 |[CFileTimeSpan::operator-=](#operator_-_eq)|Provádí odčítání `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.|  
 |[CFileTimeSpan::operator ==](#operator_eq_eq)|Porovná dva `CFileTimeSpan` objekty rovnosti.|  
-|[CFileTimeSpan::operator&gt;](#operator_gt)|Porovná dva `CFileTimeSpan` objekty, které chcete určit delší.|  
-|[CFileTimeSpan::operator&gt;=](#operator_gt_eq)|Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo delší.|  
+|[CFileTimeSpan::operator &gt;](#operator_gt)|Porovná dva `CFileTimeSpan` objekty, které chcete určit delší.|  
+|[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo delší.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tato třída poskytuje metody pro správu relativní období času často došlo při provádění operací týkajících se při se vytvoření, posledního přístupu nebo poslední změny souboru. Metody této třídy se často používají ve spojení s [CFileTime třída](../../atl-mfc-shared/reference/cfiletime-class.md) objekty.  
@@ -81,7 +76,7 @@ class CFileTimeSpan
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atltime.h  
   
-##  <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
+##  <a name="cfiletimespan"></a>  CFileTimeSpan::CFileTimeSpan  
  Konstruktor  
   
 ```
@@ -100,7 +95,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 ### <a name="remarks"></a>Poznámky  
  `CFileTimeSpan` Objekt lze vytvořit pomocí existující `CFileTimeSpan` objektu nebo vyjádřený jako hodnotu 64-bit. Výchozí konstruktor nastaví časové rozpětí na hodnotu 0.  
   
-##  <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>  CFileTimeSpan::GetTimeSpan  
  Volat tuto metodu za účelem načtení časové rozpětí z `CFileTimeSpan` objektu.  
   
 ```
@@ -110,7 +105,7 @@ LONGLONG GetTimeSpan() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí časový interval v milisekundách.  
   
-##  <a name="operator_-"></a>CFileTimeSpan::operator-  
+##  <a name="operator_-"></a>  CFileTimeSpan::operator-  
  Provádí odčítání **CFileTimeSpan** objektu.  
   
 ```
@@ -124,7 +119,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `CFileTimeSpan` objekt reprezentující výsledek rozdíl mezi dvěma časové úseky.  
   
-##  <a name="operator_neq"></a>CFileTimeSpan::operator! =  
+##  <a name="operator_neq"></a>  CFileTimeSpan::operator! =  
  Porovná dva `CFileTimeSpan` objekty nerovnost.  
   
 ```
@@ -138,7 +133,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud položka porovnávané není rovno `CFileTimeSpan` objektu; v opačném případě **false**.  
   
-##  <a name="operator_add"></a>CFileTimeSpan::operator +  
+##  <a name="operator_add"></a>  CFileTimeSpan::operator +  
  Provede přidání `CFileTimeSpan` objektu.  
   
 ```
@@ -152,7 +147,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `CFileTimeSpan` objektu, který obsahuje součet dvou čas zahrnuje.  
   
-##  <a name="operator_add_eq"></a>CFileTimeSpan::operator +=  
+##  <a name="operator_add_eq"></a>  CFileTimeSpan::operator +=  
  Provede přidání `CFileTimeSpan` objektu a přiřadí výsledek jako aktuální objekt.  
   
 ```
@@ -166,7 +161,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CFileTimeSpan` objektu, který obsahuje součet dvou čas zahrnuje.  
   
-##  <a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
+##  <a name="operator_lt"></a>  CFileTimeSpan::operator &lt;  
  Porovná dva `CFileTimeSpan` objekty, které chcete určit menší.  
   
 ```
@@ -180,7 +175,7 @@ bool operator<(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud je první objekt menší (představuje za kratší časové období) než druhý, jinak **false**.  
   
-##  <a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CFileTimeSpan::operator &lt;=  
  Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo menší.  
   
 ```
@@ -194,7 +189,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud je první objekt menší než (představuje za kratší časové období) nebo roven hodnotě druhou, jinak **false**.  
   
-##  <a name="operator_eq"></a>CFileTimeSpan::operator =  
+##  <a name="operator_eq"></a>  CFileTimeSpan::operator =  
  Operátor přiřazení.  
   
 ```
@@ -208,7 +203,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CFileTimeSpan` objektu.  
   
-##  <a name="operator_-_eq"></a>CFileTimeSpan::operator-=  
+##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator-=  
  Provádí odčítání `CFileTimeSpan` objektu a přiřadí výsledek jako aktuální objekt.  
   
 ```
@@ -222,7 +217,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CFileTimeSpan` objektu.  
   
-##  <a name="operator_eq_eq"></a>CFileTimeSpan::operator ==  
+##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator ==  
  Porovná dva `CFileTimeSpan` objekty rovnosti.  
   
 ```
@@ -236,7 +231,7 @@ bool operator==(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud objekty jsou stejné, jinak **false**.  
   
-##  <a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
+##  <a name="operator_gt"></a>  CFileTimeSpan::operator &gt;  
  Porovná dva `CFileTimeSpan` objekty, které chcete určit delší.  
   
 ```
@@ -250,7 +245,7 @@ bool operator>(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud je první objekt větší než (představuje delší časové období) než druhý, jinak **false**.  
   
-##  <a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CFileTimeSpan::operator &gt;=  
  Porovná dva `CFileTimeSpan` objekty k určení rovnosti nebo delší.  
   
 ```
@@ -264,7 +259,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** Pokud je první objekt větší než (představuje delší časové období) nebo roven hodnotě druhou, jinak **false**.  
   
-##  <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
+##  <a name="settimespan"></a>  CFileTimeSpan::SetTimeSpan  
  Volat tuto metodu a nastavit časový rozsah `CFileTimeSpan` objektu.  
   
 ```

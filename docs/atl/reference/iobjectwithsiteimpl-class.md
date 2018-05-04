@@ -1,12 +1,9 @@
 ---
-title: "Třída IObjectWithSiteImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IObjectWithSiteImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl – třída
 Tato třída poskytuje metody, které umožní objekt pro komunikaci se svou lokalitou.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>Poznámky  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) rozhraní, které umožňuje objekt pro komunikaci se svou lokalitou. Třída `IObjectWithSiteImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje **IUnknown** posíláním informací o k výpisu zařízení ladění sestavení.  
   
- `IObjectWithSiteImpl`Určuje dvě metody. První volání klienta `SetSite`, předávání lokality **IUnknown** ukazatel. Tento ukazatel je uložit do objektu a později se dají získat pomocí volání `GetSite`.  
+ `IObjectWithSiteImpl` Určuje dvě metody. První volání klienta `SetSite`, předávání lokality **IUnknown** ukazatel. Tento ukazatel je uložit do objektu a později se dají získat pomocí volání `GetSite`.  
   
  Obvykle odvozujete třídě z `IObjectWithSiteImpl` při vytváření objektu, není ovládacího prvku. Pro ovládací prvky, odvozena třídě z [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), který poskytuje také ukazatel lokality. Třídě není odvozen z obou `IObjectWithSiteImpl` a `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Dotazuje webu pro ukazatel na rozhraní identifikovaný `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  V tématu [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) ve Windows SDK.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Spravuje lokality **IUnknown** ukazatel.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_spUnkSite`nejprve obdrží tento ukazatel prostřednictvím volání [setsite –](#setsite).  
+ `m_spUnkSite` nejprve obdrží tento ukazatel prostřednictvím volání [setsite –](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Poskytuje objekt lokality **IUnknown** ukazatel.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `S_OK`.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Poskytuje objekt lokality **IUnknown** ukazatel.  
   
 ```

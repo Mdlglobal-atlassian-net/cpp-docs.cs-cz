@@ -1,13 +1,10 @@
 ---
-title: "NMAKE – odkaz | Microsoft Docs"
-ms.custom: 
+title: NMAKE – odkaz | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - program execution [C++]
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nmake-reference"></a>NMAKE – odkaz
 Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazového řádku součástí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] který sestavení projektů založených na příkazy, které jsou obsaženy v souboru popis.  

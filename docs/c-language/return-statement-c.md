@@ -1,36 +1,31 @@
 ---
-title: "Vrátí Statement (C) | Microsoft Docs"
-ms.custom: 
+title: Vrátí Statement (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>return – příkaz (C)
 `return` Příkaz ukončí provádění funkce a vrátí ovládací prvek volání funkce. Provádění pokračuje ve volání funkce okamžiku hned po volání. A `return` příkaz můžete také vrátit hodnotu volání funkce. V tématu [návratového typu](../c-language/return-type.md) Další informace.  
   
 ## <a name="syntax"></a>Syntaxe  
  *příkaz přechod*:  
- **Vrátí***výraz* opt**;**   
+ **Vrátí***výraz* opt **;**   
   
  Hodnota *výraz*, pokud existuje, je vrácen do volání funkce. Pokud *výraz* je tento parametr vynechán, návratovou hodnotu funkce není definován. Výraz, pokud existuje, je vyhodnocena a pak převést na typ vrácený funkcí. Pokud funkce byla deklarována s návratovým typem `void`, `return` příkazu, který obsahuje výraz generuje upozornění a výraz, nebude hodnocen.  
   

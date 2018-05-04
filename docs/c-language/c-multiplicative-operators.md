@@ -1,13 +1,10 @@
 ---
-title: "Multiplikativní operátory jazyka C | Microsoft Docs"
-ms.custom: 
+title: Multiplikativní operátory jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,31 +17,29 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-multiplicative-operators"></a>Multiplikativní operátory jazyka C
 Multiplikativní operátory provést násobení (**\****), dělení (**/**) a zbytek (`%`) operace.  
   
  **Syntaxe**  
   
- *multiplicative-expression*:  
+ *multiplikativní výraz*:  
  *cast-expression*  
   
- *multiplicative-expression*  **\***  *cast-expression*  
+ *multiplikativní výraz***\****výraz cast*  
   
- *multiplicative-expression*  **/**  *cast-expression*  
+ *multiplikativní výraz***/***výraz cast*  
   
- *multiplicative-expression*  **%**  *cast-expression*  
+ *multiplikativní výraz***%***výraz cast*  
   
  Operandy operátoru zbývající (`%`) musí být celočíselné. Násobení (**\****) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.  
   
@@ -67,7 +62,7 @@ Multiplikativní operátory provést násobení (**\****), dělení (**/**) a zb
 ||– Pokud jsou oba operandy kladná nebo bez znaménka, výsledkem je kladná.|  
 ||– Pokud je záporná. buď operand a výsledkem je nepřesný, výsledkem je implementace definované. (Viz část Microsoft specifické níže.)|  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  V oblasti, kde je buď operand záporná je směr zkrácení směrem k 0.  
   
@@ -103,7 +98,7 @@ n = i % j;
   
  Tento příkaz přiřadí `n` zbývající celé číslo, 1, při dělení 10 3.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Znaménko zbývající je stejný jako znaménko dělenec. Příklad:  
   

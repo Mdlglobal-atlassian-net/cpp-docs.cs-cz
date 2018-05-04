@@ -1,12 +1,12 @@
 ---
-title: "Návod: Přidání objektu CTaskDialog do aplikace | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Přidání objektu CTaskDialog do aplikace | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Návod: Přidání objektu CTaskDialog do aplikace
 Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-class.md) a ukazuje, jak přidat do vaší aplikace.  
   
- `CTaskDialog` Je dialogové okno úloh, který nahrazuje pole zpráv systému Windows v [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. `CTaskDialog` Zlepšuje původní zprávou a přidá funkce. Pole zpráv systému Windows se pořád podporuje v [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ `CTaskDialog` Je dialogové okno úloh, který nahrazuje pole zpráv systému Windows v systému Windows Vista nebo novější. `CTaskDialog` Zlepšuje původní zprávou a přidá funkce. Pole zpráv systému Windows se pořád podporuje v sadě Visual Studio.  
   
 > [!NOTE]
->  Verze Windows starší než [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] nepodporují `CTaskDialog`. Možnost v dialogovém okně alternativní musí programu, pokud chcete zobrazit zprávu pro uživatele, který spouští aplikaci ve starší verzi systému Windows. Můžete použít statickou metodu [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) k určení za běhu, zda počítač uživatele můžete zobrazit `CTaskDialog`. Kromě toho `CTaskDialog` je k dispozici pouze když je aplikace vytvořené s knihovnou kódování Unicode.  
+> Verzích Windows starších než Windows Vista nepodporují `CTaskDialog`. Možnost v dialogovém okně alternativní musí programu, pokud chcete zobrazit zprávu pro uživatele, který spouští aplikaci ve starší verzi systému Windows. Můžete použít statickou metodu [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) k určení za běhu, zda počítač uživatele můžete zobrazit `CTaskDialog`. Kromě toho `CTaskDialog` je k dispozici pouze když je aplikace vytvořené s knihovnou kódování Unicode.  
   
  `CTaskDialog` Podporuje několik volitelné prvky shromažďovat a zobrazovat informace. Například `CTaskDialog` může zobrazit příkaz odkazy, přizpůsobené tlačítka, přizpůsobené ikony a zápatí. `CTaskDialog` Také obsahuje několik metod, které vám umožní dotazování na stav dialogové okno úlohy, ve kterém lze určit, které volitelné prvky vybraného uživatele.  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 nebo novější  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista nebo novější  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Nahrazení objektu CTaskDialog systému Windows se zprávou  
  Následující postup předvádí nejzákladnější použití `CTaskDialog`, což je nahradit pole zpráv systému Windows. Tento příklad také změní ikony přidružené dialogové okno úloh. Změna na ikonu umožňuje `CTaskDialog` vypadají stejně do pole zpráv systému Windows.  

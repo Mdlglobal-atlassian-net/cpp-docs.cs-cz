@@ -2,11 +2,8 @@
 title: decltype (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 Specifikátor typu `decltype` vrací typ zadaného výrazu. `decltype` Zadejte specifikátor, společně s [auto – klíčové slovo](../cpp/auto-cpp.md), je užitečné především pro vývojáře, kteří vytvářejí knihovny šablon. Použití `auto` a `decltype` deklarovat funkce šablony jejichž návratový typ závisí na typy argumentů šablony. Nebo lze klíčová slova `auto` a `decltype` použít k deklarování šablony funkce, která zaobaluje volání další funkce, a potom vrátí návratový typ volané funkce.  
@@ -49,7 +44,7 @@ decltype( expression )
  Typ parametru `expression`.  
   
 ## <a name="remarks"></a>Poznámky  
- Specifikátor typu `decltype` je podporován v jazyce Visual C++ 2010 nebo novější verzi a lze jej použít s nativním nebo spravovaným kódem. `decltype(auto)`(C ++ 14) jsou podporovány v sadě Visual Studio 2015 a vyšší.  
+ Specifikátor typu `decltype` je podporován v jazyce Visual C++ 2010 nebo novější verzi a lze jej použít s nativním nebo spravovaným kódem. `decltype(auto)` (C ++ 14) jsou podporovány v sadě Visual Studio 2015 a vyšší.  
   
  Kompilátor používá následující pravidla pro určení typu parametru `expression`.  
   
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  Následující prototyp znázorňuje syntaxi alternativní deklarace funkce. Všimněte si, že `const` a `volatile` kvalifikátory a `throw` [specifikace výjimek](../cpp/exception-specifications-throw-cpp.md) jsou volitelné. *Function_body* zástupný symbol představuje složený příkaz, který určuje, jaké funkce. Jako nejvhodnější, zvykem *výraz* zástupný symbol v `decltype` příkaz by měl odpovídat výrazu určeného `return` příkaz, pokud existuje, v *function_body*.  
   
- **Automatické** *Název_funkce* **(** *parametry*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volatile**<sub>opt</sub>  **->**  **decltype (** *výraz* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **Automatické** *Název_funkce* **(** *parametry*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *výraz* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
  V následujícím příkladu kódu je pozdně zadaný návratový typ šablony funkce `myFunc` určen pomocí typů `t` a `u` šablony argumentů. Jako nejvhodnější, zvykem, příklad kódu používá také odkazy rvalue a `forward` funkce šablony, která podporují *ideální předávání*. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Požadavky  
  Jazyk Visual C++ 2010 nebo novější verze.  
   
- `decltype(auto)`vyžaduje Visual Studio 2015 nebo novější.  
+ `decltype(auto)` vyžaduje Visual Studio 2015 nebo novější.  
   

@@ -2,11 +2,8 @@
 title: Třída CAtlFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>CAtlFile – třída
 Tato třída poskytuje dynamické obálku kolem Windows zpracování souborů rozhraní API.  
@@ -94,7 +89,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  Konstruktor  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Poznámky  
  Konstruktor copy přenáší vlastnictví popisovač souboru z původní `CAtlFile` objekt, který chcete nově vytvořený objekt.  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  Voláním této metody lze vytvořit nebo otevřít soubor.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Poznámky  
  Volání [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) vytvořit nebo otevřít soubor.  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  Voláním této metody lze vymazat vyrovnávací paměti pro soubor a způsobit, že všechna data ve vyrovnávací paměti pro zápis do souboru.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) Vyprázdnit data ve vyrovnávací paměti do souboru.  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Volejte tuto metodu za účelem získání výsledků překryté operace na souboru.  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Poznámky  
  Volání [funkce GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) získat výsledky překryté operace na souboru.  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Volejte tuto metodu za účelem získání aktuálního umístění ukazatele souboru.  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) získat aktuální umístění ukazatele souboru.  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  Volejte tuto metodu za účelem získání velikost v bajtech souboru.  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [funkce GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) se získat velikost v bajtech souboru.  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Volejte tuto metodu za účelem uzamčení oblasti, v souboru s jinými procesy zabránit v přístupu k jeho.  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) k uzamčení oblasti, v souboru. Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Zamknete více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Při odemknutí oblasti pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. `LockRange`nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, je třeba každý odemknout samostatně.  
+ Volání [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) k uzamčení oblasti, v souboru. Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Zamknete více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Při odemknutí oblasti pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. `LockRange` nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, je třeba každý odemknout samostatně.  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Ukazatel na `CAtlTransactionManager` objektu.  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  Volejte tuto metodu za účelem čtení dat ze souboru začínající na pozici ukazatele souboru.  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Poznámky  
  První tři formuláře volání [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), poslední [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) čtení dat ze souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatele souboru.  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  Voláním této metody lze přesunout ukazatel souboru souboru.  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Poznámky  
  Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) přesunout ukazatele souboru.  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  Volejte tuto metodu a nastavit velikost souboru.  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) a [funkce SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) nastavit velikost souboru. Při návratu ukazatele souboru je nastavený na konci souboru.  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Volejte tuto metodu k odemknutí oblast souboru.  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Poznámky  
  Volání [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) k odemknutí oblast souboru.  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  Voláním této metody lze zapisovat data do souboru začínající na pozici ukazatele souboru.  
   
 ```

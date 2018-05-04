@@ -2,11 +2,8 @@
 title: Přehled posunutí souboru | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>Přehled posunutí souboru
 Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo více souborů. Každý z těchto souborů je přeložen v následujícím konceptuálním pořadí (skutečné pořadí následuje pravidlo „jako kdyby“: překlad musí nastat, jako kdyby byly následovány tyto kroky):  
@@ -58,7 +53,7 @@ Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo 
   
 -   Jedno předdefinované makro **__cplusplus**, je určená jenom pro C++. V tématu [předdefinovaná makra](../preprocessor/predefined-macros.md) v *preprocesor odkaz* Další informace.  
   
--   Preprocesor C nerozpoznává operátory jazyka C++: **.\*** ,  **-> \*** , a `::`. V tématu [operátory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) a [výrazy](../cpp/expressions-cpp.md), další informace o operátory.  
+-   Preprocesor C nerozpoznává operátory jazyka C++: **.\*** , **-> \***, a `::`. V tématu [operátory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) a [výrazy](../cpp/expressions-cpp.md), další informace o operátory.  
   
 ## <a name="see-also"></a>Viz také  
  [Lexikální konvence](../cpp/lexical-conventions.md)

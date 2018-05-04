@@ -1,30 +1,25 @@
 ---
-title: "Specifikátory typu jazyka C | Microsoft Docs"
-ms.custom: 
+title: Specifikátory typu jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
@@ -34,17 +29,17 @@ Specifikátory typu v deklaracích definování typu deklarace proměnné nebo f
 
 *Specifikátor typu*:  
 &nbsp;&nbsp;**Void**  
-&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;**Char**  
 &nbsp;&nbsp;**krátký**  
 &nbsp;&nbsp;**celá čísla**  
 &nbsp;&nbsp;**dlouhá**  
-&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;**Plovoucí desetinná čárka**  
 &nbsp;&nbsp;**Double**  
 &nbsp;&nbsp;**Podepsané**  
 &nbsp;&nbsp;**Bez znaménka**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;*Struktura nebo sjednocení – specifikátor*  
 &nbsp;&nbsp;*enum – specifikátor*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;*Název definice TypeDef*  
 
 **Podepsané char**, **podepsané int**, **podepsané krátká celočíselná**, a **podepsané dlouho int** typy, společně s jejich **bez znaménka**  svými protějšky a **výčtu**, se nazývají *integrální* typy. **Float**, **dvojité**, a **long double** specifikátory typu se označují jako *plovoucí* nebo *splovoucídesetinnoučárkou* typy. V deklaraci proměnné nebo funkce, můžete použít všechny specifikace typu integrální nebo s plovoucí desetinnou čárkou. Pokud *specifikátor typu* není zadaný v deklaraci, se provede na **int**.
 
@@ -54,7 +49,7 @@ Výčtové typy jsou považovány za základní typy. Specifikátory typu pro v�
 
 Klíčové slovo **void** se třemi způsoby: Chcete-li určit funkce návratový typ, určení seznamu typ argumentu pro funkci, která nezadávaly žádné argumenty a k určení ukazatel na neurčeného typu. Můžete použít **void** typu deklarovat funkce, které vrací žádná hodnota nebo deklarovat ukazatel na neurčeného typu. V tématu [argumenty](../c-language/arguments.md) informace o **void** když se zobrazí v závorkách následující název funkce samostatně.
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 Kontrola typu je nyní ANSI standardem, což znamená, že typ **krátké** a typ **int** jsou odlišné typy. Toto je například předefinování v kompilátoru Microsoft C, která byla přijata v předchozích verzích nástroje kompilátoru.
 

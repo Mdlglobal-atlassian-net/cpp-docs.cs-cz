@@ -1,13 +1,10 @@
 ---
-title: "Konfigurace Visual C++ pro 64bitové, x64 cíle | Microsoft Docs"
-ms.custom: 
+title: Konfigurace Visual C++ pro 64bitové, x64 cíle | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurace Visual C++ pro 64bitové, x64 cíle
 
@@ -47,11 +42,11 @@ Tento oddíl obsahuje témata o cílení na 64-bit x64 hardware s Visual C++ ná
 
 [64bitové aplikace rozhraní .NET framework](/dotnet/framework/64-bit-apps)  
   
-[Zarovnat](../cpp/align-cpp.md)  
+[align](../cpp/align-cpp.md)  
   
-[/ CLR (kompilace common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)  
+[/clr (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)  
   
-[/ favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+[/favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 [Průvodce programováním pro 64bitový systém Windows](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
   

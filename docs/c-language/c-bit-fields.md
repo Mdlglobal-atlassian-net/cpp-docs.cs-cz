@@ -1,30 +1,25 @@
 ---
 title: C Bit pole | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C
 Kromě deklarátory pro členové struktury a sjednocení může být struktura deklarátor také zadaný počet bitů, nazývá "pole bit". Jeho délka nastavena z deklarátor pro název pole dvojtečkou. Bitová pole interpretována jako typ integrální.  
@@ -33,7 +28,7 @@ Kromě deklarátory pro členové struktury a sjednocení může být struktura 
  *Struktura deklarátor*:  
  *deklarátor*  
   
- *Specifikátor typu deklarátor* opt**:** *konstantní výraz*  
+ *Specifikátor typu deklarátor* opt **:** *konstantní výraz*  
   
  *Konstantní výraz* Určuje šířku pole v bitech. *Specifikátor typu* pro `declarator` musí být `unsigned int`, **podepsané int**, nebo `int`a *konstantní výraz* musí být nezáporné celočíselná hodnota. Pokud je hodnota nula, deklaraci neobsahuje žádné `declarator`. Pole Bitová pole, ukazatele na bitových polí a funkce, které vracejí bitová pole nejsou povoleny. Volitelné `declarator` názvy pole verze. Bitová pole lze deklarovat pouze jako součást struktury. Address-of – operátor (**&**) nelze použít pro součásti bitová pole.  
   

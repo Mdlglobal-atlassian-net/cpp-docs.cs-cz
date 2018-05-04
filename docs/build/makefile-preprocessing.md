@@ -1,30 +1,25 @@
 ---
-title: "Předběžné zpracování souboru pravidel | Microsoft Docs"
-ms.custom: 
+title: Předběžné zpracování souboru pravidel | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - preprocessing makefiles
 - makefiles, preprocessing
 ms.assetid: a9185139-97c9-4adb-b4a9-1ec395cce9f8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing"></a>Předběžné zpracování souboru pravidel
 Relace NMAKE můžete řídit pomocí předběžného zpracování direktivy a výrazy. Předběžné zpracování pokyny mohou být umístěny souboru pravidel nebo Tools.ini. Pomocí direktiv, můžete podmíněně zpracovat vašeho souboru pravidel, zobrazovat chybové zprávy, zahrnout další soubory pravidel, nedefinované makra a zapnout nebo vypnout určité možnosti.  

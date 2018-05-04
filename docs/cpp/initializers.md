@@ -1,12 +1,9 @@
 ---
-title: "Inicializátory | Microsoft Docs"
-ms.custom: 
+title: Inicializátory | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Inicializátory
 Inicializátor určuje počáteční hodnotu proměnné. Můžete inicializovat proměnné v těchto kontextech:  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Výchozí inicializace  
+### <a name="default_initialization"></a> Výchozí inicializace  
  Výchozí inicializace pro tříd, struktur a sjednocení je inicializace s výchozí konstruktor. Výchozí konstruktor nelze volat, žádný výraz inicializace nebo s `new` – klíčové slovo:  
   
 ```cpp  
@@ -285,7 +280,7 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   Proměnná je inicializována s `new` – klíčové slovo a složené závorky prázdný nebo závorky  
   
--   Proměnná je inicializována s`static_cast`  
+-   Proměnná je inicializována s `static_cast`  
   
 -   v konstruktoru základní třídy a nestatické členy inicializován s inicializačním seznam  
   
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Inicializace agregace  
+### <a name="agginit"></a> Inicializace agregace  
  Inicializace agregace je forma inicializace seznamu pro pole nebo typy tříd (často struktury nebo sjednocení), které mají:  
   
 -   žádné soukromé nebo chráněné členy  
@@ -531,7 +526,7 @@ int main()
  ![Rozhodovací graf pro inicializaci typů ref](../cpp/media/vc38s71.gif "vc38S71")  
 Graf rozhodnutí inicializace typů odkazů  
   
- Odkazuje na `volatile` typy (deklarován jako `volatile` *typename*  **&**  *identifikátor*) může být inicializovaný s `volatile` objekty stejného typu nebo s objekty, které nebylo deklarováno jako `volatile`. Budou však nelze, inicializovat pomocí **const** objekty daného typu. Podobně, odkazuje na **const** typy (deklarován jako **const** *typename*  **&**  *identifikátor* ) může být inicializovaný s **const** objekty stejného typu (nebo všechno, co má převod na daný typ nebo s objekty, které nebylo deklarováno jako **const**). Nelze je však inicializovat pomocí objektů `volatile` tohoto typu.  
+ Odkazuje na `volatile` typy (deklarován jako `volatile` *typename *** &** *identifikátor*) může být inicializovaný s `volatile` objekty stejného typu nebo s objekty, které nebylo deklarováno jako `volatile`. Budou však nelze, inicializovat pomocí **const** objekty daného typu. Podobně, odkazuje na **const** typy (deklarován jako **const** *typename *** &** *identifikátor*) může být inicializovaný s **const** objekty stejného typu (nebo všechno, co má převod na daný typ nebo s objekty, které nebylo deklarováno jako **const**). Nelze je však inicializovat pomocí objektů `volatile` tohoto typu.  
   
  Odkazy, které nejsou kvalifikovaná buď **const** nebo `volatile` – klíčové slovo lze inicializovat pouze s objekty deklarován jako ani **const** ani `volatile`.  
   

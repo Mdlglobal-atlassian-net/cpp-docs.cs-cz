@@ -1,10 +1,10 @@
 ---
 title: Vytvoření kódu C/C++ v příkazovém řádku | Microsoft Docs
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Vytvoření kódu C/C++ v příkazovém řádku
 
@@ -93,10 +92,10 @@ Nejjednodušší způsob, jak určit konkrétní sestavení architektura v exist
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architecture*<br/>
+*Architektura*<br/>
 Tento volitelný argument určuje architektuře hostitele a cíle použít. Pokud *architektura* není zadán, se používá výchozí prostředí sestavení. Podporují se tyto argumenty:
 
-|*architecture*|Kompilátoru|Architektura počítače hostitele|Sestavení architektura výstup (cíl)|
+|*Architektura*|Kompilátoru|Architektura počítače hostitele|Sestavení architektura výstup (cíl)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativní 32-bit|x86, x64|x86|
 |**x86\_amd64** nebo **x86\_x64**|mezi x64 na x86|x86, x64|x64|
@@ -144,7 +143,7 @@ Pro vytvoření projektu jazyka C nebo C++ v příkazovém řádku, Visual Studi
 [CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
 Pro zkompilování a spojení soubory zdrojového kódu do aplikace, knihovny a knihovny DLL pomocí kompilátoru (cl.exe).
 
-[Link](../build/reference/linking.md)<br/>
+[Odkaz](../build/reference/linking.md)<br/>
 Použijte linker (link.exe) pro propojení zkompilovaný objekt soubory a knihovny do aplikace a knihovny DLL.
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
@@ -153,7 +152,7 @@ Pomocí nástroje MSBuild (msbuild.exe) vytvářet projekty Visual C++ a řešen
 [NÁSTROJE DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
 Použití nástroje DEVENV (devenv.exe) v kombinaci s přepínačem příkazového řádku – například **/Build** nebo **/Clean**– k provedení určité příkazy sestavení bez zobrazení Visual Studio IDE.
 
-[NMAKE](../build/nmake-reference.md)<br/>
+[PŘÍKAZ NMAKE](../build/nmake-reference.md)<br/>
 Použijte k automatizaci úloh, které sestavení projektů Visual C++ pomocí tradičních souboru pravidel NMAKE (nmake.exe).
 
 Při sestavování na příkazovém řádku příkaz F1 není k dispozici pro rychlou pomoc. Místo toho vyhledávacího webu můžete získat informace o upozornění, chyby a zprávy, nebo můžete použít soubory offline nápovědy. Používání funkce Hledat v [docs.microsoft.com](https://docs.microsoft.com/cpp/), zadejte hledaný řetězec do vyhledávacího pole v horní části stránky.

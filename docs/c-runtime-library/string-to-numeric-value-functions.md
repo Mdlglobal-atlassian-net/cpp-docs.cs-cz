@@ -1,13 +1,10 @@
 ---
-title: "Funkce řetězců na číselné hodnoty | Microsoft Docs"
-ms.custom: 
+title: Funkce řetězců na číselné hodnoty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c7c793590daee13841439fc7c372ff02d18f83b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-to-numeric-value-functions"></a>Funkce řetězců na numerické hodnoty
 -   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -67,17 +62,17 @@ ms.lasthandoff: 12/21/2017
   
  Pokud uživatel zadal ukazatel na znakem end převod není nastaven na **NULL** během volání, ukazatel na znak, který zastavena kontroly se uloží existuje místo. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota ukazatele řetězec je uložena na této adrese.  
   
- `strtod`očekává řetězec v následujícím formátu:  
+ `strtod` očekává řetězec v následujícím formátu:  
   
- [*prázdné*] [*přihlašovací*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*přihlašovací*]`digits`]  
+ [*prázdné*] [*přihlašovací*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*přihlašovací*] `digits`]  
   
  A *prázdné* může obsahovat místa nebo kartě znaků, které se mají ignorovat; *přihlašovací* je buď plus (**+**) nebo minus (**-**); a `digits` jsou jeden nebo více desetinných míst. Pokud před základ – znak, který se zobrazí žádné číslice, alespoň jeden musí být uvedena za základ – znak. Desetinných míst může následovat exponentem, který se skládá z úvodní písmeno (**d**, **D**, **e**, nebo **E**) a volitelně číslo se znaménkem. Pokud exponentu část ani základ – znak zobrazí, předpokládá se základ – znak podle poslední číslice v řetězci. První znak, který se nevejde tento formulář zastaví kontroly.  
   
  `strtol`, `strtoul`, `_strtoi64`, A `_strtoui64` funkce očekávat řetězec v následujícím formátu:  
   
- [*prázdné*] [{ **+**  &#124;  **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]  
+ [*prázdné*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
   
- Pokud je základní argumentem mezi 2 a 36, se používá jako základní číslo. Pokud je 0, počáteční znaky odkazuje ukazatele end převod se používají k určení ve znalostní bázi. Pokud první znak je 0 a druhý znak není 'x' nebo 'X', řetězec interpretována jako osmičková celé číslo. jinak je interpretován jako s desetinným číslem. Pokud první znak je '0' a druhá znak je písmeno "x" nebo "X", řetězec interpretována jako hexadecimální celé číslo. Pokud je první znak ' 1' přes ' 9', řetězec interpretována jako desítkové celé číslo. Písmena 'a' do 'z' (nebo 'A' až 'Z') jsou přiřazeny hodnoty 10 až 35; pouze písmena, jejichž přiřazené hodnoty jsou menší než *základní* jsou povoleny. `strtoul`a `_strtoui64` povolit znaménkem plus (**+**) nebo minus (**-**) přihlašovací předpony – úvodní znaménka minus označuje, že je Negované návratovou hodnotu.  
+ Pokud je základní argumentem mezi 2 a 36, se používá jako základní číslo. Pokud je 0, počáteční znaky odkazuje ukazatele end převod se používají k určení ve znalostní bázi. Pokud první znak je 0 a druhý znak není 'x' nebo 'X', řetězec interpretována jako osmičková celé číslo. jinak je interpretován jako s desetinným číslem. Pokud první znak je '0' a druhá znak je písmeno "x" nebo "X", řetězec interpretována jako hexadecimální celé číslo. Pokud je první znak ' 1' přes ' 9', řetězec interpretována jako desítkové celé číslo. Písmena 'a' do 'z' (nebo 'A' až 'Z') jsou přiřazeny hodnoty 10 až 35; pouze písmena, jejichž přiřazené hodnoty jsou menší než *základní* jsou povoleny. `strtoul` a `_strtoui64` povolit znaménkem plus (**+**) nebo minus (**-**) přihlašovací předpony – úvodní znaménka minus označuje, že je Negované návratovou hodnotu.  
   
  Výstupní hodnota je ovlivňován nastavením `LC_NUMERIC` kategorie nastavení národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná.  
   
@@ -87,8 +82,8 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------|--------------------|  
 |`strtod`|Přetečení|+/- `HUGE_VAL`|  
 |`strtod`|Podtečení nebo žádný převod|0|  
-|`strtol`|+ Přetečení|**LONG_MAX –**|  
-|`strtol`|-Přetečení|**LONG_MIN –**|  
+|`strtol`|+ Přetečení|**LONG_MAX**|  
+|`strtol`|-Přetečení|**LONG_MIN**|  
 |`strtol`|Podtečení nebo žádný převod|0|  
 |`_strtoi64`|+ Přetečení|**_I64_MAX**|  
 |`_strtoi64`|-Přetečení|**_I64_MIN**|  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  **_I64_MAX**, _**I64_MIN**, a **_UI64_MAX** jsou definovány v omezení. H.  
   
- `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, a `_wcstoui64` jsou verze široká charakterová `strtod`, `strtol`, `strtoul`, `_strtoi64`, a `_strtoui64`, respektive; má ukazatel na argument end převod na každou z těchto funkcí široká charakterová je řetězec znaků celou. Jinak každá z těchto funkcí široká charakterová se chová stejně k jeho protějšku jedním znaková.  
+ `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, a `_wcstoui64` jsou verze široká charakterová `strtod`, `strtol`, `strtoul`, `_strtoi64`, a `_strtoui64`, respektive; má ukazatel na koncoví z – převod argument pro každou z těchto funkcí široká charakterová je široká charakterová řetězec. Jinak každá z těchto funkcí široká charakterová se chová stejně k jeho protějšku jedním znaková.  
   
 ## <a name="see-also"></a>Viz také  
  [Převod dat](../c-runtime-library/data-conversion.md)   

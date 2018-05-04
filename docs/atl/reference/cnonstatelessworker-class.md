@@ -1,12 +1,9 @@
 ---
-title: "Třída CNonStatelessWorker | Microsoft Docs"
-ms.custom: 
+title: Třída CNonStatelessWorker | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker – třída
 Přijímá požadavky od fondu vláken a předává je na objekt pracovního procesu, který je vytvořen a zničen v každé žádosti.  
@@ -68,12 +63,12 @@ class CNonStatelessWorker
 ## <a name="remarks"></a>Poznámky  
  Tato třída je jednoduchý pracovní vlákno pro použití s [CThreadPool](../../atl/reference/cthreadpool-class.md). Tato třída neposkytuje žádné možnosti zpracování požadavků své vlastní. Místo toho se vytvoří jedna instance *pracovní* každý požadavek a deleguje implementace její metody do této instance.  
   
- Výhodou Tato třída je, že nabízí pohodlný způsob, jak změnit stav modelu pro existující třídy pracovní vlákno. `CThreadPool`vytvoří jeden pracovní dobu jeho existence vlákno, takže pokud pracovní třída obsahuje stav, se bude obsahovat napříč více žádostí. Pomocí třídy v jednoduše zabalení `CNonStatelessWorker` šablony před jeho s použitím `CThreadPool`, doba platnosti pracovního procesu a stát, že obsahuje, je omezený na jednu žádost.  
+ Výhodou Tato třída je, že nabízí pohodlný způsob, jak změnit stav modelu pro existující třídy pracovní vlákno. `CThreadPool` vytvoří jeden pracovní dobu jeho existence vlákno, takže pokud pracovní třída obsahuje stav, se bude obsahovat napříč více žádostí. Pomocí třídy v jednoduše zabalení `CNonStatelessWorker` šablony před jeho s použitím `CThreadPool`, doba platnosti pracovního procesu a stát, že obsahuje, je omezený na jednu žádost.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
   
-##  <a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>  CNonStatelessWorker::Execute  
  Implementace [WorkerArchetype::Execute](worker-archetype.md#execute).  
 
   
@@ -88,7 +83,7 @@ void Execute(
  Tato metoda vytvoří instanci *pracovní* třídy v zásobníku a volání [inicializovat](worker-archetype.md#initialize) na tento objekt. Pokud se inicializace úspěšné, tato metoda také volá [Execute](worker-archetype.md#execute) a [ukončit](worker-archetype.md#terminate) na stejný objekt.  
 
   
-##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
  Implementace [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
   
 ```
@@ -101,7 +96,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato třída neprovádí žádné inicializace `Initialize`.  
   
-##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
  Implementace [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
   
 ```
@@ -111,7 +106,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>Poznámky  
  Tato třída zpracovává jako třída používaná pro stejný typ pracovní položky *pracovní* parametr šablony. V tématu [CNonStatelessWorker přehled](../../atl/reference/cnonstatelessworker-class.md) podrobnosti.  
   
-##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
  Implementace [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
   
 ```

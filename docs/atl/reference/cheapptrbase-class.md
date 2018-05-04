@@ -1,12 +1,9 @@
 ---
-title: "Třída CHeapPtrBase | Microsoft Docs"
-ms.custom: 
+title: Třída CHeapPtrBase | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase – třída
 Tato třída je základem pro několik tříd inteligentní haldy ukazatele.  
@@ -93,7 +88,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcore.h  
   
-##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
  Voláním této metody lze přidělit paměť.  
   
 ```
@@ -110,7 +105,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>Poznámky  
  V sestavení pro ladění k chybě assertion dojde v případě [CHeapPtrBase::m_pData](#m_pdata) členské proměnné aktuálně ukazuje na existující hodnotu; to znamená, není rovno hodnotu NULL.  
   
-##  <a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>  CHeapPtrBase::Attach  
  Volejte tuto metodu za účelem převzít vlastnictví existující ukazatele.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(T* pData) throw();
   
  V sestavení pro ladění k chybě assertion dojde v případě [CHeapPtrBase::m_pData](#m_pdata) členské proměnné aktuálně ukazuje na existující hodnotu; to znamená, není rovno hodnotu NULL.  
   
-##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  Destruktor.  
   
 ```
@@ -136,7 +131,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky.  
   
-##  <a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>  CHeapPtrBase::Detach  
  Volejte tuto metodu za účelem uvolnění vlastnictví ukazatel.  
   
 ```
@@ -149,7 +144,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní vlastnictví ukazatel, nastaví [CHeapPtrBase::m_pData](#m_pdata) členské proměnné na hodnotu NULL a vrátí kopii ukazatele.  
   
-##  <a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>  CHeapPtrBase::Free  
  Volat tuto metodu za účelem odstranění nainstalovaného objektu, na kterou odkazuje `CHeapPtrBase`.  
   
 ```
@@ -159,7 +154,7 @@ void Free() throw();
 ### <a name="remarks"></a>Poznámky  
  Objekt na kterou odkazuje `CHeapPtrBase` po uvolnění a [CHeapPtrBase::m_pData](#m_pdata) členské proměnné je nastaven na hodnotu NULL.  
   
-##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  Členské proměnné ukazatele data.  
   
 ```
@@ -169,7 +164,7 @@ T* m_pData;
 ### <a name="remarks"></a>Poznámky  
  Tato proměnná člena obsahuje informace ukazatele.  
   
-##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  & Operátor.  
   
 ```
@@ -180,7 +175,7 @@ T** operator&() throw();
  Vrátí adresu objektu, na kterou odkazuje `CHeapPtrBase` objektu.  
   
 
-##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
  Operátor ukazatele na člena.  
   
@@ -194,7 +189,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor k volání metody ve třídě, na kterou odkazuje `CHeapPtrBase` objektu. V sestavení pro ladění k chybě assertion dojde v případě `CHeapPtrBase` odkazuje na hodnotu NULL.  
   
-##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  Operátor přetypování.  
   
 ```  
@@ -204,7 +199,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Poznámky  
  Vrátí [CHeapPtrBase::m_pData](#m_pdata).  
   
-##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
  Volejte tuto metodu a znovu přidělte paměť.  
   
 ```

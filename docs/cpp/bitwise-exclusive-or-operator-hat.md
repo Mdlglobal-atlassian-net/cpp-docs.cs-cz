@@ -1,12 +1,9 @@
 ---
-title: "Bitový exkluzivní operátor OR: ^ | Microsoft Docs"
-ms.custom: 
+title: 'Bitový exkluzivní operátor OR: ^ | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitový exkluzivní operátor OR: ^
 ## <a name="syntax"></a>Syntaxe  
@@ -44,7 +39,7 @@ Bitový exkluzivní operátor OR (**^**) porovnává každý bit jeho první ope
 Celočíselné typy musí být oba operandy k bitový exkluzivní operátor OR. Obvyklé aritmetické převody zahrnutých v [standardní převody](standard-conversions.md) se použijí pro operandy.  
   
 ## <a name="operator-keyword-for-"></a>Operator – klíčové slovo pro ^  
-**Xor** operátor je ekvivalentem text  **^** . Existují dva způsoby pro přístup **xor** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+**Xor** operátor je ekvivalentem text **^**. Existují dva způsoby pro přístup **xor** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
   
 ## <a name="example"></a>Příklad  
   

@@ -1,12 +1,9 @@
 ---
-title: "Datum a čas: Podpora databáze | Microsoft Docs"
-ms.custom: 
+title: 'Datum a čas: Podpora databáze | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [C++], date/time data
 - COleDateTimeSpan class, database programming
 ms.assetid: 4a57a1bb-fad5-4b70-b32c-42ad75c710c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83de3c9fc55b9eafb3863b70dfb1cd6fa6c23de7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e5047dfb2d8a162cf6d82c07007504df897afa1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-database-support"></a>Datum a čas: Podpora databáze
 Od verze 4.0, MFC databáze používá programovací [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) a [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) třídy reprezentující data a času. Tyto třídy, používat i v automatizace, jsou odvozené od třídy [COleVariant](../mfc/reference/colevariant-class.md). Si poskytují lepší podporu pro správu dat, datum a čas, než se [CTime –](../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

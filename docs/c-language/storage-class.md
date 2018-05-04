@@ -1,13 +1,10 @@
 ---
-title: "Třídy úložiště | Microsoft Docs"
-ms.custom: 
+title: Třídy úložiště | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4385515becbb32b256b2bf6562af941371ef47e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: ecd50ddf72fbafb23571e2b2709418e4eb89093e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class"></a>Třída úložiště
 Specifikátor třídy úložiště v definici funkce nabízí funkce buď `extern` nebo **statické** třídy úložiště.  
@@ -60,7 +55,7 @@ Specifikátor třídy úložiště v definici funkce nabízí funkce buď `exter
   
  Funkce s **statické** třídy úložiště je viditelná pouze v zdrojový soubor, ve kterém je definovaný. Všechny ostatní funkce s třídou úložiště `extern` zadanou explicitně či implicitně jsou viditelné ve všech zdrojových souborech programu. Pokud **statické** třídy úložiště se požaduje, se musí být deklarován v prvním výskytem deklarace (pokud existuje), funkce a v definici funkce.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Pokud jsou povolené rozšíření Microsoft, funkce původně deklarovány bez třídy úložiště (nebo s `extern` třídy úložiště) je zadána **statické** úložiště třídy, pokud definice této funkce je ve stejném souboru zdroje a pokud definice explicitně určuje **statické** třídy úložiště.  
   

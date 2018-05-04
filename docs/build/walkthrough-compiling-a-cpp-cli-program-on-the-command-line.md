@@ -2,26 +2,21 @@
 title: 'Návod: Kompilace C + +/ CLI Program na příkazovém řádku | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e5b8119c8921da28c6ad93b257234e0998083a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilace C + +/ CLI Program na příkazovém řádku
 Můžete vytvořit programy Visual C++, cíle Common Language Runtime (CLR), které používají rozhraní .NET Framework a sestavení je na příkazovém řádku. Podporuje Visual C++ C + +/ CLI programovací jazyk, který má operátory a další typy, jehož cílem je programovací model rozhraní .NET. Úvod do jazyka C + +/ rozhraní příkazového řádku jazyka, najdete v části [čistý C++: Hello, C + +/ CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). Obecné informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  

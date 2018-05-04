@@ -2,12 +2,9 @@
 title: Možnosti BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>Možnosti BSCMAKE
 Tato část popisuje možnosti dostupné pro řízení BSCMAKE. Několik možností obsah soubor s informacemi o procházení řídit vyloučení nebo zahrnutí určité informace. Možnosti vyloučení můžete povolit BSCMAKE spouštět rychleji a může mít za následek menší souboru BSC programem. Možnost názvů malá a velká písmena (s výjimkou **/HELP** a **/nologo**).  
@@ -81,13 +76,13 @@ Tato část popisuje možnosti dostupné pro řízení BSCMAKE. Několik možnos
  /IU  
  Zahrnuje neregistrované symboly. Ve výchozím nastavení BSCMAKE nezaznamenává všechny symboly, které jsou definovány, ale neodkazuje. Pokud soubor .sbr byly zabaleny, tato možnost nemá žádný vliv pro tento vstupní soubor, protože kompilátor již odebrána neregistrované symboly.  
   
- /n  
- Vynutí nonincremental sestavení. Použití  **/n**  Chcete-li vynutit úplnou sestavení informačního souboru procházet, jestli existuje soubor .bsc a zabránit ke zkrácení .sbr souborů. V tématu [jak BSCMAKE sestavení souboru BSC programem](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ / n  
+ Vynutí nonincremental sestavení. Použití **/n** Chcete-li vynutit úplnou sestavení informačního souboru procházet, jestli existuje soubor .bsc a zabránit ke zkrácení .sbr souborů. V tématu [jak BSCMAKE sestavení souboru BSC programem](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Potlačí zprávu o autorských právech BSCMAKE.  
   
- /o`filename`  
+ /o `filename`  
  Určuje název pro soubor s informacemi o procházení. Ve výchozím nastavení BSCMAKE poskytuje soubor s informacemi o procházení základní název první soubor .sbr a .bsc rozšíření.  
   
  /S ( `filename`...)  

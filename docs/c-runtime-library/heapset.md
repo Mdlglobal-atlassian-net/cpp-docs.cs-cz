@@ -1,13 +1,10 @@
 ---
-title: "_heapset – | Microsoft Docs"
-ms.custom: 
+title: _heapset – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _heapset
 apilocation:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71e763e39c3d5e2f1a192e7408ee02758f26e6b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c45c4cc3e6e6ffe23378ce0b4f26383369e92058
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="heapset"></a>_heapset
 Zkontroluje haldách minimální konzistence a nastaví na zadanou hodnotou volné položky.  
@@ -62,7 +57,7 @@ int _heapset(
  Zadejte znak.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_heapset`Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
+ `_heapset` Vrátí jednu z následujících konstanty manifestu typu integer definované v Malloc.h.  
   
  `_HEAPBADBEGIN`  
  Počáteční záhlaví informace neplatná nebo nebyla nalezena.  
@@ -81,13 +76,13 @@ int _heapset(
 ## <a name="remarks"></a>Poznámky  
  `_heapset` Funkce zobrazuje umístění volné paměti nebo uzly, které byly neúmyslně přepsána.  
   
- `_heapset`kontroluje minimální konzistence v haldě a poté nastaví všech bajtů haldy volné položky k `fill` hodnotu. Tato hodnota známé ukazuje, která umístění paměti haldy obsahovat volné uzly a které obsahují data, která měla neúmyslně zapsána do uvolněné paměti. Pokud operační systém nepodporuje `_heapset`(například Windows 98), funkce vrátí hodnotu `_HEAPOK` a nastaví `errno` k `ENOSYS`.  
+ `_heapset` kontroluje minimální konzistence v haldě a poté nastaví všech bajtů haldy volné položky k `fill` hodnotu. Tato hodnota známé ukazuje, která umístění paměti haldy obsahovat volné uzly a které obsahují data, která měla neúmyslně zapsána do uvolněné paměti. Pokud operační systém nepodporuje `_heapset`(například Windows 98), funkce vrátí hodnotu `_HEAPOK` a nastaví `errno` k `ENOSYS`.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|  
 |-------------|---------------------|---------------------|  
-|`_heapset`|\<malloc.h >|\<errno.h >|  
+|`_heapset`|\<malloc.h >|\<errno.h>|  
   
  Další informace o kompatibilitě, najdete v části [kompatibility](../c-runtime-library/compatibility.md) v úvodu.  
   
@@ -136,6 +131,6 @@ OK - heap is fine
 ## <a name="see-also"></a>Viz také  
  [Přidělení paměti](../c-runtime-library/memory-allocation.md)   
  [_heapadd –](../c-runtime-library/heapadd.md)   
- [_heapchk –](../c-runtime-library/reference/heapchk.md)   
+ [_heapchk](../c-runtime-library/reference/heapchk.md)   
  [_heapmin –](../c-runtime-library/reference/heapmin.md)   
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)

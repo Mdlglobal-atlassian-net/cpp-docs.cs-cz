@@ -1,13 +1,10 @@
 ---
-title: "-ERRORREPORT (sestava interními chybami Linkeru) | Microsoft Docs"
-ms.custom: 
+title: -ERRORREPORT (sestava interními chybami Linkeru) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (sestava s interními chybami linkeru)
 
@@ -39,10 +34,10 @@ ms.lasthandoff: 01/03/2018
 **None**  
 Zprávy o chybách interní kompilátoru nebudou shromažďovány nebo odesílány do společnosti Microsoft.
 
-**řádku**  
+**prompt**  
 Dotaz, zda chcete poslat zprávu, když obdrží vnitřní chyby kompilátoru. **řádku** je výchozí hodnota při kompilaci aplikace ve vývojovém prostředí.
 
-**fronty**  
+**Fronty**  
 Fronty zprávy o chybách. Když se přihlásíte pomocí oprávnění správce, tak, aby ohlásíte případných selhání od posledního byly přihlášení, zobrazí se okno (nezobrazí se výzva k odeslání zpráv o selhání více než jednou za tři dní). **fronty** je výchozí hodnota při kompilaci aplikace na příkazovém řádku.
 
 **Odeslat**  
@@ -68,6 +63,6 @@ Možnost **/errorreport:send** automaticky odesílá informace o chybách spole�
 
 ## <a name="see-also"></a>Viz také
 
-[/ errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
+[/errorReport (vytvoření sestavy s interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)  
 [Možnosti linkeru](../../build/reference/linker-options.md)  

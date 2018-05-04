@@ -2,11 +2,8 @@
 title: Funkce (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-&LT;&LT;&LT;&LT;&LT;&LT;&LT; HEAD
-4. Kromě používání návratovou hodnotu sám sebe, můžete "vrátit" hodnoty tak, že definujete libovolný počet parametrů k dispozici průchodu odkazem, takže můžete upravit nebo inicializovat hodnoty objekty, které poskytuje volající funkce. Další informace najdete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).  
-  
-## <a name="function-pointers"></a>Ukazatele na funkce  
- C++ podporuje ukazatelů na funkce stejným způsobem jako jazyk C. Nicméně alternativní typově bezpečný je obvykle použít objekt funkce.  
-  
- Deklarujete-li funkci vracející typ ukazatele na funkci, je doporučeno deklarovat pro typ ukazatele na funkci alias pomocí direktivy `typedef`.  Příklad  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- Není-li toto provedeno, lze patřičnou syntaxi deklarace funkce odvodit ze syntaxe deklarátoru ukazatele na funkci nahrazením identifikátoru (`fp` v příkladu výše) názvem funkce a seznamem argumentů takto:  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- Předchozí deklarace je ekvivalentem deklarace pomocí direktivy typedef výše.  
-  
-## <a name="see-also"></a>Viz také  
- [Přetížení funkce](../cpp/function-overloading.md)   
- [Funkce se seznamem argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [Explicitně přednastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [Výchozí argumenty](../cpp/default-arguments.md)   
- [Vložené funkce](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>Vrátí více hodnot z funkce
 
 Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
@@ -475,4 +441,3 @@ Předchozí deklarace je ekvivalentem deklarace pomocí direktivy typedef výše
 - [Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Výchozí argumenty](../cpp/default-arguments.md)
 - [Vložené funkce](../cpp/inline-functions-cpp.md)
->>>>>>> master

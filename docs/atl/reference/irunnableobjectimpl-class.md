@@ -1,12 +1,9 @@
 ---
-title: "Třída IRunnableObjectImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IRunnableObjectImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IRunnableObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1ac939d723596f4b0fc3f1013dd3f02cf2aa06b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a08fec0fd38e30729c9131def1831e5e5d8f633e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl – třída
 Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci třídy [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) rozhraní.  
@@ -79,7 +74,7 @@ class IRunnableObjectImpl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
+##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
  Vrátí CLSID spuštěné ovládacího prvku.  
   
 ```
@@ -92,7 +87,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) ve Windows SDK.  
   
-##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
+##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
  Určuje, zda je spuštěn ovládacího prvku.  
   
 ```
@@ -105,7 +100,7 @@ virtual BOOL IsRunning();
 ### <a name="remarks"></a>Poznámky  
  V tématu [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) ve Windows SDK.  
   
-##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
+##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
  Zamkne ovládacího prvku do stavu spuštěno.  
   
 ```
@@ -118,7 +113,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) ve Windows SDK.  
   
-##  <a name="run"></a>IRunnableObjectImpl::Run  
+##  <a name="run"></a>  IRunnableObjectImpl::Run  
  Vynutí spuštění ovládacího prvku.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) ve Windows SDK.  
   
-##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
+##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
  Určuje, který je vložený ovládacího prvku.  
   
 ```

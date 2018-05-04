@@ -1,12 +1,9 @@
 ---
-title: "Kódování Unicode a vícebajtových znaků (MBCS) podporu sady | Microsoft Docs"
-ms.custom: 
+title: Kódování Unicode a vícebajtových znaků (MBCS) podporu sady | Microsoft Docs
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>(MBCS) podporu kódování Unicode a vícebajtové znakové sady
 
@@ -48,15 +44,15 @@ Tyto soubory knihoven DLL, knihovny a ladicí program slouží k podpoře kódov
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
-|MFC*verze*U.LIB|MFC*verze*U.PDB|MFC*verze*U.DLL|MFC*verze*UD. LIB|
-|MFC*verze*UD. PDB|MFC*verze*UD. KNIHOVNY DLL|MFCS*verze*U.LIB|MFCS*verze*U.PDB|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD.LIB|UAFXCWD. PDB|
+|MFC*verze*U.LIB|MFC*verze*U.PDB|MFC*version*U.DLL|MFC*verze*UD. LIB|
+|MFC*verze*UD. PDB|MFC*version*UD.DLL|MFCS*verze*U.LIB|MFCS*verze*U.PDB|
 |MFCS*verze*UD. LIB|MFCS*verze*UD. PDB|MFCM*verze*U.LIB|MFCM*verze*U.PDB|
-|MFCM*verze*U.DLL|MFCM*verze*UD. LIB|MFCM*verze*UD. PDB|MFCM*verze*UD. KNIHOVNY DLL|
+|MFCM*verze*U.DLL|MFCM*verze*UD. LIB|MFCM*verze*UD. PDB|MFCM*version*UD.DLL|
 
 (*verze* představuje číslo verze souboru; '140, například znamená verze 14.0.)
 
-`CString`je založena na `TCHAR` datového typu. Pokud je symbol `_UNICODE` je definována pro sestavení vašeho programu `TCHAR` je definována jako typ `wchar_t`, typ kódování znaků 16 bitů. V opačném `TCHAR` je definován jako `char`, kódování normální 8bitové znaků. Proto v kódu Unicode `CString` se skládá z 16 rozšířené znaky. Bez kódování Unicode, se skládá z znaků typu `char`.
+`CString` je založena na `TCHAR` datového typu. Pokud je symbol `_UNICODE` je definována pro sestavení vašeho programu `TCHAR` je definována jako typ `wchar_t`, typ kódování znaků 16 bitů. V opačném `TCHAR` je definován jako `char`, kódování normální 8bitové znaků. Proto v kódu Unicode `CString` se skládá z 16 rozšířené znaky. Bez kódování Unicode, se skládá z znaků typu `char`.
 
 Do dokončení programování Unicode vaší aplikace, které je nutné také:
 
@@ -72,9 +68,9 @@ Do dokončení programování Unicode vaší aplikace, které je nutné také:
 
    - Použít `LPTSTR` použít `char*`.
 
-   - Použít `LPCTSTR` použít `const char*`. `CString`poskytuje operátor `LPCTSTR` pro převod mezi `CString` a `LPCTSTR`.
+   - Použít `LPCTSTR` použít `const char*`. `CString` poskytuje operátor `LPCTSTR` pro převod mezi `CString` a `LPCTSTR`.
 
-`CString`také poskytuje kódování Unicode konstruktory, přiřazení operátory a operátory porovnání.
+`CString` také poskytuje kódování Unicode konstruktory, přiřazení operátory a operátory porovnání.
 
 [Referenční dokumentace běhové knihovny](../c-runtime-library/c-run-time-library-reference.md) definuje přenosné verzích všechny její funkce zpracování řetězců. Další informace najdete v tématu kategorii [internacionalizace](../c-runtime-library/internationalization.md).
 
@@ -91,12 +87,12 @@ V části DBCS daný řetězec může obsahovat všechny jednobajtové znaky ANS
 > [!NOTE]
 > Serializace řetězec kódování Unicode v prostředí MFC může číst řetězce Unicode a MBCS bez ohledu na to, kterou verzi aplikace, kterou používáte. Datové soubory jsou přenosné mezi verzemi kódování Unicode a MBCS vašeho programu.
 
-`CString`Členské funkce použít speciální "obecný text" verze C běhové funkce, které volají nebo používají funkce kódování Unicode. Tedy například pokud `CString` by obvykle volání funkce `strcmp`, volá funkci odpovídající obecného textu `_tcscmp` místo. V závislosti na tom, jak symboly `_MBCS` a `_UNICODE` jsou definovány `_tcscmp` mapuje následujícím způsobem:
+`CString` Členské funkce použít speciální "obecný text" verze C běhové funkce, které volají nebo používají funkce kódování Unicode. Tedy například pokud `CString` by obvykle volání funkce `strcmp`, volá funkci odpovídající obecného textu `_tcscmp` místo. V závislosti na tom, jak symboly `_MBCS` a `_UNICODE` jsou definovány `_tcscmp` mapuje následujícím způsobem:
 
 |||
 |-|-|
-|`_MBCS`definované|`_mbscmp`|
-|`_UNICODE`definované|`wcscmp`|
+|`_MBCS` Definované|`_mbscmp`|
+|`_UNICODE` Definované|`wcscmp`|
 |Ani symbol definované|`strcmp`|
 
 > [!NOTE]

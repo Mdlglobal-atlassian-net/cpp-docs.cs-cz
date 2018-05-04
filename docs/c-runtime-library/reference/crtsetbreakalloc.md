@@ -2,11 +2,8 @@
 title: _Crtsetbreakalloc – | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e14e1d40d5d20b9759d115eaf2fd29b3cae57172
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -68,7 +63,7 @@ Vrátí předchozí číslo pořadí přidělení objektů, které mělo nastave
 
 **_Crtsetbreakalloc –** umožňuje aplikaci k provedení zjišťování nevracení paměti ukončování řádků v určitém bodě přidělování paměti a trasování zpět na počátek požadavku. Tato funkce používá sekvenční číslo pořadí přidělení objektu přiřazené bloku paměti při přidělení na haldě. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtsetbreakalloc –** jsou odebrány při předběžném zpracování.
 
-Objekt přidělení pořadové číslo je uložen v *lRequest* pole z **_crtmemblockheader –** struktuře, které jsou definované v Crtdbg.h. Pokud jsou informace o bloku paměti hlášeny jednou z funkcí s výpisem ladění, je toto číslo uzavřeno ve složených závorkách, například {36}.
+Objekt přidělení pořadové číslo je uložen v *lRequest* pole z **_crtmemblockheader –** struktuře, které jsou definované v Crtdbg.h. Při hlášení informace o paměti bloku pomocí jedné z funkce výpisu ladění, je toto číslo uzavřené do složených závorek, jako například {36}.
 
 Další informace o tom, **_crtsetbreakalloc –** lze použít s další funkce správy paměti najdete v tématu [sledování požadavků na přidělení haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 

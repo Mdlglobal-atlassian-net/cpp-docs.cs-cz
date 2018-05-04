@@ -1,10 +1,7 @@
 ---
-title: "Kódování funkcí textu ATL | Microsoft Docs"
-ms.custom: 
+title: Kódování funkcí textu ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>Kódování funkcí textu ATL
 Tyto funkce podporují text kódování a dekódování.
@@ -69,7 +65,7 @@ Tyto funkce podporují text kódování a dekódování.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Číselná hodnota vstupní znak interpretovat jako hexadecimální číslice. Například vstup '0' Vrátí hodnotu 0 a vstup 'A' vrací hodnotu 10. Pokud vstupní znak je hexadecimální číslice, funkce vrátí hodnotu -1.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Volání této funkce se získat verzi knihovny serveru ATL, kterou používáte.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Dekóduje řetězec dat, který byl zakódován jako hexadecimální text, například voláním předchozí [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z šestnáctkově zakódovaného řetězce zadané délky.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Počet bajtů požadovaných pro vyrovnávací paměť, která by mohla obsahovat dekódované řetězec `nSrcLen` znaků.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Voláním této funkce zakódujete data jako řetězec šestnáctkového textu.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Každý bajtů zdroj dat je kódovaná jako 2 hexadecimálních znaků.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Počet znaků požadovaných pro vyrovnávací paměť, která by mohla obsahovat kódovaného data `nSrcLen` bajtů.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Číselná hodnota vstupní znak interpretovat jako hexadecimální číslice. Například vstup '0' Vrátí hodnotu 0 a vstup 'A' vrací hodnotu 10. Pokud vstupní znak je hexadecimální číslice, funkce vrátí hodnotu -1.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Voláním této funkce převedete řetězec s kódováním Unicode na UTF-8.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete určit velikost vyrovnávací paměti vyžadované pro převedený řetězec, volání této funkce předávání 0 `szDest` a `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Voláním této funkce převedete data pomocí kódování B.  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>Poznámky  
  Schéma kódování "B" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Schéma kódování "B" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Voláním této funkce převedete znaky, které jsou problematické pro použití v kódu XML, na jejich bezpečné ekvivalenty.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  Příznaky ATL_ESC popisující, jak se provést převod. 
 
-- `ATL_ESC_FLAG_NONE`Výchozí chování. Uvozovky nejsou převést značky a apostrofy.
-- `ATL_ESC_FLAG_ATTR`Uvozovky, značky a apostrofy jsou převedeny na `&quot;` a `&apos;` v uvedeném pořadí.
+- `ATL_ESC_FLAG_NONE` Výchozí chování. Uvozovky nejsou převést značky a apostrofy.
+- `ATL_ESC_FLAG_ATTR` Uvozovky, značky a apostrofy jsou převedeny na `&quot;` a `&apos;` v uvedeném pořadí.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Voláním této funkce získáte počet znaků s diakritikou v řetězci.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet rozšířené znaky najít v rámci určeného řetězce [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Voláním této funkce zjistíte, zda daný znak používá diakritiku (je menší než 32, větší než 126 a nejde o tabulátor, odřádkování ani návrat na začátek řádku).  
   
 ```  
@@ -366,7 +362,7 @@ inline int IsExtendedChar(char ch) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  **Hodnota TRUE,** Pokud znak je rozšířeno, **FALSE** jinak.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Voláním této funkce převedete data pomocí kódování Q.  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>Poznámky  
  Schéma kódování "D:" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Schéma kódování "D:" je popsaná v dokumentu RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Dekóduje řetězec dat, která zakódování ve formátu tisknutelná v uvozovkách, jako předchozí voláním [QPEncode](#qpencode).  
   
 ```  
@@ -437,19 +433,19 @@ inline BOOL QPDecode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pbSrcData`  
+ [v] `pbSrcData`  
  Vyrovnávací paměť obsahující data, která mají být dekódovat.  
   
- [v]`nSrcLen`  
+ [v] `nSrcLen`  
  Délka v bajtech `pbSrcData`.  
   
- [out]`szDest`  
+ [out] `szDest`  
  Volající přidělit vyrovnávací paměť pro příjem dekódovaná data.  
   
- [out]`pnDestLen`  
+ [out] `pnDestLen`  
  Ukazatel na proměnné, která obsahuje délka v bajtech `szDest`. Pokud funkci úspěšné, obdrží proměnnou počet bajtů zapsaných do vyrovnávací paměti. Pokud funkce selže, obdrží proměnná má požadovanou délku v bajtech vyrovnávací paměti.  
   
- [v]`dwFlags`  
+ [v] `dwFlags`  
  Příznaky, které popisují, jak se provést převod. V tématu [ATLSMTP_QPENCODE příznaky](http://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>Poznámky  
  Tisknutelná v uvozovkách schéma kódování je popsán v chodu 2045 RFC ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného ve formátu quoted-printable.  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>Poznámky  
  Tisknutelná v uvozovkách schéma kódování je popsán v chodu 2045 RFC ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Voláním této funkce zakódujete data do formátu quoted-printable.  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  Příznaky ATLSMTP_QPENCODE popisující, jak se provést převod. 
-- `ATLSMTP_QPENCODE_DOT`Pokud se zobrazí tečku na začátku řádku, je je přidány do výstupu a také kódovaný.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Připojí `=\r\n` na řetězec s kódováním.
+- `ATLSMTP_QPENCODE_DOT` Pokud se zobrazí tečku na začátku řádku, je je přidány do výstupu a také kódovaný.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Připojí `=\r\n` na řetězec s kódováním.
 
 Tisknutelná v uvozovkách schéma kódování je popsán v [chodu 2045 RFC](http://www.ietf.org/rfc/rfc2045.txt).
   
@@ -513,7 +509,7 @@ Tisknutelná v uvozovkách schéma kódování je popsán v [chodu 2045 RFC](htt
 ### <a name="remarks"></a>Poznámky  
  Tisknutelná v uvozovkách schéma kódování je popsán v chodu 2045 RFC ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Poznámky  
  Tisknutelná v uvozovkách schéma kódování je popsán v chodu 2045 RFC ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Dekóduje řetězec dat, která byla uuencoded například voláním předchozí [UUEncode](#uuencode).  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>Poznámky  
  Tato implementace uuencoding dodržuje specifikaci POSIX P1003.2b/D11.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného do kódování UUENCODE.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Poznámky  
  Tato implementace uuencoding dodržuje specifikaci POSIX P1003.2b/D11.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Voláním této funkce zakódujete data do kódování UUENCODE.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Příznaky řízení chování této funkce. 
-- `ATLSMTP_UUENCODE_HEADE`Záhlaví bude kódování.
-- `ATLSMTP_UUENCODE_END`Element end se kódování.
-- `ATLSMTP_UUENCODE_DOT`Data nádivky bude provedena.  
+- `ATLSMTP_UUENCODE_HEADE` Záhlaví bude kódování.
+- `ATLSMTP_UUENCODE_END` Element end se kódování.
+- `ATLSMTP_UUENCODE_DOT` Data nádivky bude provedena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>Poznámky  
  Tato implementace uuencoding dodržuje specifikaci POSIX P1003.2b/D11.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.  
   
 ```  
@@ -637,4 +633,4 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
   
 ### <a name="see-also"></a>Viz také  
  [Koncepty](../../atl/active-template-library-atl-concepts.md)   
- [ATL COM plochy součásti](../../atl/atl-com-desktop-components.md)   
+ [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)   

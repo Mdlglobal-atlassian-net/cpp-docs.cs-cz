@@ -1,13 +1,10 @@
 ---
-title: "-vmm,. - virtuální počítače, - vmv (obecná reprezentace) | Microsoft Docs"
-ms.custom: 
+title: -vmm,. - virtuální počítače, - vmv (obecná reprezentace) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
 Použít, když [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je vybrán jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti znamenat model dědičnosti definice třídy není ještě došlo.  
@@ -56,9 +51,9 @@ Použít, když [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vm
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|**/ VMM**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá vícenásobná dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **vícenásobná dědičnost –**.<br /><br /> Tento zápis je větší než se vyžaduje pro jedna dědičnost.<br /><br /> Pokud je virtuální dědičnost model definice třídy, pro kterou je deklarován ukazatel na člena, kompilátor vygeneruje chybu.|  
-|**/ VMS**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá žádné dědičnosti nebo jedna dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **single_inheritance**.<br /><br /> Toto je nejmenší reprezentace ukazatel na člena třídy.<br /><br /> Pokud je model dědičnosti definice třídy, pro kterou je deklarován ukazatele na člena, několik nebo virtuální, kompilátor vygeneruje chybu.|  
-|**/ vmv**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá virtuální dědičnost. Tato nikdy dojde k chybě a je výchozí.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **virtual_inheritance**.<br /><br /> Tato možnost vyžaduje větší ukazatel a další kód interpretovat ukazatele než ostatní možnosti.|  
+|**/vmm**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá vícenásobná dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **vícenásobná dědičnost –**.<br /><br /> Tento zápis je větší než se vyžaduje pro jedna dědičnost.<br /><br /> Pokud je virtuální dědičnost model definice třídy, pro kterou je deklarován ukazatel na člena, kompilátor vygeneruje chybu.|  
+|**/vms**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá žádné dědičnosti nebo jedna dědičnost.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **single_inheritance**.<br /><br /> Toto je nejmenší reprezentace ukazatel na člena třídy.<br /><br /> Pokud je model dědičnosti definice třídy, pro kterou je deklarován ukazatele na člena, několik nebo virtuální, kompilátor vygeneruje chybu.|  
+|**/vmv**|Určuje vyjádření nejobecnější ukazatele na člena třídy jako ten, který používá virtuální dědičnost. Tato nikdy dojde k chybě a je výchozí.<br /><br /> Odpovídající [– klíčové slovo dědičnosti](../../cpp/inheritance-keywords.md) a argument [pointers_to_members – #pragma](../../preprocessor/pointers-to-members.md) je **virtual_inheritance**.<br /><br /> Tato možnost vyžaduje větší ukazatel a další kód interpretovat ukazatele než ostatní možnosti.|  
   
  Když zadáte jednu z těchto možností model dědičnosti, tento model se používá pro všechny ukazatelé na členy třídy, bez ohledu na jejich dědičnost typů nebo zda je ukazatel deklarovaný před nebo po třídy. Proto, pokud chcete vždy použít jedním dědičnost třídy, můžete snížit velikost kód kompilovat s **/VMS**, nicméně pokud chcete použít nejobecnější případ (za cenu největší znázornění dat), kompilovat s **/vmv**.  
   

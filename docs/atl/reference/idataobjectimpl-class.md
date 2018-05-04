@@ -1,12 +1,9 @@
 ---
-title: "Třída IDataObjectImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IDataObjectImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3ffcdd8cc8320b2534d928171fe75619062b300
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl – třída
 Tato třída poskytuje metody pro podporu Uniform přenos dat a správě připojení.  
@@ -76,9 +71,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|Datový objekt přenáší data z klienta. Implementace ATL vrátí **E_NOTIMPL**.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) rozhraní poskytuje metody pro podporu Uniform přenášet Data. `IDataObject`používá standardní formát struktury [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) načíst a ukládat data.  
+ [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) rozhraní poskytuje metody pro podporu Uniform přenášet Data. `IDataObject` používá standardní formát struktury [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) načíst a ukládat data.  
   
- `IDataObject`spravuje taky připojení k poradit jímky pro zpracování oznámení o změnách dat. V pořadí pro klienta k přijímání oznámení o změnách dat z datový objekt musí implementovat klienta [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) rozhraní na objektu s názvem jímky doporučení. Když klient pak zavolá **IDataObject::DAdvise**, připojení mezi datový objekt a jímka doporučení.  
+ `IDataObject` spravuje taky připojení k poradit jímky pro zpracování oznámení o změnách dat. V pořadí pro klienta k přijímání oznámení o změnách dat z datový objekt musí implementovat klienta [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) rozhraní na objektu s názvem jímky doporučení. Když klient pak zavolá **IDataObject::DAdvise**, připojení mezi datový objekt a jímka doporučení.  
   
  Třída `IDataObjectImpl` poskytuje výchozí implementaci třídy `IDataObject` a implementuje **IUnknown** posíláním informací o k výpisu zařízení ladění sestavení.  
   
@@ -92,7 +87,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
  Naváže připojení mezi datový objekt a jímky doporučení.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT DAdvise(
   
  V tématu [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) ve Windows SDK.  
   
-##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  Ukončí připojení dříve vytvořené prostřednictvím [DAdvise](#dadvise).  
   
 ```
@@ -120,7 +115,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) ve Windows SDK.  
   
-##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  Vytvoří enumerátor k iteraci v rámci aktuální poradní připojení.  
   
 ```
@@ -134,7 +129,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>Poznámky  
  V tématu [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) ve Windows SDK.  
   
-##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  Vytvoří enumerátor k iteraci v rámci **FORMATETC** struktury datový objekt nepodporuje.  
   
 ```
@@ -149,7 +144,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **E_NOTIMPL**.  
   
-##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
  Odešle upozornění na změnu zpět do každé podřízený doporučení, která je aktuálně spravován.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
  Načte logicky ekvivalentní **FORMATETC** struktura na takový, který je složitější.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>Poznámky  
  V tématu [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) ve Windows SDK.  
   
-##  <a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  Přenáší data z datového objektu do klienta.  
   
 ```
@@ -186,7 +181,7 @@ HRESULT GetData(
   
  V tématu [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
   
-##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  Podobně jako `GetData`, s výjimkou přidělíte klienta **STGMEDIUM** struktury.  
   
 ```
@@ -201,7 +196,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>Poznámky  
  V tématu [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) ve Windows SDK.  
   
-##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  Určuje, zda datový objekt podporuje konkrétní **FORMATETC** strukturu pro přenos dat.  
   
 ```
@@ -214,7 +209,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) ve Windows SDK.  
   
-##  <a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  Datový objekt přenáší data z klienta.  
   
 ```

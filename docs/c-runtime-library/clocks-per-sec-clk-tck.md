@@ -1,13 +1,10 @@
 ---
-title: "CLOCKS_PER_SEC, CLK_TCK – | Microsoft Docs"
-ms.custom: 
+title: CLOCKS_PER_SEC, CLK_TCK – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CLOCKS_PER_SEC
 - CLK_TCK
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CLOCKS_PER_SEC
 - CLK_TCK constant
 ms.assetid: bc285106-383d-44cb-91bf-276ad7de57bf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b728dd56b8f0b3540b92c5243a566da77b5e12d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbcc64419a34ff763f3e116474687fbadf055f42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC, CLK_TCK
 ## <a name="syntax"></a>Syntaxe  
@@ -38,8 +33,8 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Doba v sekundách je hodnoty vrácené `clock` funkce, dělený `CLOCKS_PER_SEC`. `CLK_TCK`je ekvivalentní, ale považují za zastaralé.  
+ Doba v sekundách je hodnoty vrácené `clock` funkce, dělený `CLOCKS_PER_SEC`. `CLK_TCK` je ekvivalentní, ale považují za zastaralé.  
   
 ## <a name="see-also"></a>Viz také  
- [hodiny](../c-runtime-library/reference/clock.md)   
+ [Hodiny](../c-runtime-library/reference/clock.md)   
  [Globální konstanty](../c-runtime-library/global-constants.md)

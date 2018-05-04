@@ -2,11 +2,8 @@
 title: Vícenásobné třídy Base | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Vícenásobné třídy Base
 Jak je popsáno v [vícenásobná dědičnost](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), můžete být třída odvozená z více než jeden základní třídy. V modelu vícenásobné dědičnosti (kde jsou třídy odvozené z více než jeden základní třídy) základní třídy, které jsou určeny pomocí *přehled základních* gramatika element. Lze například určit deklaraci třídy pro `CollectionOfBook` odvozenou z `Collection` a z `Book`:  
@@ -69,7 +64,7 @@ Graf simulované fronty na oběd
   
  Na obrázku je třída `Queue` základní třídou pro třídu `CashierQueue` i `LunchQueue`. Jsou-li však obě třídy kombinovány do třídy `LunchCashierQueue`, nastane následující problém: nová třída obsahuje dva podobjekty typu `Queue`, jeden z třídy `CashierQueue` a druhý z třídy `LunchQueue`. Následující obrázek ukazuje koncepční rozložení paměti (skutečné rozložení paměti může být optimalizováno).  
   
- ![Simulované oběd & č. 45; objektu řádek](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulated oběd&#45;objektu řádek](../cpp/media/vc38xp2.gif "vc38XP2")  
 Objekt simulované fronty na oběd  
   
  Povšimněte si, že v objektu `Queue` existují dva podobjekty `LunchCashierQueue`. Následující kód deklaruje základní třídu `Queue` jako virtuální:  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  Klíčové slovo `virtual` zajišťuje, že je zahrnuta pouze jedna kopie podobjektu `Queue` (viz následující obrázek).  
   
- ![Simulované oběd & č. 45; objektu řádek, základní virtuální třídy](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulated oběd&#45;objektu řádek, základní virtuální třídy](../cpp/media/vc38xp3.gif "vc38XP3")  
 Objekt simulované fronty na oběd s virtuálními základními třídami  
   
  Třída může mít virtuální i nevirtuální komponentu daného typu. K tomu dojde za podmínek znázorněných na následujícím obrázku.  

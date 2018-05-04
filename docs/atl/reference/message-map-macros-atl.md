@@ -1,12 +1,9 @@
 ---
-title: "Zpráva makra mapy (ATL) | Microsoft Docs"
-ms.custom: 
+title: Zpráva makra mapy (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -46,17 +43,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200d82c9d9b2ca0456ae5de4d6c937be69e212bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f026e7b8190b311b16e86673b6f2271637442df0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-map-macros-atl"></a>Makra Map zpráv (ATL)
 Tyto makra definovat mapy zpráv a položky.  
@@ -101,7 +96,7 @@ Tyto makra definovat mapy zpráv a položky.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>  ALT_MSG_MAP  
  Označuje začátek mapy alternativní zprávy.  
   
 ```
@@ -135,7 +130,7 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
 
-##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP  
  Označuje začátek výchozí mapování zpráv.  
   
 ```
@@ -210,7 +205,7 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT  
  Definuje položku mapy zpráv.  
   
 ```
@@ -225,7 +220,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
  [v] Identifikátor mapy zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `CHAIN_MSG_MAP_ALT`směrovat zprávy na mapě služby alternativní zpráva v základní třídě. Je nutné deklarované Tato mapa alternativní zprávu s [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Směrovat zprávy a pokuste se mapy zpráv výchozí základní třídu (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)), použijte `CHAIN_MSG_MAP`. Příklad, naleznete v části [CHAIN_MSG_MAP](#chain_msg_map).  
+ `CHAIN_MSG_MAP_ALT` směrovat zprávy na mapě služby alternativní zpráva v základní třídě. Je nutné deklarované Tato mapa alternativní zprávu s [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Směrovat zprávy a pokuste se mapy zpráv výchozí základní třídu (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)), použijte `CHAIN_MSG_MAP`. Příklad, naleznete v části [CHAIN_MSG_MAP](#chain_msg_map).  
   
 > [!NOTE]
 >  Vždy začít mapy zpráv s `BEGIN_MSG_MAP`. Potom můžete deklarovat mapy následné alternativní zpráv s `ALT_MSG_MAP`. [END_MSG_MAP](#end_msg_map) makro označuje konec mapy zpráv. Každý mapy zpráv musí mít přesně jednu instanci `BEGIN_MSG_MAP` a `END_MSG_MAP`.  
@@ -235,7 +230,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER  
  Definuje položku mapy zpráv.  
   
 ```
@@ -250,7 +245,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
  [v] Identifikátor mapy zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `CHAIN_MSG_MAP_ALT_MEMBER`směrovat zprávy na mapě služby alternativní zpráva v člena. Je nutné deklarované Tato mapa alternativní zprávu s [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Směrovat zprávy a pokuste se mapy zpráv výchozí datový člen (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)), použijte `CHAIN_MSG_MAP_MEMBER`. Příklad, naleznete v části [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
+ `CHAIN_MSG_MAP_ALT_MEMBER` směrovat zprávy na mapě služby alternativní zpráva v člena. Je nutné deklarované Tato mapa alternativní zprávu s [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Směrovat zprávy a pokuste se mapy zpráv výchozí datový člen (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)), použijte `CHAIN_MSG_MAP_MEMBER`. Příklad, naleznete v části [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
   
 > [!NOTE]
 >  Vždy začít mapy zpráv s `BEGIN_MSG_MAP`. Potom můžete deklarovat mapy následné alternativní zpráv s `ALT_MSG_MAP`. [END_MSG_MAP](#end_msg_map) makro označuje konec mapy zpráv. Každý mapy zpráv musí mít přesně jednu instanci `BEGIN_MSG_MAP` a `END_MSG_MAP`.  
@@ -260,7 +255,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP  
  Definuje položku mapy zpráv.  
   
 ```
@@ -272,7 +267,7 @@ CHAIN_MSG_MAP(theChainClass)
  [v] Název základní třídy obsahující mapy zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `CHAIN_MSG_MAP`přesměruje zprávy a pokuste se mapy zpráv výchozí základní třídu (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)). Směrovat zprávy a pokuste se mapa alternativní zpráv základní třídu (deklarovat s [ALT_MSG_MAP](#alt_msg_map)), použijte [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
+ `CHAIN_MSG_MAP` přesměruje zprávy a pokuste se mapy zpráv výchozí základní třídu (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)). Směrovat zprávy a pokuste se mapa alternativní zpráv základní třídu (deklarovat s [ALT_MSG_MAP](#alt_msg_map)), použijte [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
   
 > [!NOTE]
 >  Vždy začít mapy zpráv s `BEGIN_MSG_MAP`. Potom můžete deklarovat mapy následné alternativní zpráv s `ALT_MSG_MAP`. [END_MSG_MAP](#end_msg_map) makro označuje konec mapy zpráv. Každý mapy zpráv musí mít přesně jednu instanci `BEGIN_MSG_MAP` a `END_MSG_MAP`.  
@@ -288,12 +283,12 @@ CHAIN_MSG_MAP(theChainClass)
   
 -   Pokud okno postup používá první mapa alternativní zpráv v `CMyClass`, všechny zprávy jsou přesměrovány `CMyBaseClass`na výchozí mapy zpráv.  
   
--   Pokud je pomocí procedury okna `CMyClass`je druhá zpráva alternativní mapování a `OnChar` nemá popisovač zprávu, zpráva se přesměruje zadaná alternativní zpráva mapy ve `CMyBaseClass`. `CMyBaseClass`je nutné deklarované této mapy zpráv s `ALT_MSG_MAP(1)`.  
+-   Pokud je pomocí procedury okna `CMyClass`je druhá zpráva alternativní mapování a `OnChar` nemá popisovač zprávu, zpráva se přesměruje zadaná alternativní zpráva mapy ve `CMyBaseClass`. `CMyBaseClass` je nutné deklarované této mapy zpráv s `ALT_MSG_MAP(1)`.  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC  
  Definuje položku mapy zpráv.  
   
 ```
@@ -305,7 +300,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
  [v] Jedinečný identifikátor objektu mapy zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `CHAIN_MSG_MAP_DYNAMIC`Určí, že zprávy, v době běhu k výchozí mapování zpráv v jiném objektu. Přidružený objekt a jeho mapy zpráv *dynaChainID*, které definujete prostřednictvím [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Musí být odvozeny třídě z `CDynamicChain` Chcete-li použít `CHAIN_MSG_MAP_DYNAMIC`. Příklad, naleznete v části [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Přehled.  
+ `CHAIN_MSG_MAP_DYNAMIC` Určí, že zprávy, v době běhu k výchozí mapování zpráv v jiném objektu. Přidružený objekt a jeho mapy zpráv *dynaChainID*, které definujete prostřednictvím [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Musí být odvozeny třídě z `CDynamicChain` Chcete-li použít `CHAIN_MSG_MAP_DYNAMIC`. Příklad, naleznete v části [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Přehled.  
 
   
 > [!NOTE]
@@ -316,7 +311,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER  
  Definuje položku mapy zpráv.  
   
 ```
@@ -328,7 +323,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  [v] Název člena dat obsahující mapy zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `CHAIN_MSG_MAP_MEMBER`přesměruje zprávy a pokuste se mapy zpráv výchozí datový člen (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)). Směrovat zprávy a pokuste se mapy zpráv alternativní datový člen (deklarovat s [ALT_MSG_MAP](#alt_msg_map)), použijte [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
+ `CHAIN_MSG_MAP_MEMBER` přesměruje zprávy a pokuste se mapy zpráv výchozí datový člen (deklarovat s [BEGIN_MSG_MAP](#begin_msg_map)). Směrovat zprávy a pokuste se mapy zpráv alternativní datový člen (deklarovat s [ALT_MSG_MAP](#alt_msg_map)), použijte [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
   
 > [!NOTE]
 >  Vždy začít mapy zpráv s `BEGIN_MSG_MAP`. Potom můžete deklarovat mapy následné alternativní zpráv s `ALT_MSG_MAP`. [END_MSG_MAP](#end_msg_map) makro označuje konec mapy zpráv. Každý mapy zpráv musí mít přesně jednu instanci `BEGIN_MSG_MAP` a `END_MSG_MAP`.  
@@ -349,7 +344,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
  Podobně jako [COMMAND_HANDLER](#command_handler), ale mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy pouze na základě oznámení kódu.  
   
 ```
@@ -366,7 +361,7 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>  COMMAND_HANDLER  
  Definuje položku mapy zpráv.  
   
 ```
@@ -384,7 +379,7 @@ COMMAND_HANDLER(id, code, func)
  [v] Název funkce obslužné rutiny zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `COMMAND_HANDLER`se mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zpráva funkce zadaná obslužná rutina, na základě kód oznámení a identifikátor ovládacího prvku. Příklad:  
+ `COMMAND_HANDLER` se mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zpráva funkce zadaná obslužná rutina, na základě kód oznámení a identifikátor ovládacího prvku. Příklad:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -404,7 +399,7 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
  Podobně jako [COMMAND_HANDLER](#command_handler), ale mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy pouze na základě identifikátoru položky nabídky, řízení nebo akcelerátoru.  
   
 ```
@@ -421,7 +416,7 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
  Podobně jako [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy s kódem konkrétní oznámení z rozsahu ovládacích prvků k jedné obslužné rutiny funkce.  
   
 ```
@@ -447,7 +442,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
  Podobně jako [COMMAND_HANDLER](#command_handler), ale mapuje [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy z rozsahu ovládacích prvků k jedné obslužné rutiny funkce.  
   
 ```
@@ -470,7 +465,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP  
  Deklaruje mapování prázdná zpráva.  
   
 ```
@@ -478,11 +473,11 @@ DECLARE_EMPTY_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `DECLARE_EMPTY_MSG_MAP`je užitečný makro, který volá makra [BEGIN_MSG_MAP](#begin_msg_map) a [END_MSG_MAP](#end_msg_map) k vytvoření mapy prázdná zpráva:  
+ `DECLARE_EMPTY_MSG_MAP` je užitečný makro, který volá makra [BEGIN_MSG_MAP](#begin_msg_map) a [END_MSG_MAP](#end_msg_map) k vytvoření mapy prázdná zpráva:  
   
  [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER  
  Poskytuje výchozí obslužnou rutinu pro podřízeného okna (řízení), která bude přijímat reflektovaných zpráv; Obslužná rutina správně předá neošetřené zprávy a pokuste se `DefWindowProc`.  
   
 ```
@@ -492,7 +487,7 @@ DEFAULT_REFLECTION_HANDLER()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>  END_MSG_MAP  
  Označuje konec mapy zpráv.  
   
 ```
@@ -518,7 +513,7 @@ END_MSG_MAP()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS  
  Předává zprávy s oznámením do nadřazeného okna.  
   
 ```
@@ -531,7 +526,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>  MESSAGE_HANDLER  
  Definuje položku mapy zpráv.  
   
 ```
@@ -546,7 +541,7 @@ MESSAGE_HANDLER( msg, func )
  [v] Název funkce obslužné rutiny zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `MESSAGE_HANDLER`zprávy Windows se mapuje na funkci zadaná obslužná rutina.  
+ `MESSAGE_HANDLER` zprávy Windows se mapuje na funkci zadaná obslužná rutina.  
   
  Všechny funkce, zadaný v `MESSAGE_HANDLER` makro musí být definován následujícím způsobem:  
   
@@ -567,7 +562,7 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER  
  Podobně jako [MESSAGE_HANDLER](#message_handler), ale mapy rozsah Windows zprávy k jedné obslužné rutiny funkce.  
   
 ```
@@ -587,7 +582,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
  Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy pouze na základě oznámení kódu.  
   
 ```
@@ -604,7 +599,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>  NOTIFY_HANDLER  
  Definuje položku mapy zpráv.  
   
 ```
@@ -622,7 +617,7 @@ NOTIFY_HANDLER( id, cd, func )
  [v] Název funkce obslužné rutiny zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- `NOTIFY_HANDLER`se mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zpráva funkce zadaná obslužná rutina, na základě kód oznámení a identifikátor ovládacího prvku.  
+ `NOTIFY_HANDLER` se mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zpráva funkce zadaná obslužná rutina, na základě kód oznámení a identifikátor ovládacího prvku.  
   
  Všechny funkce, zadaný v `NOTIFY_HANDLER` makro musí být definován následujícím způsobem:  
   
@@ -643,7 +638,7 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
  Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy pouze na základě řízení identifikátoru.  
   
 ```
@@ -660,7 +655,7 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
  Podobně jako [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy s kódem konkrétní oznámení z rozsahu ovládacích prvků k jedné obslužné rutiny funkce.  
   
 ```
@@ -686,7 +681,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
  Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy z rozsahu ovládacích prvků k jedné obslužné rutiny funkce.  
   
 ```
@@ -709,7 +704,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS  
  Odráží zpráv s oznámením zpět do okna podřízené (řízení), který jim poslali.  
   
 ```
@@ -722,7 +717,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER  
  Podobně jako [COMMAND_CODE_HANDLER](#command_code_handler), ale mapuje příkazy projeví z nadřazeného okna.  
   
 ```
@@ -739,7 +734,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
    
-##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER  
  Podobně jako [COMMAND_HANDLER](#command_handler), ale mapuje příkazy projeví z nadřazeného okna.  
   
 ```
@@ -759,7 +754,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER  
  Podobně jako [COMMAND_ID_HANDLER](#command_id_handler), ale mapuje příkazy projeví z nadřazeného okna.  
   
 ```
@@ -776,7 +771,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  Podobně jako [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), ale mapuje příkazy projeví z nadřazeného okna.  
   
 ```
@@ -799,7 +794,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER  
  Podobně jako [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje příkazy projeví z nadřazeného okna.  
   
 ```
@@ -819,7 +814,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER  
  Podobně jako [NOTIFY_CODE_HANDLER](#notify_code_handler), ale mapuje oznámení projeví z nadřazeného okna.  
   
 ```
@@ -836,7 +831,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER  
  Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje oznámení projeví z nadřazeného okna.  
   
 ```
@@ -856,7 +851,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER  
  Podobně jako [NOTIFY_ID_HANDLER](#notify_id_handler), ale mapuje oznámení projeví z nadřazeného okna.  
   
 ```
@@ -873,7 +868,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
 
-##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  Podobně jako [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), ale mapuje oznámení projeví z nadřazeného okna.  
   
 ```
@@ -896,7 +891,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h   
   
-##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER  
  Podobně jako [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje oznámení projeví z nadřazeného okna.  
   
 ```

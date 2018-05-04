@@ -1,12 +1,9 @@
 ---
-title: "Operátory sčítání: + a - | Microsoft Docs"
-ms.custom: 
+title: 'Operátory sčítání: + a - | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Operátory sčítání: + a -
 ## <a name="syntax"></a>Syntaxe  
@@ -58,8 +53,8 @@ expression - expression
   
 |Typ|Význam|  
 |----------|-------------|  
-|*aritmetické operace*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|  
-|*integrální*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|  
+|*Aritmetické operace*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|  
+|*Celé číslo*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|  
 |*scalar*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|  
   
  Platnými kombinacemi pro tyto operátory jsou:  
@@ -68,11 +63,11 @@ expression - expression
   
  *scalar* + *integral*  
   
- *integral* + *scalar*  
+ *integrální* + *skalární*  
   
  *aritmetické* - *aritmetické*  
   
- *scalar* - *scalar*  
+ *Skalární* - *skalární*  
   
  Všimněte si, že sčítání a odčítání nejsou ekvivalentními operacemi.  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Odečtení ukazatele  
  Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání vypočítá výsledku podepsaný integrální ptrdiff_t – typ (definované v souboru standardní zahrnout \<stddef.h >).  
   
- Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Operátor odečítání hodnotu ukazatel (*n* - *i*) element TD pole, kde  *n*  je element na kterou odkazuje původní ukazatele a *i* je integrální hodnota Druhý operand.  
+ Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Operátor odečítání hodnotu ukazatel (*n* - *i*) element TD pole, kde *n* element ukazuje původní ukazatel a *i* je integrální hodnota Druhý operand.  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   

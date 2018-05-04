@@ -1,13 +1,10 @@
 ---
-title: "Operátory jazyka C | Microsoft Docs"
-ms.custom: 
+title: Operátory jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - associativity of operators
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4acb0acec44d695bd4c03ffa102a0ac42971b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f90f25d52a2555eb92938dd29ebb7e5bfc6e96a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-operators"></a>Operátory jazyka C
 Operátory jazyka C, jsou podmnožinou [předdefinované operátory jazyka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md).  
@@ -61,7 +56,7 @@ Operátory jazyka C, jsou podmnožinou [předdefinované operátory jazyka C++](
   
  Operátor podmíněného výrazu má nižší prioritu než binární výrazy a liší se od nich asociativitou zprava.  
   
- Výrazy s operátory obsahují také výrazy přiřazení, které používají jednočlenné nebo binární operátory přiřazení. Unární operátory přiřazení jsou přírůstku (`++`) a snížení (**--**) operátory; binárního souboru operátory přiřazení jsou operátor jednoduchého přiřazení ( **=** ) operátory a operátory složené přiřazení. Všechny složené operátory jsou kombinací jiného binárního operátoru s operátorem jednoduchého přiřazení.  
+ Výrazy s operátory obsahují také výrazy přiřazení, které používají jednočlenné nebo binární operátory přiřazení. Unární operátory přiřazení jsou přírůstku (`++`) a snížení (**--**) operátory; binárního souboru operátory přiřazení jsou operátor jednoduchého přiřazení (**=**) operátory a operátory složené přiřazení. Všechny složené operátory jsou kombinací jiného binárního operátoru s operátorem jednoduchého přiřazení.  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy a přiřazení](../c-language/expressions-and-assignments.md)

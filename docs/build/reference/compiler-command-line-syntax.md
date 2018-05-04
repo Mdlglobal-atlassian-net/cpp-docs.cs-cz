@@ -1,30 +1,25 @@
 ---
-title: "Syntaxe příkazového řádku kompilátoru | Microsoft Docs"
-ms.custom: 
+title: Syntaxe příkazového řádku kompilátoru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - syntax, CL compiler command line
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb89aca1990d44d7ef62ea76788b38e8ffa1d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 825121a111d47de6b012aad444907363ad8c2a36
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-command-line-syntax"></a>Syntaxe příkazového řádku kompilátoru
 CL příkazového řádku používá následující syntaxe:  
@@ -37,9 +32,9 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
   
 |Položka|Význam|  
 |-----------|-------------|  
-|*možnost*|Jeden nebo více [možností CL](../../build/reference/compiler-options.md). Všimněte si, že všechny možnosti použít pro všechny zadané zdrojové soubory. Možnosti jsou určené lomítkem (/) nebo pomlčkou (-). Pokud možnost trvá argument, možnost Popis dokumenty, jestli chcete povolit mezeru mezi parametrem a argumenty. Názvy možností (s výjimkou možnost/Help) se rozlišují malá a velká písmena. V tématu [pořadí možností CL](../../build/reference/order-of-cl-options.md) Další informace.|  
+|*Možnost*|Jeden nebo více [možností CL](../../build/reference/compiler-options.md). Všimněte si, že všechny možnosti použít pro všechny zadané zdrojové soubory. Možnosti jsou určené lomítkem (/) nebo pomlčkou (-). Pokud možnost trvá argument, možnost Popis dokumenty, jestli chcete povolit mezeru mezi parametrem a argumenty. Názvy možností (s výjimkou možnost/Help) se rozlišují malá a velká písmena. V tématu [pořadí možností CL](../../build/reference/order-of-cl-options.md) Další informace.|  
 |`file`|Název jeden nebo více zdrojových souborů, soubory .obj nebo knihovny. CL zkompiluje zdrojové soubory a předá názvy soubory .obj a knihovny linkeru. V tématu [syntaxe názvu souboru CL](../../build/reference/cl-filename-syntax.md) Další informace.|  
-|*lib*|Jeden nebo více názvy knihoven. CL předává tyto názvy linkeru.|  
+|*Lib*|Jeden nebo více názvy knihoven. CL předává tyto názvy linkeru.|  
 |*soubor příkazů*|Soubor, který obsahuje více možností a názvy souborů. V tématu [soubory příkazů CL](../../build/reference/cl-command-files.md) Další informace.|  
 |*vyjádřit výslovný odkaz*|Jeden nebo více [možnosti linkeru](../../build/reference/linker-options.md). CL předává tyto možnosti linkeru.|  
   

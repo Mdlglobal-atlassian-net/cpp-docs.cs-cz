@@ -2,11 +2,8 @@
 title: 'hlavní: spuštění programu | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc.main.startup
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2999596fe30afca4c9945efc34a8537e9f45e14a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-program-startup"></a>main: nastavení programu
 Speciální funkce s názvem `main` je výchozí bod spuštění pro všechny programy C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovací model, můžete použít `wmain`, což je verze široká charakterová `main`.  
@@ -63,7 +58,7 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- Můžete také použít `_tmain`, který je definován v souboru TCHAR.h. `_tmain`přeloží na `main` Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
+ Můžete také použít `_tmain`, který je definován v souboru TCHAR.h. `_tmain` přeloží na `main` Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
   
  Případně `main` a `wmain` funkce lze deklarovat jako vrácení `void` (žádnou návratovou hodnotu). Pokud je deklarovat `main` nebo `wmain` jako vrácení `void`, ukončovací kód nelze vrátit k nadřazeného procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkaz. Vrátit ukončovací kód při `main` nebo `wmain` je deklarován jako `void`, je nutné použít [ukončete](../cpp/exit-function.md) funkce.  
   

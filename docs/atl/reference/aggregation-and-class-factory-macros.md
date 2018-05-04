@@ -1,12 +1,9 @@
 ---
-title: "Agregace a třída objektu pro vytváření makra | Microsoft Docs"
-ms.custom: 
+title: Agregace a třída objektu pro vytváření makra | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d18afdfe08a97a7a685b373b1f8951799836ab1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8569d4ecbbd74a6d2d37701a4ec22e56cbe9f100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregace a makra objekt pro vytváření tříd
 Tyto makra nabízejí způsoby řízení agregace a deklarování tříd.  
@@ -59,7 +54,7 @@ Tyto makra nabízejí způsoby řízení agregace a deklarování tříd.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
    
-##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
+##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE  
  Určuje, že se dají agregovat objektu.  
   
 ```
@@ -76,7 +71,7 @@ DECLARE_AGGREGATABLE( x )
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
+##  <a name="declare_classfactory"></a>  DECLARE_CLASSFACTORY  
  Deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako objekt pro vytváření tříd.  
   
 ```
@@ -89,7 +84,7 @@ DECLARE_CLASSFACTORY()
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
-##  <a name="ccomclassfactory_class"></a>CComClassFactory – třída  
+##  <a name="ccomclassfactory_class"></a>  CComClassFactory – třída  
  Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní.  
   
 ```
@@ -98,7 +93,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CComClassFactory`implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní, která obsahuje metody pro vytvoření objektu konkrétní CLSID, jakož i zámek objektu pro vytváření tříd v paměti umožňuje rychleji vytvořit nové objekty. **IClassFactory** pro každou třídu, která zaregistrujete v registru systému a můžete přiřadit identifikátor CLSID, musí být implementována.  
+ `CComClassFactory` implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní, která obsahuje metody pro vytvoření objektu konkrétní CLSID, jakož i zámek objektu pro vytváření tříd v paměti umožňuje rychleji vytvořit nové objekty. **IClassFactory** pro každou třídu, která zaregistrujete v registru systému a můžete přiřadit identifikátor CLSID, musí být implementována.  
   
  Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete-li přepsat toto výchozí nastavení, zadejte jednu z `DECLARE_CLASSFACTORY` *XXX* makra v definici vaší třídy. Například [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) makro používá pro zadanou třídu objektu pro vytváření tříd:  
   
@@ -114,7 +109,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) používá [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), který vytvoří jeden [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) objektu.  
   
-##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
+##  <a name="declare_classfactory_ex"></a>  DECLARE_CLASSFACTORY_EX  
  Deklaruje `cf` jako objekt pro vytváření tříd.  
   
 ```
@@ -133,7 +128,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]  
   
-##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
+##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2  
  Deklaruje [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) jako objekt pro vytváření tříd.  
   
 ```
@@ -150,7 +145,7 @@ DECLARE_CLASSFACTORY2( lic )
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
-##  <a name="ccomclassfactory2_class"></a>CComClassFactory2 – třída  
+##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 – třída  
  Tato třída implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní.  
   
 ```
@@ -161,7 +156,7 @@ class  CComClassFactory2 : public IClassFactory2,
 ```    
   
 ### <a name="parameters"></a>Parametry  
- *licence*  
+ *Licence*  
  Třídu, která implementuje statické následující funkce:  
   
 - **verifylicensekey – statické BOOL (BSTR** `bstr` **);**  
@@ -171,7 +166,7 @@ class  CComClassFactory2 : public IClassFactory2,
 - **statické BOOL IsLicenseValid ();**  
   
 ### <a name="remarks"></a>Poznámky  
- `CComClassFactory2`implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, což je rozšíření z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** ovládací prvky objektu vytváření licence. Spuštění licenční klíč můžete zadat třídu objektu pro vytváření, provádění na licencovanou počítači. Tento licenční klíč umožňuje aplikaci k vytváření instancí objektů při úplné počítač licence neexistuje.  
+ `CComClassFactory2` implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) rozhraní, což je rozšíření z [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** ovládací prvky objektu vytváření licence. Spuštění licenční klíč můžete zadat třídu objektu pro vytváření, provádění na licencovanou počítači. Tento licenční klíč umožňuje aplikaci k vytváření instancí objektů při úplné počítač licence neexistuje.  
   
  Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactory2`, zadejte [DECLARE_CLASSFACTORY2](#declare_classfactory2) makra v definici třídy objektu. Příklad:  
   
@@ -181,9 +176,9 @@ class  CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]  
   
- `CComClassFactory2`je odvozena z obou **CComClassFactory2Base** a *licence*. **CComClassFactory2Base**, pak je odvozena z **IClassFactory2** a **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` je odvozena z obou **CComClassFactory2Base** a *licence*. **CComClassFactory2Base**, pak je odvozena z **IClassFactory2** a **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
-##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
+##  <a name="declare_classfactory_auto_thread"></a>  DECLARE_CLASSFACTORY_AUTO_THREAD  
  Deklaruje [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako objekt pro vytváření tříd.  
   
 ```
@@ -198,7 +193,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread – třída  
+##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread – třída  
  Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní a umožňuje vytvořit v několika Apartment objekty.  
   
 > [!IMPORTANT]
@@ -210,13 +205,13 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CComClassFactoryAutoThread`je podobná [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale umožňuje vytvořit v několika Apartment objekty. Abyste mohli využívat této podpory, odvozena EXE modul z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` je podobná [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale umožňuje vytvořit v několika Apartment objekty. Abyste mohli využívat této podpory, odvozena EXE modul z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactoryAutoThread`, zadejte [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) makra v definici třídy objektu. Příklad:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
+##  <a name="declare_classfactory_singleton"></a>  DECLARE_CLASSFACTORY_SINGLETON  
  Deklaruje [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) jako objekt pro vytváření tříd.  
   
 ```
@@ -233,7 +228,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton – třída  
+##  <a name="ccomclassfactorysingleton_class"></a>  CComClassFactorySingleton – třída  
  Tato třída odvozená z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) a používá [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.  
   
 > [!IMPORTANT]
@@ -248,14 +243,14 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  Vlastní třídy.  
   
- `CComClassFactorySingleton`odvozená z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) a používá [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu. Každé volání `CreateInstance` metoda jednoduše dotazuje tohoto objektu pro ukazatele rozhraní.  
+ `CComClassFactorySingleton` odvozená z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) a používá [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu. Každé volání `CreateInstance` metoda jednoduše dotazuje tohoto objektu pro ukazatele rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](#declare_classfactory), který deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactorySingleton`, zadejte [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) makra v definici třídy objektu. Příklad:  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
+##  <a name="declare_get_controlling_unknown"></a>  DECLARE_GET_CONTROLLING_UNKNOWN  
  Deklaruje virtuální funkci `GetControllingUnknown`.  
   
 ```
@@ -265,7 +260,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 ### <a name="remarks"></a>Poznámky  
  Přidání této makro do objektu, pokud získání chybové zprávy kompilátoru `GetControllingUnknown` není definován (například v **CComAggregateCreator**).  
   
-##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
+##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE  
  Určuje, že objektu nemůže být agregován.  
   
 ```
@@ -277,14 +272,14 @@ DECLARE_NOT_AGGREGATABLE( x )
  [v] Název objektu třídy, kterou definujete jako neagregovatelný.  
   
 ### <a name="remarks"></a>Poznámky  
- `DECLARE_NOT_AGGREGATABLE`způsobí, že `CreateInstance` vrátit chybu ( **CLASS_E_NOAGGREGATION**) Pokud je proveden pokus o k agregaci do objektu.  
+ `DECLARE_NOT_AGGREGATABLE` způsobí, že `CreateInstance` vrátit chybu ( **CLASS_E_NOAGGREGATION**) Pokud je proveden pokus o k agregaci do objektu.  
   
  Ve výchozím nastavení [CComCoClass](../../atl/reference/ccomcoclass-class.md) obsahuje [DECLARE_AGGREGATABLE](#declare_aggregatable) makro, která určuje, že se dají agregovat objektu. Chcete-li přepsat toto výchozí chování, zahrňte `DECLARE_NOT_AGGREGATABLE` v definici vaší třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
+##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE  
  Určuje, že musí být agregován objektu.  
   
 ```
@@ -296,15 +291,15 @@ DECLARE_ONLY_AGGREGATABLE( x )
  [v] Název objektu třídy, kterou definujete jako pouze agregovatelné.  
   
 ### <a name="remarks"></a>Poznámky  
- `DECLARE_ONLY_AGGREGATABLE`Výsledkem bude chyba ( **E_FAIL**) Pokud je proveden pokus o **CoCreate** objektu jako neagregovaná objekt.  
+ `DECLARE_ONLY_AGGREGATABLE` Výsledkem bude chyba ( **E_FAIL**) Pokud je proveden pokus o **CoCreate** objektu jako neagregovaná objekt.  
   
  Ve výchozím nastavení [CComCoClass](../../atl/reference/ccomcoclass-class.md) obsahuje [DECLARE_AGGREGATABLE](#declare_aggregatable) makro, která určuje, že se dají agregovat objektu. Chcete-li přepsat toto výchozí chování, zahrňte `DECLARE_ONLY_AGGREGATABLE` v definici vaší třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]  
   
-##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
- Určuje, že instance **CComPolyObject \<**  *x*  **>**  se vytvoří při vytvoření objektu.  
+##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE  
+ Určuje, že instance **CComPolyObject \<**  *x* **>** se vytvoří při vytvoření objektu.  
   
 ```
 DECLARE_POLY_AGGREGATABLE( x )
@@ -321,7 +316,7 @@ DECLARE_POLY_AGGREGATABLE( x )
   
  `DECLARE_POLY_AGGREGATABLE` Makro je automaticky deklarován v objektu, pokud použijete Průvodce ovládacím prvkem ATL k vytvoření úplné řízení.  
   
-##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT  
 
  Chrání před odstraněním Pokud objektu (během [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) interní agregovaný objekt zvětší počet odkazů a snižuje počet na hodnotu 0.  
   
@@ -329,7 +324,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```  
   
-##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
+##  <a name="declare_view_status"></a>  DECLARE_VIEW_STATUS  
  Umístit tento makro ovládacího prvku ActiveX knihovny ATL třída ovládacích prvků k určení **stavu** příznaky do kontejneru.  
   
 ```

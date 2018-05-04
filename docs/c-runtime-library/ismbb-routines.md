@@ -1,13 +1,10 @@
 ---
-title: "_ismbb – rutiny | Microsoft Docs"
-ms.custom: 
+title: _ismbb – rutiny | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcrt.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c686da7d800725d143d7e3cad9d40e7b0ceb959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ismbb-routines"></a>_ismbb – rutiny
 Testy dané celočíselná hodnota `c` pro určitá podmínka, pomocí aktuální národní prostředí nebo zadané kategorii LC_CTYPE – převod stavu.  
@@ -59,17 +54,17 @@ Testy dané celočíselná hodnota `c` pro určitá podmínka, pomocí aktuáln�
   
 |Rutina|Stav testu bajtů|  
 |-------------|-------------------------|  
-|[_ismbbalnum –](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
-|[_ismbbalpha –](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
+|[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
+|[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbblank](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|`isblank`|  
-|[_ismbbgraph –](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Stejné jako `_ismbbprint`, ale `_ismbbgraph` neobsahuje znak mezery (0x20).|  
-|[_ismbbkalnum –](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Symbol text ASCII jiného typu než interpunkce. Například v pouze znaková stránka 932 `_ismbbkalnum` testů pro katakana alfanumerické znaky.|  
-|[_ismbbkana –](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 - 0xDF). Specifické pro znaková stránka 932.|  
-|[_ismbbkprint –](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Jiné než ASCII text nebo jiné sady než ASCII interpunkční symbol. Například v pouze znaková stránka 932 `_ismbbkprint` testů pro katakana alfanumerické nebo katakana interpunkce (rozsah: 0xA1 - 0xDF).|  
-|[_ismbbkpunct –](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Interpunkce non-ASCII. Například v pouze znaková stránka 932 `_ismbbkpunct` testů pro katakana interpunkce.|  
+|[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Stejné jako `_ismbbprint`, ale `_ismbbgraph` neobsahuje znak mezery (0x20).|  
+|[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Symbol text ASCII jiného typu než interpunkce. Například v pouze znaková stránka 932 `_ismbbkalnum` testů pro katakana alfanumerické znaky.|  
+|[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 - 0xDF). Specifické pro znaková stránka 932.|  
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Jiné než ASCII text nebo jiné sady než ASCII interpunkční symbol. Například v pouze znaková stránka 932 `_ismbbkprint` testů pro katakana alfanumerické nebo katakana interpunkce (rozsah: 0xA1 - 0xDF).|  
+|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Interpunkce non-ASCII. Například v pouze znaková stránka 932 `_ismbbkpunct` testů pro katakana interpunkce.|  
 |[_ismbblead –](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|První bajt vícebajtových znaků. Například v kódu stránky 932 pouze, platné rozsahy jsou 0x81 - 0x9F, 0xE0 - 0xFC.|  
-|[_ismbbprint –](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint –** obsahuje znak mezery (0x20).|  
-|[_ismbbpunct –](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct` &#124;&#124; `_ismbbkpunct`.|  
+|[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint –** obsahuje znak mezery (0x20).|  
+|[_ismbbpunct](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct` &#124;&#124; `_ismbbkpunct`.|  
 |[_ismbbtrail –](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Druhý bajt vícebajtových znaků. Například v kódu stránky 932 pouze, platné rozsahy jsou 0x40 - 0x7E, 0x80 - 0xEC.|  
   
  V následující tabulce jsou uvedeny ORed hodnoty, které tvoří podmínky testu pro tyto rutiny. Manifestu konstanty `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`, a `_UPPER` jsou definovány v Ctype.h.  
@@ -91,5 +86,5 @@ Testy dané celočíselná hodnota `c` pro určitá podmínka, pomocí aktuáln�
 ## <a name="see-also"></a>Viz také  
  [Klasifikace bajtů](../c-runtime-library/byte-classification.md)   
  [je, isw – rutiny](../c-runtime-library/is-isw-routines.md)   
- [_mbbtombc –, _mbbtombc_l –](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
+ [_mbbtombc, _mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
  [_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)
