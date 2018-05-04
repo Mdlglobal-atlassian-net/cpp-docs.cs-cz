@@ -1,13 +1,10 @@
 ---
-title: "Deklarátor a deklarace proměnné | Microsoft Docs"
-ms.custom: 
+title: Deklarátor a deklarace proměnné | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro typy proměnných souhrnu v tomto seznamu. Konkrétně zbývající části popisují, jak deklarovat následující:  
@@ -39,9 +34,9 @@ Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro 
 |[Struktury](../c-language/structure-declarations.md)|Proměnné se skládá z kolekce hodnot, které může mít různé typy|  
 |[Sjednocení](../c-language/union-declarations.md)|Proměnné se skládá z několika hodnoty různých typů, které zabírají stejnému adresnímu prostoru úložiště|  
   
- Deklarátor je součástí deklaraci, která určuje název, který je potřeba zavést do programu. Modifikátory může zahrnovat například  **\***  (ukazatel-k) a všechny klíčová slova konvence volání Microsoft.  
+ Deklarátor je součástí deklaraci, která určuje název, který je potřeba zavést do programu. Modifikátory může zahrnovat například **\*** (ukazatel-k) a všechny klíčová slova konvence volání Microsoft.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  V deklarátor  
   
@@ -57,21 +52,21 @@ __declspec(thread) char *var;
   
 ## <a name="syntax"></a>Syntaxe  
  *deklarátor*:  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+ &nbsp;&nbsp;*ukazatel*<sub>opt</sub> *přímo deklarátor*  
   
- *direct-declarator*:  
+ *deklarátor přímo*:  
  &nbsp;&nbsp;*Identifikátor*  
- &nbsp;&nbsp;**(***deklarátor***)**   
- &nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**  
- &nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  
- &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
+ &nbsp;&nbsp;**(***deklarátor***)**  
+ &nbsp;&nbsp;*deklarátor přímo***[***konstantní výraz*<sub>opt</sub> **]**   
+ &nbsp;&nbsp;*deklarátor přímo***(***seznam parametrů typu***)**   
+ &nbsp;&nbsp;*deklarátor přímo***(***seznam identifikátorů*<sub>opt</sub> **)**   
   
  *ukazatel*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;**\*** *seznam typů kvalifikátor*<sub>opt</sub>  
+ &nbsp;&nbsp;**\*** *seznam typů kvalifikátor*<sub>opt</sub> *ukazatele*  
   
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
+ *seznam typů kvalifikátor*:  
+ &nbsp;&nbsp;*Kvalifikátor typu*  
  &nbsp;&nbsp;*seznam typů kvalifikátor kvalifikátor typu*  
   
 > [!NOTE]
@@ -91,7 +86,7 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers  
 ```  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Kompilátor Microsoft C neomezuje počet deklarátory, které můžete upravit aritmetické, struktura nebo typu union. Číslo je omezena pouze dostupné paměti.  
   

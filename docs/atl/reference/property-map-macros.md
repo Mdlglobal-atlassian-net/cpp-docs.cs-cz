@@ -2,11 +2,8 @@
 title: Makra Map vlastnost | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Makra mapy vlastností
 Tyto makra definovat mapování vlastností a položek.  
@@ -47,7 +42,7 @@ Tyto makra definovat mapování vlastností a položek.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Označuje začátek mapa vlastností objektu.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Při vytváření objektu pomocí Průvodce projektem ATL, Průvodce vytvoří prázdnou vlastností mapy zadáním `BEGIN_PROP_MAP` následuje [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`není uložit mimo rozsah (to znamená, dimenze) mapa vlastností, protože objekt, který používá mapa vlastností nemusí mít uživatelské rozhraní, neměl by mít žádné míry. Pokud se objekt ovládacího prvku ActiveX s uživatelským rozhraním, má rozsah. V takovém případě musíte zadat [PROP_DATA_ENTRY](#prop_data_entry) v mapu vlastností a zadejte rozsah.  
+ `BEGIN_PROP_MAP` není uložit mimo rozsah (to znamená, dimenze) mapa vlastností, protože objekt, který používá mapa vlastností nemusí mít uživatelské rozhraní, neměl by mít žádné míry. Pokud se objekt ovládacího prvku ActiveX s uživatelským rozhraním, má rozsah. V takovém případě musíte zadat [PROP_DATA_ENTRY](#prop_data_entry) v mapu vlastností a zadejte rozsah.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Určuje rozsah, nebo dimenze ovládacího prvku ActiveX.  
   
 ```
@@ -82,7 +77,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
  `member`  
  [v] Datový člen obsahující rozsah; například `m_sizeExtent`.  
   
- *VT*  
+ *vt*  
  [v] Určuje typ VARIANT vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Pomocí této makro zadejte popis, vlastnost DISPID a vlastnost stránky vlastností CLSID do mapa vlastností objektu.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Podobně jako [PROP_ENTRY_TYPE](#prop_entry_type), ale můžete určit konkrétní IID, pokud objekt podporuje více duální rozhraní.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Pomocí této makro zadat stránky vlastností CLSID do mapa vlastností objektu.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [v] CLSID stránky vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
- `PROP_PAGE`je podobná [PROP_ENTRY_TYPE](#prop_entry_type), ale nevyžaduje vlastnost Popis nebo DISPID.  
+ `PROP_PAGE` je podobná [PROP_ENTRY_TYPE](#prop_entry_type), ale nevyžaduje vlastnost Popis nebo DISPID.  
   
 > [!NOTE]
 >  Pokud jste již zadali CLSID s `PROP_ENTRY_TYPE` nebo [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), není potřeba provést další položku s `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Označuje konec mapa vlastností objektu.  
   
 ```

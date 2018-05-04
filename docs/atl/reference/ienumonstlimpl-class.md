@@ -1,12 +1,9 @@
 ---
-title: "Třída IEnumOnSTLImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IEnumOnSTLImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl – třída
 Tato třída definuje enumerátor rozhraní na základě kolekce standardní knihovna C++.  
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown** ukazatele objektu poskytuje kolekci.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IEnumOnSTLImpl`poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v kontejneru C++ Standard kompatibilní knihovny. Tato třída je obdobou [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) třídy, která poskytuje implementaci pro rozhraní enumerátor na základě pole.  
+ `IEnumOnSTLImpl` poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v kontejneru C++ Standard kompatibilní knihovny. Tato třída je obdobou [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) třídy, která poskytuje implementaci pro rozhraní enumerátor na základě pole.  
   
 > [!NOTE]
 >  V tématu [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) podrobnosti o další rozdíly mezi `CComEnumImpl` a `IEnumOnSTLImpl`.  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>  IEnumOnSTLImpl::Init  
  Inicializuje enumerátor.  
   
 ```
@@ -125,7 +120,7 @@ HRESULT Init(
   
  Tato metoda musí volat před předáním ukazatele rozhraní enumerátor zpět na všechny klienty.  
   
-##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
  Tato metoda poskytuje implementace [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metoda tak, že vytvoříte objekt typu `CComEnumOnSTL`, inicializace stejným kolekce a iterator používá aktuální objekt nebo vrátit rozhraní na nově vytvořený objekt.  
   
 ```
@@ -139,7 +134,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
  **IUnknown** ukazatele objektu poskytuje kolekci.  
   
 ```
@@ -149,7 +144,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Poznámky  
  Ukazatel this inteligentní udržuje odkaz na objekt předaný [IEnumOnSTLImpl::Init](#init), zajistíte, aby zůstala aktivní po dobu životnosti enumerátor.  
   
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
  Tento člen odkazuje na kolekci, která poskytuje data řídící implementace rozhraní enumerátor.  
   
 ```
@@ -159,14 +154,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Poznámky  
  Tento člen se inicializuje pomocí volání [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
  Tento člen obsahuje iterator používá k označení aktuální pozici v rámci kolekce a přejděte na další prvky.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>  IEnumOnSTLImpl::Next  
  Tato metoda poskytuje implementace [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metoda.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  Tato metoda poskytuje implementace [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metoda.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  Tato metoda poskytuje implementace [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metoda.  
   
 ```

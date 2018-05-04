@@ -1,12 +1,9 @@
 ---
-title: "Třída CDacl | Microsoft Docs"
-ms.custom: 
+title: Třída CDacl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDacl
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2724eebd218cea2795d483351ef91b34c9f1bf39
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdacl-class"></a>CDacl – třída
 Tato třída je obálku pro strukturu DACL (seznam volitelného řízení přístupu).  
@@ -88,7 +83,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
   
-##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
  Přidá povolené prostředí ACE (položky řízení přístupu) `CDacl` objektu.  
   
 ```
@@ -129,7 +124,7 @@ bool AddAllowedAce(
   
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
-##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Přidá odepření ACE (položky řízení přístupu) `CDacl` objektu.  
   
 ```
@@ -170,7 +165,7 @@ bool AddDeniedAce(
   
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
-##  <a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>  CDacl::CDacl  
  Konstruktor  
   
 ```
@@ -185,7 +180,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Poznámky  
  `CDacl` Objekt můžete volitelně vytvořit pomocí existující **seznamu ACL** struktura. Je důležité si uvědomit pouze DACL (seznam volitelného řízení přístupu), a ne SACL (seznam řízení přístupu systému), mají být předány jako tento parametr. V sestavení pro ladění předávání SACL způsobí, že vyhodnocení. V sestavení pro vydání předávání SACL způsobí, že položky řízení přístupu (položky řízení přístupu) v seznamu ACL, který se má ignorovat a dojde k žádné chybě.  
   
-##  <a name="dtor"></a>  CDacl::~CDacl  
+##  <a name="dtor"></a>  CDacl:: ~ CDacl  
  Destruktor.  
   
 ```
@@ -195,7 +190,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny prostředky získávají pomocí objektu, včetně všech ACE (položky řízení přístupu) pomocí destruktoru [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>  CDacl::GetAceCount  
  Vrátí počet položek řízení přístupu (položky řízení přístupu) `CDacl` objektu.  
   
 ```
@@ -205,7 +200,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet ACE, které jsou součástí `CDacl` objektu.  
   
-##  <a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>  CDacl::operator =  
  Operátor přiřazení.  
   
 ```
@@ -222,7 +217,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Poznámky  
  Ujistěte se, jenom předat DACL (seznam volitelného řízení přístupu) této funkce. Předávání SACL (seznam řízení přístupu systému) pro tuto funkci způsobí, že ASSERT v sestavení pro ladění ale způsobí, že žádná chyba v sestavení pro vydání.  
   
-##  <a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>  CDacl::RemoveAce  
  Odebere konkrétní ACE (položky řízení přístupu) `CDacl` objektu.  
   
 ```
@@ -236,7 +231,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je odvozený od [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  Odebere všechny položky řízení přístupu (položky řízení přístupu) součástí `CDacl` objektu.  
   
 ```
@@ -249,7 +244,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
  [CAcl – třída](../../atl/reference/cacl-class.md)   
- [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [Seznamy ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Přehled třídy](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

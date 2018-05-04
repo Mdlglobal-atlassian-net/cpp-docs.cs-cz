@@ -1,12 +1,9 @@
 ---
-title: "Třída CWindow | Microsoft Docs"
-ms.custom: 
+title: Třída CWindow | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWindow
@@ -162,17 +159,15 @@ dev_langs:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdf2b21e8c206b1098d670c7c935d3cf88f5af3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e53d3c354d436b0b800cb9e286bb2c2ba337cb3d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwindow-class"></a>CWindow – třída
 Tato třída poskytuje metody pro práci s časového období.  
@@ -357,18 +352,18 @@ class CWindow
 |[CWindow::rcDefault](#rcdefault)|Obsahuje výchozí okno dimenze.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWindow`poskytuje základní funkce pro manipulaci s okna v ATL. Řadu `CWindow` metody jednoduše zabalit jednu Win32 API funkcí. Například porovnat prototypy pro `CWindow::ShowWindow` a `ShowWindow`:  
+ `CWindow` poskytuje základní funkce pro manipulaci s okna v ATL. Řadu `CWindow` metody jednoduše zabalit jednu Win32 API funkcí. Například porovnat prototypy pro `CWindow::ShowWindow` a `ShowWindow`:  
   
 |CWindow – metoda|Win32 – funkce|  
 |--------------------|--------------------|  
 |**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|  
   
- `CWindow::ShowWindow`volá funkci Win32 `ShowWindow` předáním `CWindow::m_hWnd` jako první parametr. Každý `CWindow` předá metoda, která přímo zabalí funkci, Win32 `m_hWnd` člen; proto většinu `CWindow` dokumentace vás odkáže na Windows SDK.  
+ `CWindow::ShowWindow` volá funkci Win32 `ShowWindow` předáním `CWindow::m_hWnd` jako první parametr. Každý `CWindow` předá metoda, která přímo zabalí funkci, Win32 `m_hWnd` člen; proto většinu `CWindow` dokumentace vás odkáže na Windows SDK.  
   
 > [!NOTE]
 >  – Funkce nemusí být vždy týkající se oken Win32 zabalený `CWindow`a Ne každé `CWindow` metoda zabalí funkci, Win32.  
   
- `CWindow::m_hWnd`ukládá `HWND` identifikující časového období. `HWND` Je připojen k objektu při můžete:  
+ `CWindow::m_hWnd` ukládá `HWND` identifikující časového období. `HWND` Je připojen k objektu při můžete:  
   
 -   Zadejte `HWND` v `CWindow`pro konstruktor.  
   
@@ -389,7 +384,7 @@ class CWindow
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="arrangeiconicwindows"></a>CWindow::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>  CWindow::ArrangeIconicWindows  
  Uspořádá okna všechny podřízené minimalizovaném okně.  
   
 ```
@@ -399,7 +394,7 @@ UINT ArrangeIconicWindows() throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ArrangeIconicWindows](http://msdn.microsoft.com/library/windows/desktop/ms632671) ve Windows SDK.  
   
-##  <a name="attach"></a>CWindow::Attach  
+##  <a name="attach"></a>  CWindow::Attach  
  Připojí okno identifikovaný `hWndNew` k `CWindow` objektu.  
   
 ```
@@ -413,7 +408,7 @@ void Attach(HWND hWndNew) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#1](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]  
   
-##  <a name="beginpaint"></a>CWindow::BeginPaint  
+##  <a name="beginpaint"></a>  CWindow::BeginPaint  
  Připraví okna pro vykreslování.  
   
 ```
@@ -426,7 +421,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="bringwindowtotop"></a>CWindow::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>  CWindow::BringWindowToTop  
  Otevře okno na začátek pořadí vykreslování.  
   
 ```
@@ -439,7 +434,7 @@ BOOL BringWindowToTop() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#3](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]  
   
-##  <a name="centerwindow"></a>CWindow::CenterWindow  
+##  <a name="centerwindow"></a>  CWindow::CenterWindow  
  Centra okna pro daný interval.  
   
 ```
@@ -456,7 +451,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#4](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]  
   
-##  <a name="changeclipboardchain"></a>CWindow::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>  CWindow::ChangeClipboardChain  
  Odebere okno z řetězu schránky prohlížeče.  
   
 ```
@@ -466,7 +461,7 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ChangeClipboardChain](http://msdn.microsoft.com/library/windows/desktop/ms649034) ve Windows SDK.  
   
-##  <a name="checkdlgbutton"></a>CWindow::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>  CWindow::CheckDlgButton  
  Změní stav kontroly dané tlačítko.  
   
 ```
@@ -476,7 +471,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [CheckDlgButton](http://msdn.microsoft.com/library/windows/desktop/bb761875) ve Windows SDK.  
   
-##  <a name="checkradiobutton"></a>CWindow::CheckRadioButton  
+##  <a name="checkradiobutton"></a>  CWindow::CheckRadioButton  
  Ověří zadaný přepínač.  
   
 ```
@@ -489,7 +484,7 @@ BOOL CheckRadioButton(
 ### <a name="remarks"></a>Poznámky  
  V tématu [CheckRadioButton](http://msdn.microsoft.com/library/windows/desktop/bb761877) ve Windows SDK.  
   
-##  <a name="childwindowfrompoint"></a>CWindow::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>  CWindow::ChildWindowFromPoint  
  Načte podřízeného okna obsahující zadaný bod.  
   
 ```
@@ -499,7 +494,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ChildWindowFromPoint](http://msdn.microsoft.com/library/windows/desktop/ms632676) ve Windows SDK.  
   
-##  <a name="childwindowfrompointex"></a>CWindow::ChildWindowFromPointEx  
+##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx  
  Načte konkrétní typ podřízeného okna obsahující zadaný bod.  
   
 ```
@@ -509,7 +504,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ChildWindowFromPointEx](http://msdn.microsoft.com/library/windows/desktop/ms632677) ve Windows SDK.  
   
-##  <a name="clienttoscreen"></a>CWindow::ClientToScreen  
+##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen  
  Souřadnice obrazovky převede souřadnice klienta.  
   
 ```
@@ -522,7 +517,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
   
  Druhá verze této metody můžete převést souřadnice [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
-##  <a name="create"></a>CWindow::Create  
+##  <a name="create"></a>  CWindow::Create  
  Vytvoří okno.  
   
 ```
@@ -566,13 +561,13 @@ HWND Create(
  Pokud úspěšné, popisovač okna nově vytvořený zadán [m_hWnd](#m_hwnd). V opačném **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- `CWindow::rcDefault`je definován jako `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.  
+ `CWindow::rcDefault` je definován jako `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.  
   
  V tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK pro další informace.  
   
  **Poznámka:** Pokud 0 se používá jako hodnota `MenuOrID` parametr, musí být zadán jako 0U (výchozí hodnota) aby se zabránilo chybě kompilátoru.  
   
-##  <a name="createcaret"></a>CWindow::CreateCaret  
+##  <a name="createcaret"></a>  CWindow::CreateCaret  
  Vytvoří nový tvar pro systémový znak.  
   
 ```
@@ -582,7 +577,7 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [CreateCaret](http://msdn.microsoft.com/library/windows/desktop/ms648399) ve Windows SDK.  
   
-##  <a name="creategraycaret"></a>CWindow::CreateGrayCaret  
+##  <a name="creategraycaret"></a>  CWindow::CreateGrayCaret  
  Vytvoří šedé rámeček pro systémový znak.  
   
 ```
@@ -594,7 +589,7 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
   
  Předává (HBITMAP) 1 pro bitovou mapu zpracovávat parametr funkce Win32.  
   
-##  <a name="createsolidcaret"></a>CWindow::CreateSolidCaret  
+##  <a name="createsolidcaret"></a>  CWindow::CreateSolidCaret  
  Vytvoří plného obdélníku pro systémový znak.  
   
 ```
@@ -606,7 +601,7 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
   
  Předává (HBITMAP) 0 pro bitovou mapu zpracovávat parametr funkce Win32.  
   
-##  <a name="cwindow"></a>CWindow::CWindow  
+##  <a name="cwindow"></a>  CWindow::CWindow  
  Konstruktor  
   
 ```
@@ -621,9 +616,9 @@ CWindow(HWND hWnd = NULL) throw();
  Inicializuje [m_hWnd](#m_hwnd) člena `hWnd`, který ve výchozím nastavení je **NULL**.  
   
 > [!NOTE]
-> `CWindow::CWindow`nevytváří časového období. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), a [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (které dědí z `CWindow`) poskytují metodu pro vytvoření okno nebo dialogové okno pole, která je pak se přiřadila `CWindow::m_hWnd`. Můžete také [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 funkce.  
+> `CWindow::CWindow` nevytváří časového období. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), a [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (které dědí z `CWindow`) poskytují metodu pro vytvoření okno nebo dialogové okno pole, která je pak se přiřadila `CWindow::m_hWnd`. Můžete také [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 funkce.  
   
-##  <a name="deferwindowpos"></a>CWindow::DeferWindowPos  
+##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  Aktualizuje zadaný struktura více umístění okna pro vybrané okno.  
   
 ```
@@ -640,7 +635,7 @@ HDWP DeferWindowPos(
 ### <a name="remarks"></a>Poznámky  
  V tématu [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) ve Windows SDK.  
   
-##  <a name="destroywindow"></a>CWindow::DestroyWindow  
+##  <a name="destroywindow"></a>  CWindow::DestroyWindow  
  Zničí okna přidružené `CWindow` objekt a nastaví [m_hWnd](#m_hwnd) k **NULL**.  
   
 ```
@@ -655,7 +650,7 @@ BOOL DestroyWindow() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#5](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]  
   
-##  <a name="detach"></a>CWindow::Detach  
+##  <a name="detach"></a>  CWindow::Detach  
  Umožňuje odpojit [m_hWnd](#m_hwnd) z `CWindow` objekt a nastaví `m_hWnd` k **NULL**.  
   
 ```
@@ -668,7 +663,7 @@ HWND Detach() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#6](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]  
   
-##  <a name="dlgdirlist"></a>CWindow::DlgDirList  
+##  <a name="dlgdirlist"></a>  CWindow::DlgDirList  
  Vyplní pole se seznamem názvů všechny soubory odpovídající zadaná cesta nebo název souboru.  
   
 ```
@@ -682,7 +677,7 @@ int DlgDirList(
 ### <a name="remarks"></a>Poznámky  
  V tématu [DlgDirList](http://msdn.microsoft.com/library/windows/desktop/bb761366) ve Windows SDK.  
   
-##  <a name="dlgdirlistcombobox"></a>CWindow::DlgDirListComboBox  
+##  <a name="dlgdirlistcombobox"></a>  CWindow::DlgDirListComboBox  
  Vyplní pole se seznamem názvů všechny soubory odpovídající zadaná cesta nebo název souboru.  
   
 ```
@@ -696,7 +691,7 @@ int DlgDirListComboBox(
 ### <a name="remarks"></a>Poznámky  
  V tématu [DlgDirListComboBox](http://msdn.microsoft.com/library/windows/desktop/bb775935) ve Windows SDK.  
   
-##  <a name="dlgdirselect"></a>CWindow::DlgDirSelect  
+##  <a name="dlgdirselect"></a>  CWindow::DlgDirSelect  
  Načte aktuální výběr ze seznamu.  
   
 ```
@@ -709,7 +704,7 @@ BOOL DlgDirSelect(
 ### <a name="remarks"></a>Poznámky  
  V tématu [DlgDirSelectEx](http://msdn.microsoft.com/library/windows/desktop/bb761368) ve Windows SDK.  
   
-##  <a name="dlgdirselectcombobox"></a>CWindow::DlgDirSelectComboBox  
+##  <a name="dlgdirselectcombobox"></a>  CWindow::DlgDirSelectComboBox  
  Načte aktuální výběr z pole se seznamem.  
   
 ```
@@ -722,7 +717,7 @@ BOOL DlgDirSelectComboBox(
 ### <a name="remarks"></a>Poznámky  
  V tématu [DlgDirSelectComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775937) ve Windows SDK.  
   
-##  <a name="dragacceptfiles"></a>CWindow::DragAcceptFiles  
+##  <a name="dragacceptfiles"></a>  CWindow::DragAcceptFiles  
  Zaregistruje jestli přijímá okno přetáhnout soubory.  
   
 ```
@@ -732,7 +727,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 ### <a name="remarks"></a>Poznámky  
  V tématu [dragacceptfiles –](http://msdn.microsoft.com/library/windows/desktop/bb776406) ve Windows SDK.  
   
-##  <a name="drawmenubar"></a>CWindow::DrawMenuBar  
+##  <a name="drawmenubar"></a>  CWindow::DrawMenuBar  
  Překreslí řádku nabídek okna.  
   
 ```
@@ -742,7 +737,7 @@ BOOL DrawMenuBar() throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [DrawMenuBar](http://msdn.microsoft.com/library/windows/desktop/ms647633) ve Windows SDK.  
   
-##  <a name="enablescrollbar"></a>CWindow::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CWindow::EnableScrollBar  
  Povolí nebo zakáže na panelu šipky posuvníku.  
   
 ```
@@ -752,7 +747,7 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [EnableScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787579) ve Windows SDK.  
   
-##  <a name="enablewindow"></a>CWindow::EnableWindow  
+##  <a name="enablewindow"></a>  CWindow::EnableWindow  
  Povolí nebo zakáže vstup.  
   
 ```
@@ -765,7 +760,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#7](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]  
   
-##  <a name="endpaint"></a>CWindow::EndPaint  
+##  <a name="endpaint"></a>  CWindow::EndPaint  
  Označuje konec Malování.  
   
 ```
@@ -778,7 +773,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="flashwindow"></a>CWindow::FlashWindow  
+##  <a name="flashwindow"></a>  CWindow::FlashWindow  
  Okno bliká jednou.  
   
 ```
@@ -788,7 +783,7 @@ BOOL FlashWindow(BOOL bInvert) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [FlashWindow](http://msdn.microsoft.com/library/windows/desktop/ms679346) ve Windows SDK.  
   
-##  <a name="getclientrect"></a>CWindow::GetClientRect  
+##  <a name="getclientrect"></a>  CWindow::GetClientRect  
  Načte souřadnice oblasti klienta.  
   
 ```
@@ -801,7 +796,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#8](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]  
   
-##  <a name="getdc"></a>CWindow::GetDC  
+##  <a name="getdc"></a>  CWindow::GetDC  
  Načte kontext zařízení pro klientské oblasti.  
   
 ```
@@ -814,7 +809,7 @@ HDC GetDC() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="getdcex"></a>CWindow::GetDCEx  
+##  <a name="getdcex"></a>  CWindow::GetDCEx  
  Načte kontext zařízení pro klientské oblasti a umožňuje výstřižek možnosti.  
   
 ```
@@ -824,7 +819,7 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) ve Windows SDK.  
   
-##  <a name="getdescendantwindow"></a>CWindow::GetDescendantWindow  
+##  <a name="getdescendantwindow"></a>  CWindow::GetDescendantWindow  
  Vyhledá okno následné určeného daným identifikátorem.  
   
 ```
@@ -839,9 +834,9 @@ HWND GetDescendantWindow(int nID) const throw();
  Popisovač následné okno.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetDescendantWindow`Vyhledá celý strom podřízená okna, ne jenom systému windows, které jsou přímé podřízené objekty.  
+ `GetDescendantWindow` Vyhledá celý strom podřízená okna, ne jenom systému windows, které jsou přímé podřízené objekty.  
   
-##  <a name="getdlgcontrol"></a>CWindow::GetDlgControl  
+##  <a name="getdlgcontrol"></a>  CWindow::GetDlgControl  
  Volejte tuto funkci k získání ukazatele na rozhraní ovládacího prvku ActiveX, který je hostován složeného ovládacího prvku nebo – hostování ovládacího prvku – dialogové okno.  
   
 ```
@@ -867,7 +862,7 @@ HRESULT GetDlgControl(
 ### <a name="remarks"></a>Poznámky  
  Pomocí tento ukazatel, můžete volat metody pro rozhraní.  
   
-##  <a name="getdlgctrlid"></a>CWindow::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>  CWindow::GetDlgCtrlID  
  Načte identifikátor okna (pro podřízené pouze windows).  
   
 ```
@@ -877,7 +872,7 @@ int GetDlgCtrlID() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetDlgCtrlID](http://msdn.microsoft.com/library/windows/desktop/ms645478) ve Windows SDK.  
   
-##  <a name="getdlghost"></a>CWindow::GetDlgHost  
+##  <a name="getdlghost"></a>  CWindow::GetDlgHost  
  Načte ukazatel na rozhraní do ovládacího prvku ATL – hostování kontejneru.  
   
 ```
@@ -903,7 +898,7 @@ HRESULT GetDlgHost(
 ### <a name="remarks"></a>Poznámky  
  Pomocí tento ukazatel, můžete volat metody pro rozhraní.  
   
-##  <a name="getdlgitem"></a>CWindow::GetDlgItem  
+##  <a name="getdlgitem"></a>  CWindow::GetDlgItem  
  Načte zadaný podřízeného okna.  
   
 ```
@@ -913,7 +908,7 @@ HWND GetDlgItem(int nID) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetDlgItem](http://msdn.microsoft.com/library/windows/desktop/ms645481) ve Windows SDK.  
   
-##  <a name="getdlgitemint"></a>CWindow::GetDlgItemInt  
+##  <a name="getdlgitemint"></a>  CWindow::GetDlgItemInt  
  Přeloží text ovládacího prvku na celé číslo.  
   
 ```
@@ -926,7 +921,7 @@ UINT GetDlgItemInt(
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645485) ve Windows SDK.  
   
-##  <a name="getdlgitemtext"></a>CWindow::GetDlgItemText  
+##  <a name="getdlgitemtext"></a>  CWindow::GetDlgItemText  
  Načte text ovládacího prvku.  
   
 ```
@@ -946,7 +941,7 @@ BOOL GetDlgItemText(
 ### <a name="remarks"></a>Poznámky  
  Druhá verze tato metoda umožňuje kopírovat text ovládacího prvku `BSTR`. Tato verze vrátí **TRUE** Pokud je text úspěšně zkopírovaný; v opačném **FALSE**.  
   
-##  <a name="getexstyle"></a>CWindow::GetExStyle  
+##  <a name="getexstyle"></a>  CWindow::GetExStyle  
  Načte rozšířené styly oken okna.  
   
 ```
@@ -962,7 +957,7 @@ DWORD GetExStyle() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#10](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]  
   
-##  <a name="getfont"></a>CWindow::GetFont  
+##  <a name="getfont"></a>  CWindow::GetFont  
  Načte aktuální písmo okna odesláním [WM_GETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632624) zpráva do okna.  
   
 ```
@@ -972,7 +967,7 @@ HFONT GetFont() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač písma.  
   
-##  <a name="gethotkey"></a>CWindow::GetHotKey  
+##  <a name="gethotkey"></a>  CWindow::GetHotKey  
  Určuje klávesové zkratky, které jsou spojené s okno odesláním **WM_GETHOTKEY** zprávy.  
   
 ```
@@ -982,7 +977,7 @@ DWORD GetHotKey() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Virtuální klíče kód a modifikátory pro aktivní klíč přidružený okna. Seznam možných modifikátory najdete v tématu [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) ve Windows SDK. Seznam kódů standardní virtuální klíče naleznete v části winuser.  
   
-##  <a name="geticon"></a>CWindow::GetIcon  
+##  <a name="geticon"></a>  CWindow::GetIcon  
  Načte popisovač okna velké nebo malé ikony.  
   
 ```
@@ -997,9 +992,9 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
  Popisovač ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetIcon`odešle [WM_GETICON](http://msdn.microsoft.com/library/windows/desktop/ms632625) zpráva do okna.  
+ `GetIcon` odešle [WM_GETICON](http://msdn.microsoft.com/library/windows/desktop/ms632625) zpráva do okna.  
   
-##  <a name="getlastactivepopup"></a>CWindow::GetLastActivePopup  
+##  <a name="getlastactivepopup"></a>  CWindow::GetLastActivePopup  
  Načte nedávno active překryvné okno.  
   
 ```
@@ -1009,7 +1004,7 @@ HWND GetLastActivePopup() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetLastActivePopup](http://msdn.microsoft.com/library/windows/desktop/ms633507) ve Windows SDK.  
   
-##  <a name="getmenu"></a>CWindow::GetMenu  
+##  <a name="getmenu"></a>  CWindow::GetMenu  
  Načte nabídce okna.  
   
 ```
@@ -1019,7 +1014,7 @@ HMENU GetMenu() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647640) ve Windows SDK.  
   
-##  <a name="getnextdlggroupitem"></a>CWindow::GetNextDlgGroupItem  
+##  <a name="getnextdlggroupitem"></a>  CWindow::GetNextDlgGroupItem  
  Načte předchozí nebo další ovládací prvek v rámci skupiny ovládacích prvků.  
   
 ```
@@ -1029,7 +1024,7 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetNextDlgGroupItem](http://msdn.microsoft.com/library/windows/desktop/ms645492) ve Windows SDK.  
   
-##  <a name="getnextdlgtabitem"></a>CWindow::GetNextDlgTabItem  
+##  <a name="getnextdlgtabitem"></a>  CWindow::GetNextDlgTabItem  
  Načte nutnosti předchozí nebo další ovládací prvek **ws_tabstop –** stylu.  
   
 ```
@@ -1039,7 +1034,7 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetNextDlgTabItem](http://msdn.microsoft.com/library/windows/desktop/ms645495) ve Windows SDK.  
   
-##  <a name="getparent"></a>CWindow::GetParent  
+##  <a name="getparent"></a>  CWindow::GetParent  
  Načte okamžitou nadřazeného okna.  
   
 ```
@@ -1052,7 +1047,7 @@ HWND GetParent() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#11](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]  
   
-##  <a name="getscrollinfo"></a>CWindow::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CWindow::GetScrollInfo  
  Načte parametry posuvníku.  
   
 ```
@@ -1062,7 +1057,7 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787583) ve Windows SDK.  
   
-##  <a name="getscrollpos"></a>CWindow::GetScrollPos  
+##  <a name="getscrollpos"></a>  CWindow::GetScrollPos  
  Načte pozici od jezdce.  
   
 ```
@@ -1072,7 +1067,7 @@ int GetScrollPos(int nBar) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) ve Windows SDK.  
   
-##  <a name="getscrollrange"></a>CWindow::GetScrollRange  
+##  <a name="getscrollrange"></a>  CWindow::GetScrollRange  
  Načte rozsah posuvníku.  
   
 ```
@@ -1085,7 +1080,7 @@ BOOL GetScrollRange(
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787587) ve Windows SDK.  
   
-##  <a name="getstyle"></a>CWindow::GetStyle  
+##  <a name="getstyle"></a>  CWindow::GetStyle  
  Načte styly oken okna.  
   
 ```
@@ -1101,7 +1096,7 @@ DWORD GetStyle() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#12](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]  
   
-##  <a name="getsystemmenu"></a>CWindow::GetSystemMenu  
+##  <a name="getsystemmenu"></a>  CWindow::GetSystemMenu  
  Vytvoří kopii nabídky systému pro úpravy.  
   
 ```
@@ -1111,7 +1106,7 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetSystemMenu](http://msdn.microsoft.com/library/windows/desktop/ms647985) ve Windows SDK.  
   
-##  <a name="gettoplevelparent"></a>CWindow::GetTopLevelParent  
+##  <a name="gettoplevelparent"></a>  CWindow::GetTopLevelParent  
  Načte nejvyšší úrovně nadřazeného okna.  
   
 ```
@@ -1121,7 +1116,7 @@ HWND GetTopLevelParent() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač nejvyšší úrovně nadřazeného okna.  
   
-##  <a name="gettoplevelwindow"></a>CWindow::GetTopLevelWindow  
+##  <a name="gettoplevelwindow"></a>  CWindow::GetTopLevelWindow  
  Načte okna nejvyšší úrovně nadřazené nebo vlastníka okno.  
   
 ```
@@ -1131,7 +1126,7 @@ HWND GetTopLevelWindow() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač okna nejvyšší úrovně vlastníka.  
   
-##  <a name="gettopwindow"></a>CWindow::GetTopWindow  
+##  <a name="gettopwindow"></a>  CWindow::GetTopWindow  
  Načte nejvyšší úrovně podřízeného okna.  
   
 ```
@@ -1144,7 +1139,7 @@ HWND GetTopWindow() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#13](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]  
   
-##  <a name="getupdaterect"></a>CWindow::GetUpdateRect  
+##  <a name="getupdaterect"></a>  CWindow::GetUpdateRect  
  Načte souřadnice nejmenší obdélníku, která zcela pokrývá oblasti aktualizace.  
   
 ```
@@ -1154,7 +1149,7 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetUpdateRect](http://msdn.microsoft.com/library/windows/desktop/dd144943) ve Windows SDK.  
   
-##  <a name="getupdatergn"></a>CWindow::GetUpdateRgn  
+##  <a name="getupdatergn"></a>  CWindow::GetUpdateRgn  
  Načte oblast aktualizace a zkopíruje je do zadané oblasti.  
   
 ```
@@ -1164,7 +1159,7 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetUpdateRgn](http://msdn.microsoft.com/library/windows/desktop/dd144944) ve Windows SDK.  
   
-##  <a name="getwindow"></a>CWindow::GetWindow  
+##  <a name="getwindow"></a>  CWindow::GetWindow  
  Načte zadané okno.  
   
 ```
@@ -1174,7 +1169,7 @@ HWND GetWindow(UINT nCmd) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu `GetWindow` ve Windows SDK.  
   
-##  <a name="getwindowcontexthelpid"></a>CWindow::GetWindowContextHelpId  
+##  <a name="getwindowcontexthelpid"></a>  CWindow::GetWindowContextHelpId  
  Načte identifikátor kontextu okna nápovědy.  
   
 ```
@@ -1184,7 +1179,7 @@ DWORD GetWindowContextHelpId() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb776429) ve Windows SDK.  
   
-##  <a name="getwindowdc"></a>CWindow::GetWindowDC  
+##  <a name="getwindowdc"></a>  CWindow::GetWindowDC  
  Načte kontext zařízení pro celé okno.  
   
 ```
@@ -1197,7 +1192,7 @@ HDC GetWindowDC() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#14](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]  
   
-##  <a name="getwindowlong"></a>CWindow::GetWindowLong  
+##  <a name="getwindowlong"></a>  CWindow::GetWindowLong  
  Načte hodnotu 32-bit na zadaný posun do paměti okno navíc.  
   
 ```
@@ -1210,7 +1205,7 @@ LONG GetWindowLong(int nIndex) const throw();
 > [!NOTE]
 >  Pokud chcete psát kód, který je kompatibilní s 32bitové a 64bitové verze systému Windows, použijte [CWindow::GetWindowLongPtr](#getwindowlongptr).  
   
-##  <a name="getwindowlongptr"></a>CWindow::GetWindowLongPtr  
+##  <a name="getwindowlongptr"></a>  CWindow::GetWindowLongPtr  
  Načte informace o vybrané okno, včetně hodnotu na zadaný posun do paměti okno navíc.  
   
 ```
@@ -1228,7 +1223,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
   
  Pokud chcete psát kód, který je kompatibilní s 32bitové a 64bitové verze systému Windows, použijte `CWindow::GetWindowLongPtr`.  
   
-##  <a name="getwindowplacement"></a>CWindow::GetWindowPlacement  
+##  <a name="getwindowplacement"></a>  CWindow::GetWindowPlacement  
  Načte zobrazení stavu a pozic.  
   
 ```
@@ -1238,7 +1233,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633518) ve Windows SDK.  
   
-##  <a name="getwindowprocessid"></a>CWindow::GetWindowProcessID  
+##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID  
  Načte identifikátor procesu, který vytvořil okna.  
   
 ```
@@ -1251,7 +1246,7 @@ DWORD GetWindowProcessID() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#15](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]  
   
-##  <a name="getwindowrect"></a>CWindow::GetWindowRect  
+##  <a name="getwindowrect"></a>  CWindow::GetWindowRect  
  Načte okna ohraničující dimenzí.  
   
 ```
@@ -1261,7 +1256,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [getwindowrect –](http://msdn.microsoft.com/library/windows/desktop/ms633519) ve Windows SDK.  
   
-##  <a name="getwindowrgn"></a>CWindow::GetWindowRgn  
+##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn  
  Získá kopii oblasti okno časového období.  
   
 ```
@@ -1271,7 +1266,7 @@ int GetWindowRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd144950) ve Windows SDK.  
   
-##  <a name="getwindowtext"></a>CWindow::GetWindowText  
+##  <a name="getwindowtext"></a>  CWindow::GetWindowText  
  Načte text okna.  
   
 ```
@@ -1301,7 +1296,7 @@ int GetWindowText(CSimpleString& strText) const;
   
  Druhá verze tato metoda umožňuje ukládání textu v `BSTR`; třetí verzi umožňuje uložit výsledek v [CString](../../atl-mfc-shared/reference/cstringt-class.md), protože `CSimpleString` je základní třídu `CString`.  
   
-##  <a name="getwindowtextlength"></a>CWindow::GetWindowTextLength  
+##  <a name="getwindowtextlength"></a>  CWindow::GetWindowTextLength  
  Získá délku textu okna.  
   
 ```
@@ -1311,7 +1306,7 @@ int GetWindowTextLength() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetWindowTextLength](http://msdn.microsoft.com/library/windows/desktop/ms633521) ve Windows SDK.  
   
-##  <a name="getwindowthreadid"></a>CWindow::GetWindowThreadID  
+##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID  
  Načte identifikátor vlákno, které vytvořili vybrané okno.  
   
 ```
@@ -1324,7 +1319,7 @@ DWORD GetWindowThreadID() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#16](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]  
   
-##  <a name="getwindowword"></a>CWindow::GetWindowWord  
+##  <a name="getwindowword"></a>  CWindow::GetWindowWord  
  Načte 16bitové hodnotu na zadaný posun do paměti okno navíc.  
   
 ```
@@ -1334,7 +1329,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) ve Windows SDK.  
   
-##  <a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  Nastaví fokus klávesnice do ovládacího prvku v dialogovém okně.  
   
 ```
@@ -1344,7 +1339,7 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) ve Windows SDK.  
   
-##  <a name="hidecaret"></a>CWindow::HideCaret  
+##  <a name="hidecaret"></a>  CWindow::HideCaret  
  Skryje systémový znak.  
   
 ```
@@ -1357,7 +1352,7 @@ BOOL HideCaret() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#17](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]  
   
-##  <a name="hilitemenuitem"></a>CWindow::HiliteMenuItem  
+##  <a name="hilitemenuitem"></a>  CWindow::HiliteMenuItem  
  Označuje nebo odebere zvýraznění nabídka nejvyšší úrovně.  
   
 ```
@@ -1370,7 +1365,7 @@ BOOL HiliteMenuItem(
 ### <a name="remarks"></a>Poznámky  
  V tématu [HiliteMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647986) ve Windows SDK.  
   
-##  <a name="invalidate"></a>CWindow::Invalidate  
+##  <a name="invalidate"></a>  CWindow::Invalidate  
  Zruší platnost celého klienta.  
   
 ```
@@ -1385,7 +1380,7 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#18](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]  
   
-##  <a name="invalidaterect"></a>CWindow::InvalidateRect  
+##  <a name="invalidaterect"></a>  CWindow::InvalidateRect  
  Zruší platnost klientské oblasti v rámci zadaného rámeček.  
   
 ```
@@ -1395,7 +1390,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [InvalidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145002) ve Windows SDK.  
   
-##  <a name="invalidatergn"></a>CWindow::InvalidateRgn  
+##  <a name="invalidatergn"></a>  CWindow::InvalidateRgn  
  Zruší platnost klientské oblasti v zadané oblasti.  
   
 ```
@@ -1408,7 +1403,7 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>Poznámky  
  Určuje `void` návratový typ, zatímco `InvalidateRgn` Win32 funkce vždy vrátí hodnotu **TRUE**.  
   
-##  <a name="ischild"></a>CWindow::IsChild  
+##  <a name="ischild"></a>  CWindow::IsChild  
  Určuje, zda je zadané okno podřízeného okna.  
   
 ```
@@ -1418,7 +1413,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ischild –](http://msdn.microsoft.com/library/windows/desktop/ms633524) ve Windows SDK.  
   
-##  <a name="isdialogmessage"></a>CWindow::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage  
  Určuje, jestli je určeno zprávu pro zadaný dialogových oken.  
   
 ```
@@ -1428,7 +1423,7 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [IsDialogMessage](http://msdn.microsoft.com/library/windows/desktop/ms645498) ve Windows SDK.  
   
-##  <a name="isdlgbuttonchecked"></a>CWindow::IsDlgButtonChecked  
+##  <a name="isdlgbuttonchecked"></a>  CWindow::IsDlgButtonChecked  
  Určuje stav kontroly tlačítko.  
   
 ```
@@ -1438,7 +1433,7 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [IsDlgButtonChecked](http://msdn.microsoft.com/library/windows/desktop/bb761879) ve Windows SDK.  
   
-##  <a name="isiconic"></a>CWindow::IsIconic  
+##  <a name="isiconic"></a>  CWindow::IsIconic  
  Určuje, zda je minimalizován okna.  
   
 ```
@@ -1451,7 +1446,7 @@ BOOL IsIconic() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#19](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]  
   
-##  <a name="isparentdialog"></a>CWindow::IsParentDialog  
+##  <a name="isparentdialog"></a>  CWindow::IsParentDialog  
  Určuje, zda okno nadřazeného ovládacího prvku dialogového okna.  
   
 ```
@@ -1461,7 +1456,7 @@ BOOL IsParentDialog() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, pokud nadřazeného okna je dialogové okno, FALSE jinak.  
   
-##  <a name="iswindow"></a>CWindow::IsWindow  
+##  <a name="iswindow"></a>  CWindow::IsWindow  
  Určuje, zda popisovač zadaný okna identifikuje existujícího okna.  
   
 ```
@@ -1474,7 +1469,7 @@ BOOL IsWindow() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#20](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]  
   
-##  <a name="iswindowenabled"></a>CWindow::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>  CWindow::IsWindowEnabled  
  Určuje, zda je povoleno okna pro vstup.  
   
 ```
@@ -1487,7 +1482,7 @@ BOOL IsWindowEnabled() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#21](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]  
   
-##  <a name="iswindowvisible"></a>CWindow::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CWindow::IsWindowVisible  
  Určuje stav viditelnosti okna.  
   
 ```
@@ -1500,7 +1495,7 @@ BOOL IsWindowVisible() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#22](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]  
   
-##  <a name="iswindowunicode"></a>CWindow::IsWindowUnicode  
+##  <a name="iswindowunicode"></a>  CWindow::IsWindowUnicode  
  Určuje, zda je zadané okno nativní okna kódování Unicode.  
   
 ```
@@ -1513,7 +1508,7 @@ BOOL IsWindowUnicode() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#23](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]  
   
-##  <a name="iszoomed"></a>CWindow::IsZoomed  
+##  <a name="iszoomed"></a>  CWindow::IsZoomed  
  Určuje, jestli je okno maximalizované.  
   
 ```
@@ -1523,7 +1518,7 @@ BOOL IsZoomed() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [IsZoomed](http://msdn.microsoft.com/library/windows/desktop/ms633531) ve Windows SDK.  
   
-##  <a name="killtimer"></a>CWindow::KillTimer  
+##  <a name="killtimer"></a>  CWindow::KillTimer  
  Zničí událost časovače, vytvořené `CWindow::SetTimer`.  
   
 ```
@@ -1533,7 +1528,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [KillTimer](http://msdn.microsoft.com/library/windows/desktop/ms644903) ve Windows SDK.  
   
-##  <a name="lockwindowupdate"></a>CWindow::LockWindowUpdate  
+##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate  
  Zakazuje nebo povoluje kreslení v okně voláním [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) Win32 funkce.  
   
 ```
@@ -1550,14 +1545,14 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud `bLock` je **TRUE**, tato metoda předá [m_hWnd](#m_hwnd) Win32 funkci; jinak, předává **NULL**.  
   
-##  <a name="m_hwnd"></a>CWindow::m_hWnd  
+##  <a name="m_hwnd"></a>  CWindow::m_hWnd  
  Obsahuje popisovač do okna přidružené `CWindow` objektu.  
   
 ```
 HWND m_hWnd throw() throw();
 ```  
   
-##  <a name="mapwindowpoints"></a>CWindow::MapWindowPoints  
+##  <a name="mapwindowpoints"></a>  CWindow::MapWindowPoints  
  Převede sadu bodů z okna souřadnicového prostoru prostoru souřadnic další okno.  
   
 ```
@@ -1576,7 +1571,7 @@ int MapWindowPoints(
   
  Druhá verze této metody můžete převést souřadnice [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
-##  <a name="messagebox"></a>CWindow::MessageBox  
+##  <a name="messagebox"></a>  CWindow::MessageBox  
  Zobrazí okno se zprávou.  
   
 ```
@@ -1592,7 +1587,7 @@ int MessageBox(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#24](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]  
   
-##  <a name="modifystyle"></a>CWindow::ModifyStyle  
+##  <a name="modifystyle"></a>  CWindow::ModifyStyle  
  Upraví stylů oken `CWindow` objektu.  
   
 ```
@@ -1616,24 +1611,24 @@ BOOL ModifyStyle(
  **Hodnota TRUE,** Pokud styly oken jsou změny, jinak hodnota **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR (&#124;) operátor. Najdete v článku [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce v systému Windows SDKfor informace o dostupném časovém intervalu stylů.  
+ Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce v systému Windows SDKfor informace o dostupném časovém intervalu stylů.  
   
  Pokud `nFlags` nenulový, `ModifyStyle` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
   
-- `SWP_NOSIZE`Zachová aktuální velikost.  
+- `SWP_NOSIZE` Zachová aktuální velikost.  
   
-- `SWP_NOMOVE`Zachová aktuální pozici.  
+- `SWP_NOMOVE` Zachová aktuální pozici.  
   
-- `SWP_NOZORDER`Zachová aktuální pořadí vykreslování.  
+- `SWP_NOZORDER` Zachová aktuální pořadí vykreslování.  
   
-- `SWP_NOACTIVATE`Neaktivuje okna.  
+- `SWP_NOACTIVATE` Neaktivuje okna.  
   
  K úpravě časového období je rozšířené styly, volejte [ModifyStyleEx](#modifystyleex).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#25](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]  
   
-##  <a name="modifystyleex"></a>CWindow::ModifyStyleEx  
+##  <a name="modifystyleex"></a>  CWindow::ModifyStyleEx  
  Změní rozšířené okno stylů `CWindow` objektu.  
   
 ```
@@ -1657,24 +1652,24 @@ BOOL ModifyStyleEx(
  **Hodnota TRUE,** Pokud rozšířené styly oken jsou změny, jinak hodnota **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR (&#124;) operátor. Najdete v článku [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce v systému Windows SDKfor informace o dostupných rozšířené styly.  
+ Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce v systému Windows SDKfor informace o dostupných rozšířené styly.  
   
  Pokud `nFlags` nenulový, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
   
-- `SWP_NOSIZE`Zachová aktuální velikost.  
+- `SWP_NOSIZE` Zachová aktuální velikost.  
   
-- `SWP_NOMOVE`Zachová aktuální pozici.  
+- `SWP_NOMOVE` Zachová aktuální pozici.  
   
-- `SWP_NOZORDER`Zachová aktuální pořadí vykreslování.  
+- `SWP_NOZORDER` Zachová aktuální pořadí vykreslování.  
   
-- `SWP_NOACTIVATE`Neaktivuje okna.  
+- `SWP_NOACTIVATE` Neaktivuje okna.  
   
  Chcete-li systém windows s použitím regulárních okno styly upravit, volejte [ModifyStyle](#modifystyle).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#26](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]  
   
-##  <a name="movewindow"></a>CWindow::MoveWindow  
+##  <a name="movewindow"></a>  CWindow::MoveWindow  
  Změní velikost a umístění okna.  
   
 ```
@@ -1695,7 +1690,7 @@ BOOL MoveWindow(
   
  Druhá verze tato metoda používá [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určete nové umístění, šířku a výšku okna.  
   
-##  <a name="nextdlgctrl"></a>CWindow::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl  
  Nastaví fokus klávesnice na další ovládací prvek v dialogovém okně.  
   
 ```
@@ -1705,7 +1700,7 @@ void NextDlgCtrl() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) ve Windows SDK.  
   
-##  <a name="openclipboard"></a>CWindow::OpenClipboard  
+##  <a name="openclipboard"></a>  CWindow::OpenClipboard  
  Otevře se do schránky.  
   
 ```
@@ -1715,21 +1710,21 @@ BOOL OpenClipboard() throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [Modul OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) ve Windows SDK.  
   
-##  <a name="operator_hwnd"></a>CWindow::operator HWND  
+##  <a name="operator_hwnd"></a>  CWindow::operator HWND  
  Převede `CWindow` do objektu `HWND`.  
   
 ```  
 operator HWND() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CWindow::operator =  
+##  <a name="operator_eq"></a>  CWindow::operator =  
  Přiřadí `HWND` k `CWindow` objekt nastavením [m_hWnd](#m_hwnd) člena `hWnd`.  
   
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```  
   
-##  <a name="postmessage"></a>CWindow::PostMessage  
+##  <a name="postmessage"></a>  CWindow::PostMessage  
  Umístí zprávu do fronty zpráv přidružené vlákno, které vytvořili okna.  
   
 ```
@@ -1747,7 +1742,7 @@ BOOL PostMessage(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#27](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]  
   
-##  <a name="prevdlgctrl"></a>CWindow::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>  CWindow::PrevDlgCtrl  
  Nastaví fokus klávesnice na předchozí ovládacího prvku v dialogovém okně.  
   
 ```
@@ -1757,7 +1752,7 @@ void PrevDlgCtrl() const throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) ve Windows SDK.  
   
-##  <a name="print"></a>CWindow::Print  
+##  <a name="print"></a>  CWindow::Print  
  Odešle [WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216) zprávu do okna pro vyžádání, aby se sám sebe kreslení v kontextu zadané zařízení.  
   
 ```
@@ -1771,19 +1766,19 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
  `dwFlags`  
  [v] Určuje možnosti vykreslování. Zkombinováním jeden nebo více z následujících příznaků:  
   
-- `PRF_CHECKVISIBLE`Zakreslit okna, pouze pokud je viditelné.  
+- `PRF_CHECKVISIBLE` Zakreslit okna, pouze pokud je viditelné.  
   
-- `PRF_CHILDREN`Zakreslit všechny viditelné podřízená okna.  
+- `PRF_CHILDREN` Zakreslit všechny viditelné podřízená okna.  
   
-- `PRF_CLIENT`Zakreslit klientské oblasti okna.  
+- `PRF_CLIENT` Zakreslit klientské oblasti okna.  
   
-- `PRF_ERASEBKGND`Vymažte pozadí před kreslení okna.  
+- `PRF_ERASEBKGND` Vymažte pozadí před kreslení okna.  
   
-- `PRF_NONCLIENT`Zakreslit neklientská oblast okna.  
+- `PRF_NONCLIENT` Zakreslit neklientská oblast okna.  
   
-- `PRF_OWNED`Zakreslit všechny vlastní windows.  
+- `PRF_OWNED` Zakreslit všechny vlastní windows.  
   
-##  <a name="printclient"></a>CWindow::PrintClient  
+##  <a name="printclient"></a>  CWindow::PrintClient  
  Odešle [WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217) zprávu do okna pro vyžádání, aby ho kreslení jeho klientské oblasti v rámci zadané zařízení.  
   
 ```
@@ -1797,26 +1792,26 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
  `dwFlags`  
  [v] Určuje možnosti vykreslování. Zkombinováním jeden nebo více z následujících příznaků:  
   
-- `PRF_CHECKVISIBLE`Zakreslit okna, pouze pokud je viditelné.  
+- `PRF_CHECKVISIBLE` Zakreslit okna, pouze pokud je viditelné.  
   
-- `PRF_CHILDREN`Zakreslit všechny viditelné podřízená okna.  
+- `PRF_CHILDREN` Zakreslit všechny viditelné podřízená okna.  
   
-- `PRF_CLIENT`Zakreslit klientské oblasti okna.  
+- `PRF_CLIENT` Zakreslit klientské oblasti okna.  
   
-- `PRF_ERASEBKGND`Vymažte pozadí před kreslení okna.  
+- `PRF_ERASEBKGND` Vymažte pozadí před kreslení okna.  
   
-- `PRF_NONCLIENT`Zakreslit neklientská oblast okna.  
+- `PRF_NONCLIENT` Zakreslit neklientská oblast okna.  
   
-- `PRF_OWNED`Zakreslit všechny vlastní windows.  
+- `PRF_OWNED` Zakreslit všechny vlastní windows.  
   
-##  <a name="rcdefault"></a>CWindow::rcDefault  
+##  <a name="rcdefault"></a>  CWindow::rcDefault  
  Obsahuje výchozí okno dimenze.  
   
 ```
 static RECT rcDefault;
 ```  
   
-##  <a name="redrawwindow"></a>CWindow::RedrawWindow  
+##  <a name="redrawwindow"></a>  CWindow::RedrawWindow  
  Aktualizuje zadaný obdélníku nebo oblast v oblasti klienta.  
   
 ```
@@ -1834,7 +1829,7 @@ throw()
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#28](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]  
   
-##  <a name="releasedc"></a>CWindow::ReleaseDC  
+##  <a name="releasedc"></a>  CWindow::ReleaseDC  
  Uvolní kontextu zařízení.  
   
 ```
@@ -1847,7 +1842,7 @@ int ReleaseDC(HDC hDC);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="resizeclient"></a>CWindow::ResizeClient  
+##  <a name="resizeclient"></a>  CWindow::ResizeClient  
  Zmenší okno velikosti oblasti zadaného klienta.  
   
 ```
@@ -1867,7 +1862,7 @@ BOOL ResizeClient(
  `bRedraw`  
  Příznak určující, zda má ho překreslit změny. Výchozí hodnota je **FALSE**, označující okna beze změny změny.  
   
-##  <a name="screentoclient"></a>CWindow::ScreenToClient  
+##  <a name="screentoclient"></a>  CWindow::ScreenToClient  
  Souřadnice obrazovky převede na souřadnice klienta.  
   
 ```
@@ -1880,7 +1875,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
   
  Druhá verze této metody můžete převést souřadnice [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
-##  <a name="scrollwindow"></a>CWindow::ScrollWindow  
+##  <a name="scrollwindow"></a>  CWindow::ScrollWindow  
  Posune zadaný klientské oblasti.  
   
 ```
@@ -1894,7 +1889,7 @@ BOOL ScrollWindow(
 ### <a name="remarks"></a>Poznámky  
  V tématu [ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591) ve Windows SDK.  
   
-##  <a name="scrollwindowex"></a>CWindow::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>  CWindow::ScrollWindowEx  
  Posune zadaný klientské oblasti s další funkce.  
   
 ```
@@ -1911,7 +1906,7 @@ int ScrollWindowEx(
 ### <a name="remarks"></a>Poznámky  
  V tématu [ScrollWindowEx](http://msdn.microsoft.com/library/windows/desktop/bb787593) ve Windows SDK.  
   
-##  <a name="senddlgitemmessage"></a>CWindow::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>  CWindow::SendDlgItemMessage  
  Odešle zprávu do ovládacího prvku.  
   
 ```
@@ -1925,7 +1920,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SendDlgItemMessage](http://msdn.microsoft.com/library/windows/desktop/ms645515) ve Windows SDK.  
   
-##  <a name="sendmessage"></a>CWindow::SendMessage  
+##  <a name="sendmessage"></a>  CWindow::SendMessage  
  Odešle zprávu do okna a nevrací až do procesu okno zpracovala zprávy.  
   
 ```
@@ -1947,7 +1942,7 @@ static LRESULT SendMessage(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#29](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]  
   
-##  <a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>  CWindow::SendMessageToDescendants  
  Odešle určenou zprávu na všechny bezprostředně podřízené `CWindow` objektu.  
   
 ```
@@ -1974,7 +1969,7 @@ void SendMessageToDescendants(
 ### <a name="remarks"></a>Poznámky  
  Pokud `bDeep` je **TRUE**, kromě je zpráva odeslána na všechny následné windows.  
   
-##  <a name="sendnotifymessage"></a>CWindow::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>  CWindow::SendNotifyMessage  
  Odešle zprávu do okna.  
   
 ```
@@ -1989,7 +1984,7 @@ BOOL SendNotifyMessage(
   
  Pokud okno byl vytvořen volající vlákno `SendNotifyMessage` nevrací až do procesu okno zpracovala zprávy. Funkce okamžitě.  
   
-##  <a name="setactivewindow"></a>CWindow::SetActiveWindow  
+##  <a name="setactivewindow"></a>  CWindow::SetActiveWindow  
  Aktivuje okno.  
   
 ```
@@ -2002,7 +1997,7 @@ HWND SetActiveWindow() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#30](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]  
   
-##  <a name="setcapture"></a>CWindow::SetCapture  
+##  <a name="setcapture"></a>  CWindow::SetCapture  
  Odešle všechny vstup následné myši do okna.  
   
 ```
@@ -2012,7 +2007,7 @@ HWND SetCapture() throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetCapture](http://msdn.microsoft.com/library/windows/desktop/ms646262) ve Windows SDK.  
   
-##  <a name="setclipboardviewer"></a>CWindow::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer  
  Přidá okna prohlížeče řetězu schránky.  
   
 ```
@@ -2022,7 +2017,7 @@ HWND SetClipboardViewer() throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetClipboardViewer](http://msdn.microsoft.com/library/windows/desktop/ms649052) ve Windows SDK.  
   
-##  <a name="setdlgctrlid"></a>CWindow::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>  CWindow::SetDlgCtrlID  
  Nastaví identifikátor okna se zadanou hodnotou.  
   
 ```
@@ -2036,7 +2031,7 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěšného identifikátor předchozí okna; jinak 0.  
   
-##  <a name="setdlgitemint"></a>CWindow::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>  CWindow::SetDlgItemInt  
  Ovládací prvek text se změní na řetězcovou reprezentaci celočíselnou hodnotu.  
   
 ```
@@ -2049,7 +2044,7 @@ BOOL SetDlgItemInt(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645518) ve Windows SDK.  
   
-##  <a name="setdlgitemtext"></a>CWindow::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>  CWindow::SetDlgItemText  
  Změní text ovládacího prvku.  
   
 ```
@@ -2059,7 +2054,7 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [setdlgitemtext –](http://msdn.microsoft.com/library/windows/desktop/ms645521) ve Windows SDK.  
   
-##  <a name="setfocus"></a>CWindow::SetFocus  
+##  <a name="setfocus"></a>  CWindow::SetFocus  
  Nastaví zaměření pro vstup do okna.  
   
 ```
@@ -2072,7 +2067,7 @@ HWND SetFocus() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#31](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]  
   
-##  <a name="setfont"></a>CWindow::SetFont  
+##  <a name="setfont"></a>  CWindow::SetFont  
  Změní písmo aktuální okna odesláním [WM_SETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632642) zpráva do okna.  
   
 ```
@@ -2086,7 +2081,7 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
  `bRedraw`  
  [v] Pokud **TRUE** (výchozí hodnota), bude překreslen okna. Jinak není.  
   
-##  <a name="sethotkey"></a>CWindow::SetHotKey  
+##  <a name="sethotkey"></a>  CWindow::SetHotKey  
  Klávesové zkratky přidruží okno odesláním **WM_SETHOTKEY** zprávy.  
   
 ```
@@ -2103,7 +2098,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Seznam možných návratové hodnoty, najdete v části [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) ve Windows SDK.  
   
-##  <a name="seticon"></a>CWindow::SetIcon  
+##  <a name="seticon"></a>  CWindow::SetIcon  
  Nastaví okna velké nebo malé ikony na ikonu identifikovaný `hIcon`.  
   
 ```
@@ -2121,9 +2116,9 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
  Popisovač ikonu předchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetIcon`odešle [WM_SETICON](http://msdn.microsoft.com/library/windows/desktop/ms632643) zpráva do okna.  
+ `SetIcon` odešle [WM_SETICON](http://msdn.microsoft.com/library/windows/desktop/ms632643) zpráva do okna.  
   
-##  <a name="setmenu"></a>CWindow::SetMenu  
+##  <a name="setmenu"></a>  CWindow::SetMenu  
  Změní aktuální nabídce okna.  
   
 ```
@@ -2133,7 +2128,7 @@ BOOL SetMenu(HMENU hMenu) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647995) ve Windows SDK.  
   
-##  <a name="setparent"></a>CWindow::SetParent  
+##  <a name="setparent"></a>  CWindow::SetParent  
  Změny nadřazeného okna.  
   
 ```
@@ -2146,7 +2141,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#32](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]  
   
-##  <a name="setredraw"></a>CWindow::SetRedraw  
+##  <a name="setredraw"></a>  CWindow::SetRedraw  
  Nastaví nebo vymaže příznak překreslování odesláním [WM_SETREDRAW](http://msdn.microsoft.com/library/windows/desktop/dd145219) zpráva do okna.  
   
 ```
@@ -2163,7 +2158,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#33](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]  
   
-##  <a name="setscrollinfo"></a>CWindow::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CWindow::SetScrollInfo  
  Nastaví parametry posuvníku.  
   
 ```
@@ -2176,7 +2171,7 @@ int SetScrollInfo(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787595) ve Windows SDK.  
   
-##  <a name="setscrollpos"></a>CWindow::SetScrollPos  
+##  <a name="setscrollpos"></a>  CWindow::SetScrollPos  
  Změní pozici od jezdce.  
   
 ```
@@ -2189,7 +2184,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597) ve Windows SDK.  
   
-##  <a name="setscrollrange"></a>CWindow::SetScrollRange  
+##  <a name="setscrollrange"></a>  CWindow::SetScrollRange  
  Změní rozsah posuvníku.  
   
 ```
@@ -2203,7 +2198,7 @@ BOOL SetScrollRange(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787599) ve Windows SDK.  
   
-##  <a name="settimer"></a>CWindow::SetTimer  
+##  <a name="settimer"></a>  CWindow::SetTimer  
  Vytvoří událost časovače.  
   
 ```
@@ -2216,7 +2211,7 @@ UINT SetTimer(
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetTimer](http://msdn.microsoft.com/library/windows/desktop/ms644906) ve Windows SDK.  
   
-##  <a name="setwindowcontexthelpid"></a>CWindow::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId  
  Nastaví identifikátor kontextu okna nápovědy.  
   
 ```
@@ -2226,7 +2221,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb762101) ve Windows SDK.  
   
-##  <a name="setwindowlong"></a>CWindow::SetWindowLong  
+##  <a name="setwindowlong"></a>  CWindow::SetWindowLong  
  Nastaví hodnotu 32-bit na zadaný posun do paměti okno navíc.  
   
 ```
@@ -2239,7 +2234,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 > [!NOTE]
 >  Pokud chcete psát kód, který je kompatibilní s 32bitové a 64bitové verze systému Windows, použijte [CWindow::SetWindowLongPtr](#setwindowlongptr).  
   
-##  <a name="setwindowlongptr"></a>CWindow::SetWindowLongPtr  
+##  <a name="setwindowlongptr"></a>  CWindow::SetWindowLongPtr  
  Změní atribut zadané okno a také nastaví hodnotu, na zadaném posunu v paměti okno navíc.  
   
 ```
@@ -2251,7 +2246,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
   
  Tato funkce nahrazuje `CWindow::SetWindowLong` metoda. Pokud chcete psát kód, který je kompatibilní s 32bitové a 64bitové verze systému Windows, použijte `CWindow::SetWindowLongPtr`.  
   
-##  <a name="setwindowplacement"></a>CWindow::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>  CWindow::SetWindowPlacement  
  Nastaví zobrazení stavu a pozic.  
   
 ```
@@ -2261,7 +2256,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633544) ve Windows SDK.  
   
-##  <a name="setwindowpos"></a>CWindow::SetWindowPos  
+##  <a name="setwindowpos"></a>  CWindow::SetWindowPos  
  Nastaví velikost, umístění a pořadí vykreslování.  
   
 ```
@@ -2284,7 +2279,7 @@ BOOL SetWindowPos(
   
  Druhá verze tato metoda používá [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nastavit nové pozici, šířku a výšku okna.  
   
-##  <a name="setwindowrgn"></a>CWindow::SetWindowRgn  
+##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn  
  Nastaví oblasti okno časového období.  
   
 ```
@@ -2294,7 +2289,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd145102) ve Windows SDK.  
   
-##  <a name="setwindowtext"></a>CWindow::SetWindowText  
+##  <a name="setwindowtext"></a>  CWindow::SetWindowText  
  Změny okně text.  
   
 ```
@@ -2307,7 +2302,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#34](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]  
   
-##  <a name="setwindowword"></a>CWindow::SetWindowWord  
+##  <a name="setwindowword"></a>  CWindow::SetWindowWord  
  Nastaví hodnotu 16 bitů na zadaný posun do paměti okno navíc.  
   
 ```
@@ -2317,7 +2312,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) ve Windows SDK.  
   
-##  <a name="showcaret"></a>CWindow::ShowCaret  
+##  <a name="showcaret"></a>  CWindow::ShowCaret  
  Systémový znak zobrazí.  
   
 ```
@@ -2330,7 +2325,7 @@ BOOL ShowCaret() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#35](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]  
   
-##  <a name="showownedpopups"></a>CWindow::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>  CWindow::ShowOwnedPopups  
  Zobrazí nebo skryje automaticky otevíraná okna vlastníkem okna.  
   
 ```
@@ -2340,7 +2335,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ShowOwnedPopups](http://msdn.microsoft.com/library/windows/desktop/ms633547) ve Windows SDK.  
   
-##  <a name="showscrollbar"></a>CWindow::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar  
  Zobrazí nebo skryje posuvníku.  
   
 ```
@@ -2350,7 +2345,7 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ShowScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787601) ve Windows SDK.  
   
-##  <a name="showwindow"></a>CWindow::ShowWindow  
+##  <a name="showwindow"></a>  CWindow::ShowWindow  
  Nastaví okna zobrazení stavu.  
   
 ```
@@ -2363,7 +2358,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#36](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]  
   
-##  <a name="showwindowasync"></a>CWindow::ShowWindowAsync  
+##  <a name="showwindowasync"></a>  CWindow::ShowWindowAsync  
  Nastaví stav zobrazení okna vytvořeného rozhraním jiném podprocesu.  
   
 ```
@@ -2373,7 +2368,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ShowWindowAsync](http://msdn.microsoft.com/library/windows/desktop/ms633549) ve Windows SDK.  
   
-##  <a name="updatewindow"></a>CWindow::UpdateWindow  
+##  <a name="updatewindow"></a>  CWindow::UpdateWindow  
  Aktualizuje klientské oblasti.  
   
 ```
@@ -2386,7 +2381,7 @@ BOOL UpdateWindow() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#37](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]  
   
-##  <a name="validaterect"></a>CWindow::ValidateRect  
+##  <a name="validaterect"></a>  CWindow::ValidateRect  
  Ověřuje klientské oblasti v rámci zadaného rámeček.  
   
 ```
@@ -2396,7 +2391,7 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ValidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145194) ve Windows SDK.  
   
-##  <a name="validatergn"></a>CWindow::ValidateRgn  
+##  <a name="validatergn"></a>  CWindow::ValidateRgn  
  Ověřuje klientské oblasti v zadané oblasti.  
   
 ```
@@ -2406,7 +2401,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>Poznámky  
  V tématu [ValidateRgn](http://msdn.microsoft.com/library/windows/desktop/dd145195) ve Windows SDK.  
   
-##  <a name="winhelp"></a>CWindow::WinHelp  
+##  <a name="winhelp"></a>  CWindow::WinHelp  
  Spuštění nápovědy pro Windows.  
   
 ```

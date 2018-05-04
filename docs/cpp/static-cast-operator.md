@@ -1,12 +1,9 @@
 ---
-title: "static_cast – operátor | Microsoft Docs"
-ms.custom: 
+title: static_cast – operátor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>static_cast – operátor
 Převede *výraz* typu *id typu* podle pouze typy, které jsou k dispozici ve výrazu.  
@@ -41,7 +36,7 @@ static_cast <type-id> ( expression )
   
  `static_cast` Operátor lze použít pro operace, jako je například převodu ukazatel na základní třída pro ukazatel na odvozené třídy. Tyto převody nejsou vždy bezpečné.  
   
- Obecně používáte `static_cast` Pokud chcete převést na proměnné ints nebo proměnné ints obtékaných objektů, a číselné datové typy, jako je například výčty určitých typů dat podílí převod. `static_cast`převody nejsou jako bezpečné jako `dynamic_cast` převody, protože `static_cast` zkontrolovat žádný typ spuštění, při `dynamic_cast` nepodporuje. A `dynamic_cast` na nejednoznačný ukazatel se nezdaří, zatímco `static_cast` vrátí, jako kdyby nic nesprávný; to může být nebezpečný. I když `dynamic_cast` převody jsou bezpečnější, `dynamic_cast` pouze funguje na ukazatele nebo odkazů a kontrola typu běhu je režijní náklady. Další informace najdete v tématu [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md).  
+ Obecně používáte `static_cast` Pokud chcete převést na proměnné ints nebo proměnné ints obtékaných objektů, a číselné datové typy, jako je například výčty určitých typů dat podílí převod. `static_cast` převody nejsou jako bezpečné jako `dynamic_cast` převody, protože `static_cast` zkontrolovat žádný typ spuštění, při `dynamic_cast` nepodporuje. A `dynamic_cast` na nejednoznačný ukazatel se nezdaří, zatímco `static_cast` vrátí, jako kdyby nic nesprávný; to může být nebezpečný. I když `dynamic_cast` převody jsou bezpečnější, `dynamic_cast` pouze funguje na ukazatele nebo odkazů a kontrola typu běhu je režijní náklady. Další informace najdete v tématu [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md).  
   
  V příkladu, který následuje, řádek `D* pd2 = static_cast<D*>(pb);` není bezpečná protože `D` může mít pole a metody, které nejsou v `B`. Ale řádku `B* pb2 = static_cast<B*>(pd);` je převodu z bezpečné, protože `D` vždy obsahuje všechny `B`.  
   

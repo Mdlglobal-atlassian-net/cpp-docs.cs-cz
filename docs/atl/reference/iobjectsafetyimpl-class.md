@@ -2,11 +2,8 @@
 title: Třída IObjectSafetyImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl – třída
 Tato třída poskytuje výchozí implementaci třídy `IObjectSafety` rozhraní a tak dovolit klientským k načtení a nastavení úrovně zabezpečení objektu.  
@@ -88,7 +83,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
  Načte bezpečnostní možnosti podporované objektem, jakož i možnosti zabezpečení aktuálně nastavit pro objekt.  
   
 ```
@@ -106,14 +101,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  V tématu [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) ve Windows SDK.  
   
-##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  Uloží aktuální úroveň zabezpečení objektu.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
  Umožňuje bezpečné pro přístup z inicializace nebo skriptování nastavení objektu [m_dwCurrentSafety](#m_dwcurrentsafety) člena na odpovídající hodnotu.  
   
 ```

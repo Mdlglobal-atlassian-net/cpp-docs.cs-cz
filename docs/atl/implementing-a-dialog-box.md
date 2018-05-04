@@ -1,13 +1,10 @@
 ---
-title: "Implementace dialogové okno | Microsoft Docs"
-ms.custom: 
+title: Implementace dialogové okno | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementace dialogové okno
 Existují dva způsoby, jak dialogové okno Přidat do projektu knihovny ATL: použijte dialogové okno průvodce ATL nebo je přidat ručně.  
@@ -45,7 +40,7 @@ Existují dva způsoby, jak dialogové okno Přidat do projektu knihovny ATL: po
 > [!NOTE]
 >  Když vytvoříte dialogového okna pomocí knihovny ATL dialogové okno průvodce, průvodce automaticky přidá `IDD` členem, jako `enum` typu.  
   
- `CDialogImpl`umožňuje implementovat modální nebo nemodální dialogové okno, který je hostitelem ovládací prvky systému Windows. `CAxDialogImpl`umožňuje implementovat modální nebo nemodální dialogové okno, který je hostitelem ovládací prvky ActiveX a systému Windows.  
+ `CDialogImpl` umožňuje implementovat modální nebo nemodální dialogové okno, který je hostitelem ovládací prvky systému Windows. `CAxDialogImpl` umožňuje implementovat modální nebo nemodální dialogové okno, který je hostitelem ovládací prvky ActiveX a systému Windows.  
   
  Modální dialogové okno vytvořit, vytvořit instanci vaší `CDialogImpl`-odvozené (nebo `CAxDialogImpl`-odvozené) třídy a pak zavolají [DoModal](../atl/reference/cdialogimpl-class.md#domodal) metoda. Modální dialogové okno zavřít, volání [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metoda z obslužné rutiny zpráv. Chcete-li vytvořit nemodální dialogové okno, volejte [vytvořit](../atl/reference/cdialogimpl-class.md#create) metoda místo `DoModal`. Pokud chcete odstranit nemodální dialogové okno, volání [destroywindow –](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

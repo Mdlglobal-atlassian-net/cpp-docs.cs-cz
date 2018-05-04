@@ -2,11 +2,8 @@
 title: Třída CComCritSecLock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCritSecLock
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock – třída
 Tato třída poskytuje metody pro zamykání a odemykání objekt kritická sekce.  
@@ -66,7 +61,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
  Konstruktor  
   
 ```
@@ -83,7 +78,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Poznámky  
  Inicializuje objekt kritická sekce.  
   
-##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  Destruktor.  
   
 ```
@@ -93,7 +88,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Poznámky  
  Odemkne objekt kritická sekce.  
   
-##  <a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>  CComCritSecLock::Lock  
  Volejte tuto metodu za účelem zamknout objekt kritická sekce.  
   
 ```
@@ -106,7 +101,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud není objekt uzamčen, dojde k chybě vyhodnocení v sestavení pro ladění.  
   
-##  <a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  Volejte tuto metodu k odemknutí objekt kritická sekce.  
   
 ```

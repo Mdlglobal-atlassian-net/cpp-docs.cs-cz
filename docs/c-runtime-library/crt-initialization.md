@@ -1,29 +1,24 @@
 ---
 title: Inicializace CRT | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d472026649bbe1d72a9afba42f224b0b9159258d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd267ed4c8e21756df653a196ce41b594d41de77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crt-initialization"></a>Inicializace CRT
 Toto téma popisuje, jak CRT inicializuje globální stavy v nativním kódu.  
@@ -83,9 +78,9 @@ RELOCATIONS #6
   
  CRT definuje dva odkazy:  
   
--   `__xc_a`v`.CRT$XCA`  
+-   `__xc_a` V `.CRT$XCA`  
   
--   `__xc_z`v`.CRT$XCZ`  
+-   `__xc_z` V `.CRT$XCZ`  
   
  Obě skupiny nemají žádné další symboly definované s výjimkou `__xc_a` a `__xc_z`.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Přetížení funkcí | Microsoft Docs"
-ms.custom: 
+title: Přetížení funkcí | Microsoft Docs
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Toto nastavení se nazývá *přetížený* funkce. Přetížené funkce umožňují zadat jiný sémantiku pro funkci, v závislosti na typy a počet argumentů. 
@@ -261,12 +256,12 @@ volatile Over&
   
 |Převod z typu|Převést na typ|  
 |-----------------------|---------------------|  
-|*type-name*|*Název typu* **&**|  
-|*Název typu* **&**|*type-name*|  
+|*Název typu*|*Název typu* **&**|  
+|*Název typu* **&**|*Název typu*|  
 |*Název typu* **]**|*type-name\***|  
 |*Název typu* **(** *seznam argumentů* **)**|**(**  *\*název typu* **) (** *seznam argumentů* **)**|  
-|*type-name*|**Const** *název typu*|  
-|*type-name*|`volatile` *Název typu*|  
+|*Název typu*|**Const** *název typu*|  
+|*Název typu*|`volatile` *Název typu*|  
 |*type-name\***|**Const** *název typu\***|  
 |*type-name\***|`volatile` *Název typu\**|  
   
@@ -274,13 +269,13 @@ volatile Over&
   
 1.  Přesná shoda. Přesnou shodu mezi typy, pomocí kterých je tato funkce volána a typy deklarované v prototyp funkce je vždy nejlepší shodu. Pořadí trivial převody jsou klasifikovány jako přesné shody. Ale pořadí, ve které žádný z těchto převody neprovádějte jsou považovány za lepší, než pořadí, které převést:  
   
-    -   Z ukazatel na ukazatel na **const** (`type`  **\***  k **const** `type`  **\***  ).  
+    -   Z ukazatel na ukazatel na **const** (`type` **\*** k **const** `type` **\*** ).  
   
-    -   Z ukazatel na ukazatel na `volatile` (`type`  **\***  k `volatile` `type`  **\*** ).  
+    -   Z ukazatel na ukazatel na `volatile` (`type` **\*** k `volatile` `type` **\***).  
   
-    -   Z odkazů na odkaz na **const** (`type`  **&**  k **const** `type`  **&** ).  
+    -   Z odkazů na odkaz na **const** (`type` **&** k **const** `type` **&**).  
   
-    -   Z odkazů na odkaz na `volatile` (`type`  **&**  k `volatile` `type`  **&** ).  
+    -   Z odkazů na odkaz na `volatile` (`type` **&** k `volatile` `type` **&**).  
   
 2.  Porovnávat pomocí reklamními nabídkami. Žádné pořadí není klasifikovaný přesnou shodu, která obsahuje jenom zvýšení úrovně celého čísla, převody z **float** k **dvojité**, a trivial převody je klasifikován jako odpovídající pomocí reklamními nabídkami. I když jako dobrý shodu jako jakékoli přesná shoda, je lepší, než odpovídající pomocí standardní převody odpovídající pomocí reklamními nabídkami.  
   
@@ -453,7 +448,7 @@ int main()
   
 -   Přetížení funkcí s argumentem seznam stejné typy, podle návratový typ samostatně, je k chybě.  
   
-     **Microsoft Specific**  
+     **Konkrétní Microsoft**  
   
  Můžete použít přetížení **new – operátor** výhradně na základě těchto návratový typ – konkrétně na základě modifikátor modelu paměti zadaná.  
   

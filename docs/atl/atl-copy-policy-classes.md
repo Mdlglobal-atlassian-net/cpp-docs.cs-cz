@@ -1,13 +1,10 @@
 ---
-title: "Třídy ATL kopie zásad | Microsoft Docs"
-ms.custom: 
+title: Třídy ATL kopie zásad | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>Třídy ATL kopie zásad
 Kopírování zásad třídy jsou [nástroj třídy](../atl/utility-classes.md) použitý k inicializaci, kopírování a odstranit data. Kopírování zásad třídy umožňují definovat sémantiku kopie pro jakýkoli typ dat a k definování převody mezi různými datovými typy.  
@@ -75,14 +70,14 @@ Kopírování zásad třídy jsou [nástroj třídy](../atl/utility-classes.md) 
  Obvykle budete muset definovat vaše vlastní třídy kopie zásady pro heterogenní kopírování (to znamená, převod mezi typy dat). Některé příklady vlastní kopie zásady třídy, podívejte se na soubory VCUE_Copy.h a VCUE_CopyString.h v [ATLCollections](../visual-cpp-samples.md) ukázka. Tyto soubory obsahují dvě třídy zásady kopírování šablony `GenericCopy` a `MapCopy`, plus počet specializací `GenericCopy` pro různé datové typy.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`Umožňuje zadat *SourceType* a `DestinationType` jako argumenty pro šablony. Tady je nejobecnější formu `GenericCopy` třídy z VCUE_Copy.h:  
+ `GenericCopy` Umožňuje zadat *SourceType* a `DestinationType` jako argumenty pro šablony. Tady je nejobecnější formu `GenericCopy` třídy z VCUE_Copy.h:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  VCUE_Copy.h taky obsahuje následující specializací této třídy: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h obsahuje specializací kopírování z **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, a `GenericCopy<BSTR, std::string>`. Může zvýšit `GenericCopy` tím, že poskytuje další vlastní specializací.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`předpokládá kopírovány uložení dat do knihovny C++ Standard-style mapu, takže ho můžete zadat typ mapy, ve kterém jsou data uložena a zadejte cíl. Implementace třídy právě používá definice TypeDef poskytl *MapType* třídu k určení typu zdroje dat a k volání odpovídající `GenericCopy` třídy. Je potřeba žádné specializací této třídy.  
+ `MapCopy` předpokládá kopírovány uložení dat do knihovny C++ Standard-style mapu, takže ho můžete zadat typ mapy, ve kterém jsou data uložena a zadejte cíl. Implementace třídy právě používá definice TypeDef poskytl *MapType* třídu k určení typu zdroje dat a k volání odpovídající `GenericCopy` třídy. Je potřeba žádné specializací této třídy.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

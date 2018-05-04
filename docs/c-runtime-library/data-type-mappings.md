@@ -1,13 +1,10 @@
 ---
-title: "Datový typ mapování | Microsoft Docs"
-ms.custom: 
+title: Datový typ mapování | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _TXCHAR
 - _TUCHAR
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52c6e5664292469ef33a88e9d5458c07ec69454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a469ed8b5e6f026eecf5d8df88eee12b0e0fe74
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-mappings"></a>Mapování datového typu
 Tato mapování datového typu jsou definovány v Tchar –. H a závisí na tom, zda konstanta `_UNICODE` nebo `_MBCS` byla definována v programu.  
@@ -67,7 +62,7 @@ Tato mapování datového typu jsou definovány v Tchar –. H a závisí na tom
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T`nebo`_TEXT`|Neplatí (odebraná pomocí preprocessor)|Neplatí (odebraná pomocí preprocessor)|`L`(převede následující znak nebo řetězec k jeho protějšku Unicode)|  
+|`_T` Nebo `_TEXT`|Neplatí (odebraná pomocí preprocessor)|Neplatí (odebraná pomocí preprocessor)|`L` (převede následující znak nebo řetězec k jeho protějšku Unicode)|  
   
 ## <a name="see-also"></a>Viz také  
  [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)   

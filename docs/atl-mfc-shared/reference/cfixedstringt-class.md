@@ -1,12 +1,9 @@
 ---
-title: "Třída CFixedStringT | Microsoft Docs"
-ms.custom: 
+title: Třída CFixedStringT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT – třída
 Tato třída reprezentuje objekt řetězec s pevnou znak vyrovnávací paměti.  
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   Znak vyrovnávací paměti pro `CFixedStringT` objekt je vždy stejnou délku ( *t_nChars*). Neexistuje žádné omezení velikosti vyrovnávací paměti pro `CStringT` objekty.  
   
--   Správce paměti pro `CFixedStringT` je přizpůsobit tak, aby sdílení [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objektu mezi dvěma nebo více `CFixedStringT` objectsis není povoleno. `CStringT`objekty není nutné toto omezení.  
+-   Správce paměti pro `CFixedStringT` je přizpůsobit tak, aby sdílení [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objektu mezi dvěma nebo více `CFixedStringT` objectsis není povoleno. `CStringT` objekty není nutné toto omezení.  
   
  Další informace o možnosti vlastního nastavení `CFixedStringT` a obecně platí, najdete v části Správa paměti pro objekty řetězec [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
@@ -84,7 +79,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** cstringt.h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  Vytvoří `CFixedStringT` objektu.  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Poznámky  
  Protože konstruktorů zkopírovat do nového úložiště přidělené vstupních dat, je třeba si uvědomit, že paměť, může způsobit výjimky. Všimněte si, že některé z těchto konstruktorů fungovat jako funkce pro převod.  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  Znovu inicializuje existující `CFixedStringT` objekt se nová data.  
   
 ```

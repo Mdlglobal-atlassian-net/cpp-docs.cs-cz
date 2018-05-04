@@ -1,12 +1,9 @@
 ---
-title: "CTime – třída | Microsoft Docs"
-ms.custom: 
+title: CTime – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTime
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f3d4bf1d0c705d7712adb092a5f6d965099a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ec195c7733255487b08f8b48379abe58e305f61
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctime-class"></a>CTime – třída
 Představuje absolutní data a času.  
@@ -94,11 +89,11 @@ class CTime
 |[Operator ==, < atd.](#ctime_comparison_operators)|Operátory porovnání.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CTime`nemá základní třídu.  
+ `CTime` nemá základní třídu.  
   
- `CTime`hodnoty jsou založené na koordinovaný světový čas (UTC), což je totéž jako koordinovaného světového času (greenwichský střední čas, GMT). V tématu [Správa času](../../c-runtime-library/time-management.md) informace o tom, jak je určen časové pásmo.  
+ `CTime` hodnoty jsou založené na koordinovaný světový čas (UTC), což je totéž jako koordinovaného světového času (greenwichský střední čas, GMT). V tématu [Správa času](../../c-runtime-library/time-management.md) informace o tom, jak je určen časové pásmo.  
   
- Při vytváření `CTime` objektu, nastavte `nDST` parametr na hodnotu 0, že je v platnosti (běžný čas), nebo na hodnotu větší než 0 označíte, že letní čas je v platnosti, nebo na hodnotu menší než nula tak, aby měl restart počíta C běhové knihovny kódu e jestli (běžný čas) nebo letní čas je v platnosti. `tm_isdst`je povinné pole. Pokud není nastavená, jeho hodnota může být definovaný a návratovou hodnotou z [mktime –](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) předpovědět. Pokud `timeptr` body pro strukturu tm vrácené z předchozího volání [asctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), nebo [localtime_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), `tm_isdst` obsahuje pole správnou hodnotu.  
+ Při vytváření `CTime` objektu, nastavte `nDST` parametr na hodnotu 0, že je v platnosti (běžný čas), nebo na hodnotu větší než 0 označíte, že letní čas je v platnosti, nebo na hodnotu menší než nula tak, aby měl restart počíta C běhové knihovny kódu e jestli (běžný čas) nebo letní čas je v platnosti. `tm_isdst` je povinné pole. Pokud není nastavená, jeho hodnota může být definovaný a návratovou hodnotou z [mktime –](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) předpovědět. Pokud `timeptr` body pro strukturu tm vrácené z předchozího volání [asctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), nebo [localtime_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), `tm_isdst` obsahuje pole správnou hodnotu.  
   
  Třídu doprovodné [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md), představuje časovém intervalu.  
   
@@ -115,7 +110,7 @@ class CTime
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atltime.h  
   
-##  <a name="ctime_comparison_operators"></a>CTime – relační operátory  
+##  <a name="ctime_comparison_operators"></a>  CTime – relační operátory  
  Operátory porovnání.  
   
 ```  
@@ -137,7 +132,7 @@ bool operator>=(CTime time) const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
-##  <a name="ctime"></a>CTime::CTime  
+##  <a name="ctime"></a>  CTime::CTime  
  Vytvoří nový `CTime` objekt inicializovat pomocí zadané doby.  
   
 ```  
@@ -165,11 +160,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
  `nDST`  
  Určuje, zda letní čas je v platnosti. Může mít jednu ze tří hodnot:  
   
-- `nDST`Sada 0Standard čas je v platnosti.  
+- `nDST` Sada 0Standard čas je v platnosti.  
   
-- `nDST`Nastavte na hodnotu větší než 0Daylight čas je v platnosti.  
+- `nDST` Nastavte na hodnotu větší než 0Daylight čas je v platnosti.  
   
-- `nDST`Nastavte na hodnotu menší než výchozí 0The. Automaticky vypočítá, zda (běžný čas) nebo letní čas je v platnosti.  
+- `nDST` Nastavte na hodnotu menší než výchozí 0The. Automaticky vypočítá, zda (běžný čas) nebo letní čas je v platnosti.  
   
  `wDosDate`, `wDosTime`  
  Hodnoty data a času MS-DOS převést na hodnotu data a času a zkopírují do nové `CTime` objektu.  
@@ -219,7 +214,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
-##  <a name="format"></a>CTime::Format  
+##  <a name="format"></a>  CTime::Format  
  Volání této funkce člen vytvořit formátovaný reprezentace hodnoty data a času.  
   
 ```  
@@ -245,7 +240,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
-##  <a name="formatgmt"></a>CTime::FormatGmt  
+##  <a name="formatgmt"></a>  CTime::FormatGmt  
  Generuje formátovaný řetězec, který odpovídá tomuto `CTime` objektu.  
   
 ```  
@@ -271,7 +266,7 @@ CString FormatGmt(UINT nFormatID) const;
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CTime::Format](#format).  
   
-##  <a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>  CTime::GetAsDBTIMESTAMP  
  Volání této funkce člen převést čas informace uložené v `CTime` objekt pro strukturu DBTIMESTAMP Win32 kompatibilní.  
   
 ```  
@@ -291,7 +286,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
-##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
  Volání této funkce člen převést čas informace uložené v `CTime` objekt, který chcete Win32 kompatibilní [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura.  
   
 ```  
@@ -306,12 +301,12 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
  Hodnota TRUE, pokud je úspěšné; jinak hodnota false.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetAsSystemTime`ukládá výsledný čas v odkazovaná *timeDest* struktury. `SYSTEMTIME` Nebude mít struktura dat inicializovat pomocí této funkce jeho **wMilliseconds** člen nastavit na nulu.  
+ `GetAsSystemTime` ukládá výsledný čas v odkazovaná *timeDest* struktury. `SYSTEMTIME` Nebude mít struktura dat inicializovat pomocí této funkce jeho **wMilliseconds** člen nastavit na nulu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
-##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>  CTime::GetCurrentTime  
  Vrátí `CTime` objekt, který představuje aktuální čas.  
   
 ```  
@@ -324,7 +319,7 @@ static CTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
-##  <a name="getday"></a>CTime::GetDay  
+##  <a name="getday"></a>  CTime::GetDay  
  Vrátí den představují pomocí `CTime` objektu.  
   
 ```  
@@ -340,7 +335,7 @@ int GetDay() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
-##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>  CTime::GetDayOfWeek  
  Vrátí den v týdnu reprezentována `CTime` objektu.  
   
 ```  
@@ -356,7 +351,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#154](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
-##  <a name="getgmttm"></a>CTime::GetGmtTm  
+##  <a name="getgmttm"></a>  CTime::GetGmtTm  
  Získá **struktura tm** obsahující rozložením času obsažené v tomto `CTime` objektu.  
   
 ```  
@@ -371,14 +366,14 @@ struct tm* GetGmtTm(struct tm* ptm) const;
  Ukazatel na vyplněné **struktura tm** definovaným v souboru zahrnout čas. H. V tématu [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) struktura rozložení.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetGmtTm`Vrátí UTC.  
+ `GetGmtTm` Vrátí UTC.  
   
- `ptm`nemůže být `NULL`. Pokud chcete obnovit původní chování, ve kterém `ptm` může být `NULL` k označení, že má být použita k interní, staticky přidělené vyrovnávací paměti, pak nedefinované `_SECURE_ATL`.  
+ `ptm` nemůže být `NULL`. Pokud chcete obnovit původní chování, ve kterém `ptm` může být `NULL` k označení, že má být použita k interní, staticky přidělené vyrovnávací paměti, pak nedefinované `_SECURE_ATL`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#155](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
-##  <a name="gethour"></a>CTime::GetHour  
+##  <a name="gethour"></a>  CTime::GetHour  
  Vrátí hodinu v reprezentována `CTime` objektu.  
   
 ```  
@@ -394,7 +389,7 @@ int GetHour() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
-##  <a name="getlocaltm"></a>CTime::GetLocalTm  
+##  <a name="getlocaltm"></a>  CTime::GetLocalTm  
  Získá **struktura tm** obsahující rozložením času obsažené v tomto `CTime` objektu.  
   
 ```  
@@ -409,14 +404,14 @@ struct tm* GetLocalTm(struct tm* ptm) const;
  Ukazatel na vyplněné **struktura tm** definovaným v souboru zahrnout čas. H. V tématu [gmtime – _gmtime32 –, _gmtime64 –](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) struktura rozložení.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetLocalTm`Vrátí místní čas.  
+ `GetLocalTm` Vrátí místní čas.  
   
- `ptm`nemůže být `NULL`. Pokud chcete obnovit původní chování, ve kterém `ptm` může být `NULL` k označení, že má být použita k interní, staticky přidělené vyrovnávací paměti, pak nedefinované `_SECURE_ATL`.  
+ `ptm` nemůže být `NULL`. Pokud chcete obnovit původní chování, ve kterém `ptm` může být `NULL` k označení, že má být použita k interní, staticky přidělené vyrovnávací paměti, pak nedefinované `_SECURE_ATL`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
-##  <a name="getminute"></a>CTime::GetMinute  
+##  <a name="getminute"></a>  CTime::GetMinute  
  Vrátí minutu reprezentována `CTime` objektu.  
   
 ```  
@@ -432,7 +427,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetHour](#gethour).  
   
-##  <a name="getmonth"></a>CTime::GetMonth  
+##  <a name="getmonth"></a>  CTime::GetMonth  
  Vrátí měsíc reprezentována `CTime` objektu.  
   
 ```  
@@ -448,7 +443,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetDay](#getday).  
   
-##  <a name="getsecond"></a>CTime::GetSecond  
+##  <a name="getsecond"></a>  CTime::GetSecond  
  Vrátí sekundu reprezentována `CTime` objektu.  
   
 ```  
@@ -464,7 +459,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetHour](#gethour).  
   
-##  <a name="gettime"></a>CTime::GetTime  
+##  <a name="gettime"></a>  CTime::GetTime  
  Vrátí **__time64_t –** hodnota danou `CTime` objektu.  
   
 ```  
@@ -477,7 +472,7 @@ __time64_t GetTime() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
-##  <a name="getyear"></a>CTime::GetYear  
+##  <a name="getyear"></a>  CTime::GetYear  
  Vrátí rok reprezentována `CTime` objektu.  
   
 ```  
@@ -493,7 +488,7 @@ int GetYear();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetDay](#getday).  
   
-##  <a name="operator_eq"></a>CTime::operator =  
+##  <a name="operator_eq"></a>  CTime::operator =  
  Operátor přiřazení.  
   
 ```  
@@ -510,7 +505,7 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="remarks"></a>Poznámky  
  Tento operátor přetížené přiřazení zkopíruje do této době zdrojového `CTime` objektu. Interní čas úložiště v `CTime` objektu je nezávislý na časové pásmo. Při přiřazení není nutné převodu časového pásma.  
   
-##  <a name="operator_add_-"></a>CTime::operator +, -  
+##  <a name="operator_add_-"></a>  CTime::operator +, -  
  Tyto operátory sčítání a odečítání `CTimeSpan` a `CTime` objekty.  
   
 ```  
@@ -520,7 +515,7 @@ CTimeSpan operator-(CTime time) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *časový interval*  
+ *Časový interval*  
  `CTimeSpan` Objekt, který má být přidán nebo odečten.  
   
  `time`  
@@ -530,12 +525,12 @@ CTimeSpan operator-(CTime time) const throw();
  A `CTime` nebo `CTimeSpan` objekt reprezentující výsledek operace.  
   
 ### <a name="remarks"></a>Poznámky  
- `CTime`objekty představují absolutním čase `CTimeSpan` objekty představují relativní čas. První dva operátory umožňují sčítání a odečítání `CTimeSpan` objekty do a z `CTime` objekty. Třetí operátor umožňuje odečtena jeden `CTime` objekt z jiné yield `CTimeSpan` objektu.  
+ `CTime` objekty představují absolutním čase `CTimeSpan` objekty představují relativní čas. První dva operátory umožňují sčítání a odečítání `CTimeSpan` objekty do a z `CTime` objekty. Třetí operátor umožňuje odečtena jeden `CTime` objekt z jiné yield `CTimeSpan` objektu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>CTime::operator +=-=  
+##  <a name="operator_add_eq_-_eq"></a>  CTime::operator +=-=  
  Tyto operátory sčítání a odečítání `CTimeSpan` objekt do a z tohoto `CTime` objektu.  
   
 ```  
@@ -556,7 +551,7 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
-##  <a name="serialize64"></a>CTime::Serialize64  
+##  <a name="serialize64"></a>  CTime::Serialize64  
   
 > [!NOTE]
 >  Tato metoda je k dispozici v projektech MFC pouze.  
@@ -577,7 +572,7 @@ CArchive& Serialize64(CArchive& ar);
 ## <a name="see-also"></a>Viz také  
  [asctime_s –, _wasctime_s –](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [_ftime_s – _ftime32_s –, _ftime64_s –](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)   
- [gmtime_s – _gmtime32_s –, _gmtime64_s –](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [localtime_s – _localtime32_s –, _localtime64_s –](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
  [STRFTIME –, wcsftime –, _strftime_l –, _wcsftime_l –](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
  [čas, _time32 –, _time64 –](../../c-runtime-library/reference/time-time32-time64.md)   

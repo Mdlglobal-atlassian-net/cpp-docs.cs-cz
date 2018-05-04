@@ -1,13 +1,10 @@
 ---
-title: "Inicializace typů agregace | Microsoft Docs"
-ms.custom: 
+title: Inicializace typů agregace | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,31 +14,29 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8656d1c9f5f08e8736ee83705ea2daf9031c2446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c12ece1767c73e94551072532bfde6b36650bca9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-aggregate-types"></a>Inicializace typů agregace
 Typ "aggregate" je struktury, sjednocení nebo typ pole. Pokud typ agregace obsahuje členy typů agregace, použít pravidla inicializace rekurzivně.  
   
 ## <a name="syntax"></a>Syntaxe  
  *Inicializátor*:  
- **{***inicializátoru seznamu***}** / * pro inicializace agregace    \*/  
+ **{***inicializátoru seznamu***}** / * pro inicializace agregace \*/  
   
- **{***inicializátoru seznamu***,}**   
+ **{***inicializátoru seznamu***,}**  
   
  *inicializátoru seznamu*:  
  *Inicializátor*  
   
- *inicializátoru seznamu***,***inicializátoru*   
+ *inicializátoru seznamu***,***inicializátoru*  
   
  *Inicializátoru seznamu* je seznam inicializátory oddělených čárkami. Každý inicializátoru v seznamu je buď konstantní výraz nebo seznam inicializátor. Proto mohou být vnořené inicializační seznamy. Tento formulář je užitečné pro inicializaci agregační členy agregační typu, jak je znázorněno v příkladech v této části. Ale pokud inicializátoru pro automatické identifikátor jeden výraz, se nemusí být konstantní výraz; jenom musí mít příslušného typu pro přiřazení k identifikátoru.  
   

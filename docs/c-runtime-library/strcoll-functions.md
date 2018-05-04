@@ -1,13 +1,10 @@
 ---
-title: "strcoll – funkce | Microsoft Docs"
-ms.custom: 
+title: strcoll – funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll – funkce
 Každý z `strcoll` a `wcscoll` funkce porovnává dva řetězce podle požadavků `LC_COLLATE` kategorie nastavení znaková stránka národního prostředí aktuálně používán. Každý z `_mbscoll` funkce porovnává dva řetězce podle vícebajtové znakové stránky aktuálně používán. Použití `coll` funkce pro porovnání řetězců, když je rozdíl mezi pořadí sady znaků a pořadí lexicographic znaků na aktuální stránce kódu a tento rozdíl je určen pro porovnání. Použijte odpovídající `cmp` funkce otestovat jenom pro řetězec rovnosti.  
@@ -46,9 +41,9 @@ Každý z `strcoll` a `wcscoll` funkce porovnává dva řetězce podle požadavk
 |SBCS|Kódování Unicode|MBCS|Popis|  
 |----------|-------------|----------|-----------------|  
 |[strcoll –](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll –](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll –](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|COLLATE dva řetězce|  
-|[_stricoll –](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll –](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll –](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|COLLATE dva řetězce (rozlišuje velká a malá písmena)|  
-|[_strncoll –](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll –](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll –](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|COLLATE nejprve `count` znaky ze dvou řetězců|  
-|[_strnicoll –](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll –](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll –](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|COLLATE nejprve `count` znaky ze dvou řetězců (velká a malá písmena)|  
+|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll –](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|COLLATE dva řetězce (rozlišuje velká a malá písmena)|  
+|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll –](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|COLLATE nejprve `count` znaky ze dvou řetězců|  
+|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll –](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|COLLATE nejprve `count` znaky ze dvou řetězců (velká a malá písmena)|  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto funkce verze znakovou (SBCS) (`strcoll`, `stricoll`, `_strncoll`, a `_strnicoll`) porovnat `string1` a `string2` podle požadavků `LC_COLLATE` kategorie nastavení aktuální národní prostředí. Tyto funkce se liší od odpovídající `strcmp` funkce v tom, že `strcoll` funkce použijte národního prostředí kódu stránky, které poskytuje pořadí řazení. Pro porovnání řetězců v národní prostředí, ve kterých znaková sada pořadí a pořadí lexicographic znaků liší `strcoll` funkce by měly používat místo odpovídající `strcmp` funkce. Další informace o `LC_COLLATE`, najdete v části [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
@@ -67,5 +62,5 @@ Každý z `strcoll` a `wcscoll` funkce porovnává dva řetězce podle požadavk
  [setlocale –, _wsetlocale –](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcmp – wcscmp –, _mbscmp –](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l –](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp –, _wcsnicmp –, _mbsnicmp –, _strnicmp_l –, _wcsnicmp_l –, _mbsnicmp_l –](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

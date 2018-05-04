@@ -1,29 +1,24 @@
 ---
-title: "Identifikátory v primárních výrazech | Microsoft Docs"
-ms.custom: 
+title: Identifikátory v primárních výrazech | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e507c2b7c05f9ea818f55b10d222592fe0172cc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9f39f7ce609ea06a2d991ac79c2b1151625bc1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identifikátory v primárních výrazech
 Identifikátory může mít integrální, **float**, `enum`, `struct`, **– typ union**, pole, ukazatele, nebo typ funkce. Identifikátor je primární výraz za předpokladu, že byl deklarován jako označující objekt (v tomto případě je to l hodnota) nebo jako funkce (v tomto případě je to označení funkce). V tématu [L-Value a R-Value výrazy](../c-language/l-value-and-r-value-expressions.md) pro definici l-value.  

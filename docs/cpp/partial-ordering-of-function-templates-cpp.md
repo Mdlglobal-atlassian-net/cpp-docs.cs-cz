@@ -1,29 +1,24 @@
 ---
-title: "Částečné řazení šablon funkcí (C++) | Microsoft Docs"
-ms.custom: 
+title: Částečné řazení šablon funkcí (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Částečné řazení šablon funkcí (C++)
 
@@ -49,7 +44,7 @@ Chcete-li určit, zda je kandidát šablony funkce více specializovaný, použi
 
      2. Šablony trvá pouze __T\*__  je specializované více než jeden trvá __T__, protože typ hypotetický __X\*__  je platný argument pro __T__ argument šablony, ale __X__ není platným argumentem pro __T\*__  argument šablony.
 
-     3. __Const T__ je specializované více než __T__, protože __const X__ je platný argument pro __T__ argument šablony, ale __X__ není platný argument pro __const T__ argument šablony.
+     3. __Const T__ je specializované více než __T__, protože __const X__ je platný argument pro __T__ argument šablony, ale __X__ je není platný argument pro __const T__ argument šablony.
 
      4. __Const T\*__  je specializované více než __T\*__, protože __const X\*__  je platný argument pro __T\*__  argument šablony, ale __X\*__  není platným argumentem pro __const T\*__  argument šablony.
 

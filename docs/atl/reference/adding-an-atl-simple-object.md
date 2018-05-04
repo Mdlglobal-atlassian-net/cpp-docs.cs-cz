@@ -1,12 +1,9 @@
 ---
-title: "Přidání jednoduchého objektu knihovny ATL | Microsoft Docs"
-ms.custom: 
+title: Přidání jednoduchého objektu knihovny ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.atl
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e0251e33eb6b6ae2af920181077071c90c61192
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-simple-object"></a>Přidání jednoduchého objektu knihovny ATL
 Pokud chcete přidat objekt knihovny ATL (Active knihovna šablon) do projektu, projektu musí být vytvořen jako aplikace knihovny ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

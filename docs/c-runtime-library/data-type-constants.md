@@ -1,13 +1,10 @@
 ---
-title: "Konstanty datového typu | Microsoft Docs"
-ms.custom: 
+title: Konstanty datového typu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FLT_MIN
 - SHRT_MAX
@@ -95,17 +92,15 @@ helpviewer_keywords:
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-constants"></a>Konstanty datového typu
 Konstanty datového typu jsou závislé na implementaci rozsahů povolených pro integrální datové typy hodnot. Konstanty uvedené níže zadejte rozsahy pro integrální datové typy a jsou definovány v omezení. H.  
@@ -115,22 +110,22 @@ Konstanty datového typu jsou závislé na implementaci rozsahů povolených pro
   
 |Konstanta|Hodnota|Význam|  
 |--------------|-----------|-------------|  
-|**SCHAR_MAX –**|127|Maximální podepsané `char` hodnota|  
+|**SCHAR_MAX**|127|Maximální podepsané `char` hodnota|  
 |**SCHAR_MIN –**|-128|Minimální podepsané `char` hodnota|  
-|**UCHAR_MAX –**|255 (0xff)|Maximální `unsigned char` hodnota|  
-|**CHAR_BIT –**|8|Počet bitů`char`|  
-|**USHRT_MAX –**|65535 (0xffff)|Maximální **nepodepsané prostě** hodnota|  
-|**SHRT_MAX –**|32767|Maximální počet (se znaménkem) **krátké** hodnota|  
+|**UCHAR_MAX**|255 (0xff)|Maximální `unsigned char` hodnota|  
+|**CHAR_BIT –**|8|Počet bitů `char`|  
+|**USHRT_MAX**|65535 (0xffff)|Maximální **nepodepsané prostě** hodnota|  
+|**SHRT_MAX**|32767|Maximální počet (se znaménkem) **krátké** hodnota|  
 |**SHRT_MIN –**|-32768|Minimální (se znaménkem) **krátké** hodnota|  
-|**UINT_MAX –**|4294967295 (0xffffffff)|Maximální `unsigned int` hodnota|  
-|**ULONG_MAX –**|4294967295 (0xffffffff)|Maximální `unsigned long` hodnota|  
+|**UINT_MAX**|4294967295 (0xffffffff)|Maximální `unsigned int` hodnota|  
+|**ULONG_MAX**|4294967295 (0xffffffff)|Maximální `unsigned long` hodnota|  
 |**INT_MAX –**|2147483647|Maximální počet (se znaménkem) `int` hodnota|  
 |**INT_MIN –**|-2147483647-1|Minimální (se znaménkem) `int` hodnota|  
-|**LONG_MAX –**|2147483647|Maximální počet (se znaménkem) **dlouho** hodnota|  
-|**LONG_MIN –**|-2147483647-1|Minimální (se znaménkem) **dlouho** hodnota|  
+|**LONG_MAX**|2147483647|Maximální počet (se znaménkem) **dlouho** hodnota|  
+|**LONG_MIN**|-2147483647-1|Minimální (se znaménkem) **dlouho** hodnota|  
 |**CHAR_MAX –**|127 (Pokud se používá možnost /J 255).|Maximální `char` hodnota|  
 |**CHAR_MIN –**|-128 (0, pokud se používá možnost /J)|Minimální `char` hodnota|  
-|**MB_LEN_MAX –**|2|Maximální počet bajtů v vícebajtových`char`|  
+|**MB_LEN_MAX**|2|Maximální počet bajtů v vícebajtových `char`|  
 |**_I64_MAX**|9223372036854775807|Maximální (podepsaný držitelem) __**int64** hodnota|  
 |**_I64_MIN**|-9223372036854775807-1|Minimální (podepsaný držitelem) __**int64** hodnota|  
 |**_UI64_MAX**|0xffffffffffffffff|Maximální (bez znaménka) __**int64** hodnota|  

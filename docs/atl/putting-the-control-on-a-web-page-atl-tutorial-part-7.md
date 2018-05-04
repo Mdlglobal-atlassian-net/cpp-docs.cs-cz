@@ -1,27 +1,22 @@
 ---
-title: "Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7) | Microsoft Docs"
-ms.custom: 
+title: Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7) | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd4076ac34af6ee4b19687f401376265bf0e872
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7)
 Vlastní ovládací prvek je nyní dokončena. Vlastní ovládací prvek fungovat v situaci, skutečné najdete ji umístěte na webové stránce. Soubor HTML, který obsahuje ovládací prvek byl vytvořen při definování vlastního ovládacího prvku. Otevřete soubor PolyCtl.htm z **Průzkumníku**, a zobrazí se vaše ovládacího prvku na webové stránce.  

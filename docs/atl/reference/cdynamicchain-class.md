@@ -2,11 +2,8 @@
 title: Třída CDynamicChain | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain – třída
 Tato třída poskytuje metody podporující dynamické řetězení mapy zpráv.  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|Přidá položku mapování zpráv do kolekce nebo upraví existující položku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDynamicChain`spravuje kolekce mapy zpráv, povolení Windows zprávu, která přesměrováni v době běhu k mapy zpráv jiný objekt.  
+ `CDynamicChain` spravuje kolekce mapy zpráv, povolení Windows zprávu, která přesměrováni v době běhu k mapy zpráv jiný objekt.  
   
  Přidání podpory pro dynamické řetězení mapy zpráv, postupujte takto:  
   
 -   Odvození třídě z `CDynamicChain`. Mapy zpráv, zadejte [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro ke tvoří řetěz k mapy zpráv výchozí jiný objekt.  
   
--   Odvození každá třída chcete zřetězit z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`Umožňuje objekt vystavit jeho mapy zpráv na jiné objekty.  
+-   Odvození každá třída chcete zřetězit z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` Umožňuje objekt vystavit jeho mapy zpráv na jiné objekty.  
   
 -   Volání `CDynamicChain::SetChainEntry` k identifikaci, který objekt a mapování zpráv, které chcete řetězce pro.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Určí, že Windows zprávu, která se mapy zpráv jiný objekt.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>Poznámky  
  Okno postup vyvolání `CallChain`, je nutné zadat [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro mapy zpráv. Příklad, naleznete v části [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Přehled.  
   
- `CallChain`vyžaduje předchozí volání [SetChainEntry](#setchainentry) přidružit `dwChainID` hodnotu s objektu a jeho mapy zpráv.  
+ `CallChain` vyžaduje předchozí volání [SetChainEntry](#setchainentry) přidružit `dwChainID` hodnotu s objektu a jeho mapy zpráv.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Konstruktor  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  Destruktor.  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  Odebere určenou zprávu mapy z kolekce.  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Návratová hodnota  
  **Hodnota TRUE,** Pokud mapy zpráv se úspěšně odebral z kolekce. V opačném **FALSE**.  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  Přidá určenou zprávu mapy do kolekce.  
   
 ```

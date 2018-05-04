@@ -2,12 +2,9 @@
 title: Bitová pole jazyka C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 Třídy a struktury mohou obsahovat členy, které zabírají méně úložného prostoru než celočíselný typ. Tyto členy jsou určeny jako bitová pole. Syntaxe pro pole bit *člen deklarátor* specifikace následovně:  
@@ -85,7 +80,7 @@ struct Date {
   
  je rozložení paměti stejné jako na následujícím obrázku.  
   
- ![Rozložení objekt Date s nula & č. 45; pole bitová délka](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Rozložení Date – objekt s hodnotou nula&#45;pole bitová délka](../cpp/media/vc38uq2.png "vc38UQ2")  
 Rozložení objektu Date s nulovou délkou bitového pole  
   
  Základní typ bit pole musí být celočíselné typu, jak je popsáno v [základní typy](../cpp/fundamental-types-cpp.md).  

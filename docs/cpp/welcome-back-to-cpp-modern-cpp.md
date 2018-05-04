@@ -1,27 +1,22 @@
 ---
-title: "Vítejte zpět do C++ (moderní verze jazyka C++) | Microsoft Docs"
-ms.custom: 
+title: Vítejte zpět do C++ (moderní verze jazyka C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychlé a efektivní nejsou správně vytvořená C++ programy. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření širokou škálu aplikace – z fun a zajímavé hry, vědecké softwaru vysoce výkonné, ovladače zařízení, vložené programy a klientských aplikací systému Windows. Víc než 20 let C++ jsou využívány k řešení problémů, jako jsou tyto a mnohé další. Co možná nevíte, je, že se zvyšující číslo programátory v jazyce C++ mít přeloženy až dowdy programování stylu jazyka C včerejšek a místo toho donned moderní verze jazyka C++.  
@@ -36,7 +31,7 @@ C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychl
   
 -   Chytré ukazatele místo nezpracovaná ukazatele.  
   
--   `std::string`a `std::wstring` typy (viz [ \<řetězec >](../standard-library/string.md)) namísto nezpracovaná `char[]` pole.  
+-   `std::string` a `std::wstring` typy (viz [ \<řetězec >](../standard-library/string.md)) namísto nezpracovaná `char[]` pole.  
   
 -   [Standardní knihovna C++](../standard-library/cpp-standard-library-header-files.md) jako kontejnery `vector`, `list`, a `map` místo nezpracovaná pole nebo vlastní kontejnerů. V tématu [ \<vektoru >](../standard-library/vector.md), [ \<seznamu >](../standard-library/list.md), a [ \<mapy >](../standard-library/map.md).  
   
@@ -114,7 +109,7 @@ void f()
   
  C++ obrody dochází, protože power je král znovu. Jazyky jako Java a C# jsou vhodné, když je důležité programátory produktivitu, ale po prvořadý a celkového výkonu se zobrazit jejich omezením. Pro vysoce účinné a výkonu, zejména u zařízení, která mají omezenou hardware Nic nepřekoná moderní verze jazyka C++.  
   
- Jenom je moderní jazyk, jsou nástroje pro vývoj, příliš. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]Díky všech součástí cyklu vývoje robustní a efektivní. Obsahuje nástroje pro správu životního cyklu aplikací (ALM), vylepšení IDE jako IntelliSense, nástroj friendly mechanismy jako XAML a sestavování, ladění a mnoho dalších nástrojů.  
+ Jenom je moderní jazyk, jsou nástroje pro vývoj, příliš. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Díky všech součástí cyklu vývoje robustní a efektivní. Obsahuje nástroje pro správu životního cyklu aplikací (ALM), vylepšení IDE jako IntelliSense, nástroj friendly mechanismy jako XAML a sestavování, ladění a mnoho dalších nástrojů.  
   
  Články v této části dokumentace poskytují souhrnné pokyny a osvědčené postupy pro nejdůležitější funkce a techniky pro zápis moderní C++ – programy.  
   
@@ -144,6 +139,6 @@ void f()
   
 ## <a name="see-also"></a>Viz také  
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
- [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md)   
+ [Lambda – výrazy](../cpp/lambda-expressions-in-cpp.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)  
  [Přizpůsobení jazyka Visual C++](../visual-cpp-language-conformance.md)  

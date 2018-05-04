@@ -1,29 +1,24 @@
 ---
-title: "Pracovní Archetype | Microsoft Docs"
-ms.custom: 
+title: Pracovní Archetype | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>Archetype pracovního procesu
 Třídy, které odpovídají *pracovní* archetype zadejte kód, který proces pracovních položek ve frontě na fondu vláken.  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  Ukazatel [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struktura používaná k vytvoření fronty, na které pracovní položky byly ve frontě.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 Volat za účelem inicializace pracovní objekt před všechny žádosti do `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 Definice typu pro typ pracovní položky, která může být zpracována podle třídy pracovního procesu.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Poznámky  
  Tento typ je nutné použít jako první parametr `WorkerArchetype::Execute` a musí být schopný se přetypovat do a z ULONG_PTR.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 K inicializaci objektu worker po všechny požadavky byly předány volané `WorkerArchetype::Execute`).  
     
 ``` 

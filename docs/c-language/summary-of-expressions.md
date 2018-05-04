@@ -1,40 +1,35 @@
 ---
-title: "Souhrn výrazů | Microsoft Docs"
-ms.custom: 
+title: Souhrn výrazů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e8d3317a77093855a4f61d027f5f37f60d1b41e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 456a9b98c260107f07c302174e4d9f95d6a62aa6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-expressions"></a>Souhrn výrazů
 *primární výraz*:  
- *identifikátor*  
+ *Identifikátor*  
   
- *Konstanta*  
+ *Konstantní*  
   
  *řetězcový literál*  
   
  **(***výraz***)**   
   
  *výraz*:  
- *přiřazení – výraz*  
+ *assignment-expression*  
   
  *výraz***,***přiřazení – výraz*   
   
@@ -56,9 +51,9 @@ ms.lasthandoff: 12/21/2017
   
  *operátory výraz***[***výraz***]**   
   
- *operátory výraz***(***seznam argumentů výraz* opt**)**   
+ *operátory výraz***(***seznam argumentů výraz* opt **)**   
   
- *operátory výraz***.**   *identifikátor*  
+ *operátory výraz***.**   *Identifikátor*  
   
  *operátory výraz***->***identifikátor*   
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  *operátory – výraz*  **--**  
   
  *Seznam argumentů výraz*:  
- *přiřazení – výraz*  
+ *assignment-expression*  
   
  *Seznam argumentů výraz***,***přiřazení – výraz*   
   
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  *Unární operátor*  
   
- *výraz CAST*  
+ *cast-expression*  
   
  **sizeof –***unární výraz*   
   
@@ -92,16 +87,16 @@ ms.lasthandoff: 12/21/2017
  *výraz CAST*:  
  *Unární výraz*  
   
- **(***název typu***)***výraz cast*   
+ **(***název typu***)***výraz cast*  
   
  *multiplikativní výraz*:  
- *výraz CAST*  
+ *cast-expression*  
   
- *multiplikativní výraz***\****výraz cast*   
+ *multiplikativní výraz***\****výraz cast*  
   
- *multiplikativní výraz***/***výraz cast*   
+ *multiplikativní výraz***/***výraz cast*  
   
- *multiplikativní výraz***%***výraz cast*   
+ *multiplikativní výraz***%***výraz cast*  
   
  *doplňkové výraz*:  
  *multiplikativní výraz*  
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
  *relační výraz***\<***posunutí – výraz*   
   
- *relační výraz***>***relační shift výraz výraz*  **\< =**  *posunutí – výraz*   
+ *relační výraz***>***relační shift výraz výraz* **\< =** *shift – výraz*   
   
  *relační výraz***>=***posunutí – výraz*   
   
@@ -146,7 +141,7 @@ ms.lasthandoff: 12/21/2017
  *včetně výraz OR*:  
  *výraz exkluzivní OR*  
   
- *včetně výraz OR***&#124;** *výraz exkluzivní OR*   
+ *včetně výraz OR***&#124;***výraz exkluzivní OR*   
   
  *logický a výraz*:  
  *Inkluzivní nebo výraz*  
@@ -156,7 +151,7 @@ ms.lasthandoff: 12/21/2017
  *logický výraz OR*:  
  *logické a – výraz*  
   
- *logický výraz OR***&#124; &#124;** *logické a – výraz*   
+ *logický výraz OR***&#124;&#124;***logické a – výraz*   
   
 ## <a name="see-also"></a>Viz také  
  [Gramatika struktury fráze](../c-language/phrase-structure-grammar.md)

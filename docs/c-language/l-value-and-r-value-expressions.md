@@ -1,13 +1,10 @@
 ---
-title: "L-Value a R-Value výrazy | Microsoft Docs"
-ms.custom: 
+title: L-Value a R-Value výrazy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>Výrazy hodnot L-Value a R-Value
 Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. Hodnotu l reprezentuje hodnotu "Lokátor" v oblasti úložiště, nebo hodnotu "left" zdání, může se objevit na levé straně znaménkem rovnosti (**=**). L-hodnoty jsou často identifikátory.  
@@ -41,7 +36,7 @@ Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-h
   
 -   Dolní index (**[]**) výraz, který není vyhodnocen pole  
   
--   Výraz výběru členů ( **->**  nebo **.**)  
+-   Výraz výběru členů (**->** nebo **.**)  
   
 -   Unární indirection (**\****) výraz, který není odkaz na pole  
   
@@ -51,7 +46,7 @@ Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-h
   
  Pojem „r-hodnota“ se někdy používá k popisu hodnoty výrazu a pro jeho odlišení od l-hodnoty. Všechny l-hodnoty jsou r-hodnotami, ale ne všechny r-hodnoty jsou l-hodnotami.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace.) Tuto funkci znázorňuje následující příklad:  
   

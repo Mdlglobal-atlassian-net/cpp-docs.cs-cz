@@ -1,12 +1,9 @@
 ---
-title: "Třída IConnectionPointImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IConnectionPointImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl – třída
 Tato třída implementuje bod připojení.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|Spravuje připojení pro spojovacího bodu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IConnectionPointImpl`implementuje bod připojení, která umožňuje objekt vystavit odchozí rozhraní klientovi. Klient pro toto rozhraní implementuje na názvem podřízený objekt.  
+ `IConnectionPointImpl` implementuje bod připojení, která umožňuje objekt vystavit odchozí rozhraní klientovi. Klient pro toto rozhraní implementuje na názvem podřízený objekt.  
   
  ATL používá [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) implementovat objekt umožňující připojení. Každý bod připojení v rámci umožňující připojení objektu představuje odchozí rozhraní, identifikovaný `piid`. Třída *CDV* spravuje připojení mezi bodem připojení a jímky. Každé připojení je jedinečně identifikovaný "souboru cookie."  
   
@@ -88,7 +83,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>  IConnectionPointImpl::Advise  
  Naváže připojení mezi bodem připojení a jímky.  
   
 ```
@@ -102,7 +97,7 @@ STDMETHOD(Advise)(
   
  V tématu [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) ve Windows SDK.  
   
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Vytvoří enumerátor k iteraci v rámci připojení pro spojovacího bodu.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) ve Windows SDK.  
   
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Načte identifikátory IID rozhraní reprezentována spojovacího bodu.  
   
 ```
@@ -122,7 +117,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) ve Windows SDK.  
   
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Načte ukazatele rozhraní k objektu umožňující připojení.  
   
 ```
@@ -132,7 +127,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) ve Windows SDK.  
   
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Spravuje připojení mezi objektu bodu připojení a jímky.  
   
 ```
@@ -142,7 +137,7 @@ CDV m_vec;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `m_vec` je typu [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
-##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
  Ukončí připojení dříve vytvořené prostřednictvím [doporučení](#advise).  
   
 ```

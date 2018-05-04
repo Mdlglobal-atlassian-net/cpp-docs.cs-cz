@@ -1,27 +1,22 @@
 ---
-title: "Přidání události (ATL – tutoriál, část 5) | Microsoft Docs"
-ms.custom: 
+title: Přidání události (ATL – tutoriál, část 5) | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Přidání události (ATL – tutoriál, část 5)
 V tomto kroku přidáte `ClickIn` a `ClickOut` události do vašeho ATL ovládacího prvku. Bude platit `ClickIn` událost, pokud uživatel klikne v mnohoúhelníku a ještě efektivněji `ClickOut` Pokud uživatel klikne na mimo. Úlohy postup přidání události jsou následující:  
@@ -134,7 +129,7 @@ V tomto kroku přidáte `ClickIn` a `ClickOut` události do vašeho ATL ovládac
   
  V dalším kroku přidáte stránky vlastností.  
   
- [Zpátky ke kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [Na krok 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Zpátky ke kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [na krok 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Kurz](../atl/active-template-library-atl-tutorial.md)

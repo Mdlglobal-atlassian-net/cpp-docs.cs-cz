@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlPreviewCtrlImpl | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlPreviewCtrlImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl – třída
 Tato třída je implementací ATL okno, které je umístěn na hostitelské okno poskytuje prostředí pro verzi Preview formátováním.  
@@ -115,7 +110,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlpreviewctrlimpl.h  
   
-##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  Vytvoří objekt ovládacího prvku preview.  
   
 ```
@@ -125,7 +120,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
  Destructs objekt ovládacího prvku preview.  
   
 ```
@@ -134,7 +129,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
  Volá obslužnou rutinou bohaté Preview vytvořit období systému Windows.  
   
 ```
@@ -149,11 +144,11 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
  Určuje počáteční velikost a umístění okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
  Voláno bohaté Preview obslužnou rutinou, pokud je chcete-li odstranit tento ovládací prvek.  
   
 ```
@@ -162,7 +157,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
  Voláno rámcem k vykreslení ve verzi preview.  
   
 ```
@@ -175,7 +170,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
  Nastaví vstupní zaměření tohoto ovládacího prvku.  
   
 ```
@@ -184,7 +179,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
  Barva pozadí okna náhledu.  
   
 ```
@@ -193,7 +188,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
  Barva textu z okna náhledu.  
   
 ```
@@ -202,7 +197,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
  Písmo použité k zobrazení textu v podokně náhledu.  
   
 ```
@@ -211,7 +206,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
  Zpracovává zprávy WM_PAINT.  
   
 ```
@@ -240,7 +235,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
  Tento ovládací prvek pro ho překreslit informuje.  
   
 ```
@@ -249,7 +244,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
  Nastaví novou nadřazenou položku pro tento ovládací prvek.  
   
 ```
@@ -262,7 +257,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
  Volat bohaté Preview obslužnou rutinou, pokud je potřeba nastavit vizuální prvky bohaté Preview obsahu.  
   
 ```
@@ -284,7 +279,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
  Nastaví nové ohraničující obdélník pro tento ovládací prvek.  
   
 ```

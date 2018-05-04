@@ -1,13 +1,10 @@
 ---
-title: "Vzájemné importy | Microsoft Docs"
-ms.custom: 
+title: Vzájemné importy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Vzájemné importy
 Export a import do jiného spustitelného souboru představuje komplikace, když jsou importy vzájemné (nebo cyklické). Například dvě knihovny importovat symboly od sebe navzájem, podobně jako vzájemně rekurzivní funkce.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- Když je A.dll sestavena, je sestavena s `/D A_IMPL` a když je B.dll sestavena, je sestavena s `/D B_IMPL`. Použitím oddělených symbolů pro každou knihovnu DLL, `CExampleB` se exportují a `CExampleA` je importován při vytváření B.dll. `CExampleA`je exportována při vytváření A.dll a importován při použití B.dll (nebo jiného klienta).  
+ Když je A.dll sestavena, je sestavena s `/D A_IMPL` a když je B.dll sestavena, je sestavena s `/D B_IMPL`. Použitím oddělených symbolů pro každou knihovnu DLL, `CExampleB` se exportují a `CExampleA` je importován při vytváření B.dll. `CExampleA` je exportována při vytváření A.dll a importován při použití B.dll (nebo jiného klienta).  
   
  Tento typ vrstvení nelze provést, pokud používáte integrované **AFX_EXT_CLASS** a `_AFXEXT` preprocesoru symboly. Technik popsaných výše řeší tento problém není na rozdíl od způsobem mechanismus MFC samotné používá při sestavování jeho Active technologie, databáze a sítě MFC – knihovny DLL rozšíření.  
   

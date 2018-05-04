@@ -1,12 +1,9 @@
 ---
-title: "Operátor dolního indexu: | Microsoft Docs"
-ms.custom: 
+title: 'Operátor dolního indexu: | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>Operátor dolního indexu:
 ## <a name="syntax"></a>Syntaxe  
@@ -53,7 +48,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  V předchozím příkladu výraz `nArray[2]` je stejný jako `2[nArray]`. Důvodem je, že výsledek výraz dolního indexu *e1***[** *e2* **]** je dán:  
   
- **\*( (** *e2* **)** *+* **(***e1***) )**  
+ **\*((** *e2* **)** *+* **(***e1***))**  
   
  Adresa poskytuje podle výrazu není *e2* bajtů z adresy *e1*. Místo toho je adresu škálovat na yield další objekt v poli *e2*. Příklad:  
   
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *Expression1* **[***Výraz2***] [***expression3***]**...  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1***[***Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota konečné ukazatele adresy typu pole.  
+ Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1 ***[*** Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota konečné ukazatele adresy typu pole.  
   
  Výrazy s více dolní indexy odkazovat na elementy vícerozměrná pole. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole. Následující příklad deklaruje a inicializuje jednoduché dvourozměrná pole znaků:  
   

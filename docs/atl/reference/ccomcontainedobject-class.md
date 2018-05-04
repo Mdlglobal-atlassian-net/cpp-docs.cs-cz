@@ -1,12 +1,9 @@
 ---
-title: "Třída CComContainedObject | Microsoft Docs"
-ms.custom: 
+title: Třída CComContainedObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComContainedObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject – třída
 Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním k objektu vlastníka **IUnknown**.  
@@ -71,7 +66,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Snižuje počet odkaz objektu vlastníka.|  
   
 ## <a name="remarks"></a>Poznámky  
- ATL používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním k objektu vlastníka **IUnknown**. (Vlastník je buď objekt vnější agregace, nebo objekt, pro kterou je vytvořen rozhraní úplné vypnutí.) `CComContainedObject` volání `CComObjectRootEx`na `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny zděděné prostřednictvím `Base`.  
+ ATL používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním k objektu vlastníka **IUnknown**. (Vlastník je buď objekt vnější agregace, nebo objekt, pro kterou je vytvořen rozhraní úplné vypnutí.) `CComContainedObject` volání `CComObjectRootEx`na `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny zděděné prostřednictvím `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Base`  
@@ -81,7 +76,7 @@ class CComContainedObject : public Base
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="addref"></a>CComContainedObject::AddRef  
+##  <a name="addref"></a>  CComContainedObject::AddRef  
  Zvětší počet odkaz objektu vlastníka.  
   
 ```
@@ -91,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která může být užitečné pro diagnostiku nebo testování.  
   
-##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
+##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  Konstruktor  
   
 ```
@@ -105,7 +100,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Poznámky  
  Nastaví `m_pOuterUnknown` člen ukazatele (zděděná prostřednictvím `Base` – třída) k `pv`.  
   
-##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  Destruktor.  
   
 ```
@@ -115,7 +110,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky.  
   
-##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
+##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
  Vrátí `m_pOuterUnknown` člen ukazatele (zděděná prostřednictvím *základní* třída) která obsahuje vlastníka objektu **IUnknown**.  
   
 ```
@@ -128,7 +123,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda může být virtuální Pokud `Base` deklaruje [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) makro.  
   
-##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
  Načte ukazatel na požadované objektu vlastníka rozhraní.  
   
 ```
@@ -150,7 +145,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="release"></a>CComContainedObject::Release  
+##  <a name="release"></a>  CComContainedObject::Release  
  Snižuje počet odkaz objektu vlastníka.  
   
 ```

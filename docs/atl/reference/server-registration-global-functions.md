@@ -1,12 +1,9 @@
 ---
-title: "Globální funkce registrace serveru | Microsoft Docs"
-ms.custom: 
+title: Globální funkce registrace serveru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Globální funkce registrace serveru
 Tyto funkce poskytuje podporu pro registraci a zrušení registrace serveru objekty v mapování objektu.  
@@ -46,7 +41,7 @@ Tyto funkce poskytuje podporu pro registraci a zrušení registrace serveru obje
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Voláním této funkce se zaregistrují všechny objekty v mapě objektů.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlComModuleRegisterServer`provede mapování objektu generován automaticky ATL a zaregistruje každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` je zaregistrován; v opačném případě všechny objekty jsou registrované.  
+ `AtlComModuleRegisterServer` provede mapování objektu generován automaticky ATL a zaregistruje každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` je zaregistrován; v opačném případě všechny objekty jsou registrované.  
   
  Tato funkce je volána [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Voláním této funkce se zruší registrace všech objektů v mapě objektů.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlComModuleUnregisterServer`provede mapování objektu knihovny ATL a zrušení registrace každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` registrace; jinak hodnota všechny objekty se zrušit registraci.  
+ `AtlComModuleUnregisterServer` provede mapování objektu knihovny ATL a zrušení registrace každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` registrace; jinak hodnota všechny objekty se zrušit registraci.  
   
  Tato funkce je volána [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Voláním této funkce se zaregistrují objekty třídy.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Voláním této funkce se z tabulky spuštěných objektů odeberou objekty pro vytváření tříd.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Voláním této funkce se vrátí objekt pro vytváření tříd.  
   
 ```

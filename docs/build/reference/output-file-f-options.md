@@ -2,12 +2,9 @@
 title: Výstupní soubor (-F) možnosti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /f
 dev_langs:
@@ -17,32 +14,30 @@ helpviewer_keywords:
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40adadb2e9f0c06fc9164537656f7eec3b7527af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="output-file-f-options"></a>Možnosti výstupního souboru (/F)
 Možnosti výstupního souboru vytvořit nebo přejmenovat výstupní soubory. Ovlivní všechny jazyka C nebo C++ zdrojové soubory určeném v proměnné prostředí CL, na příkazovém řádku nebo v jakékoli příkazový soubor.  
   
--   [/ FA, /Fa (soubor seznamu)](../../build/reference/fa-fa-listing-file.md)  
+-   [/FA, /Fa (soubor výpisu)](../../build/reference/fa-fa-listing-file.md)  
   
 -   [Určení názvu cesty](../../build/reference/specifying-the-pathname.md)  
   
 -   [/FD (název souboru PDB)](../../build/reference/fd-program-database-file-name.md)  
   
--   [/FE (název souboru EXE)](../../build/reference/fe-name-exe-file.md)  
+-   [/Fe (pojmenování souboru EXE)](../../build/reference/fe-name-exe-file.md)  
   
--   [/Fi (zahrnutý názvem soubor)](../../build/reference/fi-name-forced-include-file.md)  
+-   [/FI (zahrnutý soubor s povinným názvem)](../../build/reference/fi-name-forced-include-file.md)  
   
--   [/FM (název souboru mapování)](../../build/reference/fm-name-mapfile.md)  
+-   [/Fm (pojmenování souboru mapování)](../../build/reference/fm-name-mapfile.md)  
   
 -   [/FO (název souboru objektu)](../../build/reference/fo-object-file-name.md)  
   
@@ -50,9 +45,9 @@ Možnosti výstupního souboru vytvořit nebo přejmenovat výstupní soubory. O
   
 -   [/ FR, /Fr (vytvořit soubor .sbr)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
   
--   [/FU (vynuceným názvem #using souboru)](../../build/reference/fu-name-forced-hash-using-file.md)  
+-   [/FU (soubor s vynuceným názvem #using)](../../build/reference/fu-name-forced-hash-using-file.md)  
   
--   [/FX (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md)  
+-   [/Fx (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   

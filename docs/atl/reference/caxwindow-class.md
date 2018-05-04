@@ -1,12 +1,9 @@
 ---
-title: "Třída CAxWindow | Microsoft Docs"
-ms.custom: 
+title: Třída CAxWindow | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052e7ad2bfa8cc03c4eadd4926dbd84c4fd60223
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow-class"></a>CAxWindow – třída
 Tato třída poskytuje metody pro práci s okno hostování ovládacího prvku ActiveX.  
@@ -83,7 +78,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>  CAxWindow::AttachControl  
  Vytvoří nový objekt hostitele, pokud jeden už není přítomen a daný ovládací prvek připojí k hostiteli.  
   
 ```
@@ -105,7 +100,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>Poznámky  
  Připojovaný objekt ovládacího prvku se musí správně inicializovat před voláním `AttachControl`.  
   
-##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>  CAxWindow::CAxWindow  
  Vytvoří `CAxWindow` pomocí existující objekt popisovač okna.  
   
 ```
@@ -116,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  Popisovač pro existující objekt okno.  
   
-##  <a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl  
  Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.  
   
 ```
@@ -139,7 +134,7 @@ HRESULT CreateControl(
   
 -   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresy URL, například "http://www.microsoft.com"  
+-   Adresu URL, například "http://www.microsoft.com"  
   
 -   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
   
@@ -172,7 +167,7 @@ HRESULT CreateControl(
 ### <a name="example"></a>Příklad  
  V tématu [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) příklad, který používá `CreateControl`.  
   
-##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx  
  Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.  
   
 ```
@@ -201,7 +196,7 @@ HRESULT CreateControlEx(
   
 -   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresy URL, například "http://www.microsoft.com"  
+-   Adresu URL, například "http://www.microsoft.com"  
   
 -   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
   
@@ -239,7 +234,7 @@ HRESULT CreateControlEx(
 ### <a name="example"></a>Příklad  
  V tématu [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) příklad, který používá `CreateControlEx`.  
   
-##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName  
  Načte název třídy oken.  
   
 ```
@@ -249,7 +244,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na řetězec obsahující název třídy oken, který může hostovat nonlicensed ovládací prvky ActiveX.  
   
-##  <a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>  CAxWindow::operator =  
  Přiřadí `HWND` na stávající `CAxWindow` objektu.  
   
 ```
@@ -263,7 +258,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na aktuální `CAxWindow` objektu.  
   
-##  <a name="querycontrol"></a>CAxWindow::QueryControl  
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl  
  Načte zadaný rozhraní hostované ovládacího prvku.  
   
 ```
@@ -285,7 +280,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="queryhost"></a>CAxWindow::QueryHost  
+##  <a name="queryhost"></a>  CAxWindow::QueryHost  
  Vrátí rozhraní zadaného hostitele.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>Poznámky  
  Rozhraní hostitele, které umožňuje přístup k základní funkce hostování okno kódu implementované **AxWin**.  
   
-##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch  
  Nastaví odesílání externí rozhraní pro `CAxWindow` objektu.  
   
 ```
@@ -324,7 +319,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler  
  Nastaví externí [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) rozhraní `CAxWindow` objektu.  
   
 ```

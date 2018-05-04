@@ -1,12 +1,9 @@
 ---
-title: "Třída CComCompositeControl | Microsoft Docs"
-ms.custom: 
+title: Třída CComCompositeControl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl – třída
 Tato třída poskytuje metody potřebnou k implementaci složeného ovládacího prvku.  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>Poznámky  
  Třídy odvozené od třídy `CComCompositeControl` dědění funkce složeného ovládacího prvku ActiveX. Ovládací prvky ActiveX, které jsou odvozené z `CComCompositeControl` jsou hostované pomocí standardního dialogového okna. Tyto typy ovládacích prvků se nazývají složené ovládací prvky, protože jsou možné hostovat další ovládací prvky (nativní ovládací prvky systému Windows a ovládací prvky ActiveX).  
   
- `CComCompositeControl`dialogovém okně prostředek se má použít při vytváření složených prvků tak, že vyhledá člena dat výčet ve třídě podřízené identifikuje. Člen IDD této podřízené třídy je nastavena na ID prostředku prostředku dialogového okna, který se použije jako okno ovládacího prvku. Tady je příklad dat člena, který třídy odvozené od `CComCompositeControl` by měl obsahovat k identifikaci prostředku dialogového okna, který se má použít pro okno ovládacího prvku:  
+ `CComCompositeControl` dialogovém okně prostředek se má použít při vytváření složených prvků tak, že vyhledá člena dat výčet ve třídě podřízené identifikuje. Člen IDD této podřízené třídy je nastavena na ID prostředku prostředku dialogového okna, který se použije jako okno ovládacího prvku. Tady je příklad dat člena, který třídy odvozené od `CComCompositeControl` by měl obsahovat k identifikaci prostředku dialogového okna, který se má použít pro okno ovládacího prvku:  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
  Volejte tuto metodu za účelem poradit nebo unadvise všechny ovládací prvky hostované složeného ovládacího prvku.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Poznámky  
  Základní implementace této metody vyhledá prostřednictvím položky události podřízený mapy. Potom informuje o tom, nebo unadvises body připojení k objektům modelu COM popsaného mapy jímek událostí podřízený položky. Tato metoda člen také závisí na skutečnost, že odvozené třídy dědí z jednu instanci `IDispEventImpl` pro každý ovládací prvek v mapě podřízený, které se má doporučené nebo unadvised.  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  Volat tuto metodu pro výpočet velikosti v **HIMETRIC** jednotky prostředku dialogového okna, které jsou použity k hostování složeného ovládacího prvku.  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Poznámky  
  Velikost je vrácený v `size` parametr.  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  Tato metoda je volána vytvořit okno pro řízení složeného ovládacího prvku.  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána obvykle během aktivace na místě ovládacího prvku.  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  Konstruktor  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Poznámky  
  Inicializuje [CComCompositeControl::m_hbrBackground](#m_hbrbackground) a [CComCompositeControl::m_hWndFocus](#m_hwndfocus) datové členy na hodnotu NULL.  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  Destruktor.  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Poznámky  
  Odstraní objekt pozadí, pokud existuje.  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  Volejte tuto metodu za účelem vytvoření okna pro ovládací prvek a poradit všechny hostované ovládací prvky.  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá [CComCompositeControl::Create](#create) a [CComCompositeControl::AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  Štětec pozadí plochy.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  Popisovač okna, který má právě fokus.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  Volejte tuto metodu a nastavit barvu pozadí složeného ovládacího prvku pomocí barvu pozadí kontejneru.  
   
 ```

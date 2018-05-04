@@ -1,12 +1,9 @@
 ---
-title: "Třída CComCoClass | Microsoft Docs"
-ms.custom: 
+title: Třída CComCoClass | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCoClass
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 738d7e937acf2d3299be97b4f091c698582911d5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass – třída
 Tato třída poskytuje metody pro vytvoření instance třídy a získání jeho vlastnosti.  
@@ -62,9 +57,9 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statické) Přepsání vrátit popis objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComCoClass`poskytuje metody pro načítání CLSID objektu, nastavení informací o chybách a vytváření instancí třídy. Jakákoli třída zaregistrovaný v [mapování objektu](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) by měl být odvozen od `CComCoClass`.  
+ `CComCoClass` poskytuje metody pro načítání CLSID objektu, nastavení informací o chybách a vytváření instancí třídy. Jakákoli třída zaregistrovaný v [mapování objektu](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) by měl být odvozen od `CComCoClass`.  
   
- `CComCoClass`také definuje výchozí třídu objektu pro vytváření a agregaci modelu pro objekt. `CComCoClass`používá následující dvě makra:  
+ `CComCoClass` také definuje výchozí třídu objektu pro vytváření a agregaci modelu pro objekt. `CComCoClass` používá následující dvě makra:  
   
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) deklaruje objektu pro vytváření tříd jako [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).  
   
@@ -77,7 +72,7 @@ class CComCoClass
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance  
  Pomocí těchto `CreateInstance` funkce vytvořit instanci třídy COM objektu a načíst ukazatele rozhraní bez použití rozhraní API modelu COM.  
   
 ```
@@ -111,11 +106,11 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Všimněte si, že rozhraní `Q` musí mít IID s ním spojená, který se dá načíst pomocí [__uuidof –](../../cpp/uuidof-operator.md) operátor.  
   
 ### <a name="example"></a>Příklad  
- V následujícím příkladu `CDocument` ATL třídy generované v průvodci je odvozený od `CComCoClass` , která implementuje **IDocument** rozhraní. Třída je registrována v mapování objektu s `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` makro, klienti nelze vytvořit instance dokumentu pomocí [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication`je třída typu CoClass, která poskytuje metodu na jednom vlastní rozhraní modelu COM, k vytvoření instance třídy dokumentu. Kód uvedený níže ukazuje, jak snadno ji k vytvoření instance třídy dokumentů pomocí `CreateInstance` člen zděděno z `CComCoClass` základní třídy.  
+ V následujícím příkladu `CDocument` ATL třídy generované v průvodci je odvozený od `CComCoClass` , která implementuje **IDocument** rozhraní. Třída je registrována v mapování objektu s `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` makro, klienti nelze vytvořit instance dokumentu pomocí [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` je třída typu CoClass, která poskytuje metodu na jednom vlastní rozhraní modelu COM, k vytvoření instance třídy dokumentu. Kód uvedený níže ukazuje, jak snadno ji k vytvoření instance třídy dokumentů pomocí `CreateInstance` člen zděděno z `CComCoClass` základní třídy.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>  CComCoClass::Error  
  Tato statická funkce nastaví `IErrorInfo` rozhraní k poskytování informací o chybách klienta.  
   
 ```
@@ -188,7 +183,7 @@ static HRESULT Error(
   
  Pokud `hRes` parametr je nenulové hodnoty, pak `Error` vrací hodnotu `hRes`. Pokud `hRes` nula, pak je první čtyři verze `Error` vrátit `DISP_E_EXCEPTION`. Poslední dvě verze vrátit výsledek makro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
-##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID  
  Zajišťuje konzistentní způsob načítání CLSID objektu.  
   
 ```
@@ -198,7 +193,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor třídy objektu.  
   
-##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription  
  Tato statická funkce načte textový popis pro třídu objektu.  
   
 ```
@@ -213,7 +208,7 @@ static LPCTSTR WINAPI GetObjectDescription();
   
  [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
- `GetObjectDescription`je volána metodou **IComponentRegistrar::GetComponents**. **IComponentRegistrar** je automatizace rozhraní, které vám umožní zaregistrovat a zrušit registraci jednotlivých součástí v nástroji knihovny DLL. Když vytvoříte objekt součást registrátora s Průvodce projektem ATL, průvodce bude automaticky provádět **IComponentRegistrar** rozhraní. **IComponentRegistrar** se obvykle používá server Microsoft transakce.  
+ `GetObjectDescription` je volána metodou **IComponentRegistrar::GetComponents**. **IComponentRegistrar** je automatizace rozhraní, které vám umožní zaregistrovat a zrušit registraci jednotlivých součástí v nástroji knihovny DLL. Když vytvoříte objekt součást registrátora s Průvodce projektem ATL, průvodce bude automaticky provádět **IComponentRegistrar** rozhraní. **IComponentRegistrar** se obvykle používá server Microsoft transakce.  
   
  Další informace o Průvodci projektu knihovny ATL, najdete v článku [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md).  
   

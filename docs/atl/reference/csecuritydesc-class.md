@@ -1,12 +1,9 @@
 ---
-title: "Třída CSecurityDesc | Microsoft Docs"
-ms.custom: 
+title: Třída CSecurityDesc | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc – třída
 Tato třída je obálka pro **SECURITY_DESCRIPTOR** struktura.  
@@ -124,7 +119,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
   
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
  Konstruktor  
   
 ```
@@ -140,7 +135,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Poznámky  
  `CSecurityDesc` Můžete volitelně vytvořit objekt pomocí **SECURITY_DESCRIPTOR** struktura nebo dříve definovaném `CSecurityDesc` objektu.  
   
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc:: ~ CSecurityDesc  
  Destruktor.  
   
 ```
@@ -150,7 +145,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>Poznámky  
  Destruktoru uvolní všechny přidělené prostředky.  
   
-##  <a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>  CSecurityDesc::FromString  
  Převede popisovač zabezpečení formát řetězce popisovače zabezpečení platné, funkční.  
   
 ```
@@ -169,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
  Tato metoda volá [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
-##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Načte řídit informace z popisovač zabezpečení.  
   
 ```
@@ -228,7 +223,7 @@ bool GetGroup(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true Pokud metoda úspěšné, false Pokud selže.  
   
-##  <a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>  CSecurityDesc::GetOwner  
  Načte informace vlastníka z popisovač zabezpečení.  
   
 ```
@@ -247,7 +242,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true Pokud metoda úspěšné, false Pokud selže.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Vrátí ukazatel **SECURITY_DESCRIPTOR** struktura.  
   
 ```
@@ -257,7 +252,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí ukazatel [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) struktura.  
   
-##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Načte informace o systému řízení přístupu seznam (SACL) z popisovač zabezpečení.  
   
 ```
@@ -280,7 +275,7 @@ bool GetSacl(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true Pokud metoda úspěšné, false Pokud selže.  
   
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited  
  Určuje, zda seznamu volitelného řízení přístupu (DACL) je konfigurována pro podporu automatického šíření.  
   
 ```
@@ -293,7 +288,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>Poznámky  
  Systém nastaví tento bit při provádění algoritmus automatického dědičnosti pro objekt a jeho existující podřízených objektů.  
   
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted  
  Určuje, pokud popisovač zabezpečení konfigurován s výchozím seznamu volitelného řízení přístupu (DACL).  
   
 ```
@@ -310,7 +305,7 @@ bool IsDaclDefaulted() const throw();
   
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetDacl](#setdacl) metoda.  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  Určuje, zda popisovač zabezpečení obsahuje seznam volitelného řízení přístupu (DACL).  
   
 ```
@@ -342,7 +337,7 @@ bool IsDaclProtected() const throw();
   
  Tato metoda podporuje automatické šíření zděditelné položky řízení přístupu.  
   
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted  
  Určuje, pokud se ve výchozím nastavení popisovač zabezpečení skupiny identifikátor zabezpečení (SID).  
   
 ```
@@ -355,7 +350,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetGroup](#setgroup) metoda.  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  Určuje, pokud se ve výchozím nastavení popisovač zabezpečení vlastníka identifikátor zabezpečení (SID).  
   
 ```
@@ -368,7 +363,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetOwner](#setowner) metoda.  
   
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited  
  Určuje, pokud systémový seznam řízení přístupu (SACL) je nakonfigurován pro podporu automatického šíření.  
   
 ```
@@ -381,7 +376,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>Poznámky  
  Systém nastaví tento bit při provádění algoritmus automatického dědičnosti pro objekt a jeho existující podřízených objektů.  
   
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted  
  Určuje, pokud popisovač zabezpečení je nakonfigurované výchozím seznamu řízení přístupu systému (SACL).  
   
 ```
@@ -396,7 +391,7 @@ bool IsSaclDefaulted() const throw();
   
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetSacl](#setsacl) metoda.  
   
-##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent  
  Určuje, zda popisovač zabezpečení obsahuje seznam řízení přístupu systému (SACL).  
   
 ```
@@ -409,7 +404,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete nastavit tento příznak, použijte [CSecurityDesc::SetSacl](#setsacl) metoda.  
   
-##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected  
  Určuje, pokud systémový seznam řízení přístupu (SACL) je nakonfigurována pro zabránit úpravy.  
   
 ```
@@ -424,7 +419,7 @@ bool IsSaclProtected() const throw();
   
  Tato metoda podporuje automatické šíření zděditelné položky řízení přístupu.  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  Určuje, zda popisovač zabezpečení do seberelativního formátu.  
   
 ```
@@ -434,7 +429,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true, pokud popisovač zabezpečení ve formátu self-relative všechny informace zabezpečení v bloku souvislé paměti. Vrátí hodnotu false, pokud je popisovač zabezpečení v absolutním formátu. Další informace najdete v tématu [absolutní a popisovače zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Voláním této metody lze převést popisovač zabezpečení na absolutním formátu.  
   
 ```
@@ -447,7 +442,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>Poznámky  
  Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, místo informace samotné. Popisovač zabezpečení ve formátu self-relative obsahuje informace v blok souvislé paměti. V popisovači samorelativní zabezpečení **SECURITY_DESCRIPTOR** struktura vždycky spustí informace, ale popisovač zabezpečení je jiné součásti můžete vycházet ze struktury v libovolném pořadí. Místo použití adresy paměti, jsou součástí popisovač zabezpečení samorelativní identifikovaný posun od začátku popisovač zabezpečení. Tento formát je užitečné, když popisovač zabezpečení musí být uložená na disku nebo odeslány prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovače zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Voláním této metody se převést popisovač zabezpečení do seberelativního formátu.  
   
 ```
@@ -460,7 +455,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>Poznámky  
  Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, nikoli obsahujícího informace o sám sebe. Popisovač zabezpečení ve formátu self-relative obsahuje informace v blok souvislé paměti. V popisovači samorelativní zabezpečení **SECURITY_DESCRIPTOR** struktura vždycky spustí informace, ale popisovač zabezpečení je jiné součásti můžete vycházet ze struktury v libovolném pořadí. Místo použití adresy paměti, jsou součástí popisovač zabezpečení identifikovaný posun od začátku popisovač zabezpečení. Tento formát je užitečné, když popisovač zabezpečení musí být uložená na disku nebo odeslány prostřednictvím komunikační protokol. Další informace najdete v tématu [absolutní a popisovače zabezpečení Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Operátor přiřazení.  
   
 ```
@@ -475,14 +470,14 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CSecurityDesc` objektu.  
   
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
  Vrhá hodnotu na ukazatel **SECURITY_DESCRIPTOR** struktura.  
   
 ```  
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>  CSecurityDesc::SetControl  
  Nastaví řídicí bity popisovače zabezpečení.  
   
 ```
@@ -550,7 +545,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
   
-##  <a name="setowner"></a>CSecurityDesc::SetOwner  
+##  <a name="setowner"></a>  CSecurityDesc::SetOwner  
  Nastaví vlastníka informací popisovače zabezpečení v absolutním formátu. Nahradí všechny informace vlastníka již existuje.  
   
 ```
@@ -567,7 +562,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
   
-##  <a name="setsacl"></a>CSecurityDesc::SetSacl  
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl  
  Nastaví informace v seznamu řízení přístupu (SACL) systému. Pokud seznam SACL se již nachází ve popisovač zabezpečení, je nahradit.  
   
 ```
@@ -575,7 +570,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Sacl*  
+ *SACL*  
  Ukazatel na `CSacl` zadání SACL pro popisovač zabezpečení objektu. Tento parametr nesmí mít hodnotu NULL a musí být objekt CSacl. Na rozdíl od seznamů DACL není žádný rozdíl mezi hodnotu NULL a prázdný SACL, jako objekty SACL nezadávejte přístupová práva, jenom auditování informace.  
   
  `bDefaulted`  
@@ -584,7 +579,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  Převede na formát řetězce popisovače zabezpečení.  
   
 ```

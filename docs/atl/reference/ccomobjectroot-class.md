@@ -1,12 +1,9 @@
 ---
-title: "Třída CComObjectRoot | Microsoft Docs"
-ms.custom: 
+title: Třída CComObjectRoot | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRoot
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3acd4d91082d79cff0e945f841389fb2428396f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6a7d350f7bd50476c1c327d824089981d3e8321
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot – třída
 Tato definice typu z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) je převést na šablonu na výchozí model serveru vláken.  
@@ -38,9 +33,9 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectRoot`je `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) převést na šablonu na výchozí model serveru vláken. Proto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) bude odkazovat buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
+ `CComObjectRoot` je `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) převést na šablonu na výchozí model serveru vláken. Proto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) bude odkazovat buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
   
- `CComObjectRootEx`zpracovává Správa počet odkaz objektu pro neagregovaná a agregované objekty. Pokud není agregovaný objektu a obsahuje ukazatele na vnější neznámý, pokud je agregovaný objektu drží odkaz počet objektů. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a k ochraně vnější objekt z odstranění, když jsou vydávány vnitřní rozhraní nebo vnitřní objekt se odstraní.  
+ `CComObjectRootEx` zpracovává Správa počet odkaz objektu pro neagregovaná a agregované objekty. Pokud není agregovaný objektu a obsahuje ukazatele na vnější neznámý, pokud je agregovaný objektu drží odkaz počet objektů. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a k ochraně vnější objekt z odstranění, když jsou vydávány vnitřní rozhraní nebo vnitřní objekt se odstraní.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  

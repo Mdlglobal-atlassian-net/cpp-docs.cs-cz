@@ -1,12 +1,9 @@
 ---
-title: "Třída IOleControlImpl | Microsoft Docs"
-ms.custom: 
+title: Třída IOleControlImpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl – třída
 Tato třída poskytuje výchozí implementaci třídy **IOleControl** rozhraní a implementuje **IUnknown**.  
@@ -73,7 +68,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
   
-##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
  V implementaci společnosti ATL `FreezeEvents` zvýší třída ovládacích prvků `m_nFreezeEvents` – datový člen Pokud `bFreeze` je **TRUE**a snižuje `m_nFreezeEvents` Pokud `bFreeze` je **FALSE**.  
   
 ```
@@ -81,11 +76,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `FreezeEvents`Vrátí `S_OK`.  
+ `FreezeEvents` Vrátí `S_OK`.  
   
  V tématu [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) ve Windows SDK.  
   
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Vyplní informace o chování klávesnice ovládacího prvku.  
   
 ```
@@ -98,7 +93,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **E_NOTIMPL**.  
   
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  Informuje o ovládacího prvku, že jeden nebo více vedlejším vlastnostem kontejneru se změnila.  
   
 ```
@@ -111,7 +106,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>Poznámky  
  V tématu [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) ve Windows SDK.  
   
-##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Informuje o ovládacího prvku, že uživatel má stisknutí zadaný klávesu.  
   
 ```

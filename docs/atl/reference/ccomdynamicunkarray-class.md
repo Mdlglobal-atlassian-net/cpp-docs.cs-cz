@@ -1,12 +1,9 @@
 ---
-title: "Třída CComDynamicUnkArray | Microsoft Docs"
-ms.custom: 
+title: Třída CComDynamicUnkArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray – třída
 Tato třída ukládá pole **IUnknown** ukazatele.  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  V tématu [přidání body připojení k objektu](../../atl/adding-connection-points-to-an-object.md) informace o automatizaci vytváření připojení bodu proxy.  
   
 > [!NOTE]
-> **Poznámka:** třídy **CComDynamicUnkArray** je používán **přidat třídu** Průvodce při vytvoření ovládacího prvku, který má spojovací body. Pokud chcete určit počet bodů připojení ručně, změňte odkaz z **CComDynamicUnkArray** k `CComUnkArray<`  *n*  `>`, kde  *n*  je počet bodů připojení vyžaduje.  
+> **Poznámka:** třídy **CComDynamicUnkArray** je používán **přidat třídu** Průvodce při vytvoření ovládacího prvku, který má spojovací body. Pokud chcete určit počet bodů připojení ručně, změňte odkaz z **CComDynamicUnkArray** k `CComUnkArray<` *n* `>`, kde *n*je počet bodů připojení vyžaduje.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  Voláním této metody lze přidat **IUnknown** ukazatel na pole.  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí souboru cookie přidruženého nově přidané ukazatele.  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  Vrátí ukazatel na začátek kolekce **IUnknown** rozhraní ukazatele.  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  Před použitím **IUnknown** rozhraní, je potřeba zkontrolovat, že není **NULL**.  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Vyprázdní pole.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  Konstruktor  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Poznámky  
  Nastaví velikost kolekce na hodnotu nula a inicializuje hodnoty tak, aby **NULL**. Destruktoru uvolní kolekce, v případě potřeby.  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Destruktor.  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Poznámky  
  Uvolní prostředky přidělené pomocí konstruktoru třídy.  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  Vrací ukazatel na jednu za posledních **IUnknown** ukazatele v kolekci.  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na **IUnknown** ukazatel rozhraní.  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Načte element v zadaném indexu.  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní.  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Volat tuto metodu za účelem získání souboru cookie přidruženého dané **IUnknown** ukazatel.  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Poznámky  
  Pokud je více než jednu instanci stejného **IUnknown** ukazatele, funkce vrátí hodnotu souboru cookie, který pro první.  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Vrátí délku pole.  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Délka pole.  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  Voláním této metody lze získat **IUnknown** ukazatel spojené s danou souboru cookie.  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **IUnknown** ukazatel nebo hodnota NULL, pokud je nalezen žádný odpovídající soubor cookie.  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  Voláním této metody lze odebrat **IUnknown** ukazatel z pole.  
   
 ```

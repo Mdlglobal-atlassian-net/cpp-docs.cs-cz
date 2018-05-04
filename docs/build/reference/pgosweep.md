@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f39dd3b7-1cd9-4c3b-8e8b-fb794744b757
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9680dc47d850bd49eff343c0e382b7132697858d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: ded5b692d7c51e5a46a325a69ad6969083025ff5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgosweep"></a>pgosweep
 
@@ -28,7 +27,7 @@ Používá se v optimalizace na základě profilu zapsat všechna data profilu z
 
 ## <a name="syntax"></a>Syntaxe
 
-> **pgosweep** [*options*] *image* *pgcfile*
+> **pgosweep –** [*možnosti*] *image* *pgcfile*
 
 ### <a name="parameters"></a>Parametry
 
@@ -39,7 +38,7 @@ Platné hodnoty pro *možnosti* jsou:
 
 - **/noreset** zachovává počet v modulu runtime datové struktury.
 
-*image*<br/>
+*Bitové kopie*<br/>
 Úplná cesta souboru .exe nebo .dll, který byl vytvořen pomocí [/GENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md), nebo [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) možnost.
 
 *pgcfile*<br/>

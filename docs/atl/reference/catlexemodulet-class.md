@@ -2,11 +2,8 @@
 title: Třída CAtlExeModuleT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlExeModuleT
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45b1f95aba4f11e6995bf5c4c1cfff00627e4b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22510da8c1377411b289b940e1b8e196533c93a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT – třída
 Tato třída reprezentuje modul pro aplikaci.  
@@ -91,7 +86,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Hodnota časového limitu, používá ke zpoždění uvolnění modulu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CAtlExeModuleT`představuje modul pro aplikaci (EXE) a obsahuje kód, který podporuje vytváření EXE, zpracování příkazového řádku, registrace objekty tříd, systémem zpráva smyčky a čištění po ukončení.  
+ `CAtlExeModuleT` představuje modul pro aplikaci (EXE) a obsahuje kód, který podporuje vytváření EXE, zpracování příkazového řádku, registrace objekty tříd, systémem zpráva smyčky a čištění po ukončení.  
   
  Tato třída slouží ke zlepšení výkonu při objekty modelu COM v serveru EXE průběžně vytvořen a zničen. Po vydání poslední objektu COM, EXE se čeká na dobu trvání určeného [CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout) – datový člen. Pokud během této doby nebude žádná aktivita (tedy COM nejsou vytvořeny žádné), vypnutí proces je zahájen.  
   
@@ -112,7 +107,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT  
+##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT  
  Konstruktor  
   
 ```
@@ -122,7 +117,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>Poznámky  
  Pokud modul EXE nelze inicializovat, WinMain vrátí okamžitě bez dalšího zpracování.  
   
-##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT  
+##  <a name="dtor"></a>  CAtlExeModuleT:: ~ CAtlExeModuleT  
  Destruktor.  
   
 ```
@@ -132,7 +127,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky.  
   
-##  <a name="initializecom"></a>CAtlExeModuleT::InitializeCom  
+##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom  
  Inicializuje COM.  
   
 ```
@@ -147,7 +142,7 @@ static HRESULT InitializeCom() throw();
   
  Přepíše tuto metodu obvykle vyžaduje přepsání [CAtlExeModuleT::UninitializeCom](#uninitializecom).  
   
-##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT::m_bDelayShutdown  
+##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown  
  Příznak označující, že by měl být zpoždění vypínání modulu.  
   
 ```
@@ -157,7 +152,7 @@ bool m_bDelayShutdown;
 ### <a name="remarks"></a>Poznámky  
  Najdete v článku [CAtlExeModuleT přehled](../../atl/reference/catlexemodulet-class.md) podrobnosti.  
   
-##  <a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause  
+##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause  
  Pozastavení hodnota používá k zajištění, že jsou všechny objekty zmizel před vypnutí.  
   
 ```
@@ -167,7 +162,7 @@ DWORD m_dwPause;
 ### <a name="remarks"></a>Poznámky  
  Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) nastavit počet milisekund, po použít jako hodnotu pozastavení pro vypnutí serveru. Výchozí hodnota je 1000 milisekund.  
   
-##  <a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut  
+##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut  
  Hodnota časového limitu, používá ke zpoždění uvolnění modulu.  
   
 ```
@@ -177,7 +172,7 @@ DWORD m_dwTimeOut;
 ### <a name="remarks"></a>Poznámky  
  Tuto hodnotu změnit po volání [CAtlExeModuleT::InitializeCom](#initializecom) zadat počet milisekund, po použít jako hodnotu časového limitu pro vypnutí serveru. Výchozí hodnota je 5000 milisekund. Najdete v článku [CAtlExeModuleT přehled](../../atl/reference/catlexemodulet-class.md) další podrobnosti.  
   
-##  <a name="parsecommandline"></a>CAtlExeModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine  
  Analyzuje příkazového řádku a v případě potřeby provede registrace.  
   
 ```
@@ -197,7 +192,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána z [CAtlExeModuleT::WinMain](#winmain) a může být potlačena za účelem zpracování přepínače příkazového řádku. Výchozí implementace zkontroluje **/regserver** a **/Unregserver** argumenty příkazového řádku a provádí registraci nebo zrušení registrace.  
   
-##  <a name="postmessageloop"></a>CAtlExeModuleT::PostMessageLoop  
+##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop  
  Tato metoda je volána hned po ukončení smyčky zpráv.  
   
 ```
@@ -210,7 +205,7 @@ HRESULT PostMessageLoop() throw();
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu provést čištění vlastní aplikaci. Výchozí implementace volá [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects).  
   
-##  <a name="premessageloop"></a>CAtlExeModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop  
  Tato metoda je volána bezprostředně před vstupem smyčce zpráv.  
   
 ```
@@ -227,7 +222,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem přidání vlastní inicializaci kód aplikace. Výchozí implementace zaregistruje objekty tříd.  
   
-##  <a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects  
  Zaregistruje objektu třídy se OLE, takže k nim mohla připojit jiné aplikace.  
   
 ```
@@ -244,7 +239,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí S_OK na úspěch, S_FALSE kdyby žádné třídy k registraci nebo chybu HRESULT při selhání.  
   
-##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects  
  Odebere objekt třídy.  
   
 ```
@@ -254,7 +249,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí S_OK na úspěch, S_FALSE kdyby žádné třídy k registraci nebo chybu HRESULT při selhání.  
   
-##  <a name="run"></a>CAtlExeModuleT::Run  
+##  <a name="run"></a>  CAtlExeModuleT::Run  
  Tato metoda spustí kód v modulu EXE inicializovat, spusťte zpráva smyčky a vyčistit.  
   
 ```
@@ -271,7 +266,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda může být přepsána. Nicméně, v praxi je lepší přepsat [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), nebo [CAtlExeModuleT::PostMessageLoop](#postmessageloop) Místo toho.  
   
-##  <a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop  
+##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop  
  Tato metoda provede smyčce zpráv.  
   
 ```
@@ -281,7 +276,7 @@ void RunMessageLoop() throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda může být potlačena za účelem změnit chování smyčce zpráv.  
   
-##  <a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom  
+##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom  
  Uninitializes COM.  
   
 ```
@@ -291,7 +286,7 @@ static void UninitializeCom() throw();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda jednoduše volá [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) a je volána z destruktoru. Potlačí tuto metodu, pokud přepíšete [CAtlExeModuleT::InitializeCom](#initializecom).  
   
-##  <a name="unlock"></a>CAtlExeModuleT::Unlock  
+##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  Snižuje počet modulu zámku.  
   
 ```
@@ -301,7 +296,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování.  
   
-##  <a name="winmain"></a>CAtlExeModuleT::WinMain  
+##  <a name="winmain"></a>  CAtlExeModuleT::WinMain  
  Tato metoda implementuje je kód potřebný ke spuštění EXE.  
   
 ```

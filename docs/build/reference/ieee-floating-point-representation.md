@@ -1,13 +1,10 @@
 ---
-title: "Reprezentace plovoucí desetinné čárky IEEE | Microsoft Docs"
-ms.custom: 
+title: Reprezentace plovoucí desetinné čárky IEEE | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d209d1c2a7429515383f8ebe80c621d6f2b15890
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 Microsoft Visual C++ je konzistentní s číselné standardů IEEE. Existují tři typy interní reálná čísla. Skutečné\*4 a skutečné\*8 se používají v jazyce Visual C++. Skutečné\*4 je deklarováno s použitím slovo **float**. Skutečné\*8 je deklarováno s použitím slovo **dvojité**. V systému Windows 32-bit programování `long double` datový typ mapuje **dvojité**. Existuje, ale sestavení jazyková podpora pro výpočty pomocí skutečné * 10 datového typu.  
@@ -39,9 +34,9 @@ Microsoft Visual C++ je konzistentní s číselné standardů IEEE. Existují t�
   
 |Hodnota|Uložené jako|  
 |-----------|---------------|  
-|real*4|podepsat bit, 8bitové exponent, mantisa 23 bitů|  
-|real*8|podepsat bit, exponent 11 bitů, mantisa 52 bitů|  
-|real*10|podepsat bit, exponent 15-bit, mantisa 64-bit|  
+|Real * 4|podepsat bit, 8bitové exponent, mantisa 23 bitů|  
+|Real * 8|podepsat bit, exponent 11 bitů, mantisa 52 bitů|  
+|Real * 10|podepsat bit, exponent 15-bit, mantisa 64-bit|  
   
  V reálné * 4 a skutečné\*8 formátů, v mantisa, které nejsou uloženy v paměti, tak mantisy jsou ve skutečnosti 24 nebo 53 bits, i když se ukládají jenom 23 nebo 52 bits není předpokládané úvodní 1. Skutečné\*10 formátu ve skutečnosti ukládá tento bit.  
   
@@ -63,9 +58,9 @@ Microsoft Visual C++ je konzistentní s číselné standardů IEEE. Existují t�
   
 |Formát|BYTE 1|BYTE 2|BYTE 3|BYTE 4|...|N BAJTŮ|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
-|real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|Real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|Real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|Real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
  `S` představuje přihlašovací bit, `X`na jsou exponentu bits a `M`na jsou mantisa bits. Všimněte si, že krajní levé bit se předpokládá, že v reálném * 4 a skutečné\*8 formáty, ale je k dispozici jako "1" v bajtech 3 skutečných\*10 formátu.  
   

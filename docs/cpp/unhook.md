@@ -1,12 +1,9 @@
 ---
 title: __unhook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 Dissociates z událost metodu obslužné rutiny.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Ukazatel na metodu události, ze kterého vyjmutí obslužná rutina události:  
   
 -   Nativní C++ události: *SourceClass* je třída zdroje událostí a *EventMethod* je událost.  
@@ -64,7 +59,7 @@ long  __unhook(
  `interface`  
  Název rozhraní se unhooked z `receiver`, jenom pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver –](../windows/event-receiver.md) atribut je **true**.  
   
- *zdroj*  
+ *Zdroj*  
  Ukazatel na instanci zdroj události. V závislosti na kód `type` zadaný v **event_receiver –**, *zdroj* může být jedna z následujících akcí:  
   
 -   Nativní událostí zdrojového objektu ukazatel.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   Ukazatel spravovaného objektu (pro spravované událostí).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Ukazatel na metodu obslužné rutiny události být unhooked z události. Obslužná rutina je zadán jako metodu, třídu nebo odkaz na stejnou; Pokud nezadáte název třídy `__unhook` předpokládá třídy, která má být, ve kterém se označuje jako.  
   
 -   Nativní C++ události: *ReceiverClass* je třída příjemce událostí a `HandlerMethod` je obslužná rutina.  

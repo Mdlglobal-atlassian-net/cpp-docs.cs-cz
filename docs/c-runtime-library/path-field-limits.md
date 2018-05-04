@@ -1,13 +1,10 @@
 ---
-title: "Omezení pole cesty | Microsoft Docs"
-ms.custom: 
+title: Omezení pole cesty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _MAX_EXT
 - _MAX_DIR
@@ -29,38 +26,39 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c585afee6bbea3d0cc48b696bc005b9a8d6c7992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0672245a87cdbcf2a4a6dba6d36c675f3faafbc5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="path-field-limits"></a>Omezení pole cesty
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto konstanty určit maximální délku cesty a jednotlivých polí v této cestě.  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_MAX_DIR`|Maximální délka directory součásti|  
-|`_MAX_DRIVE`|Maximální délka jednotky součásti|  
-|`_MAX_EXT`|Maximální délka součásti rozšíření|  
-|`_MAX_FNAME`|Maximální délka součástí názvu souboru|  
-|`_MAX_PATH`|Maximální délka úplné cesty|  
-  
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty určit maximální délku cesty a jednotlivých polí v této cestě.
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_MAX_DIR`|Maximální délka directory součásti|
+|`_MAX_DRIVE`|Maximální délka jednotky součásti|
+|`_MAX_EXT`|Maximální délka součásti rozšíření|
+|`_MAX_FNAME`|Maximální délka součástí názvu souboru|
+|`_MAX_PATH`|Maximální délka úplné cesty|
+
 > [!NOTE]
->  C Runtime podporuje délka délky cesty až 32768 znaků, ale je až operačního systému, speciálně systému souborů, pro podporu těchto delší cesty. Součet pole nesmí být delší než `_MAX_PATH` pro úplné zpětné kompatibility s FAT32 systémy souborů. [!INCLUDE[win2kfamily](../c-runtime-library/includes/win2kfamily_md.md)], [!INCLUDE[WinXpFamily](../atl/reference/includes/winxpfamily_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], a systému souborů Windows Vista NTFS podporuje cesty až 32768 znaků v délka, ale jenom v případě, že pomocí rozhraní API kódování Unicode. Při použití dlouhé názvy cest, předpony cestu s znaky \\ \\? \ a použít Unicode verze funkce C Runtime.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+> C Runtime podporuje délka délky cesty až 32768 znaků, ale je až operačního systému, speciálně systému souborů, pro podporu těchto delší cesty. Součet pole nesmí být delší než `_MAX_PATH` pro úplné zpětné kompatibility s FAT32 systémy souborů. Systému souborů Windows NTFS podporuje cesty až 32768 znaků délka, ale jenom v případě, že pomocí rozhraní API kódování Unicode. Při použití dlouhé názvy cest, předpony cestu s znaky \\ \\? \ a použít Unicode verze funkce C Runtime.
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

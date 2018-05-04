@@ -1,30 +1,25 @@
 ---
-title: "Návod: Vytváření a používání vlastního dynamického propojení knihovny (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytváření a používání vlastního dynamického propojení knihovny (C++) | Microsoft Docs'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytváření a používání vlastního dynamického propojení knihovny (C++)
 
@@ -89,7 +84,7 @@ V této sadě úlohy vytvoření projektu pro knihovny DLL, přidejte kód a ses
 >
 >1. Na řádku nabídek zvolte **projektu**, **vlastnosti**.
 >
->1. V levém podokně **stránky vlastností** dialogové okno, vyberte **preprocesor** pod **vlastnosti konfigurace**, **C/C++**. Zkontrolujte obsah **Definice preprocesoru** vlastnost.<br/><br/>![Zkontrolujte vlastnost Definice preprocesoru](media/mathlibrary-153bug-preprocessor-definitions-check.png "Zkontrolujte vlastnost Definice preprocesoru")<br/><br/>Pokud se zobrazí **MATHLIBRARY &#95; EXPORTUJE** v **Definice preprocesoru** seznamu, pak nemusíte nic nezmění. Pokud se zobrazí **MathLibrary &#95; EXPORTUJE** místo toho pokračujte podle těchto kroků.
+>1. V levém podokně **stránky vlastností** dialogové okno, vyberte **preprocesor** pod **vlastnosti konfigurace**, **C/C++**. Zkontrolujte obsah **Definice preprocesoru** vlastnost.<br/><br/>![Zkontrolujte vlastnost Definice preprocesoru](media/mathlibrary-153bug-preprocessor-definitions-check.png "Zkontrolujte vlastnost Definice preprocesoru")<br/><br/>Pokud se zobrazí **MATHLIBRARY&#95;EXPORTUJE** v **Definice preprocesoru** seznamu, pak nemusíte nic nezmění. Pokud se zobrazí **MathLibrary&#95;EXPORTUJE** místo toho pokračujte podle těchto kroků.
 >
 >1. V horní části **stránky vlastností** dialogové okno, změny **konfigurace** rozevírací seznam pro **všechny konfigurace**.
 >
@@ -103,7 +98,7 @@ V této sadě úlohy vytvoření projektu pro knihovny DLL, přidejte kód a ses
 
 1. Na řádku nabídek zvolte **soubor**, **nový**, **projektu**.
 
-1. V levém podokně **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, **šablony**a vyberte **Visual C++**a pak v Centru Vyberte možnost **Konzolová aplikace Win32**. Zadejte `MathLibrary` v **název** textové pole k zadání názvu pro projekt.
+1. V levém podokně **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, **šablony**a vyberte **Visual C++** a pak v Centru Vyberte možnost **Konzolová aplikace Win32**. Zadejte `MathLibrary` v **název** textové pole k zadání názvu pro projekt.
 
    ![Název projektu MathLibrary](media/mathlibrary-project-name.png "název projektu MathLibrary")
 
@@ -176,9 +171,9 @@ Pravé teď tuto knihovnu DLL velmi mnoho neprovádí. Dále vytvoříte soubor 
 
 Tento soubor hlaviček deklaruje některé funkce k vytvoření zobecněný pořadí Fibonacciho dané dva počáteční hodnoty. Volání `fibonacci_init(1, 1)` posloupnost známé Fibonacciho číslo.
 
-Všimněte si preprocesoru příkazy v horní části souboru. Ve výchozím nastavení, přidá nový projekt šablona pro knihovnu DLL  ***PROJECTNAME*&#95; EXPORTUJE** k definované makra preprocesoru pro projektu knihovny DLL. V tomto příkladu definuje Visual Studio **MATHLIBRARY &#95; EXPORTUJE** při sestavení projektu MathLibrary DLL. (Průvodce v nástroji Visual Studio 2017 verze 15.3 nevynutí tuto definici symbol na velká písmena. Pokud název projektu "MathLibrary" pak symbol definované je MathLibrary &#95; EXPORTUJE místo MATHLIBRARY &#95; EXPORTUJE. That's proto existují další kroky výše a přidejte tento symbol.)
+Všimněte si preprocesoru příkazy v horní části souboru. Ve výchozím nastavení, přidá nový projekt šablona pro knihovny DLL ***PROJECTNAME *&#95;EXPORTUJE** k definované makra preprocesoru pro projektu knihovny DLL. V tomto příkladu definuje Visual Studio **MATHLIBRARY&#95;EXPORTUJE** při sestavení projektu MathLibrary DLL. (Průvodce v nástroji Visual Studio 2017 verze 15.3 nevynutí tuto definici symbol na velká písmena. Pokud zadáte název projektu "MathLibrary" pak symbol definované je MathLibrary&#95;EXPORTUJE místo MATHLIBRARY&#95;export. That's proto existují další kroky výše a přidejte tento symbol.)
 
-Když **MATHLIBRARY &#95; EXPORTUJE** makro je definován, **MATHLIBRARY &#95; Rozhraní API** makro nastaví `__declspec(dllexport)` modifikátor na deklarace funkcí. Tento modifikátor informuje kompilátoru a linkeru pro export funkce nebo proměnná z knihovny DLL, aby se může použít jiné aplikace. Když **MATHLIBRARY &#95; EXPORTUJE** je definován, například soubor hlaviček je obsažen ve klientskou aplikaci, **MATHLIBRARY &#95; Rozhraní API** se vztahuje `__declspec(dllimport)` modifikátor deklaracích. Tento modifikátor optimalizuje import funkce nebo proměnná v aplikaci. Další informace najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Při **MATHLIBRARY&#95;EXPORTUJE** makro je definován, **MATHLIBRARY&#95;rozhraní API** makro nastaví `__declspec(dllexport)` modifikátor na deklarace funkcí. Tento modifikátor informuje kompilátoru a linkeru pro export funkce nebo proměnná z knihovny DLL, aby se může použít jiné aplikace. Při **MATHLIBRARY&#95;EXPORTUJE** je definován, například soubor hlaviček je obsažen ve klientskou aplikaci, **MATHLIBRARY&#95;rozhraní API** se vztahuje `__declspec(dllimport)` modifikátor k deklarace. Tento modifikátor optimalizuje import funkce nebo proměnná v aplikaci. Další informace najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Chcete-li přidat implementace na knihovnu DLL
 

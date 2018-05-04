@@ -1,12 +1,9 @@
 ---
-title: "_variant_t – třída | Microsoft Docs"
-ms.custom: 
+title: _variant_t – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t
@@ -19,20 +16,18 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 0ebe850e4b0d0d9fd352df0e60c4ea0737b9fd8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-class"></a>_variant_t – třída
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  A `_variant_t` zapouzdřují `VARIANT` datového typu. Třída spravuje přidělení prostředků a navrácení a provádí volání funkce na **VariantInit** a **VariantClear** podle potřeby.  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[Operátor =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu na stávající `_variant_t` objektu.|  
+|[operátor =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu na stávající `_variant_t` objektu.|  
 |[Operator ==,! =](../cpp/variant-t-relational-operators.md)|Porovnat `_variant_t` objekty pro rovnosti nebo nerovnosti.|  
 |[Extraktory](../cpp/variant-t-extractors.md)|Extrahovat data z zapouzdřené **VARIANT** objektu.|  
   

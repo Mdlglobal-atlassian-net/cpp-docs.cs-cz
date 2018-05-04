@@ -1,12 +1,9 @@
 ---
 title: Souhrn pravidel rozsahu | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>Souhrn pravidel rozsahu
 Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkce, musí být jednoznačné s ohledem na počet a typ parametry funkce. Pokud název zůstane jednoznačným, [přístup ke členu](../cpp/member-access-control-cpp.md) pravidla.  
@@ -47,7 +42,7 @@ Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je 
 ## <a name="qualified-names"></a>Kvalifikované názvy  
  Názvy použité s binárním operátorem rozlišení oboru (`::`) jsou označovány jako „kvalifikované názvy“. Název zadaný po binárním operátoru rozlišení oboru musí být členem třídy uvedené na levé straně operátoru nebo členem její základní třídy.  
   
- Názvy zadané po výběru členů operátoru (**.** nebo  **->** ) musí být členy typu třídy objektu zadaného na levé straně operátoru nebo členové jeho základní třídy. Názvy zadané na pravé straně operátoru výběru členů (**->**) může být také objekty jiné třídy typu, za předpokladu, že na levé straně  **->**  je objekt třídy a aby třída definuje operátor přetížené výběr členů (**->**), se vyhodnocuje ukazatel na jiný typ třídy. (Toto přidělení je podrobněji popsána v [přístup ke členu třída](../cpp/member-access.md).)  
+ Názvy zadané po výběru členů operátoru (**.** nebo **->**) musí být členy typu třídy objektu zadaného na levé straně operátoru nebo členové jeho základní třídy. Názvy zadané na pravé straně operátoru výběru členů (**->**) může být také objekty jiné třídy typu, za předpokladu, že na levé straně **->** je objekt třídy a aby třída definuje operátor přetížené výběr členů (**->**), se vyhodnocuje ukazatel na jiný typ třídy. (Toto přidělení je podrobněji popsána v [přístup ke členu třída](../cpp/member-access.md).)  
   
  Kompilátor vyhledá názvy v následujícím pořadí a toto hledání zastaví, když je název nalezen:  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída COleDateTime | Microsoft Docs"
-ms.custom: 
+title: Třída COleDateTime | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDateTime
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ac939714eff9473397cbe50075f3082f38cdf23
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 Zapouzdří `DATE` datový typ, který se používá v automatizace OLE.  
@@ -114,7 +109,7 @@ class COleDateTime
 |[COleDateTime::m_status](#m_status)|Obsahuje stav tohoto `COleDateTime` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `COleDateTime`nemá základní třídu.  
+ `COleDateTime` nemá základní třídu.  
   
  Je jedním z možných typů pro [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) datový typ automatizace OLE. A `COleDateTime` hodnota představuje absolutní datum a čas.  
   
@@ -131,7 +126,7 @@ class COleDateTime
 > [!CAUTION]
 >  V předchozí tabulce Upozorňujeme, že i když se stane před půlnoc na 30 prosinec 1899 záporné hodnoty den hodnoty času dne nepodporují. Například 6:00:00 je vždy označena desetinnou hodnotu 0,25 bez ohledu na to, jestli je celé číslo představující den (po 30 prosinec 1899) kladné a záporné (před 30. prosince 1899). To znamená, že by jednoduché plovoucí porovnání bodu chybnou informací řazení `COleDateTime` představující 6:00 AM na 12/29 nebo 1899 jako **později** než jeden představující 7:00 AM ve stejný den.  
   
- `COleDateTime` Třída kalendářní data z 1. leden 100, až 31. prosince 9999. `COleDateTime` Třída používá gregoriánský kalendář; nepodporuje juliánský data. `COleDateTime`ignoruje letní čas. (Viz [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).)  
+ `COleDateTime` Třída kalendářní data z 1. leden 100, až 31. prosince 9999. `COleDateTime` Třída používá gregoriánský kalendář; nepodporuje juliánský data. `COleDateTime` ignoruje letní čas. (Viz [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).)  
   
 > [!NOTE]
 >  Můžete použít `%y` formátu načíst letopočty roku pouze pro data od 1900. Pokud použijete `%y` formát na datum před 1900, kód generuje chybu vyhodnocení.  
@@ -144,14 +139,14 @@ class COleDateTime
   
  [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]  
   
- Pro základní aritmetické operace `COleDateTime` hodnoty použít třídu doprovodné [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan`určení hodnoty časového intervalu. Vztah mezi tyto třídy je podobné mezi [CTime](../../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).  
+ Pro základní aritmetické operace `COleDateTime` hodnoty použít třídu doprovodné [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan` určení hodnoty časového intervalu. Vztah mezi tyto třídy je podobné mezi [CTime](../../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).  
   
  Další informace o `COleDateTime` a `COleDateTimeSpan` třídy, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ATLComTime.h  
   
-##  <a name="coledatetime_relational_operators"></a>Relační operátory COleDateTime  
+##  <a name="coledatetime_relational_operators"></a>  Relační operátory COleDateTime  
  Operátory porovnání.  
   
 ```
@@ -176,11 +171,11 @@ bool operator>=(const COleDateTime& date) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#13](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_2.cpp)]  
   
 ### <a name="example"></a>Příklad  
- Operátory  **>=** ,  **\< =** ,  **>** , a  **<** , bude assert, pokud `COleDateTime` je nastavena na hodnotu null.  
+ Operátory **>=**, **\< =**, **>**, a **<**, bude assert, pokud `COleDateTime` je nastavena na hodnotu null.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]  
   
-##  <a name="coledatetime"></a>COleDateTime::COleDateTime  
+##  <a name="coledatetime"></a>  COleDateTime::COleDateTime  
  Vytvoří `COleDateTime` objektu.  
   
 ```
@@ -248,23 +243,23 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  Toto je stručný popis jednotlivých konstruktor:  
   
-- `COleDateTime(`**)** Vytvoří `COleDateTime` objekt hodnotu 0 (půlnoc, 30 1899 prosince).  
+- `COleDateTime(` **)** Vytvoří `COleDateTime` objekt hodnotu 0 (půlnoc, 30 1899 prosince).  
   
-- `COleDateTime(``dateSrc` **)** Vytvoří `COleDateTime` objekt z existující `COleDateTime` objektu.  
+- `COleDateTime(` `dateSrc` **)** Vytvoří `COleDateTime` objekt z existující `COleDateTime` objektu.  
   
-- `COleDateTime(`*varSrc* **)** vytvoří `COleDateTime` objektu. Pokusí se převést `VARIANT` struktura nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt, který chcete data a času ( `VT_DATE`) hodnotu. Pokud tento převod je úspěšné, převedená hodnota je zkopírovat do nové `COleDateTime` objektu. Pokud ne, je hodnota `COleDateTime` objektu je nastavena na 0 (půlnoc, 30 prosinec 1899) a její stav na neplatný.  
+- `COleDateTime(` *varSrc* **)** vytvoří `COleDateTime` objektu. Pokusí se převést `VARIANT` struktura nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt, který chcete data a času ( `VT_DATE`) hodnotu. Pokud tento převod je úspěšné, převedená hodnota je zkopírovat do nové `COleDateTime` objektu. Pokud ne, je hodnota `COleDateTime` objektu je nastavena na 0 (půlnoc, 30 prosinec 1899) a její stav na neplatný.  
   
-- `COleDateTime(``dtSrc` **)** Vytvoří `COleDateTime` objektu z **datum** hodnotu.  
+- `COleDateTime(` `dtSrc` **)** Vytvoří `COleDateTime` objektu z **datum** hodnotu.  
   
-- `COleDateTime(``timeSrc` **)** Vytvoří `COleDateTime` objektu z `time_t` hodnotu.  
+- `COleDateTime(` `timeSrc` **)** Vytvoří `COleDateTime` objektu z `time_t` hodnotu.  
   
-- `COleDateTime(`*systimeSrc* **)** vytvoří `COleDateTime` objektu z `SYSTEMTIME` hodnotu.  
+- `COleDateTime(` *systimeSrc* **)** vytvoří `COleDateTime` objektu z `SYSTEMTIME` hodnotu.  
   
-- `COleDateTime(``filetimeSrc` **)** Vytvoří `COleDateTime` objektu z `FILETIME` hodnotu. . Všimněte si, že `FILETIME` používá světového koordinovaného času (UTC), takže pokud předáte místní čas ve struktuře, výsledky budou nesprávné. V tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290) ve Windows SDK pro další informace.  
+- `COleDateTime(` `filetimeSrc` **)** Vytvoří `COleDateTime` objektu z `FILETIME` hodnotu. . Všimněte si, že `FILETIME` používá světového koordinovaného času (UTC), takže pokud předáte místní čas ve struktuře, výsledky budou nesprávné. V tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290) ve Windows SDK pro další informace.  
   
-- `COleDateTime(``nYear`, `nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Vytvoří `COleDateTime` objektu ze zadané číselné hodnoty.  
+- `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Vytvoří `COleDateTime` objektu ze zadané číselné hodnoty.  
   
-- `COleDateTime(``wDosDate`, `wDosTime` **)** Vytvoří `COleDateTime` objektu ze zadané hodnoty data a času MS-DOS.  
+- `COleDateTime(` `wDosDate``wDosTime` **)** Vytvoří `COleDateTime` objektu ze zadané hodnoty data a času MS-DOS.  
   
  Další informace o `time_t` datový typ, najdete v článku [čas](../../c-runtime-library/reference/time-time32-time64.md) fungovat v *referenční dokumentace běhové knihovny*.  
   
@@ -278,7 +273,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#2](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]  
   
-##  <a name="format"></a>COleDateTime::Format  
+##  <a name="format"></a>  COleDateTime::Format  
  Vytvoří formátovaný reprezentace hodnoty data a času.  
   
 ```
@@ -291,11 +286,11 @@ CString Format(UINT nFormatID) const;
  `dwFlags`  
  Určuje jeden z následujících příznaků národního prostředí:  
   
-- `LOCALE_NOUSEROVERRIDE`Použijte nastavení systému výchozí národní prostředí místo vlastní uživatelská nastavení.  
+- `LOCALE_NOUSEROVERRIDE` Použijte nastavení systému výchozí národní prostředí místo vlastní uživatelská nastavení.  
   
-- `VAR_TIMEVALUEONLY`Ignorujte část data během analýzy.  
+- `VAR_TIMEVALUEONLY` Ignorujte část data během analýzy.  
   
-- `VAR_DATEVALUEONLY`Při analýze ignorujte část času.  
+- `VAR_DATEVALUEONLY` Při analýze ignorujte část času.  
   
  `lcid`  
  Určuje ID národního prostředí pro převod. Další informace o identifikátorech jazyků najdete v tématu [identifikátory jazyka](http://msdn.microsoft.com/library/windows/desktop/dd318691).  
@@ -303,13 +298,13 @@ CString Format(UINT nFormatID) const;
  `lpszFormat`  
  Formátování řetězce podobně jako `printf` formátování řetězce. Každý formátování kódu, před sebou procento ( `%`) přihlášení, budou nahrazeny v odpovídajícím `COleDateTime` součásti. Dalšími znaky v řetězci formátování se zkopírují na vrácený řetězec beze změny. Najdete v části funkce běhové [STRFTIME –](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Další informace. Hodnota a význam formátování kódy pro `Format` jsou:  
   
-- `%H`Čas do aktuálního dne  
+- `%H` Čas do aktuálního dne  
   
-- `%M`Minut do aktuální hodiny  
+- `%M` Minut do aktuální hodiny  
   
-- `%S`Sekund do aktuální minuty  
+- `%S` Sekund do aktuální minuty  
   
-- `%%`Znak procenta  
+- `%%` Znak procenta  
   
  `nFormatID`  
  ID prostředku pro řetězec formát ovládacího prvku.  
@@ -334,7 +329,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#3](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]  
   
-##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>  COleDateTime::GetAsDBTIMESTAMP  
  Volat tuto metodu za účelem získání čas v `COleDateTime` objekt jako **DBTIMESTAMP** datové struktury.  
   
 ```
@@ -354,7 +349,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#4](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]  
   
-##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>  COleDateTime::GetAsSystemTime  
  Volat tuto metodu za účelem získání čas v `COleDateTime` objekt jako `SYSTEMTIME` datové struktury.  
   
 ```
@@ -369,11 +364,11 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
  Vrátí **true** v případě úspěšného; **false** Pokud převod selže, nebo pokud `COleDateTime` objekt **NULL** nebo je neplatný.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetAsSystemTime`ukládá výsledný čas v odkazovaná *sysTime* objektu. `SYSTEMTIME` Nebude mít struktura dat inicializovat pomocí této funkce jeho **wMilliseconds** člen nastavit na nulu.  
+ `GetAsSystemTime` ukládá výsledný čas v odkazovaná *sysTime* objektu. `SYSTEMTIME` Nebude mít struktura dat inicializovat pomocí této funkce jeho **wMilliseconds** člen nastavit na nulu.  
   
  V tématu [GetStatus](#getstatus) pro další informace o informace o stavu uchovávat v `COleDateTime` objektu.  
   
-##  <a name="getasudate"></a>COleDateTime::GetAsUDATE  
+##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE  
  Volat tuto metodu za účelem získání čas v `COleDateTime` objekt jako **AKT.rev.AUKCE** datové struktury.  
   
 ```
@@ -390,7 +385,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="remarks"></a>Poznámky  
  A **AKT.rev.AUKCE** struktura představuje datum "rozbalené".  
   
-##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>  COleDateTime::GetCurrentTime  
  Volání této funkce statický člen vrátit hodnotu aktuální datum a čas.  
   
 ```
@@ -400,7 +395,7 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#5](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]  
   
-##  <a name="getday"></a>COleDateTime::GetDay  
+##  <a name="getday"></a>  COleDateTime::GetDay  
  Získá den v měsíci, které jsou reprezentována tuto hodnotu data a času.  
   
 ```
@@ -432,7 +427,7 @@ int GetDay() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#6](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]  
   
-##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>  COleDateTime::GetDayOfWeek  
  Získá den v měsíci, které jsou reprezentována tuto hodnotu data a času.  
   
 ```
@@ -464,7 +459,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#7](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]  
   
-##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
+##  <a name="getdayofyear"></a>  COleDateTime::GetDayOfYear  
  Získá den v roce reprezentována tuto hodnotu data a času.  
   
 ```
@@ -496,7 +491,7 @@ int GetDayOfYear() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#8](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]  
   
-##  <a name="gethour"></a>COleDateTime::GetHour  
+##  <a name="gethour"></a>  COleDateTime::GetHour  
  Získá hodinu reprezentována tuto hodnotu data a času.  
   
 ```
@@ -528,7 +523,7 @@ int GetHour() const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#9](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]  
   
-##  <a name="getminute"></a>COleDateTime::GetMinute  
+##  <a name="getminute"></a>  COleDateTime::GetMinute  
  Získá minutu reprezentována tuto hodnotu data a času.  
   
 ```
@@ -560,7 +555,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetHour](#gethour).  
   
-##  <a name="getmonth"></a>COleDateTime::GetMonth  
+##  <a name="getmonth"></a>  COleDateTime::GetMonth  
  Získá měsíc reprezentována tuto hodnotu data a času.  
   
 ```
@@ -592,7 +587,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetDay](#getday).  
   
-##  <a name="getsecond"></a>COleDateTime::GetSecond  
+##  <a name="getsecond"></a>  COleDateTime::GetSecond  
  Získá druhý reprezentována tuto hodnotu data a času.  
   
 ```
@@ -629,7 +624,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetHour](#gethour).  
   
-##  <a name="getstatus"></a>COleDateTime::GetStatus  
+##  <a name="getstatus"></a>  COleDateTime::GetStatus  
  Získá stav (platnosti) danou `COleDateTime` objektu.  
   
 ```
@@ -654,7 +649,7 @@ enum DateTimeStatus
   
  Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:  
   
-- `COleDateTime::error`Označuje, že došlo k chybě při pokusu o získání část hodnoty data a času.  
+- `COleDateTime::error` Označuje, že došlo k chybě při pokusu o získání část hodnoty data a času.  
   
 - **COleDateTime::valid** -označuje, že tato `COleDateTime` je objekt platný.  
   
@@ -691,7 +686,7 @@ enum DateTimeStatus
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#10](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]  
   
-##  <a name="getyear"></a>COleDateTime::GetYear  
+##  <a name="getyear"></a>  COleDateTime::GetYear  
  Získá v roce reprezentována tuto hodnotu data a času.  
   
 ```
@@ -725,7 +720,7 @@ int GetYear() const throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetDay](#getday).  
   
-##  <a name="m_dt"></a>COleDateTime::m_dt  
+##  <a name="m_dt"></a>  COleDateTime::m_dt  
  Základní **datum** struktury pro tuto `COleDateTime` objektu.  
   
 ```
@@ -739,7 +734,7 @@ DATE m_dt;
   
  Další informace o provádění **datum** objektu, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="m_status"></a>COleDateTime::m_status  
+##  <a name="m_status"></a>  COleDateTime::m_status  
  Obsahuje stav tohoto `COleDateTime` objektu.  
   
 ```
@@ -752,7 +747,7 @@ DateTimeStatus m_status;
 > [!CAUTION]
 >  Tento člen dat je pro pokročilé programovací situace. Měli byste použít vložené funkce člen [GetStatus](#getstatus) a [SetStatus](#setstatus). V tématu `SetStatus` pro další upozornění týkající se explicitně nastavení tohoto člena data.  
   
-##  <a name="operator_eq"></a>COleDateTime::operator =  
+##  <a name="operator_eq"></a>  COleDateTime::operator =  
  Kopie `COleDateTime` hodnotu.  
   
 ```
@@ -780,7 +775,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **Operator = (** `udate` **)** **AKT.rev.AUKCE** hodnota převedena a zkopírovali do této `COleDateTime` objektu. Pokud převod úspěšný, je stav tohoto objektu nastaven platný; Jestliže úspěšné, bude nastaveno na neplatný. A **AKT.rev.AUKCE** struktura představuje datum "rozbalené". Najdete v části funkce [VarDateFromUdate](http://msdn.microsoft.com/en-us/1c924ac5-b896-49e1-9ccf-825ac7a030c8) další podrobnosti.  
   
-- **Operator = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) hodnota převedena a zkopírovali do této `COleDateTime` objektu. Pokud převod úspěšný, je stav tohoto objektu nastaven platný; jinak je nastavená na neplatné. `FILETIME`používá světového koordinovaného času (UTC), takže pokud předáte čas UTC ve struktuře, výsledky budou převedeny od času UTC na místní čas a bude uložena jako variant čas. Toto chování je stejné jako Visual C++ verze 6.0 a Visual C++ .NET 2003 SP2. V tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290) ve Windows SDK pro další informace.  
+- **Operator = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) hodnota převedena a zkopírovali do této `COleDateTime` objektu. Pokud převod úspěšný, je stav tohoto objektu nastaven platný; jinak je nastavená na neplatné. `FILETIME` používá světového koordinovaného času (UTC), takže pokud předáte čas UTC ve struktuře, výsledky budou převedeny od času UTC na místní čas a bude uložena jako variant čas. Toto chování je stejné jako Visual C++ verze 6.0 a Visual C++ .NET 2003 SP2. V tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290) ve Windows SDK pro další informace.  
   
  Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) položku v sadě Windows SDK.  
   
@@ -790,7 +785,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
  Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="operator_add_-"></a>COleDateTime::operator +, -  
+##  <a name="operator_add_-"></a>  COleDateTime::operator +, -  
  Sčítání a odečítání **ColeDateTime** hodnoty.  
   
 ```
@@ -800,7 +795,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `COleDateTime`objekty představují absolutní časy. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) představovat relativní časy. První dva operátory umožňují sčítání a odečítání `COleDateTimeSpan` z hodnoty `COleDateTime` hodnotu. Třetí operátor umožňuje odečtena jeden `COleDateTime` hodnotu z jiné yield `COleDateTimeSpan` hodnotu.  
+ `COleDateTime` objekty představují absolutní časy. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) představovat relativní časy. První dva operátory umožňují sčítání a odečítání `COleDateTimeSpan` z hodnoty `COleDateTime` hodnotu. Třetí operátor umožňuje odečtena jeden `COleDateTime` hodnotu z jiné yield `COleDateTimeSpan` hodnotu.  
   
  Pokud některá z operandy null, stav výsledná `COleDateTime` hodnota je null.  
   
@@ -808,7 +803,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  Pokud některý z operandy je neplatný a dalších nemá hodnotu null, stav výsledná `COleDateTime` hodnota je neplatná.  
   
-  **+**  a  **-**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
+ **+** a **-** operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
   
  Další informace o stavu platná, neplatný a hodnotu null. hodnoty, najdete v článku [m_status](#m_status) členské proměnné.  
   
@@ -817,7 +812,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#12](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>COleDateTime::operator +=-=  
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTime::operator +=-=  
  Sčítání a odečítání **ColeDateTime** hodnotu z tohoto `COleDateTime` objektu.  
   
 ```
@@ -834,11 +829,11 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Další informace o stavu platná, neplatný a hodnotu null. hodnoty, najdete v článku [m_status](#m_status) členské proměnné.  
   
-  **+=**  a  **-=**  operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
+ **+=** a **-=** operátory bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
   
  Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="operator_date"></a>COleDateTime::operator datum  
+##  <a name="operator_date"></a>  COleDateTime::operator datum  
  Převede **ColeDateTime** hodnotu do **datum**.  
   
 ```
@@ -850,7 +845,7 @@ operator DATE() const throw();
   
  **Datum** operátor bude assert, pokud `COleDateTime` je nastavena na hodnotu null. V tématu [COleDateTime relační operátory](#coledatetime_relational_operators) příklad.  
   
-##  <a name="parsedatetime"></a>COleDateTime::ParseDateTime  
+##  <a name="parsedatetime"></a>  COleDateTime::ParseDateTime  
  Analyzuje řetězec k načtení hodnoty data a času.  
   
 ```
@@ -907,7 +902,7 @@ bool ParseDateTime(
   
  Další informace o hranice a implementací `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="setdate"></a>COleDateTime::SetDate  
+##  <a name="setdate"></a>  COleDateTime::SetDate  
  Nastaví datum tohoto `COleDateTime` objektu.  
   
 ```
@@ -973,7 +968,7 @@ int SetDate(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#11](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]  
   
-##  <a name="setdatetime"></a>COleDateTime::SetDateTime  
+##  <a name="setdatetime"></a>  COleDateTime::SetDateTime  
  Nastaví datum a čas tohoto `COleDateTime` objektu.  
   
 ```
@@ -1052,7 +1047,7 @@ int SetDateTime(
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetStatus](#getstatus).  
   
-##  <a name="setstatus"></a>COleDateTime::SetStatus  
+##  <a name="setstatus"></a>  COleDateTime::SetStatus  
  Nastaví stav tohoto `COleDateTime` objektu.  
   
 ```
@@ -1072,7 +1067,7 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [GetStatus](#getstatus).  
   
-##  <a name="settime"></a>COleDateTime::SetTime  
+##  <a name="settime"></a>  COleDateTime::SetTime  
  Nastaví dobu tohoto `COleDateTime` objektu.  
   
 ```

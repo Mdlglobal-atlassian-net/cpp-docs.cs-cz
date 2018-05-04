@@ -1,12 +1,9 @@
 ---
-title: "Řetězce makra převodů | Microsoft Docs"
-ms.custom: 
+title: Řetězce makra převodů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>Řetězce makra převodů
 
 Tyto makra zadejte řetězec funkce pro převod.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL a MFC řetězec převodních maker
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL a MFC řetězec převodních maker
 
 Makra převodů řetězec tady popisovaných jsou platné pro ATL a MFC. Další informace o převod řetězce MFC najdete v tématu [TN059: použití převodních maker MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) a [MFC – makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE a makra převodů TEXTMETRIC řetězec
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE a makra převodů TEXTMETRIC řetězec
 
 Tyto makra vytvořit kopii [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) nebo [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury a převod řetězců v rámci nové struktury na nový typ řetězec. Makra přidělit paměť v zásobníku pro novou strukturu a vrátí ukazatel na strukturu nové.  
   

@@ -1,12 +1,9 @@
 ---
-title: "_com_error – třída | Microsoft Docs"
-ms.custom: 
+title: _com_error – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerror-class"></a>_com_error – třída
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  A `_com_error` objekt představuje podmínku vyhledat pomocí funkce obálky zpracování chyb v souborech hlavičky generované z knihovny typů nebo jednu z tříd COM podpory. `_com_error` Třída zapouzdří `HRESULT` kód chyby a všechny přidružené `IErrorInfo Interface` objektu.  
   
@@ -49,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[Chyba](../cpp/com-error-error.md)|Načte `HRESULT` předaný konstruktoru.|  
-|[ErrorInfo](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|  
-|[WCode](../cpp/com-error-wcode.md)|Načte kód chyby 16bitové namapovat na zapouzdřené `HRESULT`.|  
+|[ErrorInfo –](../cpp/com-error-errorinfo.md)|Načte `IErrorInfo` objekt předaný konstruktoru.|  
+|[Wcode –](../cpp/com-error-wcode.md)|Načte kód chyby 16bitové namapovat na zapouzdřené `HRESULT`.|  
   
 ### <a name="ierrorinfo-functions"></a>Funkce IErrorInfo  
   
 |||  
 |-|-|  
 |[Popis](../cpp/com-error-description.md)|Volání `IErrorInfo::GetDescription` funkce.|  
-|[HelpContext](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|  
+|[HelpContext –](../cpp/com-error-helpcontext.md)|Volání `IErrorInfo::GetHelpContext` funkce.|  
 |[Soubor nápovědy](../cpp/com-error-helpfile.md)|Volání `IErrorInfo::GetHelpFile` – funkce|  
 |[Zdroj](../cpp/com-error-source.md)|Volání `IErrorInfo::GetSource` funkce.|  
 |[GUID](../cpp/com-error-guid.md)|Volání `IErrorInfo::GetGUID` funkce.|  
@@ -72,15 +67,15 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit `HRESULT` na 16bitové `wCode`.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` na 32-bit `HRESULT`.|  
+|[Hresulttowcode –](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bit `HRESULT` na 16bitové `wCode`.|  
+|[Wcodetohresult –](../cpp/com-error-wcodetohresult.md)|Mapuje 16bitové `wCode` na 32-bit `HRESULT`.|  
   
 **Konkrétní Microsoft END**  
   
 ## <a name="requirements"></a>Požadavky  
- **Header:** \<comdef.h>  
+ **Záhlaví:** \<comdef.h >  
   
- `Lib:`comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
+ `Lib:` comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)   

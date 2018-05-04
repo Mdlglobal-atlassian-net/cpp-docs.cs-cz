@@ -1,12 +1,9 @@
 ---
-title: "Třída CSacl | Microsoft Docs"
-ms.custom: 
+title: Třída CSacl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSacl
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csacl-class"></a>CSacl – třída
 Tato třída je obálku pro strukturu SACL (seznam řízení přístupu systému).  
@@ -52,7 +47,7 @@ class CSacl : public CAcl
 |Název|Popis|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Konstruktor|  
-|[CSacl::~CSacl](#dtor)|Destruktor.|  
+|[CSacl:: ~ CSacl](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -86,7 +81,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  Přidá k auditu řízení přístupu (ACE) `CSacl` objektu.  
   
 ```
@@ -137,7 +132,7 @@ bool AddAuditAce(
   
  V tématu [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) popis různé příznaky, které lze nastavit v `AceFlags` parametr.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  Konstruktor  
   
 ```
@@ -152,7 +147,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Poznámky  
  `CSacl` Objekt můžete volitelně vytvořit pomocí existující **seznamu ACL** struktura. Ujistěte se, že tento parametr je systémový seznam řízení přístupu (SACL) a ne seznamu volitelného řízení přístupu (DACL). V sestavení pro ladění, pokud je zadaný seznam DACL kontrolní výrazy dojde. Ve verzi sestavení jsou ignorovány všechny položky DACL.  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl:: ~ CSacl  
  Destruktor.  
   
 ```
@@ -162,7 +157,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Poznámky  
  Destruktoru uvolní všechny prostředky, které získávají pomocí objektu, včetně všech položek řízení přístupu (ACE).  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Vrátí počet položek řízení přístupu (ACE) `CSacl` objektu.  
   
 ```
@@ -172,7 +167,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet ACE, které jsou součástí `CSacl` objektu.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Operátor přiřazení.  
   
 ```
@@ -186,7 +181,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na aktualizaci `CSacl` objektu. Ujistěte se, že **seznamu ACL** parametr je ve skutečnosti seznamu řízení přístupu systému (SACL) a není seznamu volitelného řízení přístupu (DACL). V sestavení pro ladění dojde k kontrolní výrazy a v sestavení pro vydání **seznamu ACL** parametr bude ignorován.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  Odebere konkrétní ACE (položky řízení přístupu) **CSacl** objektu.  
   
 ```
@@ -200,7 +195,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je odvozený od [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Odebere všechny položky řízení přístupu (ACE), součástí `CSacl` objektu.  
   
 ```
@@ -212,7 +207,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>Viz také  
  [CAcl – třída](../../atl/reference/cacl-class.md)   
- [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [Seznamy ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Přehled třídy](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

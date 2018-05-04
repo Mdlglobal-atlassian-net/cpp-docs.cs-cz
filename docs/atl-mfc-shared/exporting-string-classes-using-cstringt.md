@@ -1,29 +1,24 @@
 ---
-title: "Export tříd řetězec pomocí CStringT | Microsoft Docs"
-ms.custom: 
+title: Export tříd řetězec pomocí CStringT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Export tříd řetězec pomocí CStringT
 V minulosti jste vývojáři MFC odvozené z `CString` se specializují vlastní řetězec třídy. V sadě Microsoft Visual C++ .NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md) třída byla nahrazena šablony třídy s názvem [CStringT](../atl-mfc-shared/reference/cstringt-class.md). To poskytuje několik výhod:  
@@ -32,7 +27,7 @@ V minulosti jste vývojáři MFC odvozené z `CString` se specializují vlastní
   
 -   S novým `CStringT` třída šablony, můžete přizpůsobit `CString` chování pomocí parametrů šablony, které určují vlastnosti znak, podobně jako šablon ve standardní knihovně C++.  
   
--   Při exportu třídě řetězec z knihovny DLL pomocí `CStringT`, kompilátor také automaticky vyexportuje `CString` základní třídy. Vzhledem k tomu `CString` je sám třídu šablony může být vytvořeno kompilátorem, pokud se použije, pokud kompilátor si je vědoma, `CString` je naimportované z knihovny DLL. Pokud jste migrovali projekty Visual C++ 6.0 na Visual C++ .NET, může viděli jste symbol chybami linkeru pro násobení definované `CString` z důvodu kolizí z `CString` naimportované z knihovny DLL a místně instancí verze. Správný způsob, jak k tomu je popsaný níže. Další informace o tomto problému najdete v článku znalostní báze Knowledge Base "propojování chyby při importu CString odvozené třídy" (Q309801) v [http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx).  
+-   Při exportu třídě řetězec z knihovny DLL pomocí `CStringT`, kompilátor také automaticky vyexportuje `CString` základní třídy. Vzhledem k tomu `CString` je sám třídu šablony může být vytvořeno kompilátorem, pokud se použije, pokud kompilátor si je vědoma, `CString` je naimportované z knihovny DLL. Pokud jste migrovali projekty Visual C++ 6.0 na Visual C++ .NET, může viděli jste symbol chybami linkeru pro násobení definované `CString` z důvodu kolizí z `CString` naimportované z knihovny DLL a místně instancí verze. Správný způsob, jak k tomu je popsaný níže. Další informace o tomto problému najdete v článku znalostní báze Knowledge Base "propojování chyby při importu CString odvozené třídy" (Q309801) v [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).  
   
  V následujícím scénáři způsobí, že linkeru k vytvoření chyby symbol pro násobkem definovaných tříd. Předpokládejme, že exportujete `CString`-odvozené třídy (`CMyString`) z knihovnu DLL:  
   

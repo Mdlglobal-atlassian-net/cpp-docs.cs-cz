@@ -2,12 +2,9 @@
 title: -OPT (optimalizace) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (optimalizace)
 Řídí optimalizace, které program LINK provádí během sestavování.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
  Určení **/OPT:ICF** není povolen **/OPT:REF** možnost.  
   
- **BRÁNOU FIREWALL [=** `iterations` **] &AMP;#124; NOICF**   
+ **BRÁNOU FIREWALL [=** `iterations` **] &AMP;#124; NOICF**  
  Použití **/OPT:ICF [=**`iterations`**]** k provedení identické sekvence COMDAT skládání. Redundantní sekvence COMDAT lze odebrat z výstupu linkeru. Volitelné `iterations` parametr určuje počet pokusů procházení symboly pro duplicitní položky. Výchozí počet iterací jsou dvě. Při dalších iteracích se mohou najít další duplicity, které se odhalí skládáním při předchozí iteraci.  
   
  Linkeru chová odlišně při **/OPT:REF** je zadán – a **bránou Firewall** ve výchozím nastavení je v platnosti – než kdy **/OPT:REF, bránou Firewall** explicitně nastaven. Formu **bránou Firewall** , je povolená s **/OPT:REF** samostatně není fold jen pro čtení dat – to zahrnuje .rdata, .pdata a .xdata. Proto jsou méně funkcí přeloženy, když vytváří bitové kopie pro [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] protože funkcí v tyto moduly jsou více závislé na jen pro čtení dat – například .pdata a .xdata. Chcete-li získat úplné **bránou Firewall** skládání chování, explicitně zadáte **/OPT:ICF**.  

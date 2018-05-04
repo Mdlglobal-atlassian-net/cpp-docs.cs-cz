@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Procesy explicitního propojení s volání knihovny DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu exportované funkce v knihovně DLL. Použijete ukazatel vrácený funkce k volání funkce DLL. **GetProcAddress** přijímá jako parametry popisovač modulu DLL (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a trvá buď název funkce je Chcete hovor nebo funkce exportu pořadí.  
+Procesy explicitního propojení s volání knihovny DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu exportované funkce v knihovně DLL. Použijete ukazatel vrácený funkce k volání funkce DLL. **GetProcAddress** přijímá jako parametry popisovač modulu DLL (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a načte název funkce, které chcete volání nebo pořadí export funkce.  
   
  Protože jsou volání funkce DLL prostřednictvím ukazatele a neexistuje žádný typ kompilaci kontrola, zajistěte, aby parametrů pro funkci správnost tak, aby nemáte overstep je paměť přidělená v zásobníku a způsobit narušení přístupu. Jedním ze způsobů pomáhají zajistit bezpečnost typů je prototypy funkcí exportovaných funkcí a vytvořte odpovídající definice TypeDef pro ukazatelů na funkce. Příklad:  
   

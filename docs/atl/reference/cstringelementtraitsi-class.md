@@ -1,12 +1,9 @@
 ---
-title: "Třída CStringElementTraitsI | Microsoft Docs"
-ms.custom: 
+title: Třída CStringElementTraitsI | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraitsI
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI – třída
 Tato třída poskytuje statické funkce související s řetězce, které jsou uložené v objektech třídy kolekce. Je podobná [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ale provádí porovnávání.  
@@ -77,7 +72,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcoll.h  
   
-##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
  Volání této statické funkce k porovnání dvou prvků řetězce rovnosti rozdíly v případě je ignorována.  
   
 ```
@@ -97,7 +92,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Poznámky  
  Porovnávání se nerozlišují velká písmena.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
  Volání této statickou funkci můžete porovnat dva elementy řetězec rozdíly v případě je ignorována.  
   
 ```
@@ -118,7 +113,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Poznámky  
  Porovnávání se nerozlišují velká písmena.  
   
-##  <a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  Volání této statické funkce Vypočítat hodnotu hash pro daný řetězec elementu.  
   
 ```
@@ -132,14 +127,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu hash, vypočítává pomocí obsahu řetězce.  
   
-##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
  Datový typ pro použití při přidávání do třídy objektu kolekce elementů.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
  Datový typ pro načítání elementy z kolekce třídy objektu.  
   
 ```

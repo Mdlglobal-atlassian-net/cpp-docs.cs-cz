@@ -1,13 +1,10 @@
 ---
-title: "_spawn, _wspawn – funkce | Microsoft Docs"
-ms.custom: 
+title: _spawn, _wspawn – funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn – funkce
 Každý z `_spawn` funkce vytvoří a spustí nový proces:  
@@ -114,7 +109,7 @@ Každý z `_spawn` funkce vytvoří a spustí nový proces:
  `_P_WAIT`  
  Pozastaví volající vlákno až do dokončení provádění nový proces (synchronní `_spawn`).  
   
- `_P_NOWAIT`nebo`_P_NOWAITO`  
+ `_P_NOWAIT` Nebo `_P_NOWAITO`  
  Bude pokračovat v provádění volající proces souběžně nový proces (asynchronní `_spawn`).  
   
  `_P_DETACH`  
@@ -138,7 +133,7 @@ Každý z `_spawn` funkce vytvoří a spustí nový proces:
 >  Mezery vložené do řetězců mohou způsobit neočekávané chování, například výsledkem předání řetězce `_spawn` funkci `"hi there"` bude nový proces, který získá dva argumenty `"hi"` a `"there"`. Proces selže, pokud bylo záměrem, aby nový proces otevřel soubor s názvem "hi there". Tomu lze zabránit citováním řetězce: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Nepředávejte funkci `_spawn` vstup uživatele bez explicitní kontroly jeho obsahu. `_spawn`bude mít za následek volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) , mějte na paměti tato nekvalifikované cesta názvy může vést k potenciální ohrožení zabezpečení.  
+>  Nepředávejte funkci `_spawn` vstup uživatele bez explicitní kontroly jeho obsahu. `_spawn` bude mít za následek volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) , mějte na paměti tato nekvalifikované cesta názvy může vést k potenciální ohrožení zabezpečení.  
   
  Argument ukazatele můžete předat jako samostatné argumenty (v `_spawnl`, `_spawnle`, `_spawnlp`, a `_spawnlpe`) nebo jako pole ukazatele (v `_spawnv`, `_spawnve`, `_spawnvp`, a `_spawnvpe`). Musíte zadat alespoň jeden argument, `arg0` nebo `argv`[0], k proces spuštěný. Podle konvence tento argument je název aplikace, jako by ji zadejte na příkazovém řádku. Jinou hodnotu nevytváří k chybě.  
   
@@ -247,12 +242,12 @@ from SPAWN!
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../c-runtime-library/process-and-environment-control.md)   
- [přerušení](../c-runtime-library/reference/abort.md)   
+ [Přerušení](../c-runtime-library/reference/abort.md)   
  [AtExit](../c-runtime-library/reference/atexit.md)   
  [_exec, _wexec – funkce](../c-runtime-library/exec-wexec-functions.md)   
  [ukončení, _exit –, _exit –](../c-runtime-library/reference/exit-exit-exit.md)   
  [_flushall –](../c-runtime-library/reference/flushall.md)   
  [_getmbcp –](../c-runtime-library/reference/getmbcp.md)   
- [_onexit –, _onexit_m –](../c-runtime-library/reference/onexit-onexit-m.md)   
- [_setmbcp –](../c-runtime-library/reference/setmbcp.md)   
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
  [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

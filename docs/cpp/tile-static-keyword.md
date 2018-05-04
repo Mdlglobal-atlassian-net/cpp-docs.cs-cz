@@ -1,12 +1,9 @@
 ---
-title: "tile_static – klíčové slovo | Microsoft Docs"
-ms.custom: 
+title: tile_static – klíčové slovo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - tile_static_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tilestatic-keyword"></a>tile_static – klíčové slovo
 Klíčové slovo `tile_static` se používá k deklaraci proměnné, ke které lze přistupovat všemi vlákny v rozložení vláken. Životnost proměnné začíná, jakmile vykonávání dosáhne bodu deklarace, a končí při návratu funkce jádra. Další informace o používání bloků, najdete v části [pomocí dlaždice](../parallel/amp/using-tiles.md).  

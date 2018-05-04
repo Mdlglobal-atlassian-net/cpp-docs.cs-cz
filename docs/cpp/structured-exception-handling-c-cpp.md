@@ -2,11 +2,8 @@
 title: Strukturované zpracování výjimek (C/C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 Přestože systém Windows a Visual C++ podporují strukturovaného zpracování (SEH) výjimek, doporučujeme použít zpracování výjimek C++ standardu ISO, protože umožňuje kód víc přenosného a flexibilní. Nicméně v existující kód nebo pro určité typy programů, můžete stále nejspíš muset použít SEH.  
@@ -38,9 +33,9 @@ Přestože systém Windows a Visual C++ podporují strukturovaného zpracování
 ## <a name="grammar"></a>Gramatika  
  *Zkuste s výjimkou příkaz* :  
   
- `__try`*složené – příkaz*  
+ `__try` *složené – příkaz*  
   
- `__except`( `expression` ) *složené – příkaz*  
+ `__except` ( `expression` ) *složené – příkaz*  
   
 ## <a name="remarks"></a>Poznámky  
  S SEH můžete zajistěte, aby byly prostředky třeba bloky paměti a soubory správně Pokud spouštění neočekávaně ukončena. Můžete také řešit konkrétní problémy – například nedostatek paměti – pomocí stručným strukturovaný kód, který není závislý na `goto` příkazy nebo vypracovala testování návratové kódy.  

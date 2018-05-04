@@ -1,13 +1,10 @@
 ---
-title: "Logické operátory jazyka C | Microsoft Docs"
-ms.custom: 
+title: Logické operátory jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f92adbeab4175178be8f41a09c4455d8a581131
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-logical-operators"></a>Logické operátory jazyka C
 Logické operátory provést logické- a (**&&**) a logické OR ( `||` ) operace.  
@@ -45,7 +40,7 @@ Logické operátory provést logické- a (**&&**) a logické OR ( `||` ) operace
  *logický výraz OR*:  
  *logické a – výraz*  
   
- *logický výraz OR***&#124; &#124;** *logické a – výraz*   
+ *logický výraz OR***&#124;&#124;***logické a – výraz*   
   
  Logické operátory neprovádět obvyklé aritmetické převody. Místo toho vyhodnocují každý operand z hlediska jeho ekvivalenční na hodnotu 0. Výsledek logické operace je 0 nebo 1. Výsledný typ není `int`.  
   
@@ -78,4 +73,4 @@ printf( "%d" , (x == w || x == y || x == z) );
   
 ## <a name="see-also"></a>Viz také  
  [Logický operátor AND: & &](../cpp/logical-and-operator-amp-amp.md)   
- [Logický operátor OR: &#124; &#124;](../cpp/logical-or-operator-pipe-pipe.md)
+ [Logický operátor OR:&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

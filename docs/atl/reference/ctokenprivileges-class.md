@@ -1,12 +1,9 @@
 ---
-title: "Třída CTokenPrivileges | Microsoft Docs"
-ms.custom: 
+title: Třída CTokenPrivileges | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges – třída
 Tato třída je obálka pro **TOKEN_PRIVILEGES** struktury.  
@@ -58,7 +53,7 @@ class CTokenPrivileges
 |Název|Popis|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Konstruktor|  
-|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destruktor.|  
+|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -94,7 +89,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
   
-##  <a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>  CTokenPrivileges::Add  
  Přidá jeden nebo více oprávnění k `CTokenPrivileges` objektu tokenu přístupu.  
   
 ```
@@ -115,7 +110,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  První formulář tato metoda vrátí hodnotu PRAVDA, pokud je oprávnění úspěšně přidán, false jinak.  
   
-##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  Konstruktor  
   
 ```
@@ -134,7 +129,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Poznámky  
  `CTokenPrivileges` Můžete volitelně vytvořit objekt pomocí **TOKEN_PRIVILEGES** struktura nebo dříve definovaném `CTokenPrivileges` objektu.  
   
-##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  Destruktor.  
   
 ```
@@ -144,7 +139,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>Poznámky  
  Destruktoru uvolní všechny přidělené prostředky.  
   
-##  <a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>  CTokenPrivileges::Delete  
  Odstraní oprávnění z `CTokenPrivileges` objektu tokenu přístupu.  
   
 ```
@@ -161,7 +156,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je užitečná jako nástroj pro vytváření tokenů s omezeným přístupem.  
   
-##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
  Odstraní všechna oprávnění z `CTokenPrivileges` objektu tokenu přístupu.  
   
 ```
@@ -171,7 +166,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>Poznámky  
  Odstraní všechna oprávnění, které jsou součástí `CTokenPrivileges` objektu tokenu přístupu.  
   
-##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
  Načte zobrazované názvy pro oprávnění, které jsou součástí `CTokenPrivileges` objektu tokenu přístupu.  
   
 ```
@@ -187,7 +182,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  Tato metoda načte zobrazitelné název: například, pokud je název atributu SE_REMOTE_SHUTDOWN_NAME, zobrazitelné název je "Vynutit vypnutí ze vzdáleného systému." Chcete-li získat název systému, použijte [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
-##  <a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  Vrátí počet položek oprávnění v `CTokenPrivileges` objektu.  
   
 ```
@@ -197,7 +192,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet oprávnění, které jsou součástí `CTokenPrivileges` objektu.  
   
-##  <a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  Vrátí délku `CTokenPrivileges` objektu.  
   
 ```
@@ -207,7 +202,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí počet bajtů požadovaných k uložení **TOKEN_PRIVILEGES** struktura reprezentována `CTokenPrivileges` objektu, včetně všech položek oprávnění obsahuje.  
   
-##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
  Načte místně jedinečné identifikátory (LUID) a atribut příznaky z `CTokenPrivileges` objektu.  
   
 ```
@@ -226,7 +221,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vytvoří výčet všech oprávnění, které jsou součástí `CTokenPrivileges` přístup k objektu tokenu a umístění jednotlivých LUID a (volitelně) příznaky atribut do pole objektů.  
   
-##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
  Načte příznaky názvu a podle atributu z `CTokenPrivileges` objektu.  
   
 ```
@@ -247,7 +242,7 @@ void GetNamesAndAttributes(
   
  Tato metoda načte název atributu, nikoli název zobrazitelné: například, pokud je název atributu SE_REMOTE_SHUTDOWN_NAME, název systému je "Oprávnění SeRemoteShutdownPrivilege." Chcete-li získat zobrazitelný název, použijte metodu [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
-##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  Vrátí ukazatel **TOKEN_PRIVILEGES** struktury.  
   
 ```
@@ -257,7 +252,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí ukazatel [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struktury.  
   
-##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Načte atribut spojený s názvem dané oprávnění.  
   
 ```
@@ -276,7 +271,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu PRAVDA, pokud je atribut úspěšně načteny, false jinak.  
   
-##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>  CTokenPrivileges::operator =  
  Operátor přiřazení.  
   
 ```
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CTokenPrivileges` objektu.  
   
-##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  Vrhá hodnotu na ukazatel **TOKEN_PRIVILEGES** struktury.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Globální funkce registru a TypeLib | Microsoft Docs"
-ms.custom: 
+title: Globální funkce registru a TypeLib | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registru a knihovny typů
 Tyto funkce poskytuje podporu pro načítání a registraci knihovny typů.  
@@ -68,7 +63,7 @@ Tyto funkce poskytuje podporu pro načítání a registraci knihovny typů.
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 Tato funkce slouží k určení, zda aplikace přesměruje registru přístup k **HKEY_CURRENT_USER** (**HKCU**) uzlu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -78,11 +73,11 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`pEnabled`  
- `TRUE`Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).  
+ [out] `pEnabled`  
+ `TRUE` Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `S_OK`Pokud je metoda úspěšné, jinak `HRESULT` kód chyby, pokud dojde k chybě.  
+ `S_OK` Pokud je metoda úspěšné, jinak `HRESULT` kód chyby, pokud dojde k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení není povoleno přesměrování registru. Pokud povolíte tuto možnost, přístup k registru je přesměrován na **HKEY_CURRENT_USER\Software\Classes**.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  Vytvoří zadaný klíč registru.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 Odstraní určený klíč registrů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  Voláním této funkce se zaregistruje knihovna typů.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  Otevře určený klíč registrů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 Otevře určený klíč registrů. 
 
 ### <a name="syntax"></a>Syntaxe  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  Pomocné rutiny se zrušit registraci obslužnou rutinu preview.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 Nastaví, zda aplikace přesměruje registru přístup k **HKEY_CURRENT_USER** (**HKCU**) uzlu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -278,11 +273,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).  
+ [v] `bEnable`  
+ `TRUE` Označuje, že se přesměruje informace o registru **HKCU** uzlu; `FALSE` označuje, že aplikace do uzlu výchozí zapisuje informace registru. Je výchozí uzel **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `S_OK`Pokud je metoda úspěšné, jinak `HRESULT` kód chyby, pokud dojde k chybě.  
+ `S_OK` Pokud je metoda úspěšné, jinak `HRESULT` kód chyby, pokud dojde k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení není povoleno přesměrování registru. Pokud povolíte tuto možnost, přístup k registru je přesměrován na **HKEY_CURRENT_USER\Software\Classes**.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  Voláním této funkce se zruší registrace knihovny typů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  Voláním této funkce se načte knihovna typů.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [AtlRegisterTypeLib](#atlregistertypelib) a [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  Tato funkce byla v sadě Visual Studio 2013 nepoužívá a je odebrán v sadě Visual Studio 2015.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  Voláním této funkce se provede čtení nebo zápis v systémovém registru.  
 
 ### <a name="syntax"></a>Syntaxe  
@@ -368,7 +363,7 @@ HRESULT RegistryDataExchange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *pT*  
+ *PT*  
  Ukazatel na aktuální objekt.  
   
  *rdxOp*  

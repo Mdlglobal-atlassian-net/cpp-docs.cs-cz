@@ -1,13 +1,10 @@
 ---
-title: "– Možnosti nástroje EDITBIN | Microsoft Docs"
-ms.custom: 
+title: – Možnosti nástroje EDITBIN | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>Možnosti EDITBIN
 Editbin – slouží k úpravě objektu soubory, spustitelné soubory a dynamické knihovny (DLL). Zadejte možnosti změny, které provádí nástroje EDITBIN.  
@@ -41,7 +36,7 @@ Editbin – slouží k úpravě objektu soubory, spustitelné soubory a dynamick
 |[/APPCONTAINER](../../build/reference/appcontainer.md)|Určuje, zda aplikace musíte spustit v rámci AppContainer – například aplikace UPW.|  
 |[/BIND](../../build/reference/bind.md)|Nastaví adresy pro vstupní body v zadané objekty, které se doba načítání rychlost.|  
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Určuje, zda knihovnu DLL nebo spustitelné bitové kopie může být náhodně rebased během zatížení pomocí adres místo rozložení náhodné (technologie ASLR).|  
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Sestava s interními chybami společnosti Microsoft.|  
+|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Sestava s interními chybami společnosti Microsoft.|  
 |[/HEAP](../../build/reference/heap.md)|Nastaví velikost haldy spustitelné bitové kopie v bajtech.|  
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Určuje, zda knihovnu DLL nebo spustitelné bitové kopie podporuje vysokou entropie (64 bitů) adresu místa rozložení náhodné (technologie ASLR).|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Určuje, jestli při načítání, zkontrolujte digitální podpis.|  

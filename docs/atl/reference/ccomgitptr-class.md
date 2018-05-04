@@ -1,12 +1,9 @@
 ---
-title: "Třída CComGITPtr | Microsoft Docs"
-ms.custom: 
+title: Třída CComGITPtr | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComGITPtr
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr – třída
 Tato třída poskytuje metody pro práci s ukazatele rozhraní a globální rozhraní tabulku (GIT).  
@@ -90,7 +85,7 @@ class CComGITPtr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>  CComGITPtr::Attach  
  Volejte tuto metodu za účelem registrace ukazatel rozhraní v tabulce globální rozhraní (GIT).  
   
 ```
@@ -112,7 +107,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>Poznámky  
  V sestavení pro ladění dojde k chybě assertion Pokud GITU není platný, nebo pokud je soubor cookie rovnou na hodnotu NULL.  
   
-##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  Konstruktor  
   
 ```
@@ -124,16 +119,16 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`p`  
+ [v] `p`  
  Ukazatel rozhraní se neukládají v tabulce globální rozhraní (GIT).  
   
- [v]`git`  
+ [v] `git`  
  Odkaz na existující `CComGITPtr` objektu.  
   
- [v]`dwCookie`  
+ [v] `dwCookie`  
  Soubor cookie použít k identifikaci ukazatel rozhraní.  
   
- [v]`rv`  
+ [v] `rv`  
  Zdroj `CComGITPtr` pro přesun dat z objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -141,7 +136,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  Konstruktor, který využívá `rv` je konstruktor move. Při přesunu dat ze zdroje, `rv`a potom `rv` se vymaže.  
   
-##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  Destruktor.  
   
 ```
@@ -151,7 +146,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>Poznámky  
  Odebere z tabulky globální rozhraní (GIT), rozhraní pomocí [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>  CComGITPtr::CopyTo  
  Volejte tuto metodu pro kopírování rozhraní z tabulky globální rozhraní (GIT) do předaný ukazatele.  
   
 ```
@@ -168,7 +163,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>Poznámky  
  Rozhraní z GITU se zkopíruje na předaný ukazatele. Volající musí vydala ukazatele, pokud se už nevyžaduje.  
   
-##  <a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>  CComGITPtr::Detach  
  Volat tuto metodu pro zrušení přiřazení rozhraní z `CComGITPtr` objektu.  
   
 ```
@@ -181,7 +176,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>Poznámky  
  Je až volající rozhraní odebrání GIT, pomocí [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  Volání této metody vrátit soubor cookie z `CComGITPtr` objektu.  
   
 ```
@@ -194,7 +189,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>Poznámky  
  Soubor cookie je proměnná používá k identifikaci rozhraní a jeho umístění.  
   
-##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
  Soubor cookie.  
   
 ```
@@ -204,7 +199,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>Poznámky  
  Soubor cookie je členské proměnné použít k identifikaci rozhraní a jeho umístění.  
   
-##  <a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>  CComGITPtr::operator =  
  Operátor přiřazení.  
   
 ```
@@ -215,16 +210,16 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`p`  
+ [v] `p`  
  Ukazatele na rozhraní.  
   
- [v]`git`  
+ [v] `git`  
  Odkaz na `CComGITPtr` objektu.  
   
- [v]`dwCookie`  
+ [v] `dwCookie`  
  Soubor cookie použít k identifikaci ukazatel rozhraní.  
   
- [v]`rv`  
+ [v] `rv`  
  `CComGITPtr` Pro přesun dat z.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -233,7 +228,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>Poznámky  
  Přiřadí novou hodnotu k `CComGITPtr` objekt z existujícího objektu nebo z odkazu na tabulku globální rozhraní.  
   
-##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
  Vrátí souboru cookie přidruženého `CComGITPtr` objektu.  
   
 ```  
@@ -243,7 +238,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>Poznámky  
  Soubor cookie je proměnná používá k identifikaci rozhraní a jeho umístění.  
   
-##  <a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>  CComGITPtr::Revoke  
  Voláním této metody rozhraní aktuální odebere z tabulky globální rozhraní (GIT).  
   
 ```

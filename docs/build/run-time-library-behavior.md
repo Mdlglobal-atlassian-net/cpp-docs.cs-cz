@@ -2,12 +2,9 @@
 title: Chování běhové knihovny jazyka Visual C++ a knihovny DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Knihovny DLL a chování běhové knihovny jazyka Visual C++  
   
-Při sestavování dynamická knihovna (DLL) pomocí aplikace Visual C++, ve výchozím nastavení, zahrnuje linkeru běhové knihovny jazyka Visual C++ (VCRuntime). VCRuntime obsahuje kód potřebný k inicializaci a ukončit spustitelný soubor C/C++. Při propojení do knihovny DLL, kód VCRuntime poskytuje interní funkce vstupního bodu DLL názvem `_DllMainCRTStartup` , která zpracovává zprávy operačního systému Windows na knihovnu DLL přiřadit nebo odpojení od procesu nebo přístup z více vláken. `_DllMainCRTStartup` Funkce provádí základní úlohy, jako je nastaveno, C běhové knihovny (CRT) inicializace a ukončování zásobníku vyrovnávací paměti zabezpečení a volá konstruktory a destruktory pro statické a globální objekty. `_DllMainCRTStartup`funkce pro jiné knihovny, například WinRT, MFC a knihovny ATL k provedení vlastní inicializace a ukončování háku také volání. Bez této inicializace, CRT a další knihovny, a také statické proměnné zůstane v neinicializovaném stavu. Zda vaše knihovna DLL používá staticky propojené CRT nebo dynamicky propojené knihovny DLL CRT, se nazývají stejné VCRuntime interní inicializace a ukončování rutin.  
+Při sestavování dynamická knihovna (DLL) pomocí aplikace Visual C++, ve výchozím nastavení, zahrnuje linkeru běhové knihovny jazyka Visual C++ (VCRuntime). VCRuntime obsahuje kód potřebný k inicializaci a ukončit spustitelný soubor C/C++. Při propojení do knihovny DLL, kód VCRuntime poskytuje interní funkce vstupního bodu DLL názvem `_DllMainCRTStartup` , která zpracovává zprávy operačního systému Windows na knihovnu DLL přiřadit nebo odpojení od procesu nebo přístup z více vláken. `_DllMainCRTStartup` Funkce provádí základní úlohy, jako je nastaveno, C běhové knihovny (CRT) inicializace a ukončování zásobníku vyrovnávací paměti zabezpečení a volá konstruktory a destruktory pro statické a globální objekty. `_DllMainCRTStartup` funkce pro jiné knihovny, například WinRT, MFC a knihovny ATL k provedení vlastní inicializace a ukončování háku také volání. Bez této inicializace, CRT a další knihovny, a také statické proměnné zůstane v neinicializovaném stavu. Zda vaše knihovna DLL používá staticky propojené CRT nebo dynamicky propojené knihovny DLL CRT, se nazývají stejné VCRuntime interní inicializace a ukončování rutin.  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Výchozí knihovny DLL vstupní bod _DllMainCRTStartup  
   

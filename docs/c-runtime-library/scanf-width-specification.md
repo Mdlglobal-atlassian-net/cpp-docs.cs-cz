@@ -1,13 +1,10 @@
 ---
-title: "Specifikace šířky scanf | Microsoft Docs"
-ms.custom: 
+title: Specifikace šířky scanf | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>Specifikace šířky scanf
 Tyto informace platí pro interpretaci řetězce formátu v `scanf` řadu funkcí, včetně zabezpečené verze, jako například `scanf_s`. Tyto funkce normálně předpokládají, že vstupní datový proud je rozdělené do pořadí tokenů. Tokeny jsou oddělené prázdné znaky (mezera, tabulátor nebo nový řádek), nebo v případě číselné typy přirozené konec číselný datový typ podle prvního znaku, který nelze převést na číselné text. Specifikace šířky lze však způsobit analýza vstupu k zastavení před přirozené koncem token.  
@@ -70,14 +65,14 @@ scanf_s("%20s", str, 21);
 |`short int`|**h**|**d**, **i**, **o**, **x**, nebo **X**|  
 |**krátká celočíselná bez znaménka**|**h**|**u**|  
 |__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, nebo **X**|  
-|Znakovou s`scanf`|**h**|**c** nebo **C**|  
-|Znakovou s`wscanf`|**h**|**c** nebo **C**|  
-|Široká znaková s`scanf`|**l**|**c** nebo **C**|  
-|Široká znaková s`wscanf`|**l**|**c**, nebo **C**|  
-|Jednobajtové - řetězec znaků se`scanf`|**h**|**s** nebo **S**|  
-|Jednobajtové - řetězec znaků se`wscanf`|**h**|**s** nebo **S**|  
-|Široká charakterová řetězec s`scanf`|**l**|**s** nebo **S**|  
-|Široká charakterová řetězec s`wscanf`|**l**|**s** nebo **S**|  
+|Znakovou s `scanf`|**h**|**c** nebo **C**|  
+|Znakovou s `wscanf`|**h**|**c** nebo **C**|  
+|Široká znaková s `scanf`|**l**|**c** nebo **C**|  
+|Široká znaková s `wscanf`|**l**|**c**, nebo **C**|  
+|Jednobajtové - řetězec znaků se `scanf`|**h**|**s** nebo **S**|  
+|Jednobajtové - řetězec znaků se `wscanf`|**h**|**s** nebo **S**|  
+|Široká charakterová řetězec s `scanf`|**l**|**s** nebo **S**|  
+|Široká charakterová řetězec s `wscanf`|**l**|**s** nebo **S**|  
   
  Následující příklady použití **h** a **l** s `scanf_s` funkce a `wscanf_s` funkce:  
   
@@ -94,7 +89,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Všimněte si, že **% [-z]** a **% [z-a]** , jsou považovány za ekvivalentní **%[abcde...z]**. Toto je společného `scanf` rozšíření funkce, ale Všimněte si, že standardu ANSI nevyžaduje ho.  
   
 ## <a name="reading-unterminated-strings"></a>Čtení neukončený řetězce  
- Chcete-li uložit řetězec bez ukládání ukončující znak hodnoty null ('\0'), použijte specifikace `%`  *n*  **c** kde  *n*  je desetinné číslo. V takovém případě **c** – znak typu označuje, že je argumentem ukazatel na pole znaků. Další  *n*  znaků se načítají z vstupního datového proudu do zadaného umístění a je připojeno žádné znak hodnoty null ('\0'). Pokud  *n*  není určena, výchozí hodnota je 1.  
+ Chcete-li uložit řetězec bez ukládání ukončující znak hodnoty null ('\0'), použijte specifikace `%` *n *** c** kde *n* desetinné číslo. V takovém případě **c** – znak typu označuje, že je argumentem ukazatel na pole znaků. Další *n* znaků se načítají z vstupního datového proudu do zadaného umístění a je připojeno žádné znak hodnoty null ('\0'). Pokud *n* není určena, výchozí hodnota je 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Když se zastaví čtení pole scanf  
  `scanf` Funkce kontroluje každý vstupní pole po znacích. Může zastavit, čtení konkrétní vstupní pole, než dorazí do místa znak z různých důvodů:  

@@ -1,29 +1,24 @@
 ---
-title: "Přehled deklarátorů | Microsoft Docs"
-ms.custom: 
+title: Přehled deklarátorů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory, popsané v [deklarace a definice](declarations-and-definitions-cpp.md), nesou vlastnosti, například třída typ a úložiště. Modifikátory, popsané v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravte deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
@@ -31,7 +26,7 @@ Deklarátory jsou ty součásti deklarace, které určují názvy objektů a fun
  ![Modifikátory specifikátory a deklarátory](../cpp/media/vc38qy1.gif "vc38QY1")  
 Specifikátory, modifikátory a deklarátory  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Většinu klíčových slov rozšířených společností Microsoft lze použít jako modifikátory a vytvořit tak odvozené typy. Nejsou to specifikátory ani deklarátory. (Viz [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   

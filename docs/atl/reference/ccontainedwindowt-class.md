@@ -1,12 +1,9 @@
 ---
-title: "Třída CContainedWindowT | Microsoft Docs"
-ms.custom: 
+title: Třída CContainedWindowT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CContainedWindowT
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3f90e23eed3bd1eba80bbf90fe73de45eb7cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT – třída
 Tato třída implementuje okno obsažené v rámci jiného objektu.  
@@ -97,11 +92,11 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pObject](#m_pobject)|Odkazuje na objekt obsahující.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CContainedWindowT`implementuje okno obsažené v rámci jiného objektu. `CContainedWindowT`je okno postup používá mapování zprávu obsahující objektu na přímé zprávy do příslušné obslužné rutiny. Při vytváření `CContainedWindowT` objekt, můžete zadat, které mapy zpráv má být použita.  
+ `CContainedWindowT` implementuje okno obsažené v rámci jiného objektu. `CContainedWindowT`je okno postup používá mapování zprávu obsahující objektu na přímé zprávy do příslušné obslužné rutiny. Při vytváření `CContainedWindowT` objekt, můžete zadat, které mapy zpráv má být použita.  
   
- `CContainedWindowT`Umožňuje vytvořit nové okno vytváření supertříd existující třídy oken. **Vytvořit** metoda registruje první okno třídu, která je založená na existující třídy, ale používá `CContainedWindowT::WindowProc`. **Vytvoření** poté vytvoří okno založené na tato nová třída okno. Každá instance `CContainedWindowT` můžete supertřídě třídu jiné časové období.  
+ `CContainedWindowT` Umožňuje vytvořit nové okno vytváření supertříd existující třídy oken. **Vytvořit** metoda registruje první okno třídu, která je založená na existující třídy, ale používá `CContainedWindowT::WindowProc`. **Vytvoření** poté vytvoří okno založené na tato nová třída okno. Každá instance `CContainedWindowT` můžete supertřídě třídu jiné časové období.  
   
- `CContainedWindowT`také podporuje vytváření podtříd okno. `SubclassWindow` Metoda připojí existující okna `CContainedWindowT` objektu a změní okno postup `CContainedWindowT::WindowProc`. Každá instance `CContainedWindowT` můžete podtřídami jiné časové období.  
+ `CContainedWindowT` také podporuje vytváření podtříd okno. `SubclassWindow` Metoda připojí existující okna `CContainedWindowT` objektu a změní okno postup `CContainedWindowT::WindowProc`. Každá instance `CContainedWindowT` můžete podtřídami jiné časové období.  
   
 > [!NOTE]
 >  Pro všechny zadané `CContainedWindowT` objektu, buď volání **vytvořit** nebo `SubclassWindow`. Obě metody na stejný objekt nesmí vyvolat.  
@@ -129,7 +124,7 @@ class CContainedWindowT : public TBase
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
  Konstruktor inicializuje datových členů.  
   
 ```
@@ -167,7 +162,7 @@ CContainedWindowT(
   
  Pokud podtřídami existujícího okna prostřednictvím [SubclassWindow](#subclasswindow), `lpszClassName` nebude použita hodnota; proto můžete předat **NULL** tohoto parametru.  
   
-##  <a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>  CContainedWindowT::Create  
  Volání [RegisterWndSuperclass](#registerwndsuperclass) k registraci okno třídu, která je založená na existující třídy, ale používá [CContainedWindowT::WindowProc](#windowproc).  
   
 ```
@@ -224,7 +219,7 @@ HWND Create(
  [v] Určuje název okna. Výchozí hodnota je **NULL**.  
   
  `dwStyle`  
- [v] Styl okna. Výchozí hodnota je **ws_child – &#124; Ws_visible –**. Seznam možných hodnot najdete v tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK.  
+ [v] Styl okna. Výchozí hodnota je **ws_child – &#124; ws_visible –**. Seznam možných hodnot najdete v tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK.  
   
  `dwExStyle`  
  [v] Styl delší okno. Výchozí hodnota je 0 – žádný rozšířené styl. Seznam možných hodnot najdete v tématu [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
@@ -247,7 +242,7 @@ HWND Create(
 > [!NOTE]
 >  Pokud se používá jako hodnota 0 `MenuOrID` parametr, musí být zadán jako 0U (výchozí hodnota) aby se zabránilo chybě kompilátoru.  
   
-##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc  
  Voláno rozhraním [WindowProc](#windowproc) zpracování zpráv není zpracována mapy zpráv.  
   
 ```
@@ -274,7 +269,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení `DefWindowProc` volání [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) funkce Win32 k odeslání zprávy informací do okna postupem uvedeným v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
-##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Vrátí aktuální zprávu ( **m_pCurrentMsg**).  
   
 ```
@@ -284,7 +279,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální zprávu, součástí `MSG` struktura.  
   
-##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID  
  Obsahuje identifikátor mapy zpráv, které jsou právě používány pro okno obsažené.  
   
 ```
@@ -296,9 +291,9 @@ DWORD m_dwMsgMapID;
   
  Mapa zpráv výchozí deklarovat s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), je vždy identifikována nula. Mapování zpráv alternativní deklarovat s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), je identifikovaný `msgMapID`.  
   
- `m_dwMsgMapID`Nejprve se inicializuje pomocí konstruktoru a může být změněn voláním [SwitchMessageMap](#switchmessagemap). Příklad, naleznete v části [CContainedWindowT přehled](../../atl/reference/ccontainedwindowt-class.md).  
+ `m_dwMsgMapID` Nejprve se inicializuje pomocí konstruktoru a může být změněn voláním [SwitchMessageMap](#switchmessagemap). Příklad, naleznete v části [CContainedWindowT přehled](../../atl/reference/ccontainedwindowt-class.md).  
   
-##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName  
  Určuje název existující třídy oken.  
   
 ```
@@ -308,9 +303,9 @@ LPTSTR m_lpszClassName;
 ### <a name="remarks"></a>Poznámky  
  Při vytváření okna, [vytvořit](#create) zaregistruje novou třídu okna, která je založená na existující třída ale používá [CContainedWindowT::WindowProc](#windowproc).  
   
- `m_lpszClassName`se inicializuje pomocí konstruktoru. Příklad, naleznete v části [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) Přehled.  
+ `m_lpszClassName` se inicializuje pomocí konstruktoru. Příklad, naleznete v části [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) Přehled.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc  
  Pokud okno obsažené podtřídou, `m_pfnSuperWindowProc` odkazuje na původní procedury okna okno třídy.  
   
 ```
@@ -322,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [DefWindowProc](#defwindowproc) metoda odesílá informace zprávy procedury okna Uložit v `m_pfnSuperWindowProc`.  
   
-##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject  
  Odkazuje na objekt obsahující `CContainedWindowT` objektu.  
   
 ```
@@ -332,9 +327,9 @@ CMessageMap* m_pObject;
 ### <a name="remarks"></a>Poznámky  
  Tento kontejner, jehož třída musí být odvozeny od [CMessageMap](../../atl/reference/cmessagemap-class.md), deklaruje mapy zpráv používané okno obsažené.  
   
- `m_pObject`se inicializuje pomocí konstruktoru. Příklad, naleznete v části [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) Přehled.  
+ `m_pObject` se inicializuje pomocí konstruktoru. Příklad, naleznete v části [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) Přehled.  
   
-##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass  
  Voláno rozhraním [vytvořit](#create) registrace třídy okna okna obsažené.  
   
 ```
@@ -347,7 +342,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>Poznámky  
  Tato třída okno je založená na existující třídy, ale používá [CContainedWindowT::WindowProc](#windowproc). Existující třída okna okno a název procedury jsou uloženy ve [m_lpszClassName](#m_lpszclassname) a [m_pfnSuperWindowProc](#m_pfnsuperwindowproc), v uvedeném pořadí.  
   
-##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow  
  Podtřídy okno identifikovaný `hWnd` a připojí jej k `CContainedWindowT` objektu.  
   
 ```
@@ -367,7 +362,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  Nevolejte `SubclassWindow` Pokud již máte volána [vytvořit](#create).  
   
-##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap  
  Změny, které mapy zpráv se používá ke zpracování zprávy obsažené oken.  
   
 ```
@@ -383,7 +378,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  Nejdřív zadejte identifikátor mapy zpráv v konstruktoru.  
   
-##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow  
  Odpojí okno rozčleněné od `CContainedWindowT` objektu a obnoví původní procedury okna Uložit v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -400,7 +395,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte, pouze v případě, že chcete obnovit původní procedury okna zničen okna. V opačném [WindowProc](#windowproc) automaticky a to při okno zničena.  
   
-##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc  
  Tato metoda statické implementuje proceduru okna.  
   
 ```
@@ -428,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
  Výsledek zpracování zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- `WindowProc`přesměruje zprávy a pokuste se identifikovanou pomocí mapy zpráv [m_dwMsgMapID](#m_dwmsgmapid). V případě potřeby `WindowProc` volání [DefWindowProc](#defwindowproc) pro zpracování další zprávy.  
+ `WindowProc` přesměruje zprávy a pokuste se identifikovanou pomocí mapy zpráv [m_dwMsgMapID](#m_dwmsgmapid). V případě potřeby `WindowProc` volání [DefWindowProc](#defwindowproc) pro zpracování další zprávy.  
   
 ## <a name="see-also"></a>Viz také  
  [CWindow – třída](../../atl/reference/cwindow-class.md)   

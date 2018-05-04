@@ -1,12 +1,9 @@
 ---
-title: "Specifikace výjimek (throw, noexcept) (C++) | Microsoft Docs"
-ms.custom: 
+title: Specifikace výjimek (throw, noexcept) (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 9ab09d5aadb489208b2e7591c2bf0f60ab836da4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 
@@ -65,7 +61,7 @@ Specifikace výjimek explicitní nejsou povoleny u funkce jazyka C. Funkce C nen
 
 V následující tabulce je shrnuté, jestli funkce C++ může potenciálně throw pod různé výjimky kompilátoru zpracování možnosti:
 
-|Funkce|/ EHsc|/ EHs|/EHa|/EHac|
+|Funkce|/ EHsc|/ EHs|/EHa|/ EHac|
 |--------------|------------|-----------|-----------|------------|
 |Funkce C++ s žádné specifikace výjimek|Ano|Ano|Ano|Ano|
 |Funkce C++ s `noexcept`, `noexcept(true)`, nebo `throw()` specifikace výjimek|Ne|Ne|Ano|Ano|

@@ -1,12 +1,9 @@
 ---
-title: "Třída CComAggObject | Microsoft Docs"
-ms.custom: 
+title: Třída CComAggObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAggObject
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd06518978b37705a98e4d8b7212b8dd03a2d7b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 426a01c1957b276174b8b36884605b69dd501de8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject – třída
 Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní pro agregovaný objekt. Podle definice je agregovaný objekt obsažený v rámci vnějšího objekt. `CComAggObject` Třídy je podobná [CComObject třída](../../atl/reference/ccomobject-class.md)kromě toho, že zpřístupňuje rozhraní, které je přímo přístupný externím klientům.  
@@ -67,7 +62,7 @@ class CComAggObject : public IUnknown,
 |Název|Popis|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Zvýší počet odkazů na agregovaný objekt.|  
-|[CComAggObject::CreateInstance](#createinstance)|Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained`  **>**  objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Provede konečnou inicializaci `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Provede konečnou zničení `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované rozhraní.|  
@@ -80,7 +75,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Delegáti `IUnknown` volání na vnější neznámý.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComAggObject`implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) agregovaného objektu. `CComAggObject`má svou vlastní **IUnknown** rozhraní, které jsou oddělené od vnější objekt **IUnknown** rozhraní a udržuje vlastní počet odkazů.  
+ `CComAggObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) agregovaného objektu. `CComAggObject` má svou vlastní **IUnknown** rozhraní, které jsou oddělené od vnější objekt **IUnknown** rozhraní a udržuje vlastní počet odkazů.  
   
  Další informace o agregace, najdete v článku [základy objektů COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -96,7 +91,7 @@ class CComAggObject : public IUnknown,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="addref"></a>CComAggObject::AddRef  
+##  <a name="addref"></a>  CComAggObject::AddRef  
  Zvýší počet odkazů na agregovaný objekt.  
   
 ```
@@ -106,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která může být užitečné pro diagnostiku nebo testování.  
   
-##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
+##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject  
  Konstruktor  
   
 ```
@@ -122,7 +117,7 @@ CComAggObject(void* pv);
   
  Destruktor snižuje počet zámek modulu.  
   
-##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject  
+##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject  
  Destruktor.  
   
 ```
@@ -132,8 +127,8 @@ CComAggObject(void* pv);
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky, volání [FinalRelease](#finalrelease), a snižuje počet zámek modulu.  
   
-##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained`  **>**  objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
+ Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -143,7 +138,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametry  
  `pp`  
- [out] Ukazatel **CComAggObject\<***obsažené*  **>**  ukazatel. Pokud `CreateInstance` není úspěšné, `pp` je nastaven na **NULL**.  
+ [out] Ukazatel na **CComAggObject\<*** obsažené* **>** ukazatel. Pokud `CreateInstance` není úspěšné, `pp` je nastaven na **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
@@ -153,7 +148,7 @@ static HRESULT WINAPI CreateInstance(
   
  Pokud není nutné přímý přístup k objektu, ale přesto chcete vytvořit nový objekt bez režie `CoCreateInstance`, použijte [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) místo.  
   
-##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct  
  Volá se během poslední fáze vytváření objektů, tato metoda provádí všechny konečné inicializace [m_contained](#m_contained) člen.  
   
 ```
@@ -163,14 +158,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComAggObject::FinalRelease  
  Volá se při odstraňování objektu, tato metoda uvolní [m_contained](#m_contained) člen.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComAggObject::m_contained  
+##  <a name="m_contained"></a>  CComAggObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objekt odvozen z vaší třídy.  
   
 ```
@@ -184,7 +179,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>Poznámky  
  Všechny **IUnknown** volá prostřednictvím `m_contained` jsou delegovanými na vnější neznámý.  
   
-##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComAggObject::QueryInterface  
  Načte ukazatel na požadované rozhraní.  
   
 ```
@@ -209,7 +204,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="remarks"></a>Poznámky  
  Pokud je požadované rozhraní **IUnknown**, `QueryInterface` vrací ukazatel na agregovaného objektu vlastní **IUnknown** a zvýší počet odkazů. Jinak tato metoda dotazuje na rozhraní prostřednictvím `CComContainedObject` člen [m_contained](#m_contained).  
   
-##  <a name="release"></a>CComAggObject::Release  
+##  <a name="release"></a>  CComAggObject::Release  
  Snižuje počet odkaz na agregovaný objekt.  
   
 ```

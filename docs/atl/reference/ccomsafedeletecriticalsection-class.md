@@ -1,12 +1,9 @@
 ---
-title: "Třída CComSafeDeleteCriticalSection | Microsoft Docs"
-ms.custom: 
+title: Třída CComSafeDeleteCriticalSection | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection – třída
 Tato třída poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
@@ -66,7 +61,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|Příznaky zda interní **CRITICAL_SECTION** objekt byl inicializován.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComSafeDeleteCriticalSection`je odvozena od třídy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Ale `CComSafeDeleteCriticalSection` nabízí v porovnání s další bezpečnostní mechanismy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
+ `CComSafeDeleteCriticalSection` je odvozena od třídy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Ale `CComSafeDeleteCriticalSection` nabízí v porovnání s další bezpečnostní mechanismy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
   
  Pokud instance `CComSafeDeleteCriticalSection` ocitne mimo obor nebo je explicitně odstranit z paměti, základní objekt kritická sekce se automaticky vyčistí Pokud je stále platné. Kromě toho [CComSafeDeleteCriticalSection::Term](#term) metoda skončit řádně, je-li základní kritická sekce objekt ještě nebyl přidělen nebo už byla uvolněna z paměti.  
   
@@ -80,7 +75,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  Konstruktor  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Poznámky  
  Nastaví [m_bInitialized](#m_binitialized) – datový člen k **false**.  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  Destruktor.  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Poznámky  
  Uvolní interní **CRITICAL_SECTION** objekt z paměti, pokud [m_bInitialized](#m_binitialized) – datový člen je nastaven na **true**.  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  Volá základní třída implementace [Init](/visualstudio/debugger/init) a nastaví [m_bInitialized](#m_binitialized) k **true** v případě úspěchu.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí výsledek [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 Základní třída implementace volá [zámku](ccomcriticalsection-class.md#lock).  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  Další informace o chování funkce, najdete v části [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  Příznaky zda interní **CRITICAL_SECTION** objekt byl inicializován.  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>Poznámky  
  **M_bInitialized** – datový člen slouží ke sledování platnost základní **CRITICAL_SECTION** objekt přidružený k [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) třídy. Základní **CRITICAL_SECTION** objektu, nebude se pokus o uvolněn z paměti, pokud není tento příznak nastaven na **true**.  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  Základní třída implementace volá [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) pokud interní **CRITICAL_SECTION** je objekt platný.  
   
 ```

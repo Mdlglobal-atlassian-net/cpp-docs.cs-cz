@@ -1,12 +1,9 @@
 ---
 title: __declspec | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 Atribut Rozšířené syntaxe pro určení třídy úložiště používá informace **__declspec** – klíčové slovo, které určuje, že instance daného typu je k uložení a atribut třídy úložiště specifické pro společnost Microsoft uvedené níže. Příklady dalších modifikátory třídy úložiště **statické** a **extern** klíčová slova. Tato klíčová slova jsou však součástí specifikace ANSI jazyků C a C++ a jako taková nejsou zahrnuta v syntaxi doplňkového atributu. Syntaxe rozšířeného atributu zjednodušuje a standardizuje rozšíření specifické pro společnost Microsoft v rámci jazyků C a C++.
 
@@ -36,32 +32,32 @@ Atribut Rozšířené syntaxe pro určení třídy úložiště používá infor
 *specifikátor decl*:  
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
-*extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
+*Rozšířené decl – modifikátor seq*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*Rozšířené modifikátor decl*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*Rozšířené modifikátor decl* *rozšířené decl – modifikátor seq*
 
-*extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Zarovnat (**  *#*  **)**  
+*Rozšířené modifikátor decl*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**Zarovnat (** *#* **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**přidělit ("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**zastaralé**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
+&nbsp;&nbsp;&nbsp;&nbsp;**domény aplikace**  
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *segname* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Zastaralé**  
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**  
+&nbsp;&nbsp;&nbsp;&nbsp;**holé**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noalias**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noinline**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**proces**  
-&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Proces**  
+&nbsp;&nbsp;&nbsp;&nbsp;**vlastnost (** { **získat =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Omezení**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**přístup z více vláken**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Přístup z více vláken**  
 &nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**  
 
 Mezera odděluje sekvenci modifikátoru deklarace. Příklady se zobrazí v pozdějších oddílech.
@@ -88,7 +84,7 @@ V takovém případě atribut platí pro `X`.
 
 Obecných pokynů pro použití **__declspec** atribut pro jednoduché deklarace vypadá takto:
 
-*decl-specifier-seq* *init-declarator-list*;
+*decl. specifikátor seq* *init. deklarátor seznamu*;
 
 *Decl. specifikátor seq* by měl obsahovat mimo jiné základní typ (například **int**, **float**, **typedef**, nebo název třídy), třídy úložiště (například **statické**, **extern**), nebo **__declspec** rozšíření. *Init. deklarátor seznamu* by měl obsahovat mimo jiné ukazatele část deklarace. Příklad:
 

@@ -2,11 +2,8 @@
 title: Třída IAtlMemMgr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAtlMemMgr
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9c9380bddb9b406d9a3e6233a87870ab81df5c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35cc685c06eaa3992ec8444cfc5d99f2191145a0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr – třída
 Tato třída reprezentuje rozhraní pro správce paměti.  
@@ -49,9 +44,9 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
   
 |||  
 |-|-|  
-|[Přidělit](#allocate)|Voláním této metody lze přidělit blok paměti.|  
+|[přidělit](#allocate)|Voláním této metody lze přidělit blok paměti.|  
 |[Volné](#free)|Volejte tuto metodu k bezplatným bloku paměti.|  
-|[Getsize –](#getsize)|Volejte tuto metodu za účelem načtení velikost bloku přidělené paměti.|  
+|[GetSize](#getsize)|Volejte tuto metodu za účelem načtení velikost bloku přidělené paměti.|  
 |[Přidělit jinému uživateli](#reallocate)|Volejte tuto metodu a znovu přidělte bloku paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -66,7 +61,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlmem.h  
   
-##  <a name="allocate"></a>IAtlMemMgr::Allocate  
+##  <a name="allocate"></a>  IAtlMemMgr::Allocate  
  Voláním této metody lze přidělit blok paměti.  
   
 ```
@@ -86,7 +81,7 @@ void* Allocate(size_t nBytes) throw();
 ### <a name="example"></a>Příklad  
  Příklad, naleznete v části [IAtlMemMgr přehled](../../atl/reference/iatlmemmgr-class.md).  
   
-##  <a name="free"></a>IAtlMemMgr::Free  
+##  <a name="free"></a>  IAtlMemMgr::Free  
  Volejte tuto metodu k bezplatným bloku paměti.  
   
 ```
@@ -103,7 +98,7 @@ void Free(void* p) throw();
 ### <a name="example"></a>Příklad  
  Příklad, naleznete v části [IAtlMemMgr přehled](../../atl/reference/iatlmemmgr-class.md).  
   
-##  <a name="getsize"></a>IAtlMemMgr::GetSize  
+##  <a name="getsize"></a>  IAtlMemMgr::GetSize  
  Volejte tuto metodu za účelem načtení velikost bloku přidělené paměti.  
   
 ```
@@ -120,7 +115,7 @@ size_t GetSize(void* p) throw();
 ### <a name="example"></a>Příklad  
  Příklad, naleznete v části [IAtlMemMgr přehled](../../atl/reference/iatlmemmgr-class.md).  
   
-##  <a name="reallocate"></a>IAtlMemMgr::Reallocate  
+##  <a name="reallocate"></a>  IAtlMemMgr::Reallocate  
  Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
   
 ```
@@ -145,7 +140,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="example"></a>Příklad  
  Příklad, naleznete v části [IAtlMemMgr přehled](../../atl/reference/iatlmemmgr-class.md).  
   
-##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
+##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu  
  **AllowContextMenu** vlastnost určuje, jestli hostované ovládací prvek může zobrazit svůj vlastní místní nabídce.  
   
 ```
@@ -162,7 +157,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
+##  <a name="get_allowshowui"></a>  IAxWinAmbientDispatch::get_AllowShowUI  
  **AllowShowUI** vlastnost určuje, jestli hostované ovládací prvek může zobrazit svůj vlastní uživatelské rozhraní.  
   
 ```
@@ -179,7 +174,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **VARIANT_FALSE** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
+##  <a name="get_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::get_AllowWindowlessActivation  
  **AllowWindowlessActivation** vlastnost určuje, zda kontejner umožní aktivace bez oken.  
   
 ```
@@ -196,7 +191,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
+##  <a name="get_backcolor"></a>  IAxWinAmbientDispatch::get_BackColor  
  `BackColor` Vlastnost určuje barvu pozadí vedlejším kontejneru.  
   
 ```
@@ -213,7 +208,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **COLOR_BTNFACE** nebo **COLOR_WINDOW** jako výchozí hodnota této vlastnosti (v závislosti na tom, zda nadřazeného okna hostitele je dialogové okno, nebo ne).  
   
-##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
+##  <a name="get_displayasdefault"></a>  IAxWinAmbientDispatch::get_DisplayAsDefault  
  **DisplayAsDefault** je vedlejším vlastnost, která vám umožní kontrolu a zjistěte, zda se jedná o výchozí ovládací prvek.  
   
 ```
@@ -230,7 +225,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **VARIANT_FALSE** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
+##  <a name="get_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags** vlastnost určuje operaci, která má být provedena v reakci na poklikejte na soubor.  
   
 ```
@@ -247,7 +242,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **DOCHOSTUIDBLCLK_DEFAULT** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
+##  <a name="get_dochostflags"></a>  IAxWinAmbientDispatch::get_DocHostFlags  
  **DocHostFlags** vlastnost určuje možnosti uživatelského rozhraní objektu hostitele.  
   
 ```
@@ -264,7 +259,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **DOCHOSTUIFLAG_NO3DBORDER** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
+##  <a name="get_font"></a>  IAxWinAmbientDispatch::get_Font  
  **Písma** vlastnost určuje vedlejším písmo kontejneru.  
   
 ```
@@ -281,7 +276,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu ATL hostitele používá výchozí písmo grafického uživatelského rozhraní nebo písmo systému jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
+##  <a name="get_forecolor"></a>  IAxWinAmbientDispatch::get_ForeColor  
  `ForeColor` Vlastnost určuje barvu popředí vedlejším kontejneru.  
   
 ```
@@ -298,7 +293,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá systém okno barvy jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
+##  <a name="get_localeid"></a>  IAxWinAmbientDispatch::get_LocaleID  
  **LocaleID** vlastnost určuje ID národního prostředí vedlejším kontejneru.  
   
 ```
@@ -317,7 +312,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
   
  Pomocí této metody můžete zjistit vedlejším LocalID, který je identifikátor národního prostředí programu vlastního ovládacího prvku se používá v. Jakmile znáte identifikátor národního prostředí, můžete volat kód pro načtení specifická pro národní prostředí titulky text chybové zprávy, a tak dále ze souboru prostředků nebo satelitní knihovny DLL.  
   
-##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
+##  <a name="get_messagereflect"></a>  IAxWinAmbientDispatch::get_MessageReflect  
  **MessageReflect** – vedlejší vlastnost určuje, zda kontejner bude odrážet zprávy do ovládacího prvku hostované.  
   
 ```
@@ -334,7 +329,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
+##  <a name="get_optionkeypath"></a>  IAxWinAmbientDispatch::get_OptionKeyPath  
  **OptionKeyPath** vlastnost určuje cestu klíče registru nastavení pro uživatele.  
   
 ```
@@ -348,7 +343,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
+##  <a name="get_showgrabhandles"></a>  IAxWinAmbientDispatch::get_ShowGrabHandles  
  **ShowGrabHandles** – vedlejší vlastnost umožňuje zjistit, pokud ho (RTL) vykreslovat samotné s okamžitými výsledky popisovače ovládacího prvku.  
   
 ```
@@ -365,7 +360,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL vždy vrátí **VARIANT_FALSE** jako hodnota této vlastnosti.  
   
-##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
+##  <a name="get_showhatching"></a>  IAxWinAmbientDispatch::get_ShowHatching  
  **ShowHatching** – vedlejší vlastnost umožňuje zjistit, pokud ho měli kreslení samotné zasílána ovládacího prvku.  
   
 ```
@@ -382,7 +377,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL vždy vrátí **VARIANT_FALSE** jako hodnota této vlastnosti.  
   
-##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
+##  <a name="get_usermode"></a>  IAxWinAmbientDispatch::get_UserMode  
  **Přesměrovač** vlastnost určuje režim vedlejším uživatele kontejneru.  
   
 ```
@@ -399,7 +394,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
+##  <a name="put_allowcontextmenu"></a>  IAxWinAmbientDispatch::put_AllowContextMenu  
  **AllowContextMenu** vlastnost určuje, jestli hostované ovládací prvek může zobrazit svůj vlastní místní nabídce.  
   
 ```
@@ -416,7 +411,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
+##  <a name="put_allowshowui"></a>  IAxWinAmbientDispatch::put_AllowShowUI  
  **AllowShowUI** vlastnost určuje, jestli hostované ovládací prvek může zobrazit svůj vlastní uživatelské rozhraní.  
   
 ```
@@ -433,7 +428,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **VARIANT_FALSE** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
+##  <a name="put_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::put_AllowWindowlessActivation  
  **AllowWindowlessActivation** vlastnost určuje, zda kontejner umožní aktivace bez oken.  
   
 ```
@@ -450,7 +445,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
+##  <a name="put_backcolor"></a>  IAxWinAmbientDispatch::put_BackColor  
  `BackColor` Vlastnost určuje barvu pozadí vedlejším kontejneru.  
   
 ```
@@ -467,7 +462,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **COLOR_BTNFACE** nebo **COLOR_WINDOW** jako výchozí hodnota této vlastnosti (v závislosti na tom, zda nadřazeného okna hostitele je dialogové okno, nebo ne).  
   
-##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
+##  <a name="put_displayasdefault"></a>  IAxWinAmbientDispatch::put_DisplayAsDefault  
  **DisplayAsDefault** je vedlejším vlastnost, která vám umožní kontrolu a zjistěte, zda se jedná o výchozí ovládací prvek.  
   
 ```
@@ -484,7 +479,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **VARIANT_FALSE** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
+##  <a name="put_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags** vlastnost určuje operaci, která má být provedena v reakci na poklikejte na soubor.  
   
 ```
@@ -501,7 +496,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **DOCHOSTUIDBLCLK_DEFAULT** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
+##  <a name="put_dochostflags"></a>  IAxWinAmbientDispatch::put_DocHostFlags  
  **DocHostFlags** vlastnost určuje možnosti uživatelského rozhraní objektu hostitele.  
   
 ```
@@ -518,7 +513,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá **DOCHOSTUIFLAG_NO3DBORDER** jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
+##  <a name="put_font"></a>  IAxWinAmbientDispatch::put_Font  
  **Písma** vlastnost určuje vedlejším písmo kontejneru.  
   
 ```
@@ -535,7 +530,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu ATL hostitele používá výchozí písmo grafického uživatelského rozhraní nebo písmo systému jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
+##  <a name="put_forecolor"></a>  IAxWinAmbientDispatch::put_ForeColor  
  `ForeColor` Vlastnost určuje barvu popředí vedlejším kontejneru.  
   
 ```
@@ -552,7 +547,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá systém okno barvy jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
+##  <a name="put_localeid"></a>  IAxWinAmbientDispatch::put_LocaleID  
  **LocaleID** vlastnost určuje ID národního prostředí vedlejším kontejneru.  
   
 ```
@@ -569,7 +564,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá výchozí národní prostředí uživatele jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
+##  <a name="put_messagereflect"></a>  IAxWinAmbientDispatch::put_MessageReflect  
  **MessageReflect** – vedlejší vlastnost určuje, zda kontejner bude odrážet zprávy do ovládacího prvku hostované.  
   
 ```
@@ -586,7 +581,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
+##  <a name="put_optionkeypath"></a>  IAxWinAmbientDispatch::put_OptionKeyPath  
  **OptionKeyPath** vlastnost určuje cestu klíče registru nastavení pro uživatele.  
   
 ```
@@ -600,7 +595,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
+##  <a name="put_usermode"></a>  IAxWinAmbientDispatch::put_UserMode  
  **Přesměrovač** vlastnost určuje režim vedlejším uživatele kontejneru.  
   
 ```
@@ -617,7 +612,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ### <a name="remarks"></a>Poznámky  
  Implementace objektu hostitele ATL používá `VARIANT_TRUE` jako výchozí hodnota této vlastnosti.  
   
-##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
  Tato metoda je volána doplníte rozhraní – vedlejší vlastnost výchozí uživatelské rozhraní.  
   
 ```
@@ -634,7 +629,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ### <a name="remarks"></a>Poznámky  
  Když `SetAmbientDispatch` je volána s ukazatel na nové rozhraní, toto nové rozhraní se použije k vyvolání jakékoli vlastnosti nebo metody žádali hostované ovládacím prvkem – Pokud tyto vlastnosti nejsou obsaženy ve [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
   
-##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl  
  Připojí ovládacího prvku existující (a dříve inicializovaného) k objektu hostitele pomocí okna identifikovaný `hWnd`.  
   
 ```
@@ -651,7 +646,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl  
  Vytvoří ovládací prvek, inicializuje ji a hostuje v okně identifikovaný `hWnd`.  
   
 ```
@@ -681,7 +676,7 @@ STDMETHOD(CreateControl)(
   
  Vytvořit licencované ovládací prvek ActiveX, najdete v části [IAxWinHostWindowLic::CreateControlLic](#createcontrollicex).  
   
-##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx  
  Vytvoří ovládací prvek ActiveX, inicializuje ji a hostuje v zadané okno podobné [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
@@ -721,7 +716,7 @@ STDMETHOD(CreateControlEx)(
   
  Vytvořit licencované ovládací prvek ActiveX, najdete v části [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex).  
   
-##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl  
  Vrátí ukazatel zadaný rozhraní poskytované hostovaného ovládacího prvku.  
   
 ```
@@ -738,7 +733,7 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch  
  Nastaví externí dispinterface, která je k dispozici prostřednictvím ovládacím prvkům obsažené [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) metoda.  
   
 ```
@@ -752,7 +747,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
-##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler  
  Volání této funkce nastavit externí [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) rozhraní `CAxWindow` objektu.  
   
 ```
@@ -769,7 +764,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce používá ovládací prvky (například ovládacího prvku webového prohlížeče), které lokality hostitele pro dotazování `IDocHostUIHandlerDispatch` rozhraní.  
   
-##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
+##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic  
  Vytvoří licencované ovládací prvek, inicializuje ji a hostuje v okně identifikovaný `hWnd`.  
   
 ```
@@ -792,7 +787,7 @@ STDMETHOD(CreateControlLic)(
 ### <a name="example"></a>Příklad  
  V tématu [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) příklad, který používá `IAxWinHostWindowLic::CreateControlLic`.  
   
-##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx  
  Vytvoří licencované ovládací prvek ActiveX, inicializuje ji a hostuje v zadané okno podobné [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```

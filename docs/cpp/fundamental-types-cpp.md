@@ -1,12 +1,9 @@
 ---
-title: "Základní typy (C++) | Microsoft Docs"
-ms.custom: 
+title: Základní typy (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Základní typy (C++)
 Základní typy v jazyce C++ jsou rozdělené do tří kategorií: integrální plovoucí bodu a void. Celočíselné typy jsou umožňuje zpracovávat celá čísla. Plovoucí typy bodů jsou schopná využívat zadání hodnoty, které může mít zlomkové části.  
@@ -83,11 +78,11 @@ Základní typy v jazyce C++ jsou rozdělené do tří kategorií: integrální 
 |--------------|----------|--------------|  
 |Celé číslo|`char`|Typ `char` je integrální typ, který obvykle obsahuje členy znaková sada spuštění základní – ve výchozím nastavení, to je ASCII v Microsoft C++.<br /><br /> Kompilátor C++ zpracovává proměnné typu `char`, `signed` `char`, a `unsigned` `char` tak, že má různých typů. Proměnné typu `char` povýšené na `int` jako v případě, že jsou typ `signed` `char` ve výchozím nastavení, pokud se používá možnost /J kompilace. V takovém případě jsou považovány za typ `unsigned` `char` a povýšené na `int` bez přípony přihlášení.|  
 ||`bool`|Typ `bool` je integrální typ, který může mít jednu ze dvou hodnot `true` nebo `false`. Jeho velikost neurčená.|  
-||`short`|Typ `short` `int` (nebo jednoduše `short`) je integrální typ, který je větší než nebo rovna velikosti typu `char`a kratší než nebo rovna velikosti typu `int`.<br /><br /> Objekty typu `short` lze deklarovat jako `signed` `short` nebo `unsigned short`. `Signed short`je synonymum pro `short`.|  
-||`int`|Typ `int` je integrální typ, který je větší než nebo rovna velikosti typu `short` `int`a kratší než nebo rovna velikosti typu `long`.<br /><br /> Objekty typu `int` lze deklarovat jako `signed` `int` nebo `unsigned` `int`. `Signed``int` se jedná o synonymum `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Integer s nastavenou velikostí `__int n`, kde `n` je velikost v bitech, proměnné, celé číslo. `__int8`, `__int16`, `__int32` a `__int64` jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici na všech architektury. `(__int128`není podporována.)|  
-||`long`|Typ `long` (nebo `long` `int`) je integrální typ, který je větší než nebo rovna velikosti typu `int`.<br /><br /> Objekty typu `long` lze deklarovat jako `signed` `long` nebo `unsigned` `long`. `Signed``long` se jedná o synonymum `long`.|  
-||`long``long`|Větší než nepodepsaný `long`.<br /><br /> Objekty typu `long long` lze deklarovat jako `signed` `long long` nebo `unsigned` `long long`. `signed``long long` se jedná o synonymum `long long`.|  
+||`short`|Typ `short` `int` (nebo jednoduše `short`) je integrální typ, který je větší než nebo rovna velikosti typu `char`a kratší než nebo rovna velikosti typu `int`.<br /><br /> Objekty typu `short` lze deklarovat jako `signed` `short` nebo `unsigned short`. `Signed short` je synonymum pro `short`.|  
+||`int`|Typ `int` je integrální typ, který je větší než nebo rovna velikosti typu `short` `int`a kratší než nebo rovna velikosti typu `long`.<br /><br /> Objekty typu `int` lze deklarovat jako `signed` `int` nebo `unsigned` `int`. `Signed` `int` je synonymum pro `int`.|  
+||`__int8`, `__int16`, `__int32`, `__int64`|Integer s nastavenou velikostí `__int n`, kde `n` je velikost v bitech, proměnné, celé číslo. `__int8`, `__int16`, `__int32` a `__int64` jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici na všech architektury. `(__int128` není podporována.)|  
+||`long`|Typ `long` (nebo `long` `int`) je integrální typ, který je větší než nebo rovna velikosti typu `int`.<br /><br /> Objekty typu `long` lze deklarovat jako `signed` `long` nebo `unsigned` `long`. `Signed` `long` je synonymum pro `long`.|  
+||`long``long`|Větší než nepodepsaný `long`.<br /><br /> Objekty typu `long long` lze deklarovat jako `signed` `long long` nebo `unsigned` `long long`. `signed` `long long` je synonymum pro `long long`.|  
 ||`wchar_t`, `__wchar_t`|Proměnné typu `wchar_t` označí typu široká charakterová nebo vícebajtových znaků. Ve výchozím nastavení `wchar_t` je nativní typ, ale můžete použít [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) aby `wchar_t` typedef pro `unsigned short`. `__wchar_t` Typ je specifické pro společnost Microsoft synonymum pro nativního `wchar_t` typu.<br /><br /> K určení typu široká charakterová použijte předponu L před znak nebo řetězcový literál.|  
 |Plovoucí desetinné čárky|`float`|Typ `float` je nejmenší plovoucí typu bodu.|  
 ||`double`|Typ `double` plovoucí typ bodu, která je větší než nebo rovno zadejte `float`, ale kratší než nebo rovna velikosti typu `long` `double`.<br /><br /> Microsoft konkrétní: reprezentace `long double` a `double` se shoduje. Ale `long double` a `double` jsou samostatné typy.|  

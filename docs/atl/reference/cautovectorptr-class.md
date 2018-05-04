@@ -2,11 +2,8 @@
 title: Třída CAutoVectorPtr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df21eabe70c1d9ed8684fa1409e24dcdc76ffec0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr – třída
 Tato třída reprezentuje objekt chytré ukazatele pomocí vektoru nové a odstraňte operátory.  
@@ -83,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|Členské proměnné ukazatele data.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje metody pro vytváření a správu inteligentní ukazatel, která vám pomůže ochranu před nevracení paměti, že automaticky tím uvolní prostředky, je-li mimo rozsah. `CAutoVectorPtr`je podobná `CAutoPtr`, přičemž jediným rozdílem je, `CAutoVectorPtr` používá [vektor – nový &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) a [vector odstranit &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) alokace a uvolnit paměť, místo C++ **nové** a **odstranit** operátory. V tématu [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Pokud kolekce tříd `CAutoVectorPtr` jsou povinné.  
+ Tato třída poskytuje metody pro vytváření a správu inteligentní ukazatel, která vám pomůže ochranu před nevracení paměti, že automaticky tím uvolní prostředky, je-li mimo rozsah. `CAutoVectorPtr` je podobná `CAutoPtr`, přičemž jediným rozdílem je, `CAutoVectorPtr` používá [vektor – nový&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) a [odstranění vektoru&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) přidělit a volné paměti místo C++ **nové** a **odstranit** operátory. V tématu [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Pokud kolekce tříd `CAutoVectorPtr` jsou povinné.  
 
   
  V tématu [CAutoPtr](../../atl/reference/cautoptr-class.md) příklad použití třídy chytré ukazatele.  
@@ -91,7 +86,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>  CAutoVectorPtr::Allocate  
  Voláním této metody lze přidělit paměť vyžadovanou pole objektů, na kterou odkazuje `CAutoVectorPtr`.  
   
 ```
@@ -108,7 +103,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>Poznámky  
  V sestavení pro ladění k chybě assertion dojde v případě [CAutoVectorPtr::m_p](#m_p) členské proměnné aktuálně ukazuje na existující hodnotu; to znamená, není rovno hodnotu NULL.  
   
-##  <a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>  CAutoVectorPtr::Attach  
  Volejte tuto metodu za účelem převzít vlastnictví existující ukazatele.  
   
 ```
@@ -124,7 +119,7 @@ void Attach(T* p) throw();
   
  V sestavení pro ladění k chybě assertion dojde v případě [CAutoVectorPtr::m_p](#m_p) členské proměnné aktuálně ukazuje na existující hodnotu; to znamená, není rovno hodnotu NULL.  
   
-##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr  
  Konstruktor  
   
 ```
@@ -140,7 +135,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Poznámky  
  `CAutoVectorPtr` Objekt lze vytvořit pomocí existující ukazatele, v takovém případě přenosu vlastnictví ukazatele.  
   
-##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr  
  Destruktor.  
   
 ```
@@ -150,7 +145,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky. Volání [CAutoVectorPtr::Free](#free).  
   
-##  <a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>  CAutoVectorPtr::Detach  
  Volejte tuto metodu za účelem uvolnění vlastnictví ukazatel.  
   
 ```
@@ -163,7 +158,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní vlastnictví ukazatel, nastaví [CAutoVectorPtr::m_p](#m_p) členské proměnné na hodnotu NULL a vrátí kopii ukazatele. Po volání **odpojení**, je maximálně programátorů uvolnit všechny přidělená prostředky přes který `CAutoVectorPtr` objekt může mít dříve předpokládá, že zodpovědnost.  
   
-##  <a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>  CAutoVectorPtr::Free  
  Volat tuto metodu za účelem odstranění nainstalovaného objektu, na kterou odkazuje `CAutoVectorPtr`.  
   
 ```
@@ -173,7 +168,7 @@ void Free() throw();
 ### <a name="remarks"></a>Poznámky  
  Objekt na kterou odkazuje `CAutoVectorPtr` po uvolnění a [CAutoVectorPtr::m_p](#m_p) členské proměnné je nastaven na hodnotu NULL.  
   
-##  <a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>  CAutoVectorPtr::m_p  
  Členské proměnné ukazatele data.  
   
 ```
@@ -183,7 +178,7 @@ T* m_p;
 ### <a name="remarks"></a>Poznámky  
  Tato proměnná člena obsahuje informace ukazatele.  
   
-##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =  
  Operátor přiřazení.  
   
 ```
@@ -200,7 +195,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Poznámky  
  Operátor přiřazení odpojí `CAutoVectorPtr` objekt z jakékoli aktuální ukazatel a připojí nový ukazatel `p`, na jeho místo.  
   
-##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *  
  Operátor přetypování.  
   
 ```  

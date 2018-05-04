@@ -1,12 +1,9 @@
 ---
 title: dllexport, dllimport | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dllimport_cpp
@@ -19,20 +16,18 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e5b98b5541d1dc5f4a94c9611668a9ea8d787a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3d57287723da1bb7fbe7f75dece05674142bd417
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  `dllexport` a **dllimport** atributy třídy úložiště jsou specifické pro společnost Microsoft rozšíření pro jazyky C a C++. Můžete je používat pro export a import funkce, dat a objektů do nebo z knihovny DLL.  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
  Pokud je třída označeno declspec(dllexport), všechny specializace šablon tříd v hierarchii tříd implicitně označeno declspec(dllexport). To znamená, že explicitně instance šablony třídy a členy třídy musí být definován.  
   
- `dllexport`Funkce zpřístupní funkce se jeho upravený název. U funkcí jazyka C++ to zahrnuje, úprava názvu. Funkce jazyka C nebo funkce, které jsou deklarovány jako `extern "C"`, jedná se o decoration specifické pro platformu, která je založená na konvence volání. Informace o dekorování názvů v kódu C/C++, najdete v části [dekorované názvy](../build/reference/decorated-names.md). Úprava bez názvu se použije pro exportovaných funkcí jazyka C nebo C++ `extern "C"` funkce pomocí `__cdecl` konvence volání.  
+ `dllexport` Funkce zpřístupní funkce se jeho upravený název. U funkcí jazyka C++ to zahrnuje, úprava názvu. Funkce jazyka C nebo funkce, které jsou deklarovány jako `extern "C"`, jedná se o decoration specifické pro platformu, která je založená na konvence volání. Informace o dekorování názvů v kódu C/C++, najdete v části [dekorované názvy](../build/reference/decorated-names.md). Úprava bez názvu se použije pro exportovaných funkcí jazyka C nebo C++ `extern "C"` funkce pomocí `__cdecl` konvence volání.  
   
  Pokud chcete exportovat bez upraveného název, můžete propojit pomocí souboru definice modulu (.def), který definuje název bez upraveného v části Export. Další informace najdete v tématu [EXPORTUJE](../build/reference/exports.md). Jiný způsob, jak exportovat bez upraveného název je použít `#pragma comment(linker, "/export:alias=decorated_name")` direktivy ve zdrojovém kódu.  
   

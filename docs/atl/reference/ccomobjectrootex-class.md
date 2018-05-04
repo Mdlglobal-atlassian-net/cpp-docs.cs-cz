@@ -1,12 +1,9 @@
 ---
-title: "Třída CComObjectRootEx | Microsoft Docs"
-ms.custom: 
+title: Třída CComObjectRootEx | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b147f0ad3f1a54c2ae640b6bf2426bcddf060b35
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx – třída
 Tato třída poskytuje metody pro zpracování Správa počet odkaz objektu pro neagregovaná a agregované objekty.  
@@ -66,7 +61,7 @@ class CComObjectRootEx : public CComObjectRootBase
 |[Internaladdref –](#internaladdref)|Zvýší počet odkazů pro objekt neagregovaná.|  
 |[Internalrelease –](#internalrelease)|Snižuje počet odkaz na objekt neagregovaná.|  
 |[Zámek](#lock)|Pokud je model vláken s více vlákny, získá vlastnictví objektu kritická sekce.|  
-|[Odemknutí](#unlock)|Pokud je model vláken s více vlákny, uvolní vlastnictví objektu kritická sekce.|  
+|[odemknutí](#unlock)|Pokud je model vláken s více vlákny, uvolní vlastnictví objektu kritická sekce.|  
   
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase metody  
   
@@ -93,7 +88,7 @@ class CComObjectRootEx : public CComObjectRootBase
 |[m_pOuterUnknown](#m_pouterunknown)|S `m_dwRef`, součástí spojení. Použít, když je objekt agregován do podržte ukazatel na vnější neznámý.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectRootEx`zpracovává Správa počet odkaz objektu pro neagregovaná a agregované objekty. Pokud není agregovaný objektu a obsahuje ukazatele na vnější neznámý, pokud je agregovaný objektu drží odkaz počet objektů. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a k ochraně vnější objekt z odstranění, když jsou vydávány vnitřní rozhraní nebo vnitřní objekt se odstraní.  
+ `CComObjectRootEx` zpracovává Správa počet odkaz objektu pro neagregovaná a agregované objekty. Pokud není agregovaný objektu a obsahuje ukazatele na vnější neznámý, pokud je agregovaný objektu drží odkaz počet objektů. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a k ochraně vnější objekt z odstranění, když jsou vydávány vnitřní rozhraní nebo vnitřní objekt se odstraní.  
   
  Třídu, která implementuje COM server musí dědit z `CComObjectRootEx` nebo [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
@@ -110,14 +105,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx  
  Konstruktor inicializuje počet odkazů na hodnotu 0.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct  
  Mohou přepsat tuto metodu v odvozené třídě provést jakékoli inicializace požadována pro objekt.  
   
 ```
@@ -157,7 +152,7 @@ HRESULT FinalConstruct();
   
 -   Přepsání `FinalRelease` k uvolnění **IUnknown** ukazatel.  
   
-##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease  
  Mohou přepsat tuto metodu v odvozené třídě k vyčištění vyžadované pro objekt.  
   
 ```
@@ -169,7 +164,7 @@ void FinalRelease();
   
  Provádění vyčištění v `FinalRelease` je vhodnější při přidávání kódu do destruktor vaší třídy, vzhledem k tomu, že objekt je stále plně vytvořený v okamžiku, kdy `FinalRelease` je volána. To vám umožňuje bezpečně přístup metody poskytované nejvíce odvozené třídy. To je obzvláště důležité pro uvolnění všechny agregované objekty před odstraněním.  
   
-##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef  
  Počet odkazů objekt neagregovaná zvýší o 1.  
   
 ```
@@ -182,7 +177,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>Poznámky  
  Pokud je model vláken s více vlákny, **InterlockedIncrement** se používá k více než jedno vlákno zabránit ve změně počet odkazů ve stejnou dobu.  
   
-##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface  
  Načte ukazatel na požadované rozhraní.  
   
 ```
@@ -210,9 +205,9 @@ static HRESULT InternalQueryInterface(
  Jeden standardní `HRESULT` hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
- `InternalQueryInterface`zpracovává jenom rozhraní v tabulce COM mapy. Pokud je agregován objektu, `InternalQueryInterface` není delegovat na vnější neznámý. Rozhraní můžete zadat do tabulky mapování COM s makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jednoho z jeho variant.  
+ `InternalQueryInterface` Zpracovává jenom rozhraní v tabulce COM mapy. Pokud je agregován objektu, `InternalQueryInterface` není delegovat na vnější neznámý. Rozhraní můžete zadat do tabulky mapování COM s makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jednoho z jeho variant.  
   
-##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease  
  Snižuje odkaz na počet objekt neagregovaná o 1.  
   
 ```
@@ -225,7 +220,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>Poznámky  
  Pokud je model vláken s více vlákny, **InterlockedDecrement** se používá k více než jedno vlákno zabránit ve změně počet odkazů ve stejnou dobu.  
   
-##  <a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>  CComObjectRootEx::Lock  
  Pokud je model vláken s více vlákny, tato metoda volá funkce rozhraní Win32 API [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), které počká na vlákno může převzít vlastnictví objektu kritická sekce získaných pomocí privátní datový člen.  
   
 ```
@@ -237,7 +232,7 @@ void Lock();
   
  Pokud je model vláken jednovláknové, tato metoda neprovede žádnou akci.  
   
-##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef  
  Součást spojení, který používá čtyři bajtů paměti.  
   
 ```
@@ -259,7 +254,7 @@ long m_dwRef;
   
  Pokud není agregovaný objekt, počet odkazů přístup `AddRef` a **verze** je uložen v `m_dwRef`. Pokud je objekt agregován, má ukazatel na vnější Neznámý je uložen v [m_pOuterUnknown](#m_pouterunknown).  
   
-##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown  
  Součást spojení, který používá čtyři bajtů paměti.  
   
 ```
@@ -282,7 +277,7 @@ IUnknown*
   
  Pokud je objekt agregován, má ukazatel na vnější Neznámý je uložen v `m_pOuterUnknown`. Pokud není agregovaný objekt, počet odkazů přístup `AddRef` a **verze** je uložen v [m_dwRef](#m_dwref).  
   
-##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
  Pro každou třídu uvedené v [mapování objektu](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), tato funkce je volána po při inicializaci modulu, a znovu při ukončena.  
   
 ```
@@ -296,12 +291,12 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Poznámky  
  Hodnota `bStarting` parametr označuje, zda modul se inicializovat nebo byla ukončena. Výchozí implementaci `ObjectMain` nic neprovádí, ale můžete přepsat tuto funkci v třídě pro inicializaci nebo vyčištění prostředků, které chcete přidělit pro třídu. Všimněte si, že `ObjectMain` je volána před všechny instance třídy jsou požadovány.  
   
- `ObjectMain`je volána ze vstupního bodu knihovny DLL, tak, aby typ operace, která může provádět funkce vstupního bodu s omezeným přístupem. Další informace o těchto omezeních najdete v tématu [knihovny DLL a Visual C++ chování běhové knihovny](../../build/run-time-library-behavior.md) a [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` je volána ze vstupního bodu knihovny DLL, tak, aby typ operace, která může provádět funkce vstupního bodu s omezeným přístupem. Další informace o těchto omezeních najdete v tématu [knihovny DLL a Visual C++ chování běhové knihovny](../../build/run-time-library-behavior.md) a [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef  
  Zvýší počet odkazů vnější Neznámý agregace.  
   
 ```
@@ -311,7 +306,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která může být užitečné pro diagnostiku a testování.  
   
-##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface  
  Načte nepřímé ukazatel na požadované rozhraní.  
   
 ```
@@ -328,7 +323,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní `HRESULT` hodnoty.  
   
-##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease  
  Snižuje počet odkaz na vnější Neznámá o agregaci.  
   
 ```
@@ -338,7 +333,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>Návratová hodnota  
  V sestavení pro bez ladění vždy vrátí hodnotu 0. V sestavení pro ladění vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování.  
   
-##  <a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
  Pokud je model vláken s více vlákny, tato metoda volá funkce rozhraní Win32 API [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), které verze vlastnictví objektu kritická sekce získaných pomocí privátní datový člen.  
   
 ```

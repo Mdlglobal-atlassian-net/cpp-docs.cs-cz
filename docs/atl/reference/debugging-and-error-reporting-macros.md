@@ -1,12 +1,9 @@
 ---
-title: "Makra ladění a zasílání zpráv o chybách | Microsoft Docs"
-ms.custom: 
+title: Makra ladění a zasílání zpráv o chybách | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a zasílání zpráv o chybách
 Tyto makra poskytují užitečné ladění a trasování zařízení.  
@@ -45,7 +40,7 @@ Tyto makra poskytují užitečné ladění a trasování zařízení.
 |[ATLTRACE](#alttrace)|Sestavy upozornění na výstupní zařízení, jako je například okna ladicího programu podle uvedeného příznaky a úrovně. Zahrnuté z důvodu zpětné kompatibility.|  
 |[ATLTRACE2](#atltrace2)|Sestavy upozornění na výstupní zařízení, jako je například okna ladicího programu podle uvedeného příznaky a úrovně.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Toto makro definovat před zahrnutím chcete trasovat všechny soubory záhlaví ATL `AddRef` a **verze** volání na rozhraní vaší součásti, které se ve výstupním okně.  
   
 ```
@@ -72,9 +67,9 @@ Tyto makra poskytují užitečné ladění a trasování zařízení.
  Zde uvedené informace mapy přímo na informacích uvedených v předchozí trasovacích příkazů, tak můžete zkontrolovat v celém celou dobu životnosti převodu rozhraní počty odkaz. Kromě toho získáte údajem o maximálního počtu odkazů na jinou bitovou šířku tohoto rozhraní.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`lze použít v prodejní sestavení.  
+> `_ATL_DEBUG_INTERFACES` lze použít v prodejní sestavení.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Zapíše všechna volání `QueryInterface` do okna výstupu.  
   
 ```
@@ -86,7 +81,7 @@ Tyto makra poskytují užitečné ladění a trasování zařízení.
   
  *Název rozhraní* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT` Makro provádí stejné funkce jako [_asserte –](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makro najít v běhové knihovny jazyka C.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  Toto makro slouží k ověření parametry předaný funkci.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  V sestavení pro ladění z knihovny ATL odešle řetězec " `funcname` není implementována" výpisu zařízení a vrátí **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Sestavy upozornění na výstupní zařízení, jako je například okna ladicího programu podle uvedeného příznaky a úrovně. Zahrnuté z důvodu zpětné kompatibility.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Poznámky  
  V tématu [ATLTRACE2](#atltrace2) popis **ATLTRACE**. **ATLTRACE** a `ATLTRACE2` mají stejné chování **ATLTRACE** je zahrnuté pro zpětné kompatibility.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Sestavy upozornění na výstupní zařízení, jako je například okna ladicího programu podle uvedeného příznaky a úrovně.  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  V sestavení pro vydání `ATLTRACE2` zkompiluje do `(void) 0`.  
   
- `ATLTRACE2`omezuje obsah řetězce k odeslání do zařízení, na více než 1023 znaků po formátování.  
+ `ATLTRACE2` omezuje obsah řetězce k odeslání do zařízení, na více než 1023 znaků po formátování.  
   
  **ATLTRACE** a `ATLTRACE2` mají stejné chování **ATLTRACE** je zahrnuté pro zpětné kompatibility.  
   

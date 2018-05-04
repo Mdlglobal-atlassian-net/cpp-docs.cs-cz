@@ -1,12 +1,9 @@
 ---
-title: "Třída CComObjectStack | Microsoft Docs"
-ms.custom: 
+title: Třída CComObjectStack | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectStack
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack – třída
 Tato třída vytvoří dočasný objekt COM a poskytne mu kosterního provádění **IUnknown**.  
@@ -72,7 +67,7 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Obsahuje **HRESULT** vrátil během vytváření `CComObjectStack` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectStack`slouží k vytvoření dočasného objektu COM a zadat objekt kosterního provádění **IUnknown**. Objekt se obvykle používá jako místní proměnné v rámci jedné funkce (který se instaluje do zásobníku). Vzhledem k tomu, že objekt je zrušen po dokončení funkce, počítání odkazů neprovádí zvýšit efektivitu.  
+ `CComObjectStack` slouží k vytvoření dočasného objektu COM a zadat objekt kosterního provádění **IUnknown**. Objekt se obvykle používá jako místní proměnné v rámci jedné funkce (který se instaluje do zásobníku). Vzhledem k tomu, že objekt je zrušen po dokončení funkce, počítání odkazů neprovádí zvýšit efektivitu.  
   
  Následující příklad ukazuje, jak vytvořit objekt COM použít uvnitř funkce:  
   
@@ -88,7 +83,7 @@ class CComObjectStack
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>  CComObjectStack::AddRef  
  Vrátí hodnotu nula.  
   
 ```
@@ -101,7 +96,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Poznámky  
  V režimu ladění, volá `_ASSERTE`.  
   
-##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack  
  Konstruktor  
   
 ```
@@ -111,7 +106,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>Poznámky  
  Volání `FinalConstruct` a nastaví [m_hResFinalConstruct](#m_hresfinalconstruct) k `HRESULT` vrácený `FinalConstruct`. Pokud nebyly odvozené ze základní třídu [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), je nutné zadat vlastní `FinalConstruct` metoda. Volání destruktoru `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  Destruktor.  
   
 ```
@@ -121,14 +116,14 @@ CComObjectStack();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky a volání [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
  Obsahuje `HRESULT` vrácená z volání `FinalConstruct` během vytváření `CComObjectStack` objektu.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
  Vrátí **E_NOINTERFACE**.  
   
 ```
@@ -142,7 +137,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>Poznámky  
  V režimu ladění, volá `_ASSERTE`.  
   
-##  <a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>  CComObjectStack::Release  
  Vrátí hodnotu nula.  
   
 ```

@@ -1,27 +1,22 @@
 ---
 title: Přidání stránky vlastností (ATL – tutoriál, část 6) | Microsoft Docs
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Přidání stránky vlastností (ATL – tutoriál, část 6)
 Stránky vlastností jsou implementované jako samostatné objekty modelu COM, které mohly být sdílen, pokud je to nutné. V tomto kroku provedete následující úkoly a přidání stránky vlastností ovládacího prvku:  
@@ -104,7 +99,7 @@ Stránky vlastností jsou implementované jako samostatné objekty modelu COM, k
   
  Kód kontroluje nyní tohoto nastavení `Sides` vlastnost ve skutečnosti fungovala. Pokud se nezdaří, kód zobrazí okno zobrazení Podrobnosti o chybě z **IErrorInfo** rozhraní. Obvykle kontejner požádá objekt pro **ISupportErrorInfo** rozhraní a volání `InterfaceSupportsErrorInfo` first, abyste zjistili, zda objekt podporuje nastavení informace o chybě. Můžete přeskočit tuto úlohu.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) vám pomůže pomocí automaticky zpracování počítání odkazů, takže není nutné volat `Release` na rozhraní. `CComBSTR`pomáhá s `BSTR` zpracování, takže není nutné k provedení konečné `SysFreeString` volání. Můžete také použít různé třídy převod řetězce, tak můžete převést `BSTR` v případě potřeby (to je důvod, proč `USES_CONVERSION` makro je na začátku funkce).  
+ [CComPtr](../atl/reference/ccomptr-class.md) vám pomůže pomocí automaticky zpracování počítání odkazů, takže není nutné volat `Release` na rozhraní. `CComBSTR` pomáhá s `BSTR` zpracování, takže není nutné k provedení konečné `SysFreeString` volání. Můžete také použít různé třídy převod řetězce, tak můžete převést `BSTR` v případě potřeby (to je důvod, proč `USES_CONVERSION` makro je na začátku funkce).  
   
  Musíte taky nastavit příznak změny její stránku vlastností s údajem, že **použít** tlačítko by měla být povolená. K tomu dojde, když uživatel změní hodnotu v **stranách** textové pole.  
   
@@ -126,7 +121,7 @@ Stránky vlastností jsou implementované jako samostatné objekty modelu COM, k
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`bude volána při **wm_command –** je zpráva odeslána s **EN_CHANGE** oznámení pro `IDC_SIDES` ovládacího prvku. `OnEnChangeSides`pak zavolá `SetDirty` a předá `TRUE` udávajících vlastnost stránky je nyní nekonzistentní a **použít** tlačítko by měla být povolená.  
+ `OnEnChangeSides` bude volána při **wm_command –** je zpráva odeslána s **EN_CHANGE** oznámení pro `IDC_SIDES` ovládacího prvku. `OnEnChangeSides` pak zavolá `SetDirty` a předá `TRUE` udávajících vlastnost stránky je nyní nekonzistentní a **použít** tlačítko by měla být povolená.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Přidání stránky vlastností do ovládacího prvku  
  Průvodce přidáním třídy ATL a Průvodce stránky vlastností knihovny ATL nepřidávejte stránku vlastností do vlastního ovládacího prvku pro vás automaticky, vzhledem k tomu může být více ovládacích prvků ve vašem projektu. Musíte přidat položku do mapa vlastností ovládacího prvku.  
@@ -152,7 +147,7 @@ Stránky vlastností jsou implementované jako samostatné objekty modelu COM, k
   
  V dalším kroku umístíte ovládacího prvku na webové stránce.  
   
- [Zpátky ke kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Na krok 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Zpátky ke kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [na krok 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Kurz](../atl/active-template-library-atl-tutorial.md)

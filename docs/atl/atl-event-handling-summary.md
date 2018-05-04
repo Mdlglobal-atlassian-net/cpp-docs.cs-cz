@@ -1,29 +1,24 @@
 ---
-title: "Zpracování Souhrn událostí ATL | Microsoft Docs"
-ms.custom: 
+title: Zpracování Souhrn událostí ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>Souhrn zpracování události knihovny ATL
 Obecně platí zpracování událostí modelu COM je poměrně jednoduché proces. Existují tři hlavní kroky:  
@@ -44,7 +39,7 @@ Obecně platí zpracování událostí modelu COM je poměrně jednoduché proce
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Ne|Ano|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Ne|Ne|  
   
- \*Při použití třídy, které podporují ATL, nikdy musíte implementovat **IUnknown** nebo `IDispatch` metody ručně.  
+ \* Při použití třídy, které podporují ATL, nikdy musíte implementovat **IUnknown** nebo `IDispatch` metody ručně.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Poradenství a Unadvising zdroj události  
  Existují tři způsoby hlavní radí a unadvising zdroje událostí pomocí ATL.  
@@ -52,7 +47,7 @@ Obecně platí zpracování událostí modelu COM je poměrně jednoduché proce
 |Poradit – funkce|Unadvise – funkce|Nejvhodnější pro použití s|Vyžaduje, abyste ke sledování souboru cookie|Komentáře|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable nebo duální rozhraní | Ano | `AtlAdvise` je globální funkce ATL. `CComPtrBase::Advise`používá [CComPtr](../atl/reference/ccomptr-class.md) a [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable nebo duální rozhraní | Ano | `AtlAdvise` je globální funkce ATL. `CComPtrBase::Advise` používá [CComPtr](../atl/reference/ccomptr-class.md) a [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
 
 |[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) nebo [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Ne | Parametry méně než `AtlAdvise` od základní třídy nemá další práci. |  
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| ActiveX – ovládací prvky v složené ovládací prvky | Ne | `CComCompositeControl::AdviseSinkMap` informuje o tom, všechny položky události jímky mapy. Stejnou funkci unadvises položky. Tato metoda je volána automaticky pomocí `CComCompositeControl` třídy. |  

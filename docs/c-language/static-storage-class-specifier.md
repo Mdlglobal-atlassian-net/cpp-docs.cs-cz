@@ -1,13 +1,10 @@
 ---
-title: "statický specifikátor třídy úložiště | Microsoft Docs"
-ms.custom: 
+title: statický specifikátor třídy úložiště | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - storage classes, static
 - static storage class specifiers
 ms.assetid: 9bce361e-919b-46b9-8148-40d7ab0eb024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c957b78eeb506e9f1f91a670cf5cc4d52ad72878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a7d61e39eb706721ddf936f88f5df02a6eddf96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-storage-class-specifier"></a>Statický specifikátor třídy úložiště
 Proměnná definovaná na interní úrovni s **statické** – specifikátor třídy úložiště je globální doba platnosti, ale je viditelná pouze v rámci bloku v kterého je deklarovaná. Pro konstantní řetězce, pomocí **statické** je užitečné, protože ho nebude režii časté inicializace často říká funkcí.  

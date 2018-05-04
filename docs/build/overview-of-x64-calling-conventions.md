@@ -1,34 +1,29 @@
 ---
-title: "Přehled x64 konvence volání | Microsoft Docs"
-ms.custom: 
+title: Přehled x64 konvence volání | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Přehled konvencí volání v prostředí x64
 Dvě důležité rozdíly mezi x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] jsou schopnosti adresování 64-bit a plochá sada 16 64-bit registrů pro obecné použití. Daná rozšířeného registru, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] používá [__fastcall](../cpp/fastcall.md) volání konvence a založených RISC model zpracování výjimek. `__fastcall` Konvence používá registry pro první čtyři argumenty a rámce zásobníku předat další argumenty.  
   
  Následující možnost kompilátoru pomůže vám při optimalizaci aplikace pro [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/ favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Konvence volání  
  [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Binární rozhraní aplikace (ABI) používá konvence volání rychlého volání čtyři zaregistrovat ve výchozím nastavení. V zásobníku volání je jako stínové úložiště pro volané uložit tyto registry přiděleno místo. Je mezi argumenty pro volání funkce a zaregistruje se používá pro tyto argumenty striktní souvislosti. Některý argument, který se nevejde do 8 bajtů, nebo není 1, 2, 4 nebo 8 bajtů, musí být předán odkazem. Neexistuje žádný pokus o rozloženy více registry jeden argument. X87 zásobník registru se nepoužívá. Může být používán volaného, ale je třeba zvážit volatile napříč volání funkcí. Plovoucí desetinná čárka všechny operace se provádějí pomocí 16 XMM registrů. Celé číslo argumenty jsou předány v registrech RCX, RDX, R8 a R9. Číslo s plovoucí desetinnou argumenty se předávají v XMM0L, XMM1L, XMM2L a XMM3L. 16 bajtů argumenty jsou předávány odkazem. Předávání parametrů je podrobně popsány v [předání parametru](../build/parameter-passing.md). Kromě těchto registry RAX R10, R11, XMM4 a XMM5 závislé jsou považovány za volatile. Všechny ostatní registry jsou stálé. Využití registrů je podrobně popsaná v [zaregistrovat využití](../build/register-usage.md) a [uložit zaregistruje volající/volaný](../build/caller-callee-saved-registers.md).  

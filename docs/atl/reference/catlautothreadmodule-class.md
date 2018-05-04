@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlAutoThreadModule | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlAutoThreadModule | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModule
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1845ecea273ece212b65d61b169cbd8f894a60a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c89d142254909591ebd01bfa859be5488cbfaf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule – třída
 Tato třída implementuje server COM ve fondu vláken, apartment model.  
@@ -41,7 +36,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `CAtlAutoThreadModule`odvozená z [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) a implementuje server COM ve fondu vláken, apartment model. `CAtlAutoThreadModule`používá [CComApartment](../../atl/reference/ccomapartment-class.md) ke správě izolovaný prostor pro každé vlákno v modulu.  
+ `CAtlAutoThreadModule` odvozená z [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) a implementuje server COM ve fondu vláken, apartment model. `CAtlAutoThreadModule` používá [CComApartment](../../atl/reference/ccomapartment-class.md) ke správě izolovaný prostor pro každé vlákno v modulu.  
   
  Je nutné použít [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu k určení [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako objekt pro vytváření tříd. Měli byste pak přidat jednu instanci třídy odvozené od `CAtlAutoThreadModuleT` například `CAtlAutoThreadModule`. Příklad:  
   

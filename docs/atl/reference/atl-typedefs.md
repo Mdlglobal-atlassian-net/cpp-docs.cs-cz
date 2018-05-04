@@ -2,11 +2,8 @@
 title: ATL – definice TypeDef | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcore/ATL::_ATL_BASE_MODULE
@@ -32,17 +29,15 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb730faae0b70b840b637dc54a9f7b636f1d7a6e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-typedefs"></a>ATL – definice TypeDef
 Aktivní knihovna šablon obsahuje následující definice TypeDef.  
@@ -66,7 +61,7 @@ Aktivní knihovna šablon obsahuje následující definice TypeDef.
 |[LPCURL](#lpcurl)|Ukazatel na konstantu [CUrl](../../atl/reference/curl-class.md) objektu.|  
 |[LPURL](#lpurl)|Ukazatel [CUrl](../../atl/reference/curl-class.md) objektu.|  
   
-##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE  
+##  <a name="_atl_base_module"></a>  _ATL_BASE_MODULE  
  Definován jako definice typu podle _ATL_BASE_MODULE70.  
   
 ```   
@@ -81,7 +76,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlcore.h
 
-##  <a name="_atl_com_module"></a>_ATL_COM_MODULE  
+##  <a name="_atl_com_module"></a>  _ATL_COM_MODULE  
  Definován jako definice typu podle _ATL_COM_MODULE70.  
   
 ```   
@@ -94,7 +89,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h
   
-##  <a name="_atl_module"></a>_ATL_MODULE  
+##  <a name="_atl_module"></a>  _ATL_MODULE  
  Definován jako definice typu podle _ATL_MODULE70.  
   
 ```   
@@ -106,7 +101,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ### <a name="remarks"></a>Poznámky  
  Na základě [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).  
   
-##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE  
+##  <a name="_atl_win_module"></a>  _ATL_WIN_MODULE  
  Definován jako definice typu podle _ATL_WIN_MODULE70.  
   
 ```   
@@ -120,7 +115,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h 
   
-##  <a name="atl_url_port"></a>ATL_URL_PORT 
+##  <a name="atl_url_port"></a>  ATL_URL_PORT 
   Typ používaný [CUrl](curl-class.md) pro zadání číslo portu.
 ```  
 typedef WORD ATL_URL_PORT;
@@ -129,7 +124,7 @@ typedef WORD ATL_URL_PORT;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlutil.h
 
-##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
+##  <a name="ccomdispatchdriver"></a>  CComDispatchDriver  
  Tato třída spravuje ukazatele rozhraní COM.  
   
 ```   
@@ -138,7 +133,7 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h
   
-##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
+##  <a name="ccomglobalsthreadmodel"></a>  CComGlobalsThreadModel  
  Volá metody, modelu, bez ohledu na to, používá model vláken odpovídající vlákno.  
   
 ```   
@@ -157,7 +152,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
  V závislosti na modelu vláken používá vaše aplikace `typedef` název `CComGlobalsThreadModel` odkazuje buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Tyto třídy poskytují další `typedef` názvy tak, aby odkazovaly třídu kritická sekce.  
   
 > [!NOTE]
-> `CComGlobalsThreadModel`neodkazuje třídu [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
+> `CComGlobalsThreadModel` neodkazuje třídu [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
  Pomocí `CComGlobalsThreadModel` uvolní můžete zadat určitou třídu modelu vláken. Bez ohledu na to, používá model vláken bude mít název příslušné metody.  
   
@@ -168,14 +163,14 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
  Použití `CComObjectThreadModel` v rámci jednoho objektu třídy. Použití `CComGlobalsThreadModel` v objektu, která je globálně dostupnou vašeho programu nebo pokud chcete chránit prostředky modulu napříč více vláken.  
 
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h
   
-##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
+##  <a name="ccomobjectthreadmodel"></a>  CComObjectThreadModel  
  Volá metody, modelu, bez ohledu na to, používá model vláken odpovídající vlákno.  
   
 ```   
@@ -194,7 +189,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
  V závislosti na modelu vláken používá vaše aplikace `typedef` název `CComObjectThreadModel` odkazuje buď [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Tyto třídy poskytují další `typedef` názvy tak, aby odkazovaly třídu kritická sekce.  
   
 > [!NOTE]
-> `CComObjectThreadModel`neodkazuje třídu [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
+> `CComObjectThreadModel` neodkazuje třídu [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
  Pomocí `CComObjectThreadModel` uvolní můžete zadat určitou třídu modelu vláken. Bez ohledu na to, používá model vláken bude mít název příslušné metody.  
   
@@ -205,14 +200,14 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
  Použití `CComObjectThreadModel` v rámci jednoho objektu třídy. Použití `CComGlobalsThreadModel` v objektu, který je buď globálně dostupnou vašeho programu, nebo pokud chcete chránit prostředky modulu napříč více vláken.  
 
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h
   
-##  <a name="ccontainedwindow"></a>CContainedWindow  
+##  <a name="ccontainedwindow"></a>  CContainedWindow  
  Tato třída je specializované **CContainedWindowT.**  
   
 ```   
@@ -223,9 +218,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 **Záhlaví:** atlwin.h
   
 ### <a name="remarks"></a>Poznámky  
- `CContainedWindow`je specializované [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Pokud chcete změnit základní třídu nebo vlastnosti, použijte `CContainedWindowT` přímo.  
+ `CContainedWindow` je specializované [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Pokud chcete změnit základní třídu nebo vlastnosti, použijte `CContainedWindowT` přímo.  
   
-##  <a name="cpath"></a>CPath  
+##  <a name="cpath"></a>  CPath  
  Specializace z [CPathT](../../atl/reference/cpatht-class.md) pomocí `CString`.  
   
 ```   
@@ -235,7 +230,7 @@ typedef CPathT<CString> CPath;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlpath.h
   
-##  <a name="cpatha"></a>CPathA  
+##  <a name="cpatha"></a>  CPathA  
  Specializace z [CPathT](../../atl/reference/cpatht-class.md) pomocí `CStringA`.  
   
 ```   
@@ -245,7 +240,7 @@ typedef CPathT<CStringA> CPathA;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlpath.h  
   
-##  <a name="cpathw"></a>CPathW  
+##  <a name="cpathw"></a>  CPathW  
  Specializace z [CPathT](../../atl/reference/cpatht-class.md) pomocí `CStringW`.  
   
 ```   
@@ -254,7 +249,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlpath.h
   
-##  <a name="csimplevalarray"></a>CSimpleValArray  
+##  <a name="csimplevalarray"></a>  CSimpleValArray  
  Představuje pole pro ukládání jednoduché typy.  
   
 ```   
@@ -263,13 +258,13 @@ typedef ATL::CPathT<CStringW> CPathW;
 
   
 ### <a name="remarks"></a>Poznámky  
- `CSimpleValArray`slouží k vytváření a správě pole obsahující jednoduché datové typy. Je jednoduchý #define z [CSimpleArray](../../atl/reference/csimplearray-class.md).  
+ `CSimpleValArray` slouží k vytváření a správě pole obsahující jednoduché datové typy. Je jednoduchý #define z [CSimpleArray](../../atl/reference/csimplearray-class.md).  
 
 
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlsimpcoll.h
   
-##  <a name="lpcurl"></a>LPCURL  
+##  <a name="lpcurl"></a>  LPCURL  
  Ukazatel na konstantu [CUrl](../../atl/reference/curl-class.md) objektu.  
   
 ```   
@@ -279,7 +274,7 @@ typedef const CUrl* LPCURL;
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlutil.h
 
-##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>  DefaultThreadTraits
 Výchozí vlastnosti třídy přístup z více vláken.
 
 ### <a name="syntax"></a>Syntaxe
@@ -298,7 +293,7 @@ Pokud v aktuálním projektu používá s více vlákny CRT, DefaultThreadTraits
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlbase.h
   
-##  <a name="lpurl"></a>LPURL  
+##  <a name="lpurl"></a>  LPURL  
  Ukazatel [CUrl](../../atl/reference/curl-class.md) objektu.  
   
 ```   

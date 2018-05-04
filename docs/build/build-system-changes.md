@@ -2,12 +2,9 @@
 title: Změny systému sestavení | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a starších verzích, ale byl použit VCBuild systému. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou v aktuálním systému zobrazovat jinak. Tento dokument popisuje rozdíly v aktuální systém sestavení.  
@@ -65,10 +60,10 @@ MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
+## <a name="vcxprojuser-files"></a>. vcxproj.user soubory  
  Soubor uživatele (. vcxproj.user) ukládá vlastnosti specifické pro uživatele, pro příklad, ladění a nasazení nastavení. Soubor vcxproj.user se vztahují na všechny projekty pro určitého uživatele.  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters souboru  
  Když **Průzkumníku řešení** se používá k přidání souboru do projektu, soubor filtry (. vcxproj.filters) definuje where v **Průzkumníku řešení** stromové zobrazení, se přidá soubor, na základě jeho přípony názvu souboru.  
   
 ## <a name="vc-directories-settings"></a>Nastavení adresáře VC ++  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CSimpleDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CSimpleDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog – třída
 Tato třída implementuje základní modální dialogové.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Vytvoří modální dialogové okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Implementuje modální dialogové okno s základních funkcí. `CSimpleDialog`poskytuje podporu pro běžné ovládací prvky Windows jenom. Vytvoření a zobrazí modální dialogové okno, vytvoření instance této třídy, poskytuje název existující šablony prostředků pro dialogové okno. Pole objektu dialogového okna se zavře po kliknutí na libovolný ovládací prvek s předem definované hodnoty (například IDOK nebo IDCANCEL).  
+ Implementuje modální dialogové okno s základních funkcí. `CSimpleDialog` poskytuje podporu pro běžné ovládací prvky Windows jenom. Vytvoření a zobrazí modální dialogové okno, vytvoření instance této třídy, poskytuje název existující šablony prostředků pro dialogové okno. Pole objektu dialogového okna se zavře po kliknutí na libovolný ovládací prvek s předem definované hodnoty (například IDOK nebo IDCANCEL).  
   
- `CSimpleDialog`Umožňuje vytvořit pouze modálních dialogových oken. `CSimpleDialog`Poskytuje postup pole dialogu, který používá výchozí mapování zpráv směrovat zprávy do příslušné obslužné rutiny.  
+ `CSimpleDialog` Umožňuje vytvořit pouze modálních dialogových oken. `CSimpleDialog` Poskytuje postup pole dialogu, který používá výchozí mapování zpráv směrovat zprávy do příslušné obslužné rutiny.  
   
  V tématu [implementace dialogové okno](../../atl/implementing-a-dialog-box.md) Další informace.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  Vyvolá modální dialogové okno a vrátí výsledek – dialogové okno po dokončení.  
   
 ```

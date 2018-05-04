@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlComModule | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlComModule | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlComModule
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47e85f3aab75f8fafb76977847ce36d37808af60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule – třída
 Tato třída implementuje modul COM serveru.  
@@ -61,7 +56,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Volejte tuto metodu za účelem zrušit registraci knihovny typů.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CAtlComModule`implementuje modul server COM, umožňuje klientům přístup k součástem modulu.  
+ `CAtlComModule` implementuje modul server COM, umožňuje klientům přístup k součástem modulu.  
   
  Nahradí tato třída zastaralá [CComModule](../../atl/reference/ccommodule-class.md) třída používaná v dřívějších verzích ATL. V tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.  
   
@@ -73,7 +68,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
  Konstruktor  
   
 ```
@@ -83,7 +78,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Poznámky  
  Inicializuje modul.  
   
-##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule  
  Destruktor.  
   
 ```
@@ -93,7 +88,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny objekty pro vytváření tříd.  
   
-##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
  Volejte tuto metodu za účelem aktualizace registru systému pro každý objekt v mapování objektu.  
   
 ```
@@ -113,7 +108,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>Poznámky  
  Volá funkci globální [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
-##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib  
  Voláním této metody lze zaregistrovat knihovnu typů.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>Poznámky  
  Informace o typu knihovny se přidá do registru systému. Pokud instance modulu obsahuje více knihovny typů, použijte k určení, které knihovny typů by měl používat první verzi této metody.  
   
-##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
  Volejte tuto metodu zrušení registrace každý objekt v mapování objektu.  
   
 ```
@@ -153,7 +148,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>Poznámky  
  Volá funkci globální [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
-##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib  
  Volejte tuto metodu za účelem zrušit registraci knihovny typů.  
   
 ```

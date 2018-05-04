@@ -1,13 +1,10 @@
 ---
 title: Funkce CAtlServiceModuleT::Run | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule::Run
 - CServiceModule.Run
@@ -17,22 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run – funkce
 **Spustit** obsahuje volání `PreMessageLoop`, `RunMessageLoop`, a `PostMessageLoop`. Po volání, `PreMessageLoop` nejprve ukládá ID služby vlákna. Služba bude používat toto ID zavřete samotné odesláním **WM_QUIT** zprávu pomocí funkce rozhraní Win32 API [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop`pak zavolá `InitializeSecurity`. Ve výchozím nastavení `InitializeSecurity` volání [u funkce CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) s popisovač zabezpečení nastaven na hodnotu NULL, což znamená, že každý uživatel má přístup k objektu.  
+ `PreMessageLoop` pak zavolá `InitializeSecurity`. Ve výchozím nastavení `InitializeSecurity` volání [u funkce CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) s popisovač zabezpečení nastaven na hodnotu NULL, což znamená, že každý uživatel má přístup k objektu.  
   
  Pokud nechcete, aby službu, kterou chcete zadat vlastní zabezpečení, mají přednost před `PreMessageLoop` a nemůžete volat `InitializeSecurity`, a pak COM určí nastavení zabezpečení z registru. Pohodlný způsob, jak nakonfigurovat nastavení registru je [DCOMCNFG](../atl/dcomcnfg.md) nástroje, které jsou uvedeny dále v této části.  
   

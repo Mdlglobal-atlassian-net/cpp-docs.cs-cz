@@ -1,12 +1,9 @@
 ---
-title: "Funkce šablony | Microsoft Docs"
-ms.custom: 
+title: Funkce šablony | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721e466e5d7e77592e66aa3ebacb3ad59eb89bb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-templates"></a>Šablony funkcí
 Šablony třídy definují skupinu souvisejících tříd, které jsou založeny na typech argumentů předaných při vytváření instance třídy. Šablony funkce jsou podobné jako šablony třídy, ale definují skupinu funkcí. Pomocí šablon funkce lze určit sadu funkcí, které jsou založeny na stejném kódu, ale pracují s různými typy nebo třídami. Následující šablona funkce zamění dvě položky:  

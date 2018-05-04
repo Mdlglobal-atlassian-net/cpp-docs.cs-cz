@@ -1,13 +1,10 @@
 ---
-title: "Řídicí sekvence | Microsoft Docs"
-ms.custom: 
+title: Řídicí sekvence | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="escape-sequences"></a>Řídicí sekvence
 Znak kombinace skládající se z zpětné lomítko (**\\**) následuje písmeno, nebo kombinací číslic se nazývají "řídicích sekvencí." Pro zapsání znaku nového řádku, jednoduchých uvozovek nebo určitých jiných znaků ve znakových konstantách, je nutné použít řídicí sekvence. Řídicí sekvence je považována za jeden znak, a proto je platná jako znaková konstanta.  
@@ -73,7 +68,7 @@ Znak kombinace skládající se z zpětné lomítko (**\\**) následuje písmeno
 |**\\"**|Dvojité uvozovky|  
 |**\\\\**|Zpětné lomítko|  
 |**\\?**|Literální znak otazníku|  
-|**\\***ooo*|Znak ASCII v osmičkové soustavě|  
+|**\\** *ooo*|Znak ASCII v osmičkové soustavě|  
 |**\x** *hh*|Znak ASCII v šestnáctkové soustavě|  
 |**\x** *hhhh*|Znak Unicode v šestnáctkovém zápisu, pokud je tato řídicí sekvence použita v širokoznaké konstantě nebo literálu řetězce kódování Unicode.<br /><br /> Například `WCHAR f = L'\x4e00'` nebo `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|  
   

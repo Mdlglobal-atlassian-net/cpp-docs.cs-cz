@@ -1,13 +1,10 @@
 ---
-title: "C relační operátory a operátory rovnosti | Microsoft Docs"
-ms.custom: 
+title: C relační operátory a operátory rovnosti | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac6503b2c684b5acb921fe13ebf0b0ca11adbf04
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 Binární relační operátory a operátory rovnosti porovnat jejich první operand jejich Druhý operand k testování platnosti zadané relaci. Výsledek relační výrazu je 1, pokud je otestované vztah true a 0, pokud je hodnota false. Typ výsledku je `int`.  
@@ -67,7 +62,7 @@ Binární relační operátory a operátory rovnosti porovnat jejich první oper
   
  Operandy může mít typ celé číslo, číslo s plovoucí čárkou nebo ukazatel. Typy operandy může lišit. Relační operátory provádět obvyklé aritmetické převody na typ plovoucí a integrální operandy. Kromě toho můžete použít následující kombinace typů operand s relační operátory a operátory rovnosti:  
   
--   Ukazatelé na stejný typ může být operandy všechny relační nebo operátor rovnosti. Pro rovnosti (`==`) a nerovnosti (`!=`) operátory, výsledkem porovnání označuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory (**\<**,  **>** ,  **\<** =, a  **>** =), výsledkem porovnání označuje relativní pozici adres dvě paměti objektů na odkazuje. Relační operátory porovnání pouze posun.  
+-   Ukazatelé na stejný typ může být operandy všechny relační nebo operátor rovnosti. Pro rovnosti (`==`) a nerovnosti (`!=`) operátory, výsledkem porovnání označuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory (**\<**, **>**, **\<**=, a **>**=), výsledkem porovnání označuje relativní pozici adres dvě paměti objektů na odkazuje. Relační operátory porovnání pouze posun.  
   
      Porovnání ukazatelů je určená jenom pro součástí stejného objektu. Pokud následující ukazatele odkazovat na členy pole, je ekvivalentní k porovnání odpovídající dolní indexy porovnání. Je adresa první prvek pole "menší než" na adresu posledním elementem. V případě struktury jsou ukazatelé na členy struktura deklarovaný později "větší než" ukazatelé na členy deklarovaný dříve ve struktuře. Ukazatelé na členy stejné unie jsou stejné.  
   

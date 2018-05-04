@@ -1,32 +1,27 @@
 ---
-title: "Postupy: rozhraní mezi kódem výjimek a ostatním kódem | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: rozhraní mezi kódem výjimek a ostatním kódem | Microsoft Docs'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
 Tento článek popisuje, jak implementovat konzistentní výjimek v C++ modulu a také jak přeložit tyto výjimky do a z kódy chyb v hranicích výjimka.  
   
- V některých případech musí modulu C++ rozhraní s kódem, který nepoužívá výjimky (ostatním kód). Takového rozhraní se označuje jako *výjimka hranic*. Například můžete chtít volání funkce Win32 `CreateFile` v programu C++. `CreateFile`nepodporuje generování výjimek; Místo toho nastaví kódy chyb, které může načíst `GetLastError` funkce. Pokud vaše programu C++ netriviální, pak v ní pravděpodobně chcete mít konzistentní zásady zpracování chyb na základě výjimky. A pravděpodobně nechcete abandon výjimky právě, protože rozhraní ostatním kódem a ani chcete kombinovat zásad na základě výjimky a není určena pro výjimky Chyba v modulu C++.  
+ V některých případech musí modulu C++ rozhraní s kódem, který nepoužívá výjimky (ostatním kód). Takového rozhraní se označuje jako *výjimka hranic*. Například můžete chtít volání funkce Win32 `CreateFile` v programu C++. `CreateFile` nepodporuje generování výjimek; Místo toho nastaví kódy chyb, které může načíst `GetLastError` funkce. Pokud vaše programu C++ netriviální, pak v ní pravděpodobně chcete mít konzistentní zásady zpracování chyb na základě výjimky. A pravděpodobně nechcete abandon výjimky právě, protože rozhraní ostatním kódem a ani chcete kombinovat zásad na základě výjimky a není určena pro výjimky Chyba v modulu C++.  
   
 ## <a name="calling-non-exceptional-functions-from-c"></a>Volání funkcí ostatním z jazyka C++  
  Při volání ostatním funkce z jazyka C++ na nápad je zabalit této funkce ve funkci C++, který zjistí všechny chyby a pravděpodobně vyvolá výjimku. Při návrhu obálku funkci nejprve rozhodnout, jaký typ výjimky záruku zajistit: Ne throw, silné a basic. Druhý Navrhněte funkci tak, aby všechny prostředky, například popisovače souborů, jsou vydávány správně, pokud je vyvolána výjimka. Obvykle to znamená, které umožňují chytré ukazatele nebo podobné správci prostředků vlastní prostředky. Další informace o aspektech návrhu najdete v tématu [postupy: návrh na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).  

@@ -1,27 +1,22 @@
 ---
-title: "Přehled konvencí ABI ARM | Microsoft Docs"
-ms.custom: 
+title: Přehled konvencí ABI ARM | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Přehled konvencí ABI ARM
 Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na procesory ARM je založena na standardní EABI ARM. Tento článek popisuje klíčové rozdíly mezi Windows on ARM a standard. Další informace o standardní EABI ARM naleznete v tématu [aplikace binární rozhraní (ABI) pro architekturu ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  
@@ -67,7 +62,7 @@ Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na proces
     |LDR, LDR [S] B, H LDR [S]|Načtení z paměti|Ale není LDR literálu formulářů|  
     |STR STRB, STRH|Ukládání do paměti||  
     |PŘIDAT, ADC, RSB, SBC, SUB|Přidat nebo odebrat|Ale není přidat nebo dílčí SP, SP, imm7 formulářů<br /><br /> RM! = počítače, relativního rozlišujícího! = počítače, Rdm! = počítače|  
-    |CMP, CMN|Porovnání|RM! = počítače, nout! = počítače|  
+    |CMP, CMN|Porovnat|RM! = počítače, nout! = počítače|  
     |MUL|Násobení||  
     |AUTOMATICKÉ OBNOVENÍ SYSTÉMU, DOLNÍ LIMIT, LSR, ROR|Bitové posunutí||  
     |A BIC, EOR, ORR TST|Aritmetický bitový||  
@@ -197,7 +192,7 @@ Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na proces
 ## <a name="cc-specifics"></a>Specifika C/C++  
  Výčty jsou typy 32bitové celé číslo, pokud alespoň jednu hodnotu ve výčtu vyžaduje 64-bit dvojitou word úložiště. V takovém případě výčtu je propagována do typu 64bitové celé číslo.  
   
- `wchar_t`je definován jako ekvivalentní `unsigned short`, zachování kompatibility s jinými platformami.  
+ `wchar_t` je definován jako ekvivalentní `unsigned short`, zachování kompatibility s jinými platformami.  
   
 ## <a name="stack-walking"></a>Procházení zásobníku  
  Kompilace kódu Windows s rámečkem ukazatele povolené ([/Oy (vynechání ukazatele)](../build/reference/oy-frame-pointer-omission.md)) Chcete-li povolit procházení rychlé zásobníku. Obecně platí, r11 zaregistrovat v řetězci, který je {r11, lr} odkazuje na odkaz na další pár, který určuje má ukazatel na předchozí snímek v zásobníku a zpáteční adresu. Doporučujeme kódu také povolit ukazatele na rámce pro vylepšené profilace a trasování.  

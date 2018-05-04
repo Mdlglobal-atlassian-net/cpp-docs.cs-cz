@@ -1,29 +1,24 @@
 ---
-title: "Implementace nástroje vlastní řetězec Manager (rozšířené metoda) | Microsoft Docs"
-ms.custom: 
+title: Implementace nástroje vlastní řetězec Manager (rozšířené metoda) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementace nástroje vlastní řetězec Manager (rozšířené metoda)
 V situacích, specializované můžete implementovat vlastní řetězec správce, který mění více než jen haldě, které se používá k přidělení paměti. V takovém případě je nutné ručně implementovat [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní jako správce svého vlastní řetězec.  
@@ -34,7 +29,7 @@ V situacích, specializované můžete implementovat vlastní řetězec správce
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) toto pole ukazuje na `IAtlStringMgr` rozhraní sloužící ke správě dat tento řetězec. Když `CStringT` musí přidělit jinému uživateli nebo volné vyrovnávací paměti řetězců zavolá opětovné nebo volné metody tohoto rozhraní předávání `CStringData` struktura jako parametr. Při přidělování `CStringData` struktura v řetězec nadřízeného, je třeba nastavit tak, aby odkazovaly na váš vlastní řetězec manager v tomto poli.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) toto pole obsahuje aktuální logické délky řetězce uložené ve vyrovnávací paměti s výjimkou ukončující hodnotu null. `CStringT`Toto pole aktualizuje při délka řetězce. Při přidělování `CStringData` struktura, správce svého řetězec musí nastavit toto pole na nulu. Při opětovném přidělování `CStringData` struktura, vaše vlastní řetězec správce musí zůstat v tomto poli beze změny.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) toto pole obsahuje aktuální logické délky řetězce uložené ve vyrovnávací paměti s výjimkou ukončující hodnotu null. `CStringT` Toto pole aktualizuje při délka řetězce. Při přidělování `CStringData` struktura, správce svého řetězec musí nastavit toto pole na nulu. Při opětovném přidělování `CStringData` struktura, vaše vlastní řetězec správce musí zůstat v tomto poli beze změny.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) toto pole obsahuje maximální počet znaků (kromě ukončující null), které mohou být uloženy ve vyrovnávací paměti Tento řetězec bez změna přidělování ho. Vždy, když `CStringT` zvýšit logické délky řetězce, je potřeba nejdřív zkontroluje toto pole, abyste měli jistotu, není dostatek místa ve vyrovnávací paměti. Pokud kontrola selže, `CStringT` volání do vaší vlastní řetězec správce a znovu přidělte vyrovnávací paměti. Při přidělování nebo změna přidělování `CStringData` struktura, je potřeba nastavit pole Minimální počet znaků požadovaných v **nChars** parametru [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) nebo [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Pokud existuje více místa ve vyrovnávací paměti, než požadovaná, můžete nastavit tuto hodnotu tak, aby odrážela skutečné množství místa, které jsou k dispozici. To umožňuje `CStringT` růst řetězec k vyplnění celý přidělené místo předtím, než je zpětné volání do správce řetězec a znovu přidělte vyrovnávací paměti.  
   

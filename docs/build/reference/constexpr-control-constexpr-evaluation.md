@@ -1,13 +1,10 @@
 ---
-title: "-constexpr (zkušební constexpr ovládací prvek) | Microsoft Docs"
-ms.custom: 
+title: -constexpr (zkušební constexpr ovládací prvek) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /constexpr
 - -constexpr
@@ -20,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e594eb697c8972d28b513a3638d3eb704258b5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (zkušební constexpr řízení)  
   
@@ -41,13 +37,13 @@ Použití **/constexpr** – možnosti kompilátoru řízení parametry pro `con
   
 ## <a name="arguments"></a>Arguments  
   
-**Hloubka***N*  
+**Hloubka *** N*  
 Omezení hloubky rekurzivní `constexpr` fungovat na vyvolání *N* úrovně. Výchozí hodnota je 512.  
   
-**backtrace***N*  
+**backtrace *** N*  
 Zobrazit až *N* `constexpr` hodnocení v diagnostice. Výchozí hodnota je 10.  
   
-**kroky***N*  
+**kroky *** N*  
 Ukončit `constexpr` zkušební verzi po *N* kroky. Výchozí hodnota je 100 000.  
   
 ## <a name="remarks"></a>Poznámky  

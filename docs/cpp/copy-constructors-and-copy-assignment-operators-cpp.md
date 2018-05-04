@@ -1,12 +1,9 @@
 ---
-title: "Konstruktory a operátory přiřazení pro kopírování (C++) | Microsoft Docs"
-ms.custom: 
+title: Konstruktory a operátory přiřazení pro kopírování (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro kopírování (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  Pokud neprovedete deklaraci kopírovacího konstruktoru, kompilátor vygeneruje member-wise kopírovacího konstruktoru za vás.  Pokud neprovedete deklaraci operátor přiřazení kopírování, kompilátor generuje operátor přiřazení member-wise kopie za vás. Deklarování konstruktoru kopie nepotlačuje operátor přiřazení kopie vygenerovaný kompilátorem a opačně. Je-li jeden implementován, je doporučeno implementovat také druhý, aby byl význam kódu jasný.  
    
- Konstruktor copy používá argument typu *název třídy***&**, kde *název třídy* je název třídy, pro který je definován v konstruktoru. Příklad:  
+ Konstruktor copy používá argument typu * Třída-název ***&**, kde *název třídy* je název třídy, pro který je definován v konstruktoru. Příklad:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Ujistěte se, typ argumentu konstruktor copy *const název třídy*  **&**  kdykoli je to možné. To zabrání konstruktoru kopie v nechtěných úpravách objektu, ze kterého kopíruje. Taky umožňuje kopírování z **const** objekty.  
+>  Ujistěte se, typ argumentu konstruktor copy *const třída-název *** &** kdykoli je to možné. To zabrání konstruktoru kopie v nechtěných úpravách objektu, ze kterého kopíruje. Taky umožňuje kopírování z **const** objekty.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Kopírovací konstruktory vygenerované kompilátoru  
- Kopírování generované kompilátorem konstruktory jako uživatelem definované kopie konstruktorů mít jeden argument typu "odkaz na *název třídy*." Výjimka je v případě všechny základní třídy a člen třídy kopie konstruktorů deklarován jako trvá jeden argument typu **const** *název třídy***&**. V takovém případě je argument konstruktoru kopírování generované kompilátorem také **const**.  
+ Kopírování generované kompilátorem konstruktory jako uživatelem definované kopie konstruktorů mít jeden argument typu "odkaz na *název třídy*." Výjimka je v případě všechny základní třídy a člen třídy kopie konstruktorů deklarován jako trvá jeden argument typu **const** * třída-název ***&**. V takovém případě je argument konstruktoru kopírování generované kompilátorem také **const**.  
   
  Když je typ argumentu pro konstruktor copy není **const**, inicializace zkopírováním **const** objektu, vygeneruje se chyba. Naopak není pravda: Pokud je argumentem **const**, bude možné inicializovat zkopírováním objekt, který není **const**.  
   
- Operátory přiřazení generované kompilátorem postupují stejným způsobem s ohledem na **const.** Jejich trvat jeden argument typu *název třídy*  **&**  Pokud operátory přiřazení v všechny základní a člena třídy trvat argumenty typu **const** *název třídy &.* V takovém případě je třída generované trvá operátor přiřazení **const** argument.  
+ Operátory přiřazení generované kompilátorem postupují stejným způsobem s ohledem na **const.** Jejich trvat jeden argument typu *třída-název *** &** Pokud operátory přiřazení v všechny základní a člena třídy trvat argumenty typu **const** *název třídy &.* V takovém případě je třída generované trvá operátor přiřazení **const** argument.  
   
 > [!NOTE]
 >  Pokud jsou virtuální základní třídy inicializovány kopírovacími konstruktory, ať už vygenerovanými kompilátorem nebo definovanými uživatelem, jsou inicializovány pouze jednou v místě, kde jsou vytvořeny.  

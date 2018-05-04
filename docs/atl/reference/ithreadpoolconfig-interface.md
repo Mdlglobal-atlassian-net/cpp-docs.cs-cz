@@ -1,12 +1,9 @@
 ---
-title: "Rozhraní IThreadPoolConfig | Microsoft Docs"
-ms.custom: 
+title: Rozhraní IThreadPoolConfig | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d967720778305eace4eff9ad8b2163456fb4bb46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig rozhraní
 Toto rozhraní poskytuje metody pro konfiguraci fondu vláken.  
@@ -51,7 +46,7 @@ __interface
   
 |||  
 |-|-|  
-|[Getsize –](#getsize)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|  
+|[GetSize](#getsize)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|  
 |[GetTimeout](#gettimeout)|Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken způsobí čekání vlákno a ukončí se.|  
 |[SetSize](#setsize)|Volejte tuto metodu a nastavit počet vláken ve fondu.|  
 |[SetTimeout](#settimeout)|Volejte tuto metodu a nastavit maximální dobu v milisekundách, fondu vláken způsobí čekání vlákno a ukončí se.|  
@@ -62,7 +57,7 @@ __interface
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
   
-##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Volejte tuto metodu za účelem získání počet vláken ve fondu.  
   
 ```
@@ -79,7 +74,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
  Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken způsobí čekání vlákno a ukončí se.  
   
 ```
@@ -96,7 +91,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Příklad  
  V tématu [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  Volejte tuto metodu a nastavit počet vláken ve fondu.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Příklad  
  V tématu [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
  Volejte tuto metodu a nastavit maximální dobu v milisekundách, fondu vláken způsobí čekání vlákno a ukončí se.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Makra bodu připojení | Microsoft Docs"
-ms.custom: 
+title: Makra bodu připojení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f98b5abd00f1d7ac3e3d69b0e22b549fdea35a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-macros"></a>Makra bodu připojení
 Tyto makra definovat mapy bodu připojení a položky.  
@@ -41,7 +36,7 @@ Tyto makra definovat mapy bodu připojení a položky.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom 
    
-##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP  
  Označuje začátek položek mapování bod připojení.  
   
 ```
@@ -60,7 +55,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY a CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY a CONNECTION_POINT_ENTRY_P  
  Zadá bod připojení pro rozhraní zadané do bodu mapy připojení tak, aby k němu.  
   
 ```
@@ -85,7 +80,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
  Označuje konec položek mapování bod připojení.  
   
 ```

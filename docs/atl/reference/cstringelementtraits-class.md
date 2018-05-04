@@ -1,12 +1,9 @@
 ---
-title: "Třída CStringElementTraits | Microsoft Docs"
-ms.custom: 
+title: Třída CStringElementTraits | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraits
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025c9aa66a8647fd5d8ca9803aedb50b27ed3be1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits – třída
 Tato třída poskytuje statické funkce používá ukládání třídy kolekce `CString` objekty.  
@@ -76,7 +71,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** cstringt.h  
   
-##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
  Volání této statické funkce k porovnání dvou prvků řetězce rovnosti.  
   
 ```
@@ -93,7 +88,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu true Pokud elementy jsou stejné, jinak hodnota false.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
  Volání této statické funkce k porovnání dvou prvků řetězce.  
   
 ```
@@ -111,7 +106,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  Nula. Pokud jsou řetězce identické, < 0 Pokud `str1` je menší než `str2`, nebo > 0 Pokud `str1` je větší než `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda se používá k provádění porovnání.  
 
   
-##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
  Volání této funkce statický zkopírovat `CString` elementy, které jsou uložené v objektu třídy kolekce.  
   
 ```
@@ -134,7 +129,7 @@ static void CopyElements(
 ### <a name="remarks"></a>Poznámky  
  Zdrojové a cílové elementy se nesmí překrývat.  
   
-##  <a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>  CStringElementTraits::Hash  
  Volání této statické funkce Vypočítat hodnotu hash pro daný řetězec elementu.  
   
 ```
@@ -148,21 +143,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu hash, vypočítává pomocí obsahu řetězce.  
   
-##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
  Datový typ pro použití při přidávání do třídy objektu kolekce elementů.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
  Datový typ pro načítání elementy z kolekce třídy objektu.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
  Volání této funkce statický přesunovat `CString` elementy, které jsou uložené v objektu třídy kolekce.  
   
 ```

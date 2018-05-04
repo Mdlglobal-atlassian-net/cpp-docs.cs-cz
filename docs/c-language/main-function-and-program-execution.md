@@ -1,13 +1,10 @@
 ---
-title: "hlavní funkce a spuštění programu | Microsoft Docs"
-ms.custom: 
+title: hlavní funkce a spuštění programu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>main – spuštění funkce a programu
 Každý program C má primární funkce (hlavní), který musí mít název **hlavní**. Pokud váš kód dodržuje programovací model znakové sady Unicode, můžete použít verzi široká charakterová **hlavní**, **wmain**. **Hlavní** funkce slouží jako výchozí bod pro spuštění programu. Obvykle řídí spuštění programu pomocí směrování volání dalších funkcí v programu. Program obvykle ukončí provádění na konci **hlavní**, i když můžete ukončovat platnost u jiných bodů programu pro celou řadu důvodů. V některých případech, například při zjištění určité chyby, lze vynutit ukončení programu. Chcete-li to provést, použijte **ukončete** funkce. Najdete v článku *referenční dokumentace běhové knihovny* informace o a příklad použití [ukončete](../c-runtime-library/reference/exit-exit-exit.md) funkce.  

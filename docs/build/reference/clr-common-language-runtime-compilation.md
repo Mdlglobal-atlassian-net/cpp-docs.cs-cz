@@ -1,13 +1,10 @@
 ---
 title: -clr (kompilace Common Language Runtime) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 Umožňuje aplikací a součástí, které chcete používat funkce z common language runtime (CLR).  
@@ -56,10 +51,10 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
   
  [Postupy: přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
- **/clr:pure**  
+ **/ CLR: pure**  
  / CLR: pure je zastaralý. V budoucích verzích kompilátor nemusí podporovat tuto možnost. Doporučujeme vám, že je port kód, který musí být čistá MSIL jazyka C#.  
   
- **/clr:safe**  
+ **/ CLR: safe**  
  / CLR: safe je zastaralý. V budoucích verzích kompilátor nemusí podporovat tuto možnost. Doporučujeme vám, že je port kód, který musí být bezpečné MSIL jazyka C#. 
   
  **/CLR:noAssembly**  
@@ -76,7 +71,7 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
   
  Aplikace, který se zkompiluje pomocí **initialAppDomain** by se nemělo používat aplikaci, která používá technologii ASP.NET, protože není podporována v 1 verzi modulu CLR.  
   
- **/clr:nostdlib**  
+ **/CLR:nostdlib**  
  Dá pokyn kompilátoru ignorovat \clr výchozí adresář. Kompilátor vytváří chyby, pokud jsou včetně několik verzí knihovny DLL, jako je například System.dll. Pomocí této možnosti můžete zadat konkrétní framework pro použití během kompilace.  
   
 ## <a name="remarks"></a>Poznámky  

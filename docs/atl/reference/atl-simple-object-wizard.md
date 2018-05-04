@@ -1,12 +1,9 @@
 ---
-title: "Průvodce jednoduchého objektu knihovny ATL | Microsoft Docs"
-ms.custom: 
+title: Průvodce jednoduchého objektu knihovny ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ff9648cfc350f724a333e38622d082d8d399b3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-simple-object-wizard"></a>Průvodce jednoduchého objektu knihovny ATL
 Tento průvodce vloží do projektu minimální objektu COM. Na této stránce průvodce můžete zadat názvy, které identifikují třídami C++ a soubory pro objektu a jeho funkce COM.  

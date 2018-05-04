@@ -2,12 +2,9 @@
 title: -Ignorovat (ignorovat konkrétní varování) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /OVERWRITE
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8815438ce56629bd120c30b0d0db9fef96916d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b096fc12f69fbe637a3067646c20f6d520a9250f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Ignorovat konkrétní varování)
 ```  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 |Upozornění linkerů||  
 |--------------------|-|  
-|LNK4017|`keyword`příkaz není podporován pro cílovou platformu; Ignorovat|  
+|LNK4017|`keyword` příkaz není podporován pro cílovou platformu; Ignorovat|  
 |[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|Nerozpoznaný možnost '`option`'; ignorováno|  
 |LNK4062|'`option`'není kompatibilní s'`architecture`se cílový počítač; možnost Ignorovat|  
 |[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)|ignoruje "`option1`"kvůli na"`option2`" specifikace|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 |LNK4207|'`filename`' zkompilovat /Yc /Yu /Z7; nelze vytvořit PDB; spojující objekt a pak ji znovu zkompilovat s /Zi, jako kdyby žádné informace o ladění|  
 |LNK4208|kompatibilní formát PDB v '`filename`'; odstranit a znovu sestavte; propojování objektů, jako kdyby žádné informace o ladění|  
 |LNK4209|informace o ladění poškozený; znovu zkompiluje modulu; propojování objektů, jako kdyby žádné informace o ladění|  
-|[LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)|`option`již není podporována; Ignorovat|  
+|[LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)|`option` již není podporována; Ignorovat|  
 |LNK4228|'`option`se ignoruje; neplatná pro knihovny DLL|  
 |[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)|Neplatná direktiva /`directive` ignorován; najít|  
   

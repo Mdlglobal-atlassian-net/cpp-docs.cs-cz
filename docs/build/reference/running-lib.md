@@ -1,13 +1,10 @@
 ---
-title: "Spuštění knihovny LIB | Microsoft Docs"
-ms.custom: 
+title: Spuštění knihovny LIB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c306ba58bfef11f92d7e861272aad2aa605c8fde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-lib"></a>Spuštění knihovny LIB
 Různé možnosti příkazového řádku můžete použít k řízení LIB.  
@@ -74,7 +69,7 @@ LIB @commandfile
   
  Následující možnosti použít na všechny režimy LIB:  
   
- / ERRORREPORT [ŽÁDNÉ &#124; ŘÁDKU &#124; FRONTY &#124; ODESLAT]  
+ / ERRORREPORT [NONE &AMP;#124; VÝZVA &AMP;#124; FRONTY &AMP;#124; ODESLAT]  
  Pokud se nezdaří lib.exe za běhu, můžete/errorreport odesílat informace společnosti Microsoft o tyto interní chyby.  
   
  Další informace o/errorreport najdete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).  

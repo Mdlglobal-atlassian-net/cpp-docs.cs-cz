@@ -1,34 +1,29 @@
 ---
-title: "Konfigurace programů pro systém Windows XP | Microsoft Docs"
-ms.custom: 
+title: Konfigurace programů pro systém Windows XP | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro systém Windows XP
 
 Protože Visual Studio podporuje více modulové platformy, můžete určit cílovou operačních systémů a runtime knihovny, které nepodporují výchozí sady nástrojů. Například přepínání sada nástrojů platformy, můžete pomocí C ++ 11 a C ++ 14, vylepšení C ++ 17 jazyk podporuje – kompilátor Visual C++ v sadě Visual Studio k vytvoření aplikace cílených [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Můžete také použít starší platformy modulové zachovat starší verze kódu binární kompatibilní a nadále využívat výhody nejnovějších funkcí Visual Studio IDE.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalace sady nástrojů systému Windows XP
-Sada nástrojů platformy a součásti cíl [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Visual Studio 2017, spusťte instalační program Visual Studio. Po počáteční instalaci sady Visual Studio, nebo když zvolíte **upravit** Pokud chcete upravit existující instalace, ujistěte se, že **vývoj aplikací s jazykem C++** je vybrané úlohy. V seznamu volitelné součásti pro tuto úlohu, vyberte **Windows XP podporu pro jazyk C++**a potom zvolte **nainstalovat** nebo **upravit**.
+Sada nástrojů platformy a součásti cíl [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Visual Studio 2017, spusťte instalační program Visual Studio. Po počáteční instalaci sady Visual Studio, nebo když zvolíte **upravit** Pokud chcete upravit existující instalace, ujistěte se, že **vývoj aplikací s jazykem C++** je vybrané úlohy. V seznamu volitelné součásti pro tuto úlohu, vyberte **Windows XP podporu pro jazyk C++** a potom zvolte **nainstalovat** nebo **upravit**.
 
 ## <a name="windows-xp-targeting-experience"></a>Cílení na prostředí Windows XP
 

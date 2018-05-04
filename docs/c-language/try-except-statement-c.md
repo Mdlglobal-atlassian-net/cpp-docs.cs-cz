@@ -1,13 +1,10 @@
 ---
-title: "Zkuste – s výjimkou Statement (C) | Microsoft Docs"
-ms.custom: 
+title: Zkuste – s výjimkou Statement (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9896e8a348a70ff6e27342f53f627097ef15dfa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c55ff2599fac14be0be9ac852727167dd34e02d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement-c"></a>try-except – příkaz (C)
 **Konkrétní Microsoft**  
@@ -52,11 +47,11 @@ ms.lasthandoff: 12/21/2017
   
 3.  Pokud dojde k výjimce během zpracování oddílu chráněného nebo v jakékoli rutině části chráněného volá, `__except` výraz vyhodnocen a hodnota vrácená Určuje, jak je výjimka ošetřena. Existují tři hodnoty:  
   
-     `EXCEPTION_CONTINUE_SEARCH`Výjimka nebyla rozpoznána. Pokračovat ve vyhledávání nahoru v zásobníku pro obslužnou rutinu, nejdřív pro obsahující **zkuste – s výjimkou** příkazy, pak pro obslužné rutiny s další nejvyšší prioritou.  
+     `EXCEPTION_CONTINUE_SEARCH` Výjimka nebyla rozpoznána. Pokračovat ve vyhledávání nahoru v zásobníku pro obslužnou rutinu, nejdřív pro obsahující **zkuste – s výjimkou** příkazy, pak pro obslužné rutiny s další nejvyšší prioritou.  
   
-     `EXCEPTION_CONTINUE_EXECUTION`Výjimka je rozpoznána ale vynechat. Program bude pokračovat tam, kde k výjimce došlo.  
+     `EXCEPTION_CONTINUE_EXECUTION` Výjimka je rozpoznána ale vynechat. Program bude pokračovat tam, kde k výjimce došlo.  
   
-     `EXCEPTION_EXECUTE_HANDLER`Výjimka je rozpoznat. Přenos řízení na obslužnou rutinu výjimky spuštěním `__except` složený příkaz a potom v provádění pokračovat v místě, se vyskytla výjimka.  
+     `EXCEPTION_EXECUTE_HANDLER` Výjimka je rozpoznat. Přenos řízení na obslužnou rutinu výjimky spuštěním `__except` složený příkaz a potom v provádění pokračovat v místě, se vyskytla výjimka.  
   
  Protože `__except` výraz vyhodnocen jako výraz C, je omezený na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárka. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.  
   

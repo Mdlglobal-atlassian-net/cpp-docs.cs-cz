@@ -2,11 +2,8 @@
 title: Výchozí argumenty | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-arguments"></a>Výchozí argumenty
 V mnoha případech obsahují funkce argumenty, které jsou tak zřídka používané, že bude stačit výchozí hodnota. Zařízení výchozího argumentu umožňuje zadání pouze těch argumentů funkce, které mají v daném volání význam. Pro ilustraci tento koncept, podívejte se na příklad uvedené v [přetížení funkcí](../cpp/function-overloading.md).  

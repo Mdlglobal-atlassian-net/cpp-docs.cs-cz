@@ -1,29 +1,24 @@
 ---
-title: "Zprávy Windows makra | Microsoft Docs"
-ms.custom: 
+title: Zprávy Windows makra | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 dev_langs:
 - C++
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dde3255997b03eb827ef9e318de73b3badee23c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-messages-macros"></a>Zprávy Windows makra
 Toto makro předává zprávy oken.  
@@ -35,7 +30,7 @@ Toto makro předává zprávy oken.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h 
    
-##  <a name="wm_forwardmsg"></a>WM_FORWARDMSG  
+##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
  Toto makro předá zprávu přijme a údržbu za účelem další okno zpracování.  
   
 ```

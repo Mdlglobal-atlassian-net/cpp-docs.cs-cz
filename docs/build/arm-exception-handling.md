@@ -1,27 +1,22 @@
 ---
-title: "Zpracovávání výjimek v jazyce ARM | Microsoft Docs"
-ms.custom: 
+title: Zpracovávání výjimek v jazyce ARM | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>Zpracovávání výjimek v jazyce ARM
 Systém Windows na ARM používá stejné strukturovaného zpracování mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwaru výjimek. Obslužné rutiny výjimek specifické pro jazyk je postavená na Windows strukturovaného zpracování pomocí jazyka podpůrné funkce výjimek. Tento dokument popisuje zpracování výjimek v systému Windows na ARM a pomocníky jazyk používaný kód, který je generován MASM a kompilátor Visual C++.  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  Kód 0xFD je speciální kód na konci pořadí, které znamená, že se epilogu jeden 16bitové instrukce delší než prologu. To umožňuje větší sdílení unwind kódy.  
   
- V příkladu Pokud dojde k výjimce při spouštění tělo funkce mezi prologu a epilogu unwinding začíná epilogu případu, u posunu 0 v rámci Kód epilogu. To odpovídá posun 0x140 v příkladu. Unwinder provede úplné unwind pořadí, protože bylo provedeno žádné čištění. Pokud místo toho výjimka dojde k jedné instrukce po začátku kód epilogu, můžete unwinder úspěšně unwind přeskočením první unwind kód. Zadané mapování 1: 1 mezi operační kódy a unwind kódy, pokud unwinding z instrukce  *n*  v epilogu, přeskočte unwinder první  *n*  unwind kódy.  
+ V příkladu Pokud dojde k výjimce při spouštění tělo funkce mezi prologu a epilogu unwinding začíná epilogu případu, u posunu 0 v rámci Kód epilogu. To odpovídá posun 0x140 v příkladu. Unwinder provede úplné unwind pořadí, protože bylo provedeno žádné čištění. Pokud místo toho výjimka dojde k jedné instrukce po začátku kód epilogu, můžete unwinder úspěšně unwind přeskočením první unwind kód. Zadané mapování 1: 1 mezi operační kódy a unwind kódy, pokud unwinding z instrukce *n* v epilogu, přeskočte unwinder první *n* unwind kódy.  
   
- Podobně jako logiku funguje obráceným pro prologu. Pokud unwinding z posunu 0 v prologu, nic musí být spuštěn. Pokud unwinding z jedné instrukce v, začněte unwind pořadí od konce jeden unwind kód, protože prologu unwind kódy jsou uložené v obráceném pořadí. V případě obecné Pokud unwinding z instrukce  *n*  v prologu, unwinding by se měl spustit provádění na  *n*  unwind kódy od konce seznamu kódy.  
+ Podobně jako logiku funguje obráceným pro prologu. Pokud unwinding z posunu 0 v prologu, nic musí být spuštěn. Pokud unwinding z jedné instrukce v, začněte unwind pořadí od konce jeden unwind kód, protože prologu unwind kódy jsou uložené v obráceném pořadí. V případě obecné Pokud unwinding z instrukce *n* v prologu, unwinding by se měl spustit provádění na *n* unwind kódy od konce seznamu kódy.  
   
  Unwind kódy prologu a epilogu není vždy přesně shodují. V takovém případě může mít unwind kódu tak, aby obsahovala několik pořadí kódů. K určení posun k zahájení zpracování kódy, použijte tuto logiku:  
   

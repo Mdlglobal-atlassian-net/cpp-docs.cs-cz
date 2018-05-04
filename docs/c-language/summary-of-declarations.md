@@ -1,27 +1,22 @@
 ---
-title: "Souhrn deklarací | Microsoft Docs"
-ms.custom: 
+title: Souhrn deklarací | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: a9e5fe380d41b5d1e58a63b1aa0b99a239dee515
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 `declaration`:  
@@ -49,12 +44,12 @@ ms.lasthandoff: 03/16/2018
  *init-declarator-list*:  
  *init-declarator*  
   
- *init-declarator-list*  **,**  *init-declarator*  
+ *Init – deklarátor seznamu***,***init deklarátor*   
   
- *init-declarator*:  
+ *Init – deklarátor*:  
  *deklarátor*  
   
- *deklarátor***=***inicializátoru* / * pro skalární inicializace     \*/  
+ *deklarátor***=***inicializátoru* / * pro skalární inicializace \*/  
   
  *specifikátor třídy úložiště*:  
  **auto**  
@@ -65,9 +60,9 @@ ms.lasthandoff: 03/16/2018
   
  **extern**  
   
- **typedef**  
+ **Definice TypeDef**  
   
- **__declspec (**  *extended-decl-modifier-seq*  **)** /* Microsoft Specific \*/  
+ **__declspec (***rozšířené decl – modifikátor seq***)** / * specifické pro Microsoft     \*/  
   
  *Specifikátor typu*:  
  **void**  
@@ -98,7 +93,7 @@ ms.lasthandoff: 03/16/2018
   
  *struct-or-union-specifier*  
   
- *enum-specifier*  
+ *enum – specifikátor*  
   
  *typedef-name*  
   
@@ -108,58 +103,58 @@ ms.lasthandoff: 03/16/2018
  `volatile`  
   
  `declarator`:  
- `pointer`<sub>opt</sub> *direct-declarator*  
+ `pointer`<sub>OPT</sub> *přímo deklarátor*  
   
- *direct-declarator*:  
+ *deklarátor přímo*:  
  *Identifikátor*  
   
- **(***deklarátor***)**   
+ **(***deklarátor***)**  
   
- *direct-declarator*  **[**  *constant-expression* <sub>opt</sub>**]**  
+ *deklarátor přímo***[***konstantní výraz* <sub>opt</sub>**]**   
   
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl       \*/  
+ *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl \*/  
   
- *deklarátor přímo***(***seznam identifikátorů*<sub>opt</sub>**)** / * deklarátor zastaralé stylu     \*/  
+ *deklarátor přímo***(***seznam identifikátorů*<sub>opt</sub>**)** / * deklarátor zastaralé stylu \*/  
   
  `pointer`:  
- **\*** *type-qualifier-list*<sub>opt</sub>  
+ **\*** *seznam typů kvalifikátor*<sub>opt</sub>  
   
- **\*** *type-qualifier-list*<sub>opt</sub>`pointer`  
+ **\*** *seznam typů kvalifikátor*<sub>opt</sub>`pointer`  
   
  *Seznam parametrů typu*: /\* seznam parametrů \*/  
  *parameter-list*  
   
  *Seznam parametrů* **,...**  
   
- *parameter-list*:  
+ *Seznam parametrů*:  
  *parameter-declaration*  
   
- *Seznam parametrů***,***deklarace parametru*   
+ *Seznam parametrů***,***deklarace parametru*  
   
- *type-qualifier-list*:  
- *type-qualifier*  
+ *seznam typů kvalifikátor*:  
+ *Kvalifikátor typu*  
   
  *seznam typů kvalifikátor kvalifikátor typu*  
   
  *enum – specifikátor*:  
- **výčet***identifikátor*<sub>opt</sub>**{** *enumerátor seznamu* **}**   
+ **výčet***identifikátor*<sub>opt</sub>**{** *enumerátor seznamu* **}**  
   
- **výčet***identifikátor*   
+ **výčet***identifikátor*  
   
  *Enumerátor seznamu*:  
  *Enumerátor*  
   
- *Enumerátor seznamu***,**   `enumerator`  
+ *Enumerátor seznamu***,**  `enumerator`  
   
  `enumerator`:  
  *Konstanta výčtu*  
   
- *Konstanta výčtu***=***konstantní výraz*   
+ *Konstanta výčtu***=***konstantní výraz*  
   
  *Konstanta výčtu*:  
  *Identifikátor*  
   
- *struct-or-union-specifier*:  
+ *Struktura nebo sjednocení specifikátor*:  
  *Struktura nebo sjednocení identifikátor*<sub>opt</sub>**{** *seznam struktura prohlášení* **}** *struktura nebo sjednocení identifikátor*  
   
  *Struktura nebo sjednocení*:  
@@ -167,44 +162,44 @@ ms.lasthandoff: 03/16/2018
   
  **sjednocení**  
   
- *struct-declaration-list*:  
- *struct-declaration*  
+ *seznam struktura prohlášení*:  
+ *Struktura – deklarace*  
   
  *seznam struktura prohlášení struktura – deklarace*  
   
  *Struktura deklarace*:  
- *specifikátor. kvalifikátor seznamu struktura – deklarátor seznamu***;**   
+ *specifikátor. kvalifikátor seznamu struktura – deklarátor seznamu***;**  
   
  *specifier-qualifier-list*:  
- *type-specifier specifier-qualifier-list*<sub>opt</sub>  
+ *Specifikátor typu specifikátor kvalifikátor list*<sub>opt</sub>  
   
  *Kvalifikátor typu specifikátor kvalifikátor list*<sub>opt</sub>  
   
- *struct-declarator-list*:  
- *Struktura deklarátor struktura – deklarátor seznamu***,***deklarátor – struktura*   
+ *Struktura – deklarátor seznamu*:  
+ *Struktura deklarátor struktura – deklarátor seznamu***,***deklarátor – struktura*  
   
- *struct-declarator*:  
+ *Struktura deklarátor*:  
  *deklarátor*  
   
  *Specifikátor typu deklarátor*<sub>opt</sub>**:** *konstantní výraz*  
   
- *parameter-declaration*:  
+ *deklarace parametru*:  
  *specifikátory deklarace deklarátor* / * deklarátor pojmenované \*/  
   
- *specifikátory deklarace abstraktní – deklarátor*<sub>opt</sub>  **/ \***  anonymní deklarátor **\*/**  
+ *specifikátory deklarace abstraktní – deklarátor*<sub>opt</sub> **/ \*** anonymní deklarátor **\*/**  
   
- *Seznam identifikátorů*:  **/ \***  pro deklarátor starého stylu **\* /**  
+ *Seznam identifikátorů*: **/ \*** pro deklarátor starého stylu **\* /**  
  *Identifikátor*  
   
- *Seznam identifikátorů***,***identifikátor*   
+ *Seznam identifikátorů***,***identifikátor*  
   
- *deklarátor abstraktní*:  **/ \***  použít s anonymní deklarátory **\*/**  
- *pointer*  
+ *deklarátor abstraktní*: **/ \*** použít s anonymní deklarátory **\*/**  
+ *Ukazatele*  
   
  `pointer`<sub>opt</sub>*direct-abstract-declarator*  
   
  *direct-abstract-declarator*:  
- **(***abstraktní deklarátor***)**   
+ **(***abstraktní deklarátor***)**  
   
  *direct-abstract-declarator*<sub>opt</sub>**[** *constant-expression*<sub>opt</sub>**]**  
   
@@ -213,25 +208,25 @@ ms.lasthandoff: 03/16/2018
  *Inicializátor*:  
  *assignment-expression*  
   
- **{***inicializátoru seznamu***}** / * pro inicializace agregace     \*/  
+ **{***inicializátoru seznamu***}** / * pro inicializace agregace \*/  
   
- **{***inicializátoru seznamu***,}**   
+ **{***inicializátoru seznamu***,}**  
   
- *initializer-list*:  
+ *inicializátoru seznamu*:  
  *Inicializátor*  
   
- *inicializátoru seznamu***,***inicializátoru*   
+ *inicializátoru seznamu***,***inicializátoru*  
   
- *type-name*:  
- *specifier-qualifier-list abstract-declarator*<sub>opt</sub>  
+ *Název typu*:  
+ *specifikátor. kvalifikátor seznamu abstraktní – deklarátor*<sub>opt</sub>  
   
- *typedef-name*:  
+ *TypeDef – název*:  
  *Identifikátor*  
   
  *Rozšířené decl – modifikátor seq*:/\* specifické pro Microsoft \*/  
  *extended-decl-modifier*<sub>opt</sub>  
   
- *extended-decl-modifier-seq extended-decl-modifier*  
+ *Rozšířené rozšířené decl – modifikátor seq – decl – modifikátor*  
   
  *Rozšířené modifikátor decl*: /\* specifické pro Microsoft \*/  
  **thread**  

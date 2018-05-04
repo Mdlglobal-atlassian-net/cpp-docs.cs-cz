@@ -2,12 +2,9 @@
 title: -MD,. -MT, -LD (použít běhovou knihovnu) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Použít běhovou knihovnu)
 Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo ladicí verze knihovny runtime.  
@@ -73,8 +68,8 @@ Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo
 |------------|-----------------|  
 |**/MD**|Způsobí, že aplikace použije verzi knihovny runtime, která je vícevláknová a specifická pro knihovnu DLL. Definuje `_MT` a `_DLL` a způsobí, že kompilátor název knihovny MSVCRT.lib umístěte do souboru .obj.<br /><br /> Aplikace kompilované s tímto parametrem jsou staticky propojeny se souborem MSVCRT.lib. Tato knihovna poskytuje vrstvu kódu, která linkeru umožňuje překládat externí odkazy. Skutečné pracovní kódu je součástí MSVCR*cisloverze*. Knihovny DLL, které musí být k dispozici v době běhu aplikací propojená s MSVCRT.lib.|  
 |**/ MDd**|Definuje `_DEBUG`, `_MT`, a `_DLL` a způsobí, že aplikace pro používání ladění vícevláknový specifické a knihovny DLL verze běhové knihovny. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|  
-|**/ MT**|Způsobí, že aplikace použije vícevláknovou statickou verzi knihovny runtime. Definuje `_MT` a způsobí, že kompilátor umístěte název knihovny LIBCMT.lib do souboru .obj tak, aby linkeru použije LIBCMT.lib přeložit externí symboly.|  
-|**/ MTd**|Definuje `_DEBUG` a `_MT`. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.|  
+|**/MT**|Způsobí, že aplikace použije vícevláknovou statickou verzi knihovny runtime. Definuje `_MT` a způsobí, že kompilátor umístěte název knihovny LIBCMT.lib do souboru .obj tak, aby linkeru použije LIBCMT.lib přeložit externí symboly.|  
+|**/MTd**|Definuje `_DEBUG` a `_MT`. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.|  
 |**/LD**|Vytvoří knihovnu DLL.<br /><br /> Předává **/dll** možnosti linkeru. Linkeru hledá, ale nevyžaduje, `DllMain` funkce. Pokud jste Nezapisovat `DllMain` vloží linkeru funkce, `DllMain` funkce, která vrátí hodnotu TRUE.<br /><br /> Propojí spouštěcí kód knihovny DLL.<br /><br /> Vytvoří knihovnu importu (.lib), není-li na příkazovém řádku zadán soubor exportu (.exp). Knihovnu importu propojíte s aplikacemi, které volají vaši knihovnu DLL.<br /><br /> Interpretuje [/Fe (název souboru EXE)](../../build/reference/fe-name-exe-file.md) jako pojmenování knihovny DLL, nikoli soubor .exe. Ve výchozím nastavení, stane se název programu *basename*.dll místo *basename*.exe.<br /><br /> Znamená **/MT** explicitně nezadáte **/MD**.|  
 |**/ LDd**|Vytvoří ladicí knihovnu DLL. Definuje `_MT` a `_DEBUG`.|  
   

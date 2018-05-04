@@ -1,12 +1,9 @@
 ---
-title: "Třída CDefaultCompareTraits | Microsoft Docs"
-ms.custom: 
+title: Třída CDefaultCompareTraits | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultCompareTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c8bfd8ac02979f82e205ec86269b7ac40c8b08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits – třída
 Tato třída poskytuje výchozí element porovnání funkcí.  
@@ -61,7 +56,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcoll.h  
   
-##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
  Volání této funkci můžete porovnat dva elementy rovnosti.  
   
 ```
@@ -81,7 +76,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této funkce je rovnosti ( `==`) operátor. Pro objekty než jednoduché datové typy pravděpodobně bude třeba tuto funkci k přepsání.  
   
-##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
  Volání této funkce pro zjištění elementu vyšší a nižší úrovně.  
   
 ```
@@ -105,7 +100,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce používá `==`,  **\<** , a  **>**  operátory. Pro objekty než jednoduché datové typy pravděpodobně bude třeba tuto funkci k přepsání.  
+ Výchozí implementace této funkce používá `==`, **\<**, a **>** operátory. Pro objekty než jednoduché datové typy pravděpodobně bude třeba tuto funkci k přepsání.  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../../atl/atl-class-overview.md)

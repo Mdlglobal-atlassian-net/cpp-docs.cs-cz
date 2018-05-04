@@ -1,12 +1,9 @@
 ---
-title: "Globální funkce zabezpečení | Microsoft Docs"
-ms.custom: 
+title: Globální funkce zabezpečení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 Tyto funkce podporují úprav SID a seznamu ACL objektů.  
@@ -58,7 +53,7 @@ Tyto funkce podporují úprav SID a seznamu ACL objektů.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  Voláním této funkce načtete informace o volitelném seznamu řízení přístupu (DACL) zadaného objektu.  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>Poznámky  
  V sestavení pro ladění, dojde k chybě assertion Pokud buď `hObject` nebo `pDacl` je neplatný.  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Voláním této funkce nastavíte informace o volitelném seznamu řízení přístupu (DACL) zadaného objektu.  
   
 > [!IMPORTANT]
@@ -122,7 +117,7 @@ inline bool AtlSetDacl(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  Voláním této funkce načtete identifikátor zabezpečení skupiny (SID) určitého objektu.  
   
 > [!IMPORTANT]
@@ -151,7 +146,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  Voláním této funkce nastavíte identifikátor zabezpečení skupiny (SID) určitého objektu.  
   
 > [!IMPORTANT]
@@ -180,7 +175,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  Voláním této funkce načtete identifikátor zabezpečení vlastníka (SID) určitého objektu.  
   
 > [!IMPORTANT]
@@ -209,7 +204,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  Voláním této funkce nastavíte identifikátor zabezpečení vlastníka (SID) určitého objektu.  
   
 > [!IMPORTANT]
@@ -238,7 +233,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  Voláním této funkce načtete informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.  
   
 > [!IMPORTANT]
@@ -274,7 +269,7 @@ inline bool AtlGetSacl(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  Voláním této funkce nastavíte informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.  
   
 > [!IMPORTANT]
@@ -316,7 +311,7 @@ inline bool AtlSetSacl(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  Voláním této funkce načtete popisovač zabezpečení daného objektu.  
   
 > [!IMPORTANT]

@@ -2,11 +2,8 @@
 title: Modul snap-In objekt makra | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
@@ -20,17 +17,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 111fb83ed0eaae936dfa38d7047b2a0c2fb2443b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8a335bbe5424ca04f1db03a3f3ac4bf3cfa9ec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="snap-in-object-macros"></a>Modul snap-In objekt makra
 Tyto makra poskytuje podporu pro rozšíření modulu snap-in.  
@@ -49,7 +44,7 @@ Tyto makra poskytuje podporu pro rozšíření modulu snap-in.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsnap.h 
    
-##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="begin_extension_snapin_nodeinfo_map"></a>  BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
  Označuje začátek mapování třídy dat rozšiřující modul snap-in.  
   
 ```
@@ -66,7 +61,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
+##  <a name="begin_snapintoolbarid_map"></a>  BEGIN_SNAPINTOOLBARID_MAP  
  Deklaruje začátku mapy ID nástrojů pro objekt, modul Snap-In.  
   
 ```
@@ -80,7 +75,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
-##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="end_extension_snapin_nodeinfo_map"></a>  END_EXTENSION_SNAPIN_NODEINFO_MAP  
  Označuje konec mapování třídy dat rozšiřující modul snap-in.  
   
 ```
@@ -93,7 +88,7 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
+##  <a name="end_snapintoolbarid_map"></a>  END_SNAPINTOOLBARID_MAP  
  Deklaruje konec mapy ID nástrojů pro objekt, modul Snap-In.  
   
 ```
@@ -107,7 +102,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
-##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
+##  <a name="extension_snapin_dataclass"></a>  EXTENSION_SNAPIN_DATACLASS  
  Přidá datový člen třídy dat rozšiřující modul snap-in pro **ISnapInItemImpl**-odvozené třídy.  
   
 ```
@@ -124,7 +119,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
+##  <a name="extension_snapin_nodeinfo_entry"></a>  EXTENSION_SNAPIN_NODEINFO_ENTRY  
  Přidá třídu data rozšiřující modul snap-in k mapování tříd dat rozšiřující modul snap-in.  
   
 ```
@@ -141,7 +136,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="snapinmenuid"></a>SNAPINMENUID  
+##  <a name="snapinmenuid"></a>  SNAPINMENUID  
  Pomocí této makro deklarovat prostředků nabídky kontextu objektu modulu Snap-In.  
   
 ```
@@ -152,7 +147,7 @@ SNAPINMENUID( id )
  `id`  
  [v] Identifikuje v místní nabídce objektu modulu Snap-In.  
   
-##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
+##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY  
  Pomocí této makro zadat ID panelu nástrojů do mapování ID objektu modulu Snap-In panelu nástrojů.  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "Znaková sada spuštění | Microsoft Docs"
-ms.custom: 
+title: Znaková sada spuštění | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - character sets [C++], execution and source
 - source character set [C++]
 ms.assetid: 39ffbb55-11c1-4b6d-a105-327c0fceb449
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execution-character-set"></a>Znaková sada spuštění
 Tento obsah se často odkazuje na „znakovou sadu spuštění“. Znaková sada spuštění není nutně shodná se zdrojovou znakovou sadou použitou pro psaní programů jazyka C. Znaková sada spuštění obsahuje všechny znaky zdrojové znakové sady spolu s nulovým znakem, znakem nového řádku, backspace, horizontálního tabulátoru, vertikálního tabulátoru, návratu na začátek řádku a řídicí sekvence. V jiných implementacích se znaková sada spuštění a zdrojová znaková sada mohou lišit.  

@@ -2,11 +2,8 @@
 title: Makra Map služeb | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Makra Map služby
 Tyto makra definovat map služeb a položky.  
@@ -41,7 +36,7 @@ Tyto makra definovat map služeb a položky.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Označuje začátek mapy služeb.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Označuje konec mapy služeb.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Označuje, že objekt podporuje id služby určeného *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Dá pokyn [IServiceProviderImpl::QueryService](#queryservice) ke tvoří řetěz k objektu určeného `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Vytvoří nebo přistupovat ke službě zadaný a vrátí ukazatele rozhraní k zadanému rozhraní pro službu.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [V]`guidService`  
+ [V] `guidService`  
  Ukazatel na identifikátor služby (SID).  
   
- [V]`riid`  
+ [V] `riid`  
  Identifikátor rozhraní, ke kterému má volající získat přístup.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Nepřímý ukazatel na požadované rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Požadované rozhraní není součástí této služby nebo služby neznámý.|  
   
 ### <a name="remarks"></a>Poznámky  
- `QueryService`Vrátí nepřímý ukazatel požadované rozhraní v zadaná služba. Volající zodpovídá za vydání tento ukazatel, když se už nevyžaduje.  
+ `QueryService` Vrátí nepřímý ukazatel požadované rozhraní v zadaná služba. Volající zodpovídá za vydání tento ukazatel, když se už nevyžaduje.  
   
  Při volání `QueryService`, předáte identifikátor služby ( `guidService`) a identifikátor rozhraní ( `riid`). `guidService` Určuje službu, na který má přístup, a `riid` identifikuje rozhraní, které je součástí služby. Naopak se zobrazí nepřímých ukazatel na rozhraní.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Logický operátor OR: || | Microsoft Docs"
-ms.custom: 
+title: 'Logický operátor OR: || | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>Logický operátor OR: ||
 ## <a name="syntax"></a>Syntaxe  
@@ -56,7 +51,7 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  Rovná-li se v příkladu výše proměnná `x` proměnné `w`, `y` nebo `z`, je druhý argument funkce `printf` vyhodnocen na hodnotu true a dojde k vypsání hodnoty 1. Jinak je vyhodnocena jako false a hodnota 0 je vytisknout. Jakmile jedna z podmínek vyhodnotí jako true, přestane vyhodnocení.  
   
-## <a name="operator-keyword-for-124124"></a>Operator – klíčové slovo pro &#124; &#124;  
+## <a name="operator-keyword-for-124124"></a>Operator – klíčové slovo pro&#124;&#124;  
  **Nebo** operátor je ekvivalentem text `||`. Existují dva způsoby pro přístup **nebo** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
   
 ## <a name="example"></a>Příklad  

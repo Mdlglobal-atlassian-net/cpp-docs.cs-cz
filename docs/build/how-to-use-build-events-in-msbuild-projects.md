@@ -2,12 +2,9 @@
 title: 'Postupy: použití událostí sestavení v projektech MSBuild | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 Události sestavení je příkaz který [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] provádí v konkrétní fázi v procesu sestavení. *Před sestavením* události dojde před začátkem sestavování; *před propojením* před spuštěním kroku odkaz; dojde k události a *po sestavení* k události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že dojde k krok přidružené sestavení. Událost před propojením například nedochází, pokud nejde spustit krok propojení.  
   
  Každá z událostí tři sestavení je reprezentována ve skupině Definice command element (`<Command>`), se spustí a elementu zprávy (`<Message>`) to znamená zobrazí, když **MSBuild** provede události sestavení. Každý prvek je volitelný a pokud zadáte stejného elementu vícekrát, poslední výskyt přednost.  
   
- Volitelný *použití v sestavení* element (`<`*události sestavení***UseInBuild**`>`) lze zadat ve skupině vlastností označíte, zda události sestavení je spustit. Hodnota obsahu *použití v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je událost sestavení provést, dokud jeho odpovídající *použití v sestavení* element je nastaven na hodnotu `false`.  
+ Volitelný *použití v sestavení* – element (`<`* sestavení-událostí ***UseInBuild**`>`) lze zadat ve skupině vlastností indikující, zda je provádět události sestavení. Hodnota obsahu *použití v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je událost sestavení provést, dokud jeho odpovídající *použití v sestavení* element je nastaven na hodnotu `false`.  
   
  Následující tabulka uvádí každý element XML událostí sestavení:  
   

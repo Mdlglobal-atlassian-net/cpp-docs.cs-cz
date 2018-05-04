@@ -1,12 +1,9 @@
 ---
-title: "Třída CComAutoDeleteCriticalSection | Microsoft Docs"
-ms.custom: 
+title: Třída CComAutoDeleteCriticalSection | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAutoDeleteCriticalSection
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a0c5fdd45e819105a3f47e98c02bb5ad3d51be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5153520b5a5648f8352465031264c223ffd97c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection – třída
 Tato třída poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
@@ -38,7 +33,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `CComAutoDeleteCriticalSection`je odvozena od třídy [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Ale `CComAutoDeleteCriticalSection` přepsání [termín](ccomsafedeletecriticalsection-class.md#term) metodu `private` přístup, který vynutí interní paměť čištění proběhnout, jenom když se dostala mimo rozsah nebo jsou explicitně odstranit z paměti instance této třídy.  
+ `CComAutoDeleteCriticalSection` je odvozena od třídy [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Ale `CComAutoDeleteCriticalSection` přepsání [termín](ccomsafedeletecriticalsection-class.md#term) metodu `private` přístup, který vynutí interní paměť čištění proběhnout, jenom když se dostala mimo rozsah nebo jsou explicitně odstranit z paměti instance této třídy.  
 
   
  Tato třída představuje žádné další metody přes její základní třída. V tématu [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) a [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) Další informace o kritická sekce pomocné třídy.  

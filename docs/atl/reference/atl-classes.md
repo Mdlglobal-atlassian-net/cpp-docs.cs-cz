@@ -1,12 +1,9 @@
 ---
-title: "Třídy ATL | Microsoft Docs"
-ms.custom: 
+title: Třídy ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>ATL – třídy
 Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité třídy podle kategorie naleznete v tématu [přehledu třídy ATL](../../atl/atl-class-overview.md).  
@@ -184,10 +179,10 @@ Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité tříd
 |[CWorkerThread – třída](../../atl/reference/cworkerthread-class.md)|Tato třída vytvoří pracovní vlákno nebo používá existující, čeká na jeden nebo více objektů obslužných rutin jádra a provede funkci zadaného klienta, když se jeden z obslužné rutiny pro zpracování signalizace.|atlutil.h|  
 |[IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)|Tato třída reprezentuje rozhraní pro `CreateInstance` metoda.|atlbase.h|  
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|Tato třída reprezentuje rozhraní pro správce paměti.|atlmem.h|  
-|[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Toto rozhraní poskytuje metody pro zadání vlastnosti hostované řízení nebo kontejneru.|atlbase.h, ATLIFace.h|  
-|[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Toto rozhraní implementuje dodatečné vedlejším vlastnostem hostované ovládacího prvku.|atlbase.h, ATLIFace.h|  
-|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Toto rozhraní poskytuje metody pro manipulaci s ovládacího prvku a jeho objekt hostitele.|atlbase.h, ATLIFace.h|  
-|[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Toto rozhraní poskytuje metody pro manipulaci s licencované ovládací prvek a jeho objekt hostitele.|atlbase.h, ATLIFace.h|  
+|[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Toto rozhraní poskytuje metody pro zadání vlastnosti hostované řízení nebo kontejneru.|atlbase.h ATLIFace.h|  
+|[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Toto rozhraní implementuje dodatečné vedlejším vlastnostem hostované ovládacího prvku.|atlbase.h ATLIFace.h|  
+|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Toto rozhraní poskytuje metody pro manipulaci s ovládacího prvku a jeho objekt hostitele.|atlbase.h ATLIFace.h|  
+|[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Toto rozhraní poskytuje metody pro manipulaci s licencované ovládací prvek a jeho objekt hostitele.|atlbase.h ATLIFace.h|  
 |[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)|Tato třída poskytuje metody používané v třídě kolekce.|atlcom.h|  
 |[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)|Tato třída implementuje kontejner bod připojení ke správě kolekce [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objekty.|atlcom.h|  
 |[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)|Tato třída implementuje bod připojení.|atlcom.h|  
@@ -195,7 +190,7 @@ Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité tříd
 |[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)|Tato třída poskytuje výchozí implementaci pro `IDispatch` část duální rozhraní.|atlcom.h|  
 |[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)|Tato třída poskytuje implementace `IDispatch` metody.|atlcom.h|  
 |[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)|Tato třída poskytuje implementace `IDispatch` metody bez získávání informací o typu z knihovny typů.|atlcom.h|  
-|[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Rozhraní Microsoft HTML analýzy a modul vykreslování.|atlbase.h, ATLIFace.h|  
+|[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Rozhraní Microsoft HTML analýzy a modul vykreslování.|atlbase.h ATLIFace.h|  
 |[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|Tato třída definuje enumerátor rozhraní na základě kolekce standardní knihovna C++.|atlcom.h|  
 |[IObjectSafetyImpl](../../atl/reference/iobjectsafetyimpl-class.md)|Tato třída poskytuje výchozí implementaci třídy `IObjectSafety` rozhraní a tak dovolit klientským k načtení a nastavení úrovně zabezpečení objektu.|atlctl.h|  
 |[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)|Tato třída poskytuje metody, které umožní objekt pro komunikaci se svou lokalitou.|atlcom.h|  

@@ -2,11 +2,8 @@
 title: Třída CAtlTransactionManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager – třída
 Třída CAtlTransactionManager poskytuje obálku pro funkce správce KTM (Kernel Transaction).  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Pokud je podporovaná záložní; `FALSE` jinak.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Pokud je podporovaná záložní; `FALSE` jinak.|  
 |[m_hTransaction](#m_htransaction)|Popisovač transakce.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  CAtlTransactionManager destruktor.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Poznámky  
  V normálním zpracování transakce je automaticky potvrzené a uzavřen. Pokud je destruktor je volána v průběhu unwind výjimky, transakce je vrácena zpět a zavřít.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  CAtlTransactionManager konstruktor.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parametry  
  `bFallback`  
- `TRUE`Určuje záložní podpory. Pokud zpracovaných funkce selže, třída automaticky volá funkci "beztransakční". `FALSE`označuje žádná "záložní" volání.  
+ `TRUE` Určuje záložní podpory. Pokud zpracovaných funkce selže, třída automaticky volá funkci "beztransakční". `FALSE` označuje žádná "záložní" volání.  
   
  `bAutoCreateTransaction`  
- `TRUE`Určuje, zda obslužná rutina transakce se vytvoří automaticky v konstruktoru. `FALSE`Označuje, že není.  
+ `TRUE` Určuje, zda obslužná rutina transakce se vytvoří automaticky v konstruktoru. `FALSE` Označuje, že není.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="close"></a>Zavřete  
+##  <a name="close"></a>  Zavřete  
  Zavře popisovač transakce.  
   
 ```
@@ -137,12 +132,12 @@ inline BOOL Close();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `CloseHandle` funkce. V destruktoru se automaticky zavolá tato metoda.  
   
-##  <a name="commit"></a>Potvrzení  
+##  <a name="commit"></a>  Potvrzení  
  Počet požadavků, transakce se potvrdí.  
   
 ```
@@ -150,12 +145,12 @@ inline BOOL Commit();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `CommitTransaction` funkce. V destruktoru se automaticky zavolá tato metoda.  
   
-##  <a name="create"></a>Vytvoření  
+##  <a name="create"></a>  Vytvoření  
  Vytvoří popisovač transakce.  
   
 ```
@@ -163,12 +158,12 @@ inline BOOL Create();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `CreateTransaction` funkce. Zkontrolujte ho pro  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  Vytvoří nebo otevře soubor, datový proud souboru nebo adresáři jako zpracovaných operaci.  
   
 ```
@@ -187,7 +182,7 @@ inline HANDLE CreateFile(
  Název objektu vytvořit nebo otevřít.  
   
  `dwDesiredAccess`  
- Přístup k objektu, který může být shrnuto jako číst, zapisovat, oba, nebo žádný z nich (nula). Nejčastěji používané hodnoty jsou všeobecné_čtení a všeobecné_zápis: všeobecné_čtení &#124; VŠEOBECNÉ_ZÁPIS.  
+ Přístup k objektu, který může být shrnuto jako číst, zapisovat, oba, nebo žádný z nich (nula). Nejčastěji používané hodnoty jsou všeobecné_čtení a všeobecné_zápis: všeobecné_čtení &#124; všeobecné_zápis.  
   
  `dwShareMode`  
  Režim sdílení objektu, který může být číst, zapisovat, obě, odstranit, všechny z nich nebo žádné: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.  
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `CreateFileTransacted` funkce.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Odstraní existující soubor jako zpracovaných operaci.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `DeleteFileTransacted` funkce.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Vyhledá adresář pro soubor nebo podadresáři jako zpracovaných operaci.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `FindFirstFileTransacted` funkce.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Načte atributy systému souborů pro určený soubor nebo adresář jako zpracovaných operaci.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `GetFileAttributesTransacted` funkce.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Načte atributy systému souborů pro určený soubor nebo adresář jako zpracovaných operaci.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `GetFileAttributesTransacted` funkce.  
   
-##  <a name="gethandle"></a>Gethandle –  
+##  <a name="gethandle"></a>  Gethandle –  
  Vrátí popisovač transakce.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Určuje, zda je povoleno záložní volání.  
   
 ```
@@ -303,12 +298,12 @@ BOOL IsFallback() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `TRUE` je třída podporuje záložní volání. `FALSE`jinak.  
+ Vrátí `TRUE` je třída podporuje záložní volání. `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Pokud je podporovaná záložní; `FALSE` jinak.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Pokud je podporovaná záložní; `FALSE` jinak.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  Popisovač transakce.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Přesune existující soubor nebo adresář, včetně jeho podřízených položek, jako zpracovaných operaci.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `MoveFileTransacted` funkce.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Vytvoří zadaný klíč registru a přidruží ji transakce. Pokud klíč již existuje, funkce ho otevře.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `RegCreateKeyTransacted` funkce.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Odstraní podklíč a jeho hodnoty z registru zadané zobrazení specifických pro platformy jako zpracovaných operaci.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `RegDeleteKeyTransacted` funkce.  
   
-##  <a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  RegOpenKeyEx  
  Otevře určený klíč registrů a přidruží ji transakce.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `RegOpenKeyTransacted` funkce.  
   
-##  <a name="rollback"></a>Vrácení zpět  
+##  <a name="rollback"></a>  Vrácení zpět  
  Požadavky, které transakce vrácena zpět.  
   
 ```
@@ -454,12 +449,12 @@ inline BOOL Rollback();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volá tuto obálku `RollbackTransaction` funkce.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Nastaví atributy souboru nebo adresáři jako zpracovaných operaci.  
   
 ```

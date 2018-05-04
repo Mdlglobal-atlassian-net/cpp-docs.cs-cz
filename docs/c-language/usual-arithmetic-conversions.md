@@ -1,13 +1,10 @@
 ---
-title: "Obvyklé aritmetické převody | Microsoft Docs"
-ms.custom: 
+title: Obvyklé aritmetické převody | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usual-arithmetic-conversions"></a>Obvyklé aritmetické převody
 Většina operátory jazyka C provést převody typů a dovést operandy výrazu do stejného typu nebo rozšířit krátké hodnoty použít v operacích počítač velikosti celé číslo. Převody provádí operátory jazyka C závisí na konkrétní operátor a typ operandu nebo operandy. Řada operátorů se ale provést převody podobně jako u operandů plovoucí a integrální typy. Tyto převody se označují jako "aritmetické převody." Převod hodnoty operand na kompatibilní typ. způsobí, že žádná změna na jeho hodnotu.  

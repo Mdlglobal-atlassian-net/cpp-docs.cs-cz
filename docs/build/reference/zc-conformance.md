@@ -1,10 +1,10 @@
 ---
 title: /Zc (shoda) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (shoda)
 
@@ -47,7 +46,7 @@ Jedná se o `/Zc` – možnosti kompilátoru:
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Externí propojení pro povolení `constexpr` proměnné (ve výchozím nastavení vypnuté).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Vynutit standardní C++ `for` rozsahu pravidla (na ve výchozím nastavení).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Povolit implicitní `noexcept` na požadované funkce (na ve výchozím nastavení).|
-|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazované funkce nebo data, pokud je sekvence COMDAT, nebo obsahuje pouze vnitřní propojení (ve výchozím nastavení vypnuté).|
+|[Vložené\[-\]](zc-inline-remove-unreferenced-comdat.md)|Odebrat neodkazované funkce nebo data, pokud je sekvence COMDAT, nebo obsahuje pouze vnitřní propojení (ve výchozím nastavení vypnuté).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Vynutit C ++ 17 noexcept pravidla (na ve výchozím nastavení součástí C ++ 17 nebo novější).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT dočasného nebude vytvořit vazbu odkazu lvalue bez const (ve výchozím nastavení vypnuté).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Vynucení pravidel převodu explicitního typu Standard C++ (ve výchozím nastavení vypnuté).|

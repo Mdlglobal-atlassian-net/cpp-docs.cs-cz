@@ -1,13 +1,10 @@
 ---
 title: _daylight, _dstbias, _timezone a _tzname | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tzname
 - _timezone
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 944a127fb71beb7dba1ba9434cbc5d778230c055
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone a _tzname
 `_daylight`, `_dstbias`, `_timezone`, a `_tzname` se používají v některé rutiny datum a čas, aby úpravy místního času. Tyto globální proměnné jsou zastaralé pro bezpečnější funkční verze, které se mají používat místo globální proměnné.  
@@ -76,7 +71,7 @@ extern char *_tzname[2];
   
 ## <a name="see-also"></a>Viz také  
  [Globální proměnné](../c-runtime-library/global-variables.md)   
- [_get_daylight –](../c-runtime-library/reference/get-daylight.md)   
+ [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias –](../c-runtime-library/reference/get-dstbias.md)   
- [_get_timezone –](../c-runtime-library/reference/get-timezone.md)   
+ [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
  [_get_tzname](../c-runtime-library/reference/get-tzname.md)

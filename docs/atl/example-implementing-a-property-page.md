@@ -1,29 +1,24 @@
 ---
-title: "Implementace stránky vlastností (ATL) | Microsoft Docs"
-ms.custom: 
+title: Implementace stránky vlastností (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a umožňuje změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.  
@@ -50,7 +45,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
   
 - [Vytvoření makra](#vcconcreating_a_macro) , testovat stránku vlastností.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a>Přidání třídy ATL – stránky vlastností  
+##  <a name="vcconusing_the_atl_object_wizard"></a> Přidání třídy ATL – stránky vlastností  
  Nejprve vytvořte nový projekt ATL pro knihovny DLL na serveru s názvem `ATLPages7`. Teď použít [ATL vlastnost stránky průvodce](../atl/reference/atl-property-page-wizard.md) ke generování stránky vlastností. Poskytnout stránku vlastností **krátký název** z **DocProperties** potom přepnout **řetězce** stránky lze nastavit položky podle vlastností stránky, jak je znázorněno v následující tabulce.  
   
 |Položka|Hodnota|  
@@ -66,7 +61,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
   
  Klikněte na tlačítko **OK** Průvodce generování stránky vlastností.  
   
-##  <a name="vcconediting_the_dialog_resource"></a>Úprava prostředku dialogového okna  
+##  <a name="vcconediting_the_dialog_resource"></a> Úprava prostředku dialogového okna  
  Teď, když byla vygenerována stránky vlastností, budete muset přidat několik ovládacích prvků do prostředku dialogového okna představující stránku. Přidání textové pole, ovládacího prvku statický text a zaškrtněte políčko a nastavte jejich ID, jak je uvedeno níže:  
   
  ![Úprava prostředku dialogového okna](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
@@ -76,7 +71,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
 > [!NOTE]
 >  Prostředek dialogu nezahrnuje rámce nebo příkazového tlačítka a nemusí záložkách vzhled, které se mají očekávat. Tyto funkce jsou poskytovány rámce stránky vlastnost jako je třeba vytvořit voláním [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
-##  <a name="vcconadding_message_handlers"></a>Přidání obslužných rutin zpráv  
+##  <a name="vcconadding_message_handlers"></a> Přidání obslužných rutin zpráv  
  Ovládací prvky na místě můžete přidat obslužné rutiny zpráv se bude aktualizovat stav dirty stránky, při změně hodnoty buď ovládacích prvků:  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
@@ -86,7 +81,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
 > [!NOTE]
 >  V vlastní stránky vlastností může být nutné ke sledování přesněji vlastnosti, které bylo změněno uživatelem tak, aby se můžete vyhnout, aktualizace vlastností, které nebyly změněny. Tento příklad implementuje tento kód nesleduje původní hodnoty vlastností a porovnávání pomocí aktuálních hodnot z uživatelského rozhraní, když je čas, aby se změny projevily.  
   
-##  <a name="vcconhousekeeping"></a>Housekeeping  
+##  <a name="vcconhousekeeping"></a> Housekeeping  
  Nyní přidat pár `#import` příkazy, čímž DocProperties.h tak, aby kompilátor zná **dokumentu** rozhraní:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
@@ -95,7 +90,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>Přepsání IPropertyPageImpl::SetObjects  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Přepsání IPropertyPageImpl::SetObjects  
  První `IPropertyPageImpl` metoda, která je nutné přepsat [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Zde přidáte kód pro zkontrolujte, že byl předán pouze jeden objekt, a že podporuje **dokumentu** rozhraní, které očekáváte:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
@@ -103,7 +98,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
 > [!NOTE]
 >  Má smysl pro podporu pouze jednoho objektu pro tuto stránku, protože vám umožní uživateli nastavit název souboru objektu – v libovolném jeden umístění může existovat pouze jeden soubor.  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>Přepsání IPropertyPageImpl::Activate  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Přepsání IPropertyPageImpl::Activate  
  Dalším krokem je k chybě při inicializaci stránku vlastností s hodnoty vlastností podkladového objektu při prvním vytvoření stránky.  
   
  V takovém případě by měl přidejte následující členy do třídy, vzhledem k tomu, že budete taky používat počáteční hodnoty vlastnosti pro porovnání když uživatelé stránky své změny:  
@@ -116,7 +111,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
   
  Tento kód používá metody COM **dokumentu** rozhraní získat vlastnosti, které vás zajímají. Poté použije obálky Win32 API poskytované [CDialogImpl](../atl/reference/cdialogimpl-class.md) a jeho základních tříd k zobrazení hodnot vlastností pro uživatele.  
   
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a>Přepsání IPropertyPageImpl::Apply  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Přepsání IPropertyPageImpl::Apply  
  Když uživatelé chtějí jejich změny pro objekty, bude volat webu stránky vlastností [použít](../atl/reference/ipropertypageimpl-class.md#apply) metoda. Toto je místo, kde opačný kód **aktivovat** – zatímco **aktivovat** trvalo hodnot z objektu a jejich instaluje do ovládacích prvků na stránce vlastností **použít** vezme hodnoty z ovládacích prvků na stránce vlastností a jejich nabízených oznámení do objektu.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
@@ -127,7 +122,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
 > [!NOTE]
 > **Dokument** zpřístupní **FullName** jako vlastnost jen pro čtení. Pokud chcete aktualizovat název souboru dokumentu, na základě změn provedených na stránku vlastností, budete muset použít **Uložit** metoda uložte soubor pod jiným názvem. Proto kód na stránce vlastností nemá omezit sám sebe pro získání nebo nastavení vlastností.  
   
-##  <a name="vccontesting_the_property_page"></a>Zobrazení stránky vlastností  
+##  <a name="vccontesting_the_property_page"></a> Zobrazení stránky vlastností  
  K zobrazení této stránky, musíte vytvořit jednoduché pomocný objekt. Pomocný objekt poskytne metodu, která zjednodušuje **OleCreatePropertyFrame** rozhraní API pro zobrazení jednotlivých stránek připojení pro jediný objekt. Tohoto pomocníka budou navrženy tak, aby ho bylo možné použít z jazyka Visual Basic.  
   
  Použít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md) vygenerovat novou třídu a použijte `Helper` jako jeho krátký název. Po vytvoření, přidejte metodu, jak je znázorněno v následující tabulce.  
@@ -143,7 +138,7 @@ Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a>Vytváření maker  
+##  <a name="vcconcreating_a_macro"></a> Vytváření maker  
  Jakmile jste sestavili projekt, můžete otestovat stránku vlastností a objekt pomocníka použití jednoduchého makra, která umožňuje vytvářet a spouštět ve vývojovém prostředí sady Visual Studio. Toto makro vytvoří pomocné rutiny objektu a pak volat jeho **ShowPage** metodu pomocí atribut ProgID v **DocProperties** stránku vlastností a **IUnknown** ukazatel dokumentu v editoru Visual Studio aktuálně aktivní. Kód, který je nutné pro tuto makro je zobrazena níže:  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Kombinování C (strukturované) a výjimky jazyka C++ | Microsoft Docs"
-ms.custom: 
+title: Kombinování C (strukturované) a výjimky jazyka C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 375f954f3df300b50a11067b009614ff8879b9b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace výjimek v jazycích C (strukturované) a C++
 Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C++ doporučeno používat zpracování strukturovaných výjimek. Ale v některých případech můžete zkompilovat s **/EHa** a kombinovat strukturovaných výjimky a zdrojového kódu C++ a je třeba některá zařízení pro zpracování oba druhy výjimek. Obslužná rutina strukturovaného výjimek obsahuje žádná koncepce objekty nebo typy výjimky, a proto ho nemůže zpracovat výjimky vyvolané C++ – kód; ale C++ **catch** obslužné rutiny můžete zpracování strukturovaných výjimek. Jako takový, zpracování syntaxe výjimek C++ (**zkuste**, `throw`, **catch**) není přijat kompilátor jazyka C, ale strukturovaného zpracování syntaxe výjimek (`__try`, `__except`, `__finally`) podporuje C++ compiler.  

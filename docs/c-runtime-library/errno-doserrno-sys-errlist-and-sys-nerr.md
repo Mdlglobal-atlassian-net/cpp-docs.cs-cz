@@ -1,13 +1,10 @@
 ---
-title: "errno, _doserrno –, _sys_errlist – a _sys_nerr – | Microsoft Docs"
-ms.custom: 
+title: errno, _doserrno –, _sys_errlist – a _sys_nerr – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _errno
 apilocation:
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b17abb975ea9f3212d4bd6171bcd2bffb78e483c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 Globální makra, které mají kódy chyb, které se nastavují při spuštění programu a řetězec ekvivalenty kódy chyb pro zobrazení.  
@@ -55,7 +50,7 @@ Globální makra, které mají kódy chyb, které se nastavují při spuštění
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obě `errno` a `_doserrno` jsou nastaveny na hodnotu 0 modulem runtime během spuštění programu. `errno`je nastavený na chybu v úrovni systému volání. Protože `errno` blokování hodnota poslední volání, které je tato hodnota může změnit úspěšné volání. Běhové knihovny volá dané sadě `errno` na chybu nerušte `errno` v případě úspěchu. Vždy vymazat `errno` voláním `_set_errno(0)` bezprostředně před volání, které mohou ho nastavit a zkontrolujte ihned po volání.  
+ Obě `errno` a `_doserrno` jsou nastaveny na hodnotu 0 modulem runtime během spuštění programu. `errno` je nastavený na chybu v úrovni systému volání. Protože `errno` blokování hodnota poslední volání, které je tato hodnota může změnit úspěšné volání. Běhové knihovny volá dané sadě `errno` na chybu nerušte `errno` v případě úspěchu. Vždy vymazat `errno` voláním `_set_errno(0)` bezprostředně před volání, které mohou ho nastavit a zkontrolujte ihned po volání.  
   
  Při chybě `errno` není nutně nastaven na stejnou hodnotu jako kód chyby vrácený systémového volání. Vstupně-výstupních operací `_doserrno` ukládá ekvivalenty operačního systému. Chyba – kód `errno` kódy. Pro většinu operací jiný I/E, hodnota `_doserrno` není nastaven.  
   
@@ -129,7 +124,7 @@ Globální makra, které mají kódy chyb, které se nastavují při spuštění
  [perror, _wperror –](../c-runtime-library/reference/perror-wperror.md)   
  [strerror – _strerror –, _wcserror –, \__wcserror –](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)   
  [strerror_s – _strerror_s –, _wcserror_s –, \__wcserror_s –](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)   
- [_get_doserrno –](../c-runtime-library/reference/get-doserrno.md)   
- [_set_doserrno –](../c-runtime-library/reference/set-doserrno.md)   
- [_get_errno –](../c-runtime-library/reference/get-errno.md)   
+ [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)   
+ [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)   
+ [_get_errno](../c-runtime-library/reference/get-errno.md)   
  [_set_errno](../c-runtime-library/reference/set-errno.md)

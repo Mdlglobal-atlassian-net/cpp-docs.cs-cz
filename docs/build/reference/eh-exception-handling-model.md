@@ -1,13 +1,10 @@
 ---
-title: "-EH (Model zpracování výjimek) | Microsoft Docs"
-ms.custom: 
+title: -EH (Model zpracování výjimek) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 Určuje typ zpracování výjimky používané kompilátoru, když k optimalizaci tokeny výjimka kontroluje a jestli zrušení C++ objekty, které z důvodu výjimky se dostala mimo rozsah. Pokud **/EH** není zadán, kompilátor zachytí asynchronní strukturovaných výjimky a výjimky jazyka C++, ale nezničí C++ objekty, které z důvodu asynchronní výjimky se dostala mimo rozsah.  
@@ -105,7 +100,7 @@ int main() {
   
  Informace o omezení za zpracování výjimek **/CLR**, najdete v části [_set_se_translator –](../../c-runtime-library/reference/set-se-translator.md).  
   
- Možnost lze vymazat pomocí symbol  **-** . Například **/EHsc-** interpretována jako **/EHs /EHc-** a je ekvivalentní **/EHs**.  
+ Možnost lze vymazat pomocí symbol **-**. Například **/EHsc-** interpretována jako **/EHs /EHc-** a je ekvivalentní **/EHs**.  
   
  **/EHr** – možnost kompilátoru vynutí kontroly ukončení modulu runtime v všechny funkce, které mají `noexcept` atribut. Ve výchozím modulu runtime kontroly může optimalizovat rychle Pokud back-endu kompilátoru určuje pouze volá funkci *– vyvolání* funkce. Funkce vyvolávání bez jsou všechny funkce, které mají atribut, který určuje, že může být vyvolány žádné výjimky. To zahrnuje funkce, které jsou označeny `noexcept`, `throw()`, `__declspec(nothrow)`a kdy **/EHc** není zadaný, `extern "C"` funkce. Funkce vyvolávání bez také zahrnovat všechny, které určil kompilátor jsou bez vyvolávání pomocí kontroly. Výchozí hodnota je možné nastavit explicitně pomocí **/EHr-**.  
   

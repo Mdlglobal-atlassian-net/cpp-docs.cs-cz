@@ -1,13 +1,10 @@
 ---
-title: "Klíčová slova jazyka C | Microsoft Docs"
-ms.custom: 
+title: Klíčová slova jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,31 +12,29 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98d815a8b0d185ccfb2ea89f653cd34d54fbd6ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-keywords"></a>Klíčová slova jazyka C
 „Klíčová slova“ jsou slova, která mají pro kompilátor jazyka C zvláštní význam. Ve fázích překladu 7 a 8 nemůže mít identifikátor stejné pořadí a velikost písmen jako klíčové slovo jazyka C. (Viz popis [fáze překladu](../preprocessor/phases-of-translation.md) v *preprocesor odkaz*; informace o identifikátory, najdete v tématu [identifikátory](../c-language/c-identifiers.md).) Jazyk C používá následující klíčová slova:  
   
 |||||  
 |-|-|-|-|  
-|**automaticky**|**double**|**int**|**struct**|  
+|**auto**|**double**|**int**|**struct**|  
 |**break**|**else**|**long**|**switch**|  
-|**případ**|**enum**|**Registrace**|**Definice TypeDef**|  
+|**Případ**|**enum**|**Registrace**|**Definice TypeDef**|  
 |**char**|**extern**|**return**|**sjednocení**|  
-|**const**|**float**|**short**|**bez znaménka**|  
-|**continue**|**for**|**podepsané**|**void**|  
+|**const**|**float**|**short**|**Bez znaménka**|  
+|**continue**|**for**|**Podepsané**|**void**|  
 |**default**|**goto**|**sizeof**|**volatile**|  
-|**do**|**Pokud**|**static**|**while**|  
+|**do**|**if**|**static**|**while**|  
   
  Klíčová slova nelze předefinovat. Můžete však zadat text, který má být nahrazena klíčových slov před kompilace pomocí C [preprocesor – direktivy](../preprocessor/preprocessor-directives.md).  
   

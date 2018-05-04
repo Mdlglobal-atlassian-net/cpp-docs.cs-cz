@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlBaseModule | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlBaseModule | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlBaseModule
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88671ae94a1df10f3866dd2ae2e70092d1ca0c4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07f1252fe993ff2f2e646528996c1a53d25c5a63
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule – třída
 Ve všech projektech ATL vytvoření instance této třídy.  
@@ -71,7 +66,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Proměnná, která určuje, pokud modul inicializace se nezdařila.|  
   
 ## <a name="remarks"></a>Poznámky  
- Instance `CAtlBaseModule` s názvem _AtlBaseModule je k dispozici ve všech projektech ATL obsahující popisovač pro instanci modulu, popisovač pro modul, který obsahuje prostředky (což je ve výchozím nastavení, jsou téhož) a pole popisovače k poskytnutí primární moduly prostředky. `CAtlBaseModule`byla bezpečně přístupná z více vláken.  
+ Instance `CAtlBaseModule` s názvem _AtlBaseModule je k dispozici ve všech projektech ATL obsahující popisovač pro instanci modulu, popisovač pro modul, který obsahuje prostředky (což je ve výchozím nastavení, jsou téhož) a pole popisovače k poskytnutí primární moduly prostředky. `CAtlBaseModule` byla bezpečně přístupná z více vláken.  
   
  Nahradí tato třída zastaralá [CComModule](../../atl/reference/ccommodule-class.md) třída používaná v dřívějších verzích ATL.  
   
@@ -83,7 +78,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcore.h  
   
-##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance  
  Instance prostředků přidá do seznamu uložených popisovače.  
   
 ```
@@ -97,7 +92,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu PRAVDA, pokud prostředek byl úspěšně přidán, false jinak.  
   
-##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule  
  Konstruktor  
   
 ```
@@ -107,7 +102,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>Poznámky  
  Vytvoří `CAtlBaseModule`.  
   
-##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt  
  Vrátí popisovač do instance zadaný prostředek.  
   
 ```
@@ -121,7 +116,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí popisovač instance prostředku nebo hodnota NULL, pokud neexistuje žádný odpovídající instance prostředku.  
   
-##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance  
  Vrátí instanci modulu z `CAtlBaseModule` objektu.  
   
 ```
@@ -131,7 +126,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrací instanci modulu.  
   
-##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance  
  Vrátí instance prostředku.  
   
 ```
@@ -141,7 +136,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí instance prostředku.  
   
-##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed  
  Proměnná, která určuje, pokud modul inicializace se nezdařila.  
   
 ```
@@ -151,7 +146,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>Poznámky  
  Hodnota TRUE, pokud modul inicializována, false Pokud se nepodařilo inicializovat.  
   
-##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance  
  Instance prostředků se odebere ze seznamu uložené popisovače.  
   
 ```
@@ -165,7 +160,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu PRAVDA, pokud prostředek byl úspěšně odebrán, false jinak.  
   
-##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance  
  Nastaví instance prostředku `CAtlBaseModule` objektu.  
   
 ```

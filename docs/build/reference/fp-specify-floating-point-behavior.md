@@ -1,13 +1,10 @@
 ---
-title: "-fp (zadání chování s plovoucí desetinnou čárkou) | Microsoft Docs"
-ms.custom: 
+title: -fp (zadání chování s plovoucí desetinnou čárkou) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (zadání chování hodnot s plovoucí desetinnou čárkou)
 Určuje chování plovoucí desetinné čárky v souboru zdrojového kódu.  
@@ -67,7 +62,7 @@ Určuje chování plovoucí desetinné čárky v souboru zdrojového kódu.
   
  **/FP: přesné** nahrazuje **/Op** – možnost kompilátoru.  
   
- **Rychlé**  
+ **Rychlý**  
  Vytvoří ve většině případů nejrychlejší kód zmírněním pravidel pro optimalizaci operací s plovoucí desetinnou čárkou. To umožňuje, aby kompilátor optimalizoval kód výpočtů s plovoucí desetinnou čárkou na rychlost na úkor přesnosti a správnosti. Když **/fp:fast** je zadán, kompilátor nemusí správně zaokrouhlit na příkazy přiřazení, přiřadí typ ukazatel, nebo volání funkce a nemusí provádí zaokrouhlení zprostředkující výrazů. Kompilátor může změnit pořadí operací nebo provádět algebraické transformace – například dodržováním asociativních a distributivních pravidel – bez ohledu na vliv na konečnou přesnost výsledků. Kompilátor může operace a operandy změnit na jednoduchou přesnost a nemusí dodržovat pravidla povyšování typů jazyka C++. Optimalizace floating point konkrétní zmenšení vždy povolena ([fp_contract –](../../preprocessor/fp-contract.md) je ON). Výjimky s plovoucí desetinnou čárkou a FPU prostředí přístup, jsou zakázané (**/fp: kromě-** je implicitní a [fenv_access –](../../preprocessor/fenv-access.md) je OFF).  
   
  **/FP:Fast** nelze použít s **/fp: striktní** nebo **/fp: přesné**. Použije se poslední parametr zadaný na příkazovém řádku. Zadání obou **/fp:fast** a **/fp: kromě** generuje chybu kompilátoru.  
@@ -77,7 +72,7 @@ Určuje chování plovoucí desetinné čárky v souboru zdrojového kódu.
  **s výjimkou [-]**  
  Spolehlivý model výjimek s plovoucí desetinnou čárkou Výjimky jsou vyvolány okamžitě po aktivaci. Tento parametr je standardně vypnutý. Připojením znaménka minus k tomuto parametru ho explicitně zakážete.  
   
- **striktní**  
+ **Striktní**  
  Nejpřísnější model plovoucí desetinné čárky **/FP: striktní** způsobí, že [fp_contract –](../../preprocessor/fp-contract.md) být OFF a [fenv_access –](../../preprocessor/fenv-access.md) být ON. **/FP: kromě** je implicitní a je možné zakázat explicitním zadáním **/fp: kromě-**. Při použití s **/fp: kromě-**, **/fp: striktní** vynucuje přísné s plovoucí desetinnou čárkou sémantiku, ale bez ohledu pro výjimečné události.  
   
 ## <a name="remarks"></a>Poznámky  

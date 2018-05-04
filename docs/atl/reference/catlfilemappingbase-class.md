@@ -1,12 +1,9 @@
 ---
-title: "Třída CAtlFileMappingBase | Microsoft Docs"
-ms.custom: 
+title: Třída CAtlFileMappingBase | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase – třída
 Tato třída reprezentuje soubor mapované paměti.  
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  Konstruktor  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  Destruktor.  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny prostředky přidělené třídy a volání [CAtlFileMappingBase::Unmap](#unmap) metoda.  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Voláním této metody lze kopírovat z objekt mapování souboru.  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Volejte tuto metodu za účelem načtení dat z objektu mapování souboru.  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrací ukazatel na data.  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  Volejte tuto metodu za účelem vrací popisovač objektu mapování souboru.  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí popisovač objekt mapování souboru.  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  Volejte tuto metodu za účelem načtení velikost mapování z objektu mapování souboru.  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  Voláním této metody lze otevřít nebo vytvořit objekt mapování souboru pro zadaný soubor.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>Parametry  
  `hFile`  
- Popisovač souboru, ve kterém vytvoříte objekt mapování. `hFile`musí být platný a nelze ji nastavit na INVALID_HANDLE_VALUE.  
+ Popisovač souboru, ve kterém vytvoříte objekt mapování. `hFile` musí být platný a nelze ji nastavit na INVALID_HANDLE_VALUE.  
   
  `nMappingSize`  
  Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti souboru se identifikovanou pomocí *hfile –.*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  Voláním této metody lze vytvořit objekt mapování souboru, která umožňuje úplný přístup do všech procesů.  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>Parametry  
  `nMappingSize`  
- Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný`szName.`  
+ Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný `szName.`  
   
  `szName`  
  Název objektu mapování.  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Poznámky  
  **MapShareMem** umožňuje existující objekt mapování souboru, vytvořené [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)můžete sdílet mezi procesy.  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Voláním této metody lze otevřít objekt mapování souboru s názvem pro zadaný soubor.  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  Název objektu mapování. Je-li otevřít popisovač pro objekt mapování souboru s tímto názvem a popisovač zabezpečení pro objekt mapování není v konfliktu s `dwViewDesiredAccess` parametr, otevřete operace úspěšná.  
   
  `nMappingSize`  
- Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný`szName.`  
+ Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný `szName.`  
   
  `nOffset`  
  Posun souboru, kde je mapování začít. Hodnota posunutí musí být násobkem členitosti přidělení paměti systému.  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Poznámky  
  V sestavení pro ladění dojde k chybě assertion, pokud vstupní parametry jsou neplatné.  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  Nastaví aktuální objekt mapování souboru k jinému objektu mapování souboru.  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na aktuální objekt.  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  Volejte tuto metodu za účelem zrušit mapování objekt mapování souboru.  
   
 ```

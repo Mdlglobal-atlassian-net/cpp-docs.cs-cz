@@ -2,12 +2,9 @@
 title: Přehled LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Přehled LIB
 LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, které můžete použít se [odkaz](../../build/reference/linker-options.md) při sestavování programu. LIB se spouští z příkazového řádku.  
@@ -53,7 +48,7 @@ LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, kt
   
  Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
   
- **/ EXPORT**  
+ **/EXPORT**  
  Export funkce z vaší aplikace.  
   
  Další informace najdete v části [sestavení knihovny importu a exportu souboru](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -78,7 +73,7 @@ LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, kt
   
  Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
   
- **/ LTCG**  
+ **/LTCG**  
  Způsobí, že knihovnu, která má být sestaven pomocí kódu v době propojování generace.  
   
  Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
@@ -98,7 +93,7 @@ LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, kt
   
  Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
   
- **/ NOLOGO**  
+ **/NOLOGO**  
  Potlačí zobrazení LIB autorským zprávu a verze číslo a zabraňuje zobrazování příkaz souborů.  
   
  Další informace najdete v části [systémem LIB](../../build/reference/running-lib.md).  
@@ -113,7 +108,7 @@ LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, kt
   
  Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  
   
- **/ SUBSYSTEM**  
+ **/SUBSYSTEM**  
  Informuje operačního systému, jak spustit program vytvořené připojování ke knihovně výstup.  
   
  Další informace najdete v části [Správa knihovny](../../build/reference/managing-a-library.md).  

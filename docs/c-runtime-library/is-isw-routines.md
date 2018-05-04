@@ -1,13 +1,10 @@
 ---
-title: "je, isw – rutiny | Microsoft Docs"
-ms.custom: 
+title: je, isw – rutiny | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa1cc76bf925a334b78e5f15565c089081cfe9d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-isw-routines"></a>is, isw – rutiny
 |||  
@@ -111,10 +106,10 @@ ms.lasthandoff: 12/21/2017
  Pro **isw** rutiny, výsledkem testu pro zadanou podmínku je nezávislé na národním prostředí. Test podmínky pro **isw** funkce jsou následující:  
   
  `iswalnum`  
- `iswalpha`nebo `iswdigit`.  
+ `iswalpha` nebo `iswdigit`.  
   
  `iswalpha`  
- Všechny wide znak, který je jedním z sadu definované implementací, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswalpha`vrátí nenulovou hodnotu pouze pro široké znaky pro kterou `iswupper` nebo `iswlower` nenulový.  
+ Všechny wide znak, který je jedním z sadu definované implementací, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswalpha` vrátí nenulovou hodnotu pouze pro široké znaky pro kterou `iswupper` nebo `iswlower` nenulový.  
   
  `iswascii`  
  Široká charakterová reprezentace znaků ASCII (0x0000 - 0x007F).  
@@ -125,10 +120,10 @@ ms.lasthandoff: 12/21/2017
  `iswcntrl`  
  Široká znaková ovládacího prvku.  
   
- **__iswcsym –**  
+ **__iswcsym**  
  Všechny wide znak, pro který **isalnum –** hodnotu true, nebo je znak "_".  
   
- **__iswcsymf –**  
+ **__iswcsymf**  
  Všechny wide znak, pro který `iswalpha` hodnotu true, nebo je znak "_".  
   
  `iswctype`  
@@ -140,13 +135,13 @@ ms.lasthandoff: 12/21/2017
 |Hodnota *desc* argument|iswctype – ( *c, desc* ) ekvivalentní|  
 |------------------------------|----------------------------------------|  
 |**ÚROVNĚ _ALPHA**|**iswalpha – (** `c` **)**|  
-|**ÚROVNĚ _ALPHA** &#124; **_DIGIT**|**iswalnum – (** `c` **)**|  
+|**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT**|**iswalnum – (** `c` **)**|  
 |**_BLANK**|**iswblank (** `c` **)**|  
 |**_CONTROL**|**iswcntrl – (** `c` **)**|  
 |**_DIGIT**|**iswdigit – (** `c` **)**|  
-|**ÚROVNĚ _ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph – (** `c` **)**|  
+|**ÚROVNĚ _ALPHA** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswgraph – (** `c` **)**|  
 |**_LOWER**|**iswlower – (** `c` **)**|  
-|**ÚROVNĚ _ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint – (** `c` **)**|  
+|**ÚROVNĚ _ALPHA** &AMP;#124; **_BLANK** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswprint – (** `c` **)**|  
 |**_PUNCT**|**iswpunct – (** `c` **)**|  
 |**_BLANK**|**iswblank (** `c` **)**|  
 |**_SPACE**|**iswspace – (** `c` **)**|  
@@ -160,7 +155,7 @@ ms.lasthandoff: 12/21/2017
  Tisknutelná široké znaku kromě místa celý znak (L "").  
   
  `iswlower`  
- Malé písmeno, nebo jeden z definované implementací sadu široké znaky pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswlower`vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na malá písmena.  
+ Malé písmeno, nebo jeden z definované implementací sadu široké znaky pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswlower` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na malá písmena.  
   
  `iswprint`  
  Tisknutelná široká znaková, včetně místa celý znak (L "").  
@@ -172,7 +167,7 @@ ms.lasthandoff: 12/21/2017
  Celý znak, odpovídá standardní prázdný znak nebo je jedním z definované implementací sadu široké znaky pro kterou `iswalnum` je false. Standardní prázdné znaky jsou: místa (L ""), formfeed (L '\f'), nový řádek (L '\n'), CR (L '\r'), vodorovné karta (L "\t") a vertikální tabulátor (L '\v').  
   
  `iswupper`  
- Celý znak, je velká nebo je jedním z definované implementací sadu široké znaky, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswupper`vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na velká písmena.  
+ Celý znak, je velká nebo je jedním z definované implementací sadu široké znaky, pro které žádný z `iswcntrl`, `iswdigit`, `iswpunct`, nebo `iswspace` nenulový. `iswupper` vrátí nenulovou hodnotu pouze pro široké znaky, které odpovídají na velká písmena.  
   
  `iswxdigit`  
  Široká znaková, která odpovídá znak hexadecimální číslice.  

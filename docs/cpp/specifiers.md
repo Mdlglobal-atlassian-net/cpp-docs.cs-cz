@@ -2,11 +2,8 @@
 title: Specifikátory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarations, specifiers
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352ef898c9380c55e90205129ba6fe48bf352856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifiers"></a>Specifikátory
 Toto téma popisuje *decl specifikátory* součást (specifikátory deklarace) [deklarace](declarations-and-definitions-cpp.md).  
@@ -38,11 +33,11 @@ Toto téma popisuje *decl specifikátory* součást (specifikátory deklarace) [
   
  *Funkce – specifikátor*  
   
- [Friend](../cpp/friend-cpp.md)  
+ [friend](../cpp/friend-cpp.md)  
   
  [Definice TypeDef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [__declspec](../cpp/declspec.md) `(` *rozšířené decl – modifikátor seq*`)`  
+ [__declspec](../cpp/declspec.md) `(` *rozšířené decl – modifikátor seq* `)`  
   
 ## <a name="remarks"></a>Poznámky  
  *Decl specifikátory* součástí deklaraci je nejdelší pořadí *decl specifikátory* , můžete provést znamená název typu, není včetně ukazatele, nebo odkaz modifikátory. Zbývající část deklaraci je *deklarátor*, který obsahuje zavedla název.  

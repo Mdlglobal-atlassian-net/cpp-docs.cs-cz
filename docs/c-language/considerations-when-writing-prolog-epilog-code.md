@@ -1,13 +1,10 @@
 ---
-title: "Důležité informace k zápisu kódu prologu epilogu | Microsoft Docs"
-ms.custom: 
+title: Důležité informace k zápisu kódu prologu epilogu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a153011ad0cd571762c6473f6121a55045396c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd3d63ed06ee07943263e6f8a59bb9fceea4d99d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Důležité informace k zápisu kódu prologu/epilogu
 **Konkrétní Microsoft**  
   
  Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Je také užitečné vědět, jak používat **__local_size –** předdefinované konstanta.  
   
-##  <a name="_clang_c_stack_frame_layout"></a>Rozložení rámce zásobníku C  
+##  <a name="_clang_c_stack_frame_layout"></a> Rozložení rámce zásobníku C  
  Tento příklad ukazuje standardní kód prologu, který se může vyskytnout v 32bitové funkci:  
   
 ```  
@@ -54,7 +49,7 @@ ret                          ; Return from function
   
  Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních proměnných začíná na adrese `ebp-2`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.  
   
-##  <a name="_clang_the___local_size_constant"></a>__Local_size – konstanta  
+##  <a name="_clang_the___local_size_constant"></a> __Local_size – konstanta  
  Kompilátor poskytuje konstantu, **__local_size –**, pro použití v vloženého assembleru blok kódu prologu funkce. Tato konstanta se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.  
   
  Kompilátor určuje hodnota **__local_size –**. Hodnotou je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. **__Local_size –** lze použít pouze jako okamžitou operand; ji nelze použít ve výrazu. Hodnota této konstanty nesmí být v kódu měněna nebo předefinována. Příklad:  

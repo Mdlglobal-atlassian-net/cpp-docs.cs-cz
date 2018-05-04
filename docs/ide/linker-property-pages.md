@@ -1,12 +1,12 @@
 ---
-title: "Stránky vlastností linkeru | Microsoft Docs"
-ms.custom: 
+title: Stránky vlastností linkeru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>Stránky vlastností linkeru
 
@@ -51,7 +51,7 @@ Programový přístup, najdete v tématu <xref:Microsoft.VisualStudio.VCProjectE
 
 ### <a name="per-user-redirection"></a>Přesměrování na uživatele
 
-Registrace v sadě Visual Studio tradičně byla provedena v HKEY_CLASSES_ROOT (HKCR). S [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]pro přístup k HKCR musíte Visual Studio spustit v režimu zvýšených oprávnění. Vývojáři vždy nechcete spustit v režimu zvýšených oprávnění, ale musí i nadále fungovat s registrací. Přesměrování na uživatele umožňuje zaregistrovat bez nutnosti spuštění v tomto režimu.
+Registrace v sadě Visual Studio tradičně byla provedena v HKEY_CLASSES_ROOT (HKCR). Windows Vista a novějších operačních systémech pro přístup k HKCR musíte spustit Visual Studio v režimu zvýšených oprávnění. Vývojáři vždy nechcete spustit v režimu zvýšených oprávnění, ale musí i nadále fungovat s registrací. Přesměrování na uživatele umožňuje zaregistrovat bez nutnosti spuštění v tomto režimu.
 
 Přesměrování na uživatele vynutí všech zápisu do HKCR přesměrovat na HKEY\_aktuální\_uživatele (HKCU). Pokud je vypnutý přesměrování na uživatele, může to způsobit [chyby pro sestavení projektu PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) při pokusu zapsat do HKCR program.
 

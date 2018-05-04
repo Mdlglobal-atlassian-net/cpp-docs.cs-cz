@@ -1,13 +1,10 @@
 ---
-title: "Řetězce jazyků | Microsoft Docs"
-ms.custom: 
+title: Řetězce jazyků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 `setlocale` a `_create_locale` funkce můžete použít rozhraní API systému Windows NLS podporované jazyky v operačních systémech, které nepoužívají znaková stránka kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [referenční dokumentace rozhraní API National jazykové podpory (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Řetězec jazyka může být některá z hodnot v **jazyk** a **zkratka jazyka** sloupce seznam podporovaných jazyků. Další informace o podpoře jazyka podle verze operačního systému najdete v tématu [příloha A: produktu chování](http://msdn.microsoft.com/goglobal/bb896001.aspx) v [MS-LCID]: odkaz na Windows jazyk kódu identifikátor (LCID).   
@@ -38,7 +33,7 @@ Implementace běhové knihovny jazyka C také podporuje tyto řetězce jazyků:
 |americká angličtina|en US|  
 |americká angličtina|en US|  
 |australské|en-AU|  
-|Belgické|NL-být|  
+|Belgické|nl-BE|  
 |Kanadští|en-CA|  
 |CHH|zh-HK|  
 |-či-|zh-SG|  
@@ -46,8 +41,8 @@ Implementace běhové knihovny jazyka C také podporuje tyto řetězce jazyků:
 |hongkong čínština|zh-HK|  
 |čínština (zjednodušená)|zh-CN|  
 |Čínština Singapur|zh-SG|  
-|tradiční čínština|zh-TW.|  
-|Holandština Belgické|NL-být|  
+|tradiční čínština|zh-TW|  
+|Holandština Belgické|nl-BE|  
 |americká angličtina|en US|  
 |Austrálie angličtina|en-AU|  
 |Angličtina belize|en-BZ|  
@@ -85,7 +80,7 @@ Implementace běhové knihovny jazyka C také podporuje tyto řetězce jazyků:
 |Španělština el salvador|ES SV|  
 |Španělština Kostarika|ES-GT|  
 |Španělština honduras|ES-HN|  
-|Španělština mexickými|ES-MX|  
+|Španělština mexickými|es-MX|  
 |Španělština moderních|ES-ES|  
 |Španělština Nikaragua|ES-NI|  
 |Španělština panama|ES-PA|  

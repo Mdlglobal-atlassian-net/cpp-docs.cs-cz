@@ -1,12 +1,9 @@
 ---
-title: "Funkce se seznamem argumentů proměnných (C++) | Microsoft Docs"
-ms.custom: 
+title: Funkce se seznamem argumentů proměnných (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkce s argumentů s proměnnou seznamy (C++)
 Deklarace funkcí, ve kterých posledního člena se třemi tečkami (...) může trvat proměnný počet argumentů. V těchto případech poskytuje jazyk C++ kontrolu typu pouze pro explicitně deklarované argumenty. Seznamy argumentů proměnných lze použít, pokud je zapotřebí provést funkci tak obecnou, že i počet a typ argumentů se může lišit. Řada funkcí je příkladem funkce, které používají seznam argumentů s proměnnou délkou. `printf` *seznam argumentů deklarace*  
@@ -36,7 +31,7 @@ Deklarace funkcí, ve kterých posledního člena se třemi tečkami (...) můž
 ## <a name="functions-with-variable-arguments"></a>Funkce s proměnné argumenty  
  Přístup k argumentům po deklarované, použijte makra obsažené v souboru standardní zahrnout \<stdarg.h > jak je popsáno níže.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Microsoft C++ umožňuje zadat tři tečky jako argument, jsou-li tři tečky posledním argumentem a předchází-li jim čárka. Proto je deklarace `int Func( int i, ... );` platná, ale `int Func( int i ... );` platná není.  
   

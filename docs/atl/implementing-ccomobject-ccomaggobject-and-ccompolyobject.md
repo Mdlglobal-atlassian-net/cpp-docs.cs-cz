@@ -1,13 +1,10 @@
 ---
 title: Implementace CComObject CComAggObject a CComPolyObject | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CComPolyObject
 - CComAggObject
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementace CComObject CComAggObject a CComPolyObject
 Třídy šablon [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), a [CComPolyObject](../atl/reference/ccompolyobject-class.md) jsou vždy maximální odvozené funkcí v řetězu dědičnosti. Je zodpovídají za zpracovávaly všechny metody v **IUnknown**: `QueryInterface`, `AddRef`, a **verze**. Kromě toho `CComAggObject` a `CComPolyObject` (při použití pro agregované objekty) zadejte počítání speciální odkazů a `QueryInterface` sémantiku požadované pro vnitřní neznámý.  
@@ -40,7 +35,7 @@ Třídy šablon [CComObject](../atl/reference/ccomobject-class.md), [CComAggObje
 |– Makro|Efekt|  
 |-----------|------------|  
 |`DECLARE_NOT_AGGREGATABLE`|Vždy používá `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Používá `CComAggObject` Pokud je objekt agregován a `CComObject` Pokud není. `CComCoClass`obsahuje tato makro, pokud žádná z **DECLARE_\*_AGGREGATABLE** makra jsou deklarované v třídě, bude výchozí.|  
+|`DECLARE_AGGREGATABLE`|Používá `CComAggObject` Pokud je objekt agregován a `CComObject` Pokud není. `CComCoClass` obsahuje tato makro, pokud žádná z **DECLARE_\*_AGGREGATABLE** makra jsou deklarované v třídě, bude výchozí.|  
 |`DECLARE_ONLY_AGGREGATABLE`|Vždy používá `CComAggObject`. Vrátí chybu, pokud objekt nejsou agregovány.|  
 |`DECLARE_POLY_AGGREGATABLE`|ATL vytvoří instanci **CComPolyObject\<CYourClass >** při **IClassFactory::CreateInstance** je volána. Během vytváření se kontroluje hodnota vnější neznámý. Pokud je **NULL**, **IUnknown** je implementována pro objekt neagregovaná. Pokud vnější Neznámý není **NULL**, **IUnknown** je implementována pro agregovaný objekt.|  
   

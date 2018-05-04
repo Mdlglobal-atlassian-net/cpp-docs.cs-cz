@@ -1,12 +1,9 @@
 ---
-title: "Třída CComMultiThreadModel | Microsoft Docs"
-ms.custom: 
+title: Třída CComMultiThreadModel | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89af8507150ee708ad381be2d47201c9266f763
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel – třída
-`CComMultiThreadModel`poskytuje metody vláken pro zvyšování a dekrementace hodnotu proměnné.  
+`CComMultiThreadModel` poskytuje metody vláken pro zvyšování a dekrementace hodnotu proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,14 +64,14 @@ class CComMultiThreadModel
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- `CComMultiThreadModel`samotný definuje tři `typedef` názvy. `AutoCriticalSection`a `CriticalSection` referenční třídy, které poskytují metody pro získání a uvolněním vlastnictví kritická sekce. `ThreadModelNoCS`odkazy na třídy [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
+ `CComMultiThreadModel` samotný definuje tři `typedef` názvy. `AutoCriticalSection` a `CriticalSection` referenční třídy, které poskytují metody pro získání a uvolněním vlastnictví kritická sekce. `ThreadModelNoCS` odkazy na třídy [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
  Při použití `CComMultiThreadModel`, `typedef` název `AutoCriticalSection` odkazuje na třídu [CComAutoCriticalSection](ccomautocriticalsection-class.md), který poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
   
 ```
@@ -140,7 +135,7 @@ private:
 |`InternalAddRef`|Přírůstek není bezpečné pro přístup z více vláken.|Přírůstek je bezpečné pro přístup z více vláken.|  
 |`Lock`|Neprovede žádnou akci; neexistuje žádné kritická sekce modulu k uzamčení.|Neprovede žádnou akci; neexistuje žádné kritická sekce modulu k uzamčení.|  
   
-##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection  
  Při použití `CComMultiThreadModel`, `typedef` název `CriticalSection` odkazuje na třídu [CComCriticalSection](ccomcriticalsection-class.md), který poskytuje metody pro získání a uvolněním vlastnictví objektu kritická sekce.  
   
 ```
@@ -161,7 +156,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>Příklad  
  V tématu [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
-##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
  Tato statická funkce volá funkci Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), které sníží hodnotu proměnné, na kterou odkazuje `p`.  
   
 ```
@@ -178,7 +173,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>Poznámky  
  **InterlockedDecrement** zabrání více než jedno vlákno současně pomocí této proměnné.  
   
-##  <a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>  CComMultiThreadModel::Increment  
  Tato statická funkce volá funkci Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), což zvýší hodnotu proměnné, na kterou odkazuje `p`.  
   
 ```
@@ -195,7 +190,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>Poznámky  
  **InterlockedIncrement** zabrání více než jedno vlákno současně pomocí této proměnné.  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS  
  Při použití `CComMultiThreadModel`, `typedef` název `ThreadModelNoCS` odkazuje na třídu [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).  
   
 ```
@@ -203,7 +198,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CComMultiThreadModelNoCS`poskytuje metody vláken pro zvyšování a dekrementace proměnné. neposkytuje však kritická sekce.  
+ `CComMultiThreadModelNoCS` poskytuje metody vláken pro zvyšování a dekrementace proměnné. neposkytuje však kritická sekce.  
   
  [CComSingleThreadModel](ccomsinglethreadmodel-class.md) a `CComMultiThreadModelNoCS` také obsahovat definice pro `ThreadModelNoCS`. Následující tabulka znázorňuje vztah mezi vláken třídu modelu a třída odkazuje `ThreadModelNoCS`:  
   

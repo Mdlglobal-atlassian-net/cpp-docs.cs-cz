@@ -1,12 +1,9 @@
 ---
-title: "Třída CComUnkArray | Microsoft Docs"
-ms.custom: 
+title: Třída CComUnkArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComUnkArray
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray – třída
 Tato třída ukládá **IUnknown** ukazatele a je určen k použití jako parametr, který se [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) třídy šablony.  
@@ -77,12 +72,12 @@ class CComUnkArray
  V tématu [přidání body připojení k objektu](../../atl/adding-connection-points-to-an-object.md) informace o automatizaci vytváření připojení bodu proxy.  
   
 > [!NOTE]
-> **Poznámka:** třídy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) je používán **přidat třídu** Průvodce při vytvoření ovládacího prvku, který má spojovací body. Pokud chcete určit počet bodů připojení ručně, změňte odkaz z **CComDynamicUnkArray** k `CComUnkArray<`  *n*  `>`, kde  *n*  je počet bodů připojení vyžaduje.  
+> **Poznámka:** třídy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) je používán **přidat třídu** Průvodce při vytvoření ovládacího prvku, který má spojovací body. Pokud chcete určit počet bodů připojení ručně, změňte odkaz z **CComDynamicUnkArray** k `CComUnkArray<` *n* `>`, kde *n*je počet bodů připojení vyžaduje.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
-##  <a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>  CComUnkArray::Add  
  Voláním této metody lze přidat **IUnknown** ukazatel na pole.  
   
 ```
@@ -96,7 +91,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí souboru cookie přidruženého nově přidané ukazatele, nebo 0, pokud pole není dostatečně velký, aby se tak, aby obsahovala nové ukazatele.  
   
-##  <a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>  CComUnkArray::begin  
  Vrátí ukazatel na začátek kolekce **IUnknown** rozhraní ukazatele.  
   
 ```
@@ -112,7 +107,7 @@ IUnknown**
   
  Před použitím **IUnknown** rozhraní, je potřeba zkontrolovat, že není **NULL**.  
   
-##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  Konstruktor  
   
 ```
@@ -122,7 +117,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Poznámky  
  Nastaví kolekci pro uložení `nMaxSize` **IUnknown** ukazatele a inicializuje ukazatele na **NULL**.  
   
-##  <a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>  CComUnkArray::end  
  Vrací ukazatel na jednu za posledních **IUnknown** ukazatele v kolekci.  
   
 ```
@@ -138,7 +133,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
  Volat tuto metodu za účelem získání souboru cookie přidruženého dané **IUnknown** ukazatel.  
   
 ```
@@ -155,7 +150,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Poznámky  
  Pokud je více než jednu instanci stejného **IUnknown** ukazatele, funkce vrátí hodnotu souboru cookie, který pro první.  
   
-##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
  Voláním této metody lze získat **IUnknown** ukazatel spojené s danou souboru cookie.  
   
 ```
@@ -169,7 +164,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **IUnknown** ukazatel nebo hodnota NULL, pokud je nalezen žádný odpovídající soubor cookie.  
   
-##  <a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>  CComUnkArray::Remove  
  Voláním této metody lze odebrat **IUnknown** ukazatel z pole.  
   
 ```

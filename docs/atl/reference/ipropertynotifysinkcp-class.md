@@ -1,12 +1,9 @@
 ---
-title: "Třída IPropertyNotifySinkCP | Microsoft Docs"
-ms.custom: 
+title: Třída IPropertyNotifySinkCP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa15ef6706010154151c696eca320d464cdfee6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP – třída
 Tato třída zpřístupňuje [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní jako odchozí rozhraní na objekt umožňující připojení.  
@@ -52,7 +47,7 @@ class IPropertyNotifySinkCP
  Třída, která spravuje připojení mezi bod připojení a jeho jímky. Výchozí hodnota je [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), což umožňuje neomezený počet připojení. Můžete také použít [CComUnkArray](../../atl/reference/ccomunkarray-class.md), která určuje pevný počet připojení.  
   
 ## <a name="remarks"></a>Poznámky  
- `IPropertyNotifySinkCP`dědí všechny metody prostřednictvím její základní třída [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
+ `IPropertyNotifySinkCP` dědí všechny metody prostřednictvím její základní třída [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
  [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní, které umožňuje podřízený objekt k přijímání oznámení o změnách vlastnost. Třída `IPropertyNotifySinkCP` zpřístupní toto rozhraní jako odchozí rozhraní na objekt umožňující připojení. Klient musí implementovat `IPropertyNotifySink` metody na jímky.  
   

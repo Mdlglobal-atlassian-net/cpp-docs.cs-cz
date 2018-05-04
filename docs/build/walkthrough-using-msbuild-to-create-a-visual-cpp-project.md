@@ -1,13 +1,10 @@
 ---
-title: "Návod: Vytvoření projektu Visual C++ pomocí nástroje MSBuild | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření projektu Visual C++ pomocí nástroje MSBuild | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild
 Tento návod ukazuje, jak používat [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] pro vytvoření projektu Visual C++ v příkazovém řádku. Se dozvíte, jak vytvořit zdrojové soubory C++ a soubor projektu na základě XML pro konzolovou aplikaci Visual C++. Po vytvoření projektu, se dozvíte, jak k přizpůsobení procesu sestavení.  
@@ -191,7 +186,7 @@ Tento návod ukazuje, jak používat [!INCLUDE[vstecmsbuild](../build/includes/v
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]Vytvoří adresář pro výstupní soubory a zkompiluje a odkazů projektu pro generování Myproject.exe program. Po dokončení procesu sestavení, použijte následující příkaz ke spuštění aplikace:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] Vytvoří adresář pro výstupní soubory a zkompiluje a odkazů projektu pro generování Myproject.exe program. Po dokončení procesu sestavení, použijte následující příkaz ke spuštění aplikace:  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  Aplikace by se měla zobrazovat "Hello, z nástroje MSBuild!" v okně konzoly.  
   
 ## <a name="customizing-your-project"></a>Přizpůsobení projektu  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]Umožňuje provést předdefinované sestavení cílů, použije uživatelem definované vlastnosti a použijte vlastní nástroje, události a kroky sestavení. Tato část ukazuje následující úlohy:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] Umožňuje provést předdefinované sestavení cílů, použije uživatelem definované vlastnosti a použijte vlastní nástroje, události a kroky sestavení. Tato část ukazuje následující úlohy:  
   
 -   Pomocí [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] s sestavení cílů.  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>Přidání přizpůsobení nástroje MSBuild  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]poskytuje různé způsoby, jak přizpůsobit proces sestavení. Následující témata ukazují, jak přidat vlastní kroky sestavení, nástroje a události na váš [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] projektu:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] poskytuje různé způsoby, jak přizpůsobit proces sestavení. Následující témata ukazují, jak přidat vlastní kroky sestavení, nástroje a události na váš [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] projektu:  
   
 -   [Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

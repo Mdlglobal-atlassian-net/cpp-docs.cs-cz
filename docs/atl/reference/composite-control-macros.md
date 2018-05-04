@@ -1,12 +1,9 @@
 ---
-title: "Makra složeného ovládacího prvku | Microsoft Docs"
-ms.custom: 
+title: Makra složeného ovládacího prvku | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b609801a1716e47b208644be02d4746abf8c288a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61335d25b0d9b97fe1c7e9915aa9c3d8583eb854
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-macros"></a>Makra složeného ovládacího prvku
 Tyto makra definovat mapy jímek událostí a položek.  
@@ -45,7 +40,7 @@ Tyto makra definovat mapy jímek událostí a položek.
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
 
-##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP  
  Deklaruje začátku mapy jímek událostí složeného ovládacího prvku.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Poznámky  
  Implementace CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší metody obslužná rutina události; všechny ostatní návratové hodnoty není podporován a jeho chování není definováno.  
   
-##  <a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>  END_SINK_MAP  
  Deklaruje konec mapy jímek událostí složeného ovládacího prvku.  
   
 ```
@@ -75,7 +70,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Poznámky  
  Implementace CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší metody obslužná rutina události; všechny ostatní návratové hodnoty není podporován a jeho chování není definováno.  
   
-##  <a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>  SINK_ENTRY  
  Deklaruje obslužné rutiny ( `fn`) pro zadanou událost ( `dispid`), ovládacího prvku identifikovaný `id`.  
   
 ```
@@ -98,7 +93,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Poznámky  
  Implementace CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší metody obslužná rutina události; všechny ostatní návratové hodnoty není podporován a jeho chování není definováno.  
   
-##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX a SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX a SINK_ENTRY_EX_P
  Deklaruje obslužné rutiny ( `fn`) pro zadanou událost ( `dispid`), rozhraní dispatch ( *iid)*, pro ovládací prvek identifikovaný `id`.  
   
 ```
@@ -128,7 +123,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Poznámky  
  Implementace CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší metody obslužná rutina události; všechny ostatní návratové hodnoty není podporován a jeho chování není definováno.  
   
-##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO a SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO a SINK_ENTRY_INFO_P  
  Použití `SINK_ENTRY_INFO` makro v rámci mapování jímky událostí poskytnout informace, které [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) události trasy k příslušné obslužné rutiny.  
   
 ```
@@ -153,7 +148,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
  [v] Název obslužné rutiny událostí. Musíte použít tuto funkci **_stdcall** konvence volání a mít odpovídající stylu dispinterface podpis.  
   
  `info`  
- [v] Zadejte informace o funkci obslužná rutina události. Tento typ informace jsou poskytovány ve formě ukazatel na `_ATL_FUNC_INFO` struktura. `CC_CDECL`je jedinou možností v systém Windows CE pro podporované `CALLCONV` pole z `_ATL_FUNC_INFO` struktura. Žádné jiné hodnoty nejsou proto není definovaná své chování.  
+ [v] Zadejte informace o funkci obslužná rutina události. Tento typ informace jsou poskytovány ve formě ukazatel na `_ATL_FUNC_INFO` struktura. `CC_CDECL` je jedinou možností v systém Windows CE pro podporované `CALLCONV` pole z `_ATL_FUNC_INFO` struktura. Žádné jiné hodnoty nejsou proto není definovaná své chování.  
   
 ### <a name="remarks"></a>Poznámky  
  První čtyři makro parametry jsou stejné jako u [SINK_ENTRY_EX](#sink_entry_ex) makro. Konečný parametr obsahuje typ informace o události. Implementace CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší metody obslužná rutina události; všechny ostatní návratové hodnoty není podporován a jeho chování není definováno.  

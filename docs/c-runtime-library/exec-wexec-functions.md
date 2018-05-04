@@ -1,13 +1,10 @@
 ---
-title: "_exec, _wexec – funkce | Microsoft Docs"
-ms.custom: 
+title: _exec, _wexec – funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -62,17 +59,15 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec – funkce
 Každá funkce této rodiny načte a spustí nový proces:  
@@ -117,7 +112,7 @@ Každá funkce této rodiny načte a spustí nový proces:
 >  Mezery vložené do řetězců mohou způsobit neočekávané chování, například výsledkem předání řetězce `_exec` funkci `"hi there"` bude nový proces, který získá dva argumenty `"hi"` a `"there"`. Proces selže, pokud bylo záměrem, aby nový proces otevřel soubor s názvem "hi there". Tomu lze zabránit citováním řetězce: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Nepředávejte funkci `_exec` vstup uživatele bez explicitní kontroly jeho obsahu. `_exec`bude mít za následek volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) , mějte na paměti tato nekvalifikované cesta názvy může vést k potenciální ohrožení zabezpečení.  
+>  Nepředávejte funkci `_exec` vstup uživatele bez explicitní kontroly jeho obsahu. `_exec` bude mít za následek volání [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) , mějte na paměti tato nekvalifikované cesta názvy může vést k potenciální ohrožení zabezpečení.  
   
  `_exec` Funkcí ověření jejich parametrů. Pokud očekávaný parametry jsou ukazatelé s hodnotou null, prázdné řetězce, nebo tento parametr vynechán, `_exec` funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce `errno` k `EINVAL` a vrátí hodnotu -1. Je proveden žádný nový proces.  
   
@@ -247,9 +242,9 @@ int main( int ac, char* av[] )
   
 ## <a name="see-also"></a>Viz také  
  [Řízení procesů a prostředí](../c-runtime-library/process-and-environment-control.md)   
- [přerušení](../c-runtime-library/reference/abort.md)   
+ [Přerušení](../c-runtime-library/reference/abort.md)   
  [AtExit](../c-runtime-library/reference/atexit.md)   
  [ukončení, _exit –, _exit –](../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit –, _onexit_m –](../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn – funkce](../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

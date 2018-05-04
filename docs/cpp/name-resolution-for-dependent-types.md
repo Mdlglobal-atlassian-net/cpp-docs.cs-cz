@@ -1,27 +1,22 @@
 ---
-title: "Překlad názvů u závislých typů | Microsoft Docs"
-ms.custom: 
+title: Překlad názvů u závislých typů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozlišení názvů u závislých typů
 Použití **typename** pro kvalifikované názvy v definicích šablonu pro oznámení kompilátoru, identifikuje zadaný kvalifikovaný název typu. Další informace najdete v tématu [typename](../cpp/typename.md).  
@@ -102,7 +97,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Odstraňování mnohoznačnosti šablon  
- Aplikace [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] vynucuje pro odstraňování mnohoznačnosti s klíčovým slovem „template“ pravidla standardu C++98/03/11. V následujícím příkladu by Visual C++ 2010 přijmout neodpovídající řádky a řádky vyhovující.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]přijme jenom vyhovující řádky.  
+ Aplikace [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] vynucuje pro odstraňování mnohoznačnosti s klíčovým slovem „template“ pravidla standardu C++98/03/11. V následujícím příkladu by Visual C++ 2010 přijmout neodpovídající řádky a řádky vyhovující.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] přijme jenom vyhovující řádky.  
   
 ```cpp  
 #include <iostream>  

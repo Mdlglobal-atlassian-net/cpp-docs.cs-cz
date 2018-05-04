@@ -1,12 +1,9 @@
 ---
-title: "Výrazy s unárními operátory | Microsoft Docs"
-ms.custom: 
+title: Výrazy s unárními operátory | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>Výrazy s unárními operátory
 Unární operátory fungují s pouze jedním operandem ve výrazu. Unární operátory jsou následující:  
@@ -64,17 +59,17 @@ Unární operátory fungují s pouze jedním operandem ve výrazu. Unární oper
   
 -   *operátory – výraz*  
   
--   `++`*unární výraz*  
+-   `++` *Unární výraz*  
   
--   `--`*unární výraz*  
+-   `--` *Unární výraz*  
   
 -   *Unární operátor* *výraz cast*  
   
--   `sizeof`*unární výraz*  
+-   `sizeof` *Unární výraz*  
   
--   `sizeof(`*název typu*`)`  
+-   `sizeof(` *Název typu* `)`  
   
--   `decltype(`*výraz*`)`  
+-   `decltype(` *výraz* `)`  
   
 -   *přidělení – výraz*  
   
@@ -82,7 +77,7 @@ Unární operátory fungují s pouze jedním operandem ve výrazu. Unární oper
   
  Všechny *operátory výraz* se považuje za *unární výraz*, a protože je považována za jakékoli primární výraz *operátory výraz*, je všechny primární výrazy považovat za *unární výraz* také. Další informace najdete v tématu [výrazy přípony](../cpp/postfix-expressions.md) a [primární výrazy](../cpp/primary-expressions.md).  
   
- A *unární operátor* se skládá z jednoho nebo více z následujících znaků:`* & + - ! ~`  
+ A *unární operátor* se skládá z jednoho nebo více z následujících znaků: `* & + - ! ~`  
   
  *Výraz cast* je unární výraz s volitelné přetypování na typ změnit. Další informace najdete v části [operátor přetypování: ()](../cpp/cast-operator-parens.md).  
   

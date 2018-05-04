@@ -1,13 +1,10 @@
 ---
 title: EXPORTUJE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - EXPORTS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9a8e902e42d44ffa292b9f821839b8e948d7a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exports"></a>EXPORTY
 Představuje oddíl jeden nebo více export definice, které zadáte exportovaný názvy nebo řadové číslovky funkce nebo data. Každý definice musí být na samostatném řádku.  
@@ -45,7 +40,7 @@ EXPORTS
 entryname[=internalname] [@ordinal [NONAME]] [[PRIVATE] | [DATA]]  
 ```  
   
- `entryname`je název funkce nebo proměnná, která chcete exportovat. To je potřeba. Pokud název, který chcete exportovat se liší od názvu v knihovně DLL, zadejte název s exportem v knihovně DLL pomocí `internalname`. Například, pokud vaše knihovna DLL export funkce `func1` a chcete, aby volající pro použití jako `func2`, zadali byste:  
+ `entryname` je název funkce nebo proměnná, která chcete exportovat. To je potřeba. Pokud název, který chcete exportovat se liší od názvu v knihovně DLL, zadejte název s exportem v knihovně DLL pomocí `internalname`. Například, pokud vaše knihovna DLL export funkce `func1` a chcete, aby volající pro použití jako `func2`, zadali byste:  
   
 ```  
 EXPORTS  
@@ -77,7 +72,7 @@ EXPORTS
   
 3.  [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu odkaz  
   
-4.  A [komentář](../../preprocessor/comment-c-cpp.md) direktivy ve zdrojovém kódu ve tvaru`#pragma comment(linker, "/export: definition ")`  
+4.  A [komentář](../../preprocessor/comment-c-cpp.md) direktivy ve zdrojovém kódu ve tvaru `#pragma comment(linker, "/export: definition ")`  
   
  Všechny čtyři metody lze použít ve stejný program. Při propojení sestavení program, který obsahuje exportuje, také vytvoří knihovnu importu, pokud. EXP soubor se používá v buildu.  
   

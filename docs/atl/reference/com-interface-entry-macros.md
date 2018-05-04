@@ -1,12 +1,9 @@
 ---
-title: "Makra položky rozhraní modelu COM | Microsoft Docs"
-ms.custom: 
+title: Makra položky rozhraní modelu COM | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::COM_INTERFACE_ENTRY
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76352cf2015661bc970b2987b9794f3bf023cc15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c3ba41a05813c4112c1e5dd51bfe447d2c8debf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra  
  Tyto makra zadejte rozhraní objektu do jeho mapy COM tak, aby přístupná pomocí `QueryInterface`. Pořadí položek v mapě COM je rozhraní pořadí bude ověřen odpovídající **IID** během `QueryInterface`.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** atlcom
 
-## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY –
+## <a name="com_interface_entry"></a> COM_INTERFACE_ENTRY –
 Zadá rozhraní do mapy rozhraní COM.
 
 ### <a name="syntax"></a>Syntaxe
@@ -89,7 +84,7 @@ END_COM_MAP()
 ### <a name="requirements"></a>Požadavky
 **Záhlaví:** atlcom
   
-##  <a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2  
+##  <a name="com_interface_entry2"></a>  COM_INTERFACE_ENTRY2  
  Použití tohoto makra k rozlišení dvou větví dědičnosti.  
   
 ```
@@ -110,7 +105,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
-##  <a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID  
+##  <a name="com_interface_entry_iid"></a>  COM_INTERFACE_ENTRY_IID  
  Pomocí této makro zadejte rozhraní do mapy COM a jeho IID.  
   
 ```
@@ -128,7 +123,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
-##  <a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID  
+##  <a name="com_interface_entry2_iid"></a>  COM_INTERFACE_ENTRY2_IID  
  Stejné jako [COM_INTERFACE_ENTRY2](#com_interface_entry2), s výjimkou můžete zadat různé identifikátory IID.  
   
 ```
@@ -145,7 +140,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
  `x2`  
  [v] Název druhé rozhraní objektu třída odvozená z přímo.  
   
-##  <a name="com_interface_entry_aggregate"></a>COM_INTERFACE_ENTRY_AGGREGATE  
+##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE  
  Když rozhraní identifikovaný `iid` je dotazován, `COM_INTERFACE_ENTRY_AGGREGATE` předává `punk`.  
   
 ```
@@ -167,7 +162,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
-##  <a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
+##  <a name="com_interface_entry_aggregate_blind"></a>  COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
  Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)kromě toho, že dotazování pro všechny identifikátory IID výsledkem předávání dotaz pro `punk`.  
   
 ```
@@ -187,7 +182,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
  [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
   
 
-##  <a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE  
+##  <a name="com_interface_entry_autoaggregate"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE  
  Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), kromě případu, kdy `punk` je **NULL**, automaticky vytvoří agregace popsaného `clsid`.  
   
 ```
@@ -210,7 +205,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
-##  <a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
+##  <a name="com_interface_entry_autoaggregate_blind"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
  Stejné jako [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)kromě toho, že dotazování pro všechny identifikátory IID výsledkem předávání dotaz pro `punk`a pokud `punk` je **NULL**, automaticky vytváří agregace popsaného `clsid`.  
   
 ```
@@ -232,7 +227,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
-##  <a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK  
+##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
  Způsobí, že váš program volat [debugbreak –](http://msdn.microsoft.com/library/windows/desktop/ms679297) když je dotazován specifikované rozhraní pro.  
   
 ```
@@ -248,7 +243,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
   
   
   
-##  <a name="com_interface_entry_cached_tear_off"></a>COM_INTERFACE_ENTRY_CACHED_TEAR_OFF  
+##  <a name="com_interface_entry_cached_tear_off"></a>  COM_INTERFACE_ENTRY_CACHED_TEAR_OFF  
  Uloží data rozhraní specifické pro všechny instance.  
   
 ```
@@ -273,7 +268,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
   
-##  <a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF  
+##  <a name="com_interface_entry_tear_off"></a>  COM_INTERFACE_ENTRY_TEAR_OFF  
  Zpřístupní úplné vypnutí rozhraní.  
   
 ```
@@ -295,7 +290,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
-##  <a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN  
+##  <a name="com_interface_entry_chain"></a>  COM_INTERFACE_ENTRY_CHAIN  
  Při zpracování dosáhne této položky v mapě COM, zpracuje mapy COM základní třídy.  
   
 ```
@@ -317,7 +312,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
   
   
   
-##  <a name="com_interface_entry_func"></a>COM_INTERFACE_ENTRY_FUNC  
+##  <a name="com_interface_entry_func"></a>  COM_INTERFACE_ENTRY_FUNC  
  Obecné mechanismus pro zapojení do knihovny ATL pro `QueryInterface` logiku.  
   
 ```
@@ -343,7 +338,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
   
   
   
-##  <a name="com_interface_entry_func_blind"></a>COM_INTERFACE_ENTRY_FUNC_BLIND  
+##  <a name="com_interface_entry_func_blind"></a>  COM_INTERFACE_ENTRY_FUNC_BLIND  
  Stejné jako [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)kromě toho, že dotazování pro všechny identifikátory IID výsledkem volání `func`.  
   
 ```
@@ -361,7 +356,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
  Jakákoli chyba způsobí, že zpracování pokračovat na mapě COM. Pokud funkce vrátí hodnotu ukazatele rozhraní, by měla vrátit `S_OK`.  
   
   
-##  <a name="com_interface_entry_nointerface"></a>COM_INTERFACE_ENTRY_NOINTERFACE  
+##  <a name="com_interface_entry_nointerface"></a>  COM_INTERFACE_ENTRY_NOINTERFACE  
  Vrátí **E_NOINTERFACE** a ukončí zpracování mapy COM, když je dotazován specifikované rozhraní pro.  
   
 ```

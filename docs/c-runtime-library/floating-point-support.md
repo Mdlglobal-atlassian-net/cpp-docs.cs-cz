@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.math
 dev_langs:
@@ -17,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358f47716ee998d5070e226ee71f865d6bfc64a4
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ddf4a6ce7e2ad98841c20fcef5fd9639a5797852
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="math-and-floating-point-support"></a>Matematické a podpora plovoucí desetinné čárky
 
@@ -56,7 +54,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ podporované 
 [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Zabezpečené verzi **_controlfp –**
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Vrátí hodnotu, která má odhad jeden argument a přihlašovací jiného
 [Cos, cosf –, cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)|Vypočítá sinus
-[COSH, coshf –, coshl –](../c-runtime-library/reference/cosh-coshf-coshl.md)|Vypočítá hyperbolický sinus
+[cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Vypočítá hyperbolický sinus
 [div, ldiv –, lldiv –](../c-runtime-library/reference/div.md)|Vypočítá podílu a zbývající dva celočíselné hodnoty
 [_ecvt –](../c-runtime-library/reference/ecvt.md), [ecvt –](../c-runtime-library/reference/posix-ecvt.md)|Převede **dvojité** na řetězec
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Zabezpečené verzi **_ecvt –**
@@ -129,14 +127,14 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ podporované 
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Vynásobí číslo s plovoucí desetinnou čárkou integrální výkon **flt_radix –**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Nastaví s plovoucí desetinnou čárkou řídicího slova
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Povolí nebo zakáže SSE2 pokyny
-[Sin, sinf –, sinl –](../c-runtime-library/reference/sin-sinf-sinl.md)|Vypočítá sinus
-[SINH, sinhf –, sinhl –](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Vypočítá hyperbolický sinus
+[sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Vypočítá sinus
+[sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Vypočítá hyperbolický sinus
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Vypočítá druhou odmocninu
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Získá s plovoucí desetinnou čárkou stavového slova
 [strtof –, _strtof_l –](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Převede řetězec na **float**
 [strtold _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Převede řetězec na **dlouho** **double**
-[Tan, tanf –, tanl –](../c-runtime-library/reference/tan-tanf-tanl.md)|Vypočítá tangens
-[TANH, tanhf –, tanhl –](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Vypočítá hyperbolický tangens
+[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Vypočítá tangens
+[tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Vypočítá hyperbolický tangens
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Vypočítá gama funkce
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Zkrátí zlomkové části
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převede řetězec na široké **double**
@@ -144,4 +142,4 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ podporované 
 
 ## <a name="see-also"></a>Viz také
 
-[Univerzální C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

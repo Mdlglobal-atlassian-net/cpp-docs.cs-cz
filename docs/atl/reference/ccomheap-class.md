@@ -1,12 +1,9 @@
 ---
-title: "Třída CComHeap | Microsoft Docs"
-ms.custom: 
+title: Třída CComHeap | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheap-class"></a>CComHeap – třída
 Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkce přidělení paměti COM.  
@@ -56,7 +51,7 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComHeap`implementuje funkce přidělení paměti pomocí funkcí přidělení COM, včetně [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)a [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maximální množství paměti, kterou lze přidělit rovná **INT_MAX** (2147483647) bajtů.  
+ `CComHeap` implementuje funkce přidělení paměti pomocí funkcí přidělení COM, včetně [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)a [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maximální množství paměti, kterou lze přidělit rovná **INT_MAX** (2147483647) bajtů.  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -69,7 +64,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ATLComMem.h  
   
-##  <a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>  CComHeap::Allocate  
  Voláním této metody lze přidělit blok paměti.  
   
 ```
@@ -88,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementovaná pomocí [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
-##  <a name="free"></a>CComHeap::Free  
+##  <a name="free"></a>  CComHeap::Free  
  Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
   
 ```
@@ -102,7 +97,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
-##  <a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>  CComHeap::GetSize  
  Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
   
 ```
@@ -119,7 +114,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
-##  <a name="reallocate"></a>CComHeap::Reallocate  
+##  <a name="reallocate"></a>  CComHeap::Reallocate  
  Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Ladění a globální funkce zpráv o chybách | Microsoft Docs"
-ms.custom: 
+title: Ladění a globální funkce zpráv o chybách | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb3257b5205587b27a83671ed8e610aad5373eef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Ladění a chybách globální funkce
 Tyto funkce poskytují užitečné ladění a trasování zařízení.  
@@ -40,7 +35,7 @@ Tyto funkce poskytují užitečné ladění a trasování zařízení.
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Vyvolá `CAtlException`.|  
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Volání této funkce signál chybu na základě výsledku funkce systému Windows `GetLastError`.|  
   
-##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError  
+##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError  
  Vrátí hodnotu posledního kódu chyby volajícího vlákna ve formě HRESULT.  
   
 ```
@@ -48,12 +43,12 @@ HRESULT AtlHresultFromLastError();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlHresultFromLastError`volání `GetLastError` získat poslední chyby a vrátí chybu po převodu k HRESULT pomocí **HRESULT_FROM_WIN32** makro.  
+ `AtlHresultFromLastError` volání `GetLastError` získat poslední chyby a vrátí chybu po převodu k HRESULT pomocí **HRESULT_FROM_WIN32** makro.  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcomcli.h  
 
-##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32  
+##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32  
  Převede kód chyby Win32 na HRESULT.  
   
 ```
@@ -73,7 +68,7 @@ AtlHresultFromWin32(DWORD error);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcomcli.h  
 
-##  <a name="atlreporterror"></a>AtlReportError  
+##  <a name="atlreporterror"></a>  AtlReportError  
  Nastaví `IErrorInfo` rozhraní a poskytuje informace o chybě klientům objektu.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT WINAPI AtlReportError(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
     
-##  <a name="atlthrow"></a>AtlThrow  
+##  <a name="atlthrow"></a>  AtlThrow  
  Volání této funkce signál chybu na základě `HRESULT` stavový kód.  
   
 ```
@@ -194,7 +189,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atldef.h  
 
-##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32  
+##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32  
  Volání této funkce signál chybu na základě výsledku funkce systému Windows `GetLastError`.  
   
 ```

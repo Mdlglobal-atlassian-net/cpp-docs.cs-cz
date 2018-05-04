@@ -2,11 +2,8 @@
 title: Třída CLocalHeap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CLocalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clocalheap-class"></a>CLocalHeap – třída
 Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí lokální haldy Win32.  
@@ -56,7 +51,7 @@ class CLocalHeap : public IAtlMemMgr
 |[CLocalHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CLocalHeap`implementuje pomocí funkcí lokální haldy Win32 funkce přidělení paměti.  
+ `CLocalHeap` implementuje pomocí funkcí lokální haldy Win32 funkce přidělení paměti.  
   
 > [!NOTE]
 >  Funkce lokální haldy jsou nižší než jiné funkce správy paměti a neposkytuje jako řadu funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou k dispozici v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy.  
@@ -72,7 +67,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlmem.h  
   
-##  <a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>  CLocalHeap::Allocate  
  Voláním této metody lze přidělit blok paměti.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementovaná pomocí [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) s parametrem příznak **LMEM_FIXED**.  
   
-##  <a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>  CLocalHeap::Free  
  Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
-##  <a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>  CLocalHeap::GetSize  
  Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Poznámky  
  Implementovaná pomocí [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
-##  <a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
  Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
   
 ```

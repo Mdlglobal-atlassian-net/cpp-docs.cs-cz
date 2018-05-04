@@ -1,29 +1,24 @@
 ---
-title: "pro příkaz (C++) | Microsoft Docs"
-ms.custom: 
+title: pro příkaz (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for – příkaz (C++)
 Spustí příkaz opakovaně, dokud podmínka nebude nepravda. Informace o založený na rozsahu pro příkaz, naleznete v části [na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -45,7 +40,7 @@ for ( init-expression ; cond-expression ; loop-expression )
 |Název syntaxe|Při provedení|Popis|  
 |-----------------|-------------------|-----------------|  
 |`init-expression`|Před jakýkoli další prvek **pro** příkaz `init-expression` se spustí jenom jednou. Řízení potom předává do `cond-expression`.|Často se používá k inicializaci indexů smyčky. Může obsahovat výrazy nebo deklarace.|  
-|`cond-expression`|Před spuštěním každé iteraci `statement`, včetně první iterací. `statement`se spustí pouze v případě `cond-expression` vyhodnotí na hodnotu true (nenulové hodnoty).|Výraz, jehož výsledkem je integrální typ nebo typ třídy, která má jednoznačný převod na integrální typ. Obvykle se používá k testování kritérií pro ukončení smyčky.|  
+|`cond-expression`|Před spuštěním každé iteraci `statement`, včetně první iterací. `statement` se spustí pouze v případě `cond-expression` vyhodnotí na hodnotu true (nenulové hodnoty).|Výraz, jehož výsledkem je integrální typ nebo typ třídy, která má jednoznačný převod na integrální typ. Obvykle se používá k testování kritérií pro ukončení smyčky.|  
 |`loop-expression`|Na konci každé iteraci `statement`. Po `loop-expression` proveden, `cond-expression` vyhodnotí.|Obvykle se používá pro zvýšení indexu smyčky.|  
   
  Následující příklady ukazují různé způsoby použití `for` příkaz.  
@@ -75,7 +70,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression`a `loop-expression` může obsahovat více příkazů, které jsou oddělené čárkami. Příklad:  
+ `init-expression` a `loop-expression` může obsahovat více příkazů, které jsou oddělené čárkami. Příklad:  
   
 ```cpp  
 #include <iostream>  
@@ -93,7 +88,7 @@ int main(){
     i + j = 19  
 ```  
   
- `loop-expression`může být zvýšena nebo snížena nebo upravené jinými způsoby.  
+ `loop-expression` může být zvýšena nebo snížena nebo upravené jinými způsoby.  
   
 ```cpp  
 #include <iostream>  

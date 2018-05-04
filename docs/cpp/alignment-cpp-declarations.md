@@ -2,26 +2,21 @@
 title: Zarovnání (deklarace C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>Zarovnání (deklarace C++)
 Jedna z nízké úrovně funkcí jazyka C++, je možnost určit přesné zarovnání objektů v paměti, aby maximální využití výhod architektura konkrétní hardware. Ve výchozím nastavení kompilátoru zarovnán členy třídy a struktury na jejich velikost: bool a char je zarovnán jeden bajt hranice, krátké na dva bajty, int na čtyř bajtů, dlouho, double a long double na 8 bajtů. Ve většině scénářů máte nikdy dělat starosti s zarovnání, protože výchozí zarovnání již optimální. V některých případech ale můžete dosáhnout výrazné vylepšení výkonu, nebo úspory paměti zadáním vlastních zarovnání pro datové struktury. Před Visual Studio 2015 se používá __alignof – klíčová slova specifická pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spouštění v sadě Visual Studio 2015 by měl používat C ++ 11 standardní klíčová slova [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nové klíčová slova chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci k tato rozšíření platí také pro nové klíčová slova. V tématu [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standardní C++ neurčuje okolních chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže potřebujete použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.  

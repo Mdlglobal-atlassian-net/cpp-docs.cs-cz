@@ -1,13 +1,10 @@
 ---
-title: "Příklady skriptování registru | Microsoft Docs"
-ms.custom: 
+title: Příklady skriptování registru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Příklady skriptování registru
 Skriptovací příklady v tomto tématu ukazují, jak přidat klíč registru systému, zaregistrujte server COM registrátora a zadejte více stromy analýzy.  
@@ -59,7 +54,7 @@ HKCU
   
  Nyní, skript přidá podklíč, `HasASubkey`do `MyVeryOwnKey`. Na tento podklíč, přidá, i `PrettyCool` podklíč (s výchozí `DWORD` hodnotu 55) a `ANameValue` s názvem hodnotu (s řetězcovou hodnotu `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Registrace serveru registrátora COM  
+##  <a name="_atl_register_the_registrar_com_server"></a> Registrace serveru registrátora COM  
  Následující skript zaregistruje samotný server COM registrátora.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Přidá `ATL Registrar Class` jako výchozí hodnotu řetězce pro `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- Strom analýzy teď přidá dva nové podklíče k `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. První klíč `ProgID`, získá výchozí hodnotu řetězce, který je identifikátor ProgID. Druhý klíč `InprocServer32`, získá výchozí hodnotu řetězce `%MODULE%`, která je hodnotu preprocesoru popsané v části [pomocí nahraditelné parametry (registrátora Preprocessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), tohoto článku. `InprocServer32`také získá hodnotu s názvem `ThreadingModel`, s řetězcovou hodnotu `Apartment`.  
+ Strom analýzy teď přidá dva nové podklíče k `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. První klíč `ProgID`, získá výchozí hodnotu řetězce, který je identifikátor ProgID. Druhý klíč `InprocServer32`, získá výchozí hodnotu řetězce `%MODULE%`, která je hodnotu preprocesoru popsané v části [pomocí nahraditelné parametry (registrátora Preprocessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), tohoto článku. `InprocServer32` také získá hodnotu s názvem `ThreadingModel`, s řetězcovou hodnotu `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Zadejte více stromy analýzy  
  Pokud chcete zadat více než jeden strom analýzy ve skriptu, umístíte na konci jiné jeden stromu. Například následující skript přidá klíč, `MyVeryOwnKey`, k analýze stromy pro obě `HKEY_CLASSES_ROOT` a `HKEY_CURRENT_USER`:  

@@ -1,13 +1,10 @@
 ---
-title: "Běžné problémy s migrací 64-bit Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Běžné problémy s migrací 64-bit Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea3690e04106f0836d236eefee4acd9dda3a82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Obecné problémy migrace v 64bitovém prostředí Visual C++
 
@@ -41,7 +36,7 @@ Použijete-li vytvářet aplikace na spouštění v operačním systému Windows
   
 -   `size_t`, `time_t`, a `ptrdiff_t` jsou 64bitové hodnoty v operačních systémech Windows 64-bit.  
   
--   `time_t`je hodnota 32-bit v operačních systémech Windows 32-bit v jazyce Visual C++ verze před Visual C++ 2005. `time_t`je nyní 64bitovou celočíselnou hodnotu ve výchozím nastavení. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).  
+-   `time_t` je hodnota 32-bit v operačních systémech Windows 32-bit v jazyce Visual C++ verze před Visual C++ 2005. `time_t` je nyní 64bitovou celočíselnou hodnotu ve výchozím nastavení. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).  
   
      Byste měli vědět, kde váš kód přebírá `int` hodnotu a zpracovává je jako `size_t` nebo `time_t` hodnotu. Je možné, že číslo může být větší než 32bitové číslo a data budou zkráceny, když je předán zpět do `int` úložiště.  
   

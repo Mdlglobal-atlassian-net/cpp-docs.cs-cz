@@ -1,30 +1,25 @@
 ---
-title: "Doporučené postupy optimalizace | Microsoft Docs"
-ms.custom: 
+title: Doporučené postupy optimalizace | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>Doporučené postupy optimalizace
 Tento dokument popisuje některé z osvědčených postupů pro optimalizaci v jazyce Visual C++. Jsou popsané v následujících tématech:  
@@ -80,7 +75,7 @@ Tento dokument popisuje některé z osvědčených postupů pro optimalizaci v j
 ## <a name="optimization-declspecs"></a>Optimalizace Declspecs  
  V této části se podíváme na dva declspecs, které lze v programech, vám pomůže zvýšit výkon: `__declspec(restrict)` a `__declspec(noalias)`.  
   
- `restrict` Declspec lze použít pouze pro deklarace funkcí, které vracejí ukazatele, jako například`__declspec(restrict) void *malloc(size_t size);`  
+ `restrict` Declspec lze použít pouze pro deklarace funkcí, které vracejí ukazatele, jako například `__declspec(restrict) void *malloc(size_t size);`  
   
  `restrict` Declspec se používá na funkce, které vrací kapitoly ukazatele. This – klíčové slovo se používá k provedení C Runtime Library `malloc` vzhledem k tomu, že nikdy vrátí ukazatel na hodnotu, která je již používán v aktuálním programem (Pokud nechcete provádět něco neplatné, například pomocí paměti po bylo uvolněno).  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  Vložené je jedním z nejdůležitějších optimalizace, které provádí kompilátor a zde mluvíme o několik direktiv pragma, které pomůžou toto chování změnit.  
   
- `#pragma inline_recursion`je užitečné pro určení, zda chcete aplikaci, která bude moct vložené zpětného volání. Ve výchozím nastavení je vypnuté. Pro bez podstruktury rekurze malé funkcí může tuto možnost zapnout. Další informace najdete v tématu [inline_recursion –](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion` je užitečné pro určení, zda chcete aplikaci, která bude moct vložené zpětného volání. Ve výchozím nastavení je vypnuté. Pro bez podstruktury rekurze malé funkcí může tuto možnost zapnout. Další informace najdete v tématu [inline_recursion –](../../preprocessor/inline-recursion.md).  
   
  Další užitečné – Direktiva pragma pro omezení hloubka vložené je `#pragma inline_depth`. To je obvykle užitečné v situacích, kde se pokoušíte omezení velikosti programu nebo funkce. Další informace najdete v tématu [inline_depth –](../../preprocessor/inline-depth.md).  
   
 ## <a name="restrict-and-assume"></a>__restrict a \__assume  
  Existuje několik klíčových slov v jazyce Visual C++, který vám pomůže výkonu: [__restrict](../../cpp/extension-restrict.md) a [__assume](../../intrinsics/assume.md).  
   
- Nejdřív je potřeba poznamenat, `__restrict` a `__declspec(restrict)` dvě různé věci. Při poněkud souvisejí, jejich sémantiku se liší. `__restrict`Kvalifikátor typu, jako je třeba je `const` nebo `volatile`, ale výhradně pro typy ukazatelů.  
+ Nejdřív je potřeba poznamenat, `__restrict` a `__declspec(restrict)` dvě různé věci. Při poněkud souvisejí, jejich sémantiku se liší. `__restrict` Kvalifikátor typu, jako je třeba je `const` nebo `volatile`, ale výhradně pro typy ukazatelů.  
   
  Ukazatele, který je změnit, `__restrict` se označuje jako *__restrict ukazatel*. __Restrict ukazatel je ukazatele, který lze přistupovat pouze prostřednictvím \__omezit ukazatel. Jinými slovy, jiné ukazatele nelze použít pro přístup k datům, na kterou odkazuje \__omezit ukazatel.  
   
- `__restrict`může být výkonný nástroj pro Optimalizátor Visual C++, ale jeho použití s pozor. Pokud použili nesprávně, třeba provést Optimalizátor optimalizace, která by rozdělit vaší aplikace.  
+ `__restrict` může být výkonný nástroj pro Optimalizátor Visual C++, ale jeho použití s pozor. Pokud použili nesprávně, třeba provést Optimalizátor optimalizace, která by rozdělit vaší aplikace.  
   
  `__restrict` Nahrazuje – klíčové slovo **/Oa** přepnout z předchozích verzí.  
   
  S `__assume`, vývojáři mohou oznámení kompilátoru aby předpoklady o hodnotě některé proměnné.  
   
- Například `__assume(a < 5);` informuje okně Optimalizace, u tohoto řádku kódu proměnnou `a` je menší než 5. Toto je znovu promise kompilátoru. Pokud `a` je ve skutečnosti 6 v tomto okamžiku v programu pak chování programu po kompilátor optimalizovala nemusí být co byste očekávali. `__assume`je nejvhodnější před příkazů přepínače nebo podmíněné výrazy.  
+ Například `__assume(a < 5);` informuje okně Optimalizace, u tohoto řádku kódu proměnnou `a` je menší než 5. Toto je znovu promise kompilátoru. Pokud `a` je ve skutečnosti 6 v tomto okamžiku v programu pak chování programu po kompilátor optimalizovala nemusí být co byste očekávali. `__assume` je nejvhodnější před příkazů přepínače nebo podmíněné výrazy.  
   
  Některá omezení pro `__assume`. Nejprve jako `__restrict`, je pouze návrhu, tak, aby kompilátor volné ji ignorovat. Navíc `__assume` aktuálně funguje pouze v proměnné nerovnosti proti konstanty. Symbolický nerovnosti nejsou rozšířena například assume(a < b).  
   

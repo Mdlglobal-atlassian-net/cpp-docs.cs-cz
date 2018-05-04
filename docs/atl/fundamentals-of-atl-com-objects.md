@@ -2,12 +2,9 @@
 title: Základy ATL COM – objekty | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL COM – objekty
 Následující obrázek znázorňuje vztahy mezi třídy a rozhraní, které definují objekt ATL COM.  
@@ -36,7 +31,7 @@ Následující obrázek znázorňuje vztahy mezi třídy a rozhraní, které def
 > [!NOTE]
 >  Tento diagram ukazuje, že `CComObject` je odvozený od `CYourClass` zatímco `CComAggObject` a `CComPolyObject` zahrnují `CYourClass` jako členské proměnné.  
   
- Existují tři způsoby, jak definovat objekt ATL COM. Standardní možností je používat `CComObject` třídy odvozené z `CYourClass`. Druhou možností je vytvořit agregovaný objekt pomocí `CComAggObject` třídy. Třetí možností je používat `CComPolyObject` třídy. `CComPolyObject`funguje jako hybrid: může fungovat jako `CComObject` třídy nebo jako `CComAggObject` třídy, v závislosti na tom, jak je prvním vytvoření. Další informace o tom, jak používat `CComPolyObject` třídy najdete v tématu [CComPolyObject třída](../atl/reference/ccompolyobject-class.md).  
+ Existují tři způsoby, jak definovat objekt ATL COM. Standardní možností je používat `CComObject` třídy odvozené z `CYourClass`. Druhou možností je vytvořit agregovaný objekt pomocí `CComAggObject` třídy. Třetí možností je používat `CComPolyObject` třídy. `CComPolyObject` funguje jako hybrid: může fungovat jako `CComObject` třídy nebo jako `CComAggObject` třídy, v závislosti na tom, jak je prvním vytvoření. Další informace o tom, jak používat `CComPolyObject` třídy najdete v tématu [CComPolyObject třída](../atl/reference/ccompolyobject-class.md).  
   
  Při použití standardní ATL COM, můžete použít dva objekty: objekt vnější a vnitřní objekt. Externí klienti přistupovat k funkcím vnitřní objekt prostřednictvím funkce obálky, které jsou definovány v vnější objektu. Vnější objekt je typu `CComObject`.  
   

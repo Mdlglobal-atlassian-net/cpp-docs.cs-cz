@@ -1,13 +1,10 @@
 ---
-title: "-Ox (Povolit většinu optimalizace rychlost) | Microsoft Docs"
-ms.custom: 
+title: -Ox (Povolit většinu optimalizace rychlost) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/OX (Povolit většinu rychlost optimalizace)
 
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 
 - [/Og (globální optimalizace)](../../build/reference/og-global-optimizations.md)
 
-- [/OI (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (generování vnitřních funkcí)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/Ot (upřednostnit rychlý kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 
 - [/ O2 (maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md)
+- [/Od (zakázání (ladění))](../../build/reference/od-disable-debug.md)
 
 Posun směrem k rychlosti můžete zrušit **/Ox** – možnost kompilátoru zadáte-li **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s [/Os (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinovaná možnosti upřednostnit menší velikost kódu.
 
@@ -81,6 +76,6 @@ Pokud chcete nainstalovat všechny dostupné Optimalizace souborů pro sestaven�
 
 ## <a name="see-also"></a>Viz také
 
-[/O možnosti (Optimalizace kódu)](../../build/reference/o-options-optimize-code.md)  
+[/O – možnosti (optimalizace kódu)](../../build/reference/o-options-optimize-code.md)  
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)  
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

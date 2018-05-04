@@ -1,13 +1,10 @@
 ---
-title: "Deklarace ukazatelů | Microsoft Docs"
-ms.custom: 
+title: Deklarace ukazatelů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,43 +13,41 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointer-declarations"></a>Deklarace ukazatelů
 "Ukazatel prohlášení" názvy proměnné ukazatele a určuje typ objektu, na kterou odkazuje proměnná. Proměnná definovaná jako ukazatel obsahuje adresu paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
  *deklarátor*:  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+ &nbsp;&nbsp;*ukazatel*<sub>opt</sub> *přímo deklarátor*  
   
- *direct-declarator*:  
+ *deklarátor přímo*:  
  &nbsp;&nbsp;*Identifikátor*  
   
  &nbsp;&nbsp;**(** *deklarátor* **)**  
   
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+ &nbsp;&nbsp;*deklarátor přímo* **[** *konstantní výraz*<sub>opt</sub> **]**  
   
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+ &nbsp;&nbsp;*deklarátor přímo* **(** *seznam parametrů typu* **)**  
   
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+ &nbsp;&nbsp;*deklarátor přímo* **(** *seznam identifikátorů*<sub>opt</sub> **)**  
   
  *ukazatel*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;**\*** *seznam typů kvalifikátor*<sub>opt</sub>  
   
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;**\*** *seznam typů kvalifikátor*<sub>opt</sub> *ukazatele*  
   
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
+ *seznam typů kvalifikátor*:  
+ &nbsp;&nbsp;*Kvalifikátor typu*  
   
  &nbsp;&nbsp;*seznam typů kvalifikátor* *kvalifikátor typu*  
   
