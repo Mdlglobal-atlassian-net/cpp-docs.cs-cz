@@ -1,13 +1,10 @@
 ---
-title: "Návod: Kompilace nativního programu C++ v příkazovém řádku | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Kompilace nativního programu C++ v příkazovém řádku | Microsoft Docs'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Návod: Kompilace nativního programu C++ v příkazovém řádku
 Visual C++ zahrnuje příkazového řádku kompilátoru C++, který můžete použít k vytvoření všechno z konzoly základní aplikace pro univerzální platformu Windows aplikace, aplikace klasické pracovní plochy, ovladače zařízení a součásti rozhraní .NET.  

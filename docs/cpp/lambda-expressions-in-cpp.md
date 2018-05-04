@@ -1,12 +1,9 @@
 ---
-title: "Výrazy lambda v jazyce C++ | Microsoft Docs"
-ms.custom: 
+title: Výrazy lambda v jazyce C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1cfcb210d3de7ce818d39ecf1703299defedc5d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 C ++ 11 a novější výrazu lambda – často říká *lambda*– je pohodlný způsob definice objekt anonymní funkce ( *uzavření*) přímo v umístění, kde je volána nebo předat jako argument funkce. Lambdas se obvykle používá k zapouzdření pár řádků kódu, které se budou předávat algoritmy nebo asynchronní metody. Tento článek definuje výrazy lambda, porovnává je s jinými programovacími technikami, popisuje jejich výhody a představuje základní příklad.  
@@ -383,4 +378,4 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
  [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
  [Objekty funkcí ve standardní knihovně C++](../standard-library/function-objects-in-the-stl.md)   
  [Volání funkce](../cpp/function-call-cpp.md)   
- [for_each –](../standard-library/algorithm-functions.md#for_each)
+ [for_each](../standard-library/algorithm-functions.md#for_each)

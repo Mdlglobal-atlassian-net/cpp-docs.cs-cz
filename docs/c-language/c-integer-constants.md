@@ -1,29 +1,24 @@
 ---
 title: Konstanty typu Integer jazyka C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/27/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f28b41c54b14c9e673d3fb8e7bb4947206cfd3
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: eef5ba48d28b898ffc624d5790b0f414a8c112c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-integer-constants"></a>Konstanty typu Integer jazyka C
 
@@ -31,22 +26,22 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="syntax"></a>Syntaxe
 
-*integer-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
+*celočíselná konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Decimal – konstanta* *celé číslo příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanta* *celé číslo příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimální konstanta* *celé číslo příponu*<sub>opt</sub><br/>
 
-*decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+*Decimal – konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nenulové hodnoty číslice*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Decimal – konstanta* *číslice*<br/>
 
 *osmičkové konstanta*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanta* *osmičková číslice*<br/>
 
-*hexadecimal-constant*:<br/>
+*hexadecimální konstanta*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimální konstanta* *šestnáctková číslice*<br/>
 
 *hexadecimální předponu*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
@@ -63,11 +58,11 @@ ms.lasthandoff: 02/28/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *dlouho příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *dlouho. dlouho příponu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *64-bit-celé číslo příponu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Long příponu* *nepodepsané příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Long long – přípona* *nepodepsané příponu*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
 
 *nepodepsané příponu*: jeden z<br/>
@@ -77,10 +72,10 @@ ms.lasthandoff: 02/28/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
 
 *Long long – přípona*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Le le**<br/>
 
 *64-bit-celé číslo přípona*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**I64 I64**<br/>
 
 **I64** a **I64** přípony jsou specifické pro společnost Microsoft.
 

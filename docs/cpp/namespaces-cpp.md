@@ -1,12 +1,9 @@
 ---
-title: "Obory názvů (C++) | Microsoft Docs"
-ms.custom: 
+title: Obory názvů (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namespaces-c"></a>Obory názvů (C++)
 Obor názvů je deklarativní oblasti, která poskytuje obor na identifikátory (názvy typů, funkce, proměnné atd) uvnitř ho. Obory názvů se používají k uspořádání kódu do logických skupin a aby se zabránilo kolize názvů, které můžou nastat, zejména v případě, že vaše základu kódu obsahuje více knihoven. Všechny identifikátory v oboru názvů jsou viditelné na sebe navzájem bez kvalifikace. Identifikátory mimo obor názvů přístup pomocí plně kvalifikovaný název pro každý identifikátor, například členové `std::vector<std::string> vec;`, nebo pomocí [pomocí deklarace](../cpp/using-declaration.md) pro jediný identifikátor (`using std::string`), nebo [using – direktiva](../cpp/namespaces-cpp.md#using_directives) pro všechny identifikátory v oboru názvů (`using namespace std;`). Kód v hlavičkových souborů měli vždycky používat obor názvů plně kvalifikovaný název.  

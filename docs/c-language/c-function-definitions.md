@@ -1,13 +1,10 @@
 ---
-title: "Definice funkcí jazyka C | Microsoft Docs"
-ms.custom: 
+title: Definice funkcí jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Definice funkcí jazyka C
 Definice funkce určuje název funkce, typy a počet parametrů, které lze přijímat a její návratový typ. Definice funkce také obsahuje tělo funkce s deklarací o jeho místní proměnné a příkazy, které určují, jaké funkce.  
@@ -70,9 +65,9 @@ Definice funkce určuje název funkce, typy a počet parametrů, které lze při
  *ukazatel* opt*přímo deklarátor*  
   
  *deklarátor přímo*: /\* deklarátor – funkce \*/  
- *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl       \*/  
+ *deklarátor přímo***(***seznam parametrů typu***)** / * deklarátor nový styl \*/  
   
- *deklarátor přímo***(***seznam identifikátorů* opt**)** / * deklarátor zastaralé stylu     \*/  
+ *deklarátor přímo***(***seznam identifikátorů* opt **)** / * deklarátor zastaralé stylu \*/  
   
  Seznam parametrů v definici používá tuto syntaxi:  
   
@@ -81,12 +76,12 @@ Definice funkce určuje název funkce, typy a počet parametrů, které lze při
   
  *Seznam parametrů* **,...**  
   
- *parameter-list*:  
+ *Seznam parametrů*:  
  *parameter-declaration*  
   
- *Seznam parametrů* **,***deklarace parametru*   
+ *Seznam parametrů* **,***deklarace parametru*  
   
- *parameter-declaration*:  
+ *deklarace parametru*:  
  *deklarátor specifikátory deklarace*  
   
  *specifikátory deklarace abstraktní deklarátor* opt  
@@ -96,12 +91,12 @@ Definice funkce určuje název funkce, typy a počet parametrů, které lze při
  *Seznam identifikátorů*: /\* používán funkce zastaralé stylu definice a deklarace \*/  
  *Identifikátor*  
   
- *Seznam identifikátorů* **,***identifikátor*   
+ *Seznam identifikátorů* **,***identifikátor*  
   
  Tady je syntax pro tělo funkce:  
   
  *příkaz složené*: /\* tělo funkce \*/  
- **{**`declaration`-*seznamu* opt*seznam příkazů* opt**}**   
+ **{**`declaration`-*seznamu* opt*seznam příkazů* opt **}**  
   
  Jsou pouze specifikátory třídy úložiště, které můžete upravit deklaraci funkce `extern` a **statické**. `extern` Specifikátor označuje, že funkce lze odkazovat z jiných souborů; to znamená, že je název funkce exportován do linkeru. **Statické** specifikátor označuje, že funkci nelze na něj odkazovat z jiných souborů; to znamená, není název exportované sadou linkeru. Pokud neexistuje žádná třída úložiště se zobrazí v definici funkce `extern` se předpokládá. Funkce je v každém případě vždy viditelné z definice bodu na konec souboru.  
   

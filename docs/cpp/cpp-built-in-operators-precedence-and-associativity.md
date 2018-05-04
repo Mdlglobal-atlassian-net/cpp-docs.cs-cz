@@ -2,11 +2,8 @@
 title: Předdefinované C++ operátory, prioritu a Asociativnost | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Předdefinované C++ operátory, prioritu a Asociativnost
 
@@ -70,11 +65,11 @@ Operátor *přednost* určuje pořadí operací ve výrazech, které obsahují v
 |[Destroy – objekt](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Přetypování](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Skupina 4 přednost, zleva doprava asociativnost**|
-|[Ukazatele na člena (objekty nebo ukazatele)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; nebo -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[Ukazatele na člena (objekty nebo ukazatele)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; nebo ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Skupiny 5 přednost, zleva doprava asociativnost**|
 |[Násobení](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Dělení](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Numerického zbytku](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[dělení](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[numerického zbytku](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Skupiny 6 přednost, zleva doprava asociativnost**|
 |[Přidání](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Odčítání](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|

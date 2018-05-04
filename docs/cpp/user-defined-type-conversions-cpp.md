@@ -1,12 +1,9 @@
 ---
-title: "Uživatelem definované převody typů (C++) | Microsoft Docs"
-ms.custom: 
+title: Uživatelem definované převody typů (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>Typ uživatelem definované převody (C++)
 A *převod* vytvoří novou hodnotu typu z hodnoty jiného typu. *Standardní převody* jsou integrované do jazyka C++ a podpora, jeho vestavěné typy, případně můžete vytvořit *uživatelem definované převody* provést převody k, od nebo mezi uživatelem definované typy.  
@@ -83,7 +78,7 @@ A *převod* vytvoří novou hodnotu typu z hodnoty jiného typu. *Standardní p�
   
  `explicit` – Klíčové slovo lze použít k konstruktory převodu od C ++ 98 a funkce pro převod od C ++ 11. Následující části obsahují další informace o tom, jak používat `explicit` – klíčové slovo.  
   
-##  <a name="ConvCTOR"></a>Konstruktory převodu  
+##  <a name="ConvCTOR"></a> Konstruktory převodu  
  Konstruktory převodu definujte převody z typů uživatelem definované a integrované typu definovaný uživatelem. Následující příklad ukazuje, převod konstruktor, který převádí z předdefinovaný typ `double` pro uživatelem definovaný typ `Money`.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  I když pohodlí umožnit implicitní převody může být tempting, to tak můžou představovat pevný nalézt chyby. Pravidlem je, aby všechny konstruktory převodu explicitní s výjimkou případů, kdy jste si jisti, které chcete konkrétní převod proběhnout implicitně.  
   
-##  <a name="ConvFunc"></a>Převodní funkce  
+##  <a name="ConvFunc"></a> Převodní funkce  
  Funkce pro převod definujte převody z uživatelsky definovaný typ. na jiné typy. Tyto funkce jsou někdy označovány jako "operátory přetypování", protože, společně s konstruktory převodu, jsou volány při hodnotu vložena do jiného typu. Následující příklad ukazuje, převod funkci, která převádí z uživatelsky definovaný typ. `Money`, typu předdefinované `double`:  
   
 ```  

@@ -2,12 +2,9 @@
 title: Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC
 Při použití knihovnu DLL z běžné knihovny MFC DLL, pokud MFC – rozšiřující knihovny DLL není připojená do **CDynLinkLibrary** objektu řetězu regulární knihovny MFC DLL, můžete narazit na jeden nebo více sady souvisejících problémech. Protože verze pro ladění MFC databáze, technologie OLE a Sockets podporují knihovny DLL jsou implementované jako MFC – rozšiřující knihovny DLL, může se zobrazit podobné problémy, pokud používáte tyto MFC funkce, i v případě, že nepoužíváte explicitně všechny vlastní MFC – rozšiřující knihovny DLL. Některé příznaky jsou:  
@@ -38,7 +33,7 @@ Při použití knihovnu DLL z běžné knihovny MFC DLL, pokud MFC – rozšiřu
   
 -   `DllGetClassObject`, `DllCanUnloadNow`a `UpdateRegistry`, `Revoke`, `RevokeAll`, a `RegisterAll` členské funkce `COleObjectFactory` nepodaří najít objekt třídy definované v rozšíření MFC DLL.  
   
--   `AfxDoForAllClasses`pro všechny třídy v rozšíření MFC DLL nefunguje.  
+-   `AfxDoForAllClasses` pro všechny třídy v rozšíření MFC DLL nefunguje.  
   
 -   Standardní MFC databáze, sokety nebo prostředky OLE nepodaří načíst. Například **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) vrátí prázdný řetězec, i když běžné knihovny MFC DLL správně používá třídy MFC databáze.  
   

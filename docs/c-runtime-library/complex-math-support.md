@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.complex
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 - complex numbers
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda816c4266117da941801d7e4e3abb6934e963
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-complex-math-support"></a>Podpora komplexní matematické C
 
@@ -109,4 +108,4 @@ Protože komplexní čísla nejsou nativního typu v kompilátoru Microsoft, sta
 
 ## <a name="see-also"></a>Viz také
 
-[Univerzální C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

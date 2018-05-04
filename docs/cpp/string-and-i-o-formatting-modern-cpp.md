@@ -1,27 +1,22 @@
 ---
-title: "Řetězec a I-O formátování (moderní verze jazyka C++) | Microsoft Docs"
-ms.custom: 
+title: Řetězec a I-O formátování (moderní verze jazyka C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
 C++ [iostreams](../standard-library/iostream.md) podporují formátovaný řetězec vstupně-výstupní operace. Například následující kód ukazuje, jak nastavit cout k formátování celé výstup v šestnáctkové soustavě, nejprve ukládání mimo aktuální stav a znovu nastavení později, protože po formátování stavu je předán cout, zůstane tímto způsobem, dokud nezměníte, ne jenom pro jeden řádek kódu.  

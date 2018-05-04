@@ -1,12 +1,9 @@
 ---
-title: "Převod výjimek mezi vlákny | Microsoft Docs"
-ms.custom: 
+title: Převod výjimek mezi vlákny | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>Převod výjimek mezi vlákny
 Visual C++ podporuje *převod výjimku* z jedno vlákno na jiný. Přenos výjimek umožňuje zachytit výjimku v jednom vlákně a následně nechat výjimku vypadat, jako by byla vyvolána v jiném vlákně. Například je možné tuto funkci použít pro napsání vícevláknové aplikace, kde primární vlákno zpracovává všechny výjimky vyvolané sekundárními vlákny. Přenos výjimek je užitečný především pro vývojáře, kteří vytvářejí paralelní programovací knihovny nebo systémy. Pokud chcete implementovat přenosovou výjimky, poskytuje Visual C++ [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu a [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), a [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkce.  
@@ -259,4 +254,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>Viz také  
  [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md)   
- [/ CLR (kompilace common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

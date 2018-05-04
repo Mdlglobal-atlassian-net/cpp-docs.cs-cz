@@ -1,12 +1,9 @@
 ---
-title: "dynamic_cast – operátor | Microsoft Docs"
-ms.custom: 
+title: dynamic_cast – operátor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dynamic_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast – operátor
 Převede operand `expression` na objekt typu `type-id`.  
@@ -44,9 +39,9 @@ dynamic_cast < type-id > ( expression )
   
  Existují dvě nejnovější změny v chování nástroje `dynamic_cast` ve spravovaném kódu:  
   
--   `dynamic_cast`na ukazatel na základní typ zabalené výčtu se nezdaří za běhu, vrácení 0, a ne převedený ukazatele.  
+-   `dynamic_cast` na ukazatel na základní typ zabalené výčtu se nezdaří za běhu, vrácení 0, a ne převedený ukazatele.  
   
--   `dynamic_cast`už vyvolá výjimku při `type-id` je vnitřní ukazatel na typ hodnoty, s přetypování selhání za běhu.  Přetypování nyní vrátí hodnotu 0 ukazatel místo vyvolání.  
+-   `dynamic_cast` už vyvolá výjimku při `type-id` je vnitřní ukazatel na typ hodnoty, s přetypování selhání za běhu.  Přetypování nyní vrátí hodnotu 0 ukazatel místo vyvolání.  
   
  Pokud `type-id` ukazatel jednoznačným přístupné přímý nebo nepřímý základní třídy z `expression`, ukazatel na jedinečný určitých podřízených objektů typu `type-id` je výsledek. Příklad:  
   

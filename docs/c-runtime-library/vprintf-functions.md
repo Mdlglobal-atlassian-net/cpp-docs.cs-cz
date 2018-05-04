@@ -1,13 +1,10 @@
 ---
-title: "vprintf – funkce | Microsoft Docs"
-ms.custom: 
+title: vprintf – funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcr120.dll
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vprintf-functions"></a>vprintf – funkce
 Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a zapíše daná data na určitý cíl. Ověření parametru provést, jestli funkce trvat široké nebo znakovou řetězce, cíl výstupu a podpora pro určení pořadí, ve kterém se používají parametry v řetězec formátu funkce se liší.  
@@ -55,8 +50,8 @@ Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a
   
 |Funkce|Funkce protějšku|Cíl výstupu|Ověřování parametru|Podpora poziční parametr|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
-|`_vcprintf`|[_cprintf –](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
-|`_vcwprintf`|[_cwprintf –](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konzola|Zkontrolujte hodnotu null.|Ne|  
 |`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Zkontrolujte hodnotu null.|Ne|  
 |**vfprintf_p –**|[fprintf_p –](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ano|  
 |`vfprintf_s`|[fprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ne|  
@@ -65,24 +60,24 @@ Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a
 |`vfwprintf_s`|[fwprintf_s –](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Zkontrolujte hodnotu null a platný formát.|Ne|  
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Zkontrolujte hodnotu null.|Ne|  
 |**vprintf_p –**|[printf_p –](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ano|  
-|`vprintf_s`|[printf_s –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ne|  
+|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ne|  
 |`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Zkontrolujte hodnotu null.|Ne|  
 |**vwprintf_p –**|[wprintf_p –](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ano|  
-|`vwprintf_s`|[wprintf_s –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ne|  
+|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Zkontrolujte hodnotu null a platný formát.|Ne|  
 |**vsprintf –**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
 |**vsprintf_p –**|[sprintf_p –](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null a platný formát.|Ano|  
-|`vsprintf_s`|[sprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null a platný formát.|Ne|  
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null a platný formát.|Ne|  
 |`vswprintf`|[swprintf –](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
 |**vswprintf_p –**|[swprintf_p –](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null a platný formát.|Ano|  
 |`vswprintf_s`|[swprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null a platný formát.|Ne|  
-|`_vscprintf`|[_vscprintf –](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
-|`_vscwprintf`|[_vscwprintf –](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
-|`_vsnprintf`|[_snprintf –](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
-|`_vsnwprintf`|[_snwprintf –](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|paměť na kterou odkazuje *vyrovnávací paměti*|Zkontrolujte hodnotu null.|Ne|  
   
  `argptr` Argument má typ `va_list`, která je definována v vararg. H a STDARG. H. `argptr` Proměnná musí být inicializován podle **va_start –,** a může být znovu inicializovány podle dalších `va_arg` volá; `argptr` pak odkazuje na začátku seznamu argumentů, které jsou převedeny a přenosu pro výstup podle odpovídající specifikací v *formát* argument. *Formát* má stejnou tvoří a fungovat jako *formátu* argument pro [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Žádná z těchto funkcí vyvolá `va_end`. Podrobnější popis jednotlivých `vprintf` fungovat, naleznete v popisu funkce jeho protějšku, jak je uvedeno v předchozí tabulce.  
   
- `_vsnprintf`se liší od **vsprintf –** v tom, že zapíše Ne víc než *počet* bajtů, které mají *vyrovnávací paměti*.  
+ `_vsnprintf` se liší od **vsprintf –** v tom, že zapíše Ne víc než *počet* bajtů, které mají *vyrovnávací paměti*.  
   
  Verze tyto funkce s **w** zaváděcí v názvu jsou široká charakterová verzích odpovídající funkce bez **w** infix; v každé z těchto funkcí široká charakterová  *vyrovnávací paměť* a *formát* jsou široká charakterová řetězce. Jinak hodnota každý široká charakterová funkce se chová stejně jako jeho protějšku funkce SBCS.  
   

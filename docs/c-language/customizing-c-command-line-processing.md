@@ -1,13 +1,10 @@
 ---
-title: "Přizpůsobení zpracování příkazového řádku jazyka C | Microsoft Docs"
-ms.custom: 
+title: Přizpůsobení zpracování příkazového řádku jazyka C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60f0c14382190cb724c4e4a84488006c54813558
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824de86ec0930fb93bf5fa0a2a8ac15a4237e4fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C
 Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá **_setargv –** (nebo **_wsetargv** v prostředí široká charakterová), jak je popsáno v [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md). Chcete-li potlačit jeho použití, definovat rutiny, která nemá žádnou v soubor obsahující **hlavní** funkce a pojmenujte ji **_setargv –** (nebo **_wsetargv** znakem celou prostředí). Volání **_setargv –** nebo **_wsetargv** pak splňují vaše definice **_setargv –** nebo **_wsetargv** , a je knihovní verze není načtená.  

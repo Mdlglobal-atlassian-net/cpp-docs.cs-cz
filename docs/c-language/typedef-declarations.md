@@ -1,13 +1,10 @@
 ---
-title: "TypeDef – deklarace | Microsoft Docs"
-ms.custom: 
+title: TypeDef – deklarace | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typedef-declarations"></a>Typedef – deklarace
 Deklarace definice typedef je deklaraci s typedef jako třídy úložiště. Nový typ se změní deklarátor. Typedef – deklarace můžete použít k vytvoření kratší nebo smysluplnější názvů pro typy už definované C nebo pro typy, které mají deklarován. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.  
@@ -34,7 +29,7 @@ Deklarace definice typedef je deklaraci s typedef jako třídy úložiště. Nov
   
 ## <a name="syntax"></a>Syntaxe  
  `declaration`:  
- *specifikátory deklarace init deklarátor list* opt**;**  
+ *specifikátory deklarace init deklarátor list* opt **;**  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace* opt  
@@ -61,18 +56,18 @@ Deklarace definice typedef je deklaraci s typedef jako třídy úložiště. Nov
   
  **double**  
   
- **podepsané**  
+ **Podepsané**  
   
- **bez znaménka**  
+ **Bez znaménka**  
   
- *Struktura nebo sjednocení – specifikátor*  
+ *struct-or-union-specifier*  
   
  *enum – specifikátor*  
   
- *Název definice TypeDef*  
+ *typedef-name*  
   
  *TypeDef – název*:  
- *identifikátor*  
+ *Identifikátor*  
   
  Všimněte si, že deklaraci typedef nevytvoří typy. Vytvoří synonyma pro existující typy nebo názvy pro typy, které může být určen jinými způsoby. Pokud je jako specifikátor typu použit název typedef, lze spojovat s určitým specifikátory typu, ale jiné ne. Zahrnout přijatelné modifikátory **const** a `volatile`.  
   

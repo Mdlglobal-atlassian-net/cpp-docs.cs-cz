@@ -1,13 +1,10 @@
 ---
-title: "Inicializace skalárních typů | Microsoft Docs"
-ms.custom: 
+title: Inicializace skalárních typů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,24 +18,22 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fef7356768a594694e0fcf3415c66ef63568a7cf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-scalar-types"></a>Inicializace skalárních typů
 Při inicializaci Skalární typy, hodnota *přiřazení výraz* je přiřazen k proměnné. Pravidla převodu pro přiřazení platit. (Viz [převody typů](../c-language/type-conversions-c.md) informace o pravidel převodu.)  
   
 ## <a name="syntax"></a>Syntaxe  
  `declaration`:  
- *specifikátory deklarace init deklarátor list* opt**;**  
+ *specifikátory deklarace init deklarátor list* opt **;**  
   
  *specifikátory deklarace*:  
  *specifikátor třídy úložiště specifikátory deklarace* opt  
@@ -47,18 +42,18 @@ Při inicializaci Skalární typy, hodnota *přiřazení výraz* je přiřazen k
   
  *Kvalifikátor typu deklarace – specifikátory* opt  
   
- *Init – deklarátor seznamu*:  
- *Init – deklarátor*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
  *Init – deklarátor seznamu***,***init deklarátor*   
   
  *Init – deklarátor*:  
  *deklarátor*  
   
- *deklarátor***=***inicializátoru* / * pro skalární inicializace    \*/  
+ *deklarátor***=***inicializátoru* / * pro skalární inicializace \*/  
   
  *Inicializátor*:  
- *přiřazení – výraz*  
+ *assignment-expression*  
   
  Proměnné libovolného typu, můžete inicializovat za předpokladu, že vyhovují následujícím pravidlům:  
   

@@ -1,12 +1,9 @@
 ---
 title: Pole (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Pole (C++)
 Pole je kolekce podobně jako objekty. Nejjednodušším případě pole je vektor, který může být deklarován v následujícím pořadí:  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Inicializátoru volitelné.  V tématu [inicializátory](../cpp/initializers.md).  
   
- Počet prvků v poli je dána konstantní výraz. První prvek v poli je 0-té elementu a je posledním prvkem (*n*-1) elementu, kde  *n*  je počet elementů pole může obsahovat. *Konstantní výraz* musí být celočíselné typu a musí být větší než 0. Pole nulovou velikostí je povolen, pouze pokud je pole poslední pole v `struct` nebo **sjednocení** a pokud jsou povolené rozšíření Microsoft (/Ze).  
+ Počet prvků v poli je dána konstantní výraz. První prvek v poli je 0-té elementu a je posledním prvkem (*n*-1) elementu, kde *n* je počet elementů pole může obsahovat. *Konstantní výraz* musí být celočíselné typu a musí být větší než 0. Pole nulovou velikostí je povolen, pouze pokud je pole poslední pole v `struct` nebo **sjednocení** a pokud jsou povolené rozšíření Microsoft (/Ze).  
   
  Následující příklad ukazuje, jak definovat pole v době běhu:  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  Určuje pole typu `int`, koncepčně uspořádaných dvourozměrná matice pět řádků a sloupců sedm, jak je znázorněno na následujícím obrázku:  
   
- ![Koncepční rozložení více & č. 45; dimenzí pole](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Koncepční rozložení více&#45;dimenzí pole](../cpp/media/vc38rc1.gif "vc38RC1")  
 Koncepční rozložení multidimenzionálního pole  
   
  V deklaracích multidimensioned pole, které mají inicializátoru seznamu (jak je popsáno v [inicializátory](../cpp/initializers.md)), můžete tento parametr vynechán konstantní výraz, který určuje rozsah pro první dimenzi. Příklad:  

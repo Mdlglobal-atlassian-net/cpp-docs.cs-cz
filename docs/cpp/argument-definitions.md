@@ -2,11 +2,8 @@
 title: Definice argumentů | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>Definice argumentů
 Argumenty v prototypu  
@@ -46,7 +41,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  `argv`  
  Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv` **[0]** je příkaz, se kterým program vyvolání `argv` **[1]** je první argument příkazového řádku a tak dále, dokud `argv`  **[**`argc`**]**, který je vždycky **NULL**. V tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) informace o potlačení zpracování příkazového řádku.  
   
- První argument příkazového řádku je vždy `argv` **[1]** a je poslední `argv` **[** `argc` – 1**]**.  
+ První argument příkazového řádku je vždy `argv` **[1]** a je poslední `argv` **[** `argc` – 1 **]**.  
   
 > [!NOTE]
 >  Podle konvence `argv` **[0]** je příkaz, ke které je voláno program.  Je však možné vytvořit, využívá proces [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) načíst název spustitelného souboru a jeho plně kvalifikovanou cestu.  
