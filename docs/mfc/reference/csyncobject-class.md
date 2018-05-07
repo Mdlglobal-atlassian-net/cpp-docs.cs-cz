@@ -1,12 +1,9 @@
 ---
-title: "Třída CSyncObject | Microsoft Docs"
-ms.custom: 
+title: Třída CSyncObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>CSyncObject – třída
 Čistý virtuální třídu, která poskytuje funkce, které jsou společné pro objekty synchronizace v Win32.  
@@ -84,7 +79,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  Vytvoří objekt synchronizace se zadaným názvem.  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Název objektu. Pokud **NULL**, *pstrName* bude mít hodnotu null.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  Volání této funkce můžete získat přístup k prostředkům řídí objekt synchronizace.  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Poznámky  
  Pokud objekt synchronizace signalizace, `Lock` úspěšně vrátí a vlákno nyní vlastní objekt. Pokud se objekt synchronizace nonsignaled (není k dispozici), `Lock` synchronizace objekt, který má stát signál, až číslo zadané v milisekundách, po kterou bude čekat *dwTimeOut* parametr. Pokud objekt synchronizace stane signál není ve stanoveném čase, `Lock` vrátí chybu.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  Popisovač základní objekt synchronizace.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator POPISOVAČ  
+##  <a name="operator_handle"></a>  CSyncObject::operator POPISOVAČ  
  Použít tento operátor. Chcete-li získat popisovač `CSyncObject` objektu.  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Poznámky  
  Popisovač můžete přímo volat rozhraní API systému Windows.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  Prohlášení o `Unlock` bez parametrů je čistě virtuální funkce a musí být přepsány všechny třídy odvozené od `CSyncObject`.  
   
 ```  

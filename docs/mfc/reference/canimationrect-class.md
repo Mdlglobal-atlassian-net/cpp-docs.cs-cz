@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationRect | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationRect | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationRect
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationrect-class"></a>CAnimationRect – třída
 Implementuje funkce obdélníku, jehož strany může být animace.  
@@ -131,7 +126,7 @@ class CAnimationRect : public CAnimationBaseObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationRect::AddTransition  
+##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
  Přidá přechodů mezi pro vlevo, horní, pravé a dolní souřadnice.  
   
 ```  
@@ -158,7 +153,7 @@ void AddTransition(
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce lze přidat zadané přechody do seznamu interní přechodů má být použita pro animace proměnných pro každý rámeček stranách. Když přidáte přechody, jejich nejsou použije okamžitě a uložená v interní seznamu. Přechody se použijí (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud nemusíte vztahují přechod na jeden rámeček postranní, můžete předat hodnotu NULL.  
   
-##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
+##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect  
  Vytvoří objekt CAnimationRect.  
   
 ```  
@@ -224,7 +219,7 @@ CAnimationRect(
 ### <a name="remarks"></a>Poznámky  
  Objekt je vytvořený pomocí výchozí hodnoty pro vlevo, horní, pravé a dolní, ID objektu a ID skupiny, které bude nastavena na hodnotu 0. Může se změnit později v době běhu pomocí SetDefaultValue a ID sady.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList  
  Zařadí do seznamu proměnných zapouzdřené animace.  
   
 ```  
@@ -237,7 +232,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Když funkce vrátí hodnotu, obsahuje odkazy na čtyři CAnimationVariable objekty, které představují souřadnice obdélník.  
   
-##  <a name="getbottom"></a>CAnimationRect::GetBottom  
+##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
  Poskytuje přístup k CAnimationVariable představující souřadnice dolního.  
   
 ```  
@@ -250,7 +245,7 @@ CAnimationVariable& GetBottom();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující souřadnice dolního.  
   
-##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue  
  Vrátí výchozí hodnoty pro obdélníku hranice.  
   
 ```  
@@ -263,7 +258,7 @@ CRect GetDefaultValue();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst výchozí hodnotu, která byla dříve nastavena pomocí konstruktoru nebo SetDefaultValue.  
   
-##  <a name="getleft"></a>CAnimationRect::GetLeft  
+##  <a name="getleft"></a>  CAnimationRect::GetLeft  
  Poskytuje přístup k CAnimationVariable představující levou souřadnici.  
   
 ```  
@@ -276,7 +271,7 @@ CAnimationVariable& GetLeft();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující levou souřadnici.  
   
-##  <a name="getright"></a>CAnimationRect::GetRight  
+##  <a name="getright"></a>  CAnimationRect::GetRight  
  Poskytuje přístup k CAnimationVariable představující správné souřadnice.  
   
 ```  
@@ -289,7 +284,7 @@ CAnimationVariable& GetRight();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující souřadnici správné.  
   
-##  <a name="gettop"></a>CAnimationRect::GetTop  
+##  <a name="gettop"></a>  CAnimationRect::GetTop  
  Poskytuje přístup k CAnimationVariable představující horní souřadnici.  
   
 ```  
@@ -302,7 +297,7 @@ CAnimationVariable& GetTop();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující horní souřadnici.  
   
-##  <a name="getvalue"></a>CAnimationRect::GetValue  
+##  <a name="getvalue"></a>  CAnimationRect::GetValue  
  Vrací aktuální hodnotu.  
   
 ```  
@@ -319,7 +314,7 @@ BOOL GetValue(CRect& rect);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce načíst aktuální hodnota obdélníku animace. Pokud tato metoda selže nebo základní COM objekty pro vlevo nahoře, vpravo a dole nebyly inicializovány, Rect – obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.  
   
-##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
+##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize  
  Určuje, zda rámeček má pevnou velikost.  
   
 ```  
@@ -329,42 +324,42 @@ BOOL m_bFixedSize;
 ### <a name="remarks"></a>Poznámky  
  Pokud je tento člen pravdivá, velikost obdélníku je pevné a vpravo a dolní hodnoty jsou přepočítána pokaždé, když je přesunut levého horního rohu podle pevné velikosti. Tuto hodnotu nastavte na hodnotu TRUE snadno přesunout rámeček po obrazovce. V takovém případě přechody u souřadnice vpravo a dole se ignorují. Velikost je uložen interně při sestavení objektu nebo volání SetDefaultValue. Ve výchozím nastavení je tento člen nastavena na hodnotu FALSE.  
   
-##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
+##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue  
  Obsah zapouzdřeného animace proměnné, která představuje dolní hranice elementu obdélníku animace.  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
+##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue  
  Obsah zapouzdřeného animace proměnné, která představuje vlevo hranice elementu obdélníku animace.  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
+##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue  
  Obsah zapouzdřeného animace proměnné, která představuje vpravo hranice elementu obdélníku animace.  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
+##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial  
  Určuje počáteční velikost obdélníku animace.  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
+##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue  
  Obsah zapouzdřeného animace proměnné, která představuje horní hranice elementu obdélníku animace.  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="operator_rect"></a>Rect – CAnimationRect::operator  
+##  <a name="operator_rect"></a>  Rect – CAnimationRect::operator  
  Převede CAnimationRect obdélníkový  
   
 ```  
@@ -377,7 +372,7 @@ operator RECT();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže, bude obsahovat vrácený Rect – výchozí hodnoty pro všechny obdélníku souřadnice.  
   
-##  <a name="operator_eq"></a>CAnimationRect::operator =  
+##  <a name="operator_eq"></a>  CAnimationRect::operator =  
  Rect – přiřadí CAnimationRect.  
   
 ```  
@@ -391,7 +386,7 @@ void operator=(const RECT& rect);
 ### <a name="remarks"></a>Poznámky  
  Se doporučuje udělat před animace spustit, protože tento operátor volání SetDefaultValue, který vytvoří základní objekty modelu COM pro barvu součásti, pokud byly vytvořeny. Pokud odebíráte tento objekt animace události (ValueChanged nebo IntegerValueChanged), budete muset znovu povolit tyto události.  
   
-##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue  
  Nastaví výchozí hodnotu.  
   
 ```  

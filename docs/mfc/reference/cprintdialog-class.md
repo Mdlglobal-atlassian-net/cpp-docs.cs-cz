@@ -1,12 +1,9 @@
 ---
-title: "Třída CPrintDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CPrintDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog – třída
 Zapouzdří služeb poskytovaných běžné dialogové okno pro tisk.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Pokud nezadáte vlastní obslužných rutin v `m_pd` pro **hDevMode** a **hDevNames je** členy, nezapomeňte volání funkce systému Windows **GlobalFree** pro tyto obslužné rutiny Jakmile jste hotovi s dialogové okno. Při použití v rámci nastavení tisku implementace poskytovaná `CWinApp::OnFilePrintSetup`, není nutné bez těchto obslužných rutin. Obslužné rutiny pro zpracování se spravuje pomocí `CWinApp` a jsou uvolněny v `CWinApp`na destruktor. Je nutné uvolnit těchto obslužných rutin, při použití pouze `CPrintDialog` samostatné.  
   
- Po inicializaci ovládacím prvkům v dialogovém okně, volání `DoModal` – členská funkce a zobrazit dialogové okno Povolit uživateli vybrat možnosti tisku. `DoModal`Vrátí, zda uživatel vybral OK ( **IDOK**) nebo zrušit ( **IDCANCEL**) tlačítko.  
+ Po inicializaci ovládacím prvkům v dialogovém okně, volání `DoModal` – členská funkce a zobrazit dialogové okno Povolit uživateli vybrat možnosti tisku. `DoModal` Vrátí, zda uživatel vybral OK ( **IDOK**) nebo zrušit ( **IDCANCEL**) tlačítko.  
   
  Pokud `DoModal` vrátí **IDOK**, můžete použít jednu z `CPrintDialog`na členské funkce načíst informace o zadaný uživatelem.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Můžete použít Windows **CommDlgExtendedError** funkce k určení, zda došlo k chybě během inicializace dialogových oken a další informace o této chybě. Další informace o této funkci najdete v části Windows SDK.  
   
- `CPrintDialog`spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
+ `CPrintDialog` spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
   
  Chcete-li přizpůsobit dialogové okno, odvození třídy z `CPrintDialog`zadejte dialogové okno vlastní šablony a přidat mapy zpráv pro zpracování zprávy s oznámením z rozšířených ovládacích prvků. Všechny nezpracované zprávy by měla být předána základní třídy. Přizpůsobení funkce háku se nevyžaduje.  
   
@@ -152,7 +147,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdlgs.h  
   
-##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
  Vytvoří Tisk systému Windows nebo nastavení tisku objektu dialogového okna.  
   
 ```  
@@ -180,7 +175,7 @@ CPrintDialog(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
  Vytvoří z kontextu zařízení tiskárny (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
@@ -196,7 +191,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>  CPrintDialog::DoModal  
  Zobrazí běžné tiskové dialogové okno a umožňuje uživateli vybrat různé možnosti tisku, jako je například počet kopií, rozsahu stránek, a zda mají být tříděny kopie.  
   
 ```  
@@ -218,7 +213,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::CreatePrinterDC](#createprinterdc).  
   
-##  <a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>  CPrintDialog::GetCopies  
  Načte počtu kopií požadovaný.  
   
 ```  
@@ -234,7 +229,7 @@ int GetCopies() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>  CPrintDialog::GetDefaults  
  Načte výchozí nastavení zařízení výchozí tiskárny bez zobrazení dialogového okna.  
   
 ```  
@@ -274,7 +269,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView#108](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPrintDialog::GetDevMode  
  Načte `DEVMODE` struktura.  
   
 ```  
@@ -306,7 +301,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>  CPrintDialog::GetFromPage  
  Načte výchozí stránka rozsah tisku.  
   
 ```  
@@ -322,7 +317,7 @@ int GetFromPage() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>  CPrintDialog::GetPortName  
  Načte název portu aktuálně vybrané tiskárny.  
   
 ```  
@@ -338,7 +333,7 @@ CString GetPortName() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC  
  Načte popisovač pro kontext zařízení tiskárny.  
   
 ```  
@@ -354,7 +349,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>  CPrintDialog::GetToPage  
  Načte koncové stránky rozsah tisku.  
   
 ```  
@@ -385,7 +380,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>  CPrintDialog::PrintAll  
  Určuje, zda všechny stránky z dokumentu.  
   
 ```  
@@ -401,7 +396,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>  CPrintDialog::PrintCollate  
  Určuje, zda kompletován, že jsou požadovány kopie.  
   
 ```  
@@ -417,7 +412,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>  CPrintDialog::PrintRange  
  Určuje, zda zadaný rozsah stránek vytisknout.  
   
 ```  
@@ -433,7 +428,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>  CPrintDialog::PrintSelection  
  Určuje, jestli se mají vytisknout pouze aktuálně vybrané položky.  
   
 ```  

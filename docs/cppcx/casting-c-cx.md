@@ -1,24 +1,19 @@
 ---
-title: "Přetypování (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Přetypování (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f71be537ecc0dc0cb58a3ada13612dbe8cbd7d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-ccx"></a>Přetypování (C + +/ CX)
 Použít čtyři operátory přetypování různé typy prostředí Windows Runtime: [static_cast – operátor](../cpp/static-cast-operator.md), [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md), **safe_cast operátor**, a [ reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md). `safe_cast` a `static_cast` způsobí výjimku, pokud převod nelze provést; [static_cast – operátor](../cpp/static-cast-operator.md) také provádí kontrola typu v kompilaci. `dynamic_cast` Vrátí `nullptr` Pokud se nepodaří typ převést. I když `reinterpret_cast` vrátí nenulovou hodnotu, může to být neplatný. Z tohoto důvodu doporučujeme nepoužívat `reinterpret_cast` Pokud si nejste jisti, že bude úspěšné přetypování. Kromě toho doporučujeme používat přetypování ve stylu jazyka v jazyce C + +/ CX kódu, protože jsou identické `reinterpret_cast`.  
@@ -27,7 +22,7 @@ Použít čtyři operátory přetypování různé typy prostředí Windows Runt
   
 Prostředí Windows Runtime je abstrakci přes modelu COM, která používá kódy chyb HRESULT místo výjimky. Obecně [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) značí chybu nízké úrovně COM z E_NOINTERFACE.  
   
-## <a name="staticcast"></a>static_cast  
+## <a name="staticcast"></a>static_cast –  
  A `static_cast` je zaškrtnuté políčko, v době kompilace k určení, zda je mezi těmito dvěma typy vztah dědičnosti. Přetypování způsobí chybu kompilátoru, pokud nejsou související typy.  
   
  A `static_cast` v ref třída také způsobí, že kontrola běhu provést. A `static_cast` na ref třída projít ověřením doba kompilace ale stále selhat v době běhu; v tomto případě `Platform::InvalidCastException` je vyvolána výjimka. Obecně platí nemusíte tyto výjimky zpracovat, protože téměř vždy označují programovací chyby, které můžete eliminovat během vývoje a testování.  
@@ -115,7 +110,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 |HSTRING|Řetězec ^|  
 |HSTRING *|Řetězec ^ *|  
 |IInspectable *|Objekt ^|  
-|IInspectable **|Object^*|  
+|IInspectable **|Objekt ^ *|  
 |IInspectable-odvozené – typ *|same-interface-from-winmd^|  
 |IInspectable-odvozené – typ **|same-interface-from-winmd^*|  
 |IDefault-interface-of-RuntimeClass*|same-RefClass-from-winmd^|  

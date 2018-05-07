@@ -1,29 +1,24 @@
 ---
-title: "Struktura souborů VCXPROJ a props | Microsoft Docs"
-ms.custom: 
+title: Struktura souborů VCXPROJ a props | Microsoft Docs
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura souborů VCXPROJ a props
 
@@ -100,7 +95,7 @@ Následující části popisují účel každé z těchto elementů a proč jsou
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`je kořenový uzel. Určuje MSBuild verze se má použít a také výchozí cíl, který má být provedeny, když tento soubor je předána MSBuild.exe.
+`Project` je kořenový uzel. Určuje MSBuild verze se má použít a také výchozí cíl, který má být provedeny, když tento soubor je předána MSBuild.exe.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup – element
 
@@ -108,7 +103,7 @@ Následující části popisují účel každé z těchto elementů a proč jsou
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`obsahuje popis konfigurace projektu. Příklady jsou ladění | Win32, verze | Win32, ladění | ARM a tak dále. Mnoho nastavení projektu jsou specifické pro danou konfiguraci. Například pravděpodobně můžete nastavit vlastnosti optimalizace pro sestavení pro vydání, ale není sestavení ladicí verze.
+`ProjectConfigurations` obsahuje popis konfigurace projektu. Příklady jsou ladění | Win32, verze | Win32, ladění | ARM a tak dále. Mnoho nastavení projektu jsou specifické pro danou konfiguraci. Například pravděpodobně můžete nastavit vlastnosti optimalizace pro sestavení pro vydání, ale není sestavení ladicí verze.
 
 `ProjectConfigurations` Skupiny položek se nepoužívá v čase vytvoření buildu. Visual Studio IDE vyžaduje, aby bylo možné načíst projekt. Tato skupina položek můžete přesunout do souboru props a importovat soubor VCXPROJ. Ale v takovém případě Pokud potřebujete přidávat nebo odebírat konfigurace, je nutné ručně upravit soubor PROPS; nelze použít rozhraní IDE.
 
@@ -126,13 +121,13 @@ Následující fragment kódu ukazuje konfigurace projektu. V tomto příkladu s
 Prostředí IDE očekává, že konfigurace projektu pro libovolnou kombinaci konfigurace a platformy hodnoty používané v všechny položky ProjectConfiguration nalezena. Často to znamená, že projektu může mít smysl projektu konfigurace ke splnění tohoto požadavku. Například pokud projekt má tyto konfigurace:
 
 - Debug|Win32
-- Retail|Win32
+- Prodejní | Win32
 - Speciální optimalizace 32-bit | Win32
 
 i když je smysl pro x64 "Speciální 32-bit optimalizace" pak musí mít rovněž těchto konfigurací:
 
 - Debug|x64
-- Retail|x64
+- Prodejní | x64
 - Speciální optimalizace 32-bit | x64
 
 Můžete zakázat sestavení a nasazení příkazy pro všechny konfigurace ve **řešení Configuration Manager**.
@@ -143,9 +138,9 @@ Můžete zakázat sestavení a nasazení příkazy pro všechny konfigurace ve *
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`obsahuje nastavení úrovně projektu, například ProjectGuid, RootNamespace a ApplicationType / ApplicationTypeRevision. Poslední dva často definovat cílového operačního systému. Projektu můžete vybrat pouze jeden operačního systému, vzhledem k tomu, že odkazy a položky projektu nelze nyní k dispozici podmínky. Tyto vlastnosti nejsou obvykle přepsat jinde v souboru projektu. Tato skupina není závislá na konfiguraci a proto obvykle jenom jedné skupiny Globals existuje v souboru projektu.
+`Globals` obsahuje nastavení úrovně projektu, například ProjectGuid, RootNamespace a ApplicationType / ApplicationTypeRevision. Poslední dva často definovat cílového operačního systému. Projektu můžete vybrat pouze jeden operačního systému, vzhledem k tomu, že odkazy a položky projektu nelze nyní k dispozici podmínky. Tyto vlastnosti nejsou obvykle přepsat jinde v souboru projektu. Tato skupina není závislá na konfiguraci a proto obvykle jenom jedné skupiny Globals existuje v souboru projektu.
 
-### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import element
+### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import – element
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
@@ -161,7 +156,7 @@ Můžete zakázat sestavení a nasazení příkazy pro všechny konfigurace ve *
 
 A `Configuration` vlastnost skupina má podmínku připojené konfigurace (například `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) a dodává se ve více kopií, jeden pro každou konfiguraci. Tato vlastnost Skupina hostitelů vlastnosti, které jsou nastavené pro konkrétní konfiguraci. Vlastnosti konfigurace zahrnují PlatformToolset a také řídit zahrnutí vlastností systému v **Microsoft.Cpp.props**. Například, pokud je definovat vlastnost `<CharacterSet>Unicode</CharacterSet>`, pak vlastností systému **společnosti microsoft. Cpp.unicodesupport.props** budou zahrnuty. Je-li si prohlédnout **Microsoft.Cpp.props**, zobrazí se na řádku: `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
 
-### <a name="microsoftcppprops-import-element"></a>Microsoft.Cpp.props Import element
+### <a name="microsoftcppprops-import-element"></a>Microsoft.Cpp.props Import – element
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -191,7 +186,7 @@ A `Configuration` vlastnost skupina má podmínku připojené konfigurace (např
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`obsahuje vlastnosti vytvoříte jako proměnné, které slouží k přizpůsobení procesu sestavení. Můžete například definovat uživatelské makro definovat vlastní výstupní cesta jako $(CustomOutputPath) a použijte jej k definování jiné proměnné. Tato skupina vlastnost ve uložený tyto vlastnosti. Všimněte si, že v sadě Visual Studio, této skupině automaticky nezadají informace v souboru projektu protože Visual C++ nepodporuje makra uživatele pro konfigurace. Makra uživatele jsou podporovány v seznamu vlastností.
+`UserMacros` obsahuje vlastnosti vytvoříte jako proměnné, které slouží k přizpůsobení procesu sestavení. Můžete například definovat uživatelské makro definovat vlastní výstupní cesta jako $(CustomOutputPath) a použijte jej k definování jiné proměnné. Tato skupina vlastnost ve uložený tyto vlastnosti. Všimněte si, že v sadě Visual Studio, této skupině automaticky nezadají informace v souboru projektu protože Visual C++ nepodporuje makra uživatele pro konfigurace. Makra uživatele jsou podporovány v seznamu vlastností.
 
 ### <a name="per-configuration-propertygroup-elements"></a>PropertyGroup – za konfigurace – elementy
 

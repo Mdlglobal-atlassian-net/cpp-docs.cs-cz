@@ -1,12 +1,9 @@
 ---
-title: "Vnitřní funkce _InterlockedExchangePointer | Microsoft Docs"
-ms.custom: 
+title: Vnitřní funkce _InterlockedExchangePointer | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedExchangePointer_cpp
@@ -29,20 +26,18 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02d81376a6f923e086933f619f6ef13fcfa5b0a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer vnitřní funkce
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Proveďte operaci atomic exchange, který zkopíruje adresu předané jako druhý argument do první a vrátí původní adresu prvního.  
   
@@ -79,7 +74,7 @@ void * _InterlockedExchangePointer_HLERelease(
  [ve out] `Target`  
  Ukazatel na ukazatel na hodnotu na exchange. Funkce nastaví na hodnotu `Value` a vrátí původní hodnotu.  
   
- [in] `Value`  
+ [v] `Value`  
  Hodnota, která má být vyměňují s hodnotou na kterou odkazuje `Target`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -89,9 +84,9 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |Vnitřní funkce|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] s podporou HLE|\<immintrin.h>|  
+|`_InterlockedExchangePointer`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h >|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] s podporou HLE|\<immintrin.h >|  
   
  Na x86 architekturu, `_InterlockedExchangePointer` je makro, který volá `_InterlockedExchange`.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Zpracování zpráv a příkaz cíle | Microsoft Docs"
-ms.custom: 
+title: Zpracování zpráv a příkaz cíle | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ec1f2a1f419715a3e8e9fbac2fcba3c7584a9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-command-targets"></a>Zpracování zpráv a cíle příkazů
 Rozhraní příkazového odesílání `IOleCommandTarget` definuje jednoduchý a rozšiřitelné mechanismus pro dotazování a spustit příkazy. Tento mechanismus je jednodušší než Automation `IDispatch` protože závisí na standardní sadu příkazů; zcela příkazy zřídka mají argumenty, a je zahrnuta žádné informace o typu (bezpečnost typů dojde ke snížení pro argumenty příkazu také).  
   
  V návrhu jednotného rozhraní dispatch příkaz každý příkaz patří "příkaz skupinu", který je sám určený s **GUID**. Proto každý, kdo můžete definovat nové skupiny a definovat všechny příkazy v rámci dané skupiny bez nutnosti ke koordinaci se společností Microsoft nebo jiného dodavatele. (Toto je v podstatě znamená stejné definice **dispinterface** plus **hodnoty dispID** ve službě Automation. Se překrývají tady, i když tento příkaz mechanismus směrování je pouze pro směrování příkazů a ne pro skriptování nebo programovatelnosti ve velkém rozsahu jako obslužné rutiny automatizace.)  
   
- `IOleCommandTarget`zpracovává následující scénáře:  
+ `IOleCommandTarget` zpracovává následující scénáře:  
   
 -   Po aktivaci, pouze se obvykle zobrazují objektu panely nástrojů a panelů nástrojů objektu může mít tlačítka pro některé příkazy kontejneru jako objekt **tiskových**, **Náhled**,  **Uložit**, `New`, **zvětšení**a další. (Místní aktivace, které doporučujeme standardů, která objekty odebrat takové tlačítka od jejich panely nástrojů nebo v nejméně je zakázat. Tento návrh umožňuje tyto příkazy třeba povolit a ještě směruje na obslužnou rutinu správné). V současné době neexistuje žádný mechanismus pro objekt, který chcete odeslat tyto příkazy ke kontejneru.  
   

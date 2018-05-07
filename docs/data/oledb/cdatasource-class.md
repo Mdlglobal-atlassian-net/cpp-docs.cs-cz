@@ -1,12 +1,9 @@
 ---
-title: "CDataSource – třída | Microsoft Docs"
-ms.custom: 
+title: CDataSource – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDataSource
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDataSource class
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 508bbfc7551383fe1d4517d274031faef590fdb9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7835cd7401c13ab167a9236db4f7e2fc98f3e175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 OLE DB datový objekt, který reprezentuje prostřednictvím poskytovatele připojení ke zdroji dat odpovídá.  
@@ -48,12 +43,12 @@ class CDataSource
 |[Zavřete](../../data/oledb/cdatasource-close.md)|Ukončí připojení.|  
 |[Getinitializationstring –](../../data/oledb/cdatasource-getinitializationstring.md)|Načte inicializačního řetězce zdroje dat, který je aktuálně otevřený.|  
 |[GetProperties –](../../data/oledb/cdatasource-getproperties.md)|Získá hodnoty pro připojených zdrojů dat aktuálně nastaveny vlastnosti.|  
-|[GetProperty](../../data/oledb/cdatasource-getproperty.md)|Získá hodnotu vlastnosti jediné nastaveno pro připojeného zdroje dat.|  
-|[Open](../../data/oledb/cdatasource-open.md)|Vytvoří připojení k poskytovateli (zdroj dat) buď pomocí **CLSID**, **ProgID**, nebo `CEnumerator` Přezdívka poskytnutá volajícím.|  
+|[GetProperty –](../../data/oledb/cdatasource-getproperty.md)|Získá hodnotu vlastnosti jediné nastaveno pro připojeného zdroje dat.|  
+|[Otevřete](../../data/oledb/cdatasource-open.md)|Vytvoří připojení k poskytovateli (zdroj dat) buď pomocí **CLSID**, **ProgID**, nebo `CEnumerator` Přezdívka poskytnutá volajícím.|  
 |[OpenFromFileName](../../data/oledb/cdatasource-openfromfilename.md)|Otevře se zdroji dat ze souboru určeného název souboru zadaný uživatelem.|  
-|[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)|Otevře se zdroji dat určeného inicializačního řetězce.|  
+|[OpenFromInitializationString –](../../data/oledb/cdatasource-openfrominitializationstring.md)|Otevře se zdroji dat určeného inicializačního řetězce.|  
 |[OpenWithPromptFileName](../../data/oledb/cdatasource-openwithpromptfilename.md)|Umožňuje uživateli vybrat soubor odkazu na dříve vytvořenou dat otevřít odpovídající zdroj dat.|  
-|[OpenWithServiceComponents](../../data/oledb/cdatasource-openwithservicecomponents.md)|Otevře objekt zdroje dat pomocí dialogového okna dat propojení.|  
+|[Openwithservicecomponents –](../../data/oledb/cdatasource-openwithservicecomponents.md)|Otevře objekt zdroje dat pomocí dialogového okna dat propojení.|  
   
 ## <a name="remarks"></a>Poznámky  
  Pro jednoho připojení můžete vytvořit jeden nebo více relací databáze. Tyto relace jsou reprezentované pomocí `CSession`. Je třeba volat [CDataSource::Open](../../data/oledb/cdatasource-open.md) k otevření připojení před vytvořením relace s `CSession::Open`.  

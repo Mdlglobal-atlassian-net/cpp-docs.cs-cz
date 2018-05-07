@@ -1,12 +1,9 @@
 ---
-title: "Třída COleDocObjectItem | Microsoft Docs"
-ms.custom: 
+title: Třída COleDocObjectItem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem – třída
 Obsahování pro aktivní dokument implementuje.  
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  Volání této funkce člen k chybě při inicializaci `COleDocObjectItem` objektu.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Ukazatel `COleDocument` objekt, který funguje jako kontejner pro aktivní dokument. Tento parametr musí být **NULL** povolit **IMPLEMENT_SERIALIZE**. Obvykle se vytvářejí OLE – položky s jinou hodnotu než **NULL** ukazatel dokumentu.  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  Voláno rámcem do dokumentu pomocí výchozích nastavení.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Ukazatel [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) objekt, který popisuje úlohy k tisku.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Volání této funkce člen ke spuštění příkazu specifikovaných uživatelem.  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Došlo k neočekávané chybě.|  
 |**E_FAIL**|Došlo k chybě.|  
 |**E_NOTIMPL**|Označuje MFC samotné pokusí přeložit a odeslat příkaz.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`jinou hodnotu než **NULL** , ale neurčuje skupinu platný příkaz.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`se nerozpoznal jako platný příkaz v pGroup skupiny.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` jinou hodnotu než **NULL** , ale neurčuje skupinu platný příkaz.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` se nerozpoznal jako platný příkaz v pGroup skupiny.|  
 |**OLECMDERR_DISABLED**|Příkaz určený `nCmdID` je zakázána a nelze ho provést.|  
 |**OLECMDERR_NOHELP**|Volající požádali o pomoc na příkaz identifikovaný `nCmdID` , ale je k dispozici žádná nápověda.|  
 |**OLECMDERR_CANCELLED**|Uživatel stornoval provádění.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Poznámky  
  `pguidCmdGroup` a `nCmdID` parametry společně jednoznačně příkaz k vyvolání. `nCmdExecOpt` Parametr určuje přesné akci provést.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Volání této funkce člen získat ukazatel `IOleDocumentView` rozhraní aktuálně aktivního zobrazení.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Poznámky  
  Počet odkazů na vrácený `IOleDocumentView` ukazatel není zvýší dřív, než se vrátí pomocí této funkce.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  Volání této funkce člen načíst počet stránek v dokumentu.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  Tato funkce člen je voláno rámcem Příprava dokumentu pro tisk.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  Tato funkce člen je voláno rámcem tisk dokumentu.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  Určuje, zda celý dokument k tisku.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Dotazy na stav jednoho nebo více příkazů vygenerované uživatelské rozhraní události.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen emuluje funkce [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metoda, jak je popsáno v sadě Windows SDK.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  Uvolní připojení k propojené položky OLE a zavře se v případě, že byla otevřena. Nezničí klientské položky.  
   
 ```  

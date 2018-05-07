@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Object | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Object | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 Poskytuje společné chování pro ref třídy a struktury ref v prostředí Windows Runtime aplikace. Všechny ref třídy a instance ref struktura jsou implicitně převést na Platform::Object ^ a jeho virtuální metody ToString můžete přepsat.  
@@ -82,7 +77,7 @@ bool Equals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- obj  
+ Obj  
  Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -134,7 +129,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>Viz také  
  [Platform::type – třída](../cppcx/platform-type-class.md)   
  [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)   
- [Type System](../cppcx/type-system-c-cx.md
+ [Systém typů] (.. /cppcx/Type-System-c-CX.MD
   
 ## <a name="ctor"></a>  Object::Object – konstruktor
 Inicializuje novou instanci třídy objektu.  
@@ -155,7 +150,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- obj1  
+ Obj1  
  První objekt k porovnání.  
   
  obj2  

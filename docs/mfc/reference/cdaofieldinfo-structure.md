@@ -2,12 +2,9 @@
 title: Cdaofieldinfo – struktura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo – struktura
 `CDaoFieldInfo` Struktura obsahuje informace o objekt pole definované pro přístup k objektům dat (DAO).  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary** dlouhá binární (OLE Object); můžete chtít použít třídy MFC [CByteArray](../../mfc/reference/cbytearray-class.md) místo třída `CLongBinary` jako `CByteArray` je bohatší a snadněji použitelná.  
   
-- **dbMemo** Memo; viz třídy knihovny MFC`CString`  
+- **dbMemo** Memo; viz třídy knihovny MFC `CString`  
   
 - **dbGUID** A globálně jedinečný identifikátor nebo univerzálně jedinečný identifikátor použít s vzdálených volání procedur. Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
   
@@ -159,7 +154,7 @@ struct CDaoFieldInfo
   
  Kromě toho pro zkoumání vlastnosti objektu jeho použití, můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr k vytvoření nové pole v tabledef. Jednodušší možnosti jsou k dispozici pro tento úkol, ale pokud chcete jemnějšího ovládání, můžete použít verzi [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , která má `CDaoFieldInfo` parametr.  
   
- Načte informace `GetFieldInfo` – členská funkce (třídy, která obsahuje pole) je uložen v `CDaoFieldInfo` struktury. Volání `GetFieldInfo` – členská funkce okrajem objektu, v jehož kolekce polí pole objekt se uloží. `CDaoFieldInfo`také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoFieldInfo` objektu.  
+ Načte informace `GetFieldInfo` – členská funkce (třídy, která obsahuje pole) je uložen v `CDaoFieldInfo` struktury. Volání `GetFieldInfo` – členská funkce okrajem objektu, v jehož kolekce polí pole objekt se uloží. `CDaoFieldInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoFieldInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  

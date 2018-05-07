@@ -1,26 +1,21 @@
 ---
-title: "Platform::Collections:: unorderedmap – třída | Microsoft Docs"
-ms.custom: 
+title: 'Platform::Collections:: unorderedmap – třída | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
@@ -78,13 +73,13 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 |Název|Popis|
 |----------|-----------------|
-|[UnorderedMap::Clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu mapy.|
-|[UnorderedMap::First](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
+|[Unorderedmap::clear –](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu mapy.|
+|[Unorderedmap::First –](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
 |[UnorderedMap::GetView](#getview)|Vrátí aktuální mapy; zobrazení jen pro čtení To znamená, Platform::Collections:: unorderedmapview – třída.|
 |[UnorderedMap::HasKey](#haskey)|Určuje, zda aktuální mapy obsahuje zadaný klíč.|
-|[UnorderedMap::Insert](#insert)|Přidá k aktuálnímu objektu mapování na zadaný pár klíč hodnota.|
+|[Unorderedmap::Insert –](#insert)|Přidá k aktuálnímu objektu mapování na zadaný pár klíč hodnota.|
 |[UnorderedMap::Lookup](#lookup)|Načte element v zadaný klíč v aktuálním objektu mapy.|
-|[UnorderedMap::Remove](#remove)|Odstraní zadaný pár klíč hodnota z aktuálního objektu mapy.|
+|[Unorderedmap::Remove –](#remove)|Odstraní zadaný pár klíč hodnota z aktuálního objektu mapy.|
 |[Unorderedmap::size –](#size)|Vrátí počet prvků v aktuálním objektu mapy.|
 
 ### <a name="events"></a>Události
@@ -367,7 +362,7 @@ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k
 *první*  
 Vstupní iteraci prvním elementem v rozsahu prvků použitý k inicializaci aktuální UnorderedMap.
 
-*last*  
+*poslední*  
 Vstupní iterator první elementu po celou řadu prvky používané k chybě při inicializaci aktuální UnorderedMap.
 
 ## <a name="see-also"></a>Viz také

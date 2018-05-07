@@ -1,24 +1,19 @@
 ---
-title: "Částečné třídy (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Částečné třídy (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6cd93a8f4d82bb5ecdc94c701d346f1331558c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9457f3401ed03b13bf29f489b88472d11a4dd7a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-classes-ccx"></a>Částečné třídy (C + +/ CX)
 Částečné třídy je konstruktor, který podporuje scénáře, ve kterých budete upravovat část definice třídy a automatické generování kódu softwaru – například návrháře XAML – je taky úpravy kódu ve stejné třídě. Pomocí konkrétní třídu, můžete zabránit v Návrháři přepsal vašeho kódu. V projektu sady Visual Studio `partial` modifikátor automaticky generovaný soubor.  

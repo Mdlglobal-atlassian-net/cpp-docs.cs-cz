@@ -1,12 +1,9 @@
 ---
-title: "Třída CEdit | Microsoft Docs"
-ms.custom: 
+title: Třída CEdit | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit – třída
 Poskytuje funkce ovládacích prvků pro úpravy Windows.  
@@ -193,13 +188,13 @@ class CEdit : public CWnd
   
  Každá položka mapování zpráv má následující podobu:  
   
- **ON_**oznámení **(** *id, memberFxn ***)**  
+ **ON_** oznámení **(** *id, memberFxn ***)**  
   
  kde `id` Určuje ID okno podřízených ovládacích prvků pro úpravy odesílání oznámení, a `memberFxn` je název nadřazeného člena funkce napsané pro zpracování oznámení.  
   
  Prototyp funkce nadřazeného objektu je následující:  
   
- **afx_msg** void memberFxn **( );**  
+ **afx_msg** void memberFxn **();**  
   
  Následuje seznam možných položkách map zpráv a popis v případech, ve kterých se mají být odeslány do nadřazené:  
   
@@ -452,7 +447,7 @@ CString GetCueBanner() const;
  [out] `lpszText`  
  Ukazatel na řetězec, který obsahuje cue text.  
   
- [in] `cchText`  
+ [v] `cchText`  
  Počet znaků, které můžou přijímat. Tato hodnota zahrnuje ukončení `NULL` znak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -921,10 +916,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [v] `lpszText`  
  Ukazatel na řetězec, který obsahuje cue k zobrazení v ovládacím prvku upravit.  
   
- [in] `fDrawWhenFocused`  
+ [v] `fDrawWhenFocused`  
  Pokud `false`, Banner informující o cue není vykreslován, když uživatel klikne v ovládacím prvku upravit a bude vybrán ovládacího prvku.  
   
  Pokud `true`, Banner informující o cue vykreslením i v případě, že má právě fokus, ovládacího prvku. Hlavička cue zmizí, když uživatel spustí na typ v ovládacím prvku.  
@@ -985,8 +980,8 @@ void SetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `ichStart`|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
-|[in] `ichEnd`|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
+|[v] `ichStart`|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
+|[v] `ichEnd`|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) zprávy, která je popsána v sadě Windows SDK.  
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Když `SetPasswordChar` – členská funkce je volána, `CEdit` překreslí všechny viditelné znaky pomocí určeného znaku *ch*.  
   
- Pokud se vytvoří textové pole s [es_password –](styles-used-by-mfc.md#edit-styles) styl, výchozí znak hesla je nastaven na znak hvězdičky (  **\*** ). Tento styl se odebere, když `SetPasswordChar` je volán s *ch* nastaven na hodnotu 0.  
+ Pokud se vytvoří textové pole s [es_password –](styles-used-by-mfc.md#edit-styles) styl, výchozí znak hesla je nastaven na znak hvězdičky ( **\***). Tento styl se odebere, když `SetPasswordChar` je volán s *ch* nastaven na hodnotu 0.  
   
  Další informace najdete v tématu [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) ve Windows SDK.  
   
@@ -1249,10 +1244,10 @@ BOOL ShowBalloonTip(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
-|[in] `lpszTitle`|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
-|[in] `lpszText`|Ukazatel na řetězec obsahující text tip bubliny.|  
-|[in] `ttiIcon`|`INT` Určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
+|[v] `pEditBalloonTip`|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
+|[v] `lpszTitle`|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
+|[v] `lpszText`|Ukazatel na řetězec obsahující text tip bubliny.|  
+|[v] `ttiIcon`|`INT` Určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  

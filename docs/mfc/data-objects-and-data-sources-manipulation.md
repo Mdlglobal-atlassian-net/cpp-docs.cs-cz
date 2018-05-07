@@ -1,13 +1,10 @@
 ---
-title: "Datové objekty a zdroje dat: manipulace s | Microsoft Docs"
-ms.custom: 
+title: 'Datové objekty a zdroje dat: manipulace s | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
 Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných operací na data, jako je například vkládání a odstraňování dat, vytváření výčtu formáty, které je v datech, a další. Tento článek popisuje techniky, které jsou potřebné k dokončení většiny běžných operací. Témata zahrnují:  
@@ -42,7 +37,7 @@ Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných
   
 -   [Načítání dat z dat objektu](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Vložení dat do zdroje dat  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Vložení dat do zdroje dat  
  Jak data se vloží do zdroje dat závisí na okamžitě zadaná data nebo na vyžádání a které střední pochází. Možnosti jsou následující.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Zadávání dat okamžitě (okamžitou vykreslování)  
@@ -62,7 +57,7 @@ Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných
   
 -   Pokud používáte `CFile` objekt, který chcete zadat data, volání `COleDataSource::DelayRenderFileData` místo `COleDataSource::DelayRenderData` v předchozí možnosti. Pokud se požaduje data, bude volat rozhraní `COleDataSource::OnRenderFileData`, které je nutné přepsat.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Zjišťování k dispozici v objektu Data formátů  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Zjišťování k dispozici v objektu Data formátů  
  Předtím, než aplikace umožňuje uživatelům vkládat data do ní, je nutné vědět, pokud se do schránky, který může zpracovat formáty. K tomu, vaše aplikace by měla takto:  
   
 1.  Vytvoření `COleDataObject` objektu a **FORMATETC** struktura.  
@@ -79,7 +74,7 @@ Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných
   
  Pokud používáte `ON_UPDATE_COMMAND_UI`, teď můžete povolit vložení a případně i Vložit jinak položky v nabídce Upravit. Chcete-li to provést, volejte buď `CMenu::EnableMenuItem` nebo `CCmdUI::Enable`. Další informace o jaké kontejneru by měla aplikace provést pomocí položky nabídky a když, najdete v části [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Načítání dat z dat objektu  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Načítání dat z dat objektu  
  Jakmile jste se rozhodli formát dat, zbývá k načtení dat z datového objektu. K tomuto účelu se uživatel rozhodne kam umístit data a aplikace volá odpovídající funkce. Data budou k dispozici v jednom z následujících médií:  
   
 |Střední|Funkce pro volání|  

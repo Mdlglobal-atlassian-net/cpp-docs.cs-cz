@@ -1,12 +1,9 @@
 ---
-title: "Třída COleDropSource | Microsoft Docs"
-ms.custom: 
+title: Třída COleDropSource | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>COleDropSource – třída
 Umožňuje data přetáhnout do cíle přetažení.  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Vytvoří `COleDropSource` objektu.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Voláno rámcem po volání [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) nebo [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  Účinek, který se má zobrazit uživateli, obvykle označující, co by mohlo dojít, pokud došlo k chybě pokles v tomto okamžiku se vybraná data. Obvykle je to hodnoty vrácené nejnovější volání [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) nebo [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_NONE`Pokles nebude možné.  
+- `DROPEFFECT_NONE` Pokles nebude možné.  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL`Operaci přetažení scroll dojde nebo dochází na cíli.  
+- `DROPEFFECT_SCROLL` Operaci přetažení scroll dojde nebo dochází na cíli.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **DRAGDROP_S_USEDEFAULTCURSORS** Pokud přetahování probíhá, **NOERROR** Pokud není.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Další informace najdete v tématu [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), a [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) ve Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Volá framework při výskytu události, který by mohl spustit operaci přetažení, jako je například stisknutím levé tlačítko.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce přepsání, pokud chcete upravit způsob, jakým přetahování proces běží. Výchozí implementace zaznamená myši a zůstane v režimu přetažení, dokud uživatel klikne na tlačítko myši doleva nebo doprava nebo přístupy ESC, po kterém se uvolní myši.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Po zahájení přetahování, tato funkce je volána opakovaně rámcem dokud operaci přetažení zrušena nebo byla dokončena.  
   
 ```  

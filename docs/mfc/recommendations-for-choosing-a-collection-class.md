@@ -1,13 +1,10 @@
 ---
-title: "Doporučení pro výběr třídy kolekce | Microsoft Docs"
-ms.custom: 
+title: Doporučení pro výběr třídy kolekce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f389a621991418c054b62be477a64f02c4afaae2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28527f9668b9ca6a9ef00cf399a04ce9bad65716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Doporučení pro výběr třídy kolekce
 Tento článek obsahuje podrobné informace, které vám pomohou zvolit třídu kolekce pro vaše potřeby konkrétní aplikace.  
@@ -60,7 +55,7 @@ Tento článek obsahuje podrobné informace, které vám pomohou zvolit třídu 
   
 -   Sloupec 6 popisuje, zda každý tvar může obsahovat duplicitní prvky.  
   
-### <a name="_core_collection_shape_features"></a>Funkce tvar kolekce  
+### <a name="_core_collection_shape_features"></a>  Funkce tvar kolekce  
   
 |Obrazec|řazení|Indexované|Insert – element|Vyhledejte zadaný element|Elementy s duplicitním|  
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
@@ -70,7 +65,7 @@ Tento článek obsahuje podrobné informace, které vám pomohou zvolit třídu 
   
  V následující tabulce, [charakteristiky z MFC – třídy kolekce](#_core_characteristics_of_mfc_collection_classes), shrnuje další důležité charakteristiky konkrétní MFC – třídy kolekce jako vodítko k výběru. Zvoleného může záviset na tom, jestli je třída podle šablonami C++, zda jeho elementy lze serializovat prostřednictvím knihovny MFC dokumentu [serializace](../mfc/serialization-in-mfc.md) mechanismus, zda může být jeho elementy zálohované prostřednictvím MFC je diagnostiky vypsání mechanismus, nebo jestli třída je bezpečnost typů – to znamená, zda může zaručit typ elementů ukládat a načítat z kolekce na základě třídy.  
   
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>Charakteristické vlastnosti třídy MFC – třídy kolekce  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Charakteristické vlastnosti třídy MFC – třídy kolekce  
   
 |Třída|Používá C++<br /><br /> šablony|Může být<br /><br /> serializovat|Může být<br /><br /> zálohované|je<br /><br /> bezpečnost typů|  
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|  

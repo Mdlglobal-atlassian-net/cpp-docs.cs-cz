@@ -1,12 +1,9 @@
 ---
 title: __ll_lshift | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ll_lshift_cpp
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8aed34d31fe1675dc13d0c040c1a9f0b1f208e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lllshift"></a>__ll_lshift
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Posune poskytnutá hodnota 64-bit doleva o zadaný počet bitů.  
   
@@ -44,10 +39,10 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Mask`  
+ [v] `Mask`  
  64bitové celočíselné hodnoty posunutí doleva.  
   
- [in] `nBit`  
+ [v] `nBit`  
  Počet bitů se posunou.  
   
 ## <a name="return-value"></a>Návratová hodnota  

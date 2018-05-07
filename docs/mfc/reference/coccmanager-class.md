@@ -1,12 +1,9 @@
 ---
-title: "Třída COccManager | Microsoft Docs"
-ms.custom: 
+title: Třída COccManager | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COccManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffa16b7a210bc53f178e3ec437aefb6cede766a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coccmanager-class"></a>COccManager – třída
 Spravuje různých lokalit vlastního ovládacího prvku; implementované `COleControlContainer` a `COleControlSite` objekty.  
@@ -90,7 +85,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxocc.h  
   
-##  <a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>  COccManager::CreateContainer  
  Voláno rámcem k vytvoření kontejneru ovládacího prvku.  
   
 ```  
@@ -107,7 +102,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Další informace o vytváření vlastních webů najdete v tématu [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
  Volání této funkce můžete vytvořit ovládací prvky ActiveX určeného `pOccDialogInfo` parametr.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se úspěšně; vytvořil ovládacího prvku jinak hodnota nula.  
   
-##  <a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>  COccManager::CreateSite  
  Voláno rámcem k vytvoření ovládacího prvku lokality hostitelem kontejneru, na kterou odkazuje `pCtrlCont`.  
   
 ```  
@@ -158,7 +153,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  Každý kontejner řízení může být hostitelem více lokalit. Vytvořte další lokality pomocí několika volání `CreateSite`.  
   
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
  Volání této funkce můžete určit, zda je ovládací prvek výchozí tlačítko.  
   
 ```  
@@ -178,7 +173,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0** ovládací prvek není tlačítko.  
   
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
  Voláno rámcem k určení, zda zpráva je určený pro zadaný dialogových oken a pokud se jedná, zprávu zpracuje.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL IsDialogMessage(
   
  Přepsání této funkce zajistit vlastní chování pro zprávy odeslané do zadaného dialogového okna.  
   
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
  Volání této funkce můžete určit, zda je daný ovládací prvek ovládací prvek popisek.  
   
 ```  
@@ -220,7 +215,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvek popisek je ten, který funguje jako popisek pro libovolnou řízení je další v řazení.  
   
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
  Volání této funkce můžete určit, jestli aktuální symbolické odpovídá která reprezentována ovládacího prvku.  
   
 ```  
@@ -246,7 +241,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>  COccManager::OnEvent  
  Voláno rámcem pro zpracování zadané události.  
   
 ```  
@@ -276,7 +271,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkci můžete přizpůsobit výchozí proces zpracování událostí.  
   
-##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
  Voláno rámcem při zpracování šablony dialogového okna pro ovládací prvky ActiveX před vytvořením skutečné dialogových oken.  
   
 ```  
@@ -300,7 +295,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  Funkci k přizpůsobení procesu vytvoření dialogového okna hostování ovládacích prvků ActiveX přepište.  
   
-##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
  Voláno rámcem uvolnit paměť přidělená pro šablony dialogového okna.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  Přepsání této funkci můžete přizpůsobit proces čištění všechny prostředky používané pole objektu dialogového okna.  
   
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
  Volání této funkce pro nastavení ovládacího prvku jako výchozího tlačítka.  
   
 ```  
@@ -340,7 +335,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  Ovládací prvek musí mít **OLEMISC_ACTSLIKEBUTTON** stav nastaven bit. Další informace o **OLEMISC** příznaky, viz [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) v sadě Windows SDK.  
   
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Voláno rámcem rozdělit ovládacích prvků ActiveX z běžné ovládací prvky dialogového okna.  
   
 ```  

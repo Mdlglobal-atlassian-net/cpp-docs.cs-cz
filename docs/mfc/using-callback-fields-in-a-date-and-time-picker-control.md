@@ -1,13 +1,10 @@
 ---
-title: "Použití polí zpětného volání v výběr data a času řízení | Microsoft Docs"
-ms.custom: 
+title: Použití polí zpětného volání v výběr data a času řízení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_FORMATQUERY
 - DTN_FORMAT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Použití polí zpětného volání v ovládacím prvku pro výběr data a času
 Kromě standardní formát znaky, které definují polích pro výběr data a času můžete přizpůsobit výstupu tak, že zadáte určité části vlastní řetězec formátu jako pole zpětného volání. Chcete-li deklarovat pole zpětného volání, obsahovat jeden nebo více znaků "X" (ASCII kód 88) kdekoli v těle řetězec formátu. Například následující řetězec "" Dnes je: "rr" /, MM, nebo 'dd' (den 'X')'"způsobí, že zobrazit aktuální hodnotu jako rok a měsíc, datum a nakonec den v roce prvku pro výběr datum a čas.  

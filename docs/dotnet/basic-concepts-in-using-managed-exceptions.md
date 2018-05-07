@@ -2,12 +2,9 @@
 title: Základní koncepce při práci se spravovanými výjimkami | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Základní koncepce při práci se spravovanými výjimkami
 Toto téma popisuje zpracování výjimek v spravovaných aplikací. To znamená, aplikace, která je kompilovat s **/CLR** – možnost kompilátoru.  
@@ -48,7 +43,7 @@ Toto téma popisuje zpracování výjimek v spravovaných aplikací. To znamená
   
  Další informace o rozdíly ve zpracování výjimek ve spravovaných a nespravovaných aplikacích najdete v tématu [rozdíly v výjimka zpracování chování pod spravovaných rozšíření pro C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Vyvolání výjimek v režimu kompilace/CLR  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Vyvolání výjimek v režimu kompilace/CLR  
  Výraz throw C++ je rozšířeno na throw popisovač typu CLR. Následující příklad vytvoří typ vlastní výjimky a pak vyvolá instance tohoto typu:  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch – bloky pro rozšíření CLR  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try/Catch – bloky pro rozšíření CLR  
  Stejné **zkuste**/**catch** bloku struktura může být použita pro zachytávání CLR a nativní výjimky:  
   
 ```  

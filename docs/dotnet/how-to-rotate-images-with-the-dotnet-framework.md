@@ -1,31 +1,26 @@
 ---
-title: "Postupy: otáčení obrázků s použitím rozhraní .NET Framework | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: otáčení obrázků s použitím rozhraní .NET Framework | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GDI+ [C++], rotating images
 - graphics [C++], rotating images
 ms.assetid: e32104d5-87d0-47a9-a22f-9bc835b7e8d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 165bdc00ff9ee46c7b4396e20f21e8e4a4be8488
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 94290c05ecca9fc7211e2bc85640ec0308137804
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Postupy: Otáčení obrázků s použitím rozhraní .NET Framework
 Následující příklad kódu ukazuje použití <xref:System.Drawing.Image?displayProperty=fullName> třída načíst obrázek z disku, rotaci o 90 stupňů a uložte ho jako nový soubor .jpg.  

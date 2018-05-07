@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCPropertyGridProperty | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCPropertyGridProperty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridProperty
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b60e2355636ca0cf30ed0a0141ec07f1312f760f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ad6630f2a0debd5ab3fee30374b84f5bbe9b2b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty – třída
 A `CMFCPropertyGridProperty` objekt reprezentuje položku seznamu v ovládacím prvku seznamu vlastností.  
@@ -320,7 +315,7 @@ class CMFCPropertyGridProperty : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridctrl.h  
   
-##  <a name="addoption"></a>CMFCPropertyGridProperty::AddOption  
+##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption  
  Přidá novou položku seznamu do ovládacího prvku seznam vlastností.  
   
 ```  
@@ -330,18 +325,18 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszOption`  
+ [v] `lpszOption`  
  Položky seznamu (Možnosti) přidejte.  
   
- [v]`bInsertUnique`  
- `TRUE`pro přidání do seznamu položek pouze v případě, že ještě neexistuje; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bInsertUnique`  
+ `TRUE` pro přidání do seznamu položek pouze v případě, že ještě neexistuje; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE`, což znamená, že položka seznamu byla přidána. Jinak hodnota `FALSE`, to znamená, že položka seznamu není přidat, protože `bInsertUnique` parametr je `TRUE` a seznam položek určeného `lpszOption` parametr již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addsubitem"></a>CMFCPropertyGridProperty::AddSubItem  
+##  <a name="addsubitem"></a>  CMFCPropertyGridProperty::AddSubItem  
  Přidá podřízenou položku Vlastnosti.  
   
 ```  
@@ -349,16 +344,16 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pProp`  
+ [v] `pProp`  
  Ukazatel na vlastnosti, které chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je zadaná vlastnost je úspěšně přidaný jako vlastnost podřízené. `FALSE`Pokud vlastnost se nepřidal, protože se již vyskytuje v nadřazený klíč.  
+ `TRUE` Pokud je zadaná vlastnost je úspěšně přidaný jako vlastnost podřízené. `FALSE` Pokud vlastnost se nepřidal, protože se již vyskytuje v nadřazený klíč.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k vytvoření hierarchické seznam nadřazených a podřízených vlastnosti. Po podřízenou je vlastnost přidána nadřazený klíč se automaticky zobrazí ovládací prvek rozbalte pole, který je určen podle znaménko plus (+). Když uživatel klikne na symbol plus, vlastnost nadřazené rozbalí a zobrazí všechny podřízené položky vlastnost.  
   
-##  <a name="adjustbuttonrect"></a>CMFCPropertyGridProperty::AdjustButtonRect  
+##  <a name="adjustbuttonrect"></a>  CMFCPropertyGridProperty::AdjustButtonRect  
  Voláno rozhraním nadřazeného ovládacího prvku vlastnost seznamu říct vlastnost, která má změnit velikost ohraničující obdélník embedded tlačítko.  
   
 ```  
@@ -374,7 +369,7 @@ virtual void AdjustButtonRect();
   
 -   Posune tlačítko 1 pixel níže jsou horní okraje vlastnost.  
   
-##  <a name="adjustinplaceeditrect"></a>CMFCPropertyGridProperty::AdjustInPlaceEditRect  
+##  <a name="adjustinplaceeditrect"></a>  CMFCPropertyGridProperty::AdjustInPlaceEditRect  
  Načte hranice textového pole a tlačítko – ovládací prvek typu číselník volitelné, které se používají k nastavení hodnoty vlastnosti.  
   
 ```  
@@ -384,16 +379,16 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectEdit`  
+ [out] `rectEdit`  
  Když tato metoda vrátí, obdélníku, která určuje hranice textového pole pro hodnotu vlastnosti.  
   
- [out]`rectSpin`  
+ [out] `rectSpin`  
  Když tato metoda vrátí, obdélníku, která určuje hranice ovládací prvek typu číselník tlačítko pro hodnotu vlastnosti. Nebo, pokud vlastnost nepodporuje číselníku prázdný obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Oblasti hodnotu vlastnosti se skládá z textového pole a případně *tlačítko*, jako je například ovládací prvek typu číselník tlačítko. Tato metoda vypočítá dimenze tlačítko textové pole a možnost a potom vrátí tyto hodnoty v zadaných parametrů.  
   
-##  <a name="allowedit"></a>CMFCPropertyGridProperty::AllowEdit  
+##  <a name="allowedit"></a>  CMFCPropertyGridProperty::AllowEdit  
  Díky vlastnost buď upravovat, nebo jen pro čtení.  
   
 ```  
@@ -401,12 +396,12 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bAllow`  
- `TRUE`Chcete-li vlastnost upravitelné; `FALSE` Chcete-li vlastnost jen pro čtení. Výchozí hodnota je `TRUE`.  
+ [v] `bAllow`  
+ `TRUE` Chcete-li vlastnost upravitelné; `FALSE` Chcete-li vlastnost jen pro čtení. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="cmfcpropertygridproperty"></a>CMFCPropertyGridProperty::CMFCPropertyGridProperty  
+##  <a name="cmfcpropertygridproperty"></a>  CMFCPropertyGridProperty::CMFCPropertyGridProperty  
  Vytvoří `CMFCPropertyGridProperty` objektu.  
   
 ```  
@@ -427,36 +422,36 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`strGroupName`  
+ [v] `strGroupName`  
  Název skupiny. A *skupiny* je kolekce souvisejících vlastností v ovládacím prvku mřížky vlastnosti. Pokud se ovládací prvek zobrazí hierarchicky, *název skupiny* se zobrazí jako název kategorie v řádku nad skupině.  
   
- [v]`dwData`  
+ [v] `dwData`  
  Specifické pro aplikaci data, jako třeba celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [v]`strName`  
+ [v] `strName`  
  Název vlastnosti  
   
- [v]`varValue`  
+ [v] `varValue`  
  Hodnota vlastnosti.  
   
- [v]`lpszDescr`  
+ [v] `lpszDescr`  
  Popis vlastnosti. Výchozí hodnota je `NULL`.  
   
- [v]`lpszEditMask`  
+ [v] `lpszEditMask`  
  Maska upravit, pokud je vlastnost maskované textové pole. Výchozí hodnota je `NULL`.  
   
- [v]`lpszEditTemplate`  
+ [v] `lpszEditTemplate`  
  Šablony upravit, pokud je vlastnost maskované textové pole. Výchozí hodnota je `NULL`.  
   
- [v]`lpszValidChars`  
+ [v] `lpszValidChars`  
  Seznam platné znaky, pokud je vlastnost maskované textové pole. Výchozí hodnota je `NULL`.  
   
- [v]`bIsValueList`  
- `TRUE`Pokud vlastnost představuje seznam hodnot; `FALSE` Pokud vlastnost představuje jednu hodnotu. Výchozí hodnota je `FALSE`.  
+ [v] `bIsValueList`  
+ `TRUE` Pokud vlastnost představuje seznam hodnot; `FALSE` Pokud vlastnost představuje jednu hodnotu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="createcombo"></a>CMFCPropertyGridProperty::CreateCombo  
+##  <a name="createcombo"></a>  CMFCPropertyGridProperty::CreateCombo  
  Voláno rámcem přidat pole se seznamem na vlastnost.  
   
 ```  
@@ -466,10 +461,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Ukazatel do nadřazeného okna pole se seznamem.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -477,7 +472,7 @@ virtual CComboBox* CreateCombo(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="createinplaceedit"></a>CMFCPropertyGridProperty::CreateInPlaceEdit  
+##  <a name="createinplaceedit"></a>  CMFCPropertyGridProperty::CreateInPlaceEdit  
  Voláno rámcem k vytvoření ovládacího prvku upravovat pro vlastnost.  
   
 ```  
@@ -487,11 +482,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rectEdit`  
+ [v] `rectEdit`  
  Ohraničující obdélník upravitelné ovládacího prvku.  
   
- [v]`bDefaultFormat`  
- `TRUE`použít výchozí formát pro vlastnosti nastavit text prvku upravitelné; v opačném `FALSE`.  
+ [v] `bDefaultFormat`  
+ `TRUE` použít výchozí formát pro vlastnosti nastavit text prvku upravitelné; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel do ovládacího prvku upravovat, pokud tato metoda bude úspěšná; v opačném `NULL`.  
@@ -501,7 +496,7 @@ virtual CWnd* CreateInPlaceEdit(
   
  Tato metoda vytvoří [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) řídí, zda jeden nebo více `lpszEditMask`, `lpszEditTemplate`, nebo `lpszValidChars` jsou zadány parametry; jinak, vytvoří [CEdit](../../mfc/reference/cedit-class.md) ovládacího prvku.  
   
-##  <a name="createspincontrol"></a>CMFCPropertyGridProperty::CreateSpinControl  
+##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
  Voláno rámcem vytvořit prvek typu číselník upravovat.  
   
 ```  
@@ -509,7 +504,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rectSpin`  
+ [v] `rectSpin`  
  Obdélníku, která definuje, kde se má vytvořit upravitelné číselník tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -518,7 +513,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) metodu pro zobrazení prvek typu číselník upravovat na pravý okraj vlastnosti.  
   
-##  <a name="enable"></a>CMFCPropertyGridProperty::Enable  
+##  <a name="enable"></a>  CMFCPropertyGridProperty::Enable  
  Povolí nebo zakáže vlastnost.  
   
 ```  
@@ -526,12 +521,12 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit vlastnost; `FALSE` zakázat vlastnost. Zakázané vlastnosti Neodpovídat myši nebo vstup z klávesnice. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit vlastnost; `FALSE` zakázat vlastnost. Zakázané vlastnosti Neodpovídat myši nebo vstup z klávesnice. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enablespincontrol"></a>CMFCPropertyGridProperty::EnableSpinControl  
+##  <a name="enablespincontrol"></a>  CMFCPropertyGridProperty::EnableSpinControl  
  Povolí nebo zakáže číselníku tlačítka, který se používá k upravit hodnotu vlastnosti.  
   
 ```  
@@ -542,13 +537,13 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit ovládací prvek typu číselník tlačítko; `FALSE` zakázat ovládací prvek typu číselník tlačítko. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit ovládací prvek typu číselník tlačítko; `FALSE` zakázat ovládací prvek typu číselník tlačítko. Výchozí hodnota je `TRUE`.  
   
- [v]`nMin`  
+ [v] `nMin`  
  Minimální hodnota ovládací prvek typu číselník. Výchozí hodnota je 0.  
   
- [v]`nMax`  
+ [v] `nMax`  
  Maximální hodnota, která ovládací prvek typu číselník. Výchozí hodnota je 0.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -556,7 +551,7 @@ void EnableSpinControl(
   
  Typ vlastnosti, který je určený `varValue` parametr [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) konstruktor, musí být podporovaný typ varianty. Tuto metodu, jinak hodnota vyhodnotí v režimu ladění. Mezi podporované typy patří `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, a `VT_UI4`.  
   
-##  <a name="expand"></a>CMFCPropertyGridProperty::Expand  
+##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
  Rozbalí či sbalí vlastnost, která obsahuje dílčí vlastnosti.  
   
 ```  
@@ -564,12 +559,12 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bExpand`  
- `TRUE`Chcete-li rozšířit vlastnost; Chcete-li hodnotu FALSE na Sbalit vlastnost. Výchozí hodnota je `TRUE`.  
+ [v] `bExpand`  
+ `TRUE` Chcete-li rozšířit vlastnost; Chcete-li hodnotu FALSE na Sbalit vlastnost. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="formatproperty"></a>CMFCPropertyGridProperty::FormatProperty  
+##  <a name="formatproperty"></a>  CMFCPropertyGridProperty::FormatProperty  
  Formátuje textové reprezentace hodnotu vlastnosti.  
   
 ```  
@@ -582,7 +577,7 @@ virtual CString FormatProperty();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem předtím, než se zobrazí hodnota vlastnosti.  
   
-##  <a name="getdata"></a>CMFCPropertyGridProperty::GetData  
+##  <a name="getdata"></a>  CMFCPropertyGridProperty::GetData  
  Načte `DWORD` hodnotu, která je přidružena k vlastnosti.  
   
 ```  
@@ -595,7 +590,7 @@ DWORD_PTR GetData() const;
 ### <a name="remarks"></a>Poznámky  
  Data, která je vrácena je hodnota specifické pro aplikace, jako je číslo nebo ukazatel na další data. Zadejte hodnotu data, když vytvoříte vlastnost nebo když zavoláte [CMFCPropertyGridProperty::SetData](#setdata) metoda.  
   
-##  <a name="getdescription"></a>CMFCPropertyGridProperty::GetDescription  
+##  <a name="getdescription"></a>  CMFCPropertyGridProperty::GetDescription  
  Načte popis vlastnosti.  
   
 ```  
@@ -608,7 +603,7 @@ const CString& GetDescription() const;
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvek seznamu vlastnost používá tato metoda také zobrazíte popis vlastnosti.  
   
-##  <a name="getexpandedsubitems"></a>CMFCPropertyGridProperty::GetExpandedSubItems  
+##  <a name="getexpandedsubitems"></a>  CMFCPropertyGridProperty::GetExpandedSubItems  
  Načte počet rozbalené dílčí položky.  
   
 ```  
@@ -619,14 +614,14 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`bIncludeHidden`|`TRUE`Zahrnout skryté dílčí položky do počtu; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
+|[v] `bIncludeHidden`|`TRUE` Zahrnout skryté dílčí položky do počtu; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet rozbalené dílčí položky.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gethierarchylevel"></a>CMFCPropertyGridProperty::GetHierarchyLevel  
+##  <a name="gethierarchylevel"></a>  CMFCPropertyGridProperty::GetHierarchyLevel  
  Načte index založený na nule úrovně hierarchie vlastnosti.  
   
 ```  
@@ -638,7 +633,7 @@ int GetHierarchyLevel() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getname"></a>CMFCPropertyGridProperty::GetName  
+##  <a name="getname"></a>  CMFCPropertyGridProperty::GetName  
  Načte název vlastnosti.  
   
 ```  
@@ -650,7 +645,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getnametooltip"></a>CMFCPropertyGridProperty::GetNameTooltip  
+##  <a name="getnametooltip"></a>  CMFCPropertyGridProperty::GetNameTooltip  
  Voláno rámcem a zobrazí se název vlastnosti v popisu tlačítka.  
   
 ```  
@@ -662,7 +657,7 @@ virtual CString GetNameTooltip();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getoption"></a>CMFCPropertyGridProperty::GetOption  
+##  <a name="getoption"></a>  CMFCPropertyGridProperty::GetOption  
  Načte text možnost, která je zadána indexu.  
   
 ```  
@@ -678,7 +673,7 @@ LPCTSTR GetOption(int nIndex) const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getoptioncount"></a>CMFCPropertyGridProperty::GetOptionCount  
+##  <a name="getoptioncount"></a>  CMFCPropertyGridProperty::GetOptionCount  
  Načte počet možností, které patří do vlastnosti.  
   
 ```  
@@ -691,7 +686,7 @@ int GetOptionCount() const;
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCPropertyGridProperty::AddOption](#addoption) metoda k přidávání položek do seznamu vlastností. Volání [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) metoda odebrat všechny položky.  
   
-##  <a name="getoriginalvalue"></a>CMFCPropertyGridProperty::GetOriginalValue  
+##  <a name="getoriginalvalue"></a>  CMFCPropertyGridProperty::GetOriginalValue  
  Načte aktuální vlastnosti počáteční hodnota.  
   
 ```  
@@ -706,7 +701,7 @@ const COleVariant& GetOriginalValue() const;
   
  Původní hodnotu vlastnosti aktuální nastavuje [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) konstruktoru, upraveném [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) – metoda a obnovit tak, že [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) metoda.  
   
-##  <a name="getparent"></a>CMFCPropertyGridProperty::GetParent  
+##  <a name="getparent"></a>  CMFCPropertyGridProperty::GetParent  
  Načte ukazatel na nadřazený klíč.  
   
 ```  
@@ -718,7 +713,7 @@ CMFCPropertyGridProperty* GetParent() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getrect"></a>CMFCPropertyGridProperty::GetRect  
+##  <a name="getrect"></a>  CMFCPropertyGridProperty::GetRect  
  Načte ohraničující obdélník vlastnost.  
   
 ```  
@@ -730,7 +725,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getsubitem"></a>CMFCPropertyGridProperty::GetSubItem  
+##  <a name="getsubitem"></a>  CMFCPropertyGridProperty::GetSubItem  
  Načte dílčí vlastnosti identifikovaný index počítaný od nuly.  
   
 ```  
@@ -738,7 +733,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Index založený na nule vlastnosti pro načtení. Tento parametr je neplatný, pokud ji je menší než nula nebo větší než nebo rovna počtu dílčí vlastnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -750,7 +745,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getsubitemscount"></a>CMFCPropertyGridProperty::GetSubItemsCount  
+##  <a name="getsubitemscount"></a>  CMFCPropertyGridProperty::GetSubItemsCount  
  Načte počet podřízených položek.  
   
 ```  
@@ -762,7 +757,7 @@ int GetSubItemsCount() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvalue"></a>CMFCPropertyGridProperty::GetValue  
+##  <a name="getvalue"></a>  CMFCPropertyGridProperty::GetValue  
  Načte hodnotu vlastnosti.  
   
 ```  
@@ -774,7 +769,7 @@ virtual const _variant_t& GetValue() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvaluetooltip"></a>CMFCPropertyGridProperty::GetValueTooltip  
+##  <a name="getvaluetooltip"></a>  CMFCPropertyGridProperty::GetValueTooltip  
  Voláno rámcem načíst textovou reprezentaci hodnoty vlastnosti, které se následně zobrazí popisek.  
   
 ```  
@@ -786,7 +781,7 @@ virtual CString GetValueTooltip();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hasbutton"></a>CMFCPropertyGridProperty::HasButton  
+##  <a name="hasbutton"></a>  CMFCPropertyGridProperty::HasButton  
  Určuje, jestli vlastnost obsahuje tlačítko.  
   
 ```  
@@ -794,11 +789,11 @@ virtual BOOL HasButton() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud vlastnost obsahuje tlačítko (nebo seznam vlastností); v opačném `FALSE`.  
+ `TRUE` Pokud vlastnost obsahuje tlačítko (nebo seznam vlastností); v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hittest"></a>CMFCPropertyGridProperty::HitTest  
+##  <a name="hittest"></a>  CMFCPropertyGridProperty::HitTest  
  Odkazuje na objekt vlastnost, která odpovídá položce seznamu vlastnost, která odpovídá bod.  
   
 ```  
@@ -814,17 +809,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Bod, který chcete otestovat, v souřadnicích klienta. Tento parametr je obvykle aktuální umístění ukazatele myši.  
   
- [v]`pt`  
+ [v] `pt`  
  Bod, který chcete otestovat, v souřadnicích klienta.  
   
- [out]`pnArea`  
+ [out] `pnArea`  
  Po návratu tato metoda určuje oblasti, která obsahuje zadaný bod. Další informace najdete v části poznámky. Výchozí hodnota je `NULL`.  
   
- [v]`bPropsOnly`  
- `TRUE`Chcete-li otestovat všechny oblasti v ovládacím prvku vlastnost; `FALSE` otestovat pouze oblasti popisu. Výchozí hodnota je `FALSE`.  
+ [v] `bPropsOnly`  
+ `TRUE` Chcete-li otestovat všechny oblasti v ovládacím prvku vlastnost; `FALSE` otestovat pouze oblasti popisu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na objekt vlastnosti nebo `NULL`.  
@@ -840,7 +835,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickName`|Název vlastnosti|  
 |`ClickArea::ClickValue`|Hodnota vlastnosti.|  
   
-##  <a name="init"></a>CMFCPropertyGridProperty::Init  
+##  <a name="init"></a>  CMFCPropertyGridProperty::Init  
  Voláno rámcem k chybě při inicializaci objektu vlastnosti.  
   
 ```  
@@ -849,7 +844,7 @@ void Init();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isallowedit"></a>CMFCPropertyGridProperty::IsAllowEdit  
+##  <a name="isallowedit"></a>  CMFCPropertyGridProperty::IsAllowEdit  
  Určuje, zda je vlastnost upravovat.  
   
 ```  
@@ -857,11 +852,11 @@ BOOL IsAllowEdit() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je vlastnost upravitelné; v opačném případě `FALSE`.  
+ `TRUE` Pokud je vlastnost upravitelné; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isenabled"></a>CMFCPropertyGridProperty::IsEnabled  
+##  <a name="isenabled"></a>  CMFCPropertyGridProperty::IsEnabled  
  Určuje, zda je vlastnost povoleno nebo zakázáno.  
   
 ```  
@@ -869,12 +864,12 @@ BOOL IsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povolená vlastnost; `FALSE` Pokud je vlastnost vypnutá.  
+ `TRUE` Pokud je povolená vlastnost; `FALSE` Pokud je vlastnost vypnutá.  
   
 ### <a name="remarks"></a>Poznámky  
  Určuje, zda je vlastnost povoleno nebo zakázáno.  
   
-##  <a name="isexpanded"></a>CMFCPropertyGridProperty::IsExpanded  
+##  <a name="isexpanded"></a>  CMFCPropertyGridProperty::IsExpanded  
  Určuje, zda je vlastnost rozšířit nebo sbalené.  
   
 ```  
@@ -882,11 +877,11 @@ BOOL IsExpanded() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je rozbalený vlastnost. `FALSE` Pokud vlastnost sbalena.  
+ `TRUE` Pokud je rozbalený vlastnost. `FALSE` Pokud vlastnost sbalena.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isgroup"></a>CMFCPropertyGridProperty::IsGroup  
+##  <a name="isgroup"></a>  CMFCPropertyGridProperty::IsGroup  
  Určuje, zda aktuální vlastnost představuje skupinu.  
   
 ```  
@@ -894,12 +889,12 @@ BOOL IsGroup() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je aktuální objekt vlastnost představuje skupinu; `FALSE` Pokud vlastnost představuje hodnotu.  
+ `TRUE` Pokud je aktuální objekt vlastnost představuje skupinu; `FALSE` Pokud vlastnost představuje hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
  A *skupiny* je kolekce souvisejících vlastností v ovládacím prvku mřížky vlastnosti. Pokud se ovládací prvek zobrazí hierarchicky, *název skupiny* se zobrazí jako název kategorie v řádku nad skupině.  
   
-##  <a name="isinplaceediting"></a>CMFCPropertyGridProperty::IsInPlaceEditing  
+##  <a name="isinplaceediting"></a>  CMFCPropertyGridProperty::IsInPlaceEditing  
  Určuje, zda je aktuální vlastnost upravovat.  
   
 ```  
@@ -907,11 +902,11 @@ BOOL IsInPlaceEditing() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je aktuální vlastnost upravitelné; v opačném `FALSE`.  
+ `TRUE` Pokud je aktuální vlastnost upravitelné; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ismodified"></a>CMFCPropertyGridProperty::IsModified  
+##  <a name="ismodified"></a>  CMFCPropertyGridProperty::IsModified  
  Určuje, zda je aktuální vlastnost upravovat.  
   
 ```  
@@ -919,11 +914,11 @@ BOOL IsModified() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je vlastnost upravovat; v opačném `FALSE`.  
+ `TRUE` Pokud je vlastnost upravovat; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isparentexpanded"></a>CMFCPropertyGridProperty::IsParentExpanded  
+##  <a name="isparentexpanded"></a>  CMFCPropertyGridProperty::IsParentExpanded  
  Určuje, zda jsou rodičů aktuální vlastnosti rozšířit.  
   
 ```  
@@ -931,11 +926,11 @@ BOOL IsParentExpanded() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou všechny nadřazené objekty aktuální vlastnosti rozšířit; `FALSE` Pokud sbalené vlastnosti nadřazené.  
+ `TRUE` Pokud jsou všechny nadřazené objekty aktuální vlastnosti rozšířit; `FALSE` Pokud sbalené vlastnosti nadřazené.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isselected"></a>CMFCPropertyGridProperty::IsSelected  
+##  <a name="isselected"></a>  CMFCPropertyGridProperty::IsSelected  
  Označuje, zda je vybrána aktuální vlastností.  
   
 ```  
@@ -943,11 +938,11 @@ virtual BOOL IsSelected() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je vybrána aktuální vlastnosti; v opačném `FALSE`.  
+ `TRUE` Pokud je vybrána aktuální vlastnosti; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="issubitem"></a>CMFCPropertyGridProperty::IsSubItem  
+##  <a name="issubitem"></a>  CMFCPropertyGridProperty::IsSubItem  
  Určuje, zda je zadaná vlastnost je dílčí položka aktuální vlastnosti.  
   
 ```  
@@ -955,13 +950,13 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pProp`  
+ [v] `pProp`  
  Ukazatel na vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je zadaná vlastnost je dílčí položka aktuální vlastnosti; v opačném `FALSE`.  
+ `TRUE` Pokud je zadaná vlastnost je dílčí položka aktuální vlastnosti; v opačném `FALSE`.  
   
-##  <a name="isvaluechanged"></a>CMFCPropertyGridProperty::IsValueChanged  
+##  <a name="isvaluechanged"></a>  CMFCPropertyGridProperty::IsValueChanged  
  Určuje, zda hodnota aktuální vlastnosti změněna.  
   
 ```  
@@ -969,11 +964,11 @@ virtual BOOL IsValueChanged() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud došlo ke změně hodnotu aktuální vlastnosti; v opačném `FALSE`.  
+ `TRUE` Pokud došlo ke změně hodnotu aktuální vlastnosti; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isvisible"></a>CMFCPropertyGridProperty::IsVisible  
+##  <a name="isvisible"></a>  CMFCPropertyGridProperty::IsVisible  
  Určuje, zda je aktuální vlastnost viditelné.  
   
 ```  
@@ -981,11 +976,11 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je aktuální vlastnost viditelné; v opačném případě; `FALSE`.  
+ `TRUE` Pokud je aktuální vlastnost viditelné; v opačném případě; `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_strformatdouble"></a>CMFCPropertyGridProperty::m_strFormatDouble  
+##  <a name="m_strformatdouble"></a>  CMFCPropertyGridProperty::m_strFormatDouble  
  Obsahuje řetězec formátu pro hodnotu typu double.  
   
 ```  
@@ -994,7 +989,7 @@ static CString m_strFormatDouble;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_strformatfloat"></a>CMFCPropertyGridProperty::m_strFormatFloat  
+##  <a name="m_strformatfloat"></a>  CMFCPropertyGridProperty::m_strFormatFloat  
  Obsahuje řetězec formátu pro hodnotu typ float.  
   
 ```  
@@ -1003,7 +998,7 @@ static CString m_strFormatFloat;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_strformatlong"></a>CMFCPropertyGridProperty::m_strFormatLong  
+##  <a name="m_strformatlong"></a>  CMFCPropertyGridProperty::m_strFormatLong  
  Obsahuje řetězec formátu pro hodnotu typu long.  
   
 ```  
@@ -1012,7 +1007,7 @@ static CString m_strFormatLong;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_strformatshort"></a>CMFCPropertyGridProperty::m_strFormatShort  
+##  <a name="m_strformatshort"></a>  CMFCPropertyGridProperty::m_strFormatShort  
  Obsahuje řetězec formátu pro hodnoty typu krátké.  
   
 ```  
@@ -1021,7 +1016,7 @@ static CString m_strFormatShort;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onclickbutton"></a>CMFCPropertyGridProperty::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCPropertyGridProperty::OnClickButton  
  Voláno rámcem po kliknutí na tlačítko, který je obsažený ve vlastnosti.  
   
 ```  
@@ -1029,13 +1024,13 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Bod, v souřadnicích klienta.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onclickname"></a>CMFCPropertyGridProperty::OnClickName  
+##  <a name="onclickname"></a>  CMFCPropertyGridProperty::OnClickName  
  Voláno rozhraním nadřazeného ovládacího prvku seznam vlastností, když uživatel klikne pole název vlastnosti.  
   
 ```  
@@ -1046,12 +1041,12 @@ virtual void OnClickName(CPoint C);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`C`|Bod, v souřadnicích klienta.|  
+|[v] `C`|Bod, v souřadnicích klienta.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onclickvalue"></a>CMFCPropertyGridProperty::OnClickValue  
+##  <a name="onclickvalue"></a>  CMFCPropertyGridProperty::OnClickValue  
  Voláno rozhraním nadřazeného ovládacího prvku seznam vlastností, když uživatel klikne pole hodnoty vlastnosti.  
   
 ```  
@@ -1061,19 +1056,19 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiMsg`  
+ [v] `uiMsg`  
  Zpráva myši.  
   
- [v]`point`  
+ [v] `point`  
  Bod, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud zadaný myši zprávu zpracuje tato metoda; v opačném `FALSE`.  
+ `TRUE` Pokud zadaný myši zprávu zpracuje tato metoda; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda vrátí hodnotu `FALSE` Pokud aktuální vlastnost nelze upravovat. Jinak, upravit nebo ovládací prvek typu číselník, která souvisí s touto vlastností zpracovává zprávy zadaný myši a pak tato metoda vrátí hodnotu `TRUE`.  
   
-##  <a name="onclosecombo"></a>CMFCPropertyGridProperty::OnCloseCombo  
+##  <a name="onclosecombo"></a>  CMFCPropertyGridProperty::OnCloseCombo  
  Voláno rámcem při zavření pole se seznamem, který je obsažený ve vlastnosti.  
   
 ```  
@@ -1082,7 +1077,7 @@ virtual void OnCloseCombo();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onctlcolor"></a>CMFCPropertyGridProperty::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCPropertyGridProperty::OnCtlColor  
  Voláno rámcem při musí získat štětce k vyplnění barvu pozadí vlastnosti.  
   
 ```  
@@ -1092,10 +1087,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`nCtlColor`  
+ [v] `nCtlColor`  
  (Tento parametr se nepoužívá.)  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1103,7 +1098,7 @@ virtual HBRUSH OnCtlColor(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondblclk"></a>CMFCPropertyGridProperty::OnDblClk  
+##  <a name="ondblclk"></a>  CMFCPropertyGridProperty::OnDblClk  
  Voláno rámcem po dvojité kliknutí na vlastnosti.  
   
 ```  
@@ -1111,16 +1106,16 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Bod, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda vybere další vlastnosti položky v ovládacím prvku seznamu vlastností.  
   
-##  <a name="ondestroywindow"></a>CMFCPropertyGridProperty::OnDestroyWindow  
+##  <a name="ondestroywindow"></a>  CMFCPropertyGridProperty::OnDestroyWindow  
  Voláno rámcem, když vlastnost zničen nebo až po dokončení úprav.  
   
 ```  
@@ -1129,7 +1124,7 @@ virtual void OnDestroyWindow();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawbutton"></a>CMFCPropertyGridProperty::OnDrawButton  
+##  <a name="ondrawbutton"></a>  CMFCPropertyGridProperty::OnDrawButton  
  Voláno rámcem k vykreslení tlačítka, který je obsažený ve vlastnosti.  
   
 ```  
@@ -1139,15 +1134,15 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectButton`  
+ [v] `rectButton`  
  Ohraničující obdélník, která určuje, kde k vykreslení tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawdescription"></a>CMFCPropertyGridProperty::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCPropertyGridProperty::OnDrawDescription  
  Voláno rámcem k vykreslení popis vlastnosti.  
   
 ```  
@@ -1157,16 +1152,16 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník, která určuje, kde k vykreslení popis vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda vykreslí vlastnost název a popis v písmo použité nadřazeného ovládacího prvku seznam vlastností. Popis vlastnosti se vykresluje v pravidelných styl a název vlastnosti se vykresluje v tučné stylu.  
   
-##  <a name="ondrawexpandbox"></a>CMFCPropertyGridProperty::OnDrawExpandBox  
+##  <a name="ondrawexpandbox"></a>  CMFCPropertyGridProperty::OnDrawExpandBox  
  Voláno rámcem k vykreslení ovládacího prvku rozšířené pole téměř vlastnost, která obsahuje dílčí vlastnosti.  
   
 ```  
@@ -1176,16 +1171,16 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectExpand`  
+ [v] `rectExpand`  
  Ohraničující obdélník, která určuje, kde k vykreslení ovládacího prvku rozšířené pole.  
   
 ### <a name="remarks"></a>Poznámky  
  Klikněte na tlačítko ovládacího prvku rozšířené pole rozbalit nebo sbalit seznam dílčí vlastnosti. Ovládacího prvku rozšířené pole je určen podle čtverce, která obsahuje znak plus (+) nebo minus (-). Znaménko plus označuje, že vlastnost můžete rozbalit a zobrazit seznam dílčí vlastnosti. Znaménkem minus označuje, že v seznamu lze sbalit zobrazíte pouze vlastnost.  
   
-##  <a name="ondrawname"></a>CMFCPropertyGridProperty::OnDrawName  
+##  <a name="ondrawname"></a>  CMFCPropertyGridProperty::OnDrawName  
  Voláno rámcem zobrazíte název vlastnosti.  
   
 ```  
@@ -1195,15 +1190,15 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník, která určuje, kde k vykreslení, název vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawvalue"></a>CMFCPropertyGridProperty::OnDrawValue  
+##  <a name="ondrawvalue"></a>  CMFCPropertyGridProperty::OnDrawValue  
  Voláno rámcem zobrazíte hodnotu vlastnosti.  
   
 ```  
@@ -1213,15 +1208,15 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník, která určuje, kde k vykreslení hodnoty vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onedit"></a>CMFCPropertyGridProperty::OnEdit  
+##  <a name="onedit"></a>  CMFCPropertyGridProperty::OnEdit  
  Voláno rámcem, pokud je uživatel Chystáte se změnit hodnotu vlastnosti.  
   
 ```  
@@ -1229,16 +1224,16 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lptClick`  
+ [v] `lptClick`  
  (Tento parametr se nepoužívá.) Ukazatel na bod v souřadnice klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se operace upravování spustí úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud se operace upravování spustí úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána rámcem, pokud je uživatel Chystáte se změnit hodnotu vlastnosti. Ve výchozím nastavení tato metoda spustí editor odpovídající pro ovládací prvek pole se seznamem nebo ovládací prvek typu číselník.  
   
-##  <a name="onendedit"></a>CMFCPropertyGridProperty::OnEndEdit  
+##  <a name="onendedit"></a>  CMFCPropertyGridProperty::OnEndEdit  
  Voláno rámcem až po dokončení uživatele změnou hodnoty vlastnosti.  
   
 ```  
@@ -1251,7 +1246,7 @@ virtual BOOL OnEndEdit();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda odstraní aktuální ovládací prvek úprav a vrátí `TRUE`.  
   
-##  <a name="onkillfocus"></a>CMFCPropertyGridProperty::OnKillFocus  
+##  <a name="onkillfocus"></a>  CMFCPropertyGridProperty::OnKillFocus  
  Voláno rámcem, pokud vlastnost ztratí zaměření pro vstup.  
   
 ```  
@@ -1262,7 +1257,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`CWnd`|(Nepoužívá.) Ukazatel na okno.|  
+|[v] `CWnd`|(Nepoužívá.) Ukazatel na okno.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vždy vrátí hodnotu `TRUE`.  
@@ -1270,7 +1265,7 @@ virtual BOOL OnKillFocus(CWnd*);
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda nemá žádnou akci a poté vrátí `TRUE`. Pokud tuto metodu přepíšete, vrátí `TRUE` Pokud rozhraní můžete ukončit operace úpravy, když vlastnost ztratí zaměření pro vstup.  
   
-##  <a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
+##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection  
 
   
 ```  
@@ -1278,12 +1273,12 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CMFCPropertyGridProperty*`  
+ [v] `CMFCPropertyGridProperty*`  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
+##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged  
 
   
 ```  
@@ -1291,12 +1286,12 @@ virtual void OnPosSizeChanged(CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CRect`  
+ [v] `CRect`  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onrclickname"></a>CMFCPropertyGridProperty::OnRClickName  
+##  <a name="onrclickname"></a>  CMFCPropertyGridProperty::OnRClickName  
  Voláno rámcem po kliknutí pravým tlačítkem myši v oblasti název vlastnosti.  
   
 ```  
@@ -1307,12 +1302,12 @@ virtual void OnRClickName(CPoint C);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`C`|Bod, v souřadnicích klienta.|  
+|[v] `C`|Bod, v souřadnicích klienta.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onrclickvalue"></a>CMFCPropertyGridProperty::OnRClickValue  
+##  <a name="onrclickvalue"></a>  CMFCPropertyGridProperty::OnRClickValue  
  Voláno rámcem po kliknutí pravým tlačítkem myši v oblasti hodnotu vlastnosti.  
   
 ```  
@@ -1325,13 +1320,13 @@ virtual void OnRClickValue(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`C`|Bod, v souřadnicích klienta.|  
-|[v]`B`|Logická hodnota.|  
+|[v] `C`|Bod, v souřadnicích klienta.|  
+|[v] `B`|Logická hodnota.|  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda se nic nestane a `B` parametr nemá žádné předdefinované účel.  
   
-##  <a name="onselectcombo"></a>CMFCPropertyGridProperty::OnSelectCombo  
+##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
  Voláno rámcem, když uživatel vybere položku z pole upravitelné pole se seznamem.  
   
 ```  
@@ -1341,7 +1336,7 @@ virtual void OnSelectCombo();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda používá text vybrané položky aktualizaci hodnoty vlastnosti.  
   
-##  <a name="onsetcursor"></a>CMFCPropertyGridProperty::OnSetCursor  
+##  <a name="onsetcursor"></a>  CMFCPropertyGridProperty::OnSetCursor  
  Voláno rámcem při umístění ukazatele myši na položku Vlastnosti.  
   
 ```  
@@ -1349,12 +1344,12 @@ virtual BOOL OnSetCursor() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je aktuální vlastnost typu variant nebo seznam hodnot, a tato metoda úspěšně načte vložení bodu (pohybujte) myší; v opačném `FALSE`.  
+ `TRUE` Pokud je aktuální vlastnost typu variant nebo seznam hodnot, a tato metoda úspěšně načte vložení bodu (pohybujte) myší; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda podporuje následující typy variant: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, a `VT_BSTR`.  
   
-##  <a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
+##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection  
 
   
 ```  
@@ -1362,12 +1357,12 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CMFCPropertyGridProperty*`  
+ [v] `CMFCPropertyGridProperty*`  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci.  
   
-##  <a name="onupdatevalue"></a>CMFCPropertyGridProperty::OnUpdateValue  
+##  <a name="onupdatevalue"></a>  CMFCPropertyGridProperty::OnUpdateValue  
  Voláno rámcem, pokud došlo ke změně hodnoty upravovat vlastnosti.  
   
 ```  
@@ -1375,11 +1370,11 @@ virtual BOOL OnUpdateValue();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="pushchar"></a>CMFCPropertyGridProperty::PushChar  
+##  <a name="pushchar"></a>  CMFCPropertyGridProperty::PushChar  
  Voláno z ovládacího prvku seznam vlastností, pokud je vybraná vlastnost a uživatel zadá znak nového.  
   
 ```  
@@ -1387,16 +1382,16 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nChar`  
+ [v] `nChar`  
  Znak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud operace upravit pokračuje; v opačném `FALSE`.  
+ `TRUE` Pokud operace upravit pokračuje; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda podporuje vlastnosti, která je buď seznam hodnot nebo jeden z následujících typů variant: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8` , a `VT_BSTR`.  
   
-##  <a name="redraw"></a>CMFCPropertyGridProperty::Redraw  
+##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw  
  Překreslí vlastnost.  
   
 ```  
@@ -1405,7 +1400,7 @@ void Redraw();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removealloptions"></a>CMFCPropertyGridProperty::RemoveAllOptions  
+##  <a name="removealloptions"></a>  CMFCPropertyGridProperty::RemoveAllOptions  
  Odebere všechny možnosti (položky) z vlastnosti.  
   
 ```  
@@ -1415,7 +1410,7 @@ void RemoveAllOptions();
 ### <a name="remarks"></a>Poznámky  
  Možnosti se také označují jako položky seznamu ovládacího prvku seznam vlastností.  
   
-##  <a name="removesubitem"></a>CMFCPropertyGridProperty::RemoveSubItem  
+##  <a name="removesubitem"></a>  CMFCPropertyGridProperty::RemoveSubItem  
  Odebere zadané dílčí položky.  
   
 ```  
@@ -1425,18 +1420,18 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pProp`  
+ [v] `pProp`  
  Ukazatel na vlastnost dílčí položky.  
   
- [v]`bDelete`  
- `TRUE`Chcete-li odstranit objekt vlastnost, která je zadána `pProp` parametr, jinak hodnota `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bDelete`  
+ `TRUE` Chcete-li odstranit objekt vlastnost, která je zadána `pProp` parametr, jinak hodnota `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
  Zadejte `FALSE` pro `bDelete` parametr, pokud máte v úmyslu přesunout zadaná dílčí položka; to znamená, odebrání dílčí položky a poté jej přidejte jinde.  
   
-##  <a name="resetoriginalvalue"></a>CMFCPropertyGridProperty::ResetOriginalValue  
+##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue  
  Obnoví původní hodnota upravená vlastnosti.  
   
 ```  
@@ -1445,7 +1440,7 @@ virtual void ResetOriginalValue();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setdata"></a>CMFCPropertyGridProperty::SetData  
+##  <a name="setdata"></a>  CMFCPropertyGridProperty::SetData  
  Přidruží `DWORD` hodnoty k vlastnosti.  
   
 ```  
@@ -1453,13 +1448,13 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwData`  
+ [v] `dwData`  
  Specifické pro aplikaci 32-bit hodnotu, jako je celé číslo nebo ukazatel na další data.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCPropertyGridProperty::GetData](#getdata) metoda pro načtení `DWORD` hodnotu. Použití [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) metodu vyhledání položky seznamu vlastnost, která souvisí se zadaným `DWORD` hodnotu.  
   
-##  <a name="setdescription"></a>CMFCPropertyGridProperty::SetDescription  
+##  <a name="setdescription"></a>  CMFCPropertyGridProperty::SetDescription  
  Určuje text, který popisuje aktuální vlastností.  
   
 ```  
@@ -1467,12 +1462,12 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`strDescr`  
+ [v] `strDescr`  
  Text, který popisuje aktuální vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setname"></a>CMFCPropertyGridProperty::SetName  
+##  <a name="setname"></a>  CMFCPropertyGridProperty::SetName  
  Nastaví název vlastnosti.  
   
 ```  
@@ -1482,15 +1477,15 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Název vlastnosti  
   
- [v]`bRedraw`  
- `TRUE`Chcete-li ho překreslit vlastnost okamžitě; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bRedraw`  
+ `TRUE` Chcete-li ho překreslit vlastnost okamžitě; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridProperty::SetOriginalValue  
  Nastaví původní hodnota upravovat vlastnosti.  
   
 ```  
@@ -1498,13 +1493,13 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`varValue`  
+ [v] `varValue`  
  Hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) metoda resetovat původní hodnota upravená vlastnosti.  
   
-##  <a name="setvalue"></a>CMFCPropertyGridProperty::SetValue  
+##  <a name="setvalue"></a>  CMFCPropertyGridProperty::SetValue  
  Nastaví hodnotu vlastnosti mřížky vlastnosti.  
   
 ```  
@@ -1512,12 +1507,12 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`varValue`  
+ [v] `varValue`  
  Odkaz na hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="show"></a>CMFCPropertyGridProperty::Show  
+##  <a name="show"></a>  CMFCPropertyGridProperty::Show  
  Zobrazí nebo skryje vlastnost.  
   
 ```  
@@ -1527,11 +1522,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShow`  
- `TRUE`Chcete-li zobrazit aktuální vlastnost a její podřízené položky; `FALSE` ke skrytí aktuální vlastnost a její podřízené položky. Výchozí hodnota je `TRUE`.  
+ [v] `bShow`  
+ `TRUE` Chcete-li zobrazit aktuální vlastnost a její podřízené položky; `FALSE` ke skrytí aktuální vlastnost a její podřízené položky. Výchozí hodnota je `TRUE`.  
   
- [v]`bAdjustLayout`  
- `TRUE`Přepočítat kreslení popis a hodnotu vlastnosti, a pak kreslení vlastnost; `FALSE` používat existující výpočty k vykreslení vlastnost. Výchozí hodnota je `TRUE`.  
+ [v] `bAdjustLayout`  
+ `TRUE` Přepočítat kreslení popis a hodnotu vlastnosti, a pak kreslení vlastnost; `FALSE` používat existující výpočty k vykreslení vlastnost. Výchozí hodnota je `TRUE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

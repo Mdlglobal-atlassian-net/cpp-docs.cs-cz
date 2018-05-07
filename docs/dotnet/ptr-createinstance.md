@@ -2,11 +2,8 @@
 title: PTR::CreateInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.CreateInstance
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d764d18f3148dba663e1e6796c44a0add6aa8109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 Vytvoří instanci objektu COM v rámci `com::ptr`.  
@@ -86,7 +81,7 @@ void CreateInstance(
  Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt. Hodnoty jsou převzaty z `CLSCTX` výčtu. Pokud `cls_context` není zadán, hodnota CLSCTX_ALL se používá.  
   
  `rclsid`  
- `CLSID`související s daty a kód, který se použije k vytvoření objektu.  
+ `CLSID` související s daty a kód, který se použije k vytvoření objektu.  
   
 ## <a name="exceptions"></a>Výjimky  
  Pokud `com::ptr` již vlastní odkaz na objekt COM `CreateInstance` vyvolá <xref:System.InvalidOperationException>.  
@@ -94,7 +89,7 @@ void CreateInstance(
  Tato funkce volá `CoCreateInstance` a používá <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> převést chyby `HRESULT` k příslušné výjimky.  
   
 ## <a name="remarks"></a>Poznámky  
- `CreateInstance`používá `CoCreateInstance` vytvořit novou instanci objektu zadaného identifikovat buď z ProgID nebo identifikátor CLSID. `com::ptr` Odkazuje na nově vytvořený objekt a bude automaticky uvolnit všechny vlastní odkazy při odstraňování.  
+ `CreateInstance` používá `CoCreateInstance` vytvořit novou instanci objektu zadaného identifikovat buď z ProgID nebo identifikátor CLSID. `com::ptr` Odkazuje na nově vytvořený objekt a bude automaticky uvolnit všechny vlastní odkazy při odstraňování.  
   
 ## <a name="example"></a>Příklad  
  Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu. Třída konstruktory použít dvě různé formy `CreateInstance` vytvořit objekt dokumentu z ProgID nebo z identifikátor CLSID plus CLSCTX.  

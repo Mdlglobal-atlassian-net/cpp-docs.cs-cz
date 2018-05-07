@@ -1,12 +1,9 @@
 ---
 title: PTR::detach | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 Poskytuje až vlastnictví objektu COM, vrácení ukazatel na objekt.  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  Interně `QueryInterface` se volá na vlastní objekt COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Poznámky  
- `Detach`nejprve přidá odkaz na objekt COM jménem volající a uvolní všechny odkazy vlastníkem `com::ptr`.  Volající musí uvolnit nakonec vráceného objektu bude zničeno.  
+ `Detach` nejprve přidá odkaz na objekt COM jménem volající a uvolní všechny odkazy vlastníkem `com::ptr`.  Volající musí uvolnit nakonec vráceného objektu bude zničeno.  
   
 ## <a name="example"></a>Příklad  
  Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu.  `DetachDocument` Volání členských funkcí `Detach` uvolňovat vlastnictví objektu COM a vrátíte se ukazatel na volajícího.  

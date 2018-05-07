@@ -1,13 +1,10 @@
 ---
 title: SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) je způsob, jak komunikovat s relační databázi, která umožňuje definovat, dotaz, úpravě a řídit data. Pomocí syntaxe jazyka SQL, můžete vytvořit příkaz, který extrahuje záznamy podle zadaných kritérií.  
@@ -47,10 +42,10 @@ SQL (Structured Query Language) je způsob, jak komunikovat s relační databáz
   
 -   [Jak použít databázové třídy SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  Databázové třídy jsou implementované s rozhraním ODBC, která používá SQL v volání úrovni rozhraní namísto vložení příkazů SQL v kódu. ODBC používá ke komunikaci s SQL [zdroj dat](../../data/odbc/data-source-odbc.md) prostřednictvím ovladače ODBC. Tyto ovladače interpretovat SQL a přeloží ji, případně pro použití s formátem konkrétní databáze, jako je například Microsoft Access. Další informace o tom, jak ODBC používá SQL najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a sady SDK rozhraní ODBC *referenční informace pro programátory* na disku CD knihovny MSDN.  
   
-##  <a name="_core_the_database_classes"></a>Databázové třídy  
+##  <a name="_core_the_database_classes"></a> Databázové třídy  
  Databázové třídy jsou navrženy tak, abyste mohli upravit a aktualizovat data v existující [zdroj dat](../../data/odbc/data-source-odbc.md). [Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [průvodce příjemcem knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (přístupných prostřednictvím **přidat třídu**), a databázové třídy sestavují většinu příkazů SQL pro vás.  
   
  Databázové třídy použijte část SQL známé jako jazyk Data manipulaci (DML). Tyto příkazy umožňují pracovat s nebo její část zdroje dat, přidat nové záznamy, upravit záznamy a odstranit záznamy. Následující tabulka uvádí nejběžnější klíčová slova SQL a způsobů, jak použít databázové třídy je.  
@@ -79,7 +74,7 @@ SQL (Structured Query Language) je způsob, jak komunikovat s relační databáz
   
  Můžete najít další informace o SQL, včetně seznam podporovaných příkazů jazyka SQL, datové typy, SQL základní gramatiky a čtení seznam doporučených publikací o SQL, *ODBC SDK* *referenční informace pro programátory*  na disku CD knihovny MSDN.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Jak použít databázové třídy SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Jak použít databázové třídy SQL  
  Sady záznamů, které je odvozena od třídy databáze používat pro komunikaci se zdroji dat rozhraní ODBC a rozhraní ODBC načte záznamy ze zdroje dat pomocí odesílání příkazů SQL. Toto téma popisuje vztah mezi třídami databází a SQL.  
   
  Sady záznamů vytvoří sestavením částí do jednoho příkazu jazyka SQL do příkazu jazyka SQL `CString`. Řetězec sestavený jako **vyberte** příkaz, který vrací sadu záznamů.  

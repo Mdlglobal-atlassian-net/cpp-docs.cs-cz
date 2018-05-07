@@ -1,12 +1,9 @@
 ---
-title: "Třída CConnectionPoint | Microsoft Docs"
-ms.custom: 
+title: Třída CConnectionPoint | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint – třída
 Definuje speciální typ rozhraní používaný ke komunikaci s jinými objekty OLE, označovaný jako "bod připojení".  
@@ -112,14 +107,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
  Vytvoří `CConnectionPoint` objektu.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections  
  Volání této funkce pro načtení všech aktivních připojení pro bod připojení.  
   
 ```  
@@ -129,7 +124,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na pole aktivních připojení (jímky). Některé z následující ukazatele v poli, může mít hodnotu NULL. Každý ukazatel jinou hodnotu než NULL v toto pole může bezpečně převeden na ukazatel na rozhraní podřízený pomocí operátor přetypování.  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
  Voláno rámcem načíst **IConnectionPointContainer** pro spojovacího bodu.  
   
 ```  
@@ -142,7 +137,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je obvykle implementované `BEGIN_CONNECTION_PART` makro.  
   
-##  <a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  Voláno rámcem načíst ID rozhraní spojovacího bodu.  
   
 ```  
@@ -155,7 +150,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkci vrátíte rozhraní ID pro tento bod připojení.  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
  Voláno rámcem načíst maximální počet připojení, které jsou podporované pomocí bodu připojení.  
   
 ```  
@@ -170,7 +165,7 @@ virtual int GetMaxConnections();
   
  Tato funkce přepsání, pokud chcete omezit počet jímky, které se můžou připojit k vaší kontrole.  
   
-##  <a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
  Načte ukazatel element připojení v `pos`.  
   
 ```  
@@ -190,7 +185,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
  Spuštění mapy iterace vrácením **pozice** hodnotu, která se dá předat do [GetNextConnection](#getnextconnection) volání.  
   
 ```  
@@ -206,7 +201,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CConnectionPoint::GetNextConnection](#getnextconnection).  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
  Voláno rámcem při připojení je právě navázat nebo poškozený.  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  Tato funkce přepsání, pokud chcete oznámení, když jímky připojení nebo odpojení ze spojovacího bodu.  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
  Načte ukazatel na požadovaný podřízený rozhraní.  
   
 ```  

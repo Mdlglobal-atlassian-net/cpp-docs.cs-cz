@@ -1,12 +1,9 @@
 ---
-title: "Třída CPaneFrameWnd | Microsoft Docs"
-ms.custom: 
+title: Třída CPaneFrameWnd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPaneFrameWnd
@@ -141,17 +138,15 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93061da24ac148ac47d96f84d6dfcea67045235
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -267,7 +262,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxPaneFrameWnd.h  
   
-##  <a name="addpane"></a>CPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>  CPaneFrameWnd::AddPane  
  Přidá do podokna.  
   
 ```  
@@ -275,10 +270,10 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  V podokně Přidat.  
   
-##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
+##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Přidá nebo odebere ze seznamu pro globální podokno.  
   
 ```  
@@ -288,23 +283,23 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  V podokně Přidat nebo odebrat.  
   
- [v]`bAdd`  
+ [v] `bAdd`  
  Pokud nulová, přidejte v podokně. Pokud je 0, odeberte v podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud metoda byla úspěšná. jinak 0.  
   
-##  <a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  Upraví rozložení zkrácená rámce okna.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames  
 
   
 ```  
@@ -313,7 +308,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
+##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize  
  Vypočítá velikost ohraničení pro okno miniframe.  
   
 ```  
@@ -321,13 +316,13 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectBorderSize`  
+ [out] `rectBorderSize`  
  Obsahuje velikost v pixelech ohraničení miniframe okna.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem vypočítat velikost okna miniframe ohraničení. Vrácený velikost závisí na okno miniframe obsahuje panel nástrojů nebo [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
-##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  Vypočítejte očekávané rámeček ukotveného okna.  
   
 ```  
@@ -340,25 +335,25 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndToDock`  
+ [v] `pWndToDock`  
  Ukazatel na okno na ukotvení.  
   
- [v]`ptMouse`  
+ [v] `ptMouse`  
  Umístění myši.  
   
- [out]`rectResult`  
+ [out] `rectResult`  
  Počítaný obdélník.  
   
- [out]`bDrawTab`  
+ [out] `bDrawTab`  
  Pokud `TRUE`, kreslení na kartě. Pokud `FALSE`, není kreslení na kartě.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Ukazatel na podokně cíl.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vypočítá obdélníku, která by zabírají okno, pokud uživatel přetáhli okno bodu určeného `ptMouse` a jej ukotven existuje.  
   
-##  <a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Určuje, zda aktuální podokně lze ukotvit do jiného podokno nebo rámec okna.  
   
 ```  
@@ -366,9 +361,9 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně lze ukotvit do jiného podokno nebo rámec okna; v opačném případě `FALSE`.  
+ `TRUE` Pokud v podokně lze ukotvit do jiného podokno nebo rámec okna; v opačném případě `FALSE`.  
   
-##  <a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  Určuje, zda lze do podokna ukotvit zkrácená rámce okna.  
   
 ```  
@@ -376,13 +371,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDockingBar`  
+ [v] `pDockingBar`  
  Podokno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud můžete ukotvit zkrácená rámečku `pDockingBar`; jinak hodnota 0.  
   
-##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
   
 ```  
@@ -391,14 +386,14 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CPaneFrameWnd::ConvertToTabbedDocument  
  V podokně se převede do dokumentů s kartami.  
   
 ```  
 virtual void ConvertToTabbedDocument();
 ```  
   
-##  <a name="create"></a>CPaneFrameWnd::Create  
+##  <a name="create"></a>  CPaneFrameWnd::Create  
  Vytvoří okno miniframe a připojí jej k [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) objektu.  
   
 ```  
@@ -411,28 +406,28 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszWindowName`  
+ [v] `lpszWindowName`  
  Určuje text, který se zobrazí v okně miniframe.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Určuje styl okna. Další informace najdete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v]`rect`  
+ [v] `rect`  
  Určuje počáteční velikost a umístění okna miniframe.  
   
- [v] [out]`pParentWnd`  
+ [v] [out] `pParentWnd`  
  Určuje nadřazený rámec okna miniframe. Tato hodnota nesmí být `NULL`.  
   
- [v] [out]`pContext`  
+ [v] [out] `pContext`  
  Určuje uživatelská kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je okno vytvořený úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud je okno vytvořený úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Okno miniframe se vytvoří ve dvou krocích. První, vytvoří rozhraní `CPaneFrameWnd` objektu. Za druhé volání `Create` miniframe období systému Windows a vytvořte jej do `CPaneFrameWnd` objektu.  
   
-##  <a name="createex"></a>CPaneFrameWnd::CreateEx  
+##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
  Vytvoří okno miniframe a připojí jej k [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) objektu.  
   
 ```  
@@ -446,31 +441,31 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwStyleEx`  
+ [v] `dwStyleEx`  
  Určuje styl delší okno. Další informace najdete v tématu [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [v]`lpszWindowName`  
+ [v] `lpszWindowName`  
  Určuje text, který se zobrazí v okně miniframe.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Určuje styl okna. Další informace najdete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v]`rect`  
+ [v] `rect`  
  Určuje počáteční velikost a umístění okna miniframe.  
   
- [v] [out]`pParentWnd`  
+ [v] [out] `pParentWnd`  
  Určuje nadřazený rámec okna miniframe. Tato hodnota nesmí být `NULL`.  
   
- [v] [out]`pContext`  
+ [v] [out] `pContext`  
  Určuje uživatelská kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je okno vytvořený úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud je okno vytvořený úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Okno miniframe se vytvoří ve dvou krocích. První, vytvoří rozhraní `CPaneFrameWnd` objektu. Za druhé volání `Create` miniframe období systému Windows a vytvořte jej do `CPaneFrameWnd` objektu.  
   
-##  <a name="dockpane"></a>CPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  Ukotvené podokně.  
   
 ```  
@@ -478,13 +473,13 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`bWasDocked`  
- `TRUE`Pokud v podokně byl již ukotvena; v opačném případě `FALSE`.  
+ [out] `bWasDocked`  
+ `TRUE` Pokud v podokně byl již ukotvena; v opačném případě `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud byla operace úspěšná, `CDockablePane` , aby byl v podokně ukotven na; jinak hodnota `NULL`.  
   
-##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
+##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  Podokno s ID ovládací prvek vyhledá v seznamu pro globální plovoucí podoken.  
   
 ```  
@@ -492,13 +487,13 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  Představuje ID ovládacího prvku v podokně k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V podokně s ID ovládací prvek; v opačném `NULL`, pokud žádné podokno má ID zadaný ovládacího prvku.  
   
-##  <a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
+##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
  Vyhledá zkrácená rámec okna, který obsahuje zadaný bod.  
   
 ```  
@@ -510,22 +505,22 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pt`  
+ [v] `pt`  
  Bod v souřadnice obrazovky.  
   
- [v]`nSensitivity`  
+ [v] `nSensitivity`  
  Tato velikost zvýšit oblasti hledání zkrácená rámce okna. Zkrácená rámce okna splňuje kritéria hledání, pokud danému bodu spadá do oblasti vyšší.  
   
- [v]`pFrameToExclude`  
+ [v] `pFrameToExclude`  
  Určuje okně s rámečkem zkrácená chcete vyloučit z hledání.  
   
- [v]`bFloatMultiOnly`  
+ [v] `bFloatMultiOnly`  
  Pokud `TRUE`, vyhledávat pouze malý rámce windows, které mají `CBRS_FLOAT_MULTI` stylu. Pokud `FALSE`, hledání všech oken s rámečkem zkrácená.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na zkrácená rámec okna, který obsahuje `pt`jinak `NULL`.  
   
-##  <a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Vrátí výšku titulek zkrácená rámce okna.  
   
 ```  
@@ -538,7 +533,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem určení výšku zkrácená rámce okna. Ve výchozím nastavení, výška nastavena na `SM_CYSMCAPTION`. Další informace najdete v tématu [GetSystemMetrics funkce](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
-##  <a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
+##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Vypočítá ohraničující obdélník popisek zkrácená rámce okna.  
   
 ```  
@@ -546,13 +541,13 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectCaption`  
+ [out] `rectCaption`  
  Obsahuje velikost a umístění titulek okno zkrácená rámečku v souřadnicích obrazovky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem k výpočtu ohraničující obdélník popisek zkrácená rámce okna.  
   
-##  <a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText  
  Vrátí text titulku.  
   
 ```  
@@ -565,7 +560,7 @@ virtual CString GetCaptionText();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rozhraním framework, když se zobrazí text titulku.  
   
-##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager  
 
   
 ```  
@@ -576,7 +571,7 @@ CDockingManager* GetDockingManager() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
+##  <a name="getdockingmode"></a>  CPaneFrameWnd::GetDockingMode  
  Vrátí hodnotu režimu ukotvení.  
   
 ```  
@@ -592,7 +587,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
 - `DT_SMART`  
   
-##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  Vrátí první viditelné podokno, které se nachází v okně s rámečkem zkrácená.  
   
 ```  
@@ -602,7 +597,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="return-value"></a>Návratová hodnota  
  První podokna v okně zkrácená rámce nebo `NULL` Pokud zkrácená rámce okna obsahuje žádné podokna.  
   
-##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
+##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
   
 ```  
@@ -613,7 +608,7 @@ CPoint GetHotPoint() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpane"></a>CPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>  CPaneFrameWnd::GetPane  
  Vrátí podokno, ve kterém se nachází v zkrácená rámce okna.  
   
 ```  
@@ -625,7 +620,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>  CPaneFrameWnd::GetPaneCount  
  Vrátí počet podokna, které jsou obsaženy v okně s rámečkem zkrácená.  
   
 ```  
@@ -637,7 +632,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
+##  <a name="getparent"></a>  CPaneFrameWnd::GetParent  
 
   
 ```  
@@ -648,7 +643,7 @@ CWnd* GetParent();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
+##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState  
 
   
 ```  
@@ -659,7 +654,7 @@ BOOL GetPinState() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
+##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect  
 
   
 ```  
@@ -670,7 +665,7 @@ CRect GetRecentFloatingRect() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>  CPaneFrameWnd::GetVisiblePaneCount  
  Vrátí počet viditelné podokna, které jsou obsaženy v okně s rámečkem zkrácená.  
   
 ```  
@@ -682,7 +677,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hittest"></a>CPaneFrameWnd::HitTest  
+##  <a name="hittest"></a>  CPaneFrameWnd::HitTest  
  Určuje, jaká část zkrácená rámce okna je k danému bodu.  
   
 ```  
@@ -692,10 +687,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Bod, který chcete otestovat.  
   
- [v]`bDetectCaption`  
+ [v] `bDetectCaption`  
  Pokud `TRUE`, zkontrolujte bodu na popisek. Pokud `FALSE`, ignorovat titulek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -715,7 +710,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMLEFT`|Bod je v dolní části vlevo.|  
 |`HTBOTTOMRIGHT`|Bod je v pravé dolní části.|  
   
-##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
+##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
   
 ```  
@@ -726,7 +721,7 @@ BOOL IsCaptured() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
+##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow  
 
   
 ```  
@@ -737,7 +732,7 @@ BOOL IsDelayShow() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
+##  <a name="isrolldown"></a>  CPaneFrameWnd::IsRollDown  
  Určuje, zda mají být zahrnuty zkrácená rámce okna dolů.  
   
 ```  
@@ -745,14 +740,14 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud zkrácená rámce okna musí být vrácena v opačném `FALSE`.  
+ `TRUE` Pokud zkrácená rámce okna musí být vrácena v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem k určení, zda mají být zahrnuty zkrácená rámce okna dolů. Funkce rollup nebo rolldown je pro zkrácená rámce okna povolena, pokud obsahuje alespoň jeden podokno, které jsou `AFX_CBRS_AUTO_ROLLUP` příznak. Tento příznak nastaven při vytvoření podokno. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
  Ve výchozím nastavení rozhraní zkontroluje, zda má ukazatel myši uvnitř zkrácená rámce okna ohraničující obdélník k určení, zda se má být vrácena dolů okna. Můžete přepsat toto chování v odvozené třídě.  
   
-##  <a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
+##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
  Určuje, zda mají být okně s rámečkem zkrácená zahrnuty.  
   
 ```  
@@ -760,21 +755,21 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud musí být zahrnuté okně s rámečkem zkrácená; v opačném `FALSE`.  
+ `TRUE` Pokud musí být zahrnuté okně s rámečkem zkrácená; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem k určení, zda mají být okně s rámečkem zkrácená zahrnuty. Funkce rollup nebo rolldown je pro zkrácená rámce okna povolena, pokud obsahuje alespoň jeden podokno, které jsou `AFX_CBRS_AUTO_ROLLUP` příznak. Tento příznak nastaven při vytvoření podokno. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
  Ve výchozím nastavení rozhraní zkontroluje, zda má ukazatel myši uvnitř zkrácená rámce okna ohraničující obdélník k určení, zda se má být zahrnuté okna. Můžete přepsat toto chování v odvozené třídě.  
   
-##  <a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
+##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  Zastaví časovač ukotvení.  
   
 ```  
 void KillDockingTimer();
 ```  
   
-##  <a name="loadstate"></a>CPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>  CPaneFrameWnd::LoadState  
  V podokně Stav načte z registru.  
   
 ```  
@@ -784,16 +779,16 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Název profilu.  
   
- [v]`uiID`  
+ [v] `uiID`  
  ID podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud podokno stavu byl načten úspěšně; v opačném případě `FALSE`.  
+ `TRUE` Pokud podokno stavu byl načten úspěšně; v opačném případě `FALSE`.  
   
-##  <a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
+##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
  Určuje, jestli registrace třídy okna, který má `CS_SAVEBITS` třídy stylu.  
   
 ```  
@@ -803,7 +798,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ### <a name="remarks"></a>Poznámky  
  Nastavit tento statický člen na `TRUE` registrace třídy okna zkrácená rámce, který má `CS_SAVEBITS` stylu. To může pomoct snížit, blikání, když uživatel nastavuje tažením zkrácená rámce okna.  
   
-##  <a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
+##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  Určuje, zda je možné ukotvení.  
   
 ```  
@@ -811,9 +806,9 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud ukotvení je možné; v opačném `FALSE`.  
+ `TRUE` Pokud ukotvení je možné; v opačném `FALSE`.  
   
-##  <a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
+##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  Určuje, zda mají být zahrnuty zkrácená rámce okna nahoru nebo dolů.  
   
 ```  
@@ -825,14 +820,14 @@ virtual void OnCheckRollState();
   
  Ve výchozím nastavení, volá framework [CPaneFrameWnd::IsRollUp](#isrollup) a [CPaneFrameWnd::IsRollDown](#isrolldown) a právě roztahovány nebo obnoví zkrácená rámce okna. Můžete přepsat tuto metodu v odvozené třídě a použít jiný vizuální efekt.  
   
-##  <a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
  Ukotvené zkrácená rámce okna na nejnovější pozici.  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
-##  <a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CPaneFrameWnd::OnDrawBorder  
  Nakreslí ohraničení zkrácená rámce okna.  
   
 ```  
@@ -840,20 +835,20 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Kontext zařízení použít k vykreslení ohraničení.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem k vykreslení ohraničení zkrácená rámce okna.  
   
-##  <a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
  Zastaví časovač souhrn.  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
-##  <a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
+##  <a name="onmovepane"></a>  CPaneFrameWnd::OnMovePane  
  Zadaný posun přesune zkrácená rámce okna.  
   
 ```  
@@ -863,13 +858,13 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na podokno (Ignorovat).  
   
- [v]`ptOffset`  
+ [v] `ptOffset`  
  Posun, kterým se mají přesunout podokně.  
   
-##  <a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Upraví rozložení podokně uvnitř zkrácená rámce okna.  
   
 ```  
@@ -881,14 +876,14 @@ virtual void OnPaneRecalcLayout();
   
  Ve výchozím nastavení v podokně je nastavený tak, aby pokrývalo dokončení klientské oblasti zkrácená rámce okna.  
   
-##  <a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer  
  Nastaví časovač souhrn.  
   
 ```  
 virtual void OnSetRollUpTimer();
 ```  
   
-##  <a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>  CPaneFrameWnd::OnShowPane  
  Voláno rámcem při je skrytý nebo zobrazení podokna v okně zkrácená rámce.  
   
 ```  
@@ -898,16 +893,16 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  V podokně, který je zobrazen nebo skryt.  
   
- [v]`bShow`  
- `TRUE`zda se zobrazí v podokně; `FALSE` Pokud podokně je skryté.  
+ [v] `bShow`  
+ `TRUE` zda se zobrazí v podokně; `FALSE` Pokud podokně je skryté.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláno rámcem při podokna v okně zkrácená rámečku je zobrazen nebo skryt. Výchozí implementace neprovede žádnou akci.  
   
-##  <a name="pin"></a>CPaneFrameWnd::Pin  
+##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
   
 ```  
@@ -915,11 +910,11 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bPin`  
+ [v] `bPin`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CPaneFrameWnd::PaneFromPoint  
  Vrátí podokno, pokud obsahuje bod uživatelem zadané v okně s rámečkem zkrácená.  
   
 ```  
@@ -930,14 +925,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Bod, který uživatel klikne, souřadnice obrazovky.  
   
- [v]`nSensitivity`  
+ [v] `nSensitivity`  
  Tento parametr není používán.  
   
- [v]`bCheckVisibility`  
- `TRUE`Chcete-li určit, zda má být vrácen pouze viditelné podokna; v opačném `FALSE`.  
+ [v] `bCheckVisibility`  
+ `TRUE` Chcete-li určit, zda má být vrácen pouze viditelné podokna; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V podokně, který uživatel klikne, nebo `NULL` Pokud žádné podokně existuje v tomto umístění.  
@@ -945,7 +940,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem získání podokně, která obsahuje daný bod.  
   
-##  <a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
+##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll  
  Překreslí všechna okna s rámečkem zkrácená.  
   
 ```  
@@ -955,14 +950,14 @@ static void RedrawAll();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda aktualizuje všechna okna s rámečkem zkrácená voláním [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) pro každé okno.  
   
-##  <a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes  
  Voláno rámcem odebrat neplatné podokna.  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
-##  <a name="removepane"></a>CPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>  CPaneFrameWnd::RemovePane  
  Podokno odebere zkrácená rámce okna.  
   
 ```  
@@ -973,19 +968,19 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na podokno odebrat.  
   
- [v]`bDestroy`  
+ [v] `bDestroy`  
  Určuje, co se stane zkrácená rámce okna. Pokud `bDestroy` je `TRUE`, tato metoda zničí zkrácená rámce okna okamžitě. Pokud je `FALSE`, tato metoda zničí zkrácená rámce okna s určitým zpožděním.  
   
- [v]`bNoDelayedDestroy`  
+ [v] `bNoDelayedDestroy`  
  Pokud `TRUE`, zpožděné odstranění je zakázána. Pokud `FALSE`, zpožděné je povoleno odstraňování.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework může dojít k poškození okna s rámečkem zkrácená okamžitě, nebo s určitým zpožděním. Pokud chcete zpoždění likvidace oken s rámečkem malý, předat `FALSE` v `bNoDelayedDestroy` parametr. Zpožděné odstraňování nastane, když rozhraní zpracovává `AFX_WM_CHECKEMPTYMINIFRAME` zprávy.  
   
-##  <a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Nahradí jednu podokně jiné.  
   
 ```  
@@ -995,13 +990,13 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBarOrg`  
+ [v] `pBarOrg`  
  Ukazatel na původní podokně.  
   
- [v]`pBarReplaceWith`  
+ [v] `pBarReplaceWith`  
  Ukazatel na podokně, který nahrazuje původní podokně.  
   
-##  <a name="savestate"></a>CPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  V podokně Stav uloží do registru.  
   
 ```  
@@ -1011,16 +1006,16 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Název profilu.  
   
- [v]`uiID`  
+ [v] `uiID`  
  ID podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud podokno stavu byla úspěšně; uložena. v opačném případě `FALSE`.  
+ `TRUE` Pokud podokno stavu byla úspěšně; uložena. v opačném případě `FALSE`.  
   
-##  <a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
+##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  Nastaví titulek tlačítka.  
   
 ```  
@@ -1028,7 +1023,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwButtons`  
+ [v] `dwButtons`  
  Bitový operátor OR kombinace následující hodnoty:  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1039,7 +1034,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
-##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
+##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
   
 ```  
@@ -1047,11 +1042,11 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bDelayShow`  
+ [v] `bDelayShow`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
+##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager  
 
   
 ```  
@@ -1059,11 +1054,11 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pManager`  
+ [v] `pManager`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
+##  <a name="setdockingtimer"></a>  CPaneFrameWnd::SetDockingTimer  
  Nastaví časovač ukotvení.  
   
 ```  
@@ -1071,10 +1066,10 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nTimeOut`  
+ [v] `nTimeOut`  
  Hodnota časového limitu v milisekundách.  
   
-##  <a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Nastaví stav ukotvení.  
   
 ```  
@@ -1082,10 +1077,10 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDockManager`  
+ [v] `pDockManager`  
  Ukazatel na ukotvení správce.  
   
-##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
+##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
   
 ```  
@@ -1093,11 +1088,11 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ptNew`  
+ [v] `ptNew`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>  CPaneFrameWnd::SetPreDockState  
  Voláno rámcem pro nastavení predocking stavu.  
   
 ```  
@@ -1108,7 +1103,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`preDockState`  
+ [v] `preDockState`  
  Možné hodnoty:  
   
 - `PDS_NOTHING`,  
@@ -1117,16 +1112,16 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [v]`pBarToDock`  
+ [v] `pBarToDock`  
  Ukazatel na podokno ukotvení.  
   
- [v]`dockMethod`  
+ [v] `dockMethod`  
  Ukotvení metoda. (Tento parametr bude ignorován.)  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud není okno zkrácená rámce ukotvený; `FALSE` Pokud jej ukotven.  
+ `TRUE` Pokud není okno zkrácená rámce ukotvený; `FALSE` Pokud jej ukotven.  
   
-##  <a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
+##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
  Upraví velikost zkrácená rámce okna tak, že je ekvivalentní obsažené podokně.  
   
 ```  
@@ -1136,7 +1131,7 @@ virtual void SizeToContent();
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze upravit velikost oken s rámečkem Zkrácená velikost obsažené podokně.  
   
-##  <a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
+##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  Praskliny vypnout nabídky.  
   
 ```  
@@ -1144,13 +1139,13 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pMenu`  
+ [v] `pMenu`  
  Ukazatel na nabídku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud metoda byla úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud metoda byla úspěšná. v opačném `FALSE`.  
   
-##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 
   
 ```  
@@ -1158,11 +1153,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo  
 
   
 ```  
@@ -1172,8 +1167,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDockingBar`  
- [v]`pTabbedBar`  
+ [v] `pDockingBar`  
+ [v] `pTabbedBar`  
   
 ### <a name="remarks"></a>Poznámky  
   

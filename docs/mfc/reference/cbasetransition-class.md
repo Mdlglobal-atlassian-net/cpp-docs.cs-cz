@@ -1,12 +1,9 @@
 ---
-title: "Třída CBaseTransition | Microsoft Docs"
-ms.custom: 
+title: Třída CBaseTransition | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseTransition
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition – třída
 Představuje základní přechod.  
@@ -128,14 +123,14 @@ class CBaseTransition : public CObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
+##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition  
  Destruktor. Voláno, když je objekt přechodu zničen.  
   
 ```  
 virtual ~CBaseTransition();
 ```  
   
-##  <a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard  
  Přidá přechodu do scénáře.  
   
 ```  
@@ -152,7 +147,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>Poznámky  
  Platí pro proměnnou související ve scénáři, přechodu. Pokud je to první přechodu u této proměnné v tohoto scénáře, začne přechodu na začátku scénáři. Přechodu, jinak se připojuje k přechodu naposledy přidat proměnnou.  
   
-##  <a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
+##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes  
  Přidá přechodu do scénáře.  
   
 ```  
@@ -169,14 +164,14 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>Poznámky  
  Platí pro proměnnou související ve scénáři, přechodu. Klíčový počáteční snímek, který byl zadán, přechod začíná u této klíčový snímek. Zadané koncové klíčový snímek, přechod začíná u klíčový počáteční snímek a a zastaví na koncové klíčového snímku. Pokud přechodu byl vytvořen s trvání parametr zadaný, že doba trvání přepsána doba mezi počáteční a koncové klíčové snímky. Pokud není zadané žádné klíčový snímek, připojí se k přechodu naposledy přidat proměnnou přechodu.  
   
-##  <a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
+##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition  
  Vytvoří objekt základní transtion.  
   
 ```  
 CBaseTransition();
 ```  
   
-##  <a name="clear"></a>CBaseTransition::Clear  
+##  <a name="clear"></a>  CBaseTransition::Clear  
  Verze zapouzdřené objektu IUIAnimationTransition COM.  
   
 ```  
@@ -186,7 +181,7 @@ void Clear();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda by měla být volána z metodu Create odvozené třídy, aby se zabránilo úniku IUITransition rozhraní.  
   
-##  <a name="create"></a>CBaseTransition::Create  
+##  <a name="create"></a>  CBaseTransition::Create  
  Vytvoří přechod COM.  
   
 ```  
@@ -208,7 +203,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Toto je čistě virtuální funkci, která musí být přepsána nastaveními v odvozené třídě. Je volána metodou rozhraní framework vytvořit základní objekt COM přechodu.  
   
-##  <a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
+##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe  
  Vrátí spustit klíčový snímek.  
   
 ```  
@@ -221,7 +216,7 @@ CBaseKeyFrame* GetEndKeyframe();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda slouží pro přístup k objektu @keyframe, které určuje, který dříve nastavil SetKeyframes. Je volána službou nejvyšší úrovně kódu při přechody se přidávají do scénáře.  
   
-##  <a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
+##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable  
  Vrací ukazatel na související proměnné.  
   
 ```  
@@ -234,7 +229,7 @@ CAnimationVariable* GetRelatedVariable();
 ### <a name="remarks"></a>Poznámky  
  Toto je přistupující objekt k proměnné související animace.  
   
-##  <a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
+##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe  
  Vrátí spustit klíčový snímek.  
   
 ```  
@@ -247,7 +242,7 @@ CBaseKeyFrame* GetStartKeyframe();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda slouží pro přístup k objektu @keyframe, které určuje, který dříve nastavil SetKeyframes. Je volána službou nejvyšší úrovně kódu při přechody se přidávají do scénáře.  
   
-##  <a name="gettransition"></a>CBaseTransition::GetTransition  
+##  <a name="gettransition"></a>  CBaseTransition::GetTransition  
  Vrací ukazatel na základní objekt COM přechodu.  
   
 ```  
@@ -271,7 +266,7 @@ IUIAnimationTransition* GetTransition();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrací ukazatel na základní objekt přechod COM a v případě potřeby ji vytvoří.  
   
-##  <a name="gettype"></a>CBaseTransition::GetType  
+##  <a name="gettype"></a>  CBaseTransition::GetType  
  Vrátí typ přechodu.  
   
 ```  
@@ -284,7 +279,7 @@ TRANSITION_TYPE GetType() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda slouží k identifikaci objekt přechod podle jeho typu. Je nastaven typ v konstruktoru odvozené třídy.  
   
-##  <a name="isadded"></a>CBaseTransition::IsAdded  
+##  <a name="isadded"></a>  CBaseTransition::IsAdded  
  Oznamuje, zda přidala přechod scénáře.  
   
 ```  
@@ -297,49 +292,49 @@ BOOL IsAdded();
 ### <a name="remarks"></a>Poznámky  
  Tento příznak nastaven interně, pokud kód nejvyšší úrovně přidá přechody do scénáře.  
   
-##  <a name="m_badded"></a>CBaseTransition::m_bAdded  
+##  <a name="m_badded"></a>  CBaseTransition::m_bAdded  
  Určuje, zda přidala přechod scénáře.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe  
+##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe  
  Ukládá ukazatel klíčový snímek, který určuje konec přechodu.  
   
 ```  
 CBaseKeyFrame* m_pEndKeyframe;  
 ```  
   
-##  <a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable  
+##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable  
  Ukazatel na animace proměnnou, která je animovaný s uložené v m_transition přechodu.  
   
 ```  
 CAnimationVariable* m_pRelatedVariable;  
 ```  
   
-##  <a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe  
+##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe  
  Ukládá ukazatel klíčový snímek, který určuje začátek přechodu.  
   
 ```  
 CBaseKeyFrame* m_pStartKeyframe;  
 ```  
   
-##  <a name="m_transition"></a>CBaseTransition::m_transition  
+##  <a name="m_transition"></a>  CBaseTransition::m_transition  
  Ukládá ukazatel na IUIAnimationTransition. Hodnota NULL, pokud COM přechod objektu nebyl vytvořen.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransition> m_transition;  
 ```  
   
-##  <a name="m_type"></a>CBaseTransition::m_type  
+##  <a name="m_type"></a>  CBaseTransition::m_type  
  Ukládá typ přechodu.  
   
 ```  
 TRANSITION_TYPE m_type;  
 ```  
   
-##  <a name="setkeyframes"></a>CBaseTransition::SetKeyframes  
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes  
  Nastaví klíčových snímků pro přechod.  
   
 ```  
@@ -358,7 +353,7 @@ void SetKeyframes(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda informuje přechod spustit po zadaný klíčový snímek a volitelně čekání má hodnotu NULL, není-li ukončit před zadaný klíčový snímek. Pokud přechodu byl vytvořen s trvání parametr zadaný, že doba trvání přepsána doba mezi počáteční a koncové klíčové snímky.  
   
-##  <a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
+##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable  
  Vytvoří vztah mezi proměnnou animace a přechodu.  
   
 ```  
@@ -372,7 +367,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ### <a name="remarks"></a>Poznámky  
  Vytvoří vztah mezi proměnnou animace a přechodu. Přechod lze použít pouze pro jednu proměnnou.  
   
-##  <a name="transition_type_enumeration"></a>CBaseTransition::TRANSITION_TYPE – výčet  
+##  <a name="transition_type_enumeration"></a>  CBaseTransition::TRANSITION_TYPE – výčet  
  Definuje typy přechod implementace MFC rozhraní API systému Windows animace v současné době podporuje.  
   
 ```  

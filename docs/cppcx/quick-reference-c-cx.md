@@ -1,24 +1,19 @@
 ---
-title: "Stručná referenční dokumentace (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Stručná referenční dokumentace (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quick-reference-ccx"></a>Stručná referenční dokumentace (C + +/ CX)
 Prostředí Windows Runtime podporuje aplikace pro univerzální platformu Windows (UWP), které provést pouze v prostředí trustworthy operačního systému, použijte oprávnění funkce, datové typy a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C + +/ CX zjednodušit psaní aplikací pro prostředí Windows Runtime. Tento článek je rychlý přehled; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md) a [rozšíření komponent pro platformy běhového prostředí](http://go.microsoft.com/fwlink/p/?linkid=228720).  
@@ -51,9 +46,9 @@ Prostředí Windows Runtime podporuje aplikace pro univerzální platformu Windo
 |Deklarace struktury|`struct`  *Identifikátor* `{}`<br /><br /> (to znamená, prostý stará Data struktury (POD))|`value class`  *Identifikátor* `{}`<br /><br /> `value struct`  *Identifikátor* `{}`|Deklaruje POD struktura, která má výchozí privátní usnadnění.<br /><br /> – Hodnotová třída může být reprezentován v metadatech systému Windows, ale nemůže být třídu standardní C++.<br /><br /> Deklaruje POD struktura, která má výchozí veřejnou dostupnost.<br /><br /> Struktury hodnotu může být reprezentován v metadatech systému Windows, ale nemůže být standardní C++ struktury.|  
 |deklarace rozhraní|abstraktní třída, která obsahuje jenom čistý virtuální funkce.|`interface class`  *Identifikátor* `{}`<br /><br /> `interface struct`  *Identifikátor* `{}`|Deklaruje rozhraní, které má výchozí privátní usnadnění.<br /><br /> Deklaruje rozhraní, které má výchozí veřejnou dostupnost.|  
 |Delegát|`std::function`|`public delegate` *Návratový typ* *identifikátor typu delegáta* `(` *[parametry]* `);`|Deklaruje objekt, který lze vyvolat jako volání funkce.|  
-|Událost|(Nevztahuje)|`event` *identifikátor typu delegáta* *identifikátor události* `;`<br /><br /> *identifikátor typu delegáta* *delegáta identifikátor* = `ref new`*identifikátor typu delegáta*`( this`*[, parametry]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> -nebo-<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> -nebo-<br /><br /> `auto` *Token identifikátor* = *obj*. *identifikátor události*`::add(`*identifikátor delegáta*`);`<br /><br /> *obj* `.` *identifikátor události* `-=` *identifikátor tokenu* `;`<br /><br /> -nebo-<br /><br /> *obj* `.` *identifikátor události* `::remove(` *identifikátor tokenu* `);`|Deklaruje objekt události, která ukládá kolekce obslužné rutiny (delegáti), které jsou volány při výskytu události.<br /><br /> Vytvoří obslužnou rutinu události.<br /><br /> Přidá obslužnou rutinu události.<br /><br /> Přidání obslužné rutiny události vrátí token událostí (*token identifikátor*). Pokud máte v úmyslu explicitně odeberte obslužné rutiny události, je nutné uložit token událostí pro pozdější použití.<br /><br /> Odebere obslužnou rutinu.<br /><br /> Odebrat obslužné rutiny události, je nutné zadat událostí token, který jste uložili při přidání obslužné rutiny události.|  
-|Vlastnost|(Nevztahuje)|`property` *T* *identifikátor*;<br /><br /> `property` *T* *identifikátor* `[` *indexu* `];`<br /><br /> `property` *T* `default[` *index* `];`|Deklaruje, že členské funkce tříd nebo objektů přistupuje pomocí stejné syntaxi, která se má použít pro přístup ke členu dat nebo indexované element pole.<br /><br /> Deklaruje vlastnost na členské funkce tříd nebo objektů.<br /><br /> Indexované vlastnosti deklaruje na členskou funkci objektu.<br /><br /> Indexované vlastnosti deklaruje na členské funkce tříd.|  
-|Parametrizované typy|šablony|`generic <typename` *T* `> interface class` *identifikátor* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Deklaruje třídu parametrizované rozhraní.<br /><br /> Deklaruje parametrizované delegáta.|  
+|Událost|(Nevztahuje)|`event` *identifikátor typu delegáta* *identifikátor události* `;`<br /><br /> *identifikátor typu delegáta* *delegáta identifikátor* = `ref new`*identifikátor typu delegáta*`( this`*[, parametry]*`);`<br /><br /> *identifikátor události* `+=` *identifikátor delegáta* `;`<br /><br /> -nebo-<br /><br /> `EventRegistrationToken` *Token identifikátor* = *obj*`.`*identifikátor události*`+=`*identifikátor delegáta*`;`<br /><br /> -nebo-<br /><br /> `auto` *Token identifikátor* = *obj*. *identifikátor události*`::add(`*identifikátor delegáta*`);`<br /><br /> *obj* `.` *identifikátor události* `-=` *identifikátor tokenu* `;`<br /><br /> -nebo-<br /><br /> *obj* `.` *identifikátor události* `::remove(` *identifikátor tokenu* `);`|Deklaruje objekt události, která ukládá kolekce obslužné rutiny (delegáti), které jsou volány při výskytu události.<br /><br /> Vytvoří obslužnou rutinu události.<br /><br /> Přidá obslužnou rutinu události.<br /><br /> Přidání obslužné rutiny události vrátí token událostí (*token identifikátor*). Pokud máte v úmyslu explicitně odeberte obslužné rutiny události, je nutné uložit token událostí pro pozdější použití.<br /><br /> Odebere obslužnou rutinu.<br /><br /> Odebrat obslužné rutiny události, je nutné zadat událostí token, který jste uložili při přidání obslužné rutiny události.|  
+|Vlastnost|(Nevztahuje)|`property` *T* *identifikátor*;<br /><br /> `property` *T* *identifikátor* `[` *indexu* `];`<br /><br /> `property` *T* `default[` *indexu* `];`|Deklaruje, že členské funkce tříd nebo objektů přistupuje pomocí stejné syntaxi, která se má použít pro přístup ke členu dat nebo indexované element pole.<br /><br /> Deklaruje vlastnost na členské funkce tříd nebo objektů.<br /><br /> Indexované vlastnosti deklaruje na členskou funkci objektu.<br /><br /> Indexované vlastnosti deklaruje na členské funkce tříd.|  
+|Parametrizované typy|šablony|`generic <typename` *T* `> interface class` *identifikátor* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[návratový typ]* *identifikátor delegáta* `() {}`|Deklaruje třídu parametrizované rozhraní.<br /><br /> Deklaruje parametrizované delegáta.|  
 |typy hodnot s povolenou hodnotou Null|`boost::optional<T>`|[Platform::IBox \<T >](../cppcx/platform-ibox-interface.md)|Umožňuje proměnné Skalární typy a struktury hodnotu tak, aby měl hodnotu `nullptr`.|  
   
 ## <a name="see-also"></a>Viz také  

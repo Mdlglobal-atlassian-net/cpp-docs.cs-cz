@@ -1,13 +1,10 @@
 ---
-title: "Výjimky: Databáze výjimky | Microsoft Docs"
-ms.custom: 
+title: 'Výjimky: Databáze výjimky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Výjimky: Výjimky databáze
 Tento článek vysvětluje způsob zpracování výjimek databáze. Většina materiálu v tomto článku platí jak pro práci s třídy MFC pro připojení ODBC (Open Database) nebo třídy MFC pro objekty DAO (Data Access). Materiály, které jsou specifické pro jednu nebo jiný model je explicitně označen. Témata zahrnují:  
@@ -39,7 +34,7 @@ Tento článek vysvětluje způsob zpracování výjimek databáze. Většina ma
   
 -   [V příkladu zpracování výjimek databáze](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Přístupy k zpracování výjimek  
+##  <a name="_core_approaches_to_exception_handling"></a> Přístupy k zpracování výjimek  
  Přístup je stejný, zda pracujete s DAO nebo ODBC.  
   
  Vždy byste měli zapsat obslužné rutiny výjimek pro zpracování výjimečných podmínek.  
@@ -62,7 +57,7 @@ Tento článek vysvětluje způsob zpracování výjimek databáze. Většina ma
   
  Další informace o rozhraní DAO chyby, typ objektu chyby rozhraní DAO a kolekce DAO chyb jsou k dispozici v rámci třídy [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>V příkladu zpracování výjimek databáze  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> V příkladu zpracování výjimek databáze  
  V následujícím příkladu se pokusí vytvořit [CRecordset](../mfc/reference/crecordset-class.md)-odvozené objektu v haldě s **nové** operátor a potom otevřete sadu záznamů (pro zdroje dat ODBC). Podobně jako příklad pro třídy DAO najdete v tématu "DAO výjimky" následující příklad.  
   
 ### <a name="odbc-exception-example"></a>Příklad výjimky rozhraní ODBC  

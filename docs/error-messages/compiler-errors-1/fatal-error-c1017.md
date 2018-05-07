@@ -1,12 +1,9 @@
 ---
-title: "Závažná chyba C1017 | Microsoft Docs"
-ms.custom: 
+title: Závažná chyba C1017 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1017
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08433109a959b324621e9c837e67cf529d9f6fdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1017"></a>Závažná chyba C1017
 Neplatný celočíselný konstantní výraz.  
@@ -55,7 +50,7 @@ Neplatný celočíselný konstantní výraz.
   
  Protože `CONSTANT_NAME` vyhodnocena jako řetězec a není celé číslo, `#if` – direktiva generuje závažná chyba C1017.  
   
- V ostatních případech preprocesor vyhodnotí nedefinované konstanta nula. To může způsobit neočekávané výsledky, jak znázorňuje následující ukázka. `YES`není definován, tak se vyhodnotí na hodnotu nula. Výraz `#if` `CONSTANT_NAME` vyhodnocena jako false a kód, který se má použít na `YES` preprocesor odstraní. `NO`Proto je nedefinovaný (nula), také `#elif` `CONSTANT_NAME==NO` vyhodnotí jako true (`0 == 0`), způsobuje preprocesor kód v `#elif` část příkazu – přesně opak zamýšlené chování.  
+ V ostatních případech preprocesor vyhodnotí nedefinované konstanta nula. To může způsobit neočekávané výsledky, jak znázorňuje následující ukázka. `YES` není definován, tak se vyhodnotí na hodnotu nula. Výraz `#if` `CONSTANT_NAME` vyhodnocena jako false a kód, který se má použít na `YES` preprocesor odstraní. `NO` Proto je nedefinovaný (nula), také `#elif` `CONSTANT_NAME==NO` vyhodnotí jako true (`0 == 0`), způsobuje preprocesor kód v `#elif` část příkazu – přesně opak zamýšlené chování.  
   
 ```  
 // C1017c.cpp  

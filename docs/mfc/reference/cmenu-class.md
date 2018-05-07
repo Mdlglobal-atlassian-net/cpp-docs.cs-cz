@@ -1,12 +1,9 @@
 ---
-title: "Cmenu – třída | Microsoft Docs"
-ms.custom: 
+title: Cmenu – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenu
@@ -93,17 +90,15 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 Zapouzdření Windows `HMENU`.  
@@ -193,7 +188,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
  Přidá novou položku na konec nabídky.  
   
 ```  
@@ -242,7 +237,7 @@ BOOL AppendMenu(
   
 - **MF_DISABLED** zakáže položky nabídky, takže ji nelze vybrat, ale není dim.  
   
-- `MF_ENABLED`Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní.  
+- `MF_ENABLED` Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní.  
   
 - **MF_GRAYED** zakáže položky nabídky tak, aby nelze vybrat a ztlumí ho.  
   
@@ -250,7 +245,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK** umístí položku na nový řádek v nabídkách statické nebo v novém sloupci v místní nabídky. Žádný rozdíl řádek je umístěn mezi sloupci.  
   
-- `MF_OWNERDRAW`Určuje, že je položka položku vykreslování vlastníka. V případě, že v nabídce se zobrazí při prvním, obdrží okně, které vlastní nabídce `WM_MEASUREITEM` zprávu, která načte výška a šířka položky nabídky. `WM_DRAWITEM` Zpráva je odeslána vždy, když vlastník musíte aktualizovat vzhled položky nabídky. Tato možnost není platný pro položku nabídky nejvyšší úrovně.  
+- `MF_OWNERDRAW` Určuje, že je položka položku vykreslování vlastníka. V případě, že v nabídce se zobrazí při prvním, obdrží okně, které vlastní nabídce `WM_MEASUREITEM` zprávu, která načte výška a šířka položky nabídky. `WM_DRAWITEM` Zpráva je odeslána vždy, když vlastník musíte aktualizovat vzhled položky nabídky. Tato možnost není platný pro položku nabídky nejvyšší úrovně.  
   
 - **MF_POPUP** určí, že položky nabídky má místní nabídky s ním spojená. Parametr ID Určuje popisovač pro místní nabídky, které má být přidružená k položce. Používá se k přidání položky místní nabídky nejvyšší úrovně místní nabídky nebo hierarchické místní nabídky.  
   
@@ -273,7 +268,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>  CMenu::Attach  
  Připojí k existující nabídky systému Windows `CMenu` objektu.  
   
 ```  
@@ -295,7 +290,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
  Značky zaškrtnutí k přidá nebo odebere značky zaškrtnutí z položek nabídky v místní nabídce.  
   
 ```  
@@ -330,7 +325,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::GetMenuState](#getmenustate).  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
  Zkontroluje položku zadané nabídky a umožňuje položku přepínač.  
   
 ```  
@@ -368,7 +363,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [on_command_range –](message-map-macros-mfc.md#on_command_range).  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>  CMenu::CMenu  
  Vytvoří prázdný nabídky a připojí jej k `CMenu` objektu.  
   
 ```  
@@ -388,7 +383,7 @@ CMenu();
   
 - [Attach](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
  Vytvoří z nabídky a připojí jej k `CMenu` objektu.  
   
 ```  
@@ -408,7 +403,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
  Vytvoří místní nabídky a připojí jej k `CMenu` objektu.  
   
 ```  
@@ -428,7 +423,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
  Vymaže položku v nabídce.  
   
 ```  
@@ -460,7 +455,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
  Volá se automaticky `CWinApp` doby nečinnosti obslužnou rutinu, odstraní všechny dočasné `CMenu` objekty vytvořené [FromHandle](#fromhandle) – členská funkce.  
   
 ```  
@@ -468,12 +463,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `DeleteTempMap`Umožňuje odpojit objekt nabídky systému Windows, který je připojen do dočasného `CMenu` objekt před odstraněním `CMenu` objektu.  
+ `DeleteTempMap` Umožňuje odpojit objekt nabídky systému Windows, který je připojen do dočasného `CMenu` objekt před odstraněním `CMenu` objektu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
  Zničí v nabídce a všechny prostředky systému Windows, které byly používány.  
   
 ```  
@@ -489,7 +484,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>  CMenu::Detach  
  Umožňuje odpojit z nabídky systému Windows `CMenu` objektu a vrátí popisovač.  
   
 ```  
@@ -505,7 +500,7 @@ HMENU Detach();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
  Voláno rámcem při visual aspektů nabídce vykreslovaných vlastníkem změny.  
   
 ```  
@@ -526,7 +521,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
  Povolí, zakáže nebo ztlumí položku nabídky.  
   
 ```  
@@ -548,7 +543,7 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED** zakáže položky nabídky, takže ji nelze vybrat, ale není dim.  
   
-- `MF_ENABLED`Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní.  
+- `MF_ENABLED` Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní.  
   
 - **MF_GRAYED** zakáže položky nabídky tak, aby nelze vybrat a ztlumí ho.  
   
@@ -565,7 +560,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
  Vrátí ukazatel na `CMenu` objekt daný popisovačů systému Windows k nabídce.  
   
 ```  
@@ -587,7 +582,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
  Určuje výchozí položku nabídky v nabídce zadaný.  
   
 ```  
@@ -617,7 +612,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
  Načte kontextovou nápovědu ID přidružené k `CMenu`.  
   
 ```  
@@ -630,7 +625,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
  Načte informace pro nabídky.  
   
 ```  
@@ -647,7 +642,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst informace o nabídce.  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
  Určuje počet položek v nabídce místní nebo nejvyšší úrovně.  
   
 ```  
@@ -660,7 +655,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
  Získá identifikátor položky nabídky pro položku nabídky na pozici definované `nPos`.  
   
 ```  
@@ -677,7 +672,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
  Načte informace o položku nabídky.  
   
 ```  
@@ -706,7 +701,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
  Vrátí stav zadaná položka nabídky nebo počet položek v místní nabídce.  
   
 ```  
@@ -733,7 +728,7 @@ UINT GetMenuState(
   
 - **MF_DISABLED** zakáže položky nabídky, takže ji nelze vybrat, ale není dim.  
   
-- `MF_ENABLED`Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní. Všimněte si, že tato konstanta hodnotu 0; aplikace by neměl testování proti 0 pro typ selhání při použití této hodnoty.  
+- `MF_ENABLED` Položky nabídky umožňuje, aby ho lze vybrat a obnoví z stav neaktivní. Všimněte si, že tato konstanta hodnotu 0; aplikace by neměl testování proti 0 pro typ selhání při použití této hodnoty.  
   
 - **MF_GRAYED** zakáže položky nabídky tak, aby nelze vybrat a ztlumí ho.  
   
@@ -748,7 +743,7 @@ UINT GetMenuState(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
  Popisek zadaná položka nabídky zkopíruje do zadané vyrovnávací paměti.  
   
 ```  
@@ -794,7 +789,7 @@ int GetMenuString(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
  Vrátí `HMENU` zabalen to `CMenu` objekt, nebo **NULL** `CMenu` ukazatel.  
   
 ```  
@@ -804,7 +799,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
  Načte `CMenu` objekt místní nabídky.  
   
 ```  
@@ -821,7 +816,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::TrackPopupMenu](#trackpopupmenu).  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
  Vloží novou položku nabídky na pozici určeného `nPosition` a dalších položek se posouvá směrem dolů v nabídce.  
   
 ```  
@@ -855,7 +850,7 @@ BOOL InsertMenu(
  Určuje ID příkazu nové položky nabídky nebo, pokud `nFlags` je nastaven na **MF_POPUP**, popisovač nabídky ( `HMENU`) z místní nabídky. `nIDNewItem` Parametr je ignorován (není potřeba), pokud `nFlags` je nastaven na **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- Určuje obsah novou položku nabídky. `nFlags`Umožňuje interpretovat `lpszNewItem` následujícími způsoby:  
+ Určuje obsah novou položku nabídky. `nFlags` Umožňuje interpretovat `lpszNewItem` následujícími způsoby:  
   
 |nFlags|Výklad lpszNewItem|  
 |------------|-----------------------------------|  
@@ -881,7 +876,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
  Vloží novou položku nabídky na zadané pozici v nabídce.  
   
 ```  
@@ -904,7 +899,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>Poznámky  
  Zabalí tuto funkci [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), které jsou popsány v sadě Windows SDK.  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  Načte prostředek nabídky z spustitelný soubor aplikace a připojí jej k `CMenu` objektu.  
   
 ```  
@@ -928,7 +923,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
  Načte prostředek ze šablony nabídky v paměti a připojí jej k `CMenu` objektu.  
   
 ```  
@@ -956,7 +951,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
  Určuje, `HMENU` popisovač nabídku Windows připojené k `CMenu` objektu.  
   
 ```  
@@ -966,7 +961,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
  Voláno rámcem při vytváření nabídky s styl vykreslování vlastníka.  
   
 ```  
@@ -987,7 +982,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
  Změní stávající položku nabídky na pozici určeného `nPosition`.  
   
 ```  
@@ -1045,7 +1040,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
  Tento operátor umožňuje načíst popisovač `CMenu` objektu.  
   
 ```  
@@ -1058,7 +1053,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>Poznámky  
  Popisovač můžete přímo volat rozhraní API systému Windows.  
   
-##  <a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>  CMenu::operator! =  
  Určuje, jestli dvě nabídky jsou logicky nejsou stejné.  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>Poznámky  
  Testy, pokud objekt nabídky na levé straně není rovno nabídky objekt na pravé straně.  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator ==  
+##  <a name="operator_eq_eq"></a>  CMenu::operator ==  
  Určuje, jestli dvě nabídky jsou logicky stejné.  
   
 ```  
@@ -1086,7 +1081,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>Poznámky  
  Testů, pokud objekt nabídky na levé straně je rovno (z hlediska `HMENU` hodnotu) do nabídky objekt na pravé straně.  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
  Vymaže položku nabídky s přidružené místní nabídky v nabídce.  
   
 ```  
@@ -1118,7 +1113,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
  Nastaví výchozí položku nabídky pro zadaný nabídky.  
   
 ```  
@@ -1143,7 +1138,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
  Přidruží ID kontextu pomoc s `CMenu`.  
   
 ```  
@@ -1163,7 +1158,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
  Nastaví informace o nabídce.  
   
 ```  
@@ -1180,7 +1175,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto funkci nastavit konkrétní informace o nabídce.  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
  Přidruží zadané bitmap položku nabídky.  
   
 ```  
@@ -1226,7 +1221,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
  Změní informace o položku nabídky.  
   
 ```  
@@ -1249,7 +1244,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>Poznámky  
  Zabalí tuto funkci [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), které jsou popsány v sadě Windows SDK.  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  Zobrazí plovoucí místní nabídky v zadaném umístění a sleduje výběr položek v místní nabídce.  
   
 ```  
@@ -1286,7 +1281,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
  Zobrazí plovoucí místní nabídky v zadaném umístění a sleduje výběr položek v místní nabídce.  
   
 ```  

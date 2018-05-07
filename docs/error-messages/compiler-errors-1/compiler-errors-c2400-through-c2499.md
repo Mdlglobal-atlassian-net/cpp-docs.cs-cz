@@ -1,16 +1,12 @@
 ---
-title: "C2400 chyby kompilátoru prostřednictvím C2499 | Microsoft Docs"
-ms.custom: 
+title: C2400 chyby kompilátoru prostřednictvím C2499 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>C2400 chyby kompilátoru prostřednictvím C2499
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[Chyba kompilátoru C2426](compiler-error-c2426.md)|'*tokenu*': neplatný operátor '*kontextu*.|
 |[Chyba kompilátoru C2427](compiler-error-c2427.md)|'*třída*': nelze definovat třídy v tomto rozsahu|
 |[Chyba kompilátoru C2428](compiler-error-c2428.md)|'*operace*': nejsou povoleny u operandu typu 'bool.|
-|C2429 chyby kompilátoru|*Kontext* '*kontextu*, vyžaduje kompilátoru příznak'*možnost*.|
+|[C2429 chyby kompilátoru](compiler-error-c2429.md)|'*funkce jazyka*, vyžaduje kompilátoru příznak'*– možnost kompilátoru*.|
 |[Chyba kompilátoru C2430](compiler-error-c2430.md)|více než jeden index registr v '*kontextu*.|
 |[Chyba kompilátoru C2431](compiler-error-c2431.md)|Neplatný index registrace v '*kontextu*.|
 |[Chyba kompilátoru C2432](compiler-error-c2432.md)|Neplatný odkaz na 16bitové data v '*kontextu*.|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[Chyba kompilátoru C2491](compiler-error-c2491.md)|'*identifikátor*': definice dllimport *funkce* není povoleno|
 |[Chyba kompilátoru C2492](compiler-error-c2492.md)|'*proměnná*': data s trvání uložení vlákno nemusí mít rozhraní knihovny dll|
 |[Chyba kompilátoru C2493](compiler-error-c2493.md)|Neplatný formu __based|
-|[Chyba kompilátoru C2494](compiler-error-c2494.md)|'*– klíčové slovo*' nelze volat v rámci výraz filtru nebo &#95; &#95; blokovat nakonec/finally|
+|[Chyba kompilátoru C2494](compiler-error-c2494.md)|'*– klíčové slovo*' nelze volat v rámci výraz filtru nebo &#95; &#95;blokovat nakonec/finally|
 |[Chyba kompilátoru C2495](compiler-error-c2495.md)|'*identifikátor*': '__declspec(noexcept)' lze použít pouze funkce deklarace nebo definice|
 |[Chyba kompilátoru C2496](compiler-error-c2496.md)|'*identifikátor*': 'selectany' lze použít pouze pro datové položky s externím propojením|
 |C2497 chyby kompilátoru|'*identifikátor*': 'implementation_key' lze použít pouze pro deklarace funkcí|

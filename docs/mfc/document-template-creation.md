@@ -1,13 +1,10 @@
 ---
-title: "Vytváření šablon dokumentů | Microsoft Docs"
-ms.custom: 
+title: Vytváření šablon dokumentů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04950601a74b1ed3e44b236e1d07dcdff997eca6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-creation"></a>Vytváření šablon dokumentů
 Při vytváření nového dokumentu v reakci na `New` nebo **otevřete** příkaz **souboru** nabídce Šablona dokumentu také vytvoří nové okně s rámečkem prostřednictvím pro zobrazení dokumentu.  
@@ -36,7 +31,7 @@ Při vytváření nového dokumentu v reakci na `New` nebo **otevřete** příka
   
  [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]  
   
- Ukazatel na novou `CMultiDocTemplate` objekt se používá jako argument pro [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argumenty, které mají `CMultiDocTemplate` konstruktor zahrnují ID prostředku přidružené nabídek a akcelerátorů typ dokumentu a tři používání [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) makro. `RUNTIME_CLASS`Vrátí [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objekt pro C++ třída s názvem jako její argument. Tří `CRuntimeClass` objekty předaný konstruktoru šablony dokumentu zadejte informace potřebné k vytváření nových objektů třídy zadaný během procesu vytváření dokumentu. Tento příklad ukazuje vytvoření šablony dokumentu, který vytváří `CScribDoc` objekty s `CScribView` objekty, které jsou připojené. Zobrazení jsou rámcová ve standardní MDI podřízená rámce okna.  
+ Ukazatel na novou `CMultiDocTemplate` objekt se používá jako argument pro [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argumenty, které mají `CMultiDocTemplate` konstruktor zahrnují ID prostředku přidružené nabídek a akcelerátorů typ dokumentu a tři používání [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) makro. `RUNTIME_CLASS` Vrátí [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objekt pro C++ třída s názvem jako její argument. Tří `CRuntimeClass` objekty předaný konstruktoru šablony dokumentu zadejte informace potřebné k vytváření nových objektů třídy zadaný během procesu vytváření dokumentu. Tento příklad ukazuje vytvoření šablony dokumentu, který vytváří `CScribDoc` objekty s `CScribView` objekty, které jsou připojené. Zobrazení jsou rámcová ve standardní MDI podřízená rámce okna.  
   
 ## <a name="see-also"></a>Viz také  
  [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)   

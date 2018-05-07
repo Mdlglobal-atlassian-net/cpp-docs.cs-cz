@@ -1,12 +1,9 @@
 ---
-title: "Aktualizace sad řádků | Microsoft Docs"
-ms.custom: 
+title: Aktualizace sad řádků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fcb5794de2e0358e5c17cde5ac8e69fa9e3c08f6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8ca0ef94ba6c60bd43e24672fe7db669a3930fd7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 Operace velmi základní databáze je aktualizovat nebo zapisovat data do úložiště dat. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty členů vázaných dat a pak zapíše tyto hodnoty do sady řádků; Příjemce potom požadavků, že aktualizovat zprostředkovatele úložiště dat.  

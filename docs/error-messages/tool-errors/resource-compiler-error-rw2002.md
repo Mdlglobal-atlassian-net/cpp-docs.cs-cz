@@ -2,11 +2,8 @@
 title: Chyba kompilátoru prostředků RW2002 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Chyba kompilátoru prostředků RW2002
 Při analýze  
@@ -56,7 +51,7 @@ Při analýze
   
      **Začít** okamžitě postupujte – klíčové slovo **STRINGTABLE** – klíčové slovo.  
   
-7.  **Nelze znovu použít řetězcové konstanty**  
+7.  **nelze znovu použít řetězcové konstanty**  
   
      Používáte stejnou hodnotu dvakrát v **STRINGTABLE** příkaz. Ujistěte se, že nejsou kombinování překrývání desetinné hodnoty, šestnáctkové hodnoty. V každé ID **STRINGTABLE** musí být jedinečný. Pro maximální účinnost použijte souvislý konstanty, které začínají na více 16.  
   
@@ -64,7 +59,7 @@ Při analýze
   
      Řídicí znak v **AKCELERÁTORŮ** příkaz je neplatný. Znak následující pomocí kurzoru (**^**) musí být v rozsahu A a Z, včetně.  
   
-9. **Není povolen prázdný nabídky**  
+9. **není povolen prázdný nabídky**  
   
      **END** – klíčové slovo se nachází před všechny položky nabídky, jsou definovány v **nabídky** příkaz. Kompilátor prostředků nepovoluje prázdný nabídky. Zajistěte, aby všechny otevřené uvozovky, v rámci nemáte **nabídky** příkaz.  
   
@@ -96,7 +91,7 @@ Při analýze
   
      Každý **MENUITEM** a **místní** příkaz musí obsahovat *text* pole, která je uzavřena v uvozovkách řetězec, který určuje název položky nabídky nebo automaticky otevírané okno nabídky. A **MENUITEM ODDĚLOVAČE** příkaz vyžaduje žádné řetězec v uvozovkách.  
   
-17. **Byla očekávána hodnota číselného příkaz**  
+17. **byla očekávána hodnota číselného příkaz**  
   
      Kompilátor prostředků očekával jednu číslici *idvalue* pole **AKCELERÁTORŮ** příkaz. Ujistěte se, že jste použili `#define` Konstanta zadejte hodnotu a že konstanta je napsán správně.  
   
@@ -120,7 +115,7 @@ Při analýze
   
      Kompilátor prostředků se nepodařilo určit, jaký typ klíče se nastavuje pro akcelerátor. `event` Pole **AKCELERÁTORŮ** příkaz může být neplatný.  
   
-23. **Byla očekávána číslo pro ID**  
+23. **byla očekávána číslo pro ID**  
   
      Byla očekávána počet `id` pole příkazu ovládací prvek v **dialogové okno** příkaz. Zajistěte, aby byla číslo nebo `#define` údajů pro ID ovládacího prvku.  
   

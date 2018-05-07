@@ -1,13 +1,10 @@
 ---
-title: "Používání atributu CDateTimeCtrl | Microsoft Docs"
-ms.custom: 
+title: Používání atributu CDateTimeCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CDateTimeCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab0f8c64b953a9ddaffa3382863762256b90c6c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cdatetimectrl"></a>Používání atributu CDateTimeCtrl
 Prvku pro výběr data a času ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) používá intuitivní a rozpoznatelném způsob zadáním nebo vyberte určité datum. Hlavní rozhraní ovládacího prvku je funkce podobná pole se seznamem. Ale pokud uživatel rozšíří ovládacího prvku, zobrazí se ovládací prvek měsíční kalendář (ve výchozím nastavení), které uživateli umožňují zadat konkrétní datum. Při výběru datum ovládací prvek měsíční kalendář automaticky zmizí.  

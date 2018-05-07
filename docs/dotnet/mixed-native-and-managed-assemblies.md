@@ -1,13 +1,10 @@
 ---
-title: "Smíšená (nativní a spravovaná) sestavení | Microsoft Docs"
-ms.custom: 
+title: Smíšená (nativní a spravovaná) sestavení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Smíšená (nativní a spravovaná) sestavení
 Smíšená sestavení jsou schopná využívat obsahující pokyny nespravovaném počítači a MSIL pokyny. To umožňuje, aby volání a volat součásti rozhraní .NET, při zachování kompatibility s součásti, které jsou zcela nespravované. Pomocí smíšená sestavení, vývojářům vytvářet aplikace, které používají směs spravovaných a nespravovaných funkcí. Smíšená sestavení díky ideální pro migraci stávajících aplikací Visual C++ pro platformu .NET.  
@@ -69,7 +64,7 @@ Smíšená sestavení jsou schopná využívat obsahující pokyny nespravované
  [Postupy: Vytvoření částečně důvěryhodné aplikace CRT odebráním závislosti na knihovně DLL](../dotnet/create-a-partially-trusted-application.md)  
  Popisuje postup vytvoření částečně důvěryhodné aplikace modul Common Language Runtime Visual C++ pomocí odebráním závislosti na msvcm90.dll.  
   
- Další informace o pokyny pro kódování pro smíšená sestavení, najdete v článku webu MSDN článku "přehled o spravované nebo nespravované kód" v [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Další informace o pokyny pro kódování pro smíšená sestavení, najdete v článku webu MSDN článku "přehled o spravované nebo nespravované kód" v [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Viz také  
  [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)

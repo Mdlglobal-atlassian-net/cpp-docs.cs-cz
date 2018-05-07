@@ -1,13 +1,10 @@
 ---
-title: "Nabídky a prostředky: sloučení nabídky | Microsoft Docs"
-ms.custom: 
+title: 'Nabídky a prostředky: sloučení nabídky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Sloučení nabídky
 Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokumentů pro úpravy s náhledem zpracování a aktivace na místě správně. Aktivace na místě představuje výzvu pro kontejner a server (součást) aplikace. Uživatel zůstane ve stejném okně s rámečkem (v rámci kontejneru dokumentu), ale je ve skutečnosti spuštěna jiná aplikace (server). To vyžaduje spolupráce mezi prostředky kontejneru a serverové aplikace.  
@@ -40,7 +35,7 @@ Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokument
   
 - [Panely nástrojů a stavové řádky](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>Rozložení nabídek  
+##  <a name="_core_menu_layouts"></a> Rozložení nabídek  
  Prvním krokem je koordinace rozložení nabídek. Další informace najdete v tématu **vytvoření nabídky** kapitoly [nabídky programování aspekty](https://msdn.microsoft.com/library/ms647557.aspx) ve Windows SDK.  
   
  Aplikace typu kontejner měli vytvořit nové nabídky, který se má použít jenom v případě, že jsou zavedené Aktivované vložené položky. Minimálně by měla obsahovat této nabídky následující kroky v uvedeném pořadí:  
@@ -113,7 +108,7 @@ END
   
  Pokud je aktivován vložené položky na místě, načte rozhraní v místní nabídce. Potom požádá server aplikaci pro jeho nabídky aktivace na místě a vloží je kde jsou oddělovače. Toto je, jak v nabídkách sloučit. Získat nabídky z kontejneru pro provoz na umístění souboru a okna a získat nabídky ze serveru pro položku.  
   
-##  <a name="_core_toolbars_and_status_bars"></a>Panely nástrojů a stavové řádky  
+##  <a name="_core_toolbars_and_status_bars"></a> Panely nástrojů a stavové řádky  
  Aplikace serveru by měl vytvořit nový panel nástrojů a uložení jeho rastrový obrázek v samostatném souboru. Aplikace generované v Průvodci aplikací uložit tento rastrový obrázek v souboru s názvem ITOOLBAR. BMP. Nový panel nástrojů nahradí panel nástrojů aplikace typu kontejner, pokud váš server položku se aktivuje na místě a musí obsahovat stejné položky jako normální panelu nástrojů, ale odebrat ikony představující položky v souboru a oken nabídkách.  
   
  Tento panel nástrojů je načten do vaší `COleIPFrameWnd`-odvozené třídy, můžete vytvořit pomocí Průvodce aplikací. Stavový řádek zpracovává kontejnerové aplikace. Další informace o provádění okna s rámečkem na místě najdete v tématu [servery: implementace serveru](../mfc/servers-implementing-a-server.md).  

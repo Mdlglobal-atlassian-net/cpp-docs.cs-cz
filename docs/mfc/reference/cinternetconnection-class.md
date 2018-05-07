@@ -1,12 +1,9 @@
 ---
-title: "Třída CInternetConnection | Microsoft Docs"
-ms.custom: 
+title: Třída CInternetConnection | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection – třída
 Spravuje připojení k internetového serveru.  
@@ -81,7 +76,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  Tento člen funkce je volána, když `CInternetConnection` je vytvořen objekt.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  Výchozí hodnota pro `dwContext` odesílají MFC k `CInternetConnection`-odvozeného od objektu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený **InternetConnection**-odvozené objektu. Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext identifikátor v [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktor pro připojení. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Volání této funkce člen získat ID kontextu pro tuto relaci.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  Další informace o tom, **getcontext –** funguje s jinými WinInet třídami poskytnout informace o stavu uživatele, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Volání této funkce člen získat název serveru přidružené k připojení k Internetu.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Název serveru, který tento objekt připojení ve spolupráci s.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  Volání této funkce člen získat ukazatel `CInternetSession` objekt, který je spojen s tímto připojením.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt přidružené k tomuto objektu internetové připojení.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  Operátor se získat popisovač úroveň rozhraní API pro aktuální relaci Internet.  
   
 ```  

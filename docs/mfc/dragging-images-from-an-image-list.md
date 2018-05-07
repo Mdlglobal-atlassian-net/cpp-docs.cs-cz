@@ -1,13 +1,10 @@
 ---
-title: "Přetahování obrázků ze seznamu obrázků | Microsoft Docs"
-ms.custom: 
+title: Přetahování obrázků ze seznamu obrázků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d54984cdc1dc7897fb4f5d1d9680c6a2b95a787d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-images-from-an-image-list"></a>Přetahování obrázků ze seznamu obrázků
 [CImageList](../mfc/reference/cimagelist-class.md) obsahuje funkce pro přetažení myší bitovou kopii na obrazovce. Přetahování funkce, bitovou kopii plynule, přesuňte barevně a bez jakékoli blikající kurzor. Můžete přetáhnout maskované a nemaskované bitové kopie.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) – členská funkce nastaví počáteční umístění obrázku přetáhněte v rámci časového období a nakreslí obrázek na pozici. Parametry zahrnují ukazatel na okna, ve kterém k vykreslení bitové kopie a bod, který určuje souřadnice počáteční pozici v rámci okna. Souřadnice jsou relativní vzhledem k levého horního rohu okna, není klientské oblasti. Totéž platí pro všechny funkcí přetahování bitové kopie, které přijímají souřadnice jako parametry. To znamená, že šířek okno prvky, jako jsou například ohraničení, záhlaví a řádku nabídek musí kompenzovat při zadávání souřadnice. Pokud zadáte **NULL** popisovač okna při volání metody `DragEnter`přetahování funkce kreslení obrázku v kontextu zařízení, které jsou přidružené k okně plochy a souřadnice jsou relativní vzhledem k levého horního rohu obrazovky.  
   
- `DragEnter`Zamkne všechny další aktualizace do daného okna během operace přetažení. Pokud je potřeba udělat všechny kreslení během operace přetažení, jako je například zvýraznění cíl operace přetahování myší, dočasně můžete skrýt taženou bitové kopie, pomocí [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) – členská funkce. Můžete také [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) – členská funkce.  
+ `DragEnter` Zamkne všechny další aktualizace do daného okna během operace přetažení. Pokud je potřeba udělat všechny kreslení během operace přetažení, jako je například zvýraznění cíl operace přetahování myší, dočasně můžete skrýt taženou bitové kopie, pomocí [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) – členská funkce. Můžete také [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) – členská funkce.  
   
  Volání [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) po dokončení přetahování bitovou kopii.  
   

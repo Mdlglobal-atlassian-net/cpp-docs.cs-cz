@@ -1,12 +1,9 @@
 ---
 title: multimap (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/map> header [STL/CLR]
 - multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168c6afec0f8f195d1315a54eff2794f7e3fd07e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `multimap` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  kde:  
   
- `GKey`je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je`Key^`  
+ `GKey` je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je `Key^`  
   
- `GMapped`je stejný jako `Mapped` Pokud k tomu je typu ref, v takovém případě je`Mapped^`  
+ `GMapped` je stejný jako `Mapped` Pokud k tomu je typu ref, v takovém případě je `Mapped^`  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  Takový objekt delegáta musí použít striktní slabé řazení klíče typu [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). To znamená, pro žádné dva klíče `X` a `Y`:  
   
- `key_comp()(X, Y)`Vrátí stejné logická hodnota způsobit při každém volání.  
+ `key_comp()(X, Y)` Vrátí stejné logická hodnota způsobit při každém volání.  
   
  Pokud `key_comp()(X, Y)` má hodnotu true, pak `key_comp()(Y, X)` musí mít hodnotu false.  
   

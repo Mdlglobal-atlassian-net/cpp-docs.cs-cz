@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Agile | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Agile | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile – třída
 Představuje objekt, který má MashalingBehavior = Standard jako agile objekt, který výrazně snižuje se možnost runtime dělení na vlákna výjimky. `Agile<T>` Umožňuje-agilní objekt, který má volání nebo volání z stejné nebo jiné vlákno. Další informace najdete v tématu [dělení na vlákna a zařazování](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -73,7 +68,7 @@ class Agile;
 |Název|Popis|  
 |----------|-----------------|  
 |[-> Agile::Operator](#operator-arrow)|Načte popisovač pro objekt představovaný agilní aktuálního objektu.|  
-|[Agile::operator=](#operator-assign)|Zadaná hodnota přiřadí aktuální agilní objekt.|  
+|[Agile::Operator =](#operator-assign)|Zadaná hodnota přiřadí aktuální agilní objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Object`  
@@ -116,7 +111,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Poznámky  
  První verze součásti tento konstruktor je výchozí konstruktor. Druhá verze inicializuje nové agilní instance třídy z objektu určeného `object` parametr. Třetí verzi je konstruktor copy. Je Čtvrtá verze konstruktor move. Tento konstruktor nemůže vyvolat výjimky.  
 
-## <a name="dtor">Agilní:: ~ agilní – destruktor</a>
+## <a name="dtor"></a>  Agilní:: ~ agilní – destruktor
 Zničí aktuální instance třídy Agile.  
   
 ## <a name="syntax"></a>Syntaxe  

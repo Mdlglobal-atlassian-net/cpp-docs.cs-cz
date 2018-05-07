@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Sada záznamů: Vytváření a uzavírání sad záznamů (rozhraní ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -44,7 +39,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Kdy a jak zavřít objekt sady záznamů](#_core_closing_a_recordset).  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>Vytvoření sady záznamů v době běhu  
+##  <a name="_core_creating_recordsets_at_run_time"></a> Vytvoření sady záznamů v době běhu  
  Před vytvořením objektů sady záznamů v programu, obvykle zápisu třídy sady záznamů specifické pro aplikaci. Další informace o tomto předběžném kroku najdete v tématu [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Pokud je nutné vybrat záznamy ze zdroje dat, otevřete objekt dynamická sada nebo snímek. Typ objektu k vytvoření závisí na co musíte udělat s daty v aplikaci a na co ovladač ODBC podporuje. Další informace najdete v tématu [dynamická sada](../../data/odbc/dynaset.md) a [snímku](../../data/odbc/snapshot.md).  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  Připojovací řetězec, který použijete při vývoji nemusí být stejný řetězec připojení, který případné uživatelé potřebovat. Zobecňování vaší aplikace v tomto ohledu, najdete v části [zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
-##  <a name="_core_setting_recordset_options"></a>Nastavení možností sady záznamů  
+##  <a name="_core_setting_recordset_options"></a> Nastavení možností sady záznamů  
  Po sestavení objektu sady záznamů, ale před voláním **otevřete** vybrat záznamy, můžete chtít nastavit některé možnosti řízení chování sady záznamů. Pro všechny sady záznamů můžete:  
   
 -   Zadejte [filtru](../../data/odbc/recordset-filtering-records-odbc.md) omezit výběr záznamů.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  Pokud chcete ovlivnit výběr záznamů, musíte nastavit tyto možnosti před voláním **otevřete** – členská funkce.  
   
-##  <a name="_core_closing_a_recordset"></a>Zavírání sady záznamů  
+##  <a name="_core_closing_a_recordset"></a> Zavírání sady záznamů  
  Až skončíte s sady záznamů, musíte dispose ho a navrátit její paměť.  
   
 #### <a name="to-close-a-recordset"></a>Zavřete sady záznamů  

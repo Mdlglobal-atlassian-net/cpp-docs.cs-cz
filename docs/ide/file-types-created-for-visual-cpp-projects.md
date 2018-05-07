@@ -1,13 +1,10 @@
 ---
-title: "Typy vytvořené pro projekty Visual C++ souborů | Microsoft Docs"
-ms.custom: 
+title: Typy vytvořené pro projekty Visual C++ souborů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy souborů vytvořených pro projekty Visual C++
 Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visual C++ pro classic aplikací klasické pracovní plochy. Skutečné soubory obsažené v projektu závisí na typu projektu a možností, které jste vybrali při použití průvodce.  
@@ -63,7 +58,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visua
 |Přípona souboru|Typ|Obsah|  
 |--------------------|----------|--------------|  
 |.asmx|Zdroj|Soubor nasazení.|  
-|ASP|Zdroj|Stránka ASP.|  
+|.asp|Zdroj|Stránka ASP.|  
 |.ATP|Projekt|Soubor projektu šablony aplikace.|  
 |GIF, BMP, DIB, JPG, JPE, .png|Prostředek|Obecné obrázkové soubory.|  
 |.BSC|Kompilace|K souboru kódu prohlížeče.|  
@@ -75,7 +70,7 @@ Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visua
 |.h|Zdroj|Záhlaví (zahrnout) souboru.|  
 |htm, HTML, .xsp, .asp, HTC, HTA, .xml|Prostředek|Běžné webové soubory.|  
 |. HxC|Projekt|Soubor nápovědy projektu.|  
-|.ico, který|Prostředek|Rastrový obrázek ikony.|  
+|.ico|Prostředek|Rastrový obrázek ikony.|  
 |IDB|Kompilace|Stav soubor obsahující informace o závislostech mezi zdrojové soubory a definice tříd, které se dají použít kompilátorem během minimální opětovné sestavení a přírůstkové kompilace. Použití [/Fd](../build/reference/fd-program-database-file-name.md) – možnost kompilátoru k zadání názvu souboru IDB. V tématu [/Gm (povolit minimální sestavení)](../build/reference/gm-enable-minimal-rebuild.md) Další informace.|  
 |.IDL|Kompilace|Soubor definice jazyka rozhraní. V tématu [soubor definice IDL (Interface)](http://msdn.microsoft.com/library/windows/desktop/aa378712) ve Windows SDK pro další informace.|  
 |.ilk|Propojení|Soubor přírůstkové odkazu. V tématu [/PŘÍRŮSTKOVÉ](../build/reference/incremental-link-incrementally.md) Další informace.|  

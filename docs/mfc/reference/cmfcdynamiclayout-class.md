@@ -1,12 +1,9 @@
 ---
-title: "CMFCDynamicLayout – třída | Microsoft Docs"
-ms.custom: 
+title: CMFCDynamicLayout – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDynamicLayout
@@ -24,17 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout – třída
 Určuje, jak jsou ovládací prvky v okně přesunout a po změně velikosti jako uživatel změní velikost okna.  
@@ -94,7 +89,7 @@ class CMFCDynamicLayout : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxlayout.h  
   
-##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem  
  Přidá do seznamu systému windows, která jsou ovládaná správce dynamické rozložení podřízeného okna, obvykle prvku.  
   
 ```  
@@ -127,7 +122,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>Poznámky  
  Pozice a velikosti ovládacího prvku podřízené se změní dynamicky při změně velikosti okno hostování.  
   
-##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
+##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust  
  Přidá do seznamu systému windows, která jsou ovládaná správce dynamické rozložení podřízeného okna, obvykle prvku.  
   
 ```  
@@ -137,7 +132,7 @@ void Adjust();
 ### <a name="remarks"></a>Poznámky  
  Pozice a velikosti ovládacího prvku podřízené se změní dynamicky při změně velikosti okno hostování.  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
  Ukládá a ověří okno hostitele.  
   
 ```  
@@ -153,7 +148,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
  Vrací ukazatel na okno hostitele.  
   
 ```  
@@ -166,7 +161,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení všechny podřízené řízení polohy přepočítat relativně k toto okno.  
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
  Vrátí velikost okna, pod kterou se nezohledňuje rozložení.  
   
 ```  
@@ -179,7 +174,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>Poznámky  
  Pozice a velikosti ovládacího prvku podřízené se změní dynamicky při změně velikosti okno hostování, ale je minimální velikost, pod kterou se nezohledňuje rozložení. Uživatel může změnit velikost okna na menší velikost, ale části okna jsou poté v zobrazení skrytá.  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
  Načte rámeček pro aktuální klientské oblasti okna.  
   
 ```  
@@ -192,7 +187,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem  
  Kontroluje, zda podřízený ovládací prvek byla přidána do dynamické rozložení.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty  
  Zkontroluje, zda má dynamické rozložení žádné podřízená okna Přidat.  
   
 ```  
@@ -220,7 +215,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
  Dynamické rozložení načteme AFX_DIALOG_LAYOUT prostředku a poté použije rozložení do okna hostitele.  
   
 ```  
@@ -244,7 +239,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
+##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal  
  Získá [MoveSettings](#movesettings_structure) hodnotu, která určuje, kolik podřízeného ovládacího prvku se přesune vodorovně, když uživatel změní jeho hostitelské okno.  
   
 ```  
@@ -260,7 +255,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
+##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical  
  Získá [MoveSettings](#movesettings_structure) hodnotu, která určuje, kolik podřízeného ovládacího prvku se přesune vodorovně, když uživatel změní jeho hostitelské okno.  
   
 ```  
@@ -279,7 +274,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
+##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone  
  Získá [MoveSettings](#movesettings_structure) hodnotu, která představuje žádné pohybu svislé nebo vodorovné pro podřízený ovládací prvek.  
   
 ```  
@@ -291,7 +286,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movesettings_structure"></a>Cmfcdynamiclayout::movesettings – struktura  
+##  <a name="movesettings_structure"></a>  Cmfcdynamiclayout::movesettings – struktura  
  Zapouzdří přesunutí dat pro ovládací prvky v dynamické rozložení.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud `MoveSettings` objektu určuje nenulové hodnoty svislé pohyb.  
 
-##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
+##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical  
  Získá [MoveSettings](#movesettings_structure) hodnotu, která určuje, kolik podřízeného ovládacího prvku se přesune ve svislém směru, když uživatel změní jeho hostitelské okno.  
   
 ```  
@@ -348,7 +343,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
  Nastaví velikost okna, pod kterou se nezohledňuje rozložení.  
   
 ```  
@@ -362,7 +357,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>Poznámky  
  Pozice a velikosti ovládacího prvku podřízené se změní dynamicky při změně velikosti okno hostování, ale je minimální velikost, pod kterou se nezohledňuje rozložení. Uživatel může změnit velikost okna na menší velikost, ale části okna jsou poté v zobrazení skrytá.  
   
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
+##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal  
  Získá [SizeSettings](#sizesettings_structure) hodnotu, která určuje, kolik a podřízené po změně velikosti vodorovně když uživatel změní jeho hostitelské okno.  
   
 ```  
@@ -378,7 +373,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
+##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical  
  Získá [SizeSettings](#sizesettings_structure) hodnotu, která určuje, kolik a podřízené po změně velikosti vodorovně když uživatel změní jeho hostitelské okno.  
   
 ```  
@@ -397,7 +392,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
+##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone  
  Získá [SizeSettings](#sizesettings_structure) hodnotu, která představuje žádná změna velikosti pro podřízený ovládací prvek.  
   
 ```  
@@ -409,7 +404,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sizesettings_structure"></a>Cmfcdynamiclayout::sizesettings – struktura  
+##  <a name="sizesettings_structure"></a>  Cmfcdynamiclayout::sizesettings – struktura  
  Zapouzdří data změny velikosti pro ovládací prvky v dynamické rozložení.  
   
 ```  
@@ -449,7 +444,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud `SizeSettings` určuje objekt nenulové hodnoty svislé Změna velikosti.  
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
+##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical  
  Získá [SizeSettings](#sizesettings_structure) hodnotu, která určuje, kolik a podřízené po změně velikosti ve svislém směru při uživatel změní jeho hostitelské okno.  
   
 ```  

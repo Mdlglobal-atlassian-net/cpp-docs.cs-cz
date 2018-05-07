@@ -1,13 +1,10 @@
 ---
-title: "Příjem oznámení z běžných ovládacích prvků | Microsoft Docs"
-ms.custom: 
+title: Příjem oznámení z běžných ovládacích prvků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58131874ed039378a312acaaa238388f335f8e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notification-from-common-controls"></a>Příjem oznámení z běžných ovládacích prvků
 Běžné ovládací prvky jsou podřízená okna, které odesílají zprávy s oznámením do nadřazeného okna, když dojde k události, jako je vstup od uživatele, v ovládacím prvku.  
@@ -48,7 +43,7 @@ Běžné ovládací prvky jsou podřízená okna, které odesílají zprávy s o
  Je jednoduchý způsob, jak dosáhnout voláním `CWnd::GetCurrentMessage`. Tato metoda však pouze načte pozice kurzoru v době, kdy byla zpráva odeslána. Protože kurzor byl pravděpodobně přesunut vzhledem k tomu, že zpráva byla odeslána musí volat **CWnd::GetCursorPos** získat aktuální pozici kurzoru.  
   
 > [!NOTE]
->  `CWnd::GetCurrentMessage`by měla být volána pouze v rámci obslužné rutiny zpráv.  
+>  `CWnd::GetCurrentMessage` by měla být volána pouze v rámci obslužné rutiny zpráv.  
   
  Přidejte následující kód k tělu obslužné rutiny zpráv oznámení (v tomto příkladu **nm_rclick –**):  
   

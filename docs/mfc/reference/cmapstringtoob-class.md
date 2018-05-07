@@ -2,11 +2,8 @@
 title: Třída CMapStringToOb | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
@@ -43,19 +40,17 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a840677819710247e73aa8e3bcb904be756f852
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cmapstringtoob-class"></a>CMapStringToOb Class
+# <a name="cmapstringtoob-class"></a>CMapStringToOb – třída
 Třídy kolekce slovník, který je přiřazen jedinečný `CString` objekty ke `CObject` ukazatele.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -590,8 +585,8 @@ void SetAt(
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void\***  `key` **, void\***  `newValue` **);**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void\***  `key` **, WORD** `newValue` **);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt( LPCTSTR** `key` **, void\*** `newValue` **);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void\***  `newValue` **);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt (LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (WORD** `key` **, CObject\***  `newValue` **);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **, void\***  `newValue` **);**|  
   
@@ -617,9 +612,9 @@ void SetAt(
 ## <a name="see-also"></a>Viz také  
  [CObject – třída](../../mfc/reference/cobject-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)   
- [CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)   
+ [CMapPtrToPtr – třída](../../mfc/reference/cmapptrtoptr-class.md)   
+ [CMapPtrToWord – třída](../../mfc/reference/cmapptrtoword-class.md)   
  [CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)   
- [CMapStringToString Class](../../mfc/reference/cmapstringtostring-class.md)   
+ [CMapStringToString – třída](../../mfc/reference/cmapstringtostring-class.md)   
  [CMapWordToOb Class](../../mfc/reference/cmapwordtoob-class.md)   
  [CMapWordToPtr – třída](../../mfc/reference/cmapwordtoptr-class.md)

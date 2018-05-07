@@ -1,13 +1,10 @@
 ---
-title: "Principy závislostí v aplikaci Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Principy závislostí v aplikaci Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Principy závislostí v aplikacích Visual C++
 Chcete-li zjistit, které knihovny jazyka Visual C++ aplikace závisí na, můžete zobrazit vlastnosti projektu. (V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti** otevřete **stránky vlastností** dialogové okno.) Můžete použít také Prohlížeč závislostí (depends.exe), který vám poskytne komplexnější přehled o závislostech v projektu.  
   
- V **stránky vlastností** dialogové okno, můžete zkontrolovat v části stránky **vlastnosti konfigurace** pochopit závislosti. Například, pokud používá projektu knihovny MFC a zvolíte **použití knihovny MFC**, **použití knihovny MFC ve sdílené knihovně DLL** na **vlastnosti konfigurace**, **obecné**  stránce aplikace za běhu závisí na MFC – knihovny DLL například mfc\<verze > .dll. Pokud vaše aplikace nepoužívá MFC, pokud si zvolíte, se může záviset na knihovny CRT **Runtime Library** hodnotu **Multi-threaded Debug DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)**na **vlastnosti konfigurace**, **C/C++**, **generování kódu** stránky.  
+ V **stránky vlastností** dialogové okno, můžete zkontrolovat v části stránky **vlastnosti konfigurace** pochopit závislosti. Například, pokud používá projektu knihovny MFC a zvolíte **použití knihovny MFC**, **použití knihovny MFC ve sdílené knihovně DLL** na **vlastnosti konfigurace**, **obecné**  stránce aplikace za běhu závisí na MFC – knihovny DLL například mfc\<verze > .dll. Pokud vaše aplikace nepoužívá MFC, pokud si zvolíte, se může záviset na knihovny CRT **Runtime Library** hodnotu **Multi-threaded Debug DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)** na **vlastnosti konfigurace**, **C/C++**, **generování kódu** stránky.  
   
  Komplexnější způsob jak určit, které knihovny DLL, které závisí aplikace na je k otevření aplikace použít závislost Walkera (depends.exe). Si můžete stáhnout nástroj z [Walkera závislostí](http://go.microsoft.com/fwlink/p/?LinkId=132640) webu.  
   

@@ -1,12 +1,9 @@
 ---
 title: __shiftright128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __shiftright128
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fbd52709addbba414d6c6fc839baf96f0b2c02
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Posune množství 128-bit, vyjádřené dvě počty 64-bit `LowPart` a `HighPart`, vpravo podle počtu bitů určeného `Shift` a vrátí nízkou 64bitová verze výsledku.  
   
@@ -43,13 +38,13 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `LowPart`  
+ [v] `LowPart`  
  Nízkou 64bitová verze množství 128-bit se posunou.  
   
- [in] `HighPart`  
+ [v] `HighPart`  
  Vysoká 64bitová verze množství 128-bit se posunou.  
   
- [in] `Shift`  
+ [v] `Shift`  
  Počet bitů se posunou.  
   
 ## <a name="return-value"></a>Návratová hodnota  

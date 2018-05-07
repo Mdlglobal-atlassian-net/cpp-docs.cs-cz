@@ -1,13 +1,10 @@
 ---
-title: "Sestavení projektů C++ v sadě Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Sestavení projektů C++ v sadě Visual Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Sestavení projektů C++ v sadě Visual Studio
 V sadě Visual Studio integrované vývojové prostředí (IDE) existuje několik způsobů vytvářet celé řešení nebo jedním projektu v ní. Můžete také upravit nastavení sestavení a zadejte vlastní kroky sestavení aby vývojových procesech efektivnější.  

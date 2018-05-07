@@ -1,12 +1,9 @@
 ---
-title: "CBitmap – třída | Microsoft Docs"
-ms.custom: 
+title: CBitmap – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap – třída
 Zapouzdří grafiky zařízení rozhraní GDI rastrového obrázku a poskytuje členské funkce k manipulaci s bitové mapy.  
@@ -111,7 +106,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  Vytvoří `CBitmap` objektu.  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>Poznámky  
  Výsledný objekt musí být inicializován s jedním z členské funkce inicializace.  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  Inicializuje paměti závislé na zařízení rastrový obrázek, který má zadaný šířky, výšky a bitový.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  Další informace najdete v tématu Popis **bmBits** pole **rastrový OBRÁZEK** struktura. [Rastrový OBRÁZEK](../../mfc/reference/bitmap-structure.md) struktura je popsaný v části [CBitmap::CreateBitmapIndirect](#createbitmapindirect) – členská funkce.  
   
-##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
  Inicializuje rastrový obrázek, který má šířky, výšky a bitový (Pokud je zadaná) zadaný ve struktuře, na kterou odkazuje `lpBitmap`.  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  Po dokončení se `CBitmap` objektu vytvořeny s `CreateBitmapIndirect` fungovat, nejprve vyberte bitovou mapu mimo kontext zařízení a pak odstraňte `CBitmap` objektu.  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  Inicializuje rastrový obrázek, který je kompatibilní s do zařízení určeného `pDC`.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  Po dokončení se `CBitmap` objektu vytvořeny s `CreateCompatibleBitmap` fungovat, nejprve vyberte bitovou mapu mimo kontext zařízení a pak odstraňte `CBitmap` objektu.  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  Inicializuje discardable rastrový obrázek, který je kompatibilní s kontextu zařízení identifikovaný `pDC`.  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  Po dokončení se `CBitmap` objektu vytvořeny s `CreateDiscardableBitmap` fungovat, nejprve vyberte bitovou mapu mimo kontext zařízení a pak odstraňte `CBitmap` objektu.  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  Vrátí ukazatel na `CBitmap` objektu, pokud Zadaný popisovač pro rastrový obrázek GDI systému Windows.  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>Poznámky  
  Pokud `CBitmap` objekt není už připojený k popisovač dočasného `CBitmap` objekt se vytvoří a připojené. Toto dočasný `CBitmap` je objekt platný pouze dokud příště aplikace má čas nečinnosti v jeho událostí smyčky, na který čas všechny dočasné obrázek objekty jsou odstraněny. Jinými slovy to je, že dočasný objekt platí pouze při zpracování zprávy jeden interval.  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  Načte vlastnosti bitové kopie pro připojené rastrového obrázku.  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  Bitový připojené bitmapy zkopíruje do zadané vyrovnávací paměti.  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>Poznámky  
  Použití [CBitmap::GetBitmap](#getbitmap) k určení velikosti požadované vyrovnávací paměti.  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  Vrátí šířka a výška bitové mapy.  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>Poznámky  
  Výška a šířka jsou předpokládá, že byla dříve nastavena pomocí [SetBitmapDimension](#setbitmapdimension) – členská funkce.  
   
-##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
  Načte prostředek rastrový obrázek s názvem podle `lpszResourceName` nebo určený podle čísla ID v `nIDResource` z spustitelný soubor aplikace.  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  Tyto rastrové obrázky nejsou k dispozici v ovladače zařízení pro Windows verze 3.0 a starší. Úplný seznam rastrové obrázky a zobrazení jejich vzhled najdete v části Windows SDK.  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  Volání této funkce člen se načíst rastrový obrázek a mapování barvy na aktuální barvy systému.  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  Informace o vytváření namapované rastrového obrázku, najdete v části funkce systému Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktura ve Windows SDK.  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Načte předdefinované bitmapy používaná systémem Windows.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  Všimněte si, že konstanta **OEMRESOURCE** musí být definovaná před včetně systému WINDOWS. H, aby bylo možné používat **OBM_** konstanty.  
   
-##  <a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  CBitmap::operator HBITMAP  
  Tento operátor. použijte k získání připojené popisovač GDI systému Windows `CBitmap` objektu.  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  Další informace o použití grafických objektů najdete v tématu [obrázek objekty](http://msdn.microsoft.com/library/windows/desktop/dd144962) ve Windows SDK.  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Nastaví službu bits bitmapy bitových hodnot poskytují `lpBits`.  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>Návratová hodnota  
  Počet bajtů použitých v nastavení bits rastrového obrázku; 0, pokud funkce se nezdaří.  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  Rastrový obrázek v jednotkách 0,1 milimetru přiřadí šířku a výšku.  
   
 ```  

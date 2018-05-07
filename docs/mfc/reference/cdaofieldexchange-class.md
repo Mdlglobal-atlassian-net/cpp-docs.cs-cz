@@ -1,12 +1,9 @@
 ---
-title: "Třída CDaoFieldExchange | Microsoft Docs"
-ms.custom: 
+title: Třída CDaoFieldExchange | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange – třída
 Podporuje rutiny výměna pole záznamu exchange (DFX) používá databázové třídy DAO.  
@@ -61,7 +56,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange::m_prs](#m_prs)|Ukazatel na sadu záznamů, do které DFX se provádí operace.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDaoFieldExchange`nemá základní třídu.  
+ `CDaoFieldExchange` nemá základní třídu.  
   
  Tuto třídu použít, pokud píšete rutiny výměny dat pro vlastní datové typy; jinak nebudete používat přímo tuto třídu. DFX výměny dat mezi pole datových členů z vaší [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt a odpovídající pole ve zdroji dat na aktuální záznam. DFX spravuje exchange v obou směrech ze zdroje dat a ke zdroji dat. V tématu [Technická poznámka 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) informace o vytváření vlastní rutiny DFX.  
   
@@ -71,7 +66,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  Výměna pole záznamu rozhraní DAO (DFX) je velmi podobný výměna pole záznamu (RFX) v databázové třídy MFC založených na rozhraní ODBC ( `CDatabase`, `CRecordset`). Pokud budete rozumět tomu RFX, zjistíte, je snadno použitelný DFX.  
   
- A `CDaoFieldExchange` objekt poskytuje kontextové informace potřebné pro rozhraní DAO záznam pole exchange proběhla. `CDaoFieldExchange`objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. DFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CDaoFieldExchange`. Možné **typ pole** hodnoty jsou:  
+ A `CDaoFieldExchange` objekt poskytuje kontextové informace potřebné pro rozhraní DAO záznam pole exchange proběhla. `CDaoFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. DFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CDaoFieldExchange`. Možné **typ pole** hodnoty jsou:  
   
 - **CDaoFieldExchange::outputColumn** pro pole datových členů.  
   
@@ -85,7 +80,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
  Pokud píšete DFX funkce, zavolejte `IsValidOperation` na začátku funkce k určení, zda aktuální operaci lze provést na konkrétní typ člena dat ( **CDaoFieldExchange::outputColumn** nebo **CDaoFieldExchange::param**).  
   
 ```  
@@ -100,7 +95,7 @@ BOOL IsValidOperation();
   
  Další informace o psaní vlastní rutiny DFX najdete v tématu [Technická poznámka 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
  Určuje operaci provést na [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt přidružený k objektu exchange pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -129,12 +124,12 @@ BOOL IsValidOperation();
 |**DumpField**|Vypíše obsah pole (pouze ladění).|  
 |**MaxDFXOperation**|Použít pro kontrolu vstupní.|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
  Obsahuje odkazy [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt přidružený k `CDaoFieldExchange` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
  Volání `SetFieldType` ve vaší `CDaoRecordset` třídy `DoFieldExchange` přepsat.  
   
 ```  

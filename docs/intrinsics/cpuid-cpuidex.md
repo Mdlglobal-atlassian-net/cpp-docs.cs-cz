@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914b7117da99e69f4c531583be62158bbb693b85
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
+# <a name="cpuid-cpuidex"></a>__cpuid __cpuidex
 
-**Microsoft Specific**
+**Konkrétní Microsoft**
 
 Generuje `cpuid` instrukce, která je dostupná na x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Tento pokyn dotazuje procesor pro informace o podporovaných funkcích a typ procesoru.
 

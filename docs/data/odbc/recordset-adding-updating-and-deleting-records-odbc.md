@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Seznam záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC).
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -71,16 +66,16 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 |Pouze připojení|A|N|N|A|  
 |Plně aktualizovat|A|A|A|A|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>Určení zda sady záznamů je aktualizovatelná  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Určení zda sady záznamů je aktualizovatelná  
  Objekt sady záznamů je možné aktualizovat, pokud je možné aktualizovat zdroj dat a otevřít sadu záznamů jako lze aktualizovat. Jeho aktualizovatelnosti závisí také na příkazu SQL můžete použít, možnosti ovladač rozhraní ODBC a jestli je knihovna kurzorů rozhraní ODBC v paměti. Jen pro čtení sady záznamů nebo zdroj dat nelze aktualizovat.  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>Chcete-li určit, zda je aktualizovat sady záznamů  
   
 1.  Volání objektu sady záznamů [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) – členská funkce.  
   
-     `CanUpdate`vrátí nenulovou hodnotu, pokud je sada záznamů aktualizovatelná.  
+     `CanUpdate` vrátí nenulovou hodnotu, pokud je sada záznamů aktualizovatelná.  
   
- Ve výchozím nastavení jsou sady záznamů plně aktualizovatelné (můžete provádět `AddNew`, **upravit**, a **odstranit** operations). Ale můžete také použít [pouze přidat](../../mfc/reference/crecordset-class.md#open) možnost otevření aktualizovatelné sady záznamů. Sady záznamů, otevřené tímto způsobem umožňuje pouze přidávání nových záznamů s `AddNew`. Nelze upravit nebo odstranit existující záznamy. Můžete zkontrolovat, zda je otevřena pouze pro přidávání voláním sady záznamů [CanAppend](../../mfc/reference/crecordset-class.md#canappend) – členská funkce. `CanAppend`vrátí nenulovou hodnotu, pokud je plně aktualizovatelná nebo otevřít pouze pro přidávání záznamů.  
+ Ve výchozím nastavení jsou sady záznamů plně aktualizovatelné (můžete provádět `AddNew`, **upravit**, a **odstranit** operations). Ale můžete také použít [pouze přidat](../../mfc/reference/crecordset-class.md#open) možnost otevření aktualizovatelné sady záznamů. Sady záznamů, otevřené tímto způsobem umožňuje pouze přidávání nových záznamů s `AddNew`. Nelze upravit nebo odstranit existující záznamy. Můžete zkontrolovat, zda je otevřena pouze pro přidávání voláním sady záznamů [CanAppend](../../mfc/reference/crecordset-class.md#canappend) – členská funkce. `CanAppend` vrátí nenulovou hodnotu, pokud je plně aktualizovatelná nebo otevřít pouze pro přidávání záznamů.  
   
  Následující kód ukazuje, jak je možné použít `CanUpdate` pro objekt sady záznamů názvem `rsStudentSet`:  
   
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  Když připravujete aktualizovat sadu záznamů voláním **aktualizace**, vezměte v potaz, že vaše sada záznamů obsahuje všechny sloupce, které představují primární klíč tabulky (nebo všechny sloupce všech jedinečný index pro tabulku). V některých případech rozhraní slouží k identifikaci, který záznam v tabulce aktualizovat pouze vybrané sloupce ve vaší sadě záznamů. Bez všechny potřebné sloupce může být aktualizováno více záznamů v tabulce, případně poškození referenční integrity tabulky. V takovém případě vyvolá architektura výjimky při volání **aktualizace**.  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>Přidání záznamu do sady záznamů  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> Přidání záznamu do sady záznamů  
  Můžete přidat nové záznamy do sady záznamů, pokud jeho [CanAppend](../../mfc/reference/crecordset-class.md#canappend) – členská funkce vrátí nenulovou hodnotu.  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>Chcete-li přidat nový záznam do sady záznamů  
@@ -106,7 +101,7 @@ if( !rsStudentSet.CanUpdate( ) )
   
 2.  Volání objektu sady záznamů [AddNew](../../mfc/reference/crecordset-class.md#addnew) – členská funkce.  
   
-     `AddNew`připraví sadu záznamů tak, aby fungoval jako vyrovnávací paměť úprav. Všechna pole datových členů jsou nastaveny speciální hodnotu Null a označeny jako beze změny, pouze změny (dirty) hodnoty jsou zapsány ke zdroji dat při volání [aktualizace](../../mfc/reference/crecordset-class.md#update).  
+     `AddNew` připraví sadu záznamů tak, aby fungoval jako vyrovnávací paměť úprav. Všechna pole datových členů jsou nastaveny speciální hodnotu Null a označeny jako beze změny, pouze změny (dirty) hodnoty jsou zapsány ke zdroji dat při volání [aktualizace](../../mfc/reference/crecordset-class.md#update).  
   
 3.  Nastavte hodnoty nový záznam pole datových členů.  
   
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Zrušit `AddNew` nebo **upravit** volání, jednoduše proveďte jiné volání `AddNew` nebo **upravit** nebo volání **přesunout** s **AFX_MOVE_REFRESH**  parametr. Datové členy se resetují na předchozí hodnoty a můžete se pořád ještě v **upravit** nebo **přidat** režimu.  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>Úprava záznamů v sadě záznamů  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> Úprava záznamů v sadě záznamů  
  Pokud můžete upravit existující záznamy sady záznamů [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) – členská funkce vrátí nenulovou hodnotu.  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>Chcete-li upravit existující záznam v sadě záznamů  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Zrušit `AddNew` nebo **upravit** volání, jednoduše proveďte jiné volání `AddNew` nebo **upravit** nebo volání **přesunout** s **AFX_MOVE_REFRESH**  parametr. Datové členy se resetují na předchozí hodnoty a můžete se pořád ještě v **upravit** nebo **přidat** režimu.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>Odstranění záznamu z sady záznamů  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> Odstranění záznamu z sady záznamů  
  Pokud odstraníte záznamy sady záznamů [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) – členská funkce vrátí nenulovou hodnotu.  
   
 #### <a name="to-delete-a-record"></a>Odstranit záznam  

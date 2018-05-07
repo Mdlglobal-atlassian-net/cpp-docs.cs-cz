@@ -1,13 +1,10 @@
 ---
-title: "Běžné makra pro příkazy a vlastnosti sestavení | Microsoft Docs"
-ms.custom: 
+title: Běžné makra pro příkazy a vlastnosti sestavení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,24 +98,22 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Běžné makra pro příkazy a vlastnosti sestavení
 V závislosti na možnosti instalace sady Visual Studio můžete zpřístupnit stovky makra pro vás. Tyto odpovídat vlastnosti nástroje MSBuild, které jsou nastavené ve výchozím nastavení, nebo soubory props nebo .targets nebo nastavení projektu. Tyto makra lze použít kdekoli v projektu na **stránky vlastností** dialogové, kde jsou přijímány řetězce. Tyto makra se nerozlišují malá a velká písmena.  
   
  Pokud chcete zobrazit aktuálně k dispozici makra ve sloupci vpravo od názvu vlastnosti, klikněte na šipku rozevíracího seznamu. Pokud **upravit** je k dispozici, klikněte na něj a potom v dialogovém okně upravit, klikněte na **makra**. Další informace najdete v tématu **Specifying User-Defined hodnoty** části [stránky vlastností](../ide/property-pages-visual-cpp.md).  
   
- Makra, které jsou označeny "Zastaralé" se již nepoužívají nebo byly nahrazeny ekvivalentní [makro metadata položky](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***název***)**) . Makra, které jsou označeny "zastaralé; migrovat"je taky zastaralá. A kromě toho, pokud je projekt, který obsahuje makro migrovali ze sady Visual Studio 2008, Visual Studio převede makro na ekvivalentní aktuální makro.  
+ Makra, které jsou označeny "Zastaralé" se již nepoužívají nebo byly nahrazeny ekvivalentní [makro metadata položky](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***název***)**). Makra, které jsou označeny "zastaralé; migrovat"je taky zastaralá. A kromě toho, pokud je projekt, který obsahuje makro migrovali ze sady Visual Studio 2008, Visual Studio převede makro na ekvivalentní aktuální makro.  
   
  Následující tabulka popisuje podmnožinu běžně používané k dispozici makra. Tento seznam není vyčerpávající. Podrobnosti na způsob vytváření a použít jako makra v VCXPROJ soubory props, .targets a definice vlastnosti nástroje MSBuild najdete v tématu [vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties).  
   

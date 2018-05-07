@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Dynamické vazby datových sloupců (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Dynamické vazby datových sloupců (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e834820266e83d2c07bbe46f07e2ac48b0d18e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe71707de20ba02228039e5693cab9c9401d560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Sada záznamů: Dynamické vazby datových sloupců (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -42,7 +37,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 > [!NOTE]
 >  Toto téma se vztahuje na objekty, které jsou odvozené z `CRecordset` v který řádek hromadné načítání se neimplementovala. Technik popsaných obecně není vhodné, pokud používáte hromadné načítání řádků. Další informace o hromadné načítání řádků najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a>Když může svázat sloupců dynamicky  
+##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Když může svázat sloupců dynamicky  
  V době návrhu, Průvodce aplikací knihovny MFC nebo [průvodce příjemcem knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (z **přidat třídu**) vytváří na základě známých tabulek a sloupců na zdroj dat třídy sady záznamů. Databáze může změnit při návrhu a pokud vaše aplikace používá tyto tabulky a sloupce v době běhu později. Vy nebo jiný uživatel může přidat nebo vyřadit tabulku nebo přidat nebo vyřadit sloupce z tabulky, která vychází sada záznamů vaší aplikace. To pravděpodobně není důležité pro všechny aplikace, přístup k datům, ale pokud je pro vaše, jak můžete vypořádat s změny ve schématu databáze, jiné než přepracování a nutnosti rekompilace? Účelem tohoto tématu je odpověď na tuto otázku.  
   
  Toto téma popisuje nejběžnější případ, ve kterém můžete dynamicky vázat sloupce – zahájené se záznamů založené na schéma známé databáze, chcete zpracovávat další sloupce v době běhu. Další téma předpokládá, že mapování dalších sloupců do `CString` pole datových členů, nejběžnější případ, i když jsou dodávány návrhy, které vám pomohou spravovat jiné datové typy.  
@@ -57,12 +52,12 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Toto téma nepopisuje ostatních případech dynamické vazby, například vynechaných tabulky nebo sloupce. Pro případy budete muset použít rozhraní API ODBC volání více přímo. Informace najdete v tématu ODBC SDK *referenční informace pro programátory* na disku CD knihovny MSDN.  
   
-##  <a name="_core_how_to_bind_columns_dynamically"></a>Jak vytvořit vazbu sloupců dynamicky  
+##  <a name="_core_how_to_bind_columns_dynamically"></a> Jak vytvořit vazbu sloupců dynamicky  
  Pokud chcete vytvořit vazbu sloupců dynamicky, musíte vědět, (nebo být schopní určit) názvy dalších sloupců. Musíte také přidělit úložiště pro další pole datových členů, zadejte jejich názvy a jejich typy a zadat počet sloupců, který chcete přidat.  
   
  Následující diskuse uvádí dvě různé sady záznamů. První je hlavní sada záznamů, který vybere záznamy z cílové tabulky. Druhá je speciální sloupec sady záznamů použít k získání informací o sloupcích v cílové tabulce.  
   
-###  <a name="_core_the_general_process"></a>Obecné procesu  
+###  <a name="_core_the_general_process"></a> Obecné procesu  
  Nejvýše obecné úrovni, postupujte takto:  
   
 1.  Sestavení objektu sady hlavní záznamů.  
@@ -77,7 +72,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
      Sady záznamů vybere záznamy a používá pole záznamu (exchange – RFX) pro vazbu statické sloupce (ty jsou mapovány na sadu záznamů pole datových členů) a dynamické sloupce (mapovat do dalšího úložiště, které přidělíte).  
   
-###  <a name="_core_adding_the_columns"></a>Přidání sloupců  
+###  <a name="_core_adding_the_columns"></a> Přidání sloupců  
  Dynamické vazby přidat sloupce v době běhu vyžaduje následující kroky:  
   
 1.  V době běhu zjistěte, co jsou sloupce v cílové tabulce. Extrahuje z těchto informací seznam sloupců, které byly přidány do tabulky vzhledem k tomu, že byl navržen třídu sady záznamů.  
@@ -94,7 +89,7 @@ Vytváření seznamů sloupců pro vazbu dynamicky
   
      Jeden z přístupů je přidání smyčky do hlavní sady záznamů `DoFieldExchange` funkce, který projde seznam nových sloupců, voláním příslušné RFX funkce pro každý sloupec v seznamu. Při každém volání RFX předejte název sloupce ze seznamu sloupců název a umístění úložiště v odpovídající členem hodnota seznam výsledků.  
   
-###  <a name="_core_lists_of_columns"></a>Seznam sloupců  
+###  <a name="_core_lists_of_columns"></a> Seznam sloupců  
  V následující tabulce jsou uvedeny čtyři seznamy, které potřebujete k práci s.  
   
  **Aktuální sloupců tabulky (seznam 1 na obrázku)** seznam sloupce v tabulce ve zdroji dat. Tento seznam může odpovídat seznam sloupců, které jsou aktuálně provázána ve vaší sadě záznamů.  
@@ -108,7 +103,7 @@ Vytváření seznamů sloupců pro vazbu dynamicky
  **Dynamické hodnoty sloupce (seznam 4 na obrázku)**  
  Seznam obsahující úložiště pro hodnoty ze sloupce, které můžete vytvořit vazbu dynamicky načíst. Prvky tohoto seznamu odpovídají sloupcům v sloupce do dynamickou vazbu, 1.  
   
-###  <a name="_core_building_your_lists"></a>Vytváření seznamů  
+###  <a name="_core_building_your_lists"></a> Vytváření seznamů  
  S strategie Obecné v paměti můžete zapnout na podrobnosti. Postupy v zbývající část tohoto tématu ukazují, jak vytvářet seznamy ukazuje [seznamy sloupců](#_core_lists_of_columns). Podle pokynů Průvodce vás provede:  
   
 -   [Určení názvy sloupců nejsou ve vaší sadě záznamů](#_core_determining_which_table_columns_are_not_in_your_recordset).  
@@ -117,7 +112,7 @@ Vytváření seznamů sloupců pro vazbu dynamicky
   
 -   [Dynamické přidávání RFX volání pro nové sloupce](#_core_adding_rfx_calls_to_bind_the_columns).  
   
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a>Určení, které jsou sloupce tabulky nejsou v sady záznamů  
+###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Určení, které jsou sloupce tabulky nejsou v sady záznamů  
  Sestavte seznam (vázané sloupce sady záznamů, jako v seznamu 2 na obrázku), který obsahuje seznam sloupců, již je svázaná vaší hlavní sady záznamů. Potom můžete vytvoříte seznam (sloupce do dynamickou vazbu, odvozená od aktuální sloupců tabulky a sloupce sad záznamů hranice) obsahující názvy sloupců, které jsou v tabulce ve zdroji dat, ale ne v hlavní sady záznamů.  
   
 ##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>Chcete-li zjistit názvy sloupců nejsou v sadě záznamů (sloupce pro dynamickou vazby)  
@@ -138,7 +133,7 @@ Vytváření seznamů sloupců pro vazbu dynamicky
   
      Prvky tohoto seznamu Přehrát roli nové sady záznamů pole datových členů. Jsou umístění úložiště, na které jsou vázány dynamické sloupce. Popis seznamů najdete v tématu [seznamy sloupců](#_core_lists_of_columns).  
   
-###  <a name="_core_providing_storage_for_the_new_columns"></a>Poskytování úložiště pro nové sloupce  
+###  <a name="_core_providing_storage_for_the_new_columns"></a> Poskytování úložiště pro nové sloupce  
  Potom si nastavte umístění úložiště pro sloupce, které mají být dynamicky vázána. Cílem je zajistit element seznamu pro uložení každá hodnota sloupce. Tato umístění úložiště paralelní členské proměnné sady záznamů, které ukládají obvyklé vázané sloupce.  
   
 ##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>K poskytování dynamické úložiště pro nové sloupce (dynamické hodnoty sloupce)  
@@ -154,7 +149,7 @@ Vytváření seznamů sloupců pro vazbu dynamicky
 > [!TIP]
 >  Pokud nové sloupce nejsou všechny stejného typu dat, můžete chtít extra paralelní seznam obsahující položky, které nějakým způsobem definování typu jednotlivých odpovídající element v seznamu sloupců. (Můžete použít hodnoty **AFX_RFX_BOOL**, **AFX_RFX_BYTE**a tak dále, pokud chcete. Tyto konstanty jsou definovány v AFXDB. H.) Vyberte typ seznamu založené na tom, jak představují datové typy sloupce.  
   
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a>Přidání volání RFX pro vazbu sloupců  
+###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Přidání volání RFX pro vazbu sloupců  
  Nakonec uspořádat dynamické vazby provádí umístění RFX volání pro nové sloupce ve vaší `DoFieldExchange` funkce.  
   
 ##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>Chcete-li dynamicky přidat volání RFX pro nové sloupce  

@@ -1,12 +1,9 @@
 ---
-title: "ICommandImpl – třída | Microsoft Docs"
-ms.custom: 
+title: ICommandImpl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec1c9bb3a430b30350ca3940fc7c90e6758d7c40
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d69ff56ec92fd3acb622aa4c0399893fb44c4d1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 Poskytuje implementaci pro [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) rozhraní.  
@@ -51,11 +46,11 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
   
 |||  
 |-|-|  
-|[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|Zruší aktuální provedení příkazu.|  
+|[Cancelexecution –](../../data/oledb/icommandimpl-cancelexecution.md)|Zruší aktuální provedení příkazu.|  
 |[Zrušení](../../data/oledb/icommandimpl-cancel.md)|Zruší aktuální provedení příkazu.|  
-|[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|Vytvoří objekt sady řádků.|  
+|[Createrowset –](../../data/oledb/icommandimpl-createrowset.md)|Vytvoří objekt sady řádků.|  
 |[Spuštění](../../data/oledb/icommandimpl-execute.md)|Spustí příkaz.|  
-|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Vrátí ukazatele rozhraní do relace, který vytvořili příkaz.|  
+|[Getdbsession –](../../data/oledb/icommandimpl-getdbsession.md)|Vrátí ukazatele rozhraní do relace, který vytvořili příkaz.|  
 |[Icommandimpl –](../../data/oledb/icommandimpl-icommandimpl.md)|Konstruktor|  
   
 ### <a name="data-members"></a>Datové členy  

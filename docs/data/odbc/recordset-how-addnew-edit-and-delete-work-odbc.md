@@ -2,12 +2,9 @@
 title: 'Sada záznamů: Jak AddNew, Edit a Delete (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Sada záznamů: Funkce operací AddNew, Edit a Delete (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -57,7 +52,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Jako doplněk si můžete přečíst [výměna polí záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), který popisuje odpovídající roli RFX v operacích aktualizace.  
   
-##  <a name="_core_adding_a_record"></a>Přidání záznamu  
+##  <a name="_core_adding_a_record"></a> Přidání záznamu  
 
  Přidávání nového záznamu do sady záznamů zahrnuje volání sady záznamů [AddNew](../../mfc/reference/crecordset-class.md#addnew) – členská funkce, nastavení hodnoty nový záznam pole datových členů a volání [aktualizace](../../mfc/reference/crecordset-class.md#update) – členská funkce pro zápis záznam ke zdroji dat.  
   
@@ -95,7 +90,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     > [!TIP]
     >  Zjistit, kdy datových členů sady záznamů, změňte hodnotu, používá MFC **PSEUDO_NULL** hodnotu pro každý typ dat, který chcete uložit v sadě záznamů. Pokud musíte explicitně nastavit pole na **PSEUDO_NULL** hodnota a pole se stane již označeno jako Null, musíte také zavolat `SetFieldNull`, předávání na adresu v poli první parametr a **FALSE**v druhý parametr.  
   
-##  <a name="_core_visibility_of_added_records"></a>Viditelnost přidaných záznamů  
+##  <a name="_core_visibility_of_added_records"></a> Viditelnost přidaných záznamů  
  Když je přidaný záznam viditelné pro sady záznamů Přidání záznamů se někdy zobrazují a někdy nejsou viditelné v závislosti na dvě věci:  
   
 -   Jaké ovladače je schopen.  
@@ -104,7 +99,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Pokud ovladač ODBC podporuje **:: SQLSetPos** funkce rozhraní API ODBC, MFC pomocí funkce přidat záznamy. S **:: SQLSetPos**, přidat záznamy jsou viditelné pro žádné aktualizovat sadu záznamů MFC. Bez podpory pro tuto funkci přidat záznamy nejsou viditelné a musíte **Requery** k jejich zobrazení. Pomocí **:: SQLSetPos** je také efektivnější.  
   
-##  <a name="_core_editing_an_existing_record"></a>Úprava existujícího záznamu  
+##  <a name="_core_editing_an_existing_record"></a> Úprava existujícího záznamu  
  Úprava existujícího záznamu v sadě záznamů zahrnuje posunutí na záznam, volání sady záznamů [upravit](../../mfc/reference/crecordset-class.md#edit) – členská funkce, nastavení hodnoty nový záznam pole datových členů a volání [aktualizovat](../../mfc/reference/crecordset-class.md#update)– členská funkce zapsat změněné záznam ke zdroji dat.  
   
  Podmínkou pro volání **upravit**, musí být sady záznamů, aktualizovat a na záznam. `CanUpdate` a `IsDeleted` členské funkce umožňují určit tyto podmínky. Záznam na aktuální záznam nesmí mít smazaný a musí být záznamy v sadě záznamů (obě `IsBOF` a `IsEOF` vrátit 0).  
@@ -140,7 +135,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     > [!TIP]
     >  Když zavoláte `AddNew` nebo **upravit** po zavolání funkce dřív, ale před volání **aktualizace**, vyrovnávací paměť pro úpravu se aktualizují s uložené záznam, nových nebo upravených v nahrazení záznamu průběh. Toto chování poskytuje způsob k přerušení `AddNew` nebo **upravit** a začít další: Pokud zjistíte, že záznam v průběhu chybný, jednoduše volání **upravit** nebo `AddNew` znovu.  
   
-##  <a name="_core_deleting_a_record"></a>Odstranění záznamu  
+##  <a name="_core_deleting_a_record"></a> Odstranění záznamu  
  Odstranění záznamu z sady záznamů zahrnuje posunutí na záznam a volání sady záznamů [odstranit](../../mfc/reference/crecordset-class.md#delete) – členská funkce. Na rozdíl od `AddNew` a **upravit**, **odstranit** nevyžaduje odpovídající volání **aktualizace**.  
   
  Podmínkou pro volání **odstranit**, musí být aktualizovat sadu záznamů a musí být na záznam. `CanUpdate`, `IsBOF`, `IsEOF`, A `IsDeleted` členské funkce umožňují určit tyto podmínky.  

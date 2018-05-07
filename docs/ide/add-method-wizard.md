@@ -1,13 +1,10 @@
 ---
-title: "Průvodce přidáním metody | Microsoft Docs"
-ms.custom: 
+title: Průvodce přidáním metody | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Průvodce přidáním metody
 Pomocí tohoto Průvodce přidání metody do rozhraní. V závislosti na typu projektu nebo na kterou přidáváte metodu typ rozhraní Průvodce zobrazí různé možnosti.  
   
 ## <a name="names"></a>Názvy  
  **Návratový typ**  
- Datový typ vrácený metodou. `HRESULT`doporučuje se pro všechny typy rozhraní, protože poskytuje standardní způsob, jak vracet chyby.  
+ Datový typ vrácený metodou. `HRESULT` doporučuje se pro všechny typy rozhraní, protože poskytuje standardní způsob, jak vracet chyby.  
   
 |Typ rozhraní|Popis|  
 |--------------------|-----------------|  
@@ -77,8 +72,8 @@ Pomocí tohoto Průvodce přidání metody do rozhraní. V závislosti na typu p
 |Atribut parametru|Popis|Povolené kombinace|  
 |-------------------------|-----------------|--------------------------|  
 |**V**|Označuje, že parametr se předává z volání procedury vyvolání procedury.|**v** pouze<br /><br /> **v** a **out**|  
-|**Na více systémů**|Označuje, že je parametr ukazatele vrácená z volané procedury volání procedury (ze serveru do klienta).|**out** pouze<br /><br /> **v** a **out**<br /><br /> **out** a **retval –**|  
-|**Retval –**|Označuje, že parametr obdrží hodnotu vrácenou člena.|**retval –** a na víc systémů|  
+|**na více systémů**|Označuje, že je parametr ukazatele vrácená z volané procedury volání procedury (ze serveru do klienta).|**out** pouze<br /><br /> **v** a **out**<br /><br /> **out** a **retval –**|  
+|**retval –**|Označuje, že parametr obdrží hodnotu vrácenou člena.|**retval –** a na víc systémů|  
   
  **Typ parametru**  
  Nastaví datový typ parametru. Vyberte typ ze seznamu.  

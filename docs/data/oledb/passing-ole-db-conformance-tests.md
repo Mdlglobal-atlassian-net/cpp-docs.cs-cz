@@ -1,12 +1,9 @@
 ---
-title: "Předávání testů shodnosti technologie OLE DB | Microsoft Docs"
-ms.custom: 
+title: Předávání testů shodnosti technologie OLE DB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 11677e6295956de768c7ebc0c113d775b066bb0c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
 Chcete-li více konzistentní zprostředkovatelé, Data Access SDK poskytuje sadu testů shodnosti technologie OLE DB. Testy zkontrolujte všechny aspekty svého poskytovatele a získáte přiměřenou jistotu, že váš zprostředkovatel funguje podle očekávání. Můžete najít testů shodnosti technologie OLE DB na Microsoft Data Access SDK. Tato část se zaměřuje na věcí, které byste měli udělat předávání testů shodnosti. Informace o spuštění testů shodnosti technologie OLE DB naleznete v sadě SDK.  

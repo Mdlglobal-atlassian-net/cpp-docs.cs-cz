@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvek seznamu a zobrazení seznamu | Microsoft Docs"
-ms.custom: 
+title: Ovládací prvek seznamu a zobrazení seznamu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c9d559d642b6edf926b9feb49332ef7ec2924a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-control-and-list-view"></a>Ovládací prvek seznamu a zobrazení seznamu
 Pro usnadnění práce zapouzdří MFC ovládacího prvku seznam dvěma způsoby. Můžete použít ovládací prvky seznamu:  
@@ -36,7 +31,7 @@ Pro usnadnění práce zapouzdří MFC ovládacího prvku seznam dvěma způsoby
   
 -   Nepřímo, s použitím třídy [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView`umožňuje snadno integrovat ovládací prvek seznamu architektuře dokument/zobrazení MFC zapouzdřením ovládacího prvku mnohem jako [CEditView](../mfc/reference/ceditview-class.md) zapouzdří ovládací prvek upravit: ovládací prvek vyplní celé plochy zobrazení knihovny MFC. (Zobrazení *je* prvku přetypovat `CListView`.)  
+ `CListView` umožňuje snadno integrovat ovládací prvek seznamu architektuře dokument/zobrazení MFC zapouzdřením ovládacího prvku mnohem jako [CEditView](../mfc/reference/ceditview-class.md) zapouzdří ovládací prvek upravit: ovládací prvek vyplní celé plochy zobrazení knihovny MFC. (Zobrazení *je* prvku přetypovat `CListView`.)  
   
  A `CListView` objekt dědí z [CCtrlView](../mfc/reference/cctrlview-class.md) a jeho základní třídy a přidá členské funkce načíst základní ovládací prvek seznamu. Pomocí zobrazení členů pro práci s zobrazení jako zobrazení. Použití [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) – členská funkce k získání přístupu k členské funkce ovládacího prvku seznam. Pomocí těchto členů na:  
   

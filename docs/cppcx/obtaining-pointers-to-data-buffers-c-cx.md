@@ -1,31 +1,26 @@
 ---
-title: "Získání ukazatele na datové vyrovnávací paměti (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Získání ukazatele na datové vyrovnávací paměti (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e04a1adabab004ef64ed308d1222400192f235
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatele na datové vyrovnávací paměti (C + +/ CX)
 V prostředí Windows Runtime [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní zajišťuje jazykově neutrální, na základě datového proudu pro přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaná ukazatel základního bajtového pole pomocí rozhraní Windows Runtime knihovny IBufferByteAccess, která je definována v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě bez provedení všechny nepotřebné kopie data.  
   
  Následující diagram znázorňuje obrázek element XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` do C++ kód a potom C++ můžete použít odkaz na získat na základní vyrovnávací paměti. V aplikaci univerzální platformu Windows, který je napsán v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v prostředí Windows Runtime součásti.  
   
- ![C & č. 43; & č. 43; kód přímo přístup k datům pixelů](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; kód přímo přístup k datům pixelů](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
  Přijímá následující metodu [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí nezpracovaná ukazatel do základního bajtového pole. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.  
@@ -79,7 +74,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
             </Grid>  
         ```  
   
-3.  In MainPage.xaml.cs  
+3.  V MainPage.xaml.cs  
   
     1.  Přidejte tyto deklarace oborů názvů:  
   
@@ -163,7 +158,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
     4.  Přidat podpis z `GetPointerToPixelData` metoda, která se zobrazí ve starší fragmentu kódu. Ujistěte se, že tato metoda je soukromé.  
   
-3.  In Class1.cpp  
+3.  V Class1.cpp  
   
     1.  Přidat tyto `#include` direktivy a deklarace oborů názvů:  
   

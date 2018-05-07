@@ -1,31 +1,26 @@
 ---
-title: "Postupy: vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
 Následující postup popisuje vytvoření uživatelského ovládacího prvku rozhraní .NET Framework, vytváření uživatelského ovládacího prvku v knihovnu tříd ovládacího prvku (konkrétně knihovny ovládacích prvků Windows projekt) a pak kompilace projektu do sestavení. Ovládací prvek může být používán pak z aplikace MFC, která používá třídy odvozené od třídy [CView – třída](../mfc/reference/cview-class.md) a [CWinFormsView třída](../mfc/reference/cwinformsview-class.md).  

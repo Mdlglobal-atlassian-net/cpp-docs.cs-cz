@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Stránky vlastností | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Stránky vlastností | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 Stránky vlastností umožnit uživateli ovládacího prvku ActiveX k zobrazení a změna vlastností ovládacího prvku ActiveX. Tyto vlastnosti jsou dostupné přes vyvolání řízení dialogové okno Vlastnosti, která obsahuje jeden nebo více stránek vlastností, které poskytují vlastní grafické rozhraní pro zobrazení a úprava vlastností ovládacího prvku.  
@@ -61,7 +56,7 @@ Dialogové okno Vlastnosti
   
  Informace o používání vlastností v aplikaci MFC než ovládacího prvku ActiveX najdete v tématu [vlastností](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a>Implementace výchozí stránky vlastností  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementace výchozí stránky vlastností  
  Pokud používáte Průvodce ovládacím prvkem ActiveX k vytvoření projektu ovládacího prvku, Průvodce ovládacím prvkem ActiveX poskytuje třídu výchozí vlastnosti stránky pro ovládací prvek odvozen od [COlePropertyPage třída](../mfc/reference/colepropertypage-class.md). Na začátku této stránky vlastností je prázdný, ale do něj může přidat žádné dialogové okno Ovládací prvek nebo sadu ovládacích prvků. Protože Průvodce ovládacím prvkem ActiveX vytvoří pouze jednu vlastnost třídy stránky ve výchozím nastavení, další vlastnosti třídy stránky (také odvozené z `COlePropertyPage`) musí být vytvořen pomocí zobrazení tříd. Další informace o tomto postupu najdete v tématu [MFC – ovládací prvky ActiveX: Přidání jinou vlastní vlastnost stránku](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
  Implementace vlastností stránky (v tomto případě výchozí hodnota) je proces třech krocích:  
@@ -76,7 +71,7 @@ Dialogové okno Vlastnosti
   
  Například pro účely, následující postupy použijte jednoduchý ovládací prvek (s názvem "Ukázkový"). Ukázka byla vytvořena pomocí Průvodce ovládacím prvkem ActiveX a obsahuje pouze uložených vlastností titulek.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a>Přidání ovládacích prvků na stránce vlastností  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Přidání ovládacích prvků na stránce vlastností  
   
 #### <a name="to-add-controls-to-a-property-page"></a>Přidání ovládacích prvků do stránky vlastností  
   
@@ -96,7 +91,7 @@ Dialogové okno Vlastnosti
   
  Teď, když byla změněna uživatelské rozhraní, budete muset propojit textové pole s vlastnosti titulku. To se provádí v následující části úpravou `CSamplePropPage::DoDataExchange` funkce.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a>Přizpůsobení DoDataExchange – funkce  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Přizpůsobení DoDataExchange – funkce  
  Stránky vlastností [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) funkce umožňuje propojit hodnoty vlastností stránky a skutečné hodnoty vlastností v ovládacím prvku. Když Pokud chcete stanovit odkazy, je nutné mapovat do jejich vlastnosti příslušných ovládacích prvků pole stránky odpovídající vlastnost.  
   
  Tato mapování jsou implementované pomocí stránky vlastností **ddp_ –** funkce. **Ddp_ –** funkce fungovat jako **DDX_** funkcí používaných v standardní dialogová okna MFC, s jednou výjimkou. Kromě odkaz na proměnnou člen **ddp_ –** funkce přebírat název vlastnosti ovládacího prvku. Následuje typický položku v `DoDataExchange` funkce pro danou stránku vlastností.  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CWinFormsDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CWinFormsDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog – třída
 Obálka pro třídy dialogového okna knihovny MFC, který je hostitelem uživatelského ovládacího prvku Windows Forms.  
@@ -74,14 +69,14 @@ class CWinFormsDialog :
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Vrhá typu jako odkaz na uživatelský ovládací prvek Windows Forms.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWinFormsDialog`představuje obálku pro třídu dialogové okno knihovny MFC ( [CDialog](../../mfc/reference/cdialog-class.md)), který hostuje uživatelského ovládacího prvku Windows Forms. To umožňuje zobrazení ovládacích prvků modální nebo nemodálním dialogovém okně knihovny MFC rozhraní .NET Framework.  
+ `CWinFormsDialog` představuje obálku pro třídu dialogové okno knihovny MFC ( [CDialog](../../mfc/reference/cdialog-class.md)), který hostuje uživatelského ovládacího prvku Windows Forms. To umožňuje zobrazení ovládacích prvků modální nebo nemodálním dialogovém okně knihovny MFC rozhraní .NET Framework.  
   
  Další informace o používání Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) a [hostitelské poskytování uživatelského Windows Form jako dialogového okna knihovny MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  Vytvoří `CWinFormsDialog` objektu.  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  Obsahuje ID prostředku šablony dialogové okno pole. Použití editoru dialogových oken k vytvoření šablony dialogového okna a jeho uložení v souboru skriptu prostředků aplikace. Další informace o dialogovém okně šablony najdete v tématu [CDialog – třída](../../mfc/reference/cdialog-class.md).  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Získá odkaz na uživatelský ovládací prvek Windows Forms.  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na ovládacího prvku Windows Forms v dialogovém okně knihovny MFC.  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  Načte popisovač okna do uživatelského ovládacího prvku Windows Forms.  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí popisovač okna do uživatelského ovládacího prvku Windows Forms.  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  V dialogovém okně knihovny MFC inicializuje pomocí vytvoření a hostování uživatelského ovládacího prvku Windows Forms v něm.  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  Funkci člena přepište, pokud je třeba provést zvláštní zpracování při inicializaci dialogové okno. Další informace o použití této metody naleznete v části [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  Nahradí [CWinFormsDialog::GetControl](#getcontrol) ve výrazech.  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  Informace o používání Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Vrhá typu jako odkaz na uživatelský ovládací prvek Windows Forms.  
   
 ```  

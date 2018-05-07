@@ -1,13 +1,10 @@
 ---
-title: "TN001: Registrace tříd oken | Microsoft Docs"
-ms.custom: 
+title: 'TN001: Registrace tříd oken | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.registration
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Registrace tříd oken
 Tato poznámka popisuje MFC rutiny, které registrují speciální [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es vyžaduje Microsoft Windows. Konkrétní `WNDCLASS` atributy používané MFC a Windows jsou popsané.  
@@ -50,7 +45,7 @@ Tato poznámka popisuje MFC rutiny, které registrují speciální [WNDCLASS](ht
   
 |Pole|Popis|  
 |-----------|-----------------|  
-|`lpfnWndProc`|okno proc, musí být`AfxWndProc`|  
+|`lpfnWndProc`|okno proc, musí být `AfxWndProc`|  
 |`cbClsExtra`|nepoužívá se (musí být nula.)|  
 |`cbWndExtra`|nepoužívá se (musí být nula.)|  
 |`hInstance`|automaticky vyplněno [afxgetinstancehandle –](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
@@ -67,7 +62,7 @@ Tato poznámka popisuje MFC rutiny, které registrují speciální [WNDCLASS](ht
   
  Dvě ikony podporovat aplikace MDI s jedním dokumentem typy: jeden ikona hlavní aplikace, na ikonu pro systém windows ikony dokumentu nebo MDIChild. Pro více typů dokumentů s jinou ikony, je nutné zaregistrovat Další `WNDCLASS`es nebo použijte [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkce.  
   
- `CFrameWnd::LoadFrame`bude registrovat `WNDCLASS` pomocí ID ikonu zadáte jako první parametr a standardní následující atributy:  
+ `CFrameWnd::LoadFrame` bude registrovat `WNDCLASS` pomocí ID ikonu zadáte jako první parametr a standardní následující atributy:  
   
 -   třídy styl: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
   
@@ -106,12 +101,12 @@ pWnd->Create(strWndClass, ...);
 ...  
 ```  
   
- `AfxRegisterWndClass`vyvolá výjimku [CResourceException](../mfc/reference/cresourceexception-class.md) Pokud třída okno se nepodařilo zaregistrovat (buď z důvodu nesprávných parametrů, nebo nedostatek paměti systému Windows).  
+ `AfxRegisterWndClass` vyvolá výjimku [CResourceException](../mfc/reference/cresourceexception-class.md) Pokud třída okno se nepodařilo zaregistrovat (buď z důvodu nesprávných parametrů, nebo nedostatek paměti systému Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass a afxregisterclass – funkce  
  Pokud chcete udělat nic více pokročilé než co `AfxRegisterWndClass` poskytuje, můžete volat rozhraní API systému Windows `RegisterClass` nebo funkce MFC `AfxRegisterClass`. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` funkce přebírat `lpszClassName` název řetězce pro třídu okna jako první parametr. Můžete použít jakýkoli název třídy registrované okno, bez ohledu na metodu, kterou jste použili k registraci.  
   
- Je důležité použít `AfxRegisterClass` (nebo `AfxRegisterWndClass`) v knihovně DLL na Win32. Win32 není automaticky registraci třídy registrovaných knihovny DLL, takže musí explicitně zrušení registrace třídy při ukončení knihovnu DLL. Pomocí `AfxRegisterClass` místo `RegisterClass` to zpracovává automaticky za vás. `AfxRegisterClass`udržuje seznam jedinečných tříd zaregistrovat vaše knihovna DLL a bude automaticky zrušit jejich při ukončí knihovnu DLL. Při použití `RegisterClass` v knihovně DLL, ujistěte se, zda jsou všechny třídy registrace při ukončení knihovny DLL (ve vaší [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) funkce). Může způsobit selhání Uděláte to tak `RegisterClass` neočekávané selhání, když pokusí použít vaše knihovna DLL jinou aplikaci klienta.  
+ Je důležité použít `AfxRegisterClass` (nebo `AfxRegisterWndClass`) v knihovně DLL na Win32. Win32 není automaticky registraci třídy registrovaných knihovny DLL, takže musí explicitně zrušení registrace třídy při ukončení knihovnu DLL. Pomocí `AfxRegisterClass` místo `RegisterClass` to zpracovává automaticky za vás. `AfxRegisterClass` udržuje seznam jedinečných tříd zaregistrovat vaše knihovna DLL a bude automaticky zrušit jejich při ukončí knihovnu DLL. Při použití `RegisterClass` v knihovně DLL, ujistěte se, zda jsou všechny třídy registrace při ukončení knihovny DLL (ve vaší [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) funkce). Může způsobit selhání Uděláte to tak `RegisterClass` neočekávané selhání, když pokusí použít vaše knihovna DLL jinou aplikaci klienta.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

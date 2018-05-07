@@ -1,12 +1,9 @@
 ---
-title: "Třída CDockingManager | Microsoft Docs"
-ms.custom: 
+title: Třída CDockingManager | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockingManager
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1a436ab6bfbc5e21e43267d3992310ed6f6a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5dad441d2aa997a3e32d53f07683877442100a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager – třída
 Implementuje základní funkce, které řídí ukotvení rozložení v okně s rámečkem hlavní.  
@@ -314,7 +309,7 @@ class CDockingManager : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDockingManager.h  
   
-##  <a name="adddocksite"></a>CDockingManager::AddDockSite  
+##  <a name="adddocksite"></a>  CDockingManager::AddDockSite  
  Vytvoří podokno ukotvení a přidá ho do seznamu ovládací pruhy.  
   
 ```  
@@ -324,16 +319,16 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`info`  
+ [v] `info`  
  Odkaz na informace o struktuře, která obsahuje ukotvení podokně zarovnání.  
   
- [out]`ppDockBar`  
+ [out] `ppDockBar`  
  Ukazatel na ukazatel na nové podokno ukotvení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
+ `TRUE` Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
   
-##  <a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar  
+##  <a name="addhiddenmditabbedbar"></a>  CDockingManager::AddHiddenMDITabbedBar  
  Přidá popisovač na panel podokně do seznamu skrytých MDI na kartách panelu podokna.  
   
 ```  
@@ -341,10 +336,10 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na panel podokno  
   
-##  <a name="addpane"></a>CDockingManager::AddPane  
+##  <a name="addpane"></a>  CDockingManager::AddPane  
  Zaregistruje podokno se správce ukotvení.  
   
 ```  
@@ -356,25 +351,25 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out]`pWnd`  
+ [ve out] `pWnd`  
  Určuje, v podokně pro přidání do správce ukotvení.  
   
- [v]`bTail`  
- `TRUE`Chcete-li přidat v podokně na konec seznamu podokna pro ukotvení správce; v opačném `FALSE`.  
+ [v] `bTail`  
+ `TRUE` Chcete-li přidat v podokně na konec seznamu podokna pro ukotvení správce; v opačném `FALSE`.  
   
- [v]`bAutoHide`  
+ [v] `bAutoHide`  
  Pouze pro interní použití. Vždy použijte výchozí hodnotu `FALSE`.  
   
- [v]`bInsertForOuterEdge`  
+ [v] `bInsertForOuterEdge`  
  Pouze pro interní použití. Vždy použijte výchozí hodnotu `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně byl úspěšně zaregistrován pomocí ukotvení správce; v opačném `FALSE`.  
+ `TRUE` Pokud v podokně byl úspěšně zaregistrován pomocí ukotvení správce; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu pro registraci s plovoucí, bez umožňující změnu velikosti podokna se správce ukotvení. Pokud podokna nezaregistrujete, nezobrazí se správně při rozložená správce ukotvení.  
   
-##  <a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CDockingManager::AdjustDockingLayout  
  Přepočítá a upraví rozložení všechny podokna v okně s rámečkem.  
   
 ```  
@@ -382,12 +377,12 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hdwp`  
+ [v] `hdwp`  
  Určuje pozici strukturu odložené okna. Další informace najdete v tématu [Windows datové typy](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addminiframe"></a>CDockingManager::AddMiniFrame  
+##  <a name="addminiframe"></a>  CDockingManager::AddMiniFrame  
  Rámeček se přidá do seznamu mini snímků.  
   
 ```  
@@ -395,13 +390,13 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na rámec.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud rámečku není v seznamu mini snímků a byl úspěšně; přidán `FALSE` jinak.  
+ `TRUE` Pokud rámečku není v seznamu mini snímků a byl úspěšně; přidán `FALSE` jinak.  
   
-##  <a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>  CDockingManager::AdjustPaneFrames  
  Způsobí, že `WM_NCCALCSIZE` zpráva k odeslání do všech podokna a `CPaneFrameWnd` systému windows.  
   
 ```  
@@ -410,7 +405,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea  
+##  <a name="adjustrecttoclientarea"></a>  CDockingManager::AdjustRectToClientArea  
  Upraví zarovnání obdélníku.  
   
 ```  
@@ -420,14 +415,14 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rectResult`  
+ [v] `rectResult`  
  Odkaz na `CRect` objektu  
   
- [v]`dwAlignment`  
+ [v] `dwAlignment`  
  Zarovnání `CRect` objektu  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud zarovnání `CRect` objektu byla upravena; `FALSE` jinak.  
+ `TRUE` Pokud zarovnání `CRect` objektu byla upravena; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  `dwAlignment` Parametr může mít jeden z následujících hodnot:  
@@ -440,7 +435,7 @@ virtual BOOL AdjustRectToClientArea(
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane  
+##  <a name="alignautohidepane"></a>  CDockingManager::AlignAutoHidePane  
  Změní velikost ukotvené podokno v režimu autohide – tak, aby trvá úplné šířka nebo výška rámečku klientské oblasti obklopená ukotvení lokalit.  
   
 ```  
@@ -450,13 +445,13 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDefaultSlider`  
+ [v] `pDefaultSlider`  
  V podokně ukotvení posuvníku.  
   
- [v]`bIsVisible`  
- `TRUE`Pokud se zobrazuje; ukotvení podokno `FALSE` jinak.  
+ [v] `bIsVisible`  
+ `TRUE` Pokud se zobrazuje; ukotvení podokno `FALSE` jinak.  
   
-##  <a name="autohidepane"></a>CDockingManager::AutoHidePane  
+##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  Vytvoří automaticky skrývat nástrojů.  
   
 ```  
@@ -466,16 +461,16 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na panelu podokně.  
   
- [v]`pCurrAutoHideToolBar`  
+ [v] `pCurrAutoHideToolBar`  
  Ukazatel na automaticky skrytí panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `NULL`Pokud automatického skrytí panelu nástrojů nebyl vytvořen; v opačném případě ukazatel na nový panel nástrojů.  
+ `NULL` Pokud automatického skrytí panelu nástrojů nebyl vytvořen; v opačném případě ukazatel na nový panel nástrojů.  
   
-##  <a name="bringbarstotop"></a>CDockingManager::BringBarsToTop  
+##  <a name="bringbarstotop"></a>  CDockingManager::BringBarsToTop  
  Přináší ukotveného řádky, které mají zadané zarovnání k nejvyšší.  
   
 ```  
@@ -485,13 +480,13 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwAlignment`  
+ [v] `dwAlignment`  
  Zarovnání ukotvení pruhů, které přesměrováni na začátku jiných windows.  
   
- [v]`bExcludeDockedBars`  
- `TRUE`vyloučit ukotveného řádky nebudou na maximum. v opačném případě `FALSE`.  
+ [v] `bExcludeDockedBars`  
+ `TRUE` vyloučit ukotveného řádky nebudou na maximum. v opačném případě `FALSE`.  
   
-##  <a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu  
+##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  Přidá názvy ukotvení podokna a panelů nástrojů k nabídce.  
   
 ```  
@@ -501,13 +496,13 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`menu`  
+ [v] `menu`  
  Nabídky přidat názvy ukotvení podokna a panelů nástrojů.  
   
- [v]`bToolbarsOnly`  
- `TRUE`Chcete-li přidat pouze názvy panelu nástrojů do nabídky; `FALSE` jinak.  
+ [v] `bToolbarsOnly`  
+ `TRUE` Chcete-li přidat pouze názvy panelu nástrojů do nabídky; `FALSE` jinak.  
   
-##  <a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  Vypočítá očekávané rámeček ukotveného okna.  
   
 ```  
@@ -520,25 +515,25 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na okno na ukotvení.  
   
- [v]`ptMouse`  
+ [v] `ptMouse`  
  Umístění myši.  
   
- [out]`rectResult`  
+ [out] `rectResult`  
  Počítaný obdélník.  
   
- [v]`bDrawTab`  
- `TRUE`Kreslení na kartě; v opačném případě `FALSE`.  
+ [v] `bDrawTab`  
+ `TRUE` Kreslení na kartě; v opačném případě `FALSE`.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Ukazatel na ukazatel do podokna cíl.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vypočítá obdélníku, která by zabírají okno, pokud uživatel přetáhli okno bodu určeného `ptMouse` a jej ukotven existuje.  
   
-##  <a name="create"></a>CDockingManager::Create  
+##  <a name="create"></a>  CDockingManager::Create  
  Vytvoří ukotvení správce.  
   
 ```  
@@ -546,13 +541,13 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel na rámec nadřazené ukotvení správce. Tato hodnota nesmí být `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`vždy.  
+ `TRUE` Vždy.  
   
-##  <a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus  
+##  <a name="determinepaneandstatus"></a>  CDockingManager::DeterminePaneAndStatus  
  Určuje, v podokně obsahující k danému bodu a stavu její ukotvení.  
   
 ```  
@@ -566,22 +561,22 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pt`  
+ [v] `pt`  
  Umístění v podokně ke kontrole.  
   
- [v]`nSensitivity`  
+ [v] `nSensitivity`  
  Hodnotu pro zvýšení obdélníku okna každý zaškrtnuté podokna. Podokno splňuje kritéria hledání, pokud je daný bod v této oblasti vyšší.  
   
- [v]`dwEnabledAlignment`  
+ [v] `dwEnabledAlignment`  
  Zarovnání ukotvení panelu.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Ukazatel na ukazatel do podokna cíl.  
   
- [v]`pBarToIgnore`  
+ [v] `pBarToIgnore`  
  V podokně, která metoda bude ignorovat.  
   
- [v]`pBarToDock`  
+ [v] `pBarToDock`  
  V podokně, který je ukotvena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -597,7 +592,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 |CS_DELAY_DOCK|Je ukazatel myši nad ukotvení lokalitu, která je jiného ukotvení panelu nebo okraj hlavního rámce.|  
 |CS_DELAY_DOCK_TO_TAB|Ukazatele je nad ukotvení lokalitu, která způsobí, že podokno Ukotvit okno s kartami. K tomu dochází, při přesunutí myši na přes popisek jiné ukotvení panelu nebo přes oblast karty na kartách panelu.|  
   
-##  <a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState  
+##  <a name="disablerestoredockstate"></a>  CDockingManager::DisableRestoreDockState  
  Povolí nebo zakáže načítání ukotvení rozložení z registru.  
   
 ```  
@@ -605,13 +600,13 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bDisable`  
- `TRUE`Chcete-li zakázat načítání ukotvení rozložení z registru; v opačném `FALSE`.  
+ [v] `bDisable`  
+ `TRUE` Chcete-li zakázat načítání ukotvení rozložení z registru; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu volejte, když musíte zachovat aktuální rozložení ukotvení podokna a panelů nástrojů při načítání stavu aplikace.  
   
-##  <a name="dockpane"></a>CDockingManager::DockPane  
+##  <a name="dockpane"></a>  CDockingManager::DockPane  
  Podokno ukotvené jiného podokna nebo okně s rámečkem.  
   
 ```  
@@ -622,16 +617,16 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na panel podokně ukotvit.  
   
- [v]`nDockBarID`  
+ [v] `nDockBarID`  
  Id ukotvení panelu.  
   
- [v]`lpRect`  
+ [v] `lpRect`  
  Cílový rámeček.  
   
-##  <a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  Ukotvené podokno nalevo od jiného podokna.  
   
 ```  
@@ -641,16 +636,16 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBarToDock`  
+ [v] `pBarToDock`  
  Ukazatel na podokno ukotvit nalevo od `pTargetBar`.  
   
- [v]`pTargetBar`  
+ [v] `pTargetBar`  
  Ukazatel na podokně cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně se ukotven úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud v podokně se ukotven úspěšně; v opačném `FALSE`.  
   
-##  <a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CDockingManager::EnableAutoHidePanes  
  Umožňuje ukotvení podokna do hlavního rámce, vytvoří podokno ukotvení a přidá ji do seznamu ovládací pruhy.  
   
 ```  
@@ -658,13 +653,13 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Ukotvení zarovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
+ `TRUE` Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
   
-##  <a name="enabledocking"></a>CDockingManager::EnableDocking  
+##  <a name="enabledocking"></a>  CDockingManager::EnableDocking  
  Vytvoří podokno ukotvení a umožňuje ukotvení podokna do hlavního rámce.  
   
 ```  
@@ -672,13 +667,13 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Ukotvení zarovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
+ `TRUE` Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
   
-##  <a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu  
+##  <a name="enabledocksitemenu"></a>  CDockingManager::EnableDockSiteMenu  
  Zobrazí další tlačítko, které se otevře místní nabídky na titulky všechny ukotvení podokna.  
   
 ```  
@@ -686,23 +681,23 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit v nabídce lokality ukotvení; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit v nabídce lokality ukotvení; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  V nabídce ukotvení lokality zobrazí následující možnosti pro změnu ukotvení stav v podokně:  
   
-- `Floating`-Jako plovoucí podokno  
+- `Floating` -Jako plovoucí podokno  
   
-- `Docking`-Ukotvené panelu v hlavní rámečku tam, kde se v podokně poslední ukotveno  
+- `Docking` -Ukotvené panelu v hlavní rámečku tam, kde se v podokně poslední ukotveno  
   
-- `AutoHide`-Přepne podokně do režimu autohide –  
+- `AutoHide` -Přepne podokně do režimu autohide –  
   
-- `Hide`-Skryje podokno  
+- `Hide` -Skryje podokno  
   
  Ve výchozím nastavení tato nabídka se nezobrazí.  
   
-##  <a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu  
+##  <a name="enablepanecontextmenu"></a>  CDockingManager::EnablePaneContextMenu  
  Říká knihovna zobrazíte speciální kontextové nabídky, která má seznam panelů nástrojů aplikace a ukotvení podokna při kliknutí pravým tlačítkem myši a knihovny je zpracování zpráv WM_CONTEXTMENU.  
   
 ```  
@@ -714,19 +709,19 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
  Pokud `TRUE`, knihovny zapne podpora pro automatické kontextovou nabídku; Pokud `FALSE` knihovny vypne podporu pro automatické kontextové nabídky.  
   
- [v]`uiCustomizeCmd`  
+ [v] `uiCustomizeCmd`  
  Id příkazu pro **přizpůsobit** položky v nabídce.  
   
- [v]`strCustomizeText`  
+ [v] `strCustomizeText`  
  Text **přizpůsobit** položky.  
   
- [v]`bToolbarsOnly`  
+ [v] `bToolbarsOnly`  
  Pokud `TRUE`, v nabídce zobrazuje pouze seznam panelů nástrojů aplikace; Pokud `FALSE`, knihovny aplikace ukotvení podokna přidá do tohoto seznamu.  
   
-##  <a name="finddocksite"></a>CDockingManager::FindDockSite  
+##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  Načte panelu podokně, který je na zadané pozici a který má zadané zarovnání.  
   
 ```  
@@ -736,16 +731,16 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwAlignment`  
+ [v] `dwAlignment`  
  Zarovnání panelu podokně.  
   
- [v]`bOuter`  
+ [v] `bOuter`  
  Pokud `TRUE`, načtení panelu v head pozici v seznamu ovládací pruhy. Na panelu v tail pozici v seznamu ovládací pruhy, jinak hodnota načtěte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V podokně ukotvení, který má zadané zarovnání; `NULL` jinak.  
   
-##  <a name="findpanebyid"></a>CDockingManager::FindPaneByID  
+##  <a name="findpanebyid"></a>  CDockingManager::FindPaneByID  
  Vyhledá podokně podle ID ovládací prvek.  
   
 ```  
@@ -755,18 +750,18 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uBarID`  
+ [v] `uBarID`  
  Určuje ID ovládacího prvku v podokně k vyhledání.  
   
- [v]`bSearchMiniFrames`  
- `TRUE`Chcete-li do vyhledávání přidat všechny plovoucí podokna. `FALSE`Zahrnout pouze ukotveného podokna.  
+ [v] `bSearchMiniFrames`  
+ `TRUE` Chcete-li do vyhledávání přidat všechny plovoucí podokna. `FALSE` Zahrnout pouze ukotveného podokna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  [CBasePane](../../mfc/reference/cbasepane-class.md) objekt, který má zadaný ovládací prvek ID, nebo `NULL` Pokud nelze nalézt zadaný podokně.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane  
+##  <a name="finddocksitebypane"></a>  CDockingManager::FindDockSiteByPane  
  Vrátí panelu podokno, které má id panelu cílového řádku.  
   
 ```  
@@ -774,13 +769,13 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pTargetBar`  
+ [v] `pTargetBar`  
  Ukazatel na panelu cílového řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Na panelu podokně, který má id panelu cílového řádku; `NULL` Pokud není žádná taková panelu podokně existuje.  
   
-##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>  CDockingManager::FixupVirtualRects  
  Potvrdí všechny aktuální pozic panelu nástrojů, který má virtuální obdélníky.  
   
 ```  
@@ -790,7 +785,7 @@ virtual void FixupVirtualRects();
 ### <a name="remarks"></a>Poznámky  
  Když uživatel spustí přetáhněte panel nástrojů, aplikace si zapamatuje původní pozici v *virtuální obdélníku*. Když se uživatel přesune panel nástrojů napříč jeho ukotvení lokality, mohou být posunuty panelů nástrojů panelu nástrojů. Původní pozice jiných panelů jsou uloženy v odpovídající virtuální obdélníky.  
   
-##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint  
+##  <a name="framefrompoint"></a>  CDockingManager::FrameFromPoint  
  Vrátí rámce, který obsahuje danému bodu.  
   
 ```  
@@ -801,19 +796,19 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pt`  
+ [v] `pt`  
  Určuje bod, v souřadnice obrazovky ke kontrole.  
   
- [v]`pFrameToExclude`  
+ [v] `pFrameToExclude`  
  Ukazatel na rámec vyloučit.  
   
- [v]`bFloatMultiOnly`  
- `TRUE`vyloučit rámců, které nejsou instancí `CMultiPaneFrameWnd`; `FALSE` jinak.  
+ [v] `bFloatMultiOnly`  
+ `TRUE` vyloučit rámců, které nejsou instancí `CMultiPaneFrameWnd`; `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Rámce, který obsahuje danému bodu; `NULL` jinak.  
   
-##  <a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds  
+##  <a name="getclientareabounds"></a>  CDockingManager::GetClientAreaBounds  
  Získá obdélníku, která obsahuje hranice klientské oblasti.  
   
 ```  
@@ -823,13 +818,13 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rcClient`  
+ [out] `rcClient`  
  Odkaz na obdélníku, která obsahuje hranice klientské oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Obdélníku, která obsahuje hranice klientské oblasti.  
   
-##  <a name="getdockingmode"></a>CDockingManager::GetDockingMode  
+##  <a name="getdockingmode"></a>  CDockingManager::GetDockingMode  
  Vrátí aktuální režim ukotvení.  
   
 ```  
@@ -848,7 +843,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 ### <a name="remarks"></a>Poznámky  
  Chcete-li nastavit ukotvení režim, volejte [CDockingManager::SetDockingMode](#setdockingmode).  
   
-##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>  CDockingManager::GetDockSiteFrameWnd  
  Získá ukazatel na rámec okna nadřazené.  
   
 ```  
@@ -858,7 +853,7 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na rámec okna nadřazené.  
   
-##  <a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment  
+##  <a name="getenabledautohidealignment"></a>  CDockingManager::GetEnabledAutoHideAlignment  
  Vrátí povoleno zarovnání podoken.  
   
 ```  
@@ -871,7 +866,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 ### <a name="remarks"></a>Poznámky  
  Metoda vrátí povoleno zarovnání autohide – ovládací pruhy. Chcete-li povolit autohide – řádky, volejte [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).  
   
-##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames  
+##  <a name="getminiframes"></a>  CDockingManager::GetMiniFrames  
  Získá seznam miniframes.  
   
 ```  
@@ -881,7 +876,7 @@ const CObList& GetMiniFrames() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Seznam miniframes, které obsahují ovládací pruhy, které patří do správce ukotvení.  
   
-##  <a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds  
+##  <a name="getouteredgebounds"></a>  CDockingManager::GetOuterEdgeBounds  
  Získá obdélníku, který obsahuje vnější okrajů rámečku.  
   
 ```  
@@ -891,7 +886,7 @@ CRect GetOuterEdgeBounds() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Obdélníku, která obsahuje vnější okrajů rámečku.  
   
-##  <a name="getpanelist"></a>CDockingManager::GetPaneList  
+##  <a name="getpanelist"></a>  CDockingManager::GetPaneList  
  Vrátí seznam hodnot podokna, které patří do správce ukotvení. To zahrnuje všechny plovoucí podokna.  
   
 ```  
@@ -903,24 +898,24 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out]`lstBars`  
+ [ve out] `lstBars`  
  Obsahuje všechny podokna aktuální ukotvení správce.  
   
- [v]`bIncludeAutohide`  
- `TRUE`Zahrnout podokna, které jsou v režimu autohide –; v opačném `FALSE`.  
+ [v] `bIncludeAutohide`  
+ `TRUE` Zahrnout podokna, které jsou v režimu autohide –; v opačném `FALSE`.  
   
- [v]`pRTCFilter`  
+ [v] `pRTCFilter`  
  Není-li `NULL`, vrácený seznam obsahuje podokna pouze třídy zadaného modulu runtime.  
   
- [v]`bIncludeTabs`  
- `TRUE`Zahrnout karty; v opačném `FALSE`.  
+ [v] `bIncludeTabs`  
+ `TRUE` Zahrnout karty; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud nejsou žádné záložkách podokna ve ukotvení správci, vrátí metoda ukazatele na [CBaseTabbedPane třída](../../mfc/reference/cbasetabbedpane-class.md) objektů a vy musíte vytvořit výčet karty explicitně.  
   
  Použití `pRTCFilter` získat určité třídy podokna. Například můžete získat pouze panely nástrojů nastavením této hodnoty správně.  
   
-##  <a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager  
+##  <a name="getsmartdockingmanager"></a>  CDockingManager::GetSmartDockingManager  
  Načte ukazatel správce inteligentní ukotvení.  
   
 ```  
@@ -930,7 +925,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel [inteligentní ukotvení manager](http://msdn.microsoft.com/en-us/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
   
-##  <a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent  
+##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Načte ukazatel správce inteligentní ukotvení.  
   
 ```  
@@ -940,7 +935,7 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na inteligentní ukotvení správce.  
   
-##  <a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams  
+##  <a name="getsmartdockingparams"></a>  CDockingManager::GetSmartDockingParams  
  Vrátí parametry inteligentní ukotvení pro ukotvení správce.  
   
 ```  
@@ -952,7 +947,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes  
+##  <a name="hideautohidepanes"></a>  CDockingManager::HideAutoHidePanes  
  Skryje podokně, který je v režimu automaticky skrývat.  
   
 ```  
@@ -962,13 +957,13 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBarToExclude`  
+ [v] `pBarToExclude`  
  Ukazatel na panelu chcete vyloučit z skryté.  
   
- [v]`bImmediately`  
- `TRUE`Chcete-li skrýt podokno okamžitě; `FALSE` ke skrytí podokna s autohide – účinek.  
+ [v] `bImmediately`  
+ `TRUE` Chcete-li skrýt podokno okamžitě; `FALSE` ke skrytí podokna s autohide – účinek.  
   
-##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite  
+##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  Vytvoří podokno ukotvení a vloží je do seznamu ovládací pruhy.  
   
 ```  
@@ -979,19 +974,19 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`info`  
+ [v] `info`  
  Struktura, která obsahuje zarovnání informace o podokně ukotvení.  
   
- [v]`dwAlignToInsertAfter`  
+ [v] `dwAlignToInsertAfter`  
  Zarovnání ukotvení panelu.  
   
- [out]`ppDockBar`  
+ [out] `ppDockBar`  
  Ukazatel na ukazatel na podokně ukotvení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
+ `TRUE` Pokud se v podokně ukotvení úspěšně; vytvořil `FALSE` jinak.  
   
-##  <a name="insertpane"></a>CDockingManager::InsertPane  
+##  <a name="insertpane"></a>  CDockingManager::InsertPane  
  Vloží do seznamu ovládací pruhy podokně ovládacího prvku.  
   
 ```  
@@ -1002,22 +997,22 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
+ [v] `pControlBar`  
  Ukazatel na podokně ovládacího prvku.  
   
- [v]`pTarget`  
+ [v] `pTarget`  
  Ukazatel na cílové podokně.  
   
- [v]`bAfter`  
- `TRUE`Chcete-li vložit v podokně po pozici v podokně cíl; `FALSE` jinak.  
+ [v] `bAfter`  
+ `TRUE` Chcete-li vložit v podokně po pozici v podokně cíl; `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně ovládacího prvku se úspěšně přidal do seznamu ovládací pruhy; `FALSE` jinak.  
+ `TRUE` Pokud v podokně ovládacího prvku se úspěšně přidal do seznamu ovládací pruhy; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrátí hodnotu false, pokud v podokně ovládacího prvku je již v seznamu ovládací pruhy nebo pokud podokně cíl neexistuje v seznamu ovládací pruhy.  
   
-##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu  
+##  <a name="isdocksitemenu"></a>  CDockingManager::IsDockSiteMenu  
  Určuje, zda místní nabídky se zobrazí na titulky všech podoken.  
   
 ```  
@@ -1025,12 +1020,12 @@ static BOOL IsDockSiteMenu();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud ukotvení lokality nabídky se zobrazí na titulky všechny ukotvení podokna; v opačném případě `FALSE`.  
+ `TRUE` Pokud ukotvení lokality nabídky se zobrazí na titulky všechny ukotvení podokna; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete povolit v nabídce lokality ukotvení voláním [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).  
   
-##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout  
+##  <a name="isinadjustlayout"></a>  CDockingManager::IsInAdjustLayout  
  Určuje, pokud se upraví rozložení všech podoken.  
   
 ```  
@@ -1038,9 +1033,9 @@ BOOL IsInAdjustLayout() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se upraví rozložení všech podoken; `FALSE` jinak.  
+ `TRUE` Pokud se upraví rozložení všech podoken; `FALSE` jinak.  
   
-##  <a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode  
+##  <a name="isolecontainermode"></a>  CDockingManager::IsOLEContainerMode  
  Určuje, zda ukotvení manager je v režimu kontejneru OLE.  
   
 ```  
@@ -1048,12 +1043,12 @@ BOOL IsOLEContainerMode() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud správce ukotvení je v režimu OLE kontejneru; v opačném `FALSE`.  
+ `TRUE` Pokud správce ukotvení je v režimu OLE kontejneru; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  V režimu kontejneru OLE všechny ukotvení podokna a panelů nástrojů aplikace jsou skryté. Podokna jsou rovněž skryté v tomto režimu, pokud jste nastavili [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) k `TRUE`.  
   
-##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CDockingManager::IsPointNearDockSite  
  Určuje, zda zadaný bod je téměř webu ukotvení.  
   
 ```  
@@ -1064,19 +1059,19 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Zadaný bod.  
   
- [out]`dwBarAlignment`  
+ [out] `dwBarAlignment`  
  Určuje, které hraniční bod je téměř. Možné hodnoty jsou `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, a `CBRS_ALIGN_BOTTOM`.  
   
- [out]`bOuterEdge`  
- `TRUE`Pokud je bod téměř vnější ohraničení ukotvení serveru. `FALSE` jinak.  
+ [out] `bOuterEdge`  
+ `TRUE` Pokud je bod téměř vnější ohraničení ukotvení serveru. `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je bod téměř webu ukotvení; v opačném případě `FALSE`.  
+ `TRUE` Pokud je bod téměř webu ukotvení; v opačném případě `FALSE`.  
   
-##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid  
+##  <a name="isprintpreviewvalid"></a>  CDockingManager::IsPrintPreviewValid  
  Určuje, pokud má nastaven režim náhledu tisku.  
   
 ```  
@@ -1084,9 +1079,9 @@ BOOL IsPrintPreviewValid() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud má nastaven režim náhledu tisku; `FALSE` jinak.  
+ `TRUE` Pokud má nastaven režim náhledu tisku; `FALSE` jinak.  
   
-##  <a name="loadstate"></a>CDockingManager::LoadState  
+##  <a name="loadstate"></a>  CDockingManager::LoadState  
  Načte stav ukotvení manager z registru.  
   
 ```  
@@ -1096,16 +1091,16 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Název profilu.  
   
- [v]`uiID`  
+ [v] `uiID`  
  Id správce ukotvení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud stav ukotvení manager byl úspěšně; načten. v opačném případě `FALSE`.  
+ `TRUE` Pokud stav ukotvení manager byl úspěšně; načten. v opačném případě `FALSE`.  
   
-##  <a name="lockupdate"></a>CDockingManager::LockUpdate  
+##  <a name="lockupdate"></a>  CDockingManager::LockUpdate  
  Zamkne daného období.  
   
 ```  
@@ -1113,13 +1108,13 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bLock`  
- `TRUE`Pokud okno uzamčen; `FALSE` jinak.  
+ [v] `bLock`  
+ `TRUE` Pokud okno uzamčen; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud okno je uzamčena, nelze jej přesunout a nemůže být vystavena.  
   
-##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode  
+##  <a name="m_bhidedockingbarsincontainermode"></a>  CDockingManager::m_bHideDockingBarsInContainerMode  
  Určuje, zda správce ukotvení skryje podokna v režimu kontejneru OLE.  
   
 ```  
@@ -1129,7 +1124,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 ### <a name="remarks"></a>Poznámky  
  Nastavte hodnotu `FALSE` Pokud chcete zachovat všechny podokna ukotvena hlavního rámce viditelné pokud aplikace je v režimu kontejneru OLE. Ve výchozím nastavení, tato hodnota je `TRUE`.  
   
-##  <a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal  
+##  <a name="m_dockmodeglobal"></a>  CDockingManager::m_dockModeGlobal  
  Určuje režim globální ukotvení.  
   
 ```  
@@ -1139,7 +1134,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení používá každý ukotvení podokně tento režim ukotvení. Další informace o hodnoty, které toto pole může být nastaveno na najdete v tématu [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
-##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity  
+##  <a name="m_ndocksensitivity"></a>  CDockingManager::m_nDockSensitivity  
  Určuje ukotvení velkých a malých písmen.  
   
 ```  
@@ -1149,7 +1144,7 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 ### <a name="remarks"></a>Poznámky  
  Ukotvení citlivosti definuje, jak blízko plovoucí podokně můžete postupovat ukotvené podokno, ukotvení lokality nebo jiného podokna před rozhraní změnit její stav na ukotven.  
   
-##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock  
+##  <a name="m_ntimeoutbeforedockingbardock"></a>  CDockingManager::m_nTimeOutBeforeDockingBarDock  
  Určuje čas v milisekundách, než je ukotvena ukotvené podokno v režimu okamžité ukotvení.  
   
 ```  
@@ -1159,7 +1154,7 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 ### <a name="remarks"></a>Poznámky  
  Předtím, než je ukotvena podokno, rozhraní framework čeká Zadaná délka času. V podokně zabrání se omylem ukotven do umístění, když uživatel je stále přetáhnete ho.  
   
-##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock  
+##  <a name="m_ntimeoutbeforetoolbardock"></a>  CDockingManager::m_nTimeOutBeforeToolBarDock  
  Určuje dobu v milisekundách, než panelu nástrojů ukotven do hlavního rámce okna.  
   
 ```  
@@ -1169,7 +1164,7 @@ static UINT m_nTimeOutBeforeToolBarDock;
 ### <a name="remarks"></a>Poznámky  
  Předtím, než je ukotvena panel nástrojů, rozhraní framework čeká Zadaná délka času. To brání se omylem ukotven do umístění, když uživatel je stále přetáhnete ji panelu nástrojů.  
   
-##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame  
+##  <a name="onactivateframe"></a>  CDockingManager::OnActivateFrame  
  Voláno rámcem, když okně s rámečkem přišla active nebo je deaktivována.  
   
 ```  
@@ -1177,10 +1172,10 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bActivate`  
+ [v] `bActivate`  
  Pokud `TRUE`, okně s rámečkem přišla active; Pokud `FALSE`, okně s rámečkem je deaktivována.  
   
-##  <a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  Voláno rámcem když zpracovává zprávu WM_DESTROY active místní nabídky.  
   
 ```  
@@ -1190,7 +1185,7 @@ void OnClosePopupMenu();
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework odešle zprávu WM_DESTROY, pokud je aktuální hlavní okno zavřít. Potlačí tuto metodu pro zpracování oznámení z `CMFCPopupMenu` objekty, které patří do okna s rámečkem při `CMFCPopupMenu` objektu procesy `WM_DESTROY` zprávy.  
   
-##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CDockingManager::OnMoveMiniFrame  
  Voláno rámcem k přesunutí zkrácená rámce okna.  
   
 ```  
@@ -1198,13 +1193,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pFrame`  
+ [v] `pFrame`  
  Ukazatel na zkrácená rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud metoda úspěšně. v opačném případě `FALSE`.  
+ `TRUE` Pokud metoda úspěšně. v opačném případě `FALSE`.  
   
-##  <a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu  
+##  <a name="onpanecontextmenu"></a>  CDockingManager::OnPaneContextMenu  
  Voláno rámcem při vytváření nabídky, která má seznam podokna.  
   
 ```  
@@ -1212,10 +1207,10 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Určuje umístění v nabídce.  
   
-##  <a name="panefrompoint"></a>CDockingManager::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  Vrátí panel, který obsahuje danému bodu.  
   
 ```  
@@ -1236,25 +1231,25 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Určuje bod, v souřadnice obrazovky ke kontrole.  
   
- [v]`nSensitivity`  
+ [v] `nSensitivity`  
  Hodnota k zvýšilo obdélníku okna každý zaškrtnuté podokna. Podokno splňuje kritéria hledání, pokud je daný bod v této oblasti zvýšeným.  
   
- [v]`bExactBar`  
- `TRUE`Ignorovat `nSensitivity` parametr, jinak hodnota `FALSE`.  
+ [v] `bExactBar`  
+ `TRUE` Ignorovat `nSensitivity` parametr, jinak hodnota `FALSE`.  
   
- [v]`pRTCBarType`  
+ [v] `pRTCBarType`  
  Není-li `NULL`, tato metoda vyhledá pouze podokna zadaného typu.  
   
- [v]`bCheckVisibility`  
- `TRUE`Chcete-li zkontrolovat jenom viditelné podokna; v opačném `FALSE`.  
+ [v] `bCheckVisibility`  
+ `TRUE` Chcete-li zkontrolovat jenom viditelné podokna; v opačném `FALSE`.  
   
- [out]`dwAlignment`  
+ [out] `dwAlignment`  
  Pokud podokno se nachází zde zadaný bod, tento parametr obsahuje na straně panelu, který je nejblíže k Zadaný bod. Další informace najdete v části poznámky.  
   
- [v]`pBarToIgnore`  
+ [v] `pBarToIgnore`  
  Není-li `NULL`, metoda ignoruje podokna určeného tento parametr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1263,7 +1258,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Poznámky  
  Když funkce vrátí hodnotu a byla nalezena podokno, `dwAlignment` obsahuje zarovnání Zadaný bod. Například, pokud byl bod nejblíže k horní části podokna `dwAlignment` je nastaven na `CBRS_ALIGN_TOP`.  
   
-##  <a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand  
+##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand  
  Voláno rozhraním framework vyberte nebo zrušte zaškrtnutí políčka pro tento příkaz a přepočítat rozložení uvedené podokně.  
   
 ```  
@@ -1275,22 +1270,22 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  Id ovládacích pruhů v nabídce.  
   
- [v]`nCode`  
+ [v] `nCode`  
  Příkaz oznámení kód.  
   
- [v]`pExtra`  
+ [v] `pExtra`  
  Ukazatel na void, která je převedena na ukazatel na `CCmdUI` Pokud `nCode` je CN_UPDATE_COMMAND_UI.  
   
- [v]`pHandlerInfo`  
+ [v] `pHandlerInfo`  
  Ukazatel na strukturu informace. Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud `pEXtra` není NULL a `nCode` rovná CN_UPDATE_COMMAND_UI, nebo pokud je panel prvek se zadaným `nID`.  
+ `TRUE` Pokud `pEXtra` není NULL a `nCode` rovná CN_UPDATE_COMMAND_UI, nebo pokud je panel prvek se zadaným `nID`.  
   
-##  <a name="recalclayout"></a>CDockingManager::RecalcLayout  
+##  <a name="recalclayout"></a>  CDockingManager::RecalcLayout  
  Přepočítá interní rozložení ovládacích prvků, která je uvedena v seznamu ovládacích prvků.  
   
 ```  
@@ -1298,17 +1293,17 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bNotify`  
+ [v] `bNotify`  
  Tento parametr není používán.  
   
-##  <a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers  
+##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  Uvolní kontejnery prázdný podokně.  
   
 ```  
 void ReleaseEmptyPaneContainers();
 ```  
   
-##  <a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar  
+##  <a name="removehiddenmditabbedbar"></a>  CDockingManager::RemoveHiddenMDITabbedBar  
  Odebere zadaný skrytý panelu podokně.  
   
 ```  
@@ -1316,10 +1311,10 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na panel podokně odebrat.  
   
-##  <a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame  
+##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  Odebere ze seznamu mini snímků zadaného rámce.  
   
 ```  
@@ -1327,13 +1322,13 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na rámec odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je odebrán zadaného rámce; `FALSE` jinak.  
+ `TRUE` Pokud je odebrán zadaného rámce; `FALSE` jinak.  
   
-##  <a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CDockingManager::RemovePaneFromDockManager  
  Zruší registraci podokno a odstraní ji ze seznamu ve Správci ukotvení.  
   
 ```  
@@ -1346,22 +1341,22 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na podokně odeberou.  
   
- [v]`bDestroy`  
+ [v] `bDestroy`  
  Pokud `TRUE`, odebrané podokně zničena.  
   
- [v]`bAdjustLayout`  
+ [v] `bAdjustLayout`  
  Pokud `TRUE`, upravte ukotvení rozložení okamžitě.  
   
- [v]`bAutoHide`  
+ [v] `bAutoHide`  
  Pokud `TRUE`, v podokně se odebere ze seznamu autohide – řádky. Pokud `FALSE`, v podokně se odebere ze seznamu regulární podokna.  
   
- [v]`pBarReplacement`  
+ [v] `pBarReplacement`  
  Ukazatel na podokně, který nahrazuje podokně odebrané.  
   
-##  <a name="replacepane"></a>CDockingManager::ReplacePane  
+##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  Nahradí jednu podokně jiné.  
   
 ```  
@@ -1371,23 +1366,23 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pOriginalBar`  
+ [v] `pOriginalBar`  
  Ukazatel na původní podokně.  
   
- [v]`pNewBar`  
+ [v] `pNewBar`  
  Ukazatel na podokně, který nahrazuje původní podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je v podokně úspěšně nahradil; `FALSE` jinak.  
+ `TRUE` Pokud je v podokně úspěšně nahradil; `FALSE` jinak.  
   
-##  <a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder  
+##  <a name="resortminiframesforzorder"></a>  CDockingManager::ResortMiniFramesForZOrder  
  Používat rámce v seznamu mini snímků.  
   
 ```  
 void ResortMiniFramesForZOrder();
 ```  
   
-##  <a name="savestate"></a>CDockingManager::SaveState  
+##  <a name="savestate"></a>  CDockingManager::SaveState  
  Uloží ukotvení správce stavu do registru.  
   
 ```  
@@ -1397,19 +1392,19 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Cesta ke klíči registru.  
   
- [v]`uiID`  
+ [v] `uiID`  
  Ukotvení ID správce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně; uložen stav v opačném případě `FALSE`.  
+ `TRUE` Pokud byl úspěšně; uložen stav v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ukládání stavu ukotvení manager registru uloženo stavy ovládací pruhy, stavy autohide – řádky a stavy mini rámce, který je součástí Správce ukotvení.  
   
-##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames  
+##  <a name="sendmessagetominiframes"></a>  CDockingManager::SendMessageToMiniFrames  
  Odešle určenou zprávu na všechny mini snímky.  
   
 ```  
@@ -1420,19 +1415,19 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uMessage`  
+ [v] `uMessage`  
  Zpráva, která má být odeslána.  
   
- [v]`wParam`  
+ [v] `wParam`  
  Informace závislé další zprávy.  
   
- [v]`lParam`  
+ [v] `lParam`  
  Informace závislé další zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`vždy.  
+ `TRUE` Vždy.  
   
-##  <a name="serialize"></a>CDockingManager::Serialize  
+##  <a name="serialize"></a>  CDockingManager::Serialize  
  Ukotvení manager zapíše do archivu.  
   
 ```  
@@ -1440,13 +1435,13 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ar`  
+ [v] `ar`  
  Odkaz na objekt archivu.  
   
 ### <a name="remarks"></a>Poznámky  
  Zápis do archivu ukotvení manager zahrnuje určení počtu ukotvení ovládací pruhy a posuvníky a zápis ovládací pruhy, mini rámce, autohide – řádky a řádky MDI – záložkami do archivu.  
   
-##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder  
+##  <a name="setautohidezorder"></a>  CDockingManager::SetAutohideZOrder  
  Nastaví velikost, šířku a výšku ovládacích pruhů a podokně zadaný.  
   
 ```  
@@ -1454,10 +1449,10 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pAHDockingBar`  
+ [v] `pAHDockingBar`  
  Ukazatel na lze ukotvit podokně.  
   
-##  <a name="setdockingmode"></a>CDockingManager::SetDockingMode  
+##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  Nastaví režim ukotvení.  
   
 ```  
@@ -1476,22 +1471,22 @@ static void SetDockingMode(
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu statické nastavení ukotvení režimu.  
   
- `dockMode`může být jedna z následujících hodnot:  
+ `dockMode` může být jedna z následujících hodnot:  
   
-- `DT_STANDARD`-Ukotvení režimu, jak jsou implementované ve Visual Studio .NET 2003 standard. Podokna jsou přetáhnout bez přetahování kontextu.  
+- `DT_STANDARD` -Ukotvení režimu, jak jsou implementované ve Visual Studio .NET 2003 standard. Podokna jsou přetáhnout bez přetahování kontextu.  
   
-- `DT_IMMEDIATE`-Přímý režim ukotvení jako implementována v aplikaci Microsoft Visio. Podokna jsou přetáhnout pomocí přetahování kontextu, ale budou zobrazeny žádné značky.  
+- `DT_IMMEDIATE` -Přímý režim ukotvení jako implementována v aplikaci Microsoft Visio. Podokna jsou přetáhnout pomocí přetahování kontextu, ale budou zobrazeny žádné značky.  
   
-- `DT_SMART`-Inteligentní ukotvení režimu, jak jsou implementované v sadě Visual Studio 2005. Podokna jsou přetáhnout pomocí přetahování kontextu a budou zobrazeny inteligentní značky, zobrazit, kde můžete v podokně ukotven.  
+- `DT_SMART` -Inteligentní ukotvení režimu, jak jsou implementované v sadě Visual Studio 2005. Podokna jsou přetáhnout pomocí přetahování kontextu a budou zobrazeny inteligentní značky, zobrazit, kde můžete v podokně ukotven.  
   
-##  <a name="setdockstate"></a>CDockingManager::SetDockState  
+##  <a name="setdockstate"></a>  CDockingManager::SetDockState  
  Nastaví ukotvení stav ovládací pruhy, mini rámce a autohide – řádky.  
   
 ```  
 virtual void SetDockState();
 ```  
   
-##  <a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode  
+##  <a name="setprintpreviewmode"></a>  CDockingManager::SetPrintPreviewMode  
  Nastaví režim náhledu tisku pruhů, které se zobrazují v náhledu tisku.  
   
 ```  
@@ -1501,13 +1496,13 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bPreview`  
- `TRUE`Pokud má nastaven režim náhledu tisku; `FALSE` jinak.  
+ [v] `bPreview`  
+ `TRUE` Pokud má nastaven režim náhledu tisku; `FALSE` jinak.  
   
- [v]`pState`  
+ [v] `pState`  
  Ukazatel na stav preview. Tento parametr není používán.  
   
-##  <a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams  
+##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  Nastavuje parametry, které definují chování inteligentní ukotvení.  
   
 ```  
@@ -1515,7 +1510,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out]`params`  
+ [ve out] `params`  
  Definuje parametry pro inteligentní ukotvení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1523,7 +1518,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
   
  Chcete-li používat výchozí vzhled pro inteligentní značky ukotvení, předat Neinicializovaný instance [CSmartDockingInfo třída](../../mfc/reference/csmartdockinginfo-class.md) k `params`.  
   
-##  <a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames  
+##  <a name="showdelayshowminiframes"></a>  CDockingManager::ShowDelayShowMiniFrames  
  Zobrazí nebo skryje windows mini snímků.  
   
 ```  
@@ -1531,10 +1526,10 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShow`  
- `TRUE`Chcete-li aktivovat okno zobrazené rámce; `FALSE to` skrýt okna rámečku.  
+ [v] `bShow`  
+ `TRUE` Chcete-li aktivovat okno zobrazené rámce; `FALSE to` skrýt okna rámečku.  
   
-##  <a name="showpanes"></a>CDockingManager::ShowPanes  
+##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  Zobrazí nebo skryje podokna řízení a autohide – pruhů.  
   
 ```  
@@ -1542,13 +1537,13 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShow`  
- `TRUE`k zobrazení podokna; `FALSE to` skryta.  
+ [v] `bShow`  
+ `TRUE` k zobrazení podokna; `FALSE to` skryta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy `FALSE`.  
   
-##  <a name="startsdocking"></a>CDockingManager::StartSDocking  
+##  <a name="startsdocking"></a>  CDockingManager::StartSDocking  
  Spustí se inteligentní ukotvení zadané okno podle zarovnání správce inteligentní ukotvení.  
   
 ```  
@@ -1556,17 +1551,17 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDockingWnd`  
+ [v] `pDockingWnd`  
  Ukazatel na okno chcete ukotvit.  
   
-##  <a name="stopsdocking"></a>CDockingManager::StopSDocking  
+##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  Zastaví inteligentní ukotvení.  
   
 ```  
 void StopSDocking();
 ```  
   
-##  <a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme  
+##  <a name="getsmartdockingtheme"></a>  CDockingManager::GetSmartDockingTheme  
  Statickou metodu, která vrátí motiv slouží k zobrazení inteligentní značky ukotvení.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CDaoDatabase | Microsoft Docs"
-ms.custom: 
+title: Třída CDaoDatabase | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoDatabase
@@ -67,17 +64,15 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b5ae20f06cee55a13327d5bbe7ad058047b53c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase – třída
 Reprezentuje připojení k databázi, pomocí kterého lze provozovat na data.  
@@ -135,7 +130,7 @@ class CDaoDatabase : public CObject
  Informace o formátech databáze podporované, najdete v článku [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) – členská funkce. Může mít jeden nebo více `CDaoDatabase` objekty v každém okamžiku aktivní v dané "pracovního prostoru," reprezentována [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objektu. V pracovním prostoru udržuje kolekci otevřete databázové objekty, názvem databáze kolekce.  
   
 > [!NOTE]
->  Databázové třídy MFC rozhraní DAO se liší od třídami databází MFC založené na rozhraní ODBC. Všechny názvy tříd DAO databáze mít předponu "CDao". Třída `CDaoDatabase` poskytuje rozhraní podobná třídě ODBC [CDatabase](../../mfc/reference/cdatabase-class.md). Hlavní rozdíl je, že `CDatabase` přistupuje databázového systému prostřednictvím připojení ODBC (Open Database) a ovladač ODBC pro tento databázového systému. `CDaoDatabase`získá přístup k datům prostřednictvím objekt DAO (Data Access) podle databázový stroj Microsoft Jet. Obecně platí třídy MFC založené na rozhraní DAO schopné více než třídy MFC založené na rozhraní ODBC; třídy založené na rozhraní DAO přístup k datům, včetně prostřednictvím ovladače ODBC prostřednictvím svých vlastních databázového stroje. Třídy založené na rozhraní DAO také podporují jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy, aniž by museli DAO volat přímo.  
+>  Databázové třídy MFC rozhraní DAO se liší od třídami databází MFC založené na rozhraní ODBC. Všechny názvy tříd DAO databáze mít předponu "CDao". Třída `CDaoDatabase` poskytuje rozhraní podobná třídě ODBC [CDatabase](../../mfc/reference/cdatabase-class.md). Hlavní rozdíl je, že `CDatabase` přistupuje databázového systému prostřednictvím připojení ODBC (Open Database) a ovladač ODBC pro tento databázového systému. `CDaoDatabase` získá přístup k datům prostřednictvím objekt DAO (Data Access) podle databázový stroj Microsoft Jet. Obecně platí třídy MFC založené na rozhraní DAO schopné více než třídy MFC založené na rozhraní ODBC; třídy založené na rozhraní DAO přístup k datům, včetně prostřednictvím ovladače ODBC prostřednictvím svých vlastních databázového stroje. Třídy založené na rozhraní DAO také podporují jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy, aniž by museli DAO volat přímo.  
   
 ## <a name="usage"></a>Použití  
  Objekty databáze. můžete vytvořit implicitně, při vytváření objektů sady záznamů. Ale můžete také vytvořit databázové objekty explicitně. Chcete-li použít existující databázi explicitně s `CDaoDatabase`, proveďte jednu z následujících akcí:  
@@ -170,7 +165,7 @@ class CDaoDatabase : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
-##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDaoDatabase::CanTransact  
  Volání této funkce člen k určení, zda databáze umožňuje transakce.  
   
 ```  
@@ -183,7 +178,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Poznámky  
  Transakce jsou spravovány v prostoru databáze.  
   
-##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate  
  Volání této funkce člen můžete určit, zda `CDaoDatabase` objekt umožňuje aktualizace.  
   
 ```  
@@ -196,7 +191,7 @@ BOOL CanUpdate();
 ### <a name="remarks"></a>Poznámky  
  Informace o databázi aktualizační naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
+##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase  
  Vytvoří `CDaoDatabase` objektu.  
   
 ```  
@@ -217,7 +212,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 > [!NOTE]
 >  A `CDaoDatabase` je taky vytvořit objekt implicitně Pokud můžete otevřít [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu bez předávání ukazatel na stávající `CDaoDatabase` objektu. Tento objekt databáze je uzavřít, když zavřete objekt sady záznamů.  
   
-##  <a name="close"></a>CDaoDatabase::Close  
+##  <a name="close"></a>  CDaoDatabase::Close  
  Volání této funkce člen odpojit z databáze a zavřete všechny otevřené sady záznamů, tabledefs – a querydefs – přidružený k databázi.  
   
 ```  
@@ -235,7 +230,7 @@ virtual void Close();
   
  Pokud objekt databáze je definován v oboru funkce, a ukončete funkce aniž by se zavřel, databázový objekt zůstane otevřené, dokud se explicitně nezavře nebo modul, ve kterém je definovaný je mimo rozsah.  
   
-##  <a name="create"></a>CDaoDatabase::Create  
+##  <a name="create"></a>  CDaoDatabase::Create  
  Chcete-li vytvořit nové Microsoft Jet (. MDB) k databázi, volání této funkce člen, co vytvoříte `CDaoDatabase` objektu.  
   
 ```  
@@ -306,7 +301,7 @@ virtual void Create(
 > [!NOTE]
 >  S **vytvořit**, můžete vytvořit pouze Microsoft Jet (. Databáze MDB). Nelze vytvořit ISAM databáze nebo databáze ODBC.  
   
-##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
+##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
  Volání této funkce člen se vytvoří vztah mezi minimálně jedno pole v primární tabulce v databázi a jedno či více polí v cizí tabulce (jiné tabulky v databázi).  
   
 ```  
@@ -366,7 +361,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
  Související informace naleznete v tématu "CreateRelation způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
+##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef  
  Volání této funkce člena odstranit zadaný querydef – uložit dotazu – z `CDaoDatabase` querydefs – kolekce objektu.  
   
 ```  
@@ -382,7 +377,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
   
  Informace o vytváření objektů querydef najdete v tématu třídy [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Objekt querydef se sváže s konkrétní `CDaoDatabase` objektu, když vytvoříte `CDaoQueryDef` objekt, předání ukazatele na objekt databáze.  
   
-##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
+##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation  
  Volání této funkce člena odstranit stávající relation z kolekce vztahů objekt databáze.  
   
 ```  
@@ -398,7 +393,7 @@ void DeleteRelation(LPCTSTR lpszName);
   
  Související informace naleznete v tématu "Odstranit metodu" v nápovědě rozhraní DAO.  
   
-##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
+##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef  
  Volání této funkce člena odstranit, pokud má zadaná tabulka a všem jeho datům z `CDaoDatabase` tabledefs – kolekce objektu.  
   
 ```  
@@ -419,7 +414,7 @@ void DeleteTableDef(LPCTSTR lpszName);
   
  Související informace naleznete v tématu "Odstranit metodu" v nápovědě rozhraní DAO.  
   
-##  <a name="execute"></a>CDaoDatabase::Execute  
+##  <a name="execute"></a>  CDaoDatabase::Execute  
  Volání této funkce člen spustit dotaz akce nebo spuštění příkazu jazyka SQL v databázi.  
   
 ```  
@@ -462,7 +457,7 @@ void Execute(
   
  **Spuštění** nevrací sadě záznamů. Pomocí **Execute** v dotazu, který vybere záznamy způsobí, že má být vyvolána výjimka typu MFC `CDaoException`. (Není žádná `ExecuteSQL` – členská funkce podobá `CDatabase::ExecuteSQL`.)  
   
-##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
  Volání této funkce člen načíst připojovací řetězec použitý k připojení `CDaoDatabase` objekt do databáze ODBC nebo ISAM.  
   
 ```  
@@ -483,7 +478,7 @@ CString GetConnect();
   
  Najdete v článku [otevřete](#open) – členská funkce Popis vytvoření připojovacího řetězce. Jakmile byl v nastaven připojovací řetězec **otevřete** volání později můžete ho zkontrolovat nastavení k určení typu, cesta, uživatelské ID, heslo nebo ODBC zdroj dat databáze.  
   
-##  <a name="getname"></a>CDaoDatabase::GetName  
+##  <a name="getname"></a>  CDaoDatabase::GetName  
  Volání této funkce člen načíst název databáze aktuálně otevřené, což je název stávající soubor databáze nebo název registrované zdroje dat ODBC.  
   
 ```  
@@ -513,7 +508,7 @@ CString GetName();
   
  Připojovací řetězec databáze pro databáze ODBC, jako je například SQL Server a Oracle, identifikuje název zdroje dat (DSN), která je zaregistrovaná pomocí rozhraní ODBC.  
   
-##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
+##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount  
  Volání této funkce člen načíst počet dotazů, které jsou definované v databáze querydefs – kolekce.  
   
 ```  
@@ -524,9 +519,9 @@ short GetQueryDefCount();
  Počet dotazů, které jsou definované v databázi.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetQueryDefCount`je užitečné, pokud je třeba projít všechny querydefs – v querydefs – kolekce. Pokud chcete získat informace o daný dotaz v kolekci, najdete v části [GetQueryDefInfo](#getquerydefinfo).  
+ `GetQueryDefCount` je užitečné, pokud je třeba projít všechny querydefs – v querydefs – kolekce. Pokud chcete získat informace o daný dotaz v kolekci, najdete v části [GetQueryDefInfo](#getquerydefinfo).  
   
-##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
+##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo  
  Volání této funkce člen získat různých typů informací o dotazu definované v databázi.  
   
 ```  
@@ -552,11 +547,11 @@ void GetQueryDefInfo(
  `dwInfoOptions`  
  Možnosti, které určují, které informace o sadě záznamů k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o sada záznamů:  
   
-- `AFX_DAO_PRIMARY_INFO`(Výchozí) Název, typ  
+- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ  
   
-- `AFX_DAO_SECONDARY_INFO`Primární informace plus: data vytvořená, datum poslední aktualizace, vrátí záznamy, možností aktualizace  
+- `AFX_DAO_SECONDARY_INFO` Primární informace plus: data vytvořená, datum poslední aktualizace, vrátí záznamy, možností aktualizace  
   
-- `AFX_DAO_ALL_INFO`Primární a sekundární informace plus: SQL, připojení, odezvy  
+- `AFX_DAO_ALL_INFO` Primární a sekundární informace plus: SQL, připojení, odezvy  
   
  `lpszName`  
  Řetězec, který obsahuje název dotazu definované v databázi, pro vyhledávání podle názvu.  
@@ -566,7 +561,7 @@ void GetQueryDefInfo(
   
  Popis vrácené v informace *querydefinfo*, najdete v článku [cdaoquerydefinfo –](../../mfc/reference/cdaoquerydefinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popisu `dwInfoOptions`. Jestliže požádáte o jednu úroveň informací, můžete získat žádné předchozí úrovně také informace.  
   
-##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
+##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
  Volání této funkce člen načíst aktuální počet sekund před následných operací v připojené databázi jsou vypršel časový limit.  
   
 ```  
@@ -583,7 +578,7 @@ short GetQueryTimeout();
   
  Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected  
  Volání této funkce člen můžete určit počet záznamů ovlivněný nejnovější voláním z [Execute](#execute) – členská funkce.  
   
 ```  
@@ -598,7 +593,7 @@ long GetRecordsAffected();
   
  Související informace naleznete v tématu "RecordsAffected vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
+##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount  
  Volání této funkce člen získat počet vztahy definované mezi tabulkami v databázi.  
   
 ```  
@@ -613,7 +608,7 @@ short GetRelationCount();
   
  K objasnění konceptu vztah, zvažte tabulky Dodavatelé a tabulky produktů, které může mít vztah jeden mnoho. V této relaci jednoho dodavatele můžete zadat více než jeden produkt. Další vztahy jsou 1: 1 a m: n.  
   
-##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
+##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo  
  Volání této funkce člen získat informace o zadané relace v kolekci vztahy databázi.  
   
 ```  
@@ -639,9 +634,9 @@ void GetRelationInfo(
  `dwInfoOptions`  
  Možnosti, které určují, které informace o vztahu k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o vztah:  
   
-- `AFX_DAO_PRIMARY_INFO`(Výchozí) Název tabulky, cizí tabulky  
+- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název tabulky, cizí tabulky  
   
-- `AFX_DAO_SECONDARY_INFO`Atributy pole informace  
+- `AFX_DAO_SECONDARY_INFO` Atributy pole informace  
   
  Informace o pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) objekt obsahující pole z účastnících se vztah primární tabulce.  
   
@@ -654,7 +649,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  Pokud nastavíte vztah atributů objektu k aktivaci kaskádovými operacemi ( **dbRelationUpdateCascades** nebo **dbRelationDeleteCascades**), databázový stroj Microsoft Jet automaticky aktualizuje nebo Odstraní záznamy v jednom nebo několika tabulkách, provedení změn související primární klíč tabulky. Předpokládejme například, že je vytvořit vztah cascade delete mezi tabulkou Zákazníci a objednávky. Při odstraňování záznamů z tabulky Zákazníci budou odstraněny také záznamy v tabulce objednávky týkající se tohoto zákazníka. Kromě toho pokud vytvoříte cascade odstranit relace mezi tabulkou objednávky a jiné tabulky, záznamy z těchto tabulek jsou automaticky odstraněny při odstraňování záznamů z tabulky zákazníků.  
   
-##  <a name="gettabledefcount"></a>CDaoDatabase::GetTableDefCount  
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount  
  Volání této funkce člen načíst počet tabulek, které jsou definované v databázi.  
   
 ```  
@@ -665,9 +660,9 @@ short GetTableDefCount();
  Počet tabledefs – definované v databázi.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetTableDefCount`je užitečné, pokud je třeba projít všechny tabledefs – v této databáze tabledefs – kolekce. Pokud chcete získat informace o dané tabulce v kolekci, najdete v části [GetTableDefInfo](#gettabledefinfo).  
+ `GetTableDefCount` je užitečné, pokud je třeba projít všechny tabledefs – v této databáze tabledefs – kolekce. Pokud chcete získat informace o dané tabulce v kolekci, najdete v části [GetTableDefInfo](#gettabledefinfo).  
   
-##  <a name="gettabledefinfo"></a>CDaoDatabase::GetTableDefInfo  
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo  
  Volání této funkce člen získat různých typů informací o tabulky definované v databázi.  
   
 ```  
@@ -693,11 +688,11 @@ void GetTableDefInfo(
  `dwInfoOptions`  
  Možnosti, které určují, které informace o tabulce k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o vztah:  
   
-- `AFX_DAO_PRIMARY_INFO`(Výchozí) Název, aktualizovat, atributy  
+- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, aktualizovat, atributy  
   
-- `AFX_DAO_SECONDARY_INFO`Primární informace plus: data vytvořená, datum poslední aktualizace, názvu zdrojové tabulky Connect  
+- `AFX_DAO_SECONDARY_INFO` Primární informace plus: data vytvořená, datum poslední aktualizace, názvu zdrojové tabulky Connect  
   
-- `AFX_DAO_ALL_INFO`Primární a sekundární informace plus: počet záznamů ověřovací pravidlo, Text pro ověření,  
+- `AFX_DAO_ALL_INFO` Primární a sekundární informace plus: počet záznamů ověřovací pravidlo, Text pro ověření,  
   
  `lpszName`  
  Název objektu tabledef, pro vyhledávání podle názvu.  
@@ -710,7 +705,7 @@ void GetTableDefInfo(
 > [!NOTE]
 >  `AFX_DAO_ALL_INFO` Možnost poskytuje informace, které může být pomalé získat. Počítání záznamy v tabulce v takovém případě může být časově velmi náročné Pokud jsou k dispozici mnoho záznamy.  
   
-##  <a name="getversion"></a>CDaoDatabase::GetVersion  
+##  <a name="getversion"></a>  CDaoDatabase::GetVersion  
  Volání této funkce člen zjistíte verzi souboru databáze Microsoft Jet.  
   
 ```  
@@ -725,7 +720,7 @@ CString GetVersion();
   
  Související informace naleznete v tématu "Verze vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="isopen"></a>CDaoDatabase::IsOpen  
+##  <a name="isopen"></a>  CDaoDatabase::IsOpen  
  Volání této funkce člen můžete určit, zda `CDaoDatabase` objektu je aktuálně otevřený v databázi.  
   
 ```  
@@ -737,7 +732,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
+##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase  
  Obsahuje ukazatel na rozhraní OLE pro základní objekt DAO databáze `CDaoDatabase` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -745,13 +740,13 @@ BOOL IsOpen() const;
   
  Informace o volání rozhraní DAO přímo, najdete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
+##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace  
  Obsahuje odkazy [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objekt, který obsahuje objekt databáze.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud potřebujete získat přímo přístup k pracovním prostoru, použijte tento ukazatel – například k získání ukazatele na další objekty databáze v pracovním prostoru databáze kolekce.  
   
-##  <a name="open"></a>CDaoDatabase::Open  
+##  <a name="open"></a>  CDaoDatabase::Open  
  Musí volání této funkce člen k chybě při inicializaci nově vytvořený `CDaoDatabase` objekt, který představuje existující databázi.  
   
 ```  
@@ -810,7 +805,7 @@ virtual void Open(
   
  Můžete také použít připojovací řetězec pro více úrovní ověřování přihlášení (jednotlivých jiné `CDaoDatabase` objektu) nebo vyjádřit jiné informace specifické pro databázi.  
   
-##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout  
  Volání této funkce člena přepsat výchozí počet sekund před následných operací v připojené databázi časový limit.  
   
 ```  

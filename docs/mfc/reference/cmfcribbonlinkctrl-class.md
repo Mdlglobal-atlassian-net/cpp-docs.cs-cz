@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonLinkCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonLinkCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLinkCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3007c98629b83e6302556582220684075d5049b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl – třída
 Implementuje hypertextový odkaz, který je umístěn na pásu karet. Po kliknutí na tlačítko se otevře hypertextový odkaz na webové stránce.  
@@ -99,7 +94,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonLinkCtrl.h  
   
-##  <a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
+##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
  Vytvoří a inicializuje [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objektu.  
   
 ```  
@@ -110,13 +105,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  Určuje příkaz ID příkazu, který provede, když se po kliknutí na ovládací prvek odkazu.  
   
- [v]`lpszText`  
+ [v] `lpszText`  
  Určuje popisek zobrazíte na ovládací prvek odkazu.  
   
- [v]`lpszLink`  
+ [v] `lpszLink`  
  Určuje hypertextový odkaz přidružený k ovládacímu prvku odkazu.  
   
 ### <a name="example"></a>Příklad  
@@ -124,7 +119,7 @@ CMFCRibbonLinkCtrl(
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom  
 
   
 ```  
@@ -132,11 +127,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`src`  
+ [v] `src`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize  
 
   
 ```  
@@ -144,13 +139,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getlink"></a>CMFCRibbonLinkCtrl::GetLink  
+##  <a name="getlink"></a>  CMFCRibbonLinkCtrl::GetLink  
  Vrátí hodnotu hypertextový odkaz.  
   
 ```  
@@ -162,7 +157,7 @@ LPCTSTR GetLink() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize  
 
   
 ```  
@@ -170,13 +165,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText  
+##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText  
 
   
 ```  
@@ -187,7 +182,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage  
 
   
 ```  
@@ -195,14 +190,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CDC*`  
- [v]`CRect`  
+ [v] `CDC*`  
+ [v] `CRect`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage  
 
   
 ```  
@@ -213,7 +208,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondraw"></a>CMFCRibbonLinkCtrl::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw  
 
   
 ```  
@@ -221,11 +216,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove  
 
   
 ```  
@@ -233,11 +228,11 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSetIcon  
+##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon  
 
   
 ```  
@@ -246,7 +241,7 @@ virtual void OnSetIcon();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink  
+##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink  
  Otevře se webová stránka zadaný v hypertextový odkaz.  
   
 ```  
@@ -254,12 +249,12 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně; otevřít související webové stránky v opačném `FALSE`.  
+ `TRUE` Pokud byl úspěšně; otevřít související webové stránky v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Otevře na webové stránce pomocí přidruženého hypertextového odkazu `CMFCRibbonLinkCtrl` objektu.  
   
-##  <a name="setlink"></a>CMFCRibbonLinkCtrl::SetLink  
+##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Nastaví hodnotu hypertextový odkaz.  
   
 ```  
@@ -267,7 +262,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLink`  
+ [v] `lpszLink`  
  Určuje text hypertextového odkazu.  
   
 ## <a name="see-also"></a>Viz také  

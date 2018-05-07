@@ -1,8 +1,8 @@
 ---
-title: "C4400 upozornění kompilátoru prostřednictvím C4599 | Microsoft Docs"
+title: C4400 upozornění kompilátoru prostřednictvím C4599 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,16 +147,15 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>C4400 upozornění kompilátoru prostřednictvím C4599
 
 Články v této části dokumentace vysvětlují podmnožinu zprávy upozornění, které jsou generované kompilátorem.
 
@@ -282,7 +281,7 @@ ms.lasthandoff: 03/16/2018
 |[Upozornění kompilátoru (úroveň 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': přechod z bloku ' __finally/finally' má undefined chování při ukončení zpracování|
 |[Upozornění kompilátoru (úroveň 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Inicializace '*proměnná*'je vynecháno'*popisek goto*.|
 |[Upozornění kompilátoru (úroveň 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'*konstruktor*, nebudou pro, třída nebo struktura, výchozí konstruktor,*identifikátor*se z důvodu argument výchozí|
-|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
+|[Upozornění kompilátoru (úroveň 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|volání _set_se_translator() vyžaduje/EHa|
 |[Upozornění kompilátoru (úroveň 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': název typu překračuje limit meta-data "*character_limit*' znaků|
 |[Upozornění kompilátoru (úroveň 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objekt*': '.' u jiných UDT typu|
 |[Upozornění kompilátoru (úroveň 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*typ*': const nebo volatile kvalifikátory u tohoto typu nejsou podporovány.|

@@ -1,13 +1,10 @@
 ---
-title: "Postupy: zkompilování MFC a knihovny ATL kód pomocí - clr | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: zkompilování MFC a knihovny ATL kód pomocí - clr | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f03e324cf4f88d47232cba5e15ec65181af91feb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7412d69230bcb6375a042d6cf8e8f27a3d9eac9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Kompilování kódu knihovny MFC a knihovny ATL s použitím přepínače /clr
 Toto téma popisuje způsob kompilace existující MFC a knihovna ATL programů, pro které modul Common Language Runtime.  

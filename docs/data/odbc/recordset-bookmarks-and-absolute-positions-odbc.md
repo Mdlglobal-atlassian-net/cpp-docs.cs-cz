@@ -2,12 +2,9 @@
 title: 'Sada záznamů: Záložky a absolutní umístění (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Sada záznamů: Záložky a absolutní umístění (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -54,7 +49,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Jak nastavit aktuální záznam pomocí absolutní umístění](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>Záložky v knihovně MFC rozhraní ODBC  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> Záložky v knihovně MFC rozhraní ODBC  
  Záložka jednoznačně identifikuje záznam. Při procházení sady záznamů nelze vždy spoléhat na absolutní umístění záznamu vzhledem k tomu, že záznamy lze odstranit ze sady záznamů. Spolehlivě ke sledování pozici záznamu je použití jeho záložky. Třída `CRecordset` poskytuje členské funkce pro:  
   
 -   Získání záložky na aktuální záznam, takže ho můžete uložit do proměnné ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  V závislosti na vašich ovladač ODBC a typ sady záznamů nemusí být podporován záložky. Můžete snadno zjistit, zda jsou podporovány záložky voláním [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Pokud jsou záložky podporovány, je nutné explicitně zvolit jejich implementaci zadáním **CRecordset::useBookmarks** možnost [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) – členská funkce. Také byste měli zkontrolovat zachování záložek po určité operace sady záznamů. Například pokud jste **Requery** sady záznamů, záložky může již nebude platný. Volání [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolujte, zda můžete bezpečně volat `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Absolutní umístění v knihovně MFC rozhraní ODBC  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Absolutní umístění v knihovně MFC rozhraní ODBC  
  Kromě záložek třídy `CRecordset` vám umožní nastavit na aktuální záznam zadáním pořadové umístění. Tomu se říká absolutní umístění.  
   
 > [!NOTE]

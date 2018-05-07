@@ -1,31 +1,26 @@
 ---
 title: Kolekce (C + +/ CX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>Kolekce (C + +/ CX)
 V jazyce C + +/ CX programu, můžete provést volné použijte standardní šablona knihovny (STL) kontejnery nebo jakýkoli jiný typ uživatelem definované kolekci. Ale pokud předáte kolekce a zpět přes rozhraní binární aplikace Windows Runtime (ABI) – například do ovládacího prvku XAML nebo klienta JavaScript – je nutné použít prostředí Windows Runtime typy kolekcí.  
   
  Prostředí Windows Runtime definuje rozhraní pro kolekce a souvisejících typů a C + +/ CX poskytuje konkrétní implementace C++ v záhlaví souboru collection.h. Tento obrázek znázorňuje vztahy mezi typy kolekcí:  
   
- ![C & č. 43; & č. 43; &#47; Stromu dědičnosti CX pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;stromu dědičnosti CX pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Platform::Collections::Vector třída](../cppcx/platform-collections-vector-class.md) vypadá takto: [std::vector třída](../standard-library/vector-class.md).  
   
@@ -71,7 +66,7 @@ V jazyce C + +/ CX programu, můžete provést volné použijte standardní šab
   
  Následující obrázek znázorňuje `range for` smyčku `IVector<Person^>`. Všimněte si, že je na zarážek na řádku 64 zastavená provádění. **QuickWatch** okno ukazuje, že proměnná iterator `p` je ve skutečnosti `VectorProxy<Person^>` s `m_v` a `m_i` proměnné členů. Ale při volání `GetType` na tuto proměnnou vrátí identické typ, který má `Person` instance `p2`. Takeaway je, že i když `VectorProxy` a `ArrowProxy` se může objevit **QuickWatch**, ladicího programu některých chyb kompilátoru, nebo z jiných míst, obvykle není nutné explicitně kód pro ně.  
   
- ![VectorProxy v rozsahu & č. 45; na základě smyčka for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![VectorProxy v rozsahu&#45;na základě smyčka for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  Jeden scénář, ve které je nutné kódu kolem objekt proxy serveru je, když je třeba provést `dynamic_cast` u elementů – například když hledáte XAML objektů, určitého typu v `UIElement` prvek kolekce. V takovém případě musíte nejprve přetypování elementu, který chcete [Platform::Object](../cppcx/platform-object-class.md)^ a poté proveďte dynamické přetypování:  
   

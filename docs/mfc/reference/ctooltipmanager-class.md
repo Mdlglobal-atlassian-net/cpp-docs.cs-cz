@@ -1,12 +1,9 @@
 ---
-title: "Třída CTooltipManager | Microsoft Docs"
-ms.custom: 
+title: Třída CTooltipManager | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager – třída
 Uchovává informace o běhu programu o tlačítkách. `CTooltipManager` Třída je instancí jednou na aplikaci.  
@@ -69,7 +64,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtooltipmanager.h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  Vytvoří ovládací prvek popis tlačítka.  
   
 ```  
@@ -80,13 +75,13 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`pToolTip`  
+ [out] `pToolTip`  
  Odkaz na ukazatel popisku. Je nastaven tak, aby odkazoval na nově vytvořený popisek při funkce vrátí hodnotu.  
   
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Nadřazené popisek.  
   
- [v]`nType`  
+ [v] `nType`  
  Typ popisu tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Panel nástrojů.|CMFCToolBar CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Panelu nástrojů.|Žádné|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  Odstraní ovládacího prvku popisek.  
   
 ```  
@@ -121,13 +116,13 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out]`pToolTip`  
+ [ve out] `pToolTip`  
  Odkaz na ukazatel na popisek zničení.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody pro každou [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md) který byl vytvořen [CTooltipManager::CreateToolTip](#createtooltip). Nadřazeného ovládacího prvku by měly volat tuto metodu z jeho `OnDestroy` obslužné rutiny. To je nutné správně popisek odebrání rozhraní. Tato metoda nastaví `pToolTip` k `NULL` před vrátí.  
   
-##  <a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams  
  Přizpůsobení vzhledu ovládacího prvku tooltip pro zadané typy ovládacích prvků Windows.  
   
 ```  
@@ -138,13 +133,13 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nTypes`  
+ [v] `nTypes`  
  Určuje typy ovládacích prvků.  
   
- [v]`pRTC`  
+ [v] `pRTC`  
  Modul runtime třída vlastní popisek.  
   
- [v]`pParams`  
+ [v] `pParams`  
  Popisek parametry.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  Pokud tuto metodu lze volat, všechny existující popisek vlastníky, zobrazí se zpráva AFX_WM_UPDATETOOLTIPS a jejich popisy tlačítek se musíte znovu vytvořit pomocí [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes`může být libovolnou kombinací platný popisek typy, [CTooltipManager::CreateToolTip](#createtooltip) používá, nebo může být AFX_TOOLTIP_TYPE_ALL. Pokud předáte AFX_TOOLTIP_TYPE_ALL, všechny typy popisek je zasaženo.  
+ `nTypes` může být libovolnou kombinací platný popisek typy, [CTooltipManager::CreateToolTip](#createtooltip) používá, nebo může být AFX_TOOLTIP_TYPE_ALL. Pokud předáte AFX_TOOLTIP_TYPE_ALL, všechny typy popisek je zasaženo.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `SetTooltipParams` metodu `CTooltipManager` třídy. Tento fragment kódu je součástí [Ukázka kreslení klienta](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  Nastaví text a popis pro popisek.  
   
 ```  
@@ -172,25 +167,25 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pTI`  
+ [v] `pTI`  
  Ukazatel na objekt TOOLINFO.  
   
- [ve out]`pToolTip`  
+ [ve out] `pToolTip`  
  Ukazatel na ovládací prvek popis tlačítka pro kterou chcete nastavit text a popis.  
   
- [v]`nType`  
+ [v] `nType`  
  Určuje typ ovládacího prvku, ke kterému je přiřazeno toto popisku.  
   
- [v]`strText`  
+ [v] `strText`  
  Text, který chcete nastavit jako text popisku.  
   
- [v]`lpszDescr`  
+ [v] `lpszDescr`  
  Ukazatel na popis popisku. Může být `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
  Hodnota `nType` musí být stejná hodnota jako `nType` parametr [CTooltipManager::CreateToolTip](#createtooltip) při vytvoření popisek.  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

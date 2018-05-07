@@ -1,12 +1,9 @@
 ---
-title: "Třída CSimpleException | Microsoft Docs"
-ms.custom: 
+title: Třída CSimpleException | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>CSimpleException – třída
 Tato třída je základní třídu pro kritické prostředků MFC – výjimky.  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|Poskytuje text o chybu, ke které došlo k chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSimpleException`Základní třída pro prostředek kritické výjimky MFC a zpracovává vlastnictví a inicializace chybovou zprávu. Následující třídy použití `CSimpleException` jako jejich základní třídy:  
+ `CSimpleException` Základní třída pro prostředek kritické výjimky MFC a zpracovává vlastnictví a inicializace chybovou zprávu. Následující třídy použití `CSimpleException` jako jejich základní třídy:  
   
 |||  
 |-|-|  
@@ -79,7 +74,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  Konstruktor  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Poznámky  
  Potřebovali byste normálně nikdy přímo volat tento konstruktor. Funkci, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volat jeho konstruktoru, nebo pomocí některé z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), má být vyvolána předdefinované typu.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Volání této funkce člen zajistit text o chybu, ke které došlo k chybě.  
   
 ```  

@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Collections::map | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Collections::map | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::map – třída
 
@@ -86,13 +81,13 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 |Název|Popis|
 |----------|-----------------|
-|[Map::Map](#ctor)|Inicializuje novou instanci třídy Map.|
+|[Map::map](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Map::Clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu mapy.|
+|[Map::clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu mapy.|
 |[Map::First](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
 |[Map::GetView](#getview)|Vrátí aktuální mapy; zobrazení jen pro čtení To znamená [Platform::Collections::MapView třída](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Určuje, zda aktuální mapy obsahuje zadaný klíč.|
@@ -256,7 +251,7 @@ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k
 *první*  
 Vstupní iteraci prvním elementem v rozsahu prvků použitý k inicializaci aktuální mapy.
 
-*last*  
+*poslední*  
 Vstupní iterator první elementu po celou řadu prvky používané k chybě při inicializaci aktuální mapy.
 
 ## <a name="mapchanged"></a>  Map::mapchanged – událost

@@ -1,13 +1,10 @@
 ---
-title: "Postupy: zobrazení informací o příkazu ve stavovém řádku | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: zobrazení informací o příkazu ve stavovém řádku | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da836f48592d97b3526c568eb9d9a830428f53a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Postupy: Zobrazení informací o příkazu ve stavovém řádku
 Když spustíte Průvodce aplikace vytvořit kostru aplikace, může podporovat panelu nástrojů a stavového řádku. Právě jednou z možností v Průvodci aplikace podporuje obě. Když se nachází stavového řádku, aplikace automaticky poskytuje užitečné zpětnou vazbu přesunutí ukazatele myši položky v nabídkách. Aplikace automaticky zobrazí výzva řetězec ve stavovém řádku, když je označený položky nabídky. Například při přesunutí ukazatele myši **Vyjmout** příkaz na **upravit** nabídce Stavový řádek může zobrazit "Vyjme výběr a umístí jej do schránky" v oblasti zpráv stavového řádku. Na řádku pomáhá pochopit účel položky nabídky uživatele. Tento postup funguje i když uživatel klikne tlačítko panelu nástrojů.  

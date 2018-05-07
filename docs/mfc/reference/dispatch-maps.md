@@ -1,13 +1,10 @@
 ---
-title: "Mapy odesílání | Microsoft Docs"
-ms.custom: 
+title: Mapy odesílání | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 OLE – automatizace poskytuje způsobů, jak volat metody a pro přístup k vlastnostem napříč aplikacemi. Tento mechanismus poskytl knihovny Microsoft Foundation Class pro odeslání tyto požadavky je "mapy odesílání," což znamená, že názvy interních a externích objekt funkce a vlastnosti, jakož i datové typy vlastností sami nebo argumenty funkce.  
@@ -46,7 +41,7 @@ OLE – automatizace poskytuje způsobů, jak volat metody a pro přístup k vla
 |[DISP_PROPERTY_PARAM –](#disp_property_param)|Definuje vlastnosti automatizace OLE, která přebírá názvy a parametry funkce Get a Set.|  
 |[DISP_DEFVALUE –](#disp_defvalue)|Díky existující vlastnost Výchozí hodnota objektu.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP –  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP –  
  Pokud `CCmdTarget`-odvozené třídy v programu podporuje automatizace OLE, že třída musí poskytnout mapy odesílání vystavit její metody a vlastnosti.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP –  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP –  
  Deklaruje definici expediční mapy.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP –  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP –  
  Ukončí definici expediční mapy.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION –  
+##  <a name="disp_function"></a>  DISP_FUNCTION –  
  Definuje funkci automatizace OLE v mapě odesílání.  
   
 ```   
@@ -145,7 +140,7 @@ DISP_FUNCTION(
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
-|**HODNOTA VT_UNKNOWN**|`LPUNKNOWN`|  
+|**VT_UNKNOWN**|`LPUNKNOWN`|  
   
  `vtsParams` Argument je seznam hodnot oddělených mezerami **VTS_** konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne čárkami) určuje seznam parametrů funkce. Například 
   
@@ -171,7 +166,7 @@ DISP_FUNCTION(
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_PI2**|**krátký\***|  
 |**VTS_PI4**|**dlouhá\***|  
-|**VTS_PR4**|**plovoucí desetinná čárka\***|  
+|**VTS_PR4**|**Plovoucí desetinná čárka\***|  
 |**VTS_PR8**|**Double\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**DATUM\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY –  
+##  <a name="disp_property"></a>  DISP_PROPERTY –  
  Definuje vlastnost automatizace OLE v mapě odesílání.  
   
 ```   
@@ -226,14 +221,14 @@ DISP_PROPERTY(
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
-|**HODNOTA VT_UNKNOWN**|`LPUNKNOWN`|  
+|**VT_UNKNOWN**|`LPUNKNOWN`|  
   
  Až se změní hodnota členské proměnné určeného vlastnosti externích klientských `memberName` změní; nejsou žádná oznámení změny.  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX –  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX –  
  Definuje vlastnosti automatizace OLE a název funkce, které slouží k získání a nastavení vlastnosti na hodnotu v mapě odesílání.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY –  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY –  
  Definuje vlastnost automatizace OLE s oznámení v mapě odesílání.  
   
 ```   
@@ -315,12 +310,12 @@ DISP_PROPERTY_NOTIFY(
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
-|**HODNOTA VT_UNKNOWN**|`LPUNKNOWN`|  
+|**VT_UNKNOWN**|`LPUNKNOWN`|  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM –  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM –  
  Definuje vlastnost přístupný pomocí samostatné **získat** a `Set` členské funkce.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE –  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE –  
  Díky existující vlastnost Výchozí hodnota objektu.  
   
 ```   

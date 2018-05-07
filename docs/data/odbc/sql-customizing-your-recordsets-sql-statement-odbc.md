@@ -2,12 +2,9 @@
 title: 'SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)
 Toto téma vysvětluje:  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  Pokud používáte literály filtry (nebo dalších částí příkaz jazyka SQL), možná budete muset "nabídka" (uzavřít do zadaných oddělovačů) tyto řetězce s předponou literálu specifické databázového systému a literálu přípona znak (nebo znaků).  
   
- Zvláštní požadavky syntaxi pro operace, jako je například vnější spojení, může dojít také v závislosti na vaší databázového systému. Pomocí funkcí rozhraní ODBC získat tyto informace z vašeho ovladače databázového systému. Například volání **:: SQLGetTypeInfo** pro konkrétní datový typ, jako například **SQL_VARCHAR**, k vyžádání **LITERAL_PREFIX** a **LITERAL_SUFFIX** znaků. Pokud vytváříte kód nezávislý na databázi, naleznete v dodatku C *ODBC SDK**referenční informace pro programátory* na disku CD knihovny MSDN pro podrobné informace o syntaxi.  
+ Zvláštní požadavky syntaxi pro operace, jako je například vnější spojení, může dojít také v závislosti na vaší databázového systému. Pomocí funkcí rozhraní ODBC získat tyto informace z vašeho ovladače databázového systému. Například volání **:: SQLGetTypeInfo** pro konkrétní datový typ, jako například **SQL_VARCHAR**, k vyžádání **LITERAL_PREFIX** a **LITERAL_SUFFIX** znaků. Pokud vytváříte kód nezávislý na databázi, naleznete v dodatku C *ODBC SDK ** referenční informace pro programátory* na disku CD knihovny MSDN pro podrobné informace o syntaxi.  
   
  Objekt sady záznamů vytvoří příkaz jazyka SQL, která slouží k výběru záznamů, pokud předáte vlastní příkaz SQL. Způsob provedení závisí hlavně na hodnotě, kterou předáte `lpszSQL` parametr **otevřete** – členská funkce.  
   
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Případ|Co můžete předat lpszSQL|Výsledný příkaz SELECT|  
 |----------|------------------------------|------------------------------------|  
-|1|**HODNOTU NULL**|**Vyberte** *seznam polí rfx* **FROM** *název tabulky*<br /><br /> `CRecordset::Open`volání `GetDefaultSQL` získat název tabulky. Výsledný řetězec je jedním z případů 2 až 5, v závislosti na tom, co `GetDefaultSQL` vrátí.|  
+|1|**HODNOTU NULL**|**Vyberte** *seznam polí rfx* **FROM** *název tabulky*<br /><br /> `CRecordset::Open` volání `GetDefaultSQL` získat název tabulky. Výsledný řetězec je jedním z případů 2 až 5, v závislosti na tom, co `GetDefaultSQL` vrátí.|  
 |2|Název tabulky|**Vyberte** *seznam polí rfx* **FROM** *název tabulky*<br /><br /> Seznam polí jsou převzaty z příkazů RFX v `DoFieldExchange`. Pokud **m_strFilter** a `m_strSort` nejsou prázdné, přidá **kde** nebo **Order** klauzule.|  
 |3 *|Úplná **vyberte** příkaz ale bez **kde** nebo **Order** – klauzule|Jak je předán. Pokud **m_strFilter** a `m_strSort` nejsou prázdné, přidá **kde** nebo **Order** klauzule.|  
 |4 *|Úplná **vyberte** příkaz s **kde** nebo **Order** – klauzule|Jak je předán. **m_strFilter** nebo `m_strSort` musí zůstat prázdná, nebo dvě filtru nebo vytváří příkazy řazení.|  
 |5 *|Volání uložené procedury|Jak je předán.|  
   
- \*`m_nFields` musí být menší než počet sloupců zadaný v **vyberte** příkaz. Datový typ zadaný v každý sloupec **vyberte** příkaz musí být stejný jako datový typ odpovídající RFX výstupního sloupce.  
+ \* `m_nFields` musí být menší než počet sloupců zadaný v **vyberte** příkaz. Datový typ zadaný v každý sloupec **vyberte** příkaz musí být stejný jako datový typ odpovídající RFX výstupního sloupce.  
   
 ### <a name="case-1---lpszsql--null"></a>Případ 1 lpszSQL = NULL  
  Výběr sady záznamů závisí na co `GetDefaultSQL` vrátí, když `CRecordset::Open` nazve je. Případů 2 až 5 popisují možné řetězce.  

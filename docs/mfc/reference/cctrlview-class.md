@@ -1,12 +1,9 @@
 ---
-title: "Třída CCtrlView | Microsoft Docs"
-ms.custom: 
+title: Třída CCtrlView | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCtrlView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cctrlview-class"></a>CCtrlView – třída
 Přizpůsobení zobrazení dokumentu architekturu pro běžné ovládací prvky, které podporuje verze Windows 98 a systému Windows NT 3.51 a novější.  
@@ -85,7 +80,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>  CCtrlView::CCtrlView  
  Vytvoří `CCtrlView` objektu.  
   
 ```  
@@ -104,14 +99,14 @@ CCtrlView(
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá konstruktor při vytvoření nové okně s rámečkem nebo je rozdělit okno. Přepsání [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) k inicializaci zobrazení po je dokument připojen. Volání [CWnd::Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) k vytvoření objektu Windows.  
   
-##  <a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
  Obsahuje název třídy Windows pro třídu zobrazení.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle  
  Obsahuje výchozí styl pro třídu zobrazení.  
   
 ```  
@@ -121,7 +116,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>Poznámky  
  Toto je použit, když se vytvoří okno.  
   
-##  <a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>  CCtrlView::OnDraw  
  Voláno rámcem k vykreslení obsahu `CCtrlView` objektu v kontextu zadané zařízení.  
   
 ```  
@@ -133,9 +128,9 @@ virtual void OnDraw(CDC* pDC);
  Ukazatel na zařízení kontext, ve kterém dojde k kreslení.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnDraw`pro zobrazení na obrazovce, předávání určeného kontextu zařízení obrazovky obvykle nazývá `pDC`.  
+ `OnDraw` pro zobrazení na obrazovce, předávání určeného kontextu zařízení obrazovky obvykle nazývá `pDC`.  
   
-##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Volá se před vytvořením okna Windows připojených k tomuto `CWnd` objektu.  
   
 ```  

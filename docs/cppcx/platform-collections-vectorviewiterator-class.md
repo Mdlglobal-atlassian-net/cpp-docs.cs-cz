@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Collections::VectorViewIterator | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Collections::VectorViewIterator | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator – třída
 Poskytuje standardní knihovny šablon iterator pro objekty, které jsou odvozené z prostředí Windows Runtime`IVectorView` rozhraní.  
@@ -65,20 +60,20 @@ class VectorViewIterator;
 |Název|Popis|  
 |----------|-----------------|  
 |[VectorViewIterator::operator-– operátor](#operator-minus)|Odečítá od buď zadaný počet elementů od aktuální iterator je nové iterator nebo zadaný iterator z aktuální iterator je počet elementů mezi iterátory.|  
-|[VectorViewIterator::operator-- Operator](#operator-decrement)|Snižuje aktuální VectorViewIterator.|  
+|[VectorViewIterator::operator – operátor](#operator-decrement)|Snižuje aktuální VectorViewIterator.|  
 |[VectorViewIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální VectorViewIterator se nerovná zadané VectorViewIterator.|  
 |[VectorViewIterator::operator * – operátor](#operator-dereference)|Získá odkaz na element určeného aktuální VectorViewIterator.|  
 |[VectorViewIterator::operator\[\]](#operator-at)|Získá odkaz na element, který je zadaný přestavění z aktuální VectorViewIterator.|  
 |[VectorViewIterator::operator + – operátor](#operator-plus)|Vrátí VectorViewIterator, který odkazuje na element v zadané posunutí ze zadaného VectorViewIterator.|  
-|[VectorViewIterator::operator++ Operator](#operator-increment)|Zvýší aktuální VectorViewIterator.|  
-|[VectorViewIterator::operator+= Operator](#operator-plus-assign)|Zvýší aktuální VectorViewIterator podle zadaného posunutí.|  
+|[VectorViewIterator::operator ++ – operátor](#operator-increment)|Zvýší aktuální VectorViewIterator.|  
+|[VectorViewIterator::operator += – operátor](#operator-plus-assign)|Zvýší aktuální VectorViewIterator podle zadaného posunutí.|  
 |[VectorViewIterator::operator < – operátor](#operator-less-than)|Určuje, zda aktuální VectorViewIterator je menší než zadaný VectorViewIterator.|  
-|[VectorViewIterator::operator\<= Operator](#operator-less-than-or-equals)|Určuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|  
-|[VectorViewIterator::operator-= Operator](#operator-minus-assign)|Snižuje aktuální VectorViewIterator podle zadaného posunutí.|  
-|[VectorViewIterator::operator== Operator](#operator-equality)|Určuje, zda je aktuální VectorViewIterator rovná zadané VectorViewIterator.|  
+|[VectorViewIterator::operator\<= – operátor](#operator-less-than-or-equals)|Určuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|  
+|[VectorViewIterator::operator-= – operátor](#operator-minus-assign)|Snižuje aktuální VectorViewIterator podle zadaného posunutí.|  
+|[VectorViewIterator::operator == – operátor](#operator-equality)|Určuje, zda je aktuální VectorViewIterator rovná zadané VectorViewIterator.|  
 |[VectorViewIterator::operator > – operátor](#operator-greater-than)|Určuje, zda aktuální VectorViewIterator je větší než zadaná VectorViewIterator.|  
 |[VectorViewIterator::operator -> – operátor](#operator-arrow)|Načte adresu odkazuje aktuální VectorViewIterator elementu.|  
-|[VectorViewIterator::operator>= Operator](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.|  
+|[VectorViewIterator::operator > = – operátor](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `VectorViewIterator`  
@@ -124,7 +119,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference">VectorViewIterator::operator * – operátor</a>
+## <a name="operator-dereference"></a>  VectorViewIterator::operator * – operátor
 Získá odkaz na element určeného aktuální VectorViewIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -215,7 +210,7 @@ VectorViewIterator operator++(int);
   
 
 
-## <a name="operator-inequality">VectorViewIterator::operator! = – operátor</a>
+## <a name="operator-inequality"></a>  VectorViewIterator::operator! = – operátor
 Určuje, zda aktuální VectorViewIterator se nerovná zadané VectorViewIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -270,7 +265,7 @@ bool operator<=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-minus">VectorViewIterator::operator-– operátor</a>
+## <a name="operator-minus"></a>  VectorViewIterator::operator-– operátor
 Odečítá od buď zadaný počet elementů od aktuální iterator je nové iterator nebo zadaný iterator z aktuální iterator je počet elementů mezi iterátory.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -312,7 +307,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus">VectorViewIterator::operator + – operátor</a>
+## <a name="operator-plus"></a>  VectorViewIterator::operator + – operátor
 Vrátí VectorViewIterator, který odkazuje na element v zadané posunutí ze zadaného VectorViewIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -363,7 +358,7 @@ VectorViewIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at">VectorViewIterator::operator</a>\[\]
+## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
 Získá odkaz na element, který je zadaný přestavění z aktuální VectorViewIterator.  
   
 ### <a name="syntax"></a>Syntaxe  

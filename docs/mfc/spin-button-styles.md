@@ -1,13 +1,10 @@
 ---
-title: "Styly číselníků | Microsoft Docs"
-ms.custom: 
+title: Styly číselníků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b2ae42175e2d4fc2ddb3317ef76b6b4dec8d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b559fcda4825aec71ba4b5c1dd8c3cd319b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spin-button-styles"></a>Styly číselníků
 Mnoho z nastavení typu číselník ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) jsou řízeny stylů. Můžete nastavit následující styly pomocí **vlastnosti** okno v editoru dialogového okna.  
@@ -42,7 +37,7 @@ Mnoho z nastavení typu číselník ([CSpinButtonCtrl](../mfc/reference/cspinbut
 -   **Žádné tisíc** nevkládá tisíců oddělovače v hodnotě v záhlaví okna kamarád. Přidružené `UDS_NOTHOUSANDS` stylu.  
   
     > [!NOTE]
-    >  Nastavte tento styl, pokud chcete používat k získání celočíselnou hodnotu z ovládacího prvku kamarád výměna dialogových dat (DDX). `DDX_Text`nepřijímá embedded oddělovače tisíců.  
+    >  Nastavte tento styl, pokud chcete používat k získání celočíselnou hodnotu z ovládacího prvku kamarád výměna dialogových dat (DDX). `DDX_Text` nepřijímá embedded oddělovače tisíců.  
   
 -   **Zabalení** způsobí, že pozice "zabalit", protože tato hodnota se zvýšena nebo snížena mimo rozsah ovládacího prvku. Přidružené `UDS_WRAP` stylu.  
   

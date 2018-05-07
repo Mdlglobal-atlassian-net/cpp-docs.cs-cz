@@ -1,13 +1,10 @@
 ---
-title: "Výměna polí záznamu: Použití funkcí RFX | Microsoft Docs"
-ms.custom: 
+title: 'Výměna polí záznamu: Použití funkcí RFX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Výměna polí záznamu: Použití funkcí RFX
 Toto téma vysvětluje, jak používat funkce RFX, které tvoří tělo vaší `DoFieldExchange` přepsat.  
@@ -40,7 +35,7 @@ Toto téma vysvětluje, jak používat funkce RFX, které tvoří tělo vaší `
   
  Globální funkce RFX výměnu dat mezi sloupce na datový zdroj a pole datových členů ve vaší sadě záznamů. Zápis funkce RFX volání do sady záznamů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) – členská funkce. Toto téma popisuje funkce stručně a ukazuje datové typy, pro které RFX funkce jsou k dispozici. [Technická poznámka 43](../../mfc/tn043-rfx-routines.md) popisuje, jak napsat vlastní funkce RFX pro další datové typy.  
   
-##  <a name="_core_rfx_function_syntax"></a>Syntaxe funkce RFX  
+##  <a name="_core_rfx_function_syntax"></a> Syntaxe funkce RFX  
  Jednotlivé funkce RFX přijímá tři parametry (a některé si volitelný parametr čtvrtý nebo pátý):  
   
 -   Ukazatel [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objektu. Jednoduše předáte `pFX` ukazatel předaný `DoFieldExchange`.  
@@ -55,7 +50,7 @@ Toto téma vysvětluje, jak používat funkce RFX, které tvoří tělo vaší `
   
  Další informace najdete v tématu v části funkce RFX [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *knihovny tříd*. Pro příklad, kdy budete chtít vytvořit speciální používání parametrů naleznete v tématu [sada záznamů: získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a>RFX datové typy  
+##  <a name="_core_rfx_data_types"></a> RFX datové typy  
  Knihovna tříd poskytuje funkce RFX pro přenos mezi zdroji dat a vaše sady záznamů mnoha různými datovými typy. Následující seznam shrnuje funkce RFX podle datového typu. V případech, kdy musíte napsat vlastní funkce RFX vyberte z těchto funkcí podle datového typu.  
   
 |Funkce|Datový typ|  

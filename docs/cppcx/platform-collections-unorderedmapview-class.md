@@ -1,26 +1,21 @@
 ---
-title: "Platform::Collections:: unorderedmapview – třída | Microsoft Docs"
-ms.custom: 
+title: 'Platform::Collections:: unorderedmapview – třída | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 Představuje zobrazení jen pro čtení do *mapy*, což je kolekce párů klíč hodnota.  
@@ -43,7 +38,7 @@ ref class UnorderedMapView sealed;
  Typ hodnoty v páru klíč / hodnota.  
   
  `C`  
- Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty klíče rovnosti. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
+ Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty klíče rovnosti. Ve výchozím nastavení [std::equal_to\<kB >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Poznámky  
  UnorderedMapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView\<tisíc, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, které je předán přes rozhraní binární aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
@@ -60,11 +55,11 @@ ref class UnorderedMapView sealed;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[UnorderedMapView::First](#first)|Vrátí první prvek v zobrazení mapy iterátor, který je inicializován.|  
+|[Unorderedmapview::First –](#first)|Vrátí první prvek v zobrazení mapy iterátor, který je inicializován.|  
 |[UnorderedMapView::HasKey](#haskey)|Určuje, zda aktuální UnorderedMapView obsahuje zadaný klíč.|  
 |[UnorderedMapView::Lookup](#lookup)|Načte element v zadaný klíč v aktuálním objektu UnorderedMapView.|  
-|[UnorderedMapView::Size](#size)|Vrátí počet prvků v aktuálním objektu UnorderedMapView.|  
-|[UnorderedMapView::Split](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|  
+|[Unorderedmapview::size –](#size)|Vrátí počet prvků v aktuálním objektu UnorderedMapView.|  
+|[Unorderedmapview::split –](#split)|Původní objekt UnorderedMapView rozdělí na dva objekty UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `UnorderedMapView`  

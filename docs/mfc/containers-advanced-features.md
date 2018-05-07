@@ -1,13 +1,10 @@
 ---
-title: "Kontejnery: Pokročilé funkce | Microsoft Docs"
-ms.custom: 
+title: 'Kontejnery: Pokročilé funkce | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 Tento článek popisuje kroky potřebné k začlenit volitelné pokročilých funkcí do existující aplikace typu kontejner. Tyto funkce jsou:  
@@ -40,7 +35,7 @@ Tento článek popisuje kroky potřebné k začlenit volitelné pokročilých fu
   
 -   [Propojení OLE k vložený objekt](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>Vytvoření aplikace typu Server/kontejner  
+##  <a name="_core_creating_a_container_server_application"></a> Vytvoření aplikace typu Server/kontejner  
  Aplikace typu server/kontejner je aplikace, která slouží jako kontejner a server. Microsoft Word pro Windows je příkladem. Můžete vložit dokumenty aplikace Word pro Windows v ostatních aplikacích a můžete také vložit položek v dokumentech aplikace Word pro Windows. Proces úpravy aplikace kontejneru kontejner a celého serveru (nelze vytvořit kontejner nebo miniserver aplikaci na kombinaci) je podobný procesu pro vytváření celého serveru.  
   
  Článek [servery: implementace serveru](../mfc/servers-implementing-a-server.md) uvádí počet úlohy, které vyžadují k implementaci serverové aplikace. Pokud převedete kontejnerové aplikace k aplikaci typu server/kontejner, bude nutné provést některé z těchto úloh, přidání kódu do kontejneru. Následuje seznam důležitých věcí, které je třeba zvážit:  
@@ -57,7 +52,7 @@ Tento článek popisuje kroky potřebné k začlenit volitelné pokročilých fu
   
  Všimněte si, že aplikace MDI nelze vložit do sebe sama. Aplikace, která je server/kontejner nelze vložit do sebe, pokud je aplikace SDI.  
   
-##  <a name="_core_links_to_embedded_objects"></a>Odkazy na vložené objekty  
+##  <a name="_core_links_to_embedded_objects"></a> Odkazy na vložené objekty  
  Odkazy na vložené objekty funkce umožňuje uživateli vytvořit dokument s OLE odkaz na objekt uvnitř kontejneru aplikace. Můžete například vytvořte dokument v textovém editoru, který obsahuje vložené tabulky. Pokud vaše aplikace podporuje odkazy na vložené objekty, může vložit odkaz na tabulku obsažené v dokumentu textového procesoru. Tato funkce umožňuje vaší aplikace použijte informace obsažené v tabulce aniž by věděly, kde textového procesoru původně získali ho.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>Propojit s vložené objekty v aplikaci  

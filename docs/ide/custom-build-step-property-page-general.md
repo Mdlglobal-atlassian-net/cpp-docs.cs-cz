@@ -1,13 +1,10 @@
 ---
-title: "Stránka vlastností vlastního sestavení krok: Obecná | Microsoft Docs"
-ms.custom: 
+title: 'Stránka vlastností vlastního sestavení krok: Obecná | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Stránka vlastností vlastního kroku sestavení: Obecné
 Pro každou kombinaci konfigurace projektu a cílové platformy v projektu můžete zadat vlastní krok, který se má provést při sestavení projektu.  
@@ -39,7 +34,7 @@ Pro každou kombinaci konfigurace projektu a cílové platformy v projektu mů�
 Linux verzi této stránce, naleznete v části [vlastní sestavení krok vlastnosti (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- Příkazový řádek  
+ **Příkazový řádek**  
  Příkaz, který má vlastní krok sestavení provést.  
   
  **Popis**  
@@ -48,10 +43,10 @@ Linux verzi této stránce, naleznete v části [vlastní sestavení krok vlastn
  **Výstupy**  
  Výstupní soubor, který je vygenerován vlastním krokem sestavení. Toto nastavení je povinné, aby přírůstkové sestavení fungovalo správně.  
   
- Další závislosti  
+ **Další závislosti**  
  Seznam případných dalších vstupních souborů, které se mají použít ve vlastním kroku sestavení, oddělených středníkem.  
   
- Po spuštění a provést před  
+ **Po spuštění a provést před**  
  Tyto volby definují, kdy se vlastní krok v rámci procesu sestavení spustí. Zadávají se ve vztahu k cílům uvedeným v seznamu. Nejčastěji používané cíle jsou BuildGenerateSources, BuildCompile a BuildLink, které představují nejdůležitější kroky v procesu sestavení. Další často používané cíle jsou Midl, CLCompile a Link.  
   
  Považovat výstup za obsah  

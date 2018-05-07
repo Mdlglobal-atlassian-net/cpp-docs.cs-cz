@@ -1,12 +1,9 @@
 ---
-title: "CRowsetImpl – třída | Microsoft Docs"
-ms.custom: 
+title: CRowsetImpl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowsetImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d97eefdc1885c532df9c9be913e3f1beea2ff09
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eece641adacd6ce918929366c4fc6dc78105e71a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl – třída
 Poskytuje standardní implementace sady řádků OLE DB bez nutnosti vícenásobná dědičnost mnoho implementaci rozhraní.  
@@ -77,8 +72,8 @@ class CRowsetImpl :
 |||  
 |-|-|  
 |[GetColumnInfo –](../../data/oledb/crowsetimpl-getcolumninfo.md)|Načte informace o sloupci pro požadavek na konkrétní klienta.|  
-|[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)|Kontroluje, zda nebo oba parametry obsahovat řetězcové hodnoty, a pokud ano, zkopíruje řetězcové hodnoty datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
-|[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)|Zkontroluje, zda buď nebo obojí **DBID**s obsahovat řetězcové hodnoty a pokud ano, kopíruje je do svých členů dat [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
+|[Getcommandfromid –](../../data/oledb/crowsetimpl-getcommandfromid.md)|Kontroluje, zda nebo oba parametry obsahovat řetězcové hodnoty, a pokud ano, zkopíruje řetězcové hodnoty datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
+|[ValidateCommandID –](../../data/oledb/crowsetimpl-validatecommandid.md)|Zkontroluje, zda buď nebo obojí **DBID**s obsahovat řetězcové hodnoty a pokud ano, kopíruje je do svých členů dat [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
   
 ### <a name="data-members"></a>Datové členy  
   

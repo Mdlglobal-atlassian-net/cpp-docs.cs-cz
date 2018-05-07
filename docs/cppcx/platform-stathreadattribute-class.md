@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::STAThreadAttribute | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::STAThreadAttribute | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute – třída
 Označuje, že modelu vláken pro aplikaci je single-threaded apartment (STA).  
@@ -77,7 +72,7 @@ public:STAThreadAttribute()
   
 
 
-## <a name="equals">STAThreadAttribute::Equals</a>
+## <a name="equals"></a> STAThreadAttribute::Equals
 Určuje, zda se zadaný objekt rovná aktuálnímu objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -87,7 +82,7 @@ public:virtual override bool Equals(  Object^ obj)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- obj  
+ Obj  
  Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -109,7 +104,7 @@ public:int GetHashCode()
   
 
 
-## <a name="tostring">STAThreadAttribute::ToString</a>
+## <a name="tostring"></a> STAThreadAttribute::ToString
 Vrací řetězec, který představuje aktuální objekt.  
   
 ### <a name="syntax"></a>Syntaxe  

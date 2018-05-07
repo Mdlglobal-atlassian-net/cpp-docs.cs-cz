@@ -2,12 +2,9 @@
 title: Funkce zpětného volání používané v prostředí MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
 Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. Tyto funkce zpětného volání, které se předávají do [metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), a [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí zachycují výjimky MFC před vrácením Windows, protože nemůže být vyvolány výjimky napříč hranicemi zpětného volání. Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h 
 
-## <a name="enum_objects"></a>Funkce zpětného volání pro metodu CDC::EnumObjects
+## <a name="enum_objects"></a> Funkce zpětného volání pro metodu CDC::EnumObjects
 *ObjectFunc* název je zástupný symbol pro název funkce zadané aplikace.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Poznámky  
  Musí být exportován skutečný název.  
   
-## <a name="graystring"></a>Funkce zpětného volání pro metodu CDC::GrayString
+## <a name="graystring"></a>  Funkce zpětného volání pro metodu CDC::GrayString
 *OutputFunc* je zástupný symbol pro název funkce zpětného volání zadané aplikace.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Poznámky  
  Funkce zpětného volání (*OutputFunc*) musí kreslení obrázku relativně k souřadnice (0,0) místo (*x*, *y*).  
 
-## <a name="setabortproc"></a>Funkce zpětného volání pro metodu CDC::SetAbortProc
+## <a name="setabortproc"></a>  Funkce zpětného volání pro metodu CDC::SetAbortProc
 Název *AbortFunc* je zástupný symbol pro název funkce zadané aplikace.  
   
 ### <a name="syntax"></a>Syntaxe  

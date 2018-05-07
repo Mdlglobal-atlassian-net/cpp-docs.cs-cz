@@ -1,24 +1,19 @@
 ---
-title: "Obory názvů a viditelnost typů (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Obory názvů a viditelnost typů (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 Obor názvů je standardní C++ konstrukce pro typy, které mají související s funkcí seskupování a brání kolize názvů v knihovnách. Systém typů prostředí Windows Runtime vyžaduje, aby všechny veřejné typy prostředí Windows Runtime, včetně těch, které v kódu, musí být deklarován v oboru názvů v oboru názvů. Veřejné typy, které jsou deklarované v globálním oboru nebo vnořit do jiné třídy, způsobí chybu kompilace.  
@@ -54,7 +49,7 @@ Obor názvů je standardní C++ konstrukce pro typy, které mají související 
   
 |||  
 |-|-|  
-|**Namespace**|**Popis**|  
+|**obor názvů**|**Popis**|  
 |default|Obsahuje vestavěné typy číselné a char16. Tyto typy jsou v oboru v každé oboru názvů a `using` příkaz vyžádáním nikdy.|  
 |Platforma|Obsahuje primárně veřejné typy, které odpovídají typům prostředí Windows Runtime, jako `Array<T>`, `String`, `Guid`, a `Boolean`. Také zahrnuje typy specializované pomocné rutiny, jako `Platform::Agile<T>` a `Platform::Box<T>`.|  
 |Platform::Collections|Obsahuje třídy konkrétní kolekce, které implementují rozhraní pro kolekce prostředí Windows Runtime `IVector`, `IMap`a tak dále. Tyto typy jsou definovány v záhlaví souboru collection.h, není v platform.winmd.|  

@@ -1,11 +1,8 @@
 ---
-title: "Obor názvů Platform (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Obor názvů Platform (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform/Platform
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08045758313274a3be5626a7c4f2fa5bd54ae891
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 348bedcde953cbcd6084023d6f7117c7f7f001f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platform-namespace-ccx"></a>Obor názvů Platform (C + +/ CX)
 Obsahuje vestavěné typy, které jsou kompatibilní s prostředí Windows Runtime.  
@@ -117,6 +112,6 @@ using namespace Platform;
   
 ## <a name="see-also"></a>Viz také  
  [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)   
- [Platform::Runtime::CompilerServices Namespace](../cppcx/platform-runtime-compilerservices-namespace.md)   
- [Platform::Runtime::InteropServices Namespace](../cppcx/platform-runtime-interopservices-namespace.md)   
+ [Namespace Platform::Runtime::CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
+ [Namespace Platform::Runtime::InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
  [Platform::Metadata – obor názvů](../cppcx/platform-metadata-namespace.md)

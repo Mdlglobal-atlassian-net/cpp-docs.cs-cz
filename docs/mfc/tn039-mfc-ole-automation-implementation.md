@@ -1,13 +1,10 @@
 ---
-title: "TN039: MFC OLE – implementace automatizace | Microsoft Docs"
-ms.custom: 
+title: 'TN039: MFC OLE – implementace automatizace | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE – implementace automatizace
 > [!NOTE]
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  Řetězec místa oddělené VTS_ pro jednotlivé parametry.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto makra umožňují zadat **DISPID** místo MFC automaticky přiřadit jeden. Tato upřesňující makra mají stejné názvy s tím rozdílem, že ID je připojeným k názvu – makro (například **DISP_PROPERTY_ID**) a ID je dáno parametr pouze po zadaný `pszName` parametr. V tématu AFXDISP. H Další informace o těchto makra. **_ID** položky musí být umístěna na konci mapy odesílání. Ovlivňují automatického **DISPID** generování stejným způsobem jako jinou hodnotu než**_ID** by verzi makro ( **DISPID**s vyplývají z pozice). Příklad:  
+ Tyto makra umožňují zadat **DISPID** místo MFC automaticky přiřadit jeden. Tato upřesňující makra mají stejné názvy s tím rozdílem, že ID je připojeným k názvu – makro (například **DISP_PROPERTY_ID**) a ID je dáno parametr pouze po zadaný `pszName` parametr. V tématu AFXDISP. H Další informace o těchto makra. **_ID** položky musí být umístěna na konci mapy odesílání. Ovlivňují automatického **DISPID** generování stejným způsobem jako jinou hodnotu než **_ID** by verzi makro ( **DISPID**s vyplývají z pozice). Příklad:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

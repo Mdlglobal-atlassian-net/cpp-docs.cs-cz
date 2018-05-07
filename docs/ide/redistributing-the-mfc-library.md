@@ -1,30 +1,25 @@
 ---
 title: Redistribuce knihovny MFC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuce knihovny MFC
 Pokud jste dynamicky aplikace knihovny MFC, je třeba znovu distribuovat odpovídající MFC DLL. Například pokud aplikace MFC je integrovaný s použitím verze knihovny MFC, který se dodává s Visual Studiem 2015, je třeba znovu distribuovat mfc140.dll nebo mfc140u.dll, v závislosti na tom, jestli je vaše aplikace zkompilovaném pro úzké znaků nebo podpora kódování Unicode.  

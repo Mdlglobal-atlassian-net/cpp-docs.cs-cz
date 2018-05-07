@@ -1,13 +1,10 @@
 ---
-title: "ActiveX – ovládací prvky na Internetu | Microsoft Docs"
-ms.custom: 
+title: ActiveX – ovládací prvky na Internetu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládacího prvku. Ovládací prvky jsou primární architektury pro vývoj programovatelný softwarové komponenty, které lze použít v různých různé kontejnery, včetně podporující rozhraní COM webových prohlížečů na Internetu. Libovolný ovládací prvek ActiveX může být ovládací prvek Internet a můžete přidat jeho funkce pro aktivní dokument nebo být součástí webové stránky. Ovládací prvky na webové stránce mohou komunikovat navzájem pomocí skriptování.  
@@ -165,9 +160,9 @@ ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládac�
   
  Můžete implementovat [asynchronní monikery](../mfc/asynchronous-monikers-on-the-internet.md) pomocí `CAsyncMonikerFile` třídy. Ale můžete použít ovládací prvky ActiveX `CDataPathProperty` třídy, která je odvozená od `CAsyncMonikerFile`, pomohou implementovat asynchronní řízení vlastnosti.  
   
- Ukázka ASYNDOWN ukazuje, jak nastavit smyčky asynchronní pomocí časovačů přečíst data. ASYNDOWN je podrobně popsaná v článku znalostní báze "Postupy: AsyncDown ukazuje asynchronní Data stáhnout" (Q177244) a je k dispozici ke stažení z webu Microsoft Download Center. (Další informace o stahování souborů z webu Microsoft Download Center, najdete v článku "Jak k získání souborů z Online služby podpory" (Q119591) znalostní báze Microsoft Knowledge Base.) Můžete najít články znalostní báze Knowledge Base na [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ Ukázka ASYNDOWN ukazuje, jak nastavit smyčky asynchronní pomocí časovačů přečíst data. ASYNDOWN je podrobně popsaná v článku znalostní báze "Postupy: AsyncDown ukazuje asynchronní Data stáhnout" (Q177244) a je k dispozici ke stažení z webu Microsoft Download Center. (Další informace o stahování souborů z webu Microsoft Download Center, najdete v článku "Jak k získání souborů z Online služby podpory" (Q119591) znalostní báze Microsoft Knowledge Base.) Můžete najít články znalostní báze Knowledge Base na [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- Základní postup používá v ASYNDOWN je nastavit časovač **CDataPathProperty::OnDataAvailable** k označení, když je k dispozici data. Po přijetí zprávy časovače aplikace čtení 128 bajtů bloků dat a výplní ovládací prvek upravit. Data nejsou k dispozici, pokud je zpráva časovače, časovač vypnutý. `OnDataAvailable`spustí časovač, pokud další data dorazí později.  
+ Základní postup používá v ASYNDOWN je nastavit časovač **CDataPathProperty::OnDataAvailable** k označení, když je k dispozici data. Po přijetí zprávy časovače aplikace čtení 128 bajtů bloků dat a výplní ovládací prvek upravit. Data nejsou k dispozici, pokud je zpráva časovače, časovač vypnutý. `OnDataAvailable` spustí časovač, pokud další data dorazí později.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Zobrazení ovládacího prvku na webové stránce  
  Tady je příklad značky a atributy pro vložení ovládacího prvku na webové stránce.  

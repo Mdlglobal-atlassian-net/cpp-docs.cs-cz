@@ -1,13 +1,10 @@
 ---
-title: "Vytvoření objektu CToolBarCtrl | Microsoft Docs"
-ms.custom: 
+title: Vytvoření objektu CToolBarCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Vytvoření objektu CToolBarCtrl
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objekty obsahují několik interních datových strukturách – seznam bitmap tlačítko bitové kopie, seznam řetězců, popisku tlačítka a seznam `TBBUTTON` struktury – které přidružit bitovou kopii nebo řetězec s pozice, styl a stavu, a ID příkazu tlačítka. Jednotlivých prvků tyto datové struktury odkazuje na index počítaný od nuly. Abyste mohli používat `CToolBarCtrl` objektu, musíte nastavit tyto datové struktury. Seznam datové struktury najdete v tématu [ovládací prvky panelu nástrojů](controls-mfc.md) ve Windows SDK. Seznam řetězců, můžete použít pouze pro tlačítko popisky; řetězce nelze načíst z panelu nástrojů.  

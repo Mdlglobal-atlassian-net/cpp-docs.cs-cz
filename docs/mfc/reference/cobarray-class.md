@@ -1,12 +1,9 @@
 ---
-title: "Třída CObArray | Microsoft Docs"
-ms.custom: 
+title: Třída CObArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>CObArray – třída
 Podporuje pole `CObject` ukazatele.  
@@ -117,7 +112,7 @@ class CObArray : public CObject
   
  Stejně jako u pole C, čas přístupu `CObArray` indexované element konstantní a je nezávislý na velikost pole.  
   
- `CObArray`zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CObject` ukazatele je uložen do archivu s operátorem přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element je, pak serializovat společně s jeho index pole.  
+ `CObArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CObject` ukazatele je uložen do archivu s operátorem přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element je, pak serializovat společně s jeho index pole.  
   
  Pokud potřebujete výpis individuální `CObject` prvků v poli, je nutné nastavit hloubka `CDumpContext` objekt, který má 1 nebo vyšší.  
   
@@ -139,7 +134,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  Přidá nový prvek na konec pole, pole narůstají o 1.  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  Volání této funkce člena pro přidání do konce daného pole obsah z jiného pole.  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  Volání této funkce člena přepsat prvky dané pole s prvky jiného pole stejného typu.  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  Vytvoří prázdnou `CObject` ukazatel pole.  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  Vrátí dočasné odkaz na element ukazatele v rámci pole.  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CObArray::GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  Uvolní všechny paměť navíc, který byl přidělen při se zvětšil pole.  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CObArray::GetData](#getdata).  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  Vrátí pole element v zadaném indexu.  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  Vrátí počet prvků pole.  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  Pomocí této funkce člen můžete získat přímý přístup k prvků v poli.  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  Vrátí velikost pole.  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  Vrátí aktuální horní mez toto pole.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  Vloží zadaný index elementu (nebo všechny elementy v jiném poli).  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  Určuje, zda pole prázdné.  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je pole prázdné; jinak 0.  
   
-##  <a name="operator_at"></a>[CObArray::operator]  
+##  <a name="operator_at"></a>  [CObArray::operator]  
  Tyto dolního indexu jsou vhodnou náhradu za `SetAt` a `GetAt` funkce.  
   
 ```  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  Odebere všechny odkazy pro toto pole, ale neodstraní ve skutečnosti `CObject` objekty.  
   
 ```  
@@ -609,7 +604,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  Odebere jeden či více elementů počínaje zadaným indexem v matici.  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  Nastaví element pole u zadaného indexu.  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  Ukazatel objekt, který má být vložen do tohoto pole. A **NULL** je povolena hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetAt`nezpůsobí pole pro růst. Použití `SetAtGrow` Pokud chcete, aby pole automaticky zvětšovat.  
+ `SetAt` nezpůsobí pole pro růst. Použití `SetAtGrow` Pokud chcete, aby pole automaticky zvětšovat.  
   
  Je nutné zajistit, že hodnota indexu představuje platnou pozici v poli. Pokud je mimo rozsah, pak vyhodnotí ladicí verze knihovny.  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  Nastaví element pole u zadaného indexu.  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  Určuje velikost prázdný nebo stávajícímu poli; v případě potřeby přidělí paměť.  
   
 ```  

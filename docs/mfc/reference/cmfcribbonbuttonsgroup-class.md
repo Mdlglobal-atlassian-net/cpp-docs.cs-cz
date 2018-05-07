@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonButtonsGroup | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonButtonsGroup | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45851ea66e324f57cb7df3daaa99eb8a1b8b9311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup – třída
 `CMFCRibbonButtonsGroup` Třída umožňuje uspořádat sadu tlačítek pásu karet do skupiny. Všechny tlačítka ve skupině jsou přímo vedle sebe vodorovně a vložen do ohraničení.  
@@ -102,7 +97,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonbuttonsgroup.h  
   
-##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
+##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
  Přidá tlačítko do skupiny.  
   
 ```  
@@ -110,10 +105,10 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel na tlačítko Přidat.  
   
-##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
+##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Seznam tlačítek, přidá do skupiny.  
   
 ```  
@@ -122,10 +117,10 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lstButtons`  
+ [v] `lstButtons`  
  Seznam ukazatele na tlačítka, který chcete přidat.  
   
-##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Vytvoří `CMFCRibbonButtonsGroup` objektu.  
   
 ```  
@@ -134,14 +129,14 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Určuje tlačítka pro přidání do nově vytvořený `CMFCRibbonButtonsGroup` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
+##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
  Vrátí ukazatel na tlačítko, který se nachází na zadaný index.  
   
 ```  
@@ -149,15 +144,15 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`i`  
+ [v] `i`  
  Index počítaný od nuly tlačítka vrátit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na tlačítko, který se nachází v zadaném indexu. `NULL`Pokud zadaný index je mimo rozsah.  
+ Ukazatel na tlačítko, který se nachází v zadaném indexu. `NULL` Pokud zadaný index je mimo rozsah.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
  Vrátí počet tlačítka ve skupině.  
   
 ```  
@@ -167,7 +162,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet tlačítka ve skupině.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
  Získá zdroj velikost bitové kopie do chráněného `CMFCToolBarImages` člen `m_Images`.  
   
 ```  
@@ -179,7 +174,7 @@ const CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
  Načte maximální možná velikost skupinového elementu pásu karet.  
   
 ```  
@@ -187,14 +182,14 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontext zařízení skupiny pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
+##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
  Sestavy jestli `CMFCRibbonButtonsGroup` objekt obsahuje obrázků panelu nástrojů.  
   
 ```  
@@ -206,7 +201,7 @@ BOOL HasImages() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
  Nakreslí obrázek odpovídající pro zadanou tlačítko, v závislosti na tom, zda je tlačítko Normální, zvýrazněné nebo zakázáno.  
   
 ```  
@@ -218,21 +213,21 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení `CMFCRibbonButtonsGroup` objektu.  
   
- [v]`rectImage`  
+ [v] `rectImage`  
  Obdélníku, ve kterém k vykreslení bitovou kopii.  
   
- [v]`pButton`  
+ [v] `pButton`  
  Tlačítko pro které chcete kreslení obrázku.  
   
- [v]`nImageIndex`  
+ [v] `nImageIndex`  
  Index bitové kopie k vykreslení na tlačítko (v jednom z polí tři image pro tlačítka Normální, zvýrazněné nebo zakázáno).  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
  Odebere všechny tlačítka z `CMFCRibbonButtonsGroup` objektu.  
   
 ```  
@@ -241,7 +236,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
+##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
  Přiřadí bitové kopie do skupiny tlačítek pásu karet.  
   
 ```  
@@ -252,13 +247,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pImages`  
+ [v] `pImages`  
  Regulární bitové kopie.  
   
- [v]`pHotImages`  
+ [v] `pHotImages`  
  Aktivní Image.  
   
- [v]`pDisabledImages`  
+ [v] `pDisabledImages`  
  Zakázané bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -267,7 +262,7 @@ void SetImages(
 > [!NOTE]
 >  Aktivní Image jsou bitové kopie, které se zobrazují, když nastavení ukazatele myši na tlačítko. Zakázané Image jsou bitové kopie, které se zobrazí, když je zakázáno na tlačítko.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
  Nastaví nadřazeného `CMFCRibbonCategory` z `CMFCRibbonButtonsGroup` objekt a všechny tlačítka v něm.  
   
 ```  
@@ -275,7 +270,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pCategory`  
+ [v] `pCategory`  
  Ukazatel na nadřazené kategorii, kterou chcete nastavit (na kartách skupiny v ovládacích prvků pásu karet se nazývají kategorie).  
   
 ### <a name="remarks"></a>Poznámky  

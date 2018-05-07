@@ -1,37 +1,32 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Přidání vlastních metod | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Přidání vlastních metod | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 Vlastní metody se liší od uložených metod v tom, že již nejsou implementované pomocí `COleControl`. Je třeba zadat implementace pro jednotlivé vlastní metody, které přidáte do vašeho ovládacího prvku.  
   
  Uživatelé ovládacího prvku ActiveX můžete kdykoli provádět akce specifické pro ovládací prvek volání vlastní metody. Položka mapy odesílání pro vlastní metody je ve formátu `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>Přidání vlastní metody pomocí Průvodce přidáním metody  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Přidání vlastní metody pomocí Průvodce přidáním metody  
  Následující postup předvádí, přidávání ptincircle – vlastní metoda do ovládacího prvku ActiveX kostru kódu. Ptincircle – Určuje, zda souřadnice předán do ovládacího prvku uvnitř nebo vně kruhu. Stejný postup lze také přidat další vlastní metody. Nahraďte název vlastní metody a jeho parametry pro název metody ptincircle – a parametry.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ Vlastní metody se liší od uložených metod v tom, že již nejsou implemento
   
 10. Klikněte na tlačítko **Dokončit**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>Přidat metoda průvodce změní pro vlastní metody  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Přidat metoda průvodce změní pro vlastní metody  
  Když přidáte vlastní metodu, Průvodce přidáním metody zajistí některé změny do ovládacího prvku záhlaví – třída (. H) a implementace (. Soubory CPP). Následující řádek je přidán do deklaraci mapy odesílání v hlavičce třídy ovládacího prvku (. H) soubor:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

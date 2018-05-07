@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCColorMenuButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCColorMenuButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorMenuButton
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c6e976b1a5497e8d2814208b6b3260037458fc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton – třída
 `CMFCColorMenuButton` Třída podporuje příkazu nabídky nebo tlačítka panelu nástrojů, který začíná dialogové okno pro výběr barev.  
@@ -133,7 +128,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcolormenubutton.h  
   
-##  <a name="cmfccolormenubutton"></a>CMFCColorMenuButton::CMFCColorMenuButton  
+##  <a name="cmfccolormenubutton"></a>  CMFCColorMenuButton::CMFCColorMenuButton  
  Vytvoří `CMFCColorMenuButton` objektu.  
   
 ```  
@@ -147,13 +142,13 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu tlačítko.  
   
- [v]`lpszText`  
+ [v] `lpszText`  
  Text tlačítka.  
   
- [v]`pPalette`  
+ [v] `pPalette`  
  Ukazatel na paletu barev na tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -163,7 +158,7 @@ CMFCColorMenuButton(
   
  Druhý konstruktor inicializuje tlačítko pro barvu, která odpovídá ID zadaný příkaz.  
   
-##  <a name="copyfrom"></a>CMFCColorMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCColorMenuButton::CopyFrom  
  Zkopíruje jeden [CMFCToolBarMenuButton třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)-odvozené objekt do jiné.  
   
 ```  
@@ -171,13 +166,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`src`  
+ [v] `src`  
  Tlačítko zdroj pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro kopírování objektů, které jsou odvozeny od `CMFCColorMenuButton` objektu.  
   
-##  <a name="createpopupmenu"></a>CMFCColorMenuButton::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMFCColorMenuButton::CreatePopupMenu  
  Vytvoří dialogové okno pro výběr barev.  
   
 ```  
@@ -190,7 +185,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem po stisknutí tlačítka s nabídkou barev.  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorMenuButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorMenuButton::EnableAutomaticButton  
  Povolí nebo zakáže "automatické" tlačítko, které je umístěné výše regulární barva tlačítek. (Automatické tlačítko standardní systému jmenuje **automatické**.)  
   
 ```  
@@ -201,19 +196,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text tlačítka, který se zobrazí, když na tlačítko Automatická.  
   
- [v]`colorAutomatic`  
+ [v] `colorAutomatic`  
  Určuje barvu automatické nové.  
   
- [v]`bEnable`  
+ [v] `bEnable`  
  Určuje, jestli je tlačítko Automatické nebo ne.  
   
 ### <a name="remarks"></a>Poznámky  
  Automatické tlačítko použije aktuální výchozí barvu.  
   
-##  <a name="enabledocumentcolors"></a>CMFCColorMenuButton::EnableDocumentColors  
+##  <a name="enabledocumentcolors"></a>  CMFCColorMenuButton::EnableDocumentColors  
  Umožňuje zobrazení barvy specifické pro dokument místo barvy systému.  
   
 ```  
@@ -223,16 +218,16 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text tlačítka.  
   
- [v]`bEnable`  
- `TRUE`k zobrazení barvy specifické pro dokument nebo `FALSE` zobrazíte barvy systému.  
+ [v] `bEnable`  
+ `TRUE` k zobrazení barvy specifické pro dokument nebo `FALSE` zobrazíte barvy systému.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k zobrazení aktuální barvy dokumentu nebo barvy palety systému, když uživatel klikne na tlačítko nabídky barvu.  
   
-##  <a name="enableotherbutton"></a>CMFCColorMenuButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorMenuButton::EnableOtherButton  
  Povolí nebo zakáže "ostatní" tlačítko, které je umístěné pod regulární barva tlačítek. (Standardní systém "ostatní" tlačítko jmenuje **Další barvy**.)  
   
 ```  
@@ -243,18 +238,18 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text tlačítka.  
   
- [v]`bAltColorDlg`  
+ [v] `bAltColorDlg`  
  Zadejte `TRUE` zobrazíte `CMFCColorDialog` dialogové okno, nebo `FALSE` zobrazíte dialogové okno barvy standardní systém.  
   
- [v]`bEnable`  
+ [v] `bEnable`  
  Zadejte `TRUE` se zobrazí tlačítko "ostatní"; jinak hodnota `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enabletearoff"></a>CMFCColorMenuButton::EnableTearOff  
+##  <a name="enabletearoff"></a>  CMFCColorMenuButton::EnableTearOff  
  Umožňuje možnost oddělení podokně barev.  
   
 ```  
@@ -265,19 +260,19 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiID`  
+ [v] `uiID`  
  Určuje ID pro podokně úplné vypnutí.  
   
- [v]`nVertDockColumns`  
+ [v] `nVertDockColumns`  
  Určuje počet sloupců v podokně svisle ukotveného barev v úplné vypnutí stavu.  
   
- [v]`nHorzDockRows`  
+ [v] `nHorzDockRows`  
  Určuje počet řádků v podokně vodorovně ukotvené barev v úplné vypnutí stavu.  
   
 ### <a name="remarks"></a>Poznámky  
  Volat tuto metodu za účelem povolení této funkce "úplné vypnuto" pro podokně barvu, která se objeví při `CMFCColorMenuButton` stisknutí tlačítka.  
   
-##  <a name="getautomaticcolor"></a>CMFCColorMenuButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>  CMFCColorMenuButton::GetAutomaticColor  
  Načte aktuální automatické barvu.  
   
 ```  
@@ -290,7 +285,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>Poznámky  
  Volat tuto metodu za účelem získání automatické barvu, která se nastavuje pomocí [CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton).  
   
-##  <a name="getcolor"></a>CMFCColorMenuButton::GetColor  
+##  <a name="getcolor"></a>  CMFCColorMenuButton::GetColor  
  Načte aktuální tlačítko barvy.  
   
 ```  
@@ -302,7 +297,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcolorbycmdid"></a>CMFCColorMenuButton::GetColorByCmdID  
+##  <a name="getcolorbycmdid"></a>  CMFCColorMenuButton::GetColorByCmdID  
  Načte barvu, která odpovídá ID zadaného příkazu.  
   
 ```  
@@ -310,7 +305,7 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -319,7 +314,7 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte, pokud máte několik barva tlačítek v aplikaci. Když uživatel klikne na tlačítko barvy, tlačítko odesílá jeho ID příkazu `WM_COMMAND` zprávu, která se jeho nadřazený objekt. `GetColorByCmdID` Metoda načíst barvu odpovídající pomocí ID příkazu.  
   
-##  <a name="isemptymenuallowed"></a>CMFCColorMenuButton::IsEmptyMenuAllowed  
+##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  Určuje, zda jsou podporovány prázdný nabídky.  
   
 ```  
@@ -332,7 +327,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení jsou podporovány prázdný nabídky. Potlačí tuto metodu v odvozené třídě toto chování změnit.  
   
-##  <a name="onchangeparentwnd"></a>CMFCColorMenuButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCColorMenuButton::OnChangeParentWnd  
  Voláno rámcem, když se změní nadřazeného okna.  
   
 ```  
@@ -340,12 +335,12 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Ukazatel do nového nadřazeného okna.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondraw"></a>CMFCColorMenuButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCColorMenuButton::OnDraw  
  Voláno rámcem zobrazíte obrázek na tlačítko.  
   
 ```  
@@ -361,33 +356,33 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Obdélníku, která bounds oblasti překreslit.  
   
- [v]`pImages`  
+ [v] `pImages`  
  Body v seznamu obrázků panelu nástrojů.  
   
- [v]`bHorz`  
- `TRUE`k určení, že je panelu nástrojů v vodorovné ukotvený stavu; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bHorz`  
+ `TRUE` k určení, že je panelu nástrojů v vodorovné ukotvený stavu; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v]`bCustomizeMode`  
- `TRUE`Chcete-li určit, že aplikace je v režimu přizpůsobení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bCustomizeMode`  
+ `TRUE` Chcete-li určit, že aplikace je v režimu přizpůsobení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
- [v]`bHighlight`  
- `TRUE`Chcete-li určit, že bude zvýrazněný tlačítko. v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bHighlight`  
+ `TRUE` Chcete-li určit, že bude zvýrazněný tlačítko. v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
- [v]`bDrawBorder`  
- `TRUE`Chcete-li určit, že se zobrazí na tlačítko ohraničení; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bDrawBorder`  
+ `TRUE` Chcete-li určit, že se zobrazí na tlačítko ohraničení; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v]`bGrayDisabledButtons`  
- `TRUE`Chcete-li určit, který zakázáno tlačítka jsou šedý (neaktivní) v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bGrayDisabledButtons`  
+ `TRUE` Chcete-li určit, který zakázáno tlačítka jsou šedý (neaktivní) v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCColorMenuButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCColorMenuButton::OnDrawOnCustomizeList  
  Voláno rámcem před `CMFCColorMenuButton` objektu se zobrazí v seznamu dialogového okna přizpůsobení panelu nástrojů.  
   
 ```  
@@ -398,14 +393,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Obdélníku, která bounds tlačítko, které se mají vykreslovat.  
   
- [v]`bSelected`  
- `TRUE`Určuje, že je tlačítko ve vybraném stavu; v opačném `FALSE`.  
+ [v] `bSelected`  
+ `TRUE` Určuje, že je tlačítko ve vybraném stavu; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Šířka tlačítko.  
@@ -413,7 +408,7 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem při `CMFCColorMenuButton` objektu se zobrazí v seznamu během procesu přizpůsobení panelu nástrojů.  
   
-##  <a name="opencolordialog"></a>CMFCColorMenuButton::OpenColorDialog  
+##  <a name="opencolordialog"></a>  CMFCColorMenuButton::OpenColorDialog  
  Otevře dialogové okno Výběr barev.  
   
 ```  
@@ -423,10 +418,10 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`colorDefault`  
+ [v] `colorDefault`  
  Výchozí barvu, který je vybraný v dialogovém okně barvy.  
   
- [out]`colorRes`  
+ [out] `colorRes`  
  Vrátí barvu, která si uživatel vybere ze dialogové okno barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -435,7 +430,7 @@ virtual BOOL OpenColorDialog(
 ### <a name="remarks"></a>Poznámky  
  Při kliknutí na tlačítko nabídky volejte tuto metodu za účelem otevřete dialogové okno barvy. Pokud je vrácená hodnota nenulové, barvu, která si uživatel vybere je uložen v `colorRes` parametr. Použití [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) metoda přepínat mezi dialogové okno Standardní barev a [CMFCColorDialog třída](../../mfc/reference/cmfccolordialog-class.md) dialogové okno.  
   
-##  <a name="setcolor"></a>CMFCColorMenuButton::SetColor  
+##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  Nastaví barvu aktuální barva tlačítko.  
   
 ```  
@@ -445,16 +440,16 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clr`  
+ [v] `clr`  
  Hodnotu barva RGB.  
   
- [v]`bNotify`  
- `TRUE`Chcete-li použít `clr` parametr barvy, která má všechny související nabídky panelu nástrojů tlačítko nebo; jinak hodnota `FALSE`.  
+ [v] `bNotify`  
+ `TRUE` Chcete-li použít `clr` parametr barvy, která má všechny související nabídky panelu nástrojů tlačítko nebo; jinak hodnota `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze změnit barvu aktuální barva tlačítko. Pokud `bNotify` parametr je nenulové hodnoty, barva na odpovídající tlačítko na všechny přidružené místní nabídky nebo nástrojů se změní na barvu určeného `clr` parametr.  
   
-##  <a name="setcolorbycmdid"></a>CMFCColorMenuButton::SetColorByCmdID  
+##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  Nastaví barvu zadaná barva tlačítka nabídky.  
   
 ```  
@@ -464,13 +459,13 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID prostředku tlačítka s nabídkou barev.  
   
- [v]`color`  
+ [v] `color`  
  Hodnotu barva RGB.  
   
-##  <a name="setcolorname"></a>CMFCColorMenuButton::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Nastaví nový název pro zadaná barva.  
   
 ```  
@@ -480,15 +475,15 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnota RGB barvu, jejíž název změní.  
   
- [v]`strName`  
+ [v] `strName`  
  Nový název barvy.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setcolumnsnumber"></a>CMFCColorMenuButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCColorMenuButton::SetColumnsNumber  
  Nastaví počet sloupců do zobrazení v ovládacím prvku pro výběr barev ( [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) objekt).  
   
 ```  
@@ -496,7 +491,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nColumns`  
+ [v] `nColumns`  
  Číslo sloupce k zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  

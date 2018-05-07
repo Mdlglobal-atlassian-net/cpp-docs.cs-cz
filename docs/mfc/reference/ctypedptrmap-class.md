@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrMap – třída | Microsoft Docs"
-ms.custom: 
+title: CTypedPtrMap – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap – třída
 Poskytuje bezpečnost typů "obálky" pro objekty třídy map ukazatel `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  
@@ -87,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  Načte element mapy v `rNextPosition`, pak aktualizuje `rNextPosition` odkazovat na další prvek v mapě.  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  Tato vložená funkce volá `BASE_CLASS` **:: GetNextAssoc**.  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`používá algoritmus hash se s klíčem, který přesně odpovídá rychle najít elementu mapy.  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` používá algoritmus hash se s klíčem, který přesně odpovídá rychle najít elementu mapy.  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>Poznámky  
  Tato vložená funkce volá `BASE_CLASS` **:: vyhledávání**.  
   
-##  <a name="operator_at"></a>[CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>  [CTypedPtrMap::operator]  
  Tento operátor. můžete použít pouze na levé straně příkazu přiřazení (l hodnota).  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>Poznámky  
  Pokud neexistuje žádný element mapy se zadaným klíčem, je vytvoření nového elementu. Ekvivalentní tento operátor není žádná "pravé straně" (r-value), protože je možné, který klíč asi se nenašla v mapě. Použití `Lookup` – členská funkce pro načtení elementu.  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  Tato funkce člen volá `BASE_CLASS` **:: RemoveKey**.  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>Poznámky  
  Podrobné poznámky, najdete v části [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  Tato funkce člen volá `BASE_CLASS` **:: SetAt**.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Struktura rastrový OBRÁZEK | Microsoft Docs"
-ms.custom: 
+title: Struktura rastrový OBRÁZEK | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>BITMAP – struktura
-**Rastrový OBRÁZEK** struktura definuje výška, šířka, formát barvy a bitových hodnot logické rastrový obrázek**.**  
+**Rastrový OBRÁZEK** struktura definuje výška, šířka, formát barvy a bitových hodnot logické rastrový obrázek **.**  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>Poznámky  
  Aktuálně používané formáty rastrových obrázků jsou monochromatický a barevný. Monochromatický rastrový obrázek používá 1bitový formát s jednou rovinou. Každý průchod je násobkem 16 bitů.  
   
- Kontroly jsou uspořádány takto černobílý rastrového obrázku výšky  *n* :  
+ Kontroly jsou uspořádány takto černobílý rastrového obrázku výšky *n*:  
   
  `Scan 0`  
   

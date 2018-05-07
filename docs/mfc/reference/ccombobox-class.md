@@ -1,12 +1,9 @@
 ---
-title: "CComboBox – třída | Microsoft Docs"
-ms.custom: 
+title: CComboBox – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBox
@@ -117,17 +114,15 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 Poskytuje funkci Windows pole se seznamem.  
@@ -220,7 +215,7 @@ class CComboBox : public CWnd
   
  Každá položka mapování zpráv má následující podobu:  
   
- **ON_**oznámení **(**`id`**,**`memberFxn`**)**  
+ **ON_** oznámení **(**`id`**,**`memberFxn`**)**  
   
  kde `id` určuje podřízeného okna ID ovládacího prvku pole se seznamem odesílání oznámení a `memberFxn` je název nadřazeného člena funkce napsané pro zpracování oznámení.  
   
@@ -250,7 +245,7 @@ class CComboBox : public CWnd
   
 - **ON_CBN_KILLFOCUS** pole se seznamem je ztráty zaměření pro vstup.  
   
-- **ON_CBN_SELCHANGE** výběr v seznamu pole se seznamem se chystáte se změnit v důsledku uživatel kliknutím na položku v seznamu nebo změna výběru pomocí klávesy se šipkami. Při zpracování této zprávy, text v textovém poli pole se seznamem se dají načítat jenom prostřednictvím `GetLBText` nebo jiné podobné funkce. `GetWindowText`nelze použít.  
+- **ON_CBN_SELCHANGE** výběr v seznamu pole se seznamem se chystáte se změnit v důsledku uživatel kliknutím na položku v seznamu nebo změna výběru pomocí klávesy se šipkami. Při zpracování této zprávy, text v textovém poli pole se seznamem se dají načítat jenom prostřednictvím `GetLBText` nebo jiné podobné funkce. `GetWindowText` nelze použít.  
   
 - **ON_CBN_SETFOCUS** pole se seznamem obdrží zaměření pro vstup.  
   
@@ -258,7 +253,7 @@ class CComboBox : public CWnd
   
  Pokud vložit `CComboBox` objekt v rámci jiného okna objektu, není potřeba ho zrušení. Pokud vytvoříte `CComboBox` objektu v zásobníku, byla automaticky. Pokud vytvoříte `CComboBox` objektu v haldě pomocí **nové** funkce, musí volat **odstranit** na objekt, který má zničte, jakmile je zničen pole se seznamem systému Windows.  
   
- **Poznámka:** Pokud chcete zpracovávat `WM_KEYDOWN` a `WM_CHAR` zprávy, budete muset podtřídami pole se seznamem na Upravit a ovládací prvky seznamu, odvozovat z `CEdit` a `CListBox`, a přidejte obslužné rutiny pro tyto zprávy do odvozené třídy. Další informace najdete v tématu [http://support.microsoft.com/default.aspxscid=kb;en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) a [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Poznámka:** Pokud chcete zpracovávat `WM_KEYDOWN` a `WM_CHAR` zprávy, budete muset podtřídami pole se seznamem na Upravit a ovládací prvky seznamu, odvozovat z `CEdit` a `CListBox`, a přidejte obslužné rutiny pro tyto zprávy do odvozené třídy. Další informace najdete v tématu [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) a [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -272,7 +267,7 @@ class CComboBox : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="addstring"></a>CComboBox::AddString  
+##  <a name="addstring"></a>  CComboBox::AddString  
  Přidá řetězec do seznam pole se seznamem.  
   
 ```  
@@ -297,7 +292,7 @@ int AddString(LPCTSTR lpszString);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="ccombobox"></a>CComboBox::CComboBox  
+##  <a name="ccombobox"></a>  CComboBox::CComboBox  
  Vytvoří `CComboBox` objektu.  
   
 ```  
@@ -307,7 +302,7 @@ CComboBox();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="clear"></a>CComboBox::Clear  
+##  <a name="clear"></a>  CComboBox::Clear  
  Odstraní (vymaže) aktuální výběr, pokud existuje, v ovládacím prvku úpravy pole se seznamem.  
   
 ```  
@@ -320,7 +315,7 @@ void Clear();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CComboBox::CompareItem  
+##  <a name="compareitem"></a>  CComboBox::CompareItem  
  Voláno rámcem určit relativní pozici nové položky v části pole se seznamem pole se seznamem seřazené vykreslování vlastníka.  
   
 ```  
@@ -348,7 +343,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="copy"></a>CComboBox::Copy  
+##  <a name="copy"></a>  CComboBox::Copy  
  Zkopíruje aktuální výběr, pokud existuje, v ovládacím prvku úpravy pole se seznamem do schránky v **CF_TEXT** formátu.  
   
 ```  
@@ -358,7 +353,7 @@ void Copy();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="create"></a>CComboBox::Create  
+##  <a name="create"></a>  CComboBox::Create  
  Pole se seznamem vytvoří a připojí jej k `CComboBox` objektu.  
   
 ```  
@@ -411,7 +406,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="cut"></a>CComboBox::Cut  
+##  <a name="cut"></a>  CComboBox::Cut  
  Odstranění (kusy) aktuální výběr, pokud existuje, do pole se seznamem upravit řízení a zkopíruje odstraněný text do schránky v **CF_TEXT** formátu.  
   
 ```  
@@ -424,7 +419,7 @@ void Cut();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="deleteitem"></a>CComboBox::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBox::DeleteItem  
  Voláno rámcem, když uživatel odstraní položku z kreslení vlastníka `CComboBox` objektu nebo zničí pole se seznamem.  
   
 ```  
@@ -441,7 +436,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="deletestring"></a>CComboBox::DeleteString  
+##  <a name="deletestring"></a>  CComboBox::DeleteString  
  Odstraní položky v pozici `nIndex` z pole se seznamem.  
   
 ```  
@@ -461,7 +456,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="dir"></a>CComboBox::Dir  
+##  <a name="dir"></a>  CComboBox::Dir  
  Seznam názvů souborů nebo jednotky přidá do pole se seznamem pole se seznamem.  
   
 ```  
@@ -502,7 +497,7 @@ int Dir(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="drawitem"></a>CComboBox::DrawItem  
+##  <a name="drawitem"></a>  CComboBox::DrawItem  
  Voláno rámcem při visual aspektů změny pole se seznamem vykreslování vlastníka.  
   
 ```  
@@ -521,7 +516,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="findstring"></a>CComboBox::FindString  
+##  <a name="findstring"></a>  CComboBox::FindString  
  Najde, ale není vybrán první řetězec, který obsahuje zadanou předponu v seznamu pole se seznamem.  
   
 ```  
@@ -546,7 +541,7 @@ int FindString(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="findstringexact"></a>CComboBox::FindStringExact  
+##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
  Volání `FindStringExact` – členská funkce Najít první řetězec pole se seznamem (v pole se seznamem) odpovídající řetězec zadaný v `lpszFind`.  
   
 ```  
@@ -571,7 +566,7 @@ int FindStringExact(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
+##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo  
  K načtení informací o `CComboBox` objektu.  
   
 ```  
@@ -588,7 +583,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen emuluje funkce [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) zprávy, jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getcount"></a>CComboBox::GetCount  
+##  <a name="getcount"></a>  CComboBox::GetCount  
  Volání této funkce člen načíst počet položek v části pole se seznamem pole se seznamem.  
   
 ```  
@@ -601,7 +596,7 @@ int GetCount() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
+##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner  
  Získá cue text, který se zobrazí pro ovládací prvek pole se seznamem.  
   
 ```  
@@ -616,8 +611,8 @@ BOOL GetCueBanner(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out]`lpszText`|Ukazatel na vyrovnávací paměť, která obdrží text hlavičky cue.|  
-|[v]`cchText`|Velikost vyrovnávací paměti, která `lpszText` parametr odkazuje na.|  
+|[out] `lpszText`|Ukazatel na vyrovnávací paměť, která obdrží text hlavičky cue.|  
+|[v] `cchText`|Velikost vyrovnávací paměti, která `lpszText` parametr odkazuje na.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V první přetížení [CString](../../atl-mfc-shared/using-cstring.md) objekt, který obsahuje text hlavičky cue, pokud existuje; jinak, `CString` objekt, který má nulové délky.  
@@ -631,7 +626,7 @@ BOOL GetCueBanner(
   
  Tato metoda odesílá [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getcursel"></a>CComboBox::GetCurSel  
+##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Volání této funkce člen k určení, která položka v seznamu je vybrána.  
   
 ```  
@@ -642,12 +637,12 @@ int GetCurSel() const;
  Index založený na nule aktuálně vybrané položky v seznamu pole se seznamem, nebo **CB_ERR** Pokud není vybrána žádná položka.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetCurSel`Vrátí index do seznamu.  
+ `GetCurSel` Vrátí index do seznamu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
+##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect  
  Volání `GetDroppedControlRect` – členská funkce načíst souřadnice obrazovky pole se seznamem viditelné (vyřadit dolů) rozevíracím seznamem.  
   
 ```  
@@ -661,7 +656,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
+##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState  
  Volání `GetDroppedState` – členská funkce k určení, zda pole se seznamem rozevíracím seznamem je viditelná (vynechané).  
   
 ```  
@@ -674,7 +669,7 @@ BOOL GetDroppedState() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
+##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth  
  Volání této funkce načíst šířku v pixelech pole se seznamem seznamem minimální povolená.  
   
 ```  
@@ -692,7 +687,7 @@ int GetDroppedWidth() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [SetDroppedWidth](#setdroppedwidth).  
   
-##  <a name="geteditsel"></a>CComboBox::GetEditSel  
+##  <a name="geteditsel"></a>  CComboBox::GetEditSel  
  Získá počáteční a koncové pozice znaku aktuální výběr v ovládacím prvku úpravy pole se seznamem.  
   
 ```  
@@ -705,7 +700,7 @@ DWORD GetEditSel() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
+##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI  
  Volání `GetExtendedUI` – členská funkce k určení, zda má pole se seznamem výchozí uživatelské rozhraní nebo Rozšířené uživatelské rozhraní.  
   
 ```  
@@ -727,7 +722,7 @@ BOOL GetExtendedUI() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent  
  Načte z pole se seznamem šířku v pixelech, které části pole se seznamem pole se seznamem vodorovně posunout.  
   
 ```  
@@ -743,7 +738,7 @@ UINT GetHorizontalExtent() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="getitemdata"></a>CComboBox::GetItemData  
+##  <a name="getitemdata"></a>  CComboBox::GetItemData  
  Načte přidružený k položce zadané pole se seznamem hodnotu 32-bit zadané aplikace.  
   
 ```  
@@ -763,7 +758,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
  Načte 32bitové hodnotu zadané aplikace přidružené k položce zadané pole se seznamem jako ukazatel ( **void\***).  
   
 ```  
@@ -780,7 +775,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
+##  <a name="getitemheight"></a>  CComboBox::GetItemHeight  
  Volání `GetItemHeight` – členská funkce načíst výšku položky seznamu v poli se seznamem.  
   
 ```  
@@ -797,7 +792,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="getlbtext"></a>CComboBox::GetLBText  
+##  <a name="getlbtext"></a>  CComboBox::GetLBText  
  Získá řetězec z pole se seznamem pole se seznamem.  
   
 ```  
@@ -829,7 +824,7 @@ void GetLBText(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
+##  <a name="getlbtextlen"></a>  CComboBox::GetLBTextLen  
  Získá délku řetězce v seznamu pole se seznamem.  
   
 ```  
@@ -846,7 +841,7 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CComboBox::GetLBText](#getlbtext).  
   
-##  <a name="getlocale"></a>CComboBox::GetLocale  
+##  <a name="getlocale"></a>  CComboBox::GetLocale  
  Načte národní prostředí používané pole se seznamem.  
   
 ```  
@@ -862,7 +857,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CComboBox::SetLocale](#setlocale).  
   
-##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
+##  <a name="getminvisible"></a>  CComboBox::GetMinVisible  
  Získá minimální počet viditelné položky v rozevíracím seznamu aktuální ovládacího prvku pole se seznamem.  
   
 ```  
@@ -875,7 +870,7 @@ int GetMinVisible() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
+##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Načte index založený na nule z první položky zobrazené v části pole se seznamem pole se seznamem.  
   
 ```  
@@ -891,7 +886,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="initstorage"></a>CComboBox::InitStorage  
+##  <a name="initstorage"></a>  CComboBox::InitStorage  
  Přidělí paměť pro ukládání pole položky seznamu v části pole se seznamem pole se seznamem.  
   
 ```  
@@ -920,7 +915,7 @@ int InitStorage(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="insertstring"></a>CComboBox::InsertString  
+##  <a name="insertstring"></a>  CComboBox::InsertString  
  Řetězec se vloží do pole se seznamem pole se seznamem.  
   
 ```  
@@ -948,7 +943,7 @@ int InsertString(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="limittext"></a>CComboBox::LimitText  
+##  <a name="limittext"></a>  CComboBox::LimitText  
  Omezí se délka v bajtech text, který může uživatel zadat do ovládacího prvku pole se seznamem pro úpravy.  
   
 ```  
@@ -965,12 +960,12 @@ BOOL LimitText(int nMaxChars);
 ### <a name="remarks"></a>Poznámky  
  Pokud pole se seznamem nemá styl [cbs_autohscroll –](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), text limit musí být větší než velikost ovládacích prvků pro úpravy nastavení nebude mít žádný vliv.  
   
- `LimitText`text, který lze zadat pouze omezení. Ho nemá žádný vliv na jakýkoli text již v ovládacím prvku upravit při odeslání zprávy jsou ani neovlivní délku textu zkopírován do ovládacího prvku úprav, pokud je řetězec v rozevíracím seznamu vybrána.  
+ `LimitText` text, který lze zadat pouze omezení. Ho nemá žádný vliv na jakýkoli text již v ovládacím prvku upravit při odeslání zprávy jsou ani neovlivní délku textu zkopírován do ovládacího prvku úprav, pokud je řetězec v rozevíracím seznamu vybrána.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="measureitem"></a>CComboBox::MeasureItem  
+##  <a name="measureitem"></a>  CComboBox::MeasureItem  
  Voláno rámcem při vytvoření pole se seznamem s styl vykreslování vlastníka.  
   
 ```  
@@ -991,7 +986,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="paste"></a>CComboBox::Paste  
+##  <a name="paste"></a>  CComboBox::Paste  
  Vloží data ze schránky do ovládacího prvku úprav pole se seznamem na aktuální pozici kurzoru.  
   
 ```  
@@ -1004,7 +999,7 @@ void Paste();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="resetcontent"></a>CComboBox::ResetContent  
+##  <a name="resetcontent"></a>  CComboBox::ResetContent  
  Odebere všechny položky ze seznamu, pole a ovládacích prvků pole se seznamem pro úpravy.  
   
 ```  
@@ -1014,7 +1009,7 @@ void ResetContent();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="selectstring"></a>CComboBox::SelectString  
+##  <a name="selectstring"></a>  CComboBox::SelectString  
  Hledat řetězec v seznamu pole se seznamem a pokud se řetězec najde, vybere řetězec v seznamu a zkopíruje je do ovládacího prvku úprav.  
   
 ```  
@@ -1041,7 +1036,7 @@ int SelectString(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
+##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner  
  Nastaví cue text, který se zobrazí u ovládacího prvku pole se seznamem.  
   
 ```  
@@ -1055,7 +1050,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 |[v] *lpszText*|Ukazatel na vyrovnávací paměť ukončené hodnotou null, která obsahuje cue text.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je metoda úspěšná. v opačném `false`.  
+ `true` Pokud je metoda úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Cue text je řádku, který se zobrazí v oblasti vstupního ovládacího prvku pole se seznamem. Text upozornění se zobrazí, dokud uživatel nezadá vstup.  
@@ -1072,7 +1067,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
  [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="setcursel"></a>CComboBox::SetCurSel  
+##  <a name="setcursel"></a>  CComboBox::SetCurSel  
  Vybere řetězec v seznamu pole se seznamem.  
   
 ```  
@@ -1092,7 +1087,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
+##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth  
  Volání této funkce se nastavit minimální povolená šířku v pixelech pole se seznamem pole se seznamem.  
   
 ```  
@@ -1114,7 +1109,7 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="seteditsel"></a>CComboBox::SetEditSel  
+##  <a name="seteditsel"></a>  CComboBox::SetEditSel  
  Vybere znaků v textovém poli pole se seznamem.  
   
 ```  
@@ -1142,7 +1137,7 @@ BOOL SetEditSel(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CComboBox::GetEditSel](#geteditsel).  
   
-##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
+##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI  
  Volání `SetExtendedUI` – členská funkce a vyberte výchozí uživatelské rozhraní nebo Rozšířené uživatelské rozhraní pro pole se seznamem, který má [cbs_dropdown –](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) nebo [cbs_dropdownlist –](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stylu.  
   
 ```  
@@ -1168,7 +1163,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CComboBox::GetExtendedUI](#getextendedui).  
   
-##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent  
  Nastaví šířku v pixelech, které části pole se seznamem pole se seznamem vodorovně posunout.  
   
 ```  
@@ -1185,7 +1180,7 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="setitemdata"></a>CComboBox::SetItemData  
+##  <a name="setitemdata"></a>  CComboBox::SetItemData  
  Nastaví hodnotu 32-bit přidružené k položce zadané v poli se seznamem.  
   
 ```  
@@ -1210,7 +1205,7 @@ int SetItemData(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
  Nastaví hodnotu 32-bit přidružené k položce zadané v poli se seznamem být zadaný ukazatele ( **void\***).  
   
 ```  
@@ -1235,7 +1230,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
+##  <a name="setitemheight"></a>  CComboBox::SetItemHeight  
  Volání `SetItemHeight` – členská funkce nastavit výšku položky seznamu v pole se seznamem nebo výška textové pole (nebo statický text) část pole se seznamem.  
   
 ```  
@@ -1264,7 +1259,7 @@ int SetItemHeight(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="setlocale"></a>CComboBox::SetLocale  
+##  <a name="setlocale"></a>  CComboBox::SetLocale  
  Nastaví identifikátor národního prostředí pro toto pole se seznamem.  
   
 ```  
@@ -1284,7 +1279,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
+##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems  
  Nastaví minimální počet viditelné položky v rozevíracím seznamu aktuální pole se seznamem ovládacích prvků pole.  
   
 ```  
@@ -1295,10 +1290,10 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`iMinVisible`|Určuje minimální počet viditelné položky.|  
+|[v] `iMinVisible`|Určuje minimální počet viditelné položky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) zprávy, která je popsána v sadě Windows SDK.  
@@ -1313,7 +1308,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
  [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="settopindex"></a>CComboBox::SetTopIndex  
+##  <a name="settopindex"></a>  CComboBox::SetTopIndex  
  Zajišťuje, že určité položky viditelné v části pole se seznamem pole se seznamem.  
   
 ```  
@@ -1333,7 +1328,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
+##  <a name="showdropdown"></a>  CComboBox::ShowDropDown  
  Zobrazí nebo skryje pole se seznamem pole se seznamem, který má [cbs_dropdown –](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) nebo [cbs_dropdownlist –](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stylu.  
   
 ```  

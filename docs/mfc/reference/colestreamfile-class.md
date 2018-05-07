@@ -1,12 +1,9 @@
 ---
-title: "Třída COleStreamFile | Microsoft Docs"
-ms.custom: 
+title: Třída COleStreamFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile – třída
 Představuje datový proud ( `IStream`) v souboru složené jako součást OLE strukturovaných úložiště.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Poznámky  
  `IStorage` Objektu, musí existovat datového proudu se dá otevřít nebo vytvořit, pokud je datový proud paměti.  
   
- `COleStreamFile`objekty jsou s nimi manipulovat, stejně jako [cfile –](../../mfc/reference/cfile-class.md) objekty.  
+ `COleStreamFile` objekty jsou s nimi manipulovat, stejně jako [cfile –](../../mfc/reference/cfile-class.md) objekty.  
   
  Další informace o práci s proudů a úložišť, najdete v článku [kontejnery: složené soubory](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Přidruží zadané OLE datového proudu s `COleStreamFile` objektu.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Další informace najdete v tématu [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034) ve Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Vytvoří `COleStreamFile` objektu.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Další informace najdete v tématu [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034) ve Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Bezpečně vytvoří nový datový proud nedostatek globální, sdílené paměti kde selhání je normální, očekávané podmínku.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Další informace najdete v tématu [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) ve Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Bezpečně vytvoří nový datový proud v objektu zadaný úložiště, kde selhání je normální, očekávané podmínku.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Další informace najdete v tématu [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) ve Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Zrušíte datový proud z objektu bez zavírání datového proudu.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Další informace najdete v tématu [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034) ve Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Volání této funkce se vraťte do aktuální datový proud ukazatel.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní aktuální datového proudu ( [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Otevře existující datového proudu.  
   
 ```  

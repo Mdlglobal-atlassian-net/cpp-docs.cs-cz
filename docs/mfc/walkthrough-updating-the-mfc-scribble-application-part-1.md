@@ -1,13 +1,10 @@
 ---
-title: "Návod: Aktualizace aplikace MFC Scribble (část 1) | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Aktualizace aplikace MFC Scribble (část 1) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje na pásu karet Office 2007 a pásu karet Scenic Windows 7. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233) na webu MSDN.  
@@ -40,7 +35,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [Visual C++ – ukázky](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tato část průvodce obsahuje následující části:  
   
 - [Nahraďte základní třídy](#replaceclass)  
@@ -55,7 +50,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
 - [Nastavení vzhledu aplikace](#setlook)  
   
-##  <a name="replaceclass"></a>Nahraďte základní třídy  
+##  <a name="replaceclass"></a> Nahraďte základní třídy  
  Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pásu karet, musí být odvozený od aktualizované základní třídy aplikace, oken s rámečkem a třídy panelu nástrojů. (Doporučujeme je, že nemáte upravit původní vzorovou Scribble; místo toho vyčistěte projekt Scribble, zkopírujte ho do jiného adresáře a upravte kopii.)  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Chcete-li nahradit základní třídy v aplikaci Scribble  
@@ -101,11 +96,11 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
 8.  V souboru mainfrm.cpp:  
   
-    1.  Nahraďte `m_wndToolBar.SetBarStyle` s`m_wndToolBar.SetPaneStyle`  
+    1.  Nahraďte `m_wndToolBar.SetBarStyle` s `m_wndToolBar.SetPaneStyle`  
   
-    2.  Nahraďte `m_wndToolBar.GetBarStyle` s`m_wndToolBar.GetPaneStyle`  
+    2.  Nahraďte `m_wndToolBar.GetBarStyle` s `m_wndToolBar.GetPaneStyle`  
   
-    3.  Nahraďte `DockControlBar(&m_wndToolBar)` s`DockPane(&m_wndToolBar)`  
+    3.  Nahraďte `DockControlBar(&m_wndToolBar)` s `DockPane(&m_wndToolBar)`  
   
 9. V souboru ipframe.cpp komentář následující tři řádky kódu.  
   
@@ -130,7 +125,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [[Části](#top)]  
   
-##  <a name="addbitmap"></a>Přidávání bitmap do projektu  
+##  <a name="addbitmap"></a> Přidávání bitmap do projektu  
  Další čtyři kroky tohoto názorného postupu vyžadovat prostředky rastrového obrázku. Můžete získat odpovídající bitmap různými způsoby:  
   
 -   Použití [editory prostředků](../windows/resource-editors.md) k skladová vlastní rastrové obrázky. Nebo použijte editory prostředků ke kompilaci rastrové obrázky z bitové kopie PNG grafiky (.png), které jsou součástí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Tyto Image jsou v `VS2008ImageLibrary` adresáře.  
@@ -175,7 +170,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [[Části](#top)]  
   
-##  <a name="addribbon"></a>Přidání prostředek pásu karet do projektu  
+##  <a name="addribbon"></a> Přidání prostředek pásu karet do projektu  
  Při převodu aplikaci, která používá nabídky k aplikaci, která používá pásu karet, nemáte odebrat nebo zakázat stávající nabídky. Místo toho můžete vytvořit prostředek pásu karet, přidání tlačítek pásu karet a pak přidružit nová tlačítka existující položky nabídky. I když již nejsou viditelné v nabídkách, jsou směrovány zprávy z panelu pásu karet v nabídkách. Kromě toho nabídky zástupců pokračovat v práci.  
   
  Pásu karet se skládá z tlačítka aplikace, což je velký tlačítko na levém okraji pásu karet, a jeden nebo více kategorií karty. Každé kartě kategorie obsahuje jednu nebo více panely, které fungují jako kontejnery tlačítek pásu karet a ovládacích prvků. Následující postup ukazuje, jak vytvořit prostředek pásu karet a pak přizpůsobení tlačítka aplikace.  
@@ -226,7 +221,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [[Části](#top)]  
   
-##  <a name="createinstance"></a>Vytvoření Instance panelu pásu karet  
+##  <a name="createinstance"></a> Vytvoření Instance panelu pásu karet  
  Následující kroky ukazují, jak vytvořit instanci na pásu karet panelu při spuštění aplikace. Chcete-li přidat panel pásu karet k aplikaci, deklarujte panelu pásu karet v souboru mainfrm.h. Potom v souboru mainfrm.cpp napište kód pro načtení prostředku pásu karet.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>K vytvoření instance panelu pásu karet  
@@ -250,7 +245,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [[Části](#top)]  
   
-##  <a name="addcategory"></a>Přizpůsobení prostředek pásu karet  
+##  <a name="addcategory"></a> Přizpůsobení prostředek pásu karet  
  Teď, když jste vytvořili tlačítka aplikace, můžete přidat prvky na pásu karet.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
  [[Části](#top)]  
   
-##  <a name="setlook"></a>Nastavení vzhledu aplikace  
+##  <a name="setlook"></a> Nastavení vzhledu aplikace  
  A *visual manager* je globální objekt, který řídí všechny vykreslování pro aplikaci. Vzhledem k původní Scribble aplikace využívá styl Office 2000 uživatelské rozhraní (UI), aplikace bude vypadat stejné. Můžete resetovat aplikaci pomocí visual správce Office 2007, tak, aby vypadal aplikace Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>K nastavení vzhledu aplikace  

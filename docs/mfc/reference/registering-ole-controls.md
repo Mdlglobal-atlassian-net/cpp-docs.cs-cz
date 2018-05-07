@@ -1,13 +1,10 @@
 ---
-title: "Registrace ovládacích prvků OLE | Microsoft Docs"
-ms.custom: 
+title: Registrace ovládacích prvků OLE | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11e943b8aa6427517ecb5b32ddf6f56442f5d0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e51e4c425d3d16b57a2b1ce0d4fc2f585dc505d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 Ovládací prvky OLE, jako u jiných objektů OLE serveru, byla přístupná pomocí jiné aplikace využívající technologii OLE. Toho se dosáhne registrace knihovny typů a třídy ovládacího prvku.  
@@ -43,9 +38,9 @@ Ovládací prvky OLE, jako u jiných objektů OLE serveru, byla přístupná pom
 |[Afxoleunregisterclass –](#afxoleunregisterclass)|Odebere registrační databáze třídy ovládacího prvku nebo třídy stránky vlastností.|  
 |[Afxoleunregistertypelib –](#afxoleunregistertypelib)|Odebere databázi registrace knihovny typů ovládacího prvku.|  
   
- `AfxOleRegisterTypeLib`obvykle nazývá implementace knihovny DLL řízení `DllRegisterServer`. Podobně `AfxOleUnregisterTypeLib` volá `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, a `AfxOleUnregisterClass` se běžně označují jako `UpdateRegistry` členské funkce ovládacího prvku třídy objektu pro vytváření nebo vlastnost stránky.  
+ `AfxOleRegisterTypeLib` obvykle nazývá implementace knihovny DLL řízení `DllRegisterServer`. Podobně `AfxOleUnregisterTypeLib` volá `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, a `AfxOleUnregisterClass` se běžně označují jako `UpdateRegistry` členské funkce ovládacího prvku třídy objektu pro vytváření nebo vlastnost stránky.  
   
-##  <a name="afxoleregistercontrolclass"></a>Afxoleregistercontrolclass –  
+##  <a name="afxoleregistercontrolclass"></a>  Afxoleregistercontrolclass –  
  Zaregistruje třídu ovládacího prvku s registrační databázi systému Windows.  
   
 ```   
@@ -81,11 +76,11 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  `nRegFlags`  
  Obsahuje jeden nebo více z následujících příznaků:  
   
-- `afxRegInsertable`Umožňuje zobrazit v dialogovém okně Vložit objekt pro objekty OLE.  
+- `afxRegInsertable` Umožňuje zobrazit v dialogovém okně Vložit objekt pro objekty OLE.  
   
-- `afxRegApartmentThreading`Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
+- `afxRegApartmentThreading` Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
   
-- `afxRegFreeThreading`Nastaví model vláken v registru na ThreadingModel = volné.  
+- `afxRegFreeThreading` Nastaví model vláken v registru na ThreadingModel = volné.  
   
      Dvěma příznaky můžete kombinovat `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obě. V tématu [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) ve Windows SDK pro další informace o dělení na vlákna registrace modelu.  
   
@@ -146,7 +141,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Nenulové hodnoty, pokud byl zaregistrován třída ovládacích prvků; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- To umožňuje řídit má být používána kontejnery, které jsou OLE-control. `AfxOleRegisterControlClass`aktualizuje registr ovládacího prvku název a umístění v systému a také nastaví model vláken, která podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v OLE ovládacích prvků" a [vláken a procesů o](http://msdn.microsoft.com/library/windows/desktop/ms681917) ve Windows SDK.  
+ To umožňuje řídit má být používána kontejnery, které jsou OLE-control. `AfxOleRegisterControlClass` aktualizuje registr ovládacího prvku název a umístění v systému a také nastaví model vláken, která podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v OLE ovládacích prvků" a [vláken a procesů o](http://msdn.microsoft.com/library/windows/desktop/ms681917) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -160,7 +155,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>Afxoleregisterpropertypageclass –  
+##  <a name="afxoleregisterpropertypageclass"></a>  Afxoleregisterpropertypageclass –  
  Registruje třídy stránky vlastností registrační databázi systému Windows.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  `nRegFlags`  
  Může obsahovat příznak:  
   
-- `afxRegApartmentThreading`Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
+- `afxRegApartmentThreading` Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
   
 > [!NOTE]
 >  V MFC verze starší než MFC 4.2 `int` `nRegFlags` parametr nebyl k dispozici. Všimněte si také, že `afxRegInsertable` příznak není platná možnost pro stránky vlastností a způsobí ASSERT v prostředí MFC, pokud je nastaveno  
@@ -193,12 +188,12 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Nenulové hodnoty, pokud byl zaregistrován třída ovládacích prvků; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- To umožňuje stránka vlastností, které má být používána kontejnery, které jsou OLE-control. `AfxOleRegisterPropertyPageClass`aktualizuje registr název stránky vlastností a jeho umístění na serveru a také nastaví model vláken, která podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v OLE ovládacích prvků" a [vláken a procesů o](http://msdn.microsoft.com/library/windows/desktop/ms681917) ve Windows SDK.  
+ To umožňuje stránka vlastností, které má být používána kontejnery, které jsou OLE-control. `AfxOleRegisterPropertyPageClass` aktualizuje registr název stránky vlastností a jeho umístění na serveru a také nastaví model vláken, která podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v OLE ovládacích prvků" a [vláken a procesů o](http://msdn.microsoft.com/library/windows/desktop/ms681917) ve Windows SDK.  
   
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>Afxoleregistertypelib –  
+##  <a name="afxoleregistertypelib"></a>  Afxoleregistertypelib –  
  Registruje knihovny typů registrační databázi systému Windows a umožňuje knihovny typů, který má být používána jiných kontejnerů, které jsou OLE-control.  
   
 ```   
@@ -236,7 +231,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>Afxoleunregisterclass –  
+##  <a name="afxoleunregisterclass"></a>  Afxoleunregisterclass –  
  Odebere položku Ovládací prvek nebo vlastnost třídy stránky registrační databázi systému Windows.  
   
 ```   
@@ -256,7 +251,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>Afxoleunregistertypelib –  
+##  <a name="afxoleunregistertypelib"></a>  Afxoleunregistertypelib –  
  Volání této funkce pro odebrání položky knihovny typu z registrační databázi systému Windows.  
   
 ```   

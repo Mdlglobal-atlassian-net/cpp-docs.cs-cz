@@ -1,12 +1,9 @@
 ---
-title: "Chyba linkerů Lnk2001 | Microsoft Docs"
-ms.custom: 
+title: Chyba linkerů Lnk2001 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Chyba linkerů LNK2001
 nerozpoznané externí symbol "*symbol*"  
@@ -76,7 +71,7 @@ Této chybě může dojít, pokud jste na verzi knihovny režimu při sestavení
   
 Této chybě může dojít, pokud váš kód odkazoval na symbol z jedné verze knihovny, ale zadejte jinou verzi knihovny linkeru. Obecně platí nelze kombinovat soubory objektů nebo knihovny, které jsou vytvořeny pro různé verze kompilátoru. Knihovny, které jsou dodávány v nové verzi může obsahovat znaky, které nelze nalézt v knihovnách součástí předchozí verze a naopak. Chcete-li tento problém vyřešit, vytvořte objekt soubory a knihovny se stejnou verzí kompilátoru před propojením je společně.  
   
--  Nástroje &#124; Možnosti &#124; Projekty &#124; Dialogové okno adresáře VC ++, v části Výběr soubory knihovny, můžete změnit pořadí hledání knihovny. Složka Linkeru v dialogovém okně stránky vlastností projektu může obsahovat také cesty, které by mohly být aktuální.  
+-  Nástroje &#124; možnosti &#124; projekty &#124; adresáře VC ++ dialogové okno, v části Výběr soubory knihovny, umožňuje změnit pořadí hledání knihovny. Složka Linkeru v dialogovém okně stránky vlastností projektu může obsahovat také cesty, které by mohly být aktuální.  
   
 -  Tento problém se může zobrazit při instalaci novou sadu SDK (možná do jiného umístění), a pořadí hledání neaktualizuje tak, aby odkazoval na nové umístění. Za normálních okolností byste měli umístit cestu na novou sadu SDK zahrnout a lib adresáře před výchozí umístění Visual C++. Navíc projekt obsahující vložený cesty může stále bodu staré cesty, které jsou platné, ale aktuální pro nové funkce, které jsou přidávány nové verze, která je nainstalovaná do jiného umístění.  
   

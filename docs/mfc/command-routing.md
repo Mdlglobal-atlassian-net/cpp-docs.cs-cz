@@ -1,13 +1,10 @@
 ---
-title: "Směrování příkazů | Microsoft Docs"
-ms.custom: 
+title: Směrování příkazů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>Směrování příkazů
 Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpráv spojení mezi příkazy a jejich funkce obslužné rutiny, pro kterou použijte okno Vlastnosti úlohy. Také musíte napsat většina obslužné rutiny příkazů.  
@@ -44,11 +39,11 @@ Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpr�
   
  Jak nákladné je tento mechanismus směrování porovnání vaší obslužné rutiny nemá v reakci na příkaz, náklady směrování je nízký. Berte v úvahu, že rozhraní generuje příkazy jenom v případě, že uživatel pracuje s objektem uživatelského rozhraní.  
   
-### <a name="_core_standard_command_route"></a>Standardní příkaz trasy  
+### <a name="_core_standard_command_route"></a> Standardní příkaz trasy  
   
 |Pokud objekt tohoto typu přijme příkaz. . .|Nabízí samostatně a další příkaz cílové objekty příležitosti pro zpracování příkazu v tomto pořadí:|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Rámec okna MDI (`CMDIFrameWnd`)|1.  Aktivní`CMDIChildWnd`<br />2.  Tato oken s rámečkem<br />3.  Aplikace (`CWinApp` objekt)|  
+|Rámec okna MDI (`CMDIFrameWnd`)|1.  Aktivní `CMDIChildWnd`<br />2.  Tato oken s rámečkem<br />3.  Aplikace (`CWinApp` objekt)|  
 |Rámec okna dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktivní zobrazení<br />2.  Tato oken s rámečkem<br />3.  Aplikace (`CWinApp` objekt)|  
 |Zobrazit|1.  Toto zobrazení<br />2.  Dokument připojený k zobrazení|  
 |Dokument|1.  Tento dokument<br />2.  Šablona dokumentu, které jsou připojené k dokumentu|  

@@ -1,13 +1,10 @@
 ---
-title: "Zpracování výjimek v MFC | Microsoft Docs"
-ms.custom: 
+title: Zpracování výjimek v MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování výjimek. K dispozici jsou dva mechanismů:  
@@ -78,7 +73,7 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
   
 -   [Další informace o výjimkách](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>Kdy použít výjimky  
+##  <a name="_core_when_to_use_exceptions"></a> Kdy použít výjimky  
  Tři kategorie výstupy může dojít, když funkce je volána v průběhu provádění programu: Normální spuštění, spuštění chybné nebo abnormální provádění. Každá kategorie je popsáno níže.  
   
 -   Normální spuštění  
@@ -95,7 +90,7 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
   
  Použití výjimek je obzvláště vhodný pro abnormální provádění.  
   
-##  <a name="_core_mfc_exception_support"></a>Podpora výjimek MFC  
+##  <a name="_core_mfc_exception_support"></a> Podpora výjimek MFC  
  Jestli budete používat výjimky jazyka C++ přímo nebo použijete maker výjimek prostředí MFC, budete používat [CException – třída](../mfc/reference/cexception-class.md) nebo `CException`-odvozené objekty, které mohou být vyvolány rozhraní nebo aplikací.  
   
  V následující tabulce jsou předdefinované výjimky poskytované MFC.  
@@ -116,7 +111,7 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
 > [!NOTE]
 >  MFC podporuje výjimky jazyka C++ a maker výjimek prostředí MFC. MFC přímo nepodporuje systému Windows NT strukturovaná obslužné rutiny výjimek (SEH), jak je popsáno v [strukturované zpracování výjimek](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
   
-##  <a name="_core_further_reading_about_exceptions"></a>Další výklad o výjimkách  
+##  <a name="_core_further_reading_about_exceptions"></a> Další výklad o výjimkách  
  Na následující články vysvětlují použití knihovny MFC pro blokováním výjimka:  
   
 -   [Výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md)  

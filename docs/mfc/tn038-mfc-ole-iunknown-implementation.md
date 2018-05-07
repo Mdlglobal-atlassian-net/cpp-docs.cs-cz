@@ -1,13 +1,10 @@
 ---
-title: "TN038: MFC OLE – implementace třídy IUnknown | Microsoft Docs"
-ms.custom: 
+title: 'TN038: MFC OLE – implementace třídy IUnknown | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE – implementace třídy IUnknown
 > [!NOTE]
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Další informace o agregace, najdete v článku [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) tématu.  
   
- Podpora knihovny MFC rozhraní mapy je integrován do `CCmdTarget` třídy. `CCmdTarget`"*má a*" odkazovat počet a také všechny přidružené členské funkce [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementace (počet odkazů je třeba v `CCmdTarget`). Pokud chcete vytvořit třídu, která podporuje OLE COM, odvození třídy z `CCmdTarget` a používat různé makra a také členské funkce `CCmdTarget` implementovat požadované rozhraní. Knihovny MFC implementace používá k definování každou implementaci rozhraní podobně jako v předchozím příkladu vnořené třídy. To je snazší díky standardní implementace IUnknown, jakož i počet makra, takže některé opakovaných kódu.  
+ Podpora knihovny MFC rozhraní mapy je integrován do `CCmdTarget` třídy. `CCmdTarget` "*má a*" odkazovat počet a také všechny přidružené členské funkce [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementace (počet odkazů je třeba v `CCmdTarget`). Pokud chcete vytvořit třídu, která podporuje OLE COM, odvození třídy z `CCmdTarget` a používat různé makra a také členské funkce `CCmdTarget` implementovat požadované rozhraní. Knihovny MFC implementace používá k definování každou implementaci rozhraní podobně jako v předchozím příkladu vnořené třídy. To je snazší díky standardní implementace IUnknown, jakož i počet makra, takže některé opakovaných kódu.  
   
 ## <a name="interface-map-basics"></a>Základy rozhraní mapy  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Použití `METHOD_PROLOGUE` makro přístupu k nadřazenému `CCmdTarget`-odvozené objektu.  
   
-8. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) můžete delegovat na `CCmdTarget` provádění těchto funkcí (`ExternalAddRef`, `ExternalRelease`, a `ExternalQueryInterface` ).  
+8. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) můžete delegovat na `CCmdTarget` provádění těchto funkcí (`ExternalAddRef`, `ExternalRelease`, a `ExternalQueryInterface`).  
   
  V předchozím příkladu CPrintEditObj může být implementováno takto:  
   
@@ -474,7 +469,7 @@ BEGIN_INTERFACE_MAP(CAggrExample,
 END_INTERFACE_MAP()  
 ```  
   
- Proměnná m_lpAggrInner je inicializován v konstruktoru na hodnotu NULL. Rozhraní framework ignoruje členské proměnné NULL výchozí implementace [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates`je vhodná k samotnému vytvoření vaší objekty agregace. Budete muset volat explicitně při vytváření objektu mimo MFC implementace `COleObjectFactory`. Důvod pro vytváření agregací ve `CCmdTarget::OnCreateAggregates` a také použití `CCmdTarget::GetControllingUnknown` bude se objeví při vytváření objektů agregovatelné popsané.  
+ Proměnná m_lpAggrInner je inicializován v konstruktoru na hodnotu NULL. Rozhraní framework ignoruje členské proměnné NULL výchozí implementace [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates` je vhodná k samotnému vytvoření vaší objekty agregace. Budete muset volat explicitně při vytváření objektu mimo MFC implementace `COleObjectFactory`. Důvod pro vytváření agregací ve `CCmdTarget::OnCreateAggregates` a také použití `CCmdTarget::GetControllingUnknown` bude se objeví při vytváření objektů agregovatelné popsané.  
   
  Tento postup vám poskytne váš objekt všechna rozhraní, které podporuje agregovaný objekt plus jeho nativní rozhraní. Pokud chcete pouze podmnožinu rozhraní, která podporuje agregace, můžete přepsat `CCmdTarget::GetInterfaceHook`. To vám umožní hookability velmi nízké úrovně, podobně jako [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). Obvykle je vhodné všechna rozhraní, které podporuje agregace.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Chyba linkerů Lnk1104 | Microsoft Docs"
-ms.custom: 
+title: Chyba linkerů Lnk1104 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Chyba linkerů LNK1104
 
@@ -101,4 +96,4 @@ Této chybě může dojít, pokud máte dostatek soubor oprávnění pro příst
 
 Chybě může dojít, pokud nemáte dostatek místa na disku. Linkeru používá dočasné soubory v několika případech. I v případě, že máte dostatek místa na disku, můžete velmi velké odkaz vyčerpat by nebo fragmentu dostupné místo na disku. Zvažte použití [/OPT (optimalizace)](../../build/reference/opt-optimizations.md) možnost; to přenositelné čtení odstranění sekvence COMDAT všechny soubory objekt vícekrát.
 
-Pokud *filename* jmenuje LNK*nnn*, což je název souboru generované linkeru pro dočasného souboru, zadaný v proměnné prostředí TMP adresář neexistuje, nebo má více než jeden adresář je možné zadat proměnné prostředí TMP. Pro proměnnou prostředí TMP by měla být zadána cesta pouze jednomu adresáři.
+Pokud *filename* jmenuje LNK*nnn*, což je název souboru generované linkeru pro dočasného souboru, adresáři určeném v proměnné prostředí TMP neexistuje, nebo může být více než jeden adresář zadat proměnné prostředí TMP. Pro proměnnou prostředí TMP by měla být zadána cesta pouze jednomu adresáři.

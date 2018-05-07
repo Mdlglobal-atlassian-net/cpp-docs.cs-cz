@@ -2,36 +2,31 @@
 title: Použití ověřitelných sestavení se serverem SQL Server (C + +/ CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
 Rozšířené uložené procedury jsou reprezentovány jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL Server pomocí funkcí vytvořených s Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definovat rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (například SUMA nebo průměr).  
   
  Když klient provede rozšířenou uloženou proceduru, vyhledávání systému SQL Server pro knihovnu DLL přidružené rozšířené uložené procedury a knihovnu DLL načte. SQL Server volá požadovaný rozšířené uložené procedury a spustí ji v rámci zadaného kontextu zabezpečení. Rozšířená uložená procedura pak předá sady výsledků a vrátí parametry zpět na server.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]Poskytuje rozšíření Transact-SQL (T-SQL) aby bylo možné instalovat ověřitelná sestavení do systému SQL Server. Sada oprávnění serveru SQL určuje kontext zabezpečení, s následujícími úrovněmi zabezpečení:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] Poskytuje rozšíření Transact-SQL (T-SQL) aby bylo možné instalovat ověřitelná sestavení do systému SQL Server. Sada oprávnění serveru SQL určuje kontext zabezpečení, s následujícími úrovněmi zabezpečení:  
   
 -   Neomezený režim: spuštění kódu na vlastní nebezpečí; jako typ ověřitelný kód nemá.  
   

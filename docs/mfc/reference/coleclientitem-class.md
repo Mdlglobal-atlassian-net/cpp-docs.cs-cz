@@ -1,12 +1,9 @@
 ---
-title: "Třída COleClientItem | Microsoft Docs"
-ms.custom: 
+title: Třída COleClientItem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleClientItem
@@ -173,17 +170,15 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3732f23c2af429d0b5fc965b7f961af8400e2e42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleclientitem-class"></a>COleClientItem – třída
 Definuje rozhraní kontejner pro OLE – položky.  
@@ -295,9 +290,9 @@ class COleClientItem : public CDocItem
   
  Položky OLE lze vložené nebo propojené. Pokud je integrovaný, jeho data se ukládají jako součást složeného dokumentu. Pokud je propojena, jeho data se ukládají jako součást samostatný soubor vytvořené serverové aplikace a pouze odkaz na tento soubor je uložen v složeného dokumentu. Všechny položky OLE obsahují informace, které zadáte server aplikace, která by měla být volána upravovat je.  
   
- `COleClientItem`definuje několik přepisovatelné funkce, které se nazývají v reakci na požadavky od serverové aplikace; Tyto k přepisovatelným obvykle fungují jako oznámení. To umožňuje serveru aplikace k informování kontejneru změny, které uživatel provede při úpravě položky OLE nebo načíst informace potřebné při úpravy.  
+ `COleClientItem` definuje několik přepisovatelné funkce, které se nazývají v reakci na požadavky od serverové aplikace; Tyto k přepisovatelným obvykle fungují jako oznámení. To umožňuje serveru aplikace k informování kontejneru změny, které uživatel provede při úpravě položky OLE nebo načíst informace potřebné při úpravy.  
   
- `COleClientItem`lze použít s buď [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) třídy. Použít `COleClientItem`, odvození třídy z něj a implementaci [při změně](#onchange) členská funkce, která definuje, jak kontejneru reaguje na změny provedené v položce. Kvůli podpoře aktivace na místě, přepsat [OnGetItemPosition](#ongetitemposition) – členská funkce. Tato funkce poskytuje informace o zobrazené pozici položky OLE.  
+ `COleClientItem` lze použít s buď [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) třídy. Použít `COleClientItem`, odvození třídy z něj a implementaci [při změně](#onchange) členská funkce, která definuje, jak kontejneru reaguje na změny provedené v položce. Kvůli podpoře aktivace na místě, přepsat [OnGetItemPosition](#ongetitemposition) – členská funkce. Tato funkce poskytuje informace o zobrazené pozici položky OLE.  
   
  Další informace o používání rozhraní kontejneru, najdete v článcích [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [aktivace](../../mfc/activation-cpp.md).  
   
@@ -316,7 +311,7 @@ class COleClientItem : public CDocItem
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="activate"></a>COleClientItem::Activate  
+##  <a name="activate"></a>  COleClientItem::Activate  
  Volání této funkce provést zadaný příkaz místo [funkce DoVerb](#doverb) tak, aby můžete provést vlastní zpracováním, když je vyvolána výjimka.  
   
 ```  
@@ -353,7 +348,7 @@ void Activate(
   
  Další informace najdete v tématu [Funkce IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) ve Windows SDK.  
   
-##  <a name="activateas"></a>COleClientItem::ActivateAs  
+##  <a name="activateas"></a>  COleClientItem::ActivateAs  
  Používá pro OLE objekt převod možnosti aktivovat položky, jako by šlo položky v typu zadaném pomocí `clsidNew`.  
   
 ```  
@@ -379,7 +374,7 @@ virtual BOOL ActivateAs(
 ### <a name="remarks"></a>Poznámky  
  Tomu se říká automaticky [COleConvertDialog::DoConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert). Obvykle nevolá přímo.  
   
-##  <a name="attachdataobject"></a>COleClientItem::AttachDataObject  
+##  <a name="attachdataobject"></a>  COleClientItem::AttachDataObject  
  Volání této funkce k chybě při inicializaci [COleDataObject](../../mfc/reference/coledataobject-class.md) pro přístup k datům v položce OLE.  
   
 ```  
@@ -390,7 +385,7 @@ void AttachDataObject(COleDataObject& rDataObject) const;
  *rDataObject*  
  Odkaz na `COleDataObject` objekt, který umožňuje přístup k datům v položce OLE, budou inicializována.  
   
-##  <a name="canactivate"></a>COleClientItem::CanActivate  
+##  <a name="canactivate"></a>  COleClientItem::CanActivate  
  Voláno rámcem, když uživatel požádá aktivace na místě položky OLE; Tato funkce návratová hodnota určuje, zda aktivace na místě povolena.  
   
 ```  
@@ -405,7 +400,7 @@ virtual BOOL CanActivate();
   
  Další informace najdete v tématu [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) ve Windows SDK.  
   
-##  <a name="cancreatefromdata"></a>COleClientItem::CanCreateFromData  
+##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
  Kontroluje, zda aplikace kontejneru můžete vytvořit vložený objekt z danou `COleDataObject` objektu.  
   
 ```  
@@ -426,7 +421,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
   
  Další informace najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="cancreatelinkfromdata"></a>COleClientItem::CanCreateLinkFromData  
+##  <a name="cancreatelinkfromdata"></a>  COleClientItem::CanCreateLinkFromData  
  Kontroluje, zda aplikace kontejneru můžete vytvořit propojený objekt z danou `COleDataObject` objektu.  
   
 ```  
@@ -447,7 +442,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
   
  Další informace najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="canpaste"></a>COleClientItem::CanPaste  
+##  <a name="canpaste"></a>  COleClientItem::CanPaste  
  Volání této funkce, které chcete zobrazit, zda lze vložit vložené položky OLE ze schránky.  
   
 ```  
@@ -460,7 +455,7 @@ static BOOL PASCAL CanPaste();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) a [OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) ve Windows SDK.  
   
-##  <a name="canpastelink"></a>COleClientItem::CanPasteLink  
+##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink  
  Volání této funkce, které chcete zobrazit, zda lze vložit propojené položky OLE ze schránky.  
   
 ```  
@@ -473,7 +468,7 @@ static BOOL PASCAL CanPasteLink();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) a [OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) ve Windows SDK.  
   
-##  <a name="close"></a>COleClientItem::Close  
+##  <a name="close"></a>  COleClientItem::Close  
  Volání této funkce na změnu stavu položky OLE z do stavu spuštěno načíst stav, který je načten její obslužnou rutinu v paměti, ale server není spuštěný.  
   
 ```  
@@ -484,18 +479,18 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
  `dwCloseOption`  
  Příznak určující, za jakých okolností je položka OLE uložena, až se obnoví načíst stav. Může mít jednu z následujících hodnot:  
   
-- `OLECLOSE_SAVEIFDIRTY`Uložte položky OLE.  
+- `OLECLOSE_SAVEIFDIRTY` Uložte položky OLE.  
   
-- `OLECLOSE_NOSAVE`Neukládejte položky OLE.  
+- `OLECLOSE_NOSAVE` Neukládejte položky OLE.  
   
-- `OLECLOSE_PROMPTSAVE`Dotázat se uživatele na tom, zda je k uložení položky OLE.  
+- `OLECLOSE_PROMPTSAVE` Dotázat se uživatele na tom, zda je k uložení položky OLE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nemá žádný vliv, pokud položka OLE není spuštěna.  
   
  Další informace najdete v tématu [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) ve Windows SDK.  
   
-##  <a name="coleclientitem"></a>COleClientItem::COleClientItem  
+##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
  Vytvoří `COleClientItem` objektu a přidává ji k dokumentu kontejneru kolekce položek dokumentu, který vytvoří pouze objekt C++ a neprovádí žádné inicializace technologie OLE.  
   
 ```  
@@ -531,7 +526,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
   
 - [CreateCloneFrom](#createclonefrom)  
   
-##  <a name="convertto"></a>COleClientItem::ConvertTo  
+##  <a name="convertto"></a>  COleClientItem::ConvertTo  
  Volání této funkce člen převést položky v typu zadaném pomocí `clsidNew`.  
   
 ```  
@@ -548,7 +543,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 ### <a name="remarks"></a>Poznámky  
  Tomu se říká automaticky [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md). Není nutné volat přímo.  
   
-##  <a name="copytoclipboard"></a>COleClientItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>  COleClientItem::CopyToClipboard  
  Volání této funkce OLE položku zkopírovat do schránky.  
   
 ```  
@@ -564,7 +559,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
   
  Další informace najdete v tématu [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) ve Windows SDK.  
   
-##  <a name="createclonefrom"></a>COleClientItem::CreateCloneFrom  
+##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
  Volání této funkce vytvoření kopie zadané položky OLE.  
   
 ```  
@@ -581,7 +576,7 @@ BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 ### <a name="remarks"></a>Poznámky  
  Kopie je stejný jako zdroj položek. Tuto funkci můžete použít pro podporu operací, vrácení zpět.  
   
-##  <a name="createfromclipboard"></a>COleClientItem::CreateFromClipboard  
+##  <a name="createfromclipboard"></a>  COleClientItem::CreateFromClipboard  
  Volání této funkce Vytvoření vložené položky z obsah schránky.  
   
 ```  
@@ -592,7 +587,7 @@ BOOL CreateFromClipboard(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -609,7 +604,7 @@ BOOL CreateFromClipboard(
   
  Další informace najdete v tématu [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createfromdata"></a>COleClientItem::CreateFromData  
+##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
  Volání této funkce Vytvoření vložené položky z `COleDataObject` objektu.  
   
 ```  
@@ -624,7 +619,7 @@ BOOL CreateFromData(
  `pDataObject`  
  Ukazatel [COleDataObject](../../mfc/reference/coledataobject-class.md) objekt, ze kterého má být vytvořen položky OLE.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -641,7 +636,7 @@ BOOL CreateFromData(
   
  Další informace najdete v tématu [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createfromfile"></a>COleClientItem::CreateFromFile  
+##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
  Volání této funkce Vytvoření vložené položky OLE ze souboru.  
   
 ```  
@@ -660,7 +655,7 @@ BOOL CreateFromFile(
  `clsid`  
  Vyhrazeno pro budoucí použití.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -677,7 +672,7 @@ BOOL CreateFromFile(
   
  Další informace najdete v tématu [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createlinkfromclipboard"></a>COleClientItem::CreateLinkFromClipboard  
+##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard  
  Volání této funkce k vytvoření propojené položky z obsah schránky.  
   
 ```  
@@ -688,7 +683,7 @@ BOOL CreateLinkFromClipboard(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -705,7 +700,7 @@ BOOL CreateLinkFromClipboard(
   
  Další informace najdete v tématu [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createlinkfromdata"></a>COleClientItem::CreateLinkFromData  
+##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
  Volání této funkce vytvoření propojené položky z `COleDataObject` objektu.  
   
 ```  
@@ -720,7 +715,7 @@ BOOL CreateLinkFromData(
  `pDataObject`  
  Ukazatel [COleDataObject](../../mfc/reference/coledataobject-class.md) objekt, ze kterého má být vytvořen položky OLE.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -737,7 +732,7 @@ BOOL CreateLinkFromData(
   
  Další informace najdete v tématu [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createlinkfromfile"></a>COleClientItem::CreateLinkFromFile  
+##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
  Volání této funkce vytvoření propojené položky OLE ze souboru.  
   
 ```  
@@ -752,7 +747,7 @@ BOOL CreateLinkFromFile(
  `lpszFileName`  
  Ukazatel na název souboru, ze kterého má být vytvořen položky OLE.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -769,7 +764,7 @@ BOOL CreateLinkFromFile(
   
  Další informace najdete v tématu [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createnewitem"></a>COleClientItem::CreateNewItem  
+##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
  Volání této funkce Vytvoření vložené položky; Tato funkce spustí serverové aplikace, která umožňuje uživatelům vytvořit položku OLE.  
   
 ```  
@@ -784,7 +779,7 @@ BOOL CreateNewItem(
  `clsid`  
  ID, která jednoznačně identifikuje typ položky OLE k vytvoření.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -801,7 +796,7 @@ BOOL CreateNewItem(
   
  Další informace najdete v tématu [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createstaticfromclipboard"></a>COleClientItem::CreateStaticFromClipboard  
+##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
  Volání této funkce můžete vytvořit statickou položku z obsah schránky.  
   
 ```  
@@ -812,7 +807,7 @@ BOOL CreateStaticFromClipboard(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -829,7 +824,7 @@ BOOL CreateStaticFromClipboard(
   
  Další informace najdete v tématu [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="createstaticfromdata"></a>COleClientItem::CreateStaticFromData  
+##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
  Volání této funkce k vytvoření statických položky z `COleDataObject` objektu.  
   
 ```  
@@ -844,7 +839,7 @@ BOOL CreateStaticFromData(
  `pDataObject`  
  Ukazatel [COleDataObject](../../mfc/reference/coledataobject-class.md) objekt, ze kterého má být vytvořen položky OLE.  
   
- *vykreslení*  
+ *Vykreslení*  
  Příznak určující, jak bude server zobrazovat položky OLE. Možné hodnoty, najdete v části [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) ve Windows SDK.  
   
  `cfFormat`  
@@ -863,7 +858,7 @@ BOOL CreateStaticFromData(
   
  Další informace najdete v tématu [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) ve Windows SDK.  
   
-##  <a name="deactivate"></a>COleClientItem::Deactivate  
+##  <a name="deactivate"></a>  COleClientItem::Deactivate  
  Volání této funkce můžete deaktivovat položky OLE a uvolnit všechny související prostředky.  
   
 ```  
@@ -877,7 +872,7 @@ void Deactivate();
   
  Další informace najdete v tématu [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) ve Windows SDK.  
   
-##  <a name="deactivateui"></a>COleClientItem::DeactivateUI  
+##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
  Volání této funkce, když uživatel deaktivuje položku, která se aktivovala na místě.  
   
 ```  
@@ -891,7 +886,7 @@ void DeactivateUI();
   
  Další informace najdete v tématu [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) ve Windows SDK.  
   
-##  <a name="delete"></a>COleClientItem::Delete  
+##  <a name="delete"></a>  COleClientItem::Delete  
  Volání této funkce se odstranit položku OLE z kontejneru dokumentu.  
   
 ```  
@@ -905,7 +900,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce volá [verze](#release) členská funkce, která zase odstraní objekt C++ položku a trvale odebrání položky OLE z dokumentu. Pokud vložené položky OLE nativní data pro položku se odstraní. Vždy se zavře používají server; Proto pokud je položka Otevřít odkaz, tato funkce uzavře.  
   
-##  <a name="dodragdrop"></a>COleClientItem::DoDragDrop  
+##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop  
  Volání `DoDragDrop` – členská funkce k provedení operace přetažení myší.  
   
 ```  
@@ -949,7 +944,7 @@ DROPEFFECT DoDragDrop(
   
  Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, najdete v části [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) ve Windows SDK.  
   
-##  <a name="doverb"></a>COleClientItem::DoVerb  
+##  <a name="doverb"></a>  COleClientItem::DoVerb  
  Volání `DoVerb` provést zadanou operaci.  
   
 ```  
@@ -987,7 +982,7 @@ virtual BOOL DoVerb(
   
  Pokud je primární operace upravit a nula je uveden v `nVerb` parametr příslušnou aplikaci na server se spustí umožňující OLE položku, kterou chcete upravit. Pokud aplikace kontejner podporuje aktivace na místě, úpravy lze provést na místě. Pokud kontejner nepodporuje aktivace na místě (nebo pokud je zadán příkaz otevřený), server se spouští v samostatném okně a úpravy lze provést existuje. Obvykle, když aplikace kontejneru poklepání položku OLE, hodnota primární požadavek v `nVerb` parametr určuje akci, která uživatel může trvat. Ale pokud je server podporuje jenom jednu akci, trvá této akce, bez ohledu na to, která je zadaná hodnota v `nVerb` parametr.  
   
-##  <a name="draw"></a>COleClientItem::Draw  
+##  <a name="draw"></a>  COleClientItem::Draw  
  Volání této funkce k vykreslení položky OLE do zadaného ohraničující obdélník pomocí kontextu zadané zařízení.  
   
 ```  
@@ -1019,7 +1014,7 @@ BOOL Draw(
   
  Další informace najdete v tématu [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) ve Windows SDK.  
   
-##  <a name="getactiveview"></a>COleClientItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
  Vrátí zobrazení, na kterém je položka aktivaci.  
   
 ```  
@@ -1029,7 +1024,7 @@ CView* GetActiveView() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na zobrazení; v opačném případě **NULL** Pokud položka není aktivován na místě.  
   
-##  <a name="getcachedextent"></a>COleClientItem::GetCachedExtent  
+##  <a name="getcachedextent"></a>  COleClientItem::GetCachedExtent  
  Volání této funkce načíst velikost položky OLE.  
   
 ```  
@@ -1055,7 +1050,7 @@ BOOL GetCachedExtent(
   
  Další informace najdete v tématu [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) ve Windows SDK.  
   
-##  <a name="getclassid"></a>COleClientItem::GetClassID  
+##  <a name="getclassid"></a>  COleClientItem::GetClassID  
  Vrátí ID třídy položky do paměti, na kterou odkazuje `pClassID`.  
   
 ```  
@@ -1071,7 +1066,7 @@ void GetClassID(CLSID* pClassID) const;
   
  Další informace najdete v tématu [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) ve Windows SDK.  
   
-##  <a name="getclipboarddata"></a>COleClientItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
  Volání této funkce můžete získat `COleDataSource` objekt obsahující všechna data, která by umístit do schránky voláním [CopyToClipboard](#copytoclipboard) – členská funkce.  
   
 ```  
@@ -1096,9 +1091,9 @@ void GetClipboardData(
  Velikost objektu v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetClipboardData`je volána jako výchozí implementaci [OnGetClipboardData](#ongetclipboarddata). Přepsání `OnGetClipboardData` pouze v případě, že můžete chtít nabízet data formáty kromě těch, které nabízí `CopyToClipboard`. Umístěte tyto formáty v `COleDataSource` objekt před nebo po volání `CopyToClipboard`a pak `COleDataSource` do objektu [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) funkce. Například pokud chcete položku OLE pozici v jeho kontejneru dokumentu, který může doprovázet do schránky, kdybyste definovat vlastní formát pro předání těchto informací a jeho umístění `COleDataSource` před voláním `CopyToClipboard`.  
+ `GetClipboardData` je volána jako výchozí implementaci [OnGetClipboardData](#ongetclipboarddata). Přepsání `OnGetClipboardData` pouze v případě, že můžete chtít nabízet data formáty kromě těch, které nabízí `CopyToClipboard`. Umístěte tyto formáty v `COleDataSource` objekt před nebo po volání `CopyToClipboard`a pak `COleDataSource` do objektu [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) funkce. Například pokud chcete položku OLE pozici v jeho kontejneru dokumentu, který může doprovázet do schránky, kdybyste definovat vlastní formát pro předání těchto informací a jeho umístění `COleDataSource` před voláním `CopyToClipboard`.  
   
-##  <a name="getdocument"></a>COleClientItem::GetDocument  
+##  <a name="getdocument"></a>  COleClientItem::GetDocument  
  Volání této funkce získání ukazatele v dokumentu, který obsahuje položky OLE.  
   
 ```  
@@ -1111,7 +1106,7 @@ COleDocument* GetDocument() const;
 ### <a name="remarks"></a>Poznámky  
  Umožňuje přístup na tento ukazatel `COleDocument` objekt, který můžete předat jako argument k `COleClientItem` konstruktor.  
   
-##  <a name="getdrawaspect"></a>COleClientItem::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleClientItem::GetDrawAspect  
  Volání `GetDrawAspect` – členská funkce k určení aktuální "aspekt", nebo zobrazení, položky.  
   
 ```  
@@ -1124,7 +1119,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Poznámky  
  Daný aspekt Určuje, jak má být vykreslen položky.  
   
-##  <a name="getextent"></a>COleClientItem::GetExtent  
+##  <a name="getextent"></a>  COleClientItem::GetExtent  
  Volání této funkce načíst velikost položky OLE.  
   
 ```  
@@ -1151,7 +1146,7 @@ BOOL GetExtent(
   
  Další informace najdete v tématu [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) ve Windows SDK.  
   
-##  <a name="geticonfromregistry"></a>COleClientItem::GetIconFromRegistry  
+##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
  Volání této funkce člen načíst popisovač pro prostředek s ikonou přidružené k serveru konkrétní CLSID.  
   
 ```  
@@ -1170,7 +1165,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci člen nebude spuštění serveru nebo získat ikonu dynamicky, i v případě, že server je již spuštěna. Místo toho tuto funkci člen otevře spustitelné bitové kopie serveru a načte ikonu statické přidružené k serveru, jako byl zaregistrován.  
   
-##  <a name="geticonicmetafile"></a>COleClientItem::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleClientItem::GetIconicMetafile  
  Načte metafile používá pro kreslení ikony položky.  
   
 ```  
@@ -1185,7 +1180,7 @@ HGLOBAL GetIconicMetafile();
   
  Tato funkce také voláním [SetIconicMetafile](#seticonicmetafile) pro ukládání do mezipaměti metafile pro pozdější použití.  
   
-##  <a name="getinplacewindow"></a>COleClientItem::GetInPlaceWindow  
+##  <a name="getinplacewindow"></a>  COleClientItem::GetInPlaceWindow  
  Volání `GetInPlaceWindow` – členská funkce získání ukazatele do okna, ve kterém byla položka otevřena pro úpravy na místě.  
   
 ```  
@@ -1198,7 +1193,7 @@ CWnd* GetInPlaceWindow();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce by měla být volána pouze pro položky, které jsou na místě aktivní.  
   
-##  <a name="getitemstate"></a>COleClientItem::GetItemState  
+##  <a name="getitemstate"></a>  COleClientItem::GetItemState  
  Volání této funkce můžete získat aktuální stav položky OLE.  
   
 ```  
@@ -1213,7 +1208,7 @@ UINT GetItemState() const;
   
  Další informace najdete v článku [kontejnery: stavy klientských položek](../../mfc/containers-client-item-states.md).  
   
-##  <a name="getlaststatus"></a>COleClientItem::GetLastStatus  
+##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus  
  Vrátí stavový kód poslední operaci OLE.  
   
 ```  
@@ -1228,7 +1223,7 @@ SCODE GetLastStatus() const;
   
  Další informace o `SCODE`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) v dokumentaci k Windows SDK.  
   
-##  <a name="getlinkupdateoptions"></a>COleClientItem::GetLinkUpdateOptions  
+##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
  Volání této funkce můžete získat aktuální hodnotu možnosti propojení aktualizace pro položku OLE.  
   
 ```  
@@ -1238,9 +1233,9 @@ OLEUPDATE GetLinkUpdateOptions();
 ### <a name="return-value"></a>Návratová hodnota  
  Jedna z následujících hodnot:  
   
-- `OLEUPDATE_ALWAYS`Aktualizujte propojené položky, kdykoli je to možné. Tato volba podporuje přepínač Automatické aktualizace propojení v dialogovém okně odkazy.  
+- `OLEUPDATE_ALWAYS` Aktualizujte propojené položky, kdykoli je to možné. Tato volba podporuje přepínač Automatické aktualizace propojení v dialogovém okně odkazy.  
   
-- `OLEUPDATE_ONCALL`Aktualizovat propojené položky pouze na žádost z aplikace kontejneru (když [UpdateLink](#updatelink) – členská funkce je volána). Tato volba podporuje přepínač Ruční aktualizace propojení v dialogovém okně odkazy.  
+- `OLEUPDATE_ONCALL` Aktualizovat propojené položky pouze na žádost z aplikace kontejneru (když [UpdateLink](#updatelink) – členská funkce je volána). Tato volba podporuje přepínač Ruční aktualizace propojení v dialogovém okně odkazy.  
   
 ### <a name="remarks"></a>Poznámky  
  Toto je pokročilá operace.  
@@ -1249,7 +1244,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  Další informace najdete v tématu [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) ve Windows SDK.  
   
-##  <a name="gettype"></a>COleClientItem::GetType  
+##  <a name="gettype"></a>  COleClientItem::GetType  
  Volání této funkce k určení, zda je položka OLE vložené nebo propojené nebo statické.  
   
 ```  
@@ -1259,13 +1254,13 @@ OLE_OBJTYPE GetType() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Číslo bez znaménka s jedním z následujících hodnot:  
   
-- `OT_LINK`Položka OLE je odkaz.  
+- `OT_LINK` Položka OLE je odkaz.  
   
-- `OT_EMBEDDED`Vložené položky OLE.  
+- `OT_EMBEDDED` Vložené položky OLE.  
   
-- `OT_STATIC`Položka OLE je statická, to znamená, obsahuje pouze prezentace dat, není nativní dat a proto nelze je upravit.  
+- `OT_STATIC` Položka OLE je statická, to znamená, obsahuje pouze prezentace dat, není nativní dat a proto nelze je upravit.  
   
-##  <a name="getusertype"></a>COleClientItem::GetUserType  
+##  <a name="getusertype"></a>  COleClientItem::GetUserType  
  Volání této funkce můžete získat zobrazovanou uživateli řetězec popisující položku OLE typu, například "Dokument aplikace Word."  
   
 ```  
@@ -1278,11 +1273,11 @@ void GetUserType(
  *nUserClassType*  
  Hodnota označující požadované varianta řetězec popisující typ položky OLE. To může mít jednu z následujících hodnot:  
   
-- `USERCLASSTYPE_FULL`Název typu úplné zobrazí uživateli.  
+- `USERCLASSTYPE_FULL` Název typu úplné zobrazí uživateli.  
   
-- `USERCLASSTYPE_SHORT`Krátký název (maximálně 15 znaků) pro použití v místní nabídky a dialogové okno Upravit propojení.  
+- `USERCLASSTYPE_SHORT` Krátký název (maximálně 15 znaků) pro použití v místní nabídky a dialogové okno Upravit propojení.  
   
-- `USERCLASSTYPE_APPNAME`Název aplikace pro obsluhu třídy.  
+- `USERCLASSTYPE_APPNAME` Název aplikace pro obsluhu třídy.  
   
  `rString`  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu, na které má být vrácen řetězec s popisem typ položky OLE.  
@@ -1294,7 +1289,7 @@ void GetUserType(
   
  Další informace najdete v tématu [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) ve Windows SDK.  
   
-##  <a name="isinplaceactive"></a>COleClientItem::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
  Volání této funkce, zda položka OLE je aktivní na místě.  
   
 ```  
@@ -1307,7 +1302,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="remarks"></a>Poznámky  
  Je běžné k provádění různých logiky v závislosti na tom, jestli je položka upravovaný na místě. Funkce zkontroluje, zda je aktuální stav položky rovná buď `activeState` nebo `activeUIState`.  
   
-##  <a name="islinkuptodate"></a>COleClientItem::IsLinkUpToDate  
+##  <a name="islinkuptodate"></a>  COleClientItem::IsLinkUpToDate  
  Volání této funkce, zda je aktuální položky OLE.  
   
 ```  
@@ -1324,7 +1319,7 @@ BOOL IsLinkUpToDate() const;
   
  Další informace najdete v tématu [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) ve Windows SDK.  
   
-##  <a name="ismodified"></a>COleClientItem::IsModified  
+##  <a name="ismodified"></a>  COleClientItem::IsModified  
  Volání této funkce, zda položka OLE je nekonzistentní (změnil od posledního uložení).  
   
 ```  
@@ -1337,7 +1332,7 @@ BOOL IsModified() const;
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) ve Windows SDK.  
   
-##  <a name="isopen"></a>COleClientItem::IsOpen  
+##  <a name="isopen"></a>  COleClientItem::IsOpen  
  Volání této funkce zjistěte, zda položky OLE otevřete; To znamená otevřít v instanci serveru aplikace běžící v samostatném okně.  
   
 ```  
@@ -1350,7 +1345,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Poznámky  
  Slouží k určení, kdy k vykreslení objektu pomocí vzoru šrafování. Otevřete objekt by měl mít nesouvislého vzoru vykreslovat nad objekt. Můžete použít [crecttracker –](../../mfc/reference/crecttracker-class.md) objekt, který chcete dosáhnout.  
   
-##  <a name="isrunning"></a>COleClientItem::IsRunning  
+##  <a name="isrunning"></a>  COleClientItem::IsRunning  
  Volání této funkce, zda je spuštěn položky OLE; To znamená, zda je položka načíst a spustit v serverové aplikace.  
   
 ```  
@@ -1363,7 +1358,7 @@ BOOL IsRunning() const;
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) ve Windows SDK.  
   
-##  <a name="onactivate"></a>COleClientItem::OnActivate  
+##  <a name="onactivate"></a>  COleClientItem::OnActivate  
  Voláno rámcem položka upozornit, že právě nebyl aktivován na místě.  
   
 ```  
@@ -1375,7 +1370,7 @@ virtual void OnActivate();
   
  Výchozí implementace volá [při změně](#onchange) – členská funkce s **OLE_CHANGEDSTATE** jako parametr. Potlačí tuto funkci k provedení vlastní zpracování, když se položky stane aktivní na místě.  
   
-##  <a name="onactivateui"></a>COleClientItem::OnActivateUI  
+##  <a name="onactivateui"></a>  COleClientItem::OnActivateUI  
  Volání framework `OnActivateUI` při objekt zadá aktivním stavu uživatelského rozhraní.  
   
 ```  
@@ -1387,7 +1382,7 @@ virtual void OnActivateUI();
   
  Výchozí implementace pamatuje serveru `HWND` pro pozdější **GetServerWindow** volání.  
   
-##  <a name="onchange"></a>COleClientItem::OnChange  
+##  <a name="onchange"></a>  COleClientItem::OnChange  
  Voláno rámcem, když uživatel změní, uloží nebo zavře položky OLE.  
   
 ```  
@@ -1400,13 +1395,13 @@ virtual void OnChange(
  `nCode`  
  Z důvodu serveru změnit tuto položku. Může mít jednu z následujících hodnot:  
   
-- `OLE_CHANGED`Došlo ke změně vzhledu položky OLE.  
+- `OLE_CHANGED` Došlo ke změně vzhledu položky OLE.  
   
-- `OLE_SAVED`Položka OLE se uložila.  
+- `OLE_SAVED` Položka OLE se uložila.  
   
-- `OLE_CLOSED`Položka OLE bylo ukončeno.  
+- `OLE_CLOSED` Položka OLE bylo ukončeno.  
   
-- `OLE_CHANGED_STATE`Tato položka OLE změněna z jednoho stavu do jiného.  
+- `OLE_CHANGED_STATE` Tato položka OLE změněna z jednoho stavu do jiného.  
   
  `dwParam`  
  Pokud `nCode` je `OLE_SAVED` nebo `OLE_CLOSED`, tento parametr se nepoužívá. Pokud `nCode` je `OLE_CHANGED`, tento parametr určuje aspekt OLE položky, které se změnily. Možné hodnoty, najdete v článku `dwParam` parametr [COleClientItem::Draw](#draw). Pokud `nCode` je `OLE_CHANGED_STATE`, tento parametr je **COleClientItem::ItemState** uvedené hodnoty a popisuje stav jejich zadání. Může mít jednu z následujících hodnot: `emptyState`, **loadedState**, `openState`, `activeState`, nebo `activeUIState`.  
@@ -1418,7 +1413,7 @@ virtual void OnChange(
   
  Funkci reagovat na změny ve stavu položky OLE přepište. Obvykle můžete aktualizovat položky vzhled zneplatnění oblasti, ve kterém se zobrazí položka. Na začátku přepsání volejte implementaci základní třídy.  
   
-##  <a name="onchangeitemposition"></a>COleClientItem::OnChangeItemPosition  
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition  
  Voláno rámcem oznámit kontejneru OLE položky rozsah došlo ke změně během aktivace na místě.  
   
 ```  
@@ -1437,7 +1432,7 @@ virtual BOOL OnChangeItemPosition(const CRect& rectPos);
   
  Funkci chcete použít zvláštní pravidla pro operace změny velikosti nebo přesunutí přepište. Pokud je aplikace napsaná v jazyce MFC, toto volání dochází, protože server volá [COleServerDoc::RequestPositionChange](../../mfc/reference/coleserverdoc-class.md#requestpositionchange).  
   
-##  <a name="ondeactivate"></a>COleClientItem::OnDeactivate  
+##  <a name="ondeactivate"></a>  COleClientItem::OnDeactivate  
  Voláno rámcem při položky OLE přejde ze stavu active na místě ( `activeState`) načíst stav, což znamená, že je deaktivována po aktivace na místě.  
   
 ```  
@@ -1449,7 +1444,7 @@ virtual void OnDeactivate();
   
  Výchozí implementace volá [při změně](#onchange) – členská funkce s **OLE_CHANGEDSTATE** jako parametr. Potlačí tuto funkci k provedení vlastní zpracování při deaktivaci active položku na místě. Například pokud podporujete příkaz undo v aplikaci kontejneru, můžete přepsat této funkci můžete zrušit stavu vrácení zpět, která udává, že po deaktivaci položky nelze vrátit zpět poslední operaci provést na položce v OLE.  
   
-##  <a name="ondeactivateandundo"></a>COleClientItem::OnDeactivateAndUndo  
+##  <a name="ondeactivateandundo"></a>  COleClientItem::OnDeactivateAndUndo  
  Voláno rámcem, když uživatel příkaz zpět vyvolá po aktivaci položky OLE na místě.  
   
 ```  
@@ -1461,7 +1456,7 @@ virtual void OnDeactivateAndUndo();
   
  Další informace najdete v tématu [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) ve Windows SDK.  
   
-##  <a name="ondeactivateui"></a>COleClientItem::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
  Voláno, když uživatel deaktivuje položku, která se aktivovala na místě.  
   
 ```  
@@ -1477,7 +1472,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  Pokud `bUndoable` je **FALSE**kontejneru měli zakázat příkaz undo, platí zahození vrátit zpět stav kontejneru, protože označuje, že poslední operaci provést, server nevratná.  
   
-##  <a name="ondiscardundostate"></a>COleClientItem::OnDiscardUndoState  
+##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  Voláno rámcem, když uživatel provede akci, která zruší stavu zpět při úpravách položky OLE.  
   
 ```  
@@ -1491,7 +1486,7 @@ virtual void OnDiscardUndoState();
   
  Další informace najdete v tématu [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) ve Windows SDK.  
   
-##  <a name="ongetclipboarddata"></a>COleClientItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
  Voláno rámcem získat `COleDataSource` objekt obsahující všechna data, která by umístit do schránky voláním buď [CopyToClipboard](#copytoclipboard) nebo [metody DoDragDrop](#dodragdrop) – členská funkce.  
   
 ```  
@@ -1517,7 +1512,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této funkce volá [GetClipboardData](#getclipboarddata).  
   
-##  <a name="ongetcliprect"></a>COleClientItem::OnGetClipRect  
+##  <a name="ongetcliprect"></a>  COleClientItem::OnGetClipRect  
  Volání framework `OnGetClipRect` – členská funkce se získat výstřižek obdélníku souřadnice položky, který je zpracováván na místě.  
   
 ```  
@@ -1533,7 +1528,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
   
  Výchozí implementace vrací jednoduše klienta obdélník zobrazení, na kterém je položka místní aktivní.  
   
-##  <a name="ongetitemposition"></a>COleClientItem::OnGetItemPosition  
+##  <a name="ongetitemposition"></a>  COleClientItem::OnGetItemPosition  
  Volání framework `OnGetItemPosition` – členská funkce získat souřadnice položky, který je zpracováván na místě.  
   
 ```  
@@ -1549,7 +1544,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
   
  Výchozí implementace této funkce neprovede žádnou akci. Aplikace, které podporují úpravy v místě vyžadují jeho implementace.  
   
-##  <a name="ongetwindowcontext"></a>COleClientItem::OnGetWindowContext  
+##  <a name="ongetwindowcontext"></a>  COleClientItem::OnGetWindowContext  
  Voláno rámcem, pokud je aktivován položku na místě.  
   
 ```  
@@ -1581,7 +1576,7 @@ virtual BOOL OnGetWindowContext(
   
  Další informace najdete v tématu [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366) a [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) struktura ve Windows SDK.  
   
-##  <a name="oninsertmenus"></a>COleClientItem::OnInsertMenus  
+##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
  Voláno rámcem během aktivace na místě vložení aplikace typu kontejner nabídky do prázdné nabídky.  
   
 ```  
@@ -1604,7 +1599,7 @@ virtual void OnInsertMenus(
   
  Další informace najdete v tématu [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) ve Windows SDK.  
   
-##  <a name="onremovemenus"></a>COleClientItem::OnRemoveMenus  
+##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
  Voláno rámcem odebrat kontejneru nabídky z nabídky zadaný složené při ukončení aktivace na místě.  
   
 ```  
@@ -1622,7 +1617,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  Další informace najdete v tématu [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) ve Windows SDK.  
   
-##  <a name="onscrollby"></a>COleClientItem::OnScrollBy  
+##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
  Voláno rámcem posun položky OLE v reakci na požadavky ze serveru.  
   
 ```  
@@ -1641,7 +1636,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
   
  Další informace najdete v tématu [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) ve Windows SDK.  
   
-##  <a name="onsetmenu"></a>COleClientItem::OnSetMenu  
+##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
  Voláno rámcem dvakrát aktivace na místě zahájení a ukončení; prvním instalace složené nabídky a druhém (s `holemenu` rovna **NULL**) jeho odebrání.  
   
 ```  
@@ -1666,7 +1661,7 @@ virtual void OnSetMenu(
   
  Další informace najdete v tématu [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415), [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831), a [IOleInPlaceFrame::SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) ve Windows SDK.  
   
-##  <a name="onshowcontrolbars"></a>COleClientItem::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
  Voláno rámcem zobrazení a skrytí kontejnerové aplikace ovládacího prvku řádky.  
   
 ```  
@@ -1690,7 +1685,7 @@ virtual BOOL OnShowControlBars(
   
  Výchozí implementace odebere z okna nejvyšší úrovně rámečku panelu nástrojů.  
   
-##  <a name="onshowitem"></a>COleClientItem::OnShowItem  
+##  <a name="onshowitem"></a>  COleClientItem::OnShowItem  
  Voláno rámcem zobrazíte položky OLE viditelnosti je zcela během úprav.  
   
 ```  
@@ -1700,7 +1695,7 @@ virtual void OnShowItem();
 ### <a name="remarks"></a>Poznámky  
  Používá se při kontejneru aplikace podporuje odkazy na vložené položky (tj. Pokud mají odvozené třídě dokumentu z [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)). Tato funkce je volána během aktivace na místě nebo když položka OLE zdroj propojení a chce uživatel upravit. Výchozí implementace aktivuje první zobrazení v kontejneru dokumentu. Funkci pro posouvání dokumentu tak, aby položka OLE přepište.  
   
-##  <a name="onupdateframetitle"></a>COleClientItem::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  COleClientItem::OnUpdateFrameTitle  
  Voláno rámcem během aktivace na místě aktualizovat záhlaví rámce okna.  
   
 ```  
@@ -1713,7 +1708,7 @@ virtual BOOL OnUpdateFrameTitle();
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace se nezměnil název rámce okna. Funkci přepsat, pokud chcete název jiného snímku pro vaši aplikaci, například " *aplikace server* - *položky* v *docname*" "Microsoft (jako, Excel – tabulky v sestavě. DOC"). Toto je rozšířené přepisovatelné.  
   
-##  <a name="reactivateandundo"></a>COleClientItem::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>  COleClientItem::ReactivateAndUndo  
  Volání této funkce a znovu aktivovat položky OLE vrátit zpět poslední akci provádí uživatel během úprav na místě.  
   
 ```  
@@ -1730,7 +1725,7 @@ BOOL ReactivateAndUndo();
   
  Další informace najdete v tématu [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) ve Windows SDK.  
   
-##  <a name="release"></a>COleClientItem::Release  
+##  <a name="release"></a>  COleClientItem::Release  
  Volání této funkce vyčistěte prostředky používané položkou OLE.  
   
 ```  
@@ -1746,7 +1741,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
   
  Další informace najdete v tématu [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) ve Windows SDK.  
   
-##  <a name="reload"></a>COleClientItem::Reload  
+##  <a name="reload"></a>  COleClientItem::Reload  
  Zavře a znovu načte položku.  
   
 ```  
@@ -1759,7 +1754,7 @@ BOOL Reload();
 ### <a name="remarks"></a>Poznámky  
  Volání `Reload` funkce po aktivaci položky jako položku jiného typu voláním [ActivateAs](#activateas).  
   
-##  <a name="run"></a>COleClientItem::Run  
+##  <a name="run"></a>  COleClientItem::Run  
  Spustí aplikaci přidruženou k této položce.  
   
 ```  
@@ -1769,7 +1764,7 @@ void Run();
 ### <a name="remarks"></a>Poznámky  
  Volání **spustit** – členská funkce spuštění serverové aplikace před aktivací položky. To se provádí automaticky [aktivovat](#activate) a [funkce DoVerb](#doverb), takže obvykle není nutné volání této funkce. Volání této funkce, pokud je potřeba spustit serveru, aby nastavte atribut položky, jako je třeba [SetExtent](#setextent), před provedením [funkce DoVerb](#doverb).  
   
-##  <a name="setdrawaspect"></a>COleClientItem::SetDrawAspect  
+##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  Volání `SetDrawAspect` – členská funkce nastavit "aspekt", nebo zobrazení, položky.  
   
 ```  
@@ -1780,20 +1775,20 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
  `nDrawAspect`  
  Hodnota z `DVASPECT` výčtu. Tento parametr může mít jednu z následujících hodnot:  
   
-- `DVASPECT_CONTENT`Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
+- `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
   
-- `DVASPECT_THUMBNAIL`Položka je vykreslen v znázornění "miniaturu" tak, aby ji bylo možné zobrazit v nástroji procházení.  
+- `DVASPECT_THUMBNAIL` Položka je vykreslen v znázornění "miniaturu" tak, aby ji bylo možné zobrazit v nástroji procházení.  
   
-- `DVASPECT_ICON`Položka je reprezentována ikonu.  
+- `DVASPECT_ICON` Položka je reprezentována ikonu.  
   
-- `DVASPECT_DOCPRINT`Položka je reprezentována jako kdyby byly vytisknout, pomocí příkazu Tisk z nabídky soubor.  
+- `DVASPECT_DOCPRINT` Položka je reprezentována jako kdyby byly vytisknout, pomocí příkazu Tisk z nabídky soubor.  
   
 ### <a name="remarks"></a>Poznámky  
  Daný aspekt Určuje, jak je položka k vykreslení [kreslení](#draw) při výchozí hodnoty pro tuto funkci `nDrawAspect` použit argument.  
   
  Tato funkce je volána automaticky tak, že na ikonu změny (a další dialogová okna, které volají přímo dialogové okno Změnit ikonu) umožňující aspekt ikony zobrazení na žádost uživatele.  
   
-##  <a name="setextent"></a>COleClientItem::SetExtent  
+##  <a name="setextent"></a>  COleClientItem::SetExtent  
  Volání této funkce můžete určit, kolik místa je k dispozici pro položky OLE.  
   
 ```  
@@ -1814,7 +1809,7 @@ void SetExtent(
   
  Další informace najdete v tématu [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) ve Windows SDK.  
   
-##  <a name="sethostnames"></a>COleClientItem::SetHostNames  
+##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
  Volání této funkce určete název kontejneru aplikace a název kontejneru pro vložené položky OLE.  
   
 ```  
@@ -1831,13 +1826,13 @@ void SetHostNames(
  Ukazatel na identifikační řetězec kontejneru, který obsahuje položky OLE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je serverová aplikace byla zapsána pomocí knihovny Microsoft Foundation Class, zavolá tato funkce [OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames) členské funkce `COleServerDoc` dokument, který obsahuje položky OLE. Tyto informace se používá v okně názvy při úpravě položky OLE. Pokaždé, když je zavedený dokument kontejneru, volá rámec této funkce pro všechny položky OLE v dokumentu. `SetHostNames`používá se pouze pro vložené položky. Není nutné pro volání této funkce pokaždé, když se aktivuje vložené položky OLE pro úpravy.  
+ Pokud je serverová aplikace byla zapsána pomocí knihovny Microsoft Foundation Class, zavolá tato funkce [OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames) členské funkce `COleServerDoc` dokument, který obsahuje položky OLE. Tyto informace se používá v okně názvy při úpravě položky OLE. Pokaždé, když je zavedený dokument kontejneru, volá rámec této funkce pro všechny položky OLE v dokumentu. `SetHostNames` používá se pouze pro vložené položky. Není nutné pro volání této funkce pokaždé, když se aktivuje vložené položky OLE pro úpravy.  
   
  To je také označován automaticky se název aplikace a název dokumentu při načtení objektu, nebo když se soubor uloží pod jiným názvem. Podle toho není obvykle nutné pro volání této funkce přímo.  
   
  Další informace najdete v tématu [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) ve Windows SDK.  
   
-##  <a name="seticonicmetafile"></a>COleClientItem::SetIconicMetafile  
+##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
  Ukládá do mezipaměti metafile používá pro kreslení ikony položky.  
   
 ```  
@@ -1856,7 +1851,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
   
  `hMetaPict` Parametr je zkopírován do položky; proto `hMetaPict` musí být uvolněno volajícího.  
   
-##  <a name="setitemrects"></a>COleClientItem::SetItemRects  
+##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  Volejte tuto funkci nastavit ohraničující obdélník nebo viditelné rámeček položky OLE.  
   
 ```  
@@ -1880,7 +1875,7 @@ BOOL SetItemRects(
   
  Další informace najdete v tématu [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) ve Windows SDK.  
   
-##  <a name="setlinkupdateoptions"></a>COleClientItem::SetLinkUpdateOptions  
+##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
  Volání této funkce můžete nastavit možnost aktualizace propojení pro prezentaci zadané propojené položky.  
   
 ```  
@@ -1891,16 +1886,16 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
  *dwUpdateOpt*  
  Hodnota možnosti propojení aktualizace pro tuto položku. Tato hodnota musí být jedna z následujících akcí:  
   
-- `OLEUPDATE_ALWAYS`Aktualizujte propojené položky, kdykoli je to možné. Tato volba podporuje přepínač Automatické aktualizace propojení v dialogovém okně odkazy.  
+- `OLEUPDATE_ALWAYS` Aktualizujte propojené položky, kdykoli je to možné. Tato volba podporuje přepínač Automatické aktualizace propojení v dialogovém okně odkazy.  
   
-- `OLEUPDATE_ONCALL`Aktualizovat propojené položky pouze na žádost z aplikace kontejneru (když [UpdateLink](#updatelink) – členská funkce je volána). Tato volba podporuje přepínač Ruční aktualizace propojení v dialogovém okně odkazy.  
+- `OLEUPDATE_ONCALL` Aktualizovat propojené položky pouze na žádost z aplikace kontejneru (když [UpdateLink](#updatelink) – členská funkce je volána). Tato volba podporuje přepínač Ruční aktualizace propojení v dialogovém okně odkazy.  
   
 ### <a name="remarks"></a>Poznámky  
  Obvykle byste neměli měnit možnosti aktualizace volená uživatelem v dialogovém okně odkazy.  
   
  Další informace najdete v tématu [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) ve Windows SDK.  
   
-##  <a name="setprintdevice"></a>COleClientItem::SetPrintDevice  
+##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
  Volání této funkce a změňte zařízení vytisknout cíl pro tuto položku.  
   
 ```  
@@ -1927,7 +1922,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  Další informace najdete v tématu [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) ve Windows SDK.  
   
-##  <a name="updatelink"></a>COleClientItem::UpdateLink  
+##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
  Volání této funkce aktualizace dat prezentace položky OLE okamžitě.  
   
 ```  

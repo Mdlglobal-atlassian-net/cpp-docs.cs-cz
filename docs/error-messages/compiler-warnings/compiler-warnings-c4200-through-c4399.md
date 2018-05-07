@@ -1,12 +1,9 @@
 ---
-title: "Upozornění kompilátoru C4200 až C4399 | Microsoft Docs"
-ms.custom: 
+title: Upozornění kompilátoru C4200 až C4399 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Upozornění kompilátoru C4200 až C4399
 
@@ -175,7 +170,7 @@ ms.lasthandoff: 02/14/2018
 |[Upozornění kompilátoru (úroveň 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Import knihovny typů referencí '*library1*'před importem'*library2*.|
 |[Upozornění kompilátoru (úroveň 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|knihovny typů referencí '*library1*'v'*library2*, se automaticky importují|
 |Upozornění kompilátoru (úroveň 4) C4338|#pragma *– direktiva*: standardní oddíl '*části*' se používá|
-|[Upozornění kompilátoru (úroveň 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*typ*': použijte nedefinované typu zjistil v ' WinRT &#124; CLR' meta-data - použití tohoto typu může vést k výjimku modulu runtime|
+|[Upozornění kompilátoru (úroveň 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*typ*': použijte nedefinované typu zjistil v ' WinRT&#124;CLR' meta-data - použití tohoto typu může vést k výjimku modulu runtime|
 |[Upozornění kompilátoru (úroveň 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*hodnotu*': hodnota zabalené z kladné na zápornou hodnotu.|
 |[Upozornění kompilátoru (úroveň 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Změna v chování: '*funkce*se volá, ale byla zavolána operátor členů v předchozích verzích|
 |Upozornění kompilátoru (úroveň 4) C4343|#pragma optimize("g",off) přepsání /Og – možnost|

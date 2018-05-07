@@ -1,24 +1,19 @@
 ---
-title: "CRT – funkce není podporována v aplikacích pro univerzální platformu Windows | Microsoft Docs"
-ms.custom: 
+title: CRT – funkce není podporována v aplikacích pro univerzální platformu Windows | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ed8b5c150632d035060b0e34f3962f2e903990a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>CRT – funkce není podporována v aplikacích pro univerzální platformu Windows
 Mnoho funkcí jazyka C runtime (CRT) nejsou k dispozici, při sestavování aplikací pro univerzální platformu Windows (UWP). V některých případech jsou k dispozici alternativní řešení – – například můžete použít rozhraní API Win32 nebo prostředí Windows Runtime. Ale v ostatních případech funkcí CRT zakázali protože funkce, které odpovídají jejich nebo podporující rozhraní API neplatí pro aplikace UWP. Vyhledejte alternativní metoda, která je podporována pro prostředí Windows Runtime, najdete v tématu [alternativy k rozhraní API systému Windows v aplikacích pro UPW](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
@@ -40,9 +35,9 @@ Následující tabulka uvádí funkce CRT, které nejsou k dispozici při sestav
 |_pclose – _pipe – _popen – _wpopen –|Funkce kanálu není k dispozici pro aplikace UWP.|Alternativní řešení neexistuje.|  
 |_resetstkoflw|Podporující rozhraní API Win32 nejsou k dispozici pro aplikace UWP.|Alternativní řešení neexistuje.|  
 |_getsystime _setsystime|Tyto byly zastaralé rozhraní API v předchozích verzích CRT. Navíc nelze uživatel nastavit systémového času v aplikaci UWP z důvodu nedostatku oprávnění.|Pouze systémového času, použijte rozhraní API Win32 `GetSystemTime`. Systémový čas nelze nastavit.|  
-|_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Nejsou k dispozici pro aplikace UWP proměnné prostředí.|Alternativní řešení neexistuje. Pokud chcete nastavit časové pásmo, použijte _tzset –.|  
+|_environ – _putenv – _putenv_s – _searchenv – _searchenv_s – _dupenv_s – _wputenv – _wputenv_s – _wsearchenv – GETENV – getenv_s – putenv – _wdupenv_s – _wenviron – _wgetenv – _wgetenv_s – _wsearchenv_s – tzset –|Nejsou k dispozici pro aplikace UWP proměnné prostředí.|Alternativní řešení neexistuje. Pokud chcete nastavit časové pásmo, použijte _tzset –.|  
 |_loaddll _getdllprocaddr _unloaddll|Tyto byly zastaralé funkce v předchozích verzích CRT. Navíc uživatele nelze načíst knihovny DLL s výjimkou od funkcí ve stejném balíčku aplikace.|Použít rozhraní API Win32 `LoadPackagedLibrary`, `GetProcAddress`, a `FreeLibrary` načtení a použití zabalené knihovny DLL.|  
-|_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|Funkce není k dispozici v aplikacích pro UPW. Aplikace pro UPW nelze vyvolat v jiné aplikaci UWP nebo aplikace na ploše.|Alternativní řešení neexistuje.|  
+|_wexecl – _wexecle – _wexeclp – _wexeclpe – _wexecv – _wexecve – _wexecvp – _wexecvpe – _execl – _execle – _execlp – _execlpe – _execv – _execve – _execvp – _execvpe – _spawnl – _spawnle – _spawnlp – _spawnlpe – _spawnv – _spawnve – _spawnvp – _spawnvpe – _wspawnl – _wspawnle – _wspawnlp – _wspawnlpe – _ wspawnv – _wspawnve – _wspawnvp – _wspawnvpe – _wsystem – execl – execle – execlp – execlpe – execv – execve – execvp – execvpe – spawnl – spawnle – spawnlp – spawnlpe – spawnv – spawnve – spawnvp – spawnvpe – systém|Funkce není k dispozici v aplikacích pro UPW. Aplikace pro UPW nelze vyvolat v jiné aplikaci UWP nebo aplikace na ploše.|Alternativní řešení neexistuje.|  
 |_heapwalk – _heapadd – _heapchk – _heapset – _heapused|Tyto funkce jsou obvykle používány pro práci s haldě. Odpovídající rozhraní API Win32 však nejsou podporovány v aplikacích pro UPW. A aplikace už můžete vytvořit nebo použít privátní haldách.|Alternativní řešení neexistuje. Ale `_heapwalk` k dispozici v ladění CRT pouze pro účely ladění. Tyto nelze použít v aplikacích, které se odešlou do Microsoft Store.|  
   
  Následující funkce jsou k dispozici v CRT pro aplikace UWP, ale měli použít pouze v případě, že odpovídající Win32 nebo rozhraní API systému Windows Runtime nelze použít – například když provádíte přenos rozsáhlých základů kódu  

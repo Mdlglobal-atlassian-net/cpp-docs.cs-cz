@@ -1,12 +1,9 @@
 ---
 title: _BitScanReverse _BitScanReverse64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _BitScanReverse64
@@ -20,20 +17,18 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eff59da3ee52c560cdb56f0519aef5576a05946
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Vyhledávání dat maska z nejvýznamnějších bit Znaménkový do nejméně významný bit (LSB) pro verzi sady (1).  
   
@@ -54,7 +49,7 @@ unsigned char _BitScanReverse64(
  [out] `Index`  
  Načtená bit pozice první nastavit chvíli (1) nalezena.  
   
- [in] `Mask`  
+ [v] `Mask`  
  32bitovou nebo 64bitovou hodnotu k vyhledání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -64,7 +59,7 @@ unsigned char _BitScanReverse64(
   
 |Vnitřní funkce|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_BitScanReverse`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
 |`_BitScanReverse64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
   
 ## <a name="example"></a>Příklad  

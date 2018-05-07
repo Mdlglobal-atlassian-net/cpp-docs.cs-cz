@@ -1,12 +1,9 @@
 ---
-title: "Třída CHtmlEditCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CHtmlEditCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea794bfcb3d7e62a53ed8423918e5448990dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl – třída
 Poskytuje funkce ovládacího prvku WebBrowser ActiveX v okně knihovny MFC.  
@@ -78,14 +73,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxhtml.h  
   
-##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
  Vytvoří `CHtmlEditCtrl` objektu.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>  CHtmlEditCtrl::Create  
  Vytvoří ovládacího prvku WebBrowser ActiveX a připojí jej k `CHtmlEditCtrl` objektu. WebBrowser ActiveX řízení automaticky přejde na výchozí dokument a pak je umístěn v režimu úprav pomocí této funkce.  
   
 ```  
@@ -120,7 +115,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
  Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní na dokument momentálně načtených v obsažené ovládacího prvku WebBrowser  
   
 ```  
@@ -131,7 +126,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  Rozhraní dokumentu.  
   
-##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
  Načte adresu URL výchozí dokument k načtení v ovládacím prvku WebBrowser obsažené.  
   
 ```  

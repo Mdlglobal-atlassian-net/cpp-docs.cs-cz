@@ -1,13 +1,10 @@
 ---
-title: "Dokumenty, zobrazení a Framework | Microsoft Docs"
-ms.custom: 
+title: Dokumenty, zobrazení a Framework | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, zobrazení a framework
 Jádrem rozhraní MFC framework jsou koncepty dokumentů a zobrazení. Dokument je datový objekt, pomocí kterého uživatel pracuje v relaci úpravy. Je vytvořený `New` nebo **otevřete** příkaz na **souboru** nabídky a je obvykle uložen v souboru. (Standardní MFC dokumenty, odvozené od třídy **CDocument**, se liší od aktivní dokumenty a složené dokumenty OLE.) Zobrazení je objekt okno, pomocí kterého uživatel pracuje s dokumentem.  

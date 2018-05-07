@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::ArrayReference | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::ArrayReference | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference – třída
 `ArrayReference` je typ optimalizace, které může nahradit pro [Platform::Array ^](../cppcx/platform-array-class.md) ve vstupní parametry, když vyplníte pole stylu jazyka C s vloženými daty.  
@@ -89,7 +84,7 @@ ArrayReference(ArrayReference&& otherArg)
   
 
 
-## <a name="operator-assign">ArrayReference::operator = – operátor</a>
+## <a name="operator-assign"></a>  ArrayReference::operator = – operátor
 Zadaný objekt přiřadí aktuální [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) objekt pomocí sémantiky přesunutí.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -112,7 +107,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
   
 
 
-## <a name="operator-call">ArrayReference::operator() – operátor</a>
+## <a name="operator-call"></a>  ArrayReference::operator() – operátor
 Převede aktuální [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) zpět do objektu [Platform::Array](../cppcx/platform-array-class.md) třídy.  
   
 ### <a name="syntax"></a>Syntaxe  

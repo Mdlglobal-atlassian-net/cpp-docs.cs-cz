@@ -1,13 +1,10 @@
 ---
-title: "MFC – verze knihovny | Microsoft Docs"
-ms.custom: 
+title: MFC – verze knihovny | Microsoft Docs
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -129,12 +125,12 @@ Knihovny MFC DLL mají *verze* čísla označující binární kompatibilitu. Po
 
 |DLL|Popis|
 |---------|-----------------|
-|MFC*version*.DLL|MFC DLL, ANSI nebo MBCS vydání verze|
+|MFC*verze*. KNIHOVNY DLL|MFC DLL, ANSI nebo MBCS vydání verze|
 |MFC*version*U.DLL|MFC DLL, Unicode prodejní verzi|
 |MFC*version*D.DLL|Verze knihovny MFC DLL, ANSI nebo ladění MBCS|
 |MFC*version*UD.DLL|MFC DLL, Unicode ladicí verze|
-|MFCM*version*.DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo MBCS vydání verze|
-|MFCM*version*U.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode prodejní verzi|
+|MFCM*verze*. KNIHOVNY DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo MBCS vydání verze|
+|MFCM*verze*U.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode prodejní verzi|
 |MFCM*version*D.DLL|MFC DLL s ovládacími prvky Windows Forms, ANSI nebo ladění MBCS verze|
 |MFCM*version*UD.DLL|MFC DLL s ovládacími prvky Windows Forms, Unicode ladicí verze|
 

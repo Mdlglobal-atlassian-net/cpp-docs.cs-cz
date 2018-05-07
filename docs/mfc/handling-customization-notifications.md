@@ -2,12 +2,9 @@
 title: Zpracování oznámení o přizpůsobení | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce přizpůsobení, včetně definovaná systémem přizpůsobení dialogové okno, umožnit uživatelům vložit, odstranit nebo změna uspořádání tlačítek panelu nástrojů. Aplikace určuje, zda jsou k dispozici funkce přizpůsobení a ovládací prvky v rozsahu, ke kterému se uživatel může přizpůsobit panelu nástrojů.  
@@ -126,7 +121,7 @@ Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce p�
  **idFrom**  
  Identifikátor ovládacího prvku odesílání oznámení.  
   
- **kód**  
+ **Kód**  
  Kód oznámení. Tento člen může být hodnota specifické pro typ ovládacího prvku, jako například **tbn_beginadjust –** nebo **TTN_NEEDTEXT**, nebo je můžete použít jeden z běžných níže uvedené hodnoty oznámení:  
   
 -   **Nm_click –** uživatel klikne levé tlačítko myši v ovládacím prvku.  
@@ -169,7 +164,7 @@ Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce p�
  Index tlačítko přidružená oznámení.  
   
  **tbButton**  
- `TBBUTTON`Struktura, která obsahuje informace o tlačítka panelu nástrojů, které jsou přidružené k oznámení.  
+ `TBBUTTON` Struktura, která obsahuje informace o tlačítka panelu nástrojů, které jsou přidružené k oznámení.  
   
  **cchText**  
  Počet znaků v textu tlačítka.  

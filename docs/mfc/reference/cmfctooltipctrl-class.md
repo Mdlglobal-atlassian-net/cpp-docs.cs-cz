@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCToolTipCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCToolTipCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae37349599977b236f111530f170da746b44b425
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl – třída
 Na základě implementace rozšířených popisek [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md). Na základě popisek `CMFCToolTipCtrl` třída může zobrazit ikony, popisek a popis. Pomocí přechodu výplně, vlastní text a barvy ohraničení, tučně, zaoblenými hranami nebo bublinách styl můžete přizpůsobit její vzhled.  
@@ -165,7 +160,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtooltipctrl.h  
   
-##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl  
 
   
 ```  
@@ -173,11 +168,11 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParams`  
+ [v] `pParams`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize  
  Vrátí velikost ikony ve formě popisu tlačítka.  
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost ikony v pixelech.  
   
-##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams  
  Vrátí popisek nastavení zobrazení.  
   
 ```  
@@ -197,7 +192,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální nastavení zobrazení popisu tlačítka, které jsou uloženy v [CMFCToolTipInfo třída](../../mfc/reference/cmfctooltipinfo-class.md) objektu.  
   
-##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  Ohraničení popisku pole.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě a přizpůsobení vzhledu ohraničení popisku.  
   
-##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
 
   
 ```  
@@ -231,15 +226,15 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
- [v]`rect`  
- [v]`bCalcOnly`  
+ [v] `pDC`  
+ [v] `rect`  
+ [v] `bCalcOnly`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon  
  Zobrazí ikona ve formě popisu tlačítka.  
   
 ```  
@@ -249,19 +244,19 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectImage`  
+ [v] `rectImage`  
  Souřadnice ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud ikonu vykreslení. V opačném případě `FALSE`.  
+ `TRUE` Pokud ikonu vykreslení. V opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě zobrazíte vlastní ikonou. Je nutné přepsat [CMFCToolTipCtrl::GetIconSize](#geticonsize) povolit popisek, který správně vypočítat rozložení textu a popis.  
   
-##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Nakreslí popisek popisek nebo vypočítá velikost popisku.  
   
 ```  
@@ -287,7 +282,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled popisek popisek.  
   
-##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  Nakreslí oddělovače mezi popisku a popisu ve formě popisu tlačítka.  
   
 ```  
@@ -299,16 +294,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`x1`  
+ [v] `x1`  
  Vodorovné souřadnice levého konce oddělovače.  
   
- [v]`x2`  
+ [v] `x2`  
  Vodorovné souřadnice pravého konce oddělovače.  
   
- [v]`Y`  
+ [v] `Y`  
  Svislé souřadnice oddělovače.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -316,7 +311,7 @@ virtual void OnDrawSeparator(
   
  Potlačí tuto metodu v odvozené třídě přizpůsobit vzhled oddělovače.  
   
-##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground  
  Vyplní celé pozadí popisu tlačítka.  
   
 ```  
@@ -345,7 +340,7 @@ virtual void OnFillBackground(
   
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled popisek.  
   
-##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
  Nastaví popis, který se má zobrazit v popisu tlačítka.  
   
 ```  
@@ -359,7 +354,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Poznámky  
  Textový popis se zobrazí na popisek za oddělovačem.  
   
-##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
   
 ```  
@@ -369,12 +364,12 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nWidthRegular`  
- [v]`nWidthLargeImage`  
+ [v] `nWidthRegular`  
+ [v] `nWidthLargeImage`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton  
 
   
 ```  
@@ -382,11 +377,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pRibbonButton`  
+ [v] `pRibbonButton`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation  
 
   
 ```  
@@ -394,11 +389,11 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pt`  
+ [v] `pt`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
  Určuje vzhled popisek pomocí [CMFCToolTipInfo třída](../../mfc/reference/cmfctooltipinfo-class.md) objektu.  
   
 ```  

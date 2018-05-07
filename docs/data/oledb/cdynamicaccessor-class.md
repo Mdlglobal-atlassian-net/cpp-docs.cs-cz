@@ -1,12 +1,9 @@
 ---
-title: "CDynamicAccessor – třída | Microsoft Docs"
-ms.custom: 
+title: CDynamicAccessor – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f07ceae02c9c243f59f37ea49e77ef3113b5a54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a4006afa9ebdfcf95a01103d1fd97643a6b749f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
 Umožňuje přístup ke zdroji dat, pokud nemáte žádné znalosti schématu databáze (podkladová struktura databáze).  
@@ -48,16 +43,16 @@ class CDynamicAccessor : public CAccessorBase
 |[AddBindEntry –](../../data/oledb/cdynamicaccessor-addbindentry.md)|Přidá položku vazby ke sloupcům výstup při přepisování výchozí přistupující objekt.|  
 |[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)|Vytvoří a inicializuje `CDynamicAccessor` objektu.|  
 |[Zavřete](../../data/oledb/cdynamicaccessor-close.md)|Odpojuje všechny sloupce, uvolňuje přidělenou paměť a uvolní [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) ukazatel rozhraní ve třídě.|  
-|[GetBookmark](../../data/oledb/cdynamicaccessor-getbookmark.md)|Načte záložku pro aktuální řádek.|  
+|[GetBookmark –](../../data/oledb/cdynamicaccessor-getbookmark.md)|Načte záložku pro aktuální řádek.|  
 |[Getblobhandling –](../../data/oledb/cdynamicaccessor-getblobhandling.md)|Načte objekt BLOB zpracování hodnotu pro aktuální řádek.|  
-|[GetBlobSizeLimit](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|Načte maximální velikost objektu BLOB v bajtech.|  
-|[GetColumnCount](../../data/oledb/cdynamicaccessor-getcolumncount.md)|Načte počet sloupců v sadě řádků.|  
+|[Getblobsizelimit –](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|Načte maximální velikost objektu BLOB v bajtech.|  
+|[Getcolumncount –](../../data/oledb/cdynamicaccessor-getcolumncount.md)|Načte počet sloupců v sadě řádků.|  
 |[Getcolumnflags –](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|Načte vlastnosti sloupce.|  
 |[GetColumnInfo –](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|Načte metadata sloupce.|  
-|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Načte název zadaný sloupec.|  
+|[Getcolumnname –](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Načte název zadaný sloupec.|  
 |[Getcolumntype –](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Načte datový typ zadaný sloupec.|  
 |[GetLength –](../../data/oledb/cdynamicaccessor-getlength.md)|Načte maximální délce sloupec v bajtech.|  
-|[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|Načte index sloupce, který je zadaný název sloupce.|  
+|[Getordinal –](../../data/oledb/cdynamicaccessor-getordinal.md)|Načte index sloupce, který je zadaný název sloupce.|  
 |[GetStatus –](../../data/oledb/cdynamicaccessor-getstatus.md)|Načte stav zadaný sloupec.|  
 |[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)|Načte data z vyrovnávací paměti.|  
 |[Setblobhandling –](../../data/oledb/cdynamicaccessor-setblobhandling.md)|Nastaví objekt BLOB zpracování hodnotu pro aktuální řádek.|  

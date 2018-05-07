@@ -1,13 +1,10 @@
 ---
 title: Servery | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers"></a>Servery
 Aplikace serveru (nebo součásti aplikace) vytvoří aplikace typu kontejner OLE položky (nebo součásti) pro použití. Visual úpravy serverová aplikace také podporuje úpravy s náhledem nebo aktivace na místě. Jinou formu OLE serveru je [automatizační server](../mfc/automation-servers.md). Některé serverové aplikace podporují pouze vytváření vložené položky; ostatní podporují vytvoření vložené a propojené položky. I když toto je výjimečná některé podporují pouze propojení. Všechny aplikace server musí podporovat aktivace aplikace typu kontejner, pokud chce uživatel upravovat položky. Aplikace může být kontejner i server. Jinými slovy ho můžete obě začlenit dat do své dokumenty a vytvořit data, která lze vložit jako položky do dalších aplikací dokumenty.  

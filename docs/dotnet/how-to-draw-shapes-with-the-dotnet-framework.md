@@ -1,13 +1,10 @@
 ---
-title: "Postupy: kreslení obrazců pomocí rozhraní .NET Framework | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: kreslení obrazců pomocí rozhraní .NET Framework | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - shapes
 - shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5fc48eefb44049e4cff010b16c9567e443ba5db
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 877e78b1ce4f81af76aa20961ea05d18e64f58f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>Postupy: Kreslení tvarů s použitím rozhraní .NET Framework
 Následující příklad kódu používá <xref:System.Drawing.Graphics> třída změnit <xref:System.Windows.Forms.Form.OnPaint%2A> obslužné rutiny události pro načtení ukazatel na <xref:System.Drawing.Graphics> objekt pro hlavní formulář. Tento ukazatel je pak používá k nastavení barvy pozadí formuláře a nakreslení čáry a oblouku pomocí <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> a <xref:System.Drawing.Graphics.DrawArc%2A> metody.  

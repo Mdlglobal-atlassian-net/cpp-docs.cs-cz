@@ -1,13 +1,10 @@
 ---
-title: "Zpracování zpráv systému Windows ve vašem dialogovém okně | Microsoft Docs"
-ms.custom: 
+title: Zpracování zpráv systému Windows ve vašem dialogovém okně | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819d11c8749852900e070ea3e7abf579cac7f7f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Zpracování zpráv systému Windows ve vašem dialogovém okně
 Dialogová okna jsou windows, takže jejich zpracování zpráv systému Windows, pokud zadáte funkce příslušnou obslužnou rutinu. Při vytváření vlastní třídy dialogového okna pomocí Průvodce přidáním, průvodce přidá mapování prázdná zpráva k třídě. Okno Vlastnosti použijte k mapování libovolné zpráv systému Windows nebo příkazy, že které chcete vaší třídy pro zpracování.  

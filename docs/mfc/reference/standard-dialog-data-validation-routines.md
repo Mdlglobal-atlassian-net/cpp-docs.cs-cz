@@ -1,29 +1,24 @@
 ---
-title: "Rutiny ověřování dat standardního dialogového okna | Microsoft Docs"
-ms.custom: 
+title: Rutiny ověřování dat standardního dialogového okna | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutiny ověřování dat standardního dialogového okna
 Toto téma uvádí rutiny ověření (DDV) dat standardního dialogového okna použít pro běžné ovládací prvky MFC dialogové okno.  
@@ -53,7 +48,7 @@ Toto téma uvádí rutiny ověření (DDV) dat standardního dialogového okna p
   
 
   
-##  <a name="ddv_maxchars"></a>Ddv_maxchars –  
+##  <a name="ddv_maxchars"></a>  Ddv_maxchars –  
  Volání `DDV_MaxChars` k ověření, že počet znaků v ovládacím prvku přidružené *hodnotu* není delší než *nChars*.  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>Ddv_minmaxbyte –  
+##  <a name="ddv_minmaxbyte"></a>  Ddv_minmaxbyte –  
  Volání `DDV_MinMaxByte` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>Ddv_minmaxdatetime –  
+##  <a name="ddv_minmaxdatetime"></a>  Ddv_minmaxdatetime –  
  Volání `DDV_MinMaxDateTime` k ověření, že ovládacích prvků hodnota času a data v dialogu pro výběr data a času ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) přidružené k *refValue* leží mezi `refMinRange` a `refMaxRange`.  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>Ddv_minmaxdouble –  
+##  <a name="ddv_minmaxdouble"></a>  Ddv_minmaxdouble –  
  Volání `DDV_MinMaxDouble` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>Ddv_minmaxdword –  
+##  <a name="ddv_minmaxdword"></a>  Ddv_minmaxdword –  
  Volání `DDV_MinMaxDWord` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>Ddv_minmaxfloat –  
+##  <a name="ddv_minmaxfloat"></a>  Ddv_minmaxfloat –  
  Volání `DDV_MinMaxFloat` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>Ddv_minmaxint –  
+##  <a name="ddv_minmaxint"></a>  Ddv_minmaxint –  
  Volání `DDV_MinMaxInt` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>Ddv_minmaxlong –  
+##  <a name="ddv_minmaxlong"></a>  Ddv_minmaxlong –  
  Volání `DDV_MinMaxLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  Volání `DDV_MinMaxLongLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>Ddv_minmaxmonth –  
+##  <a name="ddv_minmaxmonth"></a>  Ddv_minmaxmonth –  
  Volání `DDV_MinMaxMonth` k ověření, že řízení hodnotě času a data v měsíční kalendář ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) přidružené k *refValue* leží mezi `refMinRange` a `refMaxRange`.  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  Volání `DDV_MinMaxShort` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>Ddv_minmaxslider –  
+##  <a name="ddv_minmaxslider"></a>  Ddv_minmaxslider –  
  Volání `DDV_MinMaxSlider` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  Volání `DDV_MinMaxUInt` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  Volání `DDV_MinMaxULongLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi `minVal` a `maxVal`.  
   
 ```   
@@ -518,7 +513,7 @@ Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku při
 ### <a name="see-also"></a>Viz také  
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [Ddx_slider –](#ddx_slider)   
- [Ddx_fieldslider –](#ddx_fieldslider)
+ [DDX_FieldSlider](#ddx_fieldslider)
  
 
 

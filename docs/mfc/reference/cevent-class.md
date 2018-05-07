@@ -1,12 +1,9 @@
 ---
-title: "Třída CEvent | Microsoft Docs"
-ms.custom: 
+title: Třída CEvent | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent – třída
 Představuje událost, která je na synchronizační objekt, který umožňuje jedno vlákno oznámit jiné, který došlo k události.  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>Poznámky  
  Události jsou užitečné, když vlákno musí vědět, kdy k provedení úkolu. Například podproces, který kopíruje data do archivu dat musí být upozorněni, když je k dispozici nová data. Pomocí `CEvent` objekt, který chcete upozornit vlákno kopie, pokud je k dispozici nová data vlákno co nejdříve provedení úkolu.  
   
- `CEvent`objekty mají dva typy: ruční a automatická.  
+ `CEvent` objekty mají dva typy: ruční a automatická.  
   
  Automatické `CEvent` objekt automaticky obnoví stav signalizace (není k dispozici), po vydání alespoň jedno vlákno. Ve výchozím nastavení `CEvent` objekt je automatické, pokud předáte `TRUE` pro `bManualReset` parametru během vytváření.  
   
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  Konstrukce a pojmenované nebo nepojmenované `CEvent` objektu.  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  Po vytvoření `CEvent` objektu, použijte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistuje. Pokud objekt mutex neočekávaně neexistuje, může to znamenat podvodný proces obsazení a může být hodláte použít mutex závadně. V takovém případě je zavřít popisovač a pokračovat, jako kdyby došlo k chybě při vytváření objektu doporučeného postupu zabezpečení.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Nastaví stav události na signál (k dispozici), uvolní všechny čekajících vláken a jeho nonsignaled (není k dispozici) automaticky obnoví.  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  Pokud nejsou žádná vlákna čekají, nebo nejsou žádná vlákna, se uvolní okamžitě, `PulseEvent` nastaví stav události nonsignaled a vrátí.  
   
- `PulseEvent`používá základní Win32 `PulseEvent` funkce, které lze na okamžik odebrat ze stavu čekání pomocí postupu asynchronní volání režimu jádra. Proto `PulseEvent` nespolehlivé a by se nemělo používat nové aplikace. Další informace najdete v tématu [funkce PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` používá základní Win32 `PulseEvent` funkce, které lze na okamžik odebrat ze stavu čekání pomocí postupu asynchronní volání režimu jádra. Proto `PulseEvent` nespolehlivé a by se nemělo používat nové aplikace. Další informace najdete v tématu [funkce PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Nastaví stav události nonsignaled dokud, explicitně nastavit na signalizovaného pomocí [SetEvent](#setevent) – členská funkce.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  Tato funkce člen není používán automatické události.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  Nastaví stav události na signál, vydání žádné podprocesy čekání.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Poznámky  
  Pokud tato událost je ruční, události zůstane signalizovaného až [ResetEvent](#resetevent) je volána. V takovém případě můžete uvolnit více než jedno vlákno. Pokud je automatické události, zůstane událost signalizovaného, dokud vydání jedním vláknem. Systém bude nonsignaled pak nastaven stav události. Pokud nejsou žádná vlákna čekají, zůstane stav signalizovaného, dokud vydání jedno vlákno.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  Uvolní objekt události.  
   
 ```  

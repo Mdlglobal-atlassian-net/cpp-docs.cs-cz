@@ -1,12 +1,9 @@
 ---
-title: "Vnitřní funkce _InterlockedAdd | Microsoft Docs"
-ms.custom: 
+title: Vnitřní funkce _InterlockedAdd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
@@ -35,20 +32,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f1798f3c9d4c5121aa48b33aee568d17fe755d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Proveďte atomic toho, které zajišťuje, že po úspěšném dokončení operace Pokud více vláken mají přístup ke sdílené proměnné.  
   
@@ -93,7 +88,7 @@ __int64 _InterlockedAdd64_rel(
  [ve out] `Addend`  
  Ukazatel na celé číslo, které mají být přidány do; výsledkem přidání nahrazena.  
   
- [in] `Value`  
+ [v] `Value`  
  Hodnota k přidání.  
   
 ## <a name="return-value"></a>Návratová hodnota  

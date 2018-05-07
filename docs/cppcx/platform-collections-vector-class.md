@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Collections::Vector | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Collections::Vector | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector – třída
 
@@ -269,7 +264,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v objektu vektoru.
 
-Položka  
+*Položka*  
 Položku, kterou chcete vložit do vektoru za elementem určeného *index*. Typ *položky* je definována *T* typename.
 
 ## <a name="removeat"></a>  Vector::removeAt – metoda
@@ -309,7 +304,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parametry
 
-*arr*  
+*směrování žádostí na aplikace*  
 Pole objektů, jejichž typ je definován *T* typename.
 
 ## <a name="setat"></a>  Vector::SetAt – metoda
@@ -327,7 +322,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 Počítaný od nuly, nepodepsané číslo, které určuje konkrétní prvek v objektu vektoru.
 
-Položka  
+*Položka*  
 Hodnota pro přiřazení daného elementu. Typ *položky* je definována *T* typename.
 
 ## <a name="size"></a>  Vector::size – metoda
@@ -372,7 +367,7 @@ Vector(std::initializer_list<T> il);
 *a*  
 A [std::array](../standard-library/array-class-stl.md) který se použije k chybě při inicializaci vektoru.
 
-*arr*  
+*směrování žádostí na aplikace*  
 A [Platform::Array](../cppcx/platform-array-class.md) který se použije k chybě při inicializaci vektoru.
 
 *Init –*  
@@ -399,7 +394,7 @@ Ukazatel na `std::vector` používané k chybě při inicializaci aktuální vek
 *první*  
 První prvek v pořadí objektů, které se používají k inicializaci aktuální vektoru. Typ *první* předávána prostřednictvím *ideální předávání*. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*poslední*  
 Posledním prvkem v pořadí objektů, které se používají k inicializaci aktuální vektoru. Typ *poslední* předávána prostřednictvím *ideální předávání*. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Viz také

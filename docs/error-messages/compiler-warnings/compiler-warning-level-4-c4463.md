@@ -1,12 +1,9 @@
 ---
-title: "Kompilátoru (úroveň 4) upozornění C4463 | Microsoft Docs"
-ms.custom: 
+title: Kompilátoru (úroveň 4) upozornění C4463 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>C4463 kompilátoru upozornění (úroveň 4)  
   
 > přetečení; přiřazení *hodnotu* bitová pole, které může obsahovat pouze hodnoty z *low_value* k *high_value*  
   
-Přiřazená *hodnota* je mimo rozsah hodnoty, které mohou být uloženy pole verze. Typy signed bitové pole použijte nejvyšších bit pro přihlášení, takže když  *n*  se velikost pole bit rozsahu podepsaný bitová pole-2<sup>n-1</sup> 2<sup>n-1</sup>-1, zatímco nepodepsané bitová pole mají rozsahu od 0 do 2<sup>n</sup>-1.  
+Přiřazená *hodnota* je mimo rozsah hodnoty, které mohou být uloženy pole verze. Typy signed bitové pole použijte nejvyšších bit pro přihlášení, takže když *n* se velikost pole bit rozsahu podepsaný bitová pole-2<sup>n-1</sup> 2<sup>n-1</sup>-1, zatímco bez znaménka Bitová pole mají rozsahu od 0 do 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Příklad  
   

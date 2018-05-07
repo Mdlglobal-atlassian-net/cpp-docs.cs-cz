@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrList – třída | Microsoft Docs"
-ms.custom: 
+title: CTypedPtrList – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList – třída
 Typově bezpečný "obálky" poskytuje pro objekty třídy `CPtrList`.  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  Tato funkce člen volá `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Poznámky  
  První verze přidá nového elementu před první pozice v seznamu. Druhá verze přidá jiného seznamu elementů před hlavičky.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  Tato funkce člen volá `BASE_CLASS` **:: addtail –**.  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Poznámky  
  První verze přidá nového elementu za konec seznamu. Druhá verze přidá jiného seznamu elementů za konec seznamu.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  Proměnné typu **pozice** je klíč pro seznamu.  
   
 ```  
@@ -177,7 +172,7 @@ TYPE GetAt(POSITION position) const;
  *TYP*  
  Parametr šablony určující typ elementů, které jsou uloženy v seznamu.  
   
- *pozice*  
+ *Pozice*  
  A **pozice** hodnoty vrácené předchozí `GetHeadPosition` nebo **najít** volání funkce člen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetAt` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `GetAt`načte `CObject` ukazatel přidružené k dané pozici.  
+ Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `GetAt` načte `CObject` ukazatel přidružené k dané pozici.  
   
  Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
  Tato vložená funkce volá `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  Získá ukazatele, který reprezentuje element head tohoto seznamu.  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Poznámky  
  Ujistěte se, že v seznamu není prázdná před voláním `GetHead`. Pokud je seznam prázdný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, jestli seznam obsahuje elementy.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  Získá seznam element identifikovaný `rPosition`, potom nastaví `rPosition` k **pozice** hodnotu další položky v seznamu.  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  Je možné odebrat element během iterace. Podívejte se na příklad pro [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  Získá seznam element identifikovaný `rPosition`, potom nastaví `rPosition` k **pozice** hodnotu předchozí položky v seznamu.  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Pokud je načtený element první v seznamu, pak nová hodnota `rPosition` je nastaven na **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Získá ukazatele, který reprezentuje element head tohoto seznamu.  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Poznámky  
  Ujistěte se, že v seznamu není prázdná před voláním `GetTail`. Pokud je seznam prázdný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, jestli seznam obsahuje elementy.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  Odebere element z hlavičky v seznamu a vrátí ji.  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Poznámky  
  Ujistěte se, že v seznamu není prázdná před voláním `RemoveHead`. Pokud je seznam prázdný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, jestli seznam obsahuje elementy.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  Odebere element z konec seznamu a vrátí ji.  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Poznámky  
  Ujistěte se, že v seznamu není prázdná před voláním `RemoveTail`. Pokud je seznam prázdný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, jestli seznam obsahuje elementy.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  Tato funkce člen volá `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  Ukazatel objekt, který má být zapsán do seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Proměnné typu **pozice** je klíč pro seznamu. Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `SetAt`zapíše objekt ukazatel na zadané pozici v seznamu.  
+ Proměnné typu **pozice** je klíč pro seznamu. Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `SetAt` zapíše objekt ukazatel na zadané pozici v seznamu.  
   
  Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   

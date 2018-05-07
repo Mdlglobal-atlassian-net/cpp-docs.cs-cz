@@ -1,13 +1,10 @@
 ---
-title: "Postupy: povolení technologie IntelliSense pro projekty Makefile | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: povolení technologie IntelliSense pro projekty Makefile | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCNMakeTool.IntelliSense
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Makefile projects, IntelliSense
 - IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel
 IntelliSense přestane fungovat v integrovaném vývojovém prostředí pro projekty makefile Visual C++ při určitých nastavení projektu a možnosti kompilátoru jsou nastaveny nesprávně. Pomocí tohoto postupu ke konfiguraci projekty makefile Visual C++, tak, aby IntelliSense funguje, když jsou projekty makefile otevřené ve vývojovém prostředí sady Visual Studio.  

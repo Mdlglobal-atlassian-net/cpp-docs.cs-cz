@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationTimerEventHandler | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationTimerEventHandler | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationTimerEventHandler
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když dojde k událostem časování.  
@@ -71,7 +66,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
  Vytvoří instanci CAnimationTimerEventHandler zpětného volání.  
   
 ```  
@@ -89,7 +84,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
   
-##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
  Obslužné rutiny události, které se provádějí až po dokončení aktualizace animace.  
   
 ```  
@@ -99,7 +94,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud metoda úspěšně. jinak E_FAIL.  
   
-##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
  Obslužné rutiny události, které nastaly před zahájením aktualizace animace.  
   
 ```  
@@ -109,7 +104,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud metoda úspěšně. jinak E_FAIL.  
   
-##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
  Zpracovává události, které nastaly při vykreslování snímků za sekundu pro animace klesne pod minimální žádoucí snímků za sekundu.  
   
 ```  
@@ -122,7 +117,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud metoda úspěšně. jinak E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
  Ukládá ukazatel animace řadiče události trasy.  
   
 ```  

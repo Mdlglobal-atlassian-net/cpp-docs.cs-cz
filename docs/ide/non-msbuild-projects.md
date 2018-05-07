@@ -1,13 +1,10 @@
 ---
-title: "Otevřete složku projektů v jazyce Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Otevřete složku projektů v jazyce Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otevřete složku projektů v jazyce Visual C++
 Visual Studio 2017 zavádí funkci "Otevřete složku", která umožňuje otevřete složku zdrojových souborů a okamžitě psaní s podporou pro technologii IntelliSense, procházení, refaktoring, ladění a tak dále. Jsou načteny žádné soubory .sln nebo VCXPROJ; v případě potřeby můžete zadat vlastní úlohy a také sestavení a spuštění parametry prostřednictvím jednoduchého .json soubory. Používá technologii otevřít složku, Visual C++ teď podporuje pouze přijít kolekcí souborů, ale také prakticky jakékoli sestavení systému, včetně CMake, expertem, QMake (pro projekty RT), gyp, SCons, Gradle, Buck, zkontrolujte a další. 
@@ -46,7 +42,7 @@ Projekt otevřít složku můžete přizpůsobit prostřednictvím tři soubory 
 |launch.vs.json|Zadejte argumenty příkazového řádku. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **ladění a spusťte nastavení**.|
 |tasks.vs.json|Zadejte vlastní sestavovací příkazy a přepínače kompilátoru. Přístupu prostřednictvím **Průzkumníku řešení** položky kontextové nabídky **nakonfigurovat úlohy**.|
 
-### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configure IntelliSense with CppProperties.json
+### <a name="configure-intellisense-with-cpppropertiesjson"></a>Nakonfigurovat CppProperties.json IntelliSense
 IntelliSense a procházení chování částečně závisí na konfiguraci active sestavení, který definuje #include cesty, přepínače kompilátoru a další parametry. Ve výchozím nastavení Visual Studio poskytuje konfigurace Debug a Release. U některých projektů musíte vytvořit vlastní konfiguraci, aby plně pochopit kódu technologie IntelliSense a procházení funkce. Pokud chcete definovat novou konfiguraci, vytvořte soubor s názvem CppProperties.json v kořenové složce. Tady je příklad:
 
 ```json
@@ -75,7 +71,7 @@ Konfigurace může mít některý z následujících vlastností:
 |`forcedInclude`|záhlaví má být automaticky zahrnut v každou jednotku kompilace (mapuje /FI pro MSVC nebo – zahrnout pro clang)|
 |`undefines`|seznam makra být definován (mapuje /U pro MSVC)|
 |`intelliSenseMode`|modul IntelliSense, který se má použít. Můžete zadat konkrétní variant architektura pro MSVC, RSZ nebo Clang:
-- msvc-x86 (default)
+- msvc-x86 (výchozí)
 - msvc-x64
 - msvc-arm
 - windows-clang-x86
@@ -248,12 +244,12 @@ Můžete vytvořit libovolný počet konfigurací v CppProperties.json. Každý 
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Define tasks with tasks.vs.json
+### <a name="define-tasks-with-tasksvsjson"></a>Definování úloh s tasks.vs.json
 Je možné automatizovat skripty sestavení nebo jiné externí operace se soubory, které máte v aktuálním pracovním prostoru spuštěním jako úlohy přímo v prostředí IDE. Novou úlohu můžete nakonfigurovat tak, že kliknete pravým tlačítkem na soubor nebo složku a výběr **nakonfigurovat úlohy**. 
 
 ![Otevřít složku konfigurovat úlohy](media/open-folder-config-tasks.png)
 
-To vytvoří (nebo otevře) `tasks.vs.json` soubor ve složce neodstraňujte, která sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a potom vyvolat z **Průzkumníku řešení** kontextové nabídky. Následující příklad ukazuje soubor tasks.vs.json, který definuje jednu úlohu. `taskName`Definuje název, který se zobrazí v místní nabídce. `appliesTo`Definuje soubory, které lze provést příkaz na. `command` Vlastnost odkazuje na proměnné prostředí COMSPEC, které identifikuje cestu pro konzolu (cmd.exe v systému Windows). Proměnné prostředí, které jsou deklarované v CppProperties.json nebo CMakeSettings.json, můžete odkazovat. `args` Vlastnost určuje příkazový řádek, který má být volána. `${file}` Makro načte vybraného souboru v **Průzkumníku řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného souboru.
+To vytvoří (nebo otevře) `tasks.vs.json` soubor ve složce neodstraňujte, která sada Visual Studio vytvoří v kořenové složce projektu. Můžete definovat všechny libovolné úlohy v tomto souboru a potom vyvolat z **Průzkumníku řešení** kontextové nabídky. Následující příklad ukazuje soubor tasks.vs.json, který definuje jednu úlohu. `taskName` Definuje název, který se zobrazí v místní nabídce. `appliesTo` Definuje soubory, které lze provést příkaz na. `command` Vlastnost odkazuje na proměnné prostředí COMSPEC, které identifikuje cestu pro konzolu (cmd.exe v systému Windows). Proměnné prostředí, které jsou deklarované v CppProperties.json nebo CMakeSettings.json, můžete odkazovat. `args` Vlastnost určuje příkazový řádek, který má být volána. `${file}` Makro načte vybraného souboru v **Průzkumníku řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného souboru.
 
 ```json
 {
@@ -273,7 +269,7 @@ Po uložení tasks.vs.json, klikněte pravým tlačítkem na libovolný soubor s
 
 
 
-#### <a name="appliesto"></a>appliesTo
+#### <a name="appliesto"></a>AppliesTo –
 Můžete vytvořit úlohy pro libovolný soubor nebo složku a to zadáním názvu v `appliesTo` pole, například `"appliesTo" : "hello.cpp"`. Následující masek souboru můžete použít jako hodnoty:
 |||
 |-|-|
@@ -292,7 +288,7 @@ Použití `output` vlastnosti k určení spustitelného souboru, který se spust
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Macros for tasks.vs.json
+#### <a name="macros-for-tasksvsjson"></a>Makra pro tasks.vs.json
 
 |||
 |-|-|

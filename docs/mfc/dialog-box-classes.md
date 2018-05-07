@@ -1,13 +1,10 @@
 ---
-title: "Třídy dialogových oken | Microsoft Docs"
-ms.custom: 
+title: Třídy dialogových oken | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Třídy dialogových oken
 Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. Vzhledem k tomu, že je zvláštní druh okna, dialogové okno `CDialog` je odvozený od `CWnd`. Vaše dialogové okno odvozovat z `CDialog` nebo některý z společné třídy dialogových oken pro standardní dialogová okna, jako je otevření nebo uložení souboru, tisk, výběr písma a barev, inicializaci operaci vyhledávání a nahrazování nebo provádění různých související s rozhraním OLE operace.  
@@ -71,7 +66,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  OLE přidá společná dialogová okna několik do systému Windows. Tyto třídy zapouzdřovat běžné dialogových oken OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Používá rozhraní tak, aby obsahovala běžné implementace pro všechny dialogových oken OLE. Všechny třídy dialogových oken v kategorii uživatelského rozhraní jsou odvozené z této základní třídy. `COleDialog`nelze použít přímo.  
+ Používá rozhraní tak, aby obsahovala běžné implementace pro všechny dialogových oken OLE. Všechny třídy dialogových oken v kategorii uživatelského rozhraní jsou odvozené z této základní třídy. `COleDialog` nelze použít přímo.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Zobrazí dialogové okno Vložit objekt, standardní uživatelské rozhraní, pro vkládání nové OLE propojené nebo vložené položky.  
@@ -125,7 +120,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
  Ovládací prvek panel, který je založený na šabloně dialogové okno pole.  
   
- [CFormView](../mfc/reference/cformview-class.md)  
+ [Třídy CFormView](../mfc/reference/cformview-class.md)  
  Posuňte zobrazení, jejichž rozložení je definována v poli šablony dialogového okna. Odvození třídy z `CFormView` implementovat uživatelské rozhraní založené na pole šablony dialogového okna.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
@@ -134,7 +129,7 @@ Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. 
  [CRecordView](../mfc/reference/crecordview-class.md)  
  Nabízí způsob zobrazení přímo připojený k objektu sady záznamů připojení ODBC (Open Database). Jako všechna zobrazení formuláře `CRecordView` je založená na šabloně dialogové okno pole.  
   
- [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
+ [Cprintinfo –](../mfc/reference/cprintinfo-structure.md)  
  Struktura obsahující informace o úloze nebo tiskového náhledu. Používá architektura pro tisk z [CView](../mfc/reference/cview-class.md).  
   
 ## <a name="see-also"></a>Viz také  

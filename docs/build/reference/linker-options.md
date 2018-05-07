@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -116,6 +116,7 @@ Můžete použít [komentář](../../preprocessor/comment-c-cpp.md) – Direktiv
 |[/ PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Uloží do souboru PDB pomocí alternativního umístění.|
 |[/ PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Vytvoří soubor databáze (PDB) program, který nemá žádný privátní symboly.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Určuje soubor .pgd pro optimalizace na základě profilu.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Zastaralé** vytvoří sestavení PGO instrumentovány bezpečné pro přístup z více vláken.|
 |[NEBO PROFIL](../../build/reference/profile-performance-tools-profiler.md)|Vytvoří výstupního souboru, který lze použít s profileru nástroje pro sledování výkonu.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Nastaví kontrolního součtu v hlavičce .exe.|
 |[/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Určuje, zda obrázek bude obsahovat tabulku obslužné rutiny výjimek bezpečné.|
@@ -127,6 +128,7 @@ Můžete použít [komentář](../../preprocessor/comment-c-cpp.md) – Direktiv
 |[/ TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Určuje ID prostředku knihovny typů generované linkeru.|
 |[/ TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Určuje název souboru .tlb a ostatní výstupní soubory MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Vytvoří aplikaci, která je určená speciálně ke spuštění v režimu terminálového serveru.|
+|[/ USEPROFILE](../../build/reference/useprofile.md)|Na základě profilu používá optimalizace Cvičná data vytvoření optimalizované bitové kopie.|
 |[/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Vytiskne hlášení průběhu linkeru.|
 |[/VERSION](../../build/reference/version-version-information.md)|Přiřadí číslo verze.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Zahrnuje každý soubor objekt ze zadané statické knihovny.|

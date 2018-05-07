@@ -1,31 +1,26 @@
 ---
-title: "Postupy: zobrazení obrázků s použitím rozhraní .NET Framework | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: zobrazení obrázků s použitím rozhraní .NET Framework | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GDI+ [C++], displaying images
 - graphics [C++], displaying images
 ms.assetid: c0eddfa1-4bd6-4af5-a533-1fa84b360325
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f50659832e04c3b8938c50bedc47b3ac770a52eb
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 4a7f3ed2d8fe90501b5ef3d0ae5028890fe5290e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Postupy: Zobrazení obrázků s použitím rozhraní .NET Framework
 Následující příklad kódu upraví OnPaint obslužné rutiny události pro načtení ukazatel <xref:System.Drawing.Graphics> objekt pro hlavní formulář. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkce je určena pro aplikaci Windows Forms, pravděpodobně vytvořené pomocí Průvodce aplikace Visual Studio.  

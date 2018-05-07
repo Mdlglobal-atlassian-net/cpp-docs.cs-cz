@@ -1,13 +1,10 @@
 ---
 title: 'Postupy: migrace na - clr | Microsoft Docs'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 Toto téma popisuje problémy, které se vynoří během kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) informace). **/ CLR** umožňuje modulům Visual C++ pro vyvolání a jde volat z sestavení .NET a přitom zachovat kompatibilitu s nespravovanými moduly. V tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  Nativní typy jsou ve výchozím nastavení soukromá. To může způsobit v nativním typu nebude viditelné mimo knihovnu DLL. Tuto chybu vyřešit přidáním `public` na tyto typy.  
   
 ### <a name="floating-point-and-alignment-issues"></a>Plovoucí desetinná čárka a přidružené problémy.  
- `__controlfp`není podporována na modul common language runtime (viz [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) Další informace). Modul CLR také nerespektuje [zarovnat](../cpp/align-cpp.md).  
+ `__controlfp` není podporována na modul common language runtime (viz [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) Další informace). Modul CLR také nerespektuje [zarovnat](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>Inicializace modulu COM  
  Modul Common Language Runtime Automatická inicializace při inicializaci modulu (když je automaticky inicializován COM je provedeno tak v modelu MTA). V důsledku toho explicitně inicializace COM vytváří návratové kódy označující, že COM již je inicializován. Probíhá pokus o inicializaci výslovně COM s jeden model vláken při modulu CLR byla inicializována COM již pro jiný model vláken může způsobit selhání aplikace.  

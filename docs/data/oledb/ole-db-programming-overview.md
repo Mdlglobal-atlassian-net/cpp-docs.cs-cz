@@ -1,12 +1,9 @@
 ---
-title: "Přehled programování v architektuře OLE DB | Microsoft Docs"
-ms.custom: 
+title: Přehled programování v architektuře OLE DB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-programming-overview"></a>Přehled programování v architektuře OLE DB
 OLE DB je databáze založená na modelu COM, vysoce výkonné technologie. Poskytuje společné způsob, jak přistupovat k datům bez ohledu na formulář, ve kterém je uložený. V typické obchodní situaci je uložený obrovské množství informací mimo firemní databáze. Tyto informace naleznete v systémech souborů (například FAT nebo systému souborů NTFS), sekvenční indexované soubory, osobní databáze (například přístup), tabulky (například aplikace Excel), aplikace plánování projektu (například projekt) a e-mailu (jako je například Outlook). OLE DB umožňuje přístup k libovolného typu úložiště dat stejným způsobem, dokud úložiště dat obsahuje zprostředkovatele OLE DB.

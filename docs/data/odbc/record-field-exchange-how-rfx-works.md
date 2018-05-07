@@ -2,12 +2,9 @@
 title: 'Výměna polí záznamu: Jak funkce RFX pracuje | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5eac97bb87103bd72dfd721515baf58324fc851f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48cece77101a14efb827e48b53be2f5852df83ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Výměna polí záznamu: Jak funkce RFX pracuje
 Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:  
@@ -42,7 +37,7 @@ Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:
 > [!NOTE]
 >  Toto téma se vztahuje na třídy odvozené od třídy `CRecordset` v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné RFX je podobná RFX. Chcete-li pochopit rozdíly, přečtěte si téma [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_rfx_and_the_recordset"></a>RFX a sady záznamů  
+##  <a name="_core_rfx_and_the_recordset"></a> RFX a sady záznamů  
  Objekt sady záznamů pole datových členů dohromady, tvoří upravit vyrovnávací paměti, která obsahuje vybrané sloupce jeden záznam. Pokud sadu záznamů prvním otevření a má číst na první záznam, RFX naváže (partnerů) každý vybraný sloupec na adresu odpovídající pole datového člena. Pokud sada záznamů aktualizuje záznam, RFX zavolá rozhraní API ODBC funkce Odeslat SQL **aktualizace** nebo **vložit** příkaz do ovladače. RFX používá znalosti o pole datových členů k určení sloupců k zápisu.  
   
  Rozhraní framework zálohuje upravené vyrovnávací paměti v některých fázích, v případě potřeby ho můžete obnovit jeho obsah. RFX zálohuje vyrovnávací paměť pro úpravu před přidáním nového záznamu a před úpravou existující záznam. Obnoví vyrovnávací paměti pro úpravy v některých případech, například po **aktualizace** následující volání `AddNew`. Vyrovnávací paměť pro úpravu funkce nebude obnovena, pokud abandon nově změněného upravené vyrovnávací paměti, například přesun na jiný záznam před voláním **aktualizace**.  
@@ -51,10 +46,10 @@ Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:
   
  Třídy sady záznamů přepsat z `DoFieldExchange` vykonává všechnu práci přesouvání dat v obou směrech. Jako výměna dialogových dat (DDX) potřebuje RFX informace o datové členy vaší třídy. Průvodce zápisem specifické sady záznamů provádění zajišťuje informace nezbytné k `DoFieldExchange` , na základě pole dat člena názvy a typy dat zadáte v průvodci.  
   
-##  <a name="_core_the_record_field_exchange_process"></a>Proces Exchange pole záznamu  
+##  <a name="_core_the_record_field_exchange_process"></a> Proces Exchange pole záznamu  
  Tato část popisuje posloupnost událostí RFX, protože je otevřen objekt sady záznamů a při přidávání, aktualizace a odstranění záznamů. V tabulce [pořadí z RFX Operations během sada záznamů otevřete](#_core_sequence_of_rfx_operations_during_recordset_open) tabulky a [pořadí operací RFX během posouvání](#_core_sequence_of_rfx_operations_during_scrolling) v tomto tématu zobrazit proces jako RFX procesy **přesunout**příkazu v sadě záznamů a RFX spravuje aktualizace. Během těchto procesů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) je volána k provedení mnoha různých operací. **M_nOperation** členem data [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objektu určuje, jaké operace je požadována. Může být užitečné číst [sada záznamů: Jak sady záznamů vyberte záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) a [sada záznamů: Jak sady záznamů aktualizace záznamů (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) před čtením této materiálů.  
   
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a>RFX: Počáteční vazba sloupců a parametry  
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Počáteční vazba sloupců a parametry  
  Následující činnosti RFX jsou prováděny v pořadí uvedeném, při volání objektu sady záznamů [otevřete](../../mfc/reference/crecordset-class.md#open) – členská funkce:  
   
 -   Pokud má sada záznamů parametry datových členů, zavolá rozhraní `DoFieldExchange` pro vazbu parametrů zástupných symbolů parametrů v řetězci příkazu SQL sady záznamů. Data závislá na zvoleném typu reprezentaci hodnoty parametru se používá pro každý zástupný symbol nalezen v **vyberte** příkaz. K tomu dochází po připravený příkaz jazyka SQL, ale před jeho spuštěním. Informace o přípravě dotazu najdete v tématu **:: SQLPrepare** funkce v ODBC *referenční informace pro programátory*.  
@@ -65,7 +60,7 @@ Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:
   
  V následující tabulce jsou uvedeny sekvence operací RFX při otevření sady záznamů.  
   
-### <a name="_core_sequence_of_rfx_operations_during_recordset_open"></a>Posloupnost operací RFX při otevření sady záznamů  
+### <a name="_core_sequence_of_rfx_operations_during_recordset_open"></a> Posloupnost operací RFX při otevření sady záznamů  
   
 |Tuto operaci|DoFieldExchange – operace|Operace databáze/SQL|  
 |--------------------|-------------------------------|-----------------------------|  
@@ -79,12 +74,12 @@ Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:
   
  Sady záznamů pomocí rozhraní ODBC je připravené provádění umožňující rychlé opakování stejný příkaz jazyka SQL. Další informace o provádění připravené, najdete v části sada SDK ODBC *referenční informace pro programátory* v knihovně MSDN.  
   
-###  <a name="_mfc_rfx.3a_.scrolling"></a>RFX: posouvání  
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: posouvání  
  Při posouvání z jednoho záznamu do jiného volá framework `DoFieldExchange` k nahrazení hodnot členů pole dat, s hodnotami pro nový záznam.  
   
  Následující tabulka zobrazuje posloupnost operací RFX, když se uživatel přesune mezi záznamy.  
   
-### <a name="_core_sequence_of_rfx_operations_during_scrolling"></a>Posloupnost operací RFX při posouvání  
+### <a name="_core_sequence_of_rfx_operations_during_scrolling"></a> Posloupnost operací RFX při posouvání  
   
 |Tuto operaci|DoFieldExchange – operace|Operace databáze/SQL|  
 |--------------------|-------------------------------|-----------------------------|  
@@ -92,12 +87,12 @@ Toto téma vysvětluje proces RFX. Toto je rozšířené zahrnut tématu:
 |||2. ODBC provádí přesunutí a výplní v datech.|  
 ||3. Oprava data pro jazyk C++.||  
   
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a>RFX: Přidání nové záznamy a úpravou existujících záznamů  
+###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Přidání nové záznamy a úpravou existujících záznamů  
  Pokud přidáte nový záznam, sadu záznamů funguje jako vyrovnávací paměť úprav pro sestaví obsah novém záznamu. Stejně jako u přidání záznamů, zahrnují úpravy záznamů hodnoty sady záznamů pole datových členů. Z pohledu RFX sekvenci vypadá takto:  
   
 1.  Volání do sady záznamů [AddNew](../../mfc/reference/crecordset-class.md#addnew) nebo [upravit](../../mfc/reference/crecordset-class.md#edit) – členská funkce způsobí, že RFX uloží aktuální vyrovnávací paměti pro úpravy, takže ji můžete později obnovit.  
   
-2.  `AddNew`nebo **upravit** připraví pole ve vyrovnávací paměti upravit, takže RFX může zjistit pole datových členů.  
+2.  `AddNew` nebo **upravit** připraví pole ve vyrovnávací paměti upravit, takže RFX může zjistit pole datových členů.  
   
      Vzhledem k tomu, že nový záznam nemá žádné předchozí hodnoty k porovnání s `AddNew` nastaví hodnotu pro každé pole datového člena **PSEUDO_NULL** hodnotu. Později při volání **aktualizace**, RFX porovná hodnotu datového člena s **PSEUDO_NULL** hodnotu. Pokud existuje rozdíl, byl nastaven datový člen. (**PSEUDO_NULL** není stejný jako sloupec záznam s hodnotou Null true ani jedna z těchto je stejný jako C++ **NULL**.)  
   

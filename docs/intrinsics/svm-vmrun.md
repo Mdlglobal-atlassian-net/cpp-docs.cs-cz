@@ -1,12 +1,9 @@
 ---
 title: __svm_vmrun | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __svm_vmrun
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988a045bc957d5920fee7e3e659d7a0b4f02d8d2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8bce7d2bef75c7fba88c986d22e95d3ab40ba652
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Spustí provádění kódu hosta virtuálního počítače, který odpovídá řídicí blok zadaný virtuální počítač (VMCB).  
   
@@ -45,7 +40,7 @@ void __svm_vmrun(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
+|[v] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
   
 ## <a name="remarks"></a>Poznámky  
  `__svm_vmrun` Funkce používá minimální množství informací VMCB zahájíte provádění kódu hosta virtuálního počítače. Použití [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) fungovat, pokud potřebujete další informace pro zpracování komplexní přerušení nebo přepnout do jiného hosta.  

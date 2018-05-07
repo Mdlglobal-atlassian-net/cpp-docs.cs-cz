@@ -1,24 +1,19 @@
 ---
-title: "Slabé odkazy a ukončování cykly (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Slabé odkazy a ukončování cykly (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a ukončování cykly (C + +/ CX)
 V žádné systém typů, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, jeden objekt odkazuje na druhý objekt, druhý objekt odkazuje na objekt třetí, a tak dále dokud některé konečný objekt odkazuje zpět první objekt. V cyklu nelze odstranit objekty správně při počet odkazů jeden objekt klesne na nulu. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::WeakReference třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` objektu podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metoda, která vrátí hodnotu null, pokud objekt již existuje, nebo vyvolá [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Pokud objekt zachování připojení, ale není typu `T`.  

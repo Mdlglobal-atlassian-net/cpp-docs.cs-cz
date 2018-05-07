@@ -1,30 +1,25 @@
 ---
-title: "Podpora kontextů aktivace ve stavu modulu MFC | Microsoft Docs"
-ms.custom: 
+title: Podpora kontextů aktivace ve stavu modulu MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41aa0987a6fad48e57544ebbdd708d60c000382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2713e0025c0587a4ab76813d4d07eed0825db447
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Podpora kontextů aktivace ve stavu modulu MFC
 MFC vytvoří aktivační kontext pomocí prostředku manifestu poskytované modulem uživatele. Další informace o vytváření kontexty aktivace najdete v následujících tématech:  
@@ -50,7 +45,7 @@ MFC vytvoří aktivační kontext pomocí prostředku manifestu poskytované mod
   
  Aktivační kontext je vytvořen v [afxwininit –](../mfc/reference/application-information-and-management.md#afxwininit). Byla v `AFX_MODULE_STATE` destruktor. Popisovač aktivační kontext je uložen v `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` je popsaná v [afxgetstaticmodulestate –](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) makro aktivuje a deaktivuje aktivační kontext. `AFX_MANAGE_STATE`je povolený pro statické knihovny MFC a také MFC – knihovny DLL, a umožňuje MFC kód na provedení v správný aktivační kontext Vybraná knihovna DLL uživatele.  
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) makro aktivuje a deaktivuje aktivační kontext. `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC a také MFC – knihovny DLL, a umožňuje MFC kód na provedení v správný aktivační kontext Vybraná knihovna DLL uživatele.  
   
 ## <a name="see-also"></a>Viz také  
  [Kontexty aktivace](http://msdn.microsoft.com/library/aa374153)   

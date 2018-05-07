@@ -1,12 +1,9 @@
 ---
-title: "Třída CFtpFileFind | Microsoft Docs"
-ms.custom: 
+title: Třída CFtpFileFind | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind – třída
 Usnadňuje hledání souborů Internetu serverů FTP.  
@@ -61,7 +56,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|Získá adresu URL, včetně cesty souboru nalezen.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CFtpFileFind`obsahuje členské funkce, které začínají vyhledávání, vyhledejte soubor a vrátit adresu URL nebo další popisné informace o souboru.  
+ `CFtpFileFind` obsahuje členské funkce, které začínají vyhledávání, vyhledejte soubor a vrátit adresu URL nebo další popisné informace o souboru.  
   
  Ostatní třídy MFC určená pro Internet a místního souboru vyhledávat obsahují [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) a [CFileFind](../../mfc/reference/cfilefind-class.md). Společně s `CFtpFileFind`, tyto třídy poskytují bezproblémové mechanismus pro klienta k vyhledání konkrétních souborů, bez ohledu na serveru protokolu nebo typ souboru (místní počítač nebo vzdálený server). Všimněte si, že neexistuje žádná třída knihovny MFC pro vyhledávání na serverech HTTP, protože HTTP nepodporuje přímé souboru manipulaci požadované pro hledání.  
   
@@ -82,7 +77,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  Tato funkce člen je volána k sestavení `CFtpFileFind` objektu.  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad v přehledu třídy dříve v tomto tématu.  
   
-##  <a name="findfile"></a>CFtpFileFind::FindFile  
+##  <a name="findfile"></a>  CFtpFileFind::FindFile  
  Volání této funkce člen najít soubor FTP.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>Příklad  
   Podívejte se na předchozí příklad v tomto tématu.  
   
-##  <a name="findnextfile"></a>CFtpFileFind::FindNextFile  
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile  
  Volání této funkce člen pokračujte hledání souboru zahájena volání [FindFile](#findfile) – členská funkce.  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce musí volat alespoň jednou před voláním jakékoli funkce atribut (viz [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile`zabalí funkci Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` zabalí funkci Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad dříve v tomto tématu.  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  Volání této funkce člen získat adresu URL zadaného souboru.  
   
 ```  
@@ -168,7 +163,7 @@ CString GetFileURL() const;
  Soubor a cestu Universal prostředků Lokátor (URL).  
   
 ### <a name="remarks"></a>Poznámky  
- `GetFileURL`je podobná – členská funkce [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)kromě toho, že se vrátí adresu URL ve formátu `ftp://moose/dir/file.txt`.  
+ `GetFileURL` je podobná – členská funkce [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)kromě toho, že se vrátí adresu URL ve formátu `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>Viz také  
  [CFileFind – třída](../../mfc/reference/cfilefind-class.md)   

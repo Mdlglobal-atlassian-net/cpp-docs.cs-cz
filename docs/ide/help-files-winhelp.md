@@ -1,29 +1,24 @@
 ---
-title: "Soubory nápovědy (WinHelp) | Microsoft Docs"
-ms.custom: 
+title: Soubory nápovědy (WinHelp) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 505506c7f3a14a73c6b0c859a70938fee3eed69e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-winhelp"></a>Soubory nápovědy (WinHelp)
 Následující soubory jsou vytvořeny po přidání WinHelp typu nápovědy k aplikaci tak, že vyberete **Kontextová nápověda** zaškrtávací políčko a potom vyberete **WinHelp formátu** v [Upřesňující funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  
@@ -34,7 +29,7 @@ Následující soubory jsou vytvořeny po přidání WinHelp typu nápovědy k a
 |*Projname*.rtf|*Projname*\hlp|Soubory nápovědy|Obsahuje informace o úpravách souboru HPJ a témata šablony, které můžete upravit.|  
 |*Projname*.cnt|*Projname*\hlp|Soubory nápovědy|Poskytuje struktury **obsah** okna nápovědy k systému Windows.|  
 |Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  
-|Print.rtf|*Projname*\hlp|Soubory nápovědy|Vytvoří, pokud projekt zahrnuje podporu tisku (výchozí). Popisuje příkazy pro tisk a dialogová okna.|  
+|PRINT.RTF|*Projname*\hlp|Soubory nápovědy|Vytvoří, pokud projekt zahrnuje podporu tisku (výchozí). Popisuje příkazy pro tisk a dialogová okna.|  
 |*.bmp|*Projname*\hlp|Zdrojové soubory|Obsahovat bitových kopií pro jiné témata nápovědy.|  
   
  Můžete přidat podporu nápovědy do projektu MFC ovládací prvek ActiveX výběrem **Generovat soubory nápovědy** v [nastavení aplikace](../mfc/reference/application-settings-mfc-activex-control-wizard.md) kartě Průvodce ovládacím prvkem ActiveX knihovny MFC. Následující soubory se přidají do projektu, když přidáte podporu nápovědy do ovládacího prvku ActiveX knihovny MFC:  

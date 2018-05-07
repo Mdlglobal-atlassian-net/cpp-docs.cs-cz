@@ -1,13 +1,10 @@
 ---
-title: "CMake projektů v jazyce Visual C++ | Microsoft Docs"
-ms.custom: 
+title: CMake projektů v jazyce Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projektů v jazyce Visual C++
 
@@ -115,7 +111,7 @@ Všechny cíle spustitelné CMake se zobrazují v **položku při spuštění** 
 
 Z nabídky CMake můžete spustit také na relaci ladění.
 
-Chcete-li přizpůsobit nastavení ladicího programu pro všechny spustitelné cíl CMake ve vašem projektu, klikněte pravým tlačítkem na konkrétní CMakeLists.txt soubor a vyberte **ladění a spusťte nastavení**. Když vyberete cíl CMake v nabídce dílčí, vytvoří se soubor s názvem launch.vs.json. Tento soubor je předem vyplnit s informacemi o CMake cíl, který jste zvolili a umožňuje vám určit další parametry, třeba typ ladicí program nebo program argumenty. Chcete-li jakékoli klíč v souboru CMakeSettings.json, adresa s "cmake." in launch.vs.json. Následující příklad ukazuje jednoduchý launch.vs.json soubor, který žádá o v hodnotě "remoteCopySources" klíč v souboru CMakeSettings.json pro aktuálně vybrané konfigurace:
+Chcete-li přizpůsobit nastavení ladicího programu pro všechny spustitelné cíl CMake ve vašem projektu, klikněte pravým tlačítkem na konkrétní CMakeLists.txt soubor a vyberte **ladění a spusťte nastavení**. Když vyberete cíl CMake v nabídce dílčí, vytvoří se soubor s názvem launch.vs.json. Tento soubor je předem vyplnit s informacemi o CMake cíl, který jste zvolili a umožňuje vám určit další parametry, třeba typ ladicí program nebo program argumenty. Chcete-li jakékoli klíč v souboru CMakeSettings.json, adresa s "cmake." v launch.vs.json. Následující příklad ukazuje jednoduchý launch.vs.json soubor, který žádá o v hodnotě "remoteCopySources" klíč v souboru CMakeSettings.json pro aktuálně vybrané konfigurace:
 
 ```json
 {
@@ -200,10 +196,10 @@ Následující příklad ukazuje Ukázková konfigurace, který můžete použí
     - "Expertem"
     - "Visual Studio 14 2015"
     - "Sady visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
+    - "Sady visual Studio 14 2015 Win64"
     - "Visual Studio 15 2017"
     - "Sady visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+    - "Sady visual Studio 15 2017 Win64"
 
 Protože expertem je navržený pro rychlé sestavení rychlosti místo flexibilitu a funkce, je nastaven jako výchozí. Některé projekty CMake však může nelze správně vytvořit pomocí expertem. Pokud k tomu dojde, můžete určit, aby CMake místo generovat projekt sady Visual Studio.
 

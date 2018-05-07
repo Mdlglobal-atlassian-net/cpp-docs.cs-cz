@@ -1,12 +1,9 @@
 ---
-title: "Určení typu přístupového objektu | Microsoft Docs"
-ms.custom: 
+title: Určení typu přístupového objektu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28173b18e1f2ab6e7c916679d5fa5a27c08caaeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 89a55127b8f7e5e0e7d338a9e7ba4f85e8c568d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Určení použitého typu přístupového objektu
 Můžete určit typy dat pro sadu řádků v době kompilace nebo za běhu.  
@@ -41,7 +36,7 @@ Můžete určit typy dat pro sadu řádků v době kompilace nebo za běhu.
 |`CAccessor`|Vytvořte záznam uživatele s `COLUMN_ENTRY` makra. Makra vazby datového člena v tomto záznamu na přistupující objekt. Při vytváření sady řádků, nesmí nevázaných sloupců.|Ano, pomocí **PARAM_MAP** makro položku. Jednou vázán, nelze parametry.|Nejrychlejší přistupující objekt z důvodu malou část kódu.|  
 |`CDynamicAccessor`|Automatické.|Ne.|Užitečné, pokud neznáte typ dat v sadě řádků.|  
 |`CDynamicParameterAccessor`|Automatické, ale může být [přepsat](../../data/oledb/overriding-a-dynamic-accessor.md).|Ano, pokud zprostředkovatel podporuje `ICommandWithParameters`. Parametry navázat automaticky.|Nižší než `CDynamicAccessor` ale užitečná pro volání obecných uložených procedur.|  
-|**CDynamicStringAccessor[A,W]**|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data.|  
+|**CDynamicStringAccessor [A, W]**|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data.|  
 |`CManualAccessor`|Ruční pomocí `AddBindEntry`.|Ručně pomocí `AddParameterEntry`.|Velmi rychlé; parametry a sloupce vázány pouze jednou. Můžete určit typ data se mají použít. (Viz [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ukázku příklad.) Vyžaduje více kódu než `CDynamicAccessor` nebo `CAccessor`. Je to spíše jako přímé volání OLE DB.|  
 |`CXMLAccessor`|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data a zformátuje ho jako značky jazyka XML data.|  
   

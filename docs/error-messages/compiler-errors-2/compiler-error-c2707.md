@@ -1,12 +1,9 @@
 ---
-title: "C2707 Chyba kompilátoru | Microsoft Docs"
-ms.custom: 
+title: C2707 Chyba kompilátoru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2707
@@ -15,28 +12,26 @@ dev_langs:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 877ca1b0592625823e262f77f7f2adcfc5c04e3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdbd957bb1c19e28d08dd0fa5392eadd0f019756
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2707"></a>C2707 chyby kompilátoru
 "identifikátor": Chybný kontext pro vnitřní funkce  
   
  Strukturované zpracování výjimek – vnitřní funkce jsou neplatné v některých kontextech:  
   
--   `_exception_code()`mimo filtru výjimek nebo `__except` bloku  
+-   `_exception_code()` mimo filtru výjimek nebo `__except` bloku  
   
--   `_exception_info()`mimo filtru výjimek  
+-   `_exception_info()` mimo filtru výjimek  
   
--   `_abnormal_termination()`mimo `__finally` bloku  
+-   `_abnormal_termination()` mimo `__finally` bloku  
   
  Chcete-li vyřešit chyby, ujistěte se, že zpracování výjimek – vnitřní funkce jsou umístěny v odpovídající kontext.  
   

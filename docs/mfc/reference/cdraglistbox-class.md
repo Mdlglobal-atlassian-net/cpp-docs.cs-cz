@@ -1,12 +1,9 @@
 ---
-title: "Třída CDragListBox | Microsoft Docs"
-ms.custom: 
+title: Třída CDragListBox | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox – třída
 Kromě zajištění funkce Windows pole se seznamem `CDragListBox` třída umožňuje uživateli přesunout položky seznamu pole, jako jsou názvy souborů, v rámci pole se seznamem.  
@@ -92,7 +87,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  Volá framework při výskytu události, který by mohl spustit operaci přetažení, jako je například stisknutím levé tlačítko.  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce přepsání, pokud chcete řídit, co se stane, když začne operaci přetažení. Výchozí implementace zaznamená myši a zůstane v režimu přetažení, dokud uživatel klikne na tlačítko myši doleva nebo doprava nebo stiskem tlačítka ESC, které během operace přetažení zrušena.  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Voláno rámcem při přetažení operace byla zrušena.  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Poznámky  
  Funkci pro zpracování žádné speciální zpracování pro vaše ovládací prvek seznam přepište.  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Vytvoří `CDragListBox` objektu.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  Voláno rámcem při položku v seznamu je přetažen v rámci `CDragListBox` objektu.  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>Návratová hodnota  
  ID prostředku kurzoru, který se má zobrazit. Následující hodnoty jsou možné:  
   
-- `DL_COPYCURSOR`Určuje, zda bude položka zkopírována.  
+- `DL_COPYCURSOR` Určuje, zda bude položka zkopírována.  
   
-- `DL_MOVECURSOR`Označuje, že položka bude přesunuta.  
+- `DL_MOVECURSOR` Označuje, že položka bude přesunuta.  
   
-- `DL_STOPCURSOR`Označuje, že aktuální cíle přetažení není platný.  
+- `DL_STOPCURSOR` Označuje, že aktuální cíle přetažení není platný.  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí výchozí chování `DL_MOVECURSOR`. Tato funkce přepsání, pokud byste chtěli poskytnout další funkce.  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  Voláno rámcem k vykreslení průvodci vložení před položka s označený index.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Poznámky  
  Hodnota - 1 vymaže průvodci vložení. Přepsání této funkci můžete změnit vzhled nebo chování příručky pro vložení.  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  Voláno rámcem při přetažení položky v rámci `CDragListBox` objektu.  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Poznámky  
  Výchozí chování zkopíruje položku seznamu a jeho data do nového umístění a poté se odstraní původní položce. Přepsání této funkci můžete přizpůsobit výchozí chování, například povolení kopie položky seznamu pole přetáhnout do jiných umístění v seznamu.  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  Volání této funkce můžete získat index založený na nule položky seznamu, pole umístěné v `pt`.  
   
 ```  

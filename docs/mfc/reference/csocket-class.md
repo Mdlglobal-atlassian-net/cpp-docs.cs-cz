@@ -1,12 +1,9 @@
 ---
-title: "CSocket – třída | Microsoft Docs"
-ms.custom: 
+title: CSocket – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket – třída
 Odvozená z `CAsyncSocket`, dědí jeho zapouzdření rozhraní Windows Sockets API a představuje vyšší úrovni abstrakce, než `CAsyncSocket` objektu.  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|Voláno k procesu čekajících zpráv při čekání na dokončení blokování volání.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSocket`funguje s třídami `CSocketFile` a `CArchive` ke správě odesílání a příjem dat.  
+ `CSocket` funguje s třídami `CSocketFile` a `CArchive` ke správě odesílání a příjem dat.  
   
  A `CSocket` objekt také poskytuje blokování, které je nezbytné pro synchronní operace `CArchive`. Blokování funkce, jako například `Receive`, `Send`, `ReceiveFrom`, `SendTo`, a `Accept` (všechny zděděné z `CAsyncSocket`), nevrátí `WSAEWOULDBLOCK` došlo k chybě v `CSocket`. Místo toho tyto funkce počkejte na dokončení operace. Kromě toho bude ukončen původní volání s chybou `WSAEINTR` Pokud `CancelBlockingCall` je volána při jednu z těchto funkcí je zablokovaná.  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  Volání této funkce člen připojit `hSocket` popisovač `CSocket` objektu.  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  Volání této funkce člen zrušit blokování volání právě probíhá.  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  Volání **vytvořit** – členská funkce poté, co vytvořen objekt soketu se vytvořit soket Windows a jeho připojení.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  Další informace o sokety datového proudu a datagram, najdete v článcích [Windows Sockets: pozadí](../../mfc/windows-sockets-background.md), [Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md), a [Windows Sockets: použití Sokety s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  Vytvoří `CSocket` objektu.  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  Vrátí ukazatel na `CSocket` objektu.  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  Volání této funkce člen lze zjistit blokování volání je v průběhu.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  Člen funkci vyhledat konkrétní zprávy ze systému Windows a reagovat na ně v vaší soketu přepište.  
   
 ```  

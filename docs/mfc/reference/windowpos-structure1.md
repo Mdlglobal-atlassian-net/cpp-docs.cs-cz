@@ -1,13 +1,10 @@
 ---
-title: "Windowpos – – Struktura1 | Microsoft Docs"
-ms.custom: 
+title: Windowpos – – Struktura1 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>Windowpos – – Struktura1
 `WINDOWPOS` Struktura obsahuje informace o velikosti a pozice časového období.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** skryje okna.  
   
-- `SWP_NOACTIVATE`Neaktivuje okna.  
+- `SWP_NOACTIVATE` Neaktivuje okna.  
   
 - **SWP_NOCOPYBITS** zahodí celý obsah klientské oblasti. Pokud tento příznak není zadán, jsou platný obsah klientské oblasti uložit a zkopírovat zpět do klientské oblasti po okna je velikost nebo změnit jejich umístění.  
   
-- `SWP_NOMOVE`Zachová aktuální pozici (ignoruje **x** a **y** členy).  
+- `SWP_NOMOVE` Zachová aktuální pozici (ignoruje **x** a **y** členy).  
   
 - **SWP_NOOWNERZORDER** nezmění okno vlastník pozice v pořadí.  
   
-- `SWP_NOSIZE`Zachová aktuální velikost (ignoruje **cx** a **cy** členy).  
+- `SWP_NOSIZE` Zachová aktuální velikost (ignoruje **cx** a **cy** členy).  
   
 - **SWP_NOREDRAW** není ho překreslit změny.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** přijetí brání okna `WM_WINDOWPOSCHANGING` zprávy.  
   
-- `SWP_NOZORDER`Zachová aktuální řazení (ignoruje **hwndInsertAfter** člen).  
+- `SWP_NOZORDER` Zachová aktuální řazení (ignoruje **hwndInsertAfter** člen).  
   
 - **SWP_SHOWWINDOW** zobrazí okno.  
   

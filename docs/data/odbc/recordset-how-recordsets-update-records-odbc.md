@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -51,7 +46,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  [Sada záznamů: Další o aktualizace (rozhraní ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) vysvětlením vliv transakcí na aktualizace, jak zavřít sadu záznamů, posouvání ovlivňuje aktualizace v průběhu a jak se vaše aktualizace komunikovat s aktualizace jiné dokončí scénáře aktualizace sady záznamů uživatelé.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Vaše Role při aktualizaci sady záznamů  
+##  <a name="_core_your_role_in_recordset_updating"></a> Vaše Role při aktualizaci sady záznamů  
  Následující tabulka ukazuje vaše role při použití sady záznamů Pokud chcete přidat, upravit nebo odstranit záznamy, společně s rozhraní provede za vás.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Aktualizace sady záznamů: Vy a architektura  
@@ -66,7 +61,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Další informace o transakcích najdete v tématu [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>Vyrovnávací paměti pro úpravy  
+##  <a name="_core_the_edit_buffer"></a> Vyrovnávací paměti pro úpravy  
  Souhrnně vzato pole datových členů sady záznamů slouží jako upravená vyrovnávací paměť, která obsahuje jeden záznam – záznam na aktuální záznam. Operace aktualizace pomocí této vyrovnávací paměti k provozu na aktuální záznam.  
   
 -   Když přidáte záznam, vyrovnávací paměť pro úpravu slouží k vytvoření nového záznamu. Po dokončení přidávání záznamu, stane záznam, který byl dříve aktuální aktuální znovu.  
@@ -78,7 +73,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 > [!NOTE]
 >  Vyrovnávací paměť pro úpravu hraje žádné roli při odstraňování záznamu. Pokud odstraníte záznam na aktuální záznam, záznamu je označen jako odstraněný a sada záznamů je "ne na záznam" dokud přejděte na jiný záznam.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Dynamické sady a snímky  
+##  <a name="_core_dynasets_and_snapshots"></a> Dynamické sady a snímky  
  [Dynamické sady](../../data/odbc/dynaset.md) aktualizovat obsah záznamů při posunutí záznamu. [Snímky](../../data/odbc/snapshot.md) představují statické záznamy, takže obsah záznamů není aktualizován, dokud zavoláte [Requery –](../../mfc/reference/crecordset-class.md#requery). Pokud chcete používat všechny funkce dynamické sady, musí být práce s ovladač ODBC, který vyhovuje správné úrovně podpory rozhraní API ODBC. Další informace najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [dynamická sada](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Viz také  

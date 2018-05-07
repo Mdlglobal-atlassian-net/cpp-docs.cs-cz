@@ -1,13 +1,10 @@
 ---
-title: "Dvojitý převod adres (C++) | Microsoft Docs"
-ms.custom: 
+title: Dvojitý převod adres (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Dvojitý převod adres na jinou bitovou šířku (C++)
 Dvojitý převod adres odkazuje ke ztrátě výkonu, které se mohou vyskytnout při volání funkce ve spravovaném kontextu volání Visual C++ spravovat funkce a kde provádění programu volá nativní vstupní bod funkce k volání spravované funkce. Toto téma popisuje, kde probíhá dvojitý převod adres a jak se můžete vyhnout ji ke zlepšení výkonu.  
@@ -40,7 +35,7 @@ Dvojitý převod adres odkazuje ke ztrátě výkonu, které se mohou vyskytnout 
   
  Podobně pokud chcete exportovat ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) spravovanou funkci, je generován nativní vstupní bod a všechny funkce, která importuje a volání této funkce bude volat prostřednictvím nativního vstupního bodu. Abyste se vyhnuli dvojitý převod adres v této situaci, nepoužívejte sémantiky nativní exportu/importu; jednoduše odkazujte metadata prostřednictvím `#using` (viz [#using – direktiva](../preprocessor/hash-using-directive-cpp.md)).  
   
- Kompilátor byla aktualizována ke snížení nepotřebné dvojitý převod adres. Například všechny funkce spravovaného typu v podpis (včetně návratový typ) budou implicitně označeny jako `__clrcall`. Další informace o dvojité jinou bitovou šířku, najdete v části [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Kompilátor byla aktualizována ke snížení nepotřebné dvojitý převod adres. Například všechny funkce spravovaného typu v podpis (včetně návratový typ) budou implicitně označeny jako `__clrcall`. Další informace o dvojité jinou bitovou šířku, najdete v části [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Příklad  
   

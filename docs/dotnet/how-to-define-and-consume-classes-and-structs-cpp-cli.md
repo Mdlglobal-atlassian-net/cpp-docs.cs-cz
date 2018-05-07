@@ -1,36 +1,31 @@
 ---
-title: "Postupy: definování a používání tříd a struktur (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: definování a používání tříd a struktur (C + +/ CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C++/CLI)
 Tento článek ukazuje, jak definovat a využívat uživatelem definované odkazové a hodnotové typy v jazyce C + +/ CLI.  
   
-##  <a name="BKMK_Contents"></a>Obsah  
+##  <a name="BKMK_Contents"></a> Obsah  
  [Vytvoření instance objektu](#BKMK_Object_instantiation)  
   
  [Implicitně abstraktní třídy](#BKMK_Implicitly_abstract_classes)  
@@ -51,7 +46,7 @@ Tento článek ukazuje, jak definovat a využívat uživatelem definované odkaz
   
  [Destruktory a finalizační metody](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="BKMK_Object_instantiation"></a>Vytvoření instance objektu  
+##  <a name="BKMK_Object_instantiation"></a> Vytvoření instance objektu  
  Typy odkazů (ref) a typy hodnot se dá jenom vytvořit instance na spravované haldě, není v zásobníku nebo v haldě nativní.  
   
 ```  
@@ -105,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Implicitly_abstract_classes"></a>Implicitně abstraktní třídy  
+##  <a name="BKMK_Implicitly_abstract_classes"></a> Implicitně abstraktní třídy  
  *Implicitně abstraktní třídy* nelze vytvořit instanci. Pokud základní typ třídy rozhraní a třídy neimplementuje všechny funkce člen rozhraní je implicitně abstraktní třídu.  
   
  Pokud není možné vytvořit objekty z třídy, která je odvozena z rozhraní, může být z důvodu, že třída je implicitně abstraktní. Další informace o abstraktní třídy najdete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).  
@@ -132,10 +127,10 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Type_visibility"></a>Viditelnost typů  
+##  <a name="BKMK_Type_visibility"></a> Viditelnost typů  
  Viditelnost běžné typy language runtime (CLR) můžete řídit, takže pokud je sestavení odkazováno, typy v sestavení může být viditelné nebo mimo sestavení nejsou viditelné.  
   
- `public`Označuje, že je viditelná pro zdrojový soubor, který obsahuje typ `#using` pro sestavení, které obsahuje typ direktivy.  `private`Označuje, že typ není viditelná pro zdrojové soubory, které obsahují `#using` pro sestavení, které obsahuje typ direktivy. Privátní typy jsou však viditelné v rámci stejného sestavení. Ve výchozím nastavení, je viditelnost pro třídu `private`.  
+ `public` Označuje, že je viditelná pro zdrojový soubor, který obsahuje typ `#using` pro sestavení, které obsahuje typ direktivy.  `private` Označuje, že typ není viditelná pro zdrojové soubory, které obsahují `#using` pro sestavení, které obsahuje typ direktivy. Privátní typy jsou však viditelné v rámci stejného sestavení. Ve výchozím nastavení, je viditelnost pro třídu `private`.  
   
  Ve výchozím nastavení před Visual C++ 2005 měl nativní typy veřejnou dostupnost mimo sestavení. Povolit [upozornění kompilátoru (úroveň 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) můžete zobrazit, kde jsou nesprávně použity privátní nativní typy. Použití [make_public –](../preprocessor/make-public.md) – Direktiva pragma předat veřejnou dostupnost nativního typu v souboru zdrojového kódu, který nelze změnit.  
   
@@ -228,8 +223,8 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="BKMK_Member_visibility"></a>Viditelnost členů  
- Můžete provést přístupu členem veřejnou třídu z v rámci stejného sestavení liší od přístup k němu z mimo sestavení pomocí párů specifikátory přístupu `public`, `protected`, a`private`  
+##  <a name="BKMK_Member_visibility"></a> Viditelnost členů  
+ Můžete provést přístupu členem veřejnou třídu z v rámci stejného sestavení liší od přístup k němu z mimo sestavení pomocí párů specifikátory přístupu `public`, `protected`, a `private`  
   
  Tato tabulka shrnuje účinek různých specifikátory přístupu:  
   
@@ -238,7 +233,7 @@ in Public_Class
 |public|Člen je přístupná uvnitř i vně sestavení.  V tématu [veřejné](../cpp/public-cpp.md) Další informace.|  
 |private|Člen není dostupný, ani mimo sestavení.  V tématu [privátní](../cpp/private-cpp.md) Další informace.|  
 |protected|Člen je přístupná uvnitř i vně sestavení, ale jenom pro odvozené typy.  V tématu [chráněné](../cpp/protected-cpp.md) Další informace.|  
-|internal|Člen je veřejný uvnitř sestavení, ale privátní mimo sestavení.  `internal`je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
+|internal|Člen je veřejný uvnitř sestavení, ale privátní mimo sestavení.  `internal` je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
 |veřejné chráněné - nebo - chráněné veřejné|Člen je veřejný uvnitř sestavení, ale chráněné mimo sestavení.|  
 |privátní chráněné - nebo - chráněné privátní|Člen je chráněný uvnitř sestavení, ale privátní mimo sestavení.|  
   
@@ -418,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a>Veřejné a privátní nativních tříd  
+##  <a name="BKMK_Public_and_private_native_classes"></a> Veřejné a privátní nativních tříd  
  Nativní typ lze odkazovat z spravovaného typu.  Například funkce v spravovaného typu, může trvat parametr, jehož typ je nativní struktury.  Pokud jsou veřejné v sestavení spravovaného typu a funkce, pak nativní typ musí být také veřejné.  
   
 ```  
@@ -459,7 +454,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Static_constructors"></a>Statické konstruktory  
+##  <a name="BKMK_Static_constructors"></a> Statické konstruktory  
  Typ CLR – například třídě nebo struktuře – může mít statický konstruktor, který slouží k inicializaci členy statických dat.  Statický konstruktor je volána alespoň jednou a je volána před všechny statický člen typu přistupuje poprvé.  
   
  Konstruktoru instance je spouštěn vždy po statického konstruktoru.  
@@ -505,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>Sémantika této ukazatele  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> Sémantika této ukazatele  
  Pokud používáte Visual C++ pro definování typů, `this` ukazatel v typu odkazu je typu "popisovač". `this` Ukazatel v typ hodnoty je typu "vnitřní ukazatel".  
   
  Tyto různé sémantiku `this` ukazatel může způsobit neočekávané chování při volání výchozí indexer. Další příklad ukazuje způsob správný přístup k výchozí indexeru v typu ref a typ hodnoty.  
@@ -560,7 +555,7 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a>Funkce skrytí podle podpisu  
+##  <a name="BKMK_Hide_by_signature_functions"></a> Funkce skrytí podle podpisu  
  V jazyce C++ standardní funkce v základní třídě je skrytý na základě funkci, která má stejný název v odvozené třídě, i v případě, že funkce odvozené třídy nemá stejný počet nebo druh parametry. Tento proces se označuje jako *skrýt podle názvu* sémantiku. V typu odkazu funkce v základní třídě lze pouze skrýt funkcí v odvozené třídě Pokud název a seznam parametrů jsou stejné. To se označuje jako *skrytí podle podpisu* sémantiku.  
   
  Třídy se považuje za třídu skrytí podle podpisu, pokud všechny funkce jsou označené v metadatech jako `hidebysig`. Ve výchozím nastavení jsou všechny třídy, které se vytvořily pod **/CLR** mít `hidebysig` funkce. Pokud má třídu `hidebysig` funkce, kompilátor není skrýt funkce tak, že název v žádné přímé základní třídy, ale pokud kompilátor zaznamená skrýt podle názvu třídy v řetězce dědičnosti, pokračuje daná chování skrýt podle názvu.  
@@ -670,7 +665,7 @@ Derived::Test4
 97  
 ```  
   
-##  <a name="BKMK_Copy_constructors"></a>Kopírovací konstruktory  
+##  <a name="BKMK_Copy_constructors"></a> Kopírovací konstruktory  
  Standardní C++ říká, že kopírovacího konstruktoru je volána, když je přesunout objekt, tak, aby objekt je vytvořen a zničen v stejnou adresu.  
   
  Ale když **/CLR** slouží ke kompilaci a funkce, který se zkompiluje do MSIL volání nativní funkce kde nativních tříd – nebo má více než jeden – je předaná hodnota a kde nativních tříd má kopírovacího konstruktoru a/nebo destruktor, žádná kopie volání konstruktoru a objekt zničen na jinou adresu než kdy byla vytvořena. Pokud třída má ukazatel do sebe, nebo pokud kód ke sledování objektů pomocí adresy to může způsobit problémy.  
@@ -735,7 +730,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="BKMK_Destructors_and_finalizers"></a>Destruktory a finalizační metody  
+##  <a name="BKMK_Destructors_and_finalizers"></a> Destruktory a finalizační metody  
  Destruktory v typu odkazu čištění, deterministická prostředků. Finalizační metody vyčištění nespravované prostředky a lze volat nepodmíněně destruktoru nebo nedeterministicky modulem garbage collector. Informace o destruktorech v standardní C++ najdete v tématu [destruktory](../cpp/destructors-cpp.md).  
   
 ```  

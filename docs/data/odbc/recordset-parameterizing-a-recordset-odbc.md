@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Parametrizace sady záznamů (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Parametrizace sady záznamů (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Sada záznamů: Parametrizace sady záznamů (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -44,7 +39,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Jak předat informace o parametrech objekt sady záznamů v době běhu](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Parametrizované sady záznamů  
+##  <a name="_core_parameterized_recordsets"></a> Parametrizované sady záznamů  
  Parametrizované sady záznamů umožňuje předat informace o parametrech v době běhu. To má dva důležité efekty:  
   
 -   Výsledkem může být vyšší rychlost provádění.  
@@ -53,7 +48,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Při volání **otevřete** spusťte dotaz, používá sada záznamů informace o parametrech k dokončení jeho **SQL SELECT** příkaz. Můžete parametrizovat všechny sady záznamů.  
   
-##  <a name="_core_when_to_use_parameters"></a>Pokud chcete používat parametry  
+##  <a name="_core_when_to_use_parameters"></a> Pokud chcete používat parametry  
  Typické použití parametrů patří:  
   
 -   Předání argumentů běhu pro předdefinovaný dotaz.  
@@ -97,7 +92,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
  Další informace o filtrech najdete v tématu [sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Parametrizace vaší třídy sady záznamů  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizace vaší třídy sady záznamů  
   
 > [!NOTE]
 >  Tato část se týká objektů odvozených od `CRecordset` v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, implementace parametrů je podobný proces. Další informace najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
 >  Pro práci s největší pravděpodobností řetězec je řetězec zadáte (pokud existuje) pro zadanou třídu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) – datový člen, ale některé ovladače ODBC mohou povolit parametry v jiných klauzulích SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Předávání hodnot parametrů v době běhu  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Předávání hodnot parametrů v době běhu  
  Musíte zadat hodnoty parametrů před voláním **otevřete** (pro nový objekt sady záznamů) nebo **Requery –** (pro již existující).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Chcete-li předat hodnoty parametrů objektu sady záznamů v době běhu  

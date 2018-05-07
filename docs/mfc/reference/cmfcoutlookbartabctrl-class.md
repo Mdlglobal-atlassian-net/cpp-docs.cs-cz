@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCOutlookBarTabCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCOutlookBarTabCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarTabCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d38cfd03c9d4fe192b8c1ee7e235140dba382ddb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl – třída
 Ovládacího prvku karta, která má vzhled **navigačním podokně** v aplikaci Microsoft Outlook.  
@@ -139,7 +134,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxoutlookbartabctrl.h  
   
-##  <a name="addcontrol"></a>CMFCOutlookBarTabCtrl::AddControl  
+##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
  Přidá ovládacího prvku Windows jako novou kartu na panelu aplikace Outlook.  
   
 ```  
@@ -152,19 +147,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndCtrl`  
+ [v] `pWndCtrl`  
  Ukazatel na ovládací prvek pro přidání.  
   
- [v]`lpszName`  
+ [v] `lpszName`  
  Určuje název karty.  
   
- [v]`bDetachable`  
+ [v] `bDetachable`  
  Pokud `TRUE`, stránka bude vytvořena jako odpojitelných.  
   
- [v]`nImageID`  
+ [v] `nImageID`  
  Index bitové kopie v seznamu obrázků interní bitové kopie, který se má zobrazit na nové kartě.  
   
- [v]`dwControlBarStyle`  
+ [v] `dwControlBarStyle`  
  Určuje, AFX_ `CBRS_`* styl zabalené ukotvení podokna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -179,7 +174,7 @@ void AddControl(
   
  [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
   
-##  <a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
+##  <a name="canshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
  Voláno rámcem během operace k určení, zda lze zobrazit méně Outlook tlačítek stránky karty na panelu, než je aktuálně vidět změny velikosti.  
   
 ```  
@@ -187,12 +182,12 @@ virtual BOOL CanShowFewerPageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je více než jeden tlačítko; v opačném případě `FALSE`.  
+ `TRUE` Pokud je více než jeden tlačítko; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvek karty panelu Outlook dynamicky přidá nebo odebere karty ze zobrazení v závislosti na tom, kolik místa je k dispozici. Tato metoda se používá rámcem v tomto procesu pomoct.  
   
-##  <a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
+##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
  Voláno rámcem během operace k určení, zda lze zobrazit další Outlook tlačítek stránky karty na panelu, než je aktuálně vidět změny velikosti.  
   
 ```  
@@ -200,12 +195,12 @@ virtual BOOL CanShowMorePageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou tlačítka, která nejsou aktuálně viditelné; v opačném případě `FALSE`.  
+ `TRUE` Pokud jsou tlačítka, která nejsou aktuálně viditelné; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvek karty panelu Outlook dynamicky přidá nebo odebere karty ze zobrazení v závislosti na tom, kolik místa je k dispozici. Tato metoda se používá rámcem v tomto procesu pomoct.  
   
-##  <a name="create"></a>CMFCOutlookBarTabCtrl::Create  
+##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create  
  Vytvoří ovládacího prvku karta panelu aplikace Outlook.  
   
 ```  
@@ -216,13 +211,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
  Určuje počáteční velikost a umístění v pixelech.  
   
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Body do nadřazeného okna. Nesmí být `NULL`.  
   
- [v]`nID`  
+ [v] `nID`  
  ID ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -231,7 +226,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvky karet panelu outlook obvykle vytvářejí při [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md) ovládací prvky `WM_CREATE` zpráva procesu.  
   
-##  <a name="enableanimation"></a>CMFCOutlookBarTabCtrl::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Určuje, zda je povoleno, ke kterému dochází při přepínání mezi active karty animace.  
   
 ```  
@@ -239,7 +234,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
  Určuje, zda by měl být animace povoleno nebo zakázáno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -247,7 +242,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
   
  Ve výchozím nastavení je povoleno animace.  
   
-##  <a name="enableinplaceedit"></a>CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
  Určuje, jestli uživatel může změnit štítky text na kartě stránky tlačítek panelu aplikace Outlook.  
   
 ```  
@@ -261,7 +256,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce, které chcete povolit nebo zakázat úpravy popisků text na kartě stránky tlačítka na místě. Ve výchozím nastavení je zakázáno úpravy na místě.  
   
-##  <a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrl::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons  
  Voláno rámcem povolit scroll popisovače, které uživateli umožní přejděte pomocí tlačítek na panelu aplikace Outlook řádku.  
   
 ```  
@@ -272,19 +267,19 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
  Určuje, zda se zobrazí tlačítka posuvníku.  
   
- [v]`bIsUp`  
+ [v] `bIsUp`  
  Určuje, zda je nejvyšší scrollbar zobrazovat.  
   
- [v]`bIsDown`  
+ [v] `bIsDown`  
  Určuje, zda je zobrazen scrollbar dolní.  
   
 ### <a name="remarks"></a>Poznámky  
  Umožňuje zobrazení tlačítka posuvníku. Tato metoda je volána rámcem, když se změní kartě active obnovit tlačítka posuvníku.  
   
-##  <a name="getbordersize"></a>CMFCOutlookBarTabCtrl::GetBorderSize  
+##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize  
  Vrátí velikost ohraničení ovládacího prvku Karta aplikace Outlook.  
   
 ```  
@@ -294,7 +289,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost ohraničení v pixelech.  
   
-##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
+##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
 
   
 ```  
@@ -305,7 +300,7 @@ int GetVisiblePageButtons() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isanimation"></a>CMFCOutlookBarTabCtrl::IsAnimation  
+##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation  
  Určuje, zda je povoleno, ke kterému dochází při přepínání mezi active karty animace.  
   
 ```  
@@ -318,7 +313,7 @@ static BOOL IsAnimation();
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation) funkce, které chcete povolit nebo zakázat animace.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBarTabCtrl::IsMode2003  
+##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003  
  Určuje, zda ovládacího prvku karta panelu aplikace Outlook je v režimu, který emuluje aplikaci Microsoft Outlook 2003.  
   
 ```  
@@ -326,12 +321,12 @@ BOOL IsMode2003() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`je-li aplikace Outlook panelu Ovládací prvek karty v aplikaci Outlook 2003 režimu; v opačném případě `FALSE`;  
+ `TRUE` je-li aplikace Outlook panelu Ovládací prvek karty v aplikaci Outlook 2003 režimu; v opačném případě `FALSE`;  
   
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota se nastavuje [CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).  
   
-##  <a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
+##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
  Voláno rámcem chcete snížit počet tlačítka karta stránek, které jsou viditelné.  
   
 ```  
@@ -341,7 +336,7 @@ virtual void OnShowFewerPageButtons();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda upraví počet tlačítek karta viditelná stránky se při změně velikosti ovládacího prvku.  
   
-##  <a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
+##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
  Voláno rámcem a zvýšit počet tlačítka karta stránek, které jsou viditelné.  
   
 ```  
@@ -351,7 +346,7 @@ virtual void OnShowMorePageButtons();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda upravit počet kartě stránky tlačítka, které jsou viditelné při změně velikosti ovládacího prvku.  
   
-##  <a name="onshowoptions"></a>CMFCOutlookBarTabCtrl::OnShowOptions  
+##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions  
  Zobrazí **Možnosti navigačního podokna** dialogové okno.  
   
 ```  
@@ -363,7 +358,7 @@ virtual void OnShowOptions();
   
  Tato metoda je volána rozhraním framework, když uživatel vybere **Možnosti navigačního podokna** položky nabídky z nabídky přizpůsobení ovládacího prvku.  
   
-##  <a name="setactivetab"></a>CMFCOutlookBarTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCOutlookBarTabCtrl::SetActiveTab  
  Nastaví aktivní karty. Na kartě active je ten, který je otevřený v jeho obsahu viditelné.  
   
 ```  
@@ -371,7 +366,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iTab`  
+ [v] `iTab`  
  Index založený na nule karty otevřít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -380,7 +375,7 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="remarks"></a>Poznámky  
  Visual účinek nastavení na kartě active závisí na tom, jestli jste povolili animace. Další informace najdete v tématu [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation).  
   
-##  <a name="setbordersize"></a>CMFCOutlookBarTabCtrl::SetBorderSize  
+##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize  
  Nastaví velikost ohraničení ovládacího prvku Karta aplikace Outlook.  
   
 ```  
@@ -388,13 +383,13 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nBorderSize`  
+ [v] `nBorderSize`  
  Určuje velikost nového ohraničení v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastaví novou velikost ohraničení a přepočítá rozložení okna aplikace outlook.  
   
-##  <a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
+##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
  Nastaví zarovnání textu popisků na kartě tlačítek panelu aplikace Outlook.  
   
 ```  
@@ -404,16 +399,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiAlign`  
+ [v] `uiAlign`  
  Určuje zarovnání textu.  
   
- [v]`bRedraw`  
+ [v] `bRedraw`  
  Pokud `TRUE`, bude překreslit okno aplikace outlook.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete změnit zarovnání textu pro stránku tlačítka.  
   
- `uiAlign`může být jedna z následujících hodnot:  
+ `uiAlign` Může být jedna z následujících hodnot:  
   
 |Konstanta|Význam|  
 |--------------|-------------|  
@@ -423,7 +418,7 @@ void SetPageButtonTextAlign(
   
  Výchozí hodnota je TA_CENTER.  
   
-##  <a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrl::SetToolbarImageList  
+##  <a name="settoolbarimagelist"></a>  CMFCOutlookBarTabCtrl::SetToolbarImageList  
  Nastaví rastrový obrázek, který obsahuje ikony, které se zobrazí v dolní části panelu aplikace Outlook v aplikaci Outlook 2003 režimu.  
   
 ```  
@@ -434,13 +429,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiID`  
+ [v] `uiID`  
  Určuje ID prostředku bitové kopie k načtení.  
   
- [v]`cx`  
+ [v] `cx`  
  Určuje šířku obrázku v seznamu obrázků v pixelech.  
   
- [v]`clrTransp`  
+ [v] `clrTransp`  
  Hodnoty RGB, který určuje průhlednou barvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -451,7 +446,7 @@ BOOL SetToolbarImageList(
   
  Tuto metodu nelze volat, pokud není v režimu Microsoft Office 2003. Další informace najdete v tématu [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
+##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
 
   
 ```  
@@ -459,7 +454,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nVisiblePageButtons`  
+ [v] `nVisiblePageButtons`  
   
 ### <a name="remarks"></a>Poznámky  
   

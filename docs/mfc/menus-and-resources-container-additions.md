@@ -1,13 +1,10 @@
 ---
-title: "Nabídky a prostředky: kontejnerové doplňky | Microsoft Docs"
-ms.custom: 
+title: 'Nabídky a prostředky: kontejnerové doplňky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Nabídky a prostředky: Kontejnerové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy kontejneru.  
@@ -52,7 +47,7 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
 -   [Přidání tabulky řetězců](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Přidání do nabídky kontejneru  
+##  <a name="_core_container_menu_additions"></a> Přidání do nabídky kontejneru  
  Do nabídky upravit, je nutné přidat následující položky:  
   
 |Položka|Účel|  
@@ -66,7 +61,7 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
  Pokud chcete zajistit podporu aktivace na místě obsažených položek, je nutné vytvořit nové nabídky pro aplikaci kontejneru. Tato nabídka se skládá z stejné nabídka Soubor a používá, když jsou otevřené soubory, ale má dva oddělovače je umístěná mezi oběma místní nabídky okna. Tyto oddělovače jsou slouží k určení, kam položky (součást) (aplikace) by měl být jeho nabídky při aktivaci na místě. Další informace o této technice slučování nabídek najdete v tématu [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Přidání tabulka akcelerátoru aplikace kontejneru  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Přidání tabulka akcelerátoru aplikace kontejneru  
  Malé změny prostředků tabulky akcelerátorů kontejnerové aplikace jsou nezbytné, pokud podporujete aktivace na místě. První změna umožňuje uživatelům stisknutím klávesy ESC (ESC) zrušit režimu úprav na místě. Přidejte následující položku v tabulce akcelerátorů hlavní:  
   
 |ID|Key|Typ|  
@@ -85,7 +80,7 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
 |**ID_PREV_PANE –**|SHIFT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE –|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Přidání tabulky řetězec pro aplikace typu kontejner  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Přidání tabulky řetězec pro aplikace typu kontejner  
  Většinu změn do tabulek řetězců pro aplikace typu kontejner odpovídají položky další nabídky uvedený v [přidání do nabídky kontejneru](#_core_container_menu_additions). Si poskytují text zobrazený ve stavovém řádku při každé položky nabídky se zobrazí. Jako příklad uvádíme položky tabulky řetězců, které generuje Průvodce aplikace:  
   
 |ID|String|  

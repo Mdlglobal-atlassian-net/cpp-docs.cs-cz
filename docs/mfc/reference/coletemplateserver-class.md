@@ -1,12 +1,9 @@
 ---
-title: "Třída COleTemplateServer | Microsoft Docs"
-ms.custom: 
+title: Třída COleTemplateServer | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer – třída
 Použít pro OLE visual úpravy servery, automatizační servery a kontejnery odkaz (aplikace, které podporují odkazy na vložené části).  
@@ -61,9 +56,9 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|Zaregistruje typ dokumentu s registrem systému OLE.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída je odvozena od třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle, můžete použít `COleTemplateServer` přímo místo odvození vlastní třídy. `COleTemplateServer`používá [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objekt ke správě dokumentů na serveru. Použití `COleTemplateServer` při implementaci celého serveru, který je server, který lze spustit jako samostatnou aplikaci. Úplné servery jsou obvykle více rozhraní (MDI) – aplikace dokumentů, i když jsou podporovány aplikace (SDI rozhraní) jednotlivý dokument. Jeden `COleTemplateServer` objektu je potřeba pro každý typ dokumentu serveru podporuje aplikace; to znamená, pokud vaše serverová aplikace podporuje listů a grafy, musíte mít dva `COleTemplateServer` objekty.  
+ Tato třída je odvozena od třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle, můžete použít `COleTemplateServer` přímo místo odvození vlastní třídy. `COleTemplateServer` používá [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objekt ke správě dokumentů na serveru. Použití `COleTemplateServer` při implementaci celého serveru, který je server, který lze spustit jako samostatnou aplikaci. Úplné servery jsou obvykle více rozhraní (MDI) – aplikace dokumentů, i když jsou podporovány aplikace (SDI rozhraní) jednotlivý dokument. Jeden `COleTemplateServer` objektu je potřeba pro každý typ dokumentu serveru podporuje aplikace; to znamená, pokud vaše serverová aplikace podporuje listů a grafy, musíte mít dva `COleTemplateServer` objekty.  
   
- `COleTemplateServer`přepsání `OnCreateInstance` – členská funkce definované `COleObjectFactory`. Tento člen funkce je volána rámcem k vytvoření objektu C++ správné typu.  
+ `COleTemplateServer` přepsání `OnCreateInstance` – členská funkce definované `COleObjectFactory`. Tento člen funkce je volána rámcem k vytvoření objektu C++ správné typu.  
   
  Další informace o serverech najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  Vytvoří `COleTemplateServer` objektu.  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>Poznámky  
  Stručný popis použití `COleTemplateServer` naleznete [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) přehledu třídy.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  Připojí šablona dokumentu, na kterou odkazuje `pDocTemplate` na odpovídající [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objektu.  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Zruší registraci šablona přidružené dokumentu.  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>Poznámky  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  Načte typ souboru informace z řetězce šablony dokumentu a umístí tyto informace v registru systému OLE.  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  Hodnota z **OLE_APPTYPE** výčtu, která je definována v AFXDISP. H. Může mít jednu z následujících hodnot:  
   
-- `OAT_INPLACE_SERVER`Server má celého serveru uživatelského rozhraní.  
+- `OAT_INPLACE_SERVER` Server má celého serveru uživatelského rozhraní.  
   
-- `OAT_SERVER`Server podporuje jenom vkládání.  
+- `OAT_SERVER` Server podporuje jenom vkládání.  
   
-- `OAT_CONTAINER`Kontejner podporuje odkazy na vložené objekty.  
+- `OAT_CONTAINER` Kontejner podporuje odkazy na vložené objekty.  
   
-- `OAT_DISPATCH_OBJECT`Objekt je `IDispatch`-podporující.  
+- `OAT_DISPATCH_OBJECT` Objekt je `IDispatch`-podporující.  
   
 - **OAT_DOC_OBJECT_SERVER** Server podporuje obě vložení a součástí modelu objektu dokumentu.  
   

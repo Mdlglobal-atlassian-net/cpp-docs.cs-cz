@@ -1,13 +1,10 @@
 ---
-title: "Zajišťování aktivace bez oken | Microsoft Docs"
-ms.custom: 
+title: Zajišťování aktivace bez oken | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>Zajišťování aktivace bez oken
 Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte **CreateWindow**) může být provést. Ovládací prvek, který udržuje obrazovce okno má ke správě zprávy pro okno. Bez oken ovládací prvky jsou proto rychlejší než ovládací prvky se systémem windows.  
@@ -47,7 +42,7 @@ Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte **Creat
   
  Pokud je povolená aktivace bez oken, kontejneru budou delegovat to vstupní zprávy k ovládacímu prvku `IOleInPlaceObjectWindowless` rozhraní. `COleControl`je implementace tohoto rozhraní odešle zprávu zprávy prostřednictvím ovládacího prvku mapy zpráv, po úpravě myši koordinuje správně. Přidáním odpovídající položky do mapy zpráv může zpracovat zprávy jako obyčejnou okno zprávy. Ve vaší obslužné rutiny pro tyto zprávy, vyhněte se použití `m_hWnd` členské proměnné (nebo – členská funkce, která jej používá) bez první kontrola její hodnota není **NULL**.  
   
- `COleControl`Poskytuje členské funkce, které vyvolají zachycení myši, fokus klávesnice, posouvání a další okno služby z kontejneru podle potřeby, včetně:  
+ `COleControl` Poskytuje členské funkce, které vyvolají zachycení myši, fokus klávesnice, posouvání a další okno služby z kontejneru podle potřeby, včetně:  
   
 -   [Hodnotu GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   

@@ -2,12 +2,9 @@
 title: 'Ovládací prvky MFC ActiveX: Použití obrázků v ovládacím prvku ActiveX | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27e5ebb58056dfd14417adea211daf2c6ac2ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX
 Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládacího prvku ActiveX. Témata zahrnují:  
@@ -40,7 +35,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
   
 -   [Přidání do projektu ovládací prvek](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a>Přehled vlastností vlastní obrázek  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Přehled vlastností vlastní obrázek  
  Typ obrázku je jedním ze skupiny typů, které jsou společné pro některé ovládací prvky ActiveX. Typ obrázku zpracovává metasoubory, rastrové obrázky nebo ikon a umožní uživateli zadat obrázek, který se má zobrazit v ovládacím prvku ActiveX. Vlastní vlastnosti obrázku jsou implementovány pomocí objektu obrázku a Get/Set funkce, které umožňují přístup uživatelů řízení vlastnosti obrázek. Ovládací prvek uživatelé přístup k vlastní vlastnosti obrázek pomocí stock stránka vlastností obrázku.  
   
  Kromě standardní typ obrázku jsou také písma a barev typy k dispozici. Další informace o použití standardní typ písma v vaše ovládací prvek ActiveX, najdete v článku [MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md).  
@@ -59,7 +54,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
   
      Tato stránka vlastností je součástí skupiny stránek uložených vlastností, které jsou k dispozici pro ovládací prvky ActiveX. Další informace o stránky vlastností ovládacího prvku ActiveX, najdete v článku [MFC – ovládací prvky ActiveX: použití Stock stránky vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>Implementace vlastnosti vlastní obrázek ve vašem ovládacím prvku ActiveX  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementace vlastnosti vlastní obrázek ve vašem ovládacím prvku ActiveX  
  Po dokončení kroků uvedených v této části můžete ovládací prvek zobrazit obrázky vybrali jeho uživatelem. Uživatel může změnit zobrazeného obrázku pomocí stránku vlastností, která ukazuje na aktuální obrázku a má tlačítko Procházet, která umožňuje uživatelům vyberte jiný obrázky.  
   
  Vlastní vlastnost obrázek se implementuje pomocí procesu podobná použít k implementaci ostatní vlastnosti hlavním rozdílem, že vlastní vlastnost musí podporovat typ obrázku. Protože je nutné vykreslit položku vlastnost obrázek ovládací prvek ActiveX, musí být počet přidání a úpravy provedeny pro vlastnost předtím, než může být plně implementováno.  
@@ -74,7 +69,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
   
      Tyto změny budou provedeny několik funkcí, které jsou zodpovědní za vykreslování ovládacího prvku ActiveX.  
   
-##  <a name="_core_additions_to_your_control_project"></a>Přidání do projektu ovládací prvek  
+##  <a name="_core_additions_to_your_control_project"></a> Přidání do projektu ovládací prvek  
  Chcete-li přidat ID stránky vlastností pro standardní stránku vlastností obrázku, vložte následující řádek po `BEGIN_PROPPAGEIDS` makro v řídicím souboru implementace (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
@@ -126,7 +121,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
 > [!NOTE]
 >  Názvy třídy a funkce řízení může lišit od příkladu nahoře.  
   
-###  <a name="_core_modifications_to_your_control_project"></a>Úpravy řízení projektu  
+###  <a name="_core_modifications_to_your_control_project"></a> Úpravy řízení projektu  
  Po provedení potřebné dodatky do projektu ovládací prvek, budete muset upravit několik funkcí, které ovlivňují vykreslování ovládacího prvku ActiveX. Tyto funkce `OnResetState`, `OnDraw`, a funkce Get/Set vlastní vlastnosti obrázku, jsou umístěné v řídicím souboru implementace. (Všimněte si, že v tomto příkladu třída ovládacích prvků se nazývá `CSampleCtrl`, `CPictureHolder` – datový člen nazývá `m_pic`, a název vlastnosti vlastní obrázek je `ControlPicture`.)  
   
  V ovládacím prvku `OnResetState` fungovat, přidejte následující řádek volitelné po volání `COleControl::OnResetState`:  

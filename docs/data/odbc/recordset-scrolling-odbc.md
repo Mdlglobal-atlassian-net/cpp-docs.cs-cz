@@ -2,12 +2,9 @@
 title: 'Sada záznamů: Posouvání (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Sada záznamů: Posouvání (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -44,7 +39,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Za jakých okolností posouvání je a nepodporuje](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Posouvání z jednoho záznamu  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Posouvání z jednoho záznamu  
  Třída `CRecordset` poskytuje **přesunout** členské funkce pro posouvání v rámci sady záznamů. Tyto funkce přesunout na aktuální záznam sady řádků. Pokud jste implementovali hromadné načítání řádků, **přesunout** operaci přemístí sadu záznamů velikostí sady řádků. Nemáte-li hromadné načítání, volání řádků **přesunout** funkce přemístí sadu záznamů podle jednoho záznamu pokaždé, když. Další informace o hromadné načítání řádků najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`vrátí nenulovou hodnotu, pokud sada záznamů umístěna za poslední záznam. `IsBOF`vrátí nenulovou hodnotu, pokud sada záznamů umístěna před první záznam (před všechny záznamy). V obou případech je k provozu na aktuální záznam. Při volání `MovePrev` při `IsBOF` je již **TRUE** nebo volání `MoveNext` při `IsEOF` je již **TRUE**, vyvolá architektura `CDBException`. Můžete také použít `IsBOF` a `IsEOF` ke kontrole prázdnou sadu záznamů.  
+ `IsEOF` vrátí nenulovou hodnotu, pokud sada záznamů umístěna za poslední záznam. `IsBOF` vrátí nenulovou hodnotu, pokud sada záznamů umístěna před první záznam (před všechny záznamy). V obou případech je k provozu na aktuální záznam. Při volání `MovePrev` při `IsBOF` je již **TRUE** nebo volání `MoveNext` při `IsEOF` je již **TRUE**, vyvolá architektura `CDBException`. Můžete také použít `IsBOF` a `IsEOF` ke kontrole prázdnou sadu záznamů.  
   
  Další informace o navigaci v sadě záznamů najdete v tématu [sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Když je posouvání podporováno  
+##  <a name="_core_when_scrolling_is_supported"></a> Když je posouvání podporováno  
  Jako původně navržené SQL k dispozici pouze dál posouvání ale ODBC rozšiřuje možnosti posouvání. Dostupné úrovně podpory pro posouvání závisí na ovladače ODBC aplikace funguje se úroveň shody rozhraní API ODBC vaší ovladačů, a zda je knihovna kurzorů rozhraní ODBC načten do paměti. Další informace najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [ODBC: knihovny kurzorů ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

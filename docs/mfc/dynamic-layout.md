@@ -1,27 +1,22 @@
 ---
-title: "Dynamické rozložení | Microsoft Docs"
-ms.custom: 
+title: Dynamické rozložení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velikost můžete vytvořit a můžete řídit způsob, jakým upraví rozložení pro změnu velikosti. Tlačítka v dolní části dialogového okna můžete například připojit k dolnímu okraji tak, aby zůstaly vždy v dolní části. Můžete také nastavit určité ovládací prvky, jako je například textová pole, rozevírací seznamy a editboxes rozbalte jako uživatel rozšíří dialogové okno.  
@@ -46,7 +41,7 @@ MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velik
   
      ![Otevřete dialogové okno v editoru prostředků. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Vyberte ovládací prvek a v okně vlastností nastavte její vlastnosti dynamické rozložení. **Dynamické rozložení** oddíl v okně Vlastnosti obsahuje vlastnosti **přesun typ**, **typ nastavení velikosti**a v závislosti na vybrané pro tyto vlastnosti hodnoty konkrétní vlastnosti, které definují kolik ovládací prvky přesunout nebo změňte velikost. **Přesunutí typ** Určuje, jak přesunout ovládacího prvku jako se změní velikost dialogového okna; **Typ nastavení velikosti** Určuje, jak je nastavena velikost ovládacího prvku jako se změní velikost dialogového okna. **Přesunutí typ** a **typ nastavení velikosti** může být **vodorovné**, **svislé**, **i**, nebo **žádné** v závislosti na dimenzí, které chcete změnit dynamicky. Vodorovný je dimenze X; Svislý je směru osy Y.  
+2.  Vyberte ovládací prvek a v okně vlastností nastavte její vlastnosti dynamické rozložení. **Dynamické rozložení** oddíl v okně Vlastnosti obsahuje vlastnosti **přesun typ**, **typ nastavení velikosti**a v závislosti na vybrané pro tyto vlastnosti hodnoty konkrétní vlastnosti, které definují kolik ovládací prvky přesunout nebo změňte velikost. **Přesunutí typ** Určuje, jak přesunout ovládacího prvku jako se změní velikost dialogového okna; **Typ nastavení velikosti** Určuje, jak je nastavena velikost ovládacího prvku jako se změní velikost dialogového okna. **Přesunutí typ** a **typ nastavení velikosti** může být **vodorovné**, **svislé**, **i**, nebo **žádné**v závislosti na dimenzí, které chcete změnit dynamicky. Vodorovný je dimenze X; Svislý je směru osy Y.  
   
 3.  Pokud chcete ovládací prvek tlačítko na pevnou velikost a umístění v pravé dolní zůstane, jako je běžné, že **OK** nebo **zrušit** tlačítka, nastavte **typ nastavení velikosti** k  **Žádné**a nastavte **přesun typ** k **i**. Pro **přesun X** a **přesun Y** hodnoty v části **přesun typ**, nastavte 100 % pro ovládací prvek, aby zůstat pevné vzdálenost od dolní pravém rohu.  
   

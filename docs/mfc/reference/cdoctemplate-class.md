@@ -1,12 +1,9 @@
 ---
-title: "CDocTemplate – třída | Microsoft Docs"
-ms.custom: 
+title: CDocTemplate – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d44aac1ca7a018be7be1b375dd92920af96dba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate – třída
 Abstraktní základní třída, která definuje základní funkce pro šablony dokumentu.  
@@ -141,7 +136,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
  Pomocí této funkce můžete přidat do šablony dokumentu.  
   
 ```  
@@ -155,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Poznámky  
  Odvozené třídy [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) a [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) funkci přepsat. Pokud odvozujete vlastní třídy šablony dokumentu z `CDocTemplate`, odvozené třídy musí přepsat tuto funkci.  
   
-##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate  
  Vytvoří `CDocTemplate` objektu.  
   
 ```  
@@ -196,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce člen můžete vytvořit `CDocTemplate` objektu. Dynamicky přidělovat `CDocTemplate` objektu a předejte ji do [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) z `InitInstance` funkce člena třídy vaší aplikace.  
   
-##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments  
  Volání této funkce člen zavřete všechny otevřené dokumenty.  
   
 ```  
@@ -212,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  Tato funkce přepsání, pokud chcete vyžadovat, aby uživatel k provedení čištění zvláštní zpracování před zavření dokumentu. Například pokud dokument představuje záznam v databázi, můžete funkci zavřete databázi přepsat.  
   
-##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument  
  Volání této funkce člen vytvořit nový dokument typu přidruženého k této šabloně dokumentu.  
   
 ```  
@@ -222,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nově vytvořený dokumentu nebo **NULL** Pokud dojde k chybě.  
   
-##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame  
  Vytvoří nové okně s rámečkem obsahující dokumentů a zobrazení.  
   
 ```  
@@ -242,11 +237,11 @@ virtual CFrameWnd* CreateNewFrame(
  Ukazatel na nově vytvořený rámce okna, nebo **NULL** Pokud dojde k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- `CreateNewFrame`používá `CRuntimeClass` objekty předaný konstruktoru vytvoření nové okně s rámečkem s zobrazení a připojený dokument. Pokud `pDoc` parametr je **NULL**, rozhraní výstupy trasování zpráv.  
+ `CreateNewFrame` používá `CRuntimeClass` objekty předaný konstruktoru vytvoření nové okně s rámečkem s zobrazení a připojený dokument. Pokud `pDoc` parametr je **NULL**, rozhraní výstupy trasování zpráv.  
   
  `pOther` Parametr se používá k implementaci okno Nový příkaz. Poskytuje okně s rámečkem na které se mají modelu nové okno rámce. Obvykle je vytvořena nové okně s rámečkem neviditelná. Volání této funkce k vytvoření oken s rámečkem mimo standardní framework provádění nový soubor a soubor otevřít.  
   
-##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  Vytvoří okno s rámečkem OLE.  
   
 ```  
@@ -272,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>Poznámky  
  Pokud `bCreateView` rovná nule, je vytvořena prázdné rámce.  
   
-##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  Načte řetězec přidružený k typu dokumentu.  
   
 ```  
@@ -310,7 +305,7 @@ virtual BOOL GetDocString(
   
  Volání této funkce pouze v případě, že jsou odvození vlastní třídy z `CDocTemplate`.  
   
-##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition  
  Načte pozici první dokument přidružená k této šabloně.  
   
 ```  
@@ -325,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) a [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) obě čistý virtuální funkci přepsat. Jakákoli třída odvozena od `CDocTemplate` musí také přepsat tuto funkci.  
   
-##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
  Načte seznam element identifikovaný `rPos`, pak nastaví `rPos` k **pozice** hodnotu další položky v seznamu.  
   
 ```  
@@ -346,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
-##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame  
  Inicializuje okně s rámečkem a volitelně umožňuje viditelné.  
   
 ```  
@@ -371,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  Není nutné volat tuto funkci při pomocí implementace rozhraní framework nový soubor a soubor otevřít.  
   
-##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate  
  Načte prostředky pro danou `CDocTemplate` nebo odvozené třídy.  
   
 ```  
@@ -381,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je voláno rámcem načíst prostředky pro danou `CDocTemplate` nebo odvozené třídy. Obvykle je volána při vytváření, s výjimkou když šablona je vytvářen globálně. V takovém případě volání `LoadTemplate` je zpožděna, dokud [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) je volána.  
   
-##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType  
  Určuje míru důvěru nalezena shoda mezi typ dokumentu a tato šablona.  
   
 ```  
@@ -423,7 +418,7 @@ enum Confidence
   
  Výchozí implementace nevrací **CDocTemplate::maybeAttemptForeign** nebo **CDocTemplate::maybeAttemptNative**. Přepsání této funkci můžete implementovat odpovídající typ logiku pro svou aplikaci, pravděpodobně používá tyto dvě hodnoty z **spolehlivosti** výčtu.  
   
-##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile  
  Otevře se soubor určený touto cestu.  
   
 ```  
@@ -435,11 +430,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszPathName`  
+ [v] `lpszPathName`  
  Ukazatel na cestu k souboru, který obsahuje dokument otevřít.  
   
- [v]`bAddToMRU`  
- `TRUE`Označuje, že dokument je jednou z nejnovější soubory; `FALSE` označuje dokument není jedním z nejnovější soubory.  
+ [v] `bAddToMRU`  
+ `TRUE` Označuje, že dokument je jednou z nejnovější soubory; `FALSE` označuje dokument není jedním z nejnovější soubory.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na dokumentů, jejichž soubor název podle `lpszPathName`; `NULL` Pokud neúspěšně.  
@@ -447,7 +442,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>Poznámky  
  Otevře soubor, jehož cesta je určena `lpszPathName`. Pokud `lpszPathName` je `NULL`, k vytvoření nového souboru, který obsahuje dokument typu přidružená k této šabloně.  
   
-##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
  Odebere dokumentu, na kterou odkazuje `pDoc` ze seznamu dokumentů přidružená k této šabloně.  
   
 ```  
@@ -461,7 +456,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Poznámky  
  Odvozené třídy `CMultiDocTemplate` a `CSingleDocTemplate` funkci přepsat. Pokud odvozujete vlastní třídy šablony dokumentu z `CDocTemplate`, odvozené třídy musí přepsat tuto funkci.  
   
-##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified  
  Uloží všechny dokumenty, které byly upraveny.  
   
 ```  
@@ -471,7 +466,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulová v případě úspěšného; jinak 0.  
   
-##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo  
  Určuje prostředky pro kontejnery OLE v případě úpravy položky OLE na místě.  
   
 ```  
@@ -487,7 +482,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  V nabídce přidružené `nIDOleInPlaceContainer` obsahuje oddělovačů, které umožňují nabídky aktivovaný položky na místě sloučit s v nabídce aplikace kontejneru. Další informace o slučování nabídek serveru a kontejneru, najdete v článku [nabídky a prostředky (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  Volání této funkce se načíst výchozí název dokumentu a zobrazit ji v záhlaví okna dokumentu.  
   
 ```  
@@ -501,7 +496,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>Poznámky  
  Informace o výchozí text, najdete v části Popis **CDocTemplate::docName** v [CDocTemplate::GetDocString](#getdocstring).  
   
-##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo  
  Určuje prostředky a třídy v případě, že dokument serveru vložené nebo upravit na místě.  
   
 ```  
@@ -530,7 +525,7 @@ void SetServerInfo(
   
  V nabídce přidružené `nIDOleInPlaceServer` obsahuje oddělovačů umožňujících nabídce serveru sloučit s nabídce kontejneru. Další informace o slučování nabídek serveru a kontejneru, najdete v článku [nabídky a prostředky (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  Vytvoří rámec podřízené používá pro bohaté Preview.  
   
 ```  
@@ -551,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo  
  Nastaví mimo proces preview obslužné rutiny.  
   
 ```  

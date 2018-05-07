@@ -1,24 +1,19 @@
 ---
-title: "Události (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Události (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef32e8310454005fa01a3e23dcd8739dcdbaa647
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-ccx"></a>Události (C + +/ CX)
 Windows Runtime můžou deklarovat typ (která se publikovat) události a kódem klientské ve stejné komponenty nebo v ostatních součástí mohou přihlásit k odběru události, tím, že přidružíte volat metody *obslužné rutiny událostí* k události. Více obslužných rutin událostí lze přidružit jednu událost. Pokud objekt publikování vyvolá událost, budou všechny obslužné rutiny událostí má být volána. Tímto způsobem můžete provádět třídu odběru ať vlastní akce je vhodné, když vydavatele vyvolává událost. Událost má typem delegáta, který určuje podpisu, který všechny obslužné rutiny události musí mít, aby přihlášení k odběru události.  

@@ -1,13 +1,10 @@
 ---
-title: "Postupy: Vytvoření částečně důvěryhodné aplikace (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: Vytvoření částečně důvěryhodné aplikace (C + +/ CLI) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfef7eacfa9da8c55155f6e7ce43dfdb79e67e91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a0a4b8b1045a9107158c6e67ecdfa7939b6a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na modulu DLL knihovny CRT
 Toto téma popisuje postup vytvoření částečně důvěryhodné aplikace modul Common Language Runtime Visual C++ pomocí odebráním závislosti na msvcm90.dll.  
@@ -51,4 +46,4 @@ Toto téma popisuje postup vytvoření částečně důvěryhodné aplikace modu
  [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)   
  [Inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md)   
  [Podpora knihovny pro smíšená sestavení](../dotnet/library-support-for-mixed-assemblies.md)   
- [/ Link (předání možností Linkeru)](../build/reference/link-pass-options-to-linker.md)   
+ [/link (předání možností do linkeru)](../build/reference/link-pass-options-to-linker.md)   

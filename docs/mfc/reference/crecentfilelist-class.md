@@ -2,11 +2,8 @@
 title: Třída CRecentFileList | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList – třída
 Podporuje ovládací prvek seznamu naposledy použitých souborů (naposledy použitých).  
@@ -91,7 +86,7 @@ class CRecentFileList
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>  CRecentFileList::Add  
  Přidá soubor do seznamu naposledy použitých souborů (naposledy použitých).  
   
 ```  
@@ -137,7 +132,7 @@ void Add(
 ### <a name="remarks"></a>Poznámky  
  Název souboru se zařadí do horní části seznamu naposledy použitých. Pokud název souboru již existuje v tomto seznamu, bude přesunut do horní části.  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  Vytvoří `CRecentFileList` objektu.  
   
 ```  
@@ -168,7 +163,7 @@ CRecentFileList(
 ### <a name="remarks"></a>Poznámky  
  Řetězec formátu na kterou odkazuje `lpszEntryFormat` by měl obsahovat "%d", který se použije pro nahrazení index každé naposledy použitých položky. Například, pokud je řetězec formátu `"file%d"` pak bude mít název položky `file0`, `file1`a tak dále.  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Získá zobrazovaný název souboru v seznamu naposledy použitých souborů pro použití v nabídce zobrazení seznamu naposledy použitých.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>Poznámky  
  Pokud je soubor v aktuálním adresáři, ponechá funkce adresáři mimo zobrazení. Pokud název souboru je příliš dlouhý, se odstraní adresář a rozšíření. Pokud název souboru je stále příliš dlouhý, zobrazovaný název je nastavit na prázdný řetězec, pokud `bAtLeastName` nenulový.  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Načte počet souborů v seznamu naposledy použitých souborů.  
   
 ```  
@@ -212,7 +207,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet souborů v aktuální naposledy použité seznamu souborů (naposledy použitých).  
   
-##  <a name="operator_at"></a>[CRecentFileList::operator]  
+##  <a name="operator_at"></a>  [CRecentFileList::operator]  
  Přetížené dolní index ( `[]`) operátor vrátí jeden `CString` určeného index založený na nule v `nIndex`.  
   
 ```  
@@ -223,14 +218,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  Index počítaný od nuly `CString` v sadě `CString`s.  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
  Přečte naposledy použité seznam souborů (naposledy použitých) z registru nebo aplikace. Soubor INI.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>  CRecentFileList::Remove  
  Odebere soubor ze seznamu naposledy použitých souborů.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  Index nule souboru, který se odeberou ze seznamu naposledy použitých souborů (naposledy použitých).  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
  Aktualizuje zobrazení nabídky seznam naposledy použitých souborů.  
   
 ```  
@@ -252,7 +247,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  Ukazatel [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt pro nabídky seznam naposledy použitých souborů (naposledy použitých).  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
  Zapíše nejvíc nabízet (naposledy použitých) do registru nebo aplikace. Soubor INI.  
   
 ```  

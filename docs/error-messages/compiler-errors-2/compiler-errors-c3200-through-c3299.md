@@ -1,12 +1,9 @@
 ---
-title: "C3200 chyby kompilátoru prostřednictvím C3299 | Microsoft Docs"
-ms.custom: 
+title: C3200 chyby kompilátoru prostřednictvím C3299 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 chyby kompilátoru prostřednictvím C3299
 
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[Chyba kompilátoru C3271](compiler-error-c3271.md)|'*pole*': Neplatná hodnota '*číslo*' pro atribut FieldOffset|
 |[Chyba kompilátoru C3272](compiler-error-c3272.md)|'*symbol*': symbol vyžaduje FieldOffset, jako je členem struktura nebo třídy *type_name* definovaný s StructLayout(LayoutKind::Explicit)|
 |[Chyba kompilátoru C3273](compiler-error-c3273.md)|'*– klíčové slovo*': není povoleno v bloku try C++|
-|[Chyba kompilátoru C3274](compiler-error-c3274.md)|Nakonec / &#95; &#95; nakonec bez odpovídající akci|
+|[Chyba kompilátoru C3274](compiler-error-c3274.md)|Nakonec /&#95;&#95;nakonec bez odpovídající akci|
 |[Chyba kompilátoru C3275](compiler-error-c3275.md)|'*identifikátor*': nemůžete použít tento symbol bez kvalifikátoru|
-|[Chyba kompilátoru C3276](compiler-error-c3276.md)|'*– klíčové slovo*': přejít z nakonec / &#95; &#95; nakonec má bloku undefined chování při ukončení zpracování|
+|[Chyba kompilátoru C3276](compiler-error-c3276.md)|'*– klíčové slovo*': přejít z nakonec /&#95;&#95;nakonec má bloku undefined chování při ukončení zpracování|
 |[Chyba kompilátoru C3277](compiler-error-c3277.md)|nelze definovat nespravované výčet '*– výčet*uvnitř spravované*typu*.|
 |[Chyba kompilátoru C3278](compiler-error-c3278.md)|přímé volání rozhraní nebo čisté metoda '*funkce*, se nezdaří za běhu|
 |[Chyba kompilátoru C3279](compiler-error-c3279.md)|částečné a explicitní specializací také jako explicitní instancí možnosti šablony třídy deklarované v oboru názvů rozhraní příkazového řádku nejsou povoleny.|

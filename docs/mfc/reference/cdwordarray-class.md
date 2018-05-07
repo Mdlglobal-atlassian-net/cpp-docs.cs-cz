@@ -1,12 +1,9 @@
 ---
-title: "Třída CDWordArray | Microsoft Docs"
-ms.custom: 
+title: Třída CDWordArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDWordArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37400e889f32ab01e187388be94b391402958fa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdwordarray-class"></a>CDWordArray – třída
 Podporuje pole doublewords 32-bit.  
@@ -116,7 +111,7 @@ class CDWordArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDWordArray`zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud je pole doublewords uložen do archivu, buď pomocí přetížené vložení (  **<<** ) operátor nebo pomocí `Serialize` – členská funkce každý prvek se naopak serializovat.  
+ `CDWordArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud je pole doublewords uložen do archivu, buď pomocí přetížené vložení ( **<<**) operátor nebo pomocí `Serialize` – členská funkce každý prvek se naopak serializovat.  
   
 > [!NOTE]
 >  Před použitím pole, použijte `SetSize` k zahájení jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  

@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar – třída | Microsoft Docs"
-ms.custom: 
+title: CDialogBar – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar – třída
 Poskytuje funkci Windows nemodální dialogového okna v ovládacím panelu.  
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  Vytvoří `CDialogBar` objektu.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  Načte prostředek – dialogové okno šablonu určenou položkou `lpszTemplateName` nebo `nIDTemplate`, vytvoří okno panel dialogového okna, nastaví její styl a přidruží ji s `CDialogBar` objektu.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  Styl panelu nástrojů. Styly dalších nástrojů, které jsou podporované jsou:  
   
-- `CBRS_TOP`Ovládací prvek panelu je v horní části okna rámce.  
+- `CBRS_TOP` Ovládací prvek panelu je v horní části okna rámce.  
   
-- `CBRS_BOTTOM`Ovládací prvek panelu je v dolní části okna rámce.  
+- `CBRS_BOTTOM` Ovládací prvek panelu je v dolní části okna rámce.  
   
-- `CBRS_NOALIGN`Ovládací prvek panelu není změnit jejich umístění při změně velikosti nadřazeného objektu.  
+- `CBRS_NOALIGN` Ovládací prvek panelu není změnit jejich umístění při změně velikosti nadřazeného objektu.  
   
-- `CBRS_TOOLTIPS`Ovládací prvek panelu zobrazí popisy.  
+- `CBRS_TOOLTIPS` Ovládací prvek panelu zobrazí popisy.  
   
 - **Cbrs_size_dynamic –** ovládacích pruhů je dynamický.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** je plovoucí ovládacích pruhů.  
   
-- `CBRS_FLYBY`Stavový řádek zobrazí informace o tlačítko.  
+- `CBRS_FLYBY` Stavový řádek zobrazí informace o tlačítko.  
   
 - **CBRS_HIDE_INPLACE** není zobrazovat uživateli, ovládacích pruhů.  
   

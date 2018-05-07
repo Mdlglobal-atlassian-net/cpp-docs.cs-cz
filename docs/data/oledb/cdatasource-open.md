@@ -1,12 +1,9 @@
 ---
 title: CDataSource::Open | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Otevře připojení k zdroje dat pomocí **CLSID**, **ProgID**, nebo `CEnumerator` přezdívka nebo vyzývá uživatele se dialogové okno lokátoru.  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  Standardní `HRESULT`.  
   
 ## <a name="remarks"></a>Poznámky  
- Přetížení metody, která používá `hWnd` parametr otevře objekt zdroje dat s součásti služby v oledb32.dll; tento soubor DLL obsahuje implementace funkce součásti služby, například sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB referenční informace pro programátory v [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Přetížení metody, která používá `hWnd` parametr otevře objekt zdroje dat s součásti služby v oledb32.dll; tento soubor DLL obsahuje implementace funkce součásti služby, například sdílení prostředků ve fondech, automatické zařazení transakce a tak dále. Další informace najdete v tématu "OLE DB služby" v OLE DB referenční informace pro programátory v [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Přetížení metody, které nepoužívají `hWnd` parametr otevřít objekt zdroje dat bez použití součásti služby v oledb32.dll. A [CDataSource](../../data/oledb/cdatasource-class.md) objekt otevřít pomocí těchto přetížení funkce se nebude moci využívat všechny funkce součásti služby.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonCheckBox | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonCheckBox | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox – třída
 `CMFCRibbonCheckBox` Třída implementuje zaškrtávací políčko, které můžete přidat k nabídce panelu, panel nástrojů Rychlý přístup nebo automaticky otevíraného okna pásu karet.  
@@ -97,7 +92,7 @@ kde `nID` je ID příkazu, který zaškrtávací políčko a `lpszText` je texto
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  Konstruktor objektu políčko pásu karet  
   
 ```  
@@ -107,10 +102,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  Určuje ID příkazu.  
   
- [v]`lpszText`  
+ [v] `lpszText`  
  Určuje text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -121,7 +116,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  Při přepisu získá compact velikost zaškrtávací políčko.  
   
 ```  
@@ -129,7 +124,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel `CDC` přidružené zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Poznámky  
  Pokud přepsána nejsou, vrátí zprostředkující velikost zaškrtávací políčko.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Získá zprostředkující velikost zaškrtávací políčko.  
   
 ```  
@@ -146,7 +141,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel `CDC` přidružené toto políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Poznámky  
  Pokud přepsána nejsou, vypočítá velikost zprostředkující jako výchozí velikost políčko ( `AFX_CHECK_BOX_DEFAULT_SIZE`) plus velikost textu, plus okraje.  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  Získá regulární velikost zaškrtávací políčko.  
   
 ```  
@@ -163,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel `CDC` objekt přidružený k toto políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Poznámky  
  Pokud přepsána nejsou, vrátí zprostředkující velikost zaškrtávací políčko.  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  Určuje, zda je přiřazen popisek Obrázek zaškrtávací políčko.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  Voláno rámcem k vykreslení zaškrtávacího políčka pomocí kontextu zadaného zařízení.  
   
 ```  
@@ -192,12 +187,12 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel `CDC` ve kterém se má nakreslit zaškrtávací políčko.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  Voláno rámcem kreslení obrázku nabídky zaškrtávacího políčka.  
   
 ```  
@@ -205,10 +200,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CDC*`  
+ [v] `CDC*`  
  Ukazatel `CDC` přidružené zaškrtávací políčko.  
   
- [v]`CRect`  
+ [v] `CRect`  
  A `CRect` určující obdélníku, ve kterém k vykreslení bitovou kopii nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>Poznámky  
  Pokud přepsána nejsou, vrátí `FALSE`.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Voláno rámcem v seznamu příkazů nakreslit zaškrtávací políčko.  
   
 ```  
@@ -231,27 +226,27 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na zařízení kontextu, ve kterém k vykreslení zaškrtávací políčko.  
   
- [v]`strText`  
+ [v] `strText`  
  Zobrazovaný text.  
   
- [v]`nTextOffset`  
+ [v] `nTextOffset`  
  Vzdálenost v pixelech, z levé strany zobrazovaný text v rozevíracím seznamu.  
   
- [v]`rect`  
+ [v] `rect`  
  Obdélník zobrazení zaškrtávacího políčka.  
   
- [v]`bIsSelected`  
- `TRUE`Pokud je políčko zaškrtnuto, nebo `FALSE` není-li.  
+ [v] `bIsSelected`  
+ `TRUE` Pokud je políčko zaškrtnuto, nebo `FALSE` není-li.  
   
- [v]`bHighlighted`  
- `TRUE`Pokud políčko zvýrazní, nebo `FALSE` není-li.  
+ [v] `bHighlighted`  
+ `TRUE` Pokud políčko zvýrazní, nebo `FALSE` není-li.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  Nastaví data usnadnění zaškrtávacího políčka.  
   
 ```  

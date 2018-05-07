@@ -2,11 +2,8 @@
 title: Třída CDialogEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>CDialogEx – třída
 `CDialogEx` Třída určuje barvu pozadí a obrázku pozadí dialogového okna.  
@@ -79,7 +74,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  Vytvoří `CDialogEx` objektu.  
   
 ```  
@@ -94,23 +89,23 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIDTemplate`  
+ [v] `nIDTemplate`  
  ID prostředku šablony pole dialogového okna.  
   
- [v]`lpszTemplateName`  
+ [v] `lpszTemplateName`  
  Název prostředku šablony pole dialogového okna.  
   
- [v]`pParent`  
+ [v] `pParent`  
  Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
   
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  Nastaví barvu pozadí dialogového okna.  
   
 ```  
@@ -120,15 +115,15 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnotu barva RGB.  
   
- [v]`bRepaint`  
- `TRUE`Chcete-li okamžitě aktualizovat na obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bRepaint`  
+ `TRUE` Chcete-li okamžitě aktualizovat na obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  Nastaví obrázek na pozadí dialogové okno.  
   
 ```  
@@ -146,20 +141,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hBitmap`  
+ [v] `hBitmap`  
  Popisovač pro obrázek pozadí.  
   
- [v]`uiBmpResId`  
+ [v] `uiBmpResId`  
  ID prostředku obrázku pozadí.  
   
- [v]`location`  
+ [v] `location`  
  Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty patří BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
   
- [v]`bAutoDestroy`  
- `TRUE`Chcete-li automaticky odstranit obrázku pozadí; v opačném `FALSE`.  
+ [v] `bAutoDestroy`  
+ `TRUE` Chcete-li automaticky odstranit obrázku pozadí; v opačném `FALSE`.  
   
- [v]`bRepaint`  
- `TRUE`okamžitě ho překreslit dialogové okno. v opačném `FALSE`.  
+ [v] `bRepaint`  
+ `TRUE` okamžitě ho překreslit dialogové okno. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V druhé metody přetížení syntaxe, `TRUE` Pokud metoda úspěšná, jinak hodnota `FALSE`.  

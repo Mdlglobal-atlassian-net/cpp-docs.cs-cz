@@ -1,13 +1,10 @@
 ---
 title: Kolekce | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>Kolekce
 Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupin objektů. Tyto třídy jsou dvou typů:  
@@ -48,7 +43,7 @@ Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupi
 > [!NOTE]
 >  Pokud váš kód už používá třídy kolekce objektu bez šablony, můžete nadále používat. Pokud píšete nové třídy typově bezpečné kolekce pro vlastní typy dat, doporučujeme použít novější třídy na základě šablon.  
   
-##  <a name="_core_collection_shapes"></a>Kolekce tvarů  
+##  <a name="_core_collection_shapes"></a> Kolekce tvarů  
  Třídy kolekce je rozdělení, podle jeho "tvar" a typy jejích elementů. Tvar, který odkazuje na způsob objekty jsou uspořádány a uložených v kolekci. Knihovna MFC poskytuje tři základní kolekce tvarů: uvádí, polí a mapy (také označované jako slovník). Můžete si vybrat kolekci obrazec, který je nejvhodnější pro váš konkrétní programovací problém.  
   
  Každá ze tří tvarů zadané kolekci je popsána stručně později v tomto tématu. Pokud chcete porovnat funkce tvarů vám pomohou rozhodnout, která je nejvhodnější pro váš program, najdete v části [doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md).  
@@ -65,7 +60,7 @@ Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupi
   
      Mapu je kolekce, která přidruží objekt hodnoty klíče objektu.  
   
-##  <a name="_core_the_template_based_collection_classes"></a>Třídy kolekcí založených na šablonách  
+##  <a name="_core_the_template_based_collection_classes"></a> Třídy kolekcí založených na šablonách  
  Nejjednodušší způsob, jak implementovat typově bezpečné kolekce, který obsahuje objekty libovolného typu, je použít jednu z tříd MFC na základě šablon. Příklady těchto tříd naleznete v ukázce MFC [SHROMAŽĎOVAT](../visual-cpp-samples.md).  
   
  Následující tabulka uvádí třídy MFC založených na šablonách kolekce.  
@@ -77,7 +72,7 @@ Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupi
 |Kolekce objektů typu|`CArray`|`CList`|`CMap`|  
 |Ukazatelé na objekty jakýkoli typ kolekce|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Třídy kolekce není založené na šablonách  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Třídy kolekce není založené na šablonách  
  Pokud už vaše aplikace používá MFC – třídy objektu bez šablony, můžete nadále používat. Pro nové kolekce, ale doporučujeme použít třídy na základě šablon. Následující tabulka uvádí třídy MFC kolekce, které nejsou založené na šablonách.  
   
 ### <a name="nontemplate-collection-classes"></a>Třídy kolekce objektu bez šablony  

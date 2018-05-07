@@ -1,13 +1,10 @@
 ---
-title: "Dva způsoby vytvoření objektu CArchive | Microsoft Docs"
-ms.custom: 
+title: Dva způsoby vytvoření objektu CArchive | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dva způsoby vytvoření objektu CArchive
 Existují dva způsoby, jak vytvořit `CArchive` objektu:  
@@ -41,7 +36,7 @@ Existují dva způsoby, jak vytvořit `CArchive` objektu:
   
 -   [Explicitní vytvoření objektu CArchive](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Implicitní vytvoření objektu CArchive prostřednictvím rozhraní  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Implicitní vytvoření objektu CArchive prostřednictvím rozhraní  
  Nejvíce běžné a nejjednodušší, způsob je umožnit rozhraní vytvořit `CArchive` objekt pro váš dokument jménem uložit, uložit jako a spuštění příkazů v nabídce Soubor.  
   
  Tady je co rozhraní dělá, když uživatel aplikace vydá příkazu Uložit jako v nabídce Soubor:  
@@ -58,7 +53,7 @@ Existují dva způsoby, jak vytvořit `CArchive` objektu:
   
  Proto pokud necháte rozhraní vytvořit `CArchive` objekt pro dokument, všechny stačí je implementovat dokumentu `Serialize` funkce, která zapisuje a přečte do a z archivu. Máte také implementovat `Serialize` pro žádné `CObject`-odvozené objekty, dokumentu `Serialize` funkce zase serializuje přímo nebo nepřímo.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Explicitní vytvoření objektu CArchive  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Explicitní vytvoření objektu CArchive  
  Kromě serializaci dokumentu prostřednictvím rozhraní, jsou k dispozici další situace, kdy může být nutné `CArchive` objektu. Například můžete chtít serializaci dat do a ze schránky, reprezentována `CSharedFile` objektu. Nebo můžete chtít použít uživatelské rozhraní pro uložení souboru, který se liší od toho, které nabízí rozhraní. V takovém případě můžete explicitně vytvořit `CArchive` objektu. Můžete to udělat stejným způsobem, který nemá rozhraní, pomocí následujícího postupu.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>Explicitní vytvoření objektu CArchive  

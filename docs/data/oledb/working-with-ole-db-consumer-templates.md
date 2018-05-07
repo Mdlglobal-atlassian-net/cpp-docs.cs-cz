@@ -1,12 +1,9 @@
 ---
-title: "Práce s šablonami příjemců OLE DB | Microsoft Docs"
-ms.custom: 
+title: Práce s šablonami příjemců OLE DB | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43cf2393a11d14c5d5926fb9c350385b31176295
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
 Následující témata obsahují některé příklady, jak používat šablony příjemce technologie OLE DB v běžné scénáře:  
@@ -66,7 +61,7 @@ Následující témata obsahují některé příklady, jak používat šablony p
   
  Můžete také najít příklady, jak používat šablony příjemce technologie OLE DB v následující ukázky:  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [Ukázky CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
 -   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   

@@ -1,29 +1,24 @@
 ---
-title: "Implementace rozhraní (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Implementace rozhraní (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - interfaces, implementing
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 896ada2c46c68a794265e7344e9b7f7c7f91aebe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementace rozhraní (Visual C++)
 Pokud chcete implementovat rozhraní, musí jste vytvořili projekt jako aplikace ATL COM nebo jako aplikace knihovny MFC, který obsahuje podpory knihovny ATL. Můžete použít [ATL – Průvodce projektem](../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

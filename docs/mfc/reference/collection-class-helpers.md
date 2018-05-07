@@ -1,13 +1,10 @@
 ---
-title: "Pomocné rutiny třídy kolekce | Microsoft Docs"
-ms.custom: 
+title: Pomocné rutiny třídy kolekce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
 Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální pomocných funkcí pro tyto účely jako porovnávání, kopírování a serializace prvků. Jako součást vaší implementace třídy na základě `CMap`, `CList`, a `CArray`, je nutné přepsat tyto funkce v případě potřeby s verzemi přizpůsobit typ dat uložených na mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že **constructelements –** a **destructelements –** jsou zastaralé.  
@@ -46,8 +41,8 @@ Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální po
 |[HashKey.](#hashkey)|Vypočítá klíč algoritmu hash.|  
 |[Serializeelements –](#serializeelements)|Ukládá nebo načítá elementy do nebo z archivu.|  
   
-##  <a name="compareelements"></a>Compareelements –  
- Volat přímo nástrojem [CList::Find] (clist class.md #not_found.md #clist__find a nepřímo [cmap__lookup](cmap-class.md#lookup) a [cmap__operator &#91; &#93;](cmap-class.md#operator_at).  
+##  <a name="compareelements"></a>  Compareelements –  
+ Volat přímo nástrojem [CList::Find] (clist class.md #not_found.md #clist__find a nepřímo [cmap__lookup](cmap-class.md#lookup) a [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -83,7 +78,7 @@ CompareElements(
 ### <a name="requirements"></a>Požadavky  
    **Záhlaví:** afxtempl.h   
   
-##  <a name="copyelements"></a>Copyelements –  
+##  <a name="copyelements"></a>  Copyelements –  
  Tato funkce je volána přímo nástrojem [CArray::Append](carray-class.md#append) a [CArray::Copy](carray-class.md#copy).  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  Počet prvků, které se mají zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace používá operátor jednoduchého přiřazení (  **=**  ) k provedení operace kopírování. Pokud typ kopírovány nemá přetížené operátor =, pak provede výchozí implementace bitové kopie.  
+ Výchozí implementace používá operátor jednoduchého přiřazení ( **=** ) k provedení operace kopírování. Pokud typ kopírovány nemá přetížené operátor =, pak provede výchozí implementace bitové kopie.  
   
  Informace o implementaci toto a další podpůrné funkce, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../how-to-make-a-type-safe-collection.md).  
   
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxtempl.h  
   
-##  <a name="dumpelements"></a>Dumpelements –  
+##  <a name="dumpelements"></a>  Dumpelements –  
  Poskytuje orientované na datový proud výstup diagnostiky v textové podobě pro elementy kolekce při přepisu.  
   
 ```   
@@ -148,7 +143,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey.  
+##  <a name="hashkey"></a>  HashKey.  
  Vypočítá hodnotu hash pro zadaný klíč.  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  Hodnota hash klíče.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je volána přímo nástrojem [CMap::RemoveKey](cmap-class.md#removekey) a nepřímo [CMap::Lookup](cmap-class.md#lookup) a [CMap::Operator &#91; &#93;](cmap-class.md#operator_at).
+ Tato funkce je volána přímo nástrojem [CMap::RemoveKey](cmap-class.md#removekey) a nepřímo [CMap::Lookup](cmap-class.md#lookup) a [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
  Výchozí implementace vytvoří hodnotu hash přepínáním `key` přímo pomocí čtyř pozic. Funkci přepište tak, aby ho vrátil hodnoty hash vhodné pro vaši aplikaci.  
   
@@ -184,7 +179,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxtempl.h 
   
-##  <a name="serializeelements"></a>Serializeelements –  
+##  <a name="serializeelements"></a>  Serializeelements –  
  [Carray –](carray-class.md), [CList](clist-class.md), a [CMap](cmap-class.md) volání této funkce určená k serializaci elementy.  
   
 ```   

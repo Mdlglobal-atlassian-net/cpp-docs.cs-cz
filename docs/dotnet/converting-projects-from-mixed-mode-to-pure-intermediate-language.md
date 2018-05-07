@@ -1,13 +1,10 @@
 ---
-title: "Převod projektů ze smíšeného režimu do čistého IL | Microsoft Docs"
-ms.custom: 
+title: Převod projektů ze smíšeného režimu do čistého IL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL (Intermediate Language)
 Všechny projekty Visual C++ CLR propojit běhové knihovny jazyka C ve výchozím nastavení. V důsledku toho jsou klasifikovány jako aplikace ve smíšeném režimu, proto, že kombinují nativní kód s kódem, který se zaměřuje modul common language runtime (spravovaný kód). Při kompilaci jsou, že se kompilují do převodní jazyk (IL), také známé jako Microsoft (MSIL intermediate language).  
@@ -88,7 +83,7 @@ Všechny projekty Visual C++ CLR propojit běhové knihovny jazyka C ve výchoz�
         |---------------|-----------------|  
         |[Logická hodnota](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Představuje logickou hodnotu.|  
         |[Bajtů](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Představuje 8bitové nepodepsanou celočíselnou hodnotu.|  
-        |[Char –](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Představuje znak Unicode.|  
+        |[Char](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Představuje znak Unicode.|  
         |[Data a času](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Představuje okamžik v čase, obvykle vyjádřený jako datum a čas, den.|  
         |[Decimal](https://msdn.microsoft.com/en-us/library/system.decimal\(v=vs.140\).aspx)|Představuje desetinné číslo.|  
         |[Double](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Představuje číslo s plovoucí desetinnou čárkou dvojitou přesností.|  
@@ -99,7 +94,7 @@ Všechny projekty Visual C++ CLR propojit běhové knihovny jazyka C ve výchoz�
         |[IntPtr](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|Specifické pro platformu typ, který se používá k reprezentování ukazatel nebo popisovač.|  
         |[SByte –](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Představuje 8bitové znaménkem.|  
         |[Jeden](https://msdn.microsoft.com/en-us/library/system.single.aspx)|Představuje číslo s plovoucí desetinnou čárkou jednoduchou přesností.|  
-        |[Časový interval](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Představuje časovém intervalu.|  
+        |[TimeSpan](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Představuje časovém intervalu.|  
         |[UInt16](https://msdn.microsoft.com/en-us/library/system.uint16\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 16 bitů.|  
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Představuje 32bitové číslo bez znaménka.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 64-bit.|  

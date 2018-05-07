@@ -1,13 +1,10 @@
 ---
-title: "Přístup k datům v jazyce Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Přístup k datům v jazyce Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
@@ -57,7 +52,7 @@ Vzhledem k tomu, že 2011 Microsoft má zarovnán na ODBC jako standardní pro n
 
 [Používání úložiště Blob z jazyka C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu jako objekty nebo objekty BLOB. Úložiště objektů BLOB můžete ukládat jakýkoli typ textu nebo binárních dat, jako je například dokument, soubor média nebo instalační program aplikace. Úložiště objektů blob se také označuje jako úložiště objektů.
 
-[Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) rozhraní ODBC je určen k použití pomocí programovacího jazyka C. Použití rozhraní ODBC zahrnuje tři oblasti: příkazy SQL, rozhraní ODBC funkce volání a C programování.
+[ Referenční informace pro programátory ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) rozhraní ODBC je určen k použití pomocí programovacího jazyka C. Použití rozhraní ODBC zahrnuje tři oblasti: příkazy SQL, rozhraní ODBC funkce volání a C programování.
 
 ## <a name="see-also"></a>Viz také
 [Visual C++](../visual-cpp-in-visual-studio.md)

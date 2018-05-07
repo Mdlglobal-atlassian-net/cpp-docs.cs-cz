@@ -1,12 +1,9 @@
 ---
-title: "Třída CKeyboardManager | Microsoft Docs"
-ms.custom: 
+title: Třída CKeyboardManager | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7547887b4ad34ecbbea32516eaf76b6f4d1ab25d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager – třída
 Spravuje zástupce klíče tabulky hlavního rámce okna a okna s rámečkem podřízené.  
@@ -104,7 +99,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
  Vytvoří `CKeyboardManager` objektu.  
   
 ```  
@@ -114,7 +109,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>Poznámky  
  Ve většině případů není nutné vytvořit `CKeyboardManager` přímo. Ve výchozím nastavení vytvoří rozhraní framework za vás. Chcete-li získat ukazatel na `CKeyboardManager`, volání [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Pokud vytvoříte jeden ručně, je třeba inicializovat pomocí metody [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
  Uvolní `CKeyboardManager` prostředky a vymaže všechny mapování klíčů zástupce.  
   
 ```  
@@ -126,7 +121,7 @@ static void CleanUp();
   
  Nemáte volání této funkce, pokud vaše aplikace bude ukončen, protože volá framework ji automaticky při ukončení aplikace.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
  Načte výchozí klávesovou zkratku pro okno a zadaný příkaz.  
   
 ```  
@@ -138,16 +133,16 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmd`  
+ [v] `uiCmd`  
  ID příkazu.  
   
- [out]`str`  
+ [out] `str`  
  Odkaz na `CString` objektu.  
   
- [v]`pWndFrame`  
+ [v] `pWndFrame`  
  Ukazatel na rámec okna.  
   
- [v]`bIsDefaultFrame`  
+ [v] `bIsDefaultFrame`  
  Určuje, jestli je okně s rámečkem výchozí rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -156,7 +151,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyhledá příkaz zadaný parametrem `uiCmd` a načte výchozí klávesovou zkratku. Potom metoda přebírá řetězec přidružený k této klávesové zkratky a zapíše hodnota, která má `str` parametr.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Určuje, zda je zadaný klíč zpracovávaných [CKeyboardManager třída](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
@@ -172,18 +167,18 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`nKey`|Klíč, který chcete zkontrolovat.|  
-|[v]`fVirt`|Určuje chování klávesovou zkratku. Seznam možných hodnot najdete v tématu [AKCELERACE struktura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[v]`pWndFrame`|Okně s rámečkem. Tato metoda určuje, zda je tento rámce zpracována klávesovou zkratku.|  
-|[v]`bIsDefaultFrame`|Parametr typu Boolean, která určuje, zda `pWndFrame` je výchozím okně rámce.|  
+|[v] `nKey`|Klíč, který chcete zkontrolovat.|  
+|[v] `fVirt`|Určuje chování klávesovou zkratku. Seznam možných hodnot najdete v tématu [AKCELERACE struktura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[v] `pWndFrame`|Okně s rámečkem. Tato metoda určuje, zda je tento rámce zpracována klávesovou zkratku.|  
+|[v] `bIsDefaultFrame`|Parametr typu Boolean, která určuje, zda `pWndFrame` je výchozím okně rámce.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se zpracovává klávesovou zkratku. `FALSE`Pokud nejsou zpracovávány klíč nebo pokud `pWndFrame` je `NULL`.  
+ `TRUE` Pokud se zpracovává klávesovou zkratku. `FALSE` Pokud nejsou zpracovávány klíč nebo pokud `pWndFrame` je `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
  Vstupní parametry se musí shodovat záznam v akcelerátoru tabulce pro `nKey` a `fVirt` k určení, zda je klávesovou zkratku zpracována v `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Určuje, zda znak je nastaveno.  
   
 ```  
@@ -195,7 +190,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`nChar`|Znak, který tato metoda ověří.|  
+|[v] `nChar`|Znak, který tato metoda ověří.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud znak je nastaveno, hodnotu není.  
@@ -203,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda selže, pokud volání [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) selže.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Určuje, zda nabídky Zobrazit všechny klávesové zkratky přidružené příkazy nabídky nebo pouze výchozí klávesové zkratky.  
   
 ```  
@@ -216,7 +211,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>Poznámky  
  Aplikace uvádí klávesové zkratky pro příkazy nabídky v panelu nabídek. Pomocí funkce [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) k řízení jestli aplikace zobrazí seznam všech klávesových zkratek nebo jenom výchozí klávesové zkratky.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
  Načte klíče tabulky zástupce z registru systému Windows.  
   
 ```  
@@ -226,10 +221,10 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Cesta v registru kde `CKeyboardManager` budou uložena data.  
   
- [v]`pDefaultFrame`  
+ [v] `pDefaultFrame`  
  Ukazatel na okně s rámečkem používat jako výchozí okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -240,7 +235,7 @@ BOOL LoadState(
   
  Pokud výchozím okně nezadáte, použije se hlavního rámce okna vaší aplikace.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
  Znovu načte zástupce klíče tabulky z prostředků aplikace.  
   
 ```  
@@ -250,7 +245,7 @@ void ResetAll();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce vymaže zástupce uložené v `CKeyboardManager` instance. Pak ji bude znovu načíst stav manager klávesnice z prostředků aplikace.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
  Uloží zástupce klíče tabulky do registru systému Windows.  
   
 ```  
@@ -260,10 +255,10 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
+ [v] `lpszProfileName`  
  Cestu registru pro ukládání `CKeyboardManager` stavu.  
   
- [v]`pDefaultFrame`  
+ [v] `pDefaultFrame`  
  Ukazatel na rámec okna, který se stane výchozím okně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -274,7 +269,7 @@ BOOL SaveState(
   
  Pokud nezadáte výchozím okně, hlavního okna rámce se použije jako výchozí okna.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
  Zobrazí všechny klávesové zkratky přidružené příkazy nabídky.  
   
 ```  
@@ -284,10 +279,10 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShowAll`  
+ [v] `bShowAll`  
  Pokud `true`, zobrazí se všechny klávesové zkratky. Pokud `false`, zobrazí se pouze první klávesovou zkratku.  
   
- [v]`lpszDelimiter`  
+ [v] `lpszDelimiter`  
  Řetězec k vložení mezi klávesové zkratky. Tento oddělovač nemá žádný vliv, pokud pouze jeden klíč zástupce se zobrazí.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -295,7 +290,7 @@ static void ShowAllAccelerators(
   
  Klávesové zkratky budou zobrazeny vedle příkaz v panelu nabídek. Pokud jsou zobrazeny všechny klávesové zkratky, řetězec poskytované `lpszDelimiter` dojde k oddělení jednotlivých klávesové zkratky.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Převádí znak na jeho horní registrace.  
   
 ```  
@@ -303,13 +298,13 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nChar`  
+ [v] `nChar`  
  Znak, který se má převést.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Znak, který je horní rejstříku vstupní parametr.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
  Aktualizuje zástupce klíče tabulky pomocí nového klíče tabulky zástupce.  
   
 ```  
@@ -327,19 +322,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pTemplate`  
+ [v] `pTemplate`  
  Ukazatel na šablony dokumentu.  
   
- [v]`lpAccel`  
+ [v] `lpAccel`  
  Ukazatel na klávesovou zkratku.  
   
- [v]`nSize`  
+ [v] `nSize`  
  Velikost novou tabulku zástupce.  
   
- [v]`pDefaultFrame`  
+ [v] `pDefaultFrame`  
  Ukazatel na rámec okna výchozí.  
   
- [v]`hAccelNew`  
+ [v] `hAccelNew`  
  Popisovač pro novou tabulku zástupce.  
   
 ### <a name="return-value"></a>Návratová hodnota  

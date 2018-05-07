@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Přidání vlastních událostí | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Přidání vlastních událostí | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
 Vlastní události lišit od uložených událostí v tom, že nejsou automaticky aktivována třídou `COleControl`. Vlastní události rozpozná určité akce, dáno vývojář ovládacího prvku, jako událost. Položky mapy událostí pro vlastní události jsou reprezentované pomocí `EVENT_CUSTOM` makro. V následující části implementuje vlastní události pro projekt ovládací prvek ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Přidání vlastních událostí pomocí Průvodce přidáním události  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Přidání vlastních událostí pomocí Průvodce přidáním události  
  Následující postup přidá konkrétní vlastní události, clickin –. Tento postup slouží k přidání dalších vlastních událostí. Nahraďte název vlastní události a jeho parametry pro název události clickin – a parametry.  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Chcete-li přidat vlastní události clickin – pomocí Průvodce přidáním události  
@@ -62,7 +57,7 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
   
 8.  Klikněte na tlačítko **Dokončit** k vytvoření události.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>Přidání události průvodce změní pro vlastní události  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> Přidání události průvodce změní pro vlastní události  
  Když přidáte vlastní události, provede Průvodce přidání události změny třída ovládacích prvků. H. CPP, a. Soubory IDL. Následující ukázky kódu jsou specifické pro clickin – událost.  
   
  Následující řádky jsou přidány do záhlaví (. H) soubor třídy ovládacího prvku:  
@@ -83,7 +78,7 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
   
  Tento řádek přiřadí clickin – událost na konkrétní číslo ID prováděné z pozice události v seznamu událostí Průvodce přidáním události. Položky v seznamu těchto událostí umožňuje kontejner odhadnout události. Například je může poskytnout kód obslužné rutiny, které budou spuštěny při událost je aktivována.  
   
-##  <a name="_core_calling_fireclickin"></a>Fireclickin – volání  
+##  <a name="_core_calling_fireclickin"></a> Fireclickin – volání  
  Teď, když jste přidali vlastní události clickin – pomocí Průvodce přidáním události, musíte rozhodnout, když se tato událost má být aktivována. To provedete pomocí volání `FireClickIn` případech příslušnou akci. V tomto výkladu používá ovládacího prvku `InCircle` funkce uvnitř `WM_LBUTTONDOWN` popisovač zpráv se má provést clickin – událost, když uživatel klikne v kruhových nebo eliptické oblast. Následující postup přidá `WM_LBUTTONDOWN` obslužné rutiny.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Přidání obslužné rutiny zpráv pomocí Průvodce přidáním události  
@@ -117,7 +112,7 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>Vlastní události s názvy uložených  
+##  <a name="_core_custom_events_with_stock_names"></a> Vlastní události s názvy uložených  
  Můžete vytvořit vlastní události se stejným názvem jako uložených událostí, ale nelze implementovat v stejný ovládací prvek. Můžete například vytvořit vlastní události názvem kliknutím, který neaktivuje při uložených událostí klikněte na tlačítko by za normálních okolností aktivovat. Klikněte na událost může pak vyvolání kdykoli voláním jeho pálení funkce.  
   
  Následující postup přidá vlastní klikněte na události.  

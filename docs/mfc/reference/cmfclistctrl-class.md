@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCListCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCListCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl – třída
 `CMFCListCtrl` Třídy rozšiřuje funkce [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třída díky podpoře funkce ovládacího prvku rozšířené hlavičky [CMFCHeaderCtrl třída](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -77,7 +72,7 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl::Sort](#sort)|Seřadí ovládacího prvku seznam.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMFCListCtrl`nabízí dvě vylepšení [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třídy. Nejprve označuje, že řazení sloupců či je k dispozici možnost automaticky kreslení šipku řazení v hlavičce. Druhý podporuje data řazení do více sloupců ve stejnou dobu.  
+ `CMFCListCtrl` nabízí dvě vylepšení [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třídy. Nejprve označuje, že řazení sloupců či je k dispozici možnost automaticky kreslení šipku řazení v hlavičce. Druhý podporuje data řazení do více sloupců ve stejnou dobu.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pomocí různých metod v nástroji `CMFCListCtrl` třídy. Tento příklad ukazuje, jak pro vytvoření ovládací prvek seznamu, sloupce k vložení, vložit položky, nastavit text položky a nastavení z písma daného ovládacího prvku seznam. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
@@ -99,7 +94,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
  Označí seřazené sloupce s jinou barvu pozadí.  
   
 ```  
@@ -109,16 +104,16 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bMark`  
+ [v] `bMark`  
  Parametr typu Boolean, která určuje, jestli se má povolit jinou barvu pozadí.  
   
- [v]`bRedraw`  
+ [v] `bRedraw`  
  Parametr typu Boolean, která určuje, zda se okamžitě ho překreslit ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
- `EnableMarkSortedColumn`použije metodu `CDrawingManager::PixelAlpha` k výpočtu, jaká barva má použít pro seřadit sloupce. Zaznamenání barva je založena na barvu pozadí regulární.  
+ `EnableMarkSortedColumn` použije metodu `CDrawingManager::PixelAlpha` k výpočtu, jaká barva má použít pro seřadit sloupce. Zaznamenání barva je založena na barvu pozadí regulární.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
  Umožňuje řazení řádky dat v ovládacím prvku seznamu podle více sloupců.  
   
 ```  
@@ -126,13 +121,13 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
  Logická hodnota, která určuje, jestli chcete povolit režim řazení více sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
  Když povolíte řazení podle více sloupců, mají sloupce hierarchie. Řádky dat, bude nejprve seřadit podle primární sloupce. Ekvivalent hodnoty jsou pak seřazené podle jednotlivých dalších sloupců na základě priority.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
  Vrátí odkaz na ovládacím prvku záhlaví.  
   
 ```  
@@ -145,7 +140,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvky záhlaví pro ovládací prvek seznamu je okno, které obsahuje názvy sloupců. Obvykle je umístěný přímo nad sloupce.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
  Kontroluje, zda seznam aktuálně podporuje řazení do více sloupců.  
   
 ```  
@@ -153,12 +148,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud ovládací prvek seznamu podporuje více řazení; `FALSE` jinak.  
+ `TRUE` Pokud ovládací prvek seznamu podporuje více řazení; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Když [CMFCListCtrl třída](../../mfc/reference/cmfclistctrl-class.md) podporuje více řazení, uživatel může seřadit dat v ovládacím prvku seznamu více sloupců. Chcete-li povolit více řazení, volejte [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
  Tato metoda volá framework při porovná dvě položky.  
   
 ```  
@@ -169,13 +164,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lParam1`  
+ [v] `lParam1`  
  První položka k porovnání.  
   
- [v]`lParam2`  
+ [v] `lParam2`  
  Druhá položka k porovnání.  
   
- [v]`iColumn`  
+ [v] `iColumn`  
  Index sloupce, který tato metoda je řazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -184,7 +179,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace vždy vrátí hodnotu 0. Tato funkce vám umožňuje řazení algoritmus musí přepsat.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
  Rozhraní framework volá tuto metodu, pokud je třeba určit barvu pozadí jedné buňky.  
   
 ```  
@@ -194,10 +189,10 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nRow`  
+ [v] `nRow`  
  Řádek buněk v.  
   
- [v]`nColumn`  
+ [v] `nColumn`  
  Sloupce v buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -206,7 +201,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementaci `OnGetCellBkColor` nepoužívá zadaný vstupní parametry a místo toho jednoduše volá `GetBkColor`. Ve výchozím nastavení, tedy ovládacího prvku celý seznam bude mít stejnou barvu pozadí. Můžete přepsat `OnGetCellBkColor` v odvozené třídě k označení jednotlivých buněk barvou pozadí samostatné.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
  Tato metoda volá framework při získání písma u jednotlivých buněk.  
   
 ```  
@@ -217,13 +212,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nRow`  
+ [v] `nRow`  
  Řádek buněk v.  
   
- [v]`nColumn`  
+ [v] `nColumn`  
  Sloupce v buňky.  
   
- [v]`dwData`  
+ [v] `dwData`  
  Uživatelská data. Výchozí implementace nepoužívá tento parametr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -232,7 +227,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda vrátí hodnotu `NULL`. Všechny buňky v ovládacím prvku seznamu mít stejné písmo. Potlačí tuto metodu za účelem poskytnutí různá písma pro různé buňky.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
  Rozhraní framework volá tuto metodu, pokud je třeba určit barvu textu jedné buňky.  
   
 ```  
@@ -242,10 +237,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nRow`  
+ [v] `nRow`  
  Řádek buněk v.  
   
- [v]`nColumn`  
+ [v] `nColumn`  
  Sloupce v buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -254,7 +249,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda volá `GetTextColor` bez ohledu na to vstupní parametry. Ovládacího prvku celý seznam bude mít stejné barvy. Můžete přepsat `OnGetCellTextColor` v odvozené třídě k označení jednotlivých buněk s samostatné barvy.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
  Odebere sloupec pro řazení seznamu seřazené sloupců.  
   
 ```  
@@ -262,13 +257,13 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Sloupec, který chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odebere řazení sloupců z ovládacího prvku záhlaví. Zavolá [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
  Nastaví aktuální seřazený sloupec a pořadí řazení.  
   
 ```  
@@ -279,19 +274,19 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Tento sloupec seřadit.  
   
- [v]`bAscending`  
+ [v] `bAscending`  
  Logická hodnota, která určuje pořadí řazení.  
   
- [v]`bAdd`  
+ [v] `bAdd`  
  Logická hodnota, která určuje, zda metoda přidá sloupec indikován `iColumn` do seznamu řazení sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda předá vstupní parametry do ovládacího prvku záhlaví pomocí metody [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
  Seřadí ovládacího prvku seznam.  
   
 ```  
@@ -302,13 +297,13 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Tento sloupec seřadit.  
   
- [v]`bAscending`  
+ [v] `bAscending`  
  Logická hodnota, která určuje pořadí řazení.  
   
- [v]`bAdd`  
+ [v] `bAdd`  
  Logická hodnota, která určuje, zda tato metoda přidá sloupec indikován `iColumn` do seznamu řazení sloupců.  
   
 ## <a name="see-also"></a>Viz také  

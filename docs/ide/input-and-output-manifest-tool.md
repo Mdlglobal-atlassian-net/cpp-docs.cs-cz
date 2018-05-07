@@ -1,13 +1,10 @@
 ---
-title: "Manifest nástroj vstupní a výstupní vlastnosti (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Manifest nástroj vstupní a výstupní vlastnosti (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Vstup a výstup, Manifest nástroj, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností
 Pomocí tohoto dialogového okna vstupní a výstupní možnosti pro [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -62,7 +57,7 @@ Pomocí tohoto dialogového okna vstupní a výstupní možnosti pro [Mt.exe](ht
  Používá **/makecdfs** můžete určit, že nástroj manifestu vygeneruje definice soubory katalogu (), které se používají k provádění katalogů.  
   
  **Generovat Manifest z ManagedAssembly**  
- Generuje manifest ze spravovaných sestavení. (**- managedassemblyname:***souboru*).  
+ Generuje manifest ze spravovaných sestavení. (**- managedassemblyname: *** souboru*).  
   
  **Potlačit Dependency – Element**  
  Používá se **- managedassembly** možnost. Tato značka potlačí generování závislosti elementů ve výsledném manifestu.  

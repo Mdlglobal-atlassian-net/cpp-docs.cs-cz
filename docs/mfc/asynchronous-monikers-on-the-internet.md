@@ -1,13 +1,10 @@
 ---
-title: "Asynchronní Monikery na Internetu | Microsoft Docs"
-ms.custom: 
+title: Asynchronní Monikery na Internetu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb9828734985c25996e7e2d1a6f390a0b629d998
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Asynchronní monikery na Internetu
 Internetu vyžaduje nové přístupy k návrhu aplikace z důvodu jeho přístup k pomalé síti. Aplikace by měla provést přístup k síti asynchronně, aby se zabránilo zablokování uživatelského rozhraní. Třída knihovny MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) poskytuje asynchronní podpora pro stahování souborů.  
@@ -59,7 +54,7 @@ Internetu vyžaduje nové přístupy k návrhu aplikace z důvodu jeho přístup
 ## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>MFC – třídy pro cesty k datům v ovládacích prvcích ActiveX  
  Třídy MFC `CDataPathProperty` a [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implementovat vlastnosti ovládacích prvků ActiveX, které je možné načíst asynchronně. Po spuštění synchronní jsou načteny asynchronní vlastnosti. Asynchronní ovládací prvky ActiveX opakovaně vyvolání zpětného volání k označení dostupnost nových dat systému exchange během zdlouhavé vlastnost.  
   
- `CDataPathProperty`je odvozený od `CAsyncMonikerFile`. `CCachedDataPathProperty`je odvozený od `CDataPathProperty`. Pokud chcete implementovat asynchronní vlastnosti v vaše ovládací prvky ActiveX, odvození třídy z `CDataPathProperty` nebo `CCachedDataPathProperty`a přepsat [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) a další oznámení, je třeba přijmout.  
+ `CDataPathProperty` je odvozený od `CAsyncMonikerFile`. `CCachedDataPathProperty` je odvozený od `CDataPathProperty`. Pokud chcete implementovat asynchronní vlastnosti v vaše ovládací prvky ActiveX, odvození třídy z `CDataPathProperty` nebo `CCachedDataPathProperty`a přepsat [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) a další oznámení, je třeba přijmout.  
   
 #### <a name="to-download-a-file-using-asynchronous-monikers"></a>Chcete-li stáhnout soubor pomocí asynchronní monikery  
   

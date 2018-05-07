@@ -1,30 +1,25 @@
 ---
-title: "Položky zpětného volání a maska zpětného volání | Microsoft Docs"
-ms.custom: 
+title: Položky zpětného volání a maska zpětného volání | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Položky zpětného volání a maska zpětného volání
 Pro každý z jeho položky ovládacího prvku zobrazení seznamu obvykle ukládá na text popisku, index bitové kopie seznamu položky ikony, a sadu bit flags pro stav položky. Jednotlivé položky můžete definovat jako položky zpětného volání, které jsou užitečné, pokud již aplikace ukládá některé z informací pro položku.  
@@ -33,13 +28,13 @@ Pro každý z jeho položky ovládacího prvku zobrazení seznamu obvykle uklád
   
  Kromě definování položky zpětného volání, můžete také upravit maska zpětného volání ovládacího prvku. Tato maska je sada bitové příznaky, které určují stavy položek, pro které aplikace, nikoli ovládacího prvku, uloží aktuální data. Maska zpětného volání platí pro všechny položky ovládacího prvku, na rozdíl od označení položky zpětného volání, která se vztahuje na konkrétní položku. Maska zpětného volání je nulová ve výchozím nastavení, což znamená, že ovládací prvek sleduje všechny stavy položek. Chcete-li změnit toto výchozí chování, inicializace maska na libovolnou kombinaci těchto hodnot:  
   
--   `LVIS_CUT`Operace Vyjmout a vložit je označena jako položka.  
+-   `LVIS_CUT` Operace Vyjmout a vložit je označena jako položka.  
   
--   `LVIS_DROPHILITED`Položka je označený jako cíl přetažení myší.  
+-   `LVIS_DROPHILITED` Položka je označený jako cíl přetažení myší.  
   
--   `LVIS_FOCUSED`Položka má fokus.  
+-   `LVIS_FOCUSED` Položka má fokus.  
   
--   `LVIS_SELECTED`Vybranou položku.  
+-   `LVIS_SELECTED` Vybranou položku.  
   
 -   **LVIS_OVERLAYMASK** aplikace ukládá seznam index bitové kopie aktuální Image překrytí pro každou položku.  
   

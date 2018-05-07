@@ -1,13 +1,10 @@
 ---
-title: "Práce s vlastnostmi projektu | Microsoft Docs"
-ms.custom: 
+title: Práce s vlastnostmi projektu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>Práce s vlastnostmi projektu
-V prostředí IDE, veškeré informace, které je potřebné k vytvoření projektu je k dispozici jako *vlastnosti*. Tyto informace zahrnují název aplikace, rozšíření (například knihovny DLL, LIB, EXE), – možnosti kompilátoru, možnosti linkeru, nastavení ladicího programu, vlastní kroky sestavení a mnoho dalších položek. Obvykle použijete, *stránky vlastností* ( **projektu &#124; Vlastnosti**) můžete zobrazit a upravit tyto vlastnosti. 
+V prostředí IDE, veškeré informace, které je potřebné k vytvoření projektu je k dispozici jako *vlastnosti*. Tyto informace zahrnují název aplikace, rozšíření (například knihovny DLL, LIB, EXE), – možnosti kompilátoru, možnosti linkeru, nastavení ladicího programu, vlastní kroky sestavení a mnoho dalších položek. Obvykle použijete, *stránky vlastností* ( **projektu &#124; vlastnosti**) můžete zobrazit a upravit tyto vlastnosti. 
   
  Když vytvoříte projekt, systém přiřadí hodnoty pro různé vlastnosti. Výchozí hodnoty lišit v závislosti na druhu projektu a jaké možnosti, můžete vybrat v Průvodci vytvořením aplikace. Například projektu knihovny ATL má vlastnosti týkající se soubory MIDL, ale tyto chybí v základní konzolovou aplikaci. Výchozí vlastnosti jsou uvedeny v podokně Obecné stránky vlastností:  
   
- ![Visual C & č. 43; & č. 43; Výchozí nastavení projektu](../ide/media/visual-c---project-defaults.png "výchozí nastavení projektu Visual C++")  
+ ![Visual C&#43; &#43; projektu výchozí](../ide/media/visual-c---project-defaults.png "výchozí nastavení projektu Visual C++")  
   
  Některé vlastnosti, jako je například název aplikace, se vztahují na všechny varianty sestavení, bez ohledu na cílové platformy nebo zda je ladění nebo verze sestavení. Ale většinu vlastností jsou závislá na konfiguraci. Je to proto, že má kompilátor vědět, jaké konkrétní platformu, která se bude program spouštět v a jaké konkrétní kompilátoru možnosti má použít k vygenerování správný kód. Proto když nastavíte vlastnost, je důležité věnovat pozornost které konfigurace a nová hodnota by se měly používat pro platformu. Měli použít pouze na sestavení pro ladění Win32 nebo také používat na ladění ARM a ladění x64? Například **optimalizace** , ve výchozím nastavení, je nastavena na **maximalizovat rychlost (/ O2)** v rámci konfigurace verze, ale je zakázán v konfiguraci ladění.  
   
  Stránky vlastností jsou navržené tak, že vždycky uvidíte a v případě potřeby upravit, které konfigurace a platformy hodnotu vlastnosti by se měly používat k. Následující obrázek znázorňuje do seznamu polí v horní části stránky vlastností se konfigurace a platformy informace. Když **optimalizace** zde nastavena vlastnost, bude se vztahovat jenom na sestavení pro ladění Win32, která se dělá jako aktivní konfigurace jako red šipek.  
   
- ![Visual C & č. 43; & č. 43; Stránky vlastností zobrazuje aktivní konfigurace](../ide/media/visual-c---property-pages-showing-active-configuration.png "aktivní konfigurace zobrazuje Visual C++ – stránky vlastností")  
+ ![Visual C&#43; &#43; stránky vlastností zobrazuje aktivní konfigurace](../ide/media/visual-c---property-pages-showing-active-configuration.png "aktivní konfigurace zobrazuje Visual C++ – stránky vlastností")  
   
  Následující obrázek znázorňuje stejné stránce vlastností projektu, ale konfigurace se změnil na verzi. Všimněte si jinou hodnotu pro vlastnost optimalizace. Všimněte si také, že aktivní konfigurace je stále ladění. Můžete nastavit vlastnosti pro všechny konfigurace zde; nemusí to být aktivní.  
   
- ![Visual C & č. 43; & č. 43; Stránky vlastností zobrazující verze konfigurace](../ide/media/visual-c---property-pages-showing-release-config.png "konfigurace verzí znázorňující Visual C++ – stránky vlastností")  
+ ![Visual C&#43; &#43; stránky vlastností zobrazuje verze konfigurace](../ide/media/visual-c---property-pages-showing-release-config.png "konfigurace verzí znázorňující Visual C++ – stránky vlastností")  
   
  Systém projektu, samotné je založen na MSBuild, který definuje formáty souborů a pravidla pro vytváření projektů jakéhokoli druhu. MSBuild spravuje většinu složitosti budova více konfigurace a platformy, ale budete muset chvíli pochopit, jak funguje. To je obzvláště důležité, pokud chcete definovat vlastní konfigurace nebo vytvořit opakovaně použitelný sady vlastností, které můžete sdílet a importovat do více projektů.  
   
  Vlastnosti projektu ukládají přímo v souboru projektu (*.vcxproj) nebo v jiné soubory .xml nebo props importuje soubor projektu a který dodávat výchozí hodnoty. Jak je uvedeno výše, může stejnou vlastnost pro stejnou konfiguraci přiřadit jinou hodnotu v různých souborů. Při sestavování projektu nástroje MSBuild modul vyhodnocuje souboru projektu a všech importovaných souborů v dobře definovaný pořadí (popsaný níže). Jako vyhodnotí každý soubor, všechny hodnoty vlastností, které jsou definované v tomto souboru přepíše existující hodnoty. Všechny hodnoty, které nebyly zadány dědí ze souborů, které byly vyhodnoceny dříve. Proto když nastavíte vlastnost s použitím stránek vlastností, je také důležité věnovat pozornost kde nastavíte. Pokud nastavíte vlastnost "X" v souboru props, ale vlastnost je nastavena na "Y" v souboru projektu, se sestavení projektu s vlastnost nastavená na "Y". Pokud stejný vlastnost nastavena na "Z" na Položka projektu, jako je soubor sada, bude používat modul MSBuild hodnotu "Z". Další informace najdete v tématu [dědičnost vlastnosti](#bkmkPropertyInheritance) dále v tomto článku.  
   
 ## <a name="build-configurations"></a>Konfigurace sestavení  
- Konfigurace je právě libovolné skupině vlastnosti, které mají název. Visual Studio poskytuje konfigurace Debug a Release a každý nastaví různé vlastnosti pro sestavení ladicí verze nebo verze sestavení. Můžete použít **nástroje Configuration Manager** se definovat vlastní konfigurace pohodlný způsob pro vlastnosti skupiny pro konkrétní příchuť sestavení. Správce vlastností se používá pro pokročilé práce s vlastnostmi, ale jeho protože pomáhá vizualizovat konfigurace vlastností zavedeme sem. Přístup k z **zobrazení &#124;  Správce vlastností** nebo **zobrazení &#124; Další Windows &#124; Správce vlastností** v závislosti na nastavení. V projektu má uzlů pro jednotlivé páry konfigurace/platformy. V každém tyto uzly jsou uzly pro seznamy vlastností (soubory props), které nastavit některé vlastnosti specifické pro danou konfiguraci.  
+ Konfigurace je právě libovolné skupině vlastnosti, které mají název. Visual Studio poskytuje konfigurace Debug a Release a každý nastaví různé vlastnosti pro sestavení ladicí verze nebo verze sestavení. Můžete použít **nástroje Configuration Manager** se definovat vlastní konfigurace pohodlný způsob pro vlastnosti skupiny pro konkrétní příchuť sestavení. Správce vlastností se používá pro pokročilé práce s vlastnostmi, ale jeho protože pomáhá vizualizovat konfigurace vlastností zavedeme sem. Přístup k z **zobrazení &#124; Správce vlastností** nebo **zobrazení &#124; ostatní okna &#124; Správce vlastností** v závislosti na nastavení. V projektu má uzlů pro jednotlivé páry konfigurace/platformy. V každém tyto uzly jsou uzly pro seznamy vlastností (soubory props), které nastavit některé vlastnosti specifické pro danou konfiguraci.  
   
  ![Správce vlastností](../ide/media/property-manager.png "Správce vlastností")  
   
@@ -69,7 +64,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
 ## <a name="property-pages"></a>Stránky vlastností  
  Jak jsme uvedli dříve, systém projektu Visual C++ je založen na [MSBuild](/visualstudio/msbuild/msbuild-properties) a hodnoty jsou uloženy v souboru projektu XML, výchozí soubory props a .targets. Pro Visual Studio 2015, tyto soubory jsou umístěny v **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Pro Visual Studio 2017, tyto soubory jsou umístěny v  **\\Program Files (x86)\\Microsoft Visual Studio\\2017\\_edition_\\Common7\\ IDE\\VC\\VCTargets**, kde _edice_ je nainstalované verze sady Visual Studio. Vlastnosti jsou uloženy i v všechny vlastní props soubory, které můžete přidat do vlastní projektu. Důrazně doporučujeme že není upravit tyto soubory ručně a místo toho použít stránek vlastností v prostředí IDE upravit všechny vlastnosti, především těch, které jsou součástí dědičnosti, pokud mají velmi dobrou znalost nástroje MSBuild.  
   
- Následující obrázek znázorňuje stránky vlastností projektu jazyka Visual C++. V levém podokně klikněte **adresáře VC ++***pravidlo* je vybrána, a v pravém podokně zobrazí vlastnosti, které jsou přidružené daného pravidla. `$(...)` Hodnoty, se nazývají bohužel *makra*. Jedná se o *není* makra jazyka C/C++, ale jednoduše kompilaci konstanty. Makra, jsou popsané v [makra vlastností stránky](#bkmkPropertiesVersusMacros) později v tomto článku.)  
+ Následující obrázek znázorňuje stránky vlastností projektu jazyka Visual C++. V levém podokně klikněte **adresáře VC ++ *** pravidlo* je vybrána, a v pravém podokně zobrazí vlastnosti, které jsou přidružené daného pravidla. `$(...)` Hodnoty, se nazývají bohužel *makra*. Jedná se o *není* makra jazyka C/C++, ale jednoduše kompilaci konstanty. Makra, jsou popsané v [makra vlastností stránky](#bkmkPropertiesVersusMacros) později v tomto článku.)  
   
  ![Stránky vlastností projektu](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -78,7 +73,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
   
 #### <a name="to-set-a-property-for-a-project"></a>Nastavení vlastnosti projektu  
   
-1.  Pro většinu scénářů můžete nastavit vlastnosti na úrovni projektu bez vytvoření vlastních vlastností. V hlavní nabídce zvolte **projektu &#124; Vlastnosti**, nebo klikněte pravým tlačítkem na uzel projektu v **Průzkumníku řešení** a zvolte **vlastnosti**.  
+1.  Pro většinu scénářů můžete nastavit vlastnosti na úrovni projektu bez vytvoření vlastních vlastností. V hlavní nabídce zvolte **projektu &#124; vlastnosti**, nebo klikněte pravým tlačítkem na uzel projektu v **Průzkumníku řešení** a zvolte **vlastnosti**.  
   
 2.  Použití **konfigurace** a **platformy** seznamu polí v horní části dialogových oken k určení, které vlastnost skupiny by se měly používat vaše změny. V mnoha případech **všechny platformy** a **všechny konfigurace** jsou správná volba. Nastavení vlastností pro některé konfigurace vícenásobný výběr je v **Správce vlastností**a pak otevřete místní nabídku a vyberte **vlastnosti**.  
   
@@ -109,7 +104,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
 -   [Stránka vlastností nástroje Generátor dat XML](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>Chcete-li rychle procházet a vyhledejte všechny vlastnosti  
- **Všechny možnosti** stránka vlastností (v části **vlastnosti konfigurace &#124; C/C++** uzlu **stránky vlastností** dialogové okno) poskytuje rychlý způsob, jak procházet a vyhledejte vlastnosti, které jsou dostupné v aktuálním kontextu. Obsahuje speciální vyhledávací pole s jednoduchou syntaxí umožňující filtrovat výsledky:  
+ **Všechny možnosti** stránka vlastností (v části **vlastnosti konfigurace &#124; C/C++** uzel v **stránky vlastností** dialogové okno) poskytuje rychlý způsob, jak procházet a vyhledejte vlastnosti, které jsou dostupné v aktuálním kontextu. Obsahuje speciální vyhledávací pole s jednoduchou syntaxí umožňující filtrovat výsledky:  
   
  Bez předpony:  
  Prohledávat pouze názvy vlastností (podřetězec bez rozlišení velkých a malých písmen)  
@@ -120,7 +115,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
  v:  
  Prohledávat pouze hodnoty (podřetězec bez rozlišení velkých a malých písmen)  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>Makra stránky vlastností  
+##  <a name="bkmkPropertiesVersusMacros"></a> Makra stránky vlastností  
  A *makro* kompilaci konstanta, která může označovat hodnotu, která je definována v sadě Visual Studio nebo MSBuild systému, nebo hodnotu definovanou uživatelem. Použijete-li makra namísto pevně definovaných hodnot, jako jsou například cesty k adresářům, můžete snadněji sdílet nastavení vlastností mezi počítači a mezi verzemi sady Visual Studio a lépe tak zajistit, aby se nastavení projektu řádně zapojilo do dědičnosti vlastností. Můžete si prohlédněte hodnoty všech dostupných maker Editor vlastností.  
   
 ### <a name="predefined-macros"></a>Předdefinovaná makra  
@@ -146,13 +141,13 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
 ## <a name="property-editor"></a>Editor vlastností  
  Editor vlastností můžete použít ke změně některých vlastností řetězce a k výběru maker jako hodnot. Editor vlastností otevřete tak, že vyberete vlastnost na stránce vlastností a pak kliknete na šipku dolů na pravé straně. Pokud v rozevíracím seznamu jsou uvedeny  **\<Upravit >**, pak můžete zobrazit vlastnosti Editor pro tuto vlastnost.  
   
- ![Vlastnost &#95; Editor &#95; rozevírací](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![Vlastnost&#95;Editor&#95;rozevírací](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  V editoru vlastností můžete **makra** tlačítko Zobrazit dostupné makra a jejich aktuální hodnoty. Následující obrázek znázorňuje vlastnost Editor pro **další adresáře Include** vlastnost po **makra** tlačítko jste vybrali. Když **zděděné z nadřazené nebo produktu project výchozí hodnoty** políčko a přidejte novou hodnotu, je připojen k žádné hodnoty, které jsou aktuálně zděděna. Pokud zaškrtnutí políčka zrušíte, nahradí nová hodnota zděděné hodnoty. Ve většině případů ponechte políčko zaškrtnuté.  
   
- ![Vlastnost editor Visual C & č. 43; & č. 43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![Vlastnost editor, Visual C&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>Vytváření opakovaně použitelných vlastnosti konfigurace  
+##  <a name="bkmkPropertySheets"></a> Vytváření opakovaně použitelných vlastnosti konfigurace  
  Je možné nastavit rovněž „globální“ vlastnosti podle jednotlivých uživatelů nebo počítačů, nadále to však nedoporučujeme. Místo toho doporučujeme používat **Správce vlastností** k vytvoření *vlastností* k ukládání nastavení pro jednotlivé typy projekt, který chcete mít možnost opakovaně použít nebo sdílet s ostatními. Seznamy vlastností také pomáhají zajistit, aby nedošlo k neúmyslné změně nastavení vlastností u dalších typů projektů. Seznam vlastností jsou popsány podrobněji [vytváření konfigurace opakovaně použitelné vlastností](#bkmkPropertySheets).  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ V prostředí IDE, veškeré informace, které je potřebné k vytvoření proje
   
 3.  V **Správce vlastností**, otevřete nové okno vlastností a nastavte vlastnosti, které chcete zahrnout.  
   
-##  <a name="bkmkPropertyInheritance"></a>Dědičnost vlastnosti  
+##  <a name="bkmkPropertyInheritance"></a> Dědičnost vlastnosti  
  Vlastnosti projektu jsou rozloženy do vrstev. Každá vrstva zdědí hodnoty předchozí vrstvy, ale zděděné hodnoty lze přepsat explicitním nastavením vlastností. Zde uvádíme základní strom dědičnosti:  
   
 1.  Výchozí nastavení ze sady nástrojů MSBuild CPP (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, tj. soubor importovaný souborem .vcxproj.)  

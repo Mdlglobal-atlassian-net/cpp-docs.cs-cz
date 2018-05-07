@@ -1,10 +1,10 @@
 ---
-title: "Nástroje Visual C++ a funkcí v edicích sady Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Nástroje Visual C++ a funkcí v edicích sady Visual Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,15 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bab6eda1c5c0d2d852d3a678f588f0539495001
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Funkcí v edicích sady Visual Studio a nástrojů pro Visual C++
 
@@ -32,7 +30,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 
 ||||||
 |-|-|-|-|-|
-|Platforma|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|Platforma|Visual Studio Express pro Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows Desktop||X|X|X|
 |Univerzální platformu Windows ((telefon, tablet, počítače, Xbox, IoT a HoloLens))|X||X|X|
 |Microsoft Store 8.1|||X|X|
@@ -74,7 +72,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |Projekt knihovny ATL|||X|X|
 |Knihovna tříd (CLR)||X|X|X|
 |Konzolová aplikace CLR||X|X|X|
-|CLR Empty Project||X|X|X|
+|Prázdný projekt CLR||X|X|X|
 |Vlastní průvodce|||X|X|
 |Prázdný projekt||X|X|X|
 |Projektem souboru pravidel||X|X|X|
@@ -91,7 +89,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Přírůstkové Linkeru (Link.exe)|X|X|X|X|
 |Nástroj Údržba programu (Nmake.exe)||X|X|X|
-|Lib Generator (Lib.exe)|X|X|X|X|
+|Generátor lib (Lib.exe)|X|X|X|X|
 |Kompilátor prostředků Windows (Rc.exe)|X|X|X|X|
 |Prostředek systému Windows pro objekt převaděče (CvtRes.exe)||X|X|X|
 |Nástroj Údržba informací (BscMake.exe) procházení|X|X|X|X|
@@ -118,7 +116,7 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |Využití GPU|X||X|X|
 |Využití paměti|X||X|X|
 |Vzdálené ladění|X|X|X|X|
-|SQL Debugging|||X|X|
+|Ladění SQL|||X|X|
 |Statická analýza kódu|Omezené|Omezené|X|X|
 
 ## <a name="designers-and-editors"></a>Návrháři a editory

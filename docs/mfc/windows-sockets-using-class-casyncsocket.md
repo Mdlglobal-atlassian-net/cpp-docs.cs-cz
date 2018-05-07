@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Použití třídy CAsyncSocket | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Použití třídy CAsyncSocket | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CAsyncSocket
 dev_langs:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
-Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Upozorňujeme, že tato třída zapouzdří rozhraní API systému Windows Sockets na velmi nízké úrovni. `CAsyncSocket`je pro používané programátory, kteří síťové komunikace podrobně znát, ale chcete pohodlí zpětných volání pro oznámení o události sítě. Podle této předpokladů, tento článek obsahuje pouze základní instrukcí. Měli byste pravděpodobně zvážit použití `CAsyncSocket` Pokud má Windows Sockets snadnou práci s několika síťových protokolů v aplikaci MFC, ale nechcete vzdát flexibilitu. Může také cítíte, že můžete získat lepší efektivitu programování další komunikace přímo sami, než jste může pomocí obecnější alternativní modelu třídy `CSocket`.  
+Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Upozorňujeme, že tato třída zapouzdří rozhraní API systému Windows Sockets na velmi nízké úrovni. `CAsyncSocket` je pro používané programátory, kteří síťové komunikace podrobně znát, ale chcete pohodlí zpětných volání pro oznámení o události sítě. Podle této předpokladů, tento článek obsahuje pouze základní instrukcí. Měli byste pravděpodobně zvážit použití `CAsyncSocket` Pokud má Windows Sockets snadnou práci s několika síťových protokolů v aplikaci MFC, ale nechcete vzdát flexibilitu. Může také cítíte, že můžete získat lepší efektivitu programování další komunikace přímo sami, než jste může pomocí obecnější alternativní modelu třídy `CSocket`.  
   
- `CAsyncSocket`je popsána v *odkaz knihovny MFC*. Visual C++ také poskytuje specifikace rozhraní Windows Sockets, umístěný ve Windows SDK. Podrobnosti jsou ponechána na vás. Visual C++ neposkytuje ukázkovou aplikaci pro `CAsyncSocket`.  
+ `CAsyncSocket` je popsána v *odkaz knihovny MFC*. Visual C++ také poskytuje specifikace rozhraní Windows Sockets, umístěný ve Windows SDK. Podrobnosti jsou ponechána na vás. Visual C++ neposkytuje ukázkovou aplikaci pro `CAsyncSocket`.  
   
  Pokud nejsou vysoce dobrou síťové komunikace a chcete jednoduchým řešením, použijte třídu [CSocket](../mfc/reference/csocket-class.md) s `CArchive` objektu. V tématu [Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) Další informace.  
   
@@ -45,7 +40,7 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
 -   [Vaše odpovědnosti s CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>Vytváření a používání objekt CAsyncSocket  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> Vytváření a používání objekt CAsyncSocket  
   
 #### <a name="to-use-casyncsocket"></a>Chcete-li použít CAsyncSocket  
   
@@ -100,7 +95,7 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
  Příklad toto pořadí v kódu (ve skutečnosti pro `CSocket` objektu), najdete v části [Windows Sockets: pořadí operací](../mfc/windows-sockets-sequence-of-operations.md).  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a>Vaše odpovědnosti s CAsyncSocket  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Vaše odpovědnosti s CAsyncSocket  
  Když vytvoříte objekt třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), objekt zapouzdří Windows **SOKETU** zpracování a poskytuje operací na popisovače. Při použití `CAsyncSocket`, musí řešit všechny problémy, může čelí Pokud přímo pomocí rozhraní API. Příklad:  
   
 -   "Blokování" scénáře.  
@@ -111,7 +106,7 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
  Definice tyto podmínky a další informace naleznete v tématu [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md), [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md) .  
   
- Přes všechny tyto problémy třídy **CAsycnSocket** může být správnou volbou pro vás, pokud vaše aplikace vyžaduje flexibilitu a řízení můžete získat. Pokud ne, měli byste zvážit použití třídy `CSocket` místo. `CSocket`Skryje velké množství informací od vás: it čerpadel Windows zpráv během blokování volání a získáte přístup k `CArchive`, který spravuje rozdíly pořadí bajtů a převod řetězce pro vás.  
+ Přes všechny tyto problémy třídy **CAsycnSocket** může být správnou volbou pro vás, pokud vaše aplikace vyžaduje flexibilitu a řízení můžete získat. Pokud ne, měli byste zvážit použití třídy `CSocket` místo. `CSocket` Skryje velké množství informací od vás: it čerpadel Windows zpráv během blokování volání a získáte přístup k `CArchive`, který spravuje rozdíly pořadí bajtů a převod řetězce pro vás.  
   
  Další informace naleznete v tématu:  
   

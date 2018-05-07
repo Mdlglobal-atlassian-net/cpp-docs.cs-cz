@@ -1,12 +1,9 @@
 ---
-title: "IRowsetUpdateImpl – třída | Microsoft Docs"
-ms.custom: 
+title: IRowsetUpdateImpl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34efd252f67a0e3da9827ef97cff8bcab0a45532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
 Implementace šablony technologie OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) rozhraní.  
@@ -83,8 +78,8 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |||  
 |-|-|  
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Získá data naposledy přenášeny do nebo získat ze zdroje dat, ignoruje změny čekající na zpracování.|  
-|[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Vrátí seznam hodnot řádků s čekajícími změnami.|  
-|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Vrátí stav zadané řádky.|  
+|[Getpendingrows –](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Vrátí seznam hodnot řádků s čekajícími změnami.|  
+|[GetRowStatus –](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Vrátí stav zadané řádky.|  
 |[vrácení zpět](../../data/oledb/irowsetupdateimpl-undo.md)|Zruší všechny změny na řádek od posledního načtení nebo aktualizace.|  
 |[Aktualizace](../../data/oledb/irowsetupdateimpl-update.md)|Přenáší všechny změny na řádek od posledního načtení nebo aktualizace.|  
   
@@ -92,7 +87,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 |||  
 |-|-|  
-|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Používá k ověření zabezpečení, integritu, a tak dále před povolením aktualizace.|  
+|[IsUpdateAllowed –](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Používá k ověření zabezpečení, integritu, a tak dále před povolením aktualizace.|  
   
 ### <a name="data-members"></a>Datové členy  
   

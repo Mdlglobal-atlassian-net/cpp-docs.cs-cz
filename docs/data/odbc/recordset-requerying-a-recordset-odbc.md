@@ -2,12 +2,9 @@
 title: 'Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -41,16 +36,16 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   Aktualizujte sadu záznamů na základě změny hodnot parametrů.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Datum aktualizování sady záznamů  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Datum aktualizování sady záznamů  
  Často budete chtít requery objektu sady záznamů a převeďte ho do aktuální. V prostředí s více uživateli databáze jiných uživatelů můžete provést změny dat během doby platnosti sady záznamů. Další informace o při sady záznamů odráží změny provedené jinými uživateli a když jiné uživatelů promítne změny najdete v tématu [sada záznamů: Jak sady záznamů aktualizace záznamů (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) a [dynamická sada](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Opětovné spuštění dotazu na základě nových parametrů  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Opětovné spuštění dotazu na základě nových parametrů  
  Jiné časté – a stejně důležité – použití [Requery –](../../mfc/reference/crecordset-class.md#requery) je výběr novou sadu záznamů na základě změny hodnot parametrů.  
   
 > [!TIP]
 >  Rychlost dotazu je pravděpodobně mnohem rychlejší, když zavoláte **Requery –** se změnou hodnoty parametrů, než pokud provádíte volání **otevřete** znovu.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Opětovné spuštění dotazu dynamické sady vs. Snímky  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Opětovné spuštění dotazu dynamické sady vs. Snímky  
  Protože dynamické sady jsou určené k vytvoření sady záznamů s dynamickými daty aktuální, budete chtít requery dynamické sady často, pokud chcete, aby odrážela dodatky jiných uživatelů. Snímky na druhé straně jsou užitečné, protože můžete bezpečně spoléhat na jejich statický obsah, zatímco Příprava sestavy vypočítat celkové a tak dále. Přesto můžete někdy chtít Requery – snímek také. V prostředí s více uživateli data snímku může dojít ke ztrátě synchronizace se zdrojem dat jako ostatní uživatelé změnit databázi.  
   
 #### <a name="to-requery-a-recordset-object"></a>Chcete-li znovu spustit dotaz objekt sady záznamů  

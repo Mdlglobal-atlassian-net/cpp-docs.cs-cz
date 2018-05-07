@@ -1,13 +1,10 @@
 ---
-title: "Kontejnery: Stavy klientských položek | Microsoft Docs"
-ms.custom: 
+title: 'Kontejnery: Stavy klientských položek | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-states"></a>Kontejnery: Stavy klientských položek
 Tento článek vysvětluje různé stavy, které klientské položky projdou v celé jeho životnosti.  
@@ -45,7 +40,7 @@ Tento článek vysvětluje různé stavy, které klientské položky projdou v c
   
  V prázdné stavu, klient položka ještě není úplně položku. Pro něj byl přidělen paměti, ale ještě nebyla inicializovaná daty položky OLE. Toto je stav položku klienta je v vytvořenou pomocí volání **nové** , ale ještě neprošel druhý krok vytvoření typické dvoustupňové.  
   
- V druhém kroku, provádět prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiný **CreateFrom***xxxx* funkce, položka je zcela vytvořen. Byla přidružena data OLE (ze souboru nebo z jiného zdroje, jako např. schránku) `COleClientItem`-odvozené objektu. Položka se nyní v načíst stav.  
+ V druhém kroku, provádět prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiný **CreateFrom *** xxxx* funkce, položka je zcela vytvořen. Byla přidružena data OLE (ze souboru nebo z jiného zdroje, jako např. schránku) `COleClientItem`-odvozené objektu. Položka se nyní v načíst stav.  
   
  Pokud položku má byl otevřen v okně serveru spíše než v místě v kontejneru dokument otevřít, je ve stavu otevřít (nebo plně otevřít). V tomto stavu je cross šrafování obvykle vykresluje přes reprezentaci položky v okně kontejneru indikující, že je položka jinde aktivní.  
   

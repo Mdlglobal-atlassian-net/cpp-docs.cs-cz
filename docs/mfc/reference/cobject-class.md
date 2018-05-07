@@ -1,12 +1,9 @@
 ---
-title: "CObject – třída | Microsoft Docs"
-ms.custom: 
+title: CObject – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObject
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0384392d42196e4365c59670537819435ce1e45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobject-class"></a>CObject – třída
 Hlavní základní třída pro knihovny Microsoft Foundation Class.  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CObject
 |[CObject::operator nový](#operator_new)|Speciální **nové** operátor.|  
   
 ## <a name="remarks"></a>Poznámky  
- Slouží jako kořenový nejen pro knihovny tříd jako `CFile` a `CObList`, ale také pro třídy, které můžete psát. `CObject`poskytuje základní služby, včetně  
+ Slouží jako kořenový nejen pro knihovny tříd jako `CFile` a `CObList`, ale také pro třídy, které můžete psát. `CObject` poskytuje základní služby, včetně  
   
 -   Podpora serializace  
   
@@ -103,7 +98,7 @@ class AFX_NOVTABLE CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
   
-##  <a name="assertvalid"></a>CObject::AssertValid  
+##  <a name="assertvalid"></a>  CObject::AssertValid  
  Ověří integritu tohoto objektu.  
   
 ```  
@@ -111,7 +106,7 @@ virtual void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `AssertValid`provádí kontroly platnosti na tento objekt kontrolou stavu interní. V ladicí verzi knihovny `AssertValid` může assert a ukončení programu s zprávou, která uvádí, číslo řádku a název souboru, ve kterých selhaly kontrolní výraz.  
+ `AssertValid` provádí kontroly platnosti na tento objekt kontrolou stavu interní. V ladicí verzi knihovny `AssertValid` může assert a ukončení programu s zprávou, která uvádí, číslo řádku a název souboru, ve kterých selhaly kontrolní výraz.  
   
  Když píšete vlastní třídu, by měly přepsat `AssertValid` funkce poskytovat diagnostiky pro vy a ostatní uživatelé vaší třídy. Přepsané `AssertValid` obvykle volá `AssertValid` funkce její základní třída před zaškrtnutím datových členů, které jsou jedinečné pro odvozené třídy.  
   
@@ -126,7 +121,7 @@ virtual void AssertValid() const;
   
  Jiný příklad najdete v tématu [afxdoforallobjects –](diagnostic-services.md#afxdoforallobjects).  
   
-##  <a name="cobject"></a>CObject::CObject  
+##  <a name="cobject"></a>  CObject::CObject  
  Tyto funkce jsou standardní `CObject` konstruktory.  
   
 ```  
@@ -136,7 +131,7 @@ CObject(const CObject& objectSrc);
   
 ### <a name="parameters"></a>Parametry  
  *objectSrc*  
- Odkaz na jiný`CObject`  
+ Odkaz na jiný `CObject`  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí verze je automaticky volána konstruktoru odvozené třídy.  
@@ -150,7 +145,7 @@ CObject(const CObject& objectSrc);
   
  [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
-##  <a name="dump"></a>CObject::Dump  
+##  <a name="dump"></a>  CObject::Dump  
  Vypíše obsah vašeho objektu [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objektu.  
   
 ```  
@@ -162,25 +157,25 @@ virtual void Dump(CDumpContext& dc) const;
  Kontext diagnostiky výpis pro vypsání obvykle `afxDump`.  
   
 ### <a name="remarks"></a>Poznámky  
- Když píšete vlastní třídu, by měly přepsat `Dump` funkce poskytovat diagnostiky pro vy a ostatní uživatelé vaší třídy. Přepsané `Dump` obvykle volá `Dump` funkce její základní třída před tiskem datových členů, které jsou jedinečné pro odvozené třídy. `CObject::Dump`Zobrazí název třídy, pokud používá třídu `IMPLEMENT_DYNAMIC` nebo `IMPLEMENT_SERIAL` makro.  
+ Když píšete vlastní třídu, by měly přepsat `Dump` funkce poskytovat diagnostiky pro vy a ostatní uživatelé vaší třídy. Přepsané `Dump` obvykle volá `Dump` funkce její základní třída před tiskem datových členů, které jsou jedinečné pro odvozené třídy. `CObject::Dump` Zobrazí název třídy, pokud používá třídu `IMPLEMENT_DYNAMIC` nebo `IMPLEMENT_SERIAL` makro.  
   
 > [!NOTE]
 >  Vaše `Dump` funkce nesmí tisku znak nového řádku na konci její výstup.  
   
- `Dump`volání smysl pouze v ladicí verzi knihovny Microsoft Foundation Class. Měli závorka volání, deklarace funkce a funkce implementace s **_DEBUG #ifdef –** /  `#endif` příkazy pro Podmíněná kompilace.  
+ `Dump` volání smysl pouze v ladicí verzi knihovny Microsoft Foundation Class. Měli závorka volání, deklarace funkce a funkce implementace s **_DEBUG #ifdef –** /  `#endif` příkazy pro Podmíněná kompilace.  
   
  Vzhledem k tomu `Dump` je **const** funkce, byl odepřen. Chcete-li změnit stav objektu při výpisu.  
   
  [CDumpContext vložení (<<) operátor](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) volání `Dump` při `CObject` je vložen ukazatele.  
   
- `Dump`povoluje pouze "Acyklické" vypsání objektů. Je možné vypsat seznam objektů, například, ale pokud některý z objektů v seznamu sám sebe, bude nakonec přetečení zásobníku.  
+ `Dump` povoluje pouze "Acyklické" vypsání objektů. Je možné vypsat seznam objektů, například, ale pokud některý z objektů v seznamu sám sebe, bude nakonec přetečení zásobníku.  
   
 ### <a name="example"></a>Příklad  
  V tématu [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` třída používaná v všechny `CObject` příklady.  
   
  [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
-##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
+##  <a name="getruntimeclass"></a>  CObject::GetRuntimeClass  
  Vrátí `CRuntimeClass` struktura odpovídající třída tohoto objektu.  
   
 ```  
@@ -212,7 +207,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
-##  <a name="iskindof"></a>CObject::IsKindOf  
+##  <a name="iskindof"></a>  CObject::IsKindOf  
  Testy relace tohoto objektu do dané třídy.  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
   
  [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
-##  <a name="isserializable"></a>CObject::IsSerializable  
+##  <a name="isserializable"></a>  CObject::IsSerializable  
  Ověřuje, zda tento objekt je vhodné pro serializaci.  
   
 ```  
@@ -257,7 +252,7 @@ BOOL IsSerializable() const;
   
  [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="operator_delete"></a>Odstranění CObject::operator  
+##  <a name="operator_delete"></a>  Odstranění CObject::operator  
  Pro verzi knihovny operátor **odstranit** uvolní je paměť přidělená operátorem **nové**.  
   
 ```  
@@ -293,7 +288,7 @@ void PASCAL operator delete(
   
  [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
-##  <a name="operator_new"></a>CObject::operator nový  
+##  <a name="operator_new"></a>  CObject::operator nový  
  Pro verzi knihovny operátor **nové** provede přidělení paměti pro optimální v podobným způsobem `malloc`.  
   
 ```  
@@ -326,7 +321,7 @@ void* PASCAL operator new(
   
  [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
-##  <a name="serialize"></a>CObject::Serialize  
+##  <a name="serialize"></a>  CObject::Serialize  
  Čtení nebo zápisu tento objekt z nebo do archivu.  
   
 ```  
@@ -344,7 +339,7 @@ virtual void Serialize(CArchive& ar);
   
  Použití [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) nebo [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) k určení, zda je archivu načítání nebo ukládání.  
   
- `Serialize`je volána metodou [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) a [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Tyto funkce jsou přidružené `CArchive` operátor vložení (  **< \<** ) a operátor extrakce (  **>>** ).  
+ `Serialize` je volána metodou [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) a [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Tyto funkce jsou přidružené `CArchive` operátor vložení ( **< \<**) a operátor extrakce ( **>>**).  
   
  Serializace příklady najdete v článku [serializace: serializace objektu](../../mfc/serialization-serializing-an-object.md).  
   

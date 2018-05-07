@@ -1,12 +1,9 @@
 ---
-title: "Třída CPtrList | Microsoft Docs"
-ms.custom: 
+title: Třída CPtrList | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPtrList
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7e69c8c0d80fea2720ea436bf0bff796ae57a60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cptrlist-class"></a>CPtrList – třída
 Podporuje seznamy neplatné ukazatele.  
@@ -48,7 +43,7 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Poznámky  
- `CPtrList`zahrnuje `IMPLEMENT_DYNAMIC` makro pro podporu přístupu běhového typu a k vypsání `CDumpContext` objektu. Pokud potřebujete výpis seznamu elementů jednotlivé ukazatele, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
+ `CPtrList` zahrnuje `IMPLEMENT_DYNAMIC` makro pro podporu přístupu běhového typu a k vypsání `CDumpContext` objektu. Pokud potřebujete výpis seznamu elementů jednotlivé ukazatele, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
   
  Ukazatel zobrazí nelze serializovat.  
   

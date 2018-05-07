@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::String | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::String | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 Představuje kolekci sekvenční znaky Unicode, která se používá k reprezentování text. Další informace a příklady naleznete v tématu [řetězce](../cppcx/strings-c-cx.md).  
@@ -76,7 +71,7 @@ public ref class String sealed : Object,
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[String::Begin](#begin)|Vrací ukazatel na začátku aktuálního řetězce.|  
+|[String::begin](#begin)|Vrací ukazatel na začátku aktuálního řetězce.|  
 |[String::CompareOrdinal](#compareordinal)|Porovná dva `String` objekty vyhodnocením číselné hodnoty odpovídající znaků v dvě řetězcové hodnoty reprezentována objekty.|  
 |[String::concat](#concat)|Zřetězí hodnoty dvou řetězcových objektů.|  
 |[String::data](#data)|Vrací ukazatel na začátku aktuálního řetězce.|  

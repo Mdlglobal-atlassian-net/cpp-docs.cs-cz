@@ -1,12 +1,9 @@
 ---
-title: "Třída COleMessageFilter | Microsoft Docs"
-ms.custom: 
+title: Třída COleMessageFilter | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter – třída
 Spravuje souběžnosti vyžaduje interakci aplikace rozhraní OLE.  
@@ -102,7 +97,7 @@ class COleMessageFilter : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
  Volání této funkce zahájíte zaneprázdněn stavu.  
   
 ```  
@@ -116,14 +111,14 @@ virtual void BeginBusyState();
   
  Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává **ON_COMMANDUPDATEUI** oznámení, příchozí volání zpracovává později, po dokončení zpracování při nečinnosti.  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Vytvoří `COleMessageFilter` objektu.  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
  Povolí nebo zakáže zaneprázdněn dialogu, který se zobrazí, když vyprší platnost zpoždění čeká na zprávu (viz [SetRetryReply](#setretryreply)) v průběhu hovoru OLE.  
   
 ```  
@@ -134,7 +129,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  Určuje, zda je povoleno dialogové okno "zaneprázdněn".  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
  Povolí nebo zakáže "neodpovídá" dialogu, který se zobrazí, pokud se čeká na zprávu klávesnici nebo myš během OLE volání a volání vypršení časového limitu.  
   
 ```  
@@ -145,7 +140,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  Určuje, zda je povoleno dialogové okno "neodpovídá".  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  Volání této funkce na konec zaneprázdněn stavu.  
   
 ```  
@@ -159,7 +154,7 @@ virtual void EndBusyState();
   
  Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává `ON_UPDATE_COMMAND_UI` oznámení, příchozí volání zpracovává po dokončení zpracování při nečinnosti.  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Voláno rámcem zpracování zpráv, když probíhá volání OLE.  
   
 ```  
@@ -178,7 +173,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  Je nutné zaregistrovat vaše filtr zpráv prostřednictvím volání [zaregistrovat](#register) může stát aktivní.  
   
-##  <a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>  COleMessageFilter::Register  
  Registruje filtr zpráv OLE systémové knihovny DLL.  
   
 ```  
@@ -193,7 +188,7 @@ BOOL Register();
   
  Rozhraní framework výchozí zprávu filtr je automaticky zaregistrován během inicializace a odvolat na ukončení.  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
  Odvolá předchozí registrace provádí volání [zaregistrovat](#register).  
   
 ```  
@@ -205,7 +200,7 @@ void Revoke();
   
  Výchozí filtr zpráv, které se vytvoří a zaregistruje se automaticky rámcem, je také automaticky odvolat.  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
  Tato funkce nastaví aplikace "zaneprázdněn odpovědi."  
   
 ```  
@@ -229,7 +224,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  Ve výchozím nastavení, je zaneprázdněn odpovědi **SERVERCALL_RETRYLATER**. Tato odpověď způsobí, že je volající aplikace k volání co nejdříve opakovat.  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
  Určuje, jak dlouho je volající aplikace čeká na odpověď od názvem aplikace před provedením další akce.  
   
 ```  
@@ -243,7 +238,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce funguje v souladu s [SetRetryReply](#setretryreply).  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
  Určuje akci volající aplikace při obdržení zaneprázdněn odpovědi z názvem aplikace.  
   
 ```  
@@ -257,7 +252,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ### <a name="remarks"></a>Poznámky  
  Při vyvolání aplikace označuje, že je zaneprázdněný, počkejte, dokud server je zaneprázdněný, zkuste ji nezaznamenáte okamžitě, nebo po určité době opakujte už může rozhodnout volající aplikace. Může také rozhodnout zcela zrušit volání.  
   
- Odpověď volajícího se řídí funkce `SetRetryReply` a [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply`Určuje, jak dlouho má volající aplikace čekat mezi opakovanými pokusy pro danou volání. `SetMessagePendingDelay`Určuje, jak dlouho je volající aplikace čeká na odpověď od serveru před provedením další akce.  
+ Odpověď volajícího se řídí funkce `SetRetryReply` a [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Určuje, jak dlouho má volající aplikace čekat mezi opakovanými pokusy pro danou volání. `SetMessagePendingDelay` Určuje, jak dlouho je volající aplikace čeká na odpověď od serveru před provedením další akce.  
   
  Obvykle výchozí hodnoty jsou přijatelné a není potřeba změnit. Rozhraní framework opakování volání každých `nRetryReply` milisekundách dokud prochází volání nebo zpoždění čeká na zprávu vypršela. Hodnota 0 pro `nRetryReply` určuje okamžitou opakování a - 1 znamená zrušení volání.  
   

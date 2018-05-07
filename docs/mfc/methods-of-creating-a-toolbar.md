@@ -1,13 +1,10 @@
 ---
-title: "Metody vytváření panelů nástrojů | Microsoft Docs"
-ms.custom: 
+title: Metody vytváření panelů nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93f8e43c933e9c8054e798c11754cc48bf54a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody vytváření panelů nástrojů
-Poskytuje dvě třídy vytvoření panelů nástrojů MFC: [ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). `CToolBar`obsahuje všechny funkce běžné ovládacího prvku panel nástrojů, a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury pro vás; ale vaše Výsledný spustitelný soubor obvykle bude větší než vytvořené pomocí `CToolBarCtrl`.  
+Poskytuje dvě třídy vytvoření panelů nástrojů MFC: [ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). `CToolBar` obsahuje všechny funkce běžné ovládacího prvku panel nástrojů, a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury pro vás; ale vaše Výsledný spustitelný soubor obvykle bude větší než vytvořené pomocí `CToolBarCtrl`.  
   
- `CToolBarCtrl`obvykle za následek menší spustitelný soubor a možná přednost `CToolBarCtrl` Pokud nemáte v úmyslu integrovat do architektury MFC panelu nástrojů. Pokud budete chtít použít `CToolBarCtrl` a integrovat panelu nástrojů do architektury MFC, je nutné provést další péči manipulace ovládacího prvku panel nástrojů s knihovnou MFC komunikovat. Tato komunikace není složité. je však další práci, kterou je potřeba, když používáte `CToolBar`.  
+ `CToolBarCtrl` obvykle za následek menší spustitelný soubor a možná přednost `CToolBarCtrl` Pokud nemáte v úmyslu integrovat do architektury MFC panelu nástrojů. Pokud budete chtít použít `CToolBarCtrl` a integrovat panelu nástrojů do architektury MFC, je nutné provést další péči manipulace ovládacího prvku panel nástrojů s knihovnou MFC komunikovat. Tato komunikace není složité. je však další práci, kterou je potřeba, když používáte `CToolBar`.  
   
  Visual C++ nabízí dva způsoby, jak využít výhod běžného ovládacího prvku panel nástrojů.  
   

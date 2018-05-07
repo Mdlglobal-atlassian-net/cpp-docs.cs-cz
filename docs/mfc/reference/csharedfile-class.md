@@ -1,12 +1,9 @@
 ---
-title: "Třída CSharedFile | Microsoft Docs"
-ms.custom: 
+title: Třída CSharedFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSharedFile
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csharedfile-class"></a>CSharedFile – třída
 [CMemFile](../../mfc/reference/cmemfile-class.md)-odvozené třídy, který podporuje sdílené paměti soubory.  
@@ -66,7 +61,7 @@ class CSharedFile : public CMemFile
   
  Pamatujte, že `CSharedFile` nepodporuje používané mapované paměti soubory a data nelze sdílet přímo mezi procesy.  
   
- `CSharedFile`objekty lze automaticky přidělit vlastní paměti nebo můžete připojit vlastní blok paměti k `CSharedFile` objekt voláním [CSharedFile::SetHandle](#sethandle). V obou případech se přidělí paměť pro rostoucí soubor paměti automaticky v `nGrowBytes`– velikost se zvýší, pokud `nGrowBytes` není nula.  
+ `CSharedFile` objekty lze automaticky přidělit vlastní paměti nebo můžete připojit vlastní blok paměti k `CSharedFile` objekt voláním [CSharedFile::SetHandle](#sethandle). V obou případech se přidělí paměť pro rostoucí soubor paměti automaticky v `nGrowBytes`– velikost se zvýší, pokud `nGrowBytes` není nula.  
   
  Další informace najdete v článku [soubory v prostředí MFC](../../mfc/files-in-mfc.md) a [zpracování souborů](../../c-runtime-library/file-handling.md) v *referenční dokumentace běhové knihovny*.  
   
@@ -82,7 +77,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
  Vytvoří `CSharedFile` objektu a přidělí paměť.  
   
 ```  
@@ -98,7 +93,7 @@ CSharedFile(
  `nGrowBytes`  
  Přírůstek přidělení paměti v bajtech.  
   
-##  <a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>  CSharedFile::Detach  
  Volání této funkce a zavřete soubor paměti jej odpojte od bloku paměti.  
   
 ```  
@@ -111,7 +106,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>Poznámky  
  Můžete ho znovu otevřít voláním [SetHandle](#sethandle), pomocí popisovač vrácený **odpojení**.  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
  Volání této funkce připojit blok globální paměti, která se `CSharedFile` objektu.  
   
 ```  

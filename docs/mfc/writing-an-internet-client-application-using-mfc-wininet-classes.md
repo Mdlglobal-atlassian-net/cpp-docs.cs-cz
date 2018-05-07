@@ -1,13 +1,10 @@
 ---
-title: "Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC | Microsoft Docs"
-ms.custom: 
+title: Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC
 Základ pro každý internetových klientských aplikací je relace Internetu. MFC implementuje relací Internetu jako objekty třídy [CInternetSession](../mfc/reference/cinternetsession-class.md). Pomocí této třídy, můžete vytvořit jednu relaci Internet nebo několik souběžných relací.  
@@ -39,7 +34,7 @@ Základ pro každý internetových klientských aplikací je relace Internetu. M
   
 -   Pro relaci Internet, musíte vytvořit instanci [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Pokud vaše relace Internet čtení nebo zápisu dat, musíte vytvořit instanci `CInternetFile` (nebo její podtřídy [CHttpFile](../mfc/reference/chttpfile-class.md) nebo [CGopherFile](../mfc/reference/cgopherfile-class.md)). Nejjednodušší způsob, jak číst data je volat [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Tato funkce analyzuje univerzální URL (Resource Locator) vám poskytl, otevře připojení k serveru zadanému v poli Adresa URL a vrátí pouze ke čtení `CInternetFile` objektu. `CInternetSession::OpenURL`není specifické pro typ jeden protokol – stejné volání funguje pro všechny adresy URL FTP, HTTP nebo gopher. `CInternetSession::OpenURL`funguje i s místní soubory (vrácení `CStdioFile` místo `CInternetFile`).  
+-   Pokud vaše relace Internet čtení nebo zápisu dat, musíte vytvořit instanci `CInternetFile` (nebo její podtřídy [CHttpFile](../mfc/reference/chttpfile-class.md) nebo [CGopherFile](../mfc/reference/cgopherfile-class.md)). Nejjednodušší způsob, jak číst data je volat [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Tato funkce analyzuje univerzální URL (Resource Locator) vám poskytl, otevře připojení k serveru zadanému v poli Adresa URL a vrátí pouze ke čtení `CInternetFile` objektu. `CInternetSession::OpenURL` není specifické pro typ jeden protokol – stejné volání funguje pro všechny adresy URL FTP, HTTP nebo gopher. `CInternetSession::OpenURL` funguje i s místní soubory (vrácení `CStdioFile` místo `CInternetFile`).  
   
 -   Pokud vaše připojení k Internetu relace číst nebo zapisovat data, ale provádí další úlohy, jako je například odstranění souboru v adresáři služby FTP nemusí budete muset vytvořit instanci `CInternetFile`.  
   

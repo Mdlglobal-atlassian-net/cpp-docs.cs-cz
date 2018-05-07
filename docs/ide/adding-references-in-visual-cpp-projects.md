@@ -1,13 +1,10 @@
 ---
-title: "Přidání odkazů v projektech Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Přidání odkazů v projektech Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Přidání odkazů v projektech v jazyce Visual C++
 Je velmi běžné programy provést volání do rozhraní API v jiné binární soubory, například knihovny DLL, komponent prostředí Windows Runtime, rozšíření sady SDK, komponenty modelu COM a sestavení .NET. Tak, aby váš program vyhledá tyto další binární soubory závisí typu projektu a typ binárního souboru.  
@@ -37,7 +32,7 @@ Je velmi běžné programy provést volání do rozhraní API v jiné binární 
   
  V nativním projektu jazyka C++ (ATL) koncept z *odkazy* se vztahuje pouze na jiné projekty v řešení, včetně sdílených projektů tak, aby se všechny můžete vidět v **správce odkazů**:  
   
- ![Visual C & č. 43; & č. 43; Správce odkazů &#40; Projekty knihovny ATL &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Správce odkazů visual C++ (projekty knihovny ATL)")  
+ ![Visual C&#43; &#43; správce odkazů &#40;projekty knihovny ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "správce odkazů Visual C++ (projekty knihovny ATL)")  
   
  V jazyce C + +/ CLI nebo univerzální platformu Windows projektu koncept odkazy se vztahuje na více druhů binárních souborů kromě jiných projekty v řešení.  Tyto jsou všechny přístupné **správce odkazů**.
   
@@ -120,7 +115,7 @@ Je velmi běžné programy provést volání do rozhraní API v jiné binární 
  Zobrazí token veřejného klíče, který se používá k identifikaci odkazované sestavení.  
   
  **Silné jméno**  
- `true`Pokud odkazované sestavení se silným názvem. Silně pojmenované sestavení je jednoznačně verzí.  
+ `true` Pokud odkazované sestavení se silným názvem. Silně pojmenované sestavení je jednoznačně verzí.  
   
  **Verze**  
  Zobrazí verzi odkazované sestavení.  

@@ -2,11 +2,8 @@
 title: Třída CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>Třída CDC
 Definuje třídu objektů kontextu zařízení.  
@@ -449,7 +444,7 @@ class CDC : public CObject
 |[CDC::AddMetaFileComment](#addmetafilecomment)|Zkopíruje komentář z vyrovnávací paměti do zadaného metafile rozšířeného formátu.|  
 |[CDC::AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, které mají průhledných nebo poloprůhledných pixelů.|  
 |[CDC::AngleArc](#anglearc)|Nevykresluje úsek čáry a oblouku a ke koncovému bodu oblouku přesune na aktuální pozici.|  
-|[CDC::Arc](#arc)|Nakreslí oblouk eliptické.|  
+|[CDC::ARC](#arc)|Nakreslí oblouk eliptické.|  
 |[CDC::ArcTo](#arcto)|Nakreslí oblouk eliptické. Tato funkce je podobná `Arc`kromě toho, že se aktualizuje na aktuální pozici.|  
 |[CDC::Attach](#attach)|Připojí k tomuto kontextu zařízení Windows `CDC` objektu.|  
 |[CDC::BeginPath](#beginpath)|Otevře cesta závorky v kontextu zařízení.|  
@@ -461,7 +456,7 @@ class CDC : public CObject
 |[CDC::CreateIC](#createic)|Vytvoří kontextu informace pro konkrétní zařízení. To poskytuje rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.|  
 |[CDC::DeleteDC](#deletedc)|Odstraní kontext zařízení systému Windows, který je přidružený k tomuto `CDC` objektu.|  
 |[CDC::DeleteTempMap](#deletetempmap)|Volá `CWinApp` doby nečinnosti obslužná rutina se odstranit všechny dočasné `CDC` objekt vytvořený `FromHandle`. Také umožňuje odpojit kontextu zařízení.|  
-|[CDC::Detach](#detach)|Umožňuje odpojit kontextu zařízení systému Windows z tohoto `CDC` objektu.|  
+|[CDC::detach](#detach)|Umožňuje odpojit kontextu zařízení systému Windows z tohoto `CDC` objektu.|  
 |[CDC::DPtoHIMETRIC](#dptohimetric)|Převede jednotky zařízení do **HIMETRIC** jednotky.|  
 |[CDC::DPtoLP](#dptolp)|Převede zařízení jednotky logické jednotky.|  
 |[CDC::Draw3dRect](#draw3drect)|Kreslení trojrozměrné obdélníku.|  
@@ -552,7 +547,7 @@ class CDC : public CObject
 |[CDC::GetWindowOrg](#getwindoworg)|Načte a y souřadnice x počátku okna přidružené.|  
 |[CDC::GetWorldTransform](#getworldtransform)|Načte aktuální world místo k transformaci stránky místa.|  
 |[CDC::GradientFill](#gradientfill)|Doplní obdélníku a trojúhelníček struktury gradating barvou.|  
-|[CDC::GrayString](#graystring)|Nakreslí neaktivní (šedým) textu v daném umístění.|  
+|[Metodu CDC::GrayString](#graystring)|Nakreslí neaktivní (šedým) textu v daném umístění.|  
 |[CDC::HIMETRICtoDP](#himetrictodp)|Převede **HIMETRIC** jednotky do jednotky zařízení.|  
 |[CDC::HIMETRICtoLP](#himetrictolp)|Převede **HIMETRIC** jednotky do logické jednotky.|  
 |[CDC::IntersectClipRect](#intersectcliprect)|Vytvoří novou oblast ořezu tvořící průnik aktuální oblast a obdélníku.|  
@@ -570,14 +565,14 @@ class CDC : public CObject
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Upravuje počátek okno relativně k souřadnice aktuální okno původu.|  
 |[CDC::PaintRgn](#paintrgn)|Vyplní štětce vybrané oblasti.|  
 |[CDC::PatBlt](#patblt)|Vytvoří bitový.|  
-|[CDC::Pie](#pie)|Nakreslí wedge se ve tvaru pie.|  
+|[CDC::PIE](#pie)|Nakreslí wedge se ve tvaru pie.|  
 |[CDC::PlayMetaFile](#playmetafile)|Obsah zadaného metafile hraje na dané zařízení. Rozšířenou verzi `PlayMetaFile` zobrazí obrázek uložený v dané metafile rozšířeného formátu. Metafile můžete přehrát žádné stanovený počet.|  
 |[CDC::PlgBlt](#plgblt)|Provede přenos bitového bloku bity barva dat z určeného obdélníku v kontextu zařízení zdroje na zadaný Kosoúhelník v kontextu daného zařízení.|  
 |[CDC::PolyBezier](#polybezier)|Jeden nebo více Bzier křivky nevykresluje. Aktuální pozici použít ani aktualizovat.|  
 |[CDC::PolyBezierTo](#polybezierto)|Nevykresluje jeden nebo více Bzier křivky a ke koncovému bodu poslední křivkový Bzier přesune na aktuální pozici.|  
 |[CDC::PolyDraw](#polydraw)|Nakreslí sadu segmenty čáry a Bzier křivky. Tato funkce aktualizuje aktuální pozici.|  
 |[CDC::Polygon](#polygon)|Nakreslí skládající se z dva nebo víc bodů (vrcholy) připojena linkami mnohoúhelníku.|  
-|[CDC::Polyline](#polyline)|Nakreslí sadu úsečky připojení uvedených bodů.|  
+|[CDC::POLYLINE](#polyline)|Nakreslí sadu úsečky připojení uvedených bodů.|  
 |[CDC::PolylineTo](#polylineto)|Nakreslí jeden nebo více přímých čáry a přesune na aktuální pozici ke koncovému bodu poslední řádek.|  
 |[CDC::PolyPolygon](#polypolygon)|Vytvoří dvě nebo více mnohoúhelníky, které jsou vyplněny pomocí aktuální režim naplnění mnohoúhelníku. Polygonů může být nesouvislý nebo se překrývají.|  
 |[CDC::PolyPolyline](#polypolyline)|Nakreslí více řad spojených čar segmentů. Aktuální pozici použít ani aktualizovat pomocí této funkce.|  
@@ -1370,7 +1365,7 @@ void Draw3dRect(
  *y*  
  Určuje logické souřadnici y levého horního rohu obdélníku trojrozměrné.  
   
- cx  
+ CX  
  Určuje šířku trojrozměrné rámeček.  
   
  CY  
@@ -1519,7 +1514,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_BUTTONPUSH** tlačítko  
   
-    - **DFCS_BUTTONRADIO** Radio button  
+    - **DFCS_BUTTONRADIO** přepínač  
   
     - **DFCS_BUTTONRADIOIMAGE** bitovou kopii pro přepínač (nečtvercovými musí image)  
   
@@ -5173,7 +5168,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `CGdiObject` objekt, který byl nahrazen, pokud je funkce úspěšné. Objekt skutečné ukazuje [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), nebo [CFont](../../mfc/reference/cfont-class.md) objektu. Pokud je volání úspěšné, je vrácenou hodnotu **NULL**.  
   
-##  <a name="setabortproc"></a>  CDC::SetAbortProc  
+##  <a name="setabortproc"></a>  Metodu CDC::SetAbortProc  
  Nainstaluje přerušení postup pro tiskové úlohy.  
   
 ```  
@@ -5233,7 +5228,7 @@ int SetArcDirection(int nArcDirection);
   
 |Oblouk|Výsečový|  
 |---------|---------|  
-|`ArcTo`|rámeček|  
+|`ArcTo`|**rámeček**|  
 |`Chord`|`RoundRect`|  
 |**třemi tečkami**||  
   
@@ -5553,7 +5548,7 @@ virtual void SetOutputDC(HDC hDC);
 ### <a name="remarks"></a>Poznámky  
  Tuto členskou funkci jde volat jenom když kontextu zařízení nebyl přidán do `CDC` objektu. Tato funkce člen nastaví `m_hDC` ale nepřipojí kontext zařízení, který má `CDC` objektu.  
   
-##  <a name="setpixel"></a>  CDC::SetPixel  
+##  <a name="setpixel"></a>  CDC::setPixel  
  Nastaví pixelů na zadaný na nejbližší aproximace barvy určeného bod `crColor`.  
   
 ```  
@@ -6368,6 +6363,6 @@ BOOL WidenPath();
  [CObject – třída](../../mfc/reference/cobject-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CPaintDC – třída](../../mfc/reference/cpaintdc-class.md)   
- [CWindowDC Class](../../mfc/reference/cwindowdc-class.md)   
+ [CWindowDC – třída](../../mfc/reference/cwindowdc-class.md)   
  [CClientDC – třída](../../mfc/reference/cclientdc-class.md)   
  [CMetaFileDC – třída](../../mfc/reference/cmetafiledc-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "Přidání třídy z Průvodce Typelib | Microsoft Docs"
-ms.custom: 
+title: Přidání třídy z Průvodce Typelib | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Přidání třídy z průvodce knihovnou typů
 Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k dispozici typu. Průvodce vytvoří třídu pro každé rozhraní, které přidáte z knihovny vybraného typu.  
@@ -44,7 +39,7 @@ Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k disp
   
  Najdete v části "Uvnitř Distributed COM: typ knihovny a jazyk integrace" v knihovně MSDN Další informace o registraci knihovny typů.  
   
- **Umístění**  
+ **Poloha**  
  Určuje umístění knihovny typů. Pokud kliknete na tlačítko **soubor** pod **přidat třídu z**, můžete zadat umístění souboru, který obsahuje knihovny typů. Chcete-li přejděte do umístění souboru, klikněte na tlačítko se třemi tečkami.  
   
  **Rozhraní**  
@@ -58,9 +53,9 @@ Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k disp
 |**<\<**|Odebere všechny třídy v **generované třídy** seznamu. Pokud neaktivní **generované třídy** seznam je prázdný.|  
   
  **Vygenerované třídy**  
- Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí  **>**  nebo  **>>**  tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
+ Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
   
- Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na  **<** . Není nutné k výběru třídy v poli generované třídy odebrat všechny třídy; Kliknutím na  **<<** , odeberte všechny třídy v **generované třídy** pole.  
+ Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na **<**. Není nutné k výběru třídy v poli generované třídy odebrat všechny třídy; Kliknutím na **<<**, odeberte všechny třídy v **generované třídy** pole.  
   
  `Class`  
  Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na tlačítko **Dokončit**. Můžete upravit název v `Class` pole.  

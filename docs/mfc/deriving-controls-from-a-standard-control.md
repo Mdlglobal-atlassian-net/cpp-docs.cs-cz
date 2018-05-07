@@ -1,13 +1,10 @@
 ---
-title: "Odvozování ovládacích prvků ze standardního ovládacího prvku | Microsoft Docs"
-ms.custom: 
+title: Odvozování ovládacích prvků ze standardního ovládacího prvku | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Odvozování ovládacích prvků ze standardního ovládacího prvku
 Stejně jako u některé [CWnd](../mfc/reference/cwnd-class.md)-odvozené třídy, můžete upravit chování ovládacího prvku odvozením novou třídu z existující třídy ovládacího prvku.  
@@ -49,7 +44,7 @@ Stejně jako u některé [CWnd](../mfc/reference/cwnd-class.md)-odvozené tříd
   
 2.  Přepsání `OnInitDialog` členské funkce ve vlastní třídy dialogového okna pro volání `SubclassDlgItem` – členská funkce pro odvozené ovládací prvek.  
   
- `SubclassDlgItem`"dynamicky podtřídy" ovládacího prvku vytvořené z šablony dialogového okna. Když podtřídou dynamicky ovládacího prvku, můžete připojit do systému Windows, zpracovat některé zprávy v rámci vlastní aplikace a pak předat zbývající zprávy k systému Windows. Další informace najdete v tématu [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkce člena třídy `CWnd` v *odkaz knihovny MFC*. Následující příklad ukazuje, jak může zapsat přepsání `OnInitDialog` volat `SubclassDlgItem`:  
+ `SubclassDlgItem` "dynamicky podtřídy" ovládacího prvku vytvořené z šablony dialogového okna. Když podtřídou dynamicky ovládacího prvku, můžete připojit do systému Windows, zpracovat některé zprávy v rámci vlastní aplikace a pak předat zbývající zprávy k systému Windows. Další informace najdete v tématu [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkce člena třídy `CWnd` v *odkaz knihovny MFC*. Následující příklad ukazuje, jak může zapsat přepsání `OnInitDialog` volat `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

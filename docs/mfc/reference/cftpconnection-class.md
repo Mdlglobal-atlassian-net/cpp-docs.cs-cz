@@ -1,12 +1,9 @@
 ---
-title: "Třída CFtpConnection | Microsoft Docs"
-ms.custom: 
+title: Třída CFtpConnection | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43df1cb610c785688db982be2ddc4a19cf140b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection – třída
 Spravuje připojení k serveru FTP na Internet server a umožňuje přímé manipulaci adresářů a souborů na tomto serveru.  
@@ -104,7 +99,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection  
  Tato funkce člen je volána k sestavení `CFtpConnection` objektu.  
   
 ```  
@@ -136,7 +131,7 @@ CFtpConnection(
  Ukazatel na řetězec obsahující název serveru FTP.  
   
  `dwContext`  
- Identifikátor kontextu pro danou operaci. `dwContext`identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
+ Identifikátor kontextu pro danou operaci. `dwContext` identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
   
  `pstrUserName`  
  Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.  
@@ -160,7 +155,7 @@ CFtpConnection(
 ### <a name="remarks"></a>Poznámky  
  Nikdy vytvoříte `CFtpConnection` objektu přímo. Místo toho volat [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), která vytvoří **CFptConnection** objektu.  
   
-##  <a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>  CFtpConnection::Command  
  Odešle příkaz přímo k serveru FTP.  
   
 ```  
@@ -196,7 +191,7 @@ CInternetFile* Command(
   
  Pokud dojde k chybě, MFC vyvolá výjimku typu [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
-##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory  
  Volání této funkce člen k vytvoření adresáře na serveru připojený.  
   
 ```  
@@ -213,9 +208,9 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>Poznámky  
  Použití `GetCurrentDirectory` k určení aktuální pracovní adresář pro toto připojení k serveru. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
   
- `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `CreateDirectory`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `CreateDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
-##  <a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
+##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory  
  Volání této funkce člen získat název aktuálního adresáře.  
   
 ```  
@@ -247,9 +242,9 @@ BOOL GetCurrentDirectory(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li místo toho získat název adresáře jako adresu URL, volejte [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
   
- Parametry `pstrDirName` nebo `strDirName` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectory`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Parametry `pstrDirName` nebo `strDirName` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
-##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
+##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL  
  Volání této funkce člen se získat název aktuální adresář jako adresu URL.  
   
 ```  
@@ -279,11 +274,11 @@ BOOL GetCurrentDirectoryAsURL(
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetCurrentDirectoryAsURL`se chová stejně jako [GetCurrentDirectory](#getcurrentdirectory)  
+ `GetCurrentDirectoryAsURL` se chová stejně jako [GetCurrentDirectory](#getcurrentdirectory)  
   
- Parametr `strDirName` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectoryAsURL`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Parametr `strDirName` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectoryAsURL` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
-##  <a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>  CFtpConnection::GetFile  
  Volání této funkce člen od serveru FTP získat soubor a uložit v místním počítači.  
   
 ```  
@@ -335,15 +330,15 @@ BOOL GetFile(
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetFile`je nejdůležitější rutiny, která zpracovává všechny režie spojená s čtení souboru ze serveru FTP a uložena místně. Aplikace, které jenom načítají data souboru nebo Zavřít kontrolu nad přenos souborů, které vyžadují by měly používat `OpenFile` a [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) místo.  
+ `GetFile` je nejdůležitější rutiny, která zpracovává všechny režie spojená s čtení souboru ze serveru FTP a uložena místně. Aplikace, které jenom načítají data souboru nebo Zavřít kontrolu nad přenos souborů, které vyžadují by měly používat `OpenFile` a [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) místo.  
   
  Pokud `dwFlags` je FILE_TRANSFER_TYPE_ASCII, překlad dat souboru taky převede ovládacího prvku a formátování znaků do Windows ekvivalenty. Výchozí přenos je binárního režimu, kde stažení souboru ve stejném formátu, který je uložen na serveru.  
   
- Obě `pstrRemoteFile` a `pstrLocalFile` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetFile`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Obě `pstrRemoteFile` a `pstrLocalFile` může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetFile` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
  Přepsání `dwContext` výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>  CFtpConnection::OpenFile  
  Volání této funkce člen a otevřete soubor nachází na serveru FTP pro čtení nebo zápis.  
   
 ```  
@@ -375,7 +370,7 @@ CInternetFile* OpenFile(
  Ukazatel [CInternetFile](../../mfc/reference/cinternetfile-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `OpenFile`je třeba používat v následujících situacích:  
+ `OpenFile` je třeba používat v následujících situacích:  
   
 -   Aplikace obsahuje data, která potřebují odesílat a vytvořen jako soubor na serveru FTP, ale, že data nejsou v místním souboru. Jednou `OpenFile` otevře soubor, aplikace používá [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) k odesílání dat souboru FTP na server.  
   
@@ -385,11 +380,11 @@ CInternetFile* OpenFile(
   
  Po volání `OpenFile` a dokud volání **CInternetConnection::Close**, aplikace může volat pouze [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), **CInternetConnection::Close**, nebo [CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Volání funkcí jiných FTP pro stejné relace FTP se nezdaří a nastavit kód chyby na FTP_ETRANSFER_IN_PROGRESS.  
   
- `pstrFileName` Parametr může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `OpenFile`před jeho použitím překládá oddělovačů název adresáře na příslušné znaků.  
+ `pstrFileName` Parametr může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `OpenFile` před jeho použitím překládá oddělovačů název adresáře na příslušné znaků.  
   
  Přepsání `dwContext` výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>  CFtpConnection::PutFile  
  Volání této funkce člen uložit soubor na serveru FTP.  
   
 ```  
@@ -417,11 +412,11 @@ BOOL PutFile(
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `PutFile`je nejdůležitější rutiny, která zpracovává všechny operace spojené s ukládání souborů na serveru FTP. Aplikace, která jenom k odesílání dat nebo blíže kontrolu nad přenos souborů, které vyžadují by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
+ `PutFile` je nejdůležitější rutiny, která zpracovává všechny operace spojené s ukládání souborů na serveru FTP. Aplikace, která jenom k odesílání dat nebo blíže kontrolu nad přenos souborů, které vyžadují by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
   
  Přepsání `dwContext` výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>  CFtpConnection::Remove  
  Volání této funkce člen odstraňte zadaný soubor z připojeného serveru.  
   
 ```  
@@ -438,7 +433,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>Poznámky  
  `pstrFileName` Parametr může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). **Odebrat** funkce překládá oddělovačů název adresáře na příslušné znaků před použitím.  
   
-##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
  Volání této funkce člena odebrat ze serveru připojeného zadaný adresář.  
   
 ```  
@@ -455,9 +450,9 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>Poznámky  
  Použití [GetCurrentDirectory](#getcurrentdirectory) k určení serveru aktuální pracovní adresář. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
   
- `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `RemoveDirectory`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `RemoveDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
-##  <a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>  CFtpConnection::Rename  
  Volání této funkce člen přejmenovat zadaný soubor na serveru připojený.  
   
 ```  
@@ -479,7 +474,7 @@ BOOL Rename(
 ### <a name="remarks"></a>Poznámky  
  `pstrExisting` a `pstrNew` parametry může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). **Přejmenujte** před použitím překládá oddělovačů název adresáře na příslušné znaků.  
   
-##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
+##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory  
  Volání této funkce člen změnit na jiný adresář na serveru FTP.  
   
 ```  
@@ -494,7 +489,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `SetCurrentDirectory`Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `SetCurrentDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
   
  Použití [GetCurrentDirectory](#getcurrentdirectory) k určení aktuální pracovní adresář serveru FTP. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
   

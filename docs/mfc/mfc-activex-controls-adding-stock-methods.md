@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Přidání uložených metod | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Přidání uložených metod | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,29 +12,27 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2531f84974626fcdb364df67b12f27d61e75a62a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC – ovládací prvky ActiveX: Přidání uložených metod
 Uložené metody se liší od vlastní metoda v tom, že už je implementováno třídou [COleControl](../mfc/reference/colecontrol-class.md). Například `COleControl` obsahuje člen předdefinované funkci, která podporuje metodu aktualizace pro ovládací prvek. Položka mapy odeslání pro tuto metodu uložených je **DISP_STOCKFUNC_REFRESH**.  
   
- `COleControl`podporuje dvě metody uložených: DoClick – a aktualizace. Aktualizace je volána uživatelem ovládacího prvku okamžitě aktualizovat vzhled ovládacího prvku; DoClick – vyvolání má provést, klikněte na tlačítko ovládacího prvku událost.  
+ `COleControl` podporuje dvě metody uložených: DoClick – a aktualizace. Aktualizace je volána uživatelem ovládacího prvku okamžitě aktualizovat vzhled ovládacího prvku; DoClick – vyvolání má provést, klikněte na tlačítko ovládacího prvku událost.  
   
 |Metoda|Položku mapy odesílání|Komentář|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Aktivuje událost klikněte na tlačítko.|  
 |**Aktualizace**|**(DISP_STOCKPROP_REFRESH)**|Okamžitě aktualizuje vzhledu ovládacího prvku.|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a>Přidání uložených metoda pomocí Průvodce přidáním metody  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Přidání uložených metoda pomocí Průvodce přidáním metody  
  Přidání uložené metody je jednoduchá pomocí [Průvodce přidáním metody](../ide/add-method-wizard.md). Následující postup předvádí, přidání do ovládacího prvku vytvořené pomocí Průvodce ovládacím prvkem ActiveX knihovny MFC metoda obnovení.  
   
 #### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Chcete-li přidat uložených metoda obnovení pomocí Průvodce přidáním metody  
@@ -56,7 +51,7 @@ Uložené metody se liší od vlastní metoda v tom, že už je implementováno 
   
 6.  Klikněte na tlačítko **Dokončit**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a>Přidání metoda průvodce změní pro uložených metod  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Přidání metoda průvodce změní pro uložených metod  
  Protože uložených metoda aktualizace je podporována základní třídou ovládacího prvku **Průvodce přidáním metody** deklaraci třídy ovládacího prvku nijak nemění. Přidá položku pro metodu expediční mapy ovládacího prvku a jeho. IDL soubor. Následující řádek je přidán do ovládacího prvku expediční mapy, umístěný v jeho implementaci (. Soubor CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  

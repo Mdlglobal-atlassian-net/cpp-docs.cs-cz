@@ -1,12 +1,9 @@
 ---
-title: "Použití dynamických přístupových objektů | Microsoft Docs"
-ms.custom: 
+title: Použití dynamických přístupových objektů | Microsoft Docs
+ms.custom: ''
 ms.date: 02/14/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce2763749537a77664f2971adac65b17e4bde28b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 700a959742fafd4478659ff08821b043aff8bc14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dynamic-accessors"></a>Použití dynamických přístupových objektů
 
@@ -181,4 +176,4 @@ Příklad, který ukazuje, jak používat tuto třídu pro spuštění systému 
 [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)  
 [CDynamicStringAccessor – třída](../../data/oledb/cdynamicstringaccessor-class.md)  
 [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)  
-[DynamicConsumer Sample](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  
+[Příklad DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  

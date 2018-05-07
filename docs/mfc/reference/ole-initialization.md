@@ -1,13 +1,10 @@
 ---
 title: Inicializace modulu OLE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - afxdisp/AfxOleInit
 - afxdisp/AfxEnableControlContainer
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014d0679be8a03b60c2e759b36c056b35784be78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8224cf27313b056b95990f514e02eb9d9c08cad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-initialization"></a>Inicializace OLE
 Aplikaci mohli používat OLE systémových služeb, musí inicializovat OLE systémové knihovny DLL a ověřte, zda jsou knihovny DLL správnou verzi. **AfxOLEInit –** funkce inicializuje OLE systémové knihovny DLL.  
@@ -39,7 +34,7 @@ Aplikaci mohli používat OLE systémových služeb, musí inicializovat OLE sys
 |[AfxEnableControlContainer –](#afxenablecontrolcontainer)|Volání této funkce do objektu application `InitInstance` funkce povolení podpory pro členství ve skupině ovládacích prvků OLE.| 
 
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer –
+## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer –
 Volání této funkce do objektu application `InitInstance` funkce povolení podpory pro členství ve skupině ovládacích prvků OLE.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -54,7 +49,7 @@ void AfxEnableControlContainer( );
  **Záhlaví:** afxdisp.h  
 
   
-##  <a name="afxoleinit"></a>AfxOLEInit –  
+##  <a name="afxoleinit"></a>  AfxOLEInit –  
  Inicializuje podporu technologie OLE pro aplikaci.  
   
 ``` 
@@ -75,7 +70,7 @@ BOOL AFXAPI AfxOleInit();
 >  Pokud **AfxOLEInit –** je volána z knihovny MFC DLL volání selže. K selhání dojde, protože funkce předpokládá, že pokud je volána z knihovny DLL, systém technologie OLE byl dříve inicializován volající aplikací.  
   
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte `COINIT_APARTMENTTHREADED` (místo `COINIT_MULTITHREADED`). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte `COINIT_APARTMENTTHREADED` (místo `COINIT_MULTITHREADED`). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h

@@ -1,13 +1,10 @@
 ---
-title: "Vytváření a správa projektů Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Vytváření a správa projektů Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vcprojects
 - creatingmanagingVC
@@ -20,32 +17,30 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Vytváření a správa projekty využívající MSBuild Visual C++
 MSBuild je systém nativní sestavení pro Visual C++ a je obecně že nejvhodnější vytvořit systému pro aplikace UWP a také aplikací klasické pracovní plochy, které používají knihovny MFC nebo ATL. MSBuild je úzce integrovaná s Visual Studio IDE a systému projektu, ale můžete ji použít i z příkazového řádku. Počínaje Visual Studio 2017, Visual C++ podporuje [CMake a dalšími systémy bez MSBuild prostřednictvím funkce Otevřít složku](non-msbuild-projects.md).
 
 Projektu na základě MSBuild má projekt soubor ve formátu XML (VCXPROJ), která určuje, všechny soubory a prostředky potřebné ke kompilaci programu, jakož i další nastavení konfigurace, například cílové platformy (x 86, x64 nebo ARM) a jestli vytváříte uvolnění verzi nebo verzi ladicí program. Projekt (nebo mnoha projektů) jsou součástí *řešení*, například řešení může obsahovat několik projektů knihovny DLL Win32 a jednu Win32 konzolovou aplikaci, která používá tyto knihovny DLL. Při sestavování projektu nástroje MSBuild modul využívá souboru projektu a vytvoří spustitelný soubor nebo jakýkoli jiný vlastní výstup, který jste zadali.
 
-Projekty Visual C++ můžete vytvořit tak, že zvolíte **soubor &#124; Nové &#124; Projekt**, zajistíte, že je vybraná Visual C++ v levém podokně a pak vyberete ze seznamu šablon projektu v prostředním podokně. Když kliknete na šablonu, v mnoha případech průvodce se zobrazí, můžete nastavit různé vlastnosti projektu před vytvořením projektu. Můžete zobrazit a upravit tyto vlastnosti později pomocí stránky vlastností projektu (**projektu &#124; Vlastnosti**).  
+Projekty Visual C++ můžete vytvořit tak, že zvolíte **soubor &#124; nový &#124; projektu**, zajistíte, že je vybraná Visual C++ v levém podokně a pak vyberete ze seznamu šablon projektu v prostředním podokně. Když kliknete na šablonu, v mnoha případech průvodce se zobrazí, můžete nastavit různé vlastnosti projektu před vytvořením projektu. Můžete zobrazit a upravit tyto vlastnosti později pomocí stránky vlastností projektu (**projektu &#124; vlastnosti**).  
   
  Můžete také vytvořit nové projekty podle:  
   
--   Výběr **soubor &#124; Nové &#124; Projekt z existujícího kódu** a následujících pokynů přidejte existující soubory zdrojového kódu. Tato možnost funguje nejlépe ve relativně malý a jednoduchý projekty, případně 25 zdrojové kódy soubory nebo menší s několika nebo žádné složitým závislostem.  
+-   Výběr **soubor &#124; nový &#124; projekt z existujícího kódu** a následujících pokynů přidejte existující soubory zdrojového kódu. Tato možnost funguje nejlépe ve relativně malý a jednoduchý projekty, případně 25 zdrojové kódy soubory nebo menší s několika nebo žádné složitým závislostem.  
   
 -   od verze souboru pravidel a zvolte šablonu projektem souboru pravidel na kartě Obecné.  
   
--   vytváření prázdného projektu (v části **Obecné** kartu) a ručně přidejte soubory zdrojového kódu tak, že kliknete na uzel projektu v Průzkumníku řešení pravým tlačítkem a vyberete **Přidat &#124; Existující položka**.  
+-   vytváření prázdného projektu (v části **Obecné** kartu) a ručně přidejte soubory zdrojového kódu tak, že kliknete na uzel projektu v Průzkumníku řešení pravým tlačítkem a vyberete **přidat &#124; existující položka**.  
   
 -   pomocí [Win32 – Průvodce aplikací](../windows/win32-application-wizard.md).  
   

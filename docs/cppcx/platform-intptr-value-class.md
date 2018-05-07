@@ -1,11 +1,8 @@
 ---
-title: "Platform::IntPtr – hodnotová třída | Microsoft Docs"
-ms.custom: 
+title: Platform::IntPtr – hodnotová třída | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/PlatformIntPtr::IntPtr
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93263e1347857b9c78a62852bea96e10c8d68fac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr – hodnotová třída
 Představuje podepsaný ukazatel nebo popisovač a jehož velikost se liší podle platformy (32bitová nebo 64bitová verze).  
@@ -43,7 +38,7 @@ public value struct IntPtr
 |Člen|Popis|  
 |------------|-----------------|  
 |[IntPtr::IntPtr](#ctor)|Inicializuje novou instanci třídy IntPtr.|  
-|[IntPtr::op_explicit Operator](#op-explicit)|Převede zadaný parametr IntPtr nebo ukazatel na hodnotu IntPtr.|  
+|[IntPtr::op_Explicit – operátor](#op-explicit)|Převede zadaný parametr IntPtr nebo ukazatel na hodnotu IntPtr.|  
 |[IntPtr::ToInt32](#toint32)|Převede aktuální IntPtr 32bitové celé číslo.|  
   
 ### <a name="requirements"></a>Požadavky  
@@ -70,7 +65,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
   
 
 
-## <a name="op-explicit"> </a> IntPtr::op_explicit Operator
+## <a name="op-explicit"> </a> IntPtr::op_Explicit – operátor
 Převede zadaný parametr IntPtr nebo ukazatel na hodnotu IntPtr.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -83,10 +78,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
  value1  
  Ukazatel na popisovač nebo IntPtr.  
   
- value2  
+ Value2  
  Celé 32bitové číslo, které lze převést na IntPtr.  
   
- value3  
+ hodnota3  
  IntPtr.  
   
 ### <a name="return-value"></a>Návratová hodnota  

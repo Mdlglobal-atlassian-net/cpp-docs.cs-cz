@@ -1,13 +1,10 @@
 ---
-title: "Použití regulárních výrazů pro ověření formátu (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: Použití regulárních výrazů pro ověření formátu (C + +/ CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59a553ac2d58f9304fce3961aa8212c33b26643a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Postupy: Použití regulárních výrazů pro ověření formátu dat (C++/CLI)
 Následující příklad kódu ukazuje použití regulárních výrazů k ověření formátování řetězce. V následujícím příkladu kódu řetězec musí obsahovat platné telefonní číslo. Následující příklad kódu používá řetězec "\d{3}-\d{3}-\d{4}" k označení, že každé pole, představuje platné telefonní číslo. "D" v řetězci označuje číslici a argument po každém "d" označuje počet číslic, které musí být přítomen. Číslo je v tomto případě musí být odděleny pomlčky.  

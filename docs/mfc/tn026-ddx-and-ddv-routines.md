@@ -1,13 +1,10 @@
 ---
 title: 'TN026: Rutiny DDX a DDV | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutiny DDX a DDV
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  Počáteční hodnoty dat se nastavují v standardní C++ konstruktoru, obvykle v bloku s `//{{AFX_DATA_INIT` a `//}}AFX_DATA_INIT` komentáře.  
   
- `CWnd::UpdateData`je operace, která provádí inicializaci a chybě zpracování kolem volání `DoDataExchange`.  
+ `CWnd::UpdateData` je operace, která provádí inicializaci a chybě zpracování kolem volání `DoDataExchange`.  
   
  Můžete volat `CWnd::UpdateData` kdykoli provádět výměny dat a ověření. Ve výchozím nastavení `UpdateData`(TRUE) se nazývá ve výchozí `CDialog::OnOK` obslužné rutiny a `UpdateData`(FALSE), se nazývá ve výchozí `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: Okno (obvykle dialogovém okně) obsahující ovládací prvky. To je k tomu, aby volající globální funkce DDX_ a DDV_ předat 'this' každé rutiny DDX/DDV.  
   
-- `PrepareCtrl`, a `PrepareEditCtrl`: připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl`slouží pro ovládací prvky nonedit a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.  
+- `PrepareCtrl`, a `PrepareEditCtrl`: připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl` slouží pro ovládací prvky nonedit a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.  
   
 - **Selhání**: volat po vyvolání výstrahy uživateli vstupních chyb okno se zprávou. Tato rutina obnoví zaměřuje na poslední ovládací prvek (poslední volání `PrepareCtrl` / `PrepareEditCtrl`) a způsobí výjimku. Tento člen funkci lze volat z DDX_ i DDV_ rutiny.  
   

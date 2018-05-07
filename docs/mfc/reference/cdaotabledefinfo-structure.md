@@ -2,12 +2,9 @@
 title: Cdaotabledefinfo – struktura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo – struktura
 `CDaoTableDefInfo` Struktura obsahuje informace o objekt tabledef definované pro přístup k objektům dat (DAO).  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  Objekt tabledef jedinečné názvy. K načtení hodnoty této vlastnosti přímo, volání objektu tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) – členská funkce. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
  `m_bUpdatable`  
- Určuje, zda v tabulce můžete provedeny změny. Rychlým způsobem k určení, zda tabulka je v aktualizovatelné je otevřít `CDaoTableDef` objektu pro tabulku a volání objektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) – členská funkce. `CanUpdate`vždycky vrátí nenulovou hodnotu (**TRUE**) pro nově vytvořený objekt tabledef objekt a 0 (**FALSE**) připojené tabledef objektu. Nový objekt tabledef lze připojit pouze k databázi, pro kterou má aktuální uživatel oprávnění k zápisu. Pokud tabulka obsahuje pouze pole nonupdatable `CanUpdate` vrátí hodnotu 0. Pokud jeden nebo víc polích je možné aktualizovat, `CanUpdate` vrátí nenulovou hodnotu. Můžete upravit pouze aktualizovat pole. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
+ Určuje, zda v tabulce můžete provedeny změny. Rychlým způsobem k určení, zda tabulka je v aktualizovatelné je otevřít `CDaoTableDef` objektu pro tabulku a volání objektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) – členská funkce. `CanUpdate` vždycky vrátí nenulovou hodnotu (**TRUE**) pro nově vytvořený objekt tabledef objekt a 0 (**FALSE**) připojené tabledef objektu. Nový objekt tabledef lze připojit pouze k databázi, pro kterou má aktuální uživatel oprávnění k zápisu. Pokud tabulka obsahuje pouze pole nonupdatable `CanUpdate` vrátí hodnotu 0. Pokud jeden nebo víc polích je možné aktualizovat, `CanUpdate` vrátí nenulovou hodnotu. Můžete upravit pouze aktualizovat pole. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
  `m_lAttributes`  
  Určuje vlastnosti reprezentované objektem tabledef tabulky. Chcete-li získat aktuální atributy tabledef, volejte jeho [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) – členská funkce. Hodnota vrácená může být kombinací těchto dlouho konstanty (pomocí bitové operace OR (**&#124;**) operátor):  
@@ -95,7 +90,7 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>Poznámky  
  Je třída objektu objekt tabledef [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) členské funkce ve třídě `CDaoDatabase`.  
   
- Načte informace [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) – členská funkce je uložen v `CDaoTableDefInfo` struktura. Volání `GetTableDefInfo` členské funkce `CDaoDatabase` objektu, v jehož tabledefs – kolekce tabledef objekt se uloží. `CDaoTableDefInfo`také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoTableDefInfo` objektu.  
+ Načte informace [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) – členská funkce je uložen v `CDaoTableDefInfo` struktura. Volání `GetTableDefInfo` členské funkce `CDaoDatabase` objektu, v jehož tabledefs – kolekce tabledef objekt se uloží. `CDaoTableDefInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoTableDefInfo` objektu.  
   
  Nastavení data a času jsou odvozené z počítače, na kterém byl vytvořen nebo naposledy aktualizován na základní tabulku. V prostředí musí uživatelé získávají těchto nastavení přímo ze souborového serveru, aby se zabránilo nesrovnalostí v DateCreated a LastUpdated nastavení vlastností.  
   

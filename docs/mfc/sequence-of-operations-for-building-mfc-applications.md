@@ -1,29 +1,24 @@
 ---
-title: "Posloupnost operací při sestavování aplikací MFC | Microsoft Docs"
-ms.custom: 
+title: Posloupnost operací při sestavování aplikací MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Posloupnost operací při sestavování aplikací MFC
 Následující tabulka popisuje obecné pořadí, které může být obvykle postupujte podle vyvíjet aplikace knihovny MFC.  
@@ -50,7 +45,7 @@ Následující tabulka popisuje obecné pořadí, které může být obvykle pos
 |Přidejte posouvání.|Pokud potřebujete podporovat posouvání, odvození třídy zobrazení nebo třídy z [CScrollView](../mfc/reference/cscrollview-class.md).|Zobrazení automaticky přidá posuvníky, když okno zobrazení je příliš malá.|  
 |Vytvořte zobrazení formuláře.|Pokud chcete základní zobrazení na prostředcích šablony dialogového okna, odvození třídy zobrazení nebo třídy z [CFormView](../mfc/reference/cformview-class.md).|Zobrazení prostředků šablony dialogového okna používá pro zobrazení ovládacích prvků. Uživatel může kartě z ovládacího prvku na ovládací prvek v zobrazení.|  
 |Vytvoření databázových formulářů.|Pokud chcete k aplikaci založené na formulářích přístup k datům, jsou odvozeny třídě zobrazení z [CRecordView](../mfc/reference/crecordview-class.md) (pro programování rozhraní ODBC).|Zobrazení funguje podobně jako zobrazení formuláře, ale jeho ovládací prvky jsou připojeny k pole [CRecordset](../mfc/reference/crecordset-class.md) objekt reprezentující databázové tabulky. MFC přesouvá data mezi ovládacími prvky a sady záznamů za vás.|  
-|Vytvoří jednoduchý textový editor.|Pokud chcete, aby zobrazení, aby bylo jednoduchý textový editor, odvození třídy zobrazení nebo třídy z [CEditView](../mfc/reference/ceditview-class.md) nebo [cricheditview –](../mfc/reference/cricheditview-class.md).|Zobrazení obsahuje úpravy souborů vstupu a výstupu, podpora schránky a funkce. `CRichEditView`poskytuje stylem text.|  
+|Vytvoří jednoduchý textový editor.|Pokud chcete, aby zobrazení, aby bylo jednoduchý textový editor, odvození třídy zobrazení nebo třídy z [CEditView](../mfc/reference/ceditview-class.md) nebo [cricheditview –](../mfc/reference/cricheditview-class.md).|Zobrazení obsahuje úpravy souborů vstupu a výstupu, podpora schránky a funkce. `CRichEditView` poskytuje stylem text.|  
 |Přidejte rozdělovače oken.|Pokud chcete podporovat rozdělení oken, přidat [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) do oken s rámečkem SDI nebo podřízeného okna MDI objektu a propojte ho v okně nástroje [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) – členská funkce.|Rozhraní framework poskytuje rozdělovač – ovládací prvky vedle posuvníky a spravuje rozdělit do několika podokna zobrazení. Pokud uživatel rozdělí okno, rozhraní framework vytvoří a připojí další zobrazit objekty v dokumentu.|  
 |Vytvoření, testování a ladění aplikace.|Použijte zařízení pro Visual c++ pro vytvoření, testování a ladění aplikace.|Visual C++ umožňuje nastavit kompilace, odkaz a další možnosti. To také umožňuje procházet zdrojový kód a třída struktury.|  
   

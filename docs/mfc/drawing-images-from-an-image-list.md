@@ -1,13 +1,10 @@
 ---
-title: "Vykreslování obrázků ze seznamu obrázků | Microsoft Docs"
-ms.custom: 
+title: Vykreslování obrázků ze seznamu obrázků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>Vykreslování obrázků ze seznamu obrázků
 Kreslení bitovou kopii, použijte [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) – členská funkce. Určete ukazatel na objekt kontextu zařízení, index bitové kopie k vykreslení, umístění v kontextu zařízení, kdy k vykreslení bitovou kopii a sadu jsou označeny styl vykreslování.  
@@ -41,7 +36,7 @@ Kreslení bitovou kopii, použijte [CImageList::Draw](../mfc/reference/cimagelis
   
  Bitovou kopii nonmasked se zkopíruje na cílovém zařízení kontext pomocí **SRCCOPY** rastrové operace. Barvy v bitové kopii se zobrazí stejný bez ohledu na barvu pozadí kontextu zařízení. Kreslení styly definované v **kreslení** také mít žádný vliv na vzhled nonmasked bitové kopie.  
   
- Kromě členská funkce kreslení jinou funkci [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozšiřuje možnosti vykreslování obrázku. `DrawIndirect`přijímá jako parametr, [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury. Tato struktura slouží k přizpůsobení vykreslování aktuální image, včetně použití kódů rastrové operace (ROP). Další informace o kódy ROP najdete v tématu [rastrové operace kódy](http://msdn.microsoft.com/library/windows/desktop/dd162892) a [bitmap jako štětce](http://msdn.microsoft.com/library/windows/desktop/dd183378) ve Windows SDK.  
+ Kromě členská funkce kreslení jinou funkci [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozšiřuje možnosti vykreslování obrázku. `DrawIndirect` přijímá jako parametr, [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury. Tato struktura slouží k přizpůsobení vykreslování aktuální image, včetně použití kódů rastrové operace (ROP). Další informace o kódy ROP najdete v tématu [rastrové operace kódy](http://msdn.microsoft.com/library/windows/desktop/dd162892) a [bitmap jako štětce](http://msdn.microsoft.com/library/windows/desktop/dd183378) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CImageList](../mfc/using-cimagelist.md)   

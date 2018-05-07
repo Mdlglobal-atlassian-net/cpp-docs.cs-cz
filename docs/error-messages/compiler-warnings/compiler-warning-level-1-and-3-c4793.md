@@ -1,12 +1,9 @@
 ---
-title: "Upozornění (úroveň 1 a 3) C4793 kompilátoru | Microsoft Docs"
-ms.custom: 
+title: Upozornění (úroveň 1 a 3) C4793 kompilátoru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Upozornění kompilátoru (úroveň 1 a 3) C4793
 'function': funkce kompiluje v nativním kódu: "důvod"  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Důvod zpráv|Poznámky|  
 |--------------------|-------------|  
 |Zarovnaný datové typy nejsou podporovány ve spravovaném kódu|Modul CLR musí být schopen přidělit data podle potřeby, která nemusí být možné v případě, že data je zarovnáno s deklaracemi, jako [__m128](../../cpp/m128.md) nebo [zarovnat](../../cpp/align-cpp.md).|  
-|Funkce, které používají '__ImageBase' nejsou podporovány ve spravovaném kódu|`__ImageBase`je speciální linkeru symbol, který se obvykle používá pouze pomocí nízké úrovně nativní kód pro načtení knihovny DLL.|  
+|Funkce, které používají '__ImageBase' nejsou podporovány ve spravovaném kódu|`__ImageBase` je speciální linkeru symbol, který se obvykle používá pouze pomocí nízké úrovně nativní kód pro načtení knihovny DLL.|  
 |vararg nejsou podporovány ' / clr' – možnost kompilátoru|Nativní funkce nelze volat spravované funkce, které mají [seznam argumentů s proměnnou délkou](../../cpp/functions-with-variable-argument-lists-cpp.md) (vararg) vzhledem k tomu, že funkce mají různé zásobníku rozložení požadavky. Ale pokud zadáte `/clr:pure` – možnost kompilátoru, seznamy jsou podporována, protože sestavení může obsahovat jenom spravované funkce argumentů proměnných. Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |64bitová verze CLR nepodporuje data deklarovat s __ptr32 – modifikátor|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
 |32bitová verze CLR nepodporuje data deklarovat s __ptr64 – modifikátor|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  

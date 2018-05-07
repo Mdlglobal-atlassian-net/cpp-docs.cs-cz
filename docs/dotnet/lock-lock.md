@@ -1,12 +1,9 @@
 ---
 title: Lock::LOCK | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 Vytvoří `lock` objekt, volitelně čeká na získání zámku navždy, po zadanou dobu, nebo vůbec.  
@@ -67,11 +62,11 @@ template<class T> lock(
 ## <a name="remarks"></a>Poznámky  
  První tři formy konstruktoru pokusí získat zámek na `_object` během zadaného časového limitu (nebo <xref:System.Threading.Timeout.Infinite> Pokud není zadaný žádný).  
   
- Čtvrtý formu konstruktoru není získat zámek na `_object`. `lock_later`je členem skupiny [lock_when – výčet](../dotnet/lock-when-enum.md). Použití [lock::acquire](../dotnet/lock-acquire.md) nebo [lock::try_acquire](../dotnet/lock-try-acquire.md) v tomto případě získat zámek.  
+ Čtvrtý formu konstruktoru není získat zámek na `_object`. `lock_later` je členem skupiny [lock_when – výčet](../dotnet/lock-when-enum.md). Použití [lock::acquire](../dotnet/lock-acquire.md) nebo [lock::try_acquire](../dotnet/lock-try-acquire.md) v tomto případě získat zámek.  
   
  Zámek, budou vydané automaticky při volání destruktoru.  
   
- `_object`nemůže být <xref:System.Threading.ReaderWriterLock>.  Pokud se jedná, dojde k chybě kompilátoru.  
+ `_object` nemůže být <xref:System.Threading.ReaderWriterLock>.  Pokud se jedná, dojde k chybě kompilátoru.  
   
 ## <a name="example"></a>Příklad  
  Tento příklad používá jednu instanci třídy napříč více vláken.  Třída využívají k zajištění konzistentní pro každé vlákno přístupů k jeho interních datových zámek sám na sobě.  Hlavní vlákno aplikace používá zámek ve stejné instanci třídy k pravidelně kontrolovat, zda stále existují jakékoli pracovních vláken a čeká ukončíte až do všech pracovních vláken dokončili úkoly.  

@@ -1,12 +1,9 @@
 ---
-title: "Podpora sad řádků schématu | Microsoft Docs"
-ms.custom: 
+title: Podpora sad řádků schématu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
 Schéma sad řádků umožňují spotřebitelům získat informace o úložišti dat bez znalosti jeho podkladová struktura nebo schéma. Úložiště dat, které může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, takže by být žádný způsob, jak zajistit, aby znalosti o schématu s výjimkou jeho čtení. (Například Upozorňujeme, že průvodci Visual C++ použít sady řádků schématu pro generování přístupových objektů pro spotřebitele.) Povolit příjemce k tomu, vystavuje objekt relace poskytovatele metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) rozhraní. V aplikacích Visual C++, můžete použít [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci **IDBSchemaRowset**.  
@@ -108,7 +103,7 @@ class CUpdateSessionTRSchemaRowset :
 |**TABLE_CATALOG**|0x1 (binární 1)|  
 |**TABLE_SCHEMA**|0x2 (binární 10)|  
 |**TABLE_NAME**|0x4 (binární 100)|  
-|TABLE_TYPE|0x8 (binární 1000)|  
+|**TABLE_TYPE**|0x8 (binární 1000)|  
   
  V dalším kroku Všimněte si, že jeden bit pro každý omezení. Vzhledem k tomu, že chcete podporovat **TABLE_NAME** pouze by vrátit 0x4 v `rgRestrictions` elementu. Pokud je podporovaná **TABLE_CATALOG** a **TABLE_NAME**, vrátili byste 0x5 (binární 101).  
   

@@ -1,13 +1,10 @@
 ---
-title: "Pomocného parametru soubory | Microsoft Docs"
-ms.custom: 
+title: Pomocného parametru soubory | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Soubory pokynů
 A *soubor pokynů* pomáhá sady Visual Studio integrované vývojové prostředí (IDE) interpretovat identifikátory Visual C++, jako jsou názvy funkcemi a makry. Když otevřete projektu Visual C++, rozhraní IDE *systém analýzy* analyzuje kód do každého souboru zdroje v projektu a shromažďuje informace o každém identifikátoru. Prostředí IDE použije tyto informace k podpoře funkce, jako **zobrazení tříd** prohlížeče a **navigační panel**.  
@@ -107,13 +102,13 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Syntaxe|Význam|  
 |------------|-------------|  
-|`#define`*pomocný parametr name* *řetězec nahrazení*<br /><br /> `#define`*pomocný parametr name* `(` *parametr*,... `)` *řetězec nahrazení*|Direktiva preprocesoru, která definuje nový pokyn nebo znovu definuje existující pokyn. Po – direktiva, preprocesor nahradí všechny výskyty *pomocný parametr name* ve zdrojovém kódu s *řetězec nahrazení*.<br /><br /> Druhý formulář syntaxe definuje funkce jako nápovědu. V případě funkce jako nápovědu ve zdrojovém kódu preprocesor nejprve nahradí všechny výskyty *parametr* v *řetězec nahrazení* s argumentem odpovídající zdrojový kód a potom nahradí *pomocný parametr name* s *řetězec nahrazení*.|  
+|`#define` *pomocný parametr name* *řetězec nahrazení*<br /><br /> `#define` *pomocný parametr name* `(` *parametr*,... `)` *řetězec nahrazení*|Direktiva preprocesoru, která definuje nový pokyn nebo znovu definuje existující pokyn. Po – direktiva, preprocesor nahradí všechny výskyty *pomocný parametr name* ve zdrojovém kódu s *řetězec nahrazení*.<br /><br /> Druhý formulář syntaxe definuje funkce jako nápovědu. V případě funkce jako nápovědu ve zdrojovém kódu preprocesor nejprve nahradí všechny výskyty *parametr* v *řetězec nahrazení* s argumentem odpovídající zdrojový kód a potom nahradí *pomocný parametr name* s *řetězec nahrazení*.|  
 |`@<`|Pro soubor konkrétní *řetězec nahrazení* určující spuštění sady elementů mapy.|  
 |`@=`|Pro soubor konkrétní *řetězec nahrazení* určující vložený prvek mapy. Mapa může mít víc elementů mapy.|  
 |`@>`|Pro soubor konkrétní *řetězec nahrazení* určující konce sady elementů mapy.|  
-|`#undef`*pomocný parametr name*|Preprocesor – direktiva, které odstraní existující pokyn. Název v pomocném parametru poskytuje *pomocný parametr name* identifikátor.|  
-|`//`*komentář*|Komentář jeden řádek.|  
-|`/*`*komentář*`*/`|Víceřádkový komentář.|  
+|`#undef` *pomocný parametr name*|Preprocesor – direktiva, které odstraní existující pokyn. Název v pomocném parametru poskytuje *pomocný parametr name* identifikátor.|  
+|`//` *Komentář*|Komentář jeden řádek.|  
+|`/*` *Komentář* `*/`|Víceřádkový komentář.|  
   
 ## <a name="what-macros-require-a-hint"></a>Co makra vyžadují nápovědu?  
  Některé typy makra může narušovat systém analýzy. Tato část popisuje typy makra, které mohly by způsobit problém a typ pomocného parametru, že můžete vytvořit pro řešení tohoto problému.  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  Následující obrázek znázorňuje některé z fyzického adresáře v projektu jazyka Visual C++. Soubory pokynů jsou v `vcpackages`, `Debug`, `A1`, a `A2` adresáře.  
   
 ### <a name="hint-file-directories"></a>Pomocný parametr souborové adresáře  
- ![Běžné a projekt & č. 45; konkrétní pomocný parametr souborové adresáře. ] (../ide/media/hintfile.png "HintFile")  
+ ![Běžné a projekt&#45;konkrétní pomocný parametr souborové adresáře. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Adresářů a obsah souboru pokynů  
  V následujícím seznamu jsou adresáře v tomto projektu, které obsahují soubory pokynů a obsah těchto souborů pokynů. Jenom některé z mnoha pomocné parametry v `vcpackages` souboru pomocný parametr adresáře jsou uvedené.  

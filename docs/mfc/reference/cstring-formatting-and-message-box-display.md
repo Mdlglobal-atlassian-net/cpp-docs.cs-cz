@@ -1,13 +1,10 @@
 ---
-title: "Formátování dat CString a zobrazení oken zpráv | Microsoft Docs"
-ms.custom: 
+title: Formátování dat CString a zobrazení oken zpráv | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formátování dat CString a zobrazení oken zpráv
 Počet funkcí jsou k dispozici můžete naformátovat a analyzovat `CString` objekty. Tyto funkce lze použít, když máte k manipulaci s `CString` objekty, ale jsou užitečné zejména pro formátování řetězce, které se zobrazí v textu okno se zprávou.  
@@ -44,7 +39,7 @@ Počet funkcí jsou k dispozici můžete naformátovat a analyzovat `CString` ob
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>Afxextractsubstring –  
+##  <a name="afxextractsubstring"></a>  Afxextractsubstring –  
  Tato globální funkce slouží k extrakci dílčí řetězec z daného zdrojový řetězec.  
   
 ```   
@@ -82,7 +77,7 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxformatstring1"></a>Afxformatstring1 –  
+##  <a name="afxformatstring1"></a>  Afxformatstring1 –  
  Nahradí text, na kterou odkazuje `lpsz1` pro všechny instance znaky "%1" v prostředku řetězec šablony, který se identifikovanou pomocí `nIDS`.  
   
 ```  
@@ -113,7 +108,7 @@ void  AfxFormatString1(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxformatstring2"></a>Afxformatstring2 –  
+##  <a name="afxformatstring2"></a>  Afxformatstring2 –  
  Nahradí text, na kterou odkazuje `lpsz1` pro všechny instance znaky "%1" a řetězec, na kterou odkazuje `lpsz2` pro všechny instance znaky "%2" v prostředku řetězec šablony, který se identifikovanou pomocí `nIDS`.  
   
 ```   
@@ -148,7 +143,7 @@ void AfxFormatString2(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox –  
+##  <a name="afxmessagebox"></a>  AfxMessageBox –  
  Na obrazovce zobrazí okno se zprávou.  
   
 ```  

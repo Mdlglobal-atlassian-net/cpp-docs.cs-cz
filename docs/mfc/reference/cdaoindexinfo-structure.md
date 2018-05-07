@@ -1,13 +1,10 @@
 ---
-title: "Cdaoindexinfo – struktura | Microsoft Docs"
-ms.custom: 
+title: Cdaoindexinfo – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo – struktura
 `CDaoIndexInfo` Struktura obsahuje informace o objektu indexu definované pro přístup k objektům dat (DAO).  
@@ -110,9 +105,9 @@ struct CDaoIndexInfo {
   
  Index objekty nejsou reprezentované pomocí třídy knihovny MFC. Místo toho rozhraní DAO objekty základní MFC objekty třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahovat kolekce objektů index názvem kolekce indexů. Členské funkce pro přístup k jednotlivé položky index informace zadat tyto třídy nebo jejich najednou pomocí `CDaoIndexInfo` objekt voláním `GetIndexInfo` členské funkce obsahující objektu.  
   
- `CDaoIndexInfo`má konstruktor a destruktor, aby bylo možné správně přidělit a navrátit informace index pole v `m_pFieldInfos`.  
+ `CDaoIndexInfo` má konstruktor a destruktor, aby bylo možné správně přidělit a navrátit informace index pole v `m_pFieldInfos`.  
   
- Načte informace `GetIndexInfo` členské funkce tabledef objektu je uložen v `CDaoIndexInfo` struktura. Volání `GetIndexInfo` členské funkce obsahující tabledef objektu, v jehož kolekce indexů index objekt se uloží. `CDaoIndexInfo`také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoIndexInfo` objektu.  
+ Načte informace `GetIndexInfo` členské funkce tabledef objektu je uložen v `CDaoIndexInfo` struktura. Volání `GetIndexInfo` členské funkce obsahující tabledef objektu, v jehož kolekce indexů index objekt se uloží. `CDaoIndexInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoIndexInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  

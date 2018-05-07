@@ -1,13 +1,10 @@
 ---
-title: "Schránka: Přidání dalších formátů | Microsoft Docs"
-ms.custom: 
+title: 'Schránka: Přidání dalších formátů | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
 Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vložit Data](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementace potřebných k podpoře kopírování a vkládání ze schránky. Pokud je to všechny implementujete, jsou pouze formáty umístit do schránky `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně `CF_LINKSOURCE`. Většina aplikací potřebovat více formátů do schránky. než tyto tři.  
   
-##  <a name="_core_registering_custom_formats"></a>Registrace vlastních formátů  
+##  <a name="_core_registering_custom_formats"></a> Registrace vlastních formátů  
  Pokud chcete vytvořit vlastní formáty, postupujte stejným způsobem, který byste použili při registraci všechny vlastní formát schránky: předat název formát, který se **RegisterClipboardFormat** funkce a použít hodnoty jako ID formátu.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>Formáty umístění do schránky  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Formáty umístění do schránky  
  Chcete-li přidat více formátů těm, které jsou umístěny do schránky, je nutné přepsat `OnGetClipboardData` funkce třídy odvozené od buď `COleClientItem` nebo `COleServerItem` (v závislosti na tom, zda je nativní data, která mají být zkopírovány). V této funkci používejte následující postup.  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>Chcete-li formáty umístění do schránky  

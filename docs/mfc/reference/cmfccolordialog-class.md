@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCColorDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCColorDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog – třída
 `CMFCColorDialog` Třída reprezentuje dialogové okno Výběr barev.  
@@ -78,8 +73,8 @@ class CMFCColorDialog : public CDialogEx
   
 |Název|Popis|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`Pokud dialogové okno pro výběr barev používá svou vlastní paletu barev nebo `FALSE` Pokud dialogové okno používá paletu, která je zadána v `CMFCColorDialog` konstruktor.|  
-|`m_bPickerMode`|`TRUE`Když uživatel je výběr barvy z dialogového okna Výběr; v opačném `FALSE`.|  
+|`m_bIsMyPalette`|`TRUE` Pokud dialogové okno pro výběr barev používá svou vlastní paletu barev nebo `FALSE` Pokud dialogové okno používá paletu, která je zadána v `CMFCColorDialog` konstruktor.|  
+|`m_bPickerMode`|`TRUE` Když uživatel je výběr barvy z dialogového okna Výběr; v opačném `FALSE`.|  
 |`m_btnColorSelect`|Tlačítko barev, které uživatel vybral.|  
 |`m_CurrentColor`|Aktuálně vybrané barvy.|  
 |`m_hcurPicker`|Kurzor, který se používá k vybrat barvu.|  
@@ -117,7 +112,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  Vytvoří `CMFCColorDialog` objektu.  
   
 ```  
@@ -129,23 +124,23 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrInit`  
+ [v] `clrInit`  
  Výchozí výběr barev. Pokud není zadaná žádná hodnota, výchozí hodnota je RGB(0,0,0) (černé).  
   
- [v]`dwFlags`  
+ [v] `dwFlags`  
  (Vyhrazené).  
   
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
   
- [v]`hPal`  
+ [v] `hPal`  
  Popisovač pro palety barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  Načte barvu, která si uživatel vybere ze dialogové okno barvy.  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Poznámky  
  Po zavolání metody volání této funkce `DoModal` metoda.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  Načte paletu barev, která je k dispozici v dialogovém okně aktuální barev.  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>Poznámky  
  Určuje barevnou paletu barev, které uživatel může vybrat.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  Paleta odvozená z palety systému.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  Nastaví barvu aktuální dialogového okna.  
   
 ```  
@@ -186,12 +181,12 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rgb`  
+ [v] `rgb`  
  Hodnotu barva RGB  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  Nastaví barvu aktuální barvu v aktuální paletu, která se nejvíce podobá.  
   
 ```  
@@ -199,12 +194,12 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rgb`  
+ [v] `rgb`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) určující barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  Určuje explicitně červené, zelené a modré součástí vybrané barvy na první stránce vlastnost dialogového okna barvy.  
   
 ```  
@@ -215,18 +210,18 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`R`  
+ [v] `R`  
  Určuje komponentu red hodnoty RGB.  
   
- [v]`G`  
+ [v] `G`  
  Určuje komponentu zelená hodnoty RGB.  
   
- [v]`B`  
+ [v] `B`  
  Určuje komponentu blue hodnoty RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  Na druhé stránce vlastnost dialogového okna barvy explicitně určuje červené, zelené a modré součástí vybrané barvy.  
   
 ```  
@@ -237,13 +232,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`R`  
+ [v] `R`  
  Určuje komponentu red hodnoty RGB  
   
- [v]`G`  
+ [v] `G`  
  Určuje komponentu zelená hodnoty RGB  
   
- [v]`B`  
+ [v] `B`  
  Určuje komponentu blue hodnoty RGB  
   
 ### <a name="remarks"></a>Poznámky  

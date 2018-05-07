@@ -1,13 +1,10 @@
 ---
-title: "Zápis přetypování a úvod safe_cast&lt; &gt; | Microsoft Docs"
-ms.custom: 
+title: Zápis přetypování a úvod safe_cast&lt; &gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Zápis přetypování a úvod safe_cast&lt;&gt;
 Zápis přetypování změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  Tak, aby Návrh pořízení zpět k dalšímu zvážení a považovány za několik alternativní zápisy a ta k výbor byla ve formě (`?type`), která uvedena jeho neurčenou – to znamená, dynamické povahy. To dalo uživateli možnost přepnout mezi dvěma formuláři - statickou nebo dynamickou – ale nikdo je příliš s radostí s ním. Aby bylo zpět na panelu Kreslení. Třetí a úspěšný zápis je teď standardní `dynamic_cast<type>`, který byl zobecněn na sadu čtyř notací přetypování nového stylu.  
   
- V ISO-C++ `dynamic_cast` vrátí `0` při použít na nevhodný typ ukazatele a vyvolá výjimku `std::bad_cast` výjimka při použití odkazového typu. Ve spravovaných rozšíření jazyka C++ použití `dynamic_cast` typu spravovaný odkaz (z důvodu jeho znázornění ukazatelem) vždy vrátí `0`. `__try_cast<type>`byl představen jako analogie s variantou vyvolávající výjimky `dynamic_cast`, s tím rozdílem, že vyvolává `System::InvalidCastException` pokud přetypování selže.  
+ V ISO-C++ `dynamic_cast` vrátí `0` při použít na nevhodný typ ukazatele a vyvolá výjimku `std::bad_cast` výjimka při použití odkazového typu. Ve spravovaných rozšíření jazyka C++ použití `dynamic_cast` typu spravovaný odkaz (z důvodu jeho znázornění ukazatelem) vždy vrátí `0`. `__try_cast<type>` byl představen jako analogie s variantou vyvolávající výjimky `dynamic_cast`, s tím rozdílem, že vyvolává `System::InvalidCastException` pokud přetypování selže.  
   
 ```  
 public __gc class ItemVerb;  

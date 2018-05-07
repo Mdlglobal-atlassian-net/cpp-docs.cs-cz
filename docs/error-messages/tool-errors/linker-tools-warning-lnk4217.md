@@ -1,12 +1,9 @@
 ---
-title: "Upozornění linkerů Lnk4217 | Microsoft Docs"
-ms.custom: 
+title: Upozornění linkerů Lnk4217 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4217
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c984d7675c73bdf225bae7d3014f81153d20e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 625f3a1b8a67f198b1cb4ca37bd1350229ec20db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Upozornění linkerů LNK4217
 místně definované symbol symbol importovat ve funkci 'function'.  
   
  [deklarace __declspec(dllimport)](../../cpp/dllexport-dllimport.md) byl zadán pro symbol, i když symbol je definován místně. Odeberte `__declspec` modifikátor vyřešit toto upozornění.  
   
- `symbol`je název symbol, který je definován v rámci bitovou kopii. `function`je funkce, která je import symbolu.  
+ `symbol` je název symbol, který je definován v rámci bitovou kopii. `function` je funkce, která je import symbolu.  
   
  Toto upozornění se nezobrazí, když zkompilujete pomocí možnosti [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
   

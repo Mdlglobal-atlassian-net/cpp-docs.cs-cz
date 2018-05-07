@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCColorBar | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCColorBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorBar
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04dcf7628e45d4c43ffbd5bbcd85132092ca04a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2083c26943768afff4b3b20a2ba95c709648dd50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar – třída
 `CMFCColorBar` Třída reprezentuje ukotvení ovládacích pruhů, které můžete vybrat barvy v dokumentu nebo aplikace.  
@@ -240,7 +235,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcolorbar.h  
   
-##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
+##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations  
  Upraví pozic barva tlačítek v ovládacím prvku pruhu barev.  
   
 ```  
@@ -250,7 +245,7 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rozhraním framework během `WM_SIZE` zpracování zprávy.  
   
-##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
  Určuje, zda lze změnit textový popisek barva tlačítek.  
   
 ```  
@@ -263,7 +258,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda vždy vrátí `FALSE`, což znamená, že popisky text nemůže být upraven. Potlačí tuto metodu za účelem povolení popisky změny textu.  
   
-##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>  CMFCColorBar::AllowShowOnList  
  Označuje, zda objekt ovládacího prvku pruhu barev můžete zobrazit v seznamu panelu nástrojů během procesu přizpůsobení.  
   
 ```  
@@ -276,7 +271,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda vždy vrátí `TRUE`, což znamená, že rozhraní můžete zobrazit ovládacího prvku pruhu barev během procesu přizpůsobení. Potlačí tuto metodu implementovat různé chování.  
   
-##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
+##  <a name="calcsize"></a>  CMFCColorBar::CalcSize  
  Voláno rámcem jako součást procesu výpočtu rozložení.  
   
 ```  
@@ -284,13 +279,13 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bVertDock`  
- `TRUE`Chcete-li určit, že ovládacího prvku pruhu barev ukotven svisle; `FALSE` k určení, že ovládacího prvku pruhu barev ukotven vodorovně.  
+ [v] `bVertDock`  
+ `TRUE` Chcete-li určit, že ovládacího prvku pruhu barev ukotven svisle; `FALSE` k určení, že ovládacího prvku pruhu barev ukotven vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost pole Barva tlačítek v ovládacím prvku pruhu barev.  
   
-##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
+##  <a name="cmfccolorbar"></a>  CMFCColorBar::CMFCColorBar  
  Vytvoří `CMFCColorBar` objektu.  
   
 ```  
@@ -328,53 +323,53 @@ CMFCColorBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`colors`  
+ [v] `colors`  
  Pole barev, které rozhraní zobrazí v ovládacím prvku pruhu barev.  
   
- [v]`color`  
+ [v] `color`  
  Původně vybrané barvy.  
   
- [v]`lpszAutoColor`  
+ [v] `lpszAutoColor`  
  Textový popisek *automatické* tlačítko barvy (výchozí), nebo `NULL`.  
   
  Standardní popisek tlačítka automatické je **automatické**.  
   
- [v]`lpszOtherColor`  
+ [v] `lpszOtherColor`  
  Textový popisek *jiných* tlačítko, které zobrazí další volby barev, nebo `NULL`.  
   
  Standardní popisek pro tlačítko Další je **Další barvy...** .  
   
- [v]`lpszDocColors`  
+ [v] `lpszDocColors`  
  Textový popisek tlačítka barvy dokumentu. Barevná paleta dokumentu jsou uvedeny všechny barev, které aktuálně používá v dokumentu.  
   
- [v]`lstDocColors`  
+ [v] `lstDocColors`  
  Seznam barev, které aktuálně používá v dokumentu.  
   
- [v]`nColumns`  
+ [v] `nColumns`  
  Počet sloupců, které má pole barev.  
   
- [v]`nRowsDockHorz`  
+ [v] `nRowsDockHorz`  
  Počet řádků, které má pruhu barev, kde je umístěn vodorovně.  
   
- [v]`nColDockVert`  
+ [v] `nColDockVert`  
  Počet sloupců, které nemá pruhu barev, pokud jej ukotven svisle.  
   
- [v]`colorAutomatic`  
+ [v] `colorAutomatic`  
  Výchozí barvu, která rozhraní platí po kliknutí na tlačítko Automatická.  
   
- [v]`nCommandID`  
+ [v] `nCommandID`  
  ID příkazu řízení pruhu barev.  
   
- [v]`pParentBtn`  
+ [v] `pParentBtn`  
  Ukazatel na nadřazené tlačítko.  
   
- [v]`src`  
+ [v] `src`  
  Existující `CMFCColorBar` objekt, který má být zkopírován do nové `CMFCColorBar` objektu.  
   
- [v]`uiCommandID`  
+ [v] `uiCommandID`  
  ID příkazu.  
   
-##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
+##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
  Vypočítá svislého a vodorovného okraje, které se musí obsahovat tlačítek v ovládacím prvku pruhu barev a upraví umístění těchto tlačítek.  
   
 ```  
@@ -387,12 +382,12 @@ void ContextToSize(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`bSquareButtons`|`TRUE`že jsou tvaru tlačítek v ovládacím prvku pruhu barev odmocnina; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
-|[v]`bCenterButtons`|`TRUE`Chcete-li určit, zda je umístěn na střed obsah na přední ovládací prvek tlačítko pruhu barev; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
+|[v] `bSquareButtons`|`TRUE` že jsou tvaru tlačítek v ovládacím prvku pruhu barev odmocnina; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
+|[v] `bCenterButtons`|`TRUE` Chcete-li určit, zda je umístěn na střed obsah na přední ovládací prvek tlačítko pruhu barev; v opačném `FALSE`. Výchozí hodnota je `TRUE`.|  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="create"></a>CMFCColorBar::Create  
+##  <a name="create"></a>  CMFCColorBar::Create  
  Okno pro řízení pruhu barev vytvoří a připojí jej k `CMFCColorBar` objektu.  
   
 ```  
@@ -407,34 +402,34 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v]`nID`  
+ [v] `nID`  
  ID příkazu.  
   
- [v]`pPalette`  
+ [v] `pPalette`  
  Ukazatel na paletu barev. Výchozí hodnota je `NULL`.  
   
- [v]`nColumns`  
+ [v] `nColumns`  
  Počet sloupců v ovládacím prvku pruhu barev. Výchozí hodnota je 0.  
   
- [v]`nRowsDockHorz`  
+ [v] `nRowsDockHorz`  
  Počet řádků v ovládacím prvku pruhu barev, když je umístěn vodorovně. Výchozí hodnota je 0.  
   
- [v]`nColDockVert`  
+ [v] `nColDockVert`  
  Počet sloupců v ovládacím prvku pruhu barev při ukotven svisle. Výchozí hodnota je 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  K vytvoření `CMFCColorBar` objektu, volání konstruktoru třídy pak tuto metodu. `Create` Metoda vytvoří ovládacího prvku Windows a inicializuje seznam barev.  
   
-##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
+##  <a name="createcontrol"></a>  CMFCColorBar::CreateControl  
  Vytvoří okno pro řízení pruhu barev, připojí se k `CMFCColorBar` objektu a změní velikost okna ovládacího prvku tak, aby obsahovala zadaný paletu barev.  
   
 ```  
@@ -447,28 +442,28 @@ virtual BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna. Nemůže být `NULL`.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník, která určuje, kde k vykreslení ovládacího prvku pruhu barev.  
   
- [v]`nID`  
+ [v] `nID`  
  ID ovládacího prvku.  
   
- [v]`nColumns`  
+ [v] `nColumns`  
  Ideální počet sloupců v ovládacím prvku pruhu barev. Tato metoda upraví počet podle zadaného paletu barev. Výchozí hodnota je -1, což znamená, že není tento parametr zadán.  
   
- [v]`pPalette`  
+ [v] `pPalette`  
  Ukazatel na paletu barev, nebo `NULL`. Pokud tento parametr je `NULL`, tato metoda vypočítá velikost ovládacího prvku pruhu barev, jako kdyby byly zadány 20 barvy. Výchozí hodnota je `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda bude úspěšná; v opačném případě `FALSE`.  
+ `TRUE` Pokud tato metoda bude úspěšná; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda používá `rect`, `nColumns`, a `pPalette` parametry k výpočtu příslušné číslo nebo řádků a sloupců v řízení pruhu barev a poté zavolá [CMFCColorBar::Create](#create) metoda.  
   
-##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
+##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
  Inicializuje palety barev v zadané pole barev.  
   
 ```  
@@ -481,13 +476,13 @@ static BOOL CreatePalette(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`arColors`|Pole barev.|  
-|[v]`palette`|Palety barev.|  
+|[v] `arColors`|Pole barev.|  
+|[v] `palette`|Palety barev.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorBar::EnableAutomaticButton  
  Zobrazí nebo skryje tlačítko Automatická.  
   
 ```  
@@ -498,21 +493,21 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Textový popisek *automatické* tlačítko barvy (výchozí), nebo `NULL`.  
   
  Standardní popisek tlačítka automatické je **automatické**.  
   
- [v]`colorAutomatic`  
+ [v] `colorAutomatic`  
  Výchozí barvu, která rozhraní platí po kliknutí na tlačítko Automatická.  
   
- [v]`bEnable`  
- `TRUE`Chcete-li povolit automatické tlačítko; `FALSE` zakázat automatické tlačítko. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit automatické tlačítko; `FALSE` zakázat automatické tlačítko. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Textový popisek tlačítka automatické je odstraněna, když `lpszLabel` parametr `NULL` nebo `bEnable` parametr `FALSE`.  
   
-##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
  Povolí nebo zakáže zobrazení dialogu, který umožňuje uživateli vybrat více barev.  
   
 ```  
@@ -523,18 +518,18 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Textový popisek *jiných* tlačítko, které zobrazí další volby barev, nebo `NULL`.  
   
  Standardní popisek pro toto tlačítko je **Další barvy...** .  
   
- [v]`bAltColorDlg`  
- `TRUE`Chcete-li zobrazit [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialogové okno; `FALSE` zobrazíte standardní [CColorDialog](../../mfc/reference/ccolordialog-class.md) dialogové okno. Výchozí hodnota je `TRUE`.  
+ [v] `bAltColorDlg`  
+ `TRUE` Chcete-li zobrazit [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialogové okno; `FALSE` zobrazíte standardní [CColorDialog](../../mfc/reference/ccolordialog-class.md) dialogové okno. Výchozí hodnota je `TRUE`.  
   
- [v]`bEnable`  
- `TRUE`povolit tlačítko; `FALSE` na tlačítko zakázat. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` povolit tlačítko; `FALSE` na tlačítko zakázat. Výchozí hodnota je `TRUE`.  
   
-##  <a name="getcolor"></a>CMFCColorBar::GetColor  
+##  <a name="getcolor"></a>  CMFCColorBar::GetColor  
  Načte aktuálně vybrané barvy.  
   
 ```  
@@ -544,7 +539,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuálně vybrané barvy.  
   
-##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
+##  <a name="getcolorgridsize"></a>  CMFCColorBar::GetColorGridSize  
  Spočítá počet řádků a sloupců v mřížce ovládacího prvku pruhu barev.  
   
 ```  
@@ -555,12 +550,12 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`bVertDock`|`TRUE`k provedení výpočtu pro ovládací prvek svisle ukotveného pruhu barev; proveďte, jinak hodnota výpočtu vodorovně ukotvené ovládacího prvku.|  
+|[v] `bVertDock`|`TRUE` k provedení výpočtu pro ovládací prvek svisle ukotveného pruhu barev; proveďte, jinak hodnota výpočtu vodorovně ukotvené ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, jehož `cx` součást obsahuje počet sloupců a jehož `cy` součást obsahuje počet řádků.  
   
-##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
+##  <a name="getcommandid"></a>  CMFCColorBar::GetCommandID  
  Načte ID příkazu, který aktuální ovládacího prvku pruhu barev.  
   
 ```  
@@ -573,7 +568,7 @@ UINT GetCommandID() const;
 ### <a name="remarks"></a>Poznámky  
  Když uživatel vybere novou barvu, rozhraní odešle ID příkazu, který `WM_COMMAND` zprávy s upozorněním nadřazeného `CMFCColorBar` objektu.  
   
-##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
+##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
  Vypočítá další výška, který aktuální pruhu barev vyžaduje, aby zobrazit různé prvky rozhraní, jako například **jiných** barvy tlačítko nebo dokumentu.  
   
 ```  
@@ -584,12 +579,12 @@ int GetExtraHeight(int nNumColumns) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`nNumColumns`|Pokud ovládací prvek pruhu barev obsahuje dokument barvy, počet sloupců do zobrazení v mřížce barvy dokumentu. Tuto hodnotu, jinak se nepoužije.|  
+|[v] `nNumColumns`|Pokud ovládací prvek pruhu barev obsahuje dokument barvy, počet sloupců do zobrazení v mřížce barvy dokumentu. Tuto hodnotu, jinak se nepoužije.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počítané navíc výška požadované.  
   
-##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>  CMFCColorBar::GetHighlightedColor  
  Načte barvu, která označuje, že barva tlačítko je aktivní; tlačítko je *aktivní*.  
   
 ```  
@@ -601,7 +596,7 @@ COLORREF GetHighlightedColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
+##  <a name="gethorzmargin"></a>  CMFCColorBar::GetHorzMargin  
  Načte vodorovné okrajem, což je prostor mezi vlevo nebo vpravo barvu buňky a hranic oblasti klienta.  
   
 ```  
@@ -611,7 +606,7 @@ int GetHorzMargin();
 ### <a name="return-value"></a>Návratová hodnota  
  Vodorovné okraj.  
   
-##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
+##  <a name="getvertmargin"></a>  CMFCColorBar::GetVertMargin  
  Načte svislé okrajem, což je prostor mezi horní nebo dolní barvu buňky a hranic oblasti klienta.  
   
 ```  
@@ -621,7 +616,7 @@ int GetVertMargin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Svislý okraj.  
   
-##  <a name="initcolors"></a>CMFCColorBar::InitColors  
+##  <a name="initcolors"></a>  CMFCColorBar::InitColors  
  Inicializuje pole barev v zadané palety nebo s systémové výchozí palety barev.  
   
 ```  
@@ -634,13 +629,13 @@ static int InitColors(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pPalette`|Ukazatel na objekt palety, nebo `NULL`. Pokud tento parametr je `NULL`, tato metoda používá výchozí palety operačního systému.|  
-|[v]`arColors`|Pole barev.|  
+|[v] `pPalette`|Ukazatel na objekt palety, nebo `NULL`. Pokud tento parametr je `NULL`, tato metoda používá výchozí palety operačního systému.|  
+|[v] `arColors`|Pole barev.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet prvků v poli barvy.  
   
-##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
+##  <a name="istearoff"></a>  CMFCColorBar::IsTearOff  
  Určuje, zda je aktuální pruhu barev lze ukotvit.  
   
 ```  
@@ -648,12 +643,12 @@ BOOL IsTearOff() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je lze ukotvit; aktuální ovládací prvek pruhu barev v opačném `FALSE`.  
+ `TRUE` Pokud je lze ukotvit; aktuální ovládací prvek pruhu barev v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud ovládací prvek pruhu barev lze ukotvit, můžete vypnout ovládací prvek panel odpojí a ukotvení v jiném umístění.  
   
-##  <a name="onkey"></a>CMFCColorBar::OnKey  
+##  <a name="onkey"></a>  CMFCColorBar::OnKey  
  Voláno rámcem po stisknutí tlačítka klávesnice.  
   
 ```  
@@ -661,13 +656,13 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nChar`  
+ [v] `nChar`  
  Kód virtuální klíče pro klíč, který uživatel stisknutí tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda zpracovává k zadanému klíči; v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda zpracovává k zadanému klíči; v opačném `FALSE`.  
   
-##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCColorBar::OnSendCommand  
  Voláno rámcem zavřete hierarchie automaticky otevírané okno Ovládací prvky.  
   
 ```  
@@ -678,12 +673,12 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pButton`|Ukazatel na ovládací prvek, který se nachází na panelu nástrojů.|  
+|[v] `pButton`|Ukazatel na ovládací prvek, který se nachází na panelu nástrojů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
-##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCColorBar::OnUpdateCmdUI  
  Voláno rámcem chcete povolit nebo zakázat uživatelské rozhraní položky ovládacího prvku pruhu barev předtím, než se zobrazí položka.  
   
 ```  
@@ -693,16 +688,16 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pTarget`  
+ [v] `pTarget`  
  Ukazatel na okno, které obsahuje položku uživatelského rozhraní k aktualizaci.  
   
- [v]`bDisableIfNoHndler`  
- `TRUE`zakázat uživatelské rozhraní položky, pokud žádná obslužná rutina je definována v mapy zpráv; v opačném `FALSE`.  
+ [v] `bDisableIfNoHndler`  
+ `TRUE` zakázat uživatelské rozhraní položky, pokud žádná obslužná rutina je definována v mapy zpráv; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Když aplikace klepnutí položku uživatelského rozhraní, položka musí vědět, jestli by se měla zobrazit jako povolené nebo zakázané. Cíl zprávy příkaz implementací poskytuje tyto informace `ON_UPDATE_COMMAND_UI` obslužná rutina příkazu. Tuto metodu použijte ke zpracování tohoto příkazu. Další informace najdete v tématu [CCmdUI – třída](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
+##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog  
  Otevře dialogové okno barvy.  
   
 ```  
@@ -712,25 +707,25 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`colorDefault`  
+ [v] `colorDefault`  
  Barvu, která je standardně vybraná, když se otevře dialogové okno barev.  
   
- [out]`colorRes`  
+ [out] `colorRes`  
  Barvu, která vybrané uživatele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud uživatel vybral barvy; `FALSE` Pokud uživatel zrušil dialogové okno barev.  
+ `TRUE` Pokud uživatel vybral barvy; `FALSE` Pokud uživatel zrušil dialogové okno barev.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
+##  <a name="rebuild"></a>  CMFCColorBar::Rebuild  
  Úplně překreslí ovládacího prvku pruhu barev.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
+##  <a name="selectpalette"></a>  CMFCColorBar::SelectPalette  
  Nastaví logické paletu kontext zadané zařízení na paletu tlačítko nadřazeného prvku aktuální pruhu barev.  
   
 ```  
@@ -741,12 +736,12 @@ CPalette* SelectPalette(CDC* pDC);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pDC`|Ukazatel na zařízení kontextu tlačítko nadřazeného prvku aktuální pruhu barev.|  
+|[v] `pDC`|Ukazatel na zařízení kontextu tlačítko nadřazeného prvku aktuální pruhu barev.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na paletu, která je nahrazena paletu tlačítko nadřazeného prvku aktuální pruhu barev.  
   
-##  <a name="setcolor"></a>CMFCColorBar::SetColor  
+##  <a name="setcolor"></a>  CMFCColorBar::SetColor  
  Nastaví barvu, která je aktuálně vybrané.  
   
 ```  
@@ -754,10 +749,10 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnotu barva RGB.  
   
-##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
  Nastaví nový název pro zadaná barva.  
   
 ```  
@@ -767,16 +762,16 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnota RGB barvy.  
   
- [v]`strName`  
+ [v] `strName`  
  Nový název pro zadaná barva.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda mění název zadaná barva ve všech `CMFCColorBar` objekty ve vaší aplikaci.  
   
-##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
+##  <a name="setcommandid"></a>  CMFCColorBar::SetCommandID  
  Nastaví nové ID příkazu pro ovládací prvek pruhu barev.  
   
 ```  
@@ -784,13 +779,13 @@ void SetCommandID(UINT nCommandID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nCommandID`  
+ [v] `nCommandID`  
  ID příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu, pokud chcete upravit příkaz ID ovládacího prvku pruhu barev a oznámit nadřazené okno ovládacího prvku, který se změnil Identifikátor.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>  CMFCColorBar::SetDocumentColors  
  Nastaví seznam barev, které se používají v aktuálním dokumentu.  
   
 ```  
@@ -801,19 +796,19 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszCaption`  
+ [v] `lpszCaption`  
  Popisek, který se zobrazí, pokud není ukotven ovládacího prvku pruhu barev.  
   
- [v]`lstDocColors`  
+ [v] `lstDocColors`  
  Seznam barev, který nahrazuje aktuální barvy dokumentu.  
   
- [v]`bShowWhenDocked`  
- `TRUE`Zobrazit barvy dokumentu, když je ukotvena ovládacího prvku pruhu barev; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bShowWhenDocked`  
+ `TRUE` Zobrazit barvy dokumentu, když je ukotvena ovládacího prvku pruhu barev; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  *Barvy dokumentu* jsou barev, které jsou aktuálně používány v dokumentu. Rozhraní framework automaticky udržuje seznam barev dokumentu, ale tuto metodu můžete použít k úpravě seznamu.  
   
-##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
+##  <a name="sethorzmargin"></a>  CMFCColorBar::SetHorzMargin  
  Nastaví vodorovnou okrajem, což je prostor mezi vlevo nebo vpravo barvu buňky a hranice klientské oblasti.  
   
 ```  
@@ -821,13 +816,13 @@ void SetHorzMargin(int nHorzMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nHorzMargin`  
+ [v] `nHorzMargin`  
  Vodorovné okraje v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení [CMFCColorBar::CMFCColorBar](#cmfccolorbar) konstruktor nastaví vodorovné okraj 4 pixelů.  
   
-##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
+##  <a name="setproplist"></a>  CMFCColorBar::SetPropList  
  Nastaví `m_pWndPropList` chráněná data člena na zadané ukazatel do ovládacího prvku mřížky vlastnosti.  
   
 ```  
@@ -838,9 +833,9 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pWndList`|Ukazatel na objekt ovládacího prvku mřížky vlastnosti.|  
+|[v] `pWndList`|Ukazatel na objekt ovládacího prvku mřížky vlastnosti.|  
   
-##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
+##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  Nastaví svislé okraj, který je mezery mezi barvu buňky horní nebo dolní a hranic oblasti klienta.  
   
 ```  
@@ -848,13 +843,13 @@ void SetVertMargin(int nVertMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nVertMargin`  
+ [v] `nVertMargin`  
  Svislé okraje v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení [CMFCColorBar::CMFCColorBar](#cmfccolorbar) konstruktor nastaví svislé okraj 4 pixelů.  
   
-##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCColorBar::ShowCommandMessageString  
  Požadavky rámec okna, který vlastní ovládací prvek pruhu barev aktualizovat řádek zprávy ve stavovém řádku.  
   
 ```  
@@ -862,7 +857,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdId`  
+ [v] `uiCmdId`  
  ID příkazu. (Tento parametr bude ignorován.)  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,13 +1,10 @@
 ---
-title: "Služby modelu běhového objektu | Microsoft Docs"
-ms.custom: 
+title: Služby modelu běhového objektu | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff506d559ab44ba4034e982bb909db763917594
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 Třídy [CObject](../../mfc/reference/cobject-class.md) a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) zapouzdření několik služby objektu, včetně přístupu k informacím run-time třída, serializace a vytváření dynamických objektů. Všechny třídy odvozené od `CObject` dědí tuto funkci.  
@@ -79,7 +74,7 @@ Třídy [CObject](../../mfc/reference/cobject-class.md) a [CRuntimeClass](../../
 |[IMPLEMENT_OLECTLTYPE –](#implement_olectltype)|Implementuje **getusertypenameid –** a `GetMiscStatus` členské funkce třídy ovládacího prvku.|  
 |[IMPLEMENT_OLECREATE_FLAGS –](#implement_olecreate_flags)|Buď toto makro nebo [implement_olecreate –](#implement_olecreate) musí být v souboru implementace pro třídy, které používá `DECLARE_OLECREATE`. |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS –
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS –
 Určuje, zda knihovny běžných ovládacích prvků implementuje zadaný rozhraní API.  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -99,7 +94,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="see-also"></a>Viz také  
  [Izolace MFC běžné ovládací prvky knihovny](../isolation-of-the-mfc-common-controls-library.md) [afx_comctl32_if_exists2 –](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2 –
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2 –
 Určuje, zda knihovny běžných ovládacích prvků implementuje zadaný rozhraní API (Toto je verze Unicode [afx_comctl32_if_exists –](#afx_comctl32_if_exists)).  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -121,7 +116,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC –  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC –  
  Přidá přístup běhu informace o třídě objektu při odvození třídy z `CObject`.  
   
 ```
@@ -147,7 +142,7 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE –  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE –  
  Umožňuje objekty `CObject`-odvozených tříd vytváření dynamicky za běhu.  
   
 ```
@@ -221,7 +216,7 @@ DECLARE_PROPPAGEIDS( class_name )
  [BEGIN_PROPPAGEIDS –](#begin_proppageids)   
  [END_PROPPAGEIDS –](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL –  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL –  
  Generuje kód záhlaví C++ potřebné pro `CObject`-odvozené třídy, které lze serializovat.  
   
 ```
@@ -253,7 +248,7 @@ DECLARE_SERIAL(class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC –  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC –  
  Generuje kód C++ potřebné pro dynamický `CObject`-odvozené třídy s přístupem k spuštění název třídy a pozici v rámci hierarchie.  
   
 ```
@@ -280,7 +275,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE –  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE –  
  Umožňuje objekty `CObject`-odvozených tříd pro dynamicky vytvořen při spuštění čas při použití s `DECLARE_DYNCREATE` makro.  
   
 ```
@@ -311,7 +306,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS –
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS –
 Buď toto makro nebo [implement_olecreate –](#implement_olecreate) musí být v souboru implementace pro třídy, které používá `DECLARE_OLECREATE`.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -330,12 +325,12 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  `nFlags`  
  Obsahuje jeden nebo více z následujících příznaků:  
   
--   `afxRegInsertable`Umožňuje zobrazit v dialogovém okně Vložit objekt pro objekty OLE.    
--   `afxRegApartmentThreading`Nastaví v registru na ThreadingModel model vláken typu Apartment =.    
+-   `afxRegInsertable` Umožňuje zobrazit v dialogovém okně Vložit objekt pro objekty OLE.    
+-   `afxRegApartmentThreading` Nastaví v registru na ThreadingModel model vláken typu Apartment =.    
 -   **afxregfreethreading –** nastaví model vláken v registru na ThreadingModel = volné.  
   
      Dvěma příznaky můžete kombinovat `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obě. V tématu [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) ve Windows SDK pro další informace o dělení na vlákna registrace modelu.    
- *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Součástí třída **CLSID**.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -356,7 +351,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  [Klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE –
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE –
 Implementuje **getusertypenameid –** a `GetMiscStatus` členské funkce třídy ovládacího prvku.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -376,7 +371,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="remarks"></a>Poznámky  
  Kromě `IMPLEMENT_OLECTLTYPE`, je nutné přidat **declare_olectltype –** makro k vaší deklaraci třídy ovládacího prvku.  
   
- **Getusertypenameid –** – členská funkce vrátí řetězec prostředku, který identifikuje třídě ovládacího prvku. `GetMiscStatus`Vrátí **OLEMISC** bits pro ovládací prvek. Tento výčet určuje kolekce nastavení, které popisují různé vlastnosti ovládacího prvku. Úplný popis **OLEMISC** najdete v části nastavení, [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) ve Windows SDK.  
+ **Getusertypenameid –** – členská funkce vrátí řetězec prostředku, který identifikuje třídě ovládacího prvku. `GetMiscStatus` Vrátí **OLEMISC** bits pro ovládací prvek. Tento výčet určuje kolekce nastavení, které popisují různé vlastnosti ovládacího prvku. Úplný popis **OLEMISC** najdete v části nastavení, [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) ve Windows SDK.  
   
 > [!NOTE]
 >  Výchozí nastavení používané ActiveX ControlWizard: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, a **OLEMISC_RECOMPOSEONRESIZE**.  
@@ -388,7 +383,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE –](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL –  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL –  
  Generuje kód C++ potřebné pro dynamický `CObject`-odvozené třídy s přístupem k spuštění název třídy a pozici v rámci hierarchie.  
   
 ```
@@ -420,7 +415,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
  Získá strukturu run-time třída z název třídy C++.  
   
 ```
@@ -432,7 +427,7 @@ RUNTIME_CLASS(class_name)
  Skutečný název třídy (není uzavřena v uvozovkách).  
   
 ### <a name="remarks"></a>Poznámky  
- `RUNTIME_CLASS`vrátí ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktury určeného třída *class_name*. Pouze `CObject`-odvozených třídách deklarovat s `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, nebo `DECLARE_SERIAL` vrátí ukazatele na `CRuntimeClass` struktury.  
+ `RUNTIME_CLASS` vrátí ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktury určeného třída *class_name*. Pouze `CObject`-odvozených třídách deklarovat s `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, nebo `DECLARE_SERIAL` vrátí ukazatele na `CRuntimeClass` struktury.  
   
  Další informace najdete v tématu [témata třídy CObject](../../mfc/using-cobject.md).  
   
@@ -442,7 +437,7 @@ RUNTIME_CLASS(class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE –  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE –  
  Umožňuje objekty `CCmdTarget`-odvozených tříd, které mají být vytvořeny prostřednictvím automatizace OLE.  
   
 ```
@@ -463,7 +458,7 @@ DECLARE_OLECREATE(class_name)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE –  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE –  
  Buď toto makro nebo [implement_olecreate_flags –](#implement_olecreate_flags) musí být v souboru implementace pro třídy, které používá `DECLARE_OLECREATE`.  
   
 ```
@@ -477,7 +472,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *external_name*  
  Název objektu zveřejněné k ostatním aplikacím (uzavřena v uvozovkách).  
   
- *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Součástí třída **CLSID**.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,13 +1,10 @@
 ---
 title: Serializace dat do a z soubory | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec6bfbe647045a334af9fe95cd6d1ab40625a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializace dat při vstupu i výstupu ze souborů
 Základní představu o trvalost je, že objekt by měl být schopni zapisovat jeho aktuální stav indikován hodnoty jeho členské proměnné, do trvalého úložiště. Objekt později, může být znovu vytvořen, čtení, nebo "deserializaci" stav objektu z trvalého úložiště. Zde bod klíče je zodpovědná za čtení a zápis vlastní stav samotného objektu. Proto pro třídu jako trvalé, musí implementovat operace základní serializace.  
@@ -50,10 +45,10 @@ Základní představu o trvalost je, že objekt by měl být schopni zapisovat j
   
 -   [Obcházení mechanismu serializace](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a>Role dokumentu v serializaci  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> Role dokumentu v serializaci  
  Rozhraní framework odpoví automaticky v nabídce soubor otevřít, uložte a uložit jako příkazy voláním dokumentu `Serialize` – členská funkce, pokud je implementována. `ID_FILE_OPEN` Příkazu, například volání funkce obslužné rutiny do objektu application. Během tohoto procesu uživatel uvidí a reaguje na dialogové okno otevřít soubor a rozhraní získá název souboru, který uživatel vybere. Vytvoří rozhraní `CArchive` objekt nastavil pro načítání dat do dokumentu a předá archivu do `Serialize`. Rozhraní framework již otevřena soubor. Kód v vašeho dokumentu `Serialize` – členská funkce čte data prostřednictvím archivu, rekonstrukce datové objekty podle potřeby. Další informace o serializaci, najdete v článku [serializace](../mfc/serialization-in-mfc.md).  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a>Role Data v serializaci  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> Role Data v serializaci  
  Obecně platí typu třídy data by měla být schopen serializovat sám sebe. To znamená když objekt můžete předat do archivu, objekt by měl vědět, jak samotné zapsat do archivu a jak číst sám sebe z archivu. MFC poskytuje podporu pro vytváření tříd serializovatelný tímto způsobem. Pokud návrh třídu k definování typu dat a máte v úmyslu serializaci dat daného typu, návrh pro serializaci.  
   
 ## <a name="see-also"></a>Viz také  

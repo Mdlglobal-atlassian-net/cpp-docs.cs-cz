@@ -1,13 +1,10 @@
 ---
-title: "Třídy DAO | Microsoft Docs"
-ms.custom: 
+title: Třídy DAO | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>DAO – třídy
 Tyto třídy pracovat s další aplikace framework třídy poskytují snadný přístup k databázím objekt DAO (Data Access), které používají stejný databázový stroj Microsoft Visual Basic a Microsoft Access. Třídy DAO můžete také přístup k celé řadě databáze, pro které jsou k dispozici ovladače připojení ODBC (Open Database).  
@@ -62,7 +57,7 @@ Tyto třídy pracovat s další aplikace framework třídy poskytují snadný p�
   
 ## <a name="related-classes"></a>Související třídy  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Zapouzdří popisovač pro úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. `CLongBinary`objekty se používají ke správě objektů velkého množství dat uložených v tabulkách databáze.  
+ Zapouzdří popisovač pro úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. `CLongBinary` objekty se používají ke správě objektů velkého množství dat uložených v tabulkách databáze.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  Obálka pro typ automatizace OLE **MĚNA**, s pevnou desetinnou čárkou aritmetické typu, s 15 číslic od desetinné čárky a po 4 číslice.  

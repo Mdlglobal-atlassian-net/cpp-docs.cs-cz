@@ -2,29 +2,24 @@
 title: Nakonec | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd357c8eeed9eddc6940ce02de6e5d2b4f8c68d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70057cad8ff5bca0606f06dd43eaa485834d2c70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finally"></a>finally
 Kromě `try` a `catch` klauzule, podporuje zpracování výjimky CLR `finally` klauzule. Sémantika jsou stejné jako `__finally` blokovat v strukturovaného zpracování (SEH) výjimek. A `__finally` můžete postupovat podle bloku `try` nebo `catch` bloku.  
@@ -32,7 +27,7 @@ Kromě `try` a `catch` klauzule, podporuje zpracování výjimky CLR `finally` k
 ## <a name="remarks"></a>Poznámky  
  Účelem `finally` bloku je vyčistit všechny prostředky zbývající po se vyskytla výjimka. Všimněte si, že `finally` bloku je vždy provést, i v případě, že byla vyvolána žádná výjimka. `catch` Bloku je spustit pouze pokud je vyvolána výjimka spravované v rámci přidruženého `try` bloku.  
   
- `finally`je kontextové klíčové slovo; v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Další informace.  
+ `finally` je kontextové klíčové slovo; v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Další informace.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje jednoduchý `finally` bloku:  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMiniFrameWnd | Microsoft Docs"
-ms.custom: 
+title: Třída CMiniFrameWnd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd – třída
 Představuje okně s rámečkem poloviční výškou zpravidla se zobrazí kolem plovoucí panely nástrojů.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Vytvoří `CMiniFrameWnd` objektu, ale nevytvoří okna.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Poznámky  
  Chcete-li vytvořit okno, volejte [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Zkrácená rámce okna Windows vytvoří a připojí jej k `CMiniFrameWnd` objektu.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** zakáže přístup k nabídce systému a v nabídce ovládací prvek a převede je na součást titulek (záhlaví).  
   
- V tématu [CWnd::Create](../../mfc/reference/cwnd-class.md#create) popis možné okno Styl hodnoty. Je typické používanou ke okna s rámečkem zkrácená **ws_popup – &#124; Ws_caption – &#124; Ws_sysmenu –**.  
+ V tématu [CWnd::Create](../../mfc/reference/cwnd-class.md#create) popis možné okno Styl hodnoty. Je typické používanou ke okna s rámečkem zkrácená **ws_popup –&#124;ws_caption –&#124;ws_sysmenu –**.  
   
  `rect`  
  A `RECT` struktura určení požadované dimenzí okna.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  **Vytvoření** inicializuje okna na název třídy a název časového období a zaregistruje výchozí hodnoty pro svou styl a nadřazené.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Vytvoří `CMiniFrameWnd` objektu.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Vrátí hodnotu TRUE, v případě úspěchu FALSE při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `CreateEx` Zadejte parametry **WNDCLASS**, styl oken a (volitelně) počáteční pozice a velikosti okna. `CreateEx`Určuje také nadřazené (pokud existuje) a ID okna.  
+ `CreateEx` Zadejte parametry **WNDCLASS**, styl oken a (volitelně) počáteční pozice a velikosti okna. `CreateEx` Určuje také nadřazené (pokud existuje) a ID okna.  
   
  Když `CreateEx` provede, odešle Windows [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), a [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) zprávy v okně.  
   
  Rozšíření zpracování zpráv výchozí, odvození třídy z `CMiniFrameWnd`, přidejte mapy zpráv do nové třídy a poskytují členské funkce pro výše uvedené zprávy. Přepsání `OnCreate`, například k provedení potřebných inicializace pro novou třídu.  
   
- Přepsání Další **na***zpráva* zprávy obslužné rutiny přidat další funkce odvozené třídy.  
+ Přepsání Další **na *** zpráva* zprávy obslužné rutiny přidat další funkce odvozené třídy.  
   
  Pokud **ws_visible –** je zadána styl, systém Windows odešle okno všechny zprávy pro aktivaci a zobrazí okno potřeba. Pokud styl okna určuje záhlaví, název okna na kterou odkazuje `lpszWindowName` parametr se zobrazí v záhlaví.  
   

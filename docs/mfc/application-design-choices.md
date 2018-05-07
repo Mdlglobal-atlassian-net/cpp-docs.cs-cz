@@ -1,13 +1,10 @@
 ---
-title: "Volby při návrhu aplikací | Microsoft Docs"
-ms.custom: 
+title: Volby při návrhu aplikací | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b78c4c086b40f786d86411c99279245704a48a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a49d2ecfc79e35da55d1393cf3880b15fba7d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-design-choices"></a>Volby při návrhu aplikací
 Tento článek popisuje některé problémy návrhu, které je třeba zvážit při programování pro Internet.  
@@ -51,7 +46,7 @@ Tento článek popisuje některé problémy návrhu, které je třeba zvážit p
   
  Pokud jste připravení Zahájit zápis váš program nyní, najdete v článku [psaní aplikací MFC](../mfc/writing-mfc-applications.md).  
   
-##  <a name="_core_intranet_versus_internet"></a>Intranet a Internet  
+##  <a name="_core_intranet_versus_internet"></a> Intranet a Internet  
  Mnoho aplikací na Internetu a jsou přístupné všem uživatelům s prohlížeči a přístup k Internetu. Podniky jsou také implementace sítě intranet, které jsou sítím společnosti pomocí protokolů TCP/IP a webové prohlížeče. Intranetu nabízí snadno rozšiřitelný a centrální zdroje informace společnosti. Lze použít k upgradu softwaru, pro doručování a sestavování tabulek průzkumy, pro zákaznickou podporu a pro doručení informací. Následující tabulka porovnává funkce Internetu a intranetu.  
   
 |Internet|Intranet|  
@@ -60,27 +55,27 @@ Tento článek popisuje některé problémy návrhu, které je třeba zvážit p
 |Menší zabezpečení dat a systémy|Řízený přístup k datům a systémy|  
 |Minimální ovládací prvek obsahu|Vysoká řízení obsahu|  
   
-##  <a name="_core_client_or_server_application"></a>Klientské nebo serverové aplikace  
+##  <a name="_core_client_or_server_application"></a> Klientské nebo serverové aplikace  
  Aplikace může být na klientském počítači nebo na počítači serveru. Aplikace může také být uložené na serveru a pak stáhnout přes Internet a spustit na klientském počítači. WinInet knihovny MFC – třídy se používají pro klientské aplikace ke stažení souborů. Asynchronní Přezdívka třídy MFC a slouží k stažení souborů a vlastností ovládacího prvku. Třídy pro ovládací prvky ActiveX a aktivní dokumenty se používají pro klientské aplikace a aplikace, které se stahují ze serveru do spuštění v klientském počítači.  
   
-##  <a name="_core_the_web_page"></a>Webové stránky: Ovládací prvky ActiveX HTML, aktivní dokumenty,  
+##  <a name="_core_the_web_page"></a> Webové stránky: Ovládací prvky ActiveX HTML, aktivní dokumenty,  
  Společnost Microsoft nabízí několik způsobů poskytování obsahu na webové stránce. Webové stránky můžete použít standardní HTML nebo HTML rozšíření, jako je například značky object, k poskytování dynamický obsah, jako je například ovládací prvky ActiveX.  
   
  Webové prohlížeče obvykle zobrazení stránky HTML. Aktivní dokumenty, můžete také zobrazit data aplikace pro jednoduché rozhraní bodu a kliknutím podporou modelu COM prohlížeče. Server pro aktivní dokument můžete zobrazit dokumentu, úplná rámce v celého klienta, s vlastní nabídek a panelů nástrojů.  
   
  Ovládací prvky ActiveX, které můžete psát je možné stáhnout asynchronně ze serveru a zobrazí na webové stránce. Skriptovací jazyk, jako je například VBScript můžete použít k provedení ověření na straně klienta před odesláním informací na server.  
   
-##  <a name="_core_browser_or_standalone"></a>Prohlížeč nebo samostatné aplikace  
+##  <a name="_core_browser_or_standalone"></a> Prohlížeč nebo samostatné aplikace  
  Můžete napsat ovládací prvky ActiveX, které jsou součástí na stránce HTML a servery pro aktivní dokumenty, které jsou zobrazeny v prohlížeči. Můžete napsat stránky HTML, které obsahují tlačítko Odeslat požadavek na spuštění aplikace rozhraní ISAPI na webovém serveru. Můžete napsat samostatná aplikace, která používá Internetové protokoly ke stahování souborů a zobrazit informace pro vaše uživatele bez někdy pomocí aplikace prohlížeče.  
   
-##  <a name="_core_com_on_the_internet"></a>COM na Internetu  
+##  <a name="_core_com_on_the_internet"></a> COM na Internetu  
  Ovládací prvky ActiveX, aktivní dokumenty a asynchronní monikery používat technologie COM (Component Object Model).  
   
  ActiveX – ovládací prvky poskytují dynamický obsah k dokumentům a stránky na internetové servery. U modelu COM můžete vytvořit ovládací prvky ActiveX a úplné rámce dokumentů pomocí aktivní dokumenty.  
   
  Asynchronní monikery poskytují funkce, které chcete povolit ovládacího prvku provést i v prostředí Internetu, včetně přírůstkové nebo znamená progresivního stahování dat. Ovládací prvky musí také měla fungovat s další ovládací prvky, které může také být načítání svá data asynchronně ve stejnou dobu.  
   
-##  <a name="_core_client_data_download_services"></a>Klientská Data stažení služby  
+##  <a name="_core_client_data_download_services"></a> Klientská Data stažení služby  
  Dvě sady rozhraní API, která vám pomůže přenosu dat do klienta jsou WinInet a asynchronních monikerů. Pokud máte velké .gif a souborů AVI a ovládací prvky ActiveX na stránku HTML, můžete zvýšit rychlost odezvy pro uživatele tak, že stáhnete asynchronně, buď pomocí asynchronní monikery nebo WinInet asynchronně.  
   
  Běžné úlohy na Internetu přenáší data. Pokud už používáte technologie Active (například pokud máte ovládacího prvku ActiveX), můžete k progresivnímu vykreslení dat během stahování asynchronní monikery. WinInet může použít k přenosu dat pomocí běžných Internetové protokoly, jako je HTTP, FTP a gopher. Obě metody zadejte protokolu nezávislost a poskytnout abstraktní vrstvu pomocí rozhraní WinSock a protokolu TCP/IP. Můžete dál používat [rozhraní WinSock](../mfc/windows-sockets-in-mfc.md) přímo.  

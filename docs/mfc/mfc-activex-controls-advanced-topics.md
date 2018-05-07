@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Advanced témata | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Advanced témata | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC – ovládací prvky ActiveX: Pokročilá témata
 Tento článek se zabývá Pokročilá témata související s vývojem – ovládací prvky ActiveX. Mezi ně patří:  
@@ -46,7 +41,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
 -   [Přístup k ovládacím prvkům dialogové okno, které jsou neviditelná za běhu](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>Použití databázových tříd v ovládacích prvcích ActiveX  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Použití databázových tříd v ovládacích prvcích ActiveX  
  Protože třídy ovládacích prvků ActiveX jsou součástí knihovny tříd, můžete použít stejné postupy a pravidla pro použití databázových tříd ve standardní aplikace MFC k vývoji ovládacích prvků ActiveX, které používají třídami databází MFC.  
   
  Obecné přehled třídami databází MFC, najdete v tématu [třídami databází MFC (rozhraní DAO a ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Článek uvádí třídy knihovny MFC rozhraní ODBC a MFC rozhraní DAO – třídy a vás přesměruje na další informace o buď.  
@@ -54,7 +49,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
 > [!NOTE]
 >  Prostředí Visual C++ a průvodců nepodporují rozhraní DAO (i když jsou zahrnuté třídy DAO a můžete je dál používat). Microsoft doporučuje používat [šablony technologie OLE DB](../data/oledb/ole-db-programming.md) nebo [rozhraní ODBC a MFC](../data/odbc/odbc-and-mfc.md) pro nové projekty. DAO byste měli používat jenom pro údržbu existujících aplikací.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implementace Parametrizovaná vlastnost  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementace Parametrizovaná vlastnost  
  Parametrizovaná vlastnost (někdy nazývané vlastnost pole) je metoda pro vystavení homogenní kolekci hodnot jako jedinou vlastností ovládacího prvku. Například můžete Parametrizovaná vlastnost vystavit pole nebo slovník jako vlastnost. V jazyce Visual Basic tato vlastnost přistupuje pomocí notace pole:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
  Pro tuto vlastnost, aby byla užitečná, může deklarovat dvourozměrná pole členské proměnné ve třídě ovládacího prvku typu **krátké**, k ukládání hodnot pro Parametrizovaná vlastnost. Může následně upravit funkce Get vrátit s hodnotou uloženou v správné řádků a sloupců, podle parametrů a upravte sadu funkci Aktualizovat hodnotu odkazuje parametry řádků a sloupců.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Zpracování chyb ve vašem ovládacím prvku ActiveX  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Zpracování chyb ve vašem ovládacím prvku ActiveX  
  Dojde-li chybové stavy v ovládacím prvku, musíte ohlaste chybu ke kontejneru ovládacího prvku. Existují dvě metody pro zasílání zpráv o chybách, v závislosti na situaci, kdy dojde k chybě. Pokud dojde k chybě v rámci vlastnosti pro získání nebo nastavení funkce, nebo v rámci implementace metodu automatizace OLE, by měly volat ovládacího prvku [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), které signály řízení uživateli, které došlo k chybě. Pokud se vždy, když dojde k chybě, by měly volat ovládacího prvku [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), která aktivuje uložených událost chyby.  
   
  K označení druh chyba, že došlo k chybě, musí projít ovládacího prvku chybový kód k `ThrowError` nebo `FireError`. Kód chyby je stavový kód OLE, což je hodnota 32-bit. Pokud je to možné, vyberte z standardní sadu kódy, které jsou definované v OLECTL chybový kód. Soubor hlaviček H. Následující tabulka shrnuje tyto kódy.  
@@ -162,7 +157,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
  Pokud vytváříte ovládacího prvku ActiveX k nahrazení existujícího ovládacího prvku VBX, definujte ActiveX chybové kódy ovládacího prvku s stejné číselné hodnoty, které ovládací prvek VBX používá k zajištění souladu kódy chyb.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>Speciální klávesy zpracování v ovládacím prvku  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Speciální klávesy zpracování v ovládacím prvku  
  V některých případech můžete chtít zpracování určitých kombinací kláves zvláštním způsobem; například ovládací prvky vložit nový řádek po stisknutí klávesy ENTER víceřádkový text pole ovládací prvek nebo přesunout mezi skupinou upravit, když směru klíče ID stisknutí tlačítka.  
   
  Pokud je základní třída ovládacího prvku ActiveX `COleControl`, můžete přepsat [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) zpracovat zprávy před kontejneru je zpracuje. Pokud použijete tento postup, vždy vrátí **TRUE** Pokud zpracovat zprávu v přepsání z `PreTranslateMessage`.  
@@ -173,7 +168,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
  Další informace o zpracování klávesnice rozhraní pro ovládací prvek ActiveX naleznete v dokumentaci k ActiveX SDK.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Přístup k ovládacím prvkům dialogové okno, které jsou neviditelná za běhu  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Přístup k ovládacím prvkům dialogové okno, které jsou neviditelná za běhu  
  Můžete vytvořit ovládací prvky dialogového okna, které mají žádné uživatelské rozhraní a jsou neviditelná za běhu. Když přidáte neviditelné v době běhu ovládacího prvku ActiveX na dialogové okno a použít [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) pro přístup k ovládacím prvku, ovládacího prvku nebude pracovat správně. Místo toho používejte jednu z následujících postupů získat objekt, který reprezentuje ovládací prvek:  
   
 -   Pomocí Průvodce přidáním členské proměnné, vyberte **řízení proměnné** a pak vyberte ID ovládacího prvku. Zadejte název proměnné člena a vyberte třídu obálky ovládacího prvku jako **– typ ovládacího prvku**.  

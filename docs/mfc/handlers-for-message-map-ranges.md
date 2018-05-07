@@ -1,13 +1,10 @@
 ---
-title: "Obslužné rutiny pro oblasti Map zpráv | Microsoft Docs"
-ms.custom: 
+title: Obslužné rutiny pro oblasti Map zpráv | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
 Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy funkci obslužné rutiny (namísto mapování jednu zprávu na jenom jednu funkci).  
@@ -75,11 +70,11 @@ Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy 
   
 -   Makra map zpráv rozsahu:  
   
-    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
+    -   [ON_COMMAND_RANGE –](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE –](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
+    -   [ON_CONTROL_RANGE –](reference/message-map-macros-mfc.md#on_control_range)  
   
 -   Parametry pro makro:  
   

@@ -1,12 +1,9 @@
 ---
 title: __mulh | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __mulh
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92dabc2c3172d16a0b165b8560554d2151318ee4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ae312de1311bfe068ac48838f2720bd8a2a83e53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mulh"></a>__mulh
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Vrátí vysoké 64bitová verze produktu dvě podepsaná celá čísla 64-bit.  
   
@@ -42,10 +37,10 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
+ [v] `a`  
  První číslo, které má násobení.  
   
- [in] `b`  
+ [v] `b`  
  Druhé číslo, které má násobení.  
   
 ## <a name="return-value"></a>Návratová hodnota  

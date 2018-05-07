@@ -1,13 +1,10 @@
 ---
-title: "Výměna polí záznamu: Práce s kódem průvodce | Microsoft Docs"
-ms.custom: 
+title: 'Výměna polí záznamu: Práce s kódem průvodce | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Výměna polí záznamu: Práce s kódem průvodce
 Toto téma vysvětluje kód, který Průvodce aplikací knihovny MFC a **přidat třídu** (jak je popsáno v [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zápis k podpoře RFX a jak můžete změnit kód.  
@@ -47,11 +42,11 @@ Toto téma vysvětluje kód, který Průvodce aplikací knihovny MFC a **přidat
   
 -   Deklarace záznamů pole datových členů ve třídě sady záznamů  
   
--   Přepsání`CRecordset::DoFieldExchange`  
+-   Přepsání `CRecordset::DoFieldExchange`  
   
 -   Inicializace záznamů pole datových členů v konstruktoru třídy sady záznamů  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Deklarace pole datového člena  
+##  <a name="_core_the_field_data_member_declarations"></a> Deklarace pole datového člena  
  Průvodci zápis deklaraci třídy sady záznamů v souboru .h podobný následujícímu pro třídu `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Navíc Všimněte si, že průvodce přepíše `DoFieldExchange` funkce člena třídy `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange – přepsat  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange – přepsat  
 
- [DoFieldExchange –](../../mfc/reference/crecordset-class.md#dofieldexchange) je jádrem RFX. Volání framework `DoFieldExchange` vždy, když je pro přesun dat do zdroje dat ze zdroje dat do sady záznamů nebo ze sady záznamů. `DoFieldExchange`také podporuje získat informace o pole datových členů, prostřednictvím [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) a [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) členské funkce.  
+ [DoFieldExchange –](../../mfc/reference/crecordset-class.md#dofieldexchange) je jádrem RFX. Volání framework `DoFieldExchange` vždy, když je pro přesun dat do zdroje dat ze zdroje dat do sady záznamů nebo ze sady záznamů. `DoFieldExchange` také podporuje získat informace o pole datových členů, prostřednictvím [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) a [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) členské funkce.  
   
  Následující `DoFieldExchange` přepsání je `CSections` třídy. Průvodce zapíše funkci v souboru pro třídu sady záznamů.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   `pFX` Ukazatel na [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objekt, který předává rozhraní při volání `DoFieldExchange`. `CFieldExchange` Objektu určuje operaci, `DoFieldExchange` je provést, směr přenosu a další informace o kontextu.  
   
-##  <a name="_core_the_recordset_constructor"></a>Konstruktor sady záznamů  
+##  <a name="_core_the_recordset_constructor"></a> Konstruktor sady záznamů  
  Sada záznamů konstruktor, který zapíše průvodce obsahuje dvě věci týkající se RFX:  
   
 -   Inicializaci pro každé pole datového člena  

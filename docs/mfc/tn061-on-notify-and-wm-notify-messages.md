@@ -1,13 +1,10 @@
 ---
-title: "TN061: ON_NOTIFY a wm_notify – zprávy | Microsoft Docs"
-ms.custom: 
+title: 'TN061: ON_NOTIFY a wm_notify – zprávy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY a WM_NOTIFY – zprávy
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS –**|Řízení vstupního fokusu ztratil|  
 |**NM_OUTOFMEMORY –**|Ovládací prvek nelze dokončit operaci, protože nebyl k dispozici dostatek paměti k dispozici|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>On_notify –: Zpracování wm_notify – zprávy v aplikacích MFC  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> On_notify –: Zpracování wm_notify – zprávy v aplikacích MFC  
  Funkce `CWnd::OnNotify` zpracovává zprávy s oznámením. Jeho výchozí implementace kontroluje mapy zpráv pro oznámení obslužné rutiny pro volání. Obecně platí, můžete přepsat `OnNotify`. Místo toho zadejte funkci obslužné rutiny a přidejte položku mapy zpráv pro tuto obslužnou rutinu do mapy zpráv nadřazené okno třídy.  
   
  ClassWizard, prostřednictvím seznamu vlastností ClassWizard, můžete vytvořit `ON_NOTIFY` položka mapování zpráv a poskytují funkce kostru obslužné rutiny. Další informace týkající se použití ClassWizard pro tuto činnost usnadnit najdete v tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md).  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Všimněte si, že ClassWizard poskytuje ukazatel správného automaticky. Struktura oznámení můžete přistupovat prostřednictvím buď `pNMHDR` nebo `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE –  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE –  
  Pokud je potřeba zpracovat stejné **wm_notify –** zpráva pro sadu ovládacích prvků, můžete použít **on_notify_range –** místo `ON_NOTIFY`. Například můžete mít sadu tlačítek, pro které chcete provádět stejné akce pro určité oznámení.  
   
  Při použití **on_notify_range –**, určete souvislý rozsah podřízené identifikátory, pro které chcete zpracovat oznámení zadáním počáteční a koncová podřízené identifikátory rozsahu.  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *výsledek*  
  Ukazatel na kód výsledku budete nastavit před vrácením.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX –, ON_NOTIFY_EX_RANGE –  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX –, ON_NOTIFY_EX_RANGE –  
  Pokud chcete více než jeden objekt v oznámení směrování do zpracovat zprávu, můžete použít **on_notify_ex –** (nebo **on_notify_ex_range –**) místo `ON_NOTIFY` (nebo **on_notify_range –** ). Jediným rozdílem mezi **EX** regulární a verze je, že – členská funkce volat pro **EX** vrátí verze **BOOL** určující, zda zpracování zpráv by měly pokračovat. Vrácení **FALSE** z tato funkce umožňuje zpracovávat stejnou zprávu ve více než jeden objekt.  
   
  ClassWizard nezpracovává **on_notify_ex –** nebo **on_notify_ex_range –**; Pokud chcete použít některou z nich, budete muset upravit mapu zpráva sami sebe.  

@@ -1,13 +1,10 @@
 ---
-title: "Ovládací pruhy | Microsoft Docs"
-ms.custom: 
+title: Ovládací pruhy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>Ovládací pruhy
 "Ovládacích pruhů" je obecné název panely nástrojů, stavové řádky a řádky dialogové okno. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a **CReBar** odvozena od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  Postupujte podle stručný přehled typů ovládacích pruhů. Další informace najdete v tématu odkazy níže.  
   
 ## <a name="control-bars"></a>Ovládací pruhy  
- Ovládací pruhy výrazně zlepšují použitelnost programu tím, že poskytuje rychlé, jednoduchý příkaz akce. Třída `CControlBar` poskytuje běžné funkce všech panely nástrojů, stavové řádky a řádky dialogové okno. `CControlBar`poskytuje funkce pro umístění panelu ovládacího prvku v jeho nadřazeného rámce okna. Ovládací prvek panelu je obvykle podřízeného okna rámce okna nadřazené, proto je na "úrovni" do zobrazení klienta nebo klienta MDI rámce okna. Objekt ovládacího prvku panel používá informace o jeho nadřazeného okna klienta obdélníku na pozici sám sebe. Poté změní zbývající obdélníku okno klienta nadřazeného objektu, tak, aby zobrazení klienta nebo okna MDI klienta vyplnil zbytek okna klienta.  
+ Ovládací pruhy výrazně zlepšují použitelnost programu tím, že poskytuje rychlé, jednoduchý příkaz akce. Třída `CControlBar` poskytuje běžné funkce všech panely nástrojů, stavové řádky a řádky dialogové okno. `CControlBar` poskytuje funkce pro umístění panelu ovládacího prvku v jeho nadřazeného rámce okna. Ovládací prvek panelu je obvykle podřízeného okna rámce okna nadřazené, proto je na "úrovni" do zobrazení klienta nebo klienta MDI rámce okna. Objekt ovládacího prvku panel používá informace o jeho nadřazeného okna klienta obdélníku na pozici sám sebe. Poté změní zbývající obdélníku okno klienta nadřazeného objektu, tak, aby zobrazení klienta nebo okna MDI klienta vyplnil zbytek okna klienta.  
   
 > [!NOTE]
 >  Pokud nemá na panelu Ovládací prvek tlačítko **příkaz** nebo **UPDATE_COMMAND_UI** obslužnou rutinu, rozhraní automaticky zakáže tlačítko.  

@@ -1,24 +1,19 @@
 ---
-title: "Systém typů (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Systém typů (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>Systém typů (C + +/ CX)
 Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Visual Basic, Visual C# a JavaScript pro zápis aplikace a součásti, které přímo přístup k rozhraní API systému Windows a zajistit vzájemnou funkční spolupráci s jinými aplikace Windows Runtime a součásti. Univerzální aplikace platformy Windows, které jsou napsané v jazyce C++ kompilace nativního kódu, které provádí přímo v procesoru. Univerzální platforma Windows aplikace, které jsou napsané v C# nebo Visual Basic zkompilovat do převodního jazyka Microsoft (MSIL) a spustit v common language runtime (CLR). Univerzální aplikace platformy Windows, které jsou napsané v jazyce JavaScript spustit v prostředí runtime. Sami součásti operačního systému Windows Runtime jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a Universal Windows Platform apps komunikovat přímo přes rozhraní binární aplikace Windows Runtime (ABI).  
@@ -27,15 +22,15 @@ Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Vi
   
  Pro podrobné informace o jazyce C + +/ CX jazyk projekce a jak to funguje v pozadí, najdete v těchto příspěvcích na blogu:  
   
-1.  [C + +/ CX část 0 \[ n \]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + +/ CX část 0 \[n\]: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + +/ CX část 1 / \[ n \]: jednoduchý – třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + +/ CX část 1 / \[n\]: jednoduchý – třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + +/ CX část 2 / \[ n \]: typy, které nosit klobouky](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + +/ CX část 2 / \[n\]: typy, které nosit klobouky](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + +/ CX části 3 \[ n \]: v části vytváření](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + +/ CX části 3 \[n\]: v části vytváření](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + +/ CX část 4 \[ n \]: statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + +/ CX část 4 \[n\]: statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Soubory metadat (.winmd) Windows  
  Při kompilaci aplikace univerzální platformu Windows, který je napsán v jazyce C++ kompilátor generuje spustitelný soubor v nativním kódu počítače a také vytváří samostatný soubor metadat (.winmd) systému Windows, který obsahuje popisy veřejné typy prostředí Windows Runtime která zahrnuje třídy, struktury, výčty, rozhraní, parametrizované rozhraní a delegáti. Formát metadat se podobá formátu, který se používá v sestavení rozhraní .NET Framework.  V komponentě C++ .winmd soubor obsahuje pouze metadata; Kód spustitelný soubor se nachází v samostatném souboru. To platí pro prostředí Windows Runtime součásti, které jsou součástí systému Windows. Název souboru WinMD musí odpovídat nebo předponu kořenového oboru názvů ve zdrojovém kódu. (Pro jazyky rozhraní .NET Framework, .winmd soubor obsahuje kód a metadata, stejně jako sestavení rozhraní .NET Framework.)  

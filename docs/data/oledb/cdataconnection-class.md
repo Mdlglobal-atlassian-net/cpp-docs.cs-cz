@@ -1,12 +1,9 @@
 ---
-title: "CDataConnection – třída | Microsoft Docs"
-ms.custom: 
+title: CDataConnection – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 945fed5edd59da93aabb1d22e4830417fc4a2518
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 Připojení ke zdroji dat spravuje.  
@@ -47,8 +42,8 @@ class CDataConnection
 |-|-|  
 |[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Konstruktor Vytvoří a inicializuje `CDataConnection` objektu.|  
 |[Kopírování](../../data/oledb/cdataconnection-copy.md)|Vytvoří kopii existující datové připojení.|  
-|[Open](../../data/oledb/cdataconnection-open.md)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|  
-|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Otevře novou relaci pro aktuální připojení.|  
+|[Otevřete](../../data/oledb/cdataconnection-open.md)|Otevře připojení ke zdroji dat pomocí inicializačního řetězce.|  
+|[Opennewsession –](../../data/oledb/cdataconnection-opennewsession.md)|Otevře novou relaci pro aktuální připojení.|  
   
 ### <a name="operators"></a>Operátory  
   

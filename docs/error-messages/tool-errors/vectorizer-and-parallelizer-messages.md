@@ -1,12 +1,9 @@
 ---
-title: "Nástrojů pro vektorizaci a paralelní zpracování zprávy | Microsoft Docs"
-ms.custom: 
+title: Nástrojů pro vektorizaci a paralelní zpracování zprávy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Zprávy nástrojů pro vektorizaci a paralelní zpracování
 Můžete použít možnosti kompilátoru jazyka Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) a [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) nastavit [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) pro výstup důvod kódy a informační zprávy o jeho aktivity. Tento článek vysvětluje kódy příčiny a zprávy.  
@@ -48,7 +43,7 @@ Můžete použít možnosti kompilátoru jazyka Visual C++ [/Qpar-report](../../
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>Informační zprávy  
+##  <a name="BKMK_InformationalMessages"></a> Informační zprávy  
  V závislosti na zadané úrovni vytváření sestav se zobrazí jedna z následujících informačních zpráv pro každou smyčku.  
   
  Informace o kódech příčiny naleznete v další části tohoto článku.  
@@ -64,7 +59,7 @@ Můžete použít možnosti kompilátoru jazyka Visual C++ [/Qpar-report](../../
 ## <a name="reason-codes"></a>Kódy příčiny  
  Následující části uvádí kódy příčiny pro automatický paralelizér a automatický vektorizér.  
   
-###  <a name="BKMK_ReasonCode50x"></a>5xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5xx  
  5*xx* význam kódů důvodů platí pro automatickou vektorizací i automatickou vektorizací.  
   
 |Kód příčiny|Vysvětlení|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10xx  
+###  <a name="BKMK_ReasonCode100x"></a> 10xx  
  10*xx* význam kódů důvodů platí pro automatickou vektorizací.  
   
 |Kód příčiny|Vysvětlení|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  11*xx* význam kódů důvodů platí pro automatickou vektorizací.  
   
 |Kód příčiny|Vysvětlení|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  12*xx* význam kódů důvodů platí pro automatickou vektorizací.  
   
 |Kód příčiny|Vysvětlení|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  13*xx* význam kódů důvodů platí pro automatickou vektorizací.  
   
 |Kód příčiny|Vysvětlení|  
@@ -791,7 +786,7 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  14*xx* důvod kódy dojít, pokud je zadána některé možnost, která je nekompatibilní se Automatická vektorizace.  
   
 |Kód příčiny|Vysvětlení|  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  Blok 15*xx* význam kódů důvodů, na které se týkají aliasy. Aliasing nastane, pokud je umístění v paměti přístupné pod dvěma různými názvy.  
   
 |Kód příčiny|Vysvětlení|  
@@ -997,4 +992,4 @@ void code_1505(int *A, int *B)
  [#pragma loop()](../../preprocessor/loop.md)   
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   
  [/ Qpar-report (úroveň sestav automatickou vektorizací)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/ Qvec-report (úroveň sestav automatickou vektorizací)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [/Qpar-report (úroveň generování sestav s automatickou vektorizací)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

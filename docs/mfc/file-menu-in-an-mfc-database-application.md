@@ -1,30 +1,25 @@
 ---
-title: "Nabídka soubor v databázových aplikacích MFC | Microsoft Docs"
-ms.custom: 
+title: Nabídka soubor v databázových aplikacích MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71e669336e4a23f1a34e0bbd65bd8123e0df3335
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Nabídka Soubor v databázových aplikacích MFC
 Pokud jste vytvoření databázové aplikace MFC a nepoužívejte serializace, jak by měla můžete interpretovat otevřené, zavřete, uložit a uložit jako příkazů v nabídce soubor při neexistují žádné pokyny styl pro tuto otázku, zde je několik návrhů:  

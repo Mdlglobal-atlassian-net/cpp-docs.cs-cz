@@ -1,12 +1,9 @@
 ---
-title: "Třída COleResizeBar | Microsoft Docs"
-ms.custom: 
+title: Třída COleResizeBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar – třída
 Typ ovládacího prvku panel, který podporuje změnu velikosti na místě OLE – položky.  
@@ -55,9 +50,9 @@ class COleResizeBar : public CControlBar
 |[COleResizeBar::Create](#create)|Vytvoří a inicializuje podřízeného okna Windows a přidruží ji k `COleResizeBar` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `COleResizeBar`objekty se zobrazí jako [crecttracker –](../../mfc/reference/crecttracker-class.md) s šrafované ohraničení a vnější změnit velikost obslužné rutiny.  
+ `COleResizeBar` objekty se zobrazí jako [crecttracker –](../../mfc/reference/crecttracker-class.md) s šrafované ohraničení a vnější změnit velikost obslužné rutiny.  
   
- `COleResizeBar`objekty jsou obvykle embedded členy odvozené z objektů oken s rámečkem [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) třídy.  
+ `COleResizeBar` objekty jsou obvykle embedded členy odvozené z objektů oken s rámečkem [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) třídy.  
   
  Další informace najdete v článku [aktivace](../../mfc/activation-cpp.md).  
   
@@ -75,7 +70,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
  Vytvoří `COleResizeBar` objektu.  
   
 ```  
@@ -85,7 +80,7 @@ COleResizeBar();
 ### <a name="remarks"></a>Poznámky  
  Volání **vytvořit** k vytvoření objektu změny velikosti panelu.  
   
-##  <a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>  COleResizeBar::Create  
  Vytvoří podřízeného okna a přidruží ji s `COleResizeBar` objektu.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CFindReplaceDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CFindReplaceDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1d0b5658da375c2202729e6888fa078063beb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog – třída
 Umožňuje implementovat standardní řetězec vyhledání a nahrazení dialogových oken v aplikaci.  
@@ -105,7 +100,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Můžete určit, zda uživatel se rozhodl ukončit dialogové okno s `IsTerminating` – členská funkce.  
   
- `CFindReplaceDialog`spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
+ `CFindReplaceDialog` spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
   
  Chcete-li přizpůsobit dialogové okno, odvození třídy z `CFindReplaceDialog`zadejte dialogové okno vlastní šablony a přidat mapy zpráv pro zpracování zprávy s oznámením z rozšířených ovládacích prvků. Všechny nezpracované zprávy by měla být předána základní třídy.  
   
@@ -129,7 +124,7 @@ class CFindReplaceDialog : public CCommonDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
  Vytvoří `CFindReplaceDialog` objektu.  
   
 ```  
@@ -146,7 +141,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
  Vytvoří a zobrazí buď najít, nebo vyhledání a nahrazení objektu dialogového okna pole, v závislosti na hodnotě `bFindDialogOnly`.  
   
 ```  
@@ -191,7 +186,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
  Volání této funkce z funkce zpětného volání k určení, jestli uživatel chce najít další výskyt hledaný řetězec.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud chce uživatel najít další výskyt řetězec pro hledání; jinak 0.  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
  Volání této funkce z funkce zpětného volání k načtení výchozí řetězec k vyhledání.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetFindString() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
  Volání této funkce načíst ukazatel na aktuální najít dialogové okno Nahradit.  
   
 ```  
@@ -236,7 +231,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
  Volání této funkce pro získání aktuálního řetězce nahrazení.  
   
 ```  
@@ -249,7 +244,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
  Volání této funkce v rámci funkce zpětného volání k určení, zda uživatel se rozhodl ukončit dialogové okno.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
  Použít pro přizpůsobení `CFindReplaceDialog` objektu.  
   
 ```  
@@ -273,14 +268,14 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_fr`je struktura typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Její členové uložení charakteristiky-dialogové objektu. Po vytváření `CFindReplaceDialog` objekt, můžete použít `m_fr` na různé hodnoty v dialogovém okně Upravit.  
+ `m_fr` je struktura typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Její členové uložení charakteristiky-dialogové objektu. Po vytváření `CFindReplaceDialog` objekt, můžete použít `m_fr` na různé hodnoty v dialogovém okně Upravit.  
   
  Další informace o tuto strukturu, najdete v článku **FINDREPLACE** struktura ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
  Volání této funkce určete, jestli uživatel chce přesně shodují v případě najít řetězec.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud uživatel chce výskytů řetězec pro hledání, které přesně odpovídají malá řetězec pro hledání; jinak 0.  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
  Volání této funkce určete, jestli uživatel chce hledat jenom celá slova.  
   
 ```  
@@ -300,7 +295,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud chce uživatel hledat jenom celá slova řetězec pro hledání; jinak 0.  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
  Volání této funkce určete, jestli uživatel chce, aby všechny výskyty řetězec, který má být nahrazen.  
   
 ```  
@@ -310,7 +305,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud uživatel vyžaduje, aby všechny řetězce odpovídající nahraďte řetězec nahradit; jinak 0.  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
  Volání této funkce určete, jestli uživatel chce aktuální slovo, které mají být nahrazeny.  
   
 ```  
@@ -320,7 +315,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud uživatel požádal, že aktuálně vybraný řetězec nahrazen nahraďte řetězec; jinak 0.  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
  Volání této funkce určete, jestli uživatel chce vyhledávání, chcete-li pokračovat v klesající směru.  
   
 ```  

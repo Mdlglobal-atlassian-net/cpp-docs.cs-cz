@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Sada záznamů (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c5fc714b9c2ff0e1af679edbc3842b86d201fee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c59de3c5db2e1ec658a09279cb42e2833a4109e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-odbc"></a>Sada záznamů (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -54,7 +49,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 > [!NOTE]
 >  Některé ovladače ODBC podporují zobrazení databáze. Zobrazení v tomto smyslu je dotaz původně vytvořen pomocí SQL `CREATE VIEW` příkaz. Průvodci aktuálně nepodporují zobrazení, ale je možné code tato podpora sami.  
   
-##  <a name="_core_recordset_capabilities"></a>Funkce sady záznamů  
+##  <a name="_core_recordset_capabilities"></a> Funkce sady záznamů  
  Všechny objekty sady záznamů sdílet následující možnosti:  
   
 -   Pokud zdroj dat není jen pro čtení, můžete určit, aby sady záznamů [aktualizovat](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [připojitelná](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), nebo jen pro čtení. Pokud je sada záznamů aktualizovatelná, můžete vybrat pesimistické nebo optimistické [uzamčení](../../data/odbc/recordset-locking-records-odbc.md) způsoby, které poskytuje ovladač poskytuje vhodnou podporu uzamčení. Pokud je zdroj dat jen pro čtení, bude sada záznamů jen pro čtení.  
@@ -67,10 +62,10 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   Můžete [Parametrizace](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) sadu záznamů pro získání výběru sady záznamů v době běhu.  
   
-##  <a name="_core_snapshots_and_dynasets"></a>Snímky a dynamické sady  
+##  <a name="_core_snapshots_and_dynasets"></a> Snímky a dynamické sady  
  Existují dva hlavní typy sad záznamů: [snímky](../../data/odbc/snapshot.md) a [dynamické sady](../../data/odbc/dynaset.md). Obě jsou podporovány třídou `CRecordset`. Každý sdílí stejné charakteristiky všech sad záznamů, ale každý taky ji rozšiřuje na běžné funkce v svým vlastním způsobem. Snímky poskytují statické zobrazení dat a jsou užitečné pro sestavy a jiné situace, ve kterých chcete zobrazit data tak, jak byly v určitou dobu. Dynamické sady jsou užitečné, pokud chcete aktualizace provedené jinými uživateli mají být zobrazeny v sadě záznamů bez nutnosti znovu spustit dotaz nebo aktualizovat sadu záznamů. Snímky a dynamické sady může být v aktualizovatelné nebo jen pro čtení. Odrážel záznamy přidání nebo odstranění jiných uživatelů, zavolejte [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
   
- `CRecordset`také umožňuje dva typy sad záznamů: dynamické sady záznamů a dopředné sady záznamů. Dynamické sady záznamů jsou podobné dynamické sady; ale dynamické sady záznamů odrážel všechny záznamy při přidání nebo odstranění bez volání `CRecordset::Requery`. Z tohoto důvodu dynamické sady záznamů jsou obvykle levnější s ohledem na doba zpracování na databázového systému a mnoho ovladačů ODBC je nepodporují. Naproti tomu dopředné sady záznamů poskytují nejúčinnější metodu přístupu k datům pro sady záznamů, které nevyžadují aktualizace nebo zpětné posouvání. Můžete například použít dopředná sada záznamů pro migraci dat z jednoho zdroje dat na jiný, kde je potřeba jenom procházet data směrem vpřed. Chcete-li použít dopředné záznamů, musíte udělat obě z následujících akcí:  
+ `CRecordset` také umožňuje dva typy sad záznamů: dynamické sady záznamů a dopředné sady záznamů. Dynamické sady záznamů jsou podobné dynamické sady; ale dynamické sady záznamů odrážel všechny záznamy při přidání nebo odstranění bez volání `CRecordset::Requery`. Z tohoto důvodu dynamické sady záznamů jsou obvykle levnější s ohledem na doba zpracování na databázového systému a mnoho ovladačů ODBC je nepodporují. Naproti tomu dopředné sady záznamů poskytují nejúčinnější metodu přístupu k datům pro sady záznamů, které nevyžadují aktualizace nebo zpětné posouvání. Můžete například použít dopředná sada záznamů pro migraci dat z jednoho zdroje dat na jiný, kde je potřeba jenom procházet data směrem vpřed. Chcete-li použít dopředné záznamů, musíte udělat obě z následujících akcí:  
   
 -   Předat možnosti **CRecordset::forwardOnly** jako `nOpenType` parametr [otevřete](../../mfc/reference/crecordset-class.md#open) – členská funkce.  
   
@@ -79,7 +74,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     > [!NOTE]
     >  Informace o požadavky ovladače ODBC pro dynamické sady podpory najdete v tématu [ODBC](../../data/odbc/odbc-basics.md). Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v části [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
   
-##  <a name="_core_your_recordsets"></a>Vaše sady záznamů  
+##  <a name="_core_your_recordsets"></a> Vaše sady záznamů  
  Pro každý odlišné tabulka, zobrazení nebo uložené procedury, jež chcete získat přístup, je obvykle definovat třídy odvozené od `CRecordset`. (Výjimkou jsou připojení k databázi, ve které jedna sada záznamů představuje sloupce ze dvou nebo více tabulek.) Pokud odvodíte třídu sady záznamů, povolíte mechanismus pole záznamu (exchange – RFX) nebo mechanismus pole záznamu (Bulk RFX) systému exchange, podobné mechanismus dialogové okno dat systému exchange (DDX). RFX a Bulk RFX zjednodušují přenos dat ze zdroje dat do sady záznamů; RFX navíc ke zdroji dat přenáší data ze sady záznamů. Další informace najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
  Objekt sady záznamů umožňuje přístup do všech vybraných záznamech. Můžete procházet více vybraných záznamů pomocí `CRecordset` členské funkce, jako například `MoveNext` a `MovePrev`. Objekt sady záznamů ve stejnou dobu, představuje pouze jeden z vybraných záznamů na aktuální záznam. Deklarováním sada záznamů třída členské proměnné, které odpovídají na sloupce tabulky nebo záznamy, které jsou výsledkem dotazu databáze můžete zkontrolovat pole na aktuální záznam. Informace o datových členů sady záznamů najdete v tématu [sada záznamů: architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  

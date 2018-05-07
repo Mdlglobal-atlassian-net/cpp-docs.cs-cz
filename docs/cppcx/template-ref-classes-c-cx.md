@@ -1,24 +1,19 @@
 ---
-title: "Třídy šablon ref (C + +/ CX) | Microsoft Docs"
-ms.custom: 
+title: Třídy šablon ref (C + +/ CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f135907a4aba473db62734f9370ee82b7113c66d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1d637eeee0ff087a0c8f07d7929f6d4dcf13247
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-ref-classes-ccx"></a>Třídy šablon ref (C + +/ CX)
 Šablonami C++ nejsou vydané ve službě metadata a proto nemůže mít veřejných nebo chráněného usnadnění v programu. Standardní C++ šablony můžete použít samozřejmě interně v programu. Kromě toho můžete definovat třídu privátní ref jako šablona a třídu ref explicitně specializované šablony můžou deklarovat jako soukromý člen v třídě veřejné ref.  

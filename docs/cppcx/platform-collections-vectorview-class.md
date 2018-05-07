@@ -1,11 +1,8 @@
 ---
-title: "Třída Platform::Collections::VectorView | Microsoft Docs"
-ms.custom: 
+title: Třída Platform::Collections::VectorView | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView – třída
 Představuje zobrazení sekvenční kolekcí objektů, které může být index individuálně získávat přístup jen pro čtení. Typ každý objekt v kolekci je určený parametrem šablony.  
@@ -245,7 +240,7 @@ VectorView(
  `InIt`  
  Typ na kolekci objektů, který se používá k chybě při inicializaci aktuální VectorView.  
   
- il  
+ IL  
  A [std::initializer_list](../standard-library/initializer-list-class.md) jehož elementy se použije k chybě při inicializaci VectorView.  
   
  `N`  

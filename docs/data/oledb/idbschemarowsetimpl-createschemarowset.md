@@ -1,12 +1,9 @@
 ---
 title: IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl::CreateSchemaRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e819805f9c73b2f8622b21b999b0db5f6771ecbe
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90a942fc92faf3066669b46fd825ad2eae393f43
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 Implementuje funkce tvůrce objektu COM pro daný objekt zadaný parametrem šablony.  
@@ -84,7 +79,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
  **Záhlaví:** atldb.h  
   
 ## <a name="see-also"></a>Viz také  
- [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [IDBSchemaRowsetImpl – třída](../../data/oledb/idbschemarowsetimpl-class.md)   
  [Členy IDBSchemaRowsetImpl – třída](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
  [Třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

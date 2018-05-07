@@ -1,34 +1,29 @@
 ---
-title: "Postupy: čtení z binárního souboru (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: čtení z binárního souboru (C + +/ CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++], binary
 - binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8411971c8bca79d9cb1809481b5a6be61b052262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>Postupy: Čtení z binárního souboru (C++/CLI)
-Následující příklad kódu ukazuje, jak číst binární data ze souboru, pomocí dvě třídy z <xref:System.IO?displayProperty=fullName> obor názvů: <xref:System.IO.FileStream> a <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream>představuje skutečný soubor. <xref:System.IO.BinaryReader>poskytuje rozhraní pro datový proud, který umožňuje binární přístup.  
+Následující příklad kódu ukazuje, jak číst binární data ze souboru, pomocí dvě třídy z <xref:System.IO?displayProperty=fullName> obor názvů: <xref:System.IO.FileStream> a <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> představuje skutečný soubor. <xref:System.IO.BinaryReader> poskytuje rozhraní pro datový proud, který umožňuje binární přístup.  
   
  Příklad kódu přečte soubor, který má název data.bin a obsahuje celá čísla v binárním formátu. Informace o tento druh souborů najdete v tématu [postupy: zápis do binárního souboru (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
   

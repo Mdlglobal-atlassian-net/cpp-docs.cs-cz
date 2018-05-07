@@ -1,13 +1,10 @@
 ---
-title: "Sada záznamů: Hromadné načítání záznamů (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 'Sada záznamů: Hromadné načítání záznamů (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Sada záznamů: Hromadné načítání záznamů (ODBC)
 Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
@@ -49,7 +44,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Jak implementovat Hromadná výměna pole záznamu](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Jak podporuje CRecordset hromadné načítání řádků  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Jak podporuje CRecordset hromadné načítání řádků  
  Před otevřením objektu sady záznamů, můžete definovat velikost sady řádků pomocí `SetRowsetSize` – členská funkce. Velikost sady řádků určuje, kolik záznamy mají být načtena během jednoho načtení. Pokud se implementuje hromadné načítání řádků, výchozí velikost sady řádků je 25. Pokud není implementována hromadné načítání řádků, zůstává v 1 Pevná velikost sady řádků.  
   
  Poté, co jste inicializovali velikost sady řádků, volejte [otevřete](../../mfc/reference/crecordset-class.md#open) – členská funkce. Zde je nutné zadat `CRecordset::useMultiRowFetch` možnost **dwOptions** parametr implementovat hromadné načítání řádků. Kromě toho můžete nastavit **CRecordset::userAllocMultiRowBuffers** možnost. Mechanismus výměna pole záznamu pole používá k ukládání více řádků dat načteny. Vyrovnávací paměti úložiště může být přidělen automaticky rámcem nebo kterou můžete přidělit ručně. Určení **CRecordset::userAllocMultiRowBuffers** možnost znamená, že provedete přidělení.  
@@ -67,7 +62,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Posune kurzor konkrétního řádku v rámci sady řádků.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Virtuální funkce, která změní nastavení velikosti sady řádků se zadanou hodnotou.|  
   
-##  <a name="_core_special_considerations"></a>Zvláštní upozornění  
+##  <a name="_core_special_considerations"></a> Zvláštní upozornění  
  I když hromadné načítání řádků je výkonnější, některé funkce fungují odlišně. Předtím, než se rozhodnete implementovat hromadné načítání řádků, zvažte následující:  
   
 -   Systém automaticky volá `DoBulkFieldExchange` – členská funkce k přenosu dat ze zdroje dat do objektu sady záznamů. Však není přenesená data ze sady záznamů zpět do zdroje dat. Volání `AddNew`, **upravit**, **odstranit**, nebo **aktualizace** členské funkce má za následek selhání kontrolního výrazu. I když `CRecordset` aktuálně neposkytuje mechanismus pro hromadnou aktualizaci řádků dat, můžete napsat vlastní funkce pomocí funkce rozhraní API ODBC **SQLSetPos**. Další informace o **SQLSetPos**, najdete v článku *referenční příručka programátora SDK ODBC* v dokumentaci k webu MSDN.  
@@ -78,7 +73,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   Na rozdíl od – record field exchange nepodporují průvodců Hromadná výměna pole záznamu. To znamená, že je nutné ručně deklarovat pole datových členů a ručně přepsat `DoBulkFieldExchange` ve volání funkce RFX hromadného zápisu. Další informace najdete v tématu [funkce výměny polí v záznamu](../../mfc/reference/record-field-exchange-functions.md) v *knihovny tříd*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>Jak implementovat Hromadná výměna pole záznamu  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Jak implementovat Hromadná výměna pole záznamu  
  Hromadná výměna pole záznamu přenese sadu řádků dat ze zdroje dat do objektu sady záznamů. Funkce hromadné RFX použít pole pro uložení dat této, stejně jako pole k uložení délka každá položka dat v dané sadě řádků. V definici vaší třídy je nutné zadat pole datových členů jako ukazatele pro přístup k polím data. Kromě toho je nutné definovat sadu ukazatele pro přístup k polím délek. Všechny parametry datových členů by neměl být deklarována jako ukazatele; deklarování parametry datových členů při použití Hromadná výměna pole záznamu je stejný jako deklarace je při použití – record field exchange. Následující kód ukazuje jednoduchý příklad:  
   
 ```  

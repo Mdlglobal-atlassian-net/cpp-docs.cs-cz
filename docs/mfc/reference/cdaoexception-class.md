@@ -1,12 +1,9 @@
 ---
-title: "Třída CDaoException | Microsoft Docs"
-ms.custom: 
+title: Třída CDaoException | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoException
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5295a63a968162f5a891def06206eb50485ab1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoexception-class"></a>CDaoException – třída
 Představuje podmínku vzniklých třídami databází MFC podle dat přístup k objektům (DAO).  
@@ -72,7 +67,7 @@ class CDaoException : public CException
 |[CDaoException::m_scode](#m_scode)|[Kód SCODE](#m_scode) hodnotu přidruženou k chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída zahrnuje veřejná data členů, které vám pomohou zjistit příčinu výjimky. `CDaoException`objekty jsou vytvořená a vyvolané členské funkce databázové třídy DAO.  
+ Třída zahrnuje veřejná data členů, které vám pomohou zjistit příčinu výjimky. `CDaoException` objekty jsou vytvořená a vyvolané členské funkce databázové třídy DAO.  
   
 > [!NOTE]
 >  Databázové třídy DAO se liší od třídami databází MFC založené na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mít předponu "CDao". Můžete i nadále přístup ke zdrojům dat ODBC s třídy DAO. Obecně platí třídy MFC založené na rozhraní DAO schopné více než třídy MFC založené na rozhraní ODBC; třídy založené na rozhraní DAO přístup k datům, včetně prostřednictvím ovladače ODBC prostřednictvím svých vlastních databázového stroje. Třídy založené na rozhraní DAO také podporují jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy, aniž by museli DAO volat přímo. Informace o výjimky generované třídy rozhraní ODBC, najdete v části [CDBException](../../mfc/reference/cdbexception-class.md).  
@@ -95,7 +90,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
-##  <a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
  Vytvoří `CDaoException` objektu.  
   
 ```  
@@ -123,7 +118,7 @@ CDaoException();
   
  Další informace o zpracování chyb ve třídách knihovny MFC rozhraní DAO, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
  Volání této funkce člen načíst počet objektů DAO Chyba v kolekci chybách databázového stroje.  
   
 ```  
@@ -139,7 +134,7 @@ short GetErrorCount();
 > [!NOTE]
 >  V kolekci chyby je obvykle pouze jeden objekt chyby. Pokud pracujete s zdroje dat ODBC, však může existovat více než jeden.  
   
-##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
  Vrátí informace o chybě o konkrétní chybě objektu v kolekci chyby.  
   
 ```  
@@ -163,11 +158,11 @@ void GetErrorInfo(int nIndex);
   
 -   Kontextové nápovědy  
   
- `GetErrorInfo`ukládá do objekt výjimky `m_pErrorInfo` – datový člen. Stručný popis vrácené informace najdete v tématu [m_pErrorInfo](#m_perrorinfo). Pokud catch k výjimce typu `CDaoException` vyvolané MFC, `m_pErrorInfo` člen bude již být vyplněna. Pokud zvolíte možnost DAO volat přímo, musí volat objekt výjimky `GetErrorInfo` – členská funkce sami k vyplnění `m_pErrorInfo`. Podrobnější popis najdete v tématu [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
+ `GetErrorInfo` ukládá do objekt výjimky `m_pErrorInfo` – datový člen. Stručný popis vrácené informace najdete v tématu [m_pErrorInfo](#m_perrorinfo). Pokud catch k výjimce typu `CDaoException` vyvolané MFC, `m_pErrorInfo` člen bude již být vyplněna. Pokud zvolíte možnost DAO volat přímo, musí volat objekt výjimky `GetErrorInfo` – členská funkce sami k vyplnění `m_pErrorInfo`. Podrobnější popis najdete v tématu [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
   
  Informace o rozhraní DAO výjimky a ukázkový kód, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
  Obsahuje knihovny MFC Rozšířený kód chyby.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -183,7 +178,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN** jste se pokusili otevřít sadu záznamů na základě querydef nebo tabledef objekt, který nebyl v otevřeném stavu.  
   
-##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
  Obsahuje odkazy `CDaoErrorInfo` struktura, která poskytuje informace o objektu DAO chyba, která poslední načten voláním [GetErrorInfo –](#geterrorinfo).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -199,7 +194,7 @@ void GetErrorInfo(int nIndex);
   
  Úplné informace o informace obsažené v `CDaoErrorInfo` objektu, najdete v článku [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
   
-##  <a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>  CDaoException::m_scode  
  Obsahuje hodnotu typu `SCODE` , který popisuje chybu.  
   
 ### <a name="remarks"></a>Poznámky  

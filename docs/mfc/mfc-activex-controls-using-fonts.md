@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Použití písem | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Použití písem | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli řízení Změna vzhledu textu změnou vlastnosti písma. Vlastnosti písma jsou implementovány jako objekty písma a může mít jednu ze dvou typů: uložených nebo vlastní. Uložené vlastnosti písma jsou vlastnosti preimplemented písma, které můžete přidat pomocí Průvodce přidáním vlastnosti. Vlastní vlastnosti písma nejsou preimplemented a vývojář ovládacího prvku určuje tato vlastnost chování a využití.  
@@ -49,7 +44,7 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
 -   [Pomocí vlastností vlastní písma v vlastního ovládacího prvku](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>Pomocí vlastnosti uložených písma  
+##  <a name="_core_using_the_stock_font_property"></a> Pomocí vlastnosti uložených písma  
  Uložené vlastnosti písma jsou preimplemented v třídě [COleControl](../mfc/reference/colecontrol-class.md). Kromě toho je standardní stránky vlastností písma také k dispozici, které uživateli umožňují změnit různé atributy písma objektu, například jeho název, velikost a styl.  
   
  Přístup k objektu písma prostřednictvím [getfont –](../mfc/reference/colecontrol-class.md#getfont), [setfont –](../mfc/reference/colecontrol-class.md#setfont), a [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkce `COleControl`. Uživatelské ovládací prvek bude přistupovat k tomuto objektu písma prostřednictvím `GetFont` a `SetFont` funkce stejným způsobem jako ostatní vlastnosti Get/Set. Pokud je nutný z v ovládacím prvku přístup k objektu písmo, použijte `InternalGetFont` funkce.  
@@ -102,14 +97,14 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>Úprava OnDraw – funkce  
+##  <a name="_core_modifying_the_ondraw_function"></a> Úprava OnDraw – funkce  
  Výchozí implementaci `OnDraw` používá písmo systému Windows pro všechny text zobrazený v ovládacím prvku. To znamená, že je nutné upravit `OnDraw` kód tak, že vyberete objekt písma do kontextu zařízení. Chcete-li to provést, volejte [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) a předejte kontextu zařízení ovládacího prvku, jak je znázorněno v následujícím příkladu:  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  Po `OnDraw` funkce změnila použití objektu písma, text v rámci prvku zobrazil s vlastnostmi z ovládacího prvku uložených vlastností písma.  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>Pomocí vlastností vlastní písma v vlastního ovládacího prvku  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> Pomocí vlastností vlastní písma v vlastního ovládacího prvku  
  Kromě uložených vlastností písma ovládacího prvku ActiveX může mít vlastní vlastnosti písma. Chcete-li přidat vlastní písma vlastnost postupujte takto:  
   
 -   Použijte Průvodce přidáním vlastnosti implementovat vlastní vlastnost písma.  
@@ -118,7 +113,7 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
 -   [Implementace nové rozhraní oznámení písma](#_core_implementing_a_new_font_notification_interface).  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>Implementace vlastní Font – vlastnost  
+###  <a name="_core_implementing_a_custom_font_property"></a> Implementace vlastní Font – vlastnost  
  Pokud chcete implementovat vlastní vlastnost písma, použijete Průvodce přidáním vlastnosti k přidat vlastnost a potom proveďte úpravy kódu. Následující části popisují, jak přidat vlastní `HeadingFont` vlastnosti do ovládacího prvku ukázka.  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>Chcete-li přidat vlastní vlastnost písma pomocí Průvodce přidáním vlastnosti  
@@ -206,7 +201,7 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
  Poté, co byly provedeny změny, znovu sestavte celý projekt, který má obsahovat další funkce.  
   
-###  <a name="_core_processing_font_notifications"></a>Zpracování oznámení písma  
+###  <a name="_core_processing_font_notifications"></a> Zpracování oznámení písma  
  Ve většině případů je potřeba vědět, kdy byly upraveny vlastnosti objektu písma ovládacího prvku. Každý objekt písma je schopný poskytnout oznámení při změně voláním funkce člena **IFontNotification** rozhraní implementované `COleControl`.  
   
  Pokud ovládací prvek používá uložených vlastností písma, jsou zpracovávány jeho oznámení `OnFontChanged` členské funkce `COleControl`. Když přidáte vlastní písma vlastnosti, si můžete je použít stejnou implementaci. V příkladu v předchozí části se toho dosáhlo tím předávání &**m_xFontNotification** při inicializaci **m_fontHeading** členské proměnné.  
@@ -218,7 +213,7 @@ Implementace více rozhraní objektů písma
   
  Jeden způsob k rozlišení mezi ovládacího prvku písma objekt oznámení je vytvoření samostatné provádění **IFontNotification** rozhraní pro každý objekt písma v ovládacím prvku. Tento postup umožňuje optimalizovat kreslení kód aktualizací pouze řetězec, nebo řetězce, které ho používají naposledy upravené. Následující části ukazují kroky nezbytné k implementaci rozhraní samostatné oznámení pro druhou vlastností písma. Druhou vlastností písma předpokládá se, že `HeadingFont` vlastnost, která byla přidána v předchozí části.  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>Implementace nové rozhraní oznámení písma  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementace nové rozhraní oznámení písma  
  K rozlišení mezi oznámení o dvě nebo více písem, je nutné implementovat nové rozhraní oznámení pro každou písmo použité v ovládacím prvku. Následující části popisují, jak implementovat nové rozhraní oznámení písma změnou ovládacího prvku záhlaví a implementace soubory.  
   
 ### <a name="additions-to-the-header-file"></a>Doplňky soubor hlaviček  

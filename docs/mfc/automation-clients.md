@@ -1,13 +1,10 @@
 ---
 title: Klienti automatizace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>Klienti automatizace
 Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Klientem automatizace je aplikace, která můžete upravit zveřejněné objekty, které patří do jiné aplikace. Automatizační server se nazývá aplikaci, která poskytuje objekty. Klient umožňuje pracovat s objekty aplikací serveru díky přístupu k těmto objektům vlastnosti a funkce.  
@@ -47,7 +42,7 @@ Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementov
  Potom zadejte soubor knihovny typů popisující vlastnosti a funkce serveru aplikační objekt. Dialogové okno Přidat položku čte tento soubor a vytvoří `COleDispatchDriver`-odvozené třídy s členské funkce, které aplikace můžete volat k způsobem typově bezpečný přístup k objektům serverová aplikace v jazyce C++. Další funkce zděděno z `COleDispatchDriver` zjednodušuje proces volání správné automatizační server.  
   
 ### <a name="handling-events-in-automation-clients"></a>Zpracování událostí v klienti automatizace  
- Pokud chcete ke zpracování událostí ve vašeho klienta automatizace, je nutné přidat podřízený rozhraní. MFC poskytuje podporu průvodce Přidat podřízený rozhraní pro ovládací prvky ActiveX, ale pro další servery COM nepodporuje. Informace o tom, jak přidat podřízený rozhraní MFC klientovi pro zdroje rozhraní popsané COM servery v najdete v tématu Postupy: vytváření rozhraní jímka v klientovi COM MFC-Based (KB 181845) v [http://support.microsoft.com/default.aspxscid=kb;en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
+ Pokud chcete ke zpracování událostí ve vašeho klienta automatizace, je nutné přidat podřízený rozhraní. MFC poskytuje podporu průvodce Přidat podřízený rozhraní pro ovládací prvky ActiveX, ale pro další servery COM nepodporuje. Informace o tom, jak přidat podřízený rozhraní MFC klientovi pro zdroje rozhraní popsané COM servery v najdete v tématu Postupy: vytváření rozhraní jímka v klientovi COM MFC-Based (KB 181845) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
 ## <a name="see-also"></a>Viz také  
  [Klienti automatizace: Použití knihoven typů](../mfc/automation-clients-using-type-libraries.md)   

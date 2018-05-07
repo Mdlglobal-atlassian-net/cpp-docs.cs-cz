@@ -1,13 +1,10 @@
 ---
-title: "Použití seznamů vlastností v aplikaci | Microsoft Docs"
-ms.custom: 
+title: Použití seznamů vlastností v aplikaci | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Použití seznamů vlastností v aplikaci
 V aplikaci použít seznam vlastností, proveďte následující kroky:  
@@ -63,7 +58,7 @@ V aplikaci použít seznam vlastností, proveďte následující kroky:
   
     -   Volání [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) pro jednotlivé stránky.  
   
-     Obvykle objekt, který vytvoří `CPropertySheet` také vytvoří `CPropertyPage` objekty v tomto kroku. Ale pokud budete implementovat `CPropertySheet`-odvozené třídy, můžete vložit `CPropertyPage` objekty v `CPropertySheet` objekt a volání `AddPage` pro jednotlivé stránky z `CPropertySheet`-konstruktoru třídy odvozené. `AddPage`Přidá `CPropertyPage` objektu do seznamu vlastností seznam stránek, ale ve skutečnosti nevytvoří okna pro této stránce. Proto není nutné počkejte na vytvoření v okně Vlastnosti list volat `AddPage`; můžete volat `AddPage` ze seznamu vlastností konstruktor.  
+     Obvykle objekt, který vytvoří `CPropertySheet` také vytvoří `CPropertyPage` objekty v tomto kroku. Ale pokud budete implementovat `CPropertySheet`-odvozené třídy, můžete vložit `CPropertyPage` objekty v `CPropertySheet` objekt a volání `AddPage` pro jednotlivé stránky z `CPropertySheet`-konstruktoru třídy odvozené. `AddPage` Přidá `CPropertyPage` objektu do seznamu vlastností seznam stránek, ale ve skutečnosti nevytvoří okna pro této stránce. Proto není nutné počkejte na vytvoření v okně Vlastnosti list volat `AddPage`; můžete volat `AddPage` ze seznamu vlastností konstruktor.  
   
      Ve výchozím nastavení Pokud má seznam vlastností další karty, než se vejde na jednom řádku seznamu vlastností, bude karty zásobníku v více řádků. Chcete-li zakázat překrývání, volejte [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) s parametrem nastavena na **FALSE**. Je třeba volat `EnableStackedTabs` při vytváření seznamu vlastností.  
   

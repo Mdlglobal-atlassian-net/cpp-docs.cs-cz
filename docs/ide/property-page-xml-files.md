@@ -1,29 +1,24 @@
 ---
-title: "Vlastnosti stránky XML pravidlo soubory | Microsoft Docs"
-ms.custom: 
+title: Vlastnosti stránky XML pravidlo soubory | Microsoft Docs
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>Soubory pravidlo XML stránky vlastností
 Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v prostředí IDE. Přesnou cestu závisí na které edition(s) sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio 2017 Enterprise Edition, v angličtině, cesta je `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty, a způsob jejich zobrazení. Když nastavíte vlastnost v prostředí IDE, nová hodnota je uložena v souboru projektu.
@@ -109,18 +104,18 @@ Následující část popisuje každou hlavní prvky a některé z metadat, kter
 
   f. **DisplayName:** Toto je název, který se zobrazí na stránce vlastností uživatelského rozhraní pro pravidlo uzel. Tato hodnota je lokalizované. Jsme vytvořili DisplayName jako podřízený element pravidla a nikoli jako atribut (např. název nebo SwitchPrefix) z důvodu vnitřní lokalizace požadavky na nástroj. Z hlediska XAML pro obě jsou ekvivalentní. Ano je možné vytvořit ji atribut přehlednost nebo necháte, protože se jedná.
 
-  G. **Zdroj dat:** to je velmi důležité vlastnost, která informuje systém projektu umístění, ze kterého by měla hodnotu vlastnosti číst z a zapisovat do a jeho seskupování (vysvětlení níže). Pro cl.xml jsou tyto hodnoty:
+  g. **Zdroj dat:** to je velmi důležité vlastnost, která informuje systém projektu umístění, ze kterého by měla hodnotu vlastnosti číst z a zapisovat do a jeho seskupování (vysvětlení níže). Pro cl.xml jsou tyto hodnoty:
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`informuje o všech vlastnostech pro pravidlo, které mají být zapsána do souboru projektu systému projektu nebo soubor seznamu vlastností (v závislosti na uzlu byla použita k spawn – stránky vlastností). Možná hodnota je "UserFile", která hodnotu zapíše do souboru .uživatel.
+   - `Persistence="ProjectFile` informuje o všech vlastnostech pro pravidlo, které mají být zapsána do souboru projektu systému projektu nebo soubor seznamu vlastností (v závislosti na uzlu byla použita k spawn – stránky vlastností). Možná hodnota je "UserFile", která hodnotu zapíše do souboru .uživatel.
 
-   - `ItemType="ClCompile"`uvádí, že vlastnosti se uloží jako ItemDefinition metadata nebo metadata položky (k tomu jenom v případě, že byly stránek vlastností vytvořený z uzlu soubor v Průzkumníku řešení) tohoto typu položky. Pokud toto pole není nastavena, je vlastnost zapisují jako běžnou vlastností v PropertyGroup.
+   - `ItemType="ClCompile"` uvádí, že vlastnosti se uloží jako ItemDefinition metadata nebo metadata položky (k tomu jenom v případě, že byly stránek vlastností vytvořený z uzlu soubor v Průzkumníku řešení) tohoto typu položky. Pokud toto pole není nastavena, je vlastnost zapisují jako běžnou vlastností v PropertyGroup.
 
-   - `Label=""`informuje, že při vlastnosti se zapisují jako `ItemDefinition` metadata, bude popisek nadřazené ItemDefinitionGroup prázdný (každý element MSBuild může mít štítek). Visual Studio 2017 používá s popiskem skupiny přejděte VCXPROJ souboru projektu. Všimněte si, zda mají skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
+   - `Label=""` informuje, že při vlastnosti se zapisují jako `ItemDefinition` metadata, bude popisek nadřazené ItemDefinitionGroup prázdný (každý element MSBuild může mít štítek). Visual Studio 2017 používá s popiskem skupiny přejděte VCXPROJ souboru projektu. Všimněte si, zda mají skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
 
-   - `HasConfigurationCondition="true"`říká systému projektu připojovat podmínku konfigurace na hodnotu tak, že bude platit pouze pro aktuální konfigurací projektu (podmínka může být umístěny do nadřazené skupiny nebo vlastní hodnota). Například otevření stránek vlastností projektu uzel a nastavte hodnotu vlastnosti **považovat upozornění jako chyby** pod **vlastnosti konfigurace > C/C++ Obecné** "Ano". Následující hodnota je zapsán do souboru projektu. Všimněte si, podmínku konfigurace připojené k nadřazené ItemDefinitionGroup.
+   - `HasConfigurationCondition="true"` říká systému projektu připojovat podmínku konfigurace na hodnotu tak, že bude platit pouze pro aktuální konfigurací projektu (podmínka může být umístěny do nadřazené skupiny nebo vlastní hodnota). Například otevření stránek vlastností projektu uzel a nastavte hodnotu vlastnosti **považovat upozornění jako chyby** pod **vlastnosti konfigurace > C/C++ Obecné** "Ano". Následující hodnota je zapsán do souboru projektu. Všimněte si, podmínku konfigurace připojené k nadřazené ItemDefinitionGroup.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">

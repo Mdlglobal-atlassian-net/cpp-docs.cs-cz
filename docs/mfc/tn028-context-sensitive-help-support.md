@@ -1,13 +1,10 @@
 ---
-title: "TN028: Podpora kontextové nápovědy | Microsoft Docs"
-ms.custom: 
+title: 'TN028: Podpora kontextové nápovědy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Podpora kontextové nápovědy
 Tato poznámka popisuje pravidla pro přiřazování ID kontexty nápovědy a další pomoc problémy v prostředí MFC. Podpora kontextové nápovědy vyžaduje kompilátor nápovědy, která je k dispozici v jazyce Visual C++.  
@@ -76,7 +71,7 @@ Tato poznámka popisuje pravidla pro přiřazování ID kontexty nápovědy a da
   
  Bez ohledu na to, jak `ID_HELP` příkaz se vygeneruje, se směruje jako normální příkaz, dokud nebude dosaženo obslužná rutina příkazu. Další informace o architektuře směrování příkazů MFC, najdete v části [Technická poznámka 21](../mfc/tn021-command-and-message-routing.md). Pokud aplikace má nápovědy povoleno, `ID_HELP` příkaz bude zpracovávat [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). Objekt aplikace přijímá zprávy nápovědy a pak směruje příkaz správně. To je nezbytné, protože výchozí směrování příkazů není vhodný pro určení nejvíce kontextu.  
   
- `CWinApp::OnHelp`se pokusí spustit WinHelp v následujícím pořadí:  
+ `CWinApp::OnHelp` se pokusí spustit WinHelp v následujícím pořadí:  
   
 1.  Kontroluje aktivní `AfxMessageBox` volání s pomůže ID. Pokud je aktuálně aktivní okno se zprávou, WinHelp se spustí s kontextem vhodné pro dané pole zpráva.  
   
@@ -99,7 +94,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
  WM_COMMANDHELP je privátní zpráva Windows MFC, který je přijatých aktivní okno, pokud se požaduje nápovědy. Když okna obdrží tuto zprávu, může volat `CWinApp::WinHelp` s kontextem, který odpovídá okna vnitřní stav.  
   
  `lParam`  
- Obsahuje kontext aktuálně k dispozici nápověda. `lParam`Pokud byla zjištěna žádná nápověda kontextu je nulová. Implementace `OnCommandHelp` můžete použít ID kontextu v `lParam` k určení různých kontext nebo můžete stačí předat jej do `CWinApp::WinHelp`.  
+ Obsahuje kontext aktuálně k dispozici nápověda. `lParam` Pokud byla zjištěna žádná nápověda kontextu je nulová. Implementace `OnCommandHelp` můžete použít ID kontextu v `lParam` k určení různých kontext nebo můžete stačí předat jej do `CWinApp::WinHelp`.  
   
  `wParam`  
  Se nepoužívá a bude nula.  
@@ -115,7 +110,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
   
  Pokud existují konkrétní překlady nebo akce trvá umístit `PreTranslateMessage` funkce, který by neměl probíhat během režimu SHIFT + F1 – Nápověda, měli byste zkontrolovat `m_bHelpMode` členem `CWinApp` před provedením těchto operací. `CDialog` Implementace `PreTranslateMessage` kontroluje to před voláním `IsDialogMessage`, např. Během režimu SHIFT + F1 to zakáže "dialogové okno navigační" klávesy na nemodální dialogová okna. Kromě toho `CWinApp::OnIdle` je stále volána v průběhu této smyčky.  
   
- Pokud se uživatel rozhodne příkazu v nabídce, se zpracovává jako nápovědu v tomto příkazu (prostřednictvím **WM_COMMANDHELP**, viz níže). Pokud uživatel klikne viditelné oblast okna aplikace, rozhodne, zda je klikněte na tlačítko nonclient nebo klikněte na klienta. `OnContextHelp`mapování obslužných rutin nonclient klikne na kliknutí klienta automaticky. Pokud je klient kliknutím, pak odešle **WM_HELPHITTEST** do okna označeného. Pokud toto okno vrátí nenulovou hodnotu, tato hodnota se používá jako kontext nápovědu. Pokud vrátí hodnotu nula, `OnContextHelp` pokusí nadřazeného okna (a které se jeho nadřazeným prvkem a tak dále). Pokud nelze určit kontext nápovědy, výchozí hodnota je k odeslání **id_default_help –** příkaz do hlavního okna, která se pak (obvykle) mapuje na `CWinApp::OnHelpIndex`.  
+ Pokud se uživatel rozhodne příkazu v nabídce, se zpracovává jako nápovědu v tomto příkazu (prostřednictvím **WM_COMMANDHELP**, viz níže). Pokud uživatel klikne viditelné oblast okna aplikace, rozhodne, zda je klikněte na tlačítko nonclient nebo klikněte na klienta. `OnContextHelp` mapování obslužných rutin nonclient klikne na kliknutí klienta automaticky. Pokud je klient kliknutím, pak odešle **WM_HELPHITTEST** do okna označeného. Pokud toto okno vrátí nenulovou hodnotu, tato hodnota se používá jako kontext nápovědu. Pokud vrátí hodnotu nula, `OnContextHelp` pokusí nadřazeného okna (a které se jeho nadřazeným prvkem a tak dále). Pokud nelze určit kontext nápovědy, výchozí hodnota je k odeslání **id_default_help –** příkaz do hlavního okna, která se pak (obvykle) mapuje na `CWinApp::OnHelpIndex`.  
   
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST  
   

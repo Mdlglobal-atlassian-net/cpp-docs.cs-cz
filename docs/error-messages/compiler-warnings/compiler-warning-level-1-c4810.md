@@ -1,13 +1,10 @@
 ---
-title: "Kompilátoru (úroveň 1) upozornění C4810 | Microsoft Docs"
-ms.custom: 
+title: Kompilátoru (úroveň 1) upozornění C4810 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4810
 dev_langs:
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C4810
 ms.assetid: 39e2cae0-9c1c-4ac1-aaa0-5f661d06085b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 652aef44e86e1395ae9faa1d29d3ffe99473c76c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a803a219520519f91605971d6fd515746cabb37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4810"></a>C4810 kompilátoru upozornění (úroveň 1)
 Hodnota – Direktiva pragma pack(show) == n  
   
- Při použití se objeví toto upozornění **zobrazit** možnost [pack](../../preprocessor/pack.md) – Direktiva pragma. *n*je aktuální hodnota pack.  
+ Při použití se objeví toto upozornění **zobrazit** možnost [pack](../../preprocessor/pack.md) – Direktiva pragma. *n* je aktuální hodnota pack.  
   
  Například následující kód ukazuje, jak funguje C4810 upozornění s – Direktiva pragma pack:  
   

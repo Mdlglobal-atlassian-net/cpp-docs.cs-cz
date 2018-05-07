@@ -1,13 +1,10 @@
 ---
-title: "Sémantika typu hodnoty | Microsoft Docs"
-ms.custom: 
+title: Sémantika typu hodnoty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Sémantika typu hodnoty
 Sémantika typu hodnoty změnily ze spravovaných rozšíření jazyka C++ na Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Vyvolání zděděných virtuálních metod  
- `Form (1)`je objekt kanonické hodnoty a je to bude přiměřeně správně pochopeny, s výjimkou případů, kdy se někdo pokusí vyvolat zděděnou virtuální metodu, jako `ToString()`. Příklad:  
+ `Form (1)` je objekt kanonické hodnoty a je to bude přiměřeně správně pochopeny, s výjimkou případů, kdy se někdo pokusí vyvolat zděděnou virtuální metodu, jako `ToString()`. Příklad:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Rádi bychom se zabalení malé nativních tříd v typu hodnoty namísto typu odkazu. aby se zabránilo přidělení dvojité haldy: nativní halda k udržování nativního typu a halda CLR pro uložení spravovaná obálka. Zabalení nativních tříd v rámci typu hodnoty lze zabránit spravovaná halda, ale poskytuje způsob, jak automatizovat recyklaci nativní halda paměti. Odkazové typy jsou jediné proveditelné spravované typy v rámci kterých obalit netriviální nativních tříd.  
   
 ## <a name="interior-pointers"></a>Vnitřních ukazatelů  
- `Form (2)`a `Form (3)` vyšší můžete vyřešit téměř vše v tomto světě nebo další (to znamená, vše spravovaným nebo nativním). Ano, například všechny následující jsou povoleny ve spravovaných rozšíření:  
+ `Form (2)` a `Form (3)` vyšší můžete vyřešit téměř vše v tomto světě nebo další (to znamená, vše spravovaným nebo nativním). Ano, například všechny následující jsou povoleny ve spravovaných rozšíření:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`a `Form (3)` spravovaných rozšíření mapování na `interior_ptr<V>`. `Form (4)`je sledovací popisovač. Zaměřuje se na celý objekt, který byl zabalen v rámci spravovaná halda. Je přeložená v nové syntaxe do `V^`,  
+ `Form (2)` a `Form (3)` spravovaných rozšíření mapování na `interior_ptr<V>`. `Form (4)` je sledovací popisovač. Zaměřuje se na celý objekt, který byl zabalen v rámci spravovaná halda. Je přeložená v nové syntaxe do `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

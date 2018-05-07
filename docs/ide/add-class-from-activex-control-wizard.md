@@ -1,13 +1,10 @@
 ---
-title: "Přidání třídy z Průvodce ovládacím prvkem ActiveX | Microsoft Docs"
-ms.custom: 
+title: Přidání třídy z Průvodce ovládacím prvkem ActiveX | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Přidání třídy z průvodce ovládacím prvkem ActiveX
 Pomocí tohoto průvodce k přidání třídy knihovny MFC z ovládacího prvku ActiveX k dispozici. Průvodce vytvoří třídu pro každé rozhraní, které přidáte z vybraný ovládací prvek ActiveX.  
@@ -44,7 +39,7 @@ Pomocí tohoto průvodce k přidání třídy knihovny MFC z ovládacího prvku 
   
  Pokud kliknete na tlačítko **soubor** pod **přidat třídu z**, toto políčko není možné měnit.  
   
- **Umístění**  
+ **Poloha**  
  Určuje umístění ovládacího prvku ActiveX. Pokud kliknete na tlačítko **soubor** pod **přidat třídu z**, můžete zadat umístění souboru, který obsahuje knihovny typů. Chcete-li přejděte do umístění souboru, klikněte na tlačítko se třemi tečkami.  
   
  Pokud kliknete na tlačítko **registru** pod **přidat třídu z**, toto políčko není možné měnit.  
@@ -60,9 +55,9 @@ Pomocí tohoto průvodce k přidání třídy knihovny MFC z ovládacího prvku 
 |**<\<**|Odebere všechny třídy v **generované třídy** seznamu. Pokud není k dispozici **generované třídy** seznam je prázdný.|  
   
  **Vygenerované třídy**  
- Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí  **>**  nebo  **>>**  tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor h** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
+ Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor h** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
   
- Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na  **<** . Není potřeba vyberte třídu v **generované třídy** pole odebrat všechny třídy; pomocí kliknutím na tlačítko  **<<** , odeberete všechny třídy v **generované třídy** pole.  
+ Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na **<**. Není potřeba vyberte třídu v **generované třídy** pole odebrat všechny třídy; pomocí kliknutím na tlačítko **<<**, odeberete všechny třídy v **generované třídy** pole.  
   
  `Class`  
  Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na tlačítko **Dokončit**. Můžete upravit název v `Class` pole.  

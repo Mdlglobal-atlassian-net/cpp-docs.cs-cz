@@ -1,13 +1,10 @@
 ---
-title: "Smazání všech objektů v kolekcích CObject | Microsoft Docs"
-ms.custom: 
+title: Smazání všech objektů v kolekcích CObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Smazání všech objektů v kolekcích CObject
 Tento článek vysvětluje, jak odstranit všechny objekty v kolekci (bez odstranění samotného objektu kolekce).  
@@ -47,7 +42,7 @@ Tento článek vysvětluje, jak odstranit všechny objekty v kolekci (bez odstra
   
 -   [Mapy](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Chcete-li odstranit všechny objekty v seznamu ukazatelé na třídy CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Chcete-li odstranit všechny objekty v seznamu ukazatelé na třídy CObject  
   
 1.  Použití `GetHeadPosition` a `GetNext` k iteraci v rámci seznamu.  
   
@@ -63,7 +58,7 @@ Tento článek vysvětluje, jak odstranit všechny objekty v kolekci (bez odstra
   
  Všimněte si rozdíl mezi odstranění objektu elementu a odebrání elementu samotného. Odebrat element ze seznamu jenom odebere v seznamu odkaz na objekt. Objekt se stále existuje v paměti. Pokud odstraníte objekt, se přestanou existovat a jeho paměť je uvolnit. Proto je důležité odebrat element ihned po elementu objekt je odstraněný tak, aby při pokusu o přístup k objektům, které už existují nebude v seznamu.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>Chcete-li odstranit všechny elementy v matici  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Chcete-li odstranit všechny elementy v matici  
   
 1.  Použití `GetSize` a celočíselné hodnoty indexu k iteraci v rámci pole.  
   
@@ -77,7 +72,7 @@ Tento článek vysvětluje, jak odstranit všechny objekty v kolekci (bez odstra
   
  Jako příklad seznamu výše, můžete volat `RemoveAll` odebrat všechny elementy v matici nebo `RemoveAt` odebrat jednotlivý prvek.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Chcete-li odstranit všechny elementy ve mapy  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Chcete-li odstranit všechny elementy ve mapy  
   
 1.  Použití `GetStartPosition` a `GetNextAssoc` k iteraci v rámci pole.  
   

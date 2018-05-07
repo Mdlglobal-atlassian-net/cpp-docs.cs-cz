@@ -1,12 +1,9 @@
 ---
 title: _mm_cvtsi64x_ss | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_cvtsi64x_ss
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29a914b2cfbc807ac3a0dae8cadc3459d3de23a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozšířenou verzi převést 64bitovou celočíselnou hodnotu na hodnotu Floating-Point jednoduchou přesností skalárních (`cvtsi2ss`) instrukcí.  
   
@@ -43,10 +38,10 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
+ [v] `a`  
  `__m128` Struktura obsahující čtyři hodnoty s plovoucí desetinnou čárkou jednoduchou přesností.  
   
- [in] `b`  
+ [v] `b`  
  64bitové celé číslo má být převeden na hodnotu s plovoucí desetinnou čárkou.  
   
 ## <a name="return-value"></a>Návratová hodnota  

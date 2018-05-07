@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonCustomizeDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonCustomizeDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c674cc127f08109ecf40d99d890b088d55e9c906
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog – třída
 Zobrazí na pásu karet **přizpůsobit** stránky.  
@@ -67,7 +62,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cpropertysheet –](../../mfc/reference/cpropertysheet-class.md)  
+ [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)  
   
  [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
   
@@ -76,7 +71,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribboncustomizedialog.h  
   
-##  <a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
  Vytvoří `CMFCRibbonCustomizeDialog` objektu.  
   
 ```  
@@ -86,10 +81,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Ukazatel do nadřazeného okna (obvykle hlavního rámce).  
   
- [v]`pRibbon`  
+ [v] `pRibbon`  
  Ukazatel `CMFCRibbonBar` , který má být přizpůsobit.  
   
 ### <a name="example"></a>Příklad  

@@ -1,13 +1,10 @@
 ---
-title: "ODBC: Knihovna kurzorů rozhraní ODBC | Microsoft Docs"
-ms.custom: 
+title: 'ODBC: Knihovna kurzorů rozhraní ODBC | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: Knihovna kurzorů rozhraní ODBC
 Toto téma popisuje knihovny kurzorů ODBC a vysvětluje, jak ho použít. Další informace naleznete v tématu:  
@@ -49,7 +44,7 @@ Toto téma popisuje knihovny kurzorů ODBC a vysvětluje, jak ho použít. Dalš
   
  Knihovna kurzorů rozhraní ODBC je dynamická knihovna (DLL), který se nachází mezi správce ovladačů ODBC a ovladači. Z hlediska rozhraní ODBC ovladač udržuje kurzoru ke sledování jeho umístění v sadě záznamů. Kurzor označí pozici v sadě záznamů, do které jste již přešli – záznam na aktuální záznam.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Ovladače ODBC – knihovna kurzorů a úrovně 1  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Ovladače ODBC – knihovna kurzorů a úrovně 1  
  Knihovna kurzorů rozhraní ODBC poskytuje ovladače úrovně 1 následující nové funkce:  
   
 -   Posun vpřed a zpět. Úroveň 2 ovladače nepotřebují knihovna kurzorů, protože jsou již posuvné.  
@@ -58,7 +53,7 @@ Toto téma popisuje knihovny kurzorů ODBC a vysvětluje, jak ho použít. Dalš
   
  Knihovna kurzorů vám snímků (statické kurzory) i v případě, že vaše ovladačem nepodporují normálně. Pokud ovladač již podporuje statické kurzory, není potřeba načíst knihovna kurzorů získat podporu snímku. Pokud použití knihovny kurzorů, můžete použít pouze snímky a dopředné sady záznamů. Pokud ovladač podporuje dynamické sady (kurzory KEYSET_DRIVEN) a chcete je použít, nesmí použití knihovny kurzorů. Pokud chcete použít snímky a dynamické sady, musíte je založit na dva různé `CDatabase` objekty (dvě různá připojení), pokud ovladač podporuje obě.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>Umístěné aktualizace a sloupce časového razítka  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> Umístěné aktualizace a sloupce časového razítka  
   
 > [!NOTE]
 >  Zdroje dat ODBC jsou přístupné prostřednictvím třídy knihovny MFC rozhraní ODBC, jak je popsáno v tomto tématu nebo třídy MFC objekt DAO (Data Access).  
@@ -75,7 +70,7 @@ Toto téma popisuje knihovny kurzorů ODBC a vysvětluje, jak ho použít. Dalš
  Druhý problém se týká omezení třídy [CTime](../../atl-mfc-shared/reference/ctime-class.md) při použití s `RFX_Date` funkce k přenosu informací data a času na nebo z tabulky. Zpracování `CTime` objekt ukládá nějakou režii ve formuláři extra pokročilého zpracování při přenosu dat. Rozsah kalendářních dat `CTime` objekty mohou být také příliš omezený pro některé aplikace. Novou verzi `RFX_Date` funkce přebírá ODBC **TIMESTAMP_STRUCT z** parametr místo `CTime` objektu. Další informace najdete v tématu `RFX_Date` v [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *odkaz knihovny MFC*.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>Použití knihovny kurzorů  
+##  <a name="_core_using_the_cursor_library"></a> Použití knihovny kurzorů  
  Při připojení ke zdroji dat – voláním [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) nebo [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) – můžete určit, zda použití knihovny kurzorů pro zdroj dat. Pokud bude vytvářet snímky na tomto zdroji dat, zadejte **CDatabase::useCursorLib** možnost `dwOptions` parametru `OpenEx` nebo zadejte **TRUE** pro  **bUseCursorLib** parametru **otevřete** (výchozí hodnota je **TRUE**). Pokud ovladač ODBC podporuje dynamické sady a chcete otevřít dynamické sady ve zdroji dat, nepoužívejte knihovna kurzorů (skryje některé funkce, které potřebují pro dynamické sady). V takovém případě nezadávejte **CDatabase::useCursorLib** v `OpenEx` nebo zadejte **FALSE** pro **bUseCursorLib** parametr v **otevřete**.  
   
 ## <a name="see-also"></a>Viz také  

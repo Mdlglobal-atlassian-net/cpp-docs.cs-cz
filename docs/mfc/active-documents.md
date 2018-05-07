@@ -1,13 +1,10 @@
 ---
-title: "Aktivní dokumenty | Microsoft Docs"
-ms.custom: 
+title: Aktivní dokumenty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Aktivní dokumenty
 Aktivní dokumenty rozšířit složeného dokumentu technologie OLE. Tato rozšíření jsou uvedeny v podobě další rozhraní, které spravují zobrazení, tak, aby fungovala v rámci kontejnerů a ještě zachovat kontrolu nad jejich zobrazení a tisk funkce objekty. Tento proces umožní zobrazování dokumentů v cizí snímků (například Microsoft modul vazby sady Office nebo aplikace Microsoft Internet Explorer) i v nativní rámce (třeba portů zobrazení produkt vlastní).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Aktivní dokument můžete vytvořit jeden nebo více typy [zobrazení](#requirements_for_view_objects) svých dat (například normální popisují, stránky rozložení a tak dále). Zobrazení fungovat stejně jako filtry, pomocí kterých můžete zobrazit data. I v případě, že pouze jeden typ zobrazení má dokument, může stále chcete podporovat více zobrazení jako prostředek podporuje nové funkce okno (například **nové okno** položku **okno** nabídky v Office aplikace).  
   
-##  <a name="requirements_for_active_documents"></a>Požadavky pro aktivní dokumenty  
+##  <a name="requirements_for_active_documents"></a> Požadavky pro aktivní dokumenty  
  Aktivní dokument, který lze zobrazit v kontejner musí:  
   
 -   Složené soubory na OLE použít jako svůj mechanismus úložiště implementací `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  Znalost, kdy a jak používat rozhraní straně kontejneru je zahrnuta v těchto požadavků.  
   
-##  <a name="requirements_for_view_objects"></a>Požadavky pro objekty zobrazení  
+##  <a name="requirements_for_view_objects"></a> Požadavky pro objekty zobrazení  
  Aktivní dokument můžete vytvořit jeden nebo více zobrazení jeho data. Tato zobrazení jsou funkčně, jako porty na konkrétní metodu pro zobrazení data. Pokud aktivní dokument podporuje pouze jedno zobrazení, aktivní dokument a že jednoho zobrazení můžete implementovat pomocí jedné třídy. **IOleDocument::CreateView** vrátí stejný objekt `IOleDocumentView` ukazatel rozhraní.  
   
  A nelze je v rámci kontejner, musí podporovat komponentu zobrazení **IOleInPlaceObject** a **IOleInPlaceActiveObject** kromě `IOleDocumentView`:  
