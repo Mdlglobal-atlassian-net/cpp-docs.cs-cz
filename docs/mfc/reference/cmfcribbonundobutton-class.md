@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonUndoButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonUndoButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 720a1de11dcf4c37b4b321bb0e014a9ae4e2e459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton – třída
 `CMFCRibbonUndoButton` Třída implementuje rozevíracího seznamu tlačítka, které obsahuje nejnovější příkazy uživatele. Uživatelé mohou vybrat jednu nebo více nejnovější příkazů z rozevíracího seznamu vrátit nebo vrátit zpět, je.  
@@ -85,7 +80,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonundobutton.h  
   
-##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
  Přidá novou akci do seznamu akcí.  
   
 ```  
@@ -93,17 +88,17 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Popisek akce, která se zobrazí v rozevíracím seznamu.  
   
-##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Vymaže seznam akcí, který je rozevíracím seznamu.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
  Vytvoří nový `CMFCRibbonUndoButton` objekt pomocí ID příkazu, který zadáte, textový popisek a obrázků ze seznamu obrázků nadřazeného objektu.  
   
 ```  
@@ -121,22 +116,22 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  Určuje identifikátor příkazu.  
   
- [v]`lpszText`  
+ [v] `lpszText`  
  Určuje textový popisek tlačítka.  
   
- [v]`nSmallImageIndex`  
+ [v] `nSmallImageIndex`  
  Index v seznamu obrázků nadřazeného objektu, pro malý obrázek na tlačítko nule.  
   
- [v]`nLargeImageIndex`  
+ [v] `nLargeImageIndex`  
  Index počítaný od nuly v seznamu obrázků nadřazeného objektu, pro velké obrázku tlačítka.  
   
- [v]`hIcon`  
+ [v] `hIcon`  
  Popisovač pro ikonu, která můžete použít jako obrázek na tlačítko.  
   
-##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Určuje počet položek, které uživatel vybere ze seznamu rozevíracího seznamu.  
   
 ```  
@@ -146,7 +141,7 @@ int GetActionNumber() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek, které vybrané uživatele.  
   
-##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
  Určuje, zda objekt obsahuje nabídky.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "MFC – třídy | Microsoft Docs"
-ms.custom: 
+title: MFC – třídy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation Class (MFC).  
@@ -826,7 +821,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Spravuje nástrojů obrázky načtené z prostředky aplikace nebo soubory.  
   
  [CMFCToolBarInfo – třída](../../mfc/reference/cmfctoolbarinfo-class.md)  
- Obsahuje ID obrázků panelu nástrojů v různé stavy prostředků. `CMFCToolBarInfo`je pomocná třída, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda.  
+ Obsahuje ID obrázků panelu nástrojů v různé stavy prostředků. `CMFCToolBarInfo` je pomocná třída, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda.  
   
  [CMFCToolBarMenuButton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  Tlačítka panelu nástrojů, který obsahuje místní nabídky.  

@@ -1,13 +1,10 @@
 ---
 title: Objekty oken | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15f53db2d0ec6a57261e22c58abd3e5e8423b716
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-objects"></a>Objekty oken
 Poskytuje třídy MFC [CWnd](../mfc/reference/cwnd-class.md) k zapouzdření `HWND` popisovač okna. `CWnd` C++ okno objektů, liší od `HWND` Windows, která představuje okno, ale který jej obsahuje. Použít `CWnd` odvození vlastní podřízeného okna třídy, nebo použijte jednu z mnoha tříd MFC odvozené od `CWnd`. Třída `CWnd` je základní třída pro všechny windows, včetně okna s rámečkem, dialogová okna, podřízená okna, ovládací prvky a ovládací pruhy například panely nástrojů. Dobrou znalost jazyka [vztah mezi objektem okna v C++ a popisovačem HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) je zásadní pro efektivní programování s knihovnou MFC.  
@@ -45,7 +40,7 @@ Poskytuje třídy MFC [CWnd](../mfc/reference/cwnd-class.md) k zapouzdření `HW
  Obecné dokumentace v programování pro systém Windows je dobré prostředku pro naučit se používat `CWnd` členské funkce, které zapouzdření `HWND` rozhraní API.  
   
 ## <a name="functions-for-operating-on-a-cwnd"></a>Funkce pro práci na třídy CWnd  
- `CWnd`a jeho [odvozené třídy oken](../mfc/derived-window-classes.md) poskytují konstruktory, destruktory a členské funkce k inicializaci objektu, vytvořit základní struktury systému Windows a přístup zapouzdřené `HWND`. `CWnd`také poskytuje členské funkce, které zapouzdření rozhraní API systému Windows pro odesílání zpráv, přístup k okna stavu, převod souřadnice, aktualizaci, posouvání, přístup k schránky a mnoho dalších úkolů. Většina rozhraní API systému Windows Správa oken, který trvat `HWND` argument se zapouzdřené jako členské funkce `CWnd`. Názvy funkcí a jejich parametrů se zachovají v `CWnd` – členská funkce. Podrobnosti o rozhraní API systému Windows zapouzdřené pomocí `CWnd`, najdete v části třídy [CWnd](../mfc/reference/cwnd-class.md).  
+ `CWnd` a jeho [odvozené třídy oken](../mfc/derived-window-classes.md) poskytují konstruktory, destruktory a členské funkce k inicializaci objektu, vytvořit základní struktury systému Windows a přístup zapouzdřené `HWND`. `CWnd` také poskytuje členské funkce, které zapouzdření rozhraní API systému Windows pro odesílání zpráv, přístup k okna stavu, převod souřadnice, aktualizaci, posouvání, přístup k schránky a mnoho dalších úkolů. Většina rozhraní API systému Windows Správa oken, který trvat `HWND` argument se zapouzdřené jako členské funkce `CWnd`. Názvy funkcí a jejich parametrů se zachovají v `CWnd` – členská funkce. Podrobnosti o rozhraní API systému Windows zapouzdřené pomocí `CWnd`, najdete v části třídy [CWnd](../mfc/reference/cwnd-class.md).  
   
 ## <a name="cwnd-and-windows-messages"></a>CWnd a zpráv systému Windows  
  Jedním z primárních účelů `CWnd` je poskytnout rozhraní pro zpracování zpráv systému Windows, jako například `WM_PAINT` nebo `WM_MOUSEMOVE`. Mnoho z členské funkce `CWnd` jsou obslužné rutiny pro standardní zprávy – těch, které začínají s identifikátorem **afx_msg** a předponu "Na", například `OnPaint` a **onmousemove –**. [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md) zahrnuje zprávy a zpracování podrobně zpráv. Informace o existuje vztahuje stejnou měrou na rozhraní framework windows a ty vytvořit sami pro zvláštní účely.  

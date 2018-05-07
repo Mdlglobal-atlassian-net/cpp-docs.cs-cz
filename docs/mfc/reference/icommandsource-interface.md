@@ -1,12 +1,9 @@
 ---
-title: "Rozhraní ICommandSource | Microsoft Docs"
-ms.custom: 
+title: Rozhraní ICommandSource | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandSource
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandsource-interface"></a>ICommandSource rozhraní
 Spravuje příkazy, odeslané ze zdrojového objektu příkazu do uživatelského ovládacího prvku.  
@@ -74,7 +69,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwinforms.h (definovanou v atlmfc\lib\mfcmifc80.dll sestavení)  
   
-## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
 Obslužná rutina příkazu přidá do zdrojového objektu příkazu.
 ```
 void AddCommandHandler(
@@ -92,7 +87,7 @@ Popisovač metody obslužná rutina příkazu.
 Tato metoda se zdrojovým objektem příkaz přidá cmdHandler obslužná rutina příkazu a obslužná rutina se mapuje na cmdID.
 V tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad použití AddCommandHandler.
 
-## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
 Přidá skupinu obslužné rutiny příkazů do zdrojového objektu příkazu.
 ```
@@ -111,7 +106,7 @@ Popisovač pro metodu zpráva obslužná rutina, ke které jsou namapované př�
 ### <a name="remarks"></a>Poznámky
 Tato metoda mapuje souvislý rozsah ID příkazů do jedné zprávy rutiny a přidá ji do zdrojového objektu příkazu. Používá se pro zpracování skupina tlačítek, související s jednu metodu.
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
 Přidá skupinu obslužné rutiny zpráv uživatelské rozhraní příkaz zdrojovým objektem příkaz.
 ```
 void AddCommandRangeUIHandler(
@@ -130,7 +125,7 @@ Popisovač pro metodu zpráva obslužná rutina, ke které jsou namapované př�
 ### <a name="remarks"></a>Poznámky
 Tato metoda mapuje souvislý rozsah ID příkazů obslužné rutiny zpráv příkaz rozhraní jednoho uživatele a přidá ji do zdrojového objektu příkazu. Používá se pro zpracování skupina tlačítek, související s jednu metodu.
 
-## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
 Obslužné rutiny zpráv uživatelské rozhraní příkaz přidá do zdrojového objektu příkazu.
 ```
 void AddCommandUIHandler(
@@ -146,7 +141,7 @@ Popisovač pro metodu uživatelské rozhraní příkaz zpráva obslužné rutiny
 ### <a name="remarks"></a>Poznámky
 Tato metoda přidá uživatelské rozhraní příkaz zpráva obslužná rutina cmdHandler ke zdrojovému objektu příkazu a obslužná rutina se mapuje na cmdID.
 
-## <a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a> ICommandSource::PostCommand
 Odešle zprávu bez čekání na zpracování.
 ```
 void PostCommand(unsigned int command);
@@ -158,7 +153,7 @@ Identifikátor příkazu zprávy odesílat.
 Tato metoda asynchronně odešle zprávu mapovat na ID zadané pomocí příkazu. Volá CWnd::PostMessage umístit zprávy ve frontě zpráv okna a potom se vrátí bez čekání na okno odpovídající ke zpracování zprávy.
 
 
-## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 Obslužná rutina příkazu odebere ze zdrojového objektu příkazu.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -170,7 +165,7 @@ ID příkazu.
 Tato metoda odebere obslužná rutina namapovaná na cmdID ze zdrojového objektu příkazu.
 
 
-## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
 Odebere skupinu obslužné rutiny příkazů ze zdrojového objektu příkazu.
 ```
 void RemoveCommandRangeUIHandler(
@@ -185,7 +180,7 @@ Koncová index rozsah ID příkazu.
 ### <a name="remarks"></a>Poznámky
 Tato metoda Odebere skupinu obslužné rutiny zpráv namapované na zadaný ID příkaz cmdIDMin a cmdIDMax, ze zdrojového objektu příkazu.
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
 Odebere skupinu obslužné rutiny zpráv uživatelské rozhraní příkaz z ke zdrojovému objektu příkazu.
 ```
 void RemoveCommandRangeUIHandler(
@@ -200,7 +195,7 @@ Koncová index rozsah ID příkazu.
 ### <a name="remarks"></a>Poznámky
 Tato metoda Odebere skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, namapovaný na zadaný ID příkaz cmdIDMin a cmdIDMax, ze zdrojového objektu příkazu.
 
-## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
 Obslužné rutiny zpráv uživatelské rozhraní příkaz odebere ke zdrojovému objektu příkazu.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -211,7 +206,7 @@ ID příkazu.
 ### <a name="remarks"></a>Poznámky
 Tato metoda odebere namapované na cmdID ze zdrojového objektu příkaz popisovač zpráv příkaz uživatelské rozhraní.
 
-## <a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a> ICommandSource::SendCommand 
 Odešle zprávu a čeká na zpracování před vrácením.
 ```
 void SendCommand(unsigned int command);

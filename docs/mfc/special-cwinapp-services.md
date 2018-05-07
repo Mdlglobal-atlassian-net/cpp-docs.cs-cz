@@ -1,13 +1,10 @@
 ---
-title: "Speciální služby CWinApp | Microsoft Docs"
-ms.custom: 
+title: Speciální služby CWinApp | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
@@ -39,27 +36,25 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-cwinapp-services"></a>Speciální služby CWinApp
 Kromě toho spuštěn zpráva smyčky a budete moci inicializace aplikace a vyčištění po, [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik dalších služeb.  
   
-##  <a name="_core_shell_registration"></a>Registrace prostředí  
+##  <a name="_core_shell_registration"></a> Registrace prostředí  
  Ve výchozím nastavení Průvodce aplikací MFC umožňuje uživateli otevřít datové soubory, které vaše aplikace vytvořena poklepáním na tyto v Průzkumníkovi souborů nebo správce souborového. Pokud vaše aplikace je aplikace MDI a zadáte rozšíření pro soubory, které vytváří vaše aplikace, Průvodce aplikací MFC přidá volání [registershellfiletypes –](../mfc/reference/cwinapp-class.md#registershellfiletypes) a [enableshellopen –](../mfc/reference/cwinapp-class.md#enableshellopen)členské funkce [CWinApp](../mfc/reference/cwinapp-class.md) k `InitInstance` přepsání, které se zapíše za vás.  
   
- `RegisterShellFileTypes`zaregistruje typů dokumentů aplikace pomocí Průzkumníka souborů nebo Správce souborů. Funkce přidá položky do databáze registrace, která udržuje systému Windows. Položky zaregistrovat každý typ dokumentu, příponu souboru přidružení typu souboru, zadejte příkazového řádku k otevření aplikace a zadat příkaz exchange (DDE), dynamická data o otevření dokumentu daného typu.  
+ `RegisterShellFileTypes` zaregistruje typů dokumentů aplikace pomocí Průzkumníka souborů nebo Správce souborů. Funkce přidá položky do databáze registrace, která udržuje systému Windows. Položky zaregistrovat každý typ dokumentu, příponu souboru přidružení typu souboru, zadejte příkazového řádku k otevření aplikace a zadat příkaz exchange (DDE), dynamická data o otevření dokumentu daného typu.  
   
- `EnableShellOpen`dokončení procesu tím, že aplikace na příjem DDE příkazy z Průzkumníka souborů nebo správce souborového k otevření souboru volená uživatelem.  
+ `EnableShellOpen` dokončení procesu tím, že aplikace na příjem DDE příkazy z Průzkumníka souborů nebo správce souborového k otevření souboru volená uživatelem.  
   
  Tato podpora automatickou registraci v `CWinApp` se eliminuje potřeba pro odeslání soubor REG s vaší aplikací nebo k provedení práce speciální instalaci.  
   
@@ -71,7 +66,7 @@ Kromě toho spuštěn zpráva smyčky a budete moci inicializace aplikace a vyč
   
  Pokud není potlačit GDI + vlákna na pozadí, příkazy DDE předčasně vystavit do aplikace před jeho hlavní okno. Příkazy DDE vystavený prostředí můžete předčasně ukončeno, výsledkem chybové zprávy.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a>Správce souborů – přetažení  
+##  <a name="_core_file_manager_drag_and_drop"></a> Správce souborů – přetažení  
  Soubory můžete přetáhnout z okna zobrazení souborů v souboru Manager nebo v Průzkumníku souborů do okna ve vaší aplikaci. Například může povolit jeden nebo více souborů přetáhnout pro aplikace MDI hlavní okno, kde aplikace může načíst názvy souborů a otevřete podřízených oken MDI pro tyto soubory.  
   
  Pokud chcete povolit přetáhněte soubor a vyřadit ve vaší aplikaci, Průvodce aplikací MFC zapíše volání [CWnd](../mfc/reference/cwnd-class.md) – členská funkce [dragacceptfiles –](../mfc/reference/cwnd-class.md#dragacceptfiles) hlavního rámce okna ve vaší `InitInstance`. Toto volání může odebrat, pokud nechcete implementovat funkci přetažení myší.  
@@ -79,7 +74,7 @@ Kromě toho spuštěn zpráva smyčky a budete moci inicializace aplikace a vyč
 > [!NOTE]
 >  Můžete taky implementovat další obecné možnosti přetahování myší – přetahování data mezi nebo v rámci dokumenty – s OLE. Informace najdete v článku [přetažení a Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Udržování přehledu o nejvíc naposledy použité dokumenty  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Udržování přehledu o nejvíc naposledy použité dokumenty  
  Když uživatel otevře a zavře soubory, uchovává informace o čtyři naposledy použitých souborů objekt aplikace. Názvy těchto souborů se přidají do nabídky soubor a při jejich změně. Rozhraní framework uloží tyto názvy souborů, buď v registru nebo v souboru .ini, se stejným názvem jako projektu a čtení ze souboru při spuštění aplikace. `InitInstance` Přepsat, Průvodce aplikací MFC vytvoří pro obsahuje volání [CWinApp](../mfc/reference/cwinapp-class.md) – členská funkce [loadstdprofilesettings –](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), který načte informace z registru nebo souboru INI soubor, včetně použít názvy souborů.  
   
  Tyto položky jsou uloženy následujícím způsobem:  

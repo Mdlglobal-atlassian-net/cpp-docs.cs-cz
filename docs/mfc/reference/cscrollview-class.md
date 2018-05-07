@@ -1,12 +1,9 @@
 ---
-title: "Třída CScrollView | Microsoft Docs"
-ms.custom: 
+title: Třída CScrollView | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView – třída
 A [CView](../../mfc/reference/cview-class.md) s možností posouvání.  
@@ -130,7 +125,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  Volání této funkce člen k určení, zda posuňte zobrazení má vodorovného a svislého řádky.  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Označuje, že aplikace má svislého posuvníku.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  Vytvoří `CScrollView` objektu.  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>Poznámky  
  Je třeba volat buď `SetScrollSizes` nebo `SetScaleToFitSize` před posuňte zobrazení je možné použít.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  Volání `FillOutsideRect` k vyplnění oblasti zobrazení, které se zobrazí mimo oblasti posouvání.  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  Volání `GetDeviceScrollPosition` když potřebujete aktuální vodorovného a svislého polohy jezdcem ve posuvníky.  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>Poznámky  
  Tato souřadnic pár odpovídá umístění v dokumentu, do které byl přešli levém horním rohu zobrazení. To je užitečné pro odsazení pozic zařízení myši na zobrazení posuňte pozic zařízení.  
   
- `GetDeviceScrollPosition`vrací hodnoty v jednotkách zařízení. Pokud chcete, aby logické jednotky, použijte `GetScrollPosition` místo.  
+ `GetDeviceScrollPosition` vrací hodnoty v jednotkách zařízení. Pokud chcete, aby logické jednotky, použijte `GetScrollPosition` místo.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`získá aktuální režim mapování, celková velikost a velikosti řádku a stránka posouvatelného zobrazení.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` Získá aktuální režim mapování, celková velikost a velikosti řádku a stránka posouvatelného zobrazení.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Poznámky  
  Velikosti jsou v jednotkách zařízení. Tato funkce člen je zřídka volána.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  Volání `GetScrollPosition` když potřebujete aktuální vodorovného a svislého polohy jezdcem ve posuvníky.  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>Poznámky  
  Tato souřadnic pár odpovídá umístění v dokumentu, do které byl přešli levém horním rohu zobrazení.  
   
- `GetScrollPosition`vrací hodnoty v logické jednotky. Pokud chcete zařízení jednotky, použijte `GetDeviceScrollPosition` místo.  
+ `GetScrollPosition` vrací hodnoty v logické jednotky. Pokud chcete zařízení jednotky, použijte `GetDeviceScrollPosition` místo.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  Volání `GetTotalSize` načíst aktuální velikosti vodorovného a svislého posouvacího zobrazení.  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Celková velikost posuňte zobrazení v logické jednotky. Vodorovné velikost **cx** členem `CSize` vrátit hodnotu. Svislé velikost **cy** člen.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  Volání `ResizeParentToFit` umožníte velikost zobrazení určují velikost jeho rámce okna.  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>Poznámky  
  Toto nastavení se doporučuje jenom pro zobrazení v rámečku podřízených oken MDI. Použití `ResizeParentToFit` v `OnInitialUpdate` obslužné rutiny funkce vaší odvozené `CScrollView` třídy. Příklad této funkce člen, naleznete v části [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `ResizeParentToFit` je volána, budete mít kontrolní výrazy. Aby se zajistilo, že tato situace, použije toto volání před voláním `ResizeParentToFit`:  
+ `ResizeParentToFit` předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `ResizeParentToFit` je volána, budete mít kontrolní výrazy. Aby se zajistilo, že tato situace, použije toto volání před voláním `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  Volání `ScrollToPosition` přesuňte k danému bodu v zobrazení.  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Poznámky  
  Zobrazení bude přesunut oblasti, takže tento bod je v levém horním rohu okna. Tato funkce člena nesmí být volána, pokud zobrazení přizpůsobí se.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  Volání `SetScaleToFitSize` když chcete automaticky škálovat na velikost zobrazení aktuální velikost okna.  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  Budete obvykle umístit volání `SetScaleToFitSize` v přepsání zobrazení `OnInitialUpdate` – členská funkce. Pokud nechcete, aby automatické škálování, zavolejte `SetScrollSizes` členské funkce místo.  
   
- `SetScaleToFitSize`lze použít k provedení operace se "Zvětšení na vyhovující". Použití `SetScrollSizes` znovu inicializovat posouvání.  
+ `SetScaleToFitSize` lze použít k provedení operace se "Zvětšení na vyhovující". Použití `SetScrollSizes` znovu inicializovat posouvání.  
   
- `SetScaleToFitSize`předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `SetScaleToFitSize` je volána, budete mít kontrolní výrazy. Aby se zajistilo, že tato situace, použije toto volání před voláním `SetScaleToFitSize`:  
+ `SetScaleToFitSize` předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `SetScaleToFitSize` je volána, budete mít kontrolní výrazy. Aby se zajistilo, že tato situace, použije toto volání před voláním `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  Volání `SetScrollSizes` po zobrazení Chystáte se aktualizovat.  
   
 ```  

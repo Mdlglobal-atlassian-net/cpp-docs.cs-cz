@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCAcceleratorKey | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCAcceleratorKey | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey – třída
 Pomocná třída, která implementuje virtuální klíče mapování a formátování.  
@@ -75,7 +70,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  Vytvoří [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objektu.  
   
 ```  
@@ -84,13 +79,13 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpAccel`  
+ [v] `lpAccel`  
  Ukazatel na klávesovou zkratku.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud nezadáte klávesovou zkratku při vytváření `CMFCAccleratorKey`, použijte [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metoda, jak přidružit klávesovou zkratku s vaší `CMFCAcceleratorKey` objektu.  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  Přeloží strukturu AKCELERACE k jeho přidružené řetězcovou hodnotu.  
   
 ```  
@@ -98,13 +93,13 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`str`  
+ [out] `str`  
  Odkaz na `CString` objektu, kde metodu zapíše přeložený klávesovou zkratku.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda načte řetězec formátu přidružené klávesovou zkratku. Můžete nastavit řetězec formátu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) pomocí konstruktoru nebo metodu [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Nastaví klávesovou zkratku [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objektu.  
   
 ```  
@@ -112,7 +107,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpAccel`  
+ [v] `lpAccel`  
  Ukazatel na klávesovou zkratku.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,13 +1,10 @@
 ---
-title: "TN053: Vlastní rutiny DFX pro rozhraní DAO databáze třídy | Microsoft Docs"
-ms.custom: 
+title: 'TN053: Vlastní rutiny DFX pro rozhraní DAO databáze třídy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Vlastní rutiny DFX pro databázové třídy DAO
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  DFX a dynamické vazby nejsou vzájemně vylučují, proto je možné použít hybridní statické a dynamické vazby.  
   
-## <a name="_mfcnotes_tn053_examples"></a>Příklad 1 – Použití rozhraní DAO výměna pole záznamu pouze  
+## <a name="_mfcnotes_tn053_examples"></a> Příklad 1 – Použití rozhraní DAO výměna pole záznamu pouze  
   
  (předpokládá `CDaoRecordset` – odvozené třídy `CMySet` otevřený)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>Jak funguje DFX  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> Jak funguje DFX  
   
  Tento mechanismus DFX funguje podobným způsobem mechanismu pole záznamu (exchange – RFX), který používá třídy knihovny MFC rozhraní ODBC. Zásady DFX a RFX jsou stejné, ale jsou množství interní rozdíly. Návrh DFX funkce se tak, že se jednotlivé rutiny DFX sdílí prakticky všechny kód. Na nejvyšší úrovni DFX pouze nemá pár věcí.  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO bude také "zpětného volání" do volající pro sloupce s proměnlivou délkou Chcete-li povolit volající přidělit paměť. Tato druhá funkce má výhodu současně minimalizuje počet kopií dat a také umožňuje přímé ukládání dat do členy třídy ( `CDaoRecordset` odvozené třídy). Tento druhý mechanismus je metoda MFC používá k vytvoření vazby datových členů v `CDaoRecordset` odvozených třídách.  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Jaké jsou vaše vlastní DFX rutiny  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> Jaké jsou vaše vlastní DFX rutiny  
  Je zřejmé z toto pojednání, který nejdůležitější operace provedena v žádné DFX funkce musí být možnost nastavit požadované datové struktury úspěšně volat `GetRows`. Existuje řada jiné operace, které musí také podporovat DFX funkce, ale žádný jako důležité nebo komplexní jako správně přípravy `GetRows` volání.  
   
  Použití DFX je popsaná v online dokumentaci. V podstatě existují dva požadavky. Nejprve je třeba přidat členy do `CDaoRecordset` odvozené třídy pro každou vázané pole a parametr. Následující to `CDaoRecordset::DoFieldExchange` by měla být potlačena. Všimněte si, že datový typ člena je důležité. Ho by měla odpovídat data z pole v databázi nebo alespoň být převoditelná na typu. Například číselné pole v databázi, jako je například dlouhých celých čísel, kdykoli můžete převést na text a vázána `CString` člena, ale textové pole v databázi může nemusí být převést na číselnému znázornění, jako je například dlouhé celé číslo a vázaný k dlouho integ Če člen. DAO a databázový stroj Microsoft Jet jsou zodpovědní za převod (nikoli MFC).  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>Podrobnosti o dfx_text –  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Podrobnosti o dfx_text –  
  Jak je uvedeno nahoře, je nejlepší způsob, jak vysvětlují, jak funguje DFX pro práci v příkladu. Pro tento účel projít interní položky `DFX_Text` by pomáhají alespoň základní znalosti o DFX velmi dobře fungovat.  
   
  **AddToParameterList**  

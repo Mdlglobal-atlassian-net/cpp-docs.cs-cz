@@ -1,13 +1,10 @@
 ---
-title: "Jímky událostí mapy | Microsoft Docs"
-ms.custom: 
+title: Jímky událostí mapy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309474220f081a0eca67d0f83ead21c59eb649e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-sink-maps"></a>Mapy jímek událostí
 V případě, že vloženému ovládacímu prvku OLE aktivuje událost, obdrží kontejneru ovládacího prvku událost pomocí mechanismus, nazývá "události podřízený mapa," poskytl MFC. Mapy jímek událostí označí funkce obslužných rutin pro každou konkrétní události, stejně jako parametry těchto událostí. Další informace o mapy jímek událostí najdete v článku [– kontejnery ovládacích prvků ActiveX](../../mfc/activex-control-containers.md).  
@@ -44,7 +39,7 @@ V případě, že vloženému ovládacímu prvku OLE aktivuje událost, obdrží
 |[ON_PROPNOTIFY_RANGE –](#on_propnotify_range)|Definuje obslužnou rutinu pro zpracování vlastnost oznámení z sadu ovládacích prvků OLE.|  
 |[ON_PROPNOTIFY_REFLECT –](#on_propnotify_reflect)|Obdrží vlastnost oznámení zaslaná z ovládacího prvku, než jsou zpracovávány kontejneru ovládacího prvku.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP –  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP –  
  Zahájí definici mapy jímek událostí.  
   
 ```   
@@ -66,7 +61,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP –  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP –  
  Kontejner OLE může poskytnout mapování jímky událostí k určení událostem, které vaše kontejneru budou informováni o.  
   
 ```   
@@ -81,7 +76,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP –  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP –  
  Ukončí definici mapy jímek událostí.  
   
 ```   
@@ -91,7 +86,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT –  
+##  <a name="on_event"></a>  ON_EVENT –  
  Použití `ON_EVENT` aktivováno makra definovat funkci zpracování událostí pro událost pomocí ovládacího prvku OLE.  
   
 ```   
@@ -126,7 +121,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE –  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE –  
  Použití `ON_EVENT_RANGE` makro definovat funkci zpracování událostí pro událost aktivováno žádné řízení OLE s ID ovládacího prvku v rámci souvislý rozsah ID.  
   
 ```   
@@ -173,7 +168,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT –  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT –  
  `ON_EVENT_REFLECT` Makro, při použití události podřízený mapy ovládacího prvku OLE obálkové třídy, obdrží události aktivována ovládacím prvkem, než jsou zpracovávány kontejneru ovládacího prvku.  
   
 ```   
@@ -207,7 +202,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY –  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY –  
  Použití `ON_PROPNOTIFY` makro k definování položky mapy jímek událostí pro zpracování vlastnost oznámení z ovládacího prvku OLE.  
   
 ```   
@@ -240,7 +235,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Seznam **VTS_** konstanty, najdete v části [event_custom –](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE –  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE –  
  Použití `ON_PROPNOTIFY_RANGE` makro k definování položky mapy jímek událostí pro zpracování vlastnost oznámení z ovládacích prvků OLE s ID ovládacího prvku v rámci souvislý rozsah ID.  
   
 ```  
@@ -271,7 +266,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT –  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT –  
  `ON_PROPNOTIFY_REFLECT` Makro, při použití události podřízený mapy ovládacího prvku OLE obálkové třídy, obdrží vlastnost oznámení zaslaná z ovládacího prvku, než jsou zpracovávány kontejneru ovládacího prvku.  
   
 ```  

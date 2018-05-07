@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCFontComboBox | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCFontComboBox | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox – třída
 `CMFCFontComboBox` Třída vytvoří prvek pole se seznamem, který obsahuje seznam písem.  
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Vytvoří `CMFCFontComboBox` objektu.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Načte informace o aktuálně vybrané písmo.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Určuje rozhraní, které Písmo sloužící k vykreslení popisky položek v aktuální pole se seznamem písma.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Poznámky  
  Tento člen nastavit na `TRUE` směrovat rozhraní používat stejné písmo k vykreslení každý popisek položky. Tento člen nastavit na `FALSE` směrovat rozhraní k vykreslení každý popisek položky s písma, jejíž název je stejný jako popisek. Výchozí hodnota tohoto člena je `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Vybere písmo, který odpovídá zadaným kritériím z pole se seznamem písma.  
   
 ```  
@@ -136,17 +131,17 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDesc`  
+ [v] `pDesc`  
  Odkazuje na objekt popis písma.  
   
- [v]`lpszName`  
+ [v] `lpszName`  
  Určuje název písma.  
   
- [v]`nCharSet`  
+ [v] `nCharSet`  
  Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud položku v poli se seznamem písmo odpovídá objektu určeného písma popis nebo název písma a charset; v opačném `FALSE`.  
+ `TRUE` Pokud položku v poli se seznamem písmo odpovídá objektu určeného písma popis nebo název písma a charset; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k výběru a přejděte na položku v poli se seznamem písmo, která odpovídá zadané písmo.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Inicializuje seznam položek v poli se seznamem písmo.  
   
 ```  
@@ -168,17 +163,17 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nFontType`  
+ [v] `nFontType`  
  Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
   
- [v]`nCharSet`  
+ [v] `nCharSet`  
  Určuje písmo znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET.  
   
- [v]`nPitchAndFamily`  
+ [v] `nPitchAndFamily`  
  Určuje výšku písma a rodiny. Výchozí hodnota je DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud pole se seznamem písma byl inicializován úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud pole se seznamem písma byl inicializován úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda inicializuje pole se seznamem písma tak, že vytváření výčtu aktuálně instalovaných písem, které odpovídají zadané parametry a vkládání těchto názvů písem v poli se seznamem písmo.  

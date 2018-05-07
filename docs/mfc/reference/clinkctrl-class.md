@@ -1,12 +1,9 @@
 ---
-title: "Třída CLinkCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CLinkCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinkCtrl
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl – třída
 Poskytuje funkci běžné SysLink ovládacího prvku Windows.  
@@ -109,14 +104,14 @@ class CLinkCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
+##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
  Vytvoří `CLinkCtrl` objektu.  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="create"></a>CLinkCtrl::Create  
+##  <a name="create"></a>  CLinkCtrl::Create  
  Ovládací prvek odkazu vytvoří a připojí jej k `CLinkCtrl` objektu.  
   
 ```  
@@ -151,7 +146,7 @@ virtual BOOL Create(DWORD dwStyle,
  Určuje ID ovládacího prvku odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud se inicializace byla úspěšná. v opačném případě `false`.  
+ `true` Pokud se inicializace byla úspěšná. v opačném případě `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete vytvořit `CLinkCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří řízení propojení a připojí jej k `CLinkCtrl` objektu. Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CLinkCtrl::CreateEx](#createex) místo `Create`.  
@@ -168,7 +163,7 @@ virtual BOOL Create(DWORD dwStyle,
   
  [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CLinkCtrl::CreateEx  
+##  <a name="createex"></a>  CLinkCtrl::CreateEx  
  Vytvoří řízení propojení s rozšířené styly a připojí jej k `CLinkCtrl` objektu.  
   
 ```  
@@ -208,14 +203,14 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  Určuje ID ovládacího prvku odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud se inicializace byla úspěšná. v opačném případě `false`.  
+ `true` Pokud se inicializace byla úspěšná. v opačném případě `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené konstanty styl systému Windows.  
   
  O druhou podobu `CreateEx` metoda je zastaralá. První formulář, který určuje použijte `lpszLinkMarkup` parametr.  
   
-##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
+##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Načte ideální výšku ovládací prvek odkazu.  
   
 ```  
@@ -228,7 +223,7 @@ int GetIdealHeight() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  Vypočítá upřednostňované výšku text odkazu pro aktuální řízení propojení, v závislosti na nastavená šířka propojení.  
   
 ```  
@@ -241,8 +236,8 @@ int GetIdealSize(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`cxMaxWidth`|Maximální šířka odkazu, který je v pixelech.|  
-|[out] *`pSize`|Ukazatel na Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura. Po návratu tato metoda `cy` členem `SIZE` struktura obsahuje výšku textu ideální odkaz k šířce text odkazu, která je zadána `cxMaxWidth`. `cx` Členů struktury obsahuje šířku text odkazu, která je skutečně potřeba.|  
+|[v] `cxMaxWidth`|Maximální šířka odkazu, který je v pixelech.|  
+|[out] * `pSize`|Ukazatel na Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura. Po návratu tato metoda `cy` členem `SIZE` struktura obsahuje výšku textu ideální odkaz k šířce text odkazu, která je zadána `cxMaxWidth`. `cx` Členů struktury obsahuje šířku text odkazu, která je skutečně potřeba.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Upřednostňované výška text odkazu, v pixelech. Vrácená hodnota je stejná jako hodnota `cy` členem `SIZE` struktura.  
@@ -252,7 +247,7 @@ int GetIdealSize(
   
  Tato metoda odesílá [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getitem"></a>CLinkCtrl::GetItem  
+##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  Načte stavy a atributy ovládacího prvku položky odkaz.  
   
 ```  
@@ -269,7 +264,7 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
+##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  Načte Identifikátor položky ovládacího prvku odkazu.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL GetItemID(
 ### <a name="remarks"></a>Poznámky  
  Načte Identifikátor položky ovládacího prvku konkrétním propojení. Další informace najdete v tématu zpráva Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) ve Windows SDK.  
   
-##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  Načte stav položky ovládacího prvku odkazu.  
   
 ```  
@@ -331,7 +326,7 @@ BOOL GetItemState(
 ### <a name="remarks"></a>Poznámky  
  Načte hodnotu zadaného stavu položky položky ovládacího prvku konkrétním propojení. Další informace najdete v tématu zpráva Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) ve Windows SDK.  
   
-##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
+##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  Načte adresu URL reprezentována položky ovládacího prvku odkazu.  
   
 ```  
@@ -367,7 +362,7 @@ BOOL GetItemUrl(
 ### <a name="remarks"></a>Poznámky  
  Načte adresu URL reprezentována položky ovládacího prvku zadaný odkaz. Další informace najdete v tématu zpráva Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) ve Windows SDK.  
   
-##  <a name="hittest"></a>CLinkCtrl::HitTest  
+##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  Určuje, pokud by uživatel klepl na zadaném propojení.  
   
 ```  
@@ -384,7 +379,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="setitem"></a>CLinkCtrl::SetItem  
+##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  Nastaví stavy a atributy ovládacího prvku položky odkaz.  
   
 ```  
@@ -401,7 +396,7 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
+##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  Načte Identifikátor položky ovládacího prvku odkazu.  
   
 ```  
@@ -423,7 +418,7 @@ BOOL SetItemID(
 ### <a name="remarks"></a>Poznámky  
  Nastaví ID položky ovládacího prvku konkrétním propojení. Další informace najdete v tématu zpráva Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) ve Windows SDK.  
   
-##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  Načte stav položky ovládacího prvku odkazu.  
   
 ```  
@@ -449,7 +444,7 @@ BOOL SetItemState(
 ### <a name="remarks"></a>Poznámky  
  Nastaví hodnotu zadaného stavu položky položky ovládacího prvku konkrétním propojení. Další informace najdete v tématu zpráva Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) ve Windows SDK.  
   
-##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
+##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  Nastaví adresu URL reprezentována položky ovládacího prvku odkazu.  
   
 ```  

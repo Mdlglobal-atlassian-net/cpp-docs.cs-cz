@@ -1,12 +1,9 @@
 ---
-title: "Třída COleDropTarget | Microsoft Docs"
-ms.custom: 
+title: Třída COleDropTarget | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget – třída
 Poskytuje mechanismus komunikace mezi okno a knihoven OLE.  
@@ -92,7 +87,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  Vytvoří objekt třídy `COleDropTarget`.  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>Poznámky  
  Volání [zaregistrovat](#register) pro tento objekt přidružit časového období.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  Voláno rámcem při přetažení ukazatele nejprve do okna.  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>Návratová hodnota  
  O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_NONE`Pokles nebude možné.  
+- `DROPEFFECT_NONE` Pokles nebude možné.  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL`Operaci přetažení scroll dojde nebo dochází na cíli.  
+- `DROPEFFECT_SCROLL` Operaci přetažení scroll dojde nebo dochází na cíli.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce umožňuje operací myší v okně k přepsání. Výchozí implementace volá [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), která vrátí jednoduše `DROPEFFECT_NONE` ve výchozím nastavení.  
   
  Další informace najdete v tématu [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) ve Windows SDK.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Voláno rámcem, když ukazatel opustí okno při přetahování operace je v platnosti.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  Další informace najdete v tématu [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) ve Windows SDK.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Voláno rámcem při přetažení ukazatele přes okno.  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>Návratová hodnota  
  O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_NONE`Pokles nebude možné.  
+- `DROPEFFECT_NONE` Pokles nebude možné.  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL`Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
+- `DROPEFFECT_SCROLL` Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce by měla být potlačena umožňující operací myší v okně. Výchozí implementace této funkce volá [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), která vrátí `DROPEFFECT_NONE` ve výchozím nastavení. Protože tato funkce je volána často během operace přetahování myší, ho by mělo být optimalizované co nejvíc.  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  Voláno rámcem před voláním [ondragenter –](#ondragenter) nebo [ondragover –](#ondragover) k určení zda `point` v oblasti s možností posouvání.  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>Návratová hodnota  
  O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_NONE`Pokles nebude možné.  
+- `DROPEFFECT_NONE` Pokles nebude možné.  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL`Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
+- `DROPEFFECT_SCROLL` Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce přepsání, pokud chcete zadat speciální chování pro tuto událost. Výchozí implementace této funkce volá [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), která vrátí `DROPEFFECT_NONE` a posune okno, když je kurzor přetažen Posunout oblast výchozí uvnitř ohraničení okna.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  Voláno rámcem při operace odstranění se má použít.  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  O tom, že se uživatel rozhodl pro operace vyřazení. Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
  `point`  
  Obsahuje umístění kurzoru v pixelech, relativně k obrazovce.  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  Další informace najdete v tématu [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) ve Windows SDK.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Voláno rámcem při operace odstranění se má použít.  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  Účinky rozevírací popisují akce spojené s operace odstranění. Najdete v následujícím seznamu rozevírací důsledky:  
   
-- `DROPEFFECT_NONE`Pokles nebude možné.  
+- `DROPEFFECT_NONE` Pokles nebude možné.  
   
-- `DROPEFFECT_COPY`Operace kopírování by se provedla.  
+- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
   
-- `DROPEFFECT_MOVE`Operace přesunu by se provedla.  
+- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
   
-- `DROPEFFECT_LINK`Odkaz z vynechaných dat na původní data by byla založena.  
+- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL`Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
+- `DROPEFFECT_SCROLL` Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
   
  Další informace najdete v tématu [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) ve Windows SDK.  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  Volání této funkce při registraci vaší okno s OLE knihoven DLL jako cíle přetažení platný.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  Další informace najdete v tématu [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) ve Windows SDK.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Volání této funkce před zničení jakékoli okno, který byl zaregistrován jako cíle přetažení prostřednictvím volání [zaregistrovat](#register) ho odebrat ze seznamu cílů umístění.  
   
 ```  

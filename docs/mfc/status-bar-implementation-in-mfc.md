@@ -1,13 +1,10 @@
 ---
-title: "Implementace stavového řádku v prostředí MFC | Microsoft Docs"
-ms.custom: 
+title: Implementace stavového řádku v prostředí MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - COldStatusBar
 dev_langs:
@@ -25,24 +22,22 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d81982e23f100fe75d6cc5769cd19359bfaa6f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementace stavového řádku v prostředí MFC
 A [cstatusbar –](../mfc/reference/cstatusbar-class.md) objekt je ovládací prvek panel s řádek podokna výstup textu. Podokna výstup běžně se používají jako řádky zprávy a jako indikátory stavu. Mezi příklady patří řádky zprávu nápovědy nabídky, které stručně popisují příkaz vybrané nabídky a indikátory, které se zobrazí stav SCROLL LOCK NUMLOCK a jiných klíčů.  
   
  Od verze knihovny MFC verze 4.0, stavové řádky jsou implementované pomocí třídy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), který zapouzdří stav panelu běžného ovládacího prvku. Z důvodu zpětné kompatibility MFC uchovává starší implementace řádku stav v třídě **COldStatusBar**. Dokumentace pro starší verze knihovny MFC popisuje **COldStatusBar** pod `CStatusBar`.  
   
- [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), členské funkce nové MFC 4.0, můžete využít podporu Windows běžné ovládacího prvku pro stavovém řádku přizpůsobení a další funkce. `CStatusBar`Členské funkce získáte většinu funkcí běžných ovládacích prvků Windows; ale při volání `GetStatusBarCtrl`, můžete udělit stavové řádky i více společných vlastností stavového řádku. Při volání `GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu. Tento odkaz můžete použít k manipulaci s ovládacího prvku panel stav.  
+ [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), členské funkce nové MFC 4.0, můžete využít podporu Windows běžné ovládacího prvku pro stavovém řádku přizpůsobení a další funkce. `CStatusBar` Členské funkce získáte většinu funkcí běžných ovládacích prvků Windows; ale při volání `GetStatusBarCtrl`, můžete udělit stavové řádky i více společných vlastností stavového řádku. Při volání `GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu. Tento odkaz můžete použít k manipulaci s ovládacího prvku panel stav.  
   
  Následující obrázek znázorňuje stavový řádek, který zobrazí několik ukazatele.  
   

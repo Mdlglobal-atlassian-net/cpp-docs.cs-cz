@@ -1,13 +1,10 @@
 ---
 title: 'TN041: Migrace z MFC OLE1 do MFC-2 | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrace z prostředí MFC/OLE1 do MFC/OLE2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>Přidání "Úpravy s náhledem"  
  Jedním z nejvíce zajímavé funkce OLE je aktivace na místě (nebo "Úpravy s náhledem"). Tato funkce umožňuje serverová aplikace převzít kontrolu nad části kontejneru uživatelské rozhraní, poskytuje pohodlnější způsob jednotného úpravy rozhraní pro uživatele. K implementaci aktivace na místě, abyste OCLIENT, některé speciální prostředky nutné přidat, a zároveň i některé další kód. Tyto prostředky a kód jsou obvykle poskytovány objekty AppWizard – ve skutečnosti většinu sem kód byla vždy pouze vypůjčí přímo z čerstvého objekty AppWizard aplikace s podporou "Kontejner".  
   
- Nejprve je potřeba přidat prostředek nabídky má být použit při určitá položka, která je aktivní na místě. Tento prostředek navíc nabídky můžete vytvořit v jazyce Visual C++ zkopírováním IDR_OCLITYPE prostředků a odebrat všechny uzly s výjimkou souborů a okna automaticky otevíraná okna. Mezi v souboru a okna automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dva oddělovacích pruhů (by měl vypadat jako: soubor &#124; &#124; Okno). Další informace o významu těchto oddělovačů a způsob sloučení nabídky serveru a kontejneru najdete v části "Nabídky a prostředky: slučování nabídek" v *OLE 2 třídy*.  
+ Nejprve je potřeba přidat prostředek nabídky má být použit při určitá položka, která je aktivní na místě. Tento prostředek navíc nabídky můžete vytvořit v jazyce Visual C++ zkopírováním IDR_OCLITYPE prostředků a odebrat všechny uzly s výjimkou souborů a okna automaticky otevíraná okna. Mezi v souboru a okna automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dva oddělovacích pruhů (by měl vypadat jako: soubor &#124; &#124; okno). Další informace o významu těchto oddělovačů a způsob sloučení nabídky serveru a kontejneru najdete v části "Nabídky a prostředky: slučování nabídek" v *OLE 2 třídy*.  
   
  Až budete mít tyto nabídky vytvořen, budete muset umožní framework vědět o nich. To se provádí volání `CDocTemplate::SetContainerInfo` šablony dokumentu předtím, než přidáte do seznamu šablony dokumentu ve vašem InitInstance. Nový kód k registraci šablona dokumentu vypadá takto:  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`již nepodporuje příznak 'bIncludeNative'. Nativní data (data naprogramovaný funkce serializace položku serveru) je vždy kopírovat, takže odeberete první parametr. Kromě toho `CopyToClipboard` vyvolá výjimku při chybě místo vrací hodnotu FALSE. Změňte kód pro CServerView::OnEditCopy takto:  
+ `COleServerItem::CopyToClipboard` již nepodporuje příznak 'bIncludeNative'. Nativní data (data naprogramovaný funkce serializace položku serveru) je vždy kopírovat, takže odeberete první parametr. Kromě toho `CopyToClipboard` vyvolá výjimku při chybě místo vrací hodnotu FALSE. Změňte kód pro CServerView::OnEditCopy takto:  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   Posouvání okna kontejneru jako výběr se změní.  
   
- Ukázka HIERSVR v MFC 3.0 také používá mírně odlišný návrhu pro položky na serveru. To pomáhá šetřit paměť a zajišťuje flexibilnější vaše odkazy. 2.0 verzi HIERSVR každý uzel ve stromové struktuře *je a* `COleServerItem`. `COleServerItem`představuje trochu další režii než je nezbytně nutné pro každý z těchto uzlů, ale `COleServerItem` je vyžadována pro každé aktivní připojení. Je ale ve většině případů jen několik aktivních odkazů v daném okamžiku. Chcete-li to efektivnější, HIERSVR v této verzi knihovny MFC odděluje uzlu ze `COleServerItem`. Má oba CServerNode a **CServerItem** třídy. **CServerItem** (odvozený z `COleServerItem`) je vytvořen pouze podle potřeby. Jakmile kontejneru (nebo kontejnery) přestat používat tuto konkrétní odkaz na příslušném uzlu, je odstraněn objekt CServerItem, přidružené CServerNode. Tento návrh je efektivnější a flexibilnější. Je flexibilní se dodává při plánování práce s více odkazy pro výběr. Ani jeden z těchto dvou verzích HIERSVR podporovat více výběrů, ale je mnohem snazší, chcete-li přidat (a podporu odkazů na tyto možnosti) s verzí MFC 3.0 HIERSVR, protože `COleServerItem` je oddělená od nativní data.  
+ Ukázka HIERSVR v MFC 3.0 také používá mírně odlišný návrhu pro položky na serveru. To pomáhá šetřit paměť a zajišťuje flexibilnější vaše odkazy. 2.0 verzi HIERSVR každý uzel ve stromové struktuře *je a* `COleServerItem`. `COleServerItem` představuje trochu další režii než je nezbytně nutné pro každý z těchto uzlů, ale `COleServerItem` je vyžadována pro každé aktivní připojení. Je ale ve většině případů jen několik aktivních odkazů v daném okamžiku. Chcete-li to efektivnější, HIERSVR v této verzi knihovny MFC odděluje uzlu ze `COleServerItem`. Má oba CServerNode a **CServerItem** třídy. **CServerItem** (odvozený z `COleServerItem`) je vytvořen pouze podle potřeby. Jakmile kontejneru (nebo kontejnery) přestat používat tuto konkrétní odkaz na příslušném uzlu, je odstraněn objekt CServerItem, přidružené CServerNode. Tento návrh je efektivnější a flexibilnější. Je flexibilní se dodává při plánování práce s více odkazy pro výběr. Ani jeden z těchto dvou verzích HIERSVR podporovat více výběrů, ale je mnohem snazší, chcete-li přidat (a podporu odkazů na tyto možnosti) s verzí MFC 3.0 HIERSVR, protože `COleServerItem` je oddělená od nativní data.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

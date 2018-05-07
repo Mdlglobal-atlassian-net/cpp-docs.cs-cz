@@ -1,12 +1,9 @@
 ---
-title: "Třída COlePasteSpecialDialog | Microsoft Docs"
-ms.custom: 
+title: Třída COlePasteSpecialDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8680842f0aeeebf98eabc0f278089781290ad902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog – třída
 Používá se pro dialogové okno OLE Vložit jinak.  
@@ -111,7 +106,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxodlgs.h  
   
-##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
  Volání této funkce můžete přidat nové formáty do seznamu formátů, které vaše aplikace může podporovat v rámci operace Vložit jinak.  
   
 ```  
@@ -165,7 +160,7 @@ void AddFormat(
   
  Další informace najdete v tématu [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) výčtového typu ve Windows SDK.  
   
-##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Přidá novou položku do seznamu podporovaných formátů schránky.  
   
 ```  
@@ -179,7 +174,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>Návratová hodnota  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) struktura obsahující informace o nových odkazů.  
   
-##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Volání této funkce můžete přidat následující formáty schránky do seznamu formátů, které vaše aplikace může podporovat v rámci Vložit jinak operace:  
   
 ```  
@@ -204,7 +199,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  Tyto formáty jsou používány pro podporu vložení a propojení.  
   
-##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog  
  Vytvoří `COlePasteSpecialDialog` objektu.  
   
 ```  
@@ -218,13 +213,13 @@ COlePasteSpecialDialog(
  `dwFlags`  
  Vytvoření příznak obsahuje libovolný počet kombinované pomocí operátoru bitové operace OR následující příznaky:  
   
-- `PSF_SELECTPASTE`Určuje, že přepínač vložení bude ověřen původně při volání dialogové okno. Nelze použít v kombinaci s `PSF_SELECTPASTELINK`. Toto nastavení je výchozí.  
+- `PSF_SELECTPASTE` Určuje, že přepínač vložení bude ověřen původně při volání dialogové okno. Nelze použít v kombinaci s `PSF_SELECTPASTELINK`. Toto nastavení je výchozí.  
   
-- `PSF_SELECTPASTELINK`Určuje, že když je volána dialogové okno zaškrtnuté Vložit propojení bude přepínač původně. Nelze použít v kombinaci s `PSF_SELECTPASTE`.  
+- `PSF_SELECTPASTELINK` Určuje, že když je volána dialogové okno zaškrtnuté Vložit propojení bude přepínač původně. Nelze použít v kombinaci s `PSF_SELECTPASTE`.  
   
-- `PSF_CHECKDISPLAYASICON`Určuje, že políčko Zobrazit jako ikonu se zkontrolují původně po se označuje jako dialogové okno.  
+- `PSF_CHECKDISPLAYASICON` Určuje, že políčko Zobrazit jako ikonu se zkontrolují původně po se označuje jako dialogové okno.  
   
-- `PSF_SHOWHELP`Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
+- `PSF_SHOWHELP` Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
   
  `pDataObject`  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) pro vložení. Pokud je tato hodnota **NULL**, získá `COleDataObject` ze schránky.  
@@ -237,7 +232,7 @@ COlePasteSpecialDialog(
   
  Další informace najdete v tématu [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) výčtového typu ve Windows SDK.  
   
-##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Vytvoří novou položku, kterou jste vybrali v dialogovém okně Vložit jinak.  
   
 ```  
@@ -254,7 +249,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce by měla být volána pouze po [DoModal](#domodal) vrátí **IDOK**.  
   
-##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
  Zobrazí dialogové okno OLE Vložit jinak.  
   
 ```  
@@ -275,7 +270,7 @@ virtual INT_PTR DoModal();
   
  Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo uživatelský vstup informace do dialogových oken.  
   
-##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
  Určuje, pokud se uživatel rozhodl zobrazit jako ikonu vybranou položku.  
   
 ```  
@@ -285,16 +280,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Metoda potřebné k vykreslení objektu.  
   
-- `DVASPECT_CONTENT`Vrátí, pokud nebyla zobrazit jako ikonu zaškrtávací políčko zaškrtnuto, když se zavře dialogové okno.  
+- `DVASPECT_CONTENT` Vrátí, pokud nebyla zobrazit jako ikonu zaškrtávací políčko zaškrtnuto, když se zavře dialogové okno.  
   
-- `DVASPECT_ICON`Vrátí, pokud při dialogové okno se zavře, zaškrtněte políčko Zobrazit jako ikonu byla zaškrtnutá.  
+- `DVASPECT_ICON` Vrátí, pokud při dialogové okno se zavře, zaškrtněte políčko Zobrazit jako ikonu byla zaškrtnutá.  
   
 ### <a name="remarks"></a>Poznámky  
  Pouze volání této funkce po [DoModal](#domodal) vrátí **IDOK**.  
   
  Další informace o kreslení aspekt najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Získá metafile přidružené k položce vybrané uživatelem.  
   
 ```  
@@ -304,7 +299,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač metafile obsahující ikony aspekt vybrané položky, pokud při dialogové okno se zavře výběrem zaškrtnuto políčko Zobrazit jako ikonu **OK**jinak **NULL**.  
   
-##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
  Získá hodnotu indexu související s položkou vybraného uživatele.  
   
 ```  
@@ -317,7 +312,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) struktura ve Windows SDK.  
   
-##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Určuje typ jednoho uživatele provedeného výběru.  
   
 ```  
@@ -349,7 +344,7 @@ enum Selection {
   
 - **COlePasteSpecialDialog::pasteStatic** vybraný formát byl metasoubory.  
   
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
  Struktura typu **OLEUIPASTESPECIAL** používat k ovládání chování dialogové okno Vložit jinak.  
   
 ```  

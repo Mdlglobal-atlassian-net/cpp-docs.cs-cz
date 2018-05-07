@@ -1,12 +1,9 @@
 ---
-title: "Třída COlePropertyPage | Microsoft Docs"
-ms.custom: 
+title: Třída COlePropertyPage | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePropertyPage
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cac788f0e7f691f28a6751d15971f117d753428c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 Slouží k zobrazení vlastností vlastního ovládacího prvku v grafickém rozhraní, podobně jako dialogové okno.  
@@ -117,7 +112,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxctl.h  
   
-##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
+##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
  Vytvoří `COlePropertyPage` objektu.  
   
 ```  
@@ -136,7 +131,7 @@ COlePropertyPage(
 ### <a name="remarks"></a>Poznámky  
  Při implementaci podtřídou třídy `COlePropertyPage`, měli používat vaše podtřída konstruktor `COlePropertyPage` konstruktor k identifikaci prostředku šablony dialogového okna na která je založena na stránku vlastností a prostředek řetězec obsahující titulek.  
   
-##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
+##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
  Určuje, zda má uživatel změnil hodnotu ovládací prvek stránku vlastností s číslem ID zadaný prostředek.  
   
 ```  
@@ -150,7 +145,7 @@ BOOL GetControlStatus(UINT nID);
 ### <a name="return-value"></a>Návratová hodnota  
  **Hodnota TRUE,** Pokud hodnota ovládacího prvku byl upravený; jinak hodnota **FALSE**.  
   
-##  <a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
+##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
  Vrátí pole objektů upravován stránku vlastností.  
   
 ```  
@@ -167,7 +162,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ### <a name="remarks"></a>Poznámky  
  Každou vlastnost objektu page udržuje ukazatele na pole `IDispatch` rozhraní objektů upravovaný stránkou. Tato funkce nastaví jeho `pnObjects` argument počet elementů v tomto poli a vrací ukazatel na první prvek pole.  
   
-##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
+##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Získá ukazatel na stránce vlastností `IPropertyPageSite` rozhraní.  
   
 ```  
@@ -180,7 +175,7 @@ LPPROPERTYPAGESITE GetPageSite();
 ### <a name="remarks"></a>Poznámky  
  Ovládací prvky a kontejnery spolupracují, aby uživatelé mohli procházet a úpravy vlastností ovládacích prvků. Ovládací prvek poskytuje stránky vlastností, z nichž každý je OLE objekt, který umožňuje uživateli upravit související sadu vlastností. Kontejner obsahuje vlastnost rámce, který zobrazuje stránky vlastností. Pro každou stránku rámečku vlastnost poskytuje lokalitě stránky, která podporuje `IPropertyPageSite` rozhraní.  
   
-##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
+##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
  Určuje, jaké ovládací prvky nepovolujte na tlačítko použít.  
   
 ```  
@@ -194,7 +189,7 @@ void IgnoreApply(UINT nID);
 ### <a name="remarks"></a>Poznámky  
  Stránka vlastností použít tlačítko je povoleno pouze v případě, že došlo ke změně hodnoty vlastnosti ovládací prvky stránky. Pomocí této funkce můžete zadat ovládacích prvků, které nezpůsobí na tlačítko použít, chcete-li povolit, pokud jejich hodnoty změnit.  
   
-##  <a name="ismodified"></a>COlePropertyPage::IsModified  
+##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
  Určuje, zda uživatel změnil žádné hodnoty na stránce vlastností.  
   
 ```  
@@ -204,7 +199,7 @@ BOOL IsModified();
 ### <a name="return-value"></a>Návratová hodnota  
  **Hodnota TRUE,** Pokud byl upraven na stránku vlastností.  
   
-##  <a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
+##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
  Rozhraní framework volá tuto funkci při specifická vlastnost je k provádění úprav.  
   
 ```  
@@ -221,7 +216,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ### <a name="remarks"></a>Poznámky  
  Je možné přepsat jeho nastavení fokusu vhodný ovládací prvek na stránce. Výchozí implementace neprovede žádnou akci a vrátí **FALSE**.  
   
-##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
+##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
  Rozhraní framework volá tuto funkci, když uživatel požádá online nápovědy.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="remarks"></a>Poznámky  
  Přepište Pokud stránky vlastností musí provést zvláštní akce, když uživatel získá přístup k nápovědě. Výchozí implementace neprovede žádnou akci a vrátí **FALSE**, které nařídí rozhraní framework volání WinHelp.  
   
-##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
+##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
  Při inicializaci dialogové okno Vlastnosti stránky volá rámec této funkce.  
   
 ```  
@@ -251,7 +246,7 @@ virtual BOOL OnInitDialog();
 ### <a name="remarks"></a>Poznámky  
  Přepište je-li zvláštní akce, vyžadováno při inicializaci dialogu. Výchozí implementace volá `CDialog::OnInitDialog` a vrátí **FALSE**.  
   
-##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
+##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
  Voláno rámcem při výběru jiného ovládacího prvku OLE, novými vlastnostmi.  
   
 ```  
@@ -263,7 +258,7 @@ virtual void OnObjectsChanged();
   
  Funkci pro příjem oznámení této akce a provádět žádné zvláštní akce přepište.  
   
-##  <a name="onsetpagesite"></a>COlePropertyPage::OnSetPageSite  
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite  
  Rozhraní framework volá tuto funkci, pokud vlastnost rámečku poskytuje stránka vlastností stránky webu.  
   
 ```  
@@ -273,7 +268,7 @@ virtual void OnSetPageSite();
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace načte záhlaví stránky a se pokusí určit velikost stránky z prostředku dialogového okna. Potlačí tuto funkci v případě, že žádné další akce; vyžaduje stránky vlastností přepsání by měly volat základní třídy implementaci.  
   
-##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
+##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
  Změní stav ovládací prvek stránky vlastností.  
   
 ```  
@@ -295,7 +290,7 @@ BOOL SetControlStatus(
 ### <a name="remarks"></a>Poznámky  
  Pokud při zavření stránku vlastností nebo na tlačítko použít je zvolen je nevyřízený stav ovládací prvek stránky vlastností, aktualizují se ovládacího prvku na odpovídající hodnotu.  
   
-##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
+##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
  Nastaví její stránku vlastností prostředku dialogového okna.  
   
 ```  
@@ -306,7 +301,7 @@ void SetDialogResource(HGLOBAL hDialog);
  *hDialog*  
  Zpracování na stránce vlastností prostředku dialogového okna.  
   
-##  <a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
+##  <a name="sethelpinfo"></a>  COlePropertyPage::SetHelpInfo  
  Určuje popisek informace, název souboru nápovědy a kontext nápovědy pro stránky vlastností.  
   
 ```  
@@ -326,7 +321,7 @@ void SetHelpInfo(
  *dwHelpContext*  
  Kontext nápovědy pro stránku vlastností.  
   
-##  <a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  COlePropertyPage::SetModifiedFlag  
  Určuje, zda má uživatel změnil její stránku vlastností.  
   
 ```  
@@ -337,7 +332,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
  `bModified`  
  Určuje novou hodnotu upravené příznak její stránku vlastností.  
   
-##  <a name="setpagename"></a>COlePropertyPage::SetPageName  
+##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
  Nastaví název její stránku vlastností, které rámečku vlastnost se obvykle zobrazí na kartě stránky.  
   
 ```  
